@@ -863,7 +863,47 @@ fn ai(app: &mut EditorApp, ui: &mut egui::Ui, f: &mut Form, out: &mut Vec<Out>) 
             out.push(Out::AiPanel);
         }
     });
+    limit_rows(app, ui, f);
     depth_rows(app, ui, f, out);
+}
+
+/// Catalog keys of a limit row: `ai_limits.<key>` and `ai_limits.<key>_desc` (the reason).
+fn limit_keys(l: &ddc_ai::limits::Limit) -> (String, String) {
+    (format!("ai_limits.{}", l.key), format!("ai_limits.{}_desc", l.key))
+}
+
+/// One row per setting-tier assistant limit; a value equal to the default is not stored.
+fn limit_rows(app: &mut EditorApp, ui: &mut egui::Ui, f: &mut Form) {
+    use ddc_ai::limits::{self, Tier, Unit};
+    let th = &app.sh.theme;
+    let c = &app.sh.cat;
+    let p = &mut app.prefs;
+    for l in limits::settings() {
+        let Tier::Setting { min, max } = l.tier else { continue };
+        let (label, desc) = limit_keys(l);
+        let (label, desc) = (c.t(&label), c.t(&desc));
+        let tip = format!("{desc}\n{}", c.t("ai_limits.default").replace("{n}", &l.value.to_string()));
+        let unit = match l.unit {
+            Unit::Seconds => c.t("ai_limits.unit_s"),
+            Unit::MiB => c.t("ai_limits.unit_mb"),
+            _ => String::new(),
+        };
+        row(ui, th, f, &label, &desc, |ui| {
+            let mut v = p.ai_limits.get(l.key).copied().unwrap_or(l.value) as f64;
+            let salt = format!("ddc.settings.ai_limit.{}", l.key);
+            let range = (min as f64, max as f64);
+            let r = ui.scope(|ui| crate::ui_kit::int_field(ui, th, c, &salt, &label, &mut v, range, &unit));
+            r.response.on_hover_text(tip);
+            if r.inner {
+                let n = (v.round() as u64).clamp(min, max);
+                if n == l.value {
+                    p.ai_limits.remove(l.key);
+                } else {
+                    p.ai_limits.insert(l.key.to_string(), n);
+                }
+            }
+        });
+    }
 }
 
 /// The open project's design depth: the summary in the row, the editor under it.
@@ -1555,6 +1595,24 @@ mod tests {
                     assert!(!text.contains(bad), "{lang:?}: {text}");
                 }
             }
+        }
+    }
+
+    #[test]
+    fn every_ai_limit_setting_has_a_row_text_in_every_language() {
+        assert!(ddc_ai::limits::settings().count() >= 8);
+        for lang in Lang::ALL.iter().copied() {
+            let cat = Catalog::new(lang);
+            for l in ddc_ai::limits::settings() {
+                let (a, b) = limit_keys(l);
+                for k in [a, b] {
+                    assert_ne!(cat.t(&k), k, "{lang:?}: {k}");
+                }
+            }
+            for k in ["ai_limits.default", "ai_limits.unit_s", "ai_limits.unit_mb"] {
+                assert!(cat.t(k) != k, "{lang:?}: {k}");
+            }
+            assert!(cat.t("ai_limits.default").contains("{n}"), "{lang:?}");
         }
     }
 

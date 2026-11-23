@@ -13,13 +13,17 @@ use serde_json::{json, Value as J};
 use std::path::Path;
 use std::sync::Arc;
 
-/// Attachments one chat holds at a time.
-pub const MAX_FILES: usize = 12;
-/// All attachments of a chat together.
-pub const MAX_TOTAL: u64 = 120 * 1024 * 1024;
+/// Attachments one chat holds at a time (`limits::ATTACH_FILES`, a setting).
+pub fn max_files() -> usize {
+    ddc_ai::limits::ATTACH_FILES.get_us()
+}
+/// All attachments of a chat together, bytes (`limits::ATTACH_TOTAL`, a setting).
+pub fn max_total() -> u64 {
+    ddc_ai::limits::ATTACH_TOTAL.get() << 20
+}
 /// Pages one `attachments_read` call returns.
-const MAX_READ_PAGES: usize = 10;
-const MAX_READ_ROWS: usize = 500;
+const MAX_READ_PAGES: usize = ddc_ai::limits::ATTACH_READ_PAGES.us();
+const MAX_READ_ROWS: usize = ddc_ai::limits::ATTACH_READ_ROWS.us();
 /// Characters of one text piece in a reply: long lines are wrapped, never cut.
 const PIECE: usize = 110;
 /// A PDF page with less text than this is a drawing: its picture goes along when seen.

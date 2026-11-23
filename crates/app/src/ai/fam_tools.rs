@@ -29,13 +29,13 @@ fn family_read(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
     let text = project_def(&c.ed.model, name)
         .ok_or_else(|| fd::Refusal::UnknownFamily(name.to_string()).wire())?;
     let mut o = Out::new(c.max_chars);
-    o.put("name", &json!(name)).put("text", &json!(text));
+    o.put("name", &json!(name)).put_text("text", &text);
     Ok(o.finish().into())
 }
 
 fn family_reference(c: &mut Core, _a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
     let mut o = Out::new(c.max_chars.max(ddc_ai::family_repair::DSL_REFERENCE.len() + 200));
-    o.put("reference", &json!(ddc_ai::family_repair::DSL_REFERENCE));
+    o.put_own("reference", &json!(ddc_ai::family_repair::DSL_REFERENCE));
     Ok(o.finish().into())
 }
 

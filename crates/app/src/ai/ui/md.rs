@@ -19,7 +19,7 @@ use std::collections::hash_map::DefaultHasher;
 use std::hash::{Hash, Hasher};
 use std::sync::Arc;
 
-const MAX_DEPTH: u8 = 8;
+const MAX_DEPTH: u8 = ddc_ai::limits::MD_DEPTH.u8v();
 /// Blocks this far outside the visible area are not laid out again.
 const CULL_PAD: f32 = 240.0;
 const COPIED_SECS: f64 = 1.5;

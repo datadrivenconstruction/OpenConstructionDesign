@@ -169,7 +169,7 @@ pub fn classify(e: &AiError) -> ErrKind {
 }
 
 /// Longest provider text shown under the hint, in characters.
-const DETAIL_MAX: usize = 300;
+const DETAIL_MAX: usize = ddc_ai::limits::UI_DETAIL.us();
 
 /// The failure's own text (HTTP status, server message, retry-after) as one masked line.
 pub fn err_detail(e: &AiError) -> Option<String> {

@@ -23,8 +23,8 @@ use std::hash::{Hash, Hasher};
 use std::rc::Rc;
 
 const PAGE: usize = 50;
-const MAX_FINDINGS: usize = 200;
-const MAX_COLS: usize = 24;
+const MAX_FINDINGS: usize = ddc_ai::limits::FINDINGS.us();
+const MAX_COLS: usize = ddc_ai::limits::SCHED_COLS.us();
 /// How many rows a filter tests between looks at the cancel token.
 const CANCEL_EVERY: usize = 4096;
 
@@ -1267,7 +1267,7 @@ fn run_checks(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
 
 const REQ_BASIS: &str = "Information requirements only: passing means the listed values are \
     present and well-formed. It is not proof of code compliance.";
-const REQ_LIMIT: u64 = 20;
+const REQ_LIMIT: u64 = ddc_ai::limits::REQ_LIST.n();
 
 /// The stored requirements on the tool's scope, narrowed to `cat` when given.
 fn req_report(c: &Core, a: &J) -> Result<ddc_model::checks::ReqReport, String> {
@@ -1537,7 +1537,7 @@ fn get_plan(c: &mut Core, _a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
 fn list_generators(c: &mut Core, _a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
     let items: Vec<J> = c.gens.iter().map(|g| json!({"id": g.id(), "summary": g.summary(), "variants": g.variants(), "params": g.params().len()})).collect();
     let mut o = out(c);
-    o.put("note", &json!(ddc_gen::SCHEMATIC_NOTE));
+    o.put_own("note", &json!(ddc_gen::SCHEMATIC_NOTE));
     o.list("generators", &items);
     Ok(o.finish().into())
 }
@@ -1571,7 +1571,7 @@ fn script_recipes(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, String>
             let items: Vec<J> = recipes::RECIPES.iter().map(|(n, _)| json!(n)).collect();
             o.put_own("blocks", &json!(recipes::BLOCKS));
             o.list("recipes", &items);
-            o.put("not_scripts", &json!({"lattice_tower": "a steel lattice tower on legs (the 300 m kind, curved legs, platforms, joints) is one run_generator call: script_recipes name lattice_tower"}));
+            o.put_own("not_scripts", &json!({"lattice_tower": "a steel lattice tower on legs (the 300 m kind, curved legs, platforms, joints) is one run_generator call: script_recipes name lattice_tower"}));
         }
     }
     Ok(o.finish().into())
@@ -1607,7 +1607,7 @@ fn describe_generator(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, Str
     o.put("id", &json!(g.id()));
     o.put("summary", &json!(g.summary()));
     o.put("variants", &json!(g.variants()));
-    o.put("note", &json!(ddc_gen::SCHEMATIC_NOTE));
+    o.put_own("note", &json!(ddc_gen::SCHEMATIC_NOTE));
     o.put_own("params", &J::from(params));
     Ok(o.finish().into())
 }

@@ -13,7 +13,7 @@ pub const SERVICE: &str = "ddc-editor";
 /// journal or a log even when a caller forgot to. Short values are not worth matching.
 static KNOWN: Mutex<Vec<String>> = Mutex::new(Vec::new());
 const MIN_KNOWN: usize = 8;
-const MAX_KNOWN: usize = 64;
+const MAX_KNOWN: usize = crate::limits::SECRETS_KNOWN.us();
 
 thread_local! {
     /// The same list per thread: a secret made on this thread is never pushed out of it by

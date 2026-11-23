@@ -20,8 +20,8 @@ use web_time::{Duration, Instant};
 
 const SYSTEM_PROMPT: &str = include_str!("../data/system.md");
 pub const ACTOR_CHAT: &str = "chat";
-const MAX_RETRIES: u32 = 2;
-const MAX_RETRY_WAIT_S: u64 = 60;
+const MAX_RETRIES: u32 = crate::limits::RETRIES.u32v();
+const MAX_RETRY_WAIT_S: u64 = crate::limits::RETRY_WAIT.n();
 const IMAGE_TOKENS: u64 = 1500;
 const CANCEL_POLL: Duration = Duration::from_millis(50);
 const TRUNCATED: &str = "…[truncated]";
@@ -68,18 +68,18 @@ const REPEAT_STOP: u32 = 4;
 const EMPTY_NUDGE: &str = "Your last reply was empty. Continue the task with the tools it needs, or give a final answer that says what was done, what is not done, and why.";
 
 /// Everything one step may bring in. Crossing it ends the turn as `LimitHit("output")`.
-const MAX_STEP_BYTES: usize = 16 * 1024 * 1024;
-const MAX_KEPT_TEXT_CHARS: usize = 256 * 1024;
-const MAX_KEPT_ARGS_BYTES: usize = 1024;
-const MAX_TOOL_ID_BYTES: usize = 128;
+const MAX_STEP_BYTES: usize = crate::limits::STEP_BYTES.us();
+const MAX_KEPT_TEXT_CHARS: usize = crate::limits::KEPT_TEXT.us();
+const MAX_KEPT_ARGS_BYTES: usize = crate::limits::KEPT_ARGS.us();
+const MAX_TOOL_ID_BYTES: usize = crate::limits::TOOL_ID.us();
 #[cfg(test)]
-const MAX_NAME_IN_ERROR_CHARS: usize = registry::MAX_SHOWN_ID;
+const MAX_NAME_IN_ERROR_CHARS: usize = crate::limits::SHOWN_ID.us();
 /// A result of an earlier turn longer than this keeps only its head (the summary comes first).
 const SETTLE_ABOVE_CHARS: usize = 1500;
 const SETTLE_KEEP_CHARS: usize = 400;
 const SETTLED: &str = "…[read in an earlier turn; ask again for the rest]";
 /// How many times one request is shrunk and repeated after `ContextTooLong`.
-const MAX_SHRINKS: u32 = 3;
+const MAX_SHRINKS: u32 = crate::limits::SHRINKS.u32v();
 /// What the history and the panel call a tool outside the catalog. A name from the model
 /// could break the pattern a server enforces, or read like a status line.
 const UNKNOWN_TOOL: &str = "unknown_tool";

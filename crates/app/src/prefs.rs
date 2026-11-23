@@ -108,6 +108,9 @@ pub struct Prefs {
     pub full_axes: bool,
     /// The user turned the ERP link on (opens `.ddclink` files); off until asked.
     pub erp_link: bool,
+    /// Assistant limits the person changed (Settings > AI), by `ddc_ai::limits` key; others keep
+    /// their default. Stored as `ai.limit.<key>=<value>`.
+    pub ai_limits: std::collections::BTreeMap<String, u64>,
     /// Where to save; `None` keeps settings in memory only (screenshots, tests).
     pub path: Option<PathBuf>,
     /// The last write of the settings files failed: not a setting, never written or compared.
@@ -213,6 +216,7 @@ impl Default for Prefs {
             thin_lines: false,
             full_axes: false,
             erp_link: false,
+            ai_limits: Default::default(),
             path: None,
             write_fail: WriteFail::default(),
         }
@@ -298,6 +302,14 @@ impl Prefs {
                 }
                 "look.font" if ddc_ui::theme::UiFont::parse(v).is_some() => p.font = v.into(),
                 "look.text_size" => p.text_size = v.parse().unwrap_or(p.text_size),
+                k if k.starts_with("ai.limit.") => {
+                    let key = &k["ai.limit.".len()..];
+                    if let (Some(l), Ok(n)) = (ddc_ai::limits::find(key), v.parse::<u64>()) {
+                        if let ddc_ai::limits::Tier::Setting { min, max } = l.tier {
+                            p.ai_limits.insert(l.key.to_string(), n.clamp(min, max));
+                        }
+                    }
+                }
                 "look.icons" if ddc_ui::icons::set(v).is_some() => p.icon_set = v.into(),
                 "focus" => p.focus = crate::shell::onboard::clean_focus(v),
                 "onboarded" => p.onboarded = v == "1",
@@ -425,6 +437,7 @@ impl Prefs {
         ) + &format!("snap.px={}\nthin_lines={}\n", self.snap_px, u8::from(self.thin_lines))
           + &format!("full_axes={}\n", u8::from(self.full_axes))
           + &format!("erp_link={}\n", u8::from(self.erp_link))
+          + &self.ai_limits.iter().map(|(k, v)| format!("ai.limit.{k}={v}\n")).collect::<String>()
           + &self.fold.text()
           + &format!(
             "look={}
@@ -487,6 +500,7 @@ look.icons={}
         units::set_frac_denominator(self.frac_denominator);
         units::set_small_area_in2(self.small_area_in2);
         crate::snap_refine::set_snap_px(self.snap_px);
+        ddc_ai::limits::set_overrides(self.ai_limits.iter().map(|(k, v)| (k.as_str(), *v)));
     }
 
     /// A failed write does not stop the work: the settings stay for this session, the failure
@@ -584,6 +598,7 @@ fn prefs_round_trip_and_clamp() {
         thin_lines: true,
         full_axes: true,
         erp_link: true,
+        ai_limits: [("copies".to_string(), 400)].into(),
         path: None,
         write_fail: WriteFail::default(),
     };
@@ -777,4 +792,19 @@ fn missing_pref_defaults_off() {
 snap.px=12
 ").thin_lines);
     assert!(!Prefs::default().thin_lines);
+}
+
+#[cfg(test)]
+#[test]
+fn ai_limit_settings_persist_clamp_and_apply() {
+    let p = Prefs::parse("ai.limit.copies=900\nai.limit.terrain_points=1\nai.limit.query_page=5\nai.limit.nope=3\n");
+    assert_eq!(p.ai_limits.get("copies"), Some(&900));
+    assert_eq!(p.ai_limits.get("terrain_points"), Some(&100), "kept within bounds");
+    assert!(!p.ai_limits.contains_key("query_page"), "a guard is not a setting");
+    assert_eq!(Prefs::parse(&p.text()).ai_limits, p.ai_limits);
+    p.apply();
+    assert_eq!(crate::ai::modify_cmds::max_copies(), 900);
+    assert!(ddc_ai::limits::describe("copy_elements").contains("900"));
+    Prefs::default().apply();
+    assert_eq!(crate::ai::modify_cmds::max_copies(), 200);
 }

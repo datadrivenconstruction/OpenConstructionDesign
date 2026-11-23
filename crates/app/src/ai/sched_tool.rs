@@ -11,10 +11,10 @@ use crate::schedule::{self, Table};
 use ddc_ai::CallCx;
 use serde_json::{json, Value as J};
 
-const MAX_COLS: usize = 24;
-const MAX_GROUPS: usize = 3;
+const MAX_COLS: usize = ddc_ai::limits::SCHED_COLS.us();
+const MAX_GROUPS: usize = ddc_ai::limits::SCHED_GROUPS.us();
 /// Group headings named in the reply: the rest are counted.
-const MAX_HEADS: usize = 40;
+const MAX_HEADS: usize = ddc_ai::limits::SCHED_HEADS.us();
 
 /// What the card keeps of a made schedule.
 #[derive(Clone, Debug, PartialEq)]

@@ -89,7 +89,7 @@ pub fn delete_option(store: &OptionStore, dir: &Path, id: i64) -> Result<Option<
 }
 
 /// Metric names listed per option; the values stay in the option's own tools.
-const MAX_METRIC_KEYS: usize = 8;
+const MAX_METRIC_KEYS: usize = ddc_ai::limits::METRIC_KEYS.us();
 
 /// Recipe folder and recipe database of the AI worker: always inside the session folder, for a
 /// saved project too. The worker never opens the project file for writing; Apply copies the

@@ -11,7 +11,7 @@ use eframe::egui::{self, Color32, Pos2, Rect};
 use std::path::PathBuf;
 
 /// Most marks one session keeps; the oldest go first.
-pub const MAX_MARKS: usize = 100;
+pub const MAX_MARKS: usize = ddc_ai::limits::POINT_MARKS.us();
 
 #[derive(Clone, Debug, PartialEq)]
 pub enum MarkState {

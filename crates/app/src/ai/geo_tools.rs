@@ -11,7 +11,7 @@ use ddc_ops::{Actor, Envelope, GeoOp, Group, Op};
 use serde_json::{json, Value as J};
 
 /// Operations of one `create_geometry` call.
-pub const MAX_GEO_OPS: usize = ddc_ai::catalog::MAX_GEO_OPS;
+pub const MAX_GEO_OPS: usize = ddc_ai::limits::GEO_OPS.us();
 const UNIT_KINDS: [&str; 4] = ["length", "area", "volume", "angle"];
 
 /// Names of the family's parameters that are not quantities (counts, switches, plain

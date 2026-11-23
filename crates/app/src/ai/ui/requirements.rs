@@ -20,9 +20,9 @@ use egui::{self, RichText, Ui};
 use std::path::Path;
 
 /// Rows of the manual-work list; the report workbook has them all.
-const MANUAL_MAX: usize = 50;
+const MANUAL_MAX: usize = ddc_ai::limits::REQ_MANUAL.us();
 /// Refused cells shown under a refused book.
-const ERRORS_MAX: usize = 20;
+const ERRORS_MAX: usize = ddc_ai::limits::REQ_ERRORS.us();
 /// Requirements named on an offer card.
 const OFFER_LINES: usize = 6;
 /// Elements named in the fix prompt; the assistant runs the check for the rest.

@@ -6,7 +6,7 @@
 use ddc_model::MetricsRow;
 use std::collections::BTreeMap;
 
-pub const TILES_MAX: usize = 4;
+pub const TILES_MAX: usize = ddc_ai::limits::COMPARE_TILES.us();
 /// Message keys of the two empty faces.
 pub const KEY_EMPTY: &str = "ai.cmp.empty";
 pub const KEY_NO_MATCH: &str = "ai.cmp.no_match";

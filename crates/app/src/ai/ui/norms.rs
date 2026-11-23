@@ -26,7 +26,7 @@ use egui::{self, RichText, Ui};
 use std::path::Path;
 
 /// Rows drawn; the exports carry every finding.
-const ROWS_MAX: usize = 200;
+const ROWS_MAX: usize = ddc_ai::limits::NORM_ROWS.us();
 /// Elements named in the fix prompt.
 const PROMPT_ELS: usize = 40;
 

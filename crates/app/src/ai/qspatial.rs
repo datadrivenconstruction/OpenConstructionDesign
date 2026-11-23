@@ -12,9 +12,8 @@ use ddc_geom::predicates::point_in_ring;
 use ddc_geom::V2;
 use serde_json::{json, Value as J};
 
-const DEFAULT_LIMIT: usize = 20;
-const MAX_LIMIT: usize = 100;
-const DEFAULT_RAY_MAX: f64 = 100.0;
+const DEFAULT_LIMIT: usize = ddc_ai::limits::QUERY_DEFAULT.us();
+const DEFAULT_RAY_MAX: f64 = ddc_ai::limits::RAY_DEFAULT.f();
 const MODES: [&str; 5] = ["near", "inside", "intersects", "on_level", "ray"];
 
 /// One element with its axis-aligned bounds in metres.
@@ -53,6 +52,9 @@ pub struct Hit {
 pub struct Found {
     pub mode: &'static str,
     pub total: usize,
+    /// Rows skipped before `hits`; `note` says when the asked limit was lowered.
+    pub offset: usize,
+    pub note: Option<String>,
     pub hits: Vec<Hit>,
 }
 
@@ -289,12 +291,10 @@ pub fn run(sp: &Space, a: &J) -> Result<Found, String> {
             .then(x.id.cmp(&y.id))
             .then(x.cat.cmp(y.cat))
     });
-    let limit = a["limit"]
-        .as_u64()
-        .map_or(DEFAULT_LIMIT, |n| (n as usize).clamp(1, MAX_LIMIT));
+    let (limit, offset, note) = ddc_ai::limits::page_args(a, DEFAULT_LIMIT, &ddc_ai::limits::QUERY_PAGE);
     let total = hits.len();
-    hits.truncate(limit);
-    Ok(Found { mode, total, hits })
+    let hits = hits.into_iter().skip(offset).take(limit).collect();
+    Ok(Found { mode, total, offset, note, hits })
 }
 
 /// The reply a model reads: units first, then counts, then the rows.
@@ -317,8 +317,17 @@ pub fn answer(sp: &Space, a: &J, max_chars: usize) -> Result<Reply, String> {
     o.put("mode", &json!(f.mode));
     o.put("total", &json!(f.total));
     o.put("returned", &json!(rows.len()));
-    o.put("more", &json!(f.total - rows.len()));
-    o.list("hits", &rows);
+    o.put("more", &json!(f.total - f.offset.min(f.total) - rows.len()));
+    if f.offset > 0 || f.offset + rows.len() < f.total {
+        o.put_own("truncated", &ddc_ai::limits::truncated(f.offset, rows.len(), f.total));
+    }
+    if let Some(n) = &f.note {
+        o.put_own("limit_note", &json!(n));
+    }
+    let n = o.list("hits", &rows);
+    if n < rows.len() {
+        o.put_own("next", &json!({"offset": f.offset + n}));
+    }
     Ok(o.finish())
 }
 
@@ -430,6 +439,26 @@ mod tests {
         // the default limit applies without the argument
         let f = run(&sp, &json!({"on_level": 1})).unwrap();
         assert_eq!(f.hits.len(), 20);
+    }
+
+    #[test]
+    fn a_cut_page_says_shown_of_total_and_where_to_go_on() {
+        let sp = Space {
+            els: (1..=30).map(|i| cube("wall", i, i as f64 * 2.0)).collect(),
+            rooms: vec![],
+        };
+        let q = json!({"near": {"point": [0.0, 0.0, 0.0], "radius": 1000.0}, "limit": 10});
+        let v: J = serde_json::from_str(&answer(&sp, &q, 4000).unwrap().text).unwrap();
+        assert_eq!(v["truncated"]["note"], "truncated: shown 10 of 30; next: offset=10");
+        let next = v["truncated"]["next"]["offset"].as_u64().unwrap();
+        let q = json!({"near": {"point": [0.0, 0.0, 0.0], "radius": 1000.0}, "limit": 10, "offset": next});
+        let v: J = serde_json::from_str(&answer(&sp, &q, 4000).unwrap().text).unwrap();
+        assert_eq!(v["hits"][0]["ref"], "wall:11");
+        assert_eq!(v["more"], 10);
+        // an asked limit over the cap is lowered and said so
+        let q = json!({"near": {"point": [0.0, 0.0, 0.0], "radius": 1000.0}, "limit": 500});
+        let v: J = serde_json::from_str(&answer(&sp, &q, 8000).unwrap().text).unwrap();
+        assert!(v["limit_note"].as_str().unwrap().contains("query_page"), "{v}");
     }
 
     #[test]

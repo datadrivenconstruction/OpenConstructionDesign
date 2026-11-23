@@ -39,7 +39,7 @@ use std::sync::{mpsc, Arc, OnceLock};
 use std::thread;
 use web_time::{Duration, Instant};
 
-const DIFF_LIMIT: usize = 200_000;
+const DIFF_LIMIT: usize = ddc_ai::limits::DIFF_CHARS.us();
 const SYNC_GAP: Duration = Duration::from_millis(500);
 const SYNC_RETRY: Duration = Duration::from_secs(5);
 pub const CONFIRM_TTL: Duration = Duration::from_secs(600);

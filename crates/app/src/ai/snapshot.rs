@@ -25,9 +25,9 @@ use std::sync::mpsc;
 use std::time::Duration;
 
 /// Longest side of an image the model may ask for.
-pub const MAX_SIDE: u32 = 1280;
+pub const MAX_SIDE: u32 = ddc_ai::limits::SNAPSHOT_SIDE.u32v();
 /// A picture heavier than this is drawn again, smaller.
-pub const MAX_PNG: usize = 1_500_000;
+pub const MAX_PNG: usize = ddc_ai::limits::SNAPSHOT_PNG.us();
 /// A label is hidden when something this much nearer than its point stands in the way.
 const SEE_TOL: f32 = 0.01;
 /// Highlight colour of 3D images; plans use the screen's selection look.

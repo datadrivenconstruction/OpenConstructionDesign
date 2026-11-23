@@ -14,9 +14,9 @@ use serde_json::{json, Value as J};
 use std::collections::HashMap;
 
 /// Most targets one question carries.
-pub const MAX_TARGETS: usize = 50;
+pub const MAX_TARGETS: usize = ddc_ai::limits::POINT_TARGETS.us();
 /// Most properties one target carries.
-pub const MAX_PROPS: usize = 30;
+pub const MAX_PROPS: usize = ddc_ai::limits::POINT_PROPS.us();
 /// A hit this close to a face plane (model units) belongs to that face.
 const FACE_TOL: f64 = 1e-3;
 

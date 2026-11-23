@@ -29,7 +29,7 @@ pub const HANDLERS: &[(&str, Handler)] = &[
 ];
 
 /// Legend rows named one by one; rarer values share one "other" row.
-pub const MAX_ROWS: usize = 24;
+pub const MAX_ROWS: usize = ddc_ai::limits::LEGEND_ROWS.us();
 /// Longest target text kept on a result card.
 const WHAT_CHARS: usize = 120;
 

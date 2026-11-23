@@ -19,17 +19,17 @@ use web_time::{Duration, Instant};
 const ENDPOINT: &str = "/mcp";
 const ACCEPT_POLL: Duration = Duration::from_millis(15);
 const READ_SLICE: Duration = Duration::from_millis(250);
-const WRITE_TIMEOUT: Duration = Duration::from_secs(30);
-const REFUSE_WRITE_TIMEOUT: Duration = Duration::from_millis(200);
+const WRITE_TIMEOUT: Duration = crate::limits::MCP_WRITE_TIMEOUT.dur();
+const REFUSE_WRITE_TIMEOUT: Duration = crate::limits::MCP_REFUSE_TIMEOUT.dur();
 const DRAIN_BYTES: u64 = 1 << 20;
 const DRAIN_WAIT: Duration = Duration::from_millis(100);
 /// There is no open connection to watch: an agent counts as connected while it keeps calling.
 const CONNECTED_WINDOW: Duration = Duration::from_secs(120);
-const MAX_CLIENTS: usize = 64;
-const MAX_SESSIONS: usize = 32;
+const MAX_CLIENTS: usize = crate::limits::MCP_CLIENTS.us();
+const MAX_SESSIONS: usize = crate::limits::MCP_SESSIONS.us();
 const SESSION_ID_BYTES: usize = 16;
 /// Reads kept while the editor does not drain them; the oldest go first.
-const MAX_RESOURCE_READS: usize = 256;
+const MAX_RESOURCE_READS: usize = crate::limits::MCP_RESOURCE_READS.us();
 const BIND_TRIES: usize = 8;
 
 #[derive(Clone, Debug)]

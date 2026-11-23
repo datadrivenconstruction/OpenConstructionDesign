@@ -304,7 +304,7 @@ fn compare_variants(c: &mut Core, a: &J, _: &CallCx<'_>) -> Result<Done, String>
 fn regenerate(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let cur = of(c, a)?;
     let (next, asked) = if let Some(k) = a["variant"].as_u64() {
-        let v = found(a, &cur, gr::MAX_VARIANTS)?;
+        let v = found(a, &cur, gr::max_variants())?;
         let x = v
             .chosen
             .get((k as usize).saturating_sub(1))

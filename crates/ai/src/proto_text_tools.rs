@@ -18,10 +18,10 @@ const CLOSE: &[u8] = b"```";
 /// model as a tool error it can correct, instead of ending the turn as an answer.
 const INVALID_BLOCK: &str = "invalid_tool_block";
 /// A block is the arguments plus a little wrapping, so one limit serves both.
-const MAX_HOLD_BYTES: usize = MAX_TOOL_ARGS_BYTES;
+const MAX_HOLD_BYTES: usize = crate::limits::TOOL_ARGS_BYTES.us();
 /// Each fence inside an unfinished block re-parses everything held: without a bound,
 /// one answer full of fences costs minutes that cancellation cannot interrupt.
-const MAX_FENCE_RETRIES: u32 = 64;
+const MAX_FENCE_RETRIES: u32 = crate::limits::FENCE_RETRIES.u32v();
 const FEED_PIECE_BYTES: usize = 64 * 1024;
 
 pub(crate) struct TextToolsProvider {

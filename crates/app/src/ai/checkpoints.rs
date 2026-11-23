@@ -9,9 +9,9 @@ use ddc_model::{ElKey, Model};
 use std::collections::{BTreeMap, BTreeSet, HashMap, VecDeque};
 
 /// Marks of one session; the oldest gives way.
-pub const MAX_POINTS: usize = 32;
+pub const MAX_POINTS: usize = ddc_ai::limits::CHECKPOINTS.us();
 /// Finding sets kept besides the marks' own (full runs): bounded the same way.
-const MAX_LEDGER: usize = 64;
+const MAX_LEDGER: usize = ddc_ai::limits::CHECKPOINT_LEDGER.us();
 
 /// A finding's identity: rule, message and the elements it names.
 pub type Print = HashMap<String, Vec<ElKey>>;

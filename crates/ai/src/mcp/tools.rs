@@ -136,7 +136,7 @@ pub fn list_json() -> &'static J {
     static LIST: OnceLock<J> = OnceLock::new();
     LIST.get_or_init(|| {
         let tool = |s: &ToolSpec, schema: J| {
-            json!({"name": s.name, "description": s.summary, "inputSchema": schema,
+            json!({"name": s.name, "description": crate::limits::with_limits(s.name, s.summary), "inputSchema": schema,
                 "annotations": annotations(s),
                 "_meta": {"ddc/version": s.version, "ddc/kind": s.kind.as_str()}})
         };

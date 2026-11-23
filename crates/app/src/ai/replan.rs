@@ -13,7 +13,7 @@ use serde_json::{json, Value as J};
 use std::collections::HashSet;
 
 /// Automatic replans one item may go through; after that the person decides.
-pub const MAX_TRIES: u8 = 2;
+pub const MAX_TRIES: u8 = ddc_ai::limits::REPLAN_TRIES.u8v();
 
 /// `ids` and every item that depends on one of them, in plan order.
 pub fn with_dependents(items: &[PlanItem], ids: &[u32]) -> Vec<u32> {

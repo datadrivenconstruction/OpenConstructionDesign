@@ -229,7 +229,7 @@ fn stats_out(r: &ScriptRun) -> J {
 }
 
 /// Most characters of a script built from parts.
-const MAX_JOINED: usize = 8 * ddc_ai::catalog::MAX_SCRIPT_CHARS;
+const MAX_JOINED: usize = ddc_ai::limits::SCRIPT_JOINED.us();
 
 /// A call's script text with the parts kept before it. `None`: a part was kept (`more`) and
 /// nothing runs yet. A model whose reply is cut by its output limit cannot send a long

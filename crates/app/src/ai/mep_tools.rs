@@ -26,7 +26,7 @@ pub const HANDLERS: &[(&str, Handler)] = &[
 ];
 
 /// Fixtures placed per item at most.
-const MAX_FIXTURES: usize = 200;
+const MAX_FIXTURES: usize = ddc_ai::limits::FIXTURES.us();
 /// Riser offsets of the water and drain networks from the given point, m.
 const RISER_STEP: [(SystemKind, f64); 3] = [
     (SystemKind::ColdWater, 0.0),

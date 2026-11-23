@@ -11,9 +11,9 @@ use serde_json::{json, Value as J};
 use std::collections::BTreeMap;
 
 /// The answer stays under this many bytes: counts stay exact, lists give way.
-pub const MAX_BYTES: usize = 8 * 1024;
-const MAX_QTY: usize = 24;
-const MAX_FINDINGS: usize = 20;
+pub const MAX_BYTES: usize = ddc_ai::limits::RECEIPT_BYTES.us();
+const MAX_QTY: usize = ddc_ai::limits::RECEIPT_QTY.us();
+const MAX_FINDINGS: usize = ddc_ai::limits::RECEIPT_FINDINGS.us();
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct FindingBrief {

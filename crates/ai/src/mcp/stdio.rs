@@ -10,10 +10,9 @@ use serde_json::json;
 use std::io::{self, BufRead, Read, Write};
 use std::time::Duration;
 
-const MAX_LINE: usize = 4 << 20;
-const MAX_REPLY: u64 = 64 << 20;
-const CONNECT_TIMEOUT: Duration = Duration::from_secs(5);
-const READ_TIMEOUT: Duration = Duration::from_secs(300);
+const MAX_LINE: usize = crate::limits::MCP_LINE.us();
+const MAX_REPLY: u64 = crate::limits::MCP_REPLY.n();
+const CONNECT_TIMEOUT: Duration = crate::limits::MCP_CONNECT_TIMEOUT.dur();
 const KEY_VERSION: &str = "io.modelcontextprotocol/protocolVersion";
 /// Outside the range the protocol reserves: errors of this bridge, not of the editor.
 const BRIDGE_ERROR: i64 = -31000;
@@ -53,7 +52,7 @@ impl Bridge {
         let agent = ureq::AgentBuilder::new()
             .redirects(0)
             .timeout_connect(CONNECT_TIMEOUT)
-            .timeout_read(READ_TIMEOUT)
+            .timeout_read(crate::limits::MCP_READ_TIMEOUT.get_dur())
             .try_proxy_from_env(false)
             .build();
         Bridge {

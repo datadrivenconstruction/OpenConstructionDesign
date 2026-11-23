@@ -7,9 +7,9 @@ use std::collections::{BTreeMap, HashMap};
 use std::sync::Arc;
 
 /// Older sets go first: one long session cannot hold unbounded id lists.
-const MAX_SETS: usize = 64;
+const MAX_SETS: usize = ddc_ai::limits::SETS.us();
 /// About 110 MB of keys and marks; the newest set stays whatever its size.
-const MAX_KEYS: usize = 4_000_000;
+const MAX_KEYS: usize = ddc_ai::limits::SET_KEYS.us();
 
 /// (table, id) to (category, mark) of every element of a copy: `rows::marks`.
 pub type Marks = HashMap<(&'static str, i64), (&'static str, u32)>;

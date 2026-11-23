@@ -82,7 +82,7 @@ pub struct ToolSpec {
 pub const VIEW_SNAPSHOT: &str = "view_snapshot";
 pub const RENDER_PLAN: &str = "render_plan";
 pub const RENDER_3D: &str = "render_3d";
-pub const MAX_CREATE_ITEMS: usize = 200;
+pub const MAX_CREATE_ITEMS: usize = crate::limits::CREATE_ITEMS.us();
 /// Category words `create_elements` takes; the app answers every one of them.
 pub const CREATE_CATS: [&str; 20] = [
     "wall", "door", "window", "floor", "room", "column", "beam", "comp", "ceiling", "roof",
@@ -90,9 +90,9 @@ pub const CREATE_CATS: [&str; 20] = [
     "member_type", "comp_type",
 ];
 const CREATE_CATS_HELP: &str = "One of wall, door, window, floor, room, column, beam, comp, ceiling, roof, stair, mep, curtain, shaft, grid, steel_conn; or a type table (wall_type, slab_type, member_type, comp_type): then each item is a type {name, layers | thickness | shape, material | family}. An element's type goes in `type` (or under its table word, e.g. wall_type)";
-const MAX_TITLE_CHARS: usize = 200;
+const MAX_TITLE_CHARS: usize = crate::limits::TITLE_CHARS.us();
 /// Longest reason kept beside a plan item; the app caps again on its side.
-pub const MAX_WHY_CHARS: usize = 300;
+pub const MAX_WHY_CHARS: usize = crate::limits::WHY_CHARS.us();
 
 fn no_args() -> Schema {
     obj(vec![])
@@ -369,6 +369,7 @@ fn query_spatial() -> Schema {
         ),
         ("cats", opt(arr(str_()))),
         ("limit", opt(int())),
+        ("offset", opt(desc("Rows to skip: the `next.offset` of the previous page", int()))),
     ])
 }
 
@@ -388,6 +389,7 @@ fn query_relations() -> Schema {
             ]),
         ),
         ("limit", opt(int())),
+        ("offset", opt(desc("Rows to skip: the `next.offset` of the previous page", int()))),
     ])
 }
 
@@ -628,7 +630,7 @@ fn array_elements() -> Schema {
         ("why", why()),
         ("target", target()),
         ("mode", enum_(&["linear", "radial"])),
-        ("count", desc("Instances including the original", int_range(2, 201))),
+        ("count", desc("Instances including the original", int_range(2, crate::limits::COPIES.hi() as i64 + 1))),
         ("step", opt(xy("linear: [dx, dy] in metres between neighbours, or first to last with fit"))),
         ("fit", opt(desc("linear: step runs from the first to the last instance", bool_()))),
         ("center", opt(xy("radial: centre [x, y] in metres"))),
@@ -741,7 +743,7 @@ fn create_terrain() -> Schema {
     obj(vec![
         ("title", title()),
         ("why", why()),
-        ("points", opt(desc("Survey points [[x, y, z], ...] m, 3 to 5000", arr_max(arr_max(num(), 3), 5000)))),
+        ("points", opt(desc("Survey points [[x, y, z], ...] m, 3 or more", arr_max(arr_max(num(), 3), crate::limits::TERRAIN_POINTS.hi() as usize)))),
         ("boundary", opt(desc("Plan outline [[x, y], ...] m; without points the terrain is a plane over it", arr_max(xy(), 500)))),
         ("z", opt(desc("Without points: height at the outline's centre, m; default 0", num()))),
         ("slope", opt(desc("Without points: fall in percent, 0..100; default 0", num()))),
@@ -809,7 +811,7 @@ fn add_param() -> Schema {
     ])
 }
 
-pub const MAX_GEO_OPS: usize = 64;
+pub const MAX_GEO_OPS: usize = crate::limits::GEO_OPS.us();
 pub const MEASURE: &str = "measure";
 pub const GET_REFERENCE: &str = "get_reference";
 pub const MEASURE_LIST: &str = "measure_list";
@@ -957,7 +959,7 @@ const DEFINE_FAMILY_HELP: &str = "Plan: define a parametric family from structur
 const CREATE_GEOMETRY_HELP: &str = "Plan: create real geometry with geometry operations: {action: solid|mass|boolean|void|reshape|convert|freeform|edit_point|thicken|trim|rebuild|panelize|surface_shell|gridshell|member|plate, ...} or {op: pattern, ...}. Forms are extrude, revolve, sweep, loft, swept_blend of profiles (rect, circle, ring, polygon, I, H, tube...). A freeform NURBS surface or shell (roof, canopy, facade) is {action: freeform, level, surface: {by: loft, curves: [{pts: [P3...], fit: through|control|polyline, degree}]} | {by: ruled, a, b} | {by: revolve, profile, axis_a, axis_b, angle} | {by: points, rows: [[P3...]...]} | {by: network, u_curves, v_curves, degree, tolerance} (every u-curve crosses every v-curve) | {by: dome, center, radius, rise} | {by: vault, a, b, span, rise}, thickness, side: normal|reverse|center, trim: {outer, holes} in 0..1 uv}; edit_point moves control point i, j; thicken sets the shell; trim cuts it; rebuild {target, count_u, count_v, degree_u, degree_v} gives a new control net and reports the deviation. A curtain system on a freeform surface is {action: panelize, host, columns, rows, pattern: quad|triangle|diamond, planarize: rounds, mullion: {width, depth}, glass, flat, cold}; columns and rows are {by: count, n} | {by: equal, n} (equal length) | {by: width, width}, rows also {by: heights, heights: [...]} (floor lines); the receipt reports flat, cold-bent and hot-bent panels. A roof or slab on a freeform surface is {action: surface_shell, host, kind: roof|slab, layers: [{thickness, material, name}], side: normal|reverse|center, openings: [[P2...]] (plan polygons cut through)}; it follows later host edits. A diagrid, gridshell or cable net is {action: gridshell, level, host: {shape: dome, center, radius, rise, oculus} | {shape: vault, a, b, span, rise} | {shape: hypar, center, lx, ly, rise, angle} | {shape: plane, corner, w, h, angle} | {shape: paraboloid, vertex, radius, depth, hub, tilt, azimuth} (dish, antenna reflector; stands on its hub ring), kind: diagrid|gridshell|cable_net, pattern: diagrid|triangular|quad_braced|quad, count_u, count_v, supports: base|edges|corners, member: \"CHS 88.9x5\" (catalogue section), edge, node (ball diameter)}. A real beam or brace row is {action: member, level, start, end, section: \"CHS 88.9x5\", role: beam|brace, rotation}; a plate is {action: plate, level, outline: [P3...], thickness, openings: [[P3...]], material}: flat ones become slabs with holes, upright rectangular ones walls with a void opening per opening. Write lengths as bare numbers in metres and points as [x, y, z] (shortest); an angle is {v, unit}. Repeat a part with {op: pattern} instead of writing it again. A boolean works on masses and keeps both operands (`keep_tool` true): it adds a linked result mass, so make the operand with action mass, not solid. Later operations of the call name the solid, mass, freeform, panelize, surface_shell, gridshell, member or plate op i of `ops` as {by: new, slot: i}. Draft only: nothing reaches the model before Apply.";
 
 /// Longest script text a call takes.
-pub const MAX_SCRIPT_CHARS: usize = 256 * 1024;
+pub const MAX_SCRIPT_CHARS: usize = crate::limits::SCRIPT_CHARS.us();
 
 const RUN_SCRIPT_HELP: &str = "Plan: build geometry with a deterministic script, for many parts (frames, domes, stairs, patterns). Syntax: `local x = 1`, `for i = 1, n do ... end`, `if a then ... end`, `function f(a) return a end`, tables {1, 2} and {k = v}, `--` comments, math.*. No files, network, clock or random. Units in the script are metres and radians; write lengths as len(\"1200 mm\") or mm(1200), angles as deg(30). Stdlib: param(name, default, {min, max}) (bounds of a value with a unit carry a unit too: min = \"2 m\") declares an input the person can change later (default \"12 m\" is a length); vec3(x, y, z) with + - * and :dot :cross :length :unit; translate(v), rot_x/rot_y/rot_z(a), rot(axis, a), m1 * m2, m * v, m * form; profile.rect(w, h), circle(r), ring(ro, ri), chs(d, t), rhs(w, h, t), shs(b, t), i, h, c, t, l(h, b, t), polygon({{x, y}, ...}), named(\"IPE 200\") from the catalog, list(); forms: extrude(prof, a, b) a member from point a to b, sweep(path, prof) with polyline({p, ...}, closed) or arc(centre, r, a0, a1) in plan, revolve(prof, centre, r, angle), loft({{profile = p, at = v}, ...}), transform(form, m); pattern(form, n, m), pattern_linear(form, n, step), pattern_radial(form, n, total_angle, centre) give lists of forms; part(name, form, material) and parts(name, forms, material) make elements; group(name, function or list) and define_component(name, forms) + place(comp, at, rot, role) give parts stable keys group/name (a role such as \"blade\" or \"gondola\" also makes the placed group a component of that name, which counts and schedules read); boolean(cut|union|intersect, part, form) turns an extruded part without a material into a mass and adds the tool and the linked result as masses, a rerun cannot change such a part; constrain(coincident|distance|parallel|perpendicular, a, b, value) is checked at once to 1 mm; measure(a, b) or measure(x) reports a length; assert(cond, message). Blocks build whole structures from one options table with shared nodes: tower, space_frame, arch, vault, helix_stair, helix_ramp, fins, bridge, stadium_roof, surface_grid over surf.*, hypar_umbrella, membrane, perforated_panel; end with audit{strict = true} (missed nodes, clashes, floating parts); script_recipes lists their options and worked examples. A script longer than one reply allows (a call cut off as invalid JSON) goes in parts: run_script with more=true for each part but the last. Limits: 2 s CPU, 256 MB, 200000 steps and 20000 elements unless allow_many. Errors come back with line, column and a hint. Apply stores the script as a recipe; rerun_recipe changes its params later. Draft only: nothing reaches the model before Apply.";
 
@@ -1446,7 +1448,7 @@ fn conflicts() -> Schema {
 }
 
 fn compare_variants() -> Schema {
-    obj(vec![("n", opt(int_range(1, 4))), ("seed", opt(int())), ("vary", opt(gen_vary())), gen_project()])
+    obj(vec![("n", opt(int_range(1, crate::limits::VARIANTS.hi() as i64))), ("seed", opt(int())), ("vary", opt(gen_vary())), gen_project()])
 }
 
 fn regenerate() -> Schema {
@@ -1454,7 +1456,7 @@ fn regenerate() -> Schema {
         ("title", opt(title())),
         ("why", why()),
         ("changes", opt(desc("Spec merge patch", map()))),
-        ("variant", opt(desc("From compare_variants, same seed and vary", int_range(1, 4)))),
+        ("variant", opt(desc("From compare_variants, same seed and vary", int_range(1, crate::limits::VARIANTS.hi() as i64)))),
         ("seed", opt(int())),
         ("vary", opt(gen_vary())),
         gen_project(),
@@ -1813,9 +1815,9 @@ pub const fn draft(name: &'static str, summary: &'static str, input: fn() -> Sch
 }
 
 /// The longest family definition text, bytes.
-pub const MAX_FAMILY_TEXT: usize = 200 * 1024;
+pub const MAX_FAMILY_TEXT: usize = crate::limits::FAMILY_TEXT.us();
 /// The longest family or draft name, characters.
-pub const MAX_FAMILY_NAME: usize = 80;
+pub const MAX_FAMILY_NAME: usize = crate::limits::FAMILY_NAME.us();
 
 fn family_text_only() -> Schema {
     obj(vec![(
@@ -2148,7 +2150,7 @@ pub fn schemas_at(ceiling: Tier, images: bool) -> Vec<ToolSchema> {
         .filter(|s| allowed_at(s, ceiling, images))
         .map(|s| ToolSchema {
             name: s.name.to_string(),
-            description: s.summary.to_string(),
+            description: crate::limits::with_limits(s.name, s.summary),
             input_schema: (s.input)().to_json(),
         })
         .collect()
@@ -2168,7 +2170,7 @@ pub fn op_tool_schemas() -> Vec<ToolSchema> {
     let target = || def_ref("Targets");
     let tool = |name: &str, summary: &str, input: J| ToolSchema {
         name: name.to_string(),
-        description: summary.to_string(),
+        description: crate::limits::with_limits(name, summary),
         input_schema: input,
     };
     vec![

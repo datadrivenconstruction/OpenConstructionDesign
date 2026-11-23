@@ -8,15 +8,15 @@ use ddc_render::{Aabb, OrbitCamera};
 use serde_json::{json, Value as J};
 
 /// Longest image side the model may ask for.
-pub const MAX_SIDE: u32 = 1280;
+pub const MAX_SIDE: u32 = ddc_ai::limits::RENDER_SIDE.u32v();
 /// Total pixel budget of one render.
-pub const MAX_PIXELS: u64 = 1_000_000;
+pub const MAX_PIXELS: u64 = ddc_ai::limits::RENDER_PIXELS.n();
 /// Plan scale limits, pixels per metre.
 pub const MIN_SCALE: f64 = 0.5;
-pub const MAX_SCALE: f64 = 2000.0;
+pub const MAX_SCALE: f64 = ddc_ai::limits::RENDER_SCALE.f();
 pub const DEFAULT_SCALE: f64 = 50.0;
 /// Legend rows kept; the reply says how many were cut.
-pub const MAX_LEGEND: usize = 60;
+pub const MAX_LEGEND: usize = ddc_ai::limits::RENDER_LEGEND.us();
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct PlanReq {

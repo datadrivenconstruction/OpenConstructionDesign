@@ -11,7 +11,7 @@ use ddc_ui::theme::Role;
 use ddc_ui::{Catalog, Lang};
 use egui::{self, RichText, Ui};
 
-const FINDINGS_MAX: usize = 500;
+const FINDINGS_MAX: usize = ddc_ai::limits::UI_FINDINGS.us();
 /// Height share of the tab the requirements section takes at most.
 const REQ_SHARE: f32 = 0.45;
 

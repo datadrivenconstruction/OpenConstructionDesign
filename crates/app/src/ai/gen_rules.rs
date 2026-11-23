@@ -18,7 +18,9 @@ use serde_json::{json, Map, Value as J};
 pub const VARY: [&str; 4] = ["massing.form", "grid.span", "depth.band", "facade.system"];
 
 /// Most variants offered at once.
-pub const MAX_VARIANTS: usize = 4;
+pub fn max_variants() -> usize {
+    ddc_ai::limits::VARIANTS.get_us()
+}
 
 /// One rule as the window and `list_rules` show it.
 #[derive(Clone, Debug)]
@@ -425,7 +427,7 @@ pub fn vary_cfg(brief: &J, n: usize, seed: u64, vary: &[String]) -> Result<VaryC
         VARY.iter().filter(|r| !vary.iter().any(|v| v == *r)).map(|r| r.to_string()).collect()
     };
     Ok(VaryCfg {
-        n: n.clamp(1, MAX_VARIANTS),
+        n: n.clamp(1, max_variants()),
         seed,
         fixed,
         locks: locks::of_brief(brief)?,
@@ -578,7 +580,7 @@ mod tests {
     fn variants_refuse_an_unknown_axis() {
         assert!(vary_cfg(&brief(), 3, 0, &["corridor.width".into()]).is_err());
         let c = vary_cfg(&brief(), 9, 1, &["grid.span".into()]).unwrap();
-        assert_eq!(c.n, MAX_VARIANTS);
+        assert_eq!(c.n, max_variants());
         assert_eq!(c.fixed.len(), VARY.len() - 1);
     }
 }

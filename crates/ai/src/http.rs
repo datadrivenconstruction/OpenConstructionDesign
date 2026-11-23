@@ -21,14 +21,12 @@ use std::thread;
 use std::time::Duration;
 
 const POLL: Duration = Duration::from_millis(50);
-const CONNECT_TIMEOUT: Duration = Duration::from_secs(10);
-const READ_TIMEOUT: Duration = Duration::from_secs(120);
-const READ_TIMEOUT_LOCAL: Duration = Duration::from_secs(600);
-const WRITE_TIMEOUT: Duration = Duration::from_secs(60);
-const LIST_MODELS_TIMEOUT: Duration = Duration::from_secs(30);
-const MAX_ERROR_BODY: u64 = 64 * 1024;
-const MAX_ERROR_CHARS: usize = 2000;
-const MAX_MODELS_BODY: u64 = 4 * 1024 * 1024;
+const CONNECT_TIMEOUT: Duration = crate::limits::HTTP_CONNECT_TIMEOUT.dur();
+const WRITE_TIMEOUT: Duration = crate::limits::HTTP_WRITE_TIMEOUT.dur();
+const LIST_MODELS_TIMEOUT: Duration = crate::limits::LIST_MODELS_TIMEOUT.dur();
+const MAX_ERROR_BODY: u64 = crate::limits::ERROR_BODY.n();
+const MAX_ERROR_CHARS: usize = crate::limits::ERROR_CHARS.us();
+const MAX_MODELS_BODY: u64 = crate::limits::MODELS_BODY.n();
 
 /// One wire format. A new protocol is one new file implementing this.
 pub(crate) trait Wire: Send + Sync {
@@ -360,9 +358,9 @@ fn build_agent(local: bool, sends_secret: bool) -> Result<ureq::Agent, ProviderE
         .redirects(0)
         .timeout_connect(CONNECT_TIMEOUT)
         .timeout_read(if local {
-            READ_TIMEOUT_LOCAL
+            crate::limits::HTTP_READ_TIMEOUT_LOCAL.get_dur()
         } else {
-            READ_TIMEOUT
+            crate::limits::HTTP_READ_TIMEOUT.get_dur()
         })
         .timeout_write(WRITE_TIMEOUT)
         .try_proxy_from_env(!local)

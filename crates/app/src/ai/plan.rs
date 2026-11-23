@@ -66,7 +66,7 @@ pub enum IdOrNew {
 }
 
 /// Most references one range may stand for.
-const MAX_RANGE: u32 = 10_000;
+const MAX_RANGE: u32 = ddc_ai::limits::REF_RANGE.u32v();
 
 /// `door:55`, `wall:n7`, `wall_type:3`.
 #[derive(Clone, Debug, PartialEq, Eq, Hash)]

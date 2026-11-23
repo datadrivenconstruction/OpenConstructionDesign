@@ -28,7 +28,7 @@ use std::sync::atomic::{AtomicUsize, Ordering};
 use std::sync::Mutex;
 
 const DEFAULT_N: usize = 4;
-const DIFF_LIMIT: usize = 200_000;
+const DIFF_LIMIT: usize = ddc_ai::limits::DIFF_CHARS.us();
 const MIB: u64 = 1 << 20;
 /// Left free on the disk after all copies: the system and the journals need room too.
 pub const DISK_RESERVE: u64 = 256 * MIB;

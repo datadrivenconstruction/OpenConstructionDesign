@@ -10,8 +10,8 @@ use std::sync::Arc;
 
 /// One model answer may not hold more calls or larger arguments than this, whatever the
 /// server claims. Anything over them ends the step instead of growing memory.
-pub(crate) const MAX_CALLS_PER_STEP: usize = 256;
-pub(crate) const MAX_TOOL_ARGS_BYTES: usize = 1024 * 1024;
+pub(crate) const MAX_CALLS_PER_STEP: usize = crate::limits::CALLS_PER_STEP.us();
+pub(crate) const MAX_TOOL_ARGS_BYTES: usize = crate::limits::TOOL_ARGS_BYTES.us();
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Role {

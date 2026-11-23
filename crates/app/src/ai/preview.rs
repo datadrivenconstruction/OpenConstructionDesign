@@ -28,7 +28,9 @@ use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::{Arc, OnceLock};
 
 /// Above this the preview shows the frame and a counter: the card still lists every element.
-pub const MAX_ELEMENTS: usize = 5000;
+pub fn max_elements() -> usize {
+    ddc_ai::limits::PREVIEW_ELEMENTS.get_us()
+}
 /// Vertices per merged mesh: one draw per kind and level keeps a large plan cheap.
 const MESH_VERTICES: usize = 400_000;
 /// Live geometry on another level cannot be hidden, so the shell sits just outside it.
@@ -40,7 +42,7 @@ const THIN_PX: f32 = 1.0;
 const DASH: (f32, f32) = (6.0, 4.0);
 const HATCH_STEP_PX: f32 = 7.0;
 const HATCH_MIN_PX: f32 = 3.0;
-const HATCH_FRAME_MAX: u32 = 20_000;
+const HATCH_FRAME_MAX: u32 = ddc_ai::limits::HATCH_FRAME.u32v();
 
 static REV: AtomicU64 = AtomicU64::new(0);
 
@@ -71,7 +73,7 @@ pub struct PreviewSet {
     pub bounds: Option<Aabb>,
     /// Absolute box of every previewed element, for hover and zoom.
     pub boxes: HashMap<ElKey, Aabb>,
-    /// Elements above `MAX_ELEMENTS`: in the card, without their own shape on the canvas.
+    /// Elements above `max_elements()`: in the card, without their own shape on the canvas.
     pub omitted: usize,
     /// Outline and box a changed element had before, for the dashed "was here" form.
     pub before_marks: Vec<PlanMark>,
@@ -453,10 +455,11 @@ pub fn build(after: &mut Editor, before: Option<&mut Editor>, diff: &[ElemDiff])
         .iter()
         .filter(|e| rows::ELEMENT_TABLES.contains(&e.key.0.as_str()))
         .collect();
-    out.omitted = elems.len().saturating_sub(MAX_ELEMENTS);
+    let max = max_elements();
+    out.omitted = elems.len().saturating_sub(max);
     let mut now: HashMap<ElKey, RowKind> = HashMap::new();
     let mut gone: HashMap<ElKey, RowKind> = HashMap::new();
-    for e in elems.iter().take(MAX_ELEMENTS) {
+    for e in elems.iter().take(max) {
         out.kinds.insert(e.key.clone(), e.kind);
         match e.kind {
             RowKind::Deleted => {
