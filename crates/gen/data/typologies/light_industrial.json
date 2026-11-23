@@ -17,7 +17,7 @@
   "floors": 2,
   "floor_height": 6.0,
   "footprint": {
-   "width": 90,
+   "width": 100,
    "depth": 36
   }
  },
