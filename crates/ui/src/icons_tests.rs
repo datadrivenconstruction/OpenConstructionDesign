@@ -168,6 +168,10 @@ const SAME_TOOL: &[(&str, &str)] = &[
     ("help.shortcuts", "mgr.keymap"),
     // the assistant: its panel and "ask" are one tool
     ("ai.panel", "ai.ask"),
+    // duct, pipe and tray runs drawn in plan or in 3D
+    ("e3d.duct", "mep.duct"),
+    ("e3d.pipe", "mep.pipe"),
+    ("e3d.tray", "mep.tray"),
 ];
 
 #[test]

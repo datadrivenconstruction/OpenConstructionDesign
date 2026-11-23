@@ -60,7 +60,7 @@ pub struct State {
     kind: Option<Kind>,
     /// Axis points, model coordinates (absolute z).
     pub pts: Vec<(f64, f64, f64)>,
-    /// Run elevation above the active level (Revit "middle elevation"); kept between runs.
+    /// Run elevation above the active level ("middle elevation"); kept between runs.
     pub z: Option<f64>,
     first: Option<MepHit>,
     snap: Option<(u64, Arc<MepSnapSet>)>,
@@ -373,11 +373,11 @@ mod tests {
         assert!((s.z.unwrap() - 2.9).abs() < 1e-9, "the plan tool's default elevation");
         assert!(s.click(&ed, (0.0, 0.0, 0.0), None).is_none());
         assert!(s.click(&ed, (4.0, 0.0, 99.0), None).is_none());
-        s.rise(&ed, 0.6);
+        s.rise(&ed, 1.5);
         assert!(s.click(&ed, (4.0, 3.0, 0.0), None).is_none());
         assert_eq!(
             s.pts,
-            vec![(0.0, 0.0, z), (4.0, 0.0, z), (4.0, 0.0, z + 0.6), (4.0, 3.0, z + 0.6)]
+            vec![(0.0, 0.0, z), (4.0, 0.0, z), (4.0, 0.0, z + 1.5), (4.0, 3.0, z + 1.5)]
         );
         let before = ed.model.mep_runs(None).unwrap().len();
         let id = s.commit(&mut ed, None).unwrap();
@@ -402,12 +402,24 @@ mod tests {
             .into_iter()
             .filter(|&i| ed.model.mep_run(i).unwrap().section.domain == MepDomain::Duct)
             .collect();
-        let main = ed.model.mep_run(ducts[0]).unwrap();
-        let (a, b) = (main.points[0], main.points[1]);
+        // the longest straight duct leg: a tee needs room for its trims
+        let (main_id, k) = ducts
+            .iter()
+            .flat_map(|&i| (0..ed.model.mep_run(i).unwrap().points.len() - 1).map(move |k| (i, k)))
+            .max_by(|x, y| {
+                let len = |(i, k): (i64, usize)| {
+                    let p = ed.model.mep_run(i).unwrap().points;
+                    (p[k + 1].0 - p[k].0).hypot(p[k + 1].1 - p[k].1)
+                };
+                len(*x).total_cmp(&len(*y))
+            })
+            .unwrap();
+        let main = ed.model.mep_run(main_id).unwrap();
+        let (a, b) = (main.points[k], main.points[k + 1]);
         let mid = ((a.0 + b.0) / 2.0, (a.1 + b.1) / 2.0, (a.2 + b.2) / 2.0);
         let mut s = tool(&ed, Kind::Duct);
         let hit = s.hit(&ed, mid, 0.1, 0.3);
-        assert!(matches!(hit, Some(MepHit::RunMid { run, .. }) if run == ducts[0]), "{hit:?}");
+        assert!(matches!(hit, Some(MepHit::RunMid { run, .. }) if run == main_id), "{hit:?}");
         s.click(&ed, mid, hit);
         assert!((s.z.unwrap() + ed.elevation - mid.2).abs() < 1e-9, "the run's elevation");
         // across the main axis, away from it
@@ -415,13 +427,13 @@ mod tests {
         let n = dx.hypot(dy);
         let side = (mid.0 - dy / n * 3.0, mid.1 + dx / n * 3.0, 0.0);
         s.click(&ed, side, None);
-        s.rise(&ed, -0.8);
+        s.rise(&ed, -1.5);
         let before = ed.model.mep_runs(None).unwrap().len();
         let id = s.commit(&mut ed, None).unwrap();
         let run = ed.model.mep_run(id).unwrap();
         assert_eq!(run.system, main.system, "the start run's system");
         assert_eq!(run.section, main.section, "the start run's section");
-        assert!((run.points.last().unwrap().2 - (mid.2 - 0.8)).abs() < 1e-6, "riser down");
+        assert!((run.points.last().unwrap().2 - (mid.2 - 1.5)).abs() < 1e-6, "riser down");
         assert_eq!(ed.model.mep_runs(None).unwrap().len(), before + 1);
         assert!(ed.model.mep_network(Some(main.system)).is_ok());
         ed.undo();
