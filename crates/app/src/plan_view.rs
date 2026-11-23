@@ -222,6 +222,11 @@ impl PlanView {
     }
 
     /// Pixel of a model point when the plan fills `rect` at the current centre and scale.
+    /// Where a model point sits on screen in the last frame (scripted shots click through it).
+    pub fn screen_of(&self, p: V2) -> Option<Pos2> {
+        self.frame.map(|(r, _)| self.screen_at(r, p))
+    }
+
     pub fn screen_at(&self, rect: egui::Rect, p: V2) -> Pos2 {
         let c = rect.center();
         Pos2::new(
