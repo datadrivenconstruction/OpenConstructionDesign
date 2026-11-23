@@ -379,8 +379,9 @@ pub fn pre_input(a: &mut EditorApp, ctx: &egui::Context) {
     if !a.view3d || ctx.wants_keyboard_input() || !crate::ui_kit::canvas_owns_keys(ctx) {
         return;
     }
-    let busy = e.busy();
-    let text = e.accepts_text();
+    let live = plan_route::live(&a.ed);
+    let busy = e.busy() || live;
+    let text = e.accepts_text() || live;
     let over = ctx
         .input(|i| i.pointer.hover_pos())
         .is_some_and(|p| e.rect.is_some_and(|r| r.contains(p)));
@@ -624,7 +625,7 @@ impl Edit3d {
             .input(|i| i.pointer.hover_pos())
             .filter(|p| rect.contains(*p) && ui.rect_contains_pointer(rect));
         let z0 = ed.elevation;
-        let ad = adapter(&view.camera, rect, z0, &self.plane);
+        let ad = adapter(&view.camera, rect, z0, &plan_route::plane_for(ed, self.plane));
         self.pointer = pointer.map(|p| crate::interact::ViewAdapter::pointer(&ad, [p.x, p.y]));
 
         // Tab cycles candidates in place; moving the cursor resets that first
@@ -656,10 +657,9 @@ impl Edit3d {
                 self.plan_tool = Some(k);
             }
         }
-        // a hosted family armed from the ribbon (door, window, opening) places by the face hit
-        // ...and a modify session (MV, CO, RO, MM, AR) reads the same pointer as in the plan
-        let hosted = (ed.opening_mode || crate::interact::sessions::modify::running(ed))
-            && matches!(self.tool, Tool::Select);
+        // any plan tool armed from the ribbon (door, room, stair, a modify session…) reads the
+        // same pointer and keys as in the plan (`plan_route::live`)
+        let hosted = plan_route::live(ed) && matches!(self.tool, Tool::Select);
         for k in keys {
             if hosted {
                 plan_route::key(ed, k);
@@ -1154,10 +1154,9 @@ impl Edit3d {
         let click = clicked.is_some() && !over_handle;
         let pt = self.snap.map(|s| s.p);
         measure_saved::draw3d(&painter, &cam, ed, fg, bg, ov.warning);
-        // an armed hosted family or a running modify session takes the pointer, not the pick
+        // an armed plan tool takes the pointer, not the pick
         // (tool-first picking stays the 3D pick: the level plane cannot reach other levels)
-        let routed = ed.opening_mode
-            || crate::interact::sessions::modify::tool(ed).is_some_and(|t| !t.selecting);
+        let routed = plan_route::takes_pointer(ed);
         match self.tool {
             Tool::Select if click && !routed => {
                 let t = if pending {
@@ -1401,7 +1400,7 @@ impl Edit3d {
         let prims = ed.preview_prims();
         if !prims.0.is_empty() {
             let units = ed.tool.units;
-            let ad = adapter(&view.camera, rect, z0, &self.plane);
+            let ad = adapter(&view.camera, rect, z0, &plan_route::plane_for(ed, self.plane));
             let draws = crate::interact::preview::draws(&prims.0, &ad);
             crate::overlay::paint_preview(&painter, &draws, ov, &|v| {
                 crate::units::display_length(v, units)
