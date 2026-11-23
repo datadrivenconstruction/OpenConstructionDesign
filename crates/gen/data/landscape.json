@@ -8,7 +8,7 @@
   "path": {"type": "Path", "tile": 1.5},
   "edge": {"types": ["Round 1", "Spreading 1", "Round 2"], "step": 2.2, "offset": 0.8, "drift": 3},
   "under": {"types": ["Spreading 1", "Round 1", "Spreading 2"], "share": 0.6, "most": 3},
-  "caps": {"hedge": 160, "lawn": 160, "bed": 240, "row": 40, "edge": 60, "under": 40},
+  "caps": {"hedge": 160, "lawn": 160, "bed": 240, "row": 40, "edge": 60, "under": 40, "path": 400},
   "reserve": 100,
   "row_inset": 2.0,
   "street_angles": {"south": 0, "east": 90, "north": 180, "west": 270}
