@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Ocultar categoria",
  "cmd.view.isolate_cat_3d.short": "Isolar categoria",
  "cmd.view.section_box_fit.short": "Ajustar à seleção",
+ "cmd.view.section_plane.short": "Plano de corte",
  "cmd.arch.void_swept_blend.short": "Mescla por varredura",
  "cmd.e3d.wp_face.short": "A partir da face",
  "cmd.e3d.wp_level.short": "A partir do nível",

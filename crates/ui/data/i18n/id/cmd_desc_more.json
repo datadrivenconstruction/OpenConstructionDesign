@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Gaya visual 3D: muka tembus pandang yang memperlihatkan elemen di dalamnya.",
  "cmd.view.vg_3d.desc": "Visibilitas dan warna kategori di tampilan 3D. Centang kategori yang akan ditampilkan.",
  "cmd.view.section_box_fit.desc": "Mengaktifkan kotak potongan di sekitar elemen yang dipilih. Seret sisi kotak untuk memindahkannya.",
+ "cmd.view.section_plane.desc": "Memotong tampilan 3D dengan bidang yang menghadap kamera melalui pilihan atau model. Seret panahnya untuk memindahkan; jalankan lagi untuk mematikan.",
  "cmd.view.section_caps.desc": "Mengaktifkan atau menonaktifkan isian potongan pada sisi kotak potongan.",
  "cmd.view.level_3d.desc": "Membuka tampilan 3D dari level saat ini dengan kotak potongan di atas ketinggiannya.",
  "cmd.view.save_3d.desc": "Menyimpan tampilan 3D saat ini dengan kamera, kotak potongan, dan gaya. Masukkan nama tampilan.",

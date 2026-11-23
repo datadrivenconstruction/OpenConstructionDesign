@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Визуален стил — рентген",
  "cmd.view.vg_3d": "Видимост на категориите в 3D",
  "cmd.view.section_box_fit": "Побери кутията на разреза към избраното",
+ "cmd.view.section_plane": "Временна равнина на разреза",
  "cmd.view.section_caps": "Запълни срезовете",
  "cmd.view.level_3d": "3D изглед на ниво",
  "cmd.view.save_3d": "Запази 3D изглед",

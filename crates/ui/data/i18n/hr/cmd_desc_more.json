@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D vizualni stil: prozirne plohe koje otkrivaju unutarnje elemente.",
  "cmd.view.vg_3d.desc": "Vidljivost i boja kategorija u 3D pogledu. Označite kategorije za prikaz.",
  "cmd.view.section_box_fit.desc": "Uključuje okvir presjeka oko odabranih elemenata. Povucite plohe okvira za pomicanje.",
+ "cmd.view.section_plane.desc": "Siječe 3D prikaz ravninom okrenutom kameri kroz odabir ili model. Povucite strelicu za pomicanje; ponovno pokrenite za isključivanje.",
  "cmd.view.section_caps.desc": "Uključuje ili isključuje ispunu presjeka na plohama okvira presjeka.",
  "cmd.view.level_3d.desc": "Otvara 3D pogled trenutne razine s okvirom presjeka preko njezine visine.",
  "cmd.view.save_3d.desc": "Sprema trenutni 3D pogled s kamerom, okvirom presjeka i stilom. Upišite naziv pogleda.",

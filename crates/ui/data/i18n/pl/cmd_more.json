@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Ukryj kategorię",
  "cmd.view.isolate_cat_3d.short": "Izoluj kategorię",
  "cmd.view.section_box_fit.short": "Dopasuj do zaznaczenia",
+ "cmd.view.section_plane.short": "Płaszczyzna przekroju",
  "cmd.arch.void_swept_blend.short": "Przeciągnięte przejście",
  "cmd.e3d.wp_face.short": "Z powierzchni",
  "cmd.e3d.wp_level.short": "Z poziomu",

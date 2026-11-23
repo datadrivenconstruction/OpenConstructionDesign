@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Стиль отображения — рентген",
  "cmd.view.vg_3d": "Видимость категорий в 3D",
  "cmd.view.section_box_fit": "Вписать секущий бокс в выбор",
+ "cmd.view.section_plane": "Временная секущая плоскость",
  "cmd.view.section_caps": "Заливка разреза",
  "cmd.view.level_3d": "3D-вид уровня",
  "cmd.view.save_3d": "Сохранить 3D-вид",

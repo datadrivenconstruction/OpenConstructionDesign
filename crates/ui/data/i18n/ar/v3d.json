@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "النمط المرئي — أشعة إكس",
  "cmd.view.vg_3d": "رؤية الفئات في ثلاثي الأبعاد",
  "cmd.view.section_box_fit": "ملاءمة صندوق القطع للتحديد",
+ "cmd.view.section_plane": "مستوى قطع مؤقت",
  "cmd.view.section_caps": "تعبئة مناطق القطع",
  "cmd.view.level_3d": "عرض ثلاثي الأبعاد للمنسوب",
  "cmd.view.save_3d": "حفظ العرض ثلاثي الأبعاد",

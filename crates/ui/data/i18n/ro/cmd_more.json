@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Ascunde categoria",
  "cmd.view.isolate_cat_3d.short": "Izolează categoria",
  "cmd.view.section_box_fit.short": "Potrivește la selecție",
+ "cmd.view.section_plane.short": "Plan de secțiune",
  "cmd.arch.void_swept_blend.short": "Racord pe traseu",
  "cmd.e3d.wp_face.short": "Din față",
  "cmd.e3d.wp_level.short": "Din nivel",

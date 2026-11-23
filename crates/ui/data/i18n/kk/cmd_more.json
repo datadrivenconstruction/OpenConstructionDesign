@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Санатты жасыру",
  "cmd.view.isolate_cat_3d.short": "Санатты оқшаулау",
  "cmd.view.section_box_fit.short": "Таңдалғанға сыйғызу",
+ "cmd.view.section_plane.short": "Кесу жазықтығы",
  "cmd.arch.void_swept_blend.short": "Жүгірту араласуы",
  "cmd.e3d.wp_face.short": "Беттен",
  "cmd.e3d.wp_level.short": "Деңгейден",

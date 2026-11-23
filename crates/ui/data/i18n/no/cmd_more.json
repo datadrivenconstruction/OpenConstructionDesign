@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Skjul kategori",
  "cmd.view.isolate_cat_3d.short": "Isoler kategori",
  "cmd.view.section_box_fit.short": "Tilpass til valg",
+ "cmd.view.section_plane.short": "Snittplan",
  "cmd.arch.void_swept_blend.short": "Sveipet overgang",
  "cmd.e3d.wp_face.short": "Fra flate",
  "cmd.e3d.wp_level.short": "Fra etasje",

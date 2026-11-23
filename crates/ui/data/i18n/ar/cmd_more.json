@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "إخفاء الفئة",
  "cmd.view.isolate_cat_3d.short": "عزل الفئة",
  "cmd.view.section_box_fit.short": "ملاءمة للتحديد",
+ "cmd.view.section_plane.short": "مستوى قطع",
  "cmd.arch.void_swept_blend.short": "مزج بالمسار",
  "cmd.e3d.wp_face.short": "من وجه",
  "cmd.e3d.wp_level.short": "من مستوى",

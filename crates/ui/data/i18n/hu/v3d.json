@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "Vizuális stílus — röntgen",
  "cmd.view.vg_3d": "Kategórialáthatóság 3D-ben",
  "cmd.view.section_box_fit": "Metszetdoboz illesztése a kijelöléshez",
+ "cmd.view.section_plane": "Ideiglenes metszősík",
  "cmd.view.section_caps": "Metszetfelületek kitöltése",
  "cmd.view.level_3d": "Szint 3D-nézete",
  "cmd.view.save_3d": "3D-nézet mentése",

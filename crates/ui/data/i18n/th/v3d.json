@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "รูปแบบภาพ — X-ray",
  "cmd.view.vg_3d": "การมองเห็นหมวดหมู่ใน 3 มิติ",
  "cmd.view.section_box_fit": "ปรับกล่องหน้าตัดให้พอดีกับที่เลือก",
+ "cmd.view.section_plane": "ระนาบตัดชั่วคราว",
  "cmd.view.section_caps": "เติมส่วนที่ตัด",
  "cmd.view.level_3d": "มุมมอง 3 มิติของระดับ",
  "cmd.view.save_3d": "บันทึกมุมมอง 3 มิติ",

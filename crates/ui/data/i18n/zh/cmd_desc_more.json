@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "三维视觉样式：半透明表面，可显示内部图元。",
  "cmd.view.vg_3d.desc": "三维视图中的类别可见性和颜色。勾选要显示的类别。",
  "cmd.view.section_box_fit.desc": "在所选图元周围开启剖切框。拖动框面可移动它们。",
+ "cmd.view.section_plane.desc": "用一个朝向相机、穿过所选构件或模型的平面剖切三维视图。拖动箭头移动它；再次执行即关闭。",
  "cmd.view.section_caps.desc": "开启或关闭剖切框面上的截面填充。",
  "cmd.view.level_3d.desc": "打开当前标高的三维视图，并在其高度范围上设置剖切框。",
  "cmd.view.save_3d.desc": "保存当前三维视图，包括相机、剖切框和样式。输入视图名称。",

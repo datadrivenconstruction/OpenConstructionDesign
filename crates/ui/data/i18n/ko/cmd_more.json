@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "카테고리 숨기기",
  "cmd.view.isolate_cat_3d.short": "카테고리 분리",
  "cmd.view.section_box_fit.short": "선택에 맞춤",
+ "cmd.view.section_plane.short": "단면 평면",
  "cmd.arch.void_swept_blend.short": "스윕 블렌드",
  "cmd.e3d.wp_face.short": "면에서",
  "cmd.e3d.wp_level.short": "레벨에서",

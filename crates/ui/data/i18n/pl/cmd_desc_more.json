@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Styl wizualny 3D — półprzezroczyste ściany ujawniające elementy wewnętrzne.",
  "cmd.view.vg_3d.desc": "Widoczność i kolor kategorii w widoku 3D. Zaznacz kategorie do pokazania.",
  "cmd.view.section_box_fit.desc": "Włącza pudło przekroju wokół zaznaczonych elementów. Przeciągaj ściany pudła, aby je przesuwać.",
+ "cmd.view.section_plane.desc": "Przecina widok 3D płaszczyzną zwróconą do kamery przez zaznaczenie lub model. Przeciągnij strzałkę, aby ją przesunąć; uruchom ponownie, aby wyłączyć.",
  "cmd.view.section_caps.desc": "Włącza lub wyłącza wypełnienie przekroju na ścianach pudła przekroju.",
  "cmd.view.level_3d.desc": "Otwiera widok 3D bieżącej kondygnacji z pudłem przekroju na jej wysokości.",
  "cmd.view.save_3d.desc": "Zapisuje bieżący widok 3D wraz z kamerą, pudłem przekroju i stylem. Wpisz nazwę widoku.",

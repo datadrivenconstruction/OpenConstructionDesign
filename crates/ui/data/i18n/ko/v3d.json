@@ -10,6 +10,7 @@
  "cmd.view.style_xray": "시각 스타일 — X-ray",
  "cmd.view.vg_3d": "3D 범주 가시성",
  "cmd.view.section_box_fit": "선택 요소에 단면 상자 맞추기",
+ "cmd.view.section_plane": "임시 단면 평면",
  "cmd.view.section_caps": "절단면 채우기",
  "cmd.view.level_3d": "레벨 3D 뷰",
  "cmd.view.save_3d": "3D 뷰 저장",

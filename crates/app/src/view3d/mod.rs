@@ -15,6 +15,7 @@ pub mod overlay;
 pub mod perf_overlay;
 pub mod saved;
 pub mod scene;
+pub mod section_plane;
 pub mod settle;
 #[cfg(test)]
 mod tests;
@@ -742,6 +743,16 @@ fn h_box_fit(a: &mut EditorApp) {
     a.view.nav.level_view = None;
     a.view3d = true;
 }
+/// Temporary section plane through the selection (else the model) facing the camera; again: off.
+fn h_section_plane(a: &mut EditorApp) {
+    let bounds = a.view.nav.deco.base_bounds.or(a.scene.bounds);
+    let sel = selection_box(a);
+    if section_plane::toggle(&mut a.view, bounds, sel) {
+        a.view3d = true;
+    } else if bounds.or(sel).is_none() {
+        msg(a, "v3d.msg.empty");
+    }
+}
 fn h_caps(a: &mut EditorApp) {
     a.view.nav.caps = !a.view.nav.caps;
 }
@@ -826,6 +837,7 @@ pub fn register(a: &mut EditorApp) {
         ("view.home_3d", h_home),
         ("view.zoom_sel_3d", h_zoom_sel),
         ("view.section_box_fit", h_box_fit),
+        ("view.section_plane", h_section_plane),
         ("view.section_caps", h_caps),
         ("view.level_3d", h_level),
         ("view.save_3d", h_save),

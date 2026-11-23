@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "3D 시각 스타일입니다. 내부 요소가 보이는 반투명 면입니다.",
  "cmd.view.vg_3d.desc": "3D 뷰의 범주 가시성과 색상입니다. 표시할 범주를 체크하십시오.",
  "cmd.view.section_box_fit.desc": "선택한 요소 주위에 단면 상자를 켭니다. 상자 면을 끌어 옮기십시오.",
+ "cmd.view.section_plane.desc": "선택 요소나 모델을 지나 카메라를 향하는 평면으로 3D 뷰를 자릅니다. 화살표를 끌어 이동하고, 다시 실행하면 해제됩니다.",
  "cmd.view.section_caps.desc": "단면 상자 면의 절단 채우기를 켜거나 끕니다.",
  "cmd.view.level_3d.desc": "현재 레벨의 3D 뷰를 높이 전체를 덮는 단면 상자와 함께 엽니다.",
  "cmd.view.save_3d.desc": "카메라, 단면 상자와 스타일을 포함한 현재 3D 뷰를 저장합니다. 뷰 이름을 입력하십시오.",

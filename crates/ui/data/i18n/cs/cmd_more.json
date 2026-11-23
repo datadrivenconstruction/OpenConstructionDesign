@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "Skrýt kategorii",
  "cmd.view.isolate_cat_3d.short": "Izolovat kategorii",
  "cmd.view.section_box_fit.short": "Přizpůsobit výběru",
+ "cmd.view.section_plane.short": "Řezná rovina",
  "cmd.arch.void_swept_blend.short": "Tažený přechod",
  "cmd.e3d.wp_face.short": "Z plochy",
  "cmd.e3d.wp_level.short": "Z podlaží",

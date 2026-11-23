@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "הסתר קטגוריה",
  "cmd.view.isolate_cat_3d.short": "בודד קטגוריה",
  "cmd.view.section_box_fit.short": "התאם לבחירה",
+ "cmd.view.section_plane.short": "מישור חתך",
  "cmd.arch.void_swept_blend.short": "מיזוג הטיה",
  "cmd.e3d.wp_face.short": "מפני השטח",
  "cmd.e3d.wp_level.short": "ממפלס",

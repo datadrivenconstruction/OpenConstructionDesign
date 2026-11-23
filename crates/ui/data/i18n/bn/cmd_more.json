@@ -8,6 +8,7 @@
  "cmd.view.hide_cat_3d.short": "বিভাগ লুকান",
  "cmd.view.isolate_cat_3d.short": "বিভাগ আলাদা করুন",
  "cmd.view.section_box_fit.short": "নির্বাচনে ফিট",
+ "cmd.view.section_plane.short": "সেকশন প্লেন",
  "cmd.arch.void_swept_blend.short": "সুইপ ব্লেন্ড",
  "cmd.e3d.wp_face.short": "তল থেকে",
  "cmd.e3d.wp_level.short": "লেভেল থেকে",

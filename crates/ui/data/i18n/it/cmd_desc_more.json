@@ -43,6 +43,7 @@
  "cmd.view.style_xray.desc": "Stile visivo 3D — facce traslucide che rivelano gli elementi interni.",
  "cmd.view.vg_3d.desc": "Visibilità e colore delle categorie nella vista 3D. Spunta le categorie da mostrare.",
  "cmd.view.section_box_fit.desc": "Attiva un box di sezione attorno agli elementi selezionati. Trascina le facce del box per spostarle.",
+ "cmd.view.section_plane.desc": "Taglia la vista 3D con un piano rivolto alla camera attraverso la selezione o il modello. Trascina la freccia per spostarlo; eseguilo di nuovo per disattivarlo.",
  "cmd.view.section_caps.desc": "Attiva o disattiva il riempimento di taglio sulle facce del box di sezione.",
  "cmd.view.level_3d.desc": "Apre una vista 3D del livello corrente con un box di sezione sulla sua altezza.",
  "cmd.view.save_3d.desc": "Salva la vista 3D corrente con camera, box di sezione e stile. Inserisci un nome per la vista.",
