@@ -1550,7 +1550,7 @@ fn script_recipes(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, String>
         // a tool recipe (the lattice tower is a generator, not a script) answers under its name
         Some(name) if recipes::recipe(name).is_none() && ddc_ai::toolset::recipe(name).is_some() => {
             o.put("name", &json!(name));
-            o.put("recipe", &json!(ddc_ai::toolset::recipe(name)));
+            o.put_own("recipe", &json!(ddc_ai::toolset::recipe(name)));
             o.put("next", &json!("not a script: follow this recipe"));
         }
         Some(name) => {
@@ -1562,16 +1562,14 @@ fn script_recipes(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, String>
                 )
             })?;
             o.put("name", &json!(name));
-            o.put("summary", &json!(recipes::summary(script)));
-            o.put("script", &json!(script));
+            o.put_own("summary", &json!(recipes::summary(script)));
+            o.put_own("script", &json!(script));
             o.put("next", &json!("run_script with this script (change params or options as asked), then read the realism findings and render_3d"));
         }
         None => {
-            let items: Vec<J> = recipes::RECIPES
-                .iter()
-                .map(|(n, s)| json!({"name": n, "summary": recipes::summary(s)}))
-                .collect();
-            o.put("blocks", &json!(recipes::BLOCKS));
+            // names only: the block reference fills most of the result; the summary comes with a name
+            let items: Vec<J> = recipes::RECIPES.iter().map(|(n, _)| json!(n)).collect();
+            o.put_own("blocks", &json!(recipes::BLOCKS));
             o.list("recipes", &items);
             o.put("not_scripts", &json!({"lattice_tower": "a steel lattice tower on legs (the 300 m kind, curved legs, platforms, joints) is one run_generator call: script_recipes name lattice_tower"}));
         }
