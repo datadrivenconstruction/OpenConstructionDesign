@@ -138,7 +138,9 @@ impl Mech {
         self.air.faults.iter().chain(&self.water.faults).chain(&self.clashes).cloned().collect()
     }
     pub fn count(&self, k: Kind) -> usize {
-        self.equip.iter().filter(|e| e.kind == k).count()
+        // the same items the schedule lists: dampers and water plant live with their networks
+        let all = self.equip.iter().chain(&self.water.plant).chain(&self.water.pumps).chain(&self.air.dampers);
+        all.filter(|e| e.kind == k).count()
     }
 }
 

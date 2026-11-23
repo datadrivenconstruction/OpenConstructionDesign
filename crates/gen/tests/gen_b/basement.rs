@@ -41,8 +41,9 @@ fn basements_hold_parking_under_the_stairs_and_lifts() {
 
 #[test]
 fn the_ground_slab_opens_for_the_stair_from_below() {
-    let (_, plain) = built(&json!({"typology": "office", "floors": 3}));
-    let (_, p) = built(&json!({"typology": "office", "floors": 3, "basements": 1}));
+    // two storeys and a basement stay under fire.tall_storeys: the stair keeps its rating
+    let (_, plain) = built(&json!({"typology": "office", "floors": 2}));
+    let (_, p) = built(&json!({"typology": "office", "floors": 2, "basements": 1}));
     let holes = |p: &GProject| p.storeys[0].layout.slab_holes.len();
     assert_eq!(holes(&p), holes(&plain) + p.storeys[0].layout.stairs.len());
     // the storeys above are the same building

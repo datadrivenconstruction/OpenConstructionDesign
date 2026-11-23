@@ -382,6 +382,16 @@ pub(crate) fn bbox(p: &[(f64, f64)]) -> R {
     b
 }
 
+/// An axis-aligned four-corner hole as a rectangle, as [`add_holes`] cuts them.
+fn as_rect(h: &[(f64, f64)]) -> Option<R> {
+    if h.len() != 4 {
+        return None;
+    }
+    let r = [h[0].0, h[0].1, h[2].0, h[2].1];
+    let same = |p: (f64, f64), q: (f64, f64)| (p.0 - q.0).abs() < EPS && (p.1 - q.1).abs() < EPS;
+    (r[0] < r[2] && r[1] < r[3] && same(h[1], (r[2], r[1])) && same(h[3], (r[0], r[3]))).then_some(r)
+}
+
 pub(crate) fn hit(a: &R, b: &R, gap: f64) -> bool {
     a[0] < b[2] + gap - EPS && b[0] < a[2] + gap - EPS && a[1] < b[3] + gap - EPS && b[1] < a[3] + gap - EPS
 }
@@ -1595,6 +1605,14 @@ pub(crate) fn add_holes(p: &mut GProject, holes: &[(usize, R)]) {
         let mut hs: Vec<R> = holes.iter().filter(|h| h.0 == k).map(|h| h.1).collect();
         if hs.is_empty() {
             continue;
+        }
+        // holes an earlier service cut on this slab merge with the new ones they touch
+        let l = &mut p.storeys[k].layout;
+        let old: Vec<usize> = (0..l.slab_holes.len())
+            .filter(|&i| as_rect(&l.slab_holes[i]).is_some_and(|o| hs.iter().any(|h| hit(h, &o, near))))
+            .collect();
+        for &i in old.iter().rev() {
+            hs.push(as_rect(&l.slab_holes.remove(i)).unwrap_or_default());
         }
         loop {
             let mut merged = false;
