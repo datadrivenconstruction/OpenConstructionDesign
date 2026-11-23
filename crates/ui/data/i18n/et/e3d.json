@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Pinna isokõver",
  "e3d.snap.param": "Kõvera keskpunkt ja kolmandikud",
  "e3d.snap.surface": "Pinna punkt",
- "e3d.snap.curve": "Lähim punkt kõveral"
+ "e3d.snap.curve": "Lähim punkt kõveral",
+ "cmd.e3d.duct": "Õhukanal 3D-s",
+ "cmd.e3d.pipe": "Toru 3D-s",
+ "cmd.e3d.tray": "Kaablirenn 3D-s",
+ "e3d.hint.mep": "Klõpsa punkte trassi tasandil · sisesta +/- väärtus püstaku jaoks · Ctrl — vertikaalselt · Shift — ortogonaalselt · klõpsa liitmikul või trassil ühendamiseks · Enter lõpetab · Esc väljub",
+ "e3d.mep.elev": "Kõrgus",
+ "e3d.mep.port": "Liitmik",
+ "e3d.mep.end": "Trassi ots",
+ "e3d.mep.on_run": "Trassil (T-haru)",
+ "e3d.err.mep_points": "trass vajab vähemalt kahte punkti"
 }

@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Flateisokurve",
  "e3d.snap.param": "Kurvens midtpunkt og tredeler",
  "e3d.snap.surface": "Flatepunkt",
- "e3d.snap.curve": "Nærmeste punkt på kurve"
+ "e3d.snap.curve": "Nærmeste punkt på kurve",
+ "cmd.e3d.duct": "Ventilasjonskanal i 3D",
+ "cmd.e3d.pipe": "Rør i 3D",
+ "cmd.e3d.tray": "Kabelbru i 3D",
+ "e3d.hint.mep": "Klikk punkter på føringsplanet · skriv +/- verdi for stigerør · Ctrl — loddrett · Shift — ortogonalt · klikk en tilkobling eller føring for å koble til · Enter avslutter · Esc lukker",
+ "e3d.mep.elev": "Kote",
+ "e3d.mep.port": "Tilkobling",
+ "e3d.mep.end": "Føringsende",
+ "e3d.mep.on_run": "På føring (T-rør)",
+ "e3d.err.mep_points": "en føring trenger minst to punkter"
 }

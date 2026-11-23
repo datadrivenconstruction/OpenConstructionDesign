@@ -73,5 +73,14 @@
  "e3d.snap.perp": "Perpendicular",
  "e3d.snap.curve": "Mais próximo na curva",
  "e3d.snap.iso": "Isocurva da superfície",
- "e3d.snap.surface": "Ponto na superfície"
+ "e3d.snap.surface": "Ponto na superfície",
+ "cmd.e3d.duct": "Conduta em 3D",
+ "cmd.e3d.pipe": "Tubo em 3D",
+ "cmd.e3d.tray": "Caminho de cabos em 3D",
+ "e3d.hint.mep": "Clique pontos no plano do troço · digite +/- valor para uma coluna montante · Ctrl — vertical · Shift — ortogonal · clique num conector ou troço para ligar · Enter termina · Esc sai",
+ "e3d.mep.elev": "Elevação",
+ "e3d.mep.port": "Conector",
+ "e3d.mep.end": "Fim do troço",
+ "e3d.mep.on_run": "No troço (tê)",
+ "e3d.err.mep_points": "um troço precisa de pelo menos dois pontos"
 }

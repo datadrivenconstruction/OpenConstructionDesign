@@ -308,6 +308,9 @@ e3d.wall | P R | - | ? | ? | todo |
 e3d.floor | P R | - | ? | ? | todo |
 e3d.column | P R | - | ? | ? | todo |
 e3d.beam | P R | - | ? | ? | todo |
+e3d.duct | P R | - | ? | ? | todo |
+e3d.pipe | P R | - | ? | ? | todo |
+e3d.tray | P R | - | ? | ? | todo |
 e3d.wp_level | P R | - | ? | ? | todo |
 e3d.wp_face | P R | - | ? | ? | todo |
 e3d.wp_ref | P R | - | ? | ? | todo |

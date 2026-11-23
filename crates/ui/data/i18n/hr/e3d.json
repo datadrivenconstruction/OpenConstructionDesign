@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Izokrivulja plohe",
  "e3d.snap.param": "Središte i trećine krivulje",
  "e3d.snap.surface": "Točka na plohi",
- "e3d.snap.curve": "Najbliže na krivulji"
+ "e3d.snap.curve": "Najbliže na krivulji",
+ "cmd.e3d.duct": "Zračni kanal u 3D",
+ "cmd.e3d.pipe": "Cijev u 3D",
+ "cmd.e3d.tray": "Kabelska polica u 3D",
+ "e3d.hint.mep": "Kliknite točke na ravnini trase · upišite +/- vrijednost za vertikalu · Ctrl — okomito · Shift — ortogonalno · kliknite priključak ili trasu za spajanje · Enter završava · Esc izlazi",
+ "e3d.mep.elev": "Visina",
+ "e3d.mep.port": "Priključak",
+ "e3d.mep.end": "Kraj trase",
+ "e3d.mep.on_run": "Na trasi (T-komad)",
+ "e3d.err.mep_points": "trasa treba barem dvije točke"
 }

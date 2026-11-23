@@ -43,3 +43,8 @@ the active level plane and the keys, through `Editor::input`, as in plan; no per
 face (the plane) inside; only its grip is drawn. Picking, snaps and undo come with the box.
 
 Labels: `e3d.cat.<Cat::key()>` (`Ext` → `other`) in `ui/data/i18n/{ru,en}/<fragment>.json`.
+
+**MEP runs**: `mep_draw` (commands `e3d.duct`, `e3d.pipe`, `e3d.tray`). Points chain at the run
+elevation; `+v`/`-v` or Ctrl click makes a riser; connectors and runs snap via `MepSnapSet`.
+Section and system come from `tools::mep::spec_3d` (plan tool options or the start run), the write
+is the plan op `mep_draw` (one undo step; fittings from the network build).

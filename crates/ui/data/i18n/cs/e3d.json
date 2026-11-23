@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Izokřivka plochy",
  "e3d.snap.param": "Střed a třetiny křivky",
  "e3d.snap.surface": "Bod na ploše",
- "e3d.snap.curve": "Nejbližší bod na křivce"
+ "e3d.snap.curve": "Nejbližší bod na křivce",
+ "cmd.e3d.duct": "Vzduchovod ve 3D",
+ "cmd.e3d.pipe": "Potrubí ve 3D",
+ "cmd.e3d.tray": "Kabelový žlab ve 3D",
+ "e3d.hint.mep": "Klikejte body v rovině trasy · zadejte +/- hodnotu pro stoupačku · Ctrl — svisle · Shift — pravoúhle · klikněte na konektor nebo trasu pro připojení · Enter ukončí · Esc opustí",
+ "e3d.mep.elev": "Výška",
+ "e3d.mep.port": "Konektor",
+ "e3d.mep.end": "Konec trasy",
+ "e3d.mep.on_run": "Na trase (odbočka T)",
+ "e3d.err.mep_points": "trasa potřebuje alespoň dva body"
 }

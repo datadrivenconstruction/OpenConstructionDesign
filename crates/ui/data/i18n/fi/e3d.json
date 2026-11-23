@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Pinnan isokäyrä",
  "e3d.snap.param": "Käyrän keskipiste ja kolmasosat",
  "e3d.snap.surface": "Pinnan piste",
- "e3d.snap.curve": "Lähin piste käyrällä"
+ "e3d.snap.curve": "Lähin piste käyrällä",
+ "cmd.e3d.duct": "Ilmakanava 3D:ssä",
+ "cmd.e3d.pipe": "Putki 3D:ssä",
+ "cmd.e3d.tray": "Kaapelihylly 3D:ssä",
+ "e3d.hint.mep": "Napsauta pisteitä reitin tasolla · kirjoita +/- arvo nousulle · Ctrl — pystysuoraan · Vaihto — suorakulmaisesti · napsauta liitintä tai reittiä yhdistääksesi · Enter lopettaa · Esc poistuu",
+ "e3d.mep.elev": "Korko",
+ "e3d.mep.port": "Liitin",
+ "e3d.mep.end": "Reitin pää",
+ "e3d.mep.on_run": "Reitillä (T-haara)",
+ "e3d.err.mep_points": "reitti tarvitsee vähintään kaksi pistettä"
 }

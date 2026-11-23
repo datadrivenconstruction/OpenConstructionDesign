@@ -254,17 +254,7 @@ pub fn on_point(a: &mut Active) -> bool {
 /// makes a vertical joint.
 pub fn draw(ed: &mut Editor, a: &mut Active, pts: &[V2]) -> bool {
     let (first, last) = (a.mep.first.clone(), a.mep.last.clone());
-    let (mut name, mut kind) = system(ed, a);
-    let on_net = first
-        .as_ref()
-        .and_then(MepHit::system)
-        .or(last.as_ref().and_then(MepHit::system));
-    if let Some(id) = on_net {
-        let found = ed.model.mep_systems().unwrap_or_default();
-        if let Some(s) = found.into_iter().find(|s| s.id == id) {
-            (name, kind) = (s.name, s.kind);
-        }
-    }
+    let (name, kind) = draw_system(ed, a, [first.as_ref(), last.as_ref()]);
     let mut spec = match run(a, 0, pts) {
         Ok(s) => s,
         Err(e) => {
@@ -293,6 +283,58 @@ pub fn draw(ed: &mut Editor, a: &mut Active, pts: &[V2]) -> bool {
         a.mep.clear_path();
     }
     done
+}
+
+/// System a drawn run goes into: the network at an end, else the picked or default one.
+pub(crate) fn draw_system(ed: &Editor, a: &Active, ends: [Option<&MepHit>; 2]) -> (String, SystemKind) {
+    let on_net = ends.into_iter().flatten().find_map(MepHit::system);
+    let found = on_net.and_then(|id| {
+        let all = ed.model.mep_systems().unwrap_or_default();
+        all.into_iter().find(|s| s.id == id)
+    });
+    match found {
+        Some(s) => (s.name, s.kind),
+        None => system(ed, a),
+    }
+}
+
+/// Run drawn in 3D: the section of the run it starts on, else the tool options; axis points as
+/// given (absolute z). An end on a network at another elevation gets a vertical joint (as in plan).
+pub(crate) fn spec_3d(
+    ed: &Editor,
+    a: &Active,
+    first: Option<&MepHit>,
+    last: Option<&MepHit>,
+    pts: &[(f64, f64, f64)],
+) -> Result<(String, SystemKind, RunSpec), ddc_model::Error> {
+    let (name, kind) = draw_system(ed, a, [first, last]);
+    let from_run = match first {
+        Some(MepHit::RunEnd { run, .. } | MepHit::RunMid { run, .. }) => ed.model.mep_run(*run).ok(),
+        _ => None,
+    };
+    let mut spec = match from_run {
+        Some(r) => RunSpec {
+            level: a.level,
+            slope: 0.0,
+            caps: (false, false),
+            ..r
+        },
+        None => run(a, 0, &[])?,
+    };
+    let mut p = pts.to_vec();
+    let n = p.len();
+    if let (Some(h), true) = (last, n >= 2) {
+        let (prev, end, e) = (p[n - 2], p[n - 1], h.at().2);
+        if (e - end.2).abs() > 1e-9 {
+            let plan = [(prev.0, prev.1), (end.0, end.1)];
+            let tail = routed_points(&plan, end.2, 0.0, None, Some(e), spec.min_leg());
+            p.pop();
+            p.extend(tail.into_iter().skip(1));
+        }
+    }
+    spec.points = p;
+    spec.slope = 0.0;
+    Ok((name, kind, spec))
 }
 
 /// Point-tool click: fixture, connect, disconnect.

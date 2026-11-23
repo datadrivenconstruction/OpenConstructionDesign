@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Izokrzywa powierzchni",
  "e3d.snap.param": "Środek i trzecie krzywej",
  "e3d.snap.surface": "Punkt na powierzchni",
- "e3d.snap.curve": "Najbliższy punkt na krzywej"
+ "e3d.snap.curve": "Najbliższy punkt na krzywej",
+ "cmd.e3d.duct": "Kanał wentylacyjny w 3D",
+ "cmd.e3d.pipe": "Rura w 3D",
+ "cmd.e3d.tray": "Korytko kablowe w 3D",
+ "e3d.hint.mep": "Klikaj punkty na płaszczyźnie trasy · wpisz +/- wartość dla pionu · Ctrl — pionowo · Shift — ortogonalnie · kliknij złącze lub trasę, aby połączyć · Enter kończy · Esc wychodzi",
+ "e3d.mep.elev": "Rzędna",
+ "e3d.mep.port": "Złącze",
+ "e3d.mep.end": "Koniec trasy",
+ "e3d.mep.on_run": "Na trasie (trójnik)",
+ "e3d.err.mep_points": "trasa wymaga co najmniej dwóch punktów"
 }

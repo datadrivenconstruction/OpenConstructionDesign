@@ -73,5 +73,14 @@
  "e3d.snap.iso": "サーフェスのアイソカーブ",
  "e3d.snap.param": "曲線の中点・三分点",
  "e3d.snap.surface": "サーフェス上の点",
- "e3d.snap.curve": "曲線上の最近接点"
+ "e3d.snap.curve": "曲線上の最近接点",
+ "cmd.e3d.duct": "3D でダクト",
+ "cmd.e3d.pipe": "3D で配管",
+ "cmd.e3d.tray": "3D でケーブルラック",
+ "e3d.hint.mep": "ルート平面上の点をクリック · 立管は +/- 値を入力 · Ctrl — 垂直 · Shift — 直交 · コネクタまたはルートをクリックして接続 · Enter で確定 · Esc で終了",
+ "e3d.mep.elev": "高さ",
+ "e3d.mep.port": "コネクタ",
+ "e3d.mep.end": "ルート端点",
+ "e3d.mep.on_run": "ルート上（T 継手）",
+ "e3d.err.mep_points": "ルートには 2 点以上が必要です"
 }

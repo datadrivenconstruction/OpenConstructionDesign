@@ -16,6 +16,7 @@ pub mod grips;
 pub mod math;
 pub mod measure;
 pub mod measure_saved;
+pub mod mep_draw;
 pub mod mep_grips;
 pub mod mesh_inst;
 pub mod mirror_array;
@@ -90,6 +91,8 @@ pub enum Tool {
     Pick3,
     Mirror,
     Array,
+    /// Duct, pipe or cable tray run (`mep_draw`).
+    Mep(mep_draw::Kind),
 }
 
 impl Tool {
@@ -106,6 +109,7 @@ impl Tool {
             Tool::Pick3 => "pick",
             Tool::Mirror => "mirror",
             Tool::Array => "array",
+            Tool::Mep(_) => "mep",
         }
     }
 
@@ -128,6 +132,7 @@ impl Tool {
             Tool::Pick3 => "e3d.wp_pick",
             Tool::Mirror => "mod.mirror",
             Tool::Array => "mod.array",
+            Tool::Mep(k) => k.command(),
         })
     }
 }
@@ -209,6 +214,7 @@ pub struct Edit3d {
     plane_elev: f64,
     /// Mirror and Array tools.
     ma: mirror_array::State,
+    mep: mep_draw::State,
     /// Cursor of the last frame in model coordinates (`interact::View3dAdapter`).
     pub pointer: Option<crate::interact::Pointer>,
     /// Plan tool armed for 3D creation on the level plane (`plan_route`), and the screen
@@ -243,6 +249,7 @@ impl Edit3d {
             || self.edit_dim.is_some()
             || self.tool == Tool::Array
             || self.create.as_ref().is_some_and(|c| !c.pts.is_empty())
+            || matches!(self.tool, Tool::Mep(_))
     }
 
     /// The user's work plane in model coordinates; `None` while it is the active level.
@@ -276,6 +283,7 @@ impl Edit3d {
         self.ms.picks.clear();
         self.pick3.clear();
         self.ma.clear();
+        self.mep.set_tool(t);
         self.create = match t {
             Tool::Create(k) => Some(create::Create::new(k)),
             _ => None,
@@ -297,6 +305,10 @@ impl Edit3d {
             (None, Tool::Create(_)) => Scope::Drafting {
                 tool: ToolId(self.tool.command().unwrap_or("e3d")),
                 step: if self.create.as_ref().is_none_or(|c| c.pts.is_empty()) { "first" } else { "next" },
+            },
+            (None, Tool::Mep(k)) => Scope::Drafting {
+                tool: ToolId(k.command()),
+                step: if self.mep.pts.is_empty() { "first" } else { "next" },
             },
             (None, Tool::Face | Tool::Pick3) => Scope::Pointing,
             (None, Tool::Mirror) => Scope::Moving { op: ModOp::Mirror },
@@ -1325,7 +1337,7 @@ impl Edit3d {
                     _ => {}
                 }
             }
-            Tool::Mirror | Tool::Array => {
+            Tool::Mirror | Tool::Array | Tool::Mep(_) => {
                 let fx = mirror_array::Fx {
                     ui: &mut *ui,
                     painter: &painter,
@@ -1343,7 +1355,10 @@ impl Edit3d {
                     shift: mods.shift,
                     ov,
                 };
-                self.ma_frame(fx);
+                match self.tool {
+                    Tool::Mep(_) => self.mep_frame(fx),
+                    _ => self.ma_frame(fx),
+                }
             }
             Tool::Face if click => {
                 if let Some(h) = &hit {
@@ -1458,6 +1473,10 @@ impl Edit3d {
         }
         if !self.pick3.is_empty() {
             self.pick3.clear();
+            return;
+        }
+        if !self.mep.pts.is_empty() {
+            self.mep.clear();
             return;
         }
         if self.ma.clear_points() {
@@ -1744,10 +1763,11 @@ pub fn register(a: &mut EditorApp) {
         open(a, Tool::Create(create::Kind::Column))
     });
     a.register_command("e3d.beam", |a| open(a, Tool::Create(create::Kind::Beam)));
+    mep_draw::register(a);
 }
 
 /// Module command ids (for data checks).
-pub const COMMANDS: [&str; 19] = [
+pub const COMMANDS: [&str; 22] = [
     "e3d.gizmo",
     "e3d.box",
     "e3d.measure",
@@ -1767,4 +1787,7 @@ pub const COMMANDS: [&str; 19] = [
     "e3d.floor",
     "e3d.column",
     "e3d.beam",
+    "e3d.duct",
+    "e3d.pipe",
+    "e3d.tray",
 ];

@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Fladens isokurve",
  "e3d.snap.param": "Kurvens midtpunkt og tredjedele",
  "e3d.snap.surface": "Fladepunkt",
- "e3d.snap.curve": "Nærmeste punkt på kurve"
+ "e3d.snap.curve": "Nærmeste punkt på kurve",
+ "cmd.e3d.duct": "Ventilationskanal i 3D",
+ "cmd.e3d.pipe": "Rør i 3D",
+ "cmd.e3d.tray": "Kabelbakke i 3D",
+ "e3d.hint.mep": "Klik punkter på føringsplanet · skriv +/- værdi for faldstamme · Ctrl — lodret · Skift — ortogonalt · klik på en tilslutning eller føring for at forbinde · Enter afslutter · Esc lukker",
+ "e3d.mep.elev": "Kote",
+ "e3d.mep.port": "Tilslutning",
+ "e3d.mep.end": "Føringsende",
+ "e3d.mep.on_run": "På føring (T-stykke)",
+ "e3d.err.mep_points": "en føring kræver mindst to punkter"
 }
