@@ -22,7 +22,7 @@
  "empty.props.title": "Nichts gewählt",
  "empty.props.hint": "Ein Element in der Ansicht anklicken, um seine Eigenschaften und seinen Typ hier zu sehen. Strg+A wählt alles in der Ansicht.",
  "empty.totals.title": "Das Modell hat noch keine Elemente",
- "empty.totals.hint": "Mit einer Wand beginnen: Architektur → Wand oder WA eingeben.",
+ "empty.totals.hint": "Mit der Modellierung beginnen: Wählen Sie ein Werkzeug im Menüband oder beschreiben Sie das Projekt im Tab „Erzeugen“.",
  "empty.sheets.title": "Noch keine Blätter",
  "empty.sheets.hint": "Mit der Schaltfläche unten oder mit Blätter für Geschosse ein Blatt erstellen, dann eine Ansicht darauf platzieren.",
  "empty.schedule.title": "Das Modell hat keine Elemente dieser Kategorie",

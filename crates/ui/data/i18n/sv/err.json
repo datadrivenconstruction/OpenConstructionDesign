@@ -22,7 +22,7 @@
  "empty.props.title": "Inget markerat",
  "empty.props.hint": "Klicka på ett element i vyn för att se dess egenskaper och typ här. Ctrl+A markerar allt i vyn.",
  "empty.totals.title": "Modellen har inga element ännu",
- "empty.totals.hint": "Börja med en vägg: Arkitektur → Vägg, eller skriv WA.",
+ "empty.totals.hint": "Börja modellera: välj ett verktyg i menyfliken eller beskriv projektet på fliken ”Generera”.",
  "empty.sheets.title": "Inga blad ännu",
  "empty.sheets.hint": "Skapa ett blad med knappen nedan eller med Blad för våningar, placera sedan en vy på det.",
  "empty.schedule.title": "Modellen har inga element i den här kategorin",

@@ -22,7 +22,7 @@
  "empty.props.title": "Tidak ada yang dipilih",
  "empty.props.hint": "Klik elemen di tampilan untuk melihat properti dan tipenya di sini. Ctrl+A memilih semua di tampilan.",
  "empty.totals.title": "Model belum memiliki elemen",
- "empty.totals.hint": "Mulai dengan dinding: Arsitektur → Dinding, atau ketik WA.",
+ "empty.totals.hint": "Mulai memodelkan: pilih alat di pita atau jelaskan proyek di tab “Buat”.",
  "empty.sheets.title": "Belum ada lembar",
  "empty.sheets.hint": "Buat lembar dengan tombol di bawah atau dengan Lembar untuk level, lalu tempatkan tampilan di atasnya.",
  "empty.schedule.title": "Model tidak memiliki elemen kategori ini",

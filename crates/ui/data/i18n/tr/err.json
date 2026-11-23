@@ -22,7 +22,7 @@
  "empty.props.title": "Hiçbir şey seçili değil",
  "empty.props.hint": "Görünümdeki bir öğeye tıklayarak özelliklerini ve tipini burada görün. Ctrl+A görünümdeki her şeyi seçer.",
  "empty.totals.title": "Modelde henüz öğe yok",
- "empty.totals.hint": "Bir duvarla başlayın: Mimari → Duvar, ya da WA yazın.",
+ "empty.totals.hint": "Modellemeye başlayın: şeritten bir araç seçin veya projeyi “Üret” sekmesinde anlatın.",
  "empty.sheets.title": "Henüz pafta yok",
  "empty.sheets.hint": "Aşağıdaki düğmeyle pafta oluşturun veya Katlar için Paftalar ile oluşturun, sonra pafta bir görünüm yerleştirin.",
  "empty.schedule.title": "Modelde bu kategoriye ait öğe yok",

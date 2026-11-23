@@ -22,7 +22,7 @@
  "empty.props.title": "Nic nie jest zaznaczone",
  "empty.props.hint": "Kliknij element w widoku, aby zobaczyć tutaj jego właściwości i typ. Ctrl+A zaznacza wszystko w widoku.",
  "empty.totals.title": "Model nie ma jeszcze elementów",
- "empty.totals.hint": "Zacznij od ściany: Architektura → Ściana lub wpisz WA.",
+ "empty.totals.hint": "Zacznij modelowanie: wybierz narzędzie na wstążce lub opisz projekt na karcie „Generuj”.",
  "empty.sheets.title": "Brak arkuszy",
  "empty.sheets.hint": "Utwórz arkusz przyciskiem poniżej lub poleceniem Arkusze dla kondygnacji, a następnie umieść na nim widok.",
  "empty.schedule.title": "Model nie ma elementów tej kategorii",

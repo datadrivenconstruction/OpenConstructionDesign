@@ -22,7 +22,7 @@
  "empty.props.title": "Rien de sélectionné",
  "empty.props.hint": "Cliquez sur un élément de la vue pour voir ici ses propriétés et son type. Ctrl+A sélectionne tout dans la vue.",
  "empty.totals.title": "Le modèle ne contient encore aucun élément",
- "empty.totals.hint": "Commencez par un mur : Architecture → Mur, ou tapez WA.",
+ "empty.totals.hint": "Commencez à modéliser : choisissez un outil dans le ruban ou décrivez le projet dans l’onglet « Générer ».",
  "empty.sheets.title": "Aucune feuille pour l’instant",
  "empty.sheets.hint": "Créez une feuille avec le bouton ci-dessous ou avec Feuilles par niveaux, puis placez-y une vue.",
  "empty.schedule.title": "Le modèle ne contient aucun élément de cette catégorie",

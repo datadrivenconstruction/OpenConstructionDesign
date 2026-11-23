@@ -22,7 +22,7 @@
  "empty.props.title": "Nic není vybráno",
  "empty.props.hint": "Kliknutím na prvek v pohledu zde zobrazíte jeho vlastnosti a typ. Ctrl+A vybere vše v pohledu.",
  "empty.totals.title": "Model zatím nemá žádné prvky",
- "empty.totals.hint": "Začněte stěnou: Architektura → Stěna, nebo napište WA.",
+ "empty.totals.hint": "Začněte modelovat: vyberte nástroj na pásu karet nebo popište projekt na kartě „Navrhnout“.",
  "empty.sheets.title": "Zatím žádné listy",
  "empty.sheets.hint": "Vytvořte list tlačítkem níže nebo příkazem Listy pro podlaží a pak na něj umístěte pohled.",
  "empty.schedule.title": "Model nemá žádné prvky této kategorie",
