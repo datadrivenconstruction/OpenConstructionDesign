@@ -14,7 +14,7 @@
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases"><img src="https://img.shields.io/github/downloads/datadrivenconstruction/OpenConstructionDesign/total?style=flat-square&label=downloads&color=2f855a" alt="Downloads"></a>
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/datadrivenconstruction/OpenConstructionDesign/ci.yml?branch=main&style=flat-square&label=CI" alt="CI status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0-3b6cf6?style=flat-square" alt="Licence: AGPL-3.0"></a>
-  <img src="https://img.shields.io/badge/platform-Windows%20%C2%B7%20Linux%20CLI%20%C2%B7%20Browser-0f172a?style=flat-square" alt="Platforms: Windows, Linux CLI, browser">
+  <img src="https://img.shields.io/badge/platform-Windows%20%C2%B7%20Linux%20%C2%B7%20Browser-0f172a?style=flat-square" alt="Platforms: Windows, Linux, browser">
   <img src="https://img.shields.io/badge/rust-1.89%2B-b7410e?style=flat-square&logo=rust&logoColor=white" alt="Rust 1.89+">
   <img src="https://img.shields.io/badge/IFC-2X3%20%C2%B7%204%20%C2%B7%204.3-2f855a?style=flat-square" alt="IFC 2X3, 4 and 4.3">
   <a href="#mcp-server"><img src="https://img.shields.io/badge/MCP-compatible-6d4aff?style=flat-square" alt="MCP compatible"></a>
@@ -68,8 +68,8 @@
 | Platform | Get it | Notes |
 |---|---|---|
 | **Windows 10/11 x64** | [**Download the zip**](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) | Full editor. Unzip and run `ddc-app.exe`. |
-| **Browser** | [**Open the viewer**](https://openconstructiondesign.com/app/) | Nothing to install. |
-| **Linux x64** | [CLI archive](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) (71 MB) | Headless `ddc` tool; no editor window yet. |
+| **Browser** | [Online demo](https://openconstructiondesign.com/app/) | Coming soon. |
+| **Linux x64** | [**Download the tar.gz**](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) (71 MB) | Editor `ddc-app` and `ddc` CLI. Ubuntu 22.04+, Debian 12+ (glibc 2.35), X11 or Wayland. |
 | **macOS** | [Build from source](#build-from-source) | No release build; untested. |
 
 <p align="center">
@@ -542,9 +542,9 @@ Details and other platforms: [docs/BUILDING.md](docs/BUILDING.md).
 | Platform | Status |
 |---|---|
 | Windows 10/11, x64 | Supported; primary development platform |
-| Linux | Library crates and the headless CLI, built and tested in CI; no editor window yet |
+| Linux | Editor and CLI in every release, built on Ubuntu 22.04; library crates tested in CI |
 | macOS | Code paths exist; not regularly built or tested |
-| Browser (wasm32) | A viewer is in preview; the browser build is not part of this repository yet |
+| Browser (wasm32) | Online demo coming soon; the browser build is not part of this repository yet |
 
 ## Current limits
 
