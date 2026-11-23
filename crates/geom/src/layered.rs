@@ -59,6 +59,18 @@ pub struct Opening {
     pub height: f64,
 }
 
+/// An opening lies on an axis of length `len` under height `height`, up to the length tolerance
+/// (an edge flush with the wall end must not fail on float rounding); sizes must be positive.
+pub fn opening_within(o: &Opening, len: f64, height: f64) -> bool {
+    let eps = Tol::default().length;
+    o.width > 0.0
+        && o.height > 0.0
+        && o.along >= -eps
+        && o.along + o.width <= len + eps
+        && o.sill >= -eps
+        && o.sill + o.height <= height + eps
+}
+
 #[derive(Debug, PartialEq)]
 pub enum JoinError {
     /// A coordinate, offset, base or height is not a finite number.
@@ -1189,11 +1201,7 @@ pub fn layer_quantities(
     strip: usize,
 ) -> Result<Vec<LayerQty>, JoinError> {
     for (k, o) in openings.iter().enumerate() {
-        let fits = o.along >= 0.0
-            && o.along + o.width <= s.length()
-            && o.sill >= 0.0
-            && o.sill + o.height <= s.height;
-        if !fits || o.width <= 0.0 || o.height <= 0.0 {
+        if !opening_within(o, s.length(), s.height) {
             return Err(JoinError::OpeningOutside { strip, opening: k });
         }
     }

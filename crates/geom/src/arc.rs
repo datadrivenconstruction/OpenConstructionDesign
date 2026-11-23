@@ -891,11 +891,7 @@ pub fn wall_quantities(
     };
     let len = ax.map_or(s.length(), |a| a.length());
     for (k, o) in openings.iter().enumerate() {
-        let fits = o.along >= 0.0
-            && o.along + o.width <= len
-            && o.sill >= 0.0
-            && o.sill + o.height <= s.height;
-        if !fits || o.width <= 0.0 || o.height <= 0.0 {
+        if !crate::layered::opening_within(o, len, s.height) {
             return Err(JoinError::OpeningOutside { strip, opening: k });
         }
     }

@@ -331,6 +331,29 @@ impl Model {
         Ok(())
     }
 
+    /// The opening with an edge within the length tolerance of the wall start/end or bottom
+    /// moved exactly onto it, so a flush design size is not lost to float rounding.
+    pub fn snap_opening(&self, wall: i64, o: &OpeningSpec) -> Result<OpeningSpec, Error> {
+        let eps = ddc_geom::math::Tol::default().length;
+        let mut o = o.clone();
+        let Ok(len) = self.wall_length(wall) else {
+            return Ok(o);
+        };
+        if o.along < 0.0 && o.along >= -eps {
+            o.width += o.along;
+            o.along = 0.0;
+        }
+        let end = o.along + o.width;
+        if end > len && end <= len + eps {
+            o.width = len - o.along;
+        }
+        if o.sill < 0.0 && o.sill >= -eps {
+            o.height += o.sill;
+            o.sill = 0.0;
+        }
+        Ok(o)
+    }
+
     /// Wall axis length: along the arc for an arc wall, exact.
     pub fn wall_length(&self, id: i64) -> Result<f64, Error> {
         let (a, b) = wall_ends(&self.db, id)?;
@@ -543,6 +566,7 @@ impl Model {
         swing: Swing,
     ) -> Result<i64, Error> {
         check_kind(o)?;
+        let o = &self.snap_opening(wall, o)?;
         self.op("wall_opening_add", |db| {
             if !exists(db, "wall", wall)? {
                 return invalid(&format!("opening: no wall {wall}"));
@@ -578,6 +602,11 @@ impl Model {
         for (_, o, _) in os {
             check_kind(o)?;
         }
+        let snapped = os
+            .iter()
+            .map(|(w, o, s)| Ok((*w, self.snap_opening(*w, o)?, *s)))
+            .collect::<Result<Vec<_>, Error>>()?;
+        let os = &snapped[..];
         self.op("wall_opening_add", |db| {
             let mut has = db.prepare_cached("SELECT count(*) FROM wall WHERE id=?1")?;
             let mut put = db.prepare_cached(
@@ -635,6 +664,14 @@ impl Model {
             .db
             .query_row("SELECT wall FROM opening WHERE id=?1", [id], |r| r.get(0))
             .ok();
+        let snapped;
+        let o = match host {
+            Some(w) => {
+                snapped = self.snap_opening(w, o)?;
+                &snapped
+            }
+            None => o,
+        };
         if let Some(w) = host {
             self.opening_fits(w, o)
                 .map_err(|e| Error::Invalid(format!("wall {w} opening {id}: {e}")))?;
@@ -1513,13 +1550,10 @@ fn build_walls(
         // with a profile, openings are checked and subtracted below, by the top height over the opening
         let flat_ops: &[Opening] = if top.is_some() { &[] } else { &ops };
         if top.is_some() {
-            if let Some(k) = ops.iter().position(|o| {
-                !(o.along >= 0.0
-                    && o.along + o.width <= alen
-                    && o.sill >= 0.0
-                    && o.width > 0.0
-                    && o.height > 0.0)
-            }) {
+            if let Some(k) = ops
+                .iter()
+                .position(|o| !ddc_geom::layered::opening_within(o, alen, f64::INFINITY))
+            {
                 return Err(Error::Geom(format!(
                     "wall {} opening {}: outside wall bounds or non-positive size",
                     walls[i].0, os[k].0
@@ -2094,6 +2128,43 @@ mod tests {
         assert_eq!(m.level_list().unwrap().len(), 1);
         m.undo().unwrap();
         assert_eq!(m.level_list().unwrap().len(), 2);
+    }
+
+    /// An opening whose right edge is flush with the wall end by design (5.397 + 0.5614 against
+    /// an axis length of 5.9583999999999975 after subtraction) fits and is snapped to the end.
+    #[test]
+    fn opening_flush_with_wall_end_survives_float_rounding() {
+        let mut m = Model::open(":memory:").unwrap();
+        let lv = m.add_level("L1", 0.0).unwrap();
+        let t = m.add_wall_type("ext", &layers()).unwrap();
+        let w = m
+            .add_wall(&WallSpec {
+                a: (41.603, -3.77),
+                b: (47.5614, -3.77),
+                level: lv,
+                base_offset: 0.0,
+                height: 1.28,
+                wall_type: t,
+                offset0: None,
+            })
+            .unwrap();
+        let len = m.wall_length(w).unwrap();
+        assert!(5.397 + 0.5614 > len, "repro needs the rounding overshoot");
+        let o = m
+            .add_opening(w, &op_spec("void", 5.397, 0.5614, 0.0, 0.48))
+            .unwrap();
+        let (along, width): (f64, f64) = m
+            .sql()
+            .query_row("SELECT along,width FROM opening WHERE id=?1", [o], |r| {
+                Ok((r.get(0)?, r.get(1)?))
+            })
+            .unwrap();
+        assert!(along + width <= len, "{along}+{width} > {len}");
+        assert!((width - 0.5614).abs() < 1e-9);
+        // beyond the tolerance it is still refused
+        assert!(m
+            .add_opening(w, &op_spec("void", 5.397, 0.5615, 0.0, 0.48))
+            .is_err());
     }
 
     fn layers() -> Vec<LayerSpec> {

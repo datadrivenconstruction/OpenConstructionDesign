@@ -3065,10 +3065,11 @@ fn fit_openings(pl: &mut Plan) {
         } else {
             w.height
         };
-        let fits = o.along >= 0.0
-            && o.along + o.width <= len
-            && o.sill >= 0.0
-            && o.sill + o.height <= top
+        let eps = ddc_geom::math::Tol::default().length;
+        let fits = o.along >= -eps
+            && o.along + o.width <= len + eps
+            && o.sill >= -eps
+            && o.sill + o.height <= top + eps
             && o.width > 0.0
             && o.height > 0.0;
         if fits {
