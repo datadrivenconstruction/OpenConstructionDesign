@@ -735,7 +735,7 @@ pub(super) fn apply(spec: &ProjectSpec, p: &mut GProject) -> Result<(), GenError
     for (k, s) in p.storeys.iter().enumerate() {
         if s.layout.fixtures.len() > super::slots::FIXTURES_MAX as usize {
             return Err(GenError::Infeasible(format!(
-                "{} fixtures on floor {}; at most {}: less paving or fewer trees",
+                "{} fixtures on floor {}; at most {}: lower `design.paving` or `design.trees`",
                 s.layout.fixtures.len(),
                 k + 1,
                 super::slots::FIXTURES_MAX
