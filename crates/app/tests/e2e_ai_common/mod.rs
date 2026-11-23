@@ -87,7 +87,9 @@ pub fn start(ed: &mut Editor, c: SessionCfg) -> UiSession {
 pub fn turn(s: &mut UiSession, ed: &mut Editor, text: &str, mode: Mode) {
     let view = view_of(ed);
     s.send_turn(ed, text.to_string(), view, mode).unwrap();
-    assert!(s.wait_idle(ed, WAIT), "the turn did not finish");
+    let t = Instant::now();
+    let idle = s.wait_idle(ed, WAIT);
+    assert!(idle, "the turn did not finish after {:?}: {}", t.elapsed(), s.idle_report());
 }
 
 pub fn run(ed: &mut Editor, tools: Vec<Script>) -> (UiSession, Arc<ScriptedProvider>) {
