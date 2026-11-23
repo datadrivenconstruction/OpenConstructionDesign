@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Görünüm durur durmaz kalite geri gelir. Bir düzey seçmek için tıklayın.",
  "gfx.note.low_tier": "Otomatik, bu bağdaştırıcı için en yüksek hızı seçti",
  "gfx.note.low_tier.tip": "Bir düzey seçmek için tıklayın.",
+ "gfx.note.flat": "Dokular kapalı: “En yüksek hız” düzeyi düz renkler çizer",
+ "gfx.note.flat.tip": "Malzemeler gerçekçi stilde “Dengeli” ve “En yüksek kalite” düzeylerinde görünür. Bir düzey seçmek için tıklayın.",
  "gfx.fatal.title": "DDC Editor grafiklerini başlatamıyor",
  "gfx.fatal.body": "Bu bilgisayarda, yerleşik yazılım sürücüsü dahil hiçbir grafik bağdaştırıcısı kullanılamadı.\n\nNeden: {reason}\n\nYapılacaklar:\n- grafik sürücüsünü üreticinin sitesinden güncelleyin ve bilgisayarı yeniden başlatın;\n- uzak masaüstü veya sanal makinede 3B hızlandırmayı açın;\n- sorun sürerse bu günlüğü destek ekibine gönderin: {log}",
  "gfx.fatal.choose_safe": "Evet — güvenli grafikle başlat.  Hayır — günlüğü aç.  İptal — kapat.",

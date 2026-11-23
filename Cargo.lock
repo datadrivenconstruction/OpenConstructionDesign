@@ -1261,6 +1261,7 @@ dependencies = [
  "bytemuck",
  "ddc-geom",
  "glam",
+ "naga",
  "pollster",
  "web-time",
  "wgpu",

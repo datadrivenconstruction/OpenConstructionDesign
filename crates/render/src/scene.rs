@@ -453,4 +453,34 @@ mod foliage_tests {
         assert!(src.contains("0x50000000u") && src.contains("i.seed"));
         assert!(include_str!("mesh.wgsl").contains("o.seed = mix32("));
     }
+
+    /// The renderer glues these sources into one module; a failure there falls back to plain shading
+    /// silently, so the glued source must parse and validate.
+    #[test]
+    fn glued_shader_modules_validate() {
+        let common = include_str!("common.wgsl");
+        for (name, src) in [
+            ("mesh", format!("{common}
+{}", include_str!("mesh.wgsl"))),
+            (
+                "realistic",
+                format!(
+                    "{common}
+{}
+{}",
+                    include_str!("mesh.wgsl"),
+                    include_str!("realistic.wgsl")
+                ),
+            ),
+        ] {
+            let m = naga::front::wgsl::parse_str(&src)
+                .unwrap_or_else(|e| panic!("{name}: {}", e.emit_to_string(&src)));
+            naga::valid::Validator::new(
+                naga::valid::ValidationFlags::all(),
+                naga::valid::Capabilities::all(),
+            )
+            .validate(&m)
+            .unwrap_or_else(|e| panic!("{name}: {e:?}"));
+        }
+    }
 }

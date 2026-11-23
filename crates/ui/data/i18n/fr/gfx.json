@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "La qualité revient dès que la vue s'arrête. Cliquez pour choisir un niveau.",
  "gfx.note.low_tier": "Automatique a choisi la vitesse maximale pour cet adaptateur",
  "gfx.note.low_tier.tip": "Cliquez pour choisir un niveau.",
+ "gfx.note.flat": "Les textures sont désactivées : le niveau « Vitesse maximale » dessine des couleurs unies",
+ "gfx.note.flat.tip": "Les matériaux s’affichent dans le style réaliste aux niveaux « Équilibré » et « Qualité maximale ». Cliquez pour choisir un niveau.",
  "gfx.fatal.title": "OpenConstructionDesign ne peut pas démarrer ses graphismes",
  "gfx.fatal.body": "Aucun adaptateur graphique de cet ordinateur n'a pu être utilisé, pas même l'adaptateur logiciel intégré.\n\nRaison : {reason}\n\nQue faire :\n- mettez à jour le pilote graphique depuis le site du fabricant et redémarrez l'ordinateur ;\n- sur un bureau à distance ou une machine virtuelle, activez là-bas l'accélération 3D ;\n- si l'échec persiste, envoyez ce journal au support : {log}",
  "gfx.fatal.choose_safe": "Oui — démarrer avec des graphismes sûrs.  Non — ouvrir le journal.  Annuler — fermer.",

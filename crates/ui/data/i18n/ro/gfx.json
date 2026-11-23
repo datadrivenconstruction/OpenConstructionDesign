@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Calitatea revine imediat ce vederea se oprește. Faceți clic pentru a alege un nivel.",
  "gfx.note.low_tier": "Automat a ales viteza maximă pentru acest adaptor",
  "gfx.note.low_tier.tip": "Faceți clic pentru a alege un nivel.",
+ "gfx.note.flat": "Texturile sunt dezactivate: nivelul „Viteză maximă” desenează culori plate",
+ "gfx.note.flat.tip": "Materialele apar în stilul realist la nivelurile „Echilibrat” și „Calitate maximă”. Faceți clic pentru a alege un nivel.",
  "gfx.fatal.title": "DDC Editor nu poate porni grafica",
  "gfx.fatal.body": "Niciun adaptor grafic din acest calculator nu a putut fi folosit, nici cel software integrat.\n\nMotiv: {reason}\n\nCe trebuie făcut:\n- actualizați driverul grafic de pe site-ul producătorului și reporniți calculatorul;\n- pe un desktop la distanță sau pe o mașină virtuală, activați accelerarea 3D acolo;\n- dacă eșuează în continuare, trimiteți acest jurnal la suport: {log}",
  "gfx.fatal.choose_safe": "Da — pornește cu grafică sigură.  Nu — deschide jurnalul.  Anulare — închide.",

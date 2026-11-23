@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Ko'rinish to'xtashi bilanoq sifat qaytadi. Darajani tanlash uchun bosing.",
  "gfx.note.low_tier": "Avtomatik: bu adapter uchun maksimal tezlik tanlandi",
  "gfx.note.low_tier.tip": "Darajani tanlash uchun bosing.",
+ "gfx.note.flat": "Teksturalar o‘chirilgan: “Maksimal tezlik” darajasi tekis ranglarni chizadi",
+ "gfx.note.flat.tip": "Materiallar “Muvozanatli” va “Maksimal sifat” darajalarida realistik uslubda ko‘rinadi. Darajani tanlash uchun bosing.",
  "gfx.fatal.title": "DDC Editor grafikasini ishga tushira olmaydi",
  "gfx.fatal.body": "Bu kompyuterdagi hech bir grafik adapter ishlatilmadi, o'rnatilgan dasturiy adapter ham kiritilgan.\n\nSabab: {reason}\n\nNima qilish kerak:\n- grafik drayverni ishlab chiqaruvchi saytidan yangilang va kompyuterni qayta ishga tushiring;\n- masofaviy ish stoli yoki virtual mashinada 3D tezlatishni yoqing;\n- hali ham xato bo'lsa, bu logni qo'llab-quvvatlashga yuboring: {log}",
  "gfx.fatal.choose_safe": "Ha — xavfsiz grafika bilan boshlash.  Yo'q — logni ochish.  Bekor qilish — yopish.",

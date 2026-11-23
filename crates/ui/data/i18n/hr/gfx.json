@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Kvaliteta se vraća čim se pogled zaustavi. Kliknite za odabir razine.",
  "gfx.note.low_tier": "Automatski je odabrao najveću brzinu za ovaj adapter",
  "gfx.note.low_tier.tip": "Kliknite za odabir razine.",
+ "gfx.note.flat": "Teksture su isključene: razina „Najveća brzina“ crta ravne boje",
+ "gfx.note.flat.tip": "Materijali se prikazuju u realističnom stilu na razinama „Uravnoteženo“ i „Najveća kvaliteta“. Kliknite za odabir razine.",
  "gfx.fatal.title": "DDC Editor ne može pokrenuti grafiku",
  "gfx.fatal.body": "Nijedan grafički adapter na ovom računalu nije mogao biti korišten, uključujući ugrađeni softverski.\n\nRazlog: {reason}\n\nŠto učiniti:\n- ažurirajte upravljački program grafike na proizvođačevoj stranici i ponovno pokrenite računalo;\n- na udaljenoj radnoj površini ili virtualnom stroju uključite 3D ubrzanje;\n- ako se problem ponavlja, pošaljite ovaj dnevnik podršci: {log}",
  "gfx.fatal.choose_safe": "Da — pokreni sigurnom grafikom.  Ne — otvori dnevnik.  Odustani — zatvori.",

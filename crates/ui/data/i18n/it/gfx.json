@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "La qualità torna appena la vista si ferma. Clic per scegliere un livello.",
  "gfx.note.low_tier": "Automatico ha scelto la velocità massima per questa scheda",
  "gfx.note.low_tier.tip": "Clic per scegliere un livello.",
+ "gfx.note.flat": "Le texture sono disattivate: il livello «Velocità massima» disegna colori piatti",
+ "gfx.note.flat.tip": "I materiali appaiono in stile realistico ai livelli «Bilanciato» e «Qualità massima». Clic per scegliere un livello.",
  "gfx.fatal.title": "DDC Editor non può avviare la grafica",
  "gfx.fatal.body": "Nessuna scheda grafica di questo computer può essere usata, incluso il software integrato.\n\nMotivo: {reason}\n\nCosa fare:\n- aggiorna il driver grafico dal sito del produttore e riavvia il computer;\n- su un desktop remoto o una macchina virtuale, attiva lì l'accelerazione 3D;\n- se continua a fallire, invia questo log al supporto: {log}",
  "gfx.fatal.choose_safe": "Sì — avvia con grafica sicura.  No — apri il log.  Annulla — chiudi.",

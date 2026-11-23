@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "Kvaliteet taastub kohe, kui vaade peatub. Klõpsa, et valida tase.",
  "gfx.note.low_tier": "Automaatne valis selle adapteri jaoks maksimaalse kiiruse",
  "gfx.note.low_tier.tip": "Klõpsa, et valida tase.",
+ "gfx.note.flat": "Tekstuurid on välja lülitatud: tase „Maksimaalne kiirus“ joonistab ühtseid värve",
+ "gfx.note.flat.tip": "Materjalid kuvatakse realistlikus stiilis tasemetel „Tasakaalustatud“ ja „Maksimaalne kvaliteet“. Klõpsa, et valida tase.",
  "gfx.fatal.title": "DDC Editor ei saa oma graafikat käivitada",
  "gfx.fatal.body": "Selles arvutis ei õnnestunud kasutada ühtegi graafikaadapterit, sealhulgas sisseehitatud tarkvaralist.\n\nPõhjus: {reason}\n\nMida teha:\n- uuenda graafikadraiverit tootja lehelt ja taaskäivita arvuti;\n- kaugtöölaual või virtuaalmasinas lülita sealt sisse 3D-kiirendus;\n- kui viga kordub, saada see logi toele: {log}",
  "gfx.fatal.choose_safe": "Jah — käivita ohutu graafikaga.  Ei — ava logi.  Tühista — sulge.",

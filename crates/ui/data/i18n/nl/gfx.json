@@ -45,6 +45,8 @@
  "gfx.note.lowered.tip": "De kwaliteit keert terug zodra de weergave stilstaat. Klik om een niveau te kiezen.",
  "gfx.note.low_tier": "Automatisch koos maximale snelheid voor deze adapter",
  "gfx.note.low_tier.tip": "Klik om een niveau te kiezen.",
+ "gfx.note.flat": "Texturen staan uit: niveau “Maximale snelheid” tekent vlakke kleuren",
+ "gfx.note.flat.tip": "Materialen worden in de realistische stijl getoond op de niveaus “Gebalanceerd” en “Maximale kwaliteit”. Klik om een niveau te kiezen.",
  "gfx.fatal.title": "DDC Editor kan zijn grafische weergave niet starten",
  "gfx.fatal.body": "Geen enkele grafische adapter op deze computer kon worden gebruikt, ook de ingebouwde softwareadapter niet.\n\nReden: {reason}\n\nWat te doen:\n- werk het stuurprogramma van de grafische kaart bij via de site van de fabrikant en start de computer opnieuw;\n- sluit op een extern bureaublad of een virtuele machine 3D-versnelling daar aan;\n- blijft het mislukken, stuur dan dit logbestand naar support: {log}",
  "gfx.fatal.choose_safe": "Ja — starten met veilige grafische weergave.  Nee — log openen.  Annuleren — sluiten.",

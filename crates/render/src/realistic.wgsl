@@ -16,7 +16,7 @@ fn hash21(p: vec2<f32>) -> f32 {
     return f32(h >> 8u) / 16777216.0;
 }
 
-fn vnoise(p: vec2<f32>) -> f32 {
+fn vnoise2(p: vec2<f32>) -> f32 {
     let i = floor(p);
     let f = fract(p);
     let s = f * f * (vec2<f32>(3.0) - 2.0 * f);
@@ -98,16 +98,16 @@ fn luma(c: vec3<f32>) -> f32 {
 
 // x: brightness variation, y: roughness
 fn surface(tag: u32, uv: vec2<f32>) -> vec2<f32> {
-    let fine = vnoise(uv * 24.0);
-    let wide = vnoise(uv * 2.5);
+    let fine = vnoise2(uv * 24.0);
+    let wide = vnoise2(uv * 2.5);
     switch (tag) {
-        case 5u: { return vec2<f32>(0.82 + 0.3 * vnoise(vec2<f32>(uv.x * 40.0, uv.y * 1.5)), 0.45); }
+        case 5u: { return vec2<f32>(0.82 + 0.3 * vnoise2(vec2<f32>(uv.x * 40.0, uv.y * 1.5)), 0.45); }
         case 8u, 25u: { return vec2<f32>(1.0, 0.08); }
         case 9u: { return vec2<f32>(1.0, 0.3); }
         case 11u: { return vec2<f32>(0.9 + 0.12 * fine + 0.06 * wide, 0.8); }
         case 20u, 23u: { return vec2<f32>(0.78 + 0.4 * fine, 0.95); }
         case 21u: { return vec2<f32>(0.72 + 0.5 * fine * wide + 0.1 * wide, 0.95); }
-        case 22u: { return vec2<f32>(0.85 + 0.3 * vnoise(uv * 60.0), 0.9); }
+        case 22u: { return vec2<f32>(0.85 + 0.3 * vnoise2(uv * 60.0), 0.9); }
         case 24u: { return vec2<f32>(0.85 + 0.2 * step(0.06, fract(uv.x * 5.0)) * step(0.06, fract(uv.y * 5.0)), 0.8); }
         default: { return vec2<f32>(0.95 + 0.06 * fine + 0.04 * wide, 0.7); }
     }
