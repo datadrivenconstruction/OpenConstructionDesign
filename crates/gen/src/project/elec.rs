@@ -892,6 +892,8 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
     let mut barred: Vec<(usize, usize, i64)> = vec![];
     let mut cut: Vec<usize> = vec![];
     let mut tries_k = 0;
+    // storeys whose board room was built: the riser and its stubs serve only those
+    let mut board_ok = vec![false; n_st];
     while k < n_st {
         let undo = (space.mark(), runs.len(), dropped.len(), links.len(), served.len(), board_fx.len(), unserved, lux_short);
         let mut failed: Vec<(usize, Feed)> = vec![];
@@ -1180,12 +1182,11 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                     .collect();
                 let corner_leg = ring_corner_leg(k, pl.load() + child_tees.iter().map(|t| t.load).sum::<f64>());
                 let mut tees: Vec<Tee> = vec![];
+                // the feed starts where the parent's carrier tees it, also where a ring's corner
+                // clamps the tee off the side
                 let feed_from = feed[v].map(|f| {
-                    let pr = &rs[f.parent];
-                    let q = match spine[f.parent] {
-                        Some(sj) => pr.sides[sj].at(f.ps, co[f.parent]),
-                        None => pr.sides[f.pj].at(f.ps, co[f.parent]),
-                    };
+                    let (pr, ps) = (&rs[f.parent], spine[f.parent]);
+                    let q = carrier_xy(pr, ps, carrier_at(pr, ps, f.pj, f.ps, co[f.parent]), co[f.parent]);
                     v3(q.0, q.1, z)
                 });
                 if let Some(f) = feed[v] {
@@ -1548,12 +1549,28 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
             }
             continue;
         }
+        board_ok[k] = ok[board_room];
         (barred, cut, tries_k) = (vec![], vec![], 0);
         k += 1;
     }
     drop(space);
+    // riser pieces above the top built board and stubs to boards never built end in the air:
+    // the riser stops at the top board it feeds
+    let top = (0..n_st).rev().find(|&k| board_ok[k]).unwrap_or(0);
+    if n_st > 1 {
+        let n_stubs = if core_xy.is_some() { n_st } else { 0 };
+        let keep: Vec<bool> = (0..runs.len())
+            .map(|i| match i.checked_sub(n_st - 1) {
+                None => i < top,
+                Some(j) if j < n_stubs => board_ok[j] && top > 0,
+                Some(_) => true,
+            })
+            .collect();
+        let mut it = keep.into_iter();
+        runs.retain(|_| it.next().unwrap_or(true));
+    }
     // a core shaft cuts the slabs itself
-    let holes: Vec<(usize, svc::R)> = (1..n_st).filter(|_| core_xy.is_none()).map(|k| (k, svc::hole(riser_xy.0, riser_xy.1, tray().0))).collect();
+    let holes: Vec<(usize, svc::R)> = (1..=top).filter(|_| core_xy.is_none()).map(|k| (k, svc::hole(riser_xy.0, riser_xy.1, tray().0))).collect();
     svc::add_holes(p, &holes);
     for (k, fx) in add.into_iter().enumerate() {
         p.storeys[k].layout.fixtures.extend(fx);
