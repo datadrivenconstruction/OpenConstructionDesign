@@ -73,5 +73,14 @@
  "e3d.snap.perp": "Perpendiculaire",
  "e3d.snap.curve": "Au plus proche sur la courbe",
  "e3d.snap.iso": "Isocourbe de surface",
- "e3d.snap.surface": "Point de surface"
+ "e3d.snap.surface": "Point de surface",
+ "cmd.e3d.duct": "Gaine en 3D",
+ "cmd.e3d.pipe": "Tuyau en 3D",
+ "cmd.e3d.tray": "Chemin de câbles en 3D",
+ "e3d.hint.mep": "Cliquez des points sur le plan du réseau · tapez +/- valeur pour une colonne montante · Ctrl — vertical · Maj — orthogonal · cliquez un connecteur ou un réseau pour raccorder · Entrée termine · Échap quitte",
+ "e3d.mep.elev": "Élévation",
+ "e3d.mep.port": "Connecteur",
+ "e3d.mep.end": "Extrémité du réseau",
+ "e3d.mep.on_run": "Sur le réseau (té)",
+ "e3d.err.mep_points": "un réseau doit avoir au moins deux points"
 }

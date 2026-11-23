@@ -73,5 +73,14 @@
  "e3d.snap.perp": "垂直",
  "e3d.snap.curve": "曲线上最近点",
  "e3d.snap.iso": "曲面等参线",
- "e3d.snap.surface": "曲面点"
+ "e3d.snap.surface": "曲面点",
+ "cmd.e3d.duct": "三维风管",
+ "cmd.e3d.pipe": "三维管道",
+ "cmd.e3d.tray": "三维电缆桥架",
+ "e3d.hint.mep": "在管线平面上单击各点 · 输入 +/- 数值生成立管 · Ctrl — 竖直 · Shift — 正交 · 单击连接件或管线进行连接 · Enter 结束 · Esc 退出",
+ "e3d.mep.elev": "标高",
+ "e3d.mep.port": "连接件",
+ "e3d.mep.end": "管线端点",
+ "e3d.mep.on_run": "在管线上（三通）",
+ "e3d.err.mep_points": "管线至少需要两个点"
 }

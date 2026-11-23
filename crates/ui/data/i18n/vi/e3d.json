@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Đường đẳng tham số mặt",
  "e3d.snap.param": "Trung điểm và điểm chia ba của đường cong",
  "e3d.snap.surface": "Điểm trên bề mặt",
- "e3d.snap.curve": "Gần nhất trên đường cong"
+ "e3d.snap.curve": "Gần nhất trên đường cong",
+ "cmd.e3d.duct": "Ống gió 3D",
+ "cmd.e3d.pipe": "Ống 3D",
+ "cmd.e3d.tray": "Máng cáp 3D",
+ "e3d.hint.mep": "Nhấp các điểm trên mặt phẳng tuyến · nhập giá trị +/- cho ống đứng · Ctrl — thẳng đứng · Shift — trực giao · nhấp đầu nối hoặc tuyến để nối · Enter kết thúc · Esc thoát",
+ "e3d.mep.elev": "Cao độ",
+ "e3d.mep.port": "Đầu nối",
+ "e3d.mep.end": "Đầu tuyến",
+ "e3d.mep.on_run": "Trên tuyến (tê)",
+ "e3d.err.mep_points": "tuyến cần ít nhất hai điểm"
 }

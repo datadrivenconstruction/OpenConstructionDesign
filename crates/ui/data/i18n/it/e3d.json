@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Isocurva di superficie",
  "e3d.snap.param": "Punto medio e terzi della curva",
  "e3d.snap.surface": "Punto di superficie",
- "e3d.snap.curve": "Più vicino sulla curva"
+ "e3d.snap.curve": "Più vicino sulla curva",
+ "cmd.e3d.duct": "Condotto in 3D",
+ "cmd.e3d.pipe": "Tubo in 3D",
+ "cmd.e3d.tray": "Passerella portacavi in 3D",
+ "e3d.hint.mep": "Fai clic sui punti del piano del percorso · digita +/- valore per una colonna montante · Ctrl — verticale · Maiusc — ortogonale · clic su un connettore o percorso per collegare · Invio termina · Esc esce",
+ "e3d.mep.elev": "Quota",
+ "e3d.mep.port": "Connettore",
+ "e3d.mep.end": "Estremità del percorso",
+ "e3d.mep.on_run": "Sul percorso (raccordo a T)",
+ "e3d.err.mep_points": "un percorso richiede almeno due punti"
 }

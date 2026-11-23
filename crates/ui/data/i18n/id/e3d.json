@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Iso-kurva permukaan",
  "e3d.snap.param": "Titik tengah dan sepertiga kurva",
  "e3d.snap.surface": "Titik permukaan",
- "e3d.snap.curve": "Terdekat pada kurva"
+ "e3d.snap.curve": "Terdekat pada kurva",
+ "cmd.e3d.duct": "Saluran udara 3D",
+ "cmd.e3d.pipe": "Pipa 3D",
+ "cmd.e3d.tray": "Rak kabel 3D",
+ "e3d.hint.mep": "Klik titik pada bidang jalur · ketik nilai +/- untuk riser · Ctrl — vertikal · Shift — ortogonal · klik konektor atau jalur untuk menyambung · Enter selesai · Esc keluar",
+ "e3d.mep.elev": "Elevasi",
+ "e3d.mep.port": "Konektor",
+ "e3d.mep.end": "Ujung jalur",
+ "e3d.mep.on_run": "Pada jalur (tee)",
+ "e3d.err.mep_points": "jalur memerlukan minimal dua titik"
 }

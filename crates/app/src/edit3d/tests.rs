@@ -682,6 +682,7 @@ fn every_command_has_strings() {
         Tool::Create(create::Kind::Floor),
         Tool::Create(create::Kind::Column),
         Tool::Create(create::Kind::Beam),
+        Tool::Mep(mep_draw::Kind::Duct),
     ] {
         let k = format!("e3d.hint.{}", t.key());
         assert_ne!(tr(false, &k), k);
@@ -693,6 +694,7 @@ fn every_command_has_strings() {
         include_str!("mep_grips.rs"),
         include_str!("xform.rs"),
         include_str!("mirror_array.rs"),
+        include_str!("mep_draw.rs"),
     ];
     for s in src {
         for k in s
@@ -803,6 +805,9 @@ fn tools_report_active_command_until_esc() {
         ("e3d.floor", "e3d.floor"),
         ("e3d.column", "e3d.column"),
         ("e3d.beam", "e3d.beam"),
+        ("e3d.duct", "e3d.duct"),
+        ("e3d.pipe", "e3d.pipe"),
+        ("e3d.tray", "e3d.tray"),
         ("e3d.wp_face", "e3d.wp_face"),
         ("e3d.wp_pick", "e3d.wp_pick"),
     ];

@@ -73,5 +73,14 @@
  "e3d.snap.iso": "서피스 아이소커브",
  "e3d.snap.param": "곡선 중점 및 삼분점",
  "e3d.snap.surface": "서피스 위의 점",
- "e3d.snap.curve": "곡선 위 최근접점"
+ "e3d.snap.curve": "곡선 위 최근접점",
+ "cmd.e3d.duct": "3D 덕트",
+ "cmd.e3d.pipe": "3D 배관",
+ "cmd.e3d.tray": "3D 케이블 트레이",
+ "e3d.hint.mep": "경로 평면에서 점 클릭 · 입상관은 +/- 값 입력 · Ctrl — 수직 · Shift — 직교 · 커넥터나 경로를 클릭해 연결 · Enter 종료 · Esc 나가기",
+ "e3d.mep.elev": "높이",
+ "e3d.mep.port": "커넥터",
+ "e3d.mep.end": "경로 끝",
+ "e3d.mep.on_run": "경로 위(티)",
+ "e3d.err.mep_points": "경로에는 점이 두 개 이상 필요합니다"
 }

@@ -73,5 +73,14 @@
  "e3d.snap.iso": "Sirt izo-egri chizig'i",
  "e3d.snap.param": "Egri chiziq o'rtasi va uchdan bir nuqtalari",
  "e3d.snap.surface": "Sirt nuqtasi",
- "e3d.snap.curve": "Egri chiziqdagi eng yaqin nuqta"
+ "e3d.snap.curve": "Egri chiziqdagi eng yaqin nuqta",
+ "cmd.e3d.duct": "3D havo kanali",
+ "cmd.e3d.pipe": "3D quvur",
+ "cmd.e3d.tray": "3D kabel novi",
+ "e3d.hint.mep": "Trassa tekisligida nuqtalarni bosing · tik quvur uchun +/- qiymat kiriting · Ctrl — tik · Shift — ortogonal · ulash uchun ulagich yoki trassani bosing · Enter — tugatish · Esc — chiqish",
+ "e3d.mep.elev": "Balandlik",
+ "e3d.mep.port": "Ulagich",
+ "e3d.mep.end": "Trassa uchi",
+ "e3d.mep.on_run": "Trassada (uchtalik)",
+ "e3d.err.mep_points": "trassaga kamida ikki nuqta kerak"
 }
