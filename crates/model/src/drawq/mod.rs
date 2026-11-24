@@ -115,6 +115,40 @@ impl Model {
         Ok(ViewRange::from_plan(self.plan_view_range(level)))
     }
 
+    /// The range a plan is drawn with: [`Model::plan_range`] with an open top closed at
+    /// [`Model::plan_default_top`], so nothing far above the level (roof framing, upper
+    /// floors) lands on the plan.
+    pub fn plan_range_drawn(&self, level: i64) -> Result<ViewRange, Error> {
+        let mut r = self.plan_range(level)?;
+        if r.top.is_infinite() {
+            r.top = self.plan_default_top(level, r.cut)?;
+        }
+        Ok(r)
+    }
+
+    /// Top of a plan range that stores none, above the level elevation: the next level up,
+    /// else the cut plus the storey height below the level (3 m on a single level).
+    pub fn plan_default_top(&self, level: i64, cut: f64) -> Result<f64, Error> {
+        let mut st = self.db.prepare_cached("SELECT id, elevation FROM level")?;
+        let lv: Vec<(i64, f64)> = st
+            .query_map([], |r| Ok((r.get(0)?, r.get(1)?)))?
+            .collect::<Result<_, _>>()?;
+        let Some(&(_, el)) = lv.iter().find(|l| l.0 == level) else {
+            return Err(Error::Invalid(format!("level {level} not found")));
+        };
+        let els = || lv.iter().map(|l| l.1);
+        let above = els().filter(|e| *e > el + 1e-6).fold(f64::INFINITY, f64::min);
+        let below = els().filter(|e| *e < el - 1e-6).fold(f64::NEG_INFINITY, f64::max);
+        let top = if above.is_finite() {
+            above - el
+        } else if below.is_finite() {
+            cut + (el - below)
+        } else {
+            cut + 3.0
+        };
+        Ok(top.max(cut))
+    }
+
     /// The range of a level when it differs from the default one (set here, in the view
     /// graphics window or by a view template).
     pub fn plan_range_saved(&self, level: i64) -> Result<Option<ViewRange>, Error> {
@@ -145,7 +179,7 @@ impl Model {
     /// depth are beyond, and the rest is left out. Walls, openings, curtain walls and stairs are
     /// sorted; every other kind is sorted by [`Model::plan_bands`] for the live plan.
     pub fn plan_view_ranged(&self, level: i64, grids: Vec<GridAxis>) -> Result<PlanView, Error> {
-        let r = self.plan_range(level)?;
+        let r = self.plan_range_drawn(level)?;
         let mut v = self.plan_view(&PlanViewSpec {
             level,
             cut_height: r.cut,

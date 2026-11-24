@@ -3,8 +3,9 @@
 //! The view range and the drawing quality styles on the live plan. Every element kind the model
 //! lists in `plan_bands` follows the range of its level: outside it the element is not drawn,
 //! overhead ones are drawn with a pattern, the rest takes the pen of its band (cut or projection
-//! style, halftone). Nothing changes until the level has a saved range or the project has custom
-//! pens, libraries or category styles.
+//! style, halftone). Without a saved range only what lies above the default top (the next level,
+//! or the cut plus the storey height) leaves the plan, until the project has custom pens,
+//! libraries or category styles.
 
 use std::cell::RefCell;
 use std::collections::{HashMap, HashSet};
@@ -12,7 +13,8 @@ use std::sync::Arc;
 
 use ddc_geom::V2;
 use ddc_model::drawq::{
-    screen_px, Band, DrawLook, HatchLib, HatchPattern, LinePattern, PenTable, HALFTONE_K,
+    screen_px, Band, DrawLook, HatchLib, HatchPattern, LinePattern, PenTable, ViewRange,
+    HALFTONE_K,
 };
 use ddc_model::ViewKey;
 use egui::{self, Color32, Pos2, Stroke};
@@ -168,10 +170,19 @@ fn build(ed: &Editor, level: i64, denom: u32, base: &Arc<GfxLayer>) -> Option<Ra
     let saved = m.plan_range_saved(level).ok().flatten();
     let look = m.drawq_look(ViewKey::Plan(level)).unwrap_or_default();
     HATCHES.with(|h| *h.borrow_mut() = look.hatches.clone());
-    if saved.is_none() && look.is_default() {
+    let range = match saved {
+        Some(r) => r,
+        // the default range leaves nothing out below the cut, only what starts above its top
+        None => ViewRange {
+            depth: f64::NEG_INFINITY,
+            ..m.plan_range_drawn(level).ok()?
+        },
+    };
+    let bands = m.plan_bands(level, &range).ok()?;
+    let above_top = saved.is_none() && bands.iter().any(|b| b.band == Band::Hidden);
+    if saved.is_none() && look.is_default() && !above_top {
         return None;
     }
-    let bands = m.plan_bands(level, &saved.unwrap_or_default()).ok()?;
     let cx = Ctx {
         look: &look,
         ranged: saved.is_some(),
@@ -183,7 +194,12 @@ fn build(ed: &Editor, level: i64, denom: u32, base: &Arc<GfxLayer>) -> Option<Ra
     let mut looks: HashMap<(&'static str, i64), (f32, bool)> = HashMap::new();
     for b in &bands {
         let sel = sel_for(b.table, b.id);
-        match cx.decide(b.category, b.band) {
+        let draw = if saved.is_none() && b.band == Band::Hidden {
+            Draw::Hide
+        } else {
+            cx.decide(b.category, b.band)
+        };
+        match draw {
             Draw::Plain => {}
             Draw::Hide => match (sel, part_for(b.table, b.id)) {
                 (Some(s), _) => {

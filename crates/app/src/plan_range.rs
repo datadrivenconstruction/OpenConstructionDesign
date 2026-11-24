@@ -24,8 +24,13 @@ pub enum RangeClass {
     Hidden,
 }
 
+/// True for the default planes (any top): nothing below the level is hidden.
+fn untouched(r: &ViewRange) -> bool {
+    ViewRange { top: None, ..*r } == ViewRange::default()
+}
+
 /// Class of a span `[z_lo, z_hi]` (absolute metres) on a level at `elevation`.
-/// The default range hides nothing, so untouched views draw as before view ranges existed.
+/// The default range hides nothing below the cut; above it, what starts over the top is hidden.
 pub fn classify(r: &ViewRange, elevation: f64, z_lo: f64, z_hi: f64) -> RangeClass {
     let cut_z = elevation + r.cut;
     let bottom_z = elevation + r.bottom;
@@ -36,7 +41,7 @@ pub fn classify(r: &ViewRange, elevation: f64, z_lo: f64, z_hi: f64) -> RangeCla
             Some(t) if z_lo > elevation + t => RangeClass::Hidden,
             _ => RangeClass::Beyond,
         }
-    } else if z_hi >= bottom_z || *r == ViewRange::default() {
+    } else if z_hi >= bottom_z || untouched(r) {
         RangeClass::Projection
     } else if z_hi >= bottom_z - r.depth {
         RangeClass::Beyond
@@ -131,7 +136,7 @@ pub fn level_classes(ed: &Editor, r: &ViewRange) -> LevelClasses {
             .collect(),
         below: vec![],
     };
-    if *r != ViewRange::default() {
+    if !untouched(r) {
         if let Some((lv, ..)) = ed.level_below() {
             let (slabs, below_el) = crate::editor::cw::slabs_of(&ed.model, lv);
             for s in slabs {
@@ -163,7 +168,7 @@ pub fn classes(ed: &Editor) -> Rc<LevelClasses> {
             return v;
         }
     }
-    let v = Rc::new(level_classes(ed, &range(ed)));
+    let v = Rc::new(level_classes(ed, &drawn(ed)));
     CACHE.with(|x| *x.borrow_mut() = Some((key, v.clone())));
     v
 }
@@ -181,6 +186,16 @@ pub fn range(ed: &Editor) -> ViewRange {
         ed.level,
     );
     CACHE.with(|x| x.borrow_mut().get(key, || ed.model.plan_view_range(ed.level)))
+}
+
+/// The range the plan is drawn with: [`range`] with an open top closed at the model's default
+/// top (the next level, or the cut plus the storey height), for every element kind.
+pub fn drawn(ed: &Editor) -> ViewRange {
+    let mut r = range(ed);
+    if r.top.is_none() {
+        r.top = ed.model.plan_default_top(ed.level, r.cut).ok();
+    }
+    r
 }
 
 #[cfg(test)]
@@ -248,6 +263,21 @@ mod tests {
         assert_eq!(range(&e), ViewRange::default());
         assert_eq!(classes(&e).wall(0), RangeClass::Projection);
         assert_eq!(classes(&e).wall(1), RangeClass::Beyond);
+    }
+
+    /// The default range has a top at the next level: what starts above it (upper floors,
+    /// roof framing) is hidden and not pickable; the stored range stays the default one.
+    #[test]
+    fn default_range_top_is_the_next_level() {
+        let mut e = Editor::new_in_memory().unwrap();
+        let l1 = e.level;
+        add_wall(&mut e, 3.5, 1.0);
+        assert_eq!(classes(&e).wall(0), RangeClass::Beyond, "single level: cut + storey");
+        e.model.add_level("L2", 3.0).unwrap();
+        e.set_level(l1);
+        assert_eq!(range(&e), ViewRange::default());
+        assert_eq!(drawn(&e).top, Some(3.0));
+        assert_eq!(classes(&e).wall(0), RangeClass::Hidden);
     }
 
     #[test]

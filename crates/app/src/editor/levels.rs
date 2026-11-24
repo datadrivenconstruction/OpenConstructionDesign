@@ -418,7 +418,7 @@ impl Editor {
                 .sum::<f64>()
                 .abs()
         };
-        let range = crate::plan_range::range(self);
+        let range = crate::plan_range::drawn(self);
         self.bodies
             .iter()
             .filter(|b| b.kind != super::bodies::BodyKind::Ceiling)
