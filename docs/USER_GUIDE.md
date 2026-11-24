@@ -1,6 +1,6 @@
 # User guide
 
-This guide covers the core workflows of the 0.9.0 preview. It assumes the Windows desktop
+This guide covers the core workflows of the editor. It assumes the Windows desktop
 editor; the `ddc` command line also runs on Linux. For a first model step by step, start with
 [getting-started](user/getting-started.md).
 
