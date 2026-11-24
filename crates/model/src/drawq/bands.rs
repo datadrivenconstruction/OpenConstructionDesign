@@ -195,7 +195,15 @@ impl Model {
             &mut out,
             "comp",
             "comp",
-            rows(db, "SELECT id, z, z FROM comp WHERE level=?1", level, trio)?,
+            // the body's world box when built (a rafter spans eave to ridge), else the insertion
+            rows(
+                db,
+                "SELECT c.id, COALESCE(q.z0 - l.elevation, c.z), COALESCE(q.z1 - l.elevation, c.z) \
+                 FROM comp c JOIN level l ON l.id = c.level LEFT JOIN comp_qty q ON q.comp = c.id \
+                 WHERE c.level=?1",
+                level,
+                trio,
+            )?,
         );
         let elev: f64 = db
             .query_row("SELECT elevation FROM level WHERE id=?1", [level], |r| {
@@ -347,6 +355,41 @@ mod tests {
             depth: 0.5,
         };
         assert_eq!(band(&m.plan_bands(l1, &high).unwrap(), "slab"), Band::Hidden);
+    }
+
+    /// A component spans its body (a rafter from eave to ridge), not its insertion point, and
+    /// the drawn default range ends at the next level: a body above it leaves the plan.
+    #[test]
+    fn components_span_their_body_and_the_default_top_hides_above() {
+        let (mut m, l1) = house();
+        let fam = m.load_library_family("Table").unwrap();
+        let ct = m.comp_types(fam).unwrap()[0].0;
+        let at = |z: f64| crate::CompSpec {
+            at: (1.0, 2.0, z),
+            ..crate::CompSpec::at(l1, ct, 1.0, 2.0)
+        };
+        let low = m.add_component(&at(1.0)).unwrap();
+        let high = m.add_component(&at(3.5)).unwrap();
+        let ex = m.plan_extents(l1).unwrap();
+        let e = ex.iter().find(|e| e.table == "comp" && e.id == low).unwrap();
+        assert!((e.z0 - 1.0).abs() < 1e-6 && e.z1 > 1.3, "{e:?}");
+        let r = m.plan_range_drawn(l1).unwrap();
+        assert_eq!(r.top, 3.0, "next level up");
+        let b = m.plan_bands(l1, &r).unwrap();
+        let of = |id: i64| b.iter().find(|b| b.table == "comp" && b.id == id).unwrap().band;
+        assert_eq!(of(low), Band::Cut, "crosses the cut plane");
+        assert_eq!(of(high), Band::Hidden, "starts above the default top");
+        assert_eq!(m.plan_range(l1).unwrap().top, f64::INFINITY, "the stored top stays open");
+    }
+
+    #[test]
+    fn default_top_is_next_level_else_cut_plus_storey() {
+        let mut m = Model::open(":memory:").unwrap();
+        let l1 = m.add_level("L1", 0.0).unwrap();
+        assert_eq!(m.plan_default_top(l1, 1.2).unwrap(), 1.2 + 3.0, "single level");
+        let l2 = m.add_level("L2", 2.7).unwrap();
+        assert_eq!(m.plan_default_top(l1, 1.2).unwrap(), 2.7);
+        assert!((m.plan_default_top(l2, 1.2).unwrap() - (1.2 + 2.7)).abs() < 1e-9);
     }
 
     #[test]
