@@ -2613,6 +2613,23 @@ fn tessellated_and_sideways_spaces_are_rooms() {
     assert!(p.report.skipped.is_empty(), "{:?}", p.report.skipped);
 }
 
+/// Name equal to LongName is not a room number: the label reads "living room", not twice.
+#[test]
+fn space_name_equal_to_long_name_is_not_a_number() {
+    let mut b = B::new();
+    let x = boxes(&mut b, &[([0.0, 0.0, 0.0], [4.0, 3.0, 2.7])]);
+    b.body("IFCSPACE", "living room", [0.0; 3], &[x], ",'living room',.ELEMENT.,.SPACE.,$");
+    let x = boxes(&mut b, &[([5.0, 0.0, 0.0], [8.0, 3.0, 2.7])]);
+    b.body("IFCSPACE", "1.02", [0.0; 3], &[x], ",'Kitchen',.ELEMENT.,.SPACE.,$");
+    let p = plan_of(&b.finish("IFC4"));
+    let got: Vec<(&str, &str)> = p
+        .rooms
+        .iter()
+        .map(|r| (r.number.as_str(), r.name.as_str()))
+        .collect();
+    assert_eq!(got, [("", "living room"), ("1.02", "Kitchen")], "{:?}", p.report);
+}
+
 #[test]
 fn a_window_in_a_slab_opening_is_a_mesh_with_its_reason() {
     let mut b = B::new();

@@ -3995,7 +3995,11 @@ fn space(
     }
     let level = level_for(pl, storey, z);
     let txt = |i: usize| Rd::arg(e, i).as_str().unwrap_or("").to_string();
-    let (number, long) = (txt(2), txt(7));
+    let (mut number, long) = (txt(2), txt(7));
+    // Name is the room number only when LongName differs: many tools write the name in both
+    if number.trim().eq_ignore_ascii_case(long.trim()) {
+        number.clear();
+    }
     pl.rooms.push(PRoom {
         level,
         name: long,
