@@ -683,6 +683,10 @@ impl Drop for Window {
 }
 
 impl eframe::App for Window {
+    fn raw_input_hook(&mut self, ctx: &egui::Context, raw: &mut egui::RawInput) {
+        ddc_app::plan_view::tab_guard(&self.0, ctx, raw);
+    }
+
     fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
         // system motion setting: read at start and about once a second (cheap call)
         if self.2 % 60 == 0 {

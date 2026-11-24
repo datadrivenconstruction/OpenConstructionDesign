@@ -124,6 +124,7 @@ impl Run<'_> {
     fn pass(&self, app: &mut EditorApp, evs: Vec<Vec<egui::Event>>, extra: usize) -> Vec<u8> {
         let n = evs.len() + extra.max(2);
         let rs = self.rs;
+        let guard = crate::plan_view::tab_guard_on(app, &self.ctx);
         let t0 = self.clock.get();
         self.clock.set(t0 + n as f64 * 0.016 + 1.0);
         crate::shot::frame_ev_at(
@@ -133,7 +134,11 @@ impl Run<'_> {
             self.scale,
             n,
             t0,
-            |_, i| evs.get(i).cloned().unwrap_or_default(),
+            |c, i| {
+                let mut e = evs.get(i).cloned().unwrap_or_default();
+                crate::plan_view::tab_strip(c, guard, &mut e);
+                e
+            },
             |c, _| app.ui(c, Some(rs)),
         )
     }

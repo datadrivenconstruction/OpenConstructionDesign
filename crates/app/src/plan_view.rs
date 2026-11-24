@@ -99,6 +99,43 @@ fn bake_end(
     }
 }
 
+fn tab_stash_id() -> egui::Id {
+    egui::Id::new("ddc.plan.tab")
+}
+
+/// Raw-input hook, before egui reads the frame: with a plan tool armed and the canvas owning
+/// the keys, Tab never reaches egui focus traversal (it would jump to the ribbon and the
+/// typed text would open the palette). A plain Tab is handed to the tool through the stash.
+pub fn tab_guard(a: &crate::shell::EditorApp, ctx: &egui::Context, raw: &mut egui::RawInput) {
+    let on = tab_guard_on(a, ctx);
+    tab_strip(ctx, on, &mut raw.events);
+}
+
+pub fn tab_guard_on(a: &crate::shell::EditorApp, ctx: &egui::Context) -> bool {
+    !a.view3d
+        && (a.ed.tool_armed() || a.ed.opening_mode)
+        && crate::ui_kit::canvas_owns_keys(ctx)
+        && !ctx.wants_keyboard_input()
+}
+
+pub fn tab_strip(ctx: &egui::Context, on: bool, events: &mut Vec<egui::Event>) {
+    ctx.data_mut(|d| d.remove_temp::<bool>(tab_stash_id()));
+    if !on {
+        return;
+    }
+    let mut plain = false;
+    events.retain(|e| match e {
+        egui::Event::Key { key: egui::Key::Tab, pressed, modifiers, .. } => {
+            plain |= *pressed && !modifiers.shift && !modifiers.command && !modifiers.alt;
+            false
+        }
+        _ => true,
+    });
+    if plain {
+        ctx.data_mut(|d| d.insert_temp(tab_stash_id(), true));
+    }
+}
+
 impl Default for PlanView {
     fn default() -> Self {
         Self {
@@ -1669,6 +1706,8 @@ impl PlanView {
             let tab = i.consume_key(egui::Modifiers::NONE, egui::Key::Tab);
             (tab, i.events.clone())
         });
+        let stashed = ui.ctx().data_mut(|d| d.remove_temp::<bool>(tab_stash_id())).unwrap_or(false);
+        let evs = (evs.0 || stashed, evs.1);
         if evs.0 {
             ed.handle(Event::Key(Key::Tab));
         }
@@ -2132,6 +2171,42 @@ fn canvas_locked(ctx: &egui::Context) -> bool {
 #[cfg(test)]
 mod tests {
     use egui::{self, Pos2};
+
+    fn tab_pass(ctx: &egui::Context, app: &crate::shell::EditorApp, guard: bool) -> bool {
+        let key = egui::Event::Key {
+            key: egui::Key::Tab,
+            physical_key: Some(egui::Key::Tab),
+            pressed: true,
+            repeat: false,
+            modifiers: egui::Modifiers::NONE,
+        };
+        let mut raw = egui::RawInput {
+            screen_rect: Some(egui::Rect::from_min_size(Pos2::ZERO, egui::vec2(400.0, 300.0))),
+            events: vec![key],
+            ..Default::default()
+        };
+        if guard {
+            super::tab_guard(app, ctx, &mut raw);
+        }
+        let _ = ctx.run(raw, |ctx| {
+            egui::CentralPanel::default().show(ctx, |ui| {
+                let _ = ui.button("ribbon");
+            });
+        });
+        ctx.memory(|m| m.focused().is_some())
+    }
+
+    #[test]
+    fn tab_with_a_plan_tool_armed_never_moves_egui_focus() {
+        let app = crate::layout_contract::app_in(ddc_ui::Lang::En);
+        assert!(app.ed.tool_armed() && !app.view3d, "the wall tool is armed from the start");
+        let ctx = egui::Context::default();
+        let _ = ctx.run(Default::default(), |_| {});
+        assert!(tab_pass(&egui::Context::default(), &app, false), "without the guard Tab takes focus");
+        assert!(!tab_pass(&ctx, &app, true), "the armed tool keeps Tab");
+        let stash = ctx.data(|d| d.get_temp::<bool>(super::tab_stash_id()));
+        assert_eq!(stash, Some(true), "the tool still gets the Tab");
+    }
 
     #[test]
     fn a_locked_canvas_takes_no_click() {
