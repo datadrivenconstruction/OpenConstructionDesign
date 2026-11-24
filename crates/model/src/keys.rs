@@ -104,8 +104,17 @@ pub(crate) fn load_keys(db: &Connection, schema: &str) -> Result<HashMap<(String
         put(format!("SELECT kind, ref, min(guid) FROM {schema}.ext_ref GROUP BY kind, ref"))?;
     }
     if has_table(db, schema, "recipe_part")? {
+        // a tombstone keeps the id of a deleted element, which a new element may take again
+        let live = if db
+            .prepare(&format!("SELECT 1 FROM pragma_table_info('recipe_part', '{schema}') WHERE name='gone'"))?
+            .exists([])?
+        {
+            " WHERE p.gone=0"
+        } else {
+            ""
+        };
         put(format!(
-            "SELECT p.tbl, p.el, {} FROM {schema}.recipe_part p JOIN {schema}.recipe r ON r.id=p.recipe",
+            "SELECT p.tbl, p.el, {} FROM {schema}.recipe_part p JOIN {schema}.recipe r ON r.id=p.recipe{live}",
             crate::recipe::PART_KEY_EXPR
         ))?;
     }

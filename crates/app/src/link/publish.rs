@@ -26,6 +26,8 @@ pub struct PublishArgs {
     pub sheets: bool,
     pub ifc: bool,
     pub force: bool,
+    /// Publish although the assistant filled values no person verified (they go out as notes).
+    pub allow_unreviewed: bool,
     /// `D1`..`D5`; the model does not record it.
     pub depth: Option<String>,
     pub name: Option<String>,
@@ -275,6 +277,20 @@ fn build(
     let mut ed = open(&a.file)?;
     let clean_on_open = !ed.is_dirty();
     step("open", t, steps, progress);
+
+    // checks before anything is built: quantities of a model that fails them must not reach the ERP
+    let t = Instant::now();
+    let (stop, rest) = super::qa::run(&ed.model, a.allow_unreviewed).map_err(|e| internal(format!("checks: {e}")))?;
+    for f in rest {
+        let what = format!("{} {}: {}", f["severity"].as_str().unwrap_or(""), f["rule"].as_str().unwrap_or(""), f["text"].as_str().unwrap_or(""));
+        notes.push(json!({"step": "qa", "what": what}));
+    }
+    if !stop.is_empty() {
+        let n = stop.len();
+        let msg = format!("{n} check finding(s) stop the publish: fix them, or pass --allow-unreviewed for values filled by AI");
+        return Err(PubError { kind: "qa", msg, details: Some(json!(stop)) });
+    }
+    step("qa", t, steps, progress);
 
     // geometry and keys
     let t = Instant::now();

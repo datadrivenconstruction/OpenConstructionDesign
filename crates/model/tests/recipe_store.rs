@@ -138,6 +138,7 @@ fn recipe_lands_and_leaves_with_its_elements_in_one_step() {
                 tbl: "solid".into(),
                 el: c,
             }],
+            &["b".into()],
         )
     })
     .unwrap();

@@ -27,6 +27,7 @@ pub mod norm_pack;
 #[cfg(test)]
 mod norm_pack_tests;
 mod rule_cases;
+mod rule_din276;
 mod rule_value_src;
 mod util;
 pub mod realism;
@@ -150,6 +151,7 @@ pub fn rules() -> &'static [&'static dyn CheckRule] {
         &realism::Realism,
         &rule_def::CompanyRules,
         &rule_value_src::AiUnverified,
+        &rule_din276::Din276,
     ]
 }
 

@@ -214,7 +214,7 @@ pub mod value_src;
 pub mod depth;
 pub use depth::{DepthSettings, Discipline, ElemDepth};
 pub mod recipe;
-pub use recipe::{Recipe, RecipePart};
+pub use recipe::{Recipe, RecipeHeld, RecipePart};
 /// Parametric feature timelines of masses (param1).
 pub mod feature_tl;
 /// Assembly joints between component instances (param1, schema 53).
@@ -265,7 +265,7 @@ pub use calc_store::{
 };
 pub use op_revert::RevertCheck;
 pub use underlay_store::{saved_underlays, UnderlayRow};
-pub use ai_revert::{AiBatch, Refusal, RevertError};
+pub use ai_revert::{AiBatch, MadeBy, Refusal, RevertError};
 pub use refusal::RefusalCode;
 pub use opt_metrics::{
     option_copy_metrics, Cost, CostLine, FindingCounts, MetricCell, MetricsRow, OptionMetrics, RoomTypeArea, Units,

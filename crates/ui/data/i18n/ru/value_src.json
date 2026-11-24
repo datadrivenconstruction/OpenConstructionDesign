@@ -24,5 +24,21 @@
  "value_src.verified_n": "Проверено значений: {n}",
  "value_src.bulk_note": "Значения ИИ, не проверены: {n}",
  "value_src.bulk_verify": "Отметить проверенными ({n})",
- "value_src.bulk_tip": "Отмечает проверенными все значения ИИ в выборе, один шаг отмены"
+ "value_src.bulk_tip": "Отмечает проверенными все значения ИИ в выборе, один шаг отмены",
+ "origin.title": "Происхождение",
+ "origin.made_by": "Создал",
+ "origin.request": "Запрос",
+ "origin.at": "Применено",
+ "origin.recipe": "рецепт «{name}», часть {part}",
+ "origin.ai": "ИИ-ассистент ({model})",
+ "origin.agent": "агент {name}",
+ "origin.script": "скрипт {name}",
+ "origin.xlsx": "таблица XLSX",
+ "origin.user": "человек",
+ "origin.import": "импорт",
+ "origin.import_file": "импорт из {file}",
+ "origin.unknown": "нет в истории",
+ "origin.held": "Изменён вручную: повторный прогон рецепта его не трогает",
+ "origin.rebuilt": "Повторный прогон рецепта перестроит его; правка вручную сохранит его как есть",
+ "origin.ai_values": "Значений от ИИ: {n}, не проверено: {open}"
 }

@@ -59,7 +59,7 @@ ddc <command> [options]     batch work on model files, no window, no GPU
 
   ddc publish <file.ddc> --out <rev.ddcrev> [--parent <prev.ddcrev>] [--sheets] [--ifc] [--brief <brief.json>]
          [--depth D1..D5] [--name <text>] [--author <text>] [--message <text>] [--project-id <uuid>]
-         [--erp-url <url>] [--imported-from <file>] [--revision-id <uuid>] [--created-at <time>] [--force]
+         [--erp-url <url>] [--imported-from <file>] [--revision-id <uuid>] [--created-at <time>] [--force] [--allow-unreviewed]
       (build with --features link) Write a revision package (ddc-erp-link/1): model, geometry.glb,
       elements.parquet, diff against --parent, optional sheets (PDF) and IFC, manifest with sha256
       per file. Element keys that were missing are minted and saved into the .ddc. The package is

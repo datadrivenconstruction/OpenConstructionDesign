@@ -51,7 +51,10 @@ pub fn run(a: &Args, json_out: bool, quiet: bool) -> (String, i32) {
             s += &format!("error: {}\n", e.msg);
             if let Some(Value::Array(d)) = &e.details {
                 for x in d.iter().take(20) {
-                    s += &format!("  {}\n", x.as_str().unwrap_or_default());
+                    // a check finding is an object: severity, rule, text
+                    let f = |k: &str| x[k].as_str().unwrap_or_default().to_string();
+                    let line = x.as_str().map(String::from).unwrap_or_else(|| format!("{} {}: {}", f("severity"), f("rule"), f("text")));
+                    s += &format!("  {line}\n");
                 }
             }
         }

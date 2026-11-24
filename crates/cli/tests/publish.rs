@@ -29,7 +29,7 @@ fn model(d: &Path, name: &str, edit: impl Fn(&mut Value)) -> (PathBuf, PathBuf) 
     let bp = d.join(format!("{name}.brief.json"));
     std::fs::write(&bp, b.to_string()).unwrap();
     let m = d.join(format!("{name}.ddc"));
-    let (t, code) = gen(&GenArgs { brief: bp.clone(), out: m.clone(), force: true }, true, true);
+    let (t, code) = gen(&GenArgs { brief: bp.clone(), out: m.clone(), force: true, metrics: None }, true, true);
     assert_eq!(code, 0, "{t}");
     (m, bp)
 }
@@ -424,4 +424,42 @@ fn m4_fifty_thousand_elements() {
     assert!(bytes <= 300_000_000, "M4 gate: {bytes} bytes");
     let manifest = package::verify(&out).unwrap();
     assert_eq!(manifest["counts"]["elements"], n);
+}
+
+#[test]
+fn values_the_assistant_filled_unverified_stop_the_publish_until_accepted() {
+    let d = dir("qa");
+    let (m, _) = model(&d, "m", |_| {});
+    let out = d.join("r.ddcrev");
+    let (log, code) = go(&args(&m, &out));
+    assert_eq!(code, 0, "a generated model passes the checks: {log}");
+    std::fs::remove_file(&out).unwrap();
+    {
+        let mut db = ddc_model::Model::open(m.to_str().unwrap()).unwrap();
+        let w: i64 = db.sql().query_row("SELECT min(id) FROM wall", [], |r| r.get(0)).unwrap();
+        let spec = ddc_model::ParamSpec {
+            name: "FireRating".into(),
+            ptype: ddc_model::ParamType::Text,
+            per_type: false,
+            unit: String::new(),
+            group: String::new(),
+            guid: None,
+            categories: vec!["wall".into()],
+        };
+        db.add_param(&spec).unwrap();
+        let v = Some(ddc_model::PVal::Text("EI90".into()));
+        db.apply_edits(&[ddc_model::Edit::ParamValue { param: "FireRating".into(), kind: "wall".into(), id: w, value: v }])
+            .unwrap();
+        let src = ddc_model::ValueSrc::ai(ddc_model::SrcKind::Ai, 100, "s", "r", "fill the fire rating");
+        db.record_value_src(&[("wall", w, "FireRating")], &src).unwrap();
+    }
+    let (log, code) = go(&args(&m, &out));
+    assert_eq!(code, 2, "{log}");
+    assert_eq!(log["error"]["kind"], "qa", "{log}");
+    assert_eq!(log["error"]["details"][0]["rule"], "ai_unverified", "{log}");
+    assert!(!out.exists());
+    let a = Args { allow_unreviewed: true, ..args(&m, &out) };
+    let (log, code) = go(&a);
+    assert_eq!(code, 0, "{log}");
+    assert!(log.to_string().contains("ai_unverified"), "accepted values go out as a note: {log}");
 }

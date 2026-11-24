@@ -24,5 +24,21 @@
  "value_src.verified_n": "Values verified: {n}",
  "value_src.bulk_note": "Values filled by AI, not verified: {n}",
  "value_src.bulk_verify": "Mark verified ({n})",
- "value_src.bulk_tip": "Marks every AI-filled value of the selection verified, one undo step"
+ "value_src.bulk_tip": "Marks every AI-filled value of the selection verified, one undo step",
+ "origin.title": "Origin",
+ "origin.made_by": "Made by",
+ "origin.request": "Request",
+ "origin.at": "Applied",
+ "origin.recipe": "recipe «{name}», part {part}",
+ "origin.ai": "the AI assistant ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "script {name}",
+ "origin.xlsx": "XLSX spreadsheet",
+ "origin.user": "a person",
+ "origin.import": "import",
+ "origin.import_file": "import from {file}",
+ "origin.unknown": "not in the history",
+ "origin.held": "Edited by hand: a rerun of the recipe leaves it as it is",
+ "origin.rebuilt": "A rerun of the recipe rebuilds it; edit it by hand to keep it as it is",
+ "origin.ai_values": "Values filled by AI: {n}, not verified: {open}"
 }

@@ -850,3 +850,25 @@ fn structure_clashes_match_the_clash_tool() {
         assert!(f.elements.contains(&("wall".to_string(), walls[0])), "{f:?}");
     }
 }
+
+#[test]
+fn a_cost_group_that_is_not_din_276_blocks_and_a_good_one_passes() {
+    let mut b = base();
+    let walls = b.closed();
+    let (d1, d2) = (b.door(walls[0], 1.0), b.door(walls[0], 3.0));
+    b.m.add_param(&door_param("Classification.DIN276")).unwrap();
+    let set = |id: i64, v: &str| Edit::ParamValue {
+        param: "Classification.DIN276".into(),
+        kind: "opening".into(),
+        id,
+        value: Some(PVal::Text(v.into())),
+    };
+    b.m.apply_edits(&[set(d1, "KG 344"), set(d2, "3440")]).unwrap();
+    let found = b.run("din276");
+    assert_eq!(found.len(), 1, "{found:?}");
+    assert_eq!(found[0].severity, Severity::Error);
+    assert_eq!(found[0].args[1].1, "3440");
+    assert_eq!(found[0].elements.len(), 1);
+    b.m.apply_edits(&[set(d2, "344")]).unwrap();
+    assert!(b.run("din276").is_empty());
+}

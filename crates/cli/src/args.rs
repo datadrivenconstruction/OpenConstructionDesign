@@ -40,7 +40,7 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
     let mut pos: Vec<OsString> = vec![];
     let mut exports = vec![];
     let (mut out, mut level, mut allow_many) = (None, None, false);
-    let (mut brief, mut force) = (None, false);
+    let (mut brief, mut force, mut allow_unreviewed) = (None, false, false);
     let mut metrics = None;
     let (mut sheets, mut ifc) = (false, false);
     let mut kv: Vec<(String, String)> = vec![];
@@ -76,6 +76,7 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
             "--brief" => brief = Some(PathBuf::from(it.next().ok_or("--brief needs a file")?)),
             "--metrics" => metrics = Some(PathBuf::from(it.next().ok_or("--metrics needs a file")?)),
             "--force" => force = true,
+            "--allow-unreviewed" => allow_unreviewed = true,
             "--sheets" => sheets = true,
             "--ifc" => ifc = true,
             o @ ("--parent" | "--depth" | "--name" | "--author" | "--message" | "--project-id" | "--erp-url" | "--revision-id"
@@ -172,6 +173,7 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
                     sheets,
                     ifc,
                     force,
+                    allow_unreviewed,
                     depth: get("depth"),
                     name: get("name"),
                     author: get("author"),
@@ -186,7 +188,7 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
             }
             #[cfg(not(feature = "link"))]
             {
-                let _ = (&brief, force, sheets, ifc, &kv);
+                let _ = (&brief, force, allow_unreviewed, sheets, ifc, &kv);
                 return Err("publish: this build has no ERP link (build with --features link)".into());
             }
         }

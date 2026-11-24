@@ -34,6 +34,8 @@ pub struct ScriptItem {
     pub params_json: String,
     pub hash: String,
     pub slots: u32,
+    /// Keys of parts a rerun reshapes in place: their prints are taken anew on Apply.
+    pub refit: Vec<String>,
 }
 
 fn level_of(ed: &crate::editor::Editor) -> Result<Ref, String> {
@@ -289,6 +291,7 @@ pub fn run_script(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> 
         params_json: params.to_string(),
         hash: r.hash.clone(),
         slots,
+        refit: vec![],
     };
     let (n, mut changes) = add(c, a, cx, item)?;
     // solids and masses are not in the element tables the plan counts: count the parts
@@ -332,11 +335,13 @@ fn cat_of(tbl: &str) -> Result<Cat, String> {
     }
 }
 
-/// What a rerun of recipe `id` with `params` changes, as a plan item and its summary.
+/// What a rerun of recipe `id` with `params` changes, as a plan item and its summary. Parts a
+/// person edited are held unless `overwrite_edited`; deleted ones are always held.
 pub fn rerun_item(
     ed: &crate::editor::Editor,
     id: i64,
     params: &J,
+    overwrite_edited: bool,
 ) -> Result<(ScriptItem, ddc_script::RerunPlan, ScriptRun), String> {
     let rec = ed
         .model
@@ -374,7 +379,19 @@ pub fn rerun_item(
             })
         })
         .collect::<Result<Vec<_>, String>>()?;
-    let plan = ddc_script::rerun_envelope(&old, &new, &links, old.env.actor.clone(), &rec.name)?;
+    let mh = ed.model.recipe_held(id).map_err(|e| e.to_string())?;
+    let held = ddc_script::Held {
+        edited: if overwrite_edited { Default::default() } else { mh.edited.into_iter().collect() },
+        removed: mh.removed.into_iter().collect(),
+    };
+    let plan = ddc_script::rerun_envelope(
+        &old,
+        &new,
+        &links,
+        &held,
+        old.env.actor.clone(),
+        &rec.name,
+    )?;
     let env = plan.env.clone().unwrap_or_else(|| new.env.clone());
     let slots = plan.created.iter().map(|p| p.slot + 1).max().unwrap_or(0);
     let item = ScriptItem {
@@ -391,6 +408,7 @@ pub fn rerun_item(
         params_json: new_params.to_string(),
         hash: new.hash.clone(),
         slots,
+        refit: plan.reshaped.clone(),
     };
     Ok((item, plan, new))
 }
@@ -398,11 +416,25 @@ pub fn rerun_item(
 /// `rerun_recipe{recipe, params}`: new params for a stored recipe, as a draft item.
 pub fn rerun_recipe(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let id = a["recipe"].as_i64().ok_or("recipe must be a recipe id")?;
-    let (item, plan, new) = rerun_item(&c.ed, id, &a["params"])?;
+    let overwrite = a["overwrite_edited"].as_bool().unwrap_or(false);
+    let (item, plan, new) = rerun_item(&c.ed, id, &a["params"], overwrite)?;
     let mut o = Out::new(c.max_chars);
+    let held = json!({
+        "edited": keys_out(&plan.held_edited),
+        "removed": keys_out(&plan.held_removed),
+    });
+    let any_held = !plan.held_edited.is_empty() || !plan.held_removed.is_empty();
     if plan.env.is_none() {
         o.put("recipe", &json!(id));
         o.put("unchanged", &json!(plan.kept));
+        if any_held {
+            o.put("held", &held);
+            o.put(
+                "note",
+                &json!("the only parts the new params change were edited or deleted by the person: they stay as they are"),
+            );
+            return Ok(o.finish().into());
+        }
         o.put(
             "note",
             &json!("the new params build the same parts: nothing to change"),
@@ -435,6 +467,13 @@ pub fn rerun_recipe(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String
             "deleted": keys_out(&plan.deleted),
         }),
     );
+    if any_held {
+        o.put("held", &held);
+        o.put(
+            "held_note",
+            &json!("edited or deleted by the person since the recipe built them: left as they are; tell the person"),
+        );
+    }
     o.put("params", &params_out(&new));
     o.put("measures", &measures_out(&new));
     o.put("hash", &json!(new.hash));

@@ -11,6 +11,7 @@
 //! batches stay undoable in order.
 
 use rusqlite::types::Value;
+use rusqlite::OptionalExtension;
 use serde_json::Value as J;
 
 use ddc_ops::Actor;
@@ -20,6 +21,20 @@ use crate::{Error, Model};
 
 /// Rows a single revert may snapshot; above this the revert is refused, not truncated.
 const MAX_ROWS: usize = 100_000;
+
+/// The live operation that made a row: who, the operation's title and, for an AI batch, the
+/// apply record (time and its plan text: title, a line break, why).
+#[derive(Clone, Debug, PartialEq)]
+pub struct MadeBy {
+    pub op_seq: i64,
+    /// `None`: written before the journal kept actors, or a kind this build cannot read.
+    pub actor: Option<Actor>,
+    pub title: Option<String>,
+    pub why: Option<String>,
+    /// Unix seconds and plan text of the AI `apply` record of this operation.
+    pub ai_at: Option<i64>,
+    pub ai_text: Option<String>,
+}
 
 /// One AI batch in the journal.
 #[derive(Clone, Debug, PartialEq)]
@@ -330,6 +345,66 @@ fn write_revert_audit(db: &rusqlite::Connection, audits: &[i64]) -> Result<(), E
 }
 
 impl Model {
+    /// The latest live operation whose inverse deletes exactly row `id` of `table`: the one that
+    /// made it (an id freed by a delete may be taken again). `None` when the journal no longer holds it (trimmed, or made before a reopen).
+    pub fn made_by(&self, table: &str, id: i64) -> Result<Option<MadeBy>, Error> {
+        if ident(table).is_none() {
+            return Ok(None);
+        }
+        let mut st = self.db.prepare(
+            "SELECT seq, actor, title, why, inv FROM op WHERE inv LIKE ?1 ORDER BY seq DESC",
+        )?;
+        let pat = format!("%DELETE FROM {table} WHERE %");
+        let rows = st.query_map([pat], |r| {
+            Ok((
+                r.get::<_, i64>(0)?,
+                r.get::<_, Option<String>>(1)?,
+                r.get::<_, Option<String>>(2)?,
+                r.get::<_, Option<String>>(3)?,
+                r.get::<_, String>(4)?,
+            ))
+        })?;
+        for row in rows {
+            let (seq, actor, title, why, inv) = row?;
+            let Ok(J::Array(stmts)) = serde_json::from_str::<J>(&inv) else {
+                continue;
+            };
+            let makes = stmts.iter().any(|s| {
+                let sql = s[0].as_str().unwrap_or_default();
+                if !sql.trim_start().to_ascii_uppercase().starts_with("DELETE FROM ") {
+                    return false;
+                }
+                let args: Vec<Value> =
+                    s[1].as_array().map_or(vec![], |a| a.iter().map(from_json).collect());
+                matches!(parse_stmt(sql, &args),
+                    (t, Key::Eq(c, Value::Integer(v))) if t == table && c == "id" && v == id)
+            });
+            if !makes {
+                continue;
+            }
+            let ai: Option<(i64, Option<String>)> = self
+                .db
+                .query_row(
+                    "SELECT ts, text FROM ai_audit WHERE op_seq=?1 AND event='apply' \
+                     AND op_undone=0 ORDER BY seq DESC LIMIT 1",
+                    [seq],
+                    |r| Ok((r.get(0)?, r.get(1)?)),
+                )
+                .optional()
+                .ok()
+                .flatten();
+            return Ok(Some(MadeBy {
+                op_seq: seq,
+                actor: crate::journal::parse_actor(actor),
+                title: title.filter(|t| !t.trim().is_empty()),
+                why: why.filter(|t| !t.trim().is_empty()),
+                ai_at: ai.as_ref().map(|a| a.0),
+                ai_text: ai.and_then(|a| a.1).filter(|t| !t.trim().is_empty()),
+            }));
+        }
+        Ok(None)
+    }
+
     /// Live AI batches, oldest first. A batch whose operation was undone is not listed.
     pub fn ai_batches(&self) -> Result<Vec<AiBatch>, Error> {
         let mut covered: Vec<i64> = vec![];
@@ -960,5 +1035,23 @@ mod tests {
         assert!(reverts(&m).is_empty());
         assert!(!m.ai_batches().unwrap()[0].reverted);
         assert_eq!(names(&m), vec!["AI".to_string()]);
+    }
+
+    #[test]
+    fn the_latest_op_that_made_a_row_names_its_ai_batch() {
+        let m = Model::open(":memory:").unwrap();
+        level(&m, 7, "old");
+        raw_op(&m, "add", &drop_inv(7));
+        let seq = raw_op(&m, "add", &drop_inv(7));
+        mark_ai(&m, seq, "Add levels
+the brief asks for two");
+        raw_op(&m, "add", &drop_inv(8));
+        let got = m.made_by("level", 7).unwrap().unwrap();
+        assert_eq!(got.op_seq, seq);
+        assert_eq!(got.ai_text.as_deref(), Some("Add levels
+the brief asks for two"));
+        assert!(got.ai_at.is_some());
+        assert_eq!(m.made_by("level", 9).unwrap(), None);
+        assert_eq!(m.made_by("no such; table", 7).unwrap(), None);
     }
 }

@@ -231,6 +231,7 @@ mod ux28b_tests;
 pub mod sel3d;
 pub mod unit_text;
 pub mod units;
+pub mod origin_ui;
 pub mod value_src_ui;
 #[cfg(test)]
 mod units_round_trip_tests;

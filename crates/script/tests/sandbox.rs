@@ -297,7 +297,7 @@ fn rerun_touches_only_the_recipe_parts() {
         name: "rerun".into(),
     };
     // same params: nothing to do
-    let same = rerun_envelope(&old, &old, &links, actor.clone(), "rerun").unwrap();
+    let same = rerun_envelope(&old, &old, &links, &Default::default(), actor.clone(), "rerun").unwrap();
     assert!(same.env.is_none());
     assert_eq!(same.kept, old.parts.len());
 
@@ -305,7 +305,7 @@ fn rerun_touches_only_the_recipe_parts() {
     let tall = Sandbox
         .run(BAYS, &opts(json!({"bays": 4, "height": "4 m"})))
         .unwrap();
-    let p = rerun_envelope(&old, &tall, &links, actor.clone(), "rerun").unwrap();
+    let p = rerun_envelope(&old, &tall, &links, &Default::default(), actor.clone(), "rerun").unwrap();
     assert_eq!(
         (p.reshaped.len(), p.created.len(), p.deleted.len()),
         (9, 0, 0)
@@ -313,7 +313,7 @@ fn rerun_touches_only_the_recipe_parts() {
 
     // fewer bays: the last post and beam go, nothing else is named
     let fewer = Sandbox.run(BAYS, &opts(json!({"bays": 3}))).unwrap();
-    let p = rerun_envelope(&old, &fewer, &links, actor.clone(), "rerun").unwrap();
+    let p = rerun_envelope(&old, &fewer, &links, &Default::default(), actor.clone(), "rerun").unwrap();
     assert_eq!(p.kept, 7);
     assert_eq!(p.deleted, vec!["post#5".to_string(), "beam#4".to_string()]);
     let env = p.env.unwrap();
@@ -336,7 +336,7 @@ fn rerun_touches_only_the_recipe_parts() {
 
     // more bays: new keys are created with fresh slots
     let more = Sandbox.run(BAYS, &opts(json!({"bays": 5}))).unwrap();
-    let p = rerun_envelope(&old, &more, &links, actor, "rerun").unwrap();
+    let p = rerun_envelope(&old, &more, &links, &Default::default(), actor, "rerun").unwrap();
     assert_eq!(
         p.created.iter().map(|c| c.key.as_str()).collect::<Vec<_>>(),
         ["post#6", "beam#5"]
@@ -350,12 +350,12 @@ fn rerun_replaces_role_parts_whose_role_moves() {
     let old = Sandbox.run(src, &opts(json!({}))).unwrap();
     let links = links_of(&old, 100);
     let actor = Actor::Script { name: "rerun".into() };
-    let same = rerun_envelope(&old, &old, &links, actor.clone(), "rerun").unwrap();
+    let same = rerun_envelope(&old, &old, &links, &Default::default(), actor.clone(), "rerun").unwrap();
     assert!(same.env.is_none());
     // a taller mast moves the hub: the tagged parts are deleted and made again (their component
     // rows go with the solids), never reshaped in place under a stale tag
     let tall = Sandbox.run(src, &opts(json!({"height": 110}))).unwrap();
-    let p = rerun_envelope(&old, &tall, &links, actor, "rerun").unwrap();
+    let p = rerun_envelope(&old, &tall, &links, &Default::default(), actor, "rerun").unwrap();
     assert!(p.replaced.iter().any(|k| k.starts_with("blade1/")), "{:?}", p.replaced);
     assert!(p.replaced.iter().any(|k| k.starts_with("rotor/")), "{:?}", p.replaced);
     assert!(p.reshaped.iter().all(|k| k.starts_with("tower") || k == "nacelle"), "{:?}", p.reshaped);

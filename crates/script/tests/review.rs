@@ -116,7 +116,7 @@ fn links_for(r: &ScriptRun, cat: Cat) -> Vec<Link> {
 
 fn plan(old: &ScriptRun, new: &ScriptRun, cat: Cat) -> Result<ddc_script::RerunPlan, String> {
     let actor = Actor::Script { name: "t".into() };
-    rerun_envelope(old, new, &links_for(old, cat), actor, "t")
+    rerun_envelope(old, new, &links_for(old, cat), &Default::default(), actor, "t")
 }
 
 #[test]

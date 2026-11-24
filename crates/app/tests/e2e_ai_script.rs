@@ -355,3 +355,67 @@ fn run_script_works_on_the_h04_model_file() {
     ed.replace_model(ddc_model::Model::open(tmp.to_str().unwrap()).unwrap()).unwrap();
     run_stadium(&mut ed);
 }
+
+fn part_el(ed: &Editor, id: i64, key: &str) -> i64 {
+    let parts = ed.model.recipe_parts(id).unwrap();
+    let keys: Vec<&str> = parts.iter().map(|p| p.key.as_str()).collect();
+    parts.iter().find(|p| p.key == key).unwrap_or_else(|| panic!("no part {key} in {keys:?}")).el
+}
+
+#[test]
+fn a_rerun_keeps_what_the_person_edited_or_deleted() {
+    let mut ed = with_wall();
+    let (mut s, _) = run(&mut ed, vec![run_script(FRAME, json!({}))]);
+    apply_and_check(&mut s, &mut ed);
+    drop(s);
+    let id = ed.model.recipes().unwrap()[0].id;
+    assert_eq!(
+        ed.model.recipe_held(id).unwrap(),
+        Default::default(),
+        "what the recipe built is not taken for a person's edit"
+    );
+
+    // the person retypes one post and deletes another
+    let edited = part_el(&ed, id, "post#2");
+    let removed = part_el(&ed, id, "post#3");
+    ed.model
+        .sql()
+        .execute("UPDATE solid SET material='Timber' WHERE id=?1", [edited])
+        .unwrap();
+    ed.model.delete_solid(removed).unwrap();
+    let mine = rows(&ed, "solid")
+        .into_iter()
+        .find(|r| r.starts_with(&format!("Integer({edited})|")))
+        .unwrap();
+
+    let (mut s, provider) = run(&mut ed, vec![rerun(id, json!({"height": "3.5 m"}))]);
+    let r = &ok(&provider)[0];
+    assert_eq!(r["held"]["edited"], json!(["post#2"]), "{r}");
+    assert_eq!(r["held"]["removed"], json!(["post#3"]), "{r}");
+    assert_eq!(r["changes"]["changed"], json!(7), "{r}");
+    assert_eq!(r["changes"]["created"], json!(0), "a deleted post is not made again");
+    apply_and_check(&mut s, &mut ed);
+    drop(s);
+    assert_eq!(count(&ed.model, "solid"), 8);
+    assert!(rows(&ed, "solid").contains(&mine), "the edited post is as the person left it");
+
+    // reshaped parts take a new print: the next rerun still changes them, not the edited one
+    let (mut s, provider) = run(&mut ed, vec![rerun(id, json!({"height": "4 m"}))]);
+    let r = &ok(&provider)[0];
+    assert_eq!(r["held"]["edited"], json!(["post#2"]), "{r}");
+    assert_eq!(r["changes"]["changed"], json!(7), "{r}");
+    apply_and_check(&mut s, &mut ed);
+    drop(s);
+
+    // asked for: the edited post is rebuilt too, the deleted one still stays deleted
+    let over = tool(
+        "rerun_recipe",
+        json!({"title": "Frame", "recipe": id, "params": {"height": "4.5 m"}, "overwrite_edited": true}),
+    );
+    let (mut s, provider) = run(&mut ed, vec![over]);
+    let r = &ok(&provider)[0];
+    assert_eq!(r["changes"]["changed"], json!(8), "{r}");
+    assert_eq!(r["held"]["removed"], json!(["post#3"]), "{r}");
+    apply_and_check(&mut s, &mut ed);
+    assert_eq!(ed.model.recipe_held(id).unwrap().edited, Vec::<String>::new());
+}

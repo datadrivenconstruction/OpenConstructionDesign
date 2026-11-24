@@ -23,5 +23,6 @@
  "ai.check.rule.count": "Regel {1}: {3} Elemente, zulässig {4}",
  "ai.check.rule.clearance": "Regel {1}: Abstand {3} m, mindestens {4} m erforderlich",
  "ai.check.rule.unsupported": "Regel {1} konnte nicht geprüft werden: diese Kategorie wird nicht unterstützt",
- "ai.check.wall_warning": "{0}"
+ "ai.check.wall_warning": "{0}",
+ "ai.check.din276_bad": "Parameter {0}: „{1}“ ist keine Kostengruppe nach DIN 276 (drei Ziffern, 100 bis 899), {2} Elemente"
 }

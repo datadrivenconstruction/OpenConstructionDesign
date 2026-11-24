@@ -12,3 +12,4 @@ pub mod glb;
 pub mod package;
 pub mod panel;
 pub mod publish;
+pub mod qa;

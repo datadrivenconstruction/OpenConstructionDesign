@@ -3,9 +3,12 @@
 //! Live geometry recipes (schema 47): the script, its params, the hash of what it built and
 //! the stdlib version, with one link per created element under its stable part key. Writes go
 //! through the journal, so the recipe lands and leaves with the elements in one undo step.
-//! A link whose element is gone (deleted by hand) is not reported: a rerun creates it again.
+//! A rerun leaves what a person changed alone: each link keeps a print of its element as the
+//! recipe wrote it (`fp`), and an element deleted outside the recipe leaves its link as a
+//! tombstone (`gone=1`), so a rerun neither rebuilds an edited part nor brings a deleted one back.
 
 use rusqlite::{params, types::Value, Connection, OptionalExtension};
+use sha2::{Digest, Sha256};
 
 use crate::ops::Inv;
 use crate::{Error, Model};
@@ -42,12 +45,42 @@ pub struct RecipePart {
     pub el: i64,
 }
 
+/// Parts of a recipe a rerun leaves as they are (`Model::recipe_held`).
+#[derive(Clone, Debug, Default, PartialEq, Eq)]
+pub struct RecipeHeld {
+    pub edited: Vec<String>,
+    pub removed: Vec<String>,
+}
+
 /// Separates the instance key of a recipe from a part key in an element key.
 pub const PART_KEY_SEP: char = '/';
 
-/// Additive: the tables, then the instance key column (`ikey`) minted for recipes without one.
+/// Additive: the tables, the instance key column (`ikey`) minted for recipes without one, and the
+/// link columns `fp`/`gone`; a link without a print takes its element as it is now.
 pub(crate) fn migrate(db: &Connection) -> Result<(), Error> {
     db.execute_batch(DDL)?;
+    for (col, ty) in [("fp", "TEXT"), ("gone", "INTEGER NOT NULL DEFAULT 0")] {
+        let has: bool = db
+            .prepare(&format!(
+                "SELECT 1 FROM pragma_table_info('recipe_part') WHERE name='{col}'"
+            ))?
+            .exists([])?;
+        if !has {
+            db.execute_batch(&format!("ALTER TABLE recipe_part ADD COLUMN {col} {ty}"))?;
+        }
+    }
+    let bare: Vec<(i64, String, String, i64)> = db
+        .prepare("SELECT recipe, key, tbl, el FROM recipe_part WHERE fp IS NULL AND gone=0")?
+        .query_map([], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?)))?
+        .collect::<rusqlite::Result<_>>()?;
+    for (recipe, key, tbl, el) in bare {
+        if let Some(fp) = fingerprint(db, &tbl, el)? {
+            db.execute(
+                "UPDATE recipe_part SET fp=?3 WHERE recipe=?1 AND key=?2",
+                params![recipe, key, fp],
+            )?;
+        }
+    }
     let has_ikey: bool = db
         .prepare("SELECT 1 FROM pragma_table_info('recipe') WHERE name='ikey'")?
         .exists([])?;
@@ -112,6 +145,93 @@ fn put_parts(db: &Connection, id: i64, parts: &[RecipePart]) -> Result<(), Error
     Ok(())
 }
 
+fn table_exists(db: &Connection, name: &str) -> Result<bool, Error> {
+    Ok(db
+        .prepare_cached("SELECT 1 FROM sqlite_master WHERE type='table' AND name=?1")?
+        .exists([name])?)
+}
+
+fn put_value(h: &mut Sha256, v: &Value) {
+    match v {
+        Value::Null => h.update(b"n"),
+        Value::Integer(i) => h.update(format!("i{i}")),
+        Value::Real(f) => h.update(format!("r{:016x}", f.to_bits())),
+        Value::Text(t) => h.update(format!("t{t}")),
+        Value::Blob(b) => {
+            h.update(b"b");
+            h.update(b);
+        }
+    }
+    h.update([0x1f]);
+}
+
+/// What a person can change on a part, hashed: its row with the columns sorted by name and `id`
+/// left out, the face paint of a mass and the element's parameter values. `None`: no element.
+pub(crate) fn fingerprint(db: &Connection, tbl: &str, el: i64) -> Result<Option<String>, Error> {
+    if !PART_TABLES.contains(&tbl) {
+        return Ok(None);
+    }
+    let mut st = db.prepare_cached(&format!("SELECT * FROM {tbl} WHERE id=?1"))?;
+    let names: Vec<String> = st.column_names().map(|n| n.to_string()).collect();
+    let row = st
+        .query_row([el], |r| {
+            (0..names.len())
+                .map(|i| r.get::<_, Value>(i))
+                .collect::<rusqlite::Result<Vec<Value>>>()
+        })
+        .optional()?;
+    let Some(vals) = row else { return Ok(None) };
+    let mut cols: Vec<(&String, &Value)> =
+        names.iter().zip(&vals).filter(|(n, _)| *n != "id").collect();
+    cols.sort_by(|a, b| a.0.cmp(b.0));
+    let mut h = Sha256::new();
+    for (n, v) in cols {
+        h.update(n);
+        put_value(&mut h, v);
+    }
+    let mut more = vec![];
+    if table_exists(db, "pparam")? && table_exists(db, "pparam_val")? {
+        more.push(
+            "SELECT p.name, pv.value FROM pparam_val pv JOIN pparam p ON p.id=pv.param \
+             WHERE pv.kind=?1 AND pv.ref=?2 AND pv.value IS NOT NULL AND pv.value<>'' \
+             ORDER BY p.name",
+        );
+    }
+    if tbl == "mass" && table_exists(db, "mass_paint")? {
+        more.push("SELECT face, material FROM mass_paint WHERE ?1<>'' AND mass=?2 ORDER BY face");
+    }
+    for sql in more {
+        h.update([0x1e]);
+        let mut st = db.prepare_cached(sql)?;
+        let mut rows = st.query(params![tbl, el])?;
+        while let Some(r) = rows.next()? {
+            put_value(&mut h, &r.get::<_, Value>(0)?);
+            put_value(&mut h, &r.get::<_, Value>(1)?);
+        }
+    }
+    Ok(Some(
+        h.finalize()[..16].iter().map(|b| format!("{b:02x}")).collect(),
+    ))
+}
+
+/// Takes the print of the given parts: only those this write built or reshaped. A part kept or
+/// held as it is keeps its old print, or the next rerun takes the person's change for its own.
+fn seal(db: &Connection, id: i64, keys: &[&str]) -> Result<(), Error> {
+    for k in keys {
+        let link: Option<(String, i64)> = db
+            .prepare_cached(
+                "SELECT tbl, el FROM recipe_part WHERE recipe=?1 AND key=?2 AND gone=0",
+            )?
+            .query_row(params![id, k], |r| Ok((r.get(0)?, r.get(1)?)))
+            .optional()?;
+        let Some((tbl, el)) = link else { continue };
+        let fp = fingerprint(db, &tbl, el)?;
+        db.prepare_cached("UPDATE recipe_part SET fp=?3 WHERE recipe=?1 AND key=?2")?
+            .execute(params![id, k, fp])?;
+    }
+    Ok(())
+}
+
 fn read(r: &rusqlite::Row<'_>) -> rusqlite::Result<Recipe> {
     Ok(Recipe {
         id: r.get(0)?,
@@ -142,6 +262,8 @@ impl Model {
             let k = mint_ikey(db, id, &r.hash)?;
             db.execute("UPDATE recipe SET ikey=?2 WHERE id=?1", params![id, k])?;
             put_parts(db, id, parts)?;
+            let keys: Vec<&str> = parts.iter().map(|p| p.key.as_str()).collect();
+            seal(db, id, &keys)?;
             let inv = Inv::default()
                 .sql("DELETE FROM recipe_part WHERE recipe=?1", vec![Value::Integer(id)])
                 .delete("recipe", "id", id);
@@ -149,7 +271,9 @@ impl Model {
         })
     }
 
-    /// A rerun: new params and hash; links of `gone` keys dropped, `added` ones written.
+    /// A rerun: new params and hash; links of `gone` keys dropped, `added` ones written, and the
+    /// prints of `added` and `refit` (reshaped in place) parts taken anew.
+    #[allow(clippy::too_many_arguments)]
     pub fn recipe_update(
         &mut self,
         id: i64,
@@ -158,6 +282,7 @@ impl Model {
         version: i64,
         gone: &[String],
         added: &[RecipePart],
+        refit: &[String],
     ) -> Result<(), Error> {
         check_parts(added)?;
         if self.recipe(id)?.is_none() {
@@ -180,6 +305,12 @@ impl Model {
                 st.execute(params![id, k])?;
             }
             put_parts(db, id, added)?;
+            let keys: Vec<&str> = added
+                .iter()
+                .map(|p| p.key.as_str())
+                .chain(refit.iter().map(|k| k.as_str()))
+                .collect();
+            seal(db, id, &keys)?;
             Ok(((), id, inv))
         })
     }
@@ -215,7 +346,7 @@ impl Model {
         for t in PART_TABLES {
             let mut st = self.db.prepare_cached(&format!(
                 "SELECT p.key, p.el FROM recipe_part p JOIN {t} e ON e.id=p.el \
-                 WHERE p.recipe=?1 AND p.tbl='{t}'"
+                 WHERE p.recipe=?1 AND p.tbl='{t}' AND p.gone=0"
             ))?;
             let rows = st.query_map([id], |r| {
                 Ok(RecipePart {
@@ -232,6 +363,31 @@ impl Model {
         Ok(out)
     }
 
+    /// Parts a person changed since the recipe wrote them, in key order: `edited` still exist
+    /// but differ from their print; `removed` were deleted outside the recipe.
+    pub fn recipe_held(&self, id: i64) -> Result<RecipeHeld, Error> {
+        let mut held = RecipeHeld::default();
+        if !has_table(&self.db)? {
+            return Ok(held);
+        }
+        for p in self.recipe_parts(id)? {
+            let fp: Option<String> = self
+                .db
+                .prepare_cached("SELECT fp FROM recipe_part WHERE recipe=?1 AND key=?2")?
+                .query_row(params![id, p.key], |r| r.get(0))?;
+            // no print (written before prints, element missing at migration): not held
+            if fp.is_some() && fingerprint(&self.db, &p.tbl, p.el)? != fp {
+                held.edited.push(p.key);
+            }
+        }
+        held.removed = self
+            .db
+            .prepare_cached("SELECT key FROM recipe_part WHERE recipe=?1 AND gone=1 ORDER BY key")?
+            .query_map([id], |r| r.get(0))?
+            .collect::<rusqlite::Result<_>>()?;
+        Ok(held)
+    }
+
     /// The element key of a part: instance key of its recipe, [`PART_KEY_SEP`], part key.
     /// Unique across recipes and projects; `None` for an element no recipe made.
     pub fn recipe_part_key(&self, tbl: &str, el: i64) -> Result<Option<String>, Error> {
@@ -242,7 +398,7 @@ impl Model {
             .db
             .prepare_cached(&format!(
                 "SELECT {PART_KEY_EXPR} FROM recipe_part p JOIN recipe r ON r.id=p.recipe \
-                 WHERE p.tbl=?1 AND p.el=?2"
+                 WHERE p.tbl=?1 AND p.el=?2 AND p.gone=0"
             ))?
             .query_row(params![tbl, el], |r| r.get(0))
             .optional()?)
@@ -255,7 +411,9 @@ impl Model {
         }
         Ok(self
             .db
-            .prepare_cached("SELECT recipe, key FROM recipe_part WHERE tbl=?1 AND el=?2")?
+            .prepare_cached(
+                "SELECT recipe, key FROM recipe_part WHERE tbl=?1 AND el=?2 AND gone=0",
+            )?
             .query_row(params![tbl, el], |r| Ok((r.get(0)?, r.get(1)?)))
             .optional()?)
     }
@@ -305,23 +463,19 @@ pub(crate) fn unlink(db: &Connection, tbl: &str, el: i64, inv: Inv) -> Result<In
         return Ok(inv);
     }
     let rows: Vec<(i64, String)> = db
-        .prepare_cached("SELECT recipe, key FROM recipe_part WHERE tbl=?1 AND el=?2")?
+        .prepare_cached("SELECT recipe, key FROM recipe_part WHERE tbl=?1 AND el=?2 AND gone=0")?
         .query_map(params![tbl, el], |r| Ok((r.get(0)?, r.get(1)?)))?
         .collect::<rusqlite::Result<_>>()?;
     let mut inv = inv;
     for (recipe, key) in rows {
         inv = inv.sql(
-            "INSERT OR REPLACE INTO recipe_part(recipe, key, tbl, el) VALUES (?1,?2,?3,?4)",
-            vec![
-                Value::Integer(recipe),
-                Value::Text(key),
-                Value::Text(tbl.to_string()),
-                Value::Integer(el),
-            ],
+            "UPDATE recipe_part SET gone=0 WHERE recipe=?1 AND key=?2",
+            vec![Value::Integer(recipe), Value::Text(key)],
         );
     }
+    // a tombstone, not a delete: a rerun must not bring the element back
     db.execute(
-        "DELETE FROM recipe_part WHERE tbl=?1 AND el=?2",
+        "UPDATE recipe_part SET gone=1 WHERE tbl=?1 AND el=?2 AND gone=0",
         params![tbl, el],
     )?;
     Ok(inv)

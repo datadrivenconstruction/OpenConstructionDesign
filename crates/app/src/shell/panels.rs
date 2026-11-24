@@ -1014,6 +1014,7 @@ impl EditorApp {
         }
         let ru = self.sh.cat.lang == Lang::Ru;
         crate::phase_ui::props(ui, &mut self.ed, ru);
+        crate::origin_ui::props(ui, &mut self.ed, ru);
         crate::value_src_ui::bulk_bar(ui, &mut self.ed, ru);
         crate::params_ui::props(ui, &mut self.ed, ru);
         // whole-model totals only when nothing is selected: a selection shows its own figures

@@ -3,7 +3,8 @@
 //! A rerun with new params as edits of the recipe's own elements, matched by part key:
 //! unchanged parts stay, changed extrusions are reshaped in place (same id), other changed
 //! forms are replaced, new keys are created and vanished keys deleted. Nothing outside the
-//! recipe's links is named, so the rest of the model cannot change.
+//! recipe's links is named, so the rest of the model cannot change. Parts a person edited or
+//! deleted since the recipe built them are held: never reshaped, replaced, deleted or made again.
 
 use std::collections::{BTreeSet, HashMap};
 
@@ -19,6 +20,15 @@ pub struct Link {
     pub id: i64,
 }
 
+/// Part keys a rerun leaves as they are.
+#[derive(Clone, Debug, Default, PartialEq, Eq)]
+pub struct Held {
+    /// Changed by a person since the recipe wrote them.
+    pub edited: BTreeSet<String>,
+    /// Deleted outside the recipe.
+    pub removed: BTreeSet<String>,
+}
+
 #[derive(Clone, Debug, PartialEq)]
 pub struct RerunPlan {
     /// `None` when nothing changes.
@@ -30,6 +40,10 @@ pub struct RerunPlan {
     /// New parts with the envelope slot that creates them (replaced ones included).
     pub created: Vec<PartOut>,
     pub deleted: Vec<String>,
+    /// Edited parts the new params would change, left as the person made them.
+    pub held_edited: Vec<String>,
+    /// Deleted parts the new params still build, not made again.
+    pub held_removed: Vec<String>,
 }
 
 fn op_of<'a>(run: &'a ScriptRun, slot: u32) -> Option<&'a Op> {
@@ -184,6 +198,7 @@ pub fn rerun_envelope(
     old: &ScriptRun,
     new: &ScriptRun,
     links: &[Link],
+    held: &Held,
     actor: Actor,
     title: &str,
 ) -> Result<RerunPlan, String> {
@@ -207,6 +222,8 @@ pub fn rerun_envelope(
         replaced: vec![],
         created: vec![],
         deleted: vec![],
+        held_edited: vec![],
+        held_removed: vec![],
     };
     let (mut ops, mut gone) = (vec![], vec![]);
     let mut slot = 0u32;
@@ -236,6 +253,10 @@ pub fn rerun_envelope(
         .collect();
     for p in &new.parts {
         let op = op_of(new, p.slot).ok_or("internal: part without op")?;
+        if held.removed.contains(&p.key) && !link.contains_key(p.key.as_str()) {
+            plan.held_removed.push(p.key.clone());
+            continue;
+        }
         let Some(l) = link.get(p.key.as_str()) else {
             create(&mut ops, op, &p.key, &mut plan);
             continue;
@@ -244,6 +265,7 @@ pub fn rerun_envelope(
         let stale = group_of(&p.key).is_some_and(|g| moved.contains(g));
         match old_op.get(p.key.as_str()) {
             Some(o) if same(o, op) && !stale => plan.kept += 1,
+            _ if held.edited.contains(&p.key) => plan.held_edited.push(p.key.clone()),
             Some(o) if is_mass(o) || is_mass(op) => {
                 return Err(format!(
                     "part `{}` is a mass cut or joined by a boolean and the new params change \
@@ -265,7 +287,9 @@ pub fn rerun_envelope(
         }
     }
     for l in links {
-        if !keys.contains(l.key.as_str()) {
+        if !keys.contains(l.key.as_str()) && held.edited.contains(&l.key) {
+            plan.held_edited.push(l.key.clone());
+        } else if !keys.contains(l.key.as_str()) {
             gone.push(Ref::id(l.cat, l.id));
             plan.deleted.push(l.key.clone());
         }

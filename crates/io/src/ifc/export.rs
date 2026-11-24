@@ -29,6 +29,7 @@ mod mep;
 mod panel_system;
 mod post;
 mod projinfo;
+mod provenance;
 mod ramps;
 mod rebar;
 mod roof_edge;
@@ -1312,6 +1313,7 @@ fn run(model: &Model, step: Step) -> Result<(Step, guids::Guids), String> {
         }
     }
     userprops::write(&mut c, model, [len_u, area_u, vol_u, ang_u], &wall_ext)?;
+    provenance::write(&mut c, model);
     Ok((c.s, c.g))
 }
 

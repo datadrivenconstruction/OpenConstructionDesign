@@ -24,5 +24,21 @@
  "value_src.verified_n": "Geprüfte Werte: {n}",
  "value_src.bulk_note": "Durch KI ausgefüllte, ungeprüfte Werte: {n}",
  "value_src.bulk_verify": "Als geprüft markieren ({n})",
- "value_src.bulk_tip": "Markiert alle durch KI ausgefüllten Werte der Auswahl als geprüft, ein Rückgängig-Schritt"
+ "value_src.bulk_tip": "Markiert alle durch KI ausgefüllten Werte der Auswahl als geprüft, ein Rückgängig-Schritt",
+ "origin.title": "Herkunft",
+ "origin.made_by": "Erstellt von",
+ "origin.request": "Anfrage",
+ "origin.at": "Angewendet",
+ "origin.recipe": "Rezept «{name}», Teil {part}",
+ "origin.ai": "KI-Assistent ({model})",
+ "origin.agent": "Agent {name}",
+ "origin.script": "Skript {name}",
+ "origin.xlsx": "XLSX-Tabelle",
+ "origin.user": "eine Person",
+ "origin.import": "Import",
+ "origin.import_file": "Import aus {file}",
+ "origin.unknown": "nicht im Verlauf",
+ "origin.held": "Von Hand geändert: ein neuer Lauf des Rezepts lässt es unverändert",
+ "origin.rebuilt": "Ein neuer Lauf des Rezepts baut es neu; von Hand ändern, um es zu behalten",
+ "origin.ai_values": "Werte von der KI: {n}, nicht geprüft: {open}"
 }

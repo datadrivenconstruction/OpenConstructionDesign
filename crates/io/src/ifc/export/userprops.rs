@@ -420,7 +420,7 @@ fn depth(c: &mut Ctx, model: &ddc_model::Model) -> Result<(), String> {
 
 /// Product that carries the data of `(kind, id)`: a door or window opening has both an
 /// IfcOpeningElement and the IfcDoor/IfcWindow filling it; its data belongs to the filling.
-fn target(c: &Ctx, kind: &str, id: i64) -> u32 {
+pub(super) fn target(c: &Ctx, kind: &str, id: i64) -> u32 {
     if kind == "opening" {
         if let Some(&e) = c.prod.get(&("opening_fill".to_string(), id)) {
             return e;

@@ -394,7 +394,15 @@ fn run(m: &mut Model, s: &ModelStep) -> Result<Vec<i64>, Error> {
                     m.recipe_add(&rec, &parts)?;
                 }
                 Some(id) => {
-                    m.recipe_update(id, &item.params_json, &item.hash, version, &item.gone, &parts)?
+                    m.recipe_update(
+                    id,
+                    &item.params_json,
+                    &item.hash,
+                    version,
+                    &item.gone,
+                    &parts,
+                    &item.refit,
+                )?
                 }
             }
             r.created

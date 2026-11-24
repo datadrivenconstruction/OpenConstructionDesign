@@ -34,7 +34,7 @@ use serde_json::Value as J;
 use sha2::{Digest, Sha256};
 
 pub use blocks::{ifc_of, PartKind, ROLE_IFC};
-pub use rerun::{rerun_envelope, Link, RerunPlan};
+pub use rerun::{rerun_envelope, Held, Link, RerunPlan};
 pub use units::{parse_angle, parse_len};
 
 /// Standard library version; stored with each recipe so a later build knows what ran.
