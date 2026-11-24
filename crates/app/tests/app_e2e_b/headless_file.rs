@@ -204,6 +204,58 @@ fn headless_dxf_underlay_save_reopen() {
     assert_eq!(r2["counts"], r["counts"]);
 }
 
+/// A DXF underlay survives `--save`: the drawing is written into the project and the reopened
+/// file holds it; the save check compares stored drawings, not only element counts.
+#[test]
+fn headless_dxf_underlay_is_stored_in_saved_project() {
+    let dxf = temp_file("headless_qa_underlay.dxf");
+    let line = "0
+SECTION
+2
+ENTITIES
+0
+LINE
+8
+QA_UNDERLAY
+10
+0
+20
+0
+30
+0
+                11
+5
+21
+2
+31
+0
+0
+ENDSEC
+0
+EOF
+";
+    std::fs::write(&dxf, line).unwrap();
+    let ddc = temp_file("headless_qa_underlay.ddc");
+    let out = temp_file("headless_qa_underlay.json");
+    let run = |v: &[&str]| report_of(&hf::parse(&argv(v)).unwrap().unwrap());
+    let (code, r) = run(&[
+        "--file",
+        dxf.to_str().unwrap(),
+        "--save",
+        ddc.to_str().unwrap(),
+        "--report-json",
+        out.to_str().unwrap(),
+    ]);
+    assert_eq!(code, 0, "{r}");
+    assert_eq!(r["underlay"]["lines"], 1, "{r}");
+    assert_eq!(r["save"]["reopen_match"], true, "{r}");
+    assert_eq!(r["save"]["underlays"], 1, "{r}");
+    assert_eq!(ddc_model::saved_underlays(&ddc).unwrap(), (1, 1));
+    let (code, r2) = run(&["--file", ddc.to_str().unwrap(), "--report-json", out.to_str().unwrap()]);
+    assert_eq!(code, 0, "{r2}");
+    assert_eq!(r2["underlay"]["lines"], 1, "{r2}");
+}
+
 fn stamp(p: &std::path::Path) -> (Vec<u8>, std::time::SystemTime) {
     (
         std::fs::read(p).unwrap(),

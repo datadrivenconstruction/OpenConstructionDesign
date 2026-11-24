@@ -68,7 +68,8 @@ Report (JSON object, schema \"ddc-headless-report/1\"; null where a step did not
                footing, strip_footing, raft, beam, brace, roof, ceiling, stair, ramp, railing, mass, mesh, component,
                mep_run, toposolid, sheet}   all keys always present, integers
   underlay    {file, entities, lines, arcs, texts, closed, fills, inserts, layers}
-  save        {path, ms, bytes, reopen_ms, reopen_match}
+  save        {path, ms, bytes, reopen_ms, reopen_match (element counts and stored
+              drawings), underlays, underlay_entities}
   xlsx       {export_ms, bytes, dry_run_ms, added, changed, deleted, rejected}
   render      {size:[w,h], plan_frame_ms, view3d_frame_ms, section_frame_ms (steady, median,
               readback included), plan_first_ms, view3d_first_ms, section_first_ms (first
@@ -289,20 +290,42 @@ fn place_underlay(dr: &mut Drawings, ed: &Editor, path: &Path) -> Result<Value, 
         v2(0.0, 0.0),
     );
     let d = dr.list.last().ok_or("underlay was not placed")?;
-    let u = &d.u;
-    let (l, a, t, c, f, i) = (
-        u.lines.len(),
-        u.arcs.len(),
-        u.texts.len(),
-        u.closed.len(),
-        u.fills.len(),
-        u.inserts.len(),
-    );
-    Ok(json!({
-        "file": name, "entities": l + a + t + c + f + i,
+    Ok(underlay_json(std::slice::from_ref(d), name))
+}
+
+/// Primitive counts of `ds` summed; the report's `underlay` object.
+fn underlay_json(ds: &[crate::drawing::Drawing], file: String) -> Value {
+    let (mut l, mut a, mut t, mut c, mut f, mut i, mut layers) = (0, 0, 0, 0, 0, 0, 0);
+    for d in ds {
+        let u = &d.u;
+        l += u.lines.len();
+        a += u.arcs.len();
+        t += u.texts.len();
+        c += u.closed.len();
+        f += u.fills.len();
+        i += u.inserts.len();
+        layers += d.layers.len();
+    }
+    json!({
+        "file": file, "entities": l + a + t + c + f + i,
         "lines": l, "arcs": a, "texts": t, "closed": c, "fills": f, "inserts": i,
-        "layers": d.layers.len(),
-    }))
+        "layers": layers,
+    })
+}
+
+/// The drawings a project stores, as the window shows them on open; `Null` when it has none.
+fn stored_underlays(dr: &mut Drawings, ed: &Editor) -> Result<Value, String> {
+    let rows = ed.model.underlays().map_err(|e| e.to_string())?;
+    if rows.is_empty() {
+        return Ok(Value::Null);
+    }
+    let n = rows.len();
+    let _notes = dr.load_rows(rows);
+    if dr.list.len() != n {
+        return Err(format!("{} of {n} stored drawings could not be read", n - dr.list.len()));
+    }
+    let names: Vec<&str> = dr.list.iter().map(|d| d.name.as_str()).collect();
+    Ok(underlay_json(&dr.list, names.join(", ")))
 }
 
 fn import_ifc(ed: &mut Editor, path: &Path) -> Result<(), String> {
@@ -344,8 +367,11 @@ fn open_ddc(ed: &mut Editor, path: &Path) -> Result<(), String> {
     }
 }
 
-fn save_and_reopen(ed: &mut Editor, target: &Path) -> Result<Value, String> {
+fn save_and_reopen(ed: &mut Editor, dr: &mut Drawings, target: &Path) -> Result<Value, String> {
+    // placed drawings live in `dr` until written into the model, as the window's save does
+    dr.persist(&mut ed.model)?;
     let before = counts(&ed.model);
+    let under = ed.model.underlay_totals().map_err(|e| e.to_string())?;
     let t = Instant::now();
     ed.save_project_as(target).map_err(|e| e.to_string())?;
     let save_ms = ms(t);
@@ -354,10 +380,14 @@ fn save_and_reopen(ed: &mut Editor, target: &Path) -> Result<Value, String> {
     let mut again = Editor::new_in_memory().map_err(|e| e.to_string())?;
     open_ddc(&mut again, target)?;
     let reopen_ms = ms(t);
-    let same = counts(&again.model) == before;
+    let under_again = again.model.underlay_totals().map_err(|e| e.to_string())?;
+    let same = counts(&again.model) == before
+        && under_again == under
+        && under.0 >= dr.list.len() as i64;
     Ok(json!({
         "path": target.display().to_string(), "ms": save_ms, "bytes": bytes,
         "reopen_ms": reopen_ms, "reopen_match": same,
+        "underlays": under_again.0, "underlay_entities": under_again.1,
     }))
 }
 
@@ -635,7 +665,8 @@ fn execute(
             std::fs::copy(&a.file, &copy).map_err(|x| format!("copy {}: {x}", a.file.display()))?;
             let r = open_ddc(&mut ed, &copy);
             let _ = std::fs::remove_file(&copy);
-            r?
+            r?;
+            underlay = stored_underlays(&mut dr, &ed)?;
         }
         _ => underlay = place_underlay(&mut dr, &ed, &a.file)?,
     }
@@ -664,7 +695,7 @@ fn execute(
     // counted after the book's edits: the model every later step writes
     rep.insert("counts".into(), counts_json(&counts(&ed.model)));
     if let Some(p) = &a.save {
-        rep.insert("save".into(), save_and_reopen(&mut ed, p)?);
+        rep.insert("save".into(), save_and_reopen(&mut ed, &mut dr, p)?);
     }
     if a.xlsx {
         rep.insert("xlsx".into(), xlsx_dry_run(&mut ed)?);
