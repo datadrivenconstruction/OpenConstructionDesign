@@ -16,6 +16,7 @@ pub mod connect;
 pub mod consent;
 pub mod dock_fold;
 pub mod ctx_chips;
+pub mod demo;
 pub mod depth_chip;
 pub mod found;
 pub mod keys;

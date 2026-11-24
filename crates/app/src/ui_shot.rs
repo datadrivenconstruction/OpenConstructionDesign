@@ -14,6 +14,7 @@
 //!   type TEXT         text into the focused field key enter|escape|tab|backspace
 //!   fold SPEC         as `--fold`                 settings PAGE   as `--settings-page`
 //!   ai-mode chat|build|review                     select-room NUMBER
+//!   ai-demo chat|build  a scripted conversation in the AI panel (no network)
 //!   frames N          passes before each shot     shot out.png    write the frame
 use crate::shell::EditorApp;
 use crate::RenderState;
@@ -28,7 +29,7 @@ pub struct Step {
 }
 
 const SETUP: [&str; 5] = ["size", "scale", "lang", "theme", "open"];
-const ACTIONS: [&str; 18] = [
+const ACTIONS: [&str; 19] = [
     "level",
     "fit",
     "view",
@@ -43,6 +44,7 @@ const ACTIONS: [&str; 18] = [
     "fold",
     "settings",
     "ai-mode",
+    "ai-demo",
     "select-room",
     "frames",
     "shot",
@@ -314,6 +316,7 @@ pub fn run(
                     .ok_or_else(|| err("ai-mode chat|build|review"))?;
                 crate::ai::ui::modes::enter(&mut app, m);
             }
+            "ai-demo" => crate::ai::ui::demo::seed(&mut app, &s.arg).map_err(|e| err(&e))?,
             "select-room" => {
                 let id = app
                     .ed
