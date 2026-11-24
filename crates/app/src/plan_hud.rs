@@ -181,6 +181,13 @@ pub fn scale_text(px_per_m: f64) -> String {
     format!("1:{}", paper_ratio(px_per_m))
 }
 
+/// Plan chip: the view's drawing scale (annotation size, sheets: "1:100") and the zoom against
+/// it in percent, so a zoom ratio is never read as the view scale.
+pub fn view_scale_text(view_denom: f64, px_per_m: f64) -> String {
+    let zoom = view_denom * px_per_m.max(1e-6) * PX_MM / 10.0;
+    format!("1:{} \u{b7} {}%", view_denom.round() as u64, zoom.round() as u64)
+}
+
 fn font() -> egui::FontId {
     egui::FontId::proportional(ddc_ui::theme::type_size::CAPTION)
 }
@@ -372,6 +379,15 @@ mod tests {
         }
         let wide = layout(canvas(1024.0, 500.0), input(120.0));
         assert!(shown(wide.name) && shown(wide.scale) && shown(wide.fit));
+    }
+
+    #[test]
+    fn plan_chip_shows_the_view_scale_and_zoom_apart() {
+        // at the paper size of 1:100 the zoom is 100 %; zooming changes only the percentage
+        let paper = 1000.0 / (100.0 * PX_MM);
+        assert_eq!(view_scale_text(100.0, paper), "1:100 \u{b7} 100%");
+        assert_eq!(view_scale_text(100.0, 2.0 * paper), "1:100 \u{b7} 200%");
+        assert_eq!(view_scale_text(50.0, paper), "1:50 \u{b7} 50%");
     }
 
     #[test]

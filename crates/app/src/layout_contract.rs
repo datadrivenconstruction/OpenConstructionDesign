@@ -4716,7 +4716,8 @@ fn plan_canvas(ru: bool, mode: Mode, screen: (f32, f32), model: bool, select: bo
         let canvas = egui::Rect::from_min_size(egui::Pos2::ZERO, egui::vec2(screen.0, screen.1));
         let name = crate::tr_lang(ru, "view_gfx.view.plan", &[("name", ed.level_name().as_str())]);
         let fit = crate::tr_lang(ru, "plan.hud.fit", &[]);
-        let ratio = hud::scale_text(view.scale);
+        let denom = ed.model.anno_scale(ddc_model::AnnoView::Plan(ed.level)).unwrap_or(100.0);
+        let ratio = hud::view_scale_text(denom, view.scale);
         let units = crate::units::Units::Metric;
         let bar = crate::units::display_length(
             crate::plan_view::scale_bar_len(view.scale, units),

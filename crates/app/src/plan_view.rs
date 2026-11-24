@@ -370,7 +370,8 @@ impl PlanView {
         let bar_text = bar_label(bar_len, self.units);
         let lvl = ed.level_name();
         let view_name = crate::tr("view_gfx.view.plan", &[("name", lvl.as_str())]);
-        let scale_txt = plan_hud::scale_text(self.scale);
+        let denom = ed.model.anno_scale(ddc_model::AnnoView::Plan(ed.level)).unwrap_or(100.0);
+        let scale_txt = plan_hud::view_scale_text(denom, self.scale);
         let fit_txt = crate::tr("plan.hud.fit", &[]);
         let hud = plan_hud::layout(
             rect,
@@ -913,7 +914,7 @@ impl PlanView {
             Sel::Body(k, id) => Some((k, id)),
             _ => None,
         });
-        let range = crate::plan_range::range(ed);
+        let range = crate::plan_range::drawn(ed);
         let body_key = self.bake.then(|| {
             use std::hash::{Hash, Hasher};
             let mut h = layer_key.clone();
