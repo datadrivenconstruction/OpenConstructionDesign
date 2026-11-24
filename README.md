@@ -48,14 +48,18 @@
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/images/download-dark.webp">
-      <img src="docs/images/download-light.webp" alt="Download for Windows (zip)" width="460">
-    </picture>
-  </a>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/images/download-windows-dark.webp">
+      <img src="docs/images/download-windows-light.webp" alt="Download for Windows (zip, 62 MB)" width="300">
+    </picture></a>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/images/download-linux-dark.webp">
+      <img src="docs/images/download-linux-light.webp" alt="Download for Linux (tar.gz, 71 MB)" width="300">
+    </picture></a>
 </p>
 
 <p align="center">
-  <b>v1.1.1</b> · 62 MB · Windows 10/11 x64 · 8 GB RAM · works offline · no account
+  <b>v1.1.1</b> · Windows 10/11 x64 · Linux x64 · 8 GB RAM · works offline · no account
 </p>
 
 | Platform | Get it | Notes |
