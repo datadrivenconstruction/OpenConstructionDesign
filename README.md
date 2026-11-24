@@ -71,6 +71,15 @@
   <a href="docs/USER_GUIDE.md">User guide</a>
 </p>
 
+<p align="center">
+  If OpenConstructionDesign is useful to you, a ⭐ on GitHub helps a lot. It is the easiest way to
+  help the project grow and reach more people who build.
+</p>
+
+<p align="center">
+  <img src="docs/images/how-to-star.gif" alt="Click Star at the top right of the repository page" width="480">
+</p>
+
 OpenConstructionDesign is a CAD-BIM editor written in Rust, with its own geometry kernel and file
 readers. You describe a building in the built-in chat, over MCP or as a JSON brief; the editor
 produces real walls, rooms, doors, stairs and building services as a highlighted preview, and
@@ -569,9 +578,28 @@ Contributions are welcome; read [CONTRIBUTING.md](CONTRIBUTING.md). Every contri
 (`git commit -s`). Follow the [Code of Conduct](CODE_OF_CONDUCT.md). Report vulnerabilities
 privately as described in [SECURITY.md](SECURITY.md), not in public issues.
 
-OpenConstructionDesign belongs to one family with [OpenConstructionERP](https://openconstructionerp.com)
-(estimates, schedules, procurement) and [OpenConstructionAcademy](https://openconstructionacademy.com)
-(courses on data-driven construction).
+## Part of the DataDrivenConstruction family
+
+<table align="center">
+  <tr>
+    <td align="center" width="260">
+      <a href="https://openconstructionerp.com"><picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/brand/erp-mark-dark.svg">
+        <img src="docs/brand/erp-mark-light.svg" alt="OpenConstructionERP" width="56" height="56"></picture></a><br>
+      <a href="https://github.com/datadrivenconstruction/OpenConstructionERP"><b>OpenConstructionERP</b></a><br>
+      Estimates, schedules and procurement; the other half of the ERP link.
+    </td>
+    <td align="center" width="260">
+      <a href="https://openconstructionacademy.com"><picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/brand/academy-mark-dark.svg">
+        <img src="docs/brand/academy-mark-light.svg" alt="OpenConstructionAcademy" width="56" height="56"></picture></a><br>
+      <a href="https://openconstructionacademy.com"><b>OpenConstructionAcademy</b></a><br>
+      Courses on data-driven construction.
+    </td>
+  </tr>
+</table>
+
+Found this useful? A ⭐ at the top of the page is the best way to say thanks.
 
 ## Licence
 
