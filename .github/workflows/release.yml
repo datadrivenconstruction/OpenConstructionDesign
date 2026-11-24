@@ -7,6 +7,7 @@ on:
     inputs:
       tag: {description: 'existing release tag', required: true}
       targets: {description: 'JSON list of runners', default: '["windows-latest", "ubuntu-22.04"]'}
+      macos: {description: 'also build the macOS beta (Apple silicon and Intel)', type: boolean, default: true}
 permissions:
   contents: write
 env:
@@ -32,7 +33,7 @@ jobs:
             *-*) pre="--prerelease"
                  notes="Test build $TAG for trying the editor. Not every automated test passes yet; please report problems you find." ;;
           esac
-          printf '%s\n\nDownloads: Windows (zip) and Linux (tar.gz) builds of the editor (ddc-app) and the command line tool (ddc).\n' "$notes" > notes.md
+          printf '%s\n\nDownloads: Windows (zip) and Linux (tar.gz) builds of the editor (ddc-app) and the command line tool (ddc).\n\nmacOS build is beta: built by CI, not tested on a Mac. The macos-beta archives (arm64 for Apple silicon, x64 for Intel) are not signed; if macOS blocks them, run: xattr -dr com.apple.quarantine <folder>\n' "$notes" > notes.md
           gh release create "$TAG" $pre --title "OpenConstructionDesign $TAG" --notes-file notes.md --generate-notes
 
   build:
@@ -94,3 +95,59 @@ jobs:
             asset="pkg/$name-linux-x64.tar.gz"
           fi
           gh release upload "$TAG" "$asset" --clobber
+
+  build-macos:
+    name: build macOS beta ${{ matrix.arch }}
+    needs: create
+    if: ${{ !cancelled() && (needs.create.result == 'success' || (github.event_name == 'workflow_dispatch' && inputs.macos)) }}
+    runs-on: macos-latest
+    env:
+      TAG: ${{ inputs.tag || github.ref_name }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {arch: arm64, target: aarch64-apple-darwin}
+          - {arch: x64, target: x86_64-apple-darwin}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - name: toolchain
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal --target ${{ matrix.target }}
+          rustup default "$RUST_TOOLCHAIN"
+      - name: build
+        run: cargo build --release --locked --target ${{ matrix.target }} -p ddc-app -p ddc-cli
+      - name: smoke test
+        run: |
+          out=target/${{ matrix.target }}/release
+          file "$out/ddc" "$out/ddc-app"
+          "$out/ddc" --version
+          "$out/ddc-app" --help > /dev/null
+      - name: package and upload
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          out=target/${{ matrix.target }}/release
+          name="OpenConstructionDesign-${TAG//\//-}"
+          mkdir -p "pkg/$name"
+          cp LICENSE NOTICE README.md THIRD_PARTY_LICENSES.txt "$out/ddc-app" "$out/ddc" "pkg/$name/"
+          {
+            echo "macOS build is beta: built by CI, not tested on a Mac."
+            echo "The binaries are not signed or notarized. If macOS refuses to open them, run:"
+            echo "  xattr -dr com.apple.quarantine ."
+          } > "pkg/$name/MACOS-BETA.txt"
+          asset="pkg/$name-macos-${{ matrix.arch }}-beta.tar.gz"
+          tar -C pkg -czf "$asset" "$name"
+          if [ "${{ github.event_name }}" = push ] || gh release view "$TAG" > /dev/null 2>&1; then
+            gh release upload "$TAG" "$asset" --clobber
+          else
+            echo "no release $TAG; asset kept as a workflow artifact only"
+          fi
+          echo "ASSET=$asset" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@v4
+        if: ${{ github.event_name == 'workflow_dispatch' }}
+        with:
+          name: macos-${{ matrix.arch }}-beta
+          path: ${{ env.ASSET }}

@@ -156,6 +156,24 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
           grep -cE '^[^ ]+: warning' clippy.txt || true
 
+  macos-check:
+    name: macOS build check (beta, advisory)
+    runs-on: macos-latest
+    timeout-minutes: 90
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: toolchain
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal
+          rustup default "$RUST_TOOLCHAIN"
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: macos-check
+          save-if: ${{ github.ref == 'refs/heads/main' }}
+      - name: check
+        run: cargo check --locked -p ddc-app -p ddc-cli
+
   supply:
     name: supply chain (required)
     runs-on: ubuntu-latest
