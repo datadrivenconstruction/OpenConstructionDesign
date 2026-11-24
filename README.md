@@ -585,14 +585,14 @@ privately as described in [SECURITY.md](SECURITY.md), not in public issues.
     <td align="center" width="260">
       <a href="https://openconstructionerp.com"><picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/brand/erp-mark-dark.svg">
-        <img src="docs/brand/erp-mark-light.svg" alt="OpenConstructionERP" width="56" height="56"></picture></a><br>
+        <img src="docs/brand/erp-mark-light.svg" alt="OpenConstructionERP" width="72" height="72"></picture></a><br>
       <a href="https://github.com/datadrivenconstruction/OpenConstructionERP"><b>OpenConstructionERP</b></a><br>
-      Estimates, schedules and procurement; the other half of the ERP link.
+      Estimates, schedules and procurement, priced from the quantities in your model.
     </td>
     <td align="center" width="260">
       <a href="https://openconstructionacademy.com"><picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/brand/academy-mark-dark.svg">
-        <img src="docs/brand/academy-mark-light.svg" alt="OpenConstructionAcademy" width="56" height="56"></picture></a><br>
+        <img src="docs/brand/academy-mark-light.svg" alt="OpenConstructionAcademy" width="72" height="72"></picture></a><br>
       <a href="https://openconstructionacademy.com"><b>OpenConstructionAcademy</b></a><br>
       Courses on data-driven construction.
     </td>
