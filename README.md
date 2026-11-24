@@ -11,8 +11,6 @@
 
 <p align="center">
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest"><img src="https://img.shields.io/github/v/release/datadrivenconstruction/OpenConstructionDesign?style=flat-square&label=release&color=3b6cf6" alt="Latest release"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases"><img src="https://img.shields.io/github/downloads/datadrivenconstruction/OpenConstructionDesign/total?style=flat-square&label=downloads&color=2f855a" alt="Downloads"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/datadrivenconstruction/OpenConstructionDesign/ci.yml?branch=main&style=flat-square&label=CI" alt="CI status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/licence-AGPL--3.0-3b6cf6?style=flat-square" alt="Licence: AGPL-3.0"></a>
   <img src="https://img.shields.io/badge/platform-Windows%20%C2%B7%20Linux%20%C2%B7%20Browser-0f172a?style=flat-square" alt="Platforms: Windows, Linux, browser">
   <img src="https://img.shields.io/badge/rust-1.89%2B-b7410e?style=flat-square&logo=rust&logoColor=white" alt="Rust 1.89+">
@@ -22,10 +20,7 @@
   <img src="https://img.shields.io/badge/works-offline-0f172a?style=flat-square" alt="Works offline">
   <br>
   <a href="https://openconstructiondesign.com"><img src="https://img.shields.io/badge/website-openconstructiondesign.com-3b6cf6?style=flat-square" alt="Website"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/commits/main"><img src="https://img.shields.io/github/last-commit/datadrivenconstruction/OpenConstructionDesign/main?style=flat-square" alt="Last commit"></a>
   <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/stargazers"><img src="https://img.shields.io/github/stars/datadrivenconstruction/OpenConstructionDesign?style=flat-square" alt="Stars"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/issues"><img src="https://img.shields.io/github/issues/datadrivenconstruction/OpenConstructionDesign?style=flat-square" alt="Open issues"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/discussions"><img src="https://img.shields.io/github/discussions/datadrivenconstruction/OpenConstructionDesign?style=flat-square" alt="Discussions"></a>
   <a href="#contributing"><img src="https://img.shields.io/badge/PRs-welcome-2f855a?style=flat-square" alt="PRs welcome"></a>
 </p>
 
