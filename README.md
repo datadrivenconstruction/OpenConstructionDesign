@@ -55,13 +55,13 @@
 </p>
 
 <p align="center">
-  <b>v1.1.1</b> · 64 MB · Windows 10/11 x64 · 8 GB RAM · works offline · no account
+  <b>v1.1.1</b> · 62 MB · Windows 10/11 x64 · 8 GB RAM · works offline · no account
 </p>
 
 | Platform | Get it | Notes |
 |---|---|---|
 | **Windows 10/11 x64** | [**Download the zip**](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) | Full editor. Unzip and run `ddc-app.exe`. |
-| **Browser** | [Online demo](https://openconstructiondesign.com/app/) | Coming soon. |
+| **Browser** | [**Open the online demo**](https://openconstructiondesign.com/demo/) | Full editor in a browser tab with sample projects, nothing to install. Register with your email, then the editor opens right away. |
 | **Linux x64** | [**Download the tar.gz**](https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest) (71 MB) | Editor `ddc-app` and `ddc` CLI. Ubuntu 22.04+, Debian 12+ (glibc 2.35), X11 or Wayland. |
 | **macOS** | [Build from source](#build-from-source) | No release build; untested. |
 
@@ -537,7 +537,7 @@ Details and other platforms: [docs/BUILDING.md](docs/BUILDING.md).
 | Windows 10/11, x64 | Supported; primary development platform |
 | Linux | Editor and CLI in every release, built on Ubuntu 22.04; library crates tested in CI |
 | macOS | Code paths exist; not regularly built or tested |
-| Browser (wasm32) | Online demo coming soon; the browser build is not part of this repository yet |
+| Browser (wasm32) | [Online demo](https://openconstructiondesign.com/demo/) after a short registration; the browser build is not part of this repository yet |
 
 ## Current limits
 
