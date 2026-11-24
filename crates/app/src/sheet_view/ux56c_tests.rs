@@ -221,3 +221,18 @@ fn publish_pdf_is_found_by_name_and_runs_sheet_export() {
         assert!(top.contains(&"data.export_pdf"), "{lang:?}: {top:?}");
     }
 }
+
+#[test]
+fn new_sheet_dialog_keeps_its_footer_on_a_1600x1000_screen() {
+    for ru in [false, true] {
+        let mut ed = Editor::new_in_memory().unwrap();
+        let mut p = Props::new_with(&ed, ru, None);
+        let ok = tr(ru, "shv.ok");
+        let probe = crate::layout_contract::probe_on(egui::Id::new("sheet_properties"), (1600.0, 1000.0), |c| {
+            let _ = props::props_window(c, &mut ed, ru, &mut p);
+        });
+        let screen = probe.screen.unwrap();
+        let (_, r) = probe.spans.iter().find(|(t, _)| t == ok).expect("the OK button is drawn");
+        assert!(screen.contains_rect(*r), "ru={ru}: footer outside the window {r:?}");
+    }
+}

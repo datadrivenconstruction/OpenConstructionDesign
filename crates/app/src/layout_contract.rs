@@ -6239,6 +6239,37 @@ fn welcome_card_waits_for_tools_and_windows(lang: Lang) {
     assert!(!app.welcome_closed, "{lang:?}: only waits, never closed");
 }
 
+/// A press on the canvas beside the card dismisses it for good (the press still reaches the tool).
+fn welcome_card_dismissed_by_canvas_click(lang: Lang) {
+    let id = egui::Id::new("ddc.welcome");
+    let mut app = app_in(lang);
+    let (ctx, mut th) = driven_ctx();
+    let mut run = |app: &mut EditorApp, events: Vec<egui::Event>| {
+        let mut frame = |ctx: &egui::Context| {
+            let area = ctx.screen_rect();
+            app.welcome(ctx, area, &mut vec![]);
+        };
+        pass_on(&ctx, &mut th, id, (1280.0, 800.0), events, &mut frame)
+    };
+    for _ in 0..FRAMES {
+        run(&mut app, vec![]);
+    }
+    assert!(!app.welcome_closed);
+    let at = egui::pos2(60.0, 740.0);
+    run(
+        &mut app,
+        vec![egui::Event::PointerMoved(at), egui::Event::PointerButton {
+            pos: at,
+            button: egui::PointerButton::Primary,
+            pressed: true,
+            modifiers: egui::Modifiers::NONE,
+        }],
+    );
+    assert!(app.welcome_closed, "{lang:?}: a canvas press dismisses the card");
+}
+
+en_ru!(welcome_card_dismissed_by_canvas_click, welcome_card_click_en, welcome_card_click_ru);
+
 /// Desktop screen sizes at which the dialog anatomy is checked.
 const DESK_SCREENS: [(f32, f32); 3] = [(1280.0, 720.0), (1440.0, 900.0), (1920.0, 1080.0)];
 

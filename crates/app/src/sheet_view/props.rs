@@ -96,61 +96,65 @@ pub(super) fn props_window(
     };
     let mut out = None;
     let mut open = true;
-    kit::Dialog::new("sheet_properties", title, kit::DialogSize::Form)
+    kit::Dialog::new("sheet_properties", title, kit::DialogSize::Tool)
+        .stable()
         .open(&mut open)
         .show(ctx, |ui| {
-            let th = ddc_ui::theme::of(ui.ctx());
-            let th = &*th;
-            let bad_number = number_block(ed, ru, p.id, &p.def.number).is_some();
-            text_row(ui, th, tr(ru, "shv.number"), "sheet.props.number", &mut p.def.number, "", bad_number);
-            text_row(ui, th, tr(ru, "shv.name_2"), "sheet.props.name", &mut p.def.name, "", false);
-            let mut at = PAPERS.iter().position(|s| *s == p.def.paper).unwrap_or(0);
-            let size = paper_note(&p.def.paper, p.def.landscape, ru);
-            if pick_row(ui, th, tr(ru, "shv.paper"), "sheet.paper", &mut at, &PAPERS, &size) {
-                p.def.paper = PAPERS[at].to_string();
-            }
-            let orient = [tr(ru, "shv.landscape_2"), tr(ru, "shv.portrait_2")];
-            let mut at = usize::from(!p.def.landscape);
-            if pick_row(ui, th, tr(ru, "sheet_props.orientation"), "sheet.orient", &mut at, &orient, "") {
-                p.def.landscape = at == 0;
-            }
-            let stds = ["ISO 7200", tr(ru, "shv.gost_r_21_101")];
-            let mut at = usize::from(p.def.standard == "gost");
-            if pick_row(ui, th, tr(ru, "shv.title_block"), "sheet.std", &mut at, &stds, "") {
-                p.def.standard = if at == 1 { "gost" } else { "iso" }.to_string();
-            }
-            widgets::section(ui, th, tr(ru, "shv.title_block_fields"), |ui| {
-                for (k, label) in stamp_fields(&p.def.standard, ru) {
-                    let v = p.def.fields.entry(k.to_string()).or_default();
-                    let hint = if AUTO.contains(&k) { tr(ru, "shv.auto") } else { "" };
-                    text_row(ui, th, label, &format!("sheet.props.f.{k}"), v, hint, false);
-                }
-            });
-            widgets::section(ui, th, tr(ru, "shv.revisions"), |ui| {
-                revisions_block(ui, th, ru, p);
-            });
-            let blocked = number_block(ed, ru, p.id, &p.def.number);
-            if !p.err.is_empty() {
-                kit::error_note(ui, &p.err);
-            } else if let Some(why) = &blocked {
-                kit::error_note(ui, why);
-            }
-            kit::dialog_footer(ui, |ui| {
-                if kit::primary_action_table(ui, tr(ru, "shv.ok"), blocked.as_deref()) {
-                    match save_props(ed, ru, p) {
-                        Ok(id) => out = Some(Some(id)),
-                        Err(e) => p.err = e,
+            kit::pinned_footer(ui, |ui, footer| {
+                let blocked = number_block(ed, ru, p.id, &p.def.number);
+                if footer {
+                    if kit::primary_action_table(ui, tr(ru, "shv.ok"), blocked.as_deref()) {
+                        match save_props(ed, ru, p) {
+                            Ok(id) => out = Some(Some(id)),
+                            Err(e) => p.err = e,
+                        }
                     }
-                }
-                if kit::cancel_button(ui, tr(ru, "shv.cancel")).clicked() {
-                    out = Some(None);
+                    if kit::cancel_button(ui, tr(ru, "shv.cancel")).clicked() {
+                        out = Some(None);
+                    }
+                    let th = ddc_ui::theme::of(ui.ctx());
+                    if widgets::Button::quiet(&msg(ru, "sheets.project.open", &[]))
+                        .show(ui, &th)
+                        .clicked()
+                    {
+                        with(|s| s.open_project = true);
+                    }
+                    return;
                 }
                 let th = ddc_ui::theme::of(ui.ctx());
-                if widgets::Button::quiet(&msg(ru, "sheets.project.open", &[]))
-                    .show(ui, &th)
-                    .clicked()
-                {
-                    with(|s| s.open_project = true);
+                let th = &*th;
+                let bad_number = number_block(ed, ru, p.id, &p.def.number).is_some();
+                text_row(ui, th, tr(ru, "shv.number"), "sheet.props.number", &mut p.def.number, "", bad_number);
+                text_row(ui, th, tr(ru, "shv.name_2"), "sheet.props.name", &mut p.def.name, "", false);
+                let mut at = PAPERS.iter().position(|s| *s == p.def.paper).unwrap_or(0);
+                let size = paper_note(&p.def.paper, p.def.landscape, ru);
+                if pick_row(ui, th, tr(ru, "shv.paper"), "sheet.paper", &mut at, &PAPERS, &size) {
+                    p.def.paper = PAPERS[at].to_string();
+                }
+                let orient = [tr(ru, "shv.landscape_2"), tr(ru, "shv.portrait_2")];
+                let mut at = usize::from(!p.def.landscape);
+                if pick_row(ui, th, tr(ru, "sheet_props.orientation"), "sheet.orient", &mut at, &orient, "") {
+                    p.def.landscape = at == 0;
+                }
+                let stds = ["ISO 7200", tr(ru, "shv.gost_r_21_101")];
+                let mut at = usize::from(p.def.standard == "gost");
+                if pick_row(ui, th, tr(ru, "shv.title_block"), "sheet.std", &mut at, &stds, "") {
+                    p.def.standard = if at == 1 { "gost" } else { "iso" }.to_string();
+                }
+                widgets::section(ui, th, tr(ru, "shv.title_block_fields"), |ui| {
+                    for (k, label) in stamp_fields(&p.def.standard, ru) {
+                        let v = p.def.fields.entry(k.to_string()).or_default();
+                        let hint = if AUTO.contains(&k) { tr(ru, "shv.auto") } else { "" };
+                        text_row(ui, th, label, &format!("sheet.props.f.{k}"), v, hint, false);
+                    }
+                });
+                widgets::section(ui, th, tr(ru, "shv.revisions"), |ui| {
+                    revisions_block(ui, th, ru, p);
+                });
+                if !p.err.is_empty() {
+                    kit::error_note(ui, &p.err);
+                } else if let Some(why) = &blocked {
+                    kit::error_note(ui, why);
                 }
             });
         });

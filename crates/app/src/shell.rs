@@ -1350,6 +1350,17 @@ impl EditorApp {
         if crate::ui_kit::window_over(ctx, last) {
             return;
         }
+        // a press on the canvas beside the card dismisses it for good and still reaches the tool
+        let pressed = ctx.input(|i| {
+            i.pointer
+                .press_origin()
+                .filter(|_| i.pointer.button_pressed(egui::PointerButton::Primary))
+        });
+        if pressed.is_some_and(|p| area.contains(p) && !last.contains(p)) {
+            self.welcome_closed = true;
+            self.plan.welcome = self.chooser_visible();
+            return;
+        }
         let th = &self.sh.theme;
         let w = 600.0f32.min(area.width() - 24.0);
         if w < 320.0 {
