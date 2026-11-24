@@ -156,6 +156,9 @@ jobs:
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
           grep -cE '^[^ ]+: warning' clippy.txt || true
+      - name: headless build (no GPU)
+        if: ${{ !cancelled() }}
+        run: cargo check --locked -p ddc-cli --features link
 
   macos-check:
     name: macOS build check (beta, advisory)

@@ -656,7 +656,6 @@ const PROTO_BATCH: usize = 64;
 #[cfg(feature = "gpu")]
 const PROTO_BATCH_TRIS: usize = 200_000;
 
-#[cfg(feature = "gpu")]
 /// Box mesh (faces outward) in the coordinates of `b`.
 pub(crate) fn box_mesh(b: &Aabb, element: u32, tag: u32) -> SceneMesh {
     let positions = (0..8)

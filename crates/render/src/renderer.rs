@@ -570,6 +570,7 @@ pub struct Renderer {
     bg_epoch: u64,
 }
 
+#[cfg(feature = "gpu")]
 /// Per-view state of a 3D view that is not the one `prepare` works on now.
 struct ViewState {
     frame: Option<Frame>,
@@ -586,9 +587,11 @@ struct ViewState {
     shadow_key: Option<ShadowKey>,
 }
 
+#[cfg(feature = "gpu")]
 // uniforms, size, chunk generation, upload epoch, selection-set generation
 type RestKey = (Vec<u8>, (u32, u32), u64, u64, u32);
 
+#[cfg(feature = "gpu")]
 fn uniform_buffer(device: &wgpu::Device) -> wgpu::Buffer {
     device.create_buffer(&wgpu::BufferDescriptor {
         label: Some("ddc-frame"),
