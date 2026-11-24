@@ -30,7 +30,7 @@
  "origin.request": "Запрос",
  "origin.at": "Применено",
  "origin.recipe": "рецепт «{name}», часть {part}",
- "origin.ai": "ИИ-ассистент ({model})",
+ "origin.ai": "ИИ-помощник ({model})",
  "origin.agent": "агент {name}",
  "origin.script": "скрипт {name}",
  "origin.xlsx": "таблица XLSX",

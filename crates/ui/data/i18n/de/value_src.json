@@ -29,7 +29,7 @@
  "origin.made_by": "Erstellt von",
  "origin.request": "Anfrage",
  "origin.at": "Angewendet",
- "origin.recipe": "Rezept «{name}», Teil {part}",
+ "origin.recipe": "Rezept „{name}“, Teil {part}",
  "origin.ai": "KI-Assistent ({model})",
  "origin.agent": "Agent {name}",
  "origin.script": "Skript {name}",

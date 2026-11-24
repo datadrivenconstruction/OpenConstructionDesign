@@ -10,7 +10,8 @@ permissions:
   contents: read
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  # a run on main always finishes, so main has a verdict
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
 env:
   CARGO_TERM_COLOR: always
   CARGO_INCREMENTAL: "0"

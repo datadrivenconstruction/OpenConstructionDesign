@@ -60,7 +60,7 @@ pub struct State {
     kind: Option<Kind>,
     /// Axis points, model coordinates (absolute z).
     pub pts: Vec<(f64, f64, f64)>,
-    /// Run elevation above the active level (Revit "middle elevation"); kept between runs.
+    /// Run elevation (centreline) above the active level; kept between runs.
     pub z: Option<f64>,
     first: Option<MepHit>,
     snap: Option<(u64, Arc<MepSnapSet>)>,
