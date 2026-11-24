@@ -18,9 +18,7 @@
   <a href="#mcp-server"><img src="https://img.shields.io/badge/MCP-compatible-6d4aff?style=flat-square" alt="MCP compatible"></a>
   <a href="#erp-link-change-the-model-the-estimate-follows"><img src="https://img.shields.io/badge/ERP-estimate%20follows%20the%20model-e8590c?style=flat-square" alt="ERP link"></a>
   <img src="https://img.shields.io/badge/works-offline-0f172a?style=flat-square" alt="Works offline">
-  <br>
   <a href="https://openconstructiondesign.com"><img src="https://img.shields.io/badge/website-openconstructiondesign.com-3b6cf6?style=flat-square" alt="Website"></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/stargazers"><img src="https://img.shields.io/github/stars/datadrivenconstruction/OpenConstructionDesign?style=flat-square" alt="Stars"></a>
   <a href="#contributing"><img src="https://img.shields.io/badge/PRs-welcome-2f855a?style=flat-square" alt="PRs welcome"></a>
 </p>
 
