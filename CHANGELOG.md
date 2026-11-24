@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.1
+
+### Editor
+- Tab with a plan tool armed keeps the focus on the canvas.
+- The first click on the plan goes through even while the start card is still shown.
+- The New sheet dialog fits small screens: its fields scroll, Cancel and OK stay visible.
+
 ## 1.1.0
 
 ### Editor
