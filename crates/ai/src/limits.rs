@@ -196,9 +196,9 @@ limits! {
     ERROR_CLIP = "error_clip", 1000, Chars, G, "an error message stays readable",
         tools: [], doc: "", src: ["app/src/ai/fmt.rs::ERROR_MAX"];
     ATTACH_READ_PAGES = "attach_read_pages", 10, Count, G, "one reply stays small enough to read",
-        tools: ["attachments_read"], doc: "reads at most {n} pages per call; ask for the next pages", src: ["app/src/ai/attach.rs::MAX_READ_PAGES"];
+        tools: ["attachments_read"], doc: "at most {n} pages per call; ask for the next", src: ["app/src/ai/attach.rs::MAX_READ_PAGES"];
     ATTACH_READ_ROWS = "attach_read_rows", 500, Count, G, "one reply stays small enough to read",
-        tools: ["attachments_read"], doc: "reads at most {n} sheet rows per call; ask for the next rows", src: ["app/src/ai/attach.rs::MAX_READ_ROWS"];
+        tools: ["attachments_read"], doc: "at most {n} sheet rows per call; ask for the next", src: ["app/src/ai/attach.rs::MAX_READ_ROWS"];
     CARD_CHARS = "card_chars", 400, Chars, G, "an element card is a summary",
         tools: [], doc: "", src: ["app/src/ai/card.rs::CARD_MAX"];
     CARD_PART = "card_part", 80, Chars, G, "one card field is a summary",
@@ -310,9 +310,9 @@ limits! {
     POINT_PROPS = "point_props", 30, Count, G, "one pointed element is a summary",
         tools: [], doc: "", src: ["app/src/ai/point.rs::MAX_PROPS"];
     HIGHLIGHT = "highlight", 200, Count, G, "the view stays readable",
-        tools: ["view_snapshot"], doc: "highlights at most {n} elements", src: ["app/src/ai/pose.rs::MAX_HIGHLIGHT"];
+        tools: ["view_snapshot"], doc: "highlight at most {n}", src: ["app/src/ai/pose.rs::MAX_HIGHLIGHT"];
     LABELS = "labels", 100, Count, G, "labels stay readable in one picture",
-        tools: ["view_snapshot"], doc: "labels at most {n} elements", src: ["app/src/ai/pose.rs::MAX_LABELS"];
+        tools: ["view_snapshot"], doc: "label at most {n}", src: ["app/src/ai/pose.rs::MAX_LABELS"];
     POSE_GAP = "pose_gap", 50, Metres, G, "the camera stays near the model",
         tools: [], doc: "", src: ["app/src/ai/pose.rs::MAX_GAP"];
     HATCH_FRAME = "hatch_frame", 20_000, Count, G, "hatch strokes drawn per preview frame",
@@ -330,13 +330,13 @@ limits! {
     REFERENCE_BYTES = "reference_bytes", 20 * 1024 * 1024, Bytes, G, "a reference file is read into memory",
         tools: ["get_reference"], doc: "reads files up to {n} bytes", src: ["app/src/ai/reference.rs::MAX_BYTES"];
     RENDER_SIDE = "render_side", 1280, Pixels, G, "a picture costs tokens by its size",
-        tools: ["render_plan", "render_3d"], doc: "pictures are at most {n} px a side", src: ["app/src/ai/render_req.rs::MAX_SIDE"];
+        tools: ["render_plan", "render_3d"], doc: "at most {n} px a side", src: ["app/src/ai/render_req.rs::MAX_SIDE"];
     RENDER_PIXELS = "render_pixels", 1_000_000, Pixels, G, "a picture costs tokens by its size",
-        tools: ["render_plan", "render_3d"], doc: "pictures hold at most {n} pixels", src: ["app/src/ai/render_req.rs::MAX_PIXELS"];
+        tools: ["render_plan", "render_3d"], doc: "at most {n} pixels", src: ["app/src/ai/render_req.rs::MAX_PIXELS"];
     RENDER_SCALE = "render_scale", 2000, Count, G, "a drawing scale beyond 1:{n} shows nothing",
         tools: ["render_plan"], doc: "scale at most 1:{n}", src: ["app/src/ai/render_req.rs::MAX_SCALE"];
     RENDER_LEGEND = "render_legend", 60, Count, G, "a legend stays readable",
-        tools: ["render_plan", "render_3d"], doc: "legends list at most {n} rows", src: ["app/src/ai/render_req.rs::MAX_LEGEND"];
+        tools: ["render_plan", "render_3d"], doc: "at most {n} legend rows", src: ["app/src/ai/render_req.rs::MAX_LEGEND"];
     REPLAN_TRIES = "replan_tries", 2, Count, G, "a refused plan is redrafted only so often",
         tools: [], doc: "", src: ["app/src/ai/replan.rs::MAX_TRIES"];
     SCHED_COLS = "sched_cols", 24, Count, G, "a schedule stays readable",
@@ -350,7 +350,7 @@ limits! {
     SET_KEYS = "set_keys", 4_000_000, Count, G, "element ids kept across all sets",
         tools: [], doc: "", src: ["app/src/ai/sets.rs::MAX_KEYS"];
     SNAPSHOT_SIDE = "snapshot_side", 1280, Pixels, G, "a picture costs tokens by its size",
-        tools: ["view_snapshot"], doc: "pictures are at most {n} px a side", src: ["app/src/ai/snapshot.rs::MAX_SIDE"];
+        tools: ["view_snapshot"], doc: "at most {n} px a side", src: ["app/src/ai/snapshot.rs::MAX_SIDE"];
     SNAPSHOT_PNG = "snapshot_png", 1_500_000, Bytes, G, "a picture rides in the prompt",
         tools: [], doc: "", src: ["app/src/ai/snapshot.rs::MAX_PNG"];
     FINDINGS = "findings", 200, Count, G, "findings listed per reply; the rest are counted",

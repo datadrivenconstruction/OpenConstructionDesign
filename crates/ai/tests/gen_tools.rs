@@ -68,7 +68,8 @@ fn calls_are_checked_before_a_handler_runs() {
     bad("set_rule", json!({"rules": 3}));
     bad("lock", json!({"targets": [{"storey": 99}]}));
     bad("lock", json!({"targets": [{"rule": "grid.span", "keep": "all"}]}));
-    bad("compare_variants", json!({"n": 5}));
+    // the schema takes up to the Settings maximum; the run keeps to the current setting
+    bad("compare_variants", json!({"n": ddc_ai::limits::VARIANTS.hi() + 1}));
     bad("compare_variants", json!({"vary": ["corridor.width"]}));
     bad("regenerate", json!({"geometry": [[0, 0]]}));
 }

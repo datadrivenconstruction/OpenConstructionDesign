@@ -3,12 +3,12 @@
 Generated from `crates/ai/data/ui_coverage.tsv` by `crates/ai/tests/ui_coverage.rs`;
 edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 
-555 commands: 125 with an API tool, 304 UI-only, 126 model edits without an API form yet.
+559 commands: 128 with an API tool, 305 UI-only, 126 model edits without an API form yet.
 
 | Kind | Meaning | Commands |
 |---|---|---|
-| api | an API tool does the same | 125 |
-| view | UI-only: changes the view or the display, not the model | 105 |
+| api | an API tool does the same | 128 |
+| view | UI-only: changes the view or the display, not the model | 106 |
 | nav | UI-only: moves around the project: views, levels, tabs | 34 |
 | dialog | UI-only: opens a window; its edits are their own commands | 84 |
 | select | UI-only: changes the selection, which the API names by reference instead | 14 |
@@ -179,6 +179,7 @@ edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 | `e3d.beam` | api | `create_elements:beam` | 3D beam creation |
 | `e3d.box` | view |  | 3D box tool |
 | `e3d.column` | api | `create_elements:column` | 3D column creation |
+| `e3d.duct` | api | `create_elements:mep` | draw duct run in 3D |
 | `e3d.floor` | api | `create_elements:floor` | 3D floor creation |
 | `e3d.gizmo` | view |  | toggles transform gizmo |
 | `e3d.measure` | view |  | 3D measure tool |
@@ -189,7 +190,9 @@ edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 | `e3d.measure.gap` | api | `measure_save:clear` | 3D measure tool; saves a clearance |
 | `e3d.measure.slope` | api | `measure_save:slope` | 3D measure tool; saves a slope |
 | `e3d.measure.volume` | api | `measure_save:volume` | 3D measure tool; saves a volume |
+| `e3d.pipe` | api | `create_elements:mep` | draw pipe run in 3D |
 | `e3d.snap` | view |  | toggles 3D snaps |
+| `e3d.tray` | api | `create_elements:mep` | draw cable tray run in 3D |
 | `e3d.wall` | api | `create_elements:wall` | 3D wall creation |
 | `e3d.wp_face` | view |  | work plane from face |
 | `e3d.wp_level` | view |  | work plane at level |
@@ -544,6 +547,7 @@ edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 | `view.section_box_fit` | view |  | fit section box |
 | `view.section_caps` | view |  | toggle section caps |
 | `view.section_here` | nav |  | no handler found |
+| `view.section_plane` | view |  | toggle temporary 3D section plane |
 | `view.sheet` | dialog |  | opens new sheet dialog |
 | `view.sheet_duplicate` | gap | `m.duplicate_sheet` | duplicate active sheet with views |
 | `view.sheet_duplicate_title` | gap | `m.duplicate_sheet` | duplicate sheet without views |

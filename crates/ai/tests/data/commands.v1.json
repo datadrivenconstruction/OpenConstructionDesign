@@ -618,7 +618,7 @@
             "type": "array"
           },
           "labels": {
-            "description": "Elements to give pixel places: references, filters such as door:*@L3, or query text",
+            "description": "Elements to place in pixels: references, filters such as door:*@L3, or query text",
             "items": {
               "type": "string"
             },
@@ -632,34 +632,34 @@
           },
           "pose": {
             "additionalProperties": false,
-            "description": "One view: plan, section, compass, iso, top, room, exploded or current; the reply has the pose and the 4x4 world-to-pixel matrix. None: the screen",
+            "description": "One view: plan, section, compass, iso, top, room, exploded or current; the reply has the pose and 4x4 world-to-pixel matrix. None: the screen",
             "properties": {
               "compass": {
-                "description": "Eye on this side looking at the model: N, NE, E, SE, S, SW, W, NW",
+                "description": "Side the eye looks from: N, NE, E, SE, S, SW, W, NW",
                 "type": "string"
               },
               "current": {
-                "description": "true: the screen's own camera (needs the window)",
+                "description": "true: the screen camera (needs the window)",
                 "type": "boolean"
               },
               "cut": {
-                "description": "With room: share of the storey height where the room is cut, 0.1 to 1; default 0.65",
+                "description": "With room: cut at this share of storey height, 0.1 to 1; default 0.65",
                 "type": "number"
               },
               "exploded": {
-                "description": "Levels pulled apart by this many metres, 0 to 50",
+                "description": "Levels pulled apart by metres, 0 to 50",
                 "type": "number"
               },
               "eye_h": {
-                "description": "With compass: eye height in metres above the lowest floor, 0.2 to 100; omitted looks down from above",
+                "description": "With compass: eye height above the lowest floor, 0.2 to 100 m; none looks from above",
                 "type": "number"
               },
               "iso": {
-                "description": "Isometric view from this bearing in degrees clockwise from north",
+                "description": "Isometric from this bearing, degrees clockwise from north",
                 "type": "number"
               },
               "plan": {
-                "description": "Plan of a level: level id or full level name",
+                "description": "Level plan: level id or full name",
                 "oneOf": [
                   {
                     "type": "integer"
@@ -670,7 +670,7 @@
                 ]
               },
               "rect": {
-                "description": "With plan: [x0, y0, x1, y1] in metres to frame instead of the level",
+                "description": "With plan: [x0, y0, x1, y1] metres to frame",
                 "items": {
                   "type": "number"
                 },
@@ -678,7 +678,7 @@
                 "type": "array"
               },
               "room": {
-                "description": "Interior of a room: its number such as 2.14, or room:<id>",
+                "description": "Room interior: number such as 2.14, or room:<id>",
                 "oneOf": [
                   {
                     "type": "integer"
@@ -689,7 +689,7 @@
                 ]
               },
               "section": {
-                "description": "A section or elevation view: id or name",
+                "description": "Section or elevation view: id or name",
                 "oneOf": [
                   {
                     "type": "integer"
@@ -700,7 +700,7 @@
                 ]
               },
               "top": {
-                "description": "true: the whole model from straight above",
+                "description": "true: whole model from straight above",
                 "type": "boolean"
               }
             },
@@ -2493,6 +2493,10 @@
             "required": [],
             "type": "object"
           },
+          "offset": {
+            "description": "Rows to skip: the `next.offset` of the previous page",
+            "type": "integer"
+          },
           "on_level": {
             "type": "integer"
           },
@@ -2585,7 +2589,7 @@
       "summary": "Spatial query, one of near, inside, intersects, on_level, ray. Lengths in metres. Hits are refs sorted by distance then id, cut to limit (default 20); `more` counts the rest.",
       "surface": "all",
       "text": "api.cmd.query_spatial",
-      "version": 1
+      "version": 2
     },
     {
       "destructive": false,
@@ -3116,6 +3120,10 @@
           "limit": {
             "type": "integer"
           },
+          "offset": {
+            "description": "Rows to skip: the `next.offset` of the previous page",
+            "type": "integer"
+          },
           "ref": {
             "type": "string"
           },
@@ -3197,7 +3205,7 @@
       "summary": "Relations of one element: hosted_by, hosts, joined_to (L/T/X with end), bounds_room, in_room, on_grid, constrained_with. Lengths in metres. Rows sorted by category then id, cut to limit (default 20); `more` counts the rest.",
       "surface": "all",
       "text": "api.cmd.query_relations",
-      "version": 1
+      "version": 2
     },
     {
       "destructive": false,
@@ -5573,6 +5581,10 @@
       "input": {
         "additionalProperties": false,
         "properties": {
+          "overwrite_edited": {
+            "description": "Rebuild hand-edited parts too, only when asked",
+            "type": "boolean"
+          },
           "params": {
             "description": "{name: value} of the params that change",
             "type": "object"
@@ -5655,10 +5667,10 @@
           }
         ]
       },
-      "summary": "Plan: run a stored geometry recipe again with new params (only the ones that change). Parts with the same key stay; changed extrusions are reshaped in place; other changed parts are replaced; parts that no longer exist are deleted. Nothing outside the recipe is touched. The reply is the diff. Draft only: nothing reaches the model before Apply.",
+      "summary": "Plan: run a stored geometry recipe again with new params (only the ones that change). Parts with the same key stay; changed extrusions are reshaped in place; other changed parts are replaced; parts that no longer exist are deleted. Nothing outside the recipe is touched. Parts the person edited or deleted stay as they are (`held` in the diff). The reply is the diff. Draft only: nothing reaches the model before Apply.",
       "surface": "all",
       "text": "api.cmd.rerun_recipe",
-      "version": 1
+      "version": 2
     },
     {
       "destructive": false,
@@ -7623,7 +7635,7 @@
         "additionalProperties": false,
         "properties": {
           "n": {
-            "maximum": 4,
+            "maximum": 12,
             "minimum": 1,
             "type": "integer"
           },
@@ -7710,7 +7722,7 @@
       "summary": "Up to four deliberately different variants: rules, penalty per tier, differences from the best and why each ranks lower. Changes nothing.",
       "surface": "all",
       "text": "api.cmd.compare_variants",
-      "version": 1
+      "version": 2
     },
     {
       "destructive": true,
@@ -7736,7 +7748,7 @@
           },
           "variant": {
             "description": "From compare_variants, same seed and vary",
-            "maximum": 4,
+            "maximum": 12,
             "minimum": 1,
             "type": "integer"
           },
@@ -7821,7 +7833,7 @@
       "summary": "Plan: rebuild a project around its locks from a spec patch or a compare_variants variant; lists what a lock refused.",
       "surface": "all",
       "text": "api.cmd.regenerate",
-      "version": 1
+      "version": 2
     },
     {
       "destructive": false,
@@ -10848,7 +10860,7 @@
           },
           "count": {
             "description": "Instances including the original",
-            "maximum": 201,
+            "maximum": 5001,
             "minimum": 2,
             "type": "integer"
           },
@@ -11046,7 +11058,7 @@
       "summary": "Plan: a linear or radial array of a target; count includes the original. `created` lists the copies.",
       "surface": "all",
       "text": "api.cmd.array_elements",
-      "version": 1
+      "version": 2
     },
     {
       "destructive": false,
@@ -12855,7 +12867,7 @@
             "type": "string"
           },
           "points": {
-            "description": "Survey points [[x, y, z], ...] m, 3 to 5000",
+            "description": "Survey points [[x, y, z], ...] m, 3 or more",
             "items": {
               "items": {
                 "type": "number"
@@ -12863,7 +12875,7 @@
               "maxItems": 3,
               "type": "array"
             },
-            "maxItems": 5000,
+            "maxItems": 100000,
             "type": "array"
           },
           "slope": {
@@ -12993,7 +13005,7 @@
       "summary": "Plan: a terrain (toposolid) through survey points, or a plane over an outline at a height with a slope; the answer names it as toposolid:ID. generate_project with site.terrain \"model\" then sets the building on it.",
       "surface": "all",
       "text": "api.cmd.create_terrain",
-      "version": 2
+      "version": 3
     },
     {
       "destructive": false,

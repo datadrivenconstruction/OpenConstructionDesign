@@ -749,7 +749,9 @@ mod tests {
             let full = ask(tool);
             assert!(full.contains(phrase), "{tool}: {phrase}");
             let s = catalog::find(tool).unwrap();
-            assert!(wire(s).description.len() < s.summary.len(), "{tool} chat text is not shorter");
+            // both carry the tool's limits; the chat text is the shorter one
+            let long = crate::limits::with_limits(tool, s.summary);
+            assert!(wire(s).description.len() < long.len(), "{tool} chat text is not shorter");
         }
         for tool in ["create_geometry", "create_elements", "update_elements", "generate_project"] {
             let w = wire(catalog::find(tool).unwrap());
