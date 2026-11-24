@@ -2826,3 +2826,75 @@ fn mesh_stair_and_railing_keep_class_and_quantities_on_export() {
         assert!(close(v, 4.5), "{v}");
     }
 }
+
+/// A triangulated body over eight corners: bottom 0..3 counter-clockwise, top 4..7 above them.
+fn tri_box(b: &mut B, c: [[f64; 3]; 8]) -> u32 {
+    let l: Vec<String> = c
+        .iter()
+        .map(|p| format!("({},{},{})", r(p[0]), r(p[1]), r(p[2])))
+        .collect();
+    let p = b.add(&format!("IFCCARTESIANPOINTLIST3D(({}))", l.join(",")));
+    b.add(&format!(
+        "IFCTRIANGULATEDFACESET(#{p},$,.T.,((1,3,2),(1,4,3),(5,6,7),(5,7,8),(1,2,6),(1,6,5),(2,3,7),(2,7,6),(3,4,8),(3,8,7),(4,1,5),(4,5,8)),$)"
+    ))
+}
+
+#[test]
+fn tessellated_wall_slab_and_roof_import_as_native_elements() {
+    let mut b = B::new();
+    let up = |r: [(f64, f64); 4], z0: &dyn Fn(f64) -> f64, h: f64| -> [[f64; 3]; 8] {
+        let mut c = [[0.0; 3]; 8];
+        for (i, p) in r.iter().enumerate() {
+            c[i] = [p.0, p.1, z0(p.0)];
+            c[i + 4] = [p.0, p.1, z0(p.0) + h];
+        }
+        c
+    };
+    let rect = |x0: f64, y0: f64, x1: f64, y1: f64| [(x0, y0), (x1, y0), (x1, y1), (x0, y1)];
+    let w = tri_box(&mut b, up(rect(0.0, 0.0, 6.0, 0.25), &|_| 0.0, 2.8));
+    b.body("IFCWALL", "outer wall", [0.0; 3], &[w], ",$,.SOLIDWALL.");
+    // a gable wall: vertical sides, top rising along it
+    let mut g = up(rect(6.0, 0.0, 6.25, 4.0), &|_| 0.0, 2.8);
+    for c in &mut g[4..] {
+        c[2] += 0.5 * c[1];
+    }
+    let g = tri_box(&mut b, g);
+    b.body("IFCWALL", "gable wall", [0.0; 3], &[g], ",$,.SOLIDWALL.");
+    let s = tri_box(&mut b, up(rect(0.0, 0.0, 6.0, 4.0), &|_| -0.2, 0.2));
+    b.body("IFCSLAB", "floor", [0.0; 3], &[s], ",$,.FLOOR.");
+    // a roof slab rising 30 degrees towards x = 6
+    let k = 30f64.to_radians().tan();
+    let rf = tri_box(&mut b, up(rect(0.0, 0.0, 6.0, 4.0), &|x| 2.8 + k * x, 0.2));
+    b.body("IFCSLAB", "roof left", [0.0; 3], &[rf], ",$,.ROOF.");
+    let src = b.finish("IFC4");
+    let p = plan_of(&src);
+    assert!(p.meshes.is_empty(), "{:?}", p.report.as_mesh);
+    assert_eq!((p.walls.len(), p.slabs.len(), p.roofs.len()), (2, 1, 1), "{:?}", p.report);
+    let gw = &p.walls[1];
+    assert!(close(gw.height, 4.8) && close((gw.b.0 - gw.a.0).hypot(gw.b.1 - gw.a.1), 4.0), "{gw:?}");
+    let wl = &p.walls[0];
+    assert!(close(wl.height, 2.8), "{wl:?}");
+    assert!(close((wl.b.0 - wl.a.0).hypot(wl.b.1 - wl.a.1), 6.0), "{wl:?}");
+    assert!(close(p.types[wl.wall_type].layers.iter().map(|l| l.1).sum::<f64>(), 0.25));
+    let ddc_model::RoofKind::Footprint { slopes, .. } = &p.roofs[0].kind else {
+        panic!("{:?}", p.roofs[0].kind)
+    };
+    let deg: Vec<f64> = slopes.iter().flatten().copied().collect();
+    assert!(deg.len() == 1 && (deg[0] - 30.0).abs() < 1e-6, "{slopes:?}");
+    let mut m = Model::open(":memory:").unwrap();
+    import_ifc(&mut m, src.as_bytes()).unwrap();
+    assert_eq!(
+        (count(&m, "wall"), count(&m, "slab"), count(&m, "roof"), count(&m, "mesh")),
+        (2, 1, 1, 0)
+    );
+    // the element keeps its name and data
+    let name: String = m
+        .sql()
+        .query_row(
+            "SELECT max(value) FROM prop WHERE kind='wall' AND key='IFC.Name'",
+            [],
+            |r| r.get(0),
+        )
+        .unwrap();
+    assert_eq!(name, "outer wall");
+}

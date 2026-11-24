@@ -82,12 +82,17 @@ fn simplify(mut v: Ring) -> Ring {
 /// Plan outline of the horizontal faces at height `z`: outer ring counter-clockwise first,
 /// then the holes clockwise. One connected region only.
 pub(super) fn plan_rings(m: &tess::Tri, z: f64) -> Result<Vec<Ring>, Why> {
+    plan_rings_of(m, &|t: &[V3; 3]| t.iter().all(|p| (p[2] - z).abs() <= EPS))
+}
+
+/// Plan outline of the faces `on` accepts, as `plan_rings`.
+fn plan_rings_of(m: &tess::Tri, on: &dyn Fn(&[V3; 3]) -> bool) -> Result<Vec<Ring>, Why> {
     const BAD: Why = "outline not simple";
     let mut count: HashMap<(K, K), usize> = HashMap::new();
     let mut at: HashMap<K, (f64, f64)> = HashMap::new();
     let mut faces = 0.0;
     for t in tris(m) {
-        if t.iter().any(|p| (p[2] - z).abs() > EPS) {
+        if !on(&t) {
             continue;
         }
         let pa = ((t[1][0] - t[0][0]) * (t[2][1] - t[0][1])
@@ -196,6 +201,95 @@ pub(super) fn prism(m: &tess::Tri) -> Result<(Vec<Ring>, f64, f64), Why> {
         return Err(NOT);
     }
     Ok((top, z0, z1))
+}
+
+/// A plane z = z0 + g . (x - p) through a face, from its (non-vertical) normal.
+fn face_plane(t: &[V3; 3]) -> Option<((f64, f64), f64, (f64, f64))> {
+    let n = cross(sub(t[1], t[0]), sub(t[2], t[0]));
+    let l = dot(n, n).sqrt();
+    if !(l > 1e-12) || n[2].abs() / l < 1e-6 {
+        return None;
+    }
+    Some(((t[0][0], t[0][1]), t[0][2], (-n[0] / n[2], -n[1] / n[2])))
+}
+
+/// A body that is a vertical prism between two parallel planes, flat or sloped (a slab or a
+/// roof part): plan rings, bottom and top z at the first ring vertex, and the (point,
+/// gradient) of the planes when they slope; like `Rd::sloped_prism` for an extrusion.
+#[allow(clippy::type_complexity)]
+pub(super) fn sloped_prism(
+    m: &tess::Tri,
+) -> Result<(Vec<Ring>, f64, f64, Option<((f64, f64), (f64, f64))>), Why> {
+    const NOT: Why = "tessellated body is not a planar prism";
+    // the largest upward and downward faces give the two planes
+    let mut best: [Option<(f64, ((f64, f64), f64, (f64, f64)))>; 2] = [None, None];
+    for t in tris(m) {
+        let Some(pl) = face_plane(&t) else { continue };
+        let n = cross(sub(t[1], t[0]), sub(t[2], t[0]));
+        let k = usize::from(n[2] < 0.0);
+        let a = dot(n, n).sqrt();
+        if best[k].is_none_or(|b| a > b.0) {
+            best[k] = Some((a, pl));
+        }
+    }
+    let (Some((_, top)), Some((_, bot))) = (best[0], best[1]) else {
+        return Err(NOT);
+    };
+    let g = top.2;
+    if (bot.2 .0 - g.0).abs() > 1e-6 || (bot.2 .1 - g.1).abs() > 1e-6 {
+        return Err(NOT);
+    }
+    let z_of = |pl: &((f64, f64), f64, (f64, f64)), x: f64, y: f64| {
+        pl.1 + pl.2 .0 * (x - pl.0 .0) + pl.2 .1 * (y - pl.0 .1)
+    };
+    let on = |pl: ((f64, f64), f64, (f64, f64))| {
+        move |t: &[V3; 3]| t.iter().all(|p| (p[2] - z_of(&pl, p[0], p[1])).abs() <= EPS)
+    };
+    // every face lies on one of the planes or is vertical
+    for t in tris(m) {
+        if face_plane(&t).is_some() && !on(top)(&t) && !on(bot)(&t) {
+            return Err(NOT);
+        }
+    }
+    let up = plan_rings_of(m, &on(top)).map_err(|_| NOT)?;
+    let down = plan_rings_of(m, &on(bot)).map_err(|_| NOT)?;
+    let keys = |rs: &[Ring]| -> BTreeSet<K> {
+        rs.iter().flatten().map(|p| key(p.0, p.1)).collect()
+    };
+    if keys(&up) != keys(&down) {
+        return Err(NOT);
+    }
+    let p = up[0][0];
+    let (z0, z1) = (z_of(&bot, p.0, p.1), z_of(&top, p.0, p.1));
+    let v = net_area(&up) * (z1 - z0);
+    if !(z1 - z0 > EPS) || (volume(m) - v).abs() > 1e-4 * v + 1e-9 {
+        return Err(NOT);
+    }
+    let slope = (g.0.hypot(g.1) > 1e-9).then_some((p, g));
+    Ok((up, z0, z1, slope))
+}
+
+/// Floor outline and z range of a body with vertical sides (any top): every vertex stands on
+/// the floor outline.
+pub(super) fn footprint(m: &tess::Tri) -> Result<(Vec<Ring>, f64, f64), Why> {
+    const NOT: Why = "tessellated body has no vertical sides";
+    let (rings, z0, z1) = floor(m).map_err(|_| NOT)?;
+    let on = |q: (f64, f64)| {
+        rings.iter().any(|r| {
+            (0..r.len()).any(|i| {
+                let (a, b) = (r[i], r[(i + 1) % r.len()]);
+                let (dx, dy) = (b.0 - a.0, b.1 - a.1);
+                let l2 = dx * dx + dy * dy;
+                let t = (((q.0 - a.0) * dx + (q.1 - a.1) * dy) / l2.max(1e-18)).clamp(0.0, 1.0);
+                (a.0 + t * dx - q.0).hypot(a.1 + t * dy - q.1) <= EPS
+            })
+        })
+    };
+    let inner = |p: &V3| (p[2] - z0).abs() <= EPS;
+    if m.t.iter().flatten().map(|&i| &m.p[i as usize]).any(|p| !inner(p) && !on((p[0], p[1]))) {
+        return Err(NOT);
+    }
+    Ok((rings, z0, z1))
 }
 
 /// Floor outline (horizontal faces at the lowest height) and z range of any body.

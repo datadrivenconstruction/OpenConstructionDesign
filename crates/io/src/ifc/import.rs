@@ -623,6 +623,11 @@ impl Frame {
     fn apply(&self, p: V3) -> V3 {
         add(self.o, self.dir(p))
     }
+    /// Inverse of `apply` for an orthonormal frame.
+    fn local(&self, p: V3) -> V3 {
+        let d = tess::sub(p, self.o);
+        [dot(d, self.x), dot(d, self.y), dot(d, self.z)]
+    }
     fn then(&self, l: &Frame) -> Frame {
         Frame {
             o: self.apply(l.o),
@@ -2478,6 +2483,23 @@ fn is_slab(t: &str) -> bool {
 /// Plan axis of a wall without an `Axis` representation: the centre line of a rectangular or
 /// parallelogram extrusion footprint, in the product frame, with the wall thickness.
 fn footprint_axis(rd: &mut Rd, e: &Entity) -> Result<(V3, V3, f64), Why> {
+    match extruded_axis(rd, e) {
+        // a triangulated body with vertical sides over a wall footprint (any top)
+        Err("no axis, unsupported body") => {
+            let fr = rd.product_frame(e)?;
+            let (m, _) = product_mesh(rd, e)?;
+            let (rings, _, _) = fit::footprint(&m).map_err(|_| "no axis, unsupported body")?;
+            let [r] = rings.as_slice() else {
+                return Err("no axis, footprint with voids");
+            };
+            let r: Vec<V3> = r.iter().map(|p| fr.local([p.0, p.1, fr.o[2]])).collect();
+            quad_axis(r)
+        }
+        r => r,
+    }
+}
+
+fn extruded_axis(rd: &mut Rd, e: &Entity) -> Result<(V3, V3, f64), Why> {
     let items = rd.body_items(e)?;
     let &[mut id] = items.as_slice() else {
         return Err(if items.is_empty() {
@@ -2509,8 +2531,14 @@ fn footprint_axis(rd: &mut Rd, e: &Entity) -> Result<(V3, V3, f64), Why> {
     let [r] = p.as_slice() else {
         return Err("no axis, footprint with voids");
     };
+    let (p0, p1, thick) = quad_axis(r.clone())?;
+    Ok((pos.apply(p0), pos.apply(p1), thick))
+}
+
+/// Axis (mid-lines of the short sides) and thickness of a footprint that is a quadrilateral
+/// with two parallel long sides.
+fn quad_axis(mut r: Vec<V3>) -> Result<(V3, V3, f64), Why> {
     // drop collinear vertices
-    let mut r: Vec<V3> = r.clone();
     let mut k = 0;
     while r.len() > 3 && k < r.len() {
         let n = r.len();
@@ -2546,7 +2574,7 @@ fn footprint_axis(rd: &mut Rd, e: &Entity) -> Result<(V3, V3, f64), Why> {
     if !(thick > 0.0 && thick.is_finite()) {
         return Err("no axis, zero thickness");
     }
-    Ok((pos.apply(p0), pos.apply(p1), thick))
+    Ok((p0, p1, thick))
 }
 
 /// Half-space cuts of the body (DIFFERENCE chain of the single body item): (point, normal of
@@ -2930,12 +2958,8 @@ fn slab(
 ) -> Result<(), Why> {
     let (rings, zmin, zmax, slope) = match rd.sloped_prism(e) {
         Ok(v) => v,
-        // a triangulated body that is a flat vertical prism is a slab all the same
-        Err("unsupported body") => {
-            let (m, _) = product_mesh(rd, e)?;
-            let (rings, z0, z1) = fit::prism(&m)?;
-            (rings, z0, z1, None)
-        }
+        // a triangulated body that is a prism between parallel planes is a slab all the same
+        Err("unsupported body") => fit::sloped_prism(&product_mesh(rd, e)?.0)?,
         Err(w) => return Err(w),
     };
     let thick = snap(zmax - zmin);
@@ -3274,6 +3298,15 @@ fn roof_part(
         }
         Ok(_) => return Err("flat roof part"),
         Err("non-vertical extrusion") => rd.tilted_prism(e)?,
+        // a triangulated sloped prism is a roof part all the same
+        Err("unsupported body") => match fit::sloped_prism(&product_mesh(rd, e)?.0)? {
+            (rings, zmin, zmax, Some((p, g))) if rings.len() == 1 => {
+                let th = (zmax - zmin) / (1.0 + g.0 * g.0 + g.1 * g.1).sqrt();
+                (rings[0].clone(), zmax, p, g, th)
+            }
+            (_, _, _, Some(_)) => return Err("roof with holes"),
+            _ => return Err("flat roof part"),
+        },
         Err(w) => return Err(w),
     };
     let a2: f64 = (0..ring.len())
