@@ -62,7 +62,7 @@
 </p>
 
 <p align="center">
-  <b>v1.0.0</b> · 62 MB · Windows 10/11 x64 · 8 GB RAM · works offline · no account
+  <b>v1.1.0</b> · 62 MB · Windows 10/11 x64 · 8 GB RAM · works offline · no account
 </p>
 
 | Platform | Get it | Notes |
@@ -86,7 +86,7 @@ or run a local model through Ollama. The model and its full change history live 
 file on your machine, and IFC goes in and out.
 
 > [!NOTE]
-> The latest release is **v1.0.0**. The project file format, the APIs and the interface
+> The latest release is **v1.1.0**. The project file format, the APIs and the interface
 > can still change between releases. Keep the original of every model you open and keep an IFC
 > export for long-term storage. See [Current limits](#current-limits).
 

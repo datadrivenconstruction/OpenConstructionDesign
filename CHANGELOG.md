@@ -1,5 +1,38 @@
 # Changelog
 
+## 1.1.0
+
+### Editor
+- Plan tools work in the 3D view; a temporary section plane cuts the model in 3D.
+- Duct, pipe and cable tray runs are drawn directly in 3D.
+- Tab over the 3D view cycles the elements under the cursor and no longer jumps to the ribbon.
+- The Realistic style compiles again and shows materials; the status bar says when the Speed profile turns textures off.
+- The empty plan suggests any modelling tool or the Generate chat, not only walls.
+- Headless scripted UI shots: `ddc-app --ui-shot script.txt`.
+
+### Drawings and sheets
+- The drawing set builds plans, sections and elevations for any model, also one without walls (bridges, plants, forms).
+- Sheet and export plans draw mesh elements (facades, glazing, grouped bodies).
+- Viewports with their dimensions and tags stay off the title block.
+- Sections cut bodies whose face lies exactly on the cut plane.
+
+### Import and exchange
+- DWG/DXF underlays are kept when a headless run saves the project, and the reopen check compares them.
+- IFC import turns triangulated walls, slabs and roofs into native elements.
+- IFC export keeps the class and quantities of mesh elements.
+- Openings flush with the wall end are accepted within the length tolerance.
+
+### Generator and MEP
+- Process plant: every nozzle is piped and routing no longer hangs.
+- Power feeds start at the parent's tee; the riser stops at the top built board.
+- Courtyard school briefs build instead of refusing; plant hall, light industry, dampers, slab holes and chase bridges fixed.
+
+### AI
+- Every AI tool limit lives in one registry; each tool description states its limits, so the assistant plans around them.
+- Truncated tool replies say "shown N of M" and the next offset instead of cutting silently.
+- User-facing limits are adjustable in Settings, each with the reason it exists.
+- A turn that times out says what the session still waits on.
+
 ## 1.0.0
 
 ### Generator
