@@ -27,6 +27,7 @@ pub mod num_file;
 pub mod obj;
 pub mod pdf;
 pub mod plan_image;
+pub mod provenance;
 pub mod requirements;
 #[doc(hidden)]
 pub mod ru_fixtures;

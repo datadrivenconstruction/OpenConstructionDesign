@@ -45,7 +45,8 @@ jobs:
           - {crate: ddc-model}
           - {crate: ddc-geom}
           - {crate: ddc-solver}
-          - {crate: ddc-io}
+          # link adds the elements.parquet writer and the contract check to the run
+          - {crate: ddc-io, features: link}
           - {crate: ddc-render}
           - {crate: ddc-ui}
           - {crate: ddc-ai}
@@ -98,10 +99,10 @@ jobs:
           save-if: ${{ github.ref == 'refs/heads/main' && (!matrix.unit.shard || startsWith(matrix.unit.shard, '1/')) }}
       - name: build
         if: ${{ !matrix.unit.shard }}
-        run: cargo build -p ${{ matrix.unit.crate }} --all-targets --locked
+        run: cargo build -p ${{ matrix.unit.crate }} --all-targets --locked ${{ matrix.unit.features && format('--features {0}', matrix.unit.features) || '' }}
       - name: test
         if: ${{ !matrix.unit.shard }}
-        run: cargo test -p ${{ matrix.unit.crate }} --locked --no-fail-fast
+        run: cargo test -p ${{ matrix.unit.crate }} --locked --no-fail-fast ${{ matrix.unit.features && format('--features {0}', matrix.unit.features) || '' }}
       - name: build shard
         if: matrix.unit.shard
         shell: bash

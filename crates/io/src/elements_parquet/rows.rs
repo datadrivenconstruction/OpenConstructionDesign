@@ -405,9 +405,14 @@ fn in_ring(r: &[(f64, f64)], x: f64, y: f64) -> bool {
     inside
 }
 
-/// Parameters other than the key properties, as flat JSON text.
-fn props_json(m: &Model, table: &str, cat: &str, id: i64) -> Result<Option<String>, String> {
+type Provs = std::collections::BTreeMap<(String, i64), crate::provenance::Prov>;
+
+/// Parameters other than the key properties, and `DDC_Provenance.*`, as flat JSON text.
+fn props_json(m: &Model, prov: &Provs, table: &str, cat: &str, id: i64) -> Result<Option<String>, String> {
     let mut o = serde_json::Map::new();
+    for (n, v) in prov.get(&(table.to_string(), id)).map(crate::provenance::fields).unwrap_or_default() {
+        o.insert(format!("DDC_Provenance.{n}"), v);
+    }
     for kind in [table, cat] {
         for (k, v, unit) in m.props(kind, id).map_err(err)? {
             if k == ddc_model::KEY_PROP || k == ddc_model::MINTED_PROP {
@@ -452,6 +457,7 @@ pub fn collect(m: &mut Model, geo: &GeoMap) -> Result<Collected, String> {
         m.level_list().map_err(err)?.into_iter().map(|(id, n, z)| (id, (n, z))).collect();
     let mut rooms: HashMap<i64, Vec<(String, Vec<Vec<(f64, f64)>>)>> = HashMap::new();
     let mut seen: HashMap<String, (String, i64)> = HashMap::new();
+    let prov = crate::provenance::read(m, |_, _| true);
 
     macro_rules! push {
         ($row:expr, $table:expr, $id:expr) => {{
@@ -616,7 +622,7 @@ pub fn collect(m: &mut Model, geo: &GeoMap) -> Result<Collected, String> {
                     weight_kg: None,
                     count: Some(1),
                     bbox,
-                    props: props_json(m, sp.table, sp.cat, id)?,
+                    props: props_json(m, &prov, sp.table, sp.cat, id)?,
                 },
                 sp.table,
                 id
@@ -685,7 +691,7 @@ pub fn collect(m: &mut Model, geo: &GeoMap) -> Result<Collected, String> {
                     weight_kg: None,
                     count: Some(1),
                     bbox,
-                    props: props_json(m, "comp", "component", r.id)?,
+                    props: props_json(m, &prov, "comp", "component", r.id)?,
                 },
                 "comp",
                 r.id

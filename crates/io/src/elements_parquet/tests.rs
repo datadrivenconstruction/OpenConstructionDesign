@@ -477,3 +477,38 @@ fn old_files_without_keys_get_the_same_minted_keys_after_save_and_reopen() {
     assert_eq!(a.rows.iter().map(|r| &r.key).collect::<Vec<_>>(), b.rows.iter().map(|r| &r.key).collect::<Vec<_>>());
     let _ = std::fs::remove_dir_all(&dir);
 }
+
+#[test]
+fn assistant_values_travel_in_props_as_ddc_provenance() {
+    use ddc_model::{Edit, PVal, ParamSpec, ParamType, SrcKind, ValueSrc};
+    let mut m = Model::open(":memory:").unwrap();
+    let lv = m.add_level("L1", 0.0).unwrap();
+    let t = m.add_wall_type("ext", &[LayerSpec { material: "brick".into(), thickness: 0.2 }]).unwrap();
+    let spec = WallSpec { a: (0.0, 0.0), b: (6.0, 0.0), level: lv, base_offset: 0.0, height: 3.0, wall_type: t, offset0: None };
+    let w = m.add_wall(&spec).unwrap();
+    m.add_wall(&WallSpec { a: (0.0, 5.0), b: (6.0, 5.0), ..spec }).unwrap();
+    let p = ParamSpec {
+        name: "Fire".into(),
+        ptype: ParamType::Text,
+        per_type: false,
+        unit: String::new(),
+        group: String::new(),
+        guid: None,
+        categories: vec!["wall".into()],
+    };
+    m.add_param(&p).unwrap();
+    let edit = Edit::ParamValue { param: "Fire".into(), kind: "wall".into(), id: w, value: Some(PVal::Text("REI 90".into())) };
+    m.apply_edits(&[edit]).unwrap();
+    m.record_value_src(&[("wall", w, "Fire")], &ValueSrc::ai(SrcKind::Ai, 100, "s", "r1", "fire rating")).unwrap();
+    let c = collect(&mut m, &GeoMap::new()).unwrap();
+    let with: Vec<serde_json::Value> = c
+        .rows
+        .iter()
+        .filter_map(|r| r.props.as_deref())
+        .map(|p| serde_json::from_str::<serde_json::Value>(p).unwrap())
+        .filter(|j| j.get("DDC_Provenance.AiValues").is_some())
+        .collect();
+    assert_eq!(with.len(), 1, "only the wall with an assistant value: {with:?}");
+    assert_eq!(with[0]["DDC_Provenance.AiValuesUnverified"], 1, "{}", with[0]);
+    assert_eq!(c.rows.iter().filter(|r| r.element_type == "Wall").count(), 2);
+}
