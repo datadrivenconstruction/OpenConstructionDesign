@@ -379,6 +379,38 @@ impl Tri {
     }
 }
 
+/// `m` minus (half-space ∩ boundary prism): the prism of `ring` (in frame `fr`) along `fr.z`,
+/// long enough to pass through `m`, clipped to the removed side of the plane (`o`, `n`).
+fn bounded_cut(m: &mut Tri, o: V3, n: V3, fr: &Frame, ring: &[(f64, f64)]) -> bool {
+    use ddc_geom::csg::BoolOp;
+    let Some((lo, hi)) = m.bbox() else {
+        return true;
+    };
+    let reach = len(sub(hi, lo)) + len(sub(fr.o, lo)) + 1.0;
+    let r: Vec<V3> = ring.iter().map(|p| [p.0, p.1, -reach]).collect();
+    let mut tool = Tri::default();
+    extrude(&oriented(vec![vec![r]]), [0.0, 0.0, 2.0 * reach], &mut tool);
+    tool.transform(fr);
+    tool.clip(o, mul(n, -1.0));
+    if tool.is_empty() {
+        return true;
+    }
+    let mesh = |t: &Tri| ddc_geom::mesh::Mesh {
+        positions: t.p.iter().map(|p| ddc_geom::v3(p[0], p[1], p[2])).collect(),
+        triangles: t.t.clone(),
+        face_of: vec![0; t.t.len()],
+    };
+    match ddc_geom::csg2::mesh_boolean(&mesh(m), &mesh(&tool), BoolOp::Subtract, Default::default())
+    {
+        Ok(r) => {
+            m.p = r.mesh.positions.iter().map(|p| [p.x, p.y, p.z]).collect();
+            m.t = r.mesh.triangles;
+            true
+        }
+        Err(_) => false,
+    }
+}
+
 fn basis(n: V3) -> (V3, V3) {
     let a = if n[0].abs() < 0.9 {
         [1.0, 0.0, 0.0]
@@ -2498,14 +2530,13 @@ impl Rd<'_> {
         Ok(out)
     }
 
-    /// Cuts `m` by a half-space operand; false when the operand is not a half space or the
-    /// bounded removal region does not cover the removed part.
+    /// Cuts `m` by a half-space operand; false when the operand is not a half space or a
+    /// bounded removal could not be subtracted (the body then stays whole).
     pub(super) fn half_space_cut(&mut self, b: u32, m: &mut Tri) -> Result<bool, Why> {
         let Some((o, n, bound)) = self.half_space(b)? else {
             return Ok(false);
         };
         if let Some((fr, ring)) = bound {
-            // exact only when everything the plane removes lies inside the boundary prism
             let inv = |p: V3| {
                 let r = sub(p, fr.o);
                 (dot(r, fr.x), dot(r, fr.y))
@@ -2514,8 +2545,9 @@ impl Rd<'_> {
                 m.p.iter()
                     .filter(|p| dot(sub(**p, o), n) > 1e-9)
                     .all(|p| inside2(&ring, inv(*p)));
+            // the plane alone is exact only when all it removes lies inside the boundary prism
             if !all_in {
-                return Ok(false);
+                return Ok(bounded_cut(m, o, n, &fr, &ring));
             }
         }
         m.clip(o, n);
@@ -2973,6 +3005,73 @@ mod tests {
             add(s, cross(sub(q, p), sub(r, p)))
         });
         len(s)
+    }
+
+    /// A bounded half-space removes only what lies inside its boundary prism, even when the
+    /// plane also passes through the rest of the body.
+    #[test]
+    fn bounded_half_space_cuts_only_inside_its_boundary() {
+        let (m, approx) = mesh_of(
+            "#1=IFCCARTESIANPOINT((0.,0.,0.));\n#2=IFCAXIS2PLACEMENT3D(#1,$,$);\n\
+             #3=IFCBLOCK(#2,2.,1.,1.);\n#4=IFCCARTESIANPOINT((0.,0.,0.5));\n\
+             #5=IFCAXIS2PLACEMENT3D(#4,$,$);\n#6=IFCPLANE(#5);\n\
+             #7=IFCCARTESIANPOINT((-0.5,-1.));\n#8=IFCCARTESIANPOINT((1.,-1.));\n\
+             #9=IFCCARTESIANPOINT((1.,2.));\n#10=IFCCARTESIANPOINT((-0.5,2.));\n\
+             #11=IFCPOLYLINE((#7,#8,#9,#10,#7));\n\
+             #12=IFCPOLYGONALBOUNDEDHALFSPACE(#6,.F.,#2,#11);\n\
+             #13=IFCBOOLEANCLIPPINGRESULT(.DIFFERENCE.,#3,#12);",
+            13,
+        );
+        assert!(approx.is_empty(), "{approx:?}");
+        assert!((volume(&m) - 1.5).abs() < 1e-6, "{}", volume(&m));
+        assert!(open_area(&m) < 1e-9);
+        let top = |lo: f64, hi: f64| {
+            m.p.iter()
+                .filter(|p| p[0] > lo && p[0] < hi)
+                .map(|p| p[2])
+                .fold(0.0, f64::max)
+        };
+        assert!((top(-0.1, 0.9) - 0.5).abs() < 1e-9 && (top(1.1, 2.1) - 1.0).abs() < 1e-9);
+    }
+
+    /// FZK-Haus gable wall: two bounded half-spaces, one per roof slope, meet at the ridge.
+    #[test]
+    fn gable_wall_clipped_by_two_bounded_half_spaces() {
+        let (m, approx) = mesh_of(
+            "#1=IFCCARTESIANPOINT((0.3,-0.3));\n#2=IFCCARTESIANPOINT((9.7,-0.3));\n\
+             #3=IFCCARTESIANPOINT((10.,0.));\n#4=IFCCARTESIANPOINT((0.,0.));\n\
+             #5=IFCPOLYLINE((#1,#2,#3,#4,#1));\n\
+             #6=IFCARBITRARYCLOSEDPROFILEDEF(.AREA.,'',#5);\n\
+             #7=IFCCARTESIANPOINT((0.,0.,0.));\n#8=IFCAXIS2PLACEMENT3D(#7,$,$);\n\
+             #9=IFCDIRECTION((0.,0.,1.));\n#10=IFCEXTRUDEDAREASOLID(#6,#8,#9,3.5);\n\
+             #11=IFCDIRECTION((0.,1.,0.));\n#12=IFCDIRECTION((0.5,0.,-0.866025403784));\n\
+             #13=IFCCARTESIANPOINT((-0.216506350946,0.,0.375));\n\
+             #14=IFCAXIS2PLACEMENT3D(#13,#12,#11);\n#15=IFCPLANE(#14);\n\
+             #16=IFCCARTESIANPOINT((-0.01,-0.31));\n#17=IFCCARTESIANPOINT((5.,-0.31));\n\
+             #18=IFCCARTESIANPOINT((5.,0.01));\n#19=IFCCARTESIANPOINT((-0.01,0.01));\n\
+             #20=IFCPOLYLINE((#16,#17,#18,#19,#16));\n\
+             #21=IFCPOLYGONALBOUNDEDHALFSPACE(#15,.T.,#8,#20);\n\
+             #22=IFCBOOLEANCLIPPINGRESULT(.DIFFERENCE.,#10,#21);\n\
+             #23=IFCDIRECTION((-0.5,0.,-0.866025403784));\n\
+             #24=IFCCARTESIANPOINT((2.71650635095,0.,4.70512701892));\n\
+             #25=IFCAXIS2PLACEMENT3D(#24,#23,#11);\n#26=IFCPLANE(#25);\n\
+             #27=IFCCARTESIANPOINT((5.,-0.31));\n#28=IFCCARTESIANPOINT((10.01,-0.31));\n\
+             #29=IFCCARTESIANPOINT((10.01,0.01));\n#30=IFCCARTESIANPOINT((5.,0.01));\n\
+             #31=IFCPOLYLINE((#27,#28,#29,#30,#27));\n\
+             #32=IFCPOLYGONALBOUNDEDHALFSPACE(#26,.T.,#8,#31);\n\
+             #33=IFCBOOLEANCLIPPINGRESULT(.DIFFERENCE.,#22,#32);",
+            33,
+        );
+        assert!(approx.is_empty(), "{approx:?}");
+        assert!(open_area(&m) < 1e-6);
+        // ridge at x = 5: 0.5 + 5·tan 30°; nothing of the 3.5 m box sticks out above the slopes
+        let t = 30f64.to_radians().tan();
+        for p in &m.p {
+            let roof = 0.5 + p[0].min(10.0 - p[0]) * t;
+            assert!(p[2] <= roof.min(3.5) + 1e-6, "{p:?} above the roof {roof}");
+        }
+        let top = m.p.iter().map(|p| p[2]).fold(0.0, f64::max);
+        assert!((top - (0.5 + 5.0 * t)).abs() < 1e-6, "{top}");
     }
 
     #[test]
