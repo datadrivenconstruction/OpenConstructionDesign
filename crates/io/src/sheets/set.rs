@@ -665,6 +665,85 @@ pub(super) fn area_unit(ctx: &Ctx) -> String {
     (ctx.text)("sheets.paper.area_unit")
 }
 
+/// The drawing area of a sheet, mm: inside the frame, the title block in its bottom-right
+/// corner excluded.
+pub(super) struct DrawArea {
+    frame: [f64; 4],
+    stamp: [f64; 4],
+}
+
+impl DrawArea {
+    pub(super) fn of(standard: &str, w: f64, h: f64) -> Self {
+        let d = data();
+        let st = &d["standards"][standard];
+        let fr = &st["frame"];
+        let frame = [num(fr, "left"), num(fr, "bottom"), w - num(fr, "right"), h - num(fr, "top")];
+        let (sw, sh) = (num(&st["stamp"], "w"), num(&st["stamp"], "h"));
+        let stamp = [frame[2] - sw, frame[1], frame[2], frame[1] + sh];
+        DrawArea { frame, stamp }
+    }
+}
+
+/// The least shift, mm, that keeps the marks of viewport `k` (view, dimensions, tags, title)
+/// inside the frame and clear of the title block; zero when they already are.
+pub(super) fn keep_in_area(marks: &[(Option<usize>, Mark)], k: usize, a: &DrawArea) -> [f64; 2] {
+    let mut b = [f64::INFINITY, f64::INFINITY, f64::NEG_INFINITY, f64::NEG_INFINITY];
+    for (_, m) in marks.iter().filter(|(v, _)| *v == Some(k)) {
+        let q = super::dset::mark_box(m);
+        b = [b[0].min(q[0]), b[1].min(q[1]), b[2].max(q[2]), b[3].max(q[3])];
+    }
+    if !b.iter().all(|v| v.is_finite()) {
+        return [0.0, 0.0];
+    }
+    let f = a.frame;
+    // into the frame; a box larger than the frame keeps its left and top edges
+    let into = |lo: f64, hi: f64, min: f64, max: f64, keep_hi: bool| {
+        if hi - lo > max - min {
+            if keep_hi { max - hi } else { min - lo }
+        } else if lo < min {
+            min - lo
+        } else if hi > max {
+            max - hi
+        } else {
+            0.0
+        }
+    };
+    let mut dx = into(b[0], b[2], f[0], f[2], false);
+    let mut dy = into(b[1], b[3], f[1], f[3], true);
+    let s = a.stamp;
+    let (x0, y0, x1, y1) = (b[0] + dx, b[1] + dy, b[2] + dx, b[3] + dy);
+    if x1 > s[0] + 1e-9 && y0 < s[3] - 1e-9 && x0 < s[2] && y1 > s[1] {
+        let up = s[3] - y0;
+        let left = s[0] - x1;
+        let up_ok = y1 + up <= f[3] + 1e-9;
+        let left_ok = x0 + left >= f[0] - 1e-9;
+        match (up_ok, left_ok) {
+            (true, true) if up <= -left => dy += up,
+            (_, true) => dx += left,
+            _ => dy += up,
+        }
+    }
+    [dx, dy]
+}
+
+/// Moves every mark of viewport `k` and its transform by `d`, mm.
+pub(super) fn move_viewport(dr: &mut SheetDrawing, k: usize, d: [f64; 2]) {
+    let mv = |p: &mut [f64; 2]| {
+        p[0] += d[0];
+        p[1] += d[1];
+    };
+    for (_, m) in dr.marks.iter_mut().filter(|(v, _)| *v == Some(k)) {
+        match m {
+            Mark::Line { pts, .. } => pts.iter_mut().for_each(mv),
+            Mark::Fill { rings, .. } => rings.iter_mut().flatten().for_each(mv),
+            Mark::Text { pos, .. } => mv(pos),
+        }
+    }
+    if let Some(t) = dr.transforms.get_mut(k) {
+        mv(&mut t.0);
+    }
+}
+
 /// The whole model sheet `id`: viewports, captions, revisions, schedules, title-block auto fields.
 pub fn compose_sheet(m: &Model, id: i64, ctx: &Ctx) -> Result<Composed, SheetError> {
     let s = m.sheet(id).map_err(me)?;
@@ -694,7 +773,7 @@ pub fn compose_sheet(m: &Model, id: i64, ctx: &Ctx) -> Result<Composed, SheetErr
         views.push(d);
         notes.push(note);
     }
-    let rects: Vec<[f64; 4]> = vps
+    let mut rects: Vec<[f64; 4]> = vps
         .iter()
         .zip(&views)
         .map(|((_, v), d)| rect_of(v, d.bbox))
@@ -740,6 +819,7 @@ pub fn compose_sheet(m: &Model, id: i64, ctx: &Ctx) -> Result<Composed, SheetErr
         }
     };
     let details = m.viewport_details(id).map_err(me)?;
+    let area = DrawArea::of(&s.standard, dr.width, dr.height);
     for (k, ((vid, v), d)) in vps.iter().zip(&views).enumerate() {
         // marks go before cropping: whatever does not fit the viewport is clipped together with the view
         section_marks(
@@ -770,6 +850,12 @@ pub fn compose_sheet(m: &Model, id: i64, ctx: &Ctx) -> Result<Composed, SheetErr
                 note: notes[k].clone(),
             };
             plan_annotations(&mut pen, below, &s.standard, &v.title, &pm);
+        }
+        let shift = keep_in_area(&dr.marks, k, &area);
+        if shift != [0.0, 0.0] {
+            move_viewport(&mut dr, k, shift);
+            rects[k][0] += shift[0];
+            rects[k][1] += shift[1];
         }
         let b = d.bbox;
         placed.push(Placed {
@@ -1094,6 +1180,36 @@ mod tests {
             crop: None,
             title: ru("plan_floor1").into(),
         }
+    }
+
+    /// A plan placed over the title block is moved so the view, its dimension chains and title
+    /// stay inside the frame and clear of the title block.
+    #[test]
+    fn viewport_and_its_dimensions_stay_off_the_title_block() {
+        let (mut m, lv, _) = house();
+        let sd = SheetDef::new("A-101", ru("plan_cap"));
+        let std = sd.standard.clone();
+        let a = m.add_sheet(&sd).unwrap();
+        let none: &dyn Fn(&str) -> Option<Table> = &|_| None;
+        let empty = compose_sheet(&m, a, &ctx(none)).unwrap().drawing;
+        let area = DrawArea::of(&std, empty.width, empty.height);
+        let st = area.stamp;
+        let plan = ViewRef::Plan { level: lv, cut: DEFAULT_CUT };
+        let c = ((st[0] + st[2]) / 2.0, (st[1] + st[3]) / 2.0);
+        m.add_viewport(&vp(a, plan, 50.0, c)).unwrap();
+        let d = compose_sheet(&m, a, &ctx(none)).unwrap().drawing;
+        let dims = d.marks.iter().filter(|(v, mk)| {
+            *v == Some(0) && matches!(mk, Mark::Line { layer, .. } if *layer == super::super::DIMS)
+        });
+        assert!(dims.count() > 0, "the plan has dimension chains");
+        let f = area.frame;
+        for (_, mk) in d.marks.iter().filter(|(v, _)| *v == Some(0)) {
+            let b = super::super::dset::mark_box(mk);
+            let inside = b[0] >= f[0] - 1e-6 && b[1] >= f[1] - 1e-6 && b[2] <= f[2] + 1e-6 && b[3] <= f[3] + 1e-6;
+            let on_stamp = b[2] > st[0] + 1e-6 && b[1] < st[3] - 1e-6;
+            assert!(inside && !on_stamp, "{mk:?} at {b:?}, stamp {st:?}");
+        }
+        assert_eq!(keep_in_area(&d.marks, 0, &area), [0.0, 0.0]);
     }
 
     /// View hiding and overrides reach the sheet, PDF and DXF.
