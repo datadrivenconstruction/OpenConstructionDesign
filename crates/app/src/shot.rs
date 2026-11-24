@@ -264,11 +264,7 @@ fn paint(
 pub fn ai_panel_w(argv: &[String]) -> Option<f32> {
     let i = argv.iter().position(|s| s == "--ai-panel-w")?;
     // num-lint: a command-line argument for scripts, never typed into the UI
-    let w = argv
-        .get(i + 1)?
-        .parse::<f32>()
-        .ok()
-        .filter(|w| w.is_finite())?;
+    let w = argv.get(i + 1)?.parse::<f32>().ok().filter(|w| w.is_finite())?;
     let (lo, hi) = crate::ai::ui::PANEL_W;
     Some(w.clamp(lo, hi))
 }

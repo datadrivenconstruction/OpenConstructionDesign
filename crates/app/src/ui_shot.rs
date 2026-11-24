@@ -86,6 +86,7 @@ fn pair(s: &Step) -> Result<(f64, f64), String> {
     let (a, b) = s.arg.split_once(',').ok_or_else(bad)?;
     // num-lint: script coordinates, never typed into the UI
     let x = a.trim().parse::<f64>().map_err(|_| bad())?;
+    // num-lint: script coordinates, never typed into the UI
     let y = b.trim().parse::<f64>().map_err(|_| bad())?;
     Ok((x, y))
 }

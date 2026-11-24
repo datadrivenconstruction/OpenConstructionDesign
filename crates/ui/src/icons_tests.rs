@@ -154,6 +154,11 @@ const SAME_TOOL: &[(&str, &str)] = &[
     ("arch.section", "view.section"),
     ("view.section_box_fit", "view.section_box"),
     ("ctx.mep.fitting", "mep.fitting"),
+    ("view.section_plane", "view.section"),
+    // the same runs drawn in the 3D view
+    ("e3d.duct", "mep.duct"),
+    ("e3d.pipe", "mep.pipe"),
+    ("e3d.tray", "mep.tray"),
     // the Data tab repeats the File menu entries
     ("data.export_ifc", "file.save_ifc"),
     ("file.save_ifc_as", "file.save_ifc"),

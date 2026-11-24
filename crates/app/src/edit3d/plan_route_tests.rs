@@ -24,8 +24,11 @@ impl Rig {
         let mut view = Viewport::new();
         view.camera.target = Vec3::new(3.0, 2.0, 1.0);
         view.camera.distance = 25.0;
+        // the 3D tools draw their hints in the app's named fonts
+        let ctx = egui::Context::default();
+        ddc_ui::theme::install_fonts(&ctx);
         Rig {
-            ctx: egui::Context::default(),
+            ctx,
             view,
             scene: Scene::default(),
             ed,

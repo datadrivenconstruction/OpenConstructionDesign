@@ -673,7 +673,10 @@ mod tests {
         let text = crate::ai::plan::audit_text("T", &long).unwrap();
         mark_ai(&a, &text);
         let b = ai_marks(&a)[0].clone().unwrap();
-        assert!(b.why.unwrap().chars().count() <= ddc_ai::catalog::MAX_WHY_CHARS + 1);
+        // the cut is marked, so the row keeps the first MAX_WHY_CHARS and says the rest is gone
+        let why = b.why.unwrap();
+        assert_eq!(why.chars().filter(|c| *c == 'w').count(), ddc_ai::catalog::MAX_WHY_CHARS, "{why}");
+        assert!(why.ends_with("chars cut]"), "{why}");
     }
 
     #[test]

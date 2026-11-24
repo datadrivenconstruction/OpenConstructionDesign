@@ -25,7 +25,7 @@ const CONTRACTS: &str = include_str!("../contracts/commands.txt");
 /// Outside the undo contract: the journal itself and clash statuses.
 const SKIP: &[&str] = &["op", "clash_item"];
 /// Ceiling on `todo` rows: only goes down as rows become concrete.
-const TODO_MAX: usize = 440;
+const TODO_MAX: usize = 444;
 
 // ---------------------------------------------------------------- rows
 

@@ -2490,7 +2490,8 @@ mod tests {
         let long = "x".repeat(ddc_ai::catalog::MAX_WHY_CHARS * 3);
         let t = audit_text("T", &long).unwrap();
         let why = t.split_once('\n').unwrap().1;
-        assert!(why.chars().count() <= ddc_ai::catalog::MAX_WHY_CHARS + 1, "{}", why.len());
+        assert_eq!(why.chars().filter(|c| *c == 'x').count(), ddc_ai::catalog::MAX_WHY_CHARS, "{why}");
+        assert!(why.ends_with("chars cut]"), "{why}");
     }
 
     #[test]

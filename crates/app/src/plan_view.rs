@@ -2199,8 +2199,10 @@ mod tests {
 
     #[test]
     fn tab_with_a_plan_tool_armed_never_moves_egui_focus() {
-        let app = crate::layout_contract::app_in(ddc_ui::Lang::En);
-        assert!(app.ed.tool_armed() && !app.view3d, "the wall tool is armed from the start");
+        let mut app = crate::layout_contract::app_in(ddc_ui::Lang::En);
+        // a new editor starts in Select; arm the wall tool as a person would
+        app.ed.set_mode(crate::wall_tool::Mode::Polyline);
+        assert!(app.ed.tool_armed() && !app.view3d, "the wall tool is armed");
         let ctx = egui::Context::default();
         let _ = ctx.run(Default::default(), |_| {});
         assert!(tab_pass(&egui::Context::default(), &app, false), "without the guard Tab takes focus");
