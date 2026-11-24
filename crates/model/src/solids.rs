@@ -650,10 +650,14 @@ pub(crate) fn section_prims(
             continue;
         }
         let Ok(m) = mesh_of(db, &s) else { continue };
-        let cuts = if is_cut {
-            gsolid::section_cut(&m, o, u)
-        } else {
-            vec![]
+        let n = v2(-u.y, u.x);
+        let (lo, hi) = m.positions.iter().fold((f64::INFINITY, f64::NEG_INFINITY), |(l, h), p| {
+            let d = (v2(p.x, p.y) - o).dot(n);
+            (l.min(d), h.max(d))
+        });
+        let cuts = match crate::sections::cut_depth(lo, hi).filter(|_| is_cut) {
+            Some(d) => gsolid::section_cut(&m, o + n * d, u),
+            None => vec![],
         };
         let class = if !is_cut || !cuts.is_empty() {
             LineClass::Projection

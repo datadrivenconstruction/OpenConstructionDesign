@@ -600,3 +600,63 @@ fn door_in_arc_wall_is_cut_in_section() {
     let beside = total(&arc_door_model(10.0, 30.0));
     assert!((beside - 0.6).abs() < 2e-3, "{beside}");
 }
+
+#[test]
+fn section_on_the_ridge_cuts_the_roof_behind_it() {
+    // a gable as two shed roofs meeting at y = 5 (how IFC roof slabs import): a section exactly on
+    // the ridge line still cuts the roof behind it, it is not only seen beyond
+    let mut m = Model::open(":memory:").unwrap();
+    let l = m.add_level("L1", 0.0).unwrap();
+    let st = m.add_slab_type("R", &layer("Tiles", 0.2)).unwrap();
+    let shed = |ring: Vec<(f64, f64)>, slopes| crate::RoofSpec {
+        level: l,
+        slab_type: st,
+        offset: 3.0,
+        overhang: 0.0,
+        fascia: 0.0,
+        kind: crate::RoofKind::Footprint {
+            ring,
+            slopes,
+            mansard: None,
+        },
+    };
+    let north = m
+        .add_roof(&shed(
+            vec![(0.0, 5.0), (12.0, 5.0), (12.0, 10.0), (0.0, 10.0)],
+            vec![None, None, Some(30.0), None],
+        ))
+        .unwrap();
+    m.add_roof(&shed(
+        vec![(0.0, 5.0), (0.0, 0.0), (12.0, 0.0), (12.0, 5.0)],
+        vec![None, Some(30.0), None, None],
+    ))
+    .unwrap();
+    let spec = SectionSpec {
+        kind: ViewKind::Section,
+        name: "A".into(),
+        a: (-1.0, 5.0),
+        b: (13.0, 5.0),
+        depth: 8.0,
+        far_clip: true,
+    };
+    let v = m.section_view(&spec, &[]).unwrap();
+    let cut: Vec<_> = v
+        .prims
+        .iter()
+        .filter_map(|p| match p {
+            ViewPrim::SectionCut {
+                table: "roof",
+                element,
+                rings,
+                ..
+            } => Some((*element, rings.clone())),
+            _ => None,
+        })
+        .collect();
+    assert!(!cut.is_empty() && cut.iter().all(|c| c.0 == north), "{cut:?}");
+    let (x0, x1) = cut
+        .iter()
+        .flat_map(|c| c.1.iter())
+        .fold((f64::MAX, f64::MIN), |(a, b), p| (a.min(p.0), b.max(p.0)));
+    assert!((x0 - 1.0).abs() < 1e-6 && (x1 - 13.0).abs() < 1e-6, "{x0} {x1}");
+}

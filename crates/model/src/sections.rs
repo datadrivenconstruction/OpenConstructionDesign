@@ -16,6 +16,20 @@ use crate::{Error, Model};
 type P = (f64, f64);
 
 /// Width of an opening-frame member in the wall plane, m.
+/// Depth (along the view normal) at which a body spanning `lo..hi` is cut: 0 when the plane
+/// crosses it; a hair behind the plane when the plane lies on its near face (a section on a
+/// ridge, a joint or a face still cuts what is behind it); None when it is not cut.
+pub(crate) fn cut_depth(lo: f64, hi: f64) -> Option<f64> {
+    const HAIR: f64 = 1e-4;
+    if lo.abs() <= HAIR && hi > 2.0 * HAIR {
+        Some(lo.max(0.0) + HAIR)
+    } else if lo < 0.0 && hi > 0.0 {
+        Some(0.0)
+    } else {
+        None
+    }
+}
+
 pub const FRAME_W: f64 = 0.05;
 /// Maximum frame depth (across the wall thickness), m.
 pub const FRAME_D: f64 = 0.1;
@@ -402,9 +416,10 @@ impl Model {
             if w1 < 0.0 || w0 > depth {
                 continue;
             }
-            let crossed = w0 < 0.0 && w1 > 0.0;
-            if is_cut && crossed {
-                for r in ddc_geom::mass::vertical_rings(&b, a, u) {
+            let at = cut_depth(w0, w1);
+            let crossed = at.is_some();
+            if let (true, Some(d)) = (is_cut, at) {
+                for r in ddc_geom::mass::vertical_rings(&b, a + n * d, u) {
                     r.iter().for_each(|p| grow(*p));
                     prims.push(ViewPrim::SectionCut {
                         table,

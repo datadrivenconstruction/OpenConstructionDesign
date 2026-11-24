@@ -1419,8 +1419,20 @@ impl Cutter {
         if hi < 0.0 || lo > far {
             return false;
         }
-        let cut = is_cut && lo < 0.0 && hi > 0.0;
-        if cut {
+        let at = crate::sections::cut_depth(lo, hi).filter(|_| is_cut);
+        let cut = at.is_some();
+        if let Some(d) = at {
+            let shifted;
+            let pl = if d > 0.0 {
+                let o = a + n * d;
+                let Some(p) = Plane::vertical(o, o + u) else {
+                    return true;
+                };
+                shifted = p;
+                &shifted
+            } else {
+                pl
+            };
             let s = mesh_ops::section(m, pl, TOL);
             let ring = |q: &[V2], ccw: bool| -> Vec<(f64, f64)> {
                 let mut v: Vec<V2> = q.iter().map(|&q| sz(pl.to_3d(q))).collect();
