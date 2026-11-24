@@ -775,6 +775,32 @@ impl Model {
         Ok(a)
     }
 
+    /// True when the project holds structural analysis input of its own: loads, load cases or
+    /// combinations, analytical adjustments or overrides, or a calculation run. A model of walls,
+    /// slabs and imported framing alone has none: its derived analytical model is not exported.
+    pub fn has_analysis_input(&self) -> Result<bool, Error> {
+        for t in [
+            "load_case",
+            "load",
+            "load_combo",
+            "an_override",
+            "analytical_adj",
+            "calc_run",
+        ] {
+            if crate::rebar::has_table(&self.db, t)? {
+                let n: i64 = self.db.query_row(
+                    &format!("SELECT EXISTS(SELECT 1 FROM {t})"),
+                    [],
+                    |r| r.get(0),
+                )?;
+                if n != 0 {
+                    return Ok(true);
+                }
+            }
+        }
+        Ok(false)
+    }
+
     pub fn analytical_with(&self, tol: Tolerances) -> Result<Analytical, Error> {
         build(&self.db, tol)
     }

@@ -880,8 +880,19 @@ fn virtual_elements_have_a_predefined_type_only_in_ifc4x3() {
 
 /// Two columns and a beam between them with a stirrup set: bars and the analytical model.
 fn frame_with_bars() -> Model {
-    use ddc_model::{RebarHook, RebarLayout, RebarPath, RebarSetSpec};
+    use ddc_model::{LoadCase, RebarHook, RebarLayout, RebarPath, RebarSetSpec};
     let mut m = Model::open(":memory:").unwrap();
+    // a load case: the project has analysis input, so its analytical model is exported
+    m.add_load_case(&LoadCase {
+        id: 0,
+        name: "G".into(),
+        category: "permanent".into(),
+        self_weight: true,
+        note: String::new(),
+        locked: false,
+        src: "manual".into(),
+    })
+    .unwrap();
     let l0 = m.add_level("L0", 0.0).unwrap();
     let l1 = m.add_level("L1", 3.0).unwrap();
     let ct = m
