@@ -45,7 +45,7 @@ fn rule(class: &str) -> Option<(Option<&'static str>, usize, bool)> {
         "IFCVIRTUALELEMENT" | "IFCDISCRETEACCESSORY" => (None, 8, false),
         "IFCDOOR" | "IFCWINDOW" => (None, 10, false),
         "IFCSTAIRFLIGHT" => (None, 12, false),
-        "IFCGEOGRAPHICELEMENT" | "IFCBUILDINGELEMENTPROXY" => {
+        "IFCGEOGRAPHICELEMENT" | "IFCBUILDINGELEMENTPROXY" | "IFCCHIMNEY" | "IFCSHADINGDEVICE" => {
             (Some("IFCBUILDINGELEMENTPROXY"), 8, true)
         }
         "IFCPIPESEGMENT" | "IFCDUCTSEGMENT" | "IFCCABLECARRIERSEGMENT" | "IFCCABLESEGMENT" => {

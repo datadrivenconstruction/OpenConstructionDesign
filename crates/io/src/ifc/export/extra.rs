@@ -95,6 +95,73 @@ fn element(
     )
 }
 
+/// Element classes a body-only element is written back as: the IFC4 attribute list ends with
+/// Tag, PredefinedType (the IFC2X3 writer cuts or renames the ones that differ there).
+const MESH_CLASSES: [&str; 16] = [
+    "IFCSTAIR",
+    "IFCRAILING",
+    "IFCRAMP",
+    "IFCROOF",
+    "IFCSLAB",
+    "IFCWALL",
+    "IFCCOLUMN",
+    "IFCBEAM",
+    "IFCMEMBER",
+    "IFCPLATE",
+    "IFCCOVERING",
+    "IFCFOOTING",
+    "IFCCURTAINWALL",
+    "IFCCHIMNEY",
+    "IFCSHADINGDEVICE",
+    "IFCBUILDINGELEMENTPROXY",
+];
+
+/// IFC class, predefined type and object type of a stored mesh: the class it was imported
+/// from (`IFC.Class`), else the class of its category, else a proxy.
+fn mesh_class(
+    sql: &rusqlite::Connection,
+    id: i64,
+    category: &str,
+) -> (&'static str, String, Option<String>) {
+    let prop = |key: &str| -> Option<String> {
+        sql.query_row(
+            "SELECT value FROM prop WHERE kind='mesh' AND ref=?1 AND key=?2",
+            rusqlite::params![id, key],
+            |r| r.get::<_, rusqlite::types::Value>(0),
+        )
+        .ok()
+        .and_then(|v| match v {
+            rusqlite::types::Value::Text(t) => Some(t),
+            _ => None,
+        })
+    };
+    let src = prop("IFC.Class").map(|c| {
+        let c = c.to_ascii_uppercase();
+        match c.strip_suffix("STANDARDCASE") {
+            Some(b) => b.to_string(),
+            None => c,
+        }
+    });
+    let class = src
+        .as_deref()
+        .and_then(|c| MESH_CLASSES.iter().find(|k| **k == c))
+        .or_else(|| {
+            MESH_CLASSES
+                .iter()
+                .find(|k| crate::ifc::import::category(k) == category)
+        })
+        .copied()
+        .unwrap_or("IFCBUILDINGELEMENTPROXY");
+    let same = src.as_deref() == Some(class);
+    let predefined = prop("IFC.PredefinedType")
+        .filter(|p| {
+            same && !p.is_empty() && p.bytes().all(|b| b.is_ascii_uppercase() || b == b'_')
+        })
+        .unwrap_or_else(|| "NOTDEFINED".into());
+    let object_type = prop("IFC.ObjectType").filter(|t| same && !t.is_empty());
+    (class, format!(".{predefined}."), object_type)
+}
+
 fn layer_usage(c: &mut Ctx, kind: &str, id: i64, ent: u32, set: u32) {
     let usage = c.s.add(
         "IFCMATERIALLAYERSETUSAGE",
@@ -372,15 +439,16 @@ pub(super) fn all(
         if m.level.or(x.first) != Some(level) {
             continue;
         }
+        let (class, predefined, object_type) = mesh_class(sql, m.id, &m.category);
         let ent = element(
             c,
             g,
-            "IFCBUILDINGELEMENTPROXY",
+            class,
             "mesh",
             m.id,
             &m.name,
-            Some(&m.category),
-            ".NOTDEFINED.",
+            Some(object_type.as_deref().unwrap_or(&m.category)),
+            &predefined,
             Some(&m.mesh),
             elev,
         );

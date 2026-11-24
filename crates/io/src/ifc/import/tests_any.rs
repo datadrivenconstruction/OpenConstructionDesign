@@ -2771,3 +2771,58 @@ fn own_export_round_trips_levels_and_footings() {
     assert_eq!((count(&dst, "iso_footing"), count(&dst, "strip_footing")), (2, 1));
     assert_eq!(count(&dst, "level"), 5);
 }
+
+#[test]
+fn mesh_stair_and_railing_keep_class_and_quantities_on_export() {
+    let mut b = B::new();
+    let t = b.tri_cube();
+    let st = b.body("IFCSTAIR", "Spiral", [0.0; 3], &[t], ",$,.SPIRAL_STAIR.");
+    let t = b.tri_cube();
+    b.body("IFCRAILING", "Rail", [3.0, 0.0, 0.0], &[t], ",$,.GUARDRAIL.");
+    let qa = b.add("IFCQUANTITYAREA('GrossArea',$,$,4.5,$)");
+    let ql = b.add("IFCQUANTITYLENGTH('Length',$,$,2.,$)");
+    let g = b.guid();
+    let q = b.add(&format!(
+        "IFCELEMENTQUANTITY({g},$,'BaseQuantities',$,$,(#{qa},#{ql}))"
+    ));
+    let g = b.guid();
+    b.add(&format!("IFCRELDEFINESBYPROPERTIES({g},$,$,$,(#{st}),#{q})"));
+    let mut m = Model::open(":memory:").unwrap();
+    import_ifc(&mut m, b.finish("IFC4").as_bytes()).unwrap();
+    assert_eq!(count(&m, "mesh"), 2);
+    for schema in [crate::ifc::IfcSchema::Ifc4, crate::ifc::IfcSchema::Ifc2x3] {
+        let opts = crate::ifc::IfcOptions {
+            schema,
+            timestamp: Some("2026-01-01T00:00:00".into()),
+            ..Default::default()
+        };
+        let (out, _) = crate::ifc::export_ifc_with(&m, &opts).unwrap();
+        let lines = |c: &str| -> Vec<&str> {
+            out.lines()
+                .filter(|l| l.split_once('=').is_some_and(|x| x.1.starts_with(c)))
+                .collect()
+        };
+        let stair = lines("IFCSTAIR(");
+        assert_eq!(stair.len(), 1, "{schema:?}");
+        assert!(stair[0].contains(".SPIRAL_STAIR."), "{}", stair[0]);
+        let rail = lines("IFCRAILING(");
+        assert!(rail.len() == 1 && rail[0].contains(".GUARDRAIL."), "{rail:?}");
+        assert!(lines("IFCBUILDINGELEMENTPROXY(").is_empty(), "{schema:?}");
+        let q = lines("IFCELEMENTQUANTITY(");
+        assert!(q.iter().any(|l| l.contains("'BaseQuantities'")), "{q:?}");
+        assert!(lines("IFCQUANTITYAREA(").iter().any(|l| l.contains("'GrossArea'") && l.contains("4.5")));
+        assert!(!lines("IFCPROPERTYSET(").iter().any(|l| l.contains("'BaseQuantities'")));
+        // the set is read back as quantities
+        let mut back = Model::open(":memory:").unwrap();
+        import_ifc(&mut back, out.as_bytes()).unwrap();
+        let v: f64 = back
+            .sql()
+            .query_row(
+                "SELECT value FROM prop WHERE key='BaseQuantities.GrossArea'",
+                [],
+                |r| r.get(0),
+            )
+            .unwrap();
+        assert!(close(v, 4.5), "{v}");
+    }
+}

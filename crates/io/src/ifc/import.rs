@@ -24,7 +24,7 @@ pub use types::{type_drafts, TypeDraft};
 pub(crate) use types::item_parts;
 mod uparams;
 
-pub(in crate::ifc) use props::{units as file_units, Units};
+pub(in crate::ifc) use props::{units as file_units, Units, QSETS};
 
 use std::collections::{BTreeMap, HashMap, HashSet};
 use std::fmt;

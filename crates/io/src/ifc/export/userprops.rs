@@ -246,7 +246,14 @@ pub(super) fn write(
         .collect::<Result<Vec<_>, _>>()
         .or_else(db)?;
     let mut by: BTreeMap<(String, i64), Sets> = BTreeMap::new();
+    let mut qsets: BTreeMap<(String, i64), Vec<String>> = BTreeMap::new();
     for (k, id, key, v, u) in rows {
+        if key == crate::ifc::import::QSETS {
+            if let Value::Text(t) = &v {
+                qsets.insert((k, id), t.split(';').map(str::to_string).collect());
+            }
+            continue;
+        }
         if SKIP.iter().any(|p| key.starts_with(p)) || !c.prod.contains_key(&(k.clone(), id)) {
             continue;
         }
@@ -284,7 +291,12 @@ pub(super) fn write(
     let mut cache = Cache::new();
     for ((k, id), sets) in by {
         let ent = target(c, &k, id);
+        let qs = qsets.get(&(k.clone(), id));
         for (set, props) in sets {
+            if qs.is_some_and(|q| q.contains(&set)) {
+                quantities(c, &k, id, ent, &set, &props);
+                continue;
+            }
             let ids: Vec<u32> = props
                 .iter()
                 .filter_map(|(n, v, u)| {
@@ -336,6 +348,38 @@ pub(super) fn write(
     }
     params(c, model, base, &mut cache)?;
     depth(c, model)
+}
+
+/// A quantity set read from a file, written back as one: the kind of each quantity follows its
+/// unit label (values are stored in metres, kilograms and seconds).
+fn quantities(c: &mut Ctx, kind: &str, id: i64, ent: u32, set: &str, props: &[(String, Value, String)]) {
+    let ids: Vec<u32> = props
+        .iter()
+        .filter_map(|(n, v, u)| {
+            let x = match v {
+                Value::Real(x) => *x,
+                Value::Integer(i) => *i as f64,
+                _ => return None,
+            };
+            let class = match u.as_str() {
+                "m" => "IFCQUANTITYLENGTH",
+                "m2" => "IFCQUANTITYAREA",
+                "m3" => "IFCQUANTITYVOLUME",
+                "kg" => "IFCQUANTITYWEIGHT",
+                "s" => "IFCQUANTITYTIME",
+                "" => "IFCQUANTITYCOUNT",
+                _ => return None,
+            };
+            x.is_finite()
+                .then(|| c.s.add(class, &[text(n), s(NONE), s(NONE), real(x), s(NONE)]))
+        })
+        .collect();
+    if ids.is_empty() {
+        return;
+    }
+    let gk = format!("uqto-{kind}-{set}");
+    let q = c.rooted("IFCELEMENTQUANTITY", &gk, id, set, &[s(NONE), list(&ids)]);
+    c.rel("IFCRELDEFINESBYPROPERTIES", &format!("{gk}-rel"), id, &[list(&[ent]), r(q)]);
 }
 
 /// One `DDC_Depth` set per element with a design depth: `Depth` (1..5) and `Discipline`.

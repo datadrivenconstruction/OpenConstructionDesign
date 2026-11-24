@@ -191,6 +191,10 @@ pub struct Ctx<'a> {
     pub classif: &'a HashMap<u32, Vec<u32>>,
 }
 
+/// Names of the element's quantity sets (`;`-separated): their values are written back as
+/// quantities, not as properties.
+pub const QSETS: &str = "IFC.QuantitySets";
+
 struct Out(Vec<PProp>);
 
 impl Out {
@@ -205,6 +209,16 @@ impl Out {
                 unit: unit.to_string(),
             });
         }
+    }
+    /// Adds `item` to the `;`-separated text list `key`.
+    fn list(&mut self, key: &str, item: &str) {
+        let cur = self.0.iter().find(|p| p.key == key).map(|p| text_of(&p.value));
+        let v = match cur {
+            Some(c) if c.split(';').any(|x| x == item) => return,
+            Some(c) => format!("{c};{item}"),
+            None => item.to_string(),
+        };
+        self.put(key.to_string(), PVal::Text(v), "");
     }
     fn text(&mut self, key: &str, v: Option<&str>) {
         if let Some(s) = v.filter(|s| !s.is_empty()) {
@@ -331,6 +345,7 @@ impl Ctx<'_> {
                     };
                     o.put(format!("{name}.{qn}"), v, unit);
                 }
+                o.list(QSETS, name);
             }
             _ => {}
         }
