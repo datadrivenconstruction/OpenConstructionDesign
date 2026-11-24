@@ -46,16 +46,12 @@
 <h2 id="download" align="center">Download</h2>
 
 <p align="center">
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest">
-    <picture>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest"><picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/images/download-windows-dark.webp">
-      <img src="docs/images/download-windows-light.webp" alt="Download for Windows (zip, 62 MB)" width="300">
-    </picture></a>
-  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest">
-    <picture>
+      <img src="docs/images/download-windows-light.webp" alt="Download for Windows (zip, 62 MB)" width="300"></picture></a>
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/latest"><picture>
       <source media="(prefers-color-scheme: dark)" srcset="docs/images/download-linux-dark.webp">
-      <img src="docs/images/download-linux-light.webp" alt="Download for Linux (tar.gz, 71 MB)" width="300">
-    </picture></a>
+      <img src="docs/images/download-linux-light.webp" alt="Download for Linux (tar.gz, 71 MB)" width="300"></picture></a>
 </p>
 
 <p align="center">
