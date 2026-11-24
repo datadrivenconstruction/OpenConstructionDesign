@@ -611,6 +611,30 @@ fn snap(d: (f64, f64)) -> (f64, f64) {
     }
 }
 
+/// Views for a model that has none (an imported one): the two sections through the middle
+/// bays and the four compass elevations the drawing set would place. Level plans need no row.
+/// Returns how many were added; a model with views or with nothing in plan is left alone.
+pub fn add_default_views(m: &mut Model) -> Result<usize, SheetError> {
+    if !m.view_defs().map_err(me)?.is_empty() {
+        return Ok(0);
+    }
+    let (plans, bb, body) = level_plans(m)?;
+    if plans.is_empty() {
+        return Ok(0);
+    }
+    let grids = m.grid_axes(None).map_err(me)?;
+    let mut specs = sections(m, bb, &grids)?;
+    specs.extend(ddc_model::compass_elevations_around(body, ELEVATION_OFF));
+    m.atomic("default_views", |m| {
+        for s in &specs {
+            m.add_view_def(s)?;
+        }
+        Ok(())
+    })
+    .map_err(me)?;
+    Ok(specs.len())
+}
+
 /// Section 1-1 along the first flight of the lowest stair, 2-2 across it through the middle of
 /// the widest bay; with no stair, 1-1 across the short side and 2-2 along the long one.
 fn sections(m: &Model, bb: [f64; 4], grids: &[GridAxis]) -> Result<Vec<SectionSpec>, SheetError> {

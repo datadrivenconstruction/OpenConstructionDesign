@@ -58,7 +58,7 @@ Steps run in this order: import, underlay, --import-xlsx, --save, --xlsx, --expo
 --export-sheets, --screenshot. Outputs never overwrite an input.
 
 Exit code: 0 on success, 1 on any error (the report then has ok=false and error, and the
-steps that ran before it).
+steps that ran before it). A skipped sheet output (see `skipped`) is not an error.
 
 Report (JSON object, schema \"ddc-headless-report/1\"; null where a step did not run):
   schema, ok, error, file, kind (ifc|rvt|dwg|dxf|ddc|mesh)
@@ -82,6 +82,8 @@ Report (JSON object, schema \"ddc-headless-report/1\"; null where a step did not
   exports     [{path, format, ms, bytes, warnings:[text], schema (ifc),
                nodes, meshes (glb/gltf), sheets (pdf)}]
   sheets      {dir, ms, files:[names], report}
+  skipped     [{step, why}]  outputs not written and why (a .pdf export or --export-sheets
+              of a project without sheets); the other steps still run
 ";
 
 pub struct FileArgs {
@@ -700,8 +702,19 @@ fn execute(
     if a.xlsx {
         rep.insert("xlsx".into(), xlsx_dry_run(&mut ed)?);
     }
+    // sheet outputs of a project without sheets are skipped with a note, not fatal
+    let no_sheets = ed.model.sheets().map_err(|e| e.to_string())?.is_empty();
+    let mut skipped = vec![];
+    let mut skip = |step: String| {
+        eprintln!("note: {step} skipped: the project has no sheets");
+        skipped.push(json!({"step": step, "why": "the project has no sheets"}));
+    };
     let mut written = vec![];
     for out in &a.exports {
+        if no_sheets && ext(out) == "pdf" {
+            skip(format!("--export {}", out.display()));
+            continue;
+        }
         match export_one(&mut ed, &dr, a, out) {
             Ok(v) => written.push(v),
             Err(e) => {
@@ -714,8 +727,13 @@ fn execute(
         rep.insert("exports".into(), Value::Array(written));
     }
     if let Some(dir) = &a.export_sheets {
-        rep.insert("sheets".into(), export_sheets(&ed, dir)?);
+        if no_sheets {
+            skip("--export-sheets".into());
+        } else {
+            rep.insert("sheets".into(), export_sheets(&ed, dir)?);
+        }
     }
+    rep.insert("skipped".into(), Value::Array(skipped));
     if a.screenshot.is_some() {
         let v = render(Loaded { ed, drawings: dr }, a)?;
         rep.insert("render".into(), v);
@@ -733,7 +751,7 @@ fn blank(a: &FileArgs) -> serde_json::Map<String, Value> {
         "total_ms": null, "peak_memory_bytes": null,
         "counts": null, "underlay": null, "save": null, "xlsx": null, "render": null,
         "warnings": [],
-        "import_xlsx": null, "exports": null, "sheets": null,
+        "import_xlsx": null, "exports": null, "sheets": null, "skipped": [],
     });
     match v {
         Value::Object(m) => m,
@@ -801,4 +819,47 @@ pub fn run(
     };
     emit(a, &Value::Object(rep));
     code
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn sheet_outputs_of_a_project_without_sheets_are_skipped_not_fatal() {
+        use ddc_model::{LayerSpec, WallSpec};
+        let mut m = Model::open(":memory:").unwrap();
+        let l = m.add_level("L0", 0.0).unwrap();
+        let layer = LayerSpec { material: "masonry".into(), thickness: 0.2 };
+        let t = m.add_wall_type("W", &[layer]).unwrap();
+        let w = |a, b| WallSpec { a, b, level: l, base_offset: 0.0, height: 3.0, wall_type: t, offset0: None };
+        m.add_wall(&w((0.0, 0.0), (6.0, 0.0))).unwrap();
+        m.add_wall(&w((6.0, 0.0), (6.0, 4.0))).unwrap();
+        let dir = std::env::temp_dir().join(format!("ddc-hl-nosheets-{}", std::process::id()));
+        std::fs::create_dir_all(&dir).unwrap();
+        let ifc = dir.join("in.ifc");
+        std::fs::write(&ifc, ddc_io::ifc::export_ifc(&m).unwrap()).unwrap();
+        let (pdf, csv, rep) = (dir.join("all.pdf"), dir.join("m.csv"), dir.join("rep.json"));
+        let argv: Vec<String> = [
+            "ddc-app", "--file", ifc.to_str().unwrap(), "--export", pdf.to_str().unwrap(),
+            "--export-sheets", dir.join("sheets").to_str().unwrap(), "--export",
+            csv.to_str().unwrap(), "--report-json", rep.to_str().unwrap(),
+        ]
+        .iter()
+        .map(|s| s.to_string())
+        .collect();
+        let fa = parse(&argv).unwrap().unwrap();
+        let code = run(&fa, &mut |_, _| Ok(Value::Null));
+        let v: Value = serde_json::from_str(&std::fs::read_to_string(&rep).unwrap()).unwrap();
+        assert_eq!(code, 0, "{v}");
+        assert_eq!(v["ok"], json!(true), "{v}");
+        let skipped = v["skipped"].as_array().unwrap();
+        assert_eq!(skipped.len(), 2, "{v}");
+        assert!(skipped.iter().all(|s| s["why"] == json!("the project has no sheets")));
+        assert!(!pdf.exists());
+        // the steps after the skipped one still ran
+        assert!(csv.is_file());
+        assert_eq!(v["exports"].as_array().unwrap().len(), 1, "{v}");
+        let _ = std::fs::remove_dir_all(&dir);
+    }
 }

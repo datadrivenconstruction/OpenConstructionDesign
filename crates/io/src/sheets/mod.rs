@@ -35,7 +35,7 @@ mod view_style;
 pub use anno::{anno_fmt, view_anno_fmt, AnnoFmt};
 pub use annot::text_width;
 pub use dset::{
-    compass_keys, flow_tables, footprint, mark_box, mark_prefix, pack_views, page_key, page_table,
+    add_default_views, compass_keys, flow_tables, footprint, mark_box, mark_prefix, pack_views, page_key, page_table,
     plan_drawing_set, tag_levels,
     DsetOptions, Foot, Part, Planned, Region, SCHEDULES,
 };

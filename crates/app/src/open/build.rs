@@ -150,7 +150,8 @@ pub(crate) fn fresh(shared: &Mutex<Option<PathBuf>>) -> Result<(WorkFile, Model,
     Ok((work, model, level))
 }
 
-/// The default level goes when the file brought its own; returns the level to show.
+/// The default level goes when the file brought its own, and a model without views gets the
+/// default sections and elevations; returns the level to show.
 pub(crate) fn tidy(model: &mut Model, seeded: i64) -> Option<i64> {
     let shown = imported_level(model);
     if let Some(l) = shown {
@@ -158,6 +159,10 @@ pub(crate) fn tidy(model: &mut Model, seeded: i64) -> Option<i64> {
             // refused while anything stands on it: then it simply stays
             let _ = model.delete_level(seeded);
         }
+    }
+    // an imported model gets the sections and elevations a drawn one would have
+    if let Err(e) = ddc_io::sheets::add_default_views(model) {
+        eprintln!("import: default views not added: {e}");
     }
     shown
         .or_else(|| crate::bigfile::first_level(model))
@@ -711,6 +716,23 @@ mod tests {
             .unwrap();
         assert_eq!(walls, 5);
         drop(b);
+        let _ = std::fs::remove_file(&p);
+    }
+
+    #[test]
+    fn an_imported_model_gets_default_sections_and_elevations() {
+        let p = ifc_file("views");
+        let b = build_ifc(p.clone(), Arc::new(Mutex::new(None)), &Progress::new()).unwrap();
+        let views = b.model.view_defs().unwrap();
+        let count = |k| views.iter().filter(|v| v.1.kind == k).count();
+        assert_eq!(
+            (count(ddc_model::ViewKind::Section), count(ddc_model::ViewKind::Elevation)),
+            (2, 4),
+            "{views:?}"
+        );
+        // a second pass adds nothing
+        let mut m = b.model;
+        assert_eq!(ddc_io::sheets::add_default_views(&mut m).unwrap(), 0);
         let _ = std::fs::remove_file(&p);
     }
 
