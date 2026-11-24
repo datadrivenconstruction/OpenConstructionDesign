@@ -173,14 +173,17 @@ fn dir(c: &mut Ctx, d: V3) -> u32 {
 }
 
 /// The analytical model as one IfcStructuralAnalysisModel (world coordinates) in a
-/// 'Reference' subcontext of `parent`; skipped when the model has no structural members
-/// (walls and slabs alone are not a structural model).
+/// 'Reference' subcontext of `parent`; skipped unless the project has analysis input of its own
+/// (`Model::has_analysis_input`) and structural members (walls and slabs alone are not one).
 pub(super) fn analysis(
     c: &mut Ctx,
     model: &Model,
     parent: u32,
     building: u32,
 ) -> Result<(), String> {
+    if !model.has_analysis_input().map_err(|e| format!("analytical: {e}"))? {
+        return Ok(());
+    }
     let a = model.analytical().map_err(|e| format!("analytical: {e}"))?;
     if a.members.is_empty() {
         return Ok(());
@@ -372,9 +375,54 @@ pub(super) fn analysis(
 mod tests {
     use crate::ifc::export::export_ifc;
     use ddc_model::{
-        AnRelease, AnalyticalAdj, BeamJoin, BeamSpec, ColumnSpec, Just, MemberShape, Model,
-        RebarHook, RebarLayout, RebarPath, RebarSetSpec,
+        AnRelease, AnalyticalAdj, BeamJoin, BeamSpec, ColumnSpec, Just, LoadCase, MemberShape,
+        Model, RebarHook, RebarLayout, RebarPath, RebarSetSpec,
     };
+
+    fn load_case(m: &mut Model) {
+        m.add_load_case(&LoadCase {
+            id: 0,
+            name: "G".into(),
+            category: "permanent".into(),
+            self_weight: true,
+            note: String::new(),
+            locked: false,
+            src: "manual".into(),
+        })
+        .unwrap();
+    }
+
+    /// Structural members alone (an architectural model, imported framing) export no
+    /// analysis model; a load case makes it the project's own and it is written.
+    #[test]
+    fn analysis_model_only_with_analysis_input() {
+        let mut m = Model::open(":memory:").unwrap();
+        let l0 = m.add_level("L0", 0.0).unwrap();
+        let bt = m
+            .add_member_type("B", &MemberShape::Rect { b: 0.3, h: 0.5 }, "Concrete")
+            .unwrap();
+        m.add_beam(&BeamSpec {
+            level: l0,
+            member_type: bt,
+            a: (0.0, 0.0, 3.0),
+            b: (6.0, 0.0, 3.0),
+            bulge: 0.0,
+            yjust: Just::Center,
+            zjust: Just::Center,
+            rotation: 0.0,
+            start_ext: 0.0,
+            end_ext: 0.0,
+            join_start: BeamJoin::Auto,
+            join_end: BeamJoin::Auto,
+        })
+        .unwrap();
+        assert!(!m.analytical().unwrap().members.is_empty());
+        let ifc = export_ifc(&m).unwrap();
+        assert!(!ifc.contains("IFCSTRUCTURAL"), "no analysis input, no analysis model");
+        load_case(&mut m);
+        let ifc = export_ifc(&m).unwrap();
+        assert_eq!(ifc.matches("=IFCSTRUCTURALANALYSISMODEL(").count(), 1);
+    }
 
     #[test]
     fn bars_and_analysis_model_are_written() {
@@ -438,6 +486,7 @@ mod tests {
             mark: Some("S1".into()),
         }])
         .unwrap();
+        load_case(&mut m);
         let ifc = export_ifc(&m).unwrap();
         assert_eq!(ifc.matches("=IFCREINFORCINGBAR(").count(), 4);
         assert!(ifc.contains(".LIGATURE."));
