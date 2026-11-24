@@ -737,6 +737,7 @@ impl Model {
         prims.extend(self.ramps_plan(spec.level, spec.cut_height)?);
         prims.extend(self.components_plan(spec.level, crate::view_gfx::plan_lod(db, spec.level)?)?);
         prims.extend(crate::solids::plan_prims(db, spec.level, spec.cut_height)?);
+        prims.extend(self.mesh_plan_prims(spec.level, spec.cut_height)?);
         prims.extend(crate::annot_text::view_prims(
             self,
             crate::AnnoView::Plan(spec.level),

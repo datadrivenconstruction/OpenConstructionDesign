@@ -332,6 +332,45 @@ fn plan_and_section_of_a_mesh() {
     assert!(!pts.is_empty());
 }
 
+/// A sheet plan of an upper storey draws its meshes as the live plan does: a cut facade
+/// body, a cut glazing surface (open, no thickness) and a low body seen below the cut.
+#[test]
+fn plan_view_draws_meshes_of_the_storey() {
+    let (mut m, _) = model();
+    let l2 = m.add_level("L2", 3.0).unwrap();
+    let up = Affine::translate(v3(0.0, 0.0, 3.0));
+    let facade = add(&m, l2, "Facade", &prism(rect(0.0, 0.0, 4.0, 0.1), 3.0, &up));
+    let glass = Mesh {
+        positions: vec![
+            v3(0.0, 3.0, 3.2),
+            v3(2.0, 3.0, 3.2),
+            v3(2.0, 3.0, 5.5),
+            v3(0.0, 3.0, 5.5),
+        ],
+        triangles: vec![[0, 1, 2], [0, 2, 3]],
+        face_of: vec![0, 0],
+    };
+    let glass = add(&m, l2, "Glazing", &glass);
+    let low = add(&m, l2, "Generic", &prism(rect(5.0, 0.0, 6.0, 1.0), 0.4, &up));
+    let v = m
+        .plan_view(&crate::PlanViewSpec { level: l2, cut_height: 1.2, grids: vec![] })
+        .unwrap();
+    let cut = |id| {
+        v.prims.iter().any(|p| {
+            matches!(p, ViewPrim::SectionCut { table: "mesh", element, .. } if *element == id)
+        })
+    };
+    let edges = |id| {
+        v.prims
+            .iter()
+            .filter(|p| matches!(p, ViewPrim::Edge { table: "mesh", element, .. } if *element == id))
+            .count()
+    };
+    assert!(cut(facade), "facade section missing");
+    assert!(edges(glass) > 0, "glazing section line missing");
+    assert!(edges(low) >= 4, "outline of the body below the cut missing");
+}
+
 fn prop_of(m: &Model, kind: &str, id: i64, key: &str) -> Option<String> {
     m.sql()
         .query_row(

@@ -1163,6 +1163,48 @@ impl Model {
         Ok(out)
     }
 
+    /// Meshes as drawing primitives of a level plan (sheets, exports): the parts the live plan
+    /// shows, from [`Self::mesh_plan`]: section fills, open-surface and lower edges, outlines.
+    pub(crate) fn mesh_plan_prims(&self, level: i64, cut: f64) -> Result<Vec<ViewPrim>, Error> {
+        if !has_table(&self.db, "mesh")? {
+            return Ok(vec![]);
+        }
+        let mut out = vec![];
+        let p = |v: V2| (v.x, v.y);
+        for e in self.mesh_plan(level, cut)? {
+            let id = e.mesh;
+            let mut edge = |class: LineClass, a: V2, b: V2, out: &mut Vec<ViewPrim>| {
+                if (b - a).len() > TOL {
+                    out.push(ViewPrim::Edge { table: "mesh", element: id, class, a: p(a), b: p(b) });
+                }
+            };
+            for r in &e.cut {
+                out.push(ViewPrim::SectionCut {
+                    table: "mesh",
+                    element: id,
+                    material: String::new(),
+                    rings: r.outer.iter().copied().map(p).collect(),
+                    holes: r.holes.iter().map(|h| h.iter().copied().map(p).collect()).collect(),
+                });
+            }
+            for l in &e.open {
+                for w in l.windows(2) {
+                    edge(LineClass::Projection, w[0], w[1], &mut out);
+                }
+            }
+            for &(a, b) in &e.below {
+                edge(LineClass::Projection, a, b, &mut out);
+            }
+            let class = if e.overhead { LineClass::Overhead } else { LineClass::Projection };
+            let n = e.beyond.len();
+            let closed = if n >= 3 { n } else { n.saturating_sub(1) };
+            for k in 0..closed {
+                edge(class, e.beyond[k], e.beyond[(k + 1) % n], &mut out);
+            }
+        }
+        Ok(out)
+    }
+
     /// Mesh geometry (None if the row is missing or the BLOB is corrupt).
     fn mesh_geometry(&self, id: i64) -> Result<Option<Mesh>, Error> {
         let r = self
