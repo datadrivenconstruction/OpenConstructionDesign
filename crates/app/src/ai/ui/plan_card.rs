@@ -182,6 +182,32 @@ fn summary(
     for q in logic::headline_qty(&plan.qty, QTY_LINES) {
         kit::caption(ui, th, &qty_line(cat, q, units));
     }
+    if let Some(line) = cost_line(cx, plan, units) {
+        kit::caption(ui, th, &line);
+    }
+}
+
+/// `Area +12 m² · Cost +3 400 €`; the cost part needs a price table, the line a change.
+fn cost_line(cx: &Cx<'_>, plan: &PlanView, u: Units) -> Option<String> {
+    let prices = cx.ed.model.unit_prices().unwrap_or_default();
+    let (area, cost) = logic::area_cost_delta(&plan.qty, &prices);
+    let cost = cost.filter(|c| c.abs() >= 0.5);
+    let area = Some(area).filter(|a| a.abs() > 1e-9);
+    if area.is_none() && cost.is_none() {
+        return None;
+    }
+    let ru = cx.cat.lang == ddc_ui::Lang::Ru;
+    let sign = |d: f64| if d < 0.0 { "−" } else { "+" };
+    let mut parts = vec![];
+    if let Some(a) = area {
+        let v = format!("{}{}", sign(a), fmt_area_in_lang(a.abs(), u, ru));
+        parts.push(cx.cat.tf("ai.plan.delta_area", &[("v", &v)]));
+    }
+    if let Some(c) = cost {
+        let v = format!("{}{} €", sign(c), fmt_num_lang(c.abs(), 0, ru));
+        parts.push(cx.cat.tf("ai.plan.delta_cost", &[("v", &v)]));
+    }
+    Some(parts.join(" · "))
 }
 
 /// `Concrete +12.4 m³` (localized separators); totals read through their own names.
@@ -258,6 +284,9 @@ fn issues(
     for issue in sorted.iter().copied().filter(|i| i.level == IssueLevel::Block) {
         issue_line(ui, cx, issue, acts, hot);
     }
+    if let Some(sc) = plan.self_check {
+        kit::caption(ui, th, &logic::self_check_text(cat, sc));
+    }
     // warnings and footnotes fold behind one line; blockers above always stay in view
     let warns: Vec<&PlanIssue> = sorted
         .iter()
@@ -283,9 +312,6 @@ fn issues(
         if plan.truncated {
             kit::caption(ui, th, &cat.t("ai.plan.truncated"));
         }
-    }
-    if let Some(sc) = plan.self_check {
-        kit::caption(ui, th, &logic::self_check_text(cat, sc));
     }
     if logic::allow_large_offer(&plan.issues, &plan.main_issues, plan.allow_large) {
         let mut on = plan.allow_large;

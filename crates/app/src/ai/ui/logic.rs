@@ -498,6 +498,25 @@ pub fn headline_qty(qty: &[QtyDelta], max: usize) -> Vec<&QtyDelta> {
     v
 }
 
+/// Floor-area delta and, when a changed material has a price, the cost delta (volume delta x
+/// price per m3). `None` cost: nothing priced moved.
+pub fn area_cost_delta(
+    qty: &[QtyDelta],
+    prices: &std::collections::BTreeMap<String, f64>,
+) -> (f64, Option<f64>) {
+    let mut area = 0.0;
+    let mut cost: Option<f64> = None;
+    for q in qty {
+        let d = q.after - q.before;
+        if q.key == "slab_area" {
+            area += d;
+        } else if let Some(p) = q.key.strip_prefix("volume:").and_then(|m| prices.get(m)) {
+            *cost.get_or_insert(0.0) += d * p;
+        }
+    }
+    (area, cost)
+}
+
 /// One `Name: value` per line, the form the settings' header box uses. A line without a colon is
 /// skipped: half a header must not reach the wire.
 pub fn parse_headers(text: &str) -> Vec<(String, String)> {
@@ -916,6 +935,43 @@ pub fn conflict_text(raw: &str, lang: &str) -> String {
 mod tests {
     use super::*;
     use crate::ai::plan::PlanOp;
+
+    fn dq(key: &str, before: f64, after: f64) -> QtyDelta {
+        QtyDelta { key: key.into(), level: None, before, after }
+    }
+
+    #[test]
+    fn cost_none_without_price() {
+        let q = [dq("volume:Concrete", 0.0, 5.0)];
+        assert_eq!(area_cost_delta(&q, &Default::default()).1, None);
+    }
+
+    #[test]
+    fn cost_is_volume_delta_times_price() {
+        let q = [dq("volume:Concrete", 1.0, 3.0)];
+        let p = [("Concrete".to_string(), 100.0)].into();
+        assert_eq!(area_cost_delta(&q, &p).1, Some(200.0));
+    }
+
+    #[test]
+    fn cost_negative_delta() {
+        let q = [dq("volume:Concrete", 3.0, 1.0)];
+        let p = [("Concrete".to_string(), 100.0)].into();
+        assert_eq!(area_cost_delta(&q, &p).1, Some(-200.0));
+    }
+
+    #[test]
+    fn cost_mixed_keys_skip_unpriced_and_sum_area() {
+        let q = [
+            dq("volume:Concrete", 0.0, 1.0),
+            dq("volume:Glass", 0.0, 9.0),
+            dq("area:Concrete", 0.0, 7.0),
+            dq("slab_area", 10.0, 14.0),
+            dq("walls", 1.0, 2.0),
+        ];
+        let p = [("Concrete".to_string(), 50.0)].into();
+        assert_eq!(area_cost_delta(&q, &p), (4.0, Some(50.0)));
+    }
 
     fn item(id: u32, on: bool, deps: &[u32]) -> PlanItem {
         PlanItem {
