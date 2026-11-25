@@ -40,6 +40,10 @@ fn main() {
             );
         }
     }
+    if std::env::args().any(|a| a == "--metrics") {
+        println!("ducts {} plant {} fire {} water {} elec {}", p.hvac.ducts.len(), p.hvac.plant.len(), p.fire.runs.len(), p.services.water.len(), p.services.elec.len());
+        println!("metrics {:?}", p.metrics);
+    }
     let g = check_project(&s, &p);
     println!("failures {:?}\nwarnings {:?}", g.failures, g.warnings);
 }
