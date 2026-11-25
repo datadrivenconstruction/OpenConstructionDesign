@@ -438,10 +438,10 @@ fn follow_ups(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
         return;
     }
     ui.add_space(space::XS);
-    ui.horizontal_wrapped(|ui| {
-        ui.spacing_mut().item_spacing = egui::vec2(space::XS, space::XS);
-        for (key, mode) in keys {
-            let text = cat.t(key);
+    // one chip a row, as wide as its words: side by side a long one folds into a column
+    for (key, mode) in keys {
+        let text = cat.t(key);
+        ui.horizontal(|ui| {
             let r = Frame::new()
                 .fill(th.c("bg.sunken"))
                 .stroke(egui::Stroke::new(1.0, th.c("border.subtle")))
@@ -468,10 +468,11 @@ fn follow_ups(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
                 );
             }
             if r.clicked() {
-                acts.push(Action::Send(text, mode));
+                acts.push(Action::Send(text.clone(), mode));
             }
-        }
-    });
+        });
+        ui.add_space(space::XXS);
+    }
 }
 
 /// Keys of the muted examples shown under the connect card.
