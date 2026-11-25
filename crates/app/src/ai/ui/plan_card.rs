@@ -832,6 +832,7 @@ fn show_all_button(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action
 fn plan_card_footer(ui: &mut Ui, cx: &Cx<'_>, plan: &PlanView) {
     let (th, cat) = (cx.th, cx.cat);
     let (n, m) = review::accepted(&plan.items);
+    // the review keys are a tooltip: four lines of shortcuts under every draft read as noise
     kit::caption(
         ui,
         th,
@@ -839,8 +840,8 @@ fn plan_card_footer(ui: &mut Ui, cx: &Cx<'_>, plan: &PlanView) {
             "ai.plan.will_apply",
             &[("n", &n.to_string()), ("m", &m.to_string())],
         ),
-    );
-    kit::caption(ui, th, &cat.t("ai.plan.keys_hint"));
+    )
+    .on_hover_text(cat.t("ai.plan.keys_hint"));
 }
 
 /// Drafts of this many items or more ask before Reject.

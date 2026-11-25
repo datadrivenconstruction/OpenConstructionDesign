@@ -14,7 +14,7 @@
 //!   type TEXT         text into the focused field key enter|escape|tab|backspace
 //!   fold SPEC         as `--fold`                 settings PAGE   as `--settings-page`
 //!   ai-mode chat|build|review                     select-room NUMBER
-//!   ai-demo chat|build  a scripted conversation in the AI panel (no network)
+//!   ai-demo chat|build|empty  a scripted conversation in the AI panel (no network)
 //!   frames N          passes before each shot     shot out.png    write the frame
 use crate::shell::EditorApp;
 use crate::RenderState;

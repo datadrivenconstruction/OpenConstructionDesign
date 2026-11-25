@@ -19,7 +19,8 @@ use egui::{self, Frame, Key, KeyboardShortcut, Margin, Modifiers, RichText, Text
 const COMPOSER_ROWS: f32 = 6.0;
 const BUBBLE_SHARE: f32 = 0.85;
 const COMPOSER_MIN_ROWS: usize = 2;
-/// Width kept free for the Send / Stop button next to the key hint, in control rows.
+/// Most width Send may take beside the attach and reference icons, in control rows.
+#[cfg(test)]
 const SEND_RESERVE_ROWS: f32 = 4.0;
 
 fn composer_margin() -> Margin {
@@ -229,7 +230,7 @@ pub(super) fn dialog(
                         super::attach_ui::req_card(ui, st, cx, acts);
                         ui.add_space(space::XS);
                     }
-                    composer(ui, st, cx, f, acts);
+                    composer(ui, st, cx, icons, f, acts);
                     status_line(ui, st, cx, state, f, acts);
                 }
             });
@@ -336,7 +337,7 @@ fn body(
     if st.log.is_empty() && f.plan.is_none() && state == PanelState::Idle {
         suggestions(ui, st, cx, icons, acts);
     }
-    log(ui, st, cx, f.busy || st.starting, acts, hot);
+    log(ui, st, cx, icons, f.busy || st.starting, acts, hot);
     let mut card_top = None;
     match state {
         PanelState::Streaming => kit::loading_state(ui, th, &cat.t("ai.state.streaming")),
@@ -512,9 +513,10 @@ fn suggestions(
     acts: &mut Vec<Action>,
 ) {
     let (th, cat) = (cx.th, cx.cat);
-    kit::empty_state(
+    widgets::empty_state(
         ui,
         th,
+        Some((&mut *icons, "spark")),
         &cat.t("ai.state.idle"),
         &cat.t("ai.state.idle.hint"),
         None,
@@ -667,6 +669,7 @@ fn log(
     ui: &mut Ui,
     st: &PanelUi,
     cx: &Cx<'_>,
+    icons: &mut IconCache,
     busy: bool,
     acts: &mut Vec<Action>,
     hot: &mut Option<Vec<ElKey>>,
@@ -690,6 +693,10 @@ fn log(
                 super::recall::actions(ui, cx, text, i, busy, shown);
             }
             Entry::Assistant(text) => {
+                // a reply after the person's words is signed once; follow-ups in a run are not
+                if i == 0 || matches!(items[i - 1], Entry::User(_)) {
+                    author(ui, cx, icons);
+                }
                 super::md::answer(ui, cx, text, i);
                 if let Some(r) = super::md::take_pill_click(ui.ctx()) {
                     acts.extend(super::md::pill_action(&r));
@@ -861,9 +868,36 @@ fn log(
             }
             Entry::Req { offer, done } => super::requirements::card(ui, cx, offer, *done, i, acts),
         }
-        ui.add_space(space::SM);
+        // a turn ends with a wider gap than the parts inside it
+        // the person's copy/edit row already spaces their bubble from the reply
+        let gap = match (&items[i], items.get(i + 1)) {
+            (Entry::User(_), _) => space::XS,
+            (_, Some(Entry::User(_))) => space::LG,
+            _ => space::SM,
+        };
+        ui.add_space(gap);
         i += 1;
     }
+}
+
+/// The assistant's name over its reply: the spark in the accent, then the name in a caption.
+fn author(ui: &mut Ui, cx: &Cx<'_>, icons: &mut IconCache) {
+    let th = cx.th;
+    ui.horizontal(|ui| {
+        ui.spacing_mut().item_spacing.x = space::XS;
+        let s = icon_size::SM;
+        let (rect, _) = ui.allocate_exact_size(egui::vec2(s, s), egui::Sense::hover());
+        icons.paint(ui, "spark", s as u32, rect, th.c("accent"));
+        ui.add(
+            egui::Label::new(
+                RichText::new(cx.cat.t("ai.panel.title"))
+                    .font(th.font(Role::Caption))
+                    .color(th.c("text.secondary")),
+            )
+            .selectable(false),
+        );
+    });
+    ui.add_space(space::XXS);
 }
 
 /// Own message: 12 px corners, the one next to the author (bottom right) 4.
@@ -883,7 +917,7 @@ fn bubble(ui: &mut Ui, cx: &Cx<'_>, text: &str) {
         Frame::new()
             .fill(th.c("bg.selected"))
             .corner_radius(bubble_radius(th))
-            .inner_margin(Margin::same(space::SM as i8))
+            .inner_margin(Margin::symmetric(space::MD as i8, space::SM as i8))
             .show(ui, |ui| {
                 ui.set_max_width(max);
                 ui.with_layout(egui::Layout::top_down(ddc_ui::i18n::text_align()), |ui| {
@@ -921,7 +955,14 @@ fn tools(ui: &mut Ui, cx: &Cx<'_>, run: &[Entry], at: usize) {
     super::steps::card(ui, cx, &run, at);
 }
 
-fn composer(ui: &mut Ui, st: &mut PanelUi, cx: &Cx<'_>, f: &Facts, acts: &mut Vec<Action>) {
+fn composer(
+    ui: &mut Ui,
+    st: &mut PanelUi,
+    cx: &Cx<'_>,
+    icons: &mut IconCache,
+    f: &Facts,
+    acts: &mut Vec<Action>,
+) {
     let (th, cat) = (cx.th, cx.cat);
     let id = egui::Id::new("ddc.ai.composer");
     // nothing to answer with: the field stays in place but cannot take input or send
@@ -952,6 +993,16 @@ fn composer(ui: &mut Ui, st: &mut PanelUi, cx: &Cx<'_>, f: &Facts, acts: &mut Ve
     } else {
         "ai.composer.hint_read"
     });
+    // one surface holds the field and its actions; the ring takes the accent while typing
+    let ring = if focused && !off { th.c("accent") } else { th.c("border.control") };
+    let surface = Frame::new()
+        .fill(th.c("bg.input"))
+        .stroke(egui::Stroke::new(if focused && !off { 1.5 } else { 1.0 }, ring))
+        .corner_radius(th.radius("lg"))
+        // a thin top edge keeps the depth chip close to the text it sets
+        .inner_margin(Margin { top: space::XXS as i8, ..Margin::same(space::XS as i8) });
+    let mut send = false;
+    surface.show(ui, |ui| {
     let field = egui::ScrollArea::vertical()
         .id_salt("ddc.ai.composer_scroll")
         .max_height(input_max_height(th))
@@ -964,6 +1015,7 @@ fn composer(ui: &mut Ui, st: &mut PanelUi, cx: &Cx<'_>, f: &Facts, acts: &mut Ve
                     .desired_rows(COMPOSER_MIN_ROWS)
                     .desired_width(f32::INFINITY)
                     .margin(composer_margin())
+                    .frame(false)
                     .hint_text(RichText::new(hint).color(th.c("text.secondary")))
                     .font(th.font(Role::Body))
                     .return_key(Some(KeyboardShortcut::new(Modifiers::SHIFT, Key::Enter))),
@@ -992,23 +1044,16 @@ fn composer(ui: &mut Ui, st: &mut PanelUi, cx: &Cx<'_>, f: &Facts, acts: &mut Ve
     } else {
         cat.t("ai.composer.send_tip")
     };
-    let mut send = enter && can_send;
-    // one row right under the field: the key hint on the left, Send (or Stop) on the right
-    ui.add_space(space::XS);
+    send = enter && can_send;
+    // the toolbar inside the surface: attach and reference on the left, Send (or Stop) on the right
     ui.horizontal(|ui| {
         if !f.busy && !st.starting {
-            let reserve = th.d().row * SEND_RESERVE_ROWS + ui.spacing().item_spacing.x;
-            ui.scope(|ui| {
-                ui.set_max_width((ui.available_width() - reserve).max(0.0));
-                ui.add(
-                    egui::Label::new(
-                        RichText::new(cat.t("ai.composer.keys_hint"))
-                            .font(th.font(Role::Caption))
-                            .color(th.c("text.secondary")),
-                    )
-                    .wrap(),
-                );
-            });
+            if widgets::icon_button(ui, icons, th, "plus", false, &cat.t("ai.att.attach_tip")).clicked() {
+                acts.push(Action::AttachFiles);
+            }
+            if widgets::icon_button(ui, icons, th, "reference", false, &cat.t("ai.ref.attach_tip")).clicked() {
+                acts.push(Action::AttachReference);
+            }
         }
         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
         if f.busy || st.starting {
@@ -1040,18 +1085,25 @@ fn composer(ui: &mut Ui, st: &mut PanelUi, cx: &Cx<'_>, f: &Facts, acts: &mut Ve
         }
         });
     });
-    if !f.busy && !st.starting {
-        // its own row: beside Send it would squeeze the key hint in a narrow panel
-        if Button::quiet(&cat.t("ai.ref.attach"))
-            .small()
-            .tooltip(&cat.t("ai.ref.attach_tip"), "")
-            .show(ui, th)
-            .clicked()
-        {
-            acts.push(Action::AttachReference);
-        }
+    });
+    if off {
+        return;
     }
     if !f.busy && !st.starting {
+        // the keys in one quiet line under the surface, where the eye leaves the field
+        ui.add_space(space::XXS);
+        ui.add(
+            egui::Label::new(
+                RichText::new(cat.t("ai.composer.keys_hint"))
+                    .font(th.font(Role::Caption))
+                    .color(th.c("text.secondary")),
+            )
+            .selectable(false)
+            .wrap(),
+        );
+        let context = budget::context_of(st);
+        let chips = budget::live_chips(st, cx);
+        let bud = budget::measure(&st.input, &chips, context);
         let way = budget::way_out(&st.input, &chips, context);
         if let Some(w) = budget::row(ui, th, cat, &bud, way) {
             budget::apply(w, st, &chips, context);
@@ -1133,7 +1185,10 @@ fn status_line(
                 acts.push(Action::Cancel);
             }
         } else {
-            kit::caption(ui, th, &cat.t(logic::state_key(state)));
+            // the greeting is the empty panel's own title; idle, the line stays quiet
+            if state != PanelState::Idle {
+                kit::caption(ui, th, &cat.t(logic::state_key(state)));
+            }
             if row.incomplete {
                 kit::caption(ui, th, &cat.t("ai.stream.incomplete"));
             }
@@ -1290,7 +1345,7 @@ mod tests {
                         let w = ctx.fonts(|f| {
                             f.layout_no_wrap(t, th.font(Role::Body), egui::Color32::WHITE).size().x
                         });
-                        // Reference has its own row; Stop never sits beside Send
+                        // Reference is an icon beside it; Stop never sits beside Send
                         if k == "ai.common.send" {
                             total += w + 2.0 * space::MD;
                         }

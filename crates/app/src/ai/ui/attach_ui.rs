@@ -109,15 +109,11 @@ pub fn chips(ui: &mut Ui, st: &mut PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>)
     if !st.attach.dropped.is_empty() {
         acts.push(Action::AttachPaths(std::mem::take(&mut st.attach.dropped)));
     }
+    // the attach action is the composer's plus; this row is only the files already attached
+    if st.attach.files.is_empty() {
+        return;
+    }
     ui.horizontal_wrapped(|ui| {
-        if Button::quiet(&cat.t("ai.att.attach"))
-            .small()
-            .tooltip(&cat.t("ai.att.attach_tip"), "")
-            .show(ui, th)
-            .clicked()
-        {
-            acts.push(Action::AttachFiles);
-        }
         for f in &st.attach.files {
             let mut text = chip_text(cat, f);
             if !f.shared {

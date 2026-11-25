@@ -15,7 +15,8 @@ use crate::shell::EditorApp;
 
 const WAIT: Duration = Duration::from_secs(120);
 
-/// The turns of one demo: `chat` answers in words, `build` drafts a house and explains it.
+/// The turns of one demo: `chat` answers in words, `build` drafts a house and explains it;
+/// `empty` (in `seed`) is a connected panel before the first request.
 fn turns(which: &str) -> Option<(&'static str, Vec<Vec<Script>>, ddc_ai::Mode)> {
     let text = |s: &str| vec![Script::Text(s.to_string())];
     match which {
@@ -48,7 +49,17 @@ fn turns(which: &str) -> Option<(&'static str, Vec<Vec<Script>>, ddc_ai::Mode)> 
 
 /// Sends the demo prompt through the panel and waits for the reply; `Err` names what failed.
 pub fn seed(app: &mut EditorApp, which: &str) -> Result<(), String> {
-    let (prompt, script, mode) = turns(which).ok_or("ai-demo chat|build")?;
+    if which == "empty" {
+        app.prefs.ai_panel_open = true;
+        with(|st| {
+            st.init(app);
+            st.watch_project(app);
+            st.open = true;
+            st.profiles = vec![fake::profile()];
+        });
+        return Ok(());
+    }
+    let (prompt, script, mode) = turns(which).ok_or("ai-demo chat|build|empty")?;
     let cfg = SessionCfg {
         provider: ScriptedProvider::new(script),
         profile: fake::profile(),
@@ -67,7 +78,11 @@ pub fn seed(app: &mut EditorApp, which: &str) -> Result<(), String> {
     if !s.wait_idle(&mut app.ed, WAIT) {
         return Err("the demo session did not open".into());
     }
+    app.prefs.ai_panel_open = true;
     with(|st| {
+        // the panel's own first-frame setup runs now, or it would reload the log over the demo
+        st.init(app);
+        st.watch_project(app);
         st.open = true;
         st.profiles = vec![fake::profile()];
         st.session_profile = fake::profile().id;

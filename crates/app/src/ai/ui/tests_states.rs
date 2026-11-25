@@ -682,7 +682,7 @@ fn not_connected_tall_panel_ru() {
     not_connected_tall_panel(ddc_ui::Lang::Ru);
 }
 
-/// Connected and idle: Send sits right under the input with the key hint on the same row, and
+/// Connected and idle: Send sits right under the input, the key hint under both, and
 /// the input grows with the text up to the token maximum, then scrolls.
 fn connected_composer(lang: ddc_ui::Lang) {
     let ed = Editor::new_in_memory().unwrap();
@@ -717,9 +717,9 @@ fn connected_composer(lang: ddc_ui::Lang) {
                     .iter()
                     .find(|(t, _, _)| *t == keys_hint)
                     .unwrap_or_else(|| panic!("{tag}: no key hint"));
-                let mid = (btn.top + btn.bottom) / 2.0;
-                assert!((hint.center().y - mid).abs() <= 2.0, "{tag}: hint and Send not aligned");
-                assert!(hint.right() <= btn.right, "{tag}: hint beyond Send");
+                assert!(hint.top() >= btn.bottom - EPS, "{tag}: hint not under Send");
+                assert!(hint.top() - btn.bottom <= space::LG, "{tag}: hint floats under the composer");
+                assert!(hint.right() <= w + EPS, "{tag}: hint past the panel edge");
                 heights.push(field.height());
                 assert!(
                     field.height() <= chat::input_max_height(&th) + EPS,
