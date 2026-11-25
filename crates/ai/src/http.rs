@@ -11,10 +11,10 @@ use crate::provider::{
 };
 use crate::secret::Secret;
 use crate::sse::{SseEvent, SseParser};
+use ddc_net::{Body, NetError, Policy, Request, Response, Transport};
 use serde_json::Value as J;
 use std::collections::HashMap;
 use std::io::{self, Read};
-use std::net::{SocketAddr, ToSocketAddrs};
 use std::sync::mpsc::{self, RecvTimeoutError, SyncSender};
 use std::sync::Arc;
 use std::thread;
@@ -79,7 +79,7 @@ fn cap_chars(s: &str, max: usize) -> String {
 }
 
 struct HttpCfg {
-    agent: ureq::Agent,
+    agent: Arc<dyn Transport>,
     base: String,
     auth: AuthKind,
     key: Option<Secret>,
@@ -90,16 +90,16 @@ struct HttpCfg {
 }
 
 impl HttpCfg {
-    fn authed(&self, mut r: ureq::Request) -> ureq::Request {
+    fn authed(&self, mut r: Request) -> Request {
         for (k, v) in &self.headers {
-            r = r.set(k, v);
+            r = r.header(k, v);
         }
         if let Some(key) = &self.key {
             match &self.auth {
                 AuthKind::None => {}
-                AuthKind::Bearer => r = r.set("Authorization", &format!("Bearer {}", key.expose())),
-                AuthKind::Header { name } => r = r.set(name, key.expose()),
-                AuthKind::Query { name } => r = r.query(name, key.expose()),
+                AuthKind::Bearer => r = r.header("Authorization", &format!("Bearer {}", key.expose())),
+                AuthKind::Header { name } => r = r.header(name, key.expose()),
+                AuthKind::Query { name } => r.url = with_query(&r.url, name, key.expose()),
             }
         }
         r
@@ -136,7 +136,7 @@ impl HttpCfg {
         }
     }
 
-    fn status_error(&self, code: u16, resp: ureq::Response) -> ProviderError {
+    fn status_error(&self, code: u16, resp: Response) -> ProviderError {
         let retry_after_s = resp
             .header("retry-after")
             .and_then(|h| h.trim().parse::<u32>().ok());
@@ -164,11 +164,8 @@ impl HttpCfg {
         }
     }
 
-    fn call_error(&self, e: ureq::Error) -> ProviderError {
-        match e {
-            ureq::Error::Status(code, resp) => self.status_error(code, resp),
-            other => ProviderError::Network(self.scrub(&other.to_string())),
-        }
+    fn call_error(&self, e: NetError) -> ProviderError {
+        ProviderError::Network(self.scrub(&e.0))
     }
 }
 
@@ -195,7 +192,7 @@ impl HttpProvider {
         let sends_secret = (key.is_some() && p.auth != AuthKind::None)
             || !header_secrets.is_empty()
             || crate::profile::split_url_secret(&base).is_some();
-        let agent = build_agent(is_local_url(&base), sends_secret)?;
+        let agent = build_agent(is_local_url(&base), sends_secret, None)?;
         let cfg = HttpCfg {
             agent,
             base,
@@ -299,13 +296,11 @@ impl HttpProvider {
     fn list_models_inner(&self) -> Result<Vec<String>, ProviderError> {
         let url = format!("{}/models", self.cfg.base);
         self.cfg.guard.check_send(&url, self.cfg.sends_secret)?;
-        // No cancel path here, so the whole call gets one short deadline.
-        let req = self
-            .cfg
-            .authed(self.cfg.agent.get(&url))
-            .timeout(LIST_MODELS_TIMEOUT);
-        let resp = req.call().map_err(|e| self.cfg.call_error(e))?;
-        let status = resp.status();
+        // No cancel path here, so the call gets its own short read deadline.
+        let short = build_agent(is_local_url(&self.cfg.base), self.cfg.sends_secret, Some(LIST_MODELS_TIMEOUT))?;
+        let req = self.cfg.authed(Request::new("GET", url));
+        let resp = short.send(req).map_err(|e| self.cfg.call_error(e))?;
+        let status = resp.status;
         if !(200..300).contains(&status) {
             return Err(self.cfg.status_error(status, resp));
         }
@@ -350,42 +345,44 @@ fn cut_short(ev: &SseEvent, e: ProviderError) -> ProviderError {
 /// TLS and roots come from the OS (corporate networks). A local address never goes
 /// through a proxy: that would send local traffic off the machine. `https_only` repeats
 /// the guard's rule for keys, so one forgotten check cannot leak one.
-fn build_agent(local: bool, sends_secret: bool) -> Result<ureq::Agent, ProviderError> {
-    let tls =
-        native_tls::TlsConnector::new().map_err(|e| ProviderError::Network(format!("tls: {e}")))?;
-    let builder = ureq::AgentBuilder::new()
-        .tls_connector(Arc::new(tls))
-        .redirects(0)
-        .timeout_connect(CONNECT_TIMEOUT)
-        .timeout_read(if local {
+fn build_agent(local: bool, sends_secret: bool, read: Option<Duration>) -> Result<Arc<dyn Transport>, ProviderError> {
+    let read = read.unwrap_or_else(|| {
+        if local {
             crate::limits::HTTP_READ_TIMEOUT_LOCAL.get_dur()
         } else {
             crate::limits::HTTP_READ_TIMEOUT.get_dur()
-        })
-        .timeout_write(WRITE_TIMEOUT)
-        .try_proxy_from_env(!local)
-        .https_only(sends_secret && !local);
-    Ok(if local {
-        builder.resolver(loopback_only).build()
-    } else {
-        builder.build()
-    })
+        }
+    });
+    // `localhost` passes as local by name; the transport resolves it to this machine only.
+    let p = Policy {
+        https_only: sends_secret && !local,
+        loopback_only: local,
+        redirects: 0,
+        connect_timeout: CONNECT_TIMEOUT,
+        read_timeout: read,
+        write_timeout: WRITE_TIMEOUT,
+    };
+    ddc_net::transport(&p).map_err(|e| ProviderError::Network(e.0))
 }
 
-/// `localhost` passes as local by name, and the OS decides what it means: a hosts file
-/// or a resolver must not be able to turn it into an outside address.
-fn loopback_only(netloc: &str) -> io::Result<Vec<SocketAddr>> {
-    let addrs: Vec<SocketAddr> = netloc
-        .to_socket_addrs()?
-        .filter(|a| a.ip().is_loopback())
-        .collect();
-    if addrs.is_empty() {
-        return Err(io::Error::new(
-            io::ErrorKind::AddrNotAvailable,
-            "local address is not on this machine",
-        ));
+/// `url` with `name=value` added to its query, both percent-encoded.
+fn with_query(url: &str, name: &str, value: &str) -> String {
+    fn enc(s: &str) -> String {
+        s.bytes()
+            .map(|b| match b {
+                b'A'..=b'Z' | b'a'..=b'z' | b'0'..=b'9' | b'-' | b'.' | b'_' | b'~' => (b as char).to_string(),
+                _ => format!("%{b:02X}"),
+            })
+            .collect()
     }
-    Ok(addrs)
+    let (head, frag) = url.split_once('#').map_or((url, None), |(h, f)| (h, Some(f)));
+    let sep = if head.contains('?') { '&' } else { '?' };
+    let mut out = format!("{head}{sep}{}={}", enc(name), enc(value));
+    if let Some(f) = frag {
+        out.push('#');
+        out.push_str(f);
+    }
+    out
 }
 
 enum Chunk {
@@ -398,13 +395,13 @@ enum Chunk {
 
 /// The HTTP client reads this only after connecting and writing the headers, which is
 /// what makes `Chunk::Started` true. If the caller has cancelled by then, the body stays.
-struct BodyReader<'a> {
-    data: &'a [u8],
-    tx: &'a SyncSender<Chunk>,
+struct BodyReader {
+    data: io::Cursor<Vec<u8>>,
+    tx: SyncSender<Chunk>,
     started: bool,
 }
 
-impl Read for BodyReader<'_> {
+impl Read for BodyReader {
     fn read(&mut self, buf: &mut [u8]) -> io::Result<usize> {
         if !self.started {
             self.started = true;
@@ -417,17 +414,18 @@ impl Read for BodyReader<'_> {
 }
 
 fn read_stream(cfg: &HttpCfg, url: &str, body: &str, tx: &SyncSender<Chunk>) {
-    // An explicit length keeps the body identical to `send_string`: not chunked.
-    let req = cfg
-        .authed(cfg.agent.post(url))
-        .set("Content-Type", "application/json")
-        .set("Accept", "text/event-stream")
-        .set("Content-Length", &body.len().to_string());
-    let resp = match req.send(BodyReader {
-        data: body.as_bytes(),
-        tx,
+    // An explicit length keeps the body identical to a plain send: not chunked.
+    let reader = BodyReader {
+        data: io::Cursor::new(body.as_bytes().to_vec()),
+        tx: tx.clone(),
         started: false,
-    }) {
+    };
+    let req = cfg
+        .authed(Request::new("POST", url))
+        .header("Content-Type", "application/json")
+        .header("Accept", "text/event-stream")
+        .body(Body::Reader(Box::new(reader), body.len() as u64));
+    let resp = match cfg.agent.send(req) {
         Ok(r) => r,
         Err(e) => {
             let _ = tx.send(Chunk::Fail(cfg.call_error(e)));
@@ -435,7 +433,7 @@ fn read_stream(cfg: &HttpCfg, url: &str, body: &str, tx: &SyncSender<Chunk>) {
         }
     };
     // Redirects are off, so a 3xx arrives here as a plain response.
-    let status = resp.status();
+    let status = resp.status;
     if !(200..300).contains(&status) {
         let _ = tx.send(Chunk::Fail(cfg.status_error(status, resp)));
         return;
@@ -771,7 +769,7 @@ mod tests {
     #[test]
     fn a_query_key_in_an_error_address_is_masked() {
         let cfg = HttpCfg {
-            agent: ureq::AgentBuilder::new().build(),
+            agent: build_agent(false, true, None).unwrap(),
             base: "https://h.test/v1".into(),
             auth: AuthKind::Query { name: "x-pass".into() },
             key: Some(Secret::new("fake/SECRET+r107=")),
@@ -795,7 +793,7 @@ mod tests {
         p.base_url = "https://h.test/v1?api_key=fake-SECRET-r107c".into();
         let key = crate::profile::lift_url_secret(&mut p);
         let cfg = HttpCfg {
-            agent: ureq::AgentBuilder::new().build(),
+            agent: build_agent(false, true, None).unwrap(),
             base: p.base_url.clone(),
             auth: p.auth.clone(),
             key,
@@ -804,14 +802,13 @@ mod tests {
             sends_secret: true,
             guard: EgressGuard::default(),
         };
-        let r = cfg.authed(cfg.agent.get(&format!("{}/models", cfg.base)));
-        assert!(r.header("Authorization").is_none());
-        for n in r.header_names() {
-            assert!(!r.header(&n).unwrap_or("").contains("SECRET"), "{n}");
+        let r = cfg.authed(Request::new("GET", format!("{}/models", cfg.base)));
+        assert!(!r.headers.iter().any(|(k, _)| k.eq_ignore_ascii_case("Authorization")));
+        for (n, v) in &r.headers {
+            assert!(!v.contains("SECRET"), "{n}");
         }
-        let u = r.request_url().unwrap();
-        assert_eq!(u.query_pairs(), vec![("api_key", "fake-SECRET-r107c")]);
-        let e = cfg.scrub(&format!("{}: refused", r.url()));
+        assert_eq!(r.url.split_once('?').map(|(_, q)| q), Some("api_key=fake-SECRET-r107c"));
+        let e = cfg.scrub(&format!("{}: refused", r.url));
         assert!(!e.contains("SECRET"), "{e}");
     }
 
@@ -835,8 +832,8 @@ mod tests {
         let (tx, rx) = mpsc::sync_channel::<Chunk>(4);
         let mut buf = [0u8; 8];
         let mut body = BodyReader {
-            data: b"abc",
-            tx: &tx,
+            data: io::Cursor::new(b"abc".to_vec()),
+            tx: tx.clone(),
             started: false,
         };
         assert_eq!(body.read(&mut buf).unwrap(), 3);
@@ -845,8 +842,8 @@ mod tests {
         assert!(rx.try_recv().is_err());
         drop(rx);
         let mut body = BodyReader {
-            data: b"abc",
-            tx: &tx,
+            data: io::Cursor::new(b"abc".to_vec()),
+            tx: tx.clone(),
             started: false,
         };
         assert!(body.read(&mut buf).is_err());
@@ -923,19 +920,17 @@ mod tests {
 
     #[test]
     fn the_agent_refuses_plain_http_on_its_own_when_it_holds_a_key() {
-        let e = build_agent(false, true)
+        let e = build_agent(false, true, None)
             .unwrap()
-            .get("http://127.0.0.1:9/")
-            .call()
-            .unwrap_err();
-        assert!(
-            matches!(e.kind(), ureq::ErrorKind::InsecureRequestHttpsOnly),
-            "{e}"
-        );
+            .send(Request::new("GET", "http://127.0.0.1:9/"))
+            .err()
+            .expect("refused");
+        assert!(e.0.to_ascii_lowercase().contains("https only"), "{e}");
     }
 
     #[test]
     fn local_names_resolve_only_to_this_machine() {
+        use ddc_net::native::loopback_only;
         assert!(loopback_only("127.0.0.1:80")
             .unwrap()
             .iter()

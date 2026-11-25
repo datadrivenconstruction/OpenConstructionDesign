@@ -15,13 +15,21 @@ ddc-gen = { path = "../gen" }
 ddc-geom = { path = "../geom" }
 ddc-model = { path = "../model" }
 ddc-ops = { path = "../ops" }
-ddc-script = { path = "../script" }
+# recipes only: the interpreter comes with the editor
+ddc-script = { path = "../script", default-features = false }
 getrandom.workspace = true
-native-tls.workspace = true
+ddc-net = { path = "../net" }
 serde.workspace = true
 serde_json.workspace = true
 thiserror.workspace = true
+
+# the stdio bridge for outside assistants runs on the desktop only
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 ureq.workspace = true
+
+# the browser's random source
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+getrandom = { workspace = true, features = ["js"] }
 
 # Other platforms have no vault integration: keys stay in MemoryStore for the session.
 [target.'cfg(any(windows, target_os = "macos"))'.dependencies]

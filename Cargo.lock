@@ -1067,11 +1067,11 @@ dependencies = [
  "ddc-gen",
  "ddc-geom",
  "ddc-model",
+ "ddc-net",
  "ddc-ops",
  "ddc-script",
  "getrandom 0.2.17",
  "keyring",
- "native-tls",
  "serde",
  "serde_json",
  "thiserror 1.0.69",
@@ -1217,12 +1217,11 @@ name = "ddc-link"
 version = "1.2.0"
 dependencies = [
  "ddc-io",
+ "ddc-net",
  "keyring",
- "native-tls",
  "serde",
  "serde_json",
  "sha2",
- "ureq",
  "web-time",
  "zip",
 ]
@@ -1242,6 +1241,17 @@ dependencies = [
  "sha2",
  "thiserror 1.0.69",
  "web-time",
+]
+
+[[package]]
+name = "ddc-net"
+version = "1.2.0"
+dependencies = [
+ "js-sys",
+ "native-tls",
+ "ureq",
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]
@@ -1875,8 +1885,10 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ff2abc00be7fca6ebc474524697ae276ad847ad0a6b3faa4bcb027e9a4614ad0"
 dependencies = [
  "cfg-if",
+ "js-sys",
  "libc",
  "wasi",
+ "wasm-bindgen",
 ]
 
 [[package]]

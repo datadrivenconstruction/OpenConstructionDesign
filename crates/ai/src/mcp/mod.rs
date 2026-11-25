@@ -6,6 +6,7 @@
 mod auth;
 mod rpc;
 mod server;
+#[cfg(not(target_arch = "wasm32"))]
 pub mod stdio;
 pub mod test_client;
 pub mod tools;

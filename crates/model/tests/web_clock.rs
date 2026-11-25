@@ -8,7 +8,7 @@ use std::path::Path;
 
 const WEB_CRATES: &[&str] = &[
     "model", "geom", "solver", "ops", "io", "render", "app", "ui", "ai", "gen", "cli", "link",
-    "script", "bridge-proto",
+    "script", "bridge-proto", "net",
 ];
 const CLOCK: &[&str] = &["Instant", "SystemTime", "UNIX_EPOCH"];
 

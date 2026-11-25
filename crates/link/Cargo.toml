@@ -10,10 +10,9 @@ description = "Client of the ERP link (contract ddc-erp-link/1): link file, toke
 
 [dependencies]
 web-time.workspace = true
-native-tls.workspace = true
+ddc-net = { path = "../net" }
 serde.workspace = true
 serde_json.workspace = true
-ureq.workspace = true
 
 # Other platforms have no vault integration: the token then lives for the session only.
 [target.'cfg(any(windows, target_os = "macos"))'.dependencies]

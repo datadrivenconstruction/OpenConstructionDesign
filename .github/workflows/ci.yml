@@ -55,7 +55,8 @@ jobs:
           - {crate: ddc-calc}
           - {crate: ddc-cli}
           - {crate: ddc-script}
-          - {crate: ddc-link}
+          - {crate: ddc-link, features: mock-erp}
+          - {crate: ddc-net}
           - {crate: bigfile-bench}
           - {crate: ddc-app, shard: 1/10}
           - {crate: ddc-app, shard: 2/10}

@@ -5,11 +5,11 @@
 
 use std::fmt;
 use std::io::Read;
-use std::net::{SocketAddr, ToSocketAddrs};
 use std::path::Path;
 use std::sync::{Arc, Mutex};
 use std::time::Duration;
 
+use ddc_net::{Body, NetError, Policy, Request, Response, Transport};
 use serde::de::DeserializeOwned;
 use serde::Deserialize;
 use serde_json::{json, Value};
@@ -107,7 +107,7 @@ enum Call {
 pub struct Client {
     base: String,
     erp: ErpUrl,
-    agent: ureq::Agent,
+    net: Arc<dyn Transport>,
     token: Option<Secret>,
     stopped: Arc<Mutex<Option<Vec<u32>>>>,
 }
@@ -122,27 +122,18 @@ impl fmt::Debug for Client {
     }
 }
 
-fn agent(erp: &ErpUrl, read: Duration) -> Result<ureq::Agent, LinkError> {
-    let tls = native_tls::TlsConnector::new().map_err(|e| LinkError::Network(format!("tls: {e}")))?;
-    // No redirects: a bearer token must not follow one to another host. A loopback ERP is
-    // reached directly and only on this machine, never through a proxy.
-    let b = ureq::AgentBuilder::new()
-        .tls_connector(Arc::new(tls))
-        .redirects(0)
-        .timeout_connect(CONNECT_TIMEOUT)
-        .timeout_read(read)
-        .timeout_write(WRITE_TIMEOUT)
-        .try_proxy_from_env(!erp.loopback)
-        .https_only(!erp.loopback);
-    Ok(if erp.loopback { b.resolver(loopback_only).build() } else { b.build() })
-}
-
-fn loopback_only(netloc: &str) -> std::io::Result<Vec<SocketAddr>> {
-    let v: Vec<SocketAddr> = netloc.to_socket_addrs()?.filter(|a| a.ip().is_loopback()).collect();
-    if v.is_empty() {
-        return Err(std::io::Error::new(std::io::ErrorKind::AddrNotAvailable, "the ERP address does not resolve to this computer"));
-    }
-    Ok(v)
+/// No redirects: a bearer token must not follow one to another host. A loopback ERP is reached
+/// directly and only on this machine, never through a proxy.
+fn transport(erp: &ErpUrl, read: Duration) -> Result<Arc<dyn Transport>, LinkError> {
+    let p = Policy {
+        https_only: !erp.loopback,
+        loopback_only: erp.loopback,
+        redirects: 0,
+        connect_timeout: CONNECT_TIMEOUT,
+        read_timeout: read,
+        write_timeout: WRITE_TIMEOUT,
+    };
+    ddc_net::transport(&p).map_err(|e| LinkError::Network(e.0))
 }
 
 fn versions_header() -> String {
@@ -198,7 +189,7 @@ fn lock_lost(call: Call, d: &Value, text: &str) -> bool {
     text.eq_ignore_ascii_case("lock lost") || (call == Call::Upload && text.starts_with("Take the project lock"))
 }
 
-fn read_limited(r: ureq::Response, max: u64) -> Result<Vec<u8>, LinkError> {
+fn read_limited(r: Response, max: u64) -> Result<Vec<u8>, LinkError> {
     let mut buf = Vec::new();
     r.into_reader().take(max + 1).read_to_end(&mut buf).map_err(|e| LinkError::Network(e.to_string()))?;
     if buf.len() as u64 > max {
@@ -245,7 +236,7 @@ impl Client {
         Ok(Client {
             base: format!("{}{API}", erp.base),
             erp: erp.clone(),
-            agent: agent(erp, READ_TIMEOUT)?,
+            net: transport(erp, READ_TIMEOUT)?,
             token: None,
             stopped: Arc::new(Mutex::new(None)),
         })
@@ -270,19 +261,20 @@ impl Client {
         LinkError::Unsupported { supported }
     }
 
-    fn request(&self, agent: &ureq::Agent, method: &str, path: &str) -> Result<ureq::Request, LinkError> {
+    fn request(&self, method: &str, path: &str) -> Result<Request, LinkError> {
         if let Some(s) = self.stopped_with() {
             return Err(LinkError::Unsupported { supported: s });
         }
-        let mut r = agent.request(method, &format!("{}{path}", self.base)).set("X-DDC-Link", &versions_header());
+        let mut r = Request::new(method, format!("{}{path}", self.base)).header("X-DDC-Link", &versions_header());
         if let Some(t) = &self.token {
-            r = r.set("Authorization", &format!("Bearer {}", t.expose()));
+            r = r.header("Authorization", &format!("Bearer {}", t.expose()));
         }
         Ok(r)
     }
 
-    fn finish(&self, call: Call, res: Result<ureq::Response, ureq::Error>) -> Result<ureq::Response, LinkError> {
+    fn finish(&self, call: Call, res: Result<Response, NetError>) -> Result<Response, LinkError> {
         match res {
+            Ok(r) if r.status >= 400 => Err(self.status_error(call, r.status, r)),
             Ok(r) => {
                 let v = r.header("X-DDC-Link").map(str::trim).map(str::to_string);
                 match v.as_deref().map(str::parse::<u32>) {
@@ -293,12 +285,11 @@ impl Client {
                     )),
                 }
             }
-            Err(ureq::Error::Status(code, r)) => Err(self.status_error(call, code, r)),
-            Err(ureq::Error::Transport(t)) => Err(LinkError::Network(t.to_string())),
+            Err(e) => Err(LinkError::Network(e.0)),
         }
     }
 
-    fn status_error(&self, call: Call, code: u16, r: ureq::Response) -> LinkError {
+    fn status_error(&self, call: Call, code: u16, r: Response) -> LinkError {
         let retry_after = r.header("Retry-After").and_then(|s| s.trim().parse().ok());
         let body: Value = read_limited(r, ERROR_BODY_MAX).ok().and_then(|b| serde_json::from_slice(&b).ok()).unwrap_or(Value::Null);
         let d = &body["detail"];
@@ -335,18 +326,18 @@ impl Client {
     }
 
     fn get_json<T: DeserializeOwned>(&self, path: &str, what: &str) -> Result<T, LinkError> {
-        let r = self.request(&self.agent, "GET", path)?.set("Accept", "application/json");
-        let r = self.finish(Call::Other, r.call())?;
+        let r = self.request("GET", path)?.header("Accept", "application/json");
+        let r = self.finish(Call::Other, self.net.send(r))?;
         parse(what, &read_limited(r, JSON_BODY_MAX)?)
     }
 
     fn post_json<T: DeserializeOwned>(&self, call: Call, path: &str, body: Option<&Value>, what: &str) -> Result<T, LinkError> {
-        let r = self.request(&self.agent, "POST", path)?.set("Accept", "application/json");
-        let res = match body {
-            Some(b) => r.set("Content-Type", "application/json").send_string(&b.to_string()),
-            None => r.call(),
+        let r = self.request("POST", path)?.header("Accept", "application/json");
+        let r = match body {
+            Some(b) => r.header("Content-Type", "application/json").body(Body::Bytes(b.to_string().into_bytes())),
+            None => r,
         };
-        let r = self.finish(call, res)?;
+        let r = self.finish(call, self.net.send(r))?;
         parse(what, &read_limited(r, JSON_BODY_MAX)?)
     }
 
@@ -390,8 +381,8 @@ impl Client {
 
     /// `DELETE /projects/{id}/lock`.
     pub fn release_lock(&self, project_id: &str) -> Result<(), LinkError> {
-        let r = self.request(&self.agent, "DELETE", &format!("/projects/{project_id}/lock"))?;
-        self.finish(Call::Other, r.call()).map(|_| ())
+        let r = self.request("DELETE", &format!("/projects/{project_id}/lock"))?;
+        self.finish(Call::Other, self.net.send(r)).map(|_| ())
     }
 
     /// `GET /projects/{id}/revisions`, newest first: every page of the `{items, total, offset, limit}`
@@ -447,8 +438,8 @@ impl Client {
         if path.is_empty() || path.starts_with('/') || path.split('/').any(|s| s == ".." || s.is_empty()) {
             return Err(LinkError::Protocol(format!("unsafe file path '{path}'")));
         }
-        let r = self.request(&self.agent, "GET", &format!("/revisions/{revision_id}/files/{}", encode_path(path)))?;
-        let r = self.finish(Call::Other, r.call())?;
+        let r = self.request("GET", &format!("/revisions/{revision_id}/files/{}", encode_path(path)))?;
+        let r = self.finish(Call::Other, self.net.send(r))?;
         read_limited(r, FILE_MAX)
     }
 
@@ -463,13 +454,13 @@ impl Client {
         let tail = format!("\r\n--{b}--\r\n");
         let total = head.len() as u64 + len + tail.len() as u64;
         let body = std::io::Cursor::new(head.into_bytes()).chain(f).chain(std::io::Cursor::new(tail.into_bytes()));
-        let up = agent(&self.erp, UPLOAD_READ_TIMEOUT)?;
+        let up = transport(&self.erp, UPLOAD_READ_TIMEOUT)?;
         let r = self
-            .request(&up, "POST", &format!("/projects/{project_id}/revisions"))?
-            .set("Accept", "application/json")
-            .set("Content-Type", &format!("multipart/form-data; boundary={b}"))
-            .set("Content-Length", &total.to_string());
-        let r = self.finish(Call::Upload, r.send(body))?;
+            .request("POST", &format!("/projects/{project_id}/revisions"))?
+            .header("Accept", "application/json")
+            .header("Content-Type", &format!("multipart/form-data; boundary={b}"))
+            .body(Body::Reader(Box::new(body), total));
+        let r = self.finish(Call::Upload, up.send(r))?;
         parse("the uploaded revision", &read_limited(r, JSON_BODY_MAX)?)
     }
 }
