@@ -1,0 +1,28 @@
+name: Web probe
+on:
+  push:
+    branches: ["web-bundle-*"]
+  workflow_dispatch:
+jobs:
+  wasm-check:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        crate: [ddc-geom, ddc-model, ddc-ops, ddc-gen, ddc-script, ddc-io, ddc-ui, ddc-render, ddc-ai, ddc-app]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+      - run: sudo apt-get update -q && sudo apt-get install -yq clang lld
+      - name: cargo check wasm32
+        env:
+          CC_wasm32_unknown_unknown: clang
+        run: |
+          set +e
+          cargo check -q --locked --target wasm32-unknown-unknown -p ${{ matrix.crate }} --no-default-features --lib 2>&1 | tee log.txt
+          code=${PIPESTATUS[0]}
+          echo "### ${{ matrix.crate }} exit $code" >> $GITHUB_STEP_SUMMARY
+          grep -E "^error" -A6 log.txt | head -80 >> $GITHUB_STEP_SUMMARY
+          exit $code
