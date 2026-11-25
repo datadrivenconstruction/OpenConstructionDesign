@@ -452,6 +452,7 @@ fn route(req: &Req, s: &mut State, pid: &str) -> Resp {
     if !version_ok(req.header("X-DDC-Link"), &s.supported) {
         return detail(426, json!({"message": "Unsupported X-DDC-Link version", "supported": s.supported}));
     }
+    let path = path.split_once('?').map_or(path, |(p, _)| p);
     let seg: Vec<&str> = path.trim_start_matches('/').split('/').collect();
     let m = req.method.as_str();
     if (m, seg.as_slice()) == ("POST", ["link", "exchange"].as_slice()) {

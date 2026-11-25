@@ -172,6 +172,32 @@ fn detail_text(d: &Value) -> String {
     s.chars().take(500).collect()
 }
 
+/// Largest page the ERP serves for the revision list.
+const REVISION_PAGE: usize = 500;
+
+/// One page of the revision list: its items and the total when the answer is the paged envelope.
+fn revision_page(v: Value) -> Result<(Vec<RevisionView>, Option<usize>), LinkError> {
+    let bad = |_| LinkError::Protocol("the revision list does not follow the contract".into());
+    match v {
+        Value::Array(_) => Ok((serde_json::from_value(v).map_err(bad)?, None)),
+        Value::Object(mut o) => {
+            let total = o.get("total").and_then(Value::as_u64).map(|t| t as usize);
+            let items = serde_json::from_value(o.remove("items").unwrap_or(Value::Null)).map_err(bad)?;
+            Ok((items, total))
+        }
+        _ => Err(LinkError::Protocol("the revision list does not follow the contract".into())),
+    }
+}
+
+/// A lost lock: the structured `detail.code` when the ERP sends one, else its known texts
+/// (heartbeat "lock lost", upload "Take the project lock before publishing a revision").
+fn lock_lost(call: Call, d: &Value, text: &str) -> bool {
+    if let Some(code) = d["code"].as_str() {
+        return code == "lock_lost";
+    }
+    text.eq_ignore_ascii_case("lock lost") || (call == Call::Upload && text.starts_with("Take the project lock"))
+}
+
 fn read_limited(r: ureq::Response, max: u64) -> Result<Vec<u8>, LinkError> {
     let mut buf = Vec::new();
     r.into_reader().take(max + 1).read_to_end(&mut buf).map_err(|e| LinkError::Network(e.to_string()))?;
@@ -298,10 +324,7 @@ impl Client {
                 if d.get("latest_published").is_some() && call == Call::Upload {
                     return LinkError::ParentMoved { latest: d["latest_published"].as_str().map(String::from) };
                 }
-                // ERP texts (erp-module/design/router.py): heartbeat "lock lost", upload
-                // "Take the project lock before publishing a revision".
-                let lost = text.eq_ignore_ascii_case("lock lost") || (call == Call::Upload && text.starts_with("Take the project lock"));
-                if lost && call != Call::TakeLock {
+                if lock_lost(call, d, &text) && call != Call::TakeLock {
                     LinkError::LockLost
                 } else {
                     LinkError::Conflict(text)
@@ -371,9 +394,21 @@ impl Client {
         self.finish(Call::Other, r.call()).map(|_| ())
     }
 
-    /// `GET /projects/{id}/revisions`, newest first.
+    /// `GET /projects/{id}/revisions`, newest first: every page of the `{items, total, offset, limit}`
+    /// envelope (an older ERP answers a bare list in one go).
     pub fn revisions(&self, project_id: &str) -> Result<Vec<RevisionView>, LinkError> {
-        self.get_json(&format!("/projects/{project_id}/revisions"), "the revision list")
+        let mut all = Vec::new();
+        loop {
+            let path = format!("/projects/{project_id}/revisions?offset={}&limit={REVISION_PAGE}", all.len());
+            let page: Value = self.get_json(&path, "the revision list")?;
+            let (items, total) = revision_page(page)?;
+            let got = items.len();
+            all.extend(items);
+            match total {
+                Some(t) if got > 0 && all.len() < t => {}
+                _ => return Ok(all),
+            }
+        }
     }
 
     /// `GET /revisions/{id}`.
@@ -462,6 +497,25 @@ mod tests {
         let tip = serde_json::from_str::<Value>(include_str!("../../io/contract/examples/revision-view.json")).unwrap();
         let tip: RevisionView = serde_json::from_value(tip).unwrap();
         assert!(!tip.imported() && tip.depth_level.is_some());
+    }
+
+    #[test]
+    fn revision_pages_and_bare_list() {
+        let one = serde_json::from_str::<Value>(include_str!("../../io/contract/examples/revision-view.json")).unwrap();
+        let (items, total) = revision_page(json!({"items": [one.clone()], "total": 51, "offset": 50, "limit": 50})).unwrap();
+        assert_eq!((items.len(), total), (1, Some(51)));
+        let (items, total) = revision_page(json!([one.clone(), one])).unwrap();
+        assert_eq!((items.len(), total), (2, None));
+        assert!(revision_page(json!("x")).is_err());
+    }
+
+    #[test]
+    fn lock_lost_by_code_then_text() {
+        assert!(lock_lost(Call::Heartbeat, &json!({"code": "lock_lost", "message": "anything"}), "anything"));
+        assert!(!lock_lost(Call::Heartbeat, &json!({"code": "other", "message": "lock lost"}), "lock lost"));
+        assert!(lock_lost(Call::Heartbeat, &json!("lock lost"), "lock lost"));
+        assert!(lock_lost(Call::Upload, &json!("Take the project lock first"), "Take the project lock first"));
+        assert!(!lock_lost(Call::Heartbeat, &json!("Take the project lock first"), "Take the project lock first"));
     }
 
     #[test]
