@@ -9,7 +9,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        crate: [ddc-geom, ddc-model, ddc-ops, ddc-gen, ddc-script, ddc-io, ddc-ui, ddc-render, ddc-ai, ddc-app]
+        crate: [ddc-geom, ddc-model, ddc-ops, ddc-gen, ddc-script, ddc-io, ddc-ui, ddc-render, ddc-net, ddc-link, ddc-ai, ddc-app]
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
