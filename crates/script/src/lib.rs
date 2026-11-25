@@ -9,21 +9,34 @@
 //! Every created element has a stable key (`group/name#n`) so a rerun with new params becomes
 //! reshape, create and delete ops on the elements of the recipe only (`rerun.rs`).
 
+#[cfg(feature = "scripting")]
 mod audit;
+#[cfg(feature = "scripting")]
 mod blocks;
+#[cfg(feature = "scripting")]
 mod blocks_build;
+#[cfg(feature = "scripting")]
 mod blocks_surf;
+#[cfg(feature = "scripting")]
 mod emit;
+#[cfg(feature = "scripting")]
 mod engine;
+#[cfg(feature = "scripting")]
 mod geo_build;
+#[cfg(feature = "scripting")]
 mod geo_curve;
+#[cfg(feature = "scripting")]
 mod hint;
 pub mod recipes;
 mod rerun;
+#[cfg(feature = "scripting")]
 mod span_blocks;
+#[cfg(feature = "scripting")]
 mod span_check;
+#[cfg(feature = "scripting")]
 mod stdlib;
 mod units;
+#[cfg(feature = "scripting")]
 mod values;
 
 use std::fmt;
@@ -33,6 +46,7 @@ use ddc_ops::{Actor, Envelope, Ref};
 use serde_json::Value as J;
 use sha2::{Digest, Sha256};
 
+#[cfg(feature = "scripting")]
 pub use blocks::{ifc_of, PartKind, ROLE_IFC};
 pub use rerun::{rerun_envelope, Held, Link, RerunPlan};
 pub use units::{parse_angle, parse_len};
@@ -194,8 +208,21 @@ pub trait GeoScript {
 pub struct Sandbox;
 
 impl GeoScript for Sandbox {
+    #[cfg(feature = "scripting")]
     fn run(&self, script: &str, opts: &RunOpts) -> Result<ScriptRun, ScriptError> {
         engine::run(script, opts)
+    }
+
+    /// Built without the interpreter (the browser build): every run is refused.
+    #[cfg(not(feature = "scripting"))]
+    fn run(&self, _script: &str, _opts: &RunOpts) -> Result<ScriptRun, ScriptError> {
+        Err(ScriptError {
+            kind: ErrorKind::Runtime,
+            line: 0,
+            col: 0,
+            message: "scripts are not available in this build".into(),
+            hint: String::new(),
+        })
     }
 
     fn version(&self) -> u32 {

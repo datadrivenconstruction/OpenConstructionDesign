@@ -64,6 +64,7 @@ pub fn parse_angle(s: &str) -> Result<f64, String> {
 }
 
 /// Kind of a quantity written as text: length, angle or neither.
+#[cfg_attr(not(feature = "scripting"), allow(dead_code))]
 pub(crate) fn dim_of(s: &str) -> Option<&'static str> {
     if parse_len(s).is_ok() {
         Some("m")
@@ -75,6 +76,7 @@ pub(crate) fn dim_of(s: &str) -> Option<&'static str> {
 }
 
 /// A param value given by the caller, converted to the SI unit `unit` (`m`, `rad`).
+#[cfg_attr(not(feature = "scripting"), allow(dead_code))]
 pub(crate) fn param_si(v: &J, unit: &str) -> Result<f64, String> {
     let text = match v {
         J::String(s) => s.clone(),

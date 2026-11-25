@@ -17,7 +17,12 @@ ddc-fem = { path = "../fem" }
 serde_json.workspace = true
 sha2 = "0.10"
 # interpreter: MIT, C sources built in (no system library)
-mlua = { version = "0.12", default-features = false, features = ["lua54", "vendored"] }
+mlua = { version = "0.12", default-features = false, features = ["lua54", "vendored"], optional = true }
+
+[features]
+default = ["scripting"]
+# the Lua interpreter; off in the browser build, where every run is refused
+scripting = ["dep:mlua"]
 
 [target.'cfg(windows)'.dependencies]
 windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_System_Threading"] }
