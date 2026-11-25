@@ -47,6 +47,8 @@ pub struct Viewport {
     pub boxed: crate::view3d::boxdrag::BoxEditor,
     /// LMB drag is handed to the tool (push-pull): offset per gesture, release.
     pub capture: bool,
+    /// A tool owns the pointer: the empty-view card must not take its clicks.
+    pub modelling: bool,
     pub grab: Option<Vec2>,
     pub released: bool,
     /// Cursor over the view in the last frame (ray for tools).
@@ -119,6 +121,7 @@ impl Viewport {
             section_plane: None,
             boxed: Default::default(),
             capture: false,
+            modelling: false,
             grab: None,
             released: false,
             pointer: None,

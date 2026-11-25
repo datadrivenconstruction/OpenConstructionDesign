@@ -92,10 +92,13 @@ fn roof_by_picking_wall_faces_in_3d() {
         .opts
         .walls = true;
     let ad = view(&ed);
-    // the middle of each wall at mid height: the ray meets the face, not the level plane
-    for (p, q) in [(a, b), (b, c), (c, d), (d, a)] {
+    // the middle of each wall near its top: lower, the near wall hides the far inner face
+    for (k, (p, q)) in [(a, b), (b, c), (c, d), (d, a)].into_iter().enumerate() {
         let m = (p + q) * 0.5;
-        let f = crate::interact::host::face_point(&ed, m, ad.eye, 1.5).expect("wall face");
+        let f = crate::interact::host::face_point(&ed, m, ad.eye, 2.9).expect("wall face");
+        let ptr = wall_pick_pointer(&ed, ad.pointer_at(ad.project_at(f).unwrap()));
+        let want = crate::interact::Target::Elem(crate::grips::Kind::Wall, ed.walls[k].id);
+        assert_eq!(ptr.host.map(|h| h.target), Some(want), "the ray meets wall {k}");
         click3d(&mut ed, &ad, f);
     }
     assert_eq!(
@@ -204,16 +207,19 @@ fn attach_top_to_roof_picked_in_3d_is_one_undo_step() {
         st.check(Op::AttachTop, Target::new(Cat::Room, 1)),
         Err("e3d.err.attach_target")
     );
+    // the wall under the roof already follows it by rule (`roof_auto`): the attach makes it a hand one
+    let before = (top_roof(&ed, wall), ed.model.wall_top_auto(wall));
     let undo = ed.undo_len();
     assert_eq!(
         st.click(&mut ed, Op::AttachTop, r).ok(),
         Some("e3d.done.attach")
     );
     assert_eq!(top_roof(&ed, wall), Some(roof));
+    assert!(!ed.model.wall_top_auto(wall));
     assert_eq!(ed.undo_len(), undo + 1);
     assert!(st.walls.is_empty(), "the tool starts over");
     ed.undo();
-    assert_eq!(top_roof(&ed, wall), None);
+    assert_eq!((top_roof(&ed, wall), ed.model.wall_top_auto(wall)), before);
 }
 
 #[test]

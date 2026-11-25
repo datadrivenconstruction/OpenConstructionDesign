@@ -305,6 +305,8 @@ pub struct Cache {
     /// Instanced mesh cache (`mesh_inst`) and the slot-map reset counter.
     pub inst: super::mesh_inst::Feed,
     slot_epoch: u64,
+    /// (part mesh, drawn tag) to the part with that tag: the base Arc is held so its address stays its own.
+    retagged: HashMap<(usize, u32), (Arc<SceneMesh>, Arc<SceneMesh>)>,
 }
 
 enum Dirty {
@@ -490,6 +492,8 @@ pub fn compose_with(ed: &mut Editor, c: &mut Cache) -> (Scene, Vec<Target>) {
     // the own level is filtered by `filter` and `paint_scene`; a foreign one has no element number, so here
     let gfx = crate::view_gfx_ui::layer(ed, ddc_model::ViewKey::ThreeD);
     let texl = crate::mat_tex::layers(ed);
+    let mut retagged = std::mem::take(&mut c.retagged);
+    let mut kept = HashMap::with_capacity(retagged.len());
     for k in &order {
         for lv in &levels {
             for (m, b, t) in c.parts.get(&(*k, *lv)).into_iter().flatten() {
@@ -515,14 +519,20 @@ pub fn compose_with(ed: &mut Editor, c: &mut Cache) -> (Scene, Vec<Target>) {
                 if tag == m.tag {
                     meshes.push(m.clone());
                 } else {
-                    let mut own = (**m).clone();
-                    own.tag = tag;
-                    meshes.push(Arc::new(own));
+                    let key = (Arc::as_ptr(m) as usize, tag);
+                    let e = retagged.remove(&key).unwrap_or_else(|| {
+                        let mut own = (**m).clone();
+                        own.tag = tag;
+                        (m.clone(), Arc::new(own))
+                    });
+                    meshes.push(e.1.clone());
+                    kept.insert(key, e);
                 }
                 boxes.push(*b);
             }
         }
     }
+    c.retagged = kept;
     // instanced bodies: same tag rules as the parts; a textured body is drawn plain
     let mut groups: std::collections::BTreeMap<(&'static str, u64, u32), (Arc<SceneMesh>, Vec<ddc_render::Inst>)> =
         Default::default();

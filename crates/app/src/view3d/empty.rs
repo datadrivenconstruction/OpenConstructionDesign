@@ -150,7 +150,8 @@ pub fn show(v: &mut Viewport, ui: &mut egui::Ui, rect: egui::Rect, scene: &Scene
         v.gfx.health.usable,
         v.nav.loading,
         kind_of(&v.nav, scene, v.section_box.as_ref()),
-    )?;
+    )
+    .filter(|k| !v.modelling || matches!(k, Kind::Gpu | Kind::Loading))?;
     let ctx = ui.ctx().clone();
     let ru = v.nav.labels_lang == Some(ddc_ui::i18n::Lang::Ru);
     let pct = v.nav.loading.flatten();

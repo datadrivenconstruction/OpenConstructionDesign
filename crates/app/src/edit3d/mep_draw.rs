@@ -373,11 +373,12 @@ mod tests {
         assert!((s.z.unwrap() - 2.9).abs() < 1e-9, "the plan tool's default elevation");
         assert!(s.click(&ed, (0.0, 0.0, 0.0), None).is_none());
         assert!(s.click(&ed, (4.0, 0.0, 99.0), None).is_none());
-        s.rise(&ed, 0.6);
+        // the riser fits its two elbows: 0.25 (easy way) + 0.4 (hard way, turning in the width)
+        s.rise(&ed, 1.0);
         assert!(s.click(&ed, (4.0, 3.0, 0.0), None).is_none());
         assert_eq!(
             s.pts,
-            vec![(0.0, 0.0, z), (4.0, 0.0, z), (4.0, 0.0, z + 0.6), (4.0, 3.0, z + 0.6)]
+            vec![(0.0, 0.0, z), (4.0, 0.0, z), (4.0, 0.0, z + 1.0), (4.0, 3.0, z + 1.0)]
         );
         let before = ed.model.mep_runs(None).unwrap().len();
         let id = s.commit(&mut ed, None).unwrap();

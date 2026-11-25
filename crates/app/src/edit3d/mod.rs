@@ -608,6 +608,7 @@ impl Edit3d {
         self.rect = Some(rect);
         view.capture =
             self.tool == Tool::Box || self.drag.is_some() || crate::mass_tools::capturing(ed);
+        view.modelling = self.busy() || plan_route::live(ed);
         let clicked = view.show(ui, scene);
         // push-pull and a click on a shape face come before 3D selection
         let clicked = crate::mass_tools::after_show_3d(ed, view, clicked);

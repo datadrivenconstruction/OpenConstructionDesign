@@ -262,7 +262,8 @@ pub fn show(
     let empty = super::empty::show(v, ui, rect, scene);
     rects.extend(empty);
 
-    // navigation hint: until the first action in this view
+    // navigation hint: until the first action in this view (an armed tool is one)
+    v.nav.hint_used |= v.modelling;
     if !v.nav.hint_used && empty.is_none() {
         let acted = ui.rect_contains_pointer(rect)
             && ui.input(|i| i.pointer.any_pressed() || i.smooth_scroll_delta.y != 0.0);
