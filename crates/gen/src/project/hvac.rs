@@ -1648,8 +1648,9 @@ pub(crate) fn ventilate(spec: &ProjectSpec, p: &mut GProject) -> Result<(), GenE
         // the general zones without the tagged rooms, then their own system under them; when
         // the second one has no room, the zones serve all, as without the rule
         if let Some((mut q, span)) = zoned(spec, p, tags, &mut Vec::new())? {
+            // no balance check: isolation rooms keep exhaust over supply on purpose
             let own = Pass { tags, dedicated: true, drop: span, net: q.hvac.nets.len() as u8 + 1, plant_ix: q.hvac.plant.len(), win: None };
-            if let Some(dd) = best_design(spec, &q, &own, &mut Vec::new())?.filter(|dd| unserved(dd) == 0.0) {
+            if let Some(dd) = best_design(spec, &q, &own, &mut Vec::new())?.filter(|dd| unserved(dd) == 0.0 && dd.fast == 0) {
                 place_design(&mut q, dd)?;
                 finish(&mut q)?;
                 *p = q;
