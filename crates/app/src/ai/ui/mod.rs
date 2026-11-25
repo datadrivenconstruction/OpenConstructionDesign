@@ -234,6 +234,8 @@ pub enum Action {
     ShowApplied(Vec<ElKey>),
     /// The receipt's Undo (or the toast's) for the apply that wrote undo-log row `op_seq`.
     UndoApplied(i64),
+    /// "Roll back to here": the model as it was before the apply with undo-log row `op_seq`.
+    RollbackApplied(i64),
     /// "Make working": the draft families the apply with undo-log row `op_seq` wrote.
     PromoteFamilies(i64),
     ConsentProject {
@@ -1252,6 +1254,17 @@ impl PanelUi {
                     let text = crate::tr("ai.receipt.toast_undone", &[]);
                     app.sh.toasts.push(Level::Info, text, None);
                 }
+            }
+            Action::RollbackApplied(seq) => {
+                let (level, text) = match receipt::rollback(app, &mut self.log, seq) {
+                    Some(n) => {
+                        audit(app, "rollback", "receipt");
+                        self.chat_dirty = true;
+                        (Level::Info, crate::tr("ai.receipt.toast_rolled", &[("n", &n.to_string())]))
+                    }
+                    None => (Level::Warning, crate::tr("ai.receipt.rollback_failed", &[])),
+                };
+                app.sh.toasts.push(level, text, None);
             }
             Action::PromoteFamilies(seq) => {
                 let names = self.log.iter().rev().find_map(|e| match e {

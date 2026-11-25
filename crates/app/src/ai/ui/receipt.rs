@@ -220,6 +220,46 @@ pub fn undo(app: &mut EditorApp, log: &mut [Entry], op_seq: i64) -> bool {
     true
 }
 
+/// Rolls the model back to just before the receipt's apply: takes back the later steps on the
+/// undo stack and then the apply itself. All or nothing: when the walk meets a step that owns no
+/// journal row, or the apply is not on the stack any more, the steps already taken come back.
+/// Returns how many undo steps it took (Ctrl+Y brings each back).
+pub fn rollback(app: &mut EditorApp, log: &mut [Entry], op_seq: i64) -> Option<usize> {
+    let stamp = log.iter().rev().find_map(|e| match e {
+        Entry::Applied(r) if r.op_seq == op_seq && !r.undone && r.stamp != 0 => Some(r.stamp),
+        _ => None,
+    })?;
+    let mut taken = 0;
+    let depth = app.ed.undo_len();
+    let reached = loop {
+        let Some(top) = undo_head(&app.ed) else { break false };
+        // the journal grows upward: a lower top means the apply is no longer on the stack
+        if top.0 < op_seq || taken >= depth {
+            break false;
+        }
+        let hit = top == (op_seq, stamp);
+        app.ed.undo();
+        taken += 1;
+        if hit {
+            break app.ed.model.ai_option_head().ok() != Some((op_seq, stamp));
+        }
+    };
+    if !reached {
+        for _ in 0..taken {
+            app.ed.redo();
+        }
+        return None;
+    }
+    for e in log.iter_mut() {
+        if let Entry::Applied(r) = e {
+            if r.op_seq >= op_seq {
+                r.undone = true;
+            }
+        }
+    }
+    Some(taken)
+}
+
 /// The card: quiet, one title line, categories, a collapsed element list, two small actions.
 pub fn card(
     ui: &mut Ui,
@@ -289,20 +329,25 @@ pub fn card(
             if b.clicked() {
                 acts.push(Action::ShowApplied(r.ids.clone()));
             }
+            // a later edit on top: the exact undo is off, the rollback takes its place
             let gate = r.gate(top);
-            let (label, tip) = match gate {
-                Gate::Ready => ("ai.receipt.undo", cat.t("ai.receipt.undo.tip")),
-                Gate::Undone => ("ai.receipt.undone", String::new()),
-                Gate::Later => ("ai.receipt.undo", cat.t("ai.receipt.later")),
+            let (label, tip, act) = match gate {
+                Gate::Ready => ("ai.receipt.undo", cat.t("ai.receipt.undo.tip"), Action::UndoApplied(r.op_seq)),
+                Gate::Undone => ("ai.receipt.undone", String::new(), Action::UndoApplied(r.op_seq)),
+                Gate::Later => (
+                    "ai.receipt.rollback",
+                    format!("{}. {}", cat.t("ai.receipt.later"), cat.t("ai.receipt.rollback.tip")),
+                    Action::RollbackApplied(r.op_seq),
+                ),
             };
             if Button::secondary(&cat.t(label))
                 .small()
-                .enabled(gate == Gate::Ready)
+                .enabled(gate != Gate::Undone)
                 .tooltip(&tip, "")
                 .show(ui, th)
                 .clicked()
             {
-                acts.push(Action::UndoApplied(r.op_seq));
+                acts.push(act);
             }
         });
         if !r.drafts.is_empty() {
@@ -514,5 +559,96 @@ mod tests {
         let o = Receipt::from_row(old).unwrap();
         assert_eq!(o.stamp, 0);
         assert_eq!(o.gate(Some((5, 0))), Gate::Later);
+    }
+
+    #[test]
+    fn rollback_takes_back_later_edits_and_the_apply() {
+        let mut a = app();
+        let before = edit(&mut a, "before");
+        let seq = edit(&mut a, "applied");
+        let mut log = vec![Entry::Applied(receipt_of(&a, seq))];
+        edit(&mut a, "later 1");
+        edit(&mut a, "later 2");
+        assert_eq!(rollback(&mut a, &mut log, seq), Some(3));
+        assert_eq!(a.ed.model.last_op_seq().unwrap(), Some(before), "the model as before the apply");
+        assert!(matches!(&log[0], Entry::Applied(r) if r.undone));
+        assert_eq!(a.ed.redo_len(), 3, "Ctrl+Y brings each step back");
+    }
+
+    #[test]
+    fn rollback_of_the_top_apply_is_one_step() {
+        let mut a = app();
+        let start = a.ed.model.last_op_seq().unwrap();
+        let seq = edit(&mut a, "applied");
+        let mut log = vec![Entry::Applied(receipt_of(&a, seq))];
+        assert_eq!(rollback(&mut a, &mut log, seq), Some(1));
+        assert_eq!(a.ed.model.last_op_seq().unwrap(), start);
+    }
+
+    #[test]
+    fn rollback_marks_every_later_receipt_undone_and_keeps_earlier_ones() {
+        let mut a = app();
+        let first = edit(&mut a, "first");
+        let r1 = receipt_of(&a, first);
+        let second = edit(&mut a, "second");
+        let r2 = receipt_of(&a, second);
+        let third = edit(&mut a, "third");
+        let r3 = receipt_of(&a, third);
+        let mut log = vec![Entry::Applied(r1), Entry::Applied(r2), Entry::Applied(r3)];
+        assert_eq!(rollback(&mut a, &mut log, second), Some(2));
+        let undone: Vec<bool> = log
+            .iter()
+            .map(|e| matches!(e, Entry::Applied(r) if r.undone))
+            .collect();
+        assert_eq!(undone, vec![false, true, true]);
+        assert_eq!(latest(&log), Some(first));
+        assert_eq!(a.ed.model.last_op_seq().unwrap(), Some(first));
+    }
+
+    #[test]
+    fn rollback_refused_when_the_apply_left_the_stack_changes_nothing() {
+        let mut a = app();
+        edit(&mut a, "before");
+        let seq = edit(&mut a, "applied");
+        let mut log = vec![Entry::Applied(receipt_of(&a, seq))];
+        // Ctrl+Z outside the card, then an unrelated edit reuses the number
+        a.ed.undo();
+        edit(&mut a, "unrelated");
+        edit(&mut a, "more");
+        let top = a.ed.model.last_op_seq().unwrap();
+        let undo_len = a.ed.undo_len();
+        assert_eq!(rollback(&mut a, &mut log, seq), None);
+        assert_eq!(a.ed.model.last_op_seq().unwrap(), top, "the steps taken came back");
+        assert_eq!(a.ed.redo_len(), 0);
+        assert_eq!(a.ed.undo_len(), undo_len);
+        assert!(matches!(&log[0], Entry::Applied(r) if !r.undone));
+    }
+
+    #[test]
+    fn rollback_of_an_undone_or_unknown_receipt_does_nothing() {
+        let mut a = app();
+        let seq = edit(&mut a, "applied");
+        let mut r = receipt_of(&a, seq);
+        r.undone = true;
+        let mut log = vec![Entry::Applied(r)];
+        assert_eq!(rollback(&mut a, &mut log, seq), None);
+        assert_eq!(rollback(&mut a, &mut log, seq + 100), None);
+        assert_eq!(a.ed.model.last_op_seq().unwrap(), Some(seq));
+    }
+
+    #[test]
+    fn rollback_after_a_reopen_cannot_reach_the_row() {
+        let mut a = app();
+        let seq = edit(&mut a, "applied");
+        let r = receipt_of(&a, seq);
+        let mut b = app();
+        b.ed.model.add_level("applied", 3.0).unwrap();
+        let mut stored = r;
+        stored.op_seq = b.ed.model.last_op_seq().unwrap().unwrap();
+        stored.stamp = b.ed.model.ai_option_head().unwrap().1;
+        let at = stored.op_seq;
+        let mut log = vec![Entry::Applied(stored)];
+        assert_eq!(rollback(&mut b, &mut log, at), None);
+        assert!(b.ed.model.last_op_seq().unwrap().is_some(), "the row stays");
     }
 }
