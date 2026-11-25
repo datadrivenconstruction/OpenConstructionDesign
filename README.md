@@ -580,24 +580,19 @@ privately as described in [SECURITY.md](SECURITY.md), not in public issues.
 
 ## Part of the DataDrivenConstruction family
 
-<table align="center">
-  <tr>
-    <td align="center" width="260">
-      <a href="https://openconstructionerp.com"><picture>
-        <source media="(prefers-color-scheme: dark)" srcset="docs/brand/erp-mark-dark.svg">
-        <img src="docs/brand/erp-mark-light.svg" alt="OpenConstructionERP" width="72" height="72"></picture></a><br>
-      <a href="https://github.com/datadrivenconstruction/OpenConstructionERP"><b>OpenConstructionERP</b></a><br>
-      Estimates, schedules and procurement, priced from the quantities in your model.
-    </td>
-    <td align="center" width="260">
-      <a href="https://openconstructionacademy.com"><picture>
-        <source media="(prefers-color-scheme: dark)" srcset="docs/brand/academy-mark-dark.svg">
-        <img src="docs/brand/academy-mark-light.svg" alt="OpenConstructionAcademy" width="72" height="72"></picture></a><br>
-      <a href="https://openconstructionacademy.com"><b>OpenConstructionAcademy</b></a><br>
-      Courses on data-driven construction.
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://openconstructionerp.com"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/erp-mark-dark.svg">
+    <img src="docs/brand/erp-mark-light.svg" alt="" width="28" height="28" align="absmiddle"></picture></a>&nbsp;
+  <a href="https://github.com/datadrivenconstruction/OpenConstructionERP"><b>OpenConstructionERP</b></a>
+  &emsp;&emsp;&emsp;
+  <a href="https://openconstructionacademy.com"><picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/academy-mark-dark.svg">
+    <img src="docs/brand/academy-mark-light.svg" alt="" width="28" height="28" align="absmiddle"></picture></a>&nbsp;
+  <a href="https://openconstructionacademy.com"><b>OpenConstructionAcademy</b></a>
+  <br>
+  <sub>Estimates, schedules and procurement priced from your model&ensp;·&ensp;Courses on data-driven construction</sub>
+</p>
 
 Found this useful? A ⭐ at the top of the page is the best way to say thanks.
 
