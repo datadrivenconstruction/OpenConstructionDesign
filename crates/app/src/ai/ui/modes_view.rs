@@ -440,10 +440,12 @@ fn stepper(ui: &mut Ui, cx: &Cx<'_>, step: BuildStep) {
                 (format!("{}", i + 1), th.c("text.disabled"))
             };
             let text_color = if i == at { th.c("text.primary") } else { th.c("text.secondary") };
-            ui.label(RichText::new(mark).font(th.font(Role::BodyStrong)).color(color));
-            ui.label(RichText::new(cat.t(s.key())).font(th.font(Role::Label)).color(text_color));
+            // whole words: a wrapped row moves a step down, it never splits its number or name
+            let keep = |ui: &mut Ui, t: RichText| ui.add(egui::Label::new(t).extend());
+            keep(ui, RichText::new(mark).font(th.font(Role::BodyStrong)).color(color));
+            keep(ui, RichText::new(cat.t(s.key())).font(th.font(Role::Label)).color(text_color));
             if i + 1 < BuildStep::ALL.len() {
-                ui.label(RichText::new("\u{2192}").color(th.c("text.disabled")));
+                keep(ui, RichText::new("\u{2192}").color(th.c("text.disabled")));
             }
         }
     });

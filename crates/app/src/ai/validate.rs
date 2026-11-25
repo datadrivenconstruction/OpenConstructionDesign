@@ -538,6 +538,13 @@ impl PlanSize {
     pub fn create_only(self) -> bool {
         self.touched > 0 && self.created == self.touched
     }
+
+    /// Elements the model already holds that the plan changes or deletes. New ones cost one undo
+    /// whatever their number, so only these ask for "Allow large" (a generated house also sets
+    /// its level and project record: two changes, not 900).
+    pub fn existing(self) -> usize {
+        self.touched - self.created
+    }
 }
 
 /// How the person confirms a plan. Only a draft is `Free`: the main model always gets Apply.
@@ -562,7 +569,7 @@ pub fn confirm_with(caps: &PlanCaps, target: Target, tier: Tier, size: PlanSize)
     }
     if size.touched > caps.refuse_above {
         Confirm::Refused
-    } else if (size.touched > caps.confirm_above && !size.create_only()) || size.deleted > caps.delete_above {
+    } else if size.existing() > caps.confirm_above || size.deleted > caps.delete_above {
         Confirm::AllowLarge
     } else if tier == Tier::T3Auto {
         Confirm::QuickApply
@@ -587,13 +594,13 @@ fn size_issues(
             vec![size.touched.to_string(), caps.refuse_above.to_string()],
         )),
         Confirm::AllowLarge if !allow_large => {
-            if size.touched > caps.confirm_above {
+            if size.existing() > caps.confirm_above {
                 out.push(issue(
                     IssueLevel::Block,
                     None,
                     None,
                     "ai.issue.too_large",
-                    vec![size.touched.to_string(), caps.confirm_above.to_string()],
+                    vec![size.existing().to_string(), caps.confirm_above.to_string()],
                 ));
             }
             if size.deleted > caps.delete_above {
@@ -1049,9 +1056,14 @@ mod tests {
         assert!(made.create_only());
         assert!(plan_issues(&[], made, Target::Main, false).is_empty());
         assert_eq!(confirm(Target::Main, Tier::T2Apply, made), Confirm::Apply);
-        // one changed element among the new ones: the size asks again
-        let mixed = PlanSize { touched: 2424, deleted: 0, created: 2423 };
-        assert_eq!(keys(&plan_issues(&[], mixed, Target::Main, false)), vec!["ai.issue.too_large"]);
+        // a few changed elements among the new ones (a generated house sets its level): no ask
+        let mixed = PlanSize { touched: 2424, deleted: 0, created: 2422 };
+        assert!(plan_issues(&[], mixed, Target::Main, false).is_empty());
+        // past the cap in changed elements it asks, counting only those
+        let edits = PlanSize { touched: 2424, deleted: 0, created: 2424 - LARGE_PLAN - 1 };
+        let got = plan_issues(&[], edits, Target::Main, false);
+        assert_eq!(keys(&got), vec!["ai.issue.too_large"]);
+        assert_eq!(got[0].args[0], (LARGE_PLAN + 1).to_string());
         // past the hard cap a creating plan is still refused
         let huge = PlanSize { touched: REFUSED_PLAN + 1, deleted: 0, created: REFUSED_PLAN + 1 };
         assert_eq!(confirm(Target::Main, Tier::T2Apply, huge), Confirm::Refused);

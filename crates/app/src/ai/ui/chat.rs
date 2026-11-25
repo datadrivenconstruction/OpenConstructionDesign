@@ -363,10 +363,15 @@ fn body(
         }
         return;
     }
-    if st.log.is_empty() && f.plan.is_none() && state == PanelState::Idle {
+    // the build and review tabs bring their own examples: the chat's greeting would crowd them
+    let own_examples = matches!(st.modes.cur, Some(super::modes::AiMode::Build | super::modes::AiMode::Review));
+    if st.log.is_empty() && f.plan.is_none() && state == PanelState::Idle && !own_examples {
         suggestions(ui, st, cx, icons, acts);
     }
     log(ui, st, cx, icons, f.busy || st.starting, acts, hot);
+    if state == PanelState::Idle && f.plan.is_none() {
+        follow_ups(ui, st, cx, acts);
+    }
     let mut card_top = None;
     match state {
         PanelState::Streaming => kit::loading_state(ui, th, &cat.t("ai.state.streaming")),
@@ -405,6 +410,68 @@ fn body(
         let now = egui::style::ScrollAnimation::none();
         ui.scroll_to_rect_animation(r, Some(egui::Align::TOP), now);
     }
+}
+
+/// What the last entry invites next: up to three prompts, each with the mode it runs in.
+/// After an applied draft, checking it; after an answer, its sources or a change; else nothing.
+pub(super) fn next_keys(last: Option<&Entry>, with_selection: bool) -> Vec<(&'static str, Mode)> {
+    match last {
+        Some(Entry::Applied(_)) => vec![("ai.next.check_change", Mode::ReadOnly), ("ai.prompt.fix", Mode::Propose)],
+        Some(Entry::Assistant(_)) => {
+            let mut v = vec![("ai.next.sources", Mode::ReadOnly)];
+            if with_selection {
+                v.push(("ai.prompt.explain", Mode::ReadOnly));
+            }
+            v.push(("ai.next.propose", Mode::Propose));
+            v
+        }
+        _ => vec![],
+    }
+}
+
+/// Follow-up chips under the last reply: one tap asks the next natural question.
+fn follow_ups(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
+    let (th, cat) = (cx.th, cx.cat);
+    let with_selection = !cx.ed.selection.is_empty() && st.use_selection;
+    let keys = next_keys(st.log.last(), with_selection);
+    if keys.is_empty() {
+        return;
+    }
+    ui.add_space(space::XS);
+    ui.horizontal_wrapped(|ui| {
+        ui.spacing_mut().item_spacing = egui::vec2(space::XS, space::XS);
+        for (key, mode) in keys {
+            let text = cat.t(key);
+            let r = Frame::new()
+                .fill(th.c("bg.sunken"))
+                .stroke(egui::Stroke::new(1.0, th.c("border.subtle")))
+                .corner_radius(th.radius("lg"))
+                .inner_margin(Margin::symmetric(space::SM as i8, space::XXS as i8))
+                .show(ui, |ui| {
+                    ui.add(
+                        egui::Label::new(
+                            RichText::new(&text).font(th.font(Role::Label)).color(th.c("text.primary")),
+                        )
+                        .selectable(false)
+                        .wrap(),
+                    );
+                })
+                .response
+                .interact(egui::Sense::click());
+            r.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, true, &text));
+            if r.hovered() {
+                ui.painter().rect_stroke(
+                    r.rect,
+                    th.radius("lg"),
+                    egui::Stroke::new(1.0, th.c("accent")),
+                    egui::StrokeKind::Inside,
+                );
+            }
+            if r.clicked() {
+                acts.push(Action::Send(text, mode));
+            }
+        }
+    });
 }
 
 /// Keys of the muted examples shown under the connect card.
@@ -1418,6 +1485,23 @@ mod tests {
                 strip: true
             }
         );
+    }
+
+    #[test]
+    fn follow_ups_fit_what_came_last() {
+        assert!(next_keys(None, false).is_empty());
+        assert!(next_keys(Some(&Entry::User("q".into())), true).is_empty());
+        let a = Entry::Assistant("a".into());
+        let plain: Vec<_> = next_keys(Some(&a), false).into_iter().map(|k| k.0).collect();
+        assert_eq!(plain, ["ai.next.sources", "ai.next.propose"]);
+        assert_eq!(next_keys(Some(&a), true).len(), 3, "a selection adds the explain prompt");
+        assert!(next_keys(Some(&a), true).iter().any(|(_, m)| *m == Mode::Propose));
+        for lang in [ddc_ui::Lang::En, ddc_ui::Lang::Ru] {
+            let cat = ddc_ui::Catalog::new(lang);
+            for k in ["ai.next.sources", "ai.next.propose", "ai.next.check_change"] {
+                assert_ne!(cat.t(k), k, "{k} in {lang:?}");
+            }
+        }
     }
 
     #[test]
