@@ -479,6 +479,8 @@ pub struct Core {
     /// Envelopes from `ops_propose`, waiting for the person's Apply.
     pub proposals: mcp_ops::Proposals,
     pub critic_cycles: u8,
+    /// Findings the last critic round left open; the card shows them with the round count.
+    pub critic_left: usize,
     /// The write, check, fix loop of family drafts; fresh at every request.
     pub fam_repair: ddc_ai::family_repair::RepairBook,
     /// Set while an external agent's `family_draft` runs: the draft is queued for the person.
@@ -838,6 +840,33 @@ impl Core {
         self.view = view;
     }
 
+    /// Validation and rule findings on what the plan changed: the card's issues and the critic's tasks.
+    fn plan_checks(&self, b: &Baseline, diff: &[plan::ElemDiff]) -> Vec<PlanIssue> {
+        let span = ddc_model::perf::span("draft.view.validate");
+        let mut issues = validate::validate(&self.ed, b, diff);
+        drop(span);
+        let _s = ddc_model::perf::span("draft.view.rules");
+        issues.extend(validate::rule_issues(
+            &self.ed.model,
+            &plan::all_rules(&self.rules),
+            diff,
+        ));
+        issues
+    }
+
+    /// The plan checks on the copy as it stands after a draft step; empty before a baseline.
+    pub fn check_issues(&self) -> Vec<PlanIssue> {
+        let Some(b) = self.baseline.as_ref().filter(|_| !self.broken) else {
+            return vec![];
+        };
+        let touched = self.ed.model.changes_since(self.copy_head);
+        let Ok(raw) = self.ed.model.diff_from(&self.copies.base, &touched, DIFF_LIMIT) else {
+            return vec![];
+        };
+        let diff = plan::split_reused(plan::group_diff(&raw), &plan::reused_ids(&self.plan));
+        self.plan_checks(b, &diff)
+    }
+
     /// The full picture of the plan on the scratch copy.
     pub fn build_view(&mut self, with_preview: bool) -> Result<PlanView, AiError> {
         let _s = ddc_model::perf::span("draft.view");
@@ -863,16 +892,7 @@ impl Core {
         let mut issues: Vec<PlanIssue> = vec![];
         let mut qty = vec![];
         if let Some(b) = &self.baseline {
-            let span = ddc_model::perf::span("draft.view.validate");
-            issues = validate::validate(&self.ed, b, &diff);
-            drop(span);
-            let span = ddc_model::perf::span("draft.view.rules");
-            issues.extend(validate::rule_issues(
-                &self.ed.model,
-                &plan::all_rules(&self.rules),
-                &diff,
-            ));
-            drop(span);
+            issues = self.plan_checks(b, &diff);
             issues.extend(materials::issues(&self.plan.items, &b.material_names));
             let _q = ddc_model::perf::span("draft.view.qty");
             qty = validate::qty_deltas(&self.ed.model, b)?;
@@ -955,6 +975,7 @@ impl Core {
             expires_in: self.confirm_time_left(),
             // dropping every item drops the files with them
             deliver: self.plan.deliver.filter(|_| !self.plan.items.is_empty()),
+            self_check: critic_hook::self_check(self),
         })
     }
 
@@ -982,6 +1003,7 @@ impl Core {
             unreviewed: vec![],
             expires_in: None,
             deliver: None,
+            self_check: None,
         }
     }
 
@@ -1315,6 +1337,7 @@ impl Core {
             let _ = tx.send(m);
         };
         self.critic_cycles = 0;
+        self.critic_left = 0;
         self.fam_repair.reset_all();
         self.measured.clear();
         self.reads = Default::default();
@@ -1663,6 +1686,7 @@ fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
         drafts: agent_draft::AgentDrafts::default(),
         proposals: mcp_ops::Proposals::default(),
         critic_cycles: 0,
+        critic_left: 0,
         fam_repair: Default::default(),
         fam_from_agent: false,
         measured: Vec::new(),
@@ -3203,6 +3227,7 @@ mod tests {
             unreviewed: vec![],
             expires_in: None,
             deliver: None,
+            self_check: None,
         }
     }
 

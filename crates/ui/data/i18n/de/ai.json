@@ -124,6 +124,8 @@
  "ai.plan.stale": "Das Modell wurde nach der Berechnung dieses Plans geändert: Er wird neu berechnet, Anwenden ist vorerst aus.",
  "ai.plan.title": "PLAN",
  "ai.plan.truncated": "Die Liste ist gekürzt: nur ein Teil der Änderungen wird angezeigt.",
+ "ai.plan.self_check": "Selbstprüfung: {rounds} Runden, {left} Befunde offen.",
+ "ai.plan.self_check_clear": "Selbstprüfung: {rounds} Runden, alle Befunde behoben.",
  "ai.prompt.explain": "Erklären Sie, was die gewählten Elemente sind und woher ihre Maße stammen.",
  "ai.prompt.fix": "Prüfungen ausführen und Korrekturen für die Befunde vorschlagen.",
  "ai.qty.curtains": "Vorhangfassaden",

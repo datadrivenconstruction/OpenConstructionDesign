@@ -350,6 +350,16 @@ pub fn turn_limit_key(what: &str) -> &'static str {
 }
 
 /// `{0}`, `{1}`: the positional arguments of issue texts.
+/// The card's self-check line: rounds the critic ran and the findings still open.
+pub fn self_check_text(cat: &Catalog, sc: crate::ai::critic_hook::SelfCheck) -> String {
+    let rounds = sc.rounds.to_string();
+    if sc.left == 0 {
+        cat.tf("ai.plan.self_check_clear", &[("rounds", &rounds)])
+    } else {
+        cat.tf("ai.plan.self_check", &[("rounds", &rounds), ("left", &sc.left.to_string())])
+    }
+}
+
 pub fn fill(template: &str, args: &[String]) -> String {
     let mut out = template.to_string();
     for (i, a) in args.iter().enumerate() {

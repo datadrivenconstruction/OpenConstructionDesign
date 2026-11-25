@@ -626,6 +626,8 @@ pub struct PlanView {
     pub expires_in: Option<std::time::Duration>,
     /// Files to write once the card is applied; the card lets the person change them.
     pub deliver: Option<crate::deliver::Outputs>,
+    /// Critic rounds run on this draft and the findings still open after them.
+    pub self_check: Option<super::critic_hook::SelfCheck>,
 }
 
 /// The agents that proposed the ticked items, each named once (the person's own items excluded).

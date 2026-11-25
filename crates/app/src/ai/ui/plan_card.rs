@@ -284,6 +284,9 @@ fn issues(
             kit::caption(ui, th, &cat.t("ai.plan.truncated"));
         }
     }
+    if let Some(sc) = plan.self_check {
+        kit::caption(ui, th, &logic::self_check_text(cat, sc));
+    }
     if logic::allow_large_offer(&plan.issues, &plan.main_issues, plan.allow_large) {
         let mut on = plan.allow_large;
         if kit::checkbox(ui, th, &mut on, &cat.t("ai.plan.limit_allow")).changed() {

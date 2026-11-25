@@ -75,6 +75,7 @@ fn plan_of(ed: &Editor, items: Vec<PlanItem>) -> Arc<PlanView> {
         unreviewed: vec![],
         expires_in: None,
         deliver: None,
+        self_check: None,
     })
 }
 

@@ -7,6 +7,7 @@
 use super::render_off;
 use super::render_req::{Render3d, Target};
 use super::session::Core;
+use super::validate::{IssueLevel, PlanIssue};
 use ddc_ai::ImageData;
 use ddc_model::checks::{realism, CheckScope, Finding};
 use ddc_ui::{Catalog, Lang};
@@ -51,35 +52,103 @@ pub fn task_lines(list: &[Finding], cat: &Catalog) -> Vec<String> {
         .collect()
 }
 
-/// The text appended to the tool reply, or `None` when the draft is clean or the cap is spent.
+/// What one review of the draft concluded.
+#[derive(Debug, PartialEq)]
+pub enum Verdict {
+    Clean,
+    /// Findings go back to the model as cycle `cycle` of `cap`.
+    Fix { cycle: u8, lines: Vec<String>, count: usize },
+    /// The cap is spent and `count` findings remain.
+    Spent { count: usize },
+}
+
+/// One English line per plan issue (validation or a rule), blockers first.
+pub fn issue_lines(list: &[PlanIssue], cat: &Catalog) -> Vec<String> {
+    let mut sorted: Vec<&PlanIssue> = list.iter().collect();
+    sorted.sort_by_key(|i| i.level != IssueLevel::Block);
+    sorted
+        .into_iter()
+        .map(|i| {
+            let text = super::ui::logic::fill(&cat.t(i.text_key), &i.args);
+            let tag = if i.level == IssueLevel::Block { "check, blocks Apply" } else { "check" };
+            match &i.el {
+                Some((t, id)) => format!("- [{tag}] {text} ({t}#{id})"),
+                None => format!("- [{tag}] {text}"),
+            }
+        })
+        .collect()
+}
+
+/// Realism findings and plan checks judged together; `done` cycles already ran this turn.
+pub fn review(realism: &[Finding], checks: &[PlanIssue], done: u8, cap: u8, cat: &Catalog) -> Verdict {
+    let count = realism.len() + checks.len();
+    if count == 0 {
+        return Verdict::Clean;
+    }
+    if done >= cap {
+        return Verdict::Spent { count };
+    }
+    let mut lines = issue_lines(checks, cat);
+    lines.extend(task_lines(realism, cat));
+    lines.truncate(MAX_LISTED);
+    if count > lines.len() {
+        lines.push(format!("- and {} more", count - lines.len()));
+    }
+    Verdict::Fix { cycle: done + 1, lines, count }
+}
+
+/// The text appended to the tool reply, or `None` when the draft is clean or the critic is off.
 pub fn critic_note(c: &mut Core) -> Option<String> {
     if !flag(c, POLICY_CRITIC) {
         return None;
     }
-    let list = realism::critique(&c.ed.model, &CheckScope::All).ok()?;
-    if list.is_empty() {
-        return None;
-    }
-    if !may_cycle(c.critic_cycles) {
-        return Some(format!(
-            "critic: {} findings remain after {} refinement cycles (limit `critic_cycles`, \
-             adjustable in Settings > AI); stop correcting and tell the user what is left",
-            list.len(),
-            max_cycles()
-        ));
-    }
-    c.critic_cycles += 1;
+    let realism = realism::critique(&c.ed.model, &CheckScope::All).unwrap_or_default();
+    let checks = c.check_issues();
     let cat = Catalog::new(Lang::En);
-    let mut lines = task_lines(&list, &cat);
-    if list.len() > lines.len() {
-        lines.push(format!("- and {} more", list.len() - lines.len()));
+    let v = review(&realism, &checks, c.critic_cycles, max_cycles(), &cat);
+    note(c, v)
+}
+
+/// Keeps the card's self-check line in step with the verdict and words the reply.
+fn note(c: &mut Core, v: Verdict) -> Option<String> {
+    match v {
+        Verdict::Clean => {
+            c.critic_left = 0;
+            None
+        }
+        Verdict::Spent { count } => {
+            c.critic_left = count;
+            Some(format!(
+                "critic: {count} findings remain after {} refinement cycles (limit `critic_cycles`,                  adjustable in Settings > AI); stop correcting and tell the user what is left",
+                c.critic_cycles
+            ))
+        }
+        Verdict::Fix { cycle, lines, count } => {
+            c.critic_cycles = cycle;
+            c.critic_left = count;
+            Some(format!(
+                "critic cycle {cycle}/{}: fix these before you answer
+{}",
+                max_cycles(),
+                lines.join("
+")
+            ))
+        }
     }
-    Some(format!(
-        "critic cycle {}/{}: fix these before you answer\n{}",
-        c.critic_cycles,
-        max_cycles(),
-        lines.join("\n")
-    ))
+}
+
+/// The card line: rounds run this turn and what is still open; `None` before the first round.
+pub fn self_check(c: &Core) -> Option<SelfCheck> {
+    (c.critic_cycles > 0).then_some(SelfCheck {
+        rounds: c.critic_cycles,
+        left: c.critic_left,
+    })
+}
+
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct SelfCheck {
+    pub rounds: u8,
+    pub left: usize,
 }
 
 fn view(yaw: f64, pitch: f64, ortho: bool) -> Render3d {
@@ -154,5 +223,102 @@ mod tests {
         assert_eq!(lines.len(), 1);
         assert!(lines[0].contains("solid:4") && lines[0].contains("3 mm"), "{}", lines[0]);
         assert!(!lines[0].contains('{'));
+    }
+
+    fn finding(name: &str) -> Finding {
+        use ddc_model::checks::{Fix, Severity};
+        Finding {
+            rule: "realism",
+            severity: Severity::Warning,
+            elements: vec![("solid".to_string(), 4)],
+            at: None,
+            measure: None,
+            msg_key: "ai.realism.tiny_part",
+            args: vec![("name", name.to_string()), ("size", "3".to_string())],
+            fix: Fix::None,
+        }
+    }
+
+    fn check(level: IssueLevel, id: i64) -> PlanIssue {
+        PlanIssue {
+            level,
+            item: None,
+            el: Some(("walls".to_string(), id)),
+            text_key: "ai.issue.integrity",
+            args: vec!["walls".to_string(), id.to_string(), "dangling host".to_string()],
+        }
+    }
+
+    fn en() -> Catalog {
+        Catalog::new(Lang::En)
+    }
+
+    #[test]
+    fn clean_draft_says_nothing() {
+        assert_eq!(review(&[], &[], 0, 3, &en()), Verdict::Clean);
+        assert_eq!(review(&[], &[], 3, 3, &en()), Verdict::Clean, "clean beats a spent cap");
+    }
+
+    #[test]
+    fn a_seeded_check_becomes_a_task_with_its_element() {
+        let v = review(&[], &[check(IssueLevel::Warn, 7)], 0, 3, &en());
+        let Verdict::Fix { cycle, lines, count } = v else { panic!("{v:?}") };
+        assert_eq!((cycle, count), (1, 1));
+        assert!(lines[0].starts_with("- [check]") && lines[0].contains("walls#7"), "{}", lines[0]);
+        assert!(lines[0].contains("dangling host") && !lines[0].contains('{'), "{}", lines[0]);
+    }
+
+    #[test]
+    fn realism_and_checks_share_one_task_list_blockers_first() {
+        let v = review(
+            &[finding("solid:4")],
+            &[check(IssueLevel::Warn, 1), check(IssueLevel::Block, 2)],
+            1,
+            3,
+            &en(),
+        );
+        let Verdict::Fix { cycle, lines, count } = v else { panic!("{v:?}") };
+        assert_eq!((cycle, count, lines.len()), (2, 3, 3));
+        assert!(lines[0].contains("blocks Apply") && lines[0].contains("walls#2"), "{lines:?}");
+        assert!(lines[1].contains("walls#1"));
+        assert!(lines[2].starts_with("- [realism]"));
+    }
+
+    #[test]
+    fn the_cap_stops_the_loop_and_counts_what_is_left() {
+        let checks = [check(IssueLevel::Block, 1)];
+        assert_eq!(
+            review(&[finding("a")], &checks, 3, 3, &en()),
+            Verdict::Spent { count: 2 }
+        );
+        assert_eq!(review(&[], &checks, 0, 0, &en()), Verdict::Spent { count: 1 }, "cap 0 never cycles");
+    }
+
+    #[test]
+    fn long_lists_are_cut_and_the_rest_counted() {
+        let checks: Vec<PlanIssue> = (0..MAX_LISTED as i64 + 4).map(|i| check(IssueLevel::Warn, i)).collect();
+        let Verdict::Fix { lines, count, .. } = review(&[], &checks, 0, 3, &en()) else { panic!() };
+        assert_eq!(count, MAX_LISTED + 4);
+        assert_eq!(lines.len(), MAX_LISTED + 1);
+        assert_eq!(lines.last().unwrap(), "- and 4 more");
+    }
+
+    #[test]
+    fn two_steps_fix_then_clear() {
+        // step one finds a problem, the model fixes it, step two is clean
+        let first = review(&[], &[check(IssueLevel::Block, 3)], 0, 3, &en());
+        let Verdict::Fix { cycle, .. } = first else { panic!("{first:?}") };
+        assert_eq!(review(&[], &[], cycle, 3, &en()), Verdict::Clean);
+    }
+
+    #[test]
+    fn self_check_line_reads_rounds_and_what_is_left() {
+        let cat = en();
+        let open = super::super::ui::logic::self_check_text(&cat, SelfCheck { rounds: 2, left: 1 });
+        assert!(open.contains('2') && open.contains('1') && !open.contains('{'), "{open}");
+        let clear = super::super::ui::logic::self_check_text(&cat, SelfCheck { rounds: 3, left: 0 });
+        assert!(clear.contains('3') && clear.contains("fixed"), "{clear}");
+        let ru = super::super::ui::logic::self_check_text(&Catalog::new(Lang::Ru), SelfCheck { rounds: 2, left: 4 });
+        assert!(ru.contains("Самопроверка") && ru.contains('4'), "{ru}");
     }
 }

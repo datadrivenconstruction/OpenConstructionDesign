@@ -212,6 +212,7 @@ impl Fx {
             unreviewed: vec![],
             expires_in: None,
             deliver: None,
+            self_check: None,
         })
     }
 

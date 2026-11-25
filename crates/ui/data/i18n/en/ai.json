@@ -133,6 +133,8 @@
  "ai.plan.truncated": "The list is shortened: only some of the changes are shown.",
  "ai.prompt.explain": "Explain what the selected elements are and where their sizes come from.",
  "ai.prompt.fix": "Run the checks and propose fixes for the findings.",
+ "ai.plan.self_check": "Self-check: {rounds} rounds, {left} findings left.",
+ "ai.plan.self_check_clear": "Self-check: {rounds} rounds, all findings fixed.",
  "ai.qty.curtains": "Curtain walls",
  "ai.qty.doors": "Doors",
  "ai.qty.room_area": "Room area",

@@ -144,6 +144,7 @@ fn plan(ed: &Editor, n: usize, stale: bool, blocked: bool) -> Arc<PlanView> {
         unreviewed: vec![],
         expires_in: None,
         deliver: None,
+        self_check: None,
     })
 }
 
