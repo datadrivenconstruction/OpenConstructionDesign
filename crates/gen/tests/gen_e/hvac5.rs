@@ -158,7 +158,6 @@ fn ducts_take_catalogue_sizes_and_change_size_through_a_transition() {
 }
 
 #[test]
-#[ignore = "the hospital supply plant run exceeds its velocity cap"]
 fn velocities_friction_and_flows_stay_within_the_rules() {
     // the friction ceiling of a checked design, over the 1 Pa/m it is sized at
     let r_max = 1.5;
