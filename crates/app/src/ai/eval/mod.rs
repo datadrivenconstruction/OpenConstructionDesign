@@ -20,6 +20,10 @@ pub mod run;
 pub mod shape_oracles;
 pub mod triggers;
 
+// object scripts the scripted answers replay; never listed to the assistant
+#[cfg(test)]
+#[path = "../../../../script/tests/data/scenes.rs"]
+mod scenes;
 #[cfg(test)]
 mod tests;
 #[cfg(test)]

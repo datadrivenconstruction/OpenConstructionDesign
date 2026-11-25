@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: AGPL-3.0-only
+// SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! `DDC_Provenance` per element: the recipe and part that built it, whether a person edited it
 //! since, the source file of an import and how many values the assistant set, verified or not.
 //! An element with none of these gets no set.

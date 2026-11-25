@@ -748,6 +748,16 @@ pub(super) fn stair_box(g: &GStair) -> Result<((f64, f64), (f64, f64)), GenError
     Ok((lo, hi))
 }
 
+/// The least band that holds the stair: its shallower box, the door zone and the margin.
+pub(super) fn stair_band(spec: &ProjectSpec) -> Result<Mm, GenError> {
+    let mut need = Mm::MAX;
+    for angle in [std::f64::consts::FRAC_PI_2, 0.0] {
+        let (lo, hi) = stair_box(&stair_def(spec, angle))?;
+        need = need.min(mm(hi.1 - lo.1));
+    }
+    Ok(need + door_zone() + stair_margin())
+}
+
 /// Flights along the depth when the band is deep enough, else along the facade.
 pub(super) fn fit_stair(spec: &ProjectSpec, ds: Mm) -> Result<(StairFit, Mm), GenError> {
     let room = ds - door_zone() - stair_margin();
@@ -800,7 +810,7 @@ fn fit_strip(spec: &ProjectSpec) -> Result<(StairFit, Mm, Mm), GenError> {
 fn programs(spec: &ProjectSpec, d: Mm, plan: PlanKind, dn: Mm, room: Mm) -> Result<Vec<Program>, GenError> {
     let mut lists: Vec<Vec<Unit>> = vec![];
     if plan == PlanKind::Deep {
-        if spec.typology == Typology::ApartmentSection {
+        if spec.traits.flats {
             return Err(infeasible(
                 "footprint.depth past two bands makes an open bay: apartments need two lit \
                  bands, so keep the depth within them",
@@ -827,7 +837,7 @@ fn programs(spec: &ProjectSpec, d: Mm, plan: PlanKind, dn: Mm, room: Mm) -> Resu
             }
             lists.push(units);
         }
-    } else if spec.typology == Typology::ApartmentSection {
+    } else if spec.traits.flats {
         let mut units = vec![];
         for a in &spec.apartments {
             let u = apartment_unit(a, d, spec.ru)?;
@@ -1052,8 +1062,10 @@ fn floor_cells(spec: &ProjectSpec, f: &Frame, p: &Program, next_apt: &mut u32) -
 fn spread(spec: &ProjectSpec, units: &[Unit], list: &[usize], spare: Mm) -> Vec<Mm> {
     let mut out = vec![0; list.len()];
     let mut grow: Vec<usize> = (0..list.len()).filter(|&k| units[list[k]].grows()).collect();
-    // a sliver too short for a room of its own widens the units that may not grow (flats)
-    if grow.is_empty() && spare < min_unit() {
+    // a spare too short for a store's door would be a room nobody reaches: when nothing may
+    // grow, every unit of the segment takes its share instead
+    let door = rule_mm("room.door_wet") + 2 * rule_mm("facade.edge_clear");
+    if grow.is_empty() && spare < door {
         grow = (0..list.len()).collect();
     }
     let total: Mm = grow.iter().map(|&k| units[list[k]].len).sum();
@@ -1311,8 +1323,18 @@ pub(super) fn shift(l: &mut GLayout, o: (f64, f64)) {
 /// it by `o`. Every point and angle of every element goes along.
 pub(super) fn place(l: &mut GLayout, quarter: u8, o: (f64, f64)) {
     let q = quarter % 4;
-    let s = |p: &mut (f64, f64)| turned(p, q, o);
-    let turn = f64::from(q) * std::f64::consts::FRAC_PI_2;
+    moved_by(l, f64::from(q) * std::f64::consts::FRAC_PI_2, |p| turned(p, q, o));
+}
+
+/// Turns the layout by `angle` radians counter-clockwise about the origin.
+pub(super) fn spin(l: &mut GLayout, angle: f64) {
+    let (c, s) = (angle.cos(), angle.sin());
+    moved_by(l, angle, |p| *p = (c * p.0 - s * p.1, s * p.0 + c * p.1));
+}
+
+/// Moves every point of the layout by `s` and turns every angle by `turn`.
+fn moved_by(l: &mut GLayout, turn: f64, s: impl Fn(&mut (f64, f64))) {
+    let s = &s;
     for c in &mut l.columns {
         s(&mut c.at);
         c.rotation += turn;
@@ -1958,7 +1980,7 @@ fn storey(
             keep: vec![],
         })
         .collect();
-    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, spec.typology, rules, dwell);
+    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, (spec.typology, spec.traits.one_household), rules, dwell);
     l.fixtures = fixtures;
     let caps = [
         (l.walls.len(), slots::OPENINGS - slots::WALLS, "walls"),
@@ -2044,5 +2066,22 @@ mod tests {
             }
         }
         assert!(seen > 0, "no apartment was laid");
+    }
+
+    /// A band of apartments that leaves a metre over gives it to the apartments: a store that
+    /// narrow got no door and refused the tower.
+    #[test]
+    fn a_spare_too_short_for_a_door_widens_the_apartments() {
+        let s = super::super::parse_spec(&serde_json::json!({"typology": "residential_tower"})).unwrap();
+        let d = mm(s.band_depth);
+        let units: Vec<Unit> = s.apartments.iter().filter_map(|a| apartment_unit(a, d, false).ok()).collect();
+        assert!(units.len() >= 2 && units.iter().all(|u| !u.grows()));
+        let list: Vec<usize> = (0..units.len()).collect();
+        let door = rule_mm("room.door_wet") + 2 * rule_mm("facade.edge_clear");
+        let e = spread(&s, &units, &list, door - 1);
+        assert_eq!(e.iter().sum::<Mm>(), door - 1, "{e:?}");
+        assert!(e.iter().all(|&x| x > 0), "{e:?}");
+        // a spare a store can be entered by stays the store
+        assert_eq!(spread(&s, &units, &list, door).iter().sum::<Mm>(), 0);
     }
 }

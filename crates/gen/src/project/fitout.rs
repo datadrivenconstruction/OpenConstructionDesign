@@ -7,7 +7,7 @@
 //! Nothing a dwelling already has is added again.
 
 use super::svc::{self, Room, Side, R};
-use super::{GProject, PRole, ProjectSpec, RoomKind, Typology};
+use super::{GProject, PRole, ProjectSpec, RoomKind};
 use crate::GFixture;
 
 /// Families counted as the appliances of a dwelling.
@@ -92,7 +92,7 @@ fn fixtures_in(p: &GProject, k: usize, room: &Room, fam: &str) -> Vec<R> {
 /// records how many appliances the project has. Returns how many were added here.
 pub(crate) fn appliances(spec: &ProjectSpec, p: &mut GProject) -> usize {
     let mut added = 0;
-    if matches!(spec.typology, Typology::House | Typology::ApartmentSection) {
+    if spec.traits.residential {
         let rooms: Vec<Vec<Room>> = p.storeys.iter().map(svc::rooms).collect();
         // dwellings that have one anywhere in the project, on any storey
         let mut washer: Vec<PRole> = vec![];
@@ -105,7 +105,7 @@ pub(crate) fn appliances(spec: &ProjectSpec, p: &mut GProject) -> usize {
         }
         for kind in [RoomKind::Bath, RoomKind::Kitchen] {
             for (k, rs) in rooms.iter().enumerate() {
-                let ours = |r: &&Room| super::furnish::dwelling_of(r.owner, spec.typology).is_some();
+                let ours = |r: &&Room| super::furnish::dwelling_of(r.owner, spec.traits.one_household).is_some();
                 for room in rs.iter().filter(|r| r.kind == kind).filter(ours) {
                     if washer.contains(&room.owner) {
                         continue;

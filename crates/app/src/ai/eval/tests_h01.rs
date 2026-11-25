@@ -93,7 +93,7 @@ fn t01_owner_tower_at_full_detail_passes_every_oracle() {
     let mut params = tower_params();
     params["detail"] = json!(3);
     let p = ScriptedProvider::new(vec![
-        tool("help", json!({"topic": "lattice_tower"})),
+        tool("help", json!({"topic": "lattice_frame"})),
         tool("load_tools", json!({"groups": ["scripts"]})),
         tool("run_generator", json!({"id": "steel_frame", "variants": 1, "params": params})),
         vec![Script::Text(ru("tower_300_reply"))],

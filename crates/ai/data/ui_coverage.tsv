@@ -151,18 +151,24 @@ drawing.to_detail	gap	m.add_annos_batch	converts view to detail annotations
 e3d.beam	api	create_elements:beam	3D beam creation
 e3d.box	view	-	3D box tool
 e3d.column	api	create_elements:column	3D column creation
-e3d.duct	api	create_elements:mep	draw duct run in 3D
 e3d.floor	api	create_elements:floor	3D floor creation
 e3d.gizmo	view	-	toggles transform gizmo
 e3d.measure	view	-	3D measure tool
-e3d.pipe	api	create_elements:mep	draw pipe run in 3D
 e3d.snap	view	-	toggles 3D snaps
-e3d.tray	api	create_elements:mep	draw cable tray run in 3D
 e3d.wall	api	create_elements:wall	3D wall creation
 e3d.wp_face	view	-	work plane from face
 e3d.wp_level	view	-	work plane at level
 e3d.wp_pick	view	-	work plane from 3 points
 e3d.wp_ref	view	-	cycle 3D work plane over ref planes
+e3d.attach_base	gap	m.attach_wall_to_slab	3D pick; attaches wall base to a floor
+e3d.attach_top	gap	m.attach_wall_top/attach_wall_to_slab	3D pick; attaches wall top to a roof or floor
+e3d.cut	gap	m.cut_geometry	3D pick; cuts one element by another
+e3d.duct	api	create_elements:mep	3D duct run
+e3d.join	gap	m.join_geometry	3D pick; joins two elements
+e3d.pipe	api	create_elements:mep	3D pipe run
+e3d.roof	api	create_elements:roof	3D roof by sketch or picked walls
+e3d.tray	api	create_elements:mep	3D cable tray run
+e3d.unjoin	gap	m.unjoin_geometry	3D pick; unjoins two elements
 edit.copy	clipboard	-	copy selection to clipboard
 edit.copy_params	clipboard	-	copy wall/opening params to clip
 edit.cut	gap	m.delete_items	clip copy then delete selection

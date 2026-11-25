@@ -7,6 +7,7 @@ mod dc;
 mod foundation;
 mod keys;
 mod landscape;
+mod plant_outdoor;
 mod plant_process;
 mod project_quality;
 mod score;

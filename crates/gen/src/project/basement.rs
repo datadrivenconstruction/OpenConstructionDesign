@@ -3,7 +3,7 @@
 //! Storeys below ground. The corridors, stairs and lifts of the ground floor run straight
 //! down; the rest of the box under the building is parking, narrow leftovers are stores.
 
-use super::build::{hole_clear, shift, stair_box};
+use super::build::{hole_clear, shift, spin, stair_box};
 use super::names;
 use super::rules::rule_mm;
 use super::tile::{self, m, mm, Cell, Mm, WinSize};
@@ -52,6 +52,16 @@ fn overlap(a: &R, b: &R) -> bool {
 
 /// An outline of four axis-parallel edges.
 fn is_box(poly: &[(f64, f64)]) -> bool {
+    // a room shares vertices with its neighbours: the points where they meet it along a
+    // straight side are not corners
+    let m0 = poly.len();
+    let poly: Vec<(f64, f64)> = (0..m0)
+        .filter(|&i| {
+            let (a, p, b) = (poly[(i + m0 - 1) % m0], poly[i], poly[(i + 1) % m0]);
+            ((p.0 - a.0) * (b.1 - p.1) - (p.1 - a.1) * (b.0 - p.0)).abs() > 1e-9
+        })
+        .map(|i| poly[i])
+        .collect();
     let n = poly.len();
     n == 4
         && (0..n).all(|i| {
@@ -206,6 +216,74 @@ fn moved(g: &GLayout, o: (f64, f64)) -> GLayout {
     l
 }
 
+/// The turn of a room off the plan axes, in (-45, 45] degrees: the direction of its longest
+/// side.
+fn turn_of(ring: &[(f64, f64)]) -> f64 {
+    let n = ring.len();
+    let long = (0..n).map(|i| (ring[i], ring[(i + 1) % n])).max_by(|a, b| {
+        let l = |e: &((f64, f64), (f64, f64))| (e.1 .0 - e.0 .0).hypot(e.1 .1 - e.0 .1);
+        l(a).total_cmp(&l(b))
+    });
+    let Some((a, b)) = long else { return 0.0 };
+    let q = std::f64::consts::FRAC_PI_2;
+    let mut t = (b.1 - a.1).atan2(b.0 - a.0).rem_euclid(q);
+    if t > q / 2.0 {
+        t -= q;
+    }
+    if t.abs() < 1e-6 {
+        0.0
+    } else {
+        t
+    }
+}
+
+/// The frames a plate's basement may be squared in: those of its lifts, then of its stairs,
+/// then the plan's own. A plate's core and a stair at its perimeter may stand turned apart.
+fn core_turns(g: &PStorey) -> Vec<f64> {
+    let mut out: Vec<f64> = vec![];
+    for k in [RoomKind::Lift, RoomKind::Stair] {
+        for (r, _) in g.layout.rooms.iter().zip(&g.rooms).filter(|x| x.1.kind == k) {
+            let t = turn_of(&r.polygon);
+            if !out.iter().any(|u| (u - t).abs() < 1e-6) {
+                out.push(t);
+            }
+        }
+    }
+    if !out.contains(&0.0) {
+        out.push(0.0);
+    }
+    out
+}
+
+/// The core among the rooms that go down: the stairs and lifts that touch a lift (or the first
+/// stair) through one another, and the straight corridors touching them; indices into `rooms`.
+fn core_group(rooms: &[(R, RoomKind)]) -> Vec<usize> {
+    let near = |a: &R, b: &R| {
+        let t = snap();
+        a.0 <= b.2 + t && b.0 <= a.2 + t && a.1 <= b.3 + t && b.1 <= a.3 + t
+    };
+    let seed = rooms
+        .iter()
+        .position(|x| x.1 == RoomKind::Lift)
+        .or_else(|| rooms.iter().position(|x| x.1 == RoomKind::Stair));
+    let Some(seed) = seed else { return (0..rooms.len()).collect() };
+    let mut core = vec![seed];
+    loop {
+        let more: Vec<usize> = (0..rooms.len())
+            .filter(|i| !core.contains(i) && rooms[*i].1 != RoomKind::Corridor && core.iter().any(|&c| near(&rooms[c].0, &rooms[*i].0)))
+            .collect();
+        if more.is_empty() {
+            break;
+        }
+        core.extend(more);
+    }
+    let corridors: Vec<usize> = (0..rooms.len())
+        .filter(|&i| rooms[i].1 == RoomKind::Corridor && core.iter().any(|&c| near(&rooms[c].0, &rooms[i].0)))
+        .collect();
+    core.extend(corridors);
+    core
+}
+
 /// The plan of one basement, in the box's own frame from (0, 0).
 struct Plan {
     cells: Vec<Cell>,
@@ -213,24 +291,71 @@ struct Plan {
     d: Mm,
     /// The box's corner in project coordinates.
     o: (f64, f64),
-    /// Each stair's hole through the slab above it, project coordinates.
+    /// Each stair's hole through the slab above it, in the core's frame.
     holes: Vec<Vec<(f64, f64)>>,
+    /// The frame's turn off the plan axes ([`core_turns`]); the frame is the plan
+    /// turned back by it.
+    turn: f64,
+    /// The ground floor's stairs, shafts and columns in the core's frame.
+    ground: GLayout,
 }
 
+/// The plan in the first frame of [`core_turns`] that holds it.
 fn plan(spec: &ProjectSpec, p: &GProject) -> Result<Plan, GenError> {
-    let g = &p.storeys[0];
-    if g.layout.stairs.is_empty() {
+    let turns = if spec.plate.is_some() { core_turns(&p.storeys[0]) } else { vec![0.0] };
+    let mut first = None;
+    for t in turns {
+        match plan_at(spec, p, t) {
+            Ok(pl) => return Ok(pl),
+            Err(e) => {
+                first.get_or_insert(e);
+            }
+        }
+    }
+    Err(first.unwrap_or_else(|| infeasible("basement: no frame holds it")))
+}
+
+fn plan_at(spec: &ProjectSpec, p: &GProject, turn: f64) -> Result<Plan, GenError> {
+    let g0 = &p.storeys[0];
+    if g0.layout.stairs.is_empty() {
         return Err(infeasible(
             "a basement needs the stair down: set floors to 2 or more, or basements to 0",
         ));
     }
     let plated = spec.plate.is_some();
+    // a plate turned on its plot keeps its core square to itself: the basement is laid out
+    // in the core's frame, where the stairs and lifts are boxes
+    let local;
+    let g = if turn == 0.0 {
+        g0
+    } else {
+        let mut t = g0.clone();
+        spin(&mut t.layout, -turn);
+        local = t;
+        &local
+    };
     // a plate keeps its stairs, lifts and straight corridors; a slanted or ring corridor
     // would not square into the parking grid
-    let down = |gr: &crate::GRoom, k: RoomKind| kept(k) && (!plated || k != RoomKind::Corridor || is_box(&gr.polygon));
+    let fits_down = |gr: &crate::GRoom, k: RoomKind| kept(k) && (!plated || k != RoomKind::Corridor || is_box(&gr.polygon));
+    let all: Vec<(R, RoomKind)> =
+        g.layout.rooms.iter().zip(&g.rooms).filter(|x| fits_down(x.0, x.1.kind)).map(|x| (bbox(&x.0.polygon), x.1.kind)).collect();
+    // the rooms that stay above: a stair at the plate's perimeter, apart from the core, when
+    // no box under the plate holds both; the core's own stairs and lift go down
+    let mut left: Vec<R> = vec![];
     let (o, w, d) = if plated {
-        let core: Vec<R> = g.layout.rooms.iter().zip(&g.rooms).filter(|x| down(x.0, x.1.kind)).map(|x| bbox(&x.0.polygon)).collect();
-        inscribed(&g.layout.slab, &core)?
+        let rects: Vec<R> = all.iter().map(|x| x.0).collect();
+        match inscribed(&g.layout.slab, &rects) {
+            Ok(b) => b,
+            Err(e) => {
+                let core = core_group(&all);
+                if core.len() == all.len() {
+                    return Err(e);
+                }
+                let b = inscribed(&g.layout.slab, &core.iter().map(|&i| all[i].0).collect::<Vec<R>>()).map_err(|_| e)?;
+                left = (0..all.len()).filter(|i| !core.contains(i)).map(|i| all[i].0).collect();
+                b
+            }
+        }
     } else {
         let (mut lo, mut hi) = ((f64::MAX, f64::MAX), (f64::MIN, f64::MIN));
         for q in g.layout.walls.iter().flat_map(|w| [w.a, w.b]) {
@@ -239,6 +364,7 @@ fn plan(spec: &ProjectSpec, p: &GProject) -> Result<Plan, GenError> {
         }
         (lo, mm(hi.0 - lo.0), mm(hi.1 - lo.1))
     };
+    let down = |gr: &crate::GRoom, k: RoomKind| fits_down(gr, k) && !left.contains(&bbox(&gr.polygon));
     let mut keep: Vec<(R, RoomKind)> = vec![];
     let snap = snap();
     for (gr, pr) in g.layout.rooms.iter().zip(&g.rooms).filter(|x| down(x.0, x.1.kind)) {
@@ -303,7 +429,20 @@ fn plan(spec: &ProjectSpec, p: &GProject) -> Result<Plan, GenError> {
         cells.push(cell(r, kind, spec.ru));
     }
     let mut holes = vec![];
-    for st in &g.layout.stairs {
+    let mut ground = moved(&g.layout, (0.0, 0.0));
+    let stays = |st: &crate::GStair| -> Result<bool, GenError> {
+        let (lo, hi) = stair_box(st)?;
+        let c = (mm((lo.0 + hi.0) / 2.0), mm((lo.1 + hi.1) / 2.0));
+        Ok(left.iter().any(|r| r.0 <= c.0 && c.0 <= r.2 && r.1 <= c.1 && c.1 <= r.3))
+    };
+    let mut down_stairs = vec![];
+    for st in ground.stairs.drain(..) {
+        if !stays(&st)? {
+            down_stairs.push(st);
+        }
+    }
+    ground.stairs = down_stairs;
+    for st in &ground.stairs {
         // the stair's layout stands in the plan already (origin and turn applied)
         let (lo, hi) = stair_box(st)?;
         let e = hole_clear();
@@ -336,13 +475,14 @@ fn plan(spec: &ProjectSpec, p: &GProject) -> Result<Plan, GenError> {
         d,
         o,
         holes,
+        turn,
+        ground,
     })
 }
 
 /// Basement `b` (0 right below the ground floor).
 fn storey(
     spec: &ProjectSpec,
-    p: &GProject,
     pl: &Plan,
     cells: &[Cell],
     b: usize,
@@ -360,7 +500,7 @@ fn storey(
     }
     l.height = h;
     l.slab = crate::layout::rect(0.0, 0.0, m(pl.w), m(pl.d));
-    let down = moved(&p.storeys[0].layout, (-pl.o.0, -pl.o.1));
+    let down = moved(&pl.ground, (-pl.o.0, -pl.o.1));
     l.stairs = down.stairs;
     l.shafts = down.shafts;
     let (w, d) = (m(pl.w), m(pl.d));
@@ -380,11 +520,14 @@ fn storey(
             keep: vec![],
         })
         .collect();
-    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, spec.typology, rules, &mut Default::default());
+    let (fixtures, fit) = super::furnish::furnish(&l, &rooms, h, (spec.typology, spec.traits.one_household), rules, &mut Default::default());
     l.fixtures = fixtures;
     shift(&mut l, pl.o);
     if b + 1 < n {
         l.slab_holes.extend(pl.holes.iter().cloned());
+    }
+    if pl.turn != 0.0 {
+        spin(&mut l, pl.turn);
     }
     let caps = [
         (l.walls.len(), slots::OPENINGS - slots::WALLS, "walls"),
@@ -436,9 +579,13 @@ pub(super) fn add(spec: &ProjectSpec, p: &mut GProject) -> Result<(), GenError> 
             Some((m, x)) => Some(super::typology::below::level_cells(spec, m, x, &pl.cells, b)?),
             None => None,
         };
-        out.push(storey(spec, p, &pl, own.as_deref().unwrap_or(&pl.cells), b, n, &rules)?);
+        out.push(storey(spec, &pl, own.as_deref().unwrap_or(&pl.cells), b, n, &rules)?);
     }
-    p.storeys[0].layout.slab_holes.extend(pl.holes.iter().cloned());
+    let mut holes = GLayout { slab_holes: pl.holes.clone(), ..GLayout::default() };
+    if pl.turn != 0.0 {
+        spin(&mut holes, pl.turn);
+    }
+    p.storeys[0].layout.slab_holes.extend(holes.slab_holes);
     // the levels of a typology hold its own spaces, not the parking the base plan shows
     let typed = spec.model.as_ref().is_some_and(|m| m.below.is_some());
     let area = |k: RoomKind| -> f64 {
@@ -482,6 +629,27 @@ mod tests {
         assert!(free.contains(&(12400, 8000, 30000, 14000)));
     }
 
+    /// A plate turned on its plot: the basement is squared in the core's frame, so the sides
+    /// of its slab run along the stair's sides and the turned stair and lift do not overlap.
+    #[test]
+    fn a_basement_under_a_turned_plate_is_square_to_its_core() {
+        let s = super::super::parse_spec(&serde_json::json!({"typology": "office", "floors": 4, "basements": 1,
+            "footprint": {"plot": [[0, 0], [62, 0], [50, 34], [8, 30]], "plot_setback": 3}}))
+        .unwrap();
+        let p = super::super::build_project(&s).unwrap_or_else(|e| panic!("{e}"));
+        let g = &p.storeys[0];
+        let lift = g.layout.rooms.iter().zip(&g.rooms).find(|x| x.1.kind == RoomKind::Lift).expect("a lift").0;
+        let t = turn_of(&lift.polygon);
+        assert!(t.abs() > 1e-3, "the core stands turned on this plot");
+        let q = std::f64::consts::FRAC_PI_2;
+        let b = &p.basements[0].layout.slab;
+        for i in 0..b.len() {
+            let (a, c) = (b[i], b[(i + 1) % b.len()]);
+            let off = ((c.1 - a.1).atan2(c.0 - a.0) - t).rem_euclid(q);
+            assert!(off.min(q - off) < 1e-6, "slab side {a:?}-{c:?} off the core by {off}");
+        }
+    }
+
     /// The stair layout stands in the plan already: every stair far from the origin gets its
     /// hole through the ground slab round its own flights.
     #[test]
@@ -495,5 +663,17 @@ mod tests {
             let c = ((lo.0 + hi.0) / 2.0, (lo.1 + hi.1) / 2.0);
             assert!(g.slab_holes.iter().any(|h| crate::check::inside(h, c)), "no hole round the stair at {c:?}");
         }
+    }
+}
+
+#[cfg(test)]
+mod box_tests {
+    /// A corridor whose side carries the corners of the rooms along it is still a box: the
+    /// plated basement kept no corridor and was refused for having none.
+    #[test]
+    fn a_box_with_shared_vertices_on_its_sides_is_a_box() {
+        let r = [(0.0, 0.0), (4.0, 0.0), (9.0, 0.0), (9.0, 2.0), (3.0, 2.0), (0.0, 2.0)];
+        assert!(super::is_box(&r));
+        assert!(!super::is_box(&[(0.0, 0.0), (9.0, 0.0), (9.0, 2.0), (4.0, 2.0), (4.0, 5.0), (0.0, 5.0)]));
     }
 }

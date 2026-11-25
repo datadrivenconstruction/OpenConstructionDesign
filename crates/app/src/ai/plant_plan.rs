@@ -7,12 +7,12 @@
 //! differs and keeps the ids of the rest; an element changed by hand since is left alone.
 
 use super::exec::{ModelStep, NewResolved, PropSet};
-use super::gen_map::type_ref;
-use super::plan::{compile_create, push, CompileCx, NewElem, PlanError};
+use super::gen_map::{new_type, type_ref};
+use super::plan::{compile_create, push, CompileCx, ElRef, NewElem, PlanError};
 use super::project_plan::row_hash;
 use super::rel_value::Skip;
 use ddc_gen::plant::{self, Kit, KitFamily, Plant};
-use ddc_model::{CompSpec, MepBuild, Model, RunSpec, SysRef};
+use ddc_model::{CompSpec, Edit, MemberShape, MepBuild, Model, RunSpec, SysRef};
 use rusqlite::types::Value;
 use serde_json::{json, Value as J};
 use std::collections::{BTreeMap, BTreeSet};
@@ -248,6 +248,30 @@ fn frame_table(t: &str) -> &'static str {
 
 type Frame = Vec<(u32, String, &'static str, NewElem, u64)>;
 
+/// Section and material of the plant's own steel posts and beams.
+const STEEL_TYPE: &str = "Plant steel";
+const STEEL: &str = "Steel";
+
+/// The member type the plant's steel is drawn with, created with its material row when the
+/// model has none: the section is the one the plant's clash checks assume.
+fn steel_type(cx: &mut CompileCx<'_>, out: &mut Vec<ModelStep>) -> Result<ElRef, PlanError> {
+    let found = cx.ed.model.sql().query_row("SELECT id FROM member_type WHERE name=?1", [STEEL_TYPE], |r| r.get::<_, i64>(0));
+    let id = match found {
+        Ok(id) => id,
+        Err(rusqlite::Error::QueryReturnedNoRows) => {
+            if cx.ed.model.material(STEEL)?.id == 0 {
+                let edit = Edit::Material { name: STEEL.to_string(), spec: ddc_model::material_defaults(STEEL) };
+                push(cx, out, ModelStep::Edits(vec![edit]))?;
+            }
+            let side = 2.0 * plant::STEEL_R;
+            let elem = NewResolved::MemberType { name: STEEL_TYPE.to_string(), shape: MemberShape::Rect { b: side, h: side }, material: STEEL.to_string() };
+            new_type(cx, out, "member_type", elem)?
+        }
+        Err(e) => return Err(e.into()),
+    };
+    Ok(type_ref("member_type", id))
+}
+
 /// Columns, beams and walls of the plant: slots follow the placed elements. One that is kept
 /// as it is stays; one that changed is replaced; one changed by hand is left alone.
 fn sync_frame(
@@ -260,11 +284,12 @@ fn sync_frame(
     fresh: &mut BTreeSet<String>,
 ) -> Result<(), PlanError> {
     let mut want: Vec<(String, &'static str, NewElem)> = vec![];
+    let mtype = if kit.cols.is_empty() && kit.beams.is_empty() { None } else { Some(steel_type(cx, out)?) };
     for c in &kit.cols {
         let elem = NewElem::Column {
             level: op.level,
             top_level: None,
-            mtype: None,
+            mtype: mtype.clone(),
             at: (c.a.x, c.a.y),
             base_offset: c.a.z.min(c.b.z),
             top_offset: c.a.z.max(c.b.z),
@@ -275,7 +300,7 @@ fn sync_frame(
         want.push((c.key.clone(), "col", elem));
     }
     for b in &kit.beams {
-        let elem = NewElem::Beam { level: op.level, mtype: None, a: (b.a.x, b.a.y, b.a.z), b: (b.b.x, b.b.y, b.b.z) };
+        let elem = NewElem::Beam { level: op.level, mtype: mtype.clone(), a: (b.a.x, b.a.y, b.a.z), b: (b.b.x, b.b.y, b.b.z) };
         want.push((b.key.clone(), "beam", elem));
     }
     for w in &kit.walls {

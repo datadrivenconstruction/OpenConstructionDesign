@@ -6,7 +6,7 @@ license.workspace = true
 publish.workspace = true
 repository.workspace = true
 rust-version.workspace = true
-description = "Headless CLI of the free, open-source CAD-BIM editor (AGPL-3.0)"
+description = "Headless batch tool for DDC model files"
 
 # Headless batch tool: no window, no GPU. Thin over the io and model crates.
 [[bin]]

@@ -33,6 +33,11 @@ fn num(path: &[&str]) -> f64 {
     v.as_f64().unwrap_or_else(|| panic!("data/landscape.json: {path:?} is not a number"))
 }
 
+/// Fixture slots of the ground storey kept for the trees and what follows the planting.
+pub fn reserve() -> usize {
+    num(&["reserve"]) as usize
+}
+
 fn text(path: &[&str]) -> &'static str {
     let mut v = data();
     for k in path {
@@ -160,6 +165,8 @@ pub struct Land {
     pub inner: f64,
     /// Fixtures the site still has room for.
     pub room: usize,
+    /// Some door walks were left out for want of fixture slots.
+    pub walks_cut: bool,
 }
 
 impl Land {
@@ -343,8 +350,8 @@ pub fn lay(
     // (local centre, local axis the tile row runs along)
     let mut centres: Vec<(P, P)> = vec![];
     let mut legs: Vec<f64> = vec![];
-    let mut spans: Vec<(usize, usize)> = vec![];
-    let mut span_leg: Vec<Option<f64>> = vec![];
+    // per door: its run of centres and the leg to the street it laid, if any
+    let mut spans: Vec<(usize, usize, Option<usize>)> = vec![];
     for d in doors {
         let start = centres.len();
         let probe = |dir: P| to_outline(l, (d.0 + dir.0 * 2.0 * pad, d.1 + dir.1 * 2.0 * pad));
@@ -368,6 +375,7 @@ pub fn lay(
         let e = if (e.0 - rlo.0).min(rhi.0 - e.0).min(e.1 - rlo.1).min(rhi.1 - e.1) < 1e-6 {
             e
         } else {
+            spans.push((start, centres.len(), None));
             continue;
         };
         centres.push((e, n));
@@ -379,8 +387,14 @@ pub fn lay(
         };
         // a door joins the nearest way to the street already laid when that is nearer than
         // its own: one leg serves every door round that stretch of the ring
-        let joined = legs.iter().map(|&x| way(x - rlo.0)).filter(|j| j.0 < way(s.0 - rlo.0).0).min_by(|a, b| a.0.total_cmp(&b.0));
-        let (len, sign) = joined.unwrap_or_else(|| way(s.0 - rlo.0));
+        let own = way(s.0 - rlo.0);
+        let joined = legs
+            .iter()
+            .enumerate()
+            .map(|(k, &x)| (k, way(x - rlo.0)))
+            .filter(|(_, j)| j.0 < own.0)
+            .min_by(|a, b| a.1 .0.total_cmp(&b.1 .0));
+        let (len, sign) = joined.map_or(own, |j| j.1);
         let steps = (len / pad).ceil() as usize;
         for i in 1..=steps {
             let t = te + sign * len * i as f64 / steps as f64;
@@ -389,9 +403,10 @@ pub fn lay(
             let axis = if v.0.abs() >= v.1.abs() { (v.0.signum(), 0.0) } else { (0.0, v.1.signum()) };
             centres.push((ring_pt(t), axis));
         }
-        if joined.is_some() {
-            spans.push((start, centres.len()));
-            span_leg.push(None);
+        if let Some((k, _)) = joined {
+            // its walk ends on a leg already laid: it brings no leg of its own and stands or
+            // falls with that leg
+            spans.push((start, centres.len(), Some(k)));
             continue;
         }
         let mut y = rlo.1 - pad;
@@ -400,13 +415,12 @@ pub fn lay(
             y -= pad;
         }
         centres.push(((s.0, street_y), (0.0, -1.0)));
+        spans.push((start, centres.len(), Some(legs.len())));
         legs.push(s.0);
-        spans.push((start, centres.len()));
-        span_leg.push(Some(s.0));
     }
-    // over the tile budget the paths narrow to one tile, then the longest walks are left out,
-    // down to none when the ground floor's fixture slots are full, as the beds and lawn do
-    let limit = cap("path").min(room);
+    // over the free fixture slots the paths narrow to one tile, then the longest walks are left
+    // out, down to none when the ground floor's slots are full; the way out has no planting cap
+    let limit = room;
     let tiles = |rows: usize, span: (usize, usize), have: &[P]| {
         let mut out: Vec<P> = vec![];
         for (q, axis) in &centres[span.0..span.1] {
@@ -421,20 +435,23 @@ pub fn lay(
         }
         out
     };
-    let mut order: Vec<usize> = (0..spans.len()).collect();
-    order.sort_by_key(|&i| spans[i].1 - spans[i].0);
+    let groups = walk_groups(&spans);
     for rows in [cfg.path_rows, 1] {
-        let mut kept = vec![];
-        land.paths.clear();
-        for &i in &order {
-            let t = tiles(rows, spans[i], &land.paths);
-            if land.paths.len() + t.len() <= limit {
-                land.paths.extend(t);
-                kept.push(i);
+        let (paths, kept) = keep_walks(&groups, limit, |g: &[usize], have: &[P]| {
+            let mut t: Vec<P> = vec![];
+            for &i in g {
+                let more = tiles(rows, (spans[i].0, spans[i].1), &have.iter().chain(&t).copied().collect::<Vec<_>>());
+                t.extend(more);
             }
-        }
-        if kept.len() == spans.len() || rows == 1 {
-            legs = kept.iter().filter_map(|&i| span_leg[i]).collect();
+            t
+        });
+        land.paths = paths;
+        if kept.len() == groups.len() || rows == 1 {
+            land.walks_cut = kept.len() < groups.len();
+            let mut keep: Vec<usize> = kept.iter().flat_map(|&g| &groups[g]).filter_map(|&i| spans[i].2).collect();
+            keep.sort_unstable();
+            keep.dedup();
+            legs = keep.into_iter().map(|k| legs[k]).collect();
             break;
         }
         land.paths.clear();
@@ -632,4 +649,61 @@ fn text_angle(k: u8) -> f64 {
 
 fn inside_plot(plot: &[P], p: P) -> bool {
     inside(plot, p)
+}
+
+/// The door walks that stand or fall together, shortest first: a street leg with every walk
+/// joining it, and each walk with no leg alone. `spans`: (first centre, end, leg).
+fn walk_groups(spans: &[(usize, usize, Option<usize>)]) -> Vec<Vec<usize>> {
+    let mut groups: Vec<Vec<usize>> = vec![];
+    let mut of_leg: std::collections::HashMap<usize, usize> = std::collections::HashMap::new();
+    for (i, s) in spans.iter().enumerate() {
+        match s.2.and_then(|k| of_leg.get(&k).copied()) {
+            Some(g) => groups[g].push(i),
+            None => {
+                if let Some(k) = s.2 {
+                    of_leg.insert(k, groups.len());
+                }
+                groups.push(vec![i]);
+            }
+        }
+    }
+    groups.sort_by_key(|g| g.iter().map(|&i| spans[i].1 - spans[i].0).sum::<usize>());
+    groups
+}
+
+/// Tiles of the groups that fit in `limit`, taken whole in order, and the groups kept.
+/// `tiles`: the new tiles of a group given those already laid.
+fn keep_walks(groups: &[Vec<usize>], limit: usize, mut tiles: impl FnMut(&[usize], &[P]) -> Vec<P>) -> (Vec<P>, Vec<usize>) {
+    let mut paths: Vec<P> = vec![];
+    let mut kept = vec![];
+    for (g, members) in groups.iter().enumerate() {
+        let t = tiles(members, &paths);
+        if paths.len() + t.len() <= limit {
+            paths.extend(t);
+            kept.push(g);
+        }
+    }
+    (paths, kept)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn a_walk_joining_a_leg_is_left_out_with_it() {
+        // a long walk owning leg 0, a short one joining it, a short one with no leg
+        let spans = [(0, 10, Some(0)), (10, 12, None), (12, 15, Some(0))];
+        let groups = walk_groups(&spans);
+        assert_eq!(groups, vec![vec![1], vec![0, 2]]);
+        let fake = |g: &[usize], _: &[P]| -> Vec<P> {
+            g.iter().flat_map(|&i| (spans[i].0..spans[i].1).map(|k| (k as f64, 0.0))).collect()
+        };
+        let (paths, kept) = keep_walks(&groups, 6, fake);
+        assert_eq!(kept, vec![0]);
+        assert_eq!(paths.len(), 2);
+        let (paths, kept) = keep_walks(&groups, 15, fake);
+        assert_eq!(kept, vec![0, 1]);
+        assert_eq!(paths.len(), 15);
+    }
 }

@@ -1055,7 +1055,8 @@ impl Model {
         }
     }
 
-    /// The apartments of the section under `rs`: each kind as many times as its rule says.
+    /// The apartments of the section under `rs`: each kind as many times as its rule says. The
+    /// apartment builder places one room per entry: a unit line with count 2 becomes two.
     pub fn apartments(&self, ru: bool, rs: &RuleSet) -> Vec<super::ApartmentReq> {
         self.units
             .iter()
@@ -1067,15 +1068,18 @@ impl Model {
                     rooms: u
                         .rooms
                         .iter()
-                        .map(|r| super::RoomReq {
-                            name: r
-                                .name
-                                .as_ref()
-                                .map_or_else(|| super::names::kind_name(r.kind, ru).to_string(), |n| (if ru { &n.1 } else { &n.0 }).clone()),
-                            kind: r.kind,
-                            area: r.area.get(rs),
-                            count: r.count,
-                            tags: Default::default(),
+                        .flat_map(|r| {
+                            let one = super::RoomReq {
+                                name: r
+                                    .name
+                                    .as_ref()
+                                    .map_or_else(|| super::names::kind_name(r.kind, ru).to_string(), |n| (if ru { &n.1 } else { &n.0 }).clone()),
+                                kind: r.kind,
+                                area: r.area.get(rs),
+                                count: 1,
+                                tags: Default::default(),
+                            };
+                            std::iter::repeat_n(one, r.count as usize)
                         })
                         .collect(),
                 })
@@ -1094,6 +1098,16 @@ impl Model {
         }
         let every = p.every.get(rs).round() as usize;
         every >= 2 && k >= 1 && (k + 1) % every == 0 && k + 1 < floors as usize
+    }
+
+    /// The clear height the tallest space of the ground storey asks, if any: that storey stands
+    /// as a tall level of its own.
+    pub fn ground_clear(&self) -> Option<f64> {
+        self.spaces
+            .iter()
+            .filter(|s| s.periodic.is_none() && matches!(s.level, Level::Up(Floor::Ground) | Level::Up(Floor::Level(0))))
+            .filter_map(|s| s.height_min)
+            .reduce(f64::max)
     }
 
     /// How many storeys of a building the space repeats on.

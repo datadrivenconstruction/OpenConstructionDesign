@@ -11,6 +11,7 @@ use ddc_geom::{v3, V2, V3};
 
 use super::realism::{
     near_pairs, BendMethod, Bolt, Input, Member, Part, Plate, Rebar, Shape, Stair, AXIS_TOL,
+    MIN_WALL,
 };
 use crate::{Error, Model};
 
@@ -327,7 +328,8 @@ fn solids(m: &Model, inp: &mut Input) -> Result<(), Error> {
         let part = Part { key: key.clone(), bbox: q.bbox, min_dim: min_ext, mesh };
         let mut b = build(key, &s.form, &s.frame, z0, &tags, part);
         if let Some(si) = b.info {
-            let own = if si.shape == Shape::Bar { si.min_side } else { si.thin };
+            // a tube's size is its outside; its wall counts only when below what is rolled
+            let own = if si.shape == Shape::Bar || si.thin >= MIN_WALL { si.min_side } else { si.thin };
             b.part.min_dim = own.min(length_of(&s.form)).max(0.0);
         }
         built.push((b, tags));

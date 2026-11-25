@@ -11,7 +11,7 @@ use super::Typology;
 use serde_json::{json, Value as J};
 use std::sync::OnceLock;
 
-fn data() -> &'static J {
+pub(super) fn data() -> &'static J {
     static D: OnceLock<J> = OnceLock::new();
     D.get_or_init(|| serde_json::from_str(include_str!("../../data/typology_programs.json")).expect("typology_programs.json is valid"))
 }
@@ -183,6 +183,10 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
     let what = text(&t["what"], ru);
     let mut out = v.clone();
     let mut notes = vec![];
+    // what the type is (residential, one household, flats) when it says so and the brief does not
+    if v["traits"].is_null() && t["traits"].is_object() {
+        out["traits"] = t["traits"].clone();
+    }
     let delegated = t["preset"].is_string() || t["typology"].is_string();
     if let Some(p) = t["preset"].as_str() {
         out["preset"] = json!(p);

@@ -1446,13 +1446,36 @@ fn comb(
                 // a branch square to the main along the cluster's row would run through the
                 // other verticals there: it first steps into the room, clear of the row
                 let into_a = if along_x { f.3 .0 } else { f.3 .1 };
-                let jog = if into_a.abs() > 0.5 { (off + bend + gap).max(f.4 + svc::od(m, dn) / 2.0 + gap) } else { 0.0 };
+                let jog_in = if into_a.abs() > 0.5 { (off + bend + gap).max(f.4 + svc::od(m, dn) / 2.0 + gap) } else { 0.0 };
+                // a leg that would run through another foot's stack steps round it along the
+                // main, either way: there are no walls under the slab
+                let hits = |a0: f64, a1: f64, b0: f64, b1: f64| {
+                    feet.iter().enumerate().any(|(j, g)| {
+                        let (ga, gb) = if along_x { (g.0 .0, g.0 .1) } else { (g.0 .1, g.0 .0) };
+                        let r = svc::od(m, dn) / 2.0 + g.5.map_or(0.0, |(gm, gdn)| svc::od(gm, gdn) / 2.0) + gap;
+                        j != i && ga > a0.min(a1) - r && ga < a0.max(a1) + r && gb > b0.min(b1) - r && gb < b0.max(b1) + r
+                    })
+                };
+                let blocked = |s: f64, jog: f64| hits(a, a + s * jog, b, b) || hits(a + s * jog, a + s * jog, b, line);
+                let pref = if into_a.abs() > 0.5 { into_a.signum() } else { 1.0 };
+                let pref = flip[i] * pref;
+                let (s, jog) = if !blocked(pref, jog_in) {
+                    (pref, jog_in)
+                } else {
+                    let j_min = jog_in.max(off + bend + gap);
+                    (0..30)
+                        .map(|k| j_min + 0.1 * f64::from(k))
+                        .flat_map(|jog| [(pref, jog), (-pref, jog)])
+                        .find(|&(s, jog)| !blocked(s, jog))
+                        .unwrap_or((pref, jog_in))
+                };
                 if (b - line).abs() < if jog > 0.0 { bend } else { off } + om + gap {
                     ok = false;
                     break;
                 }
-                joins.push((a + flip[i] * into_a.signum() * jog, i, jog));
-                jog0.push(jog);
+                joins.push((a + s * jog, i, jog));
+                // the step into the room, not a step round a stack: the retry below reads it
+                jog0.push(jog_in);
                 steps.push(((off + bend + gap).max(f.4 + svc::od(m, dn) / 2.0 + gap), bend + om + gap));
             }
             joins.sort_by(|x, y| x.0.total_cmp(&y.0));

@@ -32,7 +32,7 @@ fn g_suite_scripted_cases_run_and_their_targeted_oracles_pass() {
     let mut targeted = vec![];
     for (id, recipe, must) in SCRIPTED {
         let case = Case::load(&evals_dir().join("cases").join(format!("{id}.toml"))).unwrap();
-        let script = ddc_script::recipes::recipe(recipe).unwrap();
+        let script = super::scenes::scene(recipe).unwrap();
         let provider = ScriptedProvider::new(vec![
             vec![Script::Tool {
                 name: "run_script".into(),

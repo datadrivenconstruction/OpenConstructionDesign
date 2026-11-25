@@ -11,6 +11,9 @@ use ddc_script::{
 };
 use serde_json::json;
 
+#[path = "data/scenes.rs"]
+mod scenes;
+
 const SPHERE: &str = include_str!("../data/steel_sphere.lua");
 
 const BAYS: &str = r#"
@@ -346,7 +349,7 @@ fn rerun_touches_only_the_recipe_parts() {
 
 #[test]
 fn rerun_replaces_role_parts_whose_role_moves() {
-    let src = ddc_script::recipes::recipe("wind_turbine").unwrap();
+    let src = scenes::scene("wind_turbine").unwrap();
     let old = Sandbox.run(src, &opts(json!({}))).unwrap();
     let links = links_of(&old, 100);
     let actor = Actor::Script { name: "rerun".into() };

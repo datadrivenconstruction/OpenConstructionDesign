@@ -3,9 +3,7 @@
 //! Rebuilds a plant run folder (`PLANT_RUN_DIR` with `brief.json`): `design_plant` through the
 //! chat tools, Apply, the model saved as `plant.ddc` and the run's figures as `log.jsonl`.
 
-#[path = "e2e_ai_common/mod.rs"]
-mod e2e_ai_common;
-mod e2e_common;
+use crate::e2e_ai_common;
 
 use ddc_app::editor::Editor;
 use ddc_gen::plant;

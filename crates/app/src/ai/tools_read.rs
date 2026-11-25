@@ -1567,11 +1567,14 @@ fn script_recipes(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, String>
             o.put("next", &json!("run_script with this script (change params or options as asked), then read the realism findings and render_3d"));
         }
         None => {
-            // names only: the block reference fills most of the result; the summary comes with a name
-            let items: Vec<J> = recipes::RECIPES.iter().map(|(n, _)| json!(n)).collect();
-            o.put_own("blocks", &json!(recipes::BLOCKS));
+            let items: Vec<J> = recipes::RECIPES
+                .iter()
+                .map(|(n, s)| json!({"name": n, "summary": recipes::summary(s)}))
+                .collect();
+            // own text, never clipped like model fields: the AI writes its script from it
             o.list("recipes", &items);
-            o.put_own("not_scripts", &json!({"lattice_tower": "a steel lattice tower on legs (the 300 m kind, curved legs, platforms, joints) is one run_generator call: script_recipes name lattice_tower"}));
+            o.put_own("blocks", &json!(recipes::BLOCKS));
+            o.put_own("not_scripts", &json!({"lattice_frame": "an open steel lattice on legs (bracing in tiers, platforms, joints) is one run_generator call: script_recipes name lattice_frame"}));
         }
     }
     Ok(o.finish().into())

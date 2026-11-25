@@ -15,9 +15,6 @@
   },
   "floors": 2,
   "floor_height": 4.5,
-  "storey_heights": [
-   9.0
-  ],
   "footprint": {
    "width": 100,
    "depth": 36

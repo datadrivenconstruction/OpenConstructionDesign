@@ -21,7 +21,7 @@ fn ring(r: f64, n: usize) -> J {
 fn h04_stadium_through_the_tools_meets_every_oracle() {
     let mut ed = Editor::new_in_memory().unwrap();
     let mut calls = vec![
-        tool("help", json!({"topic": "stadium_ring"})),
+        tool("help", json!({"topic": "cantilever_ring"})),
         tool("load_tools", json!({"groups": ["scripts"]})),
         tool(
             "run_generator",

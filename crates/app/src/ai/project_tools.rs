@@ -223,9 +223,15 @@ fn refine(m: &ddc_model::Model, spec: &J) -> Result<Option<critique::Refined>, S
     if cfg.max_rounds == 0 {
         return Ok(None);
     }
+    // the rounds build as the draft does, so the best round's build is the draft's
+    ddc_gen::project::brief::set_request_text(&ddc_ai::convo::request_text());
     let mut r = critique::refine(read, &mut critique::NoShots, &mut critique::RuleCritic, cfg)
         .map_err(|e| format!("the brief does not build: {e}"))?;
+    let built_from = r.best.clone();
     project_plan::keep_model_terrain(spec, &mut r.best);
+    if project_plan::with_model_terrain(m, &r.best) != built_from {
+        r.built = None;
+    }
     Ok(Some(r))
 }
 
@@ -261,15 +267,20 @@ pub(super) fn brief_error(e: &str) -> String {
 pub(super) fn generate_project(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let t = Instant::now();
     let mut input = super::norm_tools::with_pack_norms(c, a["pack"].as_str(), a["spec"].clone())?;
+    let mut built = None;
     let refined = match super::ui::connect::policy_flag(&c.ed.model, POLICY_REFINE, true) {
         // a brief the critic cannot build is refused by the plain build below, with its why not
-        true => refine(&c.ed.model, &input).ok().flatten().map(|r| {
+        true => refine(&c.ed.model, &input).ok().flatten().map(|mut r| {
             input = r.best.clone();
+            built = r.built.take();
             refine_report(&r)
         }),
         false => None,
     };
-    let b = build_brief(&c.ed.model, &input)?;
+    let b = match built {
+        Some(b) => b.into(),
+        None => build_brief(&c.ed.model, &input)?,
+    };
     let pid = project_plan::next_pid(&c.ed.model, &drafted(c)).map_err(|e| e.to_string())?;
     clear_of_site(c, &pid, &b.project, &input)?;
     project_plan::prime(&project_plan::with_model_terrain(&c.ed.model, &input), b.clone());

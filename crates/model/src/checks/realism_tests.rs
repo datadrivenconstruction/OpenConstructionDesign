@@ -148,6 +148,25 @@ fn tiny_parts_are_flagged() {
 }
 
 #[test]
+fn a_hollow_section_is_as_large_as_its_outside_not_its_wall() {
+    // a 50 mm square tube: a 4 mm wall is a rolled handrail section, a 1.5 mm wall is not
+    let tube = |wall: f64| {
+        let sq = |h: f64| Section::polygon(vec![v2(-h, -h), v2(h, -h), v2(h, h), v2(-h, h)]).outer;
+        Section { outer: sq(0.025), holes: vec![sq(0.025 - wall)] }
+    };
+    let tiny = |wall: f64| {
+        let mut m = Model::open(":memory:").unwrap();
+        let l = m.add_level("L1", 0.0).unwrap();
+        let form = Form::Extrusion { profile: tube(wall), start: 0.0, end: 1.1 };
+        m.add_solid(&solid(l, "S355", form)).unwrap();
+        left_over(&m, &[K_TINY])
+    };
+    assert_eq!(tiny(0.004), Vec::<String>::new());
+    assert_eq!(tiny(0.0032), Vec::<String>::new());
+    assert_eq!(tiny(0.0015).len(), 1);
+}
+
+#[test]
 fn slivers_between_boxes() {
     let mk = |gap: f64| {
         one(|i| {

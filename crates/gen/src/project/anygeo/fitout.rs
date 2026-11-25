@@ -170,7 +170,7 @@ pub(super) fn fit_out(spec: &ProjectSpec, g: &Grid, p: &mut GProject) -> Result<
                 tags: spec.room_tags.of(pr.kind, &gr.name),
                 keep: swings(&tl, ring, rules.door_gap),
             };
-            let (fx, fit) = furnish(&tl, std::slice::from_ref(&room), s.height, spec.typology, &rules, &mut Default::default());
+            let (fx, fit) = furnish(&tl, std::slice::from_ref(&room), s.height, (spec.typology, spec.traits.one_household), &rules, &mut Default::default());
             if fixtures.len() + fx.len() > slots::FIXTURES_MAX as usize {
                 continue;
             }

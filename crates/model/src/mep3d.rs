@@ -10,7 +10,7 @@ use ddc_geom::math::{v2, v3, V2, V3};
 use ddc_geom::mep::{self, FittingKind, Piece, Plane, Section, Shape};
 use ddc_geom::mesh::Mesh;
 
-use crate::{Error, LineClass, Model, ViewPrim};
+use crate::{Error, LineClass, Model, ViewPrim, WorldPort};
 
 /// A part of a network body.
 #[derive(Clone, Debug, PartialEq)]
@@ -113,7 +113,17 @@ impl Model {
     /// Network bodies of a system (`None` means all systems) by part: straights and elbows by
     /// outer wall, tee/cross branches and caps, transitions; insulation and lining as shells.
     pub fn mep_bodies(&self, system: Option<i64>) -> Result<Vec<MepBody>, Error> {
-        let net = self.mep_network(system)?;
+        self.mep_bodies_with(system, &self.component_ports(None)?)
+    }
+
+    /// [`Model::mep_bodies`] with the connections already read: bodies of several systems read
+    /// them once.
+    pub fn mep_bodies_with(
+        &self,
+        system: Option<i64>,
+        ports: &[WorldPort],
+    ) -> Result<Vec<MepBody>, Error> {
+        let net = self.mep_network_with(system, ports)?;
         let mut out = vec![];
         for (run, p, s) in &net.pieces {
             let part = match p {

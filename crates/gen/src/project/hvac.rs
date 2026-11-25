@@ -11,7 +11,7 @@
 use super::rules::rule;
 use super::svc;
 use ddc_geom::mep;
-use super::{AirSys, GAirLink, GDuct, GHvac, GProject, ProjectSpec, RoofKind, RoomKind, Typology};
+use super::{AirSys, GAirLink, GDuct, GHvac, GProject, ProjectSpec, RoofKind, RoomKind};
 use crate::{GFixture, GShaft, GenError};
 use ddc_geom::mep::duct_sizing::{
     friction_rect, pick_rect, pick_round, velocity, MAX_ASPECT, ROUND_MM,
@@ -350,8 +350,8 @@ fn hood_q(q: f64) -> f64 {
     up5(q * rule("services.hvac.hood_share")).min(q)
 }
 
-fn residential(t: Typology) -> bool {
-    matches!(t, Typology::House | Typology::ApartmentSection)
+fn residential(spec: &ProjectSpec) -> bool {
+    spec.traits.residential
 }
 
 fn up5(q: f64) -> f64 {
@@ -423,8 +423,40 @@ fn round(k: &Dn, q: f64, v: f64) -> f64 {
     pick_round(q, k.friction, v, k.step, &ROUND_MM)
 }
 
+/// Round sections of risers and plant runs: the catalogue goes on past the branch sizes.
+const RISER_MM: [u32; 14] = [80, 100, 125, 160, 200, 250, 315, 400, 500, 630, 800, 1000, 1120, 1250];
+
+fn riser_round(k: &Dn, q: f64) -> f64 {
+    pick_round(q, k.friction, k.v_riser, k.step, &RISER_MM)
+}
+
 fn main_size(k: &Dn, q: f64, h_max: f64) -> (f64, f64) {
-    pick_rect(q, k.friction, k.v_main, h_max, k.step)
+    sized(0, k, q, h_max, || pick_rect(q, k.friction, k.v_main, h_max, k.step))
+}
+
+type Sized = std::collections::HashMap<(u8, [u64; 5]), (f64, f64)>;
+
+thread_local! {
+    /// Main sections by their exact inputs: the zone search sizes the same flows thousands of
+    /// times, and each sizing walks the whole section catalogue.
+    static SIZED: std::cell::RefCell<Sized> = std::cell::RefCell::new(Sized::new());
+}
+
+/// `f` remembered by its inputs; `what` tells the sizings apart.
+fn sized(what: u8, k: &Dn, q: f64, h_max: f64, f: impl FnOnce() -> (f64, f64)) -> (f64, f64) {
+    let key = (what, [q, h_max, k.friction, k.v_main, k.step].map(f64::to_bits));
+    if let Some(s) = SIZED.with(|m| m.borrow().get(&key).copied()) {
+        return s;
+    }
+    let s = f();
+    SIZED.with(|m| {
+        let mut m = m.borrow_mut();
+        if m.len() >= 1 << 16 {
+            m.clear();
+        }
+        m.insert(key, s);
+    });
+    s
 }
 
 /// Whether one main no taller than `h_max` carries `q` within the friction and speed limits
@@ -439,19 +471,21 @@ fn main_fits(k: &Dn, q: f64, h_max: f64) -> bool {
 /// The widest main a floor carrying `q` gets: its own size when one main carries it, else
 /// the largest that fits, as the floor then splits at the riser.
 fn main_widest(k: &Dn, q: f64, h_max: f64) -> (f64, f64) {
-    if main_fits(k, q, h_max) {
-        return main_size(k, q, h_max);
-    }
-    let (mut lo, mut hi) = (0.0, q);
-    for _ in 0..40 {
-        let m = (lo + hi) / 2.0;
-        if main_fits(k, m, h_max) {
-            lo = m;
-        } else {
-            hi = m;
+    sized(1, k, q, h_max, || {
+        if main_fits(k, q, h_max) {
+            return main_size(k, q, h_max);
         }
-    }
-    main_size(k, lo, h_max)
+        let (mut lo, mut hi) = (0.0, q);
+        for _ in 0..40 {
+            let m = (lo + hi) / 2.0;
+            if main_fits(k, m, h_max) {
+                lo = m;
+            } else {
+                hi = m;
+            }
+        }
+        main_size(k, lo, h_max)
+    })
 }
 
 /// Length a fitting may take from a run end at a node joining these sections: the largest
@@ -602,6 +636,7 @@ pub(super) fn core_bays(p: &GProject, kind: crate::ShaftKind) -> Vec<Rect> {
 }
 
 /// The shaft and the plant above it.
+#[derive(Clone)]
 struct Shaft {
     ring: Rect,
     side: f64,
@@ -1568,8 +1603,14 @@ fn best_design(
         rule("services.hvac.tee_mid"),
         rule("services.hvac.tee_tight"),
     ] {
+        let Some(pre) = design_prep(spec, p, pass, tee, why) else {
+            if best.is_none() {
+                break;
+            }
+            continue;
+        };
         let mut rank = 0;
-        while let Some(d) = design(spec, p, pass, rank, tee, why)? {
+        while let Some(d) = design(&pre, spec, pass, rank, tee, why)? {
             let (done, count) = (unserved(&d) == 0.0, d.count);
             if done || best.as_ref().is_none_or(|b| unserved(&d) < unserved(b)) {
                 best = Some(d);
@@ -1598,7 +1639,7 @@ pub(crate) fn ventilate(spec: &ProjectSpec, p: &mut GProject) -> Result<(), GenE
     if !spec.mep_auto || spec.services.hvac == Some(false) {
         return Ok(());
     }
-    if residential(spec.typology) && rule("services.hvac.housing_units") >= 1.0 && flat::per_flat(spec, p)? {
+    if residential(spec) && rule("services.hvac.housing_units") >= 1.0 && flat::per_flat(spec, p)? {
         return finish(p);
     }
     let tags = dedicated_tags();
@@ -1672,7 +1713,7 @@ fn zoned(
 ) -> Result<Option<(GProject, f64)>, GenError> {
     let all = Pass { tags, ..Pass::all() };
     let floors = served(spec, p, &all);
-    let dn = Dn::read(residential(spec.typology));
+    let dn = Dn::read(residential(spec));
     let h_max = floors_h_max(p);
     let big = |f: &Floor| f.total[0].max(f.total[1]);
     let grand = [0, 1].map(|s| floors.iter().flatten().map(|f| f.total[s]).sum::<f64>()).into_iter().fold(0.0, f64::max);
@@ -1688,7 +1729,7 @@ fn zoned(
     };
     let need = |q: f64, cap: f64| if cap > 0.0 { (q / cap).ceil() as usize } else { 1 };
     // a zone carries no more than its unit and the largest riser at its velocity cap
-    let riser_cap = dn.v_riser * 3600.0 * PI / 4.0 * (f64::from(ROUND_MM[ROUND_MM.len() - 1]) / 1000.0).powi(2);
+    let riser_cap = dn.v_riser * 3600.0 * PI / 4.0 * (f64::from(RISER_MM[RISER_MM.len() - 1]) / 1000.0).powi(2);
     let zone_cap = rule("services.hvac.zone_cap").min(units().iter().map(|u| u.cap).fold(0.0, f64::max)).min(riser_cap);
     let n_min = need(grand, zone_cap).max(need(floor_max, main_cap)).max(1);
     // a finer split only narrows the zones round the same shafts
@@ -1862,7 +1903,7 @@ fn de(s: (f64, f64)) -> f64 {
 /// diameter reaches `need`; a rectangle stays within `h_max` and the aspect limit.
 fn cover(s: (f64, f64), need: f64, h_max: f64) -> (f64, f64) {
     if s.1 <= 0.0 {
-        let d = ROUND_MM.iter().map(|&mm| f64::from(mm) / 1000.0).find(|&d| d + 1e-9 >= s.0 && d + 1e-9 >= need);
+        let d = RISER_MM.iter().map(|&mm| f64::from(mm) / 1000.0).find(|&d| d + 1e-9 >= s.0 && d + 1e-9 >= need);
         return (d.unwrap_or(s.0.max(need)), 0.0);
     }
     let steps = ddc_geom::mep::duct_sizing::RECT_STEPS;
@@ -1961,7 +2002,7 @@ fn check_ducts(p: &GProject) -> Result<(), GenError> {
 /// The rooms of each storey the pass serves, with their air; `None` for a storey without a
 /// corridor. A zone takes the rooms whose centre lies in its stretch.
 fn served(spec: &ProjectSpec, p: &GProject, pass: &Pass) -> Vec<Option<Floor>> {
-    let res = residential(spec.typology);
+    let res = residential(spec);
     let mut floors = vec![];
     let air = super::mech::AirPlan::new(spec, p);
     for (sk, st) in p.storeys.iter().enumerate() {
@@ -2037,21 +2078,37 @@ fn balance(floors: &mut [Option<Floor>], dedicated: bool) {
     }
 }
 
-/// The `rank`-th best shaft position; `None` when there are fewer.
-fn design(
+/// A zone's design up to the choice of shaft: the same for every rank of one tee spacing, so
+/// the ranks share it instead of scanning the shaft positions again each.
+struct Prep<'a> {
+    cx: Ctx<'a>,
+    dn: Dn,
+    wants: Vec<Want>,
+    /// Shaft positions, best first.
+    found: Vec<(f64, Shaft)>,
+    /// What the scan adds to `why`: said again with every rank, as a fresh scan would.
+    notes: Vec<(&'static str, f64)>,
+    h_max: f64,
+    spacing: f64,
+    tap_extra: f64,
+    skipped: usize,
+    span: f64,
+}
+
+/// [`design`]'s work before the shaft; `None` when the pass has nothing to design.
+fn design_prep<'a>(
     spec: &ProjectSpec,
-    p: &GProject,
+    p: &'a GProject,
     pass: &Pass,
-    rank: usize,
     tee: f64,
     why: &mut Vec<(&'static str, f64)>,
-) -> Result<Option<Design>, GenError> {
-    let res = residential(spec.typology);
+) -> Option<Prep<'a>> {
+    let res = residential(spec);
     let floors = served(spec, p, pass);
     let grand = [0, 1].map(|s| floors.iter().flatten().map(|f| f.total[s]).sum::<f64>());
     let has = grand.map(|g| g > 0.0);
     if (pass.dedicated || pass.win.is_some()) && !has[0] && !has[1] {
-        return Ok(None);
+        return None;
     }
     let pitched = (spec.roof == RoofKind::Pitched).then_some(p.roof.slope);
     let dn = Dn::read(res);
@@ -2060,7 +2117,7 @@ fn design(
         floors,
         has,
         grand,
-        riser_d: grand.map(|g| if g > 0.0 { round(&dn, g, dn.v_riser) } else { 0.0 }),
+        riser_d: grand.map(|g| if g > 0.0 { riser_round(&dn, g) } else { 0.0 }),
         zm: [0.0; 2],
         face: [0.0; 2],
         neck: [rule("services.hvac.neck_supply"), rule("services.hvac.neck_extract")],
@@ -2175,7 +2232,7 @@ fn design(
     }
     // the terminals round their flows up: the risers and the unit carry what they deliver
     cx.grand = [0, 1].map(|s| wants.iter().filter(|w| w.sys == s).map(|w| w.q).sum::<f64>());
-    cx.riser_d = cx.grand.map(|g| if g > 0.0 { round(&dn, g, dn.v_riser) } else { 0.0 });
+    cx.riser_d = cx.grand.map(|g| if g > 0.0 { riser_round(&dn, g) } else { 0.0 });
     cx.unit_t = pick_unit(cx.grand[0].max(cx.grand[1]));
     let dmax = [0, 1].map(|s| {
         wants
@@ -2211,11 +2268,12 @@ fn design(
         + dn.layer_gap;
     if pass.dedicated && ceil.is_finite() && ceil < rule("mep.hvac.dedicated_min_face") {
         why.push(("hvac_dedicated_low_ceiling", 1.0));
-        return Ok(None);
+        return None;
     }
     cx.rings = existing_rings(&cx);
     // the shaft: beside the corridor, in a service room on every storey, plant fitting above
     let mut found: Vec<(f64, Shaft)> = vec![];
+    let mut notes = vec![];
     let scan = rule("services.hvac.shaft_scan");
     if let Some(c) = cx.corridor() {
         // the building's own duct bays, on every storey alike, take the risers first
@@ -2228,7 +2286,7 @@ fn design(
         }
         if found.is_empty() {
             if !bays.is_empty() {
-                why.push(("hvac_core_bay_unfit", bays.len() as f64));
+                notes.push(("hvac_core_bay_unfit", bays.len() as f64));
             }
             for side in [1.0, -1.0] {
                 let mut x = c.0.max(wl) + 0.5;
@@ -2240,8 +2298,28 @@ fn design(
         }
     }
     found.sort_by(|a, b| a.0.total_cmp(&b.0));
-    let count = found.len();
-    let Some((_, sh)) = found.into_iter().nth(rank) else {
+    Some(Prep { cx, dn, wants, found, notes, h_max, spacing, tap_extra, skipped, span })
+}
+
+/// The `rank`-th best shaft position of `pre`; `None` when there are fewer.
+fn design(
+    pre: &Prep,
+    spec: &ProjectSpec,
+    pass: &Pass,
+    rank: usize,
+    tee: f64,
+    why: &mut Vec<(&'static str, f64)>,
+) -> Result<Option<Design>, GenError> {
+    let (cx, dn, h_max, spacing) = (&pre.cx, pre.dn, pre.h_max, pre.spacing);
+    let (tap_extra, skipped, span) = (pre.tap_extra, pre.skipped, pre.span);
+    let mut wants = pre.wants.clone();
+    let pitch = |k: usize, s: usize| {
+        let t = cx.floors[k].as_ref().map_or(0.0, |f| f.total[s]);
+        spacing.max(2.0 * tee_leg(main_widest(&dn, t, h_max)) + dn.margin)
+    };
+    why.extend(pre.notes.iter().copied());
+    let count = pre.found.len();
+    let Some(sh) = pre.found.get(rank).map(|f| f.1.clone()) else {
         if count == 0 {
             if cx.corridor().is_none() {
                 why.push(("hvac_refused_no_corridor", 1.0));
@@ -2301,15 +2379,19 @@ fn design(
     }
     // rooms stacked away from the corridor in one window, more than its taps fit: one branch
     // runs out through the near rooms and drops into each in turn
-    let mut absorbed: Vec<usize> = vec![];
+    // dropped, or absorbed into another want's branch
+    let mut gone = vec![false; wants.len()];
+    for &i in &dropped {
+        gone[i] = true;
+    }
     for i in 0..wants.len() {
-        if dropped.contains(&i) || absorbed.contains(&i) {
+        if gone[i] {
             continue;
         }
         let w = wants[i].clone();
         let key = (w.floor, w.sys, w.side, w.lo, w.hi);
         let mut group: Vec<usize> = (i..wants.len())
-            .filter(|&j| !dropped.contains(&j) && !absorbed.contains(&j))
+            .filter(|&j| !gone[j])
             .filter(|&j| (wants[j].floor, wants[j].sys, wants[j].side, wants[j].lo, wants[j].hi) == key)
             .collect();
         let fit = 1 + ((w.hi - w.lo) / pitch(w.floor, w.sys)).floor() as usize;
@@ -2332,7 +2414,9 @@ fn design(
             h.y = drops[0].y;
             h.x = x;
             h.drops = drops;
-            absorbed.extend(chain.into_iter().skip(1));
+            for j in chain.into_iter().skip(1) {
+                gone[j] = true;
+            }
         }
     }
     for w in &mut wants {
@@ -2398,7 +2482,7 @@ fn design(
     for s in [1, 0] {
         for k in 0..cx.floors.len() {
             let mut order: Vec<usize> = (0..wants.len())
-                .filter(|&i| wants[i].floor == k && wants[i].sys == s && !dropped.contains(&i) && !absorbed.contains(&i))
+                .filter(|&i| wants[i].floor == k && wants[i].sys == s && !gone[i])
                 .collect();
             // narrow windows first: they cannot move out of the way of a wide one
             order.sort_by(|a, b| {
@@ -2445,10 +2529,12 @@ fn design(
             };
             let mut taps = std::mem::take(&mut floor_taps[k][s]);
             // a split floor's mains are narrower than one main for the floor: so are the tees
-            let sp = spacing.min(tee * node_trim(&dn, &[main_widest(&dn, sh.lq[s], h_max)]) + tap_extra);
+            // the smaller system is raised to the larger's air after placing: size for that
+            let lq = sh.lq[0].max(sh.lq[1]);
+            let sp = spacing.min(tee * node_trim(&dn, &[main_widest(&dn, lq, h_max)]) + tap_extra);
             // a main end is an elbow and reducer into the last drop: that may take more; the
             // main has stepped down to that branch's own air by then
-            let main = main_widest(&dn, sh.lq[s], h_max);
+            let main = main_widest(&dn, lq, h_max);
             let end = wants
                 .iter()
                 .filter(|w| w.sys == s)
@@ -2456,8 +2542,45 @@ fn design(
                 .fold(0.0, f64::max);
             let floor = tee_leg(main) + tee_leg(main).max(end) + dn.margin;
             let lost = place(&wants, &order, &mut taps, sp, floor, &blocked);
+            // a room behind another in the same window with no tap of its own: the near
+            // room's branch runs on into it
+            let mut kept = vec![];
+            for i in lost {
+                let w = &wants[i];
+                // stacked behind it, its drops a row pitch off the near room's, and the branch
+                // no wider: the taps are spaced for its tee
+                let same = |o: &Want| {
+                    let d = round(&dn, o.q + w.q, dn.v_branch).max(w.dd);
+                    !o.hood && o.side == w.side && o.lo == w.lo && o.hi == w.hi && d <= o.d + 1e-9
+                        && w.drops.iter().all(|a| o.drops.iter().all(|b| (a.y - b.y).abs() >= row_pitch(&dn, d) - 1e-9))
+                };
+                let host = if w.hood || blocked(w, w.x) { None } else { taps.iter().position(|t| t.want.is_some_and(|j| same(&wants[j]))) };
+                let Some(ti) = host else {
+                    kept.push(i);
+                    continue;
+                };
+                let j = taps[ti].want.expect("a room's tap");
+                let ymw = ym[s] + cx.shift(k);
+                let mut drops = wants[j].drops.clone();
+                drops.extend(wants[i].drops.iter().cloned());
+                drops.sort_by(|a, b| (a.y - ymw).abs().total_cmp(&(b.y - ymw).abs()));
+                let q: f64 = drops.iter().map(|d| d.q).sum();
+                let reach = drops.iter().map(|d| (d.y - ymw).abs());
+                let h = &mut wants[j];
+                h.dist = if s == 0 { reach.fold(f64::MAX, f64::min) } else { reach.fold(0.0, f64::max) };
+                h.d = round(&dn, q, dn.v_branch).max(drops.iter().map(|d| d.d).fold(0.0, f64::max));
+                h.q = q;
+                h.y = drops[0].y;
+                h.drops = drops;
+                taps[ti].q = q;
+                gone[i] = true;
+            }
+            let lost = kept;
             let shut: Vec<usize> = lost.iter().copied().filter(|&i| blocked(&wants[i], wants[i].x)).collect();
             lost_shaft += lost.iter().filter(|i| shut.contains(i)).count();
+            for &i in &lost {
+                gone[i] = true;
+            }
             dropped.extend(lost);
             floor_taps[k][s] = taps;
         }
@@ -2491,7 +2614,46 @@ fn design(
             }
         }
     }
-    borrow(&cx, &sh, &mut wants, &mut floor_taps, &mut dropped, h_max);
+    borrow(cx, &sh, &mut wants, &mut floor_taps, &mut dropped, h_max);
+    // terminals left out unbalance the zone: the placed ones of the smaller system take up the
+    // difference, as `balance` spreads it before placing, each within its duct sizes (the
+    // taps were spaced for them)
+    if !pass.dedicated {
+        let mut live: Vec<usize> = floor_taps.iter().flatten().flatten().filter_map(|t| t.want).collect();
+        live.extend(spurs.iter().map(|sp| sp.2));
+        let air = |w: &Want| w.drops.iter().map(|d| d.q).sum::<f64>();
+        let tot = [0, 1].map(|s| live.iter().filter(|&&i| wants[i].sys == s).map(|&i| air(&wants[i])).sum::<f64>());
+        let small = usize::from(tot[0] >= tot[1]);
+        live.retain(|&i| wants[i].sys == small && !wants[i].hood);
+        let scaled = |w: &Want, f: f64| -> Vec<f64> { w.drops.iter().map(|d| up5(d.q * f)).collect() };
+        let fits = |w: &Want, f: f64| {
+            let qs = scaled(w, f);
+            round(&dn, qs.iter().sum(), dn.v_branch) <= w.d + 1e-9
+                && w.drops.iter().zip(&qs).all(|(d, &q)| round(&dn, q, dn.v_branch).max(term_for(small, q).neck_d) <= d.d + 1e-9)
+        };
+        // each branch's largest factor that keeps its sizes
+        let top: Vec<f64> = live.iter().map(|&i| (0..=100).rev().map(|k| 1.0 + f64::from(k) / 100.0).find(|&f| fits(&wants[i], f)).unwrap_or(1.0)).collect();
+        let gain = |f: f64| live.iter().zip(&top).map(|(&i, &t)| scaled(&wants[i], f.min(t)).iter().sum::<f64>()).sum::<f64>();
+        let fixed: f64 = tot[small] - live.iter().map(|&i| air(&wants[i])).sum::<f64>();
+        let want = tot[1 - small] - fixed;
+        if tot[small] < tot[1 - small] - 1e-9 && !live.is_empty() {
+            let f = (0..=100).map(|k| 1.0 + f64::from(k) / 100.0).find(|&f| gain(f) >= want - 1e-9).unwrap_or(2.0);
+            for (&i, &t) in live.iter().zip(&top) {
+                let qs = scaled(&wants[i], f.min(t));
+                let w = &mut wants[i];
+                for (d, q) in w.drops.iter_mut().zip(qs) {
+                    d.q = q;
+                    d.term = term_for(small, q);
+                }
+                w.q = air(w);
+            }
+            for t in floor_taps.iter_mut().flat_map(|f| f[small].iter_mut()) {
+                if let Some(i) = t.want {
+                    t.q = wants[i].q;
+                }
+            }
+        }
+    }
     // the network
     let n = cx.p.storeys.len();
     let mut ducts: Vec<GDuct> = vec![];
@@ -2674,7 +2836,7 @@ fn design(
                 sys: SYS[s],
                 storey: k,
                 points: vec![(xr, sh.yr, node(k)), (xr, sh.yr, node(k + 1))],
-                size: (round(&dn, below, dn.v_riser), 0.0),
+                size: (riser_round(&dn, below), 0.0),
                 flow: below,
                 bend: None,
             });
@@ -2704,7 +2866,7 @@ fn design(
             sys: SYS[s],
             storey: n,
             points,
-            size: (round(&dn, all, dn.v_riser), 0.0),
+            size: (riser_round(&dn, all), 0.0),
             flow: all,
             bend: None,
         });
@@ -2820,7 +2982,9 @@ fn borrow(cx: &Ctx, sh: &Shaft, wants: &mut [Want], floor_taps: &mut [[Vec<Tap>;
     for s in [1, 0] {
         for k in 0..cx.floors.len() {
             let Some(f) = cx.floors[k].as_ref() else { continue };
-            let lost: Vec<usize> = dropped.iter().copied().filter(|&i| wants[i].floor == k && wants[i].sys == s && !wants[i].hood).collect();
+            let mut lost: Vec<usize> = dropped.iter().copied().filter(|&i| wants[i].floor == k && wants[i].sys == s && !wants[i].hood).collect();
+            lost.sort_unstable();
+            lost.dedup();
             for i in lost {
                 let wi = wants[i].clone();
                 let Some(ri) = f.rooms.iter().find(|r| r.room == wi.room) else { continue };
@@ -2960,6 +3124,11 @@ fn borrow(cx: &Ctx, sh: &Shaft, wants: &mut [Want], floor_taps: &mut [[Vec<Tap>;
                     }
                 }
                 let Some((_, j, picks, on)) = best else { continue };
+                // a station the branch already drops at takes no second terminal
+                let picks: Vec<(f64, f64)> = picks.into_iter().filter(|p| !wants[j].drops.iter().any(|o| (o.y - p.0).abs() < 1e-6 && o.x.is_none_or(|x| (x - p.1).abs() < 1e-6))).collect();
+                if picks.is_empty() {
+                    continue;
+                }
                 let wj = &mut wants[j];
                 let q = up5(wi.q / picks.len() as f64);
                 let term = term_for(s, q);

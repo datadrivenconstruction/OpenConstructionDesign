@@ -1,0 +1,31 @@
+-- Radial array: nodes on a circle joined by rim and spoke members to a hub, legs to the ground, one component placed at every node.
+local n = param("nodes", 24, {min = 12, max = 48})
+local radius = param("radius", 20, {min = 8, max = 60})
+local hubz = radius + 3
+local node = {}
+for k = 0, n - 1 do
+  local a = k * 2 * math.pi / n
+  node[k] = vec3(0, radius * math.sin(a), hubz + radius * math.cos(a))
+end
+local hub = vec3(0, 0, hubz)
+local main, light = "CHS 168.3x8", "CHS 88.9x5"
+for k = 0, n - 1 do
+  member("rim", node[k], node[(k + 1) % n], main, "beam")
+  member("spoke", hub, node[k], main, "brace")
+end
+member("axle", vec3(-3, 0, hubz), vec3(3, 0, hubz), main, "beam")
+local base = radius * 0.4
+for _, x in ipairs({-3, 3}) do
+  member("leg", vec3(x, -base, 0), vec3(x, 0, hubz), main, "brace")
+  member("leg", vec3(x, base, 0), vec3(x, 0, hubz), main, "brace")
+end
+-- the pod hangs beside the wheel plane from a hanger off its rim node, clear of rim and spokes
+local side = 1.6
+local pod = define_component("pod", {
+  extrude(profile.rect(1.6, 1.6), vec3(side, 0, -1.8), vec3(side, 0, 0)),
+})
+for k = 0, n - 1 do
+  member("hanger", node[k], node[k] + vec3(side, 0, 0), light, "brace")
+  place(pod, node[k], "pod")
+end
+audit{strict = true}

@@ -434,6 +434,9 @@ pub fn plan(p: &GProject, cons: &[Consumer], equip: &[Equip], obst: &[(Bx, Strin
     let mut corner: [Option<(usize, P3)>; 4] = [None; 4];
     for s in (0..4).filter(|s| used[*s]) {
         let Some(&(_, at)) = ports.iter().find(|q| q.0 == s) else { continue };
+        // the rise to roof units tees off the stub's end: room for the pump on it and the tee
+        let feeds_roof = cons.iter().any(|c| c.storey >= n && c.ports[s].is_some() && c.kw[circuit(s)] > 0.0);
+        let stub = if feeds_roof { stub.max(rule("mep.hvac.pump_len") + 1.0) } else { stub };
         let c0 = (at.0 - stub, at.1, zr(s));
         let st = push(&mut pipes, s, n, PClass::Plant, vec![at, (at.0 - stub, at.1, at.2), c0], None);
         corner[s] = Some((st, c0));
@@ -452,15 +455,33 @@ pub fn plan(p: &GProject, cons: &[Consumer], equip: &[Equip], obst: &[(Bx, Strin
     }
     // roof consumers: up from the header corner over the roof plant, across, down to the port
     let tall = equip.iter().filter(|e| e.storey == n).map(|e| e.at.2 + e.size.2).chain(out.plant.iter().map(|e| e.at.2 + e.size.2)).fold(roof, f64::max);
-    for (ci, c) in cons.iter().enumerate().filter(|(_, c)| c.storey >= n) {
-        for s in 0..4 {
-            let (Some(q), Some((par, c0))) = (c.ports[s], corner[s]) else { continue };
-            if c.kw[circuit(s)] <= 0.0 {
-                continue;
+    // one rise from the corner and a header along x each way, a tee per unit: several units
+    // never meet at one node
+    for s in 0..4 {
+        let Some((par, c0)) = corner[s] else { continue };
+        let mut todo: Vec<(usize, P3)> = cons
+            .iter()
+            .enumerate()
+            .filter(|(_, c)| c.storey >= n && c.kw[circuit(s)] > 0.0)
+            .filter_map(|(ci, c)| c.ports[s].map(|q| (ci, q)))
+            .collect();
+        if todo.is_empty() {
+            continue;
+        }
+        let z = tall + cx.gap + pitch * (s as f64 + 1.0);
+        let top = (c0.0, c0.1, z);
+        let rise = push(&mut pipes, s, n, PClass::Plant, vec![c0, top], Some(par));
+        todo.sort_by(|a, b| (a.1 .0 - c0.0).abs().total_cmp(&(b.1 .0 - c0.0).abs()));
+        let mut ends = [(rise, top), (rise, top)];
+        for (ci, q) in todo {
+            let side = usize::from(q.0 > c0.0);
+            let (mut at_i, at) = ends[side];
+            let tee = (q.0, c0.1, z);
+            if dist(tee, at) > 1e-6 {
+                at_i = push(&mut pipes, s, n, PClass::Plant, vec![at, tee], Some(at_i));
+                ends[side] = (at_i, tee);
             }
-            let z = tall + cx.gap + pitch * (s as f64 + 1.0);
-            let pts = vec![c0, (c0.0, c0.1, z), (q.0, c0.1, z), (q.0, q.1, z), q];
-            let i = push(&mut pipes, s, n, PClass::Branch, pts, Some(par));
+            let i = push(&mut pipes, s, n, PClass::Branch, dedup(vec![tee, (q.0, q.1, z), q]), Some(at_i));
             pipes[i].consumer = Some(ci);
             out.leaf[ci][s] = Some(i);
         }

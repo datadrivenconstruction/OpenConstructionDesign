@@ -6,7 +6,7 @@ license.workspace = true
 publish.workspace = true
 repository.workspace = true
 rust-version.workspace = true
-description = "Free, open-source CAD-BIM editor in Rust - AGPL-3.0"
+description = "DDC editor desktop application: views, tools, editing shell"
 
 [[bin]]
 name = "ddc-app"

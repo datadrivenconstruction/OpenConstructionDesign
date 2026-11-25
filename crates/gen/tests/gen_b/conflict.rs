@@ -3,7 +3,7 @@
 //! Twenty briefs that cannot be built: the conflict found is minimal (drop any member and the
 //! brief builds), keeps out demands that play no part, and comes with relaxations in range.
 
-use ddc_gen::project::conflict::{demands, feasible, find, restrict, Demand};
+use ddc_gen::project::conflict::{demands, feasible, find, find_failed, restrict, Demand};
 use ddc_gen::project::locks::{Keep, Lock, Target};
 use ddc_gen::project::{build_project, parse_spec};
 use serde_json::{json, Value as J};
@@ -78,6 +78,18 @@ fn every_conflict_is_minimal_and_relaxable() {
         assert!(c.to_json()["conflict"].is_array());
     }
     assert!(relaxed >= 18, "{relaxed} of 20 relaxed");
+}
+
+/// The app hands the search the failure its own build met: the conflict is the one the search
+/// finds when it builds the brief itself.
+#[test]
+fn a_known_failure_finds_the_same_conflict() {
+    let (name, b, _) = &cases()[0];
+    let failure = feasible(b).unwrap_err();
+    let told = find_failed(b, failure);
+    let found = find(b).unwrap();
+    assert_eq!(told.to_json(), found.to_json(), "{name}");
+    assert_eq!(told.builds, found.builds, "{name}");
 }
 
 #[test]

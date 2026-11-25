@@ -103,18 +103,19 @@ pub fn build(input: &J) -> Result<Built, String> {
     project::brief::set_request_text(&ddc_ai::convo::request_text());
     let spec = project::parse_spec(input).map_err(|e| e.to_string())?;
     // a brief that parses but cannot be built gets the smallest conflicting set of its demands
-    // and the nearest relaxations
-    let why_not = |e: String| match project::conflict::find(input) {
-        Some(c) => format!("{e}\nwhy not: {}", c.to_json()),
-        None => e,
+    // and the nearest relaxations; the search is told the failure, not built into it again
+    let why_not = |e: String, failure: String| {
+        let c = project::conflict::find_failed(input, failure);
+        format!("{e}\nwhy not: {}", c.to_json())
     };
-    let p = project::build_project(&spec).map_err(|e| why_not(e.to_string()))?;
+    let p = project::build_project(&spec).map_err(|e| why_not(e.to_string(), e.to_string()))?;
     let gates = project::check_project(&spec, &p);
     if !gates.passed() {
-        return Err(why_not(format!(
-            "the project fails its gates: {}",
-            gates.failures.join("; ")
-        )));
+        let failures = gates.failures.join("; ");
+        return Err(why_not(
+            format!("the project fails its gates: {failures}"),
+            project::conflict::gates_failure(&gates.failures),
+        ));
     }
     Ok(Built {
         spec,

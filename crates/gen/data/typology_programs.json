@@ -62,6 +62,102 @@
   "广场",
   "街区"
  ],
+ "base": {
+  "about": "The built-in programme of each base typology (rooms of the ground, typical and single floor, what spare band length becomes, the core half opposite the stair, the names it gives its rooms) and its traits: residential (people live here), one_household (the whole building is one dwelling with no common route), flats (the plan is made of apartments). The generator branches on the traits, never on the typology; a preset brief or a brief may set its own.",
+  "house": {
+   "traits": {"residential": true, "one_household": true, "flats": false},
+   "ground": [
+    {"kind": "hall", "area": 6, "count": 1},
+    {"kind": "living", "area": 26, "count": 1},
+    {"kind": "kitchen", "area": 12, "count": 1},
+    {"kind": "wc", "area": 3, "count": 1}
+   ],
+   "typical": [
+    {"kind": "bedroom", "area": 14, "count": 1},
+    {"kind": "bedroom", "area": 12, "count": 1},
+    {"kind": "bedroom", "area": 10, "count": 1},
+    {"kind": "bath", "area": 6, "count": 1}
+   ],
+   "single": [
+    {"kind": "hall", "area": 6, "count": 1},
+    {"kind": "living", "area": 24, "count": 1},
+    {"kind": "kitchen", "area": 12, "count": 1},
+    {"kind": "bedroom", "area": 14, "count": 1},
+    {"kind": "bedroom", "area": 12, "count": 1},
+    {"kind": "bath", "area": 5, "count": 1},
+    {"kind": "wc", "area": 2, "count": 1}
+   ],
+   "spare": {"grow_share": 0.6, "kind": "office", "name": {"en": "Study", "ru": "Кабинет"}},
+   "core_rest": {"kind": "hall", "name": {"en": "Hall", "ru": "Холл"}},
+   "names": [{"kind": "parking", "name": {"en": "Garage", "ru": "Гараж"}}]
+  },
+  "apartment_section": {
+   "traits": {"residential": true, "one_household": false, "flats": true},
+   "ground": [],
+   "typical": [],
+   "single": [],
+   "spare": {"grow_share": 0.0, "kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
+   "core_rest": {"kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
+   "names": []
+  },
+  "office": {
+   "traits": {"residential": false, "one_household": false, "flats": false},
+   "ground": [
+    {"kind": "lobby", "area": 48, "count": 1},
+    {"kind": "office", "area": 72, "count": 1, "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
+    {"kind": "office", "area": 18, "count": 2},
+    {"kind": "meeting", "area": 24, "count": 1},
+    {"kind": "wc", "area": 6, "count": 2},
+    {"kind": "technical", "area": 8, "count": 1}
+   ],
+   "typical": [
+    {"kind": "office", "area": 72, "count": 2, "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
+    {"kind": "office", "area": 18, "count": 2},
+    {"kind": "meeting", "area": 24, "count": 1},
+    {"kind": "meeting", "area": 12, "count": 1},
+    {"kind": "staff", "area": 12, "count": 1},
+    {"kind": "wc", "area": 6, "count": 2},
+    {"kind": "storage", "area": 4, "count": 1}
+   ],
+   "single": [
+    {"kind": "lobby", "area": 24, "count": 1},
+    {"kind": "office", "area": 72, "count": 1, "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
+    {"kind": "office", "area": 18, "count": 2},
+    {"kind": "meeting", "area": 24, "count": 1},
+    {"kind": "staff", "area": 12, "count": 1},
+    {"kind": "wc", "area": 6, "count": 2}
+   ],
+   "spare": {"grow_share": 0.5, "kind": "office", "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
+   "core_rest": {"kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
+   "names": [{"kind": "staff", "name": {"en": "Staff room", "ru": "Комната персонала"}}]
+  },
+  "school": {
+   "traits": {"residential": false, "one_household": false, "flats": false},
+   "ground": [
+    {"kind": "lobby", "area": 72, "count": 1},
+    {"kind": "classroom", "area": 60, "count": 4},
+    {"kind": "staff", "area": 24, "count": 1},
+    {"kind": "wc", "area": 18, "count": 2},
+    {"kind": "storage", "area": 12, "count": 1}
+   ],
+   "typical": [
+    {"kind": "classroom", "area": 60, "count": 6},
+    {"kind": "staff", "area": 24, "count": 1},
+    {"kind": "wc", "area": 18, "count": 2},
+    {"kind": "storage", "area": 12, "count": 1}
+   ],
+   "single": [
+    {"kind": "lobby", "area": 48, "count": 1},
+    {"kind": "classroom", "area": 60, "count": 4},
+    {"kind": "staff", "area": 24, "count": 1},
+    {"kind": "wc", "area": 18, "count": 2},
+    {"kind": "storage", "area": 8, "count": 1}
+   ],
+   "spare": {"grow_share": 0.3, "kind": "lobby", "name": {"en": "Recreation", "ru": "Рекреация"}},
+   "core_rest": {"kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
+   "names": [{"kind": "staff", "name": {"en": "Staff room", "ru": "Учительская"}}]
+  }
+ },
  "types": [
   {
    "id": "fire_station",

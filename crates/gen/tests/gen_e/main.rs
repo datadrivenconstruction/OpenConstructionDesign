@@ -10,5 +10,6 @@ mod hvac3;
 mod hvac4;
 mod hvac5;
 mod rules;
+mod school_brief;
 mod steel_detail;
 mod trees;

@@ -73,7 +73,7 @@ fn audited(v: &J, rules: &Rules) -> GProject {
     let (s, p) = project(v);
     let mut bad = vec![];
     for (k, st) in p.storeys.iter().enumerate() {
-        bad.extend(audit(st, s.typology, rules, &s.room_tags).into_iter().map(|e| format!("floor {k}: {e}")));
+        bad.extend(audit(st, (s.typology, s.traits.one_household), rules, &s.room_tags).into_iter().map(|e| format!("floor {k}: {e}")));
     }
     assert!(bad.is_empty(), "{v}:\n{}", bad.join("\n"));
     p
@@ -201,7 +201,7 @@ fn a_brief_patch_changes_the_fit_out() {
     assert!(!has(&after, "Washbasin") && !has(&after, "Bed") && has(&after, "WC"));
     for st in &after.storeys {
         assert!(st.fit.iter().all(|f| f.rule == "wc_only"));
-        assert!(audit(st, s.typology, &rules, &s.room_tags).is_empty());
+        assert!(audit(st, (s.typology, s.traits.one_household), &rules, &s.room_tags).is_empty());
     }
 }
 
@@ -451,7 +451,7 @@ fn smoke_lobbies_pass_the_fit_audit_and_stay_empty() {
     let rules = rules_for(s.furnish.as_ref()).unwrap();
     assert!(!super::fire::smoke_lobbies(&p).is_empty());
     for (k, st) in p.storeys.iter().chain(&p.basements).enumerate() {
-        let bad = audit(st, s.typology, &rules, &s.room_tags);
+        let bad = audit(st, (s.typology, s.traits.one_household), &rules, &s.room_tags);
         assert!(bad.is_empty(), "level {k}: {bad:?}");
     }
 }

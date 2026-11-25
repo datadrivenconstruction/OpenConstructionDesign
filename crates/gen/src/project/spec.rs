@@ -51,8 +51,9 @@ const TOP: [&str; 16] = [
     "apartments",
     "roof",
 ];
-const TOP_MORE: [&str; 19] = [
+const TOP_MORE: [&str; 20] = [
     "storey_heights", "params", "origin", "design", "services", "furnish", "features", "basements", "rules", "preset", "program",
+    "traits",
     "norms", "site", "sprinklers", "lifts", "storey_rooms", "mep_auto",
     // read by locks::regenerate; the build itself ignores them
     "locks",
@@ -375,7 +376,9 @@ fn default_apartments(ru: bool) -> Vec<ApartmentReq> {
     ]
 }
 
-fn read_apartments(rd: &mut Rd, v: &J, ru: bool, cap: u32) -> Vec<ApartmentReq> {
+/// Each line's count is bounded by the schema only: the floor total is checked against the
+/// footprint's cap after, so the refusal names the rule that sets it.
+fn read_apartments(rd: &mut Rd, v: &J, ru: bool) -> Vec<ApartmentReq> {
     let Some(list) = v.as_array() else {
         rd.bad("apartments", "must be a list of {name?, count?, rooms}");
         return vec![];
@@ -394,7 +397,7 @@ fn read_apartments(rd: &mut Rd, v: &J, ru: bool, cap: u32) -> Vec<ApartmentReq> 
             &a["count"],
             1,
             1,
-            cap,
+            MAX_APARTMENTS_PER_FLOOR,
         );
         let rooms = rd.rooms(&format!("{p}.rooms"), &a["rooms"], ru, None);
         if !rooms.iter().any(|x| x.kind.habitable() && !x.kind.inner()) {
@@ -541,6 +544,11 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
         return Err(SpecError(rd.issues));
     };
     let d = defaults(typology);
+    // the base typology's traits, under those a preset or the brief sets
+    let traits = super::programme::traits(typology).patched(&v["traits"]).unwrap_or_else(|e| {
+        rd.bad("traits", e);
+        super::programme::traits(typology)
+    });
     let asked = match &v["program"] {
         J::Null => None,
         p => Program::from_json(p)
@@ -598,7 +606,16 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
     let floor_height = rd.num(&v["floor_height"], d.height, &fh_def);
     let floors_cap = floors_allowed(&rules, typology, floor_height);
     let floors = rd.int("floors", &v["floors"], d.floors.min(floors_cap), 1, floors_cap);
-    let storey_heights = read_storey_heights(&mut rd, &v["storey_heights"], floors, floor_height, rules.get("typology.tall_space_max"));
+    let mut storey_heights = read_storey_heights(&mut rd, &v["storey_heights"], floors, floor_height, rules.get("typology.tall_space_max"));
+    // a typology space asking a clear height over the floor height makes the ground storey a
+    // tall level, as the brief's own storey_heights would
+    if storey_heights.is_empty() && floors > 1 {
+        let ground = tpl.as_deref().and_then(|t| t.model.as_deref()).and_then(|m| m.ground_clear());
+        if let Some(h) = ground.map(|c| c + rules.get("services.slab")).filter(|h| *h > floor_height + 1e-9) {
+            storey_heights = vec![floor_height; floors as usize];
+            storey_heights[0] = h.min(rules.get("typology.tall_space_max").max(FLOOR_HEIGHT.max));
+        }
+    }
     if !storey_heights.is_empty() {
         let top: f64 = (0..floors as usize).map(|k| storey_heights.get(k).copied().unwrap_or(floor_height)).sum();
         if let Some(why) = height_refusal(&rules, top) {
@@ -782,6 +799,7 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
     );
     Ok(ProjectSpec {
         typology,
+        traits,
         name,
         ru,
         lang,
@@ -1168,7 +1186,7 @@ fn read_program(
     let apartments = match (&v["apartments"], apt) {
         (J::Null, true) => default_apartments(ru),
         (J::Null, false) => vec![],
-        (x, true) => read_apartments(rd, x, ru, cap),
+        (x, true) => read_apartments(rd, x, ru),
         (_, false) => {
             rd.bad(
                 "apartments",
@@ -1444,5 +1462,45 @@ fn default_name(typology: Typology, ru: bool) -> &'static str {
         (Typology::ApartmentSection, true) => "\u{421}\u{435}\u{43a}\u{446}\u{438}\u{44f}",
         (Typology::Office, true) => "\u{41e}\u{444}\u{438}\u{441}",
         (Typology::School, true) => "\u{428}\u{43a}\u{43e}\u{43b}\u{430}",
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use serde_json::json;
+
+    /// A typology space asking more clear height than the floor height raises the ground
+    /// storey as a tall level; the brief's own storey heights and plain typologies keep theirs.
+    #[test]
+    fn a_ground_space_asking_a_clear_height_raises_the_ground_storey() {
+        let s = super::super::parse_spec(&json!({"typology": "secondary_school"})).expect("school");
+        let slab = s.rules.get("services.slab");
+        assert!((s.storey_height(0) - (5.0 + slab)).abs() < 1e-9, "{:?}", s.storey_heights);
+        assert!((s.storey_height(1) - s.floor_height).abs() < 1e-9);
+        let own = super::super::parse_spec(&json!({"typology": "secondary_school", "storey_heights": [6.0]})).expect("own");
+        assert!((own.storey_height(0) - 6.0).abs() < 1e-9);
+        let plain = super::super::parse_spec(&json!({"typology": "office", "floors": 3})).expect("office");
+        assert!(plain.storey_heights.is_empty());
+        assert!(super::super::parse_spec(&json!({"typology": "plant_hall"})).is_ok(), "the plant hall reads");
+    }
+
+    /// Each apartment line is bounded by the schema only: the floor total names the rule.
+    #[test]
+    fn too_many_apartments_name_the_rule_that_caps_them() {
+        let flat = json!({"name": "1", "count": 13, "rooms": [{"kind": "living", "area": 18.0}, {"kind": "bath", "area": 4.0}]});
+        let e = super::super::parse_spec(&json!({"typology": "apartment_section", "floors": 3, "apartments": [flat]})).err().map(|e| e.to_string()).unwrap_or_default();
+        assert!(e.contains("room.apartments_max") && !e.contains("whole number"), "{e}");
+    }
+
+    /// A typology unit line with count 2 is two rooms: the builder lays one room per entry, so
+    /// the tower's two-bedroom flat kept one bedroom and the floor fell short of the brief.
+    #[test]
+    fn typology_unit_lines_give_one_room_per_entry() {
+        let s = super::super::parse_spec(&json!({"typology": "residential_tower"})).unwrap();
+        assert!(s.apartments.iter().flat_map(|a| &a.rooms).all(|r| r.count == 1));
+        let beds = |name: &str| {
+            s.apartments.iter().find(|a| a.name == name).map_or(0, |a| a.rooms.iter().filter(|r| r.kind == super::RoomKind::Bedroom).count())
+        };
+        assert_eq!((beds("1"), beds("2"), beds("3")), (1, 2, 3));
     }
 }

@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.2.0
+
+### Editor
+- The roof tool works in 3D: sketch an outline or pick walls on the level plane.
+- In 3D, wall tops and bases attach to a roof or floor by picking, and join, unjoin and cut work on picked elements.
+- The plan view range tops out at the next level by default; components show by their body span.
+- The plan HUD chip shows the view scale and the zoom apart.
+- Imported models get default views.
+- The AI chat has one composer surface, signed replies and quieter chrome.
+
+### Import and exchange
+- IFC import subtracts bounded half-spaces instead of skipping them, and room names are no longer doubled.
+- IFC export writes the analysis model only from the project's own analysis input.
+- `DDC_Provenance` is written to the props of elements.parquet.
+- The headless `ddc` command line builds again with the link feature; headless runs skip sheet outputs when there are no sheets.
+
+### Generator
+- A flat builds every room its type asks for; the residential tower brief is 61 m wide so the full flat mix fits.
+- Base programmes and typology traits come from data; the code branches on traits, not on named building types.
+- Plate layouts: basements follow the core of the plate, bands narrow no further than the stair band, walls where wings join are inner walls.
+
+### AI assistant
+- The assistant composes structures from building blocks and techniques; the block reference and scripts arrive whole.
+- AI project turns finish well within the wait.
+
 ## 1.1.1
 
 ### Editor

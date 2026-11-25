@@ -17,3 +17,4 @@ mod e2e_ai_modify;
 mod e2e_ai_plant;
 mod e2e_ai_steel;
 mod e2e_ai_tool_fuzz;
+mod plant_run_site;

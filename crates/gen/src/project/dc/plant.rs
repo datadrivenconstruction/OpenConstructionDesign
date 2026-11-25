@@ -259,11 +259,36 @@ fn cap(dc: &mut GDc, t: &Tap) {
     }
 }
 
-/// Routing of mains and feeders: the columns and the units below the trays are obstacles;
-/// each routed line is kept clear of by the next.
+/// Routing of mains and feeders: the columns and the units are obstacles; each routed line is
+/// kept clear of by the next.
 struct Router {
     ix: Index,
+    /// Units a line may end on (cooling): an obstacle to every line but those joining them.
+    joinable: Vec<Obstacle>,
     bounds: ((f64, f64), (f64, f64)),
+}
+
+/// The parts of `s`..`e` farther than `d` from `q`.
+fn beyond(s: V3, e: V3, q: V3, d: f64) -> Vec<(V3, V3)> {
+    let v = e - s;
+    let l2 = v.dot(v);
+    if l2 < EPS * EPS {
+        return if (s - q).len() < d { vec![] } else { vec![(s, e)] };
+    }
+    let t = (q - s).dot(v) / l2;
+    let h2 = (q - (s + v * t)).dot(q - (s + v * t));
+    if h2 >= d * d {
+        return vec![(s, e)];
+    }
+    let half = ((d * d - h2) / l2).sqrt();
+    let mut out = vec![];
+    if t - half > 0.0 {
+        out.push((s, s + v * (t - half).min(1.0)));
+    }
+    if t + half < 1.0 {
+        out.push((s + v * (t + half).max(0.0), e));
+    }
+    out.into_iter().filter(|(a, b)| (*b - *a).len() > EPS).collect()
 }
 
 impl Router {
@@ -283,6 +308,7 @@ impl Router {
                 obs.push(Obstacle::aabb(v3(c[0], c[1], st.elevation), v3(c[2], c[3], st.elevation + st.height), Pass::Block, 0));
             }
         }
+        let mut joinable = vec![];
         let libs: HashMap<(String, String), Lib> = Kind::ALL
             .iter()
             .flat_map(|k| types(*k))
@@ -293,18 +319,21 @@ impl Router {
             let fp = footprint(l, u.at, u.rot, 0.0);
             grow(fp[0], fp[1]);
             grow(fp[2], fp[3]);
-            if matches!(u.kind, Kind::Crah | Kind::Chiller) {
-                continue;
-            }
             let e = p.storeys[u.storey].elevation + u.z;
-            obs.push(Obstacle::aabb(v3(fp[0], fp[1], e), v3(fp[2], fp[3], e + l.h()), Pass::Block, 0));
+            let o = Obstacle::aabb(v3(fp[0], fp[1], e), v3(fp[2], fp[3], e + l.h()), Pass::Block, 0);
+            if matches!(u.kind, Kind::Crah | Kind::Chiller) {
+                joinable.push(o);
+            } else {
+                obs.push(o);
+            }
         }
         let m = rule("dc.yard_gap") + rule("dc.pipe_pitch");
-        Router { ix: Index::new(obs), bounds: ((lo.0 - m, lo.1 - m), (hi.0 + m, hi.1 + m)) }
+        Router { ix: Index::new(obs), joinable, bounds: ((lo.0 - m, lo.1 - m), (hi.0 + m, hi.1 + m)) }
     }
 
     /// A line from `a` (leaving up) to `b` at the high levels of storey `k`, clear by `r` of the
-    /// columns, the units and every run laid so far but those its own ends sit on.
+    /// columns, the units but those its ends join, and every run laid so far but its parts
+    /// within reach of the line's own ends.
     #[allow(clippy::too_many_arguments)]
     fn route(&mut self, p: &GProject, runs: &[DcRun], k: usize, a: V3, b: V3, b_up: bool, r: f64) -> Option<Vec<V3>> {
         let mut laid = RoutedIndex::default();
@@ -312,8 +341,11 @@ impl Router {
             let c = run.half();
             for w in run.points.windows(2) {
                 let (s, e) = (v3(w[0].0, w[0].1, w[0].2), v3(w[1].0, w[1].1, w[1].2));
-                let at_end = [a, b].iter().any(|&q| route3d::seg_seg_dist(q, q, s, e) < r + c);
-                if !at_end {
+                let mut parts = vec![(s, e)];
+                for q in [a, b] {
+                    parts = parts.into_iter().flat_map(|(s, e)| beyond(s, e, q, r + c)).collect();
+                }
+                for (s, e) in parts {
                     laid.push(Routed { a: s, b: e, clearance: c });
                 }
             }
@@ -338,7 +370,16 @@ impl Router {
         let up = Some(v3(0.0, 0.0, 1.0));
         let src = Source::Terminal(Terminal { at: a, dir: up });
         let tgt = [Terminal { at: b, dir: if b_up { up } else { None } }];
-        let tree = route3d::route_tree(&self.ix, &rules, &src, &tgt, &mut laid);
+        let near = |o: &Obstacle, q: V3| {
+            let (x0, x1) = (o.ring[0].x.min(o.ring[2].x) - r, o.ring[0].x.max(o.ring[2].x) + r);
+            let (y0, y1) = (o.ring[0].y.min(o.ring[2].y) - r, o.ring[0].y.max(o.ring[2].y) + r);
+            q.x > x0 && q.x < x1 && q.y > y0 && q.y < y1 && q.z > o.z0 - r && q.z < o.z1 + r
+        };
+        let mut ix = self.ix.clone();
+        for o in self.joinable.iter().filter(|o| !near(o, a) && !near(o, b)) {
+            ix.push(o.clone());
+        }
+        let tree = route3d::route_tree(&ix, &rules, &src, &tgt, &mut laid);
         if !tree.failed.is_empty() {
             return None;
         }

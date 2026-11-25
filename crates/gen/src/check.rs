@@ -7,8 +7,9 @@ use crate::{GLayout, GRoom, GWall};
 
 const EPS: f64 = 1e-6;
 const MIN_WALL: f64 = 0.2;
-/// Common area of two rooms, m2, below which they only touch.
-const OVERLAP_AREA: f64 = 1e-3;
+/// Common area of two rooms, m2, below which they only touch: rounding on a shared slanted
+/// wall leaves far less, a thin wedge over a side (6 cm2) more.
+const OVERLAP_AREA: f64 = 1e-4;
 /// Least distance of an opening from either end of its wall, m.
 pub(crate) const OPEN_END: f64 = 0.15;
 /// Least clear gap between two openings on one wall, m.

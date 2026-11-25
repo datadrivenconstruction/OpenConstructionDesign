@@ -7,7 +7,7 @@
 use ddc_gen::project::presets::Preset;
 use ddc_gen::project::typology::Model;
 use ddc_gen::project::why::explain_project;
-use ddc_gen::project::{build_project, check_project, parse_spec, GProject, ProjectSpec};
+use ddc_gen::project::{build_project, check_project, parse_spec, CircuitUse, GProject, ProjectSpec};
 use serde_json::{json, Value as J};
 
 const NEW: [&str; 4] = ["hospital_wing", "data_center", "underground_station", "process_plant_site"];
@@ -778,6 +778,39 @@ fn a_hospital_wing_designs_its_air_side_with_fire_and_volume_dampers() {
     let all = m.count(Kind::FireDamper) + m.count(Kind::VolumeDamper);
     assert!(all >= 8, "{all} dampers");
     assert_eq!(mech::unconnected(&m), 0);
+}
+
+/// A typology defined only in data (a preset object on an office base) that says it is one
+/// household's home gets a home's behaviour from its traits, with no code naming it.
+#[test]
+fn a_typology_only_in_data_gets_the_behaviour_of_its_traits() {
+    let rooms = json!([{"kind": "living", "area": 22}, {"kind": "kitchen", "area": 10},
+        {"kind": "bedroom", "area": 14}, {"kind": "bath", "area": 6}]);
+    let cabin = |traits: J| {
+        let v = json!({"preset": {"name": "cabin", "base": "office", "brief": {"traits": traits}},
+            "floors": 1, "rooms": rooms, "services": true});
+        let s = parse_spec(&v).unwrap_or_else(|e| panic!("{v}: {e}"));
+        let p = build_project(&s).unwrap_or_else(|e| panic!("{v}: {e}"));
+        (s, p)
+    };
+    // a dwelling's lighting circuits are behind an RCD, a workplace's are not
+    let lit = |p: &GProject| {
+        let l: Vec<bool> = p.services.circuits.iter().filter(|c| c.use_ == CircuitUse::Lighting).map(|c| c.rcd.is_some()).collect();
+        assert!(!l.is_empty(), "no lighting circuit");
+        l
+    };
+    let (home, p) = cabin(json!({"residential": true, "one_household": true}));
+    assert!(home.traits.residential && home.traits.one_household && !home.traits.flats);
+    assert!(lit(&p).iter().all(|x| *x), "a home's lights are behind an RCD");
+    let (work, q) = cabin(json!({}));
+    assert_eq!(work.traits, ddc_gen::project::Traits::default());
+    assert!(lit(&q).iter().all(|x| !*x), "an office's lights are not");
+    // the base typologies carry theirs from the data
+    let house = parse_spec(&json!({"typology": "house"})).unwrap();
+    assert!(house.traits.residential && house.traits.one_household);
+    assert!(parse_spec(&json!({"typology": "apartment_section", "floors": 5})).unwrap().traits.flats);
+    let e = parse_spec(&json!({"typology": "office", "traits": {"pets": true}})).unwrap_err();
+    assert!(e.to_string().contains("traits"), "{e}");
 }
 
 #[test]

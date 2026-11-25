@@ -207,6 +207,34 @@ fn the_critique_loop_patches_a_plain_brief_and_stops() {
     assert!(r.rounds.windows(2).all(|w| w[0].score <= w[1].score));
 }
 
+/// The loop hands back the build of its best round, so the draft does not build that brief a
+/// second time: it is the very build of `best`.
+#[test]
+fn the_critique_loop_keeps_the_build_of_its_best_round() {
+    let r = refine(json!({"typology": "office", "floors": 3}), &mut Blank, &mut RuleCritic, LoopCfg::default()).unwrap();
+    let kept = r.built.as_ref().expect("a scored round keeps its build");
+    let (s, p) = built(&r.best);
+    assert_eq!(kept.spec, s);
+    assert_eq!(kept.project, p);
+    assert!(kept.gates.passed());
+}
+
+/// Without images and with a critic of the spec alone the rounds are not built one by one, yet
+/// the loop ends where the drawing loop ends, with the same rounds, best brief and build.
+#[test]
+fn the_unbuilt_loop_ends_where_the_built_loop_ends() {
+    use ddc_gen::project::critique::NoShots;
+    for t in ["office", "hotel", "residential"] {
+        let brief = json!({"typology": t, "floors": 3});
+        let drawn = refine(brief.clone(), &mut Blank, &mut RuleCritic, LoopCfg::default()).unwrap();
+        let plain = refine(brief, &mut NoShots, &mut RuleCritic, LoopCfg::default()).unwrap();
+        assert_eq!(plain.best, drawn.best, "{t}");
+        assert_eq!(plain.score, drawn.score, "{t}");
+        assert_eq!(plain.rounds, drawn.rounds, "{t}");
+        assert_eq!(plain.built, drawn.built, "{t}");
+    }
+}
+
 /// The app's setting runs the loop without images: every template brief comes out building,
 /// passing the gates, and keeping what the brief asked for.
 #[test]
@@ -278,4 +306,37 @@ fn the_brief_check_repairs_an_atrium_into_a_roofed_court() {
     let c = check(&s, &p);
     assert!(c.repair.is_none(), "{}", c.report);
     assert_eq!(c.report["features"]["approximated"][0]["feature"], "atrium", "{}", c.report);
+}
+
+/// A wall tagged exterior has open ground on one side: where wings join, the walls each wing
+/// laid as its outside stand inside the block and take neither entrances nor windows.
+#[test]
+fn no_exterior_wall_has_building_on_both_sides() {
+    let mut briefs: Vec<J> = Massing::NAMES.iter().map(|m| office(json!({"massing": m}))).collect();
+    briefs.push(json!({"typology": "school_campus", "floors": 4, "design": {"massing": "courtyard"},
+        "rooms": [{"kind": "classroom", "area": 60, "count": 12}, {"kind": "gym", "area": 300}]}));
+    for v in briefs {
+        let s = parse_spec(&v).unwrap_or_else(|e| panic!("{v}: {e}"));
+        let p = build_project(&s).unwrap_or_else(|e| panic!("{v}: {e}"));
+        for (k, st) in p.storeys.iter().enumerate() {
+            let l = &st.layout;
+            // building is a room of the storey: a slab with no room on it is a terrace or a roof
+            let built = |q: (f64, f64)| l.rooms.iter().any(|r| inside(&r.polygon, q));
+            for (i, w) in l.walls.iter().enumerate().filter(|(_, w)| w.role == ddc_gen::WallRole::Exterior) {
+                let (dx, dy) = (w.b.0 - w.a.0, w.b.1 - w.a.1);
+                let n = dx.hypot(dy);
+                if n < 1e-6 {
+                    continue;
+                }
+                let m = (w.a.0 + dx / 2.0, w.a.1 + dy / 2.0);
+                let (nx, ny) = (-dy / n * 0.5, dx / n * 0.5);
+                assert!(
+                    !(built((m.0 + nx, m.1 + ny)) && built((m.0 - nx, m.1 - ny))),
+                    "{v}: storey {k} wall {i} {:?}-{:?} is exterior with building on both sides",
+                    w.a,
+                    w.b
+                );
+            }
+        }
+    }
 }

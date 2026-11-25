@@ -13,7 +13,7 @@ use ddc_geom::math::{v3, V3};
 
 use super::rules::rule;
 use super::svc::{self, Room};
-use super::{CircuitUse, GBoard, GCircuit, GProject, GRcd, GRun, GTrace, GWire, PRole, ProjectSpec, SvcSys, Typology};
+use super::{CircuitUse, GBoard, GCircuit, GProject, GRcd, GRun, GTrace, GWire, PRole, ProjectSpec, SvcSys};
 
 /// Percent in a ratio.
 const PCT: f64 = 100.0;
@@ -61,8 +61,8 @@ fn volts() -> f64 {
     rule("services.elec.voltage")
 }
 
-fn housing(t: Typology) -> bool {
-    matches!(t, Typology::House | Typology::ApartmentSection)
+fn housing(spec: &ProjectSpec) -> bool {
+    spec.traits.residential
 }
 
 fn num(x: f64) -> String {
@@ -157,7 +157,7 @@ fn limits(spec: &ProjectSpec, u: CircuitUse) -> (usize, f64) {
         CircuitUse::Lighting | CircuitUse::Emergency => (rule("services.elec.points_light") as usize, rule("services.elec.light_circuit_w").min(margin * rule("services.elec.breaker_light"))),
         CircuitUse::Appliance | CircuitUse::Feeder => (usize::MAX, f64::INFINITY),
         _ => {
-            let pts = if housing(spec.typology) { rule("services.elec.points_sockets_home") } else { rule("services.elec.points_sockets_work") };
+            let pts = if housing(spec) { rule("services.elec.points_sockets_home") } else { rule("services.elec.points_sockets_work") };
             (pts as usize, margin * rule("services.elec.breaker_other"))
         }
     }
@@ -168,7 +168,7 @@ fn limits(spec: &ProjectSpec, u: CircuitUse) -> (usize, f64) {
 fn needs_rcd(spec: &ProjectSpec, u: CircuitUse) -> bool {
     match u {
         CircuitUse::Feeder | CircuitUse::Emergency | CircuitUse::Essential => false,
-        CircuitUse::Lighting => housing(spec.typology),
+        CircuitUse::Lighting => housing(spec),
         _ => true,
     }
 }
@@ -490,7 +490,7 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
     for i in order {
         let c = &mut out[i];
         let upstream = up.get(&c.board).copied().unwrap_or(0.0);
-        let home = housing(spec.typology);
+        let home = housing(spec);
         size(c, home, upstream);
         if c.use_ == CircuitUse::Feeder {
             let to = (c.devices[0].0, c.devices[0].1);

@@ -776,6 +776,18 @@ fn shape_options(ui: &mut egui::Ui, a: &mut Active) {
     }
 }
 
+/// The option bar of a plan tool routed from the 3D view (`edit3d::plan_route`): build mode,
+/// slope, overhang and type stay at hand while the outline is drawn in 3D.
+pub fn options_3d(ui: &mut egui::Ui, rect: Rect, ed: &mut Editor, dark: bool) {
+    static TOKENS: std::sync::OnceLock<[Tokens; 2]> = std::sync::OnceLock::new();
+    let tok = TOKENS.get_or_init(|| {
+        let of = |m| crate::ui_kit::from_theme(&ddc_ui::Theme::new(m, ddc_ui::Density::Compact));
+        [of(ddc_ui::Mode::Light), of(ddc_ui::Mode::Dark)]
+    });
+    let t = &tok[dark as usize];
+    crate::interact::sessions::model_tool::with(ed, |ed, a| options_bar(ui, rect, ed, a, t));
+}
+
 fn options_bar(ui: &mut egui::Ui, rect: Rect, ed: &mut Editor, a: &mut Active, t: &Tokens) {
     // Controls that do not fit the width go to the next line and the bar grows with them: a
     // field is never cut at the pane edge. The background is painted after the height is known.

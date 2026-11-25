@@ -435,7 +435,7 @@ mod tests {
         assert!(model.gridshells(None).unwrap().is_empty());
     }
 
-    /// Chat scenario G39: "a parabolic dish antenna 18 m across, 4.5 m deep, tilted 30
+    /// A chat request: "a parabolic dish antenna 18 m across, 4.5 m deep, tilted 30
     /// degrees" -> one gridshell op on a paraboloid host, rim and hub rings as asked.
     #[test]
     fn chat_parabolic_dish_is_one_gridshell_on_a_paraboloid() {

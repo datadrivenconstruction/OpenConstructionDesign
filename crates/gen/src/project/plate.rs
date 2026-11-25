@@ -8,7 +8,7 @@
 //! neighbouring rooms share exact vertices and every room edge lies on a wall.
 
 use super::arrange::{Arrangement, P};
-use super::build::{bank_room, bank_rows, facing_depth, fit_stair, lift_inset, lift_row_full, lift_shaft, stair_def};
+use super::build::{bank_room, bank_rows, facing_depth, fit_stair, lift_inset, lift_row_full, lift_shaft, stair_band, stair_def};
 use super::footprint::{self, Region};
 use super::nav::area;
 use super::offset::{self, RingBand};
@@ -551,14 +551,22 @@ impl<'a> Lp<'a> {
             // where the edge is long enough for a room as well; short facets keep the margin
             let corr = h1 >= d - 1e-9;
             let run = door_run();
-            for (i, (e, st)) in rb.edges.iter().zip(&rb.start).enumerate() {
-                let pieces = e.full(h0, h1);
+            let all: Vec<Vec<(f64, f64)>> = rb.edges.iter().map(|e| e.full(h0, h1)).collect();
+            let len = |p: Option<&(f64, f64)>| p.map_or(0.0, |x| x.1 - x.0);
+            // a room wrapping a corner keeps a run of wall past it for its door or window: on
+            // the longer of the two sides, so a short side keeps a cut of its own
+            let run_after = |at: usize| len(all[at].first()) >= len(all[(at + n - 1) % n].last());
+            for (i, st) in rb.start.iter().enumerate() {
+                let pieces = &all[i];
                 let last = pieces.len().saturating_sub(1);
-                for (j, (a, b)) in pieces.into_iter().enumerate() {
+                for (j, &(a, b)) in pieces.iter().enumerate() {
                     let base = if tight < 2 && corr && b - a >= 2.0 * run + MIN_ROOM_W { run } else { MARGIN };
-                    // a room wrapping a corner keeps a run of wall past it for its door or window
-                    let m = |at: usize, on: bool| if on && tight == 0 && corner(at) { base.max(CORNER_RUN) } else { base };
-                    let (a, b) = (a + m(i, j == 0), b - m((i + 1) % n, j == last));
+                    // a facet too short to keep the run past its corner keeps the margin only
+                    let holds = tight == 0 && b - a >= CORNER_RUN + base;
+                    let m = |at: usize, on: bool, after: bool| {
+                        if on && holds && corner(at) && run_after(at) == after { base.max(CORNER_RUN) } else { base }
+                    };
+                    let (a, b) = (a + m(i, j == 0, true), b - m((i + 1) % n, j == last, false));
                     if b >= a {
                         v.push((st + a, st + b));
                     }
@@ -1056,8 +1064,8 @@ fn plan_floor_with(
     if k == 0 {
         items.push(Item::Entrance);
     }
-    let periodic = if spec.typology == Typology::ApartmentSection { spec.periodic_at(k) } else { None };
-    if spec.typology == Typology::ApartmentSection && periodic.is_none() {
+    let periodic = if spec.traits.flats { spec.periodic_at(k) } else { None };
+    if spec.traits.flats && periodic.is_none() {
         for a in &spec.apartments {
             for _ in 0..a.count {
                 items.push(Item::Flat(a.clone()));
@@ -1379,6 +1387,53 @@ fn ring_segs(r: &[P], out: &mut Vec<(P, P)>) {
     for i in 0..n {
         out.push((r[i], r[(i + 1) % n]));
     }
+}
+
+/// Every place a split line through `c` may take, best first after [`split_line`]'s choice.
+fn split_lines(c: P, dirs: &[P], segs: &[(P, P)], reach: f64) -> Vec<(P, P)> {
+    let first = split_line(c, dirs, segs, reach);
+    let mut out = vec![first];
+    for &dir in dirs {
+        let nn = (-dir.1, dir.0);
+        for k in [0.0, 0.4, -0.4, 0.8, -0.8, 1.2, -1.2, 1.6, -1.6] {
+            let o = (c.0 + nn.0 * k, c.1 + nn.1 * k);
+            if (o, dir) != first {
+                out.push((o, dir));
+            }
+        }
+    }
+    out
+}
+
+/// Whether a corridor split crosses a room's run to the corridor so that no piece of it takes
+/// a door while the whole run would.
+fn cut_short(ar: &Arrangement, labels: &[Option<Lab>]) -> bool {
+    let need = 0.8 + 2.0 * DOOR_CLEAR;
+    let mut runs: std::collections::BTreeMap<usize, (f64, f64)> = Default::default();
+    for c in chains(ar, labels) {
+        let r = match c.l {
+            (Some(Lab::Room(i)), Some(Lab::Corr(_))) | (Some(Lab::Corr(_)), Some(Lab::Room(i))) => i,
+            _ => continue,
+        };
+        let e = runs.entry(r).or_insert((0.0, 0.0));
+        e.0 = e.0.max(c.len());
+        e.1 += c.len();
+    }
+    runs.values().any(|&(most, sum)| most < need && sum >= need)
+}
+
+/// Every corridor piece is one simple polygon.
+fn corridors_simple(ar: &Arrangement, labels: &[Option<Lab>]) -> bool {
+    let mut corrs: Vec<u32> = labels.iter().filter_map(|l| match l {
+        Some(Lab::Corr(b)) => Some(*b),
+        _ => None,
+    }).collect();
+    corrs.sort_unstable();
+    corrs.dedup();
+    corrs.iter().all(|&b| {
+        let (outs, holes) = ar.region(labels, Lab::Corr(b));
+        outs.len() == 1 && holes.is_empty()
+    })
 }
 
 /// A split line through `c` along `dir`, moved off the vertices of `segs` where it can.
@@ -1732,7 +1787,12 @@ fn plate_band(spec: &ProjectSpec, regions: &[Region]) -> Result<f64, GenError> {
     let (d0, c) = (spec.band_depth, spec.corridor);
     let lo = super::rules::def("depth.band").map_or(3.0, |r| r.min);
     let holds = |d: f64| regions.iter().all(|r| two_bands(r, d, c));
-    let mut d = d0;
+    if holds(d0) {
+        return Ok(d0);
+    }
+    // a band shallower than the stair's never takes the core: narrowing stops there
+    let lo = if spec.has_stair() { lo.max(stair_band(spec)? as f64 / 1000.0) } else { lo };
+    let mut d = ((d0 - NARROW_STEP) * 100.0).round() / 100.0;
     while d >= lo - 1e-9 {
         if holds(d) {
             return Ok(d);
@@ -1741,7 +1801,7 @@ fn plate_band(spec: &ProjectSpec, regions: &[Region]) -> Result<f64, GenError> {
     }
     Err(infeasible(format!(
         "the plate is too thin for two {d0} m room bands and a {c} m corridor, and for bands narrowed \
-         to {lo} m: keep it at least {:.1} m across everywhere",
+         to {lo:.2} m: keep it at least {:.1} m across everywhere",
         2.0 * lo + c
     )))
 }
@@ -1893,12 +1953,16 @@ fn storey_with(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &
     // the first splits tie every closed loop of lines to the rest: through the core and
     // through every courtyard
     let mut splits = vec![];
+    // where each split was asked for, to move it if it cuts a room off its door
+    let mut asked: Vec<(P, Vec<P>)> = vec![];
     if let Some(c) = central {
         let mid = c.f.at(c.w / 2.0, c.d / 2.0);
         splits.push(split_line(mid, &[c.f.u, c.f.n()], &segs, reach));
+        asked.push((mid, vec![c.f.u, c.f.n()]));
     }
     for hole in &region.holes {
         splits.push(split_line(footprint::centroid(hole), &sh.dirs, &segs, reach));
+        asked.push((footprint::centroid(hole), sh.dirs.clone()));
     }
     let labs = |splits: &[(P, P)]| {
         let mut all = segs.clone();
@@ -1926,7 +1990,23 @@ fn storey_with(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &
             break;
         }
         splits.push(split_line(footprint::centroid(&hole), &sh.dirs, &segs, reach));
+        asked.push((footprint::centroid(&hole), sh.dirs.clone()));
         (ar, labels) = labs(&splits);
+    }
+    // a split across a room's run to the corridor leaves pieces too short for its door: the
+    // split takes the next place that keeps every run whole and the corridors simple
+    if cut_short(&ar, &labels) {
+        'moved: for (i, (c, dirs)) in asked.iter().enumerate() {
+            for alt in split_lines(*c, dirs, &segs, reach).into_iter().skip(1) {
+                let mut t = splits.clone();
+                t[i] = alt;
+                let (a2, l2) = labs(&t);
+                if !cut_short(&a2, &l2) && corridors_simple(&a2, &l2) {
+                    (ar, labels) = (a2, l2);
+                    break 'moved;
+                }
+            }
+        }
     }
     finish(sh, k, region, slab, &plan.units, core, &ar, &labels)
 }
@@ -2207,7 +2287,7 @@ pub(super) fn build(spec: &ProjectSpec) -> Result<GProject, GenError> {
     let regions: Vec<Region> = (0..n).map(|k| plate.at(k)).collect::<Result<_, _>>().map_err(infeasible)?;
     let d = plate_band(spec, &regions)?;
     let c = spec.corridor;
-    let df = if spec.typology == Typology::ApartmentSection {
+    let df = if spec.traits.flats {
         let s = (d - 3.0).min(2.4);
         if s < 1.5 {
             return Err(infeasible(format!(
@@ -2384,7 +2464,7 @@ pub(super) fn free_refusal(spec: &ProjectSpec) -> Option<&'static str> {
 }
 
 fn has_flats(spec: &ProjectSpec) -> bool {
-    spec.typology == Typology::ApartmentSection || !spec.apartments.is_empty()
+    spec.traits.flats || !spec.apartments.is_empty()
 }
 
 /// The rectangle of a free plan: length along the spine, full depth, south side, corridor,

@@ -1,7 +1,7 @@
 //! Quality gates of a generated project, run on the builder output before anything reaches a
 //! draft: the layout check of every storey plus program, door, daylight and stair rules.
 
-use super::{GProject, PRole, ProjectSpec, RoomKind, Typology};
+use super::{GProject, PRole, ProjectSpec, RoomKind};
 use crate::{GLayout, GOpening, GRoom};
 
 const AREA_TOL: f64 = 0.02;
@@ -89,11 +89,8 @@ fn bbox(poly: &[(f64, f64)]) -> ((f64, f64), (f64, f64)) {
 
 /// Rooms the spec asks on floor `k`, apartments counted room by room.
 fn asked_rooms(spec: &ProjectSpec, k: usize) -> u32 {
-    if spec.typology == Typology::ApartmentSection {
-        // a periodic storey (a refuge floor) holds its own rooms in place of the flats
-        if let Some(rooms) = spec.periodic_at(k) {
-            return rooms.iter().map(|r| r.count).sum();
-        }
+    // a periodic storey (a refuge floor) lays its own rooms instead of the flats
+    if spec.traits.flats && spec.periodic_at(k).is_none() {
         return spec
             .apartments
             .iter()
@@ -183,7 +180,7 @@ fn room_fix(spec: &ProjectSpec, l: &GLayout, met: u32, want: u32) -> String {
     let width = hi.0 - lo.0;
     let ratio = f64::from(want) / f64::from(met);
     let need = (width * ratio).ceil();
-    let unit = if spec.typology == Typology::ApartmentSection {
+    let unit = if spec.traits.flats {
         "apartments[].count or apartment rooms"
     } else {
         "rooms[].count"
@@ -193,7 +190,7 @@ fn room_fix(spec: &ProjectSpec, l: &GLayout, met: u32, want: u32) -> String {
         fix.push_str(&format!(", or set footprint.width {need} m (built {width:.1} m)"));
     }
     let floors = (f64::from(spec.floors) * ratio).ceil() as u32;
-    if floors <= spec.typology.max_floors() && spec.typology != Typology::ApartmentSection {
+    if floors <= spec.typology.max_floors() && !spec.traits.flats {
         fix.push_str(&format!(", or floors {floors} with fewer rooms per floor"));
     }
     fix
@@ -325,7 +322,7 @@ pub fn check_project(spec: &ProjectSpec, p: &GProject) -> Gates {
             }
         }
         // a programme shared out between the wings asks each wing for its share
-        let shared = p.metrics.iter().find(|m| m.0 == "program_shared").filter(|_| spec.typology != Typology::ApartmentSection);
+        let shared = p.metrics.iter().find(|m| m.0 == "program_shared").filter(|_| !spec.traits.flats);
         let want = match shared {
             Some(&(_, n)) => spec.storey_rooms(k).iter().map(|r| r.count.div_ceil(n as u32)).sum::<u32>() * p.copies,
             None => asked_rooms(spec, k) * p.copies,

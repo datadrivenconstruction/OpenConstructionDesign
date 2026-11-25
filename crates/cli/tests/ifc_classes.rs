@@ -6,9 +6,12 @@ use std::collections::{BTreeMap, HashMap};
 use ddc_io::ifc::{export_ifc, import_ifc, validate_ifc};
 use ddc_model::{Model, Recipe, RecipePart};
 use ddc_ops::{Cat, GeoOp, Op, Ref};
-use ddc_script::recipes::recipe;
 use ddc_script::{GeoScript, RunOpts, Sandbox, ROLE_IFC};
 use serde_json::json;
+
+#[path = "../../script/tests/data/scenes.rs"]
+mod scenes;
+use scenes::scene as recipe;
 
 fn count(t: &str, e: &str) -> usize {
     t.matches(&format!("={e}(")).count()

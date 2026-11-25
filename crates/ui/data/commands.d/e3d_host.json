@@ -1,0 +1,87 @@
+[
+  {
+    "id": "e3d.roof",
+    "icon": "roof",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.attach_top",
+    "icon": "wall-attach",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.attach_base",
+    "icon": "wall-attach",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.join",
+    "icon": "join",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.unjoin",
+    "once": true,
+    "icon": "unjoin-geom",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  },
+  {
+    "id": "e3d.cut",
+    "icon": "cut-geom",
+    "mnemonic": null,
+    "shortcuts": [],
+    "tab": "modify",
+    "surfaces": [
+      "R"
+    ],
+    "stage": "M3",
+    "group": "edit3d",
+    "repeatable": true,
+    "priority": 6
+  }
+]

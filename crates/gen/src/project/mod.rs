@@ -121,6 +121,40 @@ impl Typology {
     }
 }
 
+/// What a building is, as its typology data, preset or brief says: the generator branches on
+/// these properties, never on the typology itself.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub struct Traits {
+    /// People live in it: dwelling rates of air, power points and appliances.
+    pub residential: bool,
+    /// One household: the whole building is its dwelling and has no common route.
+    pub one_household: bool,
+    /// The plan is made of apartments, each with its own wet rooms, the same on every storey.
+    pub flats: bool,
+}
+
+impl Traits {
+    pub const KEYS: [&'static str; 3] = ["residential", "one_household", "flats"];
+
+    /// These traits with the ones `v` (`{trait: bool}`, or null) sets.
+    pub fn patched(mut self, v: &serde_json::Value) -> Result<Traits, String> {
+        if v.is_null() {
+            return Ok(self);
+        }
+        let o = v.as_object().ok_or("an object of trait to true or false")?;
+        for (k, x) in o {
+            let b = x.as_bool().ok_or(format!("{k}: true or false"))?;
+            match k.as_str() {
+                "residential" => self.residential = b,
+                "one_household" => self.one_household = b,
+                "flats" => self.flats = b,
+                _ => return Err(format!("unknown trait '{k}', one of {}", Self::KEYS.join(", "))),
+            }
+        }
+        Ok(self)
+    }
+}
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
 pub enum RoomKind {
     Living,
@@ -341,6 +375,8 @@ pub enum FoundationSpec {
 #[derive(Clone, Debug, PartialEq)]
 pub struct ProjectSpec {
     pub typology: Typology,
+    /// What the building is; the builder branches on these, not on `typology`.
+    pub traits: Traits,
     pub name: String,
     /// Russian data tables (programmes, presets) that exist in en and ru only.
     pub ru: bool,

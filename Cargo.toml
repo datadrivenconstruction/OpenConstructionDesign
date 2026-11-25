@@ -3,12 +3,12 @@ resolver = "2"
 members = ["crates/bridge-proto", "crates/model", "crates/geom", "crates/solver", "crates/io", "crates/render", "crates/app", "crates/ui", "crates/ai", "crates/ops", "crates/gen", "crates/fem", "crates/calc", "crates/cli", "crates/script", "crates/link", "tools/bigfile_bench"]
 
 [workspace.package]
-version = "1.1.1"
+version = "1.2.0"
 edition = "2021"
 license = "AGPL-3.0-only"
 publish = false
+# placeholder until the public home is decided
 repository = "https://github.com/datadrivenconstruction/OpenConstructionDesign"
-homepage = "https://github.com/datadrivenconstruction/OpenConstructionDesign"
 # locked deps set the floor (uuid 1.29 needs 1.89; code itself needs 1.87)
 rust-version = "1.89"
 

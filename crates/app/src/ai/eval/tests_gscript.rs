@@ -32,7 +32,7 @@ fn site() -> Vec<Script> {
 
 /// How a case is built without a live model.
 enum Build {
-    /// A shipped recipe with these params, on a fresh site level.
+    /// A scene script (test fixture) with these params, on a fresh site level.
     Recipe(&'static str, fn() -> J),
     /// A hand-written answer.
     Steps(fn() -> Vec<Vec<Script>>),
@@ -95,7 +95,7 @@ const BUILDS: &[(&str, Build)] = &[
 ];
 
 fn recipe_steps(name: &str, params: J) -> Option<Vec<Vec<Script>>> {
-    let script = ddc_script::recipes::recipe(name)?;
+    let script = super::scenes::scene(name)?;
     Some(vec![site(), tool("run_script", json!({"title": name.replace('_', " "), "script": script, "params": params}))])
 }
 
@@ -118,7 +118,7 @@ fn every_g_case_says_how_it_is_built() {
     assert_eq!(g_ids().iter().map(String::as_str).collect::<Vec<_>>(), have);
     for (id, b) in BUILDS {
         if let Recipe(name, _) = b {
-            assert!(ddc_script::recipes::recipe(name).is_some(), "{id}: no recipe {name}");
+            assert!(super::scenes::scene(name).is_some(), "{id}: no scene {name}");
         }
     }
 }

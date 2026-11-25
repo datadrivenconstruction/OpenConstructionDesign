@@ -3,11 +3,11 @@
 Generated from `crates/ai/data/ui_coverage.tsv` by `crates/ai/tests/ui_coverage.rs`;
 edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 
-559 commands: 128 with an API tool, 305 UI-only, 126 model edits without an API form yet.
+565 commands: 129 with an API tool, 305 UI-only, 131 model edits without an API form yet.
 
 | Kind | Meaning | Commands |
 |---|---|---|
-| api | an API tool does the same | 128 |
+| api | an API tool does the same | 129 |
 | view | UI-only: changes the view or the display, not the model | 106 |
 | nav | UI-only: moves around the project: views, levels, tabs | 34 |
 | dialog | UI-only: opens a window; its edits are their own commands | 84 |
@@ -15,7 +15,7 @@ edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 | file | UI-only: opens, saves or exchanges files on the person's disk | 25 |
 | session | UI-only: drives the editor session: tool state, undo, chat, panels | 39 |
 | clipboard | UI-only: the system clipboard, which the API replaces with copy_elements | 3 |
-| gap | edits the model, no API form yet | 126 |
+| gap | edits the model, no API form yet | 131 |
 
 | Command | Kind | API tool or model call | Note |
 |---|---|---|---|
@@ -176,12 +176,16 @@ edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 | `data.sync_xlsx` | api | `update_elements` | syncs XLSX book into model |
 | `data.table` | nav |  | switches dock to table layout |
 | `drawing.to_detail` | gap | `m.add_annos_batch` | converts view to detail annotations |
+| `e3d.attach_base` | gap | `m.attach_wall_to_slab` | 3D pick; attaches wall base to a floor |
+| `e3d.attach_top` | gap | `m.attach_wall_top/attach_wall_to_slab` | 3D pick; attaches wall top to a roof or floor |
 | `e3d.beam` | api | `create_elements:beam` | 3D beam creation |
 | `e3d.box` | view |  | 3D box tool |
 | `e3d.column` | api | `create_elements:column` | 3D column creation |
-| `e3d.duct` | api | `create_elements:mep` | draw duct run in 3D |
+| `e3d.cut` | gap | `m.cut_geometry` | 3D pick; cuts one element by another |
+| `e3d.duct` | api | `create_elements:mep` | 3D duct run |
 | `e3d.floor` | api | `create_elements:floor` | 3D floor creation |
 | `e3d.gizmo` | view |  | toggles transform gizmo |
+| `e3d.join` | gap | `m.join_geometry` | 3D pick; joins two elements |
 | `e3d.measure` | view |  | 3D measure tool |
 | `e3d.measure.angle` | api | `measure_save:angle` | 3D measure tool; saves an angle |
 | `e3d.measure.area` | api | `measure_save:area` | 3D measure tool; saves an area |
@@ -190,9 +194,11 @@ edit the table, then run that test with `DDC_BLESS_COVERAGE=1`.
 | `e3d.measure.gap` | api | `measure_save:clear` | 3D measure tool; saves a clearance |
 | `e3d.measure.slope` | api | `measure_save:slope` | 3D measure tool; saves a slope |
 | `e3d.measure.volume` | api | `measure_save:volume` | 3D measure tool; saves a volume |
-| `e3d.pipe` | api | `create_elements:mep` | draw pipe run in 3D |
+| `e3d.pipe` | api | `create_elements:mep` | 3D pipe run |
+| `e3d.roof` | api | `create_elements:roof` | 3D roof by sketch or picked walls |
 | `e3d.snap` | view |  | toggles 3D snaps |
-| `e3d.tray` | api | `create_elements:mep` | draw cable tray run in 3D |
+| `e3d.tray` | api | `create_elements:mep` | 3D cable tray run |
+| `e3d.unjoin` | gap | `m.unjoin_geometry` | 3D pick; unjoins two elements |
 | `e3d.wall` | api | `create_elements:wall` | 3D wall creation |
 | `e3d.wp_face` | view |  | work plane from face |
 | `e3d.wp_level` | view |  | work plane at level |

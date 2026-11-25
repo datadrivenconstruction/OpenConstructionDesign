@@ -103,8 +103,15 @@ impl Model {
                 t.extend(b.links.iter().map(|l| id_of(l.2)));
                 t.sort_unstable();
                 t.dedup();
+                // the connections are read once for all the systems, not once per system
+                let ports = m.component_ports(None);
                 t.into_iter()
-                    .map(|s| (s, m.mep_network(Some(s)).is_ok() || out.systems.contains(&s)))
+                    .map(|s| {
+                        let ok = ports
+                            .as_ref()
+                            .is_ok_and(|p| m.mep_network_with(Some(s), p).is_ok());
+                        (s, ok || out.systems.contains(&s))
+                    })
                     .collect()
             };
             let specs: Vec<RunSpec> = b
@@ -159,9 +166,12 @@ impl Model {
             })?;
             out.runs = runs;
             out.circuits = cids;
-            for (s, ok) in was {
-                if ok {
-                    m.mep_network(Some(s))?;
+            if was.iter().any(|w| w.1) {
+                let ports = m.component_ports(None)?;
+                for (s, ok) in was {
+                    if ok {
+                        m.mep_network_with(Some(s), &ports)?;
+                    }
                 }
             }
             Ok(out)

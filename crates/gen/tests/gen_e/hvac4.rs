@@ -80,3 +80,50 @@ fn a_housing_section_gets_balanced_ventilation() {
     check("housing", json!({"typology": "apartment_section", "floors": 6, "floor_height": 3.0, "services": true, "lift": true,
         "footprint": {"width": 34.0, "depth": 12.0}, "roof": {"kind": "flat"}}), true);
 }
+
+/// The ventilated hospital still drains: every stack and branch of the sanitary system reaches
+/// a building drain that leaves the ground slab, though the ducts move the stacks about.
+#[test]
+fn a_ventilated_hospital_drains_every_stack_to_the_building_drain() {
+    use ddc_gen::project::SvcSys;
+    let v = json!({"typology": "hospital_wing", "floors": 4, "floor_height": 4.2, "services": true, "lift": true,
+        "footprint": {"width": 80.0, "depth": 20.0}, "roof": {"kind": "flat"}, "basements": 0,
+        "rules": {"core.lift_shaft_w": 2.6, "core.lift_shaft_d": 2.8}});
+    let p = build_project(&parse_spec(&v).unwrap()).unwrap();
+    assert!(!p.hvac.ducts.is_empty(), "no ducts");
+    let runs: Vec<&Vec<(f64, f64, f64)>> = p.services.water.iter().filter(|r| r.sys == SvcSys::Sanitary).map(|r| &r.points).collect();
+    assert!(!runs.is_empty(), "no drains");
+    let on = |q: (f64, f64, f64), pts: &[(f64, f64, f64)]| {
+        pts.windows(2).any(|w| {
+            let (a, b) = (w[0], w[1]);
+            let d = (b.0 - a.0, b.1 - a.1, b.2 - a.2);
+            let l2 = d.0 * d.0 + d.1 * d.1 + d.2 * d.2;
+            let t = if l2 < 1e-12 { 0.0 } else { (((q.0 - a.0) * d.0 + (q.1 - a.1) * d.1 + (q.2 - a.2) * d.2) / l2).clamp(0.0, 1.0) };
+            ((q.0 - a.0 - d.0 * t).powi(2) + (q.1 - a.1 - d.1 * t).powi(2) + (q.2 - a.2 - d.2 * t).powi(2)).sqrt() < 1e-4
+        })
+    };
+    let mut root: Vec<usize> = (0..runs.len()).collect();
+    fn find(r: &mut [usize], i: usize) -> usize {
+        if r[i] != i {
+            let top = find(r, r[i]);
+            r[i] = top;
+        }
+        r[i]
+    }
+    for i in 0..runs.len() {
+        for j in i + 1..runs.len() {
+            let ends = |a: &[(f64, f64, f64)], b: &[(f64, f64, f64)]| [a[0], a[a.len() - 1]].iter().any(|&q| on(q, b));
+            if ends(runs[i], runs[j]) || ends(runs[j], runs[i]) {
+                let (a, b) = (find(&mut root, i), find(&mut root, j));
+                root[a] = b;
+            }
+        }
+    }
+    let slab = &p.storeys[0].layout.slab;
+    let (x0, x1) = slab.iter().fold((f64::MAX, f64::MIN), |a, q| (a.0.min(q.0), a.1.max(q.0)));
+    let (y0, y1) = slab.iter().fold((f64::MAX, f64::MIN), |a, q| (a.0.min(q.1), a.1.max(q.1)));
+    let outside = |q: &(f64, f64, f64)| q.2 < 0.0 && (q.0 < x0 - 1e-6 || q.0 > x1 + 1e-6 || q.1 < y0 - 1e-6 || q.1 > y1 + 1e-6);
+    let drained: std::collections::BTreeSet<usize> = (0..runs.len()).filter(|&i| runs[i].iter().any(outside)).map(|i| find(&mut root, i)).collect();
+    let cut: Vec<_> = (0..runs.len()).filter(|&i| !drained.contains(&find(&mut root, i))).map(|i| runs[i]).collect();
+    assert!(cut.is_empty(), "{} of {} drains reach no building drain, first {:?}", cut.len(), runs.len(), cut.first());
+}

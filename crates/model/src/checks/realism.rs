@@ -20,6 +20,9 @@ use crate::{ElKey, Error, Model};
 pub const AXIS_TOL: f64 = 0.001;
 /// Parts thinner than this in any direction are not buildable, m.
 pub const MIN_PART: f64 = 0.005;
+/// Walls of hollow and open sections below this are not buildable (the thinnest catalogue
+/// hollow sections have 2 mm walls; CHS 48.3x4 handrails and CHS 42.4x3.2 posts are standard), m.
+pub const MIN_WALL: f64 = 0.002;
 /// Gaps between parts: 0 < g < SLIVER_MAX is a sliver; below `TOUCH` the parts touch, m.
 pub const SLIVER_MAX: f64 = 0.001;
 pub const TOUCH: f64 = 1e-6;

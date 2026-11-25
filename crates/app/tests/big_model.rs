@@ -269,6 +269,30 @@ fn big_model_small_partial_rebuild() {
     assert!(r.elements > 100 && r.triangles > 0);
 }
 
+/// A scene of another level of the same model places the network bodies again without meshing
+/// them again (the draft preview composes one scene per level); a model change meshes anew.
+#[test]
+fn another_level_of_the_same_model_does_not_mesh_the_networks_again() {
+    let (mut ed, run) = build(3, 2, 2);
+    let first = ed.level;
+    let upper = ed.model.add_level("Upper", 4.0).unwrap();
+    ed.reload().unwrap();
+    let sc = mep3d::scene(&mut ed);
+    assert_eq!(ed.big.timing.systems_meshed, 2);
+    assert!(!sc.meshes.is_empty());
+    ed.set_level(upper);
+    assert_eq!(ed.level, upper);
+    let up = mep3d::scene(&mut ed);
+    assert!(ed.big.timing.systems_rebuilt >= 2, "the level change places every system again");
+    assert_eq!(ed.big.timing.systems_meshed, 0, "nothing changed in the model");
+    assert!(up.meshes.len() >= sc.meshes.len() / 2, "the networks are still drawn");
+    ed.run_op(OpFn(Arc::new(move |m: &mut Model| m.delete_mep_run(run))))
+        .unwrap();
+    ed.set_level(first);
+    mep3d::scene(&mut ed);
+    assert!(ed.big.timing.systems_meshed >= 1, "a changed model is meshed anew");
+}
+
 #[test]
 #[ignore = "full size, run in release with --nocapture"]
 fn big_model_50k() {

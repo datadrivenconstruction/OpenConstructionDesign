@@ -428,7 +428,7 @@ fn a_stadium_ring_on_masts_meets_the_stadium_bowl_case() {
     use ddc_script::GeoScript;
     let mut ed = editor();
     let lv = super::tests::level(&ed);
-    let src = ddc_script::recipes::recipe("stadium_roof").unwrap();
+    let src = super::scenes::scene("stadium_roof").unwrap();
     let opts = ddc_script::RunOpts::new(ddc_ops::Ref::id(ddc_ops::Cat::Level, lv), serde_json::json!({}));
     let run = ddc_script::Sandbox.run(src, &opts).unwrap_or_else(|e| panic!("{e}"));
     assert!(ed.model.apply_envelope(&run.env).is_ok());

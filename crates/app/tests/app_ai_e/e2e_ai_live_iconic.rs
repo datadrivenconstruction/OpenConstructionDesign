@@ -194,18 +194,42 @@ fn shot(ed: &Editor, name: &str) {
     }
 }
 
-/// The scripted assistant reads the block reference, opens the recipe and runs it; the plan
-/// is applied and the model must pass the scenario.
+/// The blocks a script calls (`name{`).
+fn block_calls(script: &str) -> Vec<&str> {
+    script
+        .match_indices('{')
+        .filter_map(|(i, _)| {
+            let head = &script[..i];
+            let ident = |c: char| c.is_alphanumeric() || c == '_' || c == '.';
+            let start = head.rfind(|c: char| !ident(c)).map_or(0, |k| k + 1);
+            let name = &head[start..];
+            (!name.is_empty()).then_some(name)
+        })
+        .collect()
+}
+
+/// The worked technique a good answer opens first: one that calls a block the scene calls.
+fn technique_for(script: &str) -> &'static str {
+    let mine = block_calls(script);
+    let all = ddc_script::recipes::RECIPES;
+    let shares = |t: &str| block_calls(t).iter().any(|b| mine.contains(b));
+    all.iter().find(|(_, t)| shares(t)).unwrap_or(&all[0]).0
+}
+
+/// The scripted assistant reads the block reference, opens the nearest technique example and
+/// runs its own script for the object (the scene); the plan is applied and the model must
+/// pass the scenario.
 fn replay(id: &str) {
     let s = scn(id);
     let mut ed = Editor::new_in_memory().unwrap();
     add_level(&mut ed, "Ground", 0.0);
-    let script = ddc_script::recipes::recipe(s.recipe).expect("recipe");
+    let script = crate::scenes::scene(s.recipe).expect("scene");
+    let technique = technique_for(script);
     let (mut session, provider) = run(
         &mut ed,
         vec![
             tool("script_recipes", json!({})),
-            tool("script_recipes", json!({"name": s.recipe})),
+            tool("script_recipes", json!({"name": technique})),
             tool("run_script", json!({"title": s.recipe.replace('_', " "), "script": script, "params": {}})),
         ],
     );
@@ -213,12 +237,14 @@ fn replay(id: &str) {
     assert_eq!(results.len(), 3, "{results:?}");
     assert!(results.iter().all(|r| !r.1), "{id}: {results:?}");
     let list = parsed(&results[0].0);
-    // The tool lists the whole recipe table, no more and no less.
+    // The tool lists the whole technique table, no more and no less, and no object scene.
     assert_eq!(list["recipes"].as_array().map(Vec::len), Some(ddc_script::recipes::RECIPES.len()), "{list}");
-    assert!(ddc_script::recipes::RECIPES.len() >= 22, "recipes only grow");
+    assert!((3..=6).contains(&ddc_script::recipes::RECIPES.len()), "a handful of techniques");
+    let listed = ddc_script::recipes::recipe(s.recipe);
+    assert!(listed.is_none(), "{}: an object script is listed", s.recipe);
     assert!(list["blocks"].as_str().is_some_and(|b| b.contains("surface_grid{")));
     let one = parsed(&results[1].0);
-    assert_eq!(one["script"].as_str(), Some(script));
+    assert_eq!(one["script"].as_str(), ddc_script::recipes::recipe(technique));
     let run_r = parsed(&results[2].0);
     assert!(run_r["changes"]["created"].as_i64().unwrap_or(0) >= s.parts, "{id}: {run_r}");
     apply_and_check(&mut session, &mut ed);
@@ -290,7 +316,7 @@ fn all_twenty_replays() {
 fn scenarios_are_complete() {
     assert_eq!(SCNS.len(), 20);
     for s in SCNS {
-        assert!(ddc_script::recipes::recipe(s.recipe).is_some(), "{}", s.id);
+        assert!(crate::scenes::scene(s.recipe).is_some(), "{}", s.id);
         assert!(s.en.len() > 80 && ru_brief(s.id).len() > 80, "{}: briefs", s.id);
         assert!(!s.roles.is_empty() && s.size.iter().all(|v| *v > 0.0));
     }

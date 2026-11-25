@@ -13,7 +13,7 @@ use ddc_geom::math::{v3, V3};
 
 use super::rules::rule;
 use super::svc::{self, norms, Ring, Room, Space, SvcPort, EPS};
-use super::{Boards, CircuitUse, GProject, GRun, GSvcLink, PRole, ProjectSpec, RoomKind, RoomTags, SvcSys, Typology};
+use super::{Boards, CircuitUse, GProject, GRun, GSvcLink, PRole, ProjectSpec, RoomKind, RoomTags, SvcSys};
 use crate::GFixture;
 
 /// Ring of conduit this far inside the walls, m: clear of air terminal necks kept 0.4 m out.
@@ -136,8 +136,8 @@ fn next_zone_spot(spots: &[f64], tried: &mut Vec<f64>, taken: &mut Vec<(usize, f
     Some(next)
 }
 
-fn residential(t: Typology) -> bool {
-    matches!(t, Typology::House | Typology::ApartmentSection)
+fn residential(spec: &ProjectSpec) -> bool {
+    spec.traits.residential
 }
 
 /// Small conduit diameter, m: also the connector size of a socket or luminaire.
@@ -261,7 +261,7 @@ fn crowded(room: &Room, spine: Option<usize>, taken: &[(usize, f64)], j: usize, 
 fn plan(spec: &ProjectSpec, p: &GProject, k: usize, room: &Room, f_rel: f64, fps: &[svc::R], spine: Option<usize>, reserved: &[(usize, f64)]) -> Plan {
     let n = norms();
     let st = &p.storeys[k];
-    let res = residential(spec.typology) && room.owner != PRole::Public || spec.typology == Typology::House;
+    let res = residential(spec) && room.owner != PRole::Public || spec.traits.one_household;
     let mut devs: Vec<Dev> = vec![];
     let mut cols: Vec<Col> = vec![];
     let occupied = |devs: &[Dev], cols: &[Col], j: usize, s: f64| {
@@ -1055,7 +1055,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         let attempts = rule("services.elec.attempts") as usize;
         // unit boards in the apartment halls, on the spine side beside the entrance feed
         let mut unit_at: Vec<Option<f64>> = vec![None; rs.len()];
-        if spec.services.boards == Boards::Unit && spec.typology == Typology::ApartmentSection {
+        if spec.services.boards == Boards::Unit && spec.traits.flats {
             let (ub_margin, ub_step) = (rule("services.elec.unit_board_margin"), rule("services.elec.unit_board_step"));
             let (ub_before, ub_after, ub_depth) = (rule("services.elec.board_box_before"), rule("services.elec.unit_box_after"), rule("services.elec.board_box_depth"));
             let (ub_clear, ub_top) = (rule("services.elec.unit_clear_half"), WALL_TOP);
@@ -1087,7 +1087,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         // a host room's free board spots by distance to its far room, and those already tried
         let mut zone_spots: Vec<Vec<f64>> = vec![vec![]; rs.len()];
         let mut zone_tried: Vec<Vec<f64>> = vec![vec![]; rs.len()];
-        if spec.services.boards == Boards::Unit && !residential(spec.typology) {
+        if spec.services.boards == Boards::Unit && !residential(spec) {
             let reach = rule("services.elec.zone_reach");
             let (ub_margin, ub_step) = (rule("services.elec.unit_board_margin"), rule("services.elec.unit_board_step"));
             let (ub_before, ub_after, ub_depth) = (rule("services.elec.board_box_before"), rule("services.elec.unit_box_after"), rule("services.elec.board_box_depth"));

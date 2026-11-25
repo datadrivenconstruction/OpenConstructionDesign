@@ -455,8 +455,8 @@ mod tests {
     use super::*;
 
     #[test]
-    fn lattice_tower_recipe_names_a_real_generator_and_its_params() {
-        let r = recipe("lattice_tower").unwrap();
+    fn lattice_frame_note_names_a_real_generator_and_its_params() {
+        let r = recipe("lattice_frame").unwrap();
         let g = ddc_gen::registry().iter().find(|g| g.id() == "steel_frame").expect("steel_frame generator");
         assert!(r.contains("run_generator") && r.contains("connect_members"), "{r}");
         for p in ["kind", "pattern", "tower_height", "base_width", "platform_1", "platform_2", "platform_3", "detail"] {
@@ -473,14 +473,18 @@ mod tests {
     /// that is and that the same call joins the nodes, and the system prompt must send a tower to the recipe.
     #[test]
     fn a_detailed_tower_brief_finds_detail_3_and_the_joints() {
-        let r = recipe("lattice_tower").unwrap();
+        let r = recipe("lattice_frame").unwrap();
         assert!(r.contains("detail 3 when the brief asks for high, fine, excellent or full detail"), "{r}");
         assert!(r.contains("a detailed tower is a single run_generator call: do not call connect_members after it"), "{r}");
         assert!(r.contains("\"joints\": \"all\""), "{r}");
         let g = ddc_gen::registry().iter().find(|g| g.id() == "steel_frame").expect("steel_frame generator");
         assert!(g.params().iter().any(|d| d.name == "joints"), "steel_frame has no joints param");
         let sys = include_str!("../data/system.md");
-        assert!(sys.contains("A steel lattice tower on legs") && sys.contains("`help` lattice_tower"));
+        assert!(sys.contains("An open steel lattice on legs") && sys.contains("`help` lattice_frame"));
+        // the prompt teaches primitives: no object is routed to a template
+        for gone in ["300 m kind", "nearest recipe", "landmark"] {
+            assert!(!sys.contains(gone), "system prompt still says {gone}");
+        }
     }
 
     /// A hard-case brief in any of five languages preloads the group its recipe needs, the
@@ -519,8 +523,8 @@ mod tests {
                 "一座四万座的足球体育场，悬挑钢桁架屋顶",
             ],
             "scripts",
-            "stadium_roof",
-            "a stadium or arena roof",
+            "cantilever_ring",
+            "cantilever trusses round an opening",
         );
     }
 
@@ -536,7 +540,7 @@ mod tests {
             ],
             "station",
             "plan_station",
-            "an underground metro station",
+            "an underground box of levels",
         );
     }
 
@@ -551,8 +555,8 @@ mod tests {
                 "跨河人行拱桥，主跨90米",
             ],
             "scripts",
-            "tied_arch_bridge",
-            "an arch bridge with hangers",
+            "arch_span",
+            "a deck hung from tied arches",
         );
     }
 
@@ -567,14 +571,14 @@ mod tests {
                 "一座300米高的钢结构格构铁塔",
             ],
             "steel",
-            "lattice_tower",
-            "A steel lattice tower on legs",
+            "lattice_frame",
+            "An open steel lattice on legs",
         );
     }
 
     #[test]
     fn h14_tower_platform_brief_finds_its_recipe() {
-        let r = recipe("lattice_tower").unwrap();
+        let r = recipe("lattice_frame").unwrap();
         assert!(r.contains("One more platform on a built tower") && r.contains("never rerun the generator"), "{r}");
         routes(
             [
@@ -585,8 +589,8 @@ mod tests {
                 "在格构铁塔200米处再加一个观景平台",
             ],
             "scripts",
-            "lattice_tower",
-            "A steel lattice tower on legs",
+            "lattice_frame",
+            "An open steel lattice on legs",
         );
     }
 
@@ -601,15 +605,15 @@ mod tests {
                 "100×80米飞机维修机库，网架屋顶",
             ],
             "scripts",
-            "space_frame_hall",
-            "a hangar or long-span hall",
+            "long_span_roof",
+            "plane trusses over a clear span",
         );
     }
 
     /// A transmission pylon asked for in any of the three languages finds the power_line service.
     #[test]
     fn the_tower_recipe_names_the_power_line_pylon_in_every_language() {
-        let r = recipe("lattice_tower").unwrap();
+        let r = recipe("lattice_frame").unwrap();
         for w in [ru("pylon").as_str(), "power pylon", "Strommast", "\"service\": \"power_line\""] {
             assert!(r.contains(w), "recipe lacks {w}");
         }
@@ -684,7 +688,7 @@ mod tests {
             "tower_podium",
             "Setback and cantilever step a bar",
             "Data centre: tag rooms data_hall",
-            "help data_center",
+            "help equipment_fitout",
         ] {
             assert!(gp.contains(hint), "generate_project: {hint}");
         }
@@ -880,7 +884,7 @@ mod tests {
             assert!(intent_groups(b).contains("scripts"), "{b}");
         }
         assert!(groups().iter().any(|g| g.name == "scripts" && g.tools.iter().any(|t| t == "run_generator")));
-        let r = meta_call(HELP, Some(&json!({"topic": "stadium_bowl"})), Mode::Propose, true, &mut BTreeSet::new());
+        let r = meta_call(HELP, Some(&json!({"topic": "raked_tiers"})), Mode::Propose, true, &mut BTreeSet::new());
         assert!(!r.is_error && r.text.contains("stadium_ring"), "{}", r.text);
     }
 
@@ -906,7 +910,7 @@ mod tests {
     fn help_finds_every_script_recipe_block_and_generator_in_any_wording() {
         let mut loaded = BTreeSet::new();
         let mut ask = |t: &str| meta_call(HELP, Some(&json!({"topic": t})), Mode::Propose, true, &mut loaded);
-        for (topic, kind) in [("long_span_roof", "truss_hall"), ("long_span_bridge", "arch_bridge"), ("stadium_ring", "cantilever_ring")] {
+        for (topic, kind) in [("long_span_roof", "truss_hall"), ("arch_span", "arch_bridge"), ("cantilever_ring", "cantilever_ring")] {
             let r = ask(topic);
             assert!(!r.is_error && r.text.contains(kind), "{topic}: {}", r.text);
         }
@@ -918,10 +922,10 @@ mod tests {
         for w in ["outfit", "roof", "sliding door", "crane runway", "rooms"] {
             assert!(hall.contains(w), "the hangar recipe names the {w}");
         }
-        let bridge = ask("long_span_bridge").text;
+        let bridge = ask("arch_span").text;
         assert!(bridge.contains("deck_freq_hz"), "the bridge recipe names the vibration metrics");
-        let r = ask("tied_arch_bridge");
-        assert!(r.text.contains("param(\\\"span\\\""), "params are listed: {}", r.text);
+        let r = ask("arches_and_vaults");
+        assert!(r.text.contains("param(\\\"length\\\""), "params are listed: {}", r.text);
         for b in ["tower", "arch", "bridge", "space_frame", "run_script space_frame", "Space Frame", "surf.dome"] {
             let r = ask(b);
             assert!(!r.is_error && r.text.contains("script block"), "{b}: {}", r.text);
@@ -933,9 +937,13 @@ mod tests {
         assert!(!ask("run_script").is_error);
         // a miss lists everything with summaries and names the near ones
         let miss = ask("qwerty flange");
-        assert!(miss.is_error && miss.text.contains("tapered_tower") && miss.text.contains("tied_arch_bridge"), "{}", miss.text);
+        assert!(miss.is_error && miss.text.contains("tiered_frame") && miss.text.contains("arches_and_vaults"), "{}", miss.text);
         let all = ask("all");
-        assert!(!all.is_error && all.text.contains("space_frame_hall") && all.text.contains("typical_floor"), "{}", all.text);
+        assert!(!all.is_error && all.text.contains("long_span_grid") && all.text.contains("typical_floor"), "{}", all.text);
+        // topics are techniques: no help topic is a named object
+        for gone in ["lattice_tower", "stadium_ring", "stadium_bowl", "metro_station", "pagoda_tiers", "tied_arch_bridge", "ferris_wheel"] {
+            assert!(!all.text.contains(&format!("{gone} [")), "{gone} is still a topic");
+        }
     }
 
     #[test]

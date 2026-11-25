@@ -25,7 +25,7 @@ pub(super) const WALL: f64 = 0.3;
 /// Depth of a ladder off the platform edge without and with a cage.
 const LADDER_D: f64 = 0.2;
 /// Half section of a steel member for clash checks, m.
-pub(super) const STEEL_R: f64 = 0.03;
+pub const STEEL_R: f64 = 0.03;
 /// A terminal row keeps this share of a pitch to its band ends.
 const HALF: f64 = 0.5;
 

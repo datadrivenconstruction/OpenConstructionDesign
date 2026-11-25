@@ -11,7 +11,7 @@
 //! corner through its best door.
 
 use super::why::RuleFix;
-use super::{GProject, PRole, PStorey, ProjectSpec, RoomKind, Typology};
+use super::{GProject, PRole, PStorey, ProjectSpec, RoomKind};
 use crate::{GLayout, GOpening, WallRole};
 use serde_json::json;
 
@@ -365,7 +365,7 @@ fn daylight(spec: &ProjectSpec, p: &GProject, out: &mut Vec<Finding>) {
         return;
     };
     let shown: Vec<&str> = deep.iter().take(SHOWN).map(String::as_str).collect();
-    let fix = if spec.typology == Typology::House || spec.plate.is_some() {
+    let fix = if spec.traits.one_household || spec.plate.is_some() {
         None
     } else {
         // rooms as deep as the band: a band no deeper than the limit
@@ -398,7 +398,7 @@ fn dm_ceil(x: f64) -> f64 {
 /// Common routes (public corridors, lobbies and halls) and the doors off them, against the
 /// accessibility rules. A house is one household and has no common route.
 fn access(spec: &ProjectSpec, p: &GProject, out: &mut Vec<Finding>) {
-    if spec.typology == Typology::House {
+    if spec.traits.one_household {
         return;
     }
     let route = spec.rules.get("access.route_width");

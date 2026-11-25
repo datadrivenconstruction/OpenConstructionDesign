@@ -143,7 +143,7 @@ pub fn feasible(v: &J) -> Result<(), String> {
     let p = build_project(&s).map_err(|e| e.to_string())?;
     let g = check_project(&s, &p);
     if !g.passed() {
-        return Err(format!("gates: {}", g.failures.join("; ")));
+        return Err(gates_failure(&g.failures));
     }
     let sc = score(&s, &p);
     if let Some(c) = sc.hard_misses().first() {
@@ -153,6 +153,11 @@ pub fn feasible(v: &J) -> Result<(), String> {
         return Err(format!("the lock on {} breaks", l.label()));
     }
     Ok(())
+}
+
+/// What [`feasible`] says of a brief that fails its gates.
+pub fn gates_failure(failures: &[String]) -> String {
+    format!("gates: {}", failures.join("; "))
 }
 
 /// The conflict of an infeasible brief.
@@ -294,6 +299,16 @@ impl Search<'_> {
 /// The conflict of a brief, `None` when it is feasible.
 pub fn find(v: &J) -> Option<Conflict> {
     let error = feasible(v).err()?;
+    Some(search(v, error))
+}
+
+/// [`find`] for a brief whose build or gates already failed with `failure`, worded as
+/// [`feasible`] words it: the brief itself is not built once more.
+pub fn find_failed(v: &J, failure: String) -> Conflict {
+    search(v, of_brief(v).err().unwrap_or(failure))
+}
+
+fn search(v: &J, error: String) -> Conflict {
     let mut s = Search { v, all: demands(v), builds: 1 };
     let set = s.minimise();
     let labels = set.iter().map(|d| d.label(v)).collect();
@@ -315,7 +330,7 @@ pub fn find(v: &J) -> Option<Conflict> {
             }
         }
     }
-    Some(Conflict { error, set, labels, fixes, builds: s.builds })
+    Conflict { error, set, labels, fixes, builds: s.builds }
 }
 
 /// Rules an error quotes in backticks, by id (`rules.<id>`) or by brief field, with the path

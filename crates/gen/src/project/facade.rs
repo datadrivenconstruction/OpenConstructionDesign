@@ -453,20 +453,25 @@ fn built_on(l: &GLayout, p: P) -> bool {
 fn site(l: &mut GLayout, band: f64, trees: u32, courtyard: Option<&[P]>) -> Result<(), GenError> {
     let (lo, hi) = bbox(&l.slab);
     let clear = WallRole::Exterior.thickness() / 2.0 + PAD / 2.0;
-    let mut pads = vec![];
-    if band > 0.0 {
-        let reach = band + PAD;
-        let (nx, ny) = (((hi.0 - lo.0 + 2.0 * reach) / PAD) as usize, ((hi.1 - lo.1 + 2.0 * reach) / PAD) as usize);
-        for i in 0..=nx {
-            for j in 0..=ny {
-                let p = (lo.0 - reach + PAD * (i as f64 + 0.5), lo.1 - reach + PAD * (j as f64 + 0.5));
-                let d = to_outline(l, p);
-                if !built_on(l, p) && d >= clear - 1e-9 && d <= band + clear && pads.len() < MAX_PADS {
-                    pads.push(p);
+    // the paving band takes the storey's free slots like a planting, the reserve kept for the trees
+    let free = (super::slots::FIXTURES_MAX as usize).saturating_sub(l.fixtures.len() + super::landscape::reserve());
+    let paving = |band: f64| {
+        let mut pads = vec![];
+        if band > 0.0 {
+            let reach = band + PAD;
+            let (nx, ny) = (((hi.0 - lo.0 + 2.0 * reach) / PAD) as usize, ((hi.1 - lo.1 + 2.0 * reach) / PAD) as usize);
+            for i in 0..=nx {
+                for j in 0..=ny {
+                    let p = (lo.0 - reach + PAD * (i as f64 + 0.5), lo.1 - reach + PAD * (j as f64 + 0.5));
+                    let d = to_outline(l, p);
+                    if !built_on(l, p) && d >= clear - 1e-9 && d <= band + clear {
+                        pads.push(p);
+                    }
                 }
             }
         }
-    }
+        pads
+    };
     let doors: Vec<P> = l
         .openings
         .iter()
@@ -474,7 +479,17 @@ fn site(l: &mut GLayout, band: f64, trees: u32, courtyard: Option<&[P]>) -> Resu
         .map(|o| at(&l.walls[o.wall], o.along + o.width / 2.0))
         .collect();
     let cfg = super::landscape::Cfg::read();
-    let land = super::landscape::lay(l, band, clear, PAD, &doors, pads.len(), trees, &cfg)?;
+    // over the slots the band narrows evenly all round, a tile at a time, before a door walk
+    // to the street is left out
+    let mut b = band;
+    let (pads, land) = loop {
+        let pads = paving(b);
+        let land = super::landscape::lay(l, b, clear, PAD, &doors, pads.len(), trees, &cfg)?;
+        if b <= 0.0 || (pads.len() <= MAX_PADS.min(free) && !land.walks_cut) {
+            break (pads, land);
+        }
+        b = (b - PAD).max(0.0);
+    };
     // species and turn per tree from the library's Tree family and the site's tree mix; the
     // seed is the plot box, so a site keeps its trees and another site gets other ones
     let seed = [lo.0, lo.1, hi.0, hi.1].iter().fold(0u64, |a, v| a.rotate_left(17) ^ (v * 1000.0).round() as i64 as u64);

@@ -9,6 +9,8 @@ mod app2_fx;
 mod e2e_ai_common;
 #[path = "../e2e_common/mod.rs"]
 mod e2e_common;
+#[path = "../../../script/tests/data/scenes.rs"]
+mod scenes;
 
 mod e2e_ai_attach;
 mod e2e_ai_categories;

@@ -89,7 +89,7 @@ fn tower(file: &str, connect_title: &str, reply: fn(&Said) -> String) {
     let case = Case::load(&evals_dir().join("cases").join(file)).unwrap();
     let brief = &case.turns[0].say;
     let calls = vec![
-        tool("help", json!({"topic": "lattice_tower"})),
+        tool("help", json!({"topic": "lattice_frame"})),
         tool("load_tools", json!({"groups": ["scripts"]})),
         tool(
             "run_generator",

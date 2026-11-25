@@ -1,10 +1,13 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Room programme templates as data: the default rooms of each typology, what spare band
-//! length becomes, and the names a typology gives its rooms. A norm pack builds its own
+//! length becomes, and the names a typology gives its rooms, read with the typology's traits
+//! from the `base` table of `data/typology_programs.json`. A norm pack builds its own
 //! `Programme` and passes it to `parse_spec_with`.
 
-use super::{RoomKind, RoomReq, Typology};
+use super::{RoomKind, RoomReq, Traits, Typology};
+use serde_json::Value as J;
+use std::sync::OnceLock;
 
 /// One programme line: kind, net area m2, count, and an optional (en, ru) name.
 #[derive(Clone, Debug, PartialEq)]
@@ -41,159 +44,57 @@ pub struct Programme {
     pub names: Vec<(RoomKind, String, String)>,
 }
 
-fn l(kind: RoomKind, area: f64, count: u32) -> Line {
-    Line {
-        kind,
-        area,
-        count,
-        name: None,
+/// The base entry of a typology in the data.
+fn base(t: Typology) -> &'static J {
+    &super::typo_program::data()["base"][t.name()]
+}
+
+fn kind_of(t: Typology, v: &J) -> RoomKind {
+    let k = v.as_str().unwrap_or_default();
+    RoomKind::parse(k).unwrap_or_else(|| panic!("typology_programs.json base.{}: unknown kind '{k}'", t.name()))
+}
+
+fn en_ru(v: &J) -> (String, String) {
+    let en = v["en"].as_str().unwrap_or_default().to_string();
+    let ru = v["ru"].as_str().map_or_else(|| en.clone(), str::to_string);
+    (en, ru)
+}
+
+fn programme_of(t: Typology) -> Programme {
+    let b = base(t);
+    let lines = |f: &str| lines_from_json(&b[f]).unwrap_or_else(|e| panic!("typology_programs.json base.{}.{f}: {e}", t.name()));
+    let named = |v: &J| {
+        let (en, ru) = en_ru(&v["name"]);
+        (kind_of(t, &v["kind"]), en, ru)
+    };
+    let sp = &b["spare"];
+    Programme {
+        typology: t,
+        ground: lines("ground"),
+        typical: lines("typical"),
+        single: lines("single"),
+        spare: Spare {
+            grow_share: sp["grow_share"].as_f64().unwrap_or_else(|| panic!("typology_programs.json base.{}.spare.grow_share", t.name())),
+            kind: kind_of(t, &sp["kind"]),
+            name: en_ru(&sp["name"]),
+        },
+        core_rest: named(&b["core_rest"]),
+        names: b["names"].as_array().into_iter().flatten().map(named).collect(),
     }
 }
-
-fn named(kind: RoomKind, area: f64, count: u32, en: &str, ru: &str) -> Line {
-    Line {
-        name: Some((en.to_string(), ru.to_string())),
-        ..l(kind, area, count)
-    }
-}
-
-fn s(x: &str) -> String {
-    x.to_string()
-}
-
-const RU_OPEN_SPACE: &str = "\u{41e}\u{442}\u{43a}\u{440}\u{44b}\u{442}\u{43e}\u{435} \
-    \u{440}\u{430}\u{431}\u{43e}\u{447}\u{435}\u{435} \u{43f}\u{440}\u{43e}\u{441}\u{442}\
-    \u{440}\u{430}\u{43d}\u{441}\u{442}\u{432}\u{43e}";
-const RU_HALL: &str = "\u{425}\u{43e}\u{43b}\u{43b}";
-const RU_STUDY: &str = "\u{41a}\u{430}\u{431}\u{438}\u{43d}\u{435}\u{442}";
-const RU_GARAGE: &str = "\u{413}\u{430}\u{440}\u{430}\u{436}";
-const RU_STAFF_OFFICE: &str = "\u{41a}\u{43e}\u{43c}\u{43d}\u{430}\u{442}\u{430} \
-    \u{43f}\u{435}\u{440}\u{441}\u{43e}\u{43d}\u{430}\u{43b}\u{430}";
-const RU_STAFF_SCHOOL: &str =
-    "\u{423}\u{447}\u{438}\u{442}\u{435}\u{43b}\u{44c}\u{441}\u{43a}\u{430}\u{44f}";
-const RU_RECREATION: &str = "\u{420}\u{435}\u{43a}\u{440}\u{435}\u{430}\u{446}\u{438}\u{44f}";
-const RU_TECH: &str =
-    "\u{422}\u{435}\u{445}\u{43d}\u{438}\u{447}\u{435}\u{441}\u{43a}\u{43e}\u{435}";
 
 /// The built-in programme of a typology.
 pub fn default_programme(t: Typology) -> Programme {
-    use RoomKind::*;
-    match t {
-        Typology::House => Programme {
-            typology: t,
-            ground: vec![
-                l(Hall, 6.0, 1),
-                l(Living, 26.0, 1),
-                l(Kitchen, 12.0, 1),
-                l(Wc, 3.0, 1),
-            ],
-            typical: vec![
-                l(Bedroom, 14.0, 1),
-                l(Bedroom, 12.0, 1),
-                l(Bedroom, 10.0, 1),
-                l(Bath, 6.0, 1),
-            ],
-            single: vec![
-                l(Hall, 6.0, 1),
-                l(Living, 24.0, 1),
-                l(Kitchen, 12.0, 1),
-                l(Bedroom, 14.0, 1),
-                l(Bedroom, 12.0, 1),
-                l(Bath, 5.0, 1),
-                l(Wc, 2.0, 1),
-            ],
-            // spare length of a house is a room people use: a study with a window
-            spare: Spare {
-                grow_share: 0.6,
-                kind: Office,
-                name: (s("Study"), s(RU_STUDY)),
-            },
-            core_rest: (Hall, s("Hall"), s(RU_HALL)),
-            // a house parks one or two cars: a garage, not a parking deck
-            names: vec![(Parking, s("Garage"), s(RU_GARAGE))],
-        },
-        Typology::Office => {
-            let open = |n| named(Office, 72.0, n, "Open space", RU_OPEN_SPACE);
-            Programme {
-                typology: t,
-                ground: vec![
-                    l(Lobby, 48.0, 1),
-                    open(1),
-                    l(Office, 18.0, 2),
-                    l(Meeting, 24.0, 1),
-                    l(Wc, 6.0, 2),
-                    l(Technical, 8.0, 1),
-                ],
-                typical: vec![
-                    open(2),
-                    l(Office, 18.0, 2),
-                    l(Meeting, 24.0, 1),
-                    l(Meeting, 12.0, 1),
-                    l(Staff, 12.0, 1),
-                    l(Wc, 6.0, 2),
-                    l(Storage, 4.0, 1),
-                ],
-                single: vec![
-                    l(Lobby, 24.0, 1),
-                    open(1),
-                    l(Office, 18.0, 2),
-                    l(Meeting, 24.0, 1),
-                    l(Staff, 12.0, 1),
-                    l(Wc, 6.0, 2),
-                ],
-                spare: Spare {
-                    grow_share: 0.5,
-                    kind: Office,
-                    name: (s("Open space"), s(RU_OPEN_SPACE)),
-                },
-                core_rest: (Technical, s("Technical"), s(RU_TECH)),
-                names: vec![(Staff, s("Staff room"), s(RU_STAFF_OFFICE))],
-            }
-        }
-        Typology::School => Programme {
-            typology: t,
-            ground: vec![
-                l(Lobby, 72.0, 1),
-                l(Classroom, 60.0, 4),
-                l(Staff, 24.0, 1),
-                l(Wc, 18.0, 2),
-                l(Storage, 12.0, 1),
-            ],
-            typical: vec![
-                l(Classroom, 60.0, 6),
-                l(Staff, 24.0, 1),
-                l(Wc, 18.0, 2),
-                l(Storage, 12.0, 1),
-            ],
-            single: vec![
-                l(Lobby, 48.0, 1),
-                l(Classroom, 60.0, 4),
-                l(Staff, 24.0, 1),
-                l(Wc, 18.0, 2),
-                l(Storage, 8.0, 1),
-            ],
-            spare: Spare {
-                grow_share: 0.3,
-                kind: Lobby,
-                name: (s("Recreation"), s(RU_RECREATION)),
-            },
-            core_rest: (Technical, s("Technical"), s(RU_TECH)),
-            names: vec![(Staff, s("Staff room"), s(RU_STAFF_SCHOOL))],
-        },
-        Typology::ApartmentSection => Programme {
-            typology: t,
-            ground: vec![],
-            typical: vec![],
-            single: vec![],
-            spare: Spare {
-                grow_share: 0.0,
-                kind: Technical,
-                name: (s("Technical"), s(RU_TECH)),
-            },
-            core_rest: (Technical, s("Technical"), s(RU_TECH)),
-            names: vec![],
-        },
-    }
+    static ALL: OnceLock<Vec<Programme>> = OnceLock::new();
+    let all = ALL.get_or_init(|| Typology::ALL.into_iter().map(programme_of).collect());
+    all.iter().find(|p| p.typology == t).expect("every typology has a base programme").clone()
+}
+
+/// The traits a typology's base entry gives it.
+pub fn traits(t: Typology) -> Traits {
+    Traits::default()
+        .patched(&base(t)["traits"])
+        .unwrap_or_else(|e| panic!("typology_programs.json base.{}.traits: {e}", t.name()))
 }
 
 /// Lines from a norm-pack programme list `[{kind, min_area|area, count?, name?}]`; the
@@ -269,5 +170,30 @@ mod tests {
                 assert_ne!(r.kind, RoomKind::Classroom);
             }
         }
+    }
+
+    /// The programmes that moved from code into the data, line for line.
+    #[test]
+    fn the_base_programmes_read_from_the_data() {
+        let h = default_programme(Typology::House);
+        let areas = |ls: &[Line]| ls.iter().map(|l| (l.kind, l.area, l.count)).collect::<Vec<_>>();
+        use RoomKind::*;
+        assert_eq!(areas(&h.ground), [(Hall, 6.0, 1), (Living, 26.0, 1), (Kitchen, 12.0, 1), (Wc, 3.0, 1)]);
+        assert_eq!(h.spare.grow_share, 0.6);
+        assert_eq!(h.spare.kind, Office);
+        assert_eq!(h.core_rest.0, Hall);
+        assert_eq!(h.room_name(Parking, false), "Garage");
+        let o = default_programme(Typology::Office);
+        assert_eq!(o.ground[1].name.as_ref().map(|n| n.0.as_str()), Some("Open space"));
+        assert_eq!(areas(&o.typical).len(), 7);
+        assert_eq!(default_programme(Typology::School).spare.name.0, "Recreation");
+        let a = default_programme(Typology::ApartmentSection);
+        assert!(a.ground.is_empty() && a.typical.is_empty() && a.single.is_empty());
+        assert_eq!(a.core_rest.0, Technical);
+        let t = traits;
+        assert!(t(Typology::House).residential && t(Typology::House).one_household && !t(Typology::House).flats);
+        assert!(t(Typology::ApartmentSection).residential && t(Typology::ApartmentSection).flats);
+        assert_eq!(t(Typology::Office), Traits::default());
+        assert_eq!(t(Typology::School), Traits::default());
     }
 }

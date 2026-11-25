@@ -4,6 +4,7 @@
 //! with a merge patch on the spec, rebuild, and keep the best round. Rendering and the critic
 //! are traits, so the app plugs in its viewport and a model while tests use plain code.
 
+use super::block::Built;
 use super::{build_project, check_project, merge_patch, parse_spec, Design, FacadeSystem, GProject, Massing};
 use super::why::{fixes_of, spec_patch, RuleFix};
 use serde_json::{json, Value as J};
@@ -18,6 +19,10 @@ pub struct Snapshot {
 
 pub trait Renderer {
     fn render(&mut self, p: &GProject) -> Result<Vec<Snapshot>, String>;
+    /// False for a renderer that draws nothing: the loop need not build a round to show it.
+    fn draws(&self) -> bool {
+        true
+    }
 }
 
 /// For a critic that reads only the spec and the facts (such as [`RuleCritic`]): no images.
@@ -26,6 +31,10 @@ pub struct NoShots;
 impl Renderer for NoShots {
     fn render(&mut self, _p: &GProject) -> Result<Vec<Snapshot>, String> {
         Ok(vec![])
+    }
+
+    fn draws(&self) -> bool {
+        false
     }
 }
 
@@ -51,6 +60,10 @@ impl Critique {
 
 pub trait Critic {
     fn critique(&mut self, spec: &J, facts: &J, shots: &[Snapshot]) -> Result<Critique, String>;
+    /// False for a critic that reads the spec alone, never the facts or the shots.
+    fn reads_build(&self) -> bool {
+        true
+    }
 }
 
 #[derive(Clone, Copy, Debug)]
@@ -94,6 +107,9 @@ pub struct Refined {
     pub best: J,
     pub score: f64,
     pub rounds: Vec<Round>,
+    /// The build of `best`, so drafting it does not build the same brief again; none when no
+    /// round scored.
+    pub built: Option<Built>,
 }
 
 /// The criteria a critic scores, in the words the model reads.
@@ -166,30 +182,34 @@ pub fn facts(p: &GProject) -> J {
     })
 }
 
-fn build(spec: &J) -> Result<GProject, String> {
+fn build(spec: &J) -> Result<Built, String> {
     let s = parse_spec(spec).map_err(|e| e.to_string())?;
     let p = build_project(&s).map_err(|e| e.to_string())?;
     let g = check_project(&s, &p);
     if !g.passed() {
         return Err(g.failures.join("; "));
     }
-    Ok(p)
+    Ok(Built { spec: s, project: p, gates: g })
 }
 
 /// Runs the loop from `spec`; the first build must succeed, later failures end the loop with
 /// the best round kept.
 pub fn refine(spec: J, r: &mut dyn Renderer, c: &mut dyn Critic, cfg: LoopCfg) -> Result<Refined, String> {
+    if !r.draws() && !c.reads_build() {
+        return refine_unbuilt(spec, c, cfg);
+    }
     let mut cur = spec;
     let mut p = build(&cur)?;
     let mut rounds = vec![];
-    let (mut best, mut best_score) = (cur.clone(), f64::MIN);
+    let (mut best, mut best_score, mut built) = (cur.clone(), f64::MIN, None);
     for _ in 0..cfg.max_rounds.max(1) {
-        let shots = r.render(&p)?;
-        let cr = c.critique(&cur, &facts(&p), &shots)?;
+        let shots = r.render(&p.project)?;
+        let cr = c.critique(&cur, &facts(&p.project), &shots)?;
         let score = cr.total();
         if score > best_score {
             best = cur.clone();
             best_score = score;
+            built = Some(p.clone());
         }
         let done = score >= cfg.target || cr.patch.as_object().is_none_or(|o| o.is_empty());
         let patch = cr.patch.clone();
@@ -224,7 +244,66 @@ pub fn refine(spec: J, r: &mut dyn Renderer, c: &mut dyn Critic, cfg: LoopCfg) -
         best,
         score: best_score,
         rounds,
+        built,
     })
+}
+
+/// The loop when nothing reads a round's build: the rounds are critiqued unbuilt and only the
+/// best one is built (a full build is the slow part). A best round that does not build ends the
+/// rounds there, as in the built loop, and the best of those before it is built instead.
+fn refine_unbuilt(spec: J, c: &mut dyn Critic, cfg: LoopCfg) -> Result<Refined, String> {
+    let mut rounds = vec![];
+    let mut cur = spec;
+    for _ in 0..cfg.max_rounds.max(1) {
+        let cr = c.critique(&cur, &J::Null, &[])?;
+        let score = cr.total();
+        let done = score >= cfg.target || cr.patch.as_object().is_none_or(|o| o.is_empty());
+        let patch = cr.patch.clone();
+        rounds.push(Round {
+            spec: cur.clone(),
+            score,
+            critique: Some(cr),
+            error: None,
+        });
+        if done {
+            break;
+        }
+        merge_patch(&mut cur, &patch);
+    }
+    // a round that does not build ends the rounds there and stays in the report
+    let mut tail: Option<Round> = None;
+    loop {
+        // the first round of the highest score, as the built loop keeps it
+        let mut b = 0;
+        for (i, x) in rounds.iter().enumerate() {
+            if x.score > rounds[b].score {
+                b = i;
+            }
+        }
+        match build(&rounds[b].spec) {
+            Ok(p) => {
+                let (best, score) = (rounds[b].spec.clone(), rounds[b].score);
+                rounds.extend(tail);
+                return Ok(Refined {
+                    best,
+                    score,
+                    rounds,
+                    built: Some(p),
+                });
+            }
+            Err(e) if b == 0 => return Err(e),
+            Err(e) => {
+                let spec = rounds[b].spec.clone();
+                rounds.truncate(b);
+                tail = Some(Round {
+                    spec,
+                    score: 0.0,
+                    critique: None,
+                    error: Some(e),
+                });
+            }
+        }
+    }
 }
 
 /// An offline critic from the spec alone: the design fields a contemporary result needs.
@@ -269,5 +348,9 @@ impl Critic for RuleCritic {
             notes: String::new(),
             rules: fixes,
         })
+    }
+
+    fn reads_build(&self) -> bool {
+        false
     }
 }

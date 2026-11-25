@@ -95,8 +95,9 @@ struct Piece<'a> {
     f: &'a GFixture,
 }
 
-/// Every problem of the storey's fit-out; empty when it is sound.
-pub(crate) fn audit(st: &PStorey, typology: Typology, rules: &Rules, tags: &RoomTagTable) -> Vec<String> {
+/// Every problem of the storey's fit-out; empty when it is sound. `who`: the typology and
+/// whether the building is one household.
+pub(crate) fn audit(st: &PStorey, who: (Typology, bool), rules: &Rules, tags: &RoomTagTable) -> Vec<String> {
     let l = &st.layout;
     let mut bad = vec![];
     let mut pieces: Vec<Piece<'_>> = vec![];
@@ -196,14 +197,14 @@ pub(crate) fn audit(st: &PStorey, typology: Typology, rules: &Rules, tags: &Room
         if l.rooms[i].name == super::fire::SMOKE_LOBBY {
             continue;
         }
-        let (facts, clear) = facts_of(st, typology, tags, &rects, i);
+        let (facts, clear) = facts_of(st, who, tags, &rects, i);
         let roomy = clear[2] - clear[0] >= 0.6 && clear[3] - clear[1] >= 0.6;
         if roomy && rules.rooms.iter().any(|r| r.matches(&facts)) && !st.fit.iter().any(|f| f.room == i) {
             bad.push(format!("room {i} {}: not fitted out", l.rooms[i].name));
         }
     }
     for fit in &st.fit {
-        bad.extend(room_audit(st, (typology, tags), rules, fit, &pieces, &rects, &walls, &columns).into_iter().map(|e| {
+        bad.extend(room_audit(st, (who, tags), rules, fit, &pieces, &rects, &walls, &columns).into_iter().map(|e| {
             format!("room {} {}: {e}", fit.room, l.rooms.get(fit.room).map_or("", |r| r.name.as_str()))
         }));
     }
@@ -236,12 +237,12 @@ pub(crate) fn connections(p: &super::GProject) -> Vec<String> {
 }
 
 /// What the rules match a room by, and its clear rectangle.
-fn facts_of<'a>(st: &'a PStorey, typology: Typology, tags: &RoomTagTable, rects: &[R], i: usize) -> (RoomFacts<'a>, R) {
+fn facts_of<'a>(st: &'a PStorey, (typology, one_household): (Typology, bool), tags: &RoomTagTable, rects: &[R], i: usize) -> (RoomFacts<'a>, R) {
     let clear = clear_of(&st.layout, &rects[i]);
     let pr = &st.rooms[i];
     let facts = RoomFacts {
         kind: pr.kind,
-        dwelling: super::furnish::dwelling_of(pr.owner, typology).is_some(),
+        dwelling: super::furnish::dwelling_of(pr.owner, one_household).is_some(),
         typology,
         area: (clear[2] - clear[0]) * (clear[3] - clear[1]),
         width: (clear[2] - clear[0]).min(clear[3] - clear[1]),
@@ -255,7 +256,7 @@ fn facts_of<'a>(st: &'a PStorey, typology: Typology, tags: &RoomTagTable, rects:
 #[allow(clippy::too_many_arguments)]
 fn room_audit(
     st: &PStorey,
-    (typology, tags): (Typology, &RoomTagTable),
+    (who, tags): ((Typology, bool), &RoomTagTable),
     rules: &Rules,
     fit: &super::RoomFit,
     pieces: &[Piece<'_>],
@@ -267,7 +268,8 @@ fn room_audit(
     let Some(room) = rects.get(fit.room).filter(|_| fit.room < st.rooms.len()) else {
         return vec!["no such room".into()];
     };
-    let (facts, clear) = facts_of(st, typology, tags, rects, fit.room);
+    let typology = who.0;
+    let (facts, clear) = facts_of(st, who, tags, rects, fit.room);
     let area = facts.area;
     let Some(rule) = rules.rule(&fit.rule) else {
         return vec![format!("unknown rule {}", fit.rule)];

@@ -327,11 +327,11 @@ const REFUSALS: [&str; 8] = [
     "a piece's side bands taken",
 ];
 
-/// The dwelling of a room: its apartment, or the whole house.
-pub(crate) fn dwelling_of(owner: PRole, typology: Typology) -> Option<u32> {
+/// The dwelling of a room: its apartment, or the whole building of one household.
+pub(crate) fn dwelling_of(owner: PRole, one_household: bool) -> Option<u32> {
     match owner {
         PRole::Apartment(a) => Some(a),
-        PRole::Public if typology == Typology::House => Some(u32::MAX),
+        PRole::Public if one_household => Some(u32::MAX),
         PRole::Public => None,
     }
 }
@@ -1128,12 +1128,13 @@ impl Lay {
 
 /// Fits out every room of a storey; `h` is the storey height. The fixtures come in room order.
 /// `dwell` holds the (dwelling, set) pairs placed once per dwelling: a dwelling spans storeys,
-/// so the caller carries it from one storey to the next.
+/// so the caller carries it from one storey to the next. `one_household`: the building is one
+/// dwelling (the spec's trait).
 pub(crate) fn furnish(
     l: &GLayout,
     rooms: &[RoomIn<'_>],
     h: f64,
-    typology: Typology,
+    (typology, one_household): (Typology, bool),
     rules: &Rules,
     dwell: &mut HashSet<(u32, usize)>,
 ) -> (Vec<GFixture>, Vec<RoomFit>) {
@@ -1143,7 +1144,7 @@ pub(crate) fn furnish(
         let (w, d) = (g.clear[2] - g.clear[0], g.clear[3] - g.clear[1]);
         super::fit_rules::RoomFacts {
             kind: rooms[i].kind,
-            dwelling: dwelling_of(rooms[i].owner, typology).is_some(),
+            dwelling: dwelling_of(rooms[i].owner, one_household).is_some(),
             typology,
             area: g.area(),
             width: w.min(d),
@@ -1176,7 +1177,7 @@ pub(crate) fn furnish(
                 triangle: None,
                 dwell: dwell.clone(),
             };
-            let mut cx = Cx { g, rules, st, dwelling: dwelling_of(rooms[i].owner, typology), typology, refused: Default::default() };
+            let mut cx = Cx { g, rules, st, dwelling: dwelling_of(rooms[i].owner, one_household), typology, refused: Default::default() };
             let unmet = cx.steps(&rule.steps);
             let better = best.as_ref().is_none_or(|b| unmet.len() < b.0.len());
             let done = unmet.is_empty();

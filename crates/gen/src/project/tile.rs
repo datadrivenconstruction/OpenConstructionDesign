@@ -311,9 +311,12 @@ pub(crate) fn tile(
             }
         }
     }
-    // daylight short of the rule is measured and named by the gates, on the final geometry
-    for c in cells {
-        windows(c, w, d, &op, &mut l)?;
+    // daylight short of the rule is measured and named by the gates, on the final geometry;
+    // a storey whose walls take no windows (below grade) lays none
+    if win.h > 0.0 && win.w > 0.0 {
+        for c in cells {
+            windows(c, w, d, &op, &mut l)?;
+        }
     }
     let mut rooms = Vec::with_capacity(cells.len());
     for (c, number) in cells.iter().zip(numbers) {
@@ -451,6 +454,15 @@ fn doors(cells: &[Cell], op: &Opener<'_>, l: &mut GLayout) -> Result<(), GenErro
             reach(i, &mut pos, &mut heap);
         }
     }
+    // a floor without a corridor (a basement under a plate whose ring corridor does not square
+    // into the parking grid) is reached from its stairs and lifts
+    if pos.iter().all(Option::is_none) {
+        for (i, c) in cells.iter().enumerate() {
+            if matches!(c.kind, RoomKind::Stair | RoomKind::Lift) {
+                reach(i, &mut pos, &mut heap);
+            }
+        }
+    }
     if pos.iter().all(Option::is_none) {
         return Err(GenError::Infeasible("no corridor on the floor".into()));
     }
@@ -542,4 +554,19 @@ fn windows(c: &Cell, w: Mm, d: Mm, op: &Opener<'_>, l: &mut GLayout) -> Result<(
         )));
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    /// A habitable room on a storey without windows (a basement) tiles without any: the
+    /// hotel's staff changing room below grade was refused for a facade it cannot have.
+    #[test]
+    fn a_storey_without_windows_tiles_its_habitable_rooms_without_any() {
+        let c = Cell { x0: 0, y0: 0, x1: 8000, y1: 5000, kind: RoomKind::Staff, name: "Staff".into(), owner: PRole::Public, asked: Some(40.0), grown: false, lit: RoomKind::Staff.habitable() };
+        let corr = Cell { y0: 5000, y1: 6500, kind: RoomKind::Corridor, name: "Corridor".into(), asked: None, ..c.clone() };
+        let t = tile(&[c, corr], vec!["B01".into(), "B02".into()], 8000, 6500, WinSize { w: 0.0, h: 0.0, sill: 0.0 }, false).expect("tiled");
+        assert!(t.layout.openings.iter().all(|o| o.door), "no window below grade");
+    }
 }

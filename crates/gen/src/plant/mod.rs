@@ -28,7 +28,7 @@ use crate::project::why::Why;
 
 pub use brief::{Brief, Kind};
 pub use check::Report;
-pub use layout::{Access, Bund, Flue, Hall, Platform, Steel, SteelKind, Zone};
+pub use layout::{Access, Bund, Flue, Hall, Platform, Steel, SteelKind, Zone, STEEL_R};
 pub use model::{system_kind, Kit, KitComp, KitFamily, KitFooting, KitMember, KitRun, KitWall};
 pub use route::{FitKind, Fitting, Piping, Placed, Seg, Support, SupportKind};
 pub use sched::{LineRow, Schedules, Totals};

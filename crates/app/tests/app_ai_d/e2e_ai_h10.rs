@@ -25,7 +25,7 @@ fn h10_footbridge_meets_every_oracle_of_its_case() {
     let errors_before = blocking_findings(&ed.model).unwrap();
     let (mut s, provider) = {
         let provider = ddc_ai::fake::ScriptedProvider::new(script(vec![
-            tool("help", json!({"topic": "long_span_bridge"})),
+            tool("help", json!({"topic": "arch_span"})),
             tool("load_tools", json!({"groups": ["scripts"]})),
             tool("run_generator", json!({"id": "steel_frame", "params": {"kind": "arch_bridge", "span": 90.0, "rise": 15.0, "deck_z": 6.0, "width": 4.0}})),
         ]));

@@ -4,9 +4,13 @@
 //! and connections, rules that steer the sizing, and the refusals.
 
 use ddc_ops::{Cat, GeoOp, Op, Ref};
-use ddc_script::recipes::recipe;
 use ddc_script::{GeoScript, RunOpts, Sandbox, ScriptError, ScriptRun};
 use serde_json::json;
+
+// the object scripts are scene fixtures; the technique examples are in `ddc_script::recipes`
+#[path = "data/scenes.rs"]
+mod scenes;
+use scenes::scene as recipe;
 
 fn run(src: &str) -> Result<ScriptRun, ScriptError> {
     let o = RunOpts::new(Ref::name(Cat::Level, "Level 1"), json!({}));

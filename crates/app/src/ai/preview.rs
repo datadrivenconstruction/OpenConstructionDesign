@@ -352,6 +352,8 @@ fn harvest(ed: &mut Editor, wanted: &HashMap<ElKey, RowKind>, out: &mut PreviewS
     drop(span);
     // the one-level scenes below must not stay in the editor's live 3D cache
     let live = std::mem::take(&mut ed.big);
+    // the network bodies are kept: the next preview of the same model meshes none of them again
+    ed.big.share_bodies(&live);
     for lv in levels {
         let span = ddc_model::perf::span("preview.level");
         ed.set_level(lv);
@@ -440,6 +442,8 @@ fn harvest(ed: &mut Editor, wanted: &HashMap<ElKey, RowKind>, out: &mut PreviewS
             });
         }
     }
+    let mut live = live;
+    live.share_bodies(&ed.big);
     ed.big = live;
     ed.set_level(keep);
 }

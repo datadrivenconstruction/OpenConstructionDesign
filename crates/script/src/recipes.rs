@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
-//! Worked scripts for freeform structures, one per block family, and a short reference of
-//! the blocks. Shown to the assistant by the `script_recipes` tool.
+//! A few worked scripts, one per technique (tiers, a lattice on a surface, a long-span grid,
+//! arches and vaults, a radial array), and a short reference of the blocks. Shown to the
+//! assistant by the `script_recipes` tool: it composes its own script, never picks an object.
 
 macro_rules! recipes {
     ($($name:literal),* $(,)?) => {
@@ -11,30 +12,11 @@ macro_rules! recipes {
 
 /// (name, script); the first script line is a `-- summary`.
 pub const RECIPES: &[(&str, &str)] = recipes!(
-    "twisted_diagrid_tower",
-    "timber_gridshell",
-    "cable_stayed_footbridge",
-    "stadium_roof",
-    "observation_ramp_tower",
-    "ruled_shell_hall",
-    "fin_facade",
-    "catenary_market",
-    "sphere_pavilion",
-    "hypar_umbrellas",
-    "membrane_canopy",
-    "space_frame_hall",
-    "hangar_space_frame",
-    "tied_arch_bridge",
-    "truss_footbridge",
-    "tapered_tower",
-    "voronoi_screen",
-    "sun_louvres",
-    "spiral_loft_pavilion",
-    "pointed_vault_cloister",
-    "wave_canopy",
-    "pagoda_tiers",
-    "wind_turbine",
-    "ferris_wheel",
+    "tiered_frame",
+    "surface_lattice",
+    "long_span_grid",
+    "arches_and_vaults",
+    "radial_array",
 );
 
 /// The summary line of a recipe.
@@ -138,7 +120,7 @@ mod tests {
         for (name, script) in RECIPES {
             assert!(!summary(script).is_empty(), "{name}");
         }
-        let p = params_of(recipe("tied_arch_bridge").unwrap());
-        assert!(p.iter().any(|d| d.starts_with("param(\"span\"") && d.contains("max")), "{p:?}");
+        let p = params_of(recipe("arches_and_vaults").unwrap());
+        assert!(p.iter().any(|d| d.starts_with("param(\"length\"") && d.contains("max")), "{p:?}");
     }
 }

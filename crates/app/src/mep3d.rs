@@ -121,6 +121,8 @@ pub struct Timing {
     /// Architecture meshes kept as before during its rebuild.
     pub arch_meshes_kept: usize,
     pub systems_rebuilt: usize,
+    /// Systems among those whose network bodies were meshed, not taken from the cache.
+    pub systems_meshed: usize,
     pub comps_reused: bool,
 }
 
@@ -141,6 +143,10 @@ pub struct Big {
     arch_boxes: Vec<Aabb>,
     info: HashMap<i64, RunInfo>,
     mep: HashMap<i64, (Vec<Arc<SceneMesh>>, Vec<Aabb>)>,
+    /// Network bodies by system as of model change `bodies_head`: a scene of another level of
+    /// the same model places them again without meshing them again.
+    bodies: HashMap<i64, Arc<Vec<ddc_model::MepBody>>>,
+    bodies_head: Option<u64>,
     axes: HashMap<i64, Axis>,
     comps: Vec<Instanced>,
     comp_at: HashMap<i64, V2>,
@@ -166,6 +172,13 @@ pub struct Big {
 }
 
 impl Big {
+    /// Takes over the network bodies `other` meshed; they are kept only while the model is at
+    /// the change they were meshed at.
+    pub(crate) fn share_bodies(&mut self, other: &Big) {
+        self.bodies.clone_from(&other.bodies);
+        self.bodies_head = other.bodies_head;
+    }
+
     fn lang(&self) -> Lang {
         self.lang.unwrap_or(Lang::Ru)
     }
@@ -491,11 +504,29 @@ pub fn scene(ed: &mut Editor) -> Scene {
             }
         }
         let (level, dz) = (ed.level, ed.elevation);
+        let head = ed.model.change_head();
+        if big.bodies_head != Some(head) {
+            big.bodies.clear();
+            big.bodies_head = Some(head);
+        }
+        // the connections are read once for all the systems meshed here
+        let mut ports: Option<Option<Vec<ddc_model::WorldPort>>> = None;
         for sys in &dirty {
             big.mep.remove(sys);
-            let bodies = ed.model.mep_bodies(Some(*sys)).unwrap_or_default();
+            let bodies = big
+                .bodies
+                .entry(*sys)
+                .or_insert_with(|| {
+                    tm.systems_meshed += 1;
+                    let ports = ports.get_or_insert_with(|| ed.model.component_ports(None).ok());
+                    let bodies = ports
+                        .as_ref()
+                        .and_then(|p| ed.model.mep_bodies_with(Some(*sys), p).ok());
+                    Arc::new(bodies.unwrap_or_default())
+                })
+                .clone();
             let mut out = Vec::with_capacity(bodies.len());
-            for b in bodies {
+            for b in bodies.iter() {
                 let Some(ri) = info.get(&b.run) else { continue };
                 let element = if ri.level == level {
                     MEP_BASE + big.runs.get(b.run)

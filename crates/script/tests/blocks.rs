@@ -4,9 +4,14 @@
 //! deterministic; options are checked and refusals name the block and the option.
 
 use ddc_ops::{Cat, GeoOp, Op, Ref};
-use ddc_script::recipes::{recipe, summary, RECIPES};
+use ddc_script::recipes::{summary, RECIPES};
 use ddc_script::{GeoScript, RunOpts, Sandbox, ScriptError, ScriptRun};
 use serde_json::json;
+
+// the object scripts are scene fixtures; the technique examples are in `ddc_script::recipes`
+#[path = "data/scenes.rs"]
+mod scenes;
+use scenes::{scene as recipe, SCENES};
 
 fn run(src: &str) -> Result<ScriptRun, ScriptError> {
     let o = RunOpts::new(Ref::name(Cat::Level, "Level 1"), json!({}));
@@ -37,8 +42,10 @@ fn role(r: &ScriptRun, role: &str) -> usize {
 
 #[test]
 fn every_recipe_builds_clean_and_deterministic() {
-    assert_eq!(RECIPES.len(), 24);
-    for (name, script) in RECIPES {
+    // a handful of technique examples for the assistant, the object scenes for the tests
+    assert!((3..=6).contains(&RECIPES.len()), "{}", RECIPES.len());
+    assert_eq!(SCENES.len(), 24);
+    for (name, script) in RECIPES.iter().chain(SCENES) {
         assert!(summary(script).len() > 20, "{name}: summary line");
         let a = ok(script);
         let b = ok(script);
@@ -125,7 +132,7 @@ fn parts_carry_the_ifc_class_of_their_role() {
     assert_eq!(ifc_of(PartKind::Panel, "blob").unwrap().class, "IfcPlate");
     assert_eq!(ifc_of(PartKind::Slab, "blob").unwrap().class, "IfcSlab");
     // every recipe: no generated part is left a proxy unless it is a free solid
-    for (name, script) in RECIPES {
+    for (name, script) in RECIPES.iter().chain(SCENES) {
         let r = ok(script);
         let classed = r.env.groups[0]
             .ops

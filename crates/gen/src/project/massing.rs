@@ -22,6 +22,9 @@ const PODIUM_STEP: f64 = 3.0;
 const MAX_STAIRS: usize = (slots::SHAFTS - slots::STAIRS) as usize;
 const MAX_SHAFTS: usize = (slots::GRIDS - slots::SHAFTS) as usize;
 
+/// How far off a wall's centre line its sides are probed for rooms, m.
+const JOINT_PROBE: f64 = 0.1;
+
 fn infeasible(s: impl Into<String>) -> GenError {
     GenError::Infeasible(s.into())
 }
@@ -464,6 +467,7 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
             let i = s.rooms.len() - 1;
             fit_added(spec, &mut s, i);
         }
+        inner_joints(&mut s.layout);
         s.layout.slab = outline.clone();
         if let Some(h) = &court {
             s.layout.slab_holes.push(h.clone());
@@ -549,6 +553,49 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
     p.metrics.push(("wings", parts.len() as f64));
     set_metrics(&mut p);
     Ok(p)
+}
+
+/// Walls each part laid as its outside that the joined block covers on both sides (a wing's
+/// end against a corner hall, two wings meeting) are inner walls: no windows, no entrances.
+pub(super) fn inner_joints(l: &mut GLayout) {
+    let rooms: Vec<&[P]> = l.rooms.iter().map(|r| r.polygon.as_slice()).collect();
+    let covered = |q: P| rooms.iter().any(|r| crate::check::inside(r, q));
+    let mut joint = vec![];
+    for (i, w) in l.walls.iter().enumerate() {
+        if w.role != WallRole::Exterior || w.bulge != 0.0 {
+            continue;
+        }
+        let (dx, dy) = (w.b.0 - w.a.0, w.b.1 - w.a.1);
+        let n = dx.hypot(dy);
+        if n < EPS {
+            continue;
+        }
+        let (nx, ny) = (-dy / n * JOINT_PROBE, dx / n * JOINT_PROBE);
+        let both = [0.1, 0.3, 0.5, 0.7, 0.9].iter().all(|&t| {
+            let m = (w.a.0 + dx * t, w.a.1 + dy * t);
+            covered((m.0 + nx, m.1 + ny)) && covered((m.0 - nx, m.1 - ny))
+        });
+        if both {
+            joint.push(i);
+        }
+    }
+    // what hangs on a joint moves onto the face of the thinner wall, on the side it stood
+    let face = WallRole::Partition.thickness() / 2.0;
+    for f in l.fixtures.iter_mut().filter(|f| f.wall.is_some_and(|k| joint.contains(&k))) {
+        let w = &l.walls[f.wall.unwrap_or_default()];
+        let (s, n) = (w.along(f.at), w.length());
+        let foot = (w.a.0 + (w.b.0 - w.a.0) * s / n, w.a.1 + (w.b.1 - w.a.1) * s / n);
+        let v = (f.at.0 - foot.0, f.at.1 - foot.1);
+        let off = v.0.hypot(v.1);
+        if off > face {
+            let k = face / off;
+            f.at = (foot.0 + v.0 * k, foot.1 + v.1 * k);
+        }
+    }
+    for &i in &joint {
+        l.walls[i].role = WallRole::Partition;
+    }
+    l.openings.retain(|o| o.door || !joint.contains(&o.wall));
 }
 
 /// The first wing's grid lines ran to its own edges, which in a joined block lie in a corner
@@ -674,7 +721,7 @@ fn fit_added(spec: &ProjectSpec, s: &mut PStorey, i: usize) {
         tags: spec.room_tags.of(kind, &name),
         keep: vec![],
     };
-    let (fx, fit) = super::furnish::furnish(&s.layout, std::slice::from_ref(&room), s.height, spec.typology, &rules, &mut Default::default());
+    let (fx, fit) = super::furnish::furnish(&s.layout, std::slice::from_ref(&room), s.height, (spec.typology, spec.traits.one_household), &rules, &mut Default::default());
     s.layout.fixtures.extend(fx);
     s.fit.extend(fit.into_iter().map(|mut f| {
         f.room = i;

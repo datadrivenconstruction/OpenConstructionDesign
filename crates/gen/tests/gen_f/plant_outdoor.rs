@@ -8,7 +8,7 @@ use ddc_gen::plant::{self, Plant};
 use serde_json::{json, Value as J};
 
 fn brief() -> J {
-    serde_json::from_str(include_str!("data/plant_run_brief.json")).unwrap()
+    serde_json::from_str(include_str!("../data/plant_run_brief.json")).unwrap()
 }
 
 fn design(b: &J) -> Plant {

@@ -11,7 +11,7 @@
 
 use super::nav::{dist, finding, Finding};
 use super::why::{RuleFix, Why};
-use super::{names, GProject, ProjectSpec, RoomKind, RoomReq, Typology};
+use super::{names, GProject, ProjectSpec, RoomKind, RoomReq};
 use serde_json::json;
 
 type P = (f64, f64);
@@ -49,7 +49,7 @@ pub fn skeleton(spec: &ProjectSpec) -> Skeleton {
     let mut storeys: Vec<Vec<RoomReq>> = (0..n).map(|k| spec.floor_rooms(k)).collect();
     let mut filled = vec![];
     // apartments carry their own wet rooms, the same on every storey
-    if spec.rules.get("mep.wet_stack_fill") != 0.0 && spec.typology != Typology::ApartmentSection {
+    if spec.rules.get("mep.wet_stack_fill") != 0.0 && !spec.traits.flats {
         let wet = |rooms: &[RoomReq]| rooms.iter().any(|r| is_wet(r.kind) && r.count > 0);
         let mut above: Option<usize> = None;
         // top down, so a stack carried to one storey carries on to the storeys under it

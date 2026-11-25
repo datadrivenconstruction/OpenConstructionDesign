@@ -69,7 +69,7 @@ pub struct BlockPlan {
 }
 
 /// One building as a single project has it.
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, PartialEq)]
 pub struct Built {
     pub spec: ProjectSpec,
     pub project: GProject,
