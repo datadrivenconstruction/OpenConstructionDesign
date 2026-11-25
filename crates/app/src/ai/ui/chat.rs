@@ -19,6 +19,8 @@ use egui::{self, Frame, Key, KeyboardShortcut, Margin, Modifiers, RichText, Text
 const COMPOSER_ROWS: f32 = 6.0;
 const BUBBLE_SHARE: f32 = 0.85;
 const COMPOSER_MIN_ROWS: usize = 2;
+/// Widest answer-mode menu, in panel pixels.
+const MODE_MENU_W: f32 = 280.0;
 /// Most width Send may take beside the attach and reference icons, in control rows.
 #[cfg(test)]
 const SEND_RESERVE_ROWS: f32 = 4.0;
@@ -159,25 +161,52 @@ pub(super) fn header(
             }
         });
     }
-    if !parts.mode {
-        return;
-    }
-    ui.horizontal(|ui| {
-        let ro = cat.t(logic::mode_key(Mode::ReadOnly));
-        let prop = cat.t(logic::mode_key(Mode::Propose));
-        if let Some(i) = widgets::segmented(
-            ui,
-            th,
-            &[ro.as_str(), prop.as_str()],
-            usize::from(st.propose),
-        ) {
-            acts.push(if i == 1 {
-                Action::SetPropose(true)
-            } else {
-                Action::SetPropose(false)
-            });
-        }
-    });
+    // the answer mode is chosen where the request is typed: see `mode_chip`
+    let _ = parts.mode;
+}
+
+/// The answer mode beside the attach icons: the current mode, and a menu that says what each does.
+fn mode_chip(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
+    let (th, cat) = (cx.th, cx.cat);
+    let now = mode_of(st);
+    let label = format!("{} \u{25be}", cat.t(logic::mode_key(now)));
+    let resp = Button::quiet(&label).small().tooltip(&cat.t("ai.mode.pick_tip"), "").show(ui, th);
+    egui::Popup::menu(&resp)
+        .close_behavior(egui::PopupCloseBehavior::CloseOnClick)
+        .show(|ui| {
+            ui.set_max_width(MODE_MENU_W.min(ui.ctx().screen_rect().width() - 2.0 * space::MD));
+            for (m, desc) in [(Mode::ReadOnly, "ai.mode.read_only.desc"), (Mode::Propose, "ai.mode.propose.desc")] {
+                let on = m == now;
+                let r = Frame::new()
+                    .fill(if on { th.c("bg.selected") } else { egui::Color32::TRANSPARENT })
+                    .corner_radius(th.radius("md"))
+                    .inner_margin(Margin::symmetric(space::SM as i8, space::XS as i8))
+                    .show(ui, |ui| {
+                        ui.set_width(ui.available_width());
+                        ui.label(
+                            RichText::new(cat.t(logic::mode_key(m)))
+                                .font(th.font(Role::BodyStrong))
+                                .color(th.c("text.primary")),
+                        );
+                        ui.add(
+                            egui::Label::new(
+                                RichText::new(cat.t(desc))
+                                    .font(th.font(Role::Caption))
+                                    .color(th.c("text.secondary")),
+                            )
+                            .wrap(),
+                        );
+                    })
+                    .response
+                    .interact(egui::Sense::click());
+                if r.hovered() && !on {
+                    kit::row_highlight(ui, th, r.rect, false);
+                }
+                if r.clicked() && !on {
+                    acts.push(Action::SetPropose(m == Mode::Propose));
+                }
+            }
+        });
 }
 
 /// The conversation: log and cards scrolling, the plan's actions and (with `with_composer`) the
@@ -493,9 +522,10 @@ fn prompt_row(
     let size = egui::vec2(ui.available_width(), h);
     let (rect, r) = ui.allocate_exact_size(size, egui::Sense::click());
     r.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, true, text));
-    if r.hovered() {
-        kit::row_highlight(ui, th, rect, false);
-    }
+    // a quiet card that lifts on hover: the starters read as things to tap, not as text
+    let fill = th.c(if r.hovered() { "bg.hover" } else { "bg.sunken" });
+    let edge = egui::Stroke::new(1.0, th.c("border.subtle"));
+    ui.painter().rect(rect, th.radius("md"), fill, edge, egui::StrokeKind::Inside);
     let at = egui::pos2(rect.left() + pad, rect.center().y - icon / 2.0);
     let color = th.c(if r.hovered() { "text.primary" } else { "text.secondary" });
     let spot = egui::Rect::from_min_size(at, egui::Vec2::splat(icon));
@@ -535,6 +565,7 @@ fn suggestions(
         if prompt_row(ui, th, icons, key, &text) {
             acts.push(Action::Send(text, mode));
         }
+        ui.add_space(space::XS);
     }
     let h = ui.cursor().top() - y0;
     ui.data_mut(|d| d.insert_temp(hid, h));
@@ -1054,6 +1085,7 @@ fn composer(
             if widgets::icon_button(ui, icons, th, "reference", false, &cat.t("ai.ref.attach_tip")).clicked() {
                 acts.push(Action::AttachReference);
             }
+            mode_chip(ui, st, cx, acts);
         }
         ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
         if f.busy || st.starting {
