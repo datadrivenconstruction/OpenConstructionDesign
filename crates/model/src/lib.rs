@@ -65,6 +65,24 @@ pub mod query_count {
     }
 }
 
+/// File times from `std::fs` on the portable clock: one type on desktop, converted in the browser.
+pub mod clock {
+    use web_time::SystemTime;
+
+    /// The modification time of a file, `None` when the platform does not report one.
+    pub fn modified(md: &std::fs::Metadata) -> Option<SystemTime> {
+        #[cfg(all(target_family = "wasm", target_os = "unknown"))]
+        {
+            use web_time::web::SystemTimeExt;
+            md.modified().ok().map(SystemTime::from_std)
+        }
+        #[cfg(not(all(target_family = "wasm", target_os = "unknown")))]
+        {
+            md.modified().ok()
+        }
+    }
+}
+
 mod ai_audit;
 mod ai_revert;
 /// Tool refusal by path: root `Refusal` is the AI revert one, `Fix` the checks one.
