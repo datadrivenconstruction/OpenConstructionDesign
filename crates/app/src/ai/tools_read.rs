@@ -1184,6 +1184,42 @@ fn mark_checkpoint(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String>
     Ok(o.finish().into())
 }
 
+/// "checked N elements against rules [..]: X pass, Y findings"; a rule passes when it ran and
+/// raised nothing. Info findings count in Y like in `total`.
+fn checks_summary(scope: &CheckScope, ran: &[&str], found: &[Finding]) -> String {
+    let what = match scope {
+        CheckScope::Elements(l) => format!("{} elements", l.len()),
+        CheckScope::Level(l) => format!("level {l}"),
+        _ => "the whole model".to_string(),
+    };
+    let pass = ran.iter().filter(|r| !found.iter().any(|f| f.rule == **r)).count();
+    let n = |s: Severity| found.iter().filter(|f| f.severity == s).count();
+    format!(
+        "checked {what} against rules [{}]: {pass} pass, {} findings ({} error, {} warning, {} info)",
+        ran.join(", "),
+        found.len(),
+        n(Severity::Error),
+        n(Severity::Warning),
+        n(Severity::Info),
+    )
+}
+
+/// What a person needs to cite a finding: rule id, its title and source when the project defines
+/// them, the English message and the `table#id` elements.
+fn finding_cite(f: &Finding, defs: &[ddc_model::checks::RuleDef], cat: &ddc_ui::Catalog) -> J {
+    let args: Vec<String> = f.args.iter().map(|x| x.1.clone()).collect();
+    let text = super::ui::logic::fill(&cat.t(f.msg_key), &args);
+    let els: Vec<String> = f.elements.iter().take(20).map(|e| format!("{}#{}", e.0, e.1)).collect();
+    let def = defs.iter().find(|d| d.id == f.rule);
+    let title = def.map(|d| d.title.as_str()).unwrap_or_default();
+    let clause = def.and_then(|d| d.source_text.as_deref()).unwrap_or_default();
+    let mut cite = format!("{}: {text}", f.rule);
+    if !els.is_empty() {
+        cite = format!("{cite} [{}]", els.join(", "));
+    }
+    json!({"title": title, "clause": clause, "text": text, "cite": cite})
+}
+
 fn run_checks(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let started = web_time::Instant::now();
     let ids = str_list(&a["rules"]);
@@ -1216,15 +1252,12 @@ fn run_checks(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     } else if ids.is_empty() && scope == CheckScope::All {
         c.checkpoints.record(head, super::checkpoints::print_of(&found));
     }
-    let company: Vec<String> =
-        c.ed.model
-            .project_rules()
-            .map_err(|e| e.to_string())?
-            .into_iter()
-            .map(|r| r.id)
-            .collect();
+    let defs = c.ed.model.project_rules().map_err(|e| e.to_string())?;
+    let company: Vec<String> = defs.iter().map(|r| r.id.clone()).collect();
     found.sort_by_key(|f| f.severity);
     let total = found.len();
+    let summary = checks_summary(&scope, &ran, &found);
+    let cat = ddc_ui::Catalog::new(ddc_ui::Lang::En);
     found.truncate(MAX_FINDINGS);
     let mut list = Vec::with_capacity(found.len());
     for f in found {
@@ -1235,17 +1268,23 @@ fn run_checks(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
             .map(|x| (x.0.to_string(), json!(x.1)))
             .collect();
         let els: Vec<String> = f.elements.iter().take(20).map(el_text).collect();
+        let cite = finding_cite(&f, &defs, &cat);
         list.push(json!({
             "ref": id,
             "rule": f.rule,
+            "title": cite["title"],
+            "clause": cite["clause"],
             "severity": severity(f.severity),
             "msg": f.msg_key,
+            "text": cite["text"],
+            "cite": cite["cite"],
             "args": args,
             "elements": els,
             "fixable": !matches!(f.fix, Fix::None),
         }));
     }
     let mut o = out(c);
+    o.put("summary", &json!(summary));
     o.put("total", &json!(total));
     o.put("rules_ran", &json!(ran));
     o.put("rules_not_run", &json!(not_run));
@@ -1712,5 +1751,73 @@ mod selection_tests {
             assert!(BIG_SELECTION_HINT.contains(name), "{name}");
             assert!(catalog::find(name).is_some(), "{name}");
         }
+    }
+}
+
+#[cfg(test)]
+mod cite_tests {
+    use super::*;
+    use ddc_model::checks::RuleDef;
+
+    fn finding(rule: &'static str, severity: Severity, els: Vec<ElKey>) -> Finding {
+        Finding {
+            rule,
+            severity,
+            elements: els,
+            at: None,
+            measure: None,
+            msg_key: "ai.realism.tiny_part",
+            args: vec![("name", "solid:4".to_string()), ("size", "3".to_string())],
+            fix: Fix::None,
+        }
+    }
+
+    #[test]
+    fn a_clean_run_says_every_rule_passed() {
+        let s = checks_summary(&CheckScope::All, &["a", "b"], &[]);
+        assert_eq!(s, "checked the whole model against rules [a, b]: 2 pass, 0 findings (0 error, 0 warning, 0 info)");
+    }
+
+    #[test]
+    fn a_finding_cites_rule_message_and_elements() {
+        let f = finding("realism", Severity::Warning, vec![("wall".to_string(), 7)]);
+        let cat = ddc_ui::Catalog::new(ddc_ui::Lang::En);
+        let c = finding_cite(&f, &[], &cat);
+        let cite = c["cite"].as_str().unwrap();
+        assert!(cite.starts_with("realism: ") && cite.ends_with("[wall#7]"), "{cite}");
+        assert!(cite.contains("solid:4") && !cite.contains('{'), "{cite}");
+        assert_eq!(c["title"], json!(""));
+        let s = checks_summary(&CheckScope::All, &["realism", "integrity"], &[f]);
+        assert!(s.contains("1 pass, 1 findings (0 error, 1 warning, 0 info)"), "{s}");
+    }
+
+    #[test]
+    fn a_project_rule_adds_its_title_and_source() {
+        let def = RuleDef {
+            id: "company.door_width".into(),
+            title: "Door width".into(),
+            source_text: Some("SP 59 p.5.1.2".into()),
+            severity: Severity::Error,
+            scope: ddc_model::checks::RuleScope { cats: vec![], levels: None, type_name: None, when: None },
+            check: ddc_model::checks::RuleCheck::ParamPresent { param: "width".into() },
+        };
+        let f = finding("company.door_width", Severity::Error, vec![("opening".to_string(), 3)]);
+        let c = finding_cite(&f, &[def], &ddc_ui::Catalog::new(ddc_ui::Lang::En));
+        assert_eq!((c["title"].as_str(), c["clause"].as_str()), (Some("Door width"), Some("SP 59 p.5.1.2")));
+    }
+
+    #[test]
+    fn an_element_scope_counts_its_elements() {
+        let scope = CheckScope::Elements(vec![("door".to_string(), 1), ("door".to_string(), 2)]);
+        assert!(checks_summary(&scope, &["r"], &[]).starts_with("checked 2 elements against rules [r]: 1 pass"));
+    }
+
+    #[test]
+    fn info_findings_count_as_findings_and_the_rule_does_not_pass() {
+        let f = finding("r", Severity::Info, vec![]);
+        let s = checks_summary(&CheckScope::Level(2), &["r"], &[f]);
+        assert!(s.contains("level 2") && s.contains("0 pass, 1 findings (0 error, 0 warning, 1 info)"), "{s}");
+        let c = finding_cite(&finding("r", Severity::Info, vec![]), &[], &ddc_ui::Catalog::new(ddc_ui::Lang::En));
+        assert!(!c["cite"].as_str().unwrap().contains('['), "no elements, no brackets");
     }
 }
