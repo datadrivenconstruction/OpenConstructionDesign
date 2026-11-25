@@ -367,7 +367,7 @@ view.style_wireframe | P R | - | ? | ? | todo |
 view.style_xray | P R | - | ? | ? | todo |
 view.vg_3d | P R | - | ? | ? | todo |
 view.section_box_fit | P R | - | ? | ? | todo |
-view.section_plane | P R | - | ? | ? | todo |
+view.section_plane | P R | - | 0 | once | run |
 view.section_caps | P R | - | ? | ? | todo |
 view.level_3d | P R | - | ? | ? | todo |
 view.save_3d | P R | - | ? | ? | todo |

@@ -538,10 +538,10 @@ fn connect_members() -> Schema {
         ("why", why()),
         (
             "type",
-            desc(
-                "Connection type; auto (with no members) picks the type of every free node",
+            opt(desc(
+                "Connection type; auto (default, with no members) picks the type of every free node",
                 enum_(&STEEL_TYPES),
-            ),
+            )),
         ),
         (
             "members",
@@ -2251,6 +2251,14 @@ mod tests {
         assert_eq!(validate(spec("generate_project"), &v), Ok(()));
         let t = json!({ "title": "Ground", "boundary": [[0, 0], [20, 0], [20, 10]], "z": 50, "slope": 10 });
         assert_eq!(validate(spec("create_terrain"), &t), Ok(()));
+    }
+
+    #[test]
+    fn connect_members_type_is_optional_and_checked_when_given() {
+        assert_eq!(validate(spec("connect_members"), &json!({ "title": "Nodes" })), Ok(()));
+        let t = json!({ "title": "Nodes", "type": "base_plate", "members": ["column:1"] });
+        assert_eq!(validate(spec("connect_members"), &t), Ok(()));
+        assert!(validate(spec("connect_members"), &json!({ "title": "x", "type": "weld_all" })).is_err());
     }
 
     #[test]
