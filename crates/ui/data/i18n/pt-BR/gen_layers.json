@@ -5,8 +5,6 @@
  "gen.rule.fire.insulation_class.desc": "Pior classe de reação ao fogo que o isolamento de paredes externas e coberturas pode ter; composições com isolamento pior não são escolhidas.",
  "gen.rule.envelope.u_wall.title": "Valor U da parede externa",
  "gen.rule.envelope.u_wall.desc": "Maior transmitância térmica de uma parede externa; o isolamento da parede é dimensionado para ficar abaixo dela, por isso um clima mais frio resulta em parede mais espessa.",
- "gen.rule.envelope.u_roof.title": "Valor U da cobertura",
- "gen.rule.envelope.u_roof.desc": "Maior transmitância térmica de uma cobertura; o isolamento da cobertura é dimensionado para ficar abaixo dela.",
  "gen.rule.envelope.u_ground.title": "Valor U da laje sobre o solo",
  "gen.rule.envelope.u_ground.desc": "Maior transmitância térmica da laje sobre o solo; o isolamento sob o contrapiso é dimensionado para ficar abaixo dela.",
  "gen.rule.acoustic.rw_party.title": "Isolamento acústico de paredes entre unidades",

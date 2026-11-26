@@ -47,5 +47,6 @@
  "ai.check.rule.undefined": "Regla {1}: la norma no define este caso; decídalo con el proyectista",
  "norms.pack": "Paquete de norma (país)",
  "norms.pack_auto": "Automático: {pack}",
- "norms.pack_tip": "Las reglas, los programas de espacios y las dimensiones proceden de este paquete. Automático sigue el idioma de la interfaz."
+ "norms.pack_tip": "Las reglas, los programas de espacios y las dimensiones proceden de este paquete. Automático sigue el idioma de la interfaz.",
+ "norms.pack_partial": "Paquete parcial: {pack} aún no declara todas las normas, por lo que una comprobación limpia no es cobertura total."
 }

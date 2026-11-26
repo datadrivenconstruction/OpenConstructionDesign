@@ -184,6 +184,5 @@
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} ya no existe; se descartaron las celdas de sus propias columnas",
  "xl.msg.delsafe_type_param_on_elements": "el parámetro '{}' es de tipo; edítelo en la hoja de tipos, no aplicado",
  "xl.msg.tag_x_is_removed_with_x_x": "la etiqueta {} se elimina junto con {} {}",
- "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "la cota {} pierde {} {} y conserva su última forma",
  "xl.msg.cannot_check_annotations_of_deleted_elements_x": "no se pueden verificar las anotaciones de elementos eliminados: {}"
 }

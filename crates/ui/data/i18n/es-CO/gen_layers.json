@@ -1,9 +1,5 @@
 {
- "gen.group.envelope": "Envolvente",
- "gen.group.acoustic": "Aislamiento acústico",
  "gen.rule.fire.insulation_class.title": "Clase de reacción al fuego del aislamiento de la envolvente",
- "gen.rule.fire.insulation_class.desc": "Peor clase de reacción al fuego que puede tener el aislamiento de muros exteriores y cubiertas; no se eligen composiciones con peor aislamiento.",
- "gen.rule.envelope.u_wall.title": "Valor U del muro exterior",
  "gen.rule.envelope.u_wall.desc": "Mayor transmitancia térmica de un muro exterior; el aislamiento del muro se dimensiona para quedar por debajo, así un clima más frío da un muro más grueso.",
  "gen.rule.envelope.u_roof.title": "Valor U de la cubierta",
  "gen.rule.envelope.u_roof.desc": "Mayor transmitancia térmica de una cubierta; el aislamiento de la cubierta se dimensiona para quedar por debajo.",
@@ -13,9 +9,6 @@
  "gen.rule.acoustic.rw_party.desc": "Menor índice de reducción acústica Rw de un muro entre viviendas o junto a un corredor común; el núcleo de mampostería se dimensiona por la ley de masa para alcanzarlo.",
  "gen.rule.acoustic.rw_floor.title": "Aislamiento acústico del entrepiso",
  "gen.rule.acoustic.rw_floor.desc": "Menor índice de reducción acústica Rw de un entrepiso entre plantas; la losa de concreto se dimensiona por la ley de masa para alcanzarlo.",
- "gen.why.e.asm_wall": "muros exteriores de {t} m de espesor con {ins} m de aislamiento: U {u} W/m2K, máximo {lim}",
- "gen.why.e.asm_roof": "cubierta de {t} m de espesor con {ins} m de aislamiento: U {u} W/m2K, máximo {lim}",
  "gen.why.e.asm_ground": "losa sobre el terreno de {t} m de espesor con {ins} m de aislamiento: U {u} W/m2K, máximo {lim}",
- "gen.why.e.asm_party": "muros medianeros de {t} m de espesor, {m} kg/m2: Rw {rw} dB por la ley de masa, mínimo {lim}",
  "gen.why.e.asm_floor": "entrepisos de {t} m de espesor, {m} kg/m2: Rw {rw} dB por la ley de masa, mínimo {lim}"
 }

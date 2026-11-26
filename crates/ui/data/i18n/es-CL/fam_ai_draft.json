@@ -1,16 +1,7 @@
 {
- "fe.ai.repair": "corregido tras {n} intentos rechazados, unos {tokens} tokens",
- "ai.fam_offer": "Un agente ofreció la familia {name}",
- "ai.fam_offer.open": "Abrir en el editor de familias",
- "ai.fam_offer.dismiss": "Descartar",
- "fe.ai.badge": "IA",
  "fe.ai.checking": "Verificando…",
  "fe.ai.clean": "La verificación no encontró nada",
  "fe.ai.check_values": "Verificar con valores",
- "fe.ai.lines": "líneas {n}",
  "fe.ai.changes": "{n} cambios respecto de la versión anterior",
- "fe.ai.added": "agregado: {head} {name}",
- "fe.ai.removed": "eliminado: {head} {name}",
- "fe.ai.changed": "modificado: {head} {name}",
- "fe.ai.reject": "Rechazar"
+ "fe.ai.added": "agregado: {head} {name}"
 }

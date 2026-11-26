@@ -1,7 +1,6 @@
 {
  "complib.fam.mast_lift": "Elevador de mástil",
  "fam.name.mast_lift": "Elevador de mástil",
- "gen.rule.steel.check.self_weight.desc": "Peso de la torre sobre un corte, por metro de altura.",
  "gen.rule.steel.check.self_weight.title": "Peso del acero por metro",
  "gen.rule.steel.check.strut_share.desc": "Proporción de la fuerza del cordón que sostiene un horizontal en su nodo.",
  "gen.rule.steel.check.strut_share.title": "Proporción del horizontal",

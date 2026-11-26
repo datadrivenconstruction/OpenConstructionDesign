@@ -11,7 +11,6 @@
  "ai.receipt.undo.tip": "Desfazer exatamente esta aplicação",
  "ai.receipt.undone": "Desfeito",
  "ai.receipt.later": "Foram feitas edições posteriores",
- "ai.receipt.rollback": "Reverter até aqui",
  "ai.receipt.rollback.tip": "Retorna o modelo ao estado anterior a esta aplicação: as alterações posteriores também são desfeitas, Ctrl+Y as restaura",
  "ai.receipt.toast_rolled": "{n} etapas revertidas até antes do plano aplicado",
  "ai.receipt.rollback_failed": "Não é possível reverter: uma etapa posterior não está na pilha de desfazer, nada foi alterado",

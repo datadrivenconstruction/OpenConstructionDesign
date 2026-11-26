@@ -46,6 +46,5 @@
  "phui.kind.shaft": "Patinillos",
  "phui.kind.ramp": "Rampas",
  "phui.kind.member": "Elementos",
- "phui.dates": "Fechas (inicio, término)",
- "phui.show_calendar": "Mostrar por calendario"
+ "phui.dates": "Fechas (inicio, término)"
 }

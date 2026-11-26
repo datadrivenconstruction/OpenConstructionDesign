@@ -45,7 +45,5 @@
  "phui.kind.comp": "Componentes",
  "phui.kind.shaft": "Poços",
  "phui.kind.ramp": "Rampas",
- "phui.kind.member": "Elementos estruturais",
- "phui.dates": "Datas (início, fim)",
- "phui.show_calendar": "Mostrar por calendário"
+ "phui.kind.member": "Elementos estruturais"
 }

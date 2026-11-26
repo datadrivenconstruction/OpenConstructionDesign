@@ -51,7 +51,7 @@
  "gen.rule.plant.column.bottoms.title": "하부 배출 비율",
  "gen.rule.plant.column.hd.desc": "직경 대비 증류탑의 직통부 높이.",
  "gen.rule.plant.column.hd.title": "탑 세장비",
- "gen.rule.plant.column.hold.desc": "탑 저부와 트레이가 수용하는 공급량의 분(分) 수.",
+ "gen.rule.plant.column.hold.desc": "탑 저부와 트레이가 수용하는 공급량의 분 수.",
  "gen.rule.plant.column.hold.title": "탑 체류량",
  "gen.rule.plant.column.latent.desc": "액체 1 m3/h를 끓이는 열량.",
  "gen.rule.plant.column.latent.title": "비등 열량",

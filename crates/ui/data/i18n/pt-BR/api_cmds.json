@@ -67,7 +67,6 @@
  "api.cmd.export_ifc": "Exportar o projeto para IFC",
  "api.cmd.measure": "Medir distâncias, ângulos e áreas entre referências",
  "api.cmd.measure_list": "Medições salvas",
- "api.cmd.measure_eval": "Avaliar uma medição",
  "api.cmd.get_reference": "A referência escolhida pela pessoa na tela",
  "api.cmd.define_family": "Planejar uma família definida por dados estruturados",
  "api.cmd.create_geometry": "Planejar sólidos e massas a partir de operações de geometria",

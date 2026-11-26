@@ -19,8 +19,5 @@
  "cmd.ctx.floor.link_unlink.short": "Quitar bordes",
  "cmd.ui.onboarding.short": "Configurar…",
  "cmd.mod.distribute.short": "Distribuir",
- "cmd.data.src_delta.short": "Cambios hoja de cálculo XLSX…",
- "cmd.data.import_xlsx.short": "Importar desde XLSX…",
- "cmd.data.export_xlsx.short": "Exportar a XLSX…",
- "cmd.data.sync_xlsx.short": "Sincronizar con XLSX…"
+ "cmd.data.src_delta.short": "Cambios hoja de cálculo XLSX…"
 }

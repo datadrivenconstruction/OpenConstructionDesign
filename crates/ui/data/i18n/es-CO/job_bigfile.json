@@ -21,7 +21,6 @@
  "job.done": "Hecho",
  "job.busy": "Ya hay una tarea en curso",
  "job.busy_heavy": "Se está ejecutando otra operación pesada: espere a que termine o pulse Esc para cancelarla",
- "job.title.form": "Operación de forma",
  "job.title.view": "Regenerando la vista",
  "job.stage.kernel": "Calculando la geometría",
  "job.stale": "El modelo cambió mientras se ejecutaba la tarea: se descartó su resultado",

@@ -19,8 +19,5 @@
  "cmd.ctx.floor.link_unlink.short": "Soltar arestas",
  "cmd.ui.onboarding.short": "Configurar…",
  "cmd.mod.distribute.short": "Distribuir",
- "cmd.data.src_delta.short": "Alter. planilha XLSX…",
- "cmd.data.import_xlsx.short": "Importar de XLSX…",
- "cmd.data.export_xlsx.short": "Exportar para XLSX…",
- "cmd.data.sync_xlsx.short": "Sincronizar com XLSX…"
+ "cmd.data.src_delta.short": "Alter. planilha XLSX…"
 }

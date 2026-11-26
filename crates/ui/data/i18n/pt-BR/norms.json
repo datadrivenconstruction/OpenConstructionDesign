@@ -47,5 +47,6 @@
  "ai.check.rule.undefined": "Regra {1}: a norma não define este caso; decida com o projetista",
  "norms.pack": "Pacote de normas (país)",
  "norms.pack_auto": "Automático: {pack}",
- "norms.pack_tip": "Regras, programas de ambientes e dimensões vêm deste pacote. Automático segue o idioma da interface."
+ "norms.pack_tip": "Regras, programas de ambientes e dimensões vêm deste pacote. Automático segue o idioma da interface.",
+ "norms.pack_partial": "Pacote parcial: {pack} ainda não cobre todas as normas, portanto uma verificação sem ocorrências não é cobertura total."
 }

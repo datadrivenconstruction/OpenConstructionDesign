@@ -1,14 +1,6 @@
 {
  "theme.icons.color": "Colorido",
  "cmd.ui.icons.color": "Ícones coloridos",
- "cmd.ui.icons.color.desc": "Estilo de desenho dos ícones",
- "theme.icons.hierarchical": "Hierárquico",
- "cmd.ui.icons.hierarchical": "Ícones hierárquicos",
- "cmd.ui.icons.hierarchical.desc": "Estilo de desenho dos ícones",
- "theme.icons.isometric": "Isométrico",
- "cmd.ui.icons.isometric": "Ícones isométricos",
- "cmd.ui.icons.isometric.desc": "Estilo de desenho dos ícones",
  "theme.icons.monoline": "Linha única",
- "cmd.ui.icons.monoline": "Ícones de linha única",
- "cmd.ui.icons.monoline.desc": "Estilo de desenho dos ícones"
+ "cmd.ui.icons.monoline": "Ícones de linha única"
 }

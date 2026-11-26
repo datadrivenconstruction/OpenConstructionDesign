@@ -24,12 +24,7 @@
  "collab_diff.diff.col.old": "Era",
  "collab_diff.diff.col.new": "Agora",
  "collab_diff.reveal.title": "Evolução da construção",
- "collab_diff.reveal.start": "Mostrar como construído",
- "collab_diff.reveal.play": "Reproduzir",
  "collab_diff.reveal.pause": "Pausar",
  "collab_diff.reveal.back": "Voltar",
- "collab_diff.reveal.close": "Fechar",
- "collab_diff.reveal.nothing": "Nada a mostrar: nenhum elemento alterado está na cena 3D.",
- "collab_diff.reveal.journal_busy": "Lendo o diário…",
- "collab_diff.reveal.journal_play": "Reproduzir diário"
+ "collab_diff.reveal.journal_busy": "Lendo o diário…"
 }

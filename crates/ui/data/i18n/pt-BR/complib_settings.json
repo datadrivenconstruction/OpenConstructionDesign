@@ -50,11 +50,8 @@
  "settings.lib_dir": "Pasta da minha biblioteca",
  "settings.lib_dir_desc": "Arquivos de família (.ddcf) colocados aqui aparecem em Minha biblioteca. DDC_COMPONENTS_DIR move a pasta.",
  "complib.fam.sprinkler_head": "Chuveiro automático",
- "complib.fam.fire_pump": "Bomba de incêndio",
- "complib.fam.pressurisation_fan": "Ventilador de pressurização",
  "complib.fam.lift_car": "Cabine do elevador",
  "complib.fam.lift_landing_door": "Porta de pavimento do elevador",
- "complib.fam.lift_pit": "Poço do elevador",
  "complib.fam.lift_overrun": "Casa de máquinas superior do elevador",
  "complib.fam.lift_machine": "Máquina de elevador"
 }

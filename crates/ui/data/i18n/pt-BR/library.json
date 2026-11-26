@@ -42,15 +42,9 @@
  "library.ifc.stair": "Escada",
  "library.ifc.pipe_fitting": "Acessório de tubagem",
  "library.ifc.duct_fitting": "Acessório de conduta",
- "library.ifc.beam": "Viga",
- "library.ifc.column": "Pilar",
  "library.ifc.appliance": "Aparelho",
- "library.ifc.fire_terminal": "Terminal de combate a incêndio",
  "library.ifc.heat_exchanger": "Trocador de calor",
- "library.ifc.pump": "Bomba",
  "library.ifc.tank": "Tanque",
- "library.ifc.transport": "Elemento de transporte",
- "library.ifc.valve": "Válvula",
  "library.ifc.waste_terminal": "Terminal de esgoto",
  "library.ifc.medical": "Equipamento médico"
 }

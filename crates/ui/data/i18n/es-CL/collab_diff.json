@@ -24,12 +24,5 @@
  "collab_diff.diff.col.old": "Antes",
  "collab_diff.diff.col.new": "Ahora",
  "collab_diff.reveal.title": "Construcción",
- "collab_diff.reveal.start": "Mostrar como construido",
- "collab_diff.reveal.play": "Reproducir",
- "collab_diff.reveal.pause": "Pausa",
- "collab_diff.reveal.back": "Retroceder",
- "collab_diff.reveal.close": "Cerrar",
- "collab_diff.reveal.nothing": "Nada que mostrar: ningún elemento modificado está en la escena 3D.",
- "collab_diff.reveal.journal_busy": "Leyendo el diario…",
- "collab_diff.reveal.journal_play": "Reproducir diario"
+ "collab_diff.reveal.back": "Retroceder"
 }
