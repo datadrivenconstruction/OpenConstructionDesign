@@ -20,8 +20,7 @@
    "unit": "m",
    "value": 0.25,
    "text": {
-    "en": "Common stair tread at least 0.25 m",
-    "ru": "Проступь общей лестницы не менее 0.25 м"
+    "en": "Common stair tread at least 0.25 m"
    },
    "source": {
     "doc": "se-bbr8",
@@ -60,8 +59,7 @@
    "unit": "m",
    "value": 2.4,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.4 m",
-    "ru": "Высота жилых помещений не менее 2.4 м"
+    "en": "Clear height of habitable rooms at least 2.4 m"
    },
    "source": {
     "doc": "se-bbr3",
@@ -96,8 +94,7 @@
    "unit": "m",
    "value": 2.4,
    "text": {
-    "en": "Clear height of work rooms at least 2.4 m",
-    "ru": "Высота рабочих помещений не менее 2.4 м"
+    "en": "Clear height of work rooms at least 2.4 m"
    },
    "source": {
     "doc": "se-bbr3",

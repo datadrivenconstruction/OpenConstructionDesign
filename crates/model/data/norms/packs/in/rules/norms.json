@@ -17,8 +17,7 @@
    "unit": "m",
    "value": 0.175,
    "text": {
-    "en": "Stair riser at most 0.175 m (one or two family dwelling)",
-    "hi": "सीढ़ी का राइज़र अधिकतम 0.175 m (एक या दो परिवार वाला आवास)"
+    "en": "Stair riser at most 0.175 m (one or two family dwelling)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -51,8 +50,7 @@
    "unit": "m",
    "value": 0.15,
    "text": {
-    "en": "Stair riser at most 0.15 m (other buildings)",
-    "hi": "सीढ़ी का राइज़र अधिकतम 0.15 m (अन्य भवन)"
+    "en": "Stair riser at most 0.15 m (other buildings)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -85,8 +83,7 @@
    "unit": "m",
    "value": 0.25,
    "text": {
-    "en": "Residential stair tread at least 0.25 m (without nosing)",
-    "hi": "आवासीय सीढ़ी का ट्रेड कम से कम 0.25 m (नोज़िंग के बिना)"
+    "en": "Residential stair tread at least 0.25 m (without nosing)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -117,8 +114,7 @@
    "unit": "m",
    "value": 0.3,
    "text": {
-    "en": "Office stair tread at least 0.30 m (without nosing)",
-    "hi": "कार्यालय सीढ़ी का ट्रेड कम से कम 0.30 m (नोज़िंग के बिना)"
+    "en": "Office stair tread at least 0.30 m (without nosing)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -149,8 +145,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Stair flight width at least 1.00 m (one or two family dwelling)",
-    "hi": "सीढ़ी के फ़्लाइट की चौड़ाई कम से कम 1.00 m (एक या दो परिवार वाला आवास)"
+    "en": "Stair flight width at least 1.00 m (one or two family dwelling)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -182,8 +177,7 @@
    "unit": "m",
    "value": 1.25,
    "text": {
-    "en": "Stair flight width at least 1.25 m (apartment house, subdivision A-III)",
-    "hi": "सीढ़ी के फ़्लाइट की चौड़ाई कम से कम 1.25 m (अपार्टमेंट भवन, उप-वर्ग A-III)"
+    "en": "Stair flight width at least 1.25 m (apartment house, subdivision A-III)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -214,8 +208,7 @@
    "unit": "m",
    "value": 1.5,
    "text": {
-    "en": "Stair flight width at least 1.50 m (business and other buildings)",
-    "hi": "सीढ़ी के फ़्लाइट की चौड़ाई कम से कम 1.50 m (व्यावसायिक और अन्य भवन)"
+    "en": "Stair flight width at least 1.50 m (business and other buildings)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -242,8 +235,7 @@
    "unit": "m",
    "value": 2.2,
    "text": {
-    "en": "Headroom under a stair landing and over the flight at least 2.2 m",
-    "hi": "सीढ़ी लैंडिंग के नीचे और फ़्लाइट के ऊपर हेडरूम कम से कम 2.2 m"
+    "en": "Headroom under a stair landing and over the flight at least 2.2 m"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -277,8 +269,7 @@
    "unit": "m",
    "value": 30.0,
    "text": {
-    "en": "Travel distance from a room to an exit or stair at most 30 m (residential, construction types 1 and 2, no sprinklers)",
-    "hi": "कक्ष से निकास या सीढ़ी तक यात्रा दूरी अधिकतम 30 m (आवासीय, निर्माण प्रकार 1 और 2, बिना स्प्रिंकलर)"
+    "en": "Travel distance from a room to an exit or stair at most 30 m (residential, construction types 1 and 2, no sprinklers)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -310,8 +301,7 @@
    "unit": "m",
    "value": 30.0,
    "text": {
-    "en": "Travel distance from a room to an exit or stair at most 30 m (business, construction types 1 and 2, no sprinklers)",
-    "hi": "कक्ष से निकास या सीढ़ी तक यात्रा दूरी अधिकतम 30 m (व्यावसायिक, निर्माण प्रकार 1 और 2, बिना स्प्रिंकलर)"
+    "en": "Travel distance from a room to an exit or stair at most 30 m (business, construction types 1 and 2, no sprinklers)"
    },
    "source": {
     "doc": "nbcs2026-f",
@@ -359,8 +349,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Accessible corridor at least 1.2 m",
-    "ru": "Доступный коридор не менее 1.2 м"
+    "en": "Accessible corridor at least 1.2 m"
    },
    "source": {
     "doc": "hg-india-2021",

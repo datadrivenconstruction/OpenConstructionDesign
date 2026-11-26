@@ -4,10 +4,12 @@
 //! judged by code only: the same model and pack give the same findings in the same order. AI
 //! may explain a finding or draft a fix; it never decides that a rule is broken.
 //!
-//! The pack format is JSON: `{"rules": [{"id", "title": {"en", "ru"}, "source": {"doc",
+//! The pack format is JSON: `{"rules": [{"id", "title": {"en", <locale>...}, "source": {"doc",
 //! "clause"}, "example", "severity", "scope", "check"}]}`; `scope` and `check` are the same
 //! shapes as company rules (`param_present`, `param_range`, `param_in`, `count`, `clearance`,
 //! `unique`, `param_value`). Packs shipped here are examples to verify by an engineer.
+
+use std::collections::BTreeMap;
 
 use serde_json::{json, Value as J};
 
@@ -16,14 +18,16 @@ use super::{finalize, rule_from, CheckScope, Finding, RuleDef, Severity};
 use crate::{ElKey, Error, Model};
 use crate::{ParamSpec, ParamType};
 
-/// Id of the country pack whose engine rules the norms panel shows.
-pub const STARTER_PACK_ID: &str = "ru";
+/// Id of the country-neutral pack whose rows the norms panel shows before a pack is chosen.
+pub const STARTER_PACK_ID: &str = "generic";
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct NormRule {
     /// `def.title` is the English title, `def.source_text` the document and clause.
     pub def: RuleDef,
-    pub title_ru: String,
+    /// Titles other than English given inline by the pack, by locale code (older or user packs);
+    /// shipped packs keep translations in the UI locale bundles under [`text_key`].
+    pub titles: BTreeMap<String, String>,
     pub doc: String,
     pub clause: String,
     /// Shipped as an example: an engineer verifies it before relying on it.
@@ -34,17 +38,33 @@ impl NormRule {
     pub fn id(&self) -> &str {
         &self.def.id
     }
-    pub fn title(&self, ru: bool) -> &str {
-        if ru && !self.title_ru.is_empty() {
-            &self.title_ru
-        } else {
-            &self.def.title
-        }
+    /// English title, the source text.
+    pub fn title(&self) -> &str {
+        &self.def.title
+    }
+    /// Inline title in `lang`, if the pack gave one.
+    pub fn title_in(&self, lang: &str) -> Option<&str> {
+        self.titles.get(lang).map(String::as_str).filter(|s| !s.trim().is_empty())
     }
     /// `SP 1.13130.2020 p.4.2.5`.
     pub fn citation(&self) -> String {
         format!("{} {}", self.doc, self.clause).trim().to_string()
     }
+}
+
+/// Locale-bundle key of a rule's title: `norm_rule.<id>`.
+pub fn text_key(rule_id: &str) -> String {
+    format!("norm_rule.{rule_id}")
+}
+
+/// Non-English entries of a `{"en": .., "<locale>": ..}` text object.
+pub(crate) fn local_texts(v: &J) -> BTreeMap<String, String> {
+    v.as_object()
+        .into_iter()
+        .flatten()
+        .filter(|(k, _)| k.as_str() != "en")
+        .filter_map(|(k, x)| x.as_str().map(|x| (k.clone(), x.to_string())))
+        .collect()
 }
 
 fn bad<T>(what: &str) -> Result<T, Error> {
@@ -68,7 +88,7 @@ pub fn load_norm_pack(json: &str) -> Result<Vec<NormRule>, Error> {
     let mut out: Vec<NormRule> = Vec::with_capacity(list.len());
     for r in list {
         let title_en = text(&r["title"], "en")?;
-        let title_ru = r["title"]["ru"].as_str().unwrap_or("").to_string();
+        let titles = local_texts(&r["title"]);
         let doc = text(&r["source"], "doc")?;
         let clause = text(&r["source"], "clause")?;
         let mut flat = r.clone();
@@ -80,7 +100,7 @@ pub fn load_norm_pack(json: &str) -> Result<Vec<NormRule>, Error> {
         }
         out.push(NormRule {
             def,
-            title_ru,
+            titles,
             doc,
             clause,
             example: r["example"].as_bool().unwrap_or(false),
@@ -89,10 +109,10 @@ pub fn load_norm_pack(json: &str) -> Result<Vec<NormRule>, Error> {
     Ok(out)
 }
 
-/// The shipped pack; a damaged pack is an error to show, never an empty set.
+/// The panel rows of the country-neutral pack; a damaged pack is an error to show, never an empty set.
 pub fn starter_pack() -> Result<Vec<NormRule>, Error> {
     let pack = super::norm_pack::PackSet::embedded().resolve(STARTER_PACK_ID)?;
-    Ok(pack.legacy_rules())
+    Ok(pack_norm_rules(&pack))
 }
 
 /// Every rule of `pack` as a panel row: its engine rules first, as they are, then one row per
@@ -114,7 +134,7 @@ pub fn pack_norm_rules(pack: &super::norm_pack::NormPack) -> Vec<NormRule> {
                     // never run: the pack checker evaluates the kind
                     check: super::RuleCheck::ParamPresent { param: String::new() },
                 },
-                title_ru: r.text.get("ru").cloned().unwrap_or_default(),
+                titles: r.text.iter().filter(|(k, _)| k.as_str() != "en").map(|(k, v)| (k.clone(), v.clone())).collect(),
                 doc,
                 clause: r.clause.clone(),
                 example: r.example || !r.verified,
@@ -265,7 +285,7 @@ pub fn findings_json_for(rules: &[NormRule], findings: &[NormFinding], pack: Opt
             Some(json!({
                 "id": format!("{}|{}", f.rule_id, els.join(",")),
                 "title": r.def.title,
-                "title_ru": r.title_ru,
+                "titles": r.titles,
                 "priority": priority(f.severity),
                 "severity": severity_name(f.severity),
                 "rule": {

@@ -22,7 +22,7 @@ pub fn explain(spec: &ProjectSpec, p: &GProject) -> Vec<Why> {
     };
     let sch: Schedule = super::schedule_of(spec, p).unwrap_or_default();
     let t = sch.totals();
-    let ru = spec.ru;
+    let lang = spec.lang;
     let name = spec.template.clone().unwrap_or_else(|| spec.name.clone());
     let mut out: Vec<Why> = vec![];
     let mut add = |target: &str, rule: &str, value: f64, key: &'static str, args: Args| {
@@ -91,7 +91,7 @@ pub fn explain(spec: &ProjectSpec, p: &GProject) -> Vec<Why> {
         ]);
     }
     if let Some(b) = &m.below {
-        let names: Vec<String> = b.levels.iter().map(|l| (if ru { &l.name.1 } else { &l.name.0 }).clone()).collect();
+        let names: Vec<String> = b.levels.iter().map(|l| l.name.get(lang)).collect();
         let rooms: usize = p.basements.iter().map(|x| x.rooms.len()).sum();
         add("basement", "basement.count", p.basements.len() as f64, "typ_below", vec![
             ("n", s(p.basements.len())),

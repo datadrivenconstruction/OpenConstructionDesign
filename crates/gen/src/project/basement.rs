@@ -189,14 +189,14 @@ fn free_rects(keep: &[R], w: Mm, d: Mm) -> Vec<R> {
     out
 }
 
-fn cell(r: R, kind: RoomKind, ru: bool) -> Cell {
+fn cell(r: R, kind: RoomKind, lang: &str) -> Cell {
     Cell {
         x0: r.0,
         y0: r.1,
         x1: r.2,
         y1: r.3,
         kind,
-        name: names::kind_name(kind, ru).to_string(),
+        name: names::kind_name(kind, lang).to_string(),
         owner: PRole::Public,
         asked: None,
         grown: false,
@@ -378,8 +378,8 @@ fn plan_at(spec: &ProjectSpec, p: &GProject, turn: f64) -> Result<Plan, GenError
             return Err(infeasible(format!(
                 "basement: the {} and the {} above overlap once squared; use a bar massing \
                  or basements 0",
-                names::kind_name(x.1, false),
-                names::kind_name(pr.kind, false)
+                names::kind_name_en(x.1),
+                names::kind_name_en(pr.kind)
             )));
         }
         keep.push((r, pr.kind));
@@ -411,7 +411,7 @@ fn plan_at(spec: &ProjectSpec, p: &GProject, turn: f64) -> Result<Plan, GenError
         keep = open;
     }
     let rects: Vec<R> = keep.iter().map(|k| k.0).collect();
-    let mut cells: Vec<Cell> = keep.iter().map(|k| cell(k.0, k.1, spec.ru)).collect();
+    let mut cells: Vec<Cell> = keep.iter().map(|k| cell(k.0, k.1, spec.lang)).collect();
     for r in free_rects(&rects, w, d) {
         let narrow = (r.2 - r.0).min(r.3 - r.1);
         if narrow < snap {
@@ -426,7 +426,7 @@ fn plan_at(spec: &ProjectSpec, p: &GProject, turn: f64) -> Result<Plan, GenError
         } else {
             RoomKind::Storage
         };
-        cells.push(cell(r, kind, spec.ru));
+        cells.push(cell(r, kind, spec.lang));
     }
     let mut holes = vec![];
     let mut ground = moved(&g.layout, (0.0, 0.0));
@@ -543,7 +543,7 @@ fn storey(
     }
     crate::check::validate_layout(&l).map_err(|e| infeasible(format!("basement {}: {e}", b + 1)))?;
     Ok(PStorey {
-        name: below.map_or_else(|| names::basement_name(b, spec.ru), |x| super::typology::below::level_name(spec, x, b)),
+        name: below.map_or_else(|| names::basement_name(b, spec.lang), |x| super::typology::below::level_name(spec, x, b)),
         elevation: -((b + 1) as f64) * h,
         height: h,
         layout: l,

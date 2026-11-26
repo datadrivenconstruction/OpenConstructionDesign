@@ -1,12 +1,10 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
-//! The brief of a plant: its kind and duty from fields or from words in English or Russian
-//! ("boiler house 2 MW with 3 boilers", "pumping station 120 m3/h head 45 m", also in Russian); a storage
+//! The brief of a plant: its kind and duty from fields or from words in English or a locale's
+//! word list ("boiler house 2 MW with 3 boilers", "pumping station 120 m3/h head 45 m"); a storage
 //! tank's diameter, height and nozzles also from German or Spanish words.
 
 use serde_json::{json, Value as J};
-use std::collections::HashMap;
-use std::sync::OnceLock;
 
 /// Largest heat output a brief may ask for, kW.
 pub const MAX_DUTY_KW: f64 = 20000.0;
@@ -57,7 +55,7 @@ impl Kind {
             Kind::PumpingStation => (&["pumping", "pump station", "pump"], "kind_pumping_station"),
             Kind::StorageTank => (&["tank", "tanque"], "kind_storage_tank"),
         };
-        en.iter().copied().chain(ru_list(key).iter().map(String::as_str)).collect()
+        en.iter().copied().chain(loc_list(key).iter().map(String::as_str)).collect()
     }
 }
 
@@ -90,30 +88,27 @@ pub struct Brief {
 
 const NUMBER_WORDS: [(&str, usize); 6] = [("one", 1), ("two", 2), ("three", 3), ("four", 4), ("five", 5), ("six", 6)];
 
-/// Russian words of the brief (`data/lang/ru/plant_brief.json`): lists of stems and units by key.
-const RU_DATA: &str = include_str!("../../data/lang/ru/plant_brief.json");
-
-fn ru_list(key: &str) -> &'static [String] {
-    static T: OnceLock<HashMap<String, Vec<String>>> = OnceLock::new();
-    T.get_or_init(|| serde_json::from_str(RU_DATA).unwrap_or_default()).get(key).map_or(&[][..], Vec::as_slice)
+/// Brief words of every locale (`data/lang/<locale>/plant_brief.json`): stems and units by key.
+fn loc_list(key: &str) -> &'static [String] {
+    crate::lang::words("plant_brief", key)
 }
 
-/// English stems followed by the Russian ones under `key`.
+/// English stems followed by the locales' ones under `key`.
 fn word_set(en: &[&'static str], key: &str) -> Vec<&'static str> {
-    en.iter().copied().chain(ru_list(key).iter().map(String::as_str)).collect()
+    en.iter().copied().chain(loc_list(key).iter().map(String::as_str)).collect()
 }
 
-/// True when `w` starts with a Russian stem or unit under `key`.
-fn starts_ru(w: &str, key: &str) -> bool {
-    ru_list(key).iter().any(|u| w.starts_with(u.as_str()))
+/// True when `w` starts with a locale's stem or unit under `key`.
+fn starts_loc(w: &str, key: &str) -> bool {
+    loc_list(key).iter().any(|u| w.starts_with(u.as_str()))
 }
 
-/// The count a number word names (English, Russian, and with `more` German and Spanish).
+/// The count a number word names (English, the locale lists, and with `more` German and Spanish).
 fn number_word(w: &str, more: bool) -> Option<usize> {
     let en = NUMBER_WORDS.iter().find(|(x, _)| *x == w).map(|&(_, n)| n);
-    let ru = (1..=6).find(|n| ru_list(&format!("n{n}")).iter().any(|x| x == w));
+    let loc = (1..=6).find(|n| loc_list(&format!("n{n}")).iter().any(|x| x == w));
     let other = if more { MORE_NUMBER_WORDS.iter().find(|(x, _)| *x == w).map(|&(_, n)| n) } else { None };
-    en.or(ru).or(other)
+    en.or(loc).or(other)
 }
 
 /// Counts in German and Spanish, for the nozzles of a storage tank.
@@ -158,7 +153,7 @@ impl Brief {
         let low = text.to_lowercase();
         // a reboiler is a column's heater, not a boiler house
         let mut low_k = low.replace("reboiler", " ");
-        for r in ru_list("reboiler") {
+        for r in loc_list("reboiler") {
             low_k = low_k.replace(r.as_str(), " ");
         }
         let kind = match v.get("kind").and_then(J::as_str) {
@@ -245,21 +240,21 @@ impl Brief {
             };
             let w = word_after(&chars, j);
             let before: String = chars[i.saturating_sub(24)..i].iter().collect();
-            if w.starts_with("mw") || starts_ru(&w, "mw") {
+            if w.starts_with("mw") || starts_loc(&w, "mw") {
                 self.duty_kw = Some(x * KW_PER_MW);
-            } else if w.starts_with("kw") || starts_ru(&w, "kw") {
+            } else if w.starts_with("kw") || starts_loc(&w, "kw") {
                 self.duty_kw = Some(x);
-            } else if w.starts_with("gcal") || starts_ru(&w, "gcal") {
+            } else if w.starts_with("gcal") || starts_loc(&w, "gcal") {
                 self.duty_kw = Some(x * KW_PER_GCALH);
-            } else if ["m3/h", "m³/h", "m3/hr", "cmh"].iter().any(|u| w.starts_with(u)) || starts_ru(&w, "flow") {
+            } else if ["m3/h", "m³/h", "m3/hr", "cmh"].iter().any(|u| w.starts_with(u)) || starts_loc(&w, "flow") {
                 self.flow_m3h = Some(x);
-            } else if w.starts_with("l/s") || starts_ru(&w, "ls") {
+            } else if w.starts_with("l/s") || starts_loc(&w, "ls") {
                 self.flow_m3h = Some(x * M3H_PER_LS);
             } else if (w == "m"
                 || w.starts_with("m ")
                 || w == "m."
-                || ru_list("meter").iter().any(|u| w == *u || w == format!("{u}.")))
-                && (before.contains("head") || ru_list("head").iter().any(|h| before.contains(h.as_str())))
+                || loc_list("meter").iter().any(|u| w == *u || w == format!("{u}.")))
+                && (before.contains("head") || loc_list("head").iter().any(|h| before.contains(h.as_str())))
             {
                 self.head_m = Some(x);
             } else if (w == "m" || w.starts_with("m ") || w == "m.") && before.contains("rack") && self.rack_m.is_none() {
@@ -271,7 +266,7 @@ impl Brief {
         }
         self.distill = word_set(&["distill", "rectif"], "distill").iter().any(|w| low.contains(w))
             || (low.contains("column") && self.kind == Kind::ProcessLine)
-            || (ru_list("column").iter().any(|w| low.contains(w.as_str())) && self.kind == Kind::ProcessLine);
+            || (loc_list("column").iter().any(|w| low.contains(w.as_str())) && self.kind == Kind::ProcessLine);
         self.outdoor = word_set(&["outdoor", "outside", "open air", "open-air"], "outdoor").iter().any(|w| low.contains(w));
         {
             let words: Vec<&str> = low.split(|c: char| !c.is_alphanumeric()).filter(|s| !s.is_empty()).collect();
@@ -314,7 +309,7 @@ impl Brief {
             let Ok(x) = digits.replace(',', ".").parse::<f64>() else { continue };
             let glued = &w[digits.len()..];
             let (unit, mut j) = if glued.is_empty() { (words.get(i + 1).copied().unwrap_or(""), i + 2) } else { (glued, i + 1) };
-            if unit != "m" && !ru_list("meter").iter().any(|u| u == unit) {
+            if unit != "m" && !loc_list("meter").iter().any(|u| u == unit) {
                 if words.get(i + 1).is_some_and(|&n| is(n, &nozzle_words)) {
                     self.nozzles = Some(x as usize);
                 }

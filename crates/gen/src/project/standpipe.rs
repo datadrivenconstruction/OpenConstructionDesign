@@ -59,7 +59,7 @@ pub(super) fn standpipes(spec: &ProjectSpec, p: &mut GProject) {
         return;
     }
     for (i, s) in spots(p).into_iter().enumerate() {
-        let name = if spec.ru { format!("{} {}", crate::lang::ru("Standpipe"), i + 1) } else { format!("Standpipe {}", i + 1) };
+        let name = format!("{} {}", super::names::tr(spec.lang, "", "Standpipe"), i + 1);
         build(p, name, s);
     }
     reach(p);

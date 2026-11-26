@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! A brief that names a building type but no rooms or outline: the default programme and plan
-//! come from `data/typology_programs.json` (keywords in en/ru/de/es/zh, area shares, en/ru
-//! names), so the generator never relies on the model to list them. A type that already has a
+//! come from `data/typology_programs.json` (keywords in several languages, area shares, English
+//! names the gen bundles translate), so the generator never relies on the model to list them. A type that already has a
 //! preset or a base typology hands over to it. Rooms, a preset or a program of the brief win.
 
 use super::footprint;
@@ -16,8 +16,21 @@ pub(super) fn data() -> &'static J {
     D.get_or_init(|| serde_json::from_str(include_str!("../../data/typology_programs.json")).expect("typology_programs.json is valid"))
 }
 
-fn text(v: &J, ru: bool) -> String {
-    v[if ru { "ru" } else { "en" }].as_str().or(v["en"].as_str()).unwrap_or_default().to_string()
+/// A note template of the data in `lang` (`gen.typo_note.<field>`), else its English.
+fn note(d: &J, field: &str, lang: &str) -> String {
+    let en = d[field]["en"].as_str().unwrap_or_default();
+    super::names::look(lang, &format!("gen.typo_note.{field}")).unwrap_or(en).to_string()
+}
+
+/// A name of the data in `lang`, translated under `scope`.
+fn name_of(v: &J, lang: &str, scope: &str) -> String {
+    super::names::tr(lang, scope, v["en"].as_str().unwrap_or_default())
+}
+
+/// What the type is, worded for the notes (`gen.what.<slug>`).
+fn what_of(v: &J, lang: &str) -> String {
+    let en = v["en"].as_str().unwrap_or_default();
+    super::names::look(lang, &format!("gen.what.{}", super::names::slug(en))).unwrap_or(en).to_string()
 }
 
 fn is_cjk(s: &str) -> bool {
@@ -179,8 +192,9 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
         return None;
     }
     let (d, t) = (data(), entry(v)?);
-    let ru = v["lang"].as_str().is_some_and(|l| l.eq_ignore_ascii_case("ru"));
-    let what = text(&t["what"], ru);
+    let lang = v["lang"].as_str().map_or("en", super::names::locale);
+    let scope = format!("type.{}", t["id"].as_str().unwrap_or_default());
+    let what = what_of(&t["what"], lang);
     let mut out = v.clone();
     let mut notes = vec![];
     // what the type is (residential, one household, flats) when it says so and the brief does not
@@ -190,22 +204,22 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
     let delegated = t["preset"].is_string() || t["typology"].is_string();
     if let Some(p) = t["preset"].as_str() {
         out["preset"] = json!(p);
-        notes.push(text(&d["delegate_note"], ru).replace("{what}", &what).replace("{via}", &format!("preset {p}")));
+        notes.push(note(d, "delegate_note", lang).replace("{what}", &what).replace("{via}", &format!("preset {p}")));
     } else if let Some(b) = t["typology"].as_str() {
         if v["typology"].as_str() != Some(b) {
             out["typology"] = json!(b);
-            notes.push(text(&d["delegate_note"], ru).replace("{what}", &what).replace("{via}", &format!("base typology {b}")));
+            notes.push(note(d, "delegate_note", lang).replace("{what}", &what).replace("{via}", &format!("base typology {b}")));
         }
     } else {
         if !v["typology"].as_str().is_some_and(|x| Typology::NAMES.contains(&x)) {
             out["typology"] = json!(Typology::Office.name());
         }
-        notes.push(text(&d["note"], ru).replace("{what}", &what));
+        notes.push(note(d, "note", lang).replace("{what}", &what));
     }
     // a preset or base typology brings its own name, storeys and heights
     if !delegated {
         if v["name"].is_null() {
-            out["name"] = json!(text(&t["name"], ru));
+            out["name"] = json!(name_of(&t["name"], lang, &scope));
         }
         for k in ["floors", "floor_height"] {
             if v[k].is_null() {
@@ -234,7 +248,7 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
             if v["floor_height"].is_null() {
                 let h = tall.min(cap).max(t["floor_height"].as_f64().unwrap_or(0.0));
                 out["floor_height"] = json!(h);
-                notes.push(text(&d["raise_note"], ru).replace("{what}", &what).replace("{h}", &format!("{h:.1}")).replace("{cap}", &format!("{cap:.0}")));
+                notes.push(note(d, "raise_note", lang).replace("{what}", &what).replace("{h}", &format!("{h:.1}")).replace("{cap}", &format!("{cap:.0}")));
             }
         } else if ground_tall > 0.0 && v["storey_heights"].is_null() {
             // several storeys: the ground level is as tall as its tall room, the others normal
@@ -249,10 +263,10 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
                 out["floor_height"] = json!(upper);
             }
             out["storey_heights"] = json!([h]);
-            notes.push(text(&d["levels_note"], ru).replace("{h}", &format!("{h:.1}")).replace("{n}", &storeys.to_string()));
+            notes.push(note(d, "levels_note", lang).replace("{h}", &format!("{h:.1}")).replace("{n}", &storeys.to_string()));
         } else if tall > 0.0 {
             let f = out["floor_height"].as_f64().unwrap_or(0.0);
-            notes.push(text(&d["tall_note"], ru).replace("{h}", &format!("{tall:.1}")).replace("{n}", &storeys.to_string()).replace("{f}", &format!("{f:.1}")));
+            notes.push(note(d, "tall_note", lang).replace("{h}", &format!("{tall:.1}")).replace("{n}", &storeys.to_string()).replace("{f}", &format!("{f:.1}")));
         }
     }
     let fp = &v["footprint"];
@@ -285,7 +299,7 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
         }
         out["footprint"]["width"] = json!(w);
         out["footprint"]["depth"] = json!(dp);
-        let s = text(&d["outline_note"], ru);
+        let s = note(d, "outline_note", lang);
         notes.push(s.replace("{w}", &format!("{w:.1}")).replace("{d}", &format!("{dp:.1}")).replace("{a}", &format!("{area:.0}")));
     }
     if !delegated {
@@ -300,7 +314,7 @@ pub(crate) fn fill(v: &J) -> Option<(J, Vec<String>)> {
             lines
                 .iter()
                 .zip(each)
-                .map(|(l, a)| json!({"kind": l["kind"], "area": (a * 10.0).round() / 10.0, "count": l["count"], "name": text(&l["name"], ru)}))
+                .map(|(l, a)| json!({"kind": l["kind"], "area": (a * 10.0).round() / 10.0, "count": l["count"], "name": name_of(&l["name"], lang, &scope)}))
                 .collect()
         };
         // one storey takes rooms alone

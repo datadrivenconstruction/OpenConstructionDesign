@@ -378,9 +378,9 @@ pub struct ProjectSpec {
     /// What the building is; the builder branches on these, not on `typology`.
     pub traits: Traits,
     pub name: String,
-    /// Russian data tables (programmes, presets) that exist in en and ru only.
+    /// `lang == "ru"`, kept only for the hvac and services texts that still branch on it.
     pub ru: bool,
-    /// UI locale of default room and level names (one of [`names::locales`]), `en` by default.
+    /// UI locale of every generated name and note (one of [`names::locales`]), `en` by default.
     pub lang: &'static str,
     pub room_tags: RoomTagTable,
     pub floors: u32,
@@ -601,7 +601,7 @@ impl ProjectSpec {
     /// The rooms of storey `k` when the typology makes it a periodic storey (a refuge floor):
     /// such a storey holds these rooms and no apartments.
     pub fn periodic_at(&self, k: usize) -> Option<Vec<RoomReq>> {
-        self.model.as_ref()?.periodic_rooms(k, self.floors, self.ru, &self.rules, &self.rooms)
+        self.model.as_ref()?.periodic_rooms(k, self.floors, self.lang, &self.rules, &self.rooms)
     }
 
     /// Storeys before `k` that hold apartments.

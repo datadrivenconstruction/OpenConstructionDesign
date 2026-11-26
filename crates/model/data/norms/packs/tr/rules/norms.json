@@ -20,8 +20,7 @@
    "unit": "m",
    "value": 0.16,
    "text": {
-    "en": "Common stair riser at most 0.16 m",
-    "ru": "Подъём ступени общей лестницы не более 0.16 м"
+    "en": "Common stair riser at most 0.16 m"
    },
    "source": {
     "doc": "tr-planli",
@@ -55,8 +54,7 @@
    "unit": "m",
    "value": 0.27,
    "text": {
-    "en": "Common stair tread at least 0.27 m",
-    "ru": "Проступь общей лестницы не менее 0.27 м"
+    "en": "Common stair tread at least 0.27 m"
    },
    "source": {
     "doc": "tr-planli",
@@ -89,8 +87,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Common stair flight width at least 1.2 m",
-    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+    "en": "Common stair flight width at least 1.2 m"
    },
    "source": {
     "doc": "tr-planli",
@@ -121,8 +118,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Stair flight width in a house at least 1.0 m",
-    "ru": "Ширина марша в доме не менее 1.0 м"
+    "en": "Stair flight width in a house at least 1.0 m"
    },
    "source": {
     "doc": "tr-planli",
@@ -160,8 +156,7 @@
    "unit": "m",
    "value": 2.6,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.6 m",
-    "ru": "Высота жилых помещений не менее 2.6 м"
+    "en": "Clear height of habitable rooms at least 2.6 m"
    },
    "source": {
     "doc": "tr-planli",
@@ -196,8 +191,7 @@
    "unit": "m",
    "value": 2.6,
    "text": {
-    "en": "Clear height of work rooms at least 2.6 m",
-    "ru": "Высота рабочих помещений не менее 2.6 м"
+    "en": "Clear height of work rooms at least 2.6 m"
    },
    "source": {
     "doc": "tr-planli",
@@ -233,8 +227,7 @@
    "unit": "m",
    "value": 1.5,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.5 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.5 м"
+    "en": "Accessible-route corridor clear width at least 1.5 m"
    },
    "source": {
     "doc": "tr-planli",
@@ -267,8 +260,7 @@
    "unit": "m",
    "value": 20,
    "text": {
-    "en": "Travel distance to an exit or stair at most 20 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 20 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 20 m (residential)"
    },
    "source": {
     "doc": "tr-fire",
@@ -300,8 +292,7 @@
    "unit": "m",
    "value": 45,
    "text": {
-    "en": "Travel distance to an exit or stair at most 45 m (office)",
-    "ru": "Путь до выхода или лестницы не более 45 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 45 m (office)"
    },
    "source": {
     "doc": "tr-fire",

@@ -5,17 +5,18 @@
 //! from the `base` table of `data/typology_programs.json`. A norm pack builds its own
 //! `Programme` and passes it to `parse_spec_with`.
 
+use super::names::Text;
 use super::{RoomKind, RoomReq, Traits, Typology};
 use serde_json::Value as J;
 use std::sync::OnceLock;
 
-/// One programme line: kind, net area m2, count, and an optional (en, ru) name.
+/// One programme line: kind, net area m2, count, and an optional name.
 #[derive(Clone, Debug, PartialEq)]
 pub struct Line {
     pub kind: RoomKind,
     pub area: f64,
     pub count: u32,
-    pub name: Option<(String, String)>,
+    pub name: Option<Text>,
 }
 
 /// What a stretch of band no asked room fills becomes.
@@ -23,9 +24,9 @@ pub struct Line {
 pub struct Spare {
     /// The neighbouring room grows by up to this share of its own length.
     pub grow_share: f64,
-    /// Otherwise a room of this kind and (en, ru) name; small leftovers stay storage.
+    /// Otherwise a room of this kind and name; small leftovers stay storage.
     pub kind: RoomKind,
-    pub name: (String, String),
+    pub name: Text,
 }
 
 #[derive(Clone, Debug, PartialEq)]
@@ -39,9 +40,9 @@ pub struct Programme {
     pub single: Vec<Line>,
     pub spare: Spare,
     /// The core half opposite the stair when there is no lift room.
-    pub core_rest: (RoomKind, String, String),
-    /// Room names this typology uses instead of the generic ones: (kind, en, ru).
-    pub names: Vec<(RoomKind, String, String)>,
+    pub core_rest: (RoomKind, Text),
+    /// Room names this typology uses instead of the generic ones.
+    pub names: Vec<(RoomKind, Text)>,
 }
 
 /// The base entry of a typology in the data.
@@ -54,18 +55,16 @@ fn kind_of(t: Typology, v: &J) -> RoomKind {
     RoomKind::parse(k).unwrap_or_else(|| panic!("typology_programs.json base.{}: unknown kind '{k}'", t.name()))
 }
 
-fn en_ru(v: &J) -> (String, String) {
-    let en = v["en"].as_str().unwrap_or_default().to_string();
-    let ru = v["ru"].as_str().map_or_else(|| en.clone(), str::to_string);
-    (en, ru)
+fn text_in(v: &J, scope: &str) -> Text {
+    Text::from_json(v, scope).unwrap_or_default()
 }
 
 fn programme_of(t: Typology) -> Programme {
     let b = base(t);
-    let lines = |f: &str| lines_from_json(&b[f]).unwrap_or_else(|e| panic!("typology_programs.json base.{}.{f}: {e}", t.name()));
+    let scope = format!("base.{}", t.name());
+    let lines = |f: &str| lines_in(&b[f], &scope).unwrap_or_else(|e| panic!("typology_programs.json base.{}.{f}: {e}", t.name()));
     let named = |v: &J| {
-        let (en, ru) = en_ru(&v["name"]);
-        (kind_of(t, &v["kind"]), en, ru)
+        (kind_of(t, &v["kind"]), text_in(&v["name"], &scope))
     };
     let sp = &b["spare"];
     Programme {
@@ -76,7 +75,7 @@ fn programme_of(t: Typology) -> Programme {
         spare: Spare {
             grow_share: sp["grow_share"].as_f64().unwrap_or_else(|| panic!("typology_programs.json base.{}.spare.grow_share", t.name())),
             kind: kind_of(t, &sp["kind"]),
-            name: en_ru(&sp["name"]),
+            name: text_in(&sp["name"], &scope),
         },
         core_rest: named(&b["core_rest"]),
         names: b["names"].as_array().into_iter().flatten().map(named).collect(),
@@ -98,8 +97,13 @@ pub fn traits(t: Typology) -> Traits {
 }
 
 /// Lines from a norm-pack programme list `[{kind, min_area|area, count?, name?}]`; the
-/// name may be a string or `{en, ru}`. Unknown kinds are reported, not dropped silently.
+/// name may be a string or `{en, <locale>..}`. Unknown kinds are reported, not dropped silently.
 pub fn lines_from_json(v: &serde_json::Value) -> Result<Vec<Line>, String> {
+    lines_in(v, "")
+}
+
+/// [`lines_from_json`] with the names translated under `scope`.
+pub fn lines_in(v: &serde_json::Value, scope: &str) -> Result<Vec<Line>, String> {
     let list = v.as_array().ok_or("programme rooms must be a list")?;
     list.iter()
         .enumerate()
@@ -112,12 +116,8 @@ pub fn lines_from_json(v: &serde_json::Value) -> Result<Vec<Line>, String> {
                 .ok_or(format!("rooms[{i}]: area or min_area required"))?;
             let count = r["count"].as_u64().map_or(1, |c| c as u32);
             let name = match &r["name"] {
-                serde_json::Value::String(x) => Some((x.clone(), x.clone())),
-                n if n.is_object() => {
-                    let en = n["en"].as_str().unwrap_or(k).to_string();
-                    Some((en.clone(), n["ru"].as_str().map_or(en, str::to_string)))
-                }
-                _ => None,
+                n if n.is_object() && n["en"].as_str().is_none() => Some(Text::src(k, scope)),
+                n => Text::from_json(n, scope),
             };
             Ok(Line {
                 kind,
@@ -131,21 +131,21 @@ pub fn lines_from_json(v: &serde_json::Value) -> Result<Vec<Line>, String> {
 
 impl Programme {
     /// The name this typology gives a kind.
-    pub fn room_name(&self, k: RoomKind, ru: bool) -> String {
+    pub fn room_name(&self, k: RoomKind, lang: &str) -> String {
         match self.names.iter().find(|x| x.0 == k) {
-            Some((_, en, r)) => if ru { r } else { en }.clone(),
-            None => super::names::kind_name(k, ru).to_string(),
+            Some((_, n)) => n.get(lang),
+            None => super::names::kind_name(k, lang).to_string(),
         }
     }
 
-    pub fn reqs(&self, lines: &[Line], ru: bool) -> Vec<RoomReq> {
+    pub fn reqs(&self, lines: &[Line], lang: &str) -> Vec<RoomReq> {
         lines
             .iter()
             .filter(|x| x.count > 0)
             .map(|x| RoomReq {
                 name: match &x.name {
-                    Some((en, r)) => if ru { r } else { en }.clone(),
-                    None => self.room_name(x.kind, ru),
+                    Some(n) => n.get(lang),
+                    None => self.room_name(x.kind, lang),
                 },
                 kind: x.kind,
                 area: x.area,
@@ -163,9 +163,9 @@ mod tests {
     #[test]
     fn office_names_carry_no_school_rooms() {
         let p = default_programme(Typology::Office);
-        let school = default_programme(Typology::School).room_name(RoomKind::Staff, true);
+        let school = default_programme(Typology::School).room_name(RoomKind::Staff, "ru");
         for lines in [&p.ground, &p.typical, &p.single] {
-            for r in p.reqs(lines, true) {
+            for r in p.reqs(lines, "ru") {
                 assert_ne!(r.name, school);
                 assert_ne!(r.kind, RoomKind::Classroom);
             }
@@ -182,11 +182,11 @@ mod tests {
         assert_eq!(h.spare.grow_share, 0.6);
         assert_eq!(h.spare.kind, Office);
         assert_eq!(h.core_rest.0, Hall);
-        assert_eq!(h.room_name(Parking, false), "Garage");
+        assert_eq!(h.room_name(Parking, "en"), "Garage");
         let o = default_programme(Typology::Office);
-        assert_eq!(o.ground[1].name.as_ref().map(|n| n.0.as_str()), Some("Open space"));
+        assert_eq!(o.ground[1].name.as_ref().map(|n| n.en.as_str()), Some("Open space"));
         assert_eq!(areas(&o.typical).len(), 7);
-        assert_eq!(default_programme(Typology::School).spare.name.0, "Recreation");
+        assert_eq!(default_programme(Typology::School).spare.name.en, "Recreation");
         let a = default_programme(Typology::ApartmentSection);
         assert!(a.ground.is_empty() && a.typical.is_empty() && a.single.is_empty());
         assert_eq!(a.core_rest.0, Technical);

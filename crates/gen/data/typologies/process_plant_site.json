@@ -11,8 +11,7 @@
  "note": "process plant site: the buildings around the process area (control room, electrical rooms, laboratory, workshop, warehouse, welfare); the process equipment, pipe racks and piping are the plant module's; this typology works out the briefs for them from its loads; the process area itself is not built here",
  "brief": {
   "name": {
-   "en": "Process plant site",
-   "ru": "Площадка технологической установки"
+   "en": "Process plant site"
   },
   "floors": 2,
   "floor_height": 4.5
@@ -24,16 +23,14 @@
  },
  "model": {
   "title": {
-   "en": "Process plant site",
-   "ru": "Площадка технологической установки"
+   "en": "Process plant site"
   },
   "spaces": [
    {
     "class": "control",
     "kind": "office",
     "name": {
-     "en": "Control room",
-     "ru": "Операторная"
+     "en": "Control room"
     },
     "area": 70,
     "count": 1,
@@ -49,8 +46,7 @@
     "class": "mcc",
     "kind": "technical",
     "name": {
-     "en": "Electrical and switch room",
-     "ru": "Электрощитовая и РУ"
+     "en": "Electrical and switch room"
     },
     "area": 90,
     "count": 2,
@@ -69,8 +65,7 @@
     "class": "lab",
     "kind": "lab",
     "name": {
-     "en": "Process laboratory",
-     "ru": "Заводская лаборатория"
+     "en": "Process laboratory"
     },
     "area": 55,
     "count": 2,
@@ -86,8 +81,7 @@
     "class": "workshop",
     "kind": "workshop",
     "name": {
-     "en": "Maintenance workshop",
-     "ru": "Ремонтная мастерская"
+     "en": "Maintenance workshop"
     },
     "area": 180,
     "count": 1,
@@ -103,8 +97,7 @@
     "class": "warehouse",
     "kind": "storage",
     "name": {
-     "en": "Spares warehouse",
-     "ru": "Склад запасных частей"
+     "en": "Spares warehouse"
     },
     "area": 200,
     "count": 2,
@@ -116,8 +109,7 @@
     "class": "canteen",
     "kind": "dining",
     "name": {
-     "en": "Canteen",
-     "ru": "Столовая"
+     "en": "Canteen"
     },
     "area": 90,
     "count": 1,
@@ -132,8 +124,7 @@
     "class": "changing",
     "kind": "staff",
     "name": {
-     "en": "Changing room",
-     "ru": "Гардероб и раздевалка"
+     "en": "Changing room"
     },
     "area": 35,
     "count": 2,
@@ -147,8 +138,7 @@
     "class": "admin",
     "kind": "office",
     "name": {
-     "en": "Administration office",
-     "ru": "Административный кабинет"
+     "en": "Administration office"
     },
     "area": 20,
     "count": 3,
@@ -159,8 +149,7 @@
     "class": "wc_p",
     "kind": "wc",
     "name": {
-     "en": "Toilet",
-     "ru": "Санузел"
+     "en": "Toilet"
     },
     "area": 5,
     "count": 4,
@@ -171,8 +160,7 @@
     "class": "staff_office",
     "kind": "office",
     "name": {
-     "en": "Staff office",
-     "ru": "Кабинет сотрудников"
+     "en": "Staff office"
     },
     "area": 20,
     "count": 8,
@@ -183,8 +171,7 @@
     "class": "meeting_p",
     "kind": "meeting",
     "name": {
-     "en": "Meeting room",
-     "ru": "Переговорная"
+     "en": "Meeting room"
     },
     "area": 30,
     "count": 1,
@@ -195,8 +182,7 @@
     "class": "wc_p2",
     "kind": "wc",
     "name": {
-     "en": "Upper toilet",
-     "ru": "Санузел верхнего этажа"
+     "en": "Upper toilet"
     },
     "area": 5,
     "count": 2,
@@ -208,8 +194,7 @@
    {
     "id": "control",
     "name": {
-     "en": "Control",
-     "ru": "Управление"
+     "en": "Control"
     },
     "adjacent_to": [
      {
@@ -221,8 +206,7 @@
    {
     "id": "power",
     "name": {
-     "en": "Power",
-     "ru": "Электроснабжение"
+     "en": "Power"
     },
     "adjacent_to": [
      {
@@ -234,16 +218,14 @@
    {
     "id": "service",
     "name": {
-     "en": "Service",
-     "ru": "Обслуживание"
+     "en": "Service"
     },
     "adjacent_to": []
    },
    {
     "id": "welfare",
     "name": {
-     "en": "Welfare",
-     "ru": "Бытовая зона"
+     "en": "Welfare"
     },
     "adjacent_to": []
    }
@@ -260,8 +242,7 @@
    "grow_share": 0.6,
    "kind": "storage",
    "name": {
-    "en": "Yard store",
-    "ru": "Складское помещение"
+    "en": "Yard store"
    }
   },
   "plant": [

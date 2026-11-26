@@ -79,9 +79,10 @@ impl Net {
         }
     }
 
-    /// The system's name in English or Russian.
-    pub fn name(self, ru: bool) -> String {
-        data()["systems"][self.key()][if ru { "ru" } else { "en" }].as_str().unwrap_or(self.key()).to_string()
+    /// The system's name in `lang`.
+    pub fn name(self, lang: &str) -> String {
+        let en = data()["systems"][self.key()]["en"].as_str().unwrap_or(self.key());
+        super::names::tr(lang, "dc", en)
     }
 
     pub fn kind(self) -> ddc_geom::mep::SystemKind {

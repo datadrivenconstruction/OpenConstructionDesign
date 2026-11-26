@@ -721,7 +721,7 @@ struct Planner<'a> {
 impl Planner<'_> {
     fn spare_unit(&self) -> Unit {
         let s = &self.spec.spare;
-        public(s.kind, if self.spec.ru { &s.name.1 } else { &s.name.0 }.clone(), None)
+        public(s.kind, s.name.get(self.spec.lang), None)
     }
 
     /// Fills `cur..end` of a loop with spare rooms, or grows the last room when it is short.
@@ -831,10 +831,10 @@ impl Planner<'_> {
 
     /// An apartment from `cur`: facade rooms in front, hall and wet rooms behind them.
     fn flat(&mut self, lp: &mut Lp, ring: usize, cur: f64, end: f64, a: &super::ApartmentReq) -> Option<(f64, usize)> {
-        let ru = self.spec.ru;
+        let lang = self.spec.lang;
         let mut front: Vec<&RoomReq> = vec![];
         let mut back: Vec<&RoomReq> = vec![];
-        let mut hall_name = names::kind_name(RoomKind::Hall, ru).to_string();
+        let mut hall_name = names::kind_name(RoomKind::Hall, lang).to_string();
         let mut rooms: Vec<&RoomReq> = vec![];
         for r in &a.rooms {
             for _ in 0..r.count {
@@ -974,7 +974,7 @@ impl Planner<'_> {
     /// last room grows over it, as at the loop end.
     #[allow(clippy::too_many_arguments)]
     fn skip_to(&mut self, lp: &mut Lp, ring: usize, cur: f64, end: f64, last: Option<usize>, item: &Item) -> Option<(f64, usize)> {
-        let ru = self.spec.ru;
+        let lang = self.spec.lang;
         let mut s = cur;
         for _ in 0..200 {
             s = lp.next_ok(Strip::Full, s + MARGIN, &[])?;
@@ -986,7 +986,7 @@ impl Planner<'_> {
             }
             let placed = match item {
                 Item::Entrance => {
-                    let u = public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, ru).to_string(), None);
+                    let u = public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, lang).to_string(), None);
                     self.full(lp, ring, s, end, u, Some(ENTRANCE_W))
                 }
                 Item::Room(r) => self.full(lp, ring, s, end, public(r.kind, r.name.clone(), Some(r.area)), None),
@@ -1059,7 +1059,7 @@ fn plan_floor_with(
     next_apt: &mut u32,
     tight: u8,
 ) -> Result<FloorPlan, GenError> {
-    let ru = spec.ru;
+    let lang = spec.lang;
     let mut items: Vec<Item> = vec![];
     if k == 0 {
         items.push(Item::Entrance);
@@ -1088,7 +1088,7 @@ fn plan_floor_with(
             (0, Some((c, (t0, t1)))) => {
                 for (i, &(x0, x1, kind)) in c.cells.iter().enumerate() {
                     let (a, b) = c.seat.get(i).zip(c.seat.get(i + 1)).map_or((t0 + x0, t0 + x1), |(a, b)| (*a, *b));
-                    let r = pl.plan.add(public(kind, names::kind_name(kind, ru).to_string(), None));
+                    let r = pl.plan.add(public(kind, names::kind_name(kind, lang).to_string(), None));
                     pl.plan.zones.push(Zone { room: r, ring: 0, t0: a, t1: b, strip: Strip::Full });
                     lp.cuts.extend([a, b]);
                 }
@@ -1096,7 +1096,7 @@ fn plan_floor_with(
             }
             (0, None) if es.is_some() => {
                 let e = es.unwrap();
-                let r = pl.plan.add(public(RoomKind::Stair, names::kind_name(RoomKind::Stair, ru).to_string(), None));
+                let r = pl.plan.add(public(RoomKind::Stair, names::kind_name(RoomKind::Stair, lang).to_string(), None));
                 pl.plan.zones.push(Zone { room: r, ring: 0, t0: e.t0, t1: e.t1, strip: Strip::Full });
                 lp.cuts.extend([e.t0, e.t1]);
                 (e.t1, e.t0 + lp.p())
@@ -1119,7 +1119,7 @@ fn plan_floor_with(
             let Some(item) = queue.front() else { break };
             let placed = match item {
                 Item::Entrance => {
-                    let u = public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, ru).to_string(), None);
+                    let u = public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, lang).to_string(), None);
                     pl.full(lp, ring, cur, end, u, Some(ENTRANCE_W))
                 }
                 Item::Room(r) => {
@@ -1839,7 +1839,7 @@ fn storey_with(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &
     let core_first = plan.units.len();
     if let Some(c) = central {
         for &(_, _, kind) in &c.cells {
-            plan.add(public(kind, names::kind_name(kind, spec.ru).to_string(), None));
+            plan.add(public(kind, names::kind_name(kind, spec.lang).to_string(), None));
         }
     }
     // store rooms in the dark interior, reached from the corridor round them
@@ -1867,7 +1867,7 @@ fn storey_with(sh: &Shared, k: usize, region: &Region, slab: Vec<P>, next_apt: &
                 if footprint::region_area(&r) < STORE_AREA {
                     continue;
                 }
-                let u = plan.add(public(RoomKind::Storage, names::kind_name(RoomKind::Storage, spec.ru).to_string(), None));
+                let u = plan.add(public(RoomKind::Storage, names::kind_name(RoomKind::Storage, spec.lang).to_string(), None));
                 stores.push((chord_ring(&r.outer, &[]), u));
             }
         }
@@ -2079,7 +2079,7 @@ fn finish(
     }).collect();
     corrs.sort_unstable();
     corrs.dedup();
-    let corr_name = names::kind_name(RoomKind::Corridor, spec.ru).to_string();
+    let corr_name = names::kind_name(RoomKind::Corridor, spec.lang).to_string();
     for &b in &corrs {
         let (outs, holes) = ar.region(&labels, Lab::Corr(b));
         if !holes.is_empty() {
@@ -2217,7 +2217,7 @@ fn finish(
     }
     crate::check::validate_layout(&l).map_err(|e| infeasible(format!("floor {fl}: {e}")))?;
     Ok(PStorey {
-        name: names::level_name(k, spec.ru),
+        name: names::level_name(k, spec.lang),
         elevation: spec.storey_elevation(k),
         height: h,
         layout: l,
@@ -2266,7 +2266,7 @@ fn roofs(spec: &ProjectSpec, top: &Region, dirs: &[P]) -> Vec<PRoof> {
                 }
             }
             PRoof {
-                name: names::roof_name(spec.ru).to_string(),
+                name: names::roof_name(spec.lang).to_string(),
                 elevation: spec.building_height(),
                 ring,
                 slope,
@@ -2563,7 +2563,7 @@ fn match_rooms(kind: &FlatKind, pins: &[Pin]) -> Option<Vec<(usize, usize)>> {
 }
 
 fn free_floor(spec: &ProjectSpec, k: usize, g: &FreeGeo, core: Option<&Core>, kinds: &[FlatKind], apt0: u32, budget: (usize, usize)) -> Result<FreeFloor, GenError> {
-    let ru = spec.ru;
+    let lang = spec.lang;
     let fl = k + 1;
     let mut units: Vec<Unit> = vec![];
     // program rooms still to place: unit and a frontage kept whatever the depth
@@ -2580,7 +2580,7 @@ fn free_floor(spec: &ProjectSpec, k: usize, g: &FreeGeo, core: Option<&Core>, ki
         let side = g.ds.min(g.full - g.ds - g.c);
         let lobby = spec.storey_rooms(k).iter().any(|r| r.kind == RoomKind::Lobby && r.area / side >= ENTRANCE_W);
         if k == 0 && !lobby {
-            units.push(public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, ru).to_string(), None));
+            units.push(public(RoomKind::Lobby, names::kind_name(RoomKind::Lobby, lang).to_string(), None));
             asks.push((0, Some(ENTRANCE_W)));
         }
     } else {
@@ -2588,7 +2588,7 @@ fn free_floor(spec: &ProjectSpec, k: usize, g: &FreeGeo, core: Option<&Core>, ki
         // the same and their wet rooms stack: a service room over the entrance
         let x0 = if core.is_some() { g.core_x + core.map_or(0.0, |c| c.w) } else { g.core_x };
         let kind = if k == 0 { RoomKind::Lobby } else { RoomKind::Technical };
-        units.push(public(kind, names::kind_name(kind, ru).to_string(), None));
+        units.push(public(kind, names::kind_name(kind, lang).to_string(), None));
         fixed.push(Fixed { side: Side::South, x0, x1: x0 + ENTRANCE_W });
         pinned.push((vec![(x0, 0.0), (x0 + ENTRANCE_W, 0.0), (x0 + ENTRANCE_W, g.ds), (x0, g.ds)], 0));
         // pinned apartments first: each zone stands fixed as an obstacle, keeps its number and
@@ -2613,7 +2613,7 @@ fn free_floor(spec: &ProjectSpec, k: usize, g: &FreeGeo, core: Option<&Core>, ki
             let (ya, yb) = stand(g, b, &mut fixed, &mut caps).ok_or_else(|| {
                 infeasible(format!("floor {fl}: pinned apartment {a} does not stand on a side of the free plan: unpin it or keep the footprint"))
             })?;
-            let hall = names::kind_name(RoomKind::Hall, ru).to_string();
+            let hall = names::kind_name(RoomKind::Hall, lang).to_string();
             units.push(Unit { kind: RoomKind::Hall, name: hall, owner: z.owner, asked: None, grown: false });
             let zone = place::Rect { x0: b.0 .0, y0: ya, x1: b.1 .0, y1: yb, part: place::Part::Corridor };
             held.push((units.len() - 1, t, zone, rooms));
@@ -2626,7 +2626,7 @@ fn free_floor(spec: &ProjectSpec, k: usize, g: &FreeGeo, core: Option<&Core>, ki
                     n += 1;
                 }
                 let owner = PRole::Apartment(n);
-                let hall = names::kind_name(RoomKind::Hall, ru).to_string();
+                let hall = names::kind_name(RoomKind::Hall, lang).to_string();
                 units.push(Unit { kind: RoomKind::Hall, name: hall, owner, asked: None, grown: false });
                 let u = units.len() - 1;
                 flats.push((u, t));
@@ -2682,7 +2682,7 @@ fn free_floor(spec: &ProjectSpec, k: usize, g: &FreeGeo, core: Option<&Core>, ki
     let core_first = units.len();
     if let Some(c) = core {
         for &(_, _, kind) in &c.cells {
-            units.push(public(kind, names::kind_name(kind, ru).to_string(), None));
+            units.push(public(kind, names::kind_name(kind, lang).to_string(), None));
         }
         fixed.push(Fixed { side: Side::South, x0: g.core_x, x1: g.core_x + c.w });
     }
@@ -2759,9 +2759,9 @@ fn free_storey(sh: &Shared, k: usize, g: &FreeGeo, region: &Region, f: FreeFloor
     for &store in &shape.spares {
         let s = &spec.spare;
         units.push(if store {
-            public(RoomKind::Storage, names::kind_name(RoomKind::Storage, spec.ru).to_string(), None)
+            public(RoomKind::Storage, names::kind_name(RoomKind::Storage, spec.lang).to_string(), None)
         } else {
-            public(s.kind, if spec.ru { &s.name.1 } else { &s.name.0 }.clone(), None)
+            public(s.kind, s.name.get(spec.lang), None)
         });
     }
     let lab = |part: place::Part| match part {
@@ -2830,7 +2830,7 @@ fn free_storey(sh: &Shared, k: usize, g: &FreeGeo, region: &Region, f: FreeFloor
         }
         let store0 = units.len();
         for _ in 0..fl.stores {
-            units.push(Unit { kind: RoomKind::Storage, name: names::kind_name(RoomKind::Storage, spec.ru).to_string(), owner, asked: None, grown: false });
+            units.push(Unit { kind: RoomKind::Storage, name: names::kind_name(RoomKind::Storage, spec.lang).to_string(), owner, asked: None, grown: false });
         }
         for s in &fl.rects {
             let (a, b) = (to(s.x0, s.y0), to(s.x1, s.y1));

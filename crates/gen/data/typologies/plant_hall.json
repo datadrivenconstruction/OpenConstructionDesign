@@ -10,8 +10,7 @@
  "note": "plant hall: a high process hall with pump house, boiler room, switchgear and control room beside it; the equipment, pipes and platforms belong to the plant module, this typology gives the building around them and works out plant briefs from its loads",
  "brief": {
   "name": {
-   "en": "Plant hall",
-   "ru": "Машинный зал установки"
+   "en": "Plant hall"
   },
   "floors": 2,
   "floor_height": 4.5,
@@ -27,16 +26,14 @@
  },
  "model": {
   "title": {
-   "en": "Plant hall",
-   "ru": "Машинный зал установки"
+   "en": "Plant hall"
   },
   "spaces": [
    {
     "class": "control_h",
     "kind": "office",
     "name": {
-     "en": "Control room",
-     "ru": "Операторная"
+     "en": "Control room"
     },
     "area": 60,
     "count": 1,
@@ -51,8 +48,7 @@
     "class": "hall_h",
     "kind": "workshop",
     "name": {
-     "en": "Plant hall",
-     "ru": "Машинный зал установки"
+     "en": "Plant hall"
     },
     "area": 500,
     "count": 3,
@@ -72,8 +68,7 @@
     "class": "pump_h",
     "kind": "technical",
     "name": {
-     "en": "Pump house",
-     "ru": "Насосная"
+     "en": "Pump house"
     },
     "area": 120,
     "count": 2,
@@ -92,8 +87,7 @@
     "class": "boiler_h",
     "kind": "technical",
     "name": {
-     "en": "Boiler room",
-     "ru": "Котельная"
+     "en": "Boiler room"
     },
     "area": 160,
     "count": 1,
@@ -112,8 +106,7 @@
     "class": "switch_h",
     "kind": "technical",
     "name": {
-     "en": "Switchgear room",
-     "ru": "Распределительное устройство"
+     "en": "Switchgear room"
     },
     "area": 90,
     "count": 2,
@@ -132,8 +125,7 @@
     "class": "lab_h",
     "kind": "lab",
     "name": {
-     "en": "Process laboratory",
-     "ru": "Заводская лаборатория"
+     "en": "Process laboratory"
     },
     "area": 55,
     "count": 1,
@@ -149,8 +141,7 @@
     "class": "workshop_h",
     "kind": "workshop",
     "name": {
-     "en": "Maintenance workshop",
-     "ru": "Ремонтная мастерская"
+     "en": "Maintenance workshop"
     },
     "area": 150,
     "count": 1,
@@ -164,8 +155,7 @@
     "class": "store_h",
     "kind": "storage",
     "name": {
-     "en": "Spares store",
-     "ru": "Склад запасных частей"
+     "en": "Spares store"
     },
     "area": 150,
     "count": 1,
@@ -177,8 +167,7 @@
     "class": "wc_h",
     "kind": "wc",
     "name": {
-     "en": "Toilet",
-     "ru": "Санузел"
+     "en": "Toilet"
     },
     "area": 5,
     "count": 3,
@@ -189,8 +178,7 @@
     "class": "office_h",
     "kind": "office",
     "name": {
-     "en": "Plant office",
-     "ru": "Кабинет"
+     "en": "Plant office"
     },
     "area": 20,
     "count": 6,
@@ -201,8 +189,7 @@
     "class": "wc_h2",
     "kind": "wc",
     "name": {
-     "en": "Upper toilet",
-     "ru": "Санузел верхнего этажа"
+     "en": "Upper toilet"
     },
     "area": 5,
     "count": 2,
@@ -214,8 +201,7 @@
    {
     "id": "process",
     "name": {
-     "en": "Process",
-     "ru": "Технологическая зона"
+     "en": "Process"
     },
     "adjacent_to": [
      {
@@ -231,8 +217,7 @@
    {
     "id": "power",
     "name": {
-     "en": "Power",
-     "ru": "Электроснабжение"
+     "en": "Power"
     },
     "adjacent_to": [
      {
@@ -244,8 +229,7 @@
    {
     "id": "control",
     "name": {
-     "en": "Control",
-     "ru": "Управление"
+     "en": "Control"
     },
     "adjacent_to": [
      {
@@ -257,16 +241,14 @@
    {
     "id": "service",
     "name": {
-     "en": "Service",
-     "ru": "Обслуживание"
+     "en": "Service"
     },
     "adjacent_to": []
    },
    {
     "id": "welfare",
     "name": {
-     "en": "Welfare",
-     "ru": "Бытовая зона"
+     "en": "Welfare"
     },
     "adjacent_to": []
    }
@@ -283,8 +265,7 @@
    "grow_share": 0.6,
    "kind": "storage",
    "name": {
-    "en": "Hall store",
-    "ru": "Кладовая"
+    "en": "Hall store"
    }
   },
   "plant": [

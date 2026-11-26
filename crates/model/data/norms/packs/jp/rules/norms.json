@@ -19,8 +19,7 @@
    "unit": "m",
    "value": 0.2,
    "text": {
-    "en": "Common stair riser at most 0.2 m",
-    "ru": "Подъём ступени общей лестницы не более 0.2 м"
+    "en": "Common stair riser at most 0.2 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -53,8 +52,7 @@
    "unit": "m",
    "value": 0.24,
    "text": {
-    "en": "Common stair tread at least 0.24 m",
-    "ru": "Проступь общей лестницы не менее 0.24 м"
+    "en": "Common stair tread at least 0.24 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -87,8 +85,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Common stair flight width at least 1.2 m",
-    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+    "en": "Common stair flight width at least 1.2 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -119,8 +116,7 @@
    "unit": "m",
    "value": 0.23,
    "text": {
-    "en": "Stair riser in a house at most 0.23 m",
-    "ru": "Подъём ступени в доме не более 0.23 м"
+    "en": "Stair riser in a house at most 0.23 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -151,8 +147,7 @@
    "unit": "m",
    "value": 0.15,
    "text": {
-    "en": "Stair tread in a house at least 0.15 m",
-    "ru": "Проступь в доме не менее 0.15 м"
+    "en": "Stair tread in a house at least 0.15 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -183,8 +178,7 @@
    "unit": "m",
    "value": 0.75,
    "text": {
-    "en": "Stair flight width in a house at least 0.75 m",
-    "ru": "Ширина марша в доме не менее 0.75 м"
+    "en": "Stair flight width in a house at least 0.75 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -222,8 +216,7 @@
    "unit": "m",
    "value": 2.1,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.1 m",
-    "ru": "Высота жилых помещений не менее 2.1 м"
+    "en": "Clear height of habitable rooms at least 2.1 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -258,8 +251,7 @@
    "unit": "m",
    "value": 2.1,
    "text": {
-    "en": "Clear height of work rooms at least 2.1 m",
-    "ru": "Высота рабочих помещений не менее 2.1 м"
+    "en": "Clear height of work rooms at least 2.1 m"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -295,8 +287,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.2 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+    "en": "Accessible-route corridor clear width at least 1.2 m"
    },
    "source": {
     "doc": "jp-bf-order",
@@ -329,8 +320,7 @@
    "unit": "m",
    "value": 50,
    "text": {
-    "en": "Travel distance to an exit or stair at most 50 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 50 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 50 m (residential)"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -362,8 +352,7 @@
    "unit": "m",
    "value": 50,
    "text": {
-    "en": "Travel distance to an exit or stair at most 50 m (office)",
-    "ru": "Путь до выхода или лестницы не более 50 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 50 m (office)"
    },
    "source": {
     "doc": "jp-bsa-order",
@@ -397,8 +386,7 @@
    "unit": "ratio",
    "value": 0.142857,
    "text": {
-    "en": "Window area at least 14.29 % of the floor of a habitable room",
-    "ru": "Площадь окон не менее 14.29 % площади пола жилой комнаты"
+    "en": "Window area at least 14.29 % of the floor of a habitable room"
    },
    "source": {
     "doc": "jp-bsa-order",

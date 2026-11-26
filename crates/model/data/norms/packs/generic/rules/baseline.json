@@ -3,8 +3,7 @@
   {
    "id": "generic.stair.step",
    "text": {
-    "en": "Step rule: 2 risers + tread from 0.60 to 0.65 m",
-    "ru": "Шаг: 2 подъёма + проступь от 0,60 до 0,65 м"
+    "en": "Step rule: 2 risers + tread from 0.60 to 0.65 m"
    },
    "source": {
     "doc": "intl-baseline",
@@ -27,8 +26,7 @@
   {
    "id": "generic.room.daylight",
    "text": {
-    "en": "Window area at least 1/8 of the floor of a habitable room",
-    "ru": "Площадь окон не менее 1/8 площади пола жилого помещения"
+    "en": "Window area at least 1/8 of the floor of a habitable room"
    },
    "source": {
     "doc": "intl-baseline",
@@ -61,8 +59,7 @@
   {
    "id": "generic.circulation.residential",
    "text": {
-    "en": "Corridors and halls at most 18 % of the dwelling area",
-    "ru": "Коридоры и холлы не более 18 % площади жилья"
+    "en": "Corridors and halls at most 18 % of the dwelling area"
    },
    "source": {
     "doc": "intl-baseline",
@@ -98,8 +95,7 @@
   {
    "id": "generic.circulation.office",
    "text": {
-    "en": "Corridors and halls at most 25 % of the floor area",
-    "ru": "Коридоры и холлы не более 25 % площади этажа"
+    "en": "Corridors and halls at most 25 % of the floor area"
    },
    "source": {
     "doc": "intl-baseline",
@@ -135,8 +131,7 @@
   {
    "id": "generic.storage.share",
    "text": {
-    "en": "Storage at most 5 % of the dwelling area",
-    "ru": "Кладовые не более 5 % площади жилья"
+    "en": "Storage at most 5 % of the dwelling area"
    },
    "source": {
     "doc": "intl-baseline",
@@ -171,8 +166,7 @@
   {
    "id": "generic.egress.distance",
    "text": {
-    "en": "Travel distance from a room to an exit or a stair at most 30 m",
-    "ru": "Путь от помещения до выхода или лестницы не более 30 м"
+    "en": "Travel distance from a room to an exit or a stair at most 30 m"
    },
    "source": {
     "doc": "intl-baseline",
@@ -196,8 +190,7 @@
   {
    "id": "generic.wet.stack",
    "text": {
-    "en": "Wet rooms stand over wet rooms of the storey below",
-    "ru": "Мокрые помещения над мокрыми помещениями нижнего этажа"
+    "en": "Wet rooms stand over wet rooms of the storey below"
    },
    "source": {
     "doc": "intl-baseline",
@@ -221,8 +214,7 @@
   {
    "id": "generic.adjacency.residential",
    "text": {
-    "en": "Kitchen opens to a living room, hall or corridor; no WC or bath door into a kitchen",
-    "ru": "Кухня связана с гостиной, холлом или коридором; вход в уборную и ванную не из кухни"
+    "en": "Kitchen opens to a living room, hall or corridor; no WC or bath door into a kitchen"
    },
    "source": {
     "doc": "intl-baseline",
@@ -267,8 +259,7 @@
   {
    "id": "generic.programme.house",
    "text": {
-    "en": "House has the rooms of its programme",
-    "ru": "Дом содержит помещения своей программы"
+    "en": "House has the rooms of its programme"
    },
    "source": {
     "doc": "intl-baseline",
@@ -292,8 +283,7 @@
   {
    "id": "generic.programme.apartment",
    "text": {
-    "en": "Apartment has the rooms of its programme",
-    "ru": "Квартира содержит помещения своей программы"
+    "en": "Apartment has the rooms of its programme"
    },
    "source": {
     "doc": "intl-baseline",
@@ -318,8 +308,7 @@
   {
    "id": "generic.stair.headroom",
    "text": {
-    "en": "Stair headroom at least 2.0 m",
-    "ru": "Высота прохода над лестницей не менее 2,0 м"
+    "en": "Stair headroom at least 2.0 m"
    },
    "source": {
     "doc": "intl-baseline",
@@ -341,8 +330,7 @@
   {
    "id": "generic.door.width",
    "text": {
-    "en": "Door clear width at least 0.8 m",
-    "ru": "Ширина дверного проёма не менее 0,8 м"
+    "en": "Door clear width at least 0.8 m"
    },
    "source": {
     "doc": "intl-baseline",
@@ -364,8 +352,7 @@
   {
    "id": "generic.corridor.width",
    "text": {
-    "en": "Corridor clear width at least 1.0 m",
-    "ru": "Ширина коридора не менее 1,0 м"
+    "en": "Corridor clear width at least 1.0 m"
    },
    "source": {
     "doc": "intl-baseline",
@@ -391,8 +378,7 @@
   {
    "id": "generic.guard.height",
    "text": {
-    "en": "Guard (railing) height at least 0.9 m",
-    "ru": "Высота ограждения не менее 0,9 м"
+    "en": "Guard (railing) height at least 0.9 m"
    },
    "source": {
     "doc": "intl-baseline",

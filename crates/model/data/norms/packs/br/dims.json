@@ -151,8 +151,7 @@
    "verified": false,
    "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
    "text": {
-    "en": "Room height is set by the city building code.",
-    "ru": "Высоту помещения задаёт городской строительный кодекс."
+    "en": "Room height is set by the city building code."
    }
   },
   {
@@ -164,8 +163,7 @@
    "verified": false,
    "note": "na: fire norms classify buildings by height bands, not a 13 m class; the bands were not read in this pass",
    "text": {
-    "en": "No 13 m building class.",
-    "ru": "Нет класса здания 13 м."
+    "en": "No 13 m building class."
    }
   }
  ]

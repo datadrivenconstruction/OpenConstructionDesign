@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 use super::norm_kinds::*;
 use super::norm_pack::*;
-use super::norms::{load_norm_pack, starter_pack};
+use super::norms::load_norm_pack;
 use super::{CheckScope, NormLocale, Severity};
 use crate::{LayerSpec, Model, OpeningSpec, RoomSpec, StairSpec, WallSpec};
 use serde_json::json;
@@ -100,7 +100,7 @@ fn shipped_packs_resolve_without_problems() {
 fn migration_keeps_every_starter_rule_unchanged() {
     let old = load_norm_pack(LEGACY).unwrap();
     assert_eq!(old.len(), 27);
-    assert_eq!(starter_pack().unwrap(), old, "same rules, same order, same fields");
+    assert_eq!(PackSet::embedded().resolve("ru").unwrap().legacy_rules(), old, "same rules, same order, same fields");
     let raw: serde_json::Value = serde_json::from_str(LEGACY).unwrap();
     let ru = PackSet::embedded().resolve("ru").unwrap();
     for r in raw["rules"].as_array().unwrap() {

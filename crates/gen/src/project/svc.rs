@@ -801,6 +801,7 @@ pub(crate) fn network(runs: &[&GRun]) -> Net {
 /// fittings along its through run: each extra run that ends there steps back from the node,
 /// runs `services.tap_pitch` along the through run and taps it there with its own tee.
 pub(crate) fn spread_nodes(runs: &mut [&mut GRun]) {
+    join_collinear(runs);
     let cap = rule("services.node_arms") as usize;
     for _ in 0..4 {
         let refs: Vec<&GRun> = runs.iter().map(|r| &**r).collect();
@@ -856,6 +857,48 @@ pub(crate) fn spread_nodes(runs: &mut [&mut GRun]) {
                 edits.push((net.edges[a[k].0].0, a[k].1, [back, back + t * off, tap]));
             }
         }
+        // two junctions on one through run too close for both fittings: a run that ends at one
+        // and leaves across steps back and taps the through run a pitch beyond, away from the other
+        let moved: HashSet<(usize, usize)> = edits.iter().map(|e| (e.0, e.1)).collect();
+        let mut done: HashSet<usize> = HashSet::new();
+        let trim = node_trims(&refs, &net, &[], &mut vec![]);
+        for (e, (ri, p, ns, _)) in net.edges.iter().enumerate() {
+            if p.len() != 2 || ns[0] == ns[1] {
+                continue;
+            }
+            let r = refs[*ri];
+            if mep::route(p, &|u| radius(r, u), (trim[e][0], trim[e][1])).is_ok() || done.contains(&ns[0]) || done.contains(&ns[1]) {
+                continue;
+            }
+            let s = rule("services.tap_pitch").max(2.5 * mep::junction_leg(&refs[*ri].section));
+            'side: for (n, other) in [(ns[0], ns[1]), (ns[1], ns[0])] {
+                let a = &net.arms[n];
+                let at = net.nodes[n];
+                let t = (at - net.nodes[other]).normalized();
+                let first = |k: usize| {
+                    let q = &net.edges[a[k].0].1;
+                    if a[k].1 == 0 { (q[1] - q[0]).len() } else { (q[q.len() - 2] - q[q.len() - 1]).len() }
+                };
+                let ds: Vec<V3> = a.iter().map(|&(e, end)| depart(&net.edges[e].1, end)).collect();
+                let Some(on) = (0..a.len()).find(|&k| ds[k].dot(t) > 1.0 - 1e-6 && first(k) > s) else { continue };
+                let tap = at + t * s;
+                if net.nodes.iter().any(|q| (*q - tap).len() < 0.8 * s) {
+                    continue;
+                }
+                for k in 0..a.len() {
+                    let (e, end) = a[k];
+                    let own = net.edges[e].3[end] as usize == end;
+                    let run = net.edges[e].0;
+                    if k == on || !own || ds[k].dot(t).abs() > 1e-6 || first(k) <= 2.0 * s || moved.contains(&(run, end)) {
+                        continue;
+                    }
+                    let back = at + ds[k] * s;
+                    edits.push((run, end, [back, back + t * s, tap]));
+                    done.extend([n, other]);
+                    break 'side;
+                }
+            }
+        }
         if edits.is_empty() {
             return;
         }
@@ -875,6 +918,94 @@ pub(crate) fn spread_nodes(runs: &mut [&mut GRun]) {
     }
 }
 
+/// Two straight runs of one system laid along the same line over a common stretch (the mains
+/// of two risers down one corridor) become one line: they meet end to end at one point of the
+/// stretch, the point farthest from the other nodes on the line, so every piece keeps room
+/// for its fittings and what tapped the stretch still lies on the line.
+pub(crate) fn join_collinear(runs: &mut [&mut GRun]) {
+    let straight = |r: &GRun| r.points.len() == 2;
+    for _ in 0..runs.len() {
+        let mut hit = None;
+        'find: for i in 0..runs.len() {
+            for j in i + 1..runs.len() {
+                let (ri, rj) = (&*runs[i], &*runs[j]);
+                if ri.sys != rj.sys || !straight(ri) || !straight(rj) {
+                    continue;
+                }
+                let (a, b) = (pts(ri), pts(rj));
+                let d = b[1] - b[0];
+                let u = a[1] - a[0];
+                if u.len() < TOL || d.len() < TOL {
+                    continue;
+                }
+                let u = u.normalized();
+                let off = |p: V3| (p - a[0] - u * (p - a[0]).dot(u)).len();
+                if off(b[0]) > TOL || off(b[1]) > TOL {
+                    continue;
+                }
+                let t = |p: V3| (p - a[0]).dot(u);
+                let (ia, ib) = (0.0, t(a[1]));
+                let (ja, jb) = (t(b[0]).min(t(b[1])), t(b[0]).max(t(b[1])));
+                if ib.min(jb) - ja.max(ia) > TOL {
+                    hit = Some((i, j, a[0], u, [ia, ib], [ja, jb]));
+                    break 'find;
+                }
+            }
+        }
+        let Some((i, j, o, u, si, sj)) = hit else { return };
+        let (lo, hi) = (si[0].min(sj[0]), si[1].max(sj[1]));
+        let (o0, o1) = (si[0].max(sj[0]), si[1].min(sj[1]));
+        let t = |p: V3| (p - o).dot(u);
+        let on_line = |p: V3| (p - o - u * t(p)).len() < TOL;
+        // every point where something meets the line, other than the two runs' own ends
+        let mut nodes: Vec<f64> = vec![];
+        for (k, r) in runs.iter().enumerate() {
+            let p = pts(r);
+            let ends: Vec<V3> = if k == i || k == j { vec![] } else { vec![p[0], *p.last().expect("a run")] };
+            nodes.extend(ends.into_iter().filter(|q| on_line(*q) && t(*q) > lo - TOL && t(*q) < hi + TOL).map(t));
+        }
+        let ends = [si[0], si[1], sj[0], sj[1]];
+        let clear = |m: f64| {
+            ends.iter().chain(&nodes).filter(|x| (**x - m).abs() > TOL).map(|x| (x - m).abs()).fold(f64::INFINITY, f64::min)
+        };
+        // the meeting point: a node or an end inside the common stretch, the most clear one
+        let m = ends
+            .iter()
+            .chain(&nodes)
+            .copied()
+            .filter(|x| *x > o0 - TOL && *x < o1 + TOL && *x > lo + TOL && *x < hi - TOL)
+            .max_by(|x, y| clear(*x).total_cmp(&clear(*y)).then(y.total_cmp(x)))
+            .unwrap_or((o0 + o1) / 2.0);
+        // the run reaching farther below the meeting point takes the low side
+        let low_i = si[0] < sj[0] - TOL || (si[0] < sj[0] + TOL && si[1] <= sj[1]);
+        let cap_at = |x: f64| {
+            let r_of = |s: &[f64; 2], r: &GRun, pa: V3| {
+                let (c0, c1) = r.caps;
+                let first_low = t(pa) <= s[0] + TOL;
+                [(s[0], if first_low { c0 } else { c1 }), (s[1], if first_low { c1 } else { c0 })]
+            };
+            r_of(&si, &*runs[i], pts(&*runs[i])[0])
+                .into_iter()
+                .chain(r_of(&sj, &*runs[j], pts(&*runs[j])[0]))
+                .filter(|e| (e.0 - x).abs() < TOL)
+                .any(|e| e.1)
+        };
+        let (cap_lo, cap_hi) = (cap_at(lo), cap_at(hi));
+        for (k, low) in [(i, low_i), (j, !low_i)] {
+            let (s0, s1, c0, c1) = if low { (lo, m, cap_lo, false) } else { (m, hi, false, cap_hi) };
+            let r = &mut *runs[k];
+            let p = pts(r);
+            let up = t(p[1]) >= t(p[0]);
+            let q = |x: f64| {
+                let v = o + u * x;
+                (v.x, v.y, v.z)
+            };
+            r.points = if up { vec![q(s0), q(s1)] } else { vec![q(s1), q(s0)] };
+            r.caps = if up { (c0, c1) } else { (c1, c0) };
+        }
+    }
+}
+
 fn depart(p: &[V3], end: usize) -> V3 {
     if end == 0 {
         (p[1] - p[0]).normalized()
@@ -890,13 +1021,9 @@ pub(crate) fn net_faults(runs: &[&GRun], ports: &[V3]) -> Vec<String> {
     net_faults_at(runs, ports).into_iter().map(|f| f.1).collect()
 }
 
-/// [`net_faults`] with the point each fault is at.
-pub(crate) fn net_faults_at(runs: &[&GRun], ports: &[V3]) -> Vec<(V3, String)> {
-    let mut out: Vec<(V3, String)> = vec![];
-    if runs.is_empty() {
-        return out;
-    }
-    let net = network(runs);
+/// How far the fitting at each node takes each edge end back from the node (tee or cross
+/// legs, elbow tangents, reducers, caps), with the node faults found on the way.
+fn node_trims(runs: &[&GRun], net: &Net, ports: &[V3], out: &mut Vec<(V3, String)>) -> Vec<[f64; 2]> {
     let port_at = |p: V3| ports.iter().any(|q| (*q - p).len() < PORT_TOL);
     let mut trim = vec![[0.0f64; 2]; net.edges.len()];
     for (n, a) in net.arms.iter().enumerate() {
@@ -967,6 +1094,17 @@ pub(crate) fn net_faults_at(runs: &[&GRun], ports: &[V3]) -> Vec<(V3, String)> {
             k => out.push((at, format!("{k} branches at {:?}", (at.x, at.y, at.z)))),
         }
     }
+    trim
+}
+
+/// [`net_faults`] with the point each fault is at.
+pub(crate) fn net_faults_at(runs: &[&GRun], ports: &[V3]) -> Vec<(V3, String)> {
+    let mut out: Vec<(V3, String)> = vec![];
+    if runs.is_empty() {
+        return out;
+    }
+    let net = network(runs);
+    let trim = node_trims(runs, &net, ports, &mut out);
     for (e, (ri, p, _, _)) in net.edges.iter().enumerate() {
         let r = runs[*ri];
         if let Err(x) = mep::route(p, &|u| radius(r, u), (trim[e][0], trim[e][1])) {
@@ -990,13 +1128,25 @@ pub(crate) fn net_faults_at(runs: &[&GRun], ports: &[V3]) -> Vec<(V3, String)> {
         }
         i
     }
+    // a sprinkler riser: a vertical fire run the network joins along its length. Cycles closed
+    // through risers are a looped wet system (NFPA 13, EN 12845), not a fault
+    let mut pieces = vec![0usize; runs.len()];
+    for (ri, _, _, _) in &net.edges {
+        pieces[*ri] += 1;
+    }
+    let riser = |ri: usize| {
+        let r = runs[ri];
+        r.sys == SvcSys::Fire && pieces[ri] >= 2 && r.points.windows(2).all(|w| (w[0].0 - w[1].0).abs() < TOL && (w[0].1 - w[1].1).abs() < TOL)
+    };
     let mut loops = 0;
-    for (_, _, n, _) in &net.edges {
-        let (a, b) = (root(&mut parent, n[0]), root(&mut parent, n[1]));
-        if a == b {
-            loops += 1;
-        } else {
-            parent[a] = b;
+    for through_risers in [false, true] {
+        for (_, _, n, _) in net.edges.iter().filter(|e| riser(e.0) == through_risers) {
+            let (a, b) = (root(&mut parent, n[0]), root(&mut parent, n[1]));
+            if a != b {
+                parent[a] = b;
+            } else if !through_risers {
+                loops += 1;
+            }
         }
     }
     let parts: HashSet<usize> = (0..net.nodes.len()).map(|i| root(&mut parent, i)).collect();
@@ -1547,6 +1697,25 @@ impl<'a> Space<'a> {
             .collect()
     }
 
+    pub fn zzwhy(&self, r: &GRun, gap: f64) -> String {
+        let q = pts(r);
+        for w in q.windows(2) {
+            let b = seg_box(&r.section, w[0], w[1]);
+            let sys = format!("{:?}", r.sys);
+            if let Some(o) = self.obst.iter().find(|o| overlap(&o.0, &b, gap) && !shaft_takes(o.1, &sys)) {
+                return format!("obst {} {:?} seg {:?}->{:?}", o.1, o.0, w[0], w[1]);
+            }
+            for s in &self.segs {
+                let g = if s.0 == r.sys { 0.0 } else { gap };
+                if overlap(&s.3, &b, g) {
+                    let joined = s.0 == r.sys && (on_seg(s.1, w[0], w[1]) || on_seg(s.2, w[0], w[1]) || on_seg(w[0], s.1, s.2) || on_seg(w[1], s.1, s.2));
+                    if !joined { return format!("seg {:?} {:?}->{:?} vs {:?}->{:?}", s.0, s.1, s.2, w[0], w[1]); }
+                }
+            }
+        }
+        "slab?".into()
+    }
+
     /// Whether the run fits: clear of obstacles by `gap`, of other systems' runs by `gap`,
     /// of its own system's runs unless joined to them, and crossing slabs only upright.
     pub fn fits(&self, r: &GRun, gap: f64) -> bool {
@@ -1789,5 +1958,79 @@ mod layer_tests {
         assert_eq!(crowded(&runs), 0);
         let net = network(&runs.iter().collect::<Vec<_>>());
         assert!(net.arms.iter().all(|a| a.len() <= rule("services.node_arms") as usize));
+    }
+
+    #[test]
+    fn tees_too_close_for_their_fittings_move_apart() {
+        let run = |a: V3, b: V3| {
+            let mut r = pipe_run(SvcSys::Fire, 0, PipeMaterial::Steel, 50, vec![a, b]);
+            r.caps = (true, true);
+            r
+        };
+        let z = 3.0;
+        let mut runs = vec![
+            run(v3(0.0, 0.0, z), v3(10.0, 0.0, z)),
+            run(v3(5.0, 0.0, z), v3(5.0, 4.0, z)),
+            run(v3(5.05, 0.0, z), v3(5.05, -4.0, z)),
+        ];
+        let short = |runs: &[GRun]| {
+            let refs: Vec<&GRun> = runs.iter().collect();
+            net_faults(&refs, &[]).into_iter().filter(|f| f.contains("too short")).count()
+        };
+        assert!(short(&runs) > 0);
+        let mut rs: Vec<&mut GRun> = runs.iter_mut().collect();
+        spread_nodes(&mut rs);
+        let refs: Vec<&GRun> = runs.iter().collect();
+        assert!(net_faults(&refs, &[]).is_empty(), "{:?}", net_faults(&refs, &[]));
+    }
+
+    #[test]
+    fn a_sprinkler_loop_through_two_risers_is_no_fault() {
+        let run = |sys: SvcSys, p: Vec<V3>| pipe_run(sys, 0, PipeMaterial::Steel, 50, p);
+        let loops = |sys: SvcSys, square: bool| {
+            let mut runs = vec![
+                run(sys, vec![v3(0.0, 0.0, 0.0), v3(0.0, 0.0, 6.0)]),
+                run(sys, vec![v3(4.0, 0.0, 0.0), v3(4.0, 0.0, 6.0)]),
+                run(sys, vec![v3(0.0, 0.0, 3.0), v3(4.0, 0.0, 3.0)]),
+                run(sys, vec![v3(0.0, 0.0, 6.0), v3(4.0, 0.0, 6.0)]),
+            ];
+            if square {
+                // a ring on one level, not through the risers
+                runs.push(run(sys, vec![v3(1.0, 0.0, 3.0), v3(1.0, 2.0, 3.0), v3(3.0, 2.0, 3.0), v3(3.0, 0.0, 3.0)]));
+            }
+            let refs: Vec<&GRun> = runs.iter().collect();
+            let ports = [v3(0.0, 0.0, 0.0), v3(4.0, 0.0, 0.0)];
+            net_faults(&refs, &ports).into_iter().filter(|f| f.contains("loops")).collect::<Vec<_>>()
+        };
+        assert!(loops(SvcSys::Fire, false).is_empty(), "{:?}", loops(SvcSys::Fire, false));
+        assert_eq!(loops(SvcSys::Fire, true), vec!["1 loops".to_string()]);
+        assert_eq!(loops(SvcSys::Cold, false), vec!["1 loops".to_string()]);
+    }
+
+    #[test]
+    fn two_mains_along_one_line_meet_end_to_end() {
+        let run = |a: V3, b: V3| {
+            let mut r = pipe_run(SvcSys::Fire, 0, PipeMaterial::Steel, 50, vec![a, b]);
+            r.caps = (true, true);
+            r
+        };
+        let z = 3.0;
+        let mut runs = vec![
+            run(v3(0.0, 0.0, z), v3(12.0, 0.0, z)),
+            run(v3(14.0, 0.0, z), v3(4.0, 0.0, z)),
+            run(v3(9.0, 0.0, z), v3(9.0, 3.0, z)),
+            run(v3(6.0, 0.0, z), v3(6.0, -3.0, z)),
+        ];
+        let mut rs: Vec<&mut GRun> = runs.iter_mut().collect();
+        spread_nodes(&mut rs);
+        let refs: Vec<&GRun> = runs.iter().collect();
+        let faults: Vec<String> = net_faults(&refs, &[]).into_iter().filter(|f| !f.contains("open end")).collect();
+        assert!(faults.is_empty(), "{faults:?}");
+        let xs = |r: &GRun| (r.points[0].0.min(r.points[1].0), r.points[0].0.max(r.points[1].0));
+        let (a, b) = (xs(&runs[0]), xs(&runs[1]));
+        assert!((a.1 - b.0).abs() < 1e-9 && a.0 == 0.0 && b.1 == 14.0, "{a:?} {b:?}");
+        // the line keeps its capped ends and the meeting point carries no cap
+        assert_eq!((runs[0].caps.0, runs[1].caps.0), (true, true));
+        assert!(!runs[0].caps.1 && !runs[1].caps.1);
     }
 }

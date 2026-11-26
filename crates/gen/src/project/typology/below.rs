@@ -31,14 +31,14 @@ fn size(r: &R) -> Mm {
     (r.2 - r.0) * (r.3 - r.1)
 }
 
-fn cell(r: R, s: &TSpace, ru: bool) -> Cell {
+fn cell(r: R, s: &TSpace, lang: &str) -> Cell {
     Cell {
         x0: r.0,
         y0: r.1,
         x1: r.2,
         y1: r.3,
         kind: s.kind,
-        name: s.display(ru).to_string(),
+        name: s.display(lang).to_string(),
         owner: PRole::Public,
         asked: None,
         grown: false,
@@ -61,12 +61,12 @@ fn halves(r: R) -> (R, R) {
 /// builder made: its stairs, lifts and corridors kept, its free rectangles given to the spaces
 /// of the level.
 pub(crate) fn level_cells(spec: &ProjectSpec, model: &Model, below: &Below, base: &[Cell], b: usize) -> Result<Vec<Cell>, GenError> {
-    let ru = spec.ru;
+    let lang = spec.lang;
     let lvl = &below.levels[b.min(below.levels.len() - 1)];
     let mut out: Vec<Cell> = base.iter().filter(|c| core(c.kind)).cloned().collect();
-    if let Some((en, rus)) = &lvl.corridor {
+    if let Some(n) = &lvl.corridor {
         for c in out.iter_mut().filter(|c| c.kind == RoomKind::Corridor) {
-            c.name = if ru { rus.clone() } else { en.clone() };
+            c.name = n.get(lang);
         }
     }
     let mut free: Vec<R> = base.iter().filter(|c| !core(c.kind)).map(rect).collect();
@@ -87,39 +87,39 @@ pub(crate) fn level_cells(spec: &ProjectSpec, model: &Model, below: &Below, base
     for s in want {
         for _ in 0..s.count {
             if free.is_empty() {
-                halve_for(&mut out, s, ru, b)?;
+                halve_for(&mut out, s, lang, b)?;
                 continue;
             }
             let r = free.remove(0);
-            out.push(cell(r, s, ru));
+            out.push(cell(r, s, lang));
         }
     }
     // the fill the level itself asks for gets a room even when the others took every rectangle
     if free.is_empty() && own && fill.level == Level::Below(b as u32 + 1) && fill.count > 0 {
-        halve_for(&mut out, fill, ru, b)?;
+        halve_for(&mut out, fill, lang, b)?;
     }
     for r in free {
-        out.push(cell(r, fill, ru));
+        out.push(cell(r, fill, lang));
     }
     Ok(out)
 }
 
 /// No free rectangle left on level `b`: the largest room of `s`'s class is cut in two, else the
 /// largest room the level holds gives up half of itself to `s`.
-fn halve_for(out: &mut Vec<Cell>, s: &TSpace, ru: bool, b: usize) -> Result<(), GenError> {
+fn halve_for(out: &mut Vec<Cell>, s: &TSpace, lang: &str, b: usize) -> Result<(), GenError> {
     let largest = |same: bool| {
         out.iter()
             .enumerate()
-            .filter(|(_, c)| !core(c.kind) && (!same || (c.kind == s.kind && c.name == s.display(ru))))
+            .filter(|(_, c)| !core(c.kind) && (!same || (c.kind == s.kind && c.name == s.display(lang))))
             .max_by_key(|(_, c)| size(&rect(c)))
             .map(|(i, _)| i)
     };
     let at = largest(true).or_else(|| largest(false)).ok_or_else(|| {
-        infeasible(format!("level below {}: no room left for '{}'; widen the footprint or lower its count", b + 1, s.name.0))
+        infeasible(format!("level below {}: no room left for '{}'; widen the footprint or lower its count", b + 1, s.name.en))
     })?;
     let (a, z) = halves(rect(&out[at]));
     (out[at].x0, out[at].y0, out[at].x1, out[at].y1) = a;
-    out.push(cell(z, s, ru));
+    out.push(cell(z, s, lang));
     Ok(())
 }
 
@@ -133,11 +133,11 @@ pub(crate) fn retain(l: &mut GLayout) {
 /// Name of the level `b` in the spec's language.
 pub(crate) fn level_name(spec: &ProjectSpec, below: &Below, b: usize) -> String {
     let n = &below.levels[b.min(below.levels.len() - 1)].name;
-    let base = if spec.ru { &n.1 } else { &n.0 };
+    let base = n.get(spec.lang);
     if b < below.levels.len() {
-        base.clone()
+        base
     } else {
-        format!("{} {}", names::basement_name(b, spec.ru), base)
+        format!("{} {}", names::basement_name(b, spec.lang), base)
     }
 }
 

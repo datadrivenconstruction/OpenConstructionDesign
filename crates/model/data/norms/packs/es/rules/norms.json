@@ -19,8 +19,7 @@
    "unit": "m",
    "value": 0.185,
    "text": {
-    "en": "Residential stair riser at most 0.185 m",
-    "ru": "Подъём ступени жилой лестницы не более 0.185 м"
+    "en": "Residential stair riser at most 0.185 m"
    },
    "source": {
     "doc": "cte-db-sua",
@@ -49,8 +48,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Residential stair tread at least 0.28 m",
-    "ru": "Проступь жилой лестницы не менее 0.28 м"
+    "en": "Residential stair tread at least 0.28 m"
    },
    "source": {
     "doc": "cte-db-sua",
@@ -79,8 +77,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Stair flight width at least 1 m (house/apartment/apartment_section)",
-    "ru": "Ширина марша не менее 1 м (house/apartment/apartment_section)"
+    "en": "Stair flight width at least 1 m (house/apartment/apartment_section)"
    },
    "source": {
     "doc": "cte-db-sua",
@@ -109,8 +106,7 @@
    "unit": "m",
    "value": 0.175,
    "text": {
-    "en": "Office stair riser at most 0.175 m",
-    "ru": "Подъём ступени офисной лестницы не более 0.175 м"
+    "en": "Office stair riser at most 0.175 m"
    },
    "source": {
     "doc": "cte-db-sua",
@@ -139,8 +135,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Office stair tread at least 0.28 m",
-    "ru": "Проступь офисной лестницы не менее 0.28 м"
+    "en": "Office stair tread at least 0.28 m"
    },
    "source": {
     "doc": "cte-db-sua",
@@ -167,8 +162,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Stair flight width at least 1 m (office)",
-    "ru": "Ширина марша не менее 1 м (office)"
+    "en": "Stair flight width at least 1 m (office)"
    },
    "source": {
     "doc": "cte-db-sua",
@@ -197,8 +191,7 @@
     0.7
    ],
    "text": {
-    "en": "Step rule: 2 risers + tread from 0.54 to 0.7 m",
-    "ru": "Шаг: 2 подъёма + проступь от 0.54 до 0.7 м"
+    "en": "Step rule: 2 risers + tread from 0.54 to 0.7 m"
    },
    "source": {
     "doc": "cte-db-sua",
@@ -230,8 +223,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Corridor clear width at least 1 m",
-    "ru": "Ширина коридора не менее 1 м"
+    "en": "Corridor clear width at least 1 m"
    },
    "source": {
     "doc": "habitabilidad",
@@ -262,8 +254,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Corridor clear width at least 1.0 m",
-    "ru": "Ширина коридора не менее 1.0 м"
+    "en": "Corridor clear width at least 1.0 m"
    },
    "source": {
     "doc": "cte-db-si",
@@ -297,8 +288,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.2 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+    "en": "Accessible-route corridor clear width at least 1.2 m"
    },
    "source": {
     "doc": "cte-db-sua9",
@@ -334,8 +324,7 @@
    "unit": "m",
    "value": 2.5,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.5 m",
-    "ru": "Высота жилых помещений не менее 2.5 м"
+    "en": "Clear height of habitable rooms at least 2.5 m"
    },
    "source": {
     "doc": "habitabilidad",
@@ -367,8 +356,7 @@
    "unit": "m",
    "value": 2.5,
    "text": {
-    "en": "Clear height of work rooms at least 2.5 m",
-    "ru": "Высота рабочих помещений не менее 2.5 м"
+    "en": "Clear height of work rooms at least 2.5 m"
    },
    "source": {
     "doc": "rd486-1997",
@@ -400,8 +388,7 @@
    "unit": "",
    "value": 10.0,
    "text": {
-    "en": "Area of a office room at least 10 m2",
-    "ru": "Площадь помещения «office» не менее 10 м2"
+    "en": "Area of a office room at least 10 m2"
    },
    "source": {
     "doc": "rd486-1997",
@@ -434,8 +421,7 @@
    "unit": "",
    "value": 6.0,
    "text": {
-    "en": "Area of a bedroom room at least 6 m2",
-    "ru": "Площадь помещения «bedroom» не менее 6 м2"
+    "en": "Area of a bedroom room at least 6 m2"
    },
    "source": {
     "doc": "habitabilidad",
@@ -468,8 +454,7 @@
    "unit": "",
    "value": 14.0,
    "text": {
-    "en": "Area of a living room at least 14 m2",
-    "ru": "Площадь помещения «living» не менее 14 м2"
+    "en": "Area of a living room at least 14 m2"
    },
    "source": {
     "doc": "habitabilidad",
@@ -500,8 +485,7 @@
    "unit": "m",
    "value": 35.0,
    "text": {
-    "en": "Travel distance from a room to an exit or stair at most 35 m (residential)",
-    "ru": "Путь от помещения до выхода или лестницы не более 35 м"
+    "en": "Travel distance from a room to an exit or stair at most 35 m (residential)"
    },
    "source": {
     "doc": "cte-db-si",
@@ -531,8 +515,7 @@
    "unit": "m",
    "value": 50.0,
    "text": {
-    "en": "Travel distance from a room to an exit or stair at most 50 m (office)",
-    "ru": "Путь от помещения до выхода или лестницы не более 50 м"
+    "en": "Travel distance from a room to an exit or stair at most 50 m (office)"
    },
    "source": {
     "doc": "cte-db-si",
@@ -632,8 +615,7 @@
    "unit": "ratio",
    "value": 0.167,
    "text": {
-    "en": "Window area at least one sixth of the room floor",
-    "ru": "Площадь окна не менее 1/6 площади пола помещения"
+    "en": "Window area at least one sixth of the room floor"
    },
    "source": {
     "doc": "es-orden-1944",

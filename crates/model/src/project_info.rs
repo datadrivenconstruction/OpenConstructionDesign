@@ -13,6 +13,8 @@ use crate::{Error, Model, SiteProps};
 
 const KIND: &str = "project_info";
 const MAX_LEN: usize = 500;
+/// Property of the document language; not one of `fields()`, so the info form keeps its rows.
+const DOC_LANG: &str = "doc_lang";
 
 #[derive(Clone, Debug, Default, PartialEq, Eq)]
 pub struct ProjectInfo {
@@ -159,6 +161,46 @@ impl Model {
         self.op("project_info", |db| Ok((true, 0, write_fields(db, &info)?)))
     }
 
+    /// Locale code (`de`, `pt-BR`) the drawing set, schedules and tags are written in; None —
+    /// not chosen, the interface language is used.
+    pub fn document_lang(&self) -> Result<Option<String>, Error> {
+        Ok(self
+            .props(KIND, 0)?
+            .into_iter()
+            .find(|p| p.0 == DOC_LANG)
+            .and_then(|p| match p.1 {
+                Value::Text(t) if !t.trim().is_empty() => Some(t),
+                _ => None,
+            }))
+    }
+
+    /// Sets (None or empty clears) the document language in one undo step; `false` — unchanged.
+    pub fn set_document_lang(&mut self, code: Option<&str>) -> Result<bool, Error> {
+        let code = code.map(str::trim).filter(|c| !c.is_empty());
+        if let Some(c) = code {
+            if c.len() > 16 || !c.chars().all(|ch| ch.is_ascii_alphanumeric() || ch == '-' || ch == '_') {
+                return Err(Error::Invalid(format!("document language: bad locale code '{c}'")));
+            }
+        }
+        if code.map(str::to_string) == self.document_lang()? {
+            return Ok(false);
+        }
+        self.op("project_info", |db| {
+            let inv = crate::imported::prop_restore(db, KIND, 0, DOC_LANG)?;
+            db.execute(
+                "DELETE FROM prop WHERE kind=?1 AND ref=0 AND key=?2",
+                rusqlite::params![KIND, DOC_LANG],
+            )?;
+            if let Some(c) = code {
+                db.execute(
+                    "INSERT INTO prop(kind,ref,key,value,unit) VALUES (?1,0,?2,?3,'')",
+                    rusqlite::params![KIND, DOC_LANG, c],
+                )?;
+            }
+            Ok((true, 0, inv))
+        })
+    }
+
     /// Fields and site in one operation: one undo step, nothing written on a refusal.
     /// `false` — nothing differs, no journal entry.
     pub fn set_project_data(
@@ -227,6 +269,21 @@ mod tests {
         assert_eq!(m.project_info().unwrap(), info());
         m.undo().unwrap();
         assert_eq!(m.project_info().unwrap(), ProjectInfo::default());
+    }
+
+    #[test]
+    fn document_language_is_stored_apart_from_the_fields_and_undoes() {
+        let mut m = Model::open(":memory:").unwrap();
+        assert_eq!(m.document_lang().unwrap(), None);
+        assert!(m.set_document_lang(Some("de")).unwrap());
+        assert!(!m.set_document_lang(Some(" de ")).unwrap());
+        m.set_project_info(&info()).unwrap();
+        assert_eq!(m.document_lang().unwrap().as_deref(), Some("de"));
+        assert_eq!(m.project_info().unwrap(), info());
+        assert!(m.set_document_lang(Some("bad code!")).is_err());
+        m.undo().unwrap();
+        m.undo().unwrap();
+        assert_eq!(m.document_lang().unwrap(), None);
     }
 
     #[test]

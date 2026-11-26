@@ -19,8 +19,7 @@
    "unit": "m",
    "value": 0.21,
    "text": {
-    "en": "Common stair riser at most 0.21 m",
-    "ru": "Подъём ступени общей лестницы не более 0.21 м"
+    "en": "Common stair riser at most 0.21 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -53,8 +52,7 @@
    "unit": "m",
    "value": 0.185,
    "text": {
-    "en": "Common stair tread at least 0.185 m",
-    "ru": "Проступь общей лестницы не менее 0.185 м"
+    "en": "Common stair tread at least 0.185 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -87,8 +85,7 @@
    "unit": "m",
    "value": 0.8,
    "text": {
-    "en": "Common stair flight width at least 0.8 m",
-    "ru": "Ширина марша общей лестницы не менее 0.8 м"
+    "en": "Common stair flight width at least 0.8 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -119,8 +116,7 @@
    "unit": "m",
    "value": 0.188,
    "text": {
-    "en": "Stair riser in a house at most 0.188 m",
-    "ru": "Подъём ступени в доме не более 0.188 м"
+    "en": "Stair riser in a house at most 0.188 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -151,8 +147,7 @@
    "unit": "m",
    "value": 0.22,
    "text": {
-    "en": "Stair tread in a house at least 0.22 m",
-    "ru": "Проступь в доме не менее 0.22 м"
+    "en": "Stair tread in a house at least 0.22 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -183,8 +178,7 @@
    "unit": "m",
    "value": 0.8,
    "text": {
-    "en": "Stair flight width in a house at least 0.8 m",
-    "ru": "Ширина марша в доме не менее 0.8 м"
+    "en": "Stair flight width in a house at least 0.8 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -222,8 +216,7 @@
    "unit": "m",
    "value": 2.6,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.6 m",
-    "ru": "Высота жилых помещений не менее 2.6 м"
+    "en": "Clear height of habitable rooms at least 2.6 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -259,8 +252,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.2 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+    "en": "Accessible-route corridor clear width at least 1.2 m"
    },
    "source": {
     "doc": "nl-bbl",
@@ -293,8 +285,7 @@
    "unit": "m",
    "value": 30,
    "text": {
-    "en": "Travel distance to an exit or stair at most 30 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 30 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 30 m (residential)"
    },
    "source": {
     "doc": "nl-bbl",
@@ -326,8 +317,7 @@
    "unit": "m",
    "value": 30,
    "text": {
-    "en": "Travel distance to an exit or stair at most 30 m (office)",
-    "ru": "Путь до выхода или лестницы не более 30 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 30 m (office)"
    },
    "source": {
     "doc": "nl-bbl",
@@ -361,8 +351,7 @@
    "unit": "ratio",
    "value": 0.1,
    "text": {
-    "en": "Window area at least 10.0 % of the floor of a habitable room",
-    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+    "en": "Window area at least 10.0 % of the floor of a habitable room"
    },
    "source": {
     "doc": "nl-bbl",

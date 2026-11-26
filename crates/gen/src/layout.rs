@@ -76,7 +76,7 @@ pub(crate) struct Names {
 /// Room names of the generators, from the one table of room kinds.
 pub(crate) fn names(lang: &str) -> Names {
     use crate::project::RoomKind as K;
-    let n = |k| crate::project::names::kind_name(k, lang == "ru");
+    let n = |k| crate::project::names::kind_name(k, lang);
     Names {
         living: n(K::Living),
         bedroom: n(K::Bedroom),

@@ -3,8 +3,7 @@
   {
    "id": "ru.apartment.area",
    "text": {
-    "en": "Apartment area at least the minimum for its number of living rooms",
-    "ru": "Площадь квартиры не менее минимальной для числа жилых комнат"
+    "en": "Apartment area at least the minimum for its number of living rooms"
    },
    "source": {
     "doc": "sp54.13330",
@@ -29,8 +28,7 @@
   {
    "id": "ru.room.low_height_share",
    "text": {
-    "en": "Rooms lower than 2.5 m take at most half of the dwelling area",
-    "ru": "Помещения ниже 2,5 м занимают не более половины площади жилья"
+    "en": "Rooms lower than 2.5 m take at most half of the dwelling area"
    },
    "source": {
     "doc": "sp54.13330",

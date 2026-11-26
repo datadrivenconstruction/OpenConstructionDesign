@@ -347,13 +347,18 @@ fn light_depth(c: &Ctx<'_>, t: f64) -> (f64, f64, usize, usize) {
     counted(failed, of)
 }
 
+/// A room people only pass through: circulation, stair or lift.
+fn moves(k: RoomKind) -> bool {
+    k.circulation() || k == RoomKind::Stair || k == RoomKind::Lift
+}
+
 fn circulation_share(c: &Ctx<'_>) -> f64 {
     let (mut circ, mut all) = (0.0, 0.0);
     for st in &c.p.storeys {
         for (k, _, poly) in rooms(st) {
             let a = area(poly);
             all += a;
-            if k.circulation() || k == RoomKind::Stair || k == RoomKind::Lift {
+            if moves(k) {
                 circ += a;
             }
         }
@@ -375,7 +380,8 @@ fn efficiency(c: &Ctx<'_>, t: f64) -> (f64, f64, usize, usize) {
     for st in &c.p.storeys {
         let holes: f64 = st.layout.slab_holes.iter().map(|h| area(h)).sum();
         gross += (area(&st.layout.slab) - holes).max(0.0);
-        net += rooms(st).map(|x| area(x.2)).sum::<f64>();
+        // usable area: corridors, stairs and lifts are gross, not net
+        net += rooms(st).filter(|x| !moves(x.0)).map(|x| area(x.2)).sum::<f64>();
     }
     let e = if gross > 0.0 { (net / gross).min(1.0) } else { 1.0 };
     (e, ((t - e) / t).clamp(0.0, 1.0), 0, 0)

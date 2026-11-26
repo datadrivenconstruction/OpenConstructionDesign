@@ -1246,7 +1246,7 @@ fn compile_rule(v: &J, src: &Source) -> Result<PackRule, String> {
         let def = rule_from(&flat).map_err(|e| e.to_string())?;
         PackCheck::Legacy(Box::new(NormRule {
             def,
-            title_ru: text.get("ru").cloned().unwrap_or_default(),
+            titles: super::norms::local_texts(&v["text"]),
             doc: src.title.clone(),
             clause: clause.clone(),
             example: v["example"].as_bool().unwrap_or(false),

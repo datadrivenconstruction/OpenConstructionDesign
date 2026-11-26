@@ -156,20 +156,16 @@
  },
  "systems": {
   "chw_supply": {
-   "en": "Chilled water supply",
-   "ru": "Холодоснабжение, подача"
+   "en": "Chilled water supply"
   },
   "chw_return": {
-   "en": "Chilled water return",
-   "ru": "Холодоснабжение, обратка"
+   "en": "Chilled water return"
   },
   "power_a": {
-   "en": "IT power path A",
-   "ru": "Питание ИТ, луч A"
+   "en": "IT power path A"
   },
   "power_b": {
-   "en": "IT power path B",
-   "ru": "Питание ИТ, луч B"
+   "en": "IT power path B"
   }
  }
 }

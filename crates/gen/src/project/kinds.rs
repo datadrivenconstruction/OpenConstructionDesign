@@ -15,7 +15,7 @@ pub struct KindDef {
     pub id: String,
     pub base: RoomKind,
     pub aliases: Vec<String>,
-    pub name: (String, String),
+    pub name: super::names::Text,
     /// Rule holding the smallest area of this room, when it has one.
     pub min_area_rule: Option<String>,
     pub ground_only: bool,
@@ -45,7 +45,7 @@ pub fn defs() -> &'static [KindDef] {
                 id: text(&k["id"]),
                 base: RoomKind::parse(k["base"].as_str().unwrap_or_default()).expect("room_kinds.json base kind"),
                 aliases: k["aliases"].as_array().map_or(vec![], |a| a.iter().map(|x| text(x).to_lowercase()).collect()),
-                name: (text(&k["name"]["en"]), text(&k["name"]["ru"])),
+                name: super::names::Text::src(&text(&k["name"]["en"]), "kind"),
                 min_area_rule: k["min_area_rule"].as_str().map(str::to_string),
                 ground_only: k["ground_only"].as_bool().unwrap_or(false),
                 in_apartment: k["in_apartment"].as_bool().unwrap_or(false),

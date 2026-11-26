@@ -11,8 +11,7 @@
  "note": "light industrial building: production halls and assembly bays with goods store and loading on the ground floor, offices and a laboratory above; hall ventilation, loads and floor loads per room class",
  "brief": {
   "name": {
-   "en": "Light industrial building",
-   "ru": "Лёгкое промышленное здание"
+   "en": "Light industrial building"
   },
   "floors": 2,
   "floor_height": 6.0,
@@ -28,16 +27,14 @@
  },
  "model": {
   "title": {
-   "en": "Light industrial building",
-   "ru": "Лёгкое промышленное здание"
+   "en": "Light industrial building"
   },
   "spaces": [
    {
     "class": "reception_l",
     "kind": "lobby",
     "name": {
-     "en": "Reception",
-     "ru": "Приёмная"
+     "en": "Reception"
     },
     "area": 40,
     "count": 1,
@@ -48,8 +45,7 @@
     "class": "office_l",
     "kind": "office",
     "name": {
-     "en": "Site office",
-     "ru": "Контора"
+     "en": "Site office"
     },
     "area": 18,
     "count": 4,
@@ -60,8 +56,7 @@
     "class": "canteen_l",
     "kind": "dining",
     "name": {
-     "en": "Staff canteen",
-     "ru": "Столовая персонала"
+     "en": "Staff canteen"
     },
     "area": 70,
     "count": 1,
@@ -73,8 +68,7 @@
     "class": "changing_l",
     "kind": "staff",
     "name": {
-     "en": "Changing room",
-     "ru": "Раздевалка"
+     "en": "Changing room"
     },
     "area": 30,
     "count": 2,
@@ -85,8 +79,7 @@
     "class": "wc_l",
     "kind": "wc",
     "name": {
-     "en": "Toilet",
-     "ru": "Санузел"
+     "en": "Toilet"
     },
     "area": 5,
     "count": 4,
@@ -97,8 +90,7 @@
     "class": "production",
     "kind": "workshop",
     "name": {
-     "en": "Production hall",
-     "ru": "Производственный зал"
+     "en": "Production hall"
     },
     "area": 420,
     "count": 3,
@@ -117,8 +109,7 @@
     "class": "assembly",
     "kind": "workshop",
     "name": {
-     "en": "Assembly bay",
-     "ru": "Сборочный участок"
+     "en": "Assembly bay"
     },
     "area": 260,
     "count": 2,
@@ -137,8 +128,7 @@
     "class": "goods",
     "kind": "storage",
     "name": {
-     "en": "Goods store",
-     "ru": "Склад готовой продукции"
+     "en": "Goods store"
     },
     "area": 320,
     "count": 2,
@@ -151,8 +141,7 @@
     "class": "loading_l",
     "kind": "storage",
     "name": {
-     "en": "Loading bay",
-     "ru": "Погрузочная зона"
+     "en": "Loading bay"
     },
     "area": 120,
     "count": 1,
@@ -166,8 +155,7 @@
     "class": "mcc_l",
     "kind": "technical",
     "name": {
-     "en": "Electrical room",
-     "ru": "Электрощитовая"
+     "en": "Electrical room"
     },
     "area": 50,
     "count": 1,
@@ -185,8 +173,7 @@
     "class": "compressor",
     "kind": "technical",
     "name": {
-     "en": "Compressor room",
-     "ru": "Компрессорная"
+     "en": "Compressor room"
     },
     "area": 60,
     "count": 1,
@@ -203,8 +190,7 @@
     "class": "qc",
     "kind": "lab",
     "name": {
-     "en": "Quality laboratory",
-     "ru": "Лаборатория качества"
+     "en": "Quality laboratory"
     },
     "area": 40,
     "count": 1,
@@ -219,8 +205,7 @@
     "class": "office_l2",
     "kind": "office",
     "name": {
-     "en": "Office",
-     "ru": "Офис"
+     "en": "Office"
     },
     "area": 24,
     "count": 6,
@@ -231,8 +216,7 @@
     "class": "meeting_l",
     "kind": "meeting",
     "name": {
-     "en": "Meeting room",
-     "ru": "Переговорная"
+     "en": "Meeting room"
     },
     "area": 30,
     "count": 1,
@@ -243,8 +227,7 @@
     "class": "wc_l2",
     "kind": "wc",
     "name": {
-     "en": "Upper toilet",
-     "ru": "Санузел верхнего этажа"
+     "en": "Upper toilet"
     },
     "area": 5,
     "count": 2,
@@ -256,8 +239,7 @@
    {
     "id": "production",
     "name": {
-     "en": "Production",
-     "ru": "Производство"
+     "en": "Production"
     },
     "adjacent_to": [
      {
@@ -273,8 +255,7 @@
    {
     "id": "logistics",
     "name": {
-     "en": "Logistics",
-     "ru": "Логистика"
+     "en": "Logistics"
     },
     "adjacent_to": [
      {
@@ -286,8 +267,7 @@
    {
     "id": "services",
     "name": {
-     "en": "Services",
-     "ru": "Инженерные помещения"
+     "en": "Services"
     },
     "adjacent_to": [
      {
@@ -299,16 +279,14 @@
    {
     "id": "office",
     "name": {
-     "en": "Office",
-     "ru": "Управление"
+     "en": "Office"
     },
     "adjacent_to": []
    },
    {
     "id": "welfare",
     "name": {
-     "en": "Welfare",
-     "ru": "Бытовая зона"
+     "en": "Welfare"
     },
     "adjacent_to": []
    }
@@ -325,8 +303,7 @@
    "grow_share": 0.7,
    "kind": "storage",
    "name": {
-    "en": "Store",
-    "ru": "Склад"
+    "en": "Store"
    }
   }
  }

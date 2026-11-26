@@ -3,8 +3,7 @@
   {
    "id": "ex.wall.thickness",
    "text": {
-    "en": "Wall thickness at least 0.1 m",
-    "ru": "Толщина стены не менее 0,1 м"
+    "en": "Wall thickness at least 0.1 m"
    },
    "source": {
     "doc": "office-bim-example",
@@ -33,8 +32,7 @@
   {
    "id": "ex.door.mark",
    "text": {
-    "en": "Door has a mark",
-    "ru": "У двери задана марка"
+    "en": "Door has a mark"
    },
    "source": {
     "doc": "office-bim-example",
@@ -61,8 +59,7 @@
   {
    "id": "ex.window.mark",
    "text": {
-    "en": "Window has a mark",
-    "ru": "У окна задана марка"
+    "en": "Window has a mark"
    },
    "source": {
     "doc": "office-bim-example",
@@ -89,8 +86,7 @@
   {
    "id": "ex.room.name",
    "text": {
-    "en": "Room has a name",
-    "ru": "У помещения задано имя"
+    "en": "Room has a name"
    },
    "source": {
     "doc": "office-bim-example",
@@ -117,8 +113,7 @@
   {
    "id": "ex.room.number",
    "text": {
-    "en": "Room has a number",
-    "ru": "У помещения задан номер"
+    "en": "Room has a number"
    },
    "source": {
     "doc": "office-bim-example",
@@ -145,8 +140,7 @@
   {
    "id": "ex.door.fire",
    "text": {
-    "en": "Door has a fire rating",
-    "ru": "У двери задан предел огнестойкости"
+    "en": "Door has a fire rating"
    },
    "source": {
     "doc": "office-bim-example",
@@ -173,8 +167,7 @@
   {
    "id": "ex.door.evac",
    "text": {
-    "en": "Door has the EvacuationExit property (yes or no) so exit rules can apply",
-    "ru": "У двери задано свойство EvacuationExit (yes или no), чтобы применялись правила выходов"
+    "en": "Door has the EvacuationExit property (yes or no) so exit rules can apply"
    },
    "source": {
     "doc": "office-bim-example",
@@ -201,8 +194,7 @@
   {
    "id": "ex.door.mark_unique",
    "text": {
-    "en": "Door marks are unique",
-    "ru": "Марки дверей уникальны"
+    "en": "Door marks are unique"
    },
    "source": {
     "doc": "office-bim-example",
@@ -230,8 +222,7 @@
   {
    "id": "ex.window.mark_unique",
    "text": {
-    "en": "Window marks are unique",
-    "ru": "Марки окон уникальны"
+    "en": "Window marks are unique"
    },
    "source": {
     "doc": "office-bim-example",
@@ -259,8 +250,7 @@
   {
    "id": "ex.room.number_unique",
    "text": {
-    "en": "Room numbers are unique",
-    "ru": "Номера помещений уникальны"
+    "en": "Room numbers are unique"
    },
    "source": {
     "doc": "office-bim-example",
@@ -288,8 +278,7 @@
   {
    "id": "ex.door.width",
    "text": {
-    "en": "Evacuation exit (EvacuationExit = yes), opening width at least 0.8 m (general case; 0.6 m for technical, storage, sanitary rooms and single workplaces; 1.2 m from 50 people)",
-    "ru": "Эвакуационный выход (EvacuationExit = yes), ширина проёма не менее 0,8 м (общий случай; 0,6 м для технических, складских, санитарных помещений и одиночных мест; 1,2 м при 50 и более человек)"
+    "en": "Evacuation exit (EvacuationExit = yes), opening width at least 0.8 m (general case; 0.6 m for technical, storage, sanitary rooms and single workplaces; 1.2 m from 50 people)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -323,8 +312,7 @@
   {
    "id": "ex.door.height",
    "text": {
-    "en": "Evacuation exit (EvacuationExit = yes), opening height at least 1.9 m (general case; 1.8 m for rooms without permanent occupancy and single workplaces)",
-    "ru": "Эвакуационный выход (EvacuationExit = yes), высота проёма не менее 1,9 м (общий случай; 1,8 м для помещений без постоянного пребывания людей и одиночных рабочих мест)"
+    "en": "Evacuation exit (EvacuationExit = yes), opening height at least 1.9 m (general case; 1.8 m for rooms without permanent occupancy and single workplaces)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -358,8 +346,7 @@
   {
    "id": "ex.stair.riser",
    "text": {
-    "en": "Stair riser from 0.05 m to 0.22 m",
-    "ru": "Высота ступени от 0,05 до 0,22 м"
+    "en": "Stair riser from 0.05 m to 0.22 m"
    },
    "source": {
     "doc": "sp1.13130",
@@ -389,8 +376,7 @@
   {
    "id": "ex.stair.tread",
    "text": {
-    "en": "Stair tread at least 0.25 m",
-    "ru": "Проступь не менее 0,25 м"
+    "en": "Stair tread at least 0.25 m"
    },
    "source": {
     "doc": "sp1.13130",
@@ -420,8 +406,7 @@
   {
    "id": "ex.stair.risers",
    "text": {
-    "en": "A flight has from 3 to 16 risers (counts all risers of the stair: check turning stairs by flight)",
-    "ru": "В марше от 3 до 16 подъёмов (считаются все подъёмы лестницы: многомаршевые проверяйте по маршам)"
+    "en": "A flight has from 3 to 16 risers (counts all risers of the stair: check turning stairs by flight)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -450,8 +435,7 @@
   {
    "id": "ex.stair.flight_width",
    "text": {
-    "en": "Evacuation stair flight width by building: fire class, height and people on a floor above the first (sub-items b, a, g, v, d, e of the clause in priority order; exit-width part not checked)",
-    "ru": "Ширина марша эвакуационной лестницы по зданию: класс пожарной опасности, высота и число людей на этаже выше первого (подпункты б, а, г, в, д, е по приоритету; часть про ширину выхода не проверяется)"
+    "en": "Evacuation stair flight width by building: fire class, height and people on a floor above the first (sub-items b, a, g, v, d, e of the clause in priority order; exit-width part not checked)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -645,8 +629,7 @@
   {
    "id": "ex.stair.headroom",
    "text": {
-    "en": "Headroom on the stair at least 2.2 m (stair parameter Headroom, typed: the model does not compute it)",
-    "ru": "Высота пути эвакуации по лестнице не менее 2,2 м (параметр лестницы Headroom, вводится вручную: модель её не вычисляет)"
+    "en": "Headroom on the stair at least 2.2 m (stair parameter Headroom, typed: the model does not compute it)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -683,8 +666,7 @@
   {
    "id": "ex.door.column",
    "text": {
-    "en": "Door at least 0.3 m from a column",
-    "ru": "Дверь не ближе 0,3 м к колонне"
+    "en": "Door at least 0.3 m from a column"
    },
    "source": {
     "doc": "office-bim-example",
@@ -714,8 +696,7 @@
   {
    "id": "ex.window.width",
    "text": {
-    "en": "Window width at least 0.4 m",
-    "ru": "Ширина окна не менее 0,4 м"
+    "en": "Window width at least 0.4 m"
    },
    "source": {
     "doc": "office-bim-example",
@@ -744,8 +725,7 @@
   {
    "id": "ex.stair.landing",
    "text": {
-    "en": "Landing at least as wide as the flight",
-    "ru": "Площадка не уже марша"
+    "en": "Landing at least as wide as the flight"
    },
    "source": {
     "doc": "sp1.13130",
@@ -776,8 +756,7 @@
   {
    "id": "ex.stair.slope",
    "text": {
-    "en": "Stair slope not steeper than 1:1 (riser not above tread)",
-    "ru": "Уклон лестницы не круче 1:1 (подступёнок не выше проступи)"
+    "en": "Stair slope not steeper than 1:1 (riser not above tread)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -808,8 +787,7 @@
   {
    "id": "ex.corridor.width",
    "text": {
-    "en": "Corridor width at least 1.0 m, at least 1.2 m for more than 50 people (Purpose = corridor, Occupants = people served)",
-    "ru": "Ширина коридора не менее 1,0 м, не менее 1,2 м при более чем 50 людях (Purpose = corridor, Occupants = число людей)"
+    "en": "Corridor width at least 1.0 m, at least 1.2 m for more than 50 people (Purpose = corridor, Occupants = people served)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -862,8 +840,7 @@
   {
    "id": "ex.corridor.workplace",
    "text": {
-    "en": "Passage to single workplaces at least 0.7 m, 1.2 m for more than 50 people (Purpose = workplace_passage)",
-    "ru": "Проход к одиночным рабочим местам не менее 0,7 м, не менее 1,2 м при более чем 50 людях (Purpose = workplace_passage)"
+    "en": "Passage to single workplaces at least 0.7 m, 1.2 m for more than 50 people (Purpose = workplace_passage)"
    },
    "source": {
     "doc": "sp1.13130",
@@ -916,8 +893,7 @@
   {
    "id": "ex.room.height_public",
    "text": {
-    "en": "Public room height at least 3.0 m (Purpose = public)",
-    "ru": "Высота общественного помещения не менее 3,0 м (Purpose = public)"
+    "en": "Public room height at least 3.0 m (Purpose = public)"
    },
    "source": {
     "doc": "sp118.13330",
@@ -950,8 +926,7 @@
   {
    "id": "ex.room.height_service",
    "text": {
-    "en": "Service room height at least 2.7 m (Purpose = service)",
-    "ru": "Высота служебного помещения не менее 2,7 м (Purpose = service)"
+    "en": "Service room height at least 2.7 m (Purpose = service)"
    },
    "source": {
     "doc": "sp118.13330",
@@ -984,8 +959,7 @@
   {
    "id": "ex.door.accessible_width",
    "text": {
-    "en": "Door for people with reduced mobility at least 0.9 m wide (Accessible = yes); opening width, not clear width",
-    "ru": "Дверь для МГН шириной не менее 0,9 м (Accessible = yes); ширина проёма, не в свету"
+    "en": "Door for people with reduced mobility at least 0.9 m wide (Accessible = yes); opening width, not clear width"
    },
    "source": {
     "doc": "sp59.13330",
@@ -1018,8 +992,7 @@
   {
    "id": "ex.room.purpose",
    "text": {
-    "en": "Room has a Purpose so purpose-based rules can apply",
-    "ru": "У помещения задано назначение Purpose, чтобы применялись правила по назначению"
+    "en": "Room has a Purpose so purpose-based rules can apply"
    },
    "source": {
     "doc": "office-bim-example",

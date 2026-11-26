@@ -17,8 +17,7 @@
     0.64
    ],
    "text": {
-    "en": "Step rule: 2 risers + tread from 0.6 to 0.64 m",
-    "ru": "Шаг: 2 подъёма + проступь от 0.6 до 0.64 м"
+    "en": "Step rule: 2 risers + tread from 0.6 to 0.64 m"
    },
    "source": {
     "doc": "cch",
@@ -47,8 +46,7 @@
    "unit": "m",
    "value": 0.17,
    "text": {
-    "en": "Common stair riser at most 0.17 m",
-    "ru": "Подъём ступени общей лестницы не более 0.17 м"
+    "en": "Common stair riser at most 0.17 m"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -80,8 +78,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Common stair tread at least 0.28 m",
-    "ru": "Проступь общей лестницы не менее 0.28 м"
+    "en": "Common stair tread at least 0.28 m"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -113,8 +110,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Common stair width at least 1 m between handrails",
-    "ru": "Ширина общей лестницы не менее 1 м между поручнями"
+    "en": "Common stair width at least 1 m between handrails"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -145,8 +141,7 @@
    "unit": "m",
    "value": 0.17,
    "text": {
-    "en": "Office stair riser at most 0.17 m",
-    "ru": "Подъём ступени офисной лестницы не более 0.17 м"
+    "en": "Office stair riser at most 0.17 m"
    },
    "source": {
     "doc": "code-travail",
@@ -174,8 +169,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Office stair tread at least 0.28 m",
-    "ru": "Проступь офисной лестницы не менее 0.28 м"
+    "en": "Office stair tread at least 0.28 m"
    },
    "source": {
     "doc": "code-travail",
@@ -203,8 +197,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Stair flight width at least 1 m (office)",
-    "ru": "Ширина марша не менее 1 м (office)"
+    "en": "Stair flight width at least 1 m (office)"
    },
    "source": {
     "doc": "code-travail",
@@ -237,8 +230,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Corridor clear width at least 1.2 m",
-    "ru": "Ширина коридора не менее 1.2 м"
+    "en": "Corridor clear width at least 1.2 m"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -269,8 +261,7 @@
    "unit": "m",
    "value": 1.4,
    "text": {
-    "en": "Corridor clear width at least 1.4 m",
-    "ru": "Ширина коридора не менее 1.4 м"
+    "en": "Corridor clear width at least 1.4 m"
    },
    "source": {
     "doc": "code-travail",
@@ -303,8 +294,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.2 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+    "en": "Accessible-route corridor clear width at least 1.2 m"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -339,8 +329,7 @@
    "unit": "m",
    "value": 2.2,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.2 m",
-    "ru": "Высота жилых помещений не менее 2.2 м"
+    "en": "Clear height of habitable rooms at least 2.2 m"
    },
    "source": {
     "doc": "decret2002-120",
@@ -371,8 +360,7 @@
    "unit": "m",
    "value": 2.5,
    "text": {
-    "en": "Clear height of work rooms at least 2.5 m",
-    "ru": "Высота рабочих помещений не менее 2.5 м"
+    "en": "Clear height of work rooms at least 2.5 m"
    },
    "source": {
     "doc": "code-travail",
@@ -403,8 +391,7 @@
    "unit": "",
    "value": 10.0,
    "text": {
-    "en": "Area of a office room at least 10 m2",
-    "ru": "Площадь помещения «office» не менее 10 м2"
+    "en": "Area of a office room at least 10 m2"
    },
    "source": {
     "doc": "code-travail",
@@ -433,8 +420,7 @@
    "unit": "m",
    "value": 40.0,
    "text": {
-    "en": "Travel distance from a room to an exit or stair at most 40 m (office)",
-    "ru": "Путь от помещения до выхода или лестницы не более 40 м"
+    "en": "Travel distance from a room to an exit or stair at most 40 m (office)"
    },
    "source": {
     "doc": "code-travail",
@@ -466,8 +452,7 @@
    "unit": "ratio",
    "value": 0.1667,
    "text": {
-    "en": "Window area at least 16.67 % of the floor of a habitable or work room",
-    "ru": "Площадь окон не менее 16.67 % площади пола жилого или рабочего помещения"
+    "en": "Window area at least 16.67 % of the floor of a habitable or work room"
    },
    "source": {
     "doc": "rsd",
@@ -555,8 +540,7 @@
    "unit": "m",
    "value": 0.18,
    "text": {
-    "en": "Stair riser inside a dwelling at most 0.18 m",
-    "ru": "Подъём ступени внутриквартирной лестницы не более 0.18 м"
+    "en": "Stair riser inside a dwelling at most 0.18 m"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -587,8 +571,7 @@
    "unit": "m",
    "value": 0.24,
    "text": {
-    "en": "Stair tread inside a dwelling at least 0.24 m",
-    "ru": "Проступь внутриквартирной лестницы не менее 0.24 м"
+    "en": "Stair tread inside a dwelling at least 0.24 m"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -619,8 +602,7 @@
    "unit": "m",
    "value": 0.8,
    "text": {
-    "en": "Stair width inside a dwelling at least 0.8 m",
-    "ru": "Ширина внутриквартирной лестницы не менее 0.8 м"
+    "en": "Stair width inside a dwelling at least 0.8 m"
    },
    "source": {
     "doc": "arrete2015-12-24",
@@ -653,8 +635,7 @@
    "unit": "m",
    "value": 15.0,
    "text": {
-    "en": "From a dwelling door to the stair at most 15 m",
-    "ru": "От двери квартиры до лестницы не более 15 м"
+    "en": "From a dwelling door to the stair at most 15 m"
    },
    "source": {
     "doc": "arrete1986-01-31",

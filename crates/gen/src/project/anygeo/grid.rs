@@ -371,7 +371,7 @@ pub(crate) fn place(spec: &ProjectSpec, g: &Grid, p: &GProject) -> (Vec<GGrid>, 
         }
         let i = count[fam];
         count[fam] += 1;
-        let name = if fam == 0 { (i + 1).to_string() } else { ddc_geom::axes::axis_letter(i, spec.ru) };
+        let name = if fam == 0 { (i + 1).to_string() } else { ddc_geom::axes::axis_letter(i, super::super::names::cyrillic_axes(spec.lang)) };
         grids.push(GGrid { name, a, b });
     }
     (grids, columns(&nodes, p))

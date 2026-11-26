@@ -30,12 +30,12 @@ pub struct Skeleton {
 
 /// A wet room of the stack as a toilet of the same size: a storey that asked for no wet
 /// rooms gets toilets, and the same size keeps it on the riser.
-fn toilet(r: &RoomReq, ru: bool) -> RoomReq {
+fn toilet(r: &RoomReq, lang: &str) -> RoomReq {
     if r.kind == RoomKind::Wc {
         return r.clone();
     }
     RoomReq {
-        name: names::kind_name(RoomKind::Wc, ru).to_string(),
+        name: names::kind_name(RoomKind::Wc, lang).to_string(),
         kind: RoomKind::Wc,
         area: r.area,
         count: r.count,
@@ -59,7 +59,7 @@ pub fn skeleton(spec: &ProjectSpec) -> Skeleton {
                 let stack: Vec<RoomReq> = storeys[a]
                     .iter()
                     .filter(|r| is_wet(r.kind) && r.count > 0)
-                    .map(|r| toilet(r, spec.ru))
+                    .map(|r| toilet(r, spec.lang))
                     .collect();
                 storeys[k].extend(stack);
                 filled.push((k, a));

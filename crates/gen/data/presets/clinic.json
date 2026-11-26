@@ -16,8 +16,7 @@
  "note": "clinic: built as a corridor plan of consulting rooms (office kind) and wards; operating theatres and medical gases are not built",
  "brief": {
   "name": {
-   "en": "Clinic",
-   "ru": "Поликлиника"
+   "en": "Clinic"
   }
  },
  "rules": {},
@@ -28,8 +27,7 @@
     "kind": "lobby",
     "area": 40,
     "name": {
-     "en": "Reception",
-     "ru": "Регистратура"
+     "en": "Reception"
     },
     "floor": "ground"
    },
@@ -38,8 +36,7 @@
     "area": 16,
     "count": 4,
     "name": {
-     "en": "Consulting room",
-     "ru": "Кабинет врача"
+     "en": "Consulting room"
     },
     "floor": "ground"
    },
@@ -54,8 +51,7 @@
     "area": 16,
     "count": 6,
     "name": {
-     "en": "Consulting room",
-     "ru": "Кабинет врача"
+     "en": "Consulting room"
     },
     "floor": "typical"
    },
@@ -64,8 +60,7 @@
     "area": 18,
     "count": 4,
     "name": {
-     "en": "Ward",
-     "ru": "Палата"
+     "en": "Ward"
     },
     "floor": "typical"
    },
@@ -79,8 +74,7 @@
     "kind": "lobby",
     "area": 30,
     "name": {
-     "en": "Reception",
-     "ru": "Регистратура"
+     "en": "Reception"
     },
     "floor": "single"
    },
@@ -89,8 +83,7 @@
     "area": 16,
     "count": 4,
     "name": {
-     "en": "Consulting room",
-     "ru": "Кабинет врача"
+     "en": "Consulting room"
     },
     "floor": "single"
    },

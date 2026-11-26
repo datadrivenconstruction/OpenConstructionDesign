@@ -389,8 +389,7 @@
    "verified": false,
    "note": "na: the building regulations set no minimum room height; the space standard asks 2.3 m over at least 75 % of a dwelling's floor area, which rule uk.low.share checks",
    "text": {
-    "en": "No minimum room height in the regulations; the space standard's 2.3 m over 75 % of the floor is checked as a share.",
-    "ru": "В регламенте нет минимальной высоты помещения; стандарт площадей требует 2,3 м на 75 % площади, это проверяется как доля."
+    "en": "No minimum room height in the regulations; the space standard's 2.3 m over 75 % of the floor is checked as a share."
    }
   },
   {
@@ -430,8 +429,7 @@
    "verified": false,
    "note": "na: no building class by height; height bands appear per measure (18 m higher-risk, building.high_rise_height; 11 m and 30 m in the fire guidance)",
    "text": {
-    "en": "No building height class; individual measures use their own height bands.",
-    "ru": "Нет класса здания по высоте; отдельные требования используют свои пороги высоты."
+    "en": "No building height class; individual measures use their own height bands."
    }
   },
   {

@@ -374,10 +374,6 @@ pub fn content(p: &GProject, m: &Mech) -> Content {
 
 
 /// Names of the water systems by slot: chilled water flow and return, heating flow and return.
-pub fn water_names(ru: bool) -> [&'static str; 4] {
-    if ru {
-        ["\u{425}1", "\u{425}2", "\u{422}1", "\u{422}2"]
-    } else {
-        ["CHWS", "CHWR", "HWS", "HWR"]
-    }
+pub fn water_names(lang: &str) -> [String; 4] {
+    ["CHWS", "CHWR", "HWS", "HWR"].map(|en| super::super::names::tr(lang, "", en))
 }

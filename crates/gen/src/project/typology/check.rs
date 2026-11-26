@@ -15,7 +15,7 @@ pub(crate) fn run(spec: &ProjectSpec, p: &GProject) -> (Vec<String>, Vec<String>
     let Some(m) = spec.model.as_ref() else {
         return (fail, warn);
     };
-    let ru = spec.ru;
+    let lang = spec.lang;
     let built = super::schedule_of(spec, p).unwrap_or_default();
     // a space with a clear height asked stands on the tallest storey
     let clear = spec.tallest_storey() - spec.rules.get("services.slab");
@@ -26,7 +26,7 @@ pub(crate) fn run(spec: &ProjectSpec, p: &GProject) -> (Vec<String>, Vec<String>
         if let Some(h) = s.height_min.filter(|h| *h > clear + 1e-9) {
             fail.push(format!(
                 "{}: needs {h} m clear height, the storeys give {clear:.2} m; raise massing.floor_height",
-                s.name.0
+                s.name.en
             ));
         }
     }
@@ -36,11 +36,11 @@ pub(crate) fn run(spec: &ProjectSpec, p: &GProject) -> (Vec<String>, Vec<String>
             continue;
         }
         let asked = s.count_in(Some(&spec.rules));
-        let built: u32 = built_rooms(p, s, ru);
+        let built: u32 = built_rooms(p, s, lang);
         if built == 0 {
-            fail.push(format!("no '{}' built, the typology asks for {asked} on {st} storey(s)", s.name.0));
+            fail.push(format!("no '{}' built, the typology asks for {asked} on {st} storey(s)", s.name.en));
         } else if built < asked * st {
-            warn.push(format!("{built} of {} '{}' built", asked * st, s.name.0));
+            warn.push(format!("{built} of {} '{}' built", asked * st, s.name.en));
         }
     }
     let air_below: f64 = built.rows.iter().filter(|r| r.below).map(|r| r.supply_m3h + r.extract_m3h).sum();
@@ -60,13 +60,13 @@ pub(crate) fn run(spec: &ProjectSpec, p: &GProject) -> (Vec<String>, Vec<String>
             let Level::Below(n) = s.level else { continue };
             let Some(st) = p.basements.get(n as usize - 1) else { continue };
             let is_fill = b.levels.get(n as usize - 1).is_some_and(|l| l.fill == s.class);
-            let built = st.layout.rooms.iter().filter(|r| r.name == s.display(ru)).count() as u32;
+            let built = st.layout.rooms.iter().filter(|r| r.name == s.display(lang)).count() as u32;
             if built < s.count && !is_fill {
                 fail.push(format!(
                     "level {n} below ground: {} of {} '{}' built",
                     built,
                     s.count,
-                    s.name.0
+                    s.name.en
                 ));
             }
         }
@@ -117,11 +117,11 @@ pub(crate) fn run(spec: &ProjectSpec, p: &GProject) -> (Vec<String>, Vec<String>
     (fail, warn)
 }
 
-fn built_rooms(p: &GProject, s: &super::TSpace, ru: bool) -> u32 {
+fn built_rooms(p: &GProject, s: &super::TSpace, lang: &str) -> u32 {
     p.storeys
         .iter()
         .chain(&p.basements)
         .flat_map(|st| st.rooms.iter().zip(&st.layout.rooms))
-        .filter(|(pr, gr)| pr.kind == s.kind && gr.name == s.display(ru))
+        .filter(|(pr, gr)| pr.kind == s.kind && gr.name == s.display(lang))
         .count() as u32
 }

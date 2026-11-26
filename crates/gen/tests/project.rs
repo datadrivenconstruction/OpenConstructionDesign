@@ -804,7 +804,7 @@ fn storey_rooms_add_rooms_to_that_storey_only() {
         }
     }
     let spare = &s0.spare;
-    let filler = |r: &(String, RoomKind, f64)| r.1 == RoomKind::Storage || (r.1 == spare.kind && r.0 == spare.name.0);
+    let filler = |r: &(String, RoomKind, f64)| r.1 == RoomKind::Storage || (r.1 == spare.kind && r.0 == spare.name.en);
     let (before, after) = (rooms(&p0, 2), rooms(&p1, 2));
     // (a) the ordered room is there
     assert!(after.iter().any(|r| r.0 == "Operating theatre"), "{after:?}");

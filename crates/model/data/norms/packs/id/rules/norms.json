@@ -20,8 +20,7 @@
    "unit": "m",
    "value": 0.17,
    "text": {
-    "en": "Common stair riser at most 0.17 m",
-    "ru": "Подъём ступени общей лестницы не более 0.17 м"
+    "en": "Common stair riser at most 0.17 m"
    },
    "source": {
     "doc": "id-pp16",
@@ -55,8 +54,7 @@
    "unit": "m",
    "value": 0.3,
    "text": {
-    "en": "Common stair tread at least 0.3 m",
-    "ru": "Проступь общей лестницы не менее 0.3 м"
+    "en": "Common stair tread at least 0.3 m"
    },
    "source": {
     "doc": "id-pp16",
@@ -90,8 +88,7 @@
    "unit": "m",
    "value": 0.9,
    "text": {
-    "en": "Common stair flight width at least 0.9 m",
-    "ru": "Ширина марша общей лестницы не менее 0.9 м"
+    "en": "Common stair flight width at least 0.9 m"
    },
    "source": {
     "doc": "id-pp16",
@@ -127,8 +124,7 @@
    "unit": "m",
    "value": 0.92,
    "text": {
-    "en": "Accessible-route corridor clear width at least 0.92 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 0.92 м"
+    "en": "Accessible-route corridor clear width at least 0.92 m"
    },
    "source": {
     "doc": "id-pp16",
@@ -161,8 +157,7 @@
    "unit": "m",
    "value": 53,
    "text": {
-    "en": "Travel distance to an exit or stair at most 53 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 53 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 53 m (residential)"
    },
    "source": {
     "doc": "id-permen26-2008",
@@ -194,8 +189,7 @@
    "unit": "m",
    "value": 61,
    "text": {
-    "en": "Travel distance to an exit or stair at most 61 m (office)",
-    "ru": "Путь до выхода или лестницы не более 61 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 61 m (office)"
    },
    "source": {
     "doc": "id-permen26-2008",

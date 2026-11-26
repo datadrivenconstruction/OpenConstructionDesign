@@ -5,6 +5,18 @@ use super::{CheckScope, Cond, NormProject, Severity};
 use crate::{LayerSpec, Model, OpeningSpec, PVal, ParamSet, RoomSpec, StairSpec, WallSpec};
 use rusqlite::types::Value;
 
+fn ru_pack_rules() -> Vec<NormRule> {
+    super::norm_pack::PackSet::embedded().resolve("ru").unwrap().legacy_rules()
+}
+
+#[test]
+fn the_starter_pack_is_country_neutral() {
+    assert_eq!(STARTER_PACK_ID, "generic");
+    let rows = starter_pack().unwrap();
+    assert!(!rows.is_empty());
+    assert_ne!(rows, ru_pack_rules());
+}
+
 struct B {
     m: Model,
     level: i64,
@@ -129,7 +141,7 @@ fn run(b: &B, rules: &[NormRule]) -> Vec<NormFinding> {
 
 #[test]
 fn starter_pack_is_a_valid_marked_example() {
-    let rules = starter_pack().unwrap();
+    let rules = ru_pack_rules();
     assert!(rules.len() >= 15, "{}", rules.len());
     let mut ids: Vec<&str> = rules.iter().map(NormRule::id).collect();
     ids.sort();
@@ -137,15 +149,11 @@ fn starter_pack_is_a_valid_marked_example() {
     assert_eq!(ids.len(), rules.len(), "ids are unique");
     for r in &rules {
         assert!(r.example, "{} is not marked as an example", r.id());
-        assert!(
-            !r.def.title.is_empty() && !r.title_ru.is_empty(),
-            "{}",
-            r.id()
-        );
+        assert!(!r.def.title.is_empty() && r.titles.is_empty(), "{}: English only in the data", r.id());
         assert!(!r.doc.is_empty() && !r.clause.is_empty(), "{}", r.id());
         assert_eq!(r.citation(), format!("{} {}", r.doc, r.clause));
-        assert_eq!(r.title(true), r.title_ru);
-        assert_eq!(r.title(false), r.def.title);
+        assert_eq!(r.title(), r.def.title);
+        assert_eq!(text_key(r.id()), format!("norm_rule.{}", r.id()));
     }
     // an empty model breaks nothing
     let b = base();
@@ -331,7 +339,7 @@ fn identical_model_gives_identical_ordered_findings() {
         let d = b.door(1.0 + i as f64 * 1.4, 0.6 + 0.05 * i as f64);
         b.mark(d, if i % 2 == 0 { "A" } else { "B" });
     }
-    let rules = starter_pack().unwrap();
+    let rules = ru_pack_rules();
     let first = run(&b, &rules);
     assert!(first.len() > 6, "{}", first.len());
     for _ in 0..3 {
@@ -375,7 +383,9 @@ fn json_export_carries_rule_clause_elements_and_numbers() {
     assert_eq!(t["components"][0]["id"], d);
     assert_eq!(t["measured"], 0.7);
     assert_eq!(t["required"], 0.8);
-    assert_eq!(t["title_ru"], "T-ru");
+    // an older pack with an inline translation still loads and exports it
+    assert_eq!(t["titles"]["ru"], "T-ru");
+    assert_eq!(rules[0].title_in("ru"), Some("T-ru"));
     assert!(v.get("pack").is_none(), "no pack named");
     // the pack's coverage travels with the findings: a partial pack is labelled partial
     let set = super::norm_pack::PackSet::embedded();
@@ -620,7 +630,7 @@ fn fixture(id: &str, broken: bool) -> B {
 
 #[test]
 fn every_starter_rule_fails_on_a_bad_model_and_passes_on_a_good_one() {
-    let rules = starter_pack().unwrap();
+    let rules = ru_pack_rules();
     for r in &rules {
         let one = std::slice::from_ref(r);
         let bad = run(&fixture(r.id(), true), one);
@@ -649,8 +659,7 @@ fn exit_rules_apply_only_to_marked_evacuation_exits() {
     let unset = b.door(7.0, 0.7);
     b.evac(sanitary, "no");
     b.evac(exit, " YES");
-    let rules: Vec<NormRule> = starter_pack()
-        .unwrap()
+    let rules: Vec<NormRule> = ru_pack_rules()
         .into_iter()
         .filter(|r| matches!(r.id(), "ex.door.width" | "ex.door.evac"))
         .collect();
@@ -767,8 +776,7 @@ fn scope_filter_round_trips_and_a_damaged_pack_is_an_error() {
 
 #[test]
 fn corridor_width_tiers_by_people_and_reports_missing_data() {
-    let rules: Vec<NormRule> = starter_pack()
-        .unwrap()
+    let rules: Vec<NormRule> = ru_pack_rules()
         .into_iter()
         .filter(|r| r.id() == "ex.corridor.width")
         .collect();
@@ -874,7 +882,7 @@ fn building(b: &mut B, class: &str, height: Option<f64>, people: i64) {
 }
 
 fn flight_rule() -> Vec<NormRule> {
-    let all = starter_pack().unwrap();
+    let all = ru_pack_rules();
     all.into_iter()
         .filter(|r| r.id() == "ex.stair.flight_width")
         .collect()
@@ -999,7 +1007,7 @@ fn building_inputs_are_stored_validated_and_computed() {
 
 #[test]
 fn small_corridor_to_workplaces_and_headroom_have_their_own_limits() {
-    let rules = starter_pack().unwrap();
+    let rules = ru_pack_rules();
     let only =
         |id: &str| -> Vec<NormRule> { rules.iter().filter(|r| r.id() == id).cloned().collect() };
     let mut b = base();

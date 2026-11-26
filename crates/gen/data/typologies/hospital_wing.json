@@ -29,8 +29,7 @@
  "note": "hospital wing: a corridor plan of outpatient, emergency, diagnostic and surgical rooms on the ground floor and inpatient floors above; each room class carries its own air changes, pressure, loads and media; shielding, medical-gas piping and sterile flow are described in the schedule, not modelled as geometry",
  "brief": {
   "name": {
-   "en": "Hospital wing",
-   "ru": "Больничный корпус"
+   "en": "Hospital wing"
   },
   "floors": 4,
   "floor_height": 4.2,
@@ -47,16 +46,14 @@
  },
  "model": {
   "title": {
-   "en": "Hospital wing",
-   "ru": "Больничный корпус"
+   "en": "Hospital wing"
   },
   "spaces": [
    {
     "class": "reception",
     "kind": "lobby",
     "name": {
-     "en": "Reception hall",
-     "ru": "Приёмный холл"
+     "en": "Reception hall"
     },
     "area": 70,
     "count": 1,
@@ -67,8 +64,7 @@
     "class": "consulting",
     "kind": "office",
     "name": {
-     "en": "Consulting room",
-     "ru": "Кабинет врача"
+     "en": "Consulting room"
     },
     "area": 16,
     "count": 8,
@@ -79,8 +75,7 @@
     "class": "emergency",
     "kind": "ward",
     "name": {
-     "en": "Emergency treatment room",
-     "ru": "Процедурная неотложной помощи"
+     "en": "Emergency treatment room"
     },
     "area": 20,
     "count": 4,
@@ -103,8 +98,7 @@
     "class": "imaging",
     "kind": "lab",
     "name": {
-     "en": "Imaging room",
-     "ru": "Кабинет визуальной диагностики"
+     "en": "Imaging room"
     },
     "area": 36,
     "count": 2,
@@ -122,8 +116,7 @@
     "class": "mri",
     "kind": "lab",
     "name": {
-     "en": "Magnetic resonance room",
-     "ru": "Кабинет магнитно-резонансной томографии"
+     "en": "Magnetic resonance room"
     },
     "area": 40,
     "count": 1,
@@ -142,8 +135,7 @@
     "class": "theatre",
     "kind": "technical",
     "name": {
-     "en": "Operating theatre",
-     "ru": "Операционная"
+     "en": "Operating theatre"
     },
     "area": 48,
     "count": 2,
@@ -181,8 +173,7 @@
     "class": "sterile",
     "kind": "technical",
     "name": {
-     "en": "Sterile supply room",
-     "ru": "Стерилизационная"
+     "en": "Sterile supply room"
     },
     "area": 40,
     "count": 1,
@@ -201,8 +192,7 @@
     "class": "recovery",
     "kind": "ward",
     "name": {
-     "en": "Recovery bay",
-     "ru": "Палата пробуждения"
+     "en": "Recovery bay"
     },
     "area": 30,
     "count": 1,
@@ -225,8 +215,7 @@
     "class": "pharmacy",
     "kind": "storage",
     "name": {
-     "en": "Pharmacy store",
-     "ru": "Аптечный склад"
+     "en": "Pharmacy store"
     },
     "area": 30,
     "count": 1,
@@ -237,8 +226,7 @@
     "class": "staff_g",
     "kind": "staff",
     "name": {
-     "en": "Clinical staff room",
-     "ru": "Ординаторская"
+     "en": "Clinical staff room"
     },
     "area": 28,
     "count": 1,
@@ -249,8 +237,7 @@
     "class": "wc_g",
     "kind": "wc",
     "name": {
-     "en": "Public toilet",
-     "ru": "Общественный туалет"
+     "en": "Public toilet"
     },
     "area": 5,
     "count": 4,
@@ -261,8 +248,7 @@
     "class": "patient",
     "kind": "ward",
     "name": {
-     "en": "Patient room",
-     "ru": "Палата"
+     "en": "Patient room"
     },
     "area": 18,
     "count": 14,
@@ -282,8 +268,7 @@
     "class": "isolation",
     "kind": "ward",
     "name": {
-     "en": "Isolation room",
-     "ru": "Палата-изолятор"
+     "en": "Isolation room"
     },
     "area": 20,
     "count": 2,
@@ -307,8 +292,7 @@
     "class": "icu",
     "kind": "ward",
     "name": {
-     "en": "Intensive care room",
-     "ru": "Палата интенсивной терапии"
+     "en": "Intensive care room"
     },
     "area": 24,
     "count": 4,
@@ -343,8 +327,7 @@
     "class": "nurse",
     "kind": "staff",
     "name": {
-     "en": "Nurses station",
-     "ru": "Сестринский пост"
+     "en": "Nurses station"
     },
     "area": 24,
     "count": 2,
@@ -355,8 +338,7 @@
     "class": "clean_link",
     "kind": "lobby",
     "name": {
-     "en": "Clean transfer lobby",
-     "ru": "Чистый шлюз"
+     "en": "Clean transfer lobby"
     },
     "area": 14,
     "count": 2,
@@ -372,8 +354,7 @@
     "class": "dirty_link",
     "kind": "lobby",
     "name": {
-     "en": "Dirty transfer lobby",
-     "ru": "Грязный шлюз"
+     "en": "Dirty transfer lobby"
     },
     "area": 14,
     "count": 2,
@@ -389,8 +370,7 @@
     "class": "clean_util",
     "kind": "storage",
     "name": {
-     "en": "Clean utility room",
-     "ru": "Чистая подсобная"
+     "en": "Clean utility room"
     },
     "area": 12,
     "count": 1,
@@ -401,8 +381,7 @@
     "class": "dirty_util",
     "kind": "storage",
     "name": {
-     "en": "Dirty utility room",
-     "ru": "Грязная подсобная"
+     "en": "Dirty utility room"
     },
     "area": 12,
     "count": 1,
@@ -417,8 +396,7 @@
     "class": "bath_w",
     "kind": "bath",
     "name": {
-     "en": "Patient bathroom",
-     "ru": "Санузел палаты"
+     "en": "Patient bathroom"
     },
     "area": 5,
     "count": 4,
@@ -429,8 +407,7 @@
     "class": "wc_w",
     "kind": "wc",
     "name": {
-     "en": "Visitor toilet",
-     "ru": "Туалет для посетителей"
+     "en": "Visitor toilet"
     },
     "area": 4,
     "count": 2,
@@ -441,8 +418,7 @@
     "class": "plant_room",
     "kind": "technical",
     "name": {
-     "en": "Plant room",
-     "ru": "Венткамера и теплоузел"
+     "en": "Plant room"
     },
     "area": 110,
     "count": 2,
@@ -459,8 +435,7 @@
     "class": "csd",
     "kind": "technical",
     "name": {
-     "en": "Central sterile department",
-     "ru": "Центральное стерилизационное отделение"
+     "en": "Central sterile department"
     },
     "area": 140,
     "count": 1,
@@ -479,8 +454,7 @@
     "class": "switch_room",
     "kind": "technical",
     "name": {
-     "en": "Switch room",
-     "ru": "Распределительная"
+     "en": "Switch room"
     },
     "area": 45,
     "count": 1,
@@ -497,8 +471,7 @@
     "class": "gas_store",
     "kind": "technical",
     "name": {
-     "en": "Medical gas store",
-     "ru": "Склад медицинских газов"
+     "en": "Medical gas store"
     },
     "area": 30,
     "count": 1,
@@ -513,8 +486,7 @@
     "class": "store_b",
     "kind": "storage",
     "name": {
-     "en": "Basement store",
-     "ru": "Подвальный склад"
+     "en": "Basement store"
     },
     "area": 40,
     "count": 1,
@@ -527,16 +499,14 @@
    {
     "id": "public",
     "name": {
-     "en": "Public",
-     "ru": "Общая зона"
+     "en": "Public"
     },
     "adjacent_to": []
    },
    {
     "id": "outpatient",
     "name": {
-     "en": "Outpatient",
-     "ru": "Амбулаторная зона"
+     "en": "Outpatient"
     },
     "adjacent_to": [
      {
@@ -548,8 +518,7 @@
    {
     "id": "emergency",
     "name": {
-     "en": "Emergency",
-     "ru": "Неотложная помощь"
+     "en": "Emergency"
     },
     "adjacent_to": [
      {
@@ -565,8 +534,7 @@
    {
     "id": "diagnostics",
     "name": {
-     "en": "Diagnostics",
-     "ru": "Диагностика"
+     "en": "Diagnostics"
     },
     "adjacent_to": [
      {
@@ -578,8 +546,7 @@
    {
     "id": "surgical",
     "name": {
-     "en": "Surgical suite",
-     "ru": "Хирургический блок"
+     "en": "Surgical suite"
     },
     "adjacent_to": [
      {
@@ -595,8 +562,7 @@
    {
     "id": "ward",
     "name": {
-     "en": "Inpatient",
-     "ru": "Стационар"
+     "en": "Inpatient"
     },
     "adjacent_to": [
      {
@@ -608,8 +574,7 @@
    {
     "id": "icu",
     "name": {
-     "en": "Intensive care",
-     "ru": "Реанимация"
+     "en": "Intensive care"
     },
     "adjacent_to": [
      {
@@ -621,8 +586,7 @@
    {
     "id": "support",
     "name": {
-     "en": "Support",
-     "ru": "Обеспечивающая зона"
+     "en": "Support"
     },
     "adjacent_to": []
    }
@@ -639,8 +603,7 @@
    "levels": [
     {
      "name": {
-      "en": "Plant and sterile services",
-      "ru": "Технический этаж и стерилизация"
+      "en": "Plant and sterile services"
      },
      "fill": "store_b"
     }
@@ -651,8 +614,7 @@
    "grow_share": 0.6,
    "kind": "storage",
    "name": {
-    "en": "Ward store",
-    "ru": "Кладовая отделения"
+    "en": "Ward store"
    }
   }
  }

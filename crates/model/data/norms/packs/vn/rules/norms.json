@@ -20,8 +20,7 @@
    "unit": "m",
    "value": 0.22,
    "text": {
-    "en": "Common stair riser at most 0.22 m",
-    "ru": "Подъём ступени общей лестницы не более 0.22 м"
+    "en": "Common stair riser at most 0.22 m"
    },
    "source": {
     "doc": "vn-qcvn06",
@@ -55,8 +54,7 @@
    "unit": "m",
    "value": 0.25,
    "text": {
-    "en": "Common stair tread at least 0.25 m",
-    "ru": "Проступь общей лестницы не менее 0.25 м"
+    "en": "Common stair tread at least 0.25 m"
    },
    "source": {
     "doc": "vn-qcvn06",
@@ -90,8 +88,7 @@
    "unit": "m",
    "value": 0.9,
    "text": {
-    "en": "Common stair flight width at least 0.9 m",
-    "ru": "Ширина марша общей лестницы не менее 0.9 м"
+    "en": "Common stair flight width at least 0.9 m"
    },
    "source": {
     "doc": "vn-qcvn06",
@@ -129,8 +126,7 @@
    "unit": "m",
    "value": 2.6,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.6 m",
-    "ru": "Высота жилых помещений не менее 2.6 м"
+    "en": "Clear height of habitable rooms at least 2.6 m"
    },
    "source": {
     "doc": "vn-qcvn04",
@@ -163,8 +159,7 @@
    "unit": "m",
    "value": 40,
    "text": {
-    "en": "Travel distance to an exit or stair at most 40 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 40 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 40 m (residential)"
    },
    "source": {
     "doc": "vn-qcvn06",
@@ -196,8 +191,7 @@
    "unit": "m",
    "value": 60,
    "text": {
-    "en": "Travel distance to an exit or stair at most 60 m (office)",
-    "ru": "Путь до выхода или лестницы не более 60 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 60 m (office)"
    },
    "source": {
     "doc": "vn-qcvn06",

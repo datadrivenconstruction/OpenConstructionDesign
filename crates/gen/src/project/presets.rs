@@ -102,6 +102,7 @@ impl Preset {
             m => {
                 let mut md = super::typology::Model::from_json(m).map_err(|e| format!("{name}.model: {}", e.join("; ")))?;
                 md.id = name.to_string();
+                md.set_scope(&name);
                 Some(std::sync::Arc::new(md))
             }
         };
@@ -109,7 +110,7 @@ impl Preset {
         let program = match (&t["program"], &model) {
             (J::Null, Some(m)) => m.program(),
             (J::Null, None) => Program::default(),
-            (p, _) => Program::from_json(p).map_err(|e| format!("{name}.program: {}", e.join("; ")))?,
+            (p, _) => Program::from_json(p).map(|p| p.in_scope(&name)).map_err(|e| format!("{name}.program: {}", e.join("; ")))?,
         };
         let mut programme = program.over(&default_programme(base));
         if let Some(sp) = model.as_ref().and_then(|m| m.spare.clone()) {
@@ -210,11 +211,11 @@ impl Preset {
     pub fn expand(&self, brief: &J) -> J {
         let mut out = self.brief.clone();
         let mut defaults: Vec<(&str, J)> = vec![];
-        let ru = brief["lang"].as_str() == Some("ru");
+        let lang = brief["lang"].as_str().map_or("en", super::names::locale);
         if let Some(o) = out.as_object_mut() {
             if let Some(n) = o.get("name").filter(|n| n.is_object()).cloned() {
-                let pick = n[if ru { "ru" } else { "en" }].as_str().or(n["en"].as_str());
-                o.insert("name".into(), pick.map_or(J::Null, |x| J::String(x.to_string())));
+                let pick = super::names::Text::from_json(&n, &self.name).map(|t| t.get(lang));
+                o.insert("name".into(), pick.map_or(J::Null, J::String));
             }
             for (id, val) in self.rules.as_object().into_iter().flatten() {
                 let Some((path, x)) = rules::alias_value(id, val) else {

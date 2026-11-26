@@ -19,8 +19,7 @@
    "unit": "m",
    "value": 0.18,
    "text": {
-    "en": "Common stair riser at most 0.18 m",
-    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+    "en": "Common stair riser at most 0.18 m"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -54,8 +53,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Common stair tread at least 0.28 m",
-    "ru": "Проступь общей лестницы не менее 0.28 м"
+    "en": "Common stair tread at least 0.28 m"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -89,8 +87,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Common stair flight width at least 1.2 m",
-    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+    "en": "Common stair flight width at least 1.2 m"
    },
    "source": {
     "doc": "sa-momrah-res",
@@ -121,8 +118,7 @@
    "unit": "m",
    "value": 0.2,
    "text": {
-    "en": "Stair riser in a house at most 0.2 m",
-    "ru": "Подъём ступени в доме не более 0.2 м"
+    "en": "Stair riser in a house at most 0.2 m"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -154,8 +150,7 @@
    "unit": "m",
    "value": 0.25,
    "text": {
-    "en": "Stair tread in a house at least 0.25 m",
-    "ru": "Проступь в доме не менее 0.25 м"
+    "en": "Stair tread in a house at least 0.25 m"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -187,8 +182,7 @@
    "unit": "m",
    "value": 0.9,
    "text": {
-    "en": "Stair flight width in a house at least 0.9 m",
-    "ru": "Ширина марша в доме не менее 0.9 м"
+    "en": "Stair flight width in a house at least 0.9 m"
    },
    "source": {
     "doc": "sa-momrah-res",
@@ -226,8 +220,7 @@
    "unit": "m",
    "value": 2.3,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.3 m",
-    "ru": "Высота жилых помещений не менее 2.3 м"
+    "en": "Clear height of habitable rooms at least 2.3 m"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -263,8 +256,7 @@
    "unit": "m",
    "value": 2.3,
    "text": {
-    "en": "Clear height of work rooms at least 2.3 m",
-    "ru": "Высота рабочих помещений не менее 2.3 м"
+    "en": "Clear height of work rooms at least 2.3 m"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -298,8 +290,7 @@
    "unit": "m",
    "value": 61,
    "text": {
-    "en": "Travel distance to an exit or stair at most 61 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 61 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 61 m (residential)"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -332,8 +323,7 @@
    "unit": "m",
    "value": 61,
    "text": {
-    "en": "Travel distance to an exit or stair at most 61 m (office)",
-    "ru": "Путь до выхода или лестницы не более 61 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 61 m (office)"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -368,8 +358,7 @@
    "unit": "ratio",
    "value": 0.08,
    "text": {
-    "en": "Window area at least 8.0 % of the floor of a habitable room",
-    "ru": "Площадь окон не менее 8.0 % площади пола жилой комнаты"
+    "en": "Window area at least 8.0 % of the floor of a habitable room"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -412,8 +401,7 @@
    "unit": "m",
    "value": 1.1,
    "text": {
-    "en": "Corridor clear width at least 1.1 m",
-    "ru": "Ширина коридора не менее 1.1 м"
+    "en": "Corridor clear width at least 1.1 m"
    },
    "source": {
     "doc": "sa-sbc201-2007-copy",
@@ -433,8 +421,7 @@
    "na": true,
    "note": "na: the code limits riser and tread separately (sa.riser, sa.tread); no stride formula",
    "text": {
-    "en": "No stride formula.",
-    "ru": "Нет формулы шага."
+    "en": "No stride formula."
    }
   },
   {
@@ -443,8 +430,7 @@
    "na": true,
    "note": "na: office area enters as occupant load per person for egress, not a minimum room area",
    "text": {
-    "en": "No minimum office area per workplace.",
-    "ru": "Нет минимальной площади на рабочее место."
+    "en": "No minimum office area per workplace."
    }
   }
  ]

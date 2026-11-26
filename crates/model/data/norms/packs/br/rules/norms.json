@@ -19,8 +19,7 @@
    "unit": "m",
    "value": 0.18,
    "text": {
-    "en": "Emergency stair riser at most 0.18 m (0.16 to 0.18 m, tolerance 0.005 m)",
-    "pt": "Altura do espelho da escada de emergência no máximo 0.18 m (0.16 a 0.18 m, tolerância 0.005 m)"
+    "en": "Emergency stair riser at most 0.18 m (0.16 to 0.18 m, tolerance 0.005 m)"
    },
    "source": {
     "doc": "go-nt11",
@@ -57,8 +56,7 @@
     0.64
    ],
    "text": {
-    "en": "Emergency stair step rule 2 x riser + tread between 0.63 and 0.64 m",
-    "pt": "Regra do degrau da escada de emergência: 2 x espelho + piso entre 0.63 e 0.64 m"
+    "en": "Emergency stair step rule 2 x riser + tread between 0.63 and 0.64 m"
    },
    "source": {
     "doc": "go-nt11",
@@ -89,8 +87,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Emergency stair flight width at least 1.2 m (office)",
-    "pt": "Largura livre do lance da escada de emergência de no mínimo 1.2 m (escritório)"
+    "en": "Emergency stair flight width at least 1.2 m (office)"
    },
    "source": {
     "doc": "go-nt11",
@@ -124,8 +121,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Corridor clear width at least 1.2 m (office)",
-    "pt": "Largura livre do corredor de no mínimo 1.2 m (escritório)"
+    "en": "Corridor clear width at least 1.2 m (office)"
    },
    "source": {
     "doc": "go-nt11",
@@ -159,8 +155,7 @@
    "unit": "m",
    "value": 40.0,
    "text": {
-    "en": "Travel distance from a room to an exit or stair at most 40 m (residential, upper floors, no sprinklers or detection)",
-    "pt": "Distância de percurso de um cômodo até uma saída ou escada de no máximo 40 m (residencial, pavimentos superiores, sem chuveiros automáticos nem detecção)"
+    "en": "Travel distance from a room to an exit or stair at most 40 m (residential, upper floors, no sprinklers or detection)"
    },
    "source": {
     "doc": "go-nt11",
@@ -192,8 +187,7 @@
    "unit": "m",
    "value": 35.0,
    "text": {
-    "en": "Travel distance from a room to an exit or stair at most 35 m (office, upper floors, no sprinklers or detection)",
-    "pt": "Distância de percurso de um cômodo até uma saída ou escada de no máximo 35 m (escritório, pavimentos superiores, sem chuveiros automáticos nem detecção)"
+    "en": "Travel distance from a room to an exit or stair at most 35 m (office, upper floors, no sprinklers or detection)"
    },
    "source": {
     "doc": "go-nt11",
@@ -234,8 +228,7 @@
    "unit": "m",
    "value": 0.27,
    "text": {
-    "en": "Escape stair tread at least 0.27 m (from the step rule)",
-    "ru": "Проступь эвакуационной лестницы не менее 0.27 м (из правила шага)"
+    "en": "Escape stair tread at least 0.27 m (from the step rule)"
    },
    "source": {
     "doc": "go-nt11",
@@ -267,8 +260,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Escape stair width at least 1.2 m",
-    "ru": "Ширина эвакуационной лестницы не менее 1.2 м"
+    "en": "Escape stair width at least 1.2 m"
    },
    "source": {
     "doc": "go-nt11",
@@ -288,8 +280,7 @@
    "na": true,
    "note": "na: the state fire norm covers buildings other than single-family houses; private house stairs follow the city code (to verify per city)",
    "text": {
-    "en": "No national stair width for single-family houses.",
-    "ru": "Нет общенациональной ширины лестницы для индивидуального дома."
+    "en": "No national stair width for single-family houses."
    }
   },
   {
@@ -298,8 +289,7 @@
    "na": true,
    "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
    "text": {
-    "en": "Room height is set by the city building code.",
-    "ru": "Высоту помещения задаёт городской строительный кодекс."
+    "en": "Room height is set by the city building code."
    }
   },
   {
@@ -308,8 +298,7 @@
    "na": true,
    "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
    "text": {
-    "en": "Office room height is set by the city building code.",
-    "ru": "Высоту офисного помещения задаёт городской кодекс."
+    "en": "Office room height is set by the city building code."
    }
   },
   {
@@ -318,8 +307,7 @@
    "na": true,
    "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack",
    "text": {
-    "en": "Office area per workplace is set by the city building code.",
-    "ru": "Площадь на рабочее место задаёт городской кодекс."
+    "en": "Office area per workplace is set by the city building code."
    }
   },
   {
@@ -328,8 +316,7 @@
    "na": true,
    "note": "na: room heights, office areas and window shares are set by each city's building code; no national or reference-state value in this pack; the generic advice rule stays",
    "text": {
-    "en": "Window share is set by the city building code.",
-    "ru": "Долю остекления задаёт городской кодекс."
+    "en": "Window share is set by the city building code."
    }
   }
  ]

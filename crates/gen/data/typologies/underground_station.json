@@ -10,8 +10,7 @@
  "note": "underground station: a surface building over three storeys below ground (concourse, platform with a trackway, ventilation and traction level); the outside walls below ground are retaining walls; stair and lift cores run down all levels; tracks, rolling stock and escalator machines are not modelled",
  "brief": {
   "name": {
-   "en": "Underground station",
-   "ru": "Станция метро"
+   "en": "Underground station"
   },
   "floors": 2,
   "floor_height": 5.0,
@@ -29,16 +28,14 @@
  },
  "model": {
   "title": {
-   "en": "Underground station",
-   "ru": "Станция метро"
+   "en": "Underground station"
   },
   "spaces": [
    {
     "class": "ticket_hall",
     "kind": "lobby",
     "name": {
-     "en": "Ticket hall",
-     "ru": "Кассовый зал"
+     "en": "Ticket hall"
     },
     "area": 1100,
     "count": 1,
@@ -50,8 +47,7 @@
     "class": "fare_control",
     "kind": "lobby",
     "name": {
-     "en": "Fare control hall",
-     "ru": "Зал контроля проезда"
+     "en": "Fare control hall"
     },
     "area": 520,
     "count": 1,
@@ -63,8 +59,7 @@
     "class": "station_control",
     "kind": "office",
     "name": {
-     "en": "Station control room",
-     "ru": "Помещение управления станцией"
+     "en": "Station control room"
     },
     "area": 40,
     "count": 1,
@@ -75,8 +70,7 @@
     "class": "staff_st",
     "kind": "staff",
     "name": {
-     "en": "Station staff room",
-     "ru": "Комната персонала станции"
+     "en": "Station staff room"
     },
     "area": 30,
     "count": 2,
@@ -87,8 +81,7 @@
     "class": "wc_st",
     "kind": "wc",
     "name": {
-     "en": "Public toilet",
-     "ru": "Общественный туалет"
+     "en": "Public toilet"
     },
     "area": 12,
     "count": 4,
@@ -99,8 +92,7 @@
     "class": "kiosk",
     "kind": "retail",
     "name": {
-     "en": "Retail kiosk",
-     "ru": "Торговый киоск"
+     "en": "Retail kiosk"
     },
     "area": 30,
     "count": 4,
@@ -111,8 +103,7 @@
     "class": "ops_office",
     "kind": "office",
     "name": {
-     "en": "Operations office",
-     "ru": "Служебный кабинет"
+     "en": "Operations office"
     },
     "area": 40,
     "count": 4,
@@ -123,8 +114,7 @@
     "class": "vent_upper",
     "kind": "technical",
     "name": {
-     "en": "Upper ventilation room",
-     "ru": "Верхняя венткамера"
+     "en": "Upper ventilation room"
     },
     "area": 120,
     "count": 2,
@@ -140,8 +130,7 @@
     "class": "concourse",
     "kind": "lobby",
     "name": {
-     "en": "Concourse",
-     "ru": "Пересадочный вестибюль"
+     "en": "Concourse"
     },
     "area": 900,
     "count": 1,
@@ -156,8 +145,7 @@
     "class": "escalator_hall",
     "kind": "lobby",
     "name": {
-     "en": "Escalator hall",
-     "ru": "Эскалаторный зал"
+     "en": "Escalator hall"
     },
     "area": 150,
     "count": 2,
@@ -172,8 +160,7 @@
     "class": "concourse_services",
     "kind": "technical",
     "name": {
-     "en": "Concourse services room",
-     "ru": "Служебное помещение вестибюля"
+     "en": "Concourse services room"
     },
     "area": 120,
     "count": 2,
@@ -189,8 +176,7 @@
     "class": "platform",
     "kind": "lobby",
     "name": {
-     "en": "Platform",
-     "ru": "Платформа"
+     "en": "Platform"
     },
     "area": 1300,
     "count": 2,
@@ -209,8 +195,7 @@
     "class": "platform_services",
     "kind": "technical",
     "name": {
-     "en": "Platform services room",
-     "ru": "Служебное помещение платформы"
+     "en": "Platform services room"
     },
     "area": 90,
     "count": 2,
@@ -226,8 +211,7 @@
     "class": "fan_room",
     "kind": "technical",
     "name": {
-     "en": "Tunnel ventilation fan room",
-     "ru": "Вентиляционная камера"
+     "en": "Tunnel ventilation fan room"
     },
     "area": 160,
     "count": 4,
@@ -246,8 +230,7 @@
     "class": "substation",
     "kind": "technical",
     "name": {
-     "en": "Traction substation",
-     "ru": "Тяговая подстанция"
+     "en": "Traction substation"
     },
     "area": 130,
     "count": 2,
@@ -266,8 +249,7 @@
     "class": "sump",
     "kind": "technical",
     "name": {
-     "en": "Drainage pump room",
-     "ru": "Насосная откачки"
+     "en": "Drainage pump room"
     },
     "area": 70,
     "count": 2,
@@ -284,8 +266,7 @@
     "class": "cable",
     "kind": "technical",
     "name": {
-     "en": "Cable room",
-     "ru": "Кабельное помещение"
+     "en": "Cable room"
     },
     "area": 80,
     "count": 2,
@@ -300,8 +281,7 @@
     "class": "service_void",
     "kind": "storage",
     "name": {
-     "en": "Service store",
-     "ru": "Служебная кладовая"
+     "en": "Service store"
     },
     "area": 60,
     "count": 1,
@@ -314,16 +294,14 @@
    {
     "id": "public",
     "name": {
-     "en": "Public",
-     "ru": "Общая зона"
+     "en": "Public"
     },
     "adjacent_to": []
    },
    {
     "id": "operations",
     "name": {
-     "en": "Operations",
-     "ru": "Эксплуатация"
+     "en": "Operations"
     },
     "adjacent_to": [
      {
@@ -335,16 +313,14 @@
    {
     "id": "systems",
     "name": {
-     "en": "Systems",
-     "ru": "Системы"
+     "en": "Systems"
     },
     "adjacent_to": []
    },
    {
     "id": "power",
     "name": {
-     "en": "Power",
-     "ru": "Электроснабжение"
+     "en": "Power"
     },
     "adjacent_to": [
      {
@@ -366,26 +342,22 @@
    "levels": [
     {
      "name": {
-      "en": "Concourse level",
-      "ru": "Вестибюльный уровень"
+      "en": "Concourse level"
      },
      "fill": "concourse_services"
     },
     {
      "name": {
-      "en": "Platform level",
-      "ru": "Платформенный уровень"
+      "en": "Platform level"
      },
      "fill": "platform_services",
      "corridor": {
-      "en": "Trackway",
-      "ru": "Путевая часть"
+      "en": "Trackway"
      }
     },
     {
      "name": {
-      "en": "Ventilation and traction level",
-      "ru": "Вентиляционно-тяговый уровень"
+      "en": "Ventilation and traction level"
      },
      "fill": "service_void"
     }
@@ -397,8 +369,7 @@
    "grow_share": 0.6,
    "kind": "lobby",
    "name": {
-    "en": "Public hall",
-    "ru": "Общий зал"
+    "en": "Public hall"
    }
   }
  }

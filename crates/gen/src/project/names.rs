@@ -4,46 +4,9 @@
 
 use super::RoomKind;
 
-pub(crate) fn kind_name(k: RoomKind, ru: bool) -> &'static str {
+/// The English name of a room kind, the source the bundles translate.
+pub(crate) fn kind_name_en(k: RoomKind) -> &'static str {
     use RoomKind::*;
-    if ru {
-        return match k {
-            Living => "\u{413}\u{43e}\u{441}\u{442}\u{438}\u{43d}\u{430}\u{44f}",
-            Bedroom => "\u{421}\u{43f}\u{430}\u{43b}\u{44c}\u{43d}\u{44f}",
-            Kitchen => "\u{41a}\u{443}\u{445}\u{43d}\u{44f}",
-            Bath => "\u{412}\u{430}\u{43d}\u{43d}\u{430}\u{44f}",
-            Wc => "\u{422}\u{443}\u{430}\u{43b}\u{435}\u{442}",
-            Hall => "\u{41f}\u{440}\u{438}\u{445}\u{43e}\u{436}\u{430}\u{44f}",
-            Storage => "\u{41a}\u{43b}\u{430}\u{434}\u{43e}\u{432}\u{430}\u{44f}",
-            Office => "\u{41a}\u{430}\u{431}\u{438}\u{43d}\u{435}\u{442}",
-            Meeting => concat!(
-                "\u{41f}\u{435}\u{440}\u{435}\u{433}\u{43e}",
-                "\u{432}\u{43e}\u{440}\u{43d}\u{430}\u{44f}"
-            ),
-            Classroom => "\u{41a}\u{43b}\u{430}\u{441}\u{441}",
-            Lab => "\u{41b}\u{430}\u{431}\u{43e}\u{440}\u{430}\u{442}\u{43e}\u{440}\u{438}\u{44f}",
-            Staff => concat!(
-                "\u{423}\u{447}\u{438}\u{442}\u{435}\u{43b}",
-                "\u{44c}\u{441}\u{43a}\u{430}\u{44f}"
-            ),
-            Lobby => "\u{412}\u{435}\u{441}\u{442}\u{438}\u{431}\u{44e}\u{43b}\u{44c}",
-            Technical => {
-                "\u{422}\u{435}\u{445}\u{43d}\u{438}\u{447}\u{435}\u{441}\u{43a}\u{43e}\u{435}"
-            }
-            Corridor => "\u{41a}\u{43e}\u{440}\u{438}\u{434}\u{43e}\u{440}",
-            Stair => "\u{41b}\u{435}\u{441}\u{442}\u{43d}\u{438}\u{446}\u{430}",
-            Lift => "\u{41b}\u{438}\u{444}\u{442}",
-            Parking => "\u{410}\u{432}\u{442}\u{43e}\u{441}\u{442}\u{43e}\u{44f}\u{43d}\u{43a}\u{430}",
-            Retail => "\u{422}\u{43e}\u{440}\u{433}\u{43e}\u{432}\u{44b}\u{439} \u{437}\u{430}\u{43b}",
-            Dining => concat!(
-                "\u{41e}\u{431}\u{435}\u{434}\u{435}\u{43d}\u{43d}\u{44b}\u{439} ",
-                "\u{437}\u{430}\u{43b}"
-            ),
-            Workshop => "\u{426}\u{435}\u{445}",
-            Ward => "\u{41f}\u{430}\u{43b}\u{430}\u{442}\u{430}",
-            Gym => "\u{421}\u{43f}\u{43e}\u{440}\u{442}\u{437}\u{430}\u{43b}",
-        };
-    }
     match k {
         Living => "Living",
         Bedroom => "Bedroom",
@@ -71,29 +34,51 @@ pub(crate) fn kind_name(k: RoomKind, ru: bool) -> &'static str {
     }
 }
 
-pub(crate) fn level_name(storey: usize, ru: bool) -> String {
-    if ru {
-        format!(
-            "\u{423}\u{440}\u{43e}\u{432}\u{435}\u{43d}\u{44c} {}",
-            storey + 1
-        )
-    } else {
-        format!("Level {}", storey + 1)
-    }
+/// The default name of a room kind in `lang`.
+pub(crate) fn kind_name(k: RoomKind, lang: &str) -> &'static str {
+    look(lang, &format!("gen.name.room.{}", k.key())).unwrap_or(kind_name_en(k))
+}
+
+pub(crate) fn level_name(storey: usize, lang: &str) -> String {
+    look(lang, "gen.name.level").unwrap_or("Level {n}").replace("{n}", &(storey + 1).to_string())
 }
 
 /// Basement `b`, 0 right below the ground floor.
-pub(crate) fn basement_name(b: usize, ru: bool) -> String {
-    if ru {
-        format!("\u{41f}\u{43e}\u{434}\u{432}\u{430}\u{43b} {}", b + 1)
-    } else {
-        format!("Basement {}", b + 1)
+pub(crate) fn basement_name(b: usize, lang: &str) -> String {
+    look(lang, "gen.name.basement").unwrap_or("Basement {n}").replace("{n}", &(b + 1).to_string())
+}
+
+pub(crate) fn roof_name(lang: &str) -> &'static str {
+    look(lang, "gen.name.roof").unwrap_or("Roof")
+}
+
+/// Rooms still named by their kind's English default take the locale's default.
+pub(crate) fn default_rooms(p: &mut super::GProject, lang: &str) {
+    if lang == "en" {
+        return;
     }
+    for st in p.storeys.iter_mut().chain(p.basements.iter_mut()) {
+        for (g, r) in st.layout.rooms.iter_mut().zip(&st.rooms) {
+            if g.name == kind_name_en(r.kind) {
+                g.name = kind_name(r.kind, lang).to_string();
+            }
+        }
+    }
+}
+
+/// Grid axes take Cyrillic letters where the locale's `gen.grid.axes` says `cyrillic`.
+pub(crate) fn cyrillic_axes(lang: &str) -> bool {
+    look(lang, "gen.grid.axes") == Some("cyrillic")
 }
 
 // LOCALES: every UI locale (a folder of `crates/ui/data/i18n`); NAME_FILES: the locales whose
 // folder holds `gen_names.json`, with its text
 include!(concat!(env!("OUT_DIR"), "/gen_names.rs"));
+
+/// The word lists of `data/lang`: (locale, list, text).
+pub(crate) fn word_files() -> &'static [(&'static str, &'static str, &'static str)] {
+    WORD_FILES
+}
 
 /// Every UI locale code; a spec's `lang` is one of them.
 pub fn locales() -> &'static [&'static str] {
@@ -140,39 +125,113 @@ pub fn text(lang: &str, key: &str, n: Option<usize>) -> String {
     }
 }
 
-/// Default names in the project's locale: rooms, storeys, basements and the roof the builders
-/// named by the English default take the locale's `gen.name.*`. en and ru are built so.
-pub(crate) fn localize(p: &mut super::GProject, lang: &str) {
-    if lang == "en" || lang == "ru" {
-        return;
+/// The translation of `key` in `lang` or its base language; `None` in English or when no
+/// bundle has it, so the caller keeps its English source.
+pub(crate) fn look(lang: &str, key: &str) -> Option<&'static str> {
+    if lang == "en" {
+        return None;
     }
-    for st in p.storeys.iter_mut().chain(p.basements.iter_mut()) {
-        for (g, r) in st.layout.rooms.iter_mut().zip(&st.rooms) {
-            if g.name == kind_name(r.kind, false) {
-                g.name = text(lang, &format!("gen.name.room.{}", r.kind.key()), None);
-            }
-        }
-    }
-    for (k, st) in p.storeys.iter_mut().enumerate() {
-        if st.name == level_name(k, false) {
-            st.name = text(lang, "gen.name.level", Some(k + 1));
-        }
-    }
-    for (b, st) in p.basements.iter_mut().enumerate() {
-        if st.name == basement_name(b, false) {
-            st.name = text(lang, "gen.name.basement", Some(b + 1));
-        }
-    }
-    if p.roof.name == roof_name(false) {
-        p.roof.name = text(lang, "gen.name.roof", None);
-    }
+    let base = lang.split('-').next().unwrap_or(lang);
+    [lang, base].iter().find_map(|l| tables().get(*l)?.get(key)?.as_str())
 }
 
-pub(crate) fn roof_name(ru: bool) -> &'static str {
-    if ru {
-        "\u{41a}\u{440}\u{43e}\u{432}\u{43b}\u{44f}"
-    } else {
-        "Roof"
+/// Lowercase ASCII words of an English text joined by `_`: the key part of a name.
+pub(crate) fn slug(en: &str) -> String {
+    let mut out = String::new();
+    for w in en.split(|c: char| !c.is_ascii_alphanumeric()).filter(|w| !w.is_empty()) {
+        if !out.is_empty() {
+            out.push('_');
+        }
+        out.push_str(&w.to_ascii_lowercase());
+    }
+    out
+}
+
+/// An English name of generator data in `lang`: `gen.n.<scope>.<slug>`, then `gen.n.<slug>`.
+pub fn tr(lang: &str, scope: &str, en: &str) -> String {
+    if lang == "en" || en.is_empty() {
+        return en.to_string();
+    }
+    let s = slug(en);
+    let own = (!scope.is_empty()).then(|| look(lang, &format!("gen.n.{scope}.{s}"))).flatten();
+    own.or_else(|| look(lang, &format!("gen.n.{s}"))).unwrap_or(en).to_string()
+}
+
+/// A display name: English source the bundles translate, or the user's own words. A plain
+/// string is the same in every language; `{en, <locale>: ..}` keeps the locales it gives.
+#[derive(Clone, Debug, Default, PartialEq)]
+pub struct Text {
+    pub en: String,
+    scope: String,
+    own: Vec<(String, String)>,
+    fixed: bool,
+}
+
+impl Text {
+    /// A name of the generator's own data, translated under `scope`.
+    pub fn src(en: &str, scope: &str) -> Text {
+        Text { en: en.to_string(), scope: scope.to_string(), own: vec![], fixed: false }
+    }
+
+    /// Words that stay as written in every language.
+    pub fn fixed(s: &str) -> Text {
+        Text { en: s.to_string(), scope: String::new(), own: vec![], fixed: true }
+    }
+
+    /// A string or `{en, <locale>..}`; `None` without English words.
+    pub fn from_json(v: &serde_json::Value, scope: &str) -> Option<Text> {
+        match v {
+            serde_json::Value::String(s) if !s.trim().is_empty() => Some(Text::fixed(s)),
+            serde_json::Value::Object(o) => {
+                let en = o.get("en")?.as_str().filter(|s| !s.trim().is_empty())?;
+                let own = o.iter().filter(|(k, _)| *k != "en").filter_map(|(k, x)| Some((k.clone(), x.as_str()?.to_string()))).collect();
+                Some(Text { own, ..Text::src(en, scope) })
+            }
+            _ => None,
+        }
+    }
+
+    /// The scope the bundles translate it under, for data read before its scope is known.
+    pub fn in_scope(mut self, scope: &str) -> Text {
+        if self.scope.is_empty() {
+            self.scope = scope.to_string();
+        }
+        self
+    }
+
+    pub fn get(&self, lang: &str) -> String {
+        let base = lang.split('-').next().unwrap_or(lang);
+        let own = [lang, base].iter().find_map(|l| self.own.iter().find(|(k, _)| k == l));
+        match own {
+            Some((_, v)) => v.clone(),
+            None if self.fixed => self.en.clone(),
+            None => tr(lang, &self.scope, &self.en),
+        }
+    }
+
+    /// True when `name` is this name in some language.
+    pub fn names(&self, name: &str) -> bool {
+        if name == self.en || self.own.iter().any(|(_, v)| v == name) {
+            return true;
+        }
+        if self.fixed {
+            return false;
+        }
+        let s = slug(&self.en);
+        let keys = [format!("gen.n.{}.{s}", self.scope), format!("gen.n.{s}")];
+        tables().values().any(|t| keys.iter().any(|k| t.get(k).and_then(|v| v.as_str()) == Some(name)))
+    }
+
+    pub fn to_json(&self) -> serde_json::Value {
+        if self.fixed {
+            return serde_json::Value::String(self.en.clone());
+        }
+        let mut o = serde_json::Map::new();
+        o.insert("en".into(), self.en.clone().into());
+        for (k, v) in &self.own {
+            o.insert(k.clone(), v.clone().into());
+        }
+        serde_json::Value::Object(o)
     }
 }
 
@@ -182,7 +241,7 @@ mod tests {
 
     #[test]
     fn generators_and_projects_name_rooms_from_one_table() {
-        for (lang, ru) in [("en", false), ("ru", true)] {
+        for lang in ["en", "ru", "de"] {
             let n = crate::layout::names(lang);
             let pairs = [
                 (n.living, RoomKind::Living),
@@ -194,7 +253,7 @@ mod tests {
                 (n.service, RoomKind::Technical),
             ];
             for (name, k) in pairs {
-                assert_eq!(name, kind_name(k, ru), "{lang} {k:?}");
+                assert_eq!(name, kind_name(k, lang), "{lang} {k:?}");
             }
         }
     }

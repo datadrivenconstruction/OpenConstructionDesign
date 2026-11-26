@@ -153,8 +153,7 @@
    "verified": false,
    "note": "na: fire measures step by evacuation height bands (14 m, 15 m, 28 m) per use, not by a building class",
    "text": {
-    "en": "No height class: fire measures step by evacuation height per use.",
-    "ru": "Нет класса по высоте: требования меняются по высоте эвакуации для каждого назначения."
+    "en": "No height class: fire measures step by evacuation height per use."
    }
   },
   {

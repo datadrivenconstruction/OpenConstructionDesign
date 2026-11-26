@@ -9,8 +9,7 @@
  "note": "warehouse: built as storage halls with an office corner in deep room bands; crane beams, loading docks and mezzanines are not built",
  "brief": {
   "name": {
-   "en": "Warehouse",
-   "ru": "Склад"
+   "en": "Warehouse"
   },
   "floors": 1
  },
@@ -26,8 +25,7 @@
     "area": 200,
     "count": 2,
     "name": {
-     "en": "Warehouse hall",
-     "ru": "Складской зал"
+     "en": "Warehouse hall"
     },
     "floor": "ground"
    },
@@ -58,8 +56,7 @@
     "area": 200,
     "count": 2,
     "name": {
-     "en": "Warehouse hall",
-     "ru": "Складской зал"
+     "en": "Warehouse hall"
     },
     "floor": "single"
    },

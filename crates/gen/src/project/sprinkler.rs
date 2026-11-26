@@ -27,7 +27,7 @@ const PUMP: &str = "Fire Pump";
 
 pub(super) fn protect(spec: &ProjectSpec, p: &mut GProject) {
     p.lifts = super::build::lift_plan(spec);
-    p.fire.name = if spec.ru { crate::lang::ru("Sprinklers") } else { "Sprinklers" }.to_string();
+    p.fire.name = super::names::tr(spec.lang, "", "Sprinklers");
     let Some(last) = p.storeys.last() else { return };
     // norms count from the floor of the top occupied storey, not the roof
     let top = last.elevation;

@@ -19,8 +19,7 @@
    "unit": "m",
    "value": 0.18,
    "text": {
-    "en": "Common stair riser at most 0.18 m",
-    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+    "en": "Common stair riser at most 0.18 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -53,8 +52,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Common stair tread at least 0.28 m",
-    "ru": "Проступь общей лестницы не менее 0.28 м"
+    "en": "Common stair tread at least 0.28 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -87,8 +85,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Common stair flight width at least 1.2 m",
-    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+    "en": "Common stair flight width at least 1.2 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -119,8 +116,7 @@
    "unit": "m",
    "value": 0.18,
    "text": {
-    "en": "Stair riser in a house at most 0.18 m",
-    "ru": "Подъём ступени в доме не более 0.18 м"
+    "en": "Stair riser in a house at most 0.18 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -151,8 +147,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Stair tread in a house at least 0.28 m",
-    "ru": "Проступь в доме не менее 0.28 м"
+    "en": "Stair tread in a house at least 0.28 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -183,8 +178,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Stair flight width in a house at least 1.0 m",
-    "ru": "Ширина марша в доме не менее 1.0 м"
+    "en": "Stair flight width in a house at least 1.0 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -222,8 +216,7 @@
    "unit": "m",
    "value": 2.7,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.7 m",
-    "ru": "Высота жилых помещений не менее 2.7 м"
+    "en": "Clear height of habitable rooms at least 2.7 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -258,8 +251,7 @@
    "unit": "m",
    "value": 2.5,
    "text": {
-    "en": "Clear height of work rooms at least 2.5 m",
-    "ru": "Высота рабочих помещений не менее 2.5 м"
+    "en": "Clear height of work rooms at least 2.5 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -295,8 +287,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.0 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.0 м"
+    "en": "Accessible-route corridor clear width at least 1.0 m"
    },
    "source": {
     "doc": "ae-du-dbc",
@@ -330,8 +321,7 @@
    "unit": "ratio",
    "value": 0.1,
    "text": {
-    "en": "Window area at least 10.0 % of the floor of a habitable room",
-    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+    "en": "Window area at least 10.0 % of the floor of a habitable room"
    },
    "source": {
     "doc": "ae-du-dbc",

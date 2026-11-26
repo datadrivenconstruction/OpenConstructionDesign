@@ -17,8 +17,7 @@
    "unit": "m",
    "value": 1.1,
    "text": {
-    "en": "Public stair flight clear width at least 1.10 m (two streams of 0.55 m)",
-    "zh": "公共楼梯梯段净宽不小于 1.10 m（两股 0.55 m）"
+    "en": "Public stair flight clear width at least 1.10 m (two streams of 0.55 m)"
    },
    "source": {
     "doc": "gb55031",
@@ -52,8 +51,7 @@
    "unit": "m",
    "value": 1.3,
    "text": {
-    "en": "Public corridor clear width at least 1.30 m (not housing)",
-    "zh": "公共走道净宽不小于 1.30 m（非住宅）"
+    "en": "Public corridor clear width at least 1.30 m (not housing)"
    },
    "source": {
     "doc": "gb55031",
@@ -87,8 +85,7 @@
    "unit": "m",
    "value": 2.0,
    "text": {
-    "en": "Clear height of public corridors at least 2.00 m",
-    "zh": "公共走道净高不小于 2.00 m"
+    "en": "Clear height of public corridors at least 2.00 m"
    },
    "source": {
     "doc": "gb55031",
@@ -115,8 +112,7 @@
    "unit": "m",
    "value": 2.2,
    "text": {
-    "en": "Public stair flight clear height at least 2.20 m",
-    "zh": "公共楼梯梯段净高不小于 2.20 m"
+    "en": "Public stair flight clear height at least 2.20 m"
    },
    "source": {
     "doc": "gb55031",
@@ -153,8 +149,7 @@
    "unit": "m",
    "value": 0.175,
    "text": {
-    "en": "Residential stair riser at most 0.175 m",
-    "ru": "Подъём ступени жилой лестницы не более 0.175 м"
+    "en": "Residential stair riser at most 0.175 m"
    },
    "source": {
     "doc": "gb50096",
@@ -187,8 +182,7 @@
    "unit": "m",
    "value": 0.26,
    "text": {
-    "en": "Residential stair tread at least 0.26 m",
-    "ru": "Проступь жилой лестницы не менее 0.26 м"
+    "en": "Residential stair tread at least 0.26 m"
    },
    "source": {
     "doc": "gb50096",
@@ -220,8 +214,7 @@
    "unit": "m",
    "value": 1.1,
    "text": {
-    "en": "Stair flight clear width at least 1.1 m",
-    "ru": "Ширина марша не менее 1.1 м"
+    "en": "Stair flight clear width at least 1.1 m"
    },
    "source": {
     "doc": "gb50096",
@@ -254,8 +247,7 @@
    "unit": "m",
    "value": 2.4,
    "text": {
-    "en": "Bedroom and living room clear height at least 2.4 m",
-    "ru": "Высота спальни и гостиной не менее 2.4 м"
+    "en": "Bedroom and living room clear height at least 2.4 m"
    },
    "source": {
     "doc": "gb50096",
@@ -289,8 +281,7 @@
    "unit": "ratio",
    "value": 0.143,
    "text": {
-    "en": "Window area at least 1/7 of the room floor",
-    "ru": "Площадь окна не менее 1/7 площади пола"
+    "en": "Window area at least 1/7 of the room floor"
    },
    "source": {
     "doc": "gb50096",

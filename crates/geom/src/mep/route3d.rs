@@ -918,6 +918,39 @@ fn escape(t: &Terminal, r: &Rules, end: Option<EndRun>) -> (V3, Option<u8>, f64)
     }
 }
 
+/// The layers moved where vertical ports can turn onto them: a port whose own straight ends past a
+/// layer by less than a leg can never come back to it, so the layer goes to the farthest such end.
+fn reachable_layers(rules: &Rules, ports: &[(Terminal, Option<EndRun>)]) -> Option<Rules> {
+    let mut out = rules.clone();
+    let mut moved = false;
+    for l in out.layers.iter_mut() {
+        for s in [1.0, -1.0] {
+            let past = ports
+                .iter()
+                .filter_map(|(t, end)| {
+                    let d = t.dir?.normalized();
+                    if (d.z - s).abs() > 1e-6 || s * (*l - t.at.z) < -1e-6 {
+                        return None;
+                    }
+                    let ze = escape(t, rules, *end).0.z;
+                    let over = s * (ze - *l);
+                    (over > 1e-6 && over < rules.min_leg - 1e-6).then_some(ze)
+                })
+                .max_by(|a, b| (s * a).total_cmp(&(s * b)));
+            if let Some(z) = past {
+                let dz = z - *l;
+                if (out.zone.0 - 1e-6..=out.zone.1 + 1e-6).contains(l) {
+                    out.zone = (out.zone.0 + dz, out.zone.1 + dz);
+                }
+                *l = z;
+                moved = true;
+                break;
+            }
+        }
+    }
+    moved.then_some(out)
+}
+
 /// Grows a tree from the source to every target; `others` are runs already placed (other
 /// systems), and the tree's own segments are added to it as they are routed.
 pub fn route_tree(
@@ -927,6 +960,16 @@ pub fn route_tree(
     targets: &[Terminal],
     others: &mut RoutedIndex,
 ) -> Tree {
+    let mut ports: Vec<(Terminal, Option<EndRun>)> = targets
+        .iter()
+        .enumerate()
+        .map(|(i, t)| (*t, rules.ends.get(i).copied().flatten()))
+        .collect();
+    if let Source::Terminal(t) = source {
+        ports.push((*t, None));
+    }
+    let moved = reachable_layers(rules, &ports);
+    let rules = moved.as_ref().unwrap_or(rules);
     let end_of = |i: usize| rules.ends.get(i).copied().flatten();
     let mut extra: Vec<V3> = vec![];
     for (i, t) in targets.iter().enumerate() {

@@ -10,8 +10,7 @@
  "note": "data centre: halls of racks with their cooling and power rooms in a two-storey corridor plan; the loads (cooling, power, backup power) are computed per room class and worked out as plant briefs in the shape the plant module takes; racks and cooling units themselves are not placed",
  "brief": {
   "name": {
-   "en": "Data centre",
-   "ru": "Центр обработки данных"
+   "en": "Data centre"
   },
   "floors": 2,
   "floor_height": 5.0
@@ -23,16 +22,14 @@
  },
  "model": {
   "title": {
-   "en": "Data centre",
-   "ru": "Центр обработки данных"
+   "en": "Data centre"
   },
   "spaces": [
    {
     "class": "lobby",
     "kind": "lobby",
     "name": {
-     "en": "Entrance lobby",
-     "ru": "Входной вестибюль"
+     "en": "Entrance lobby"
     },
     "area": 50,
     "count": 1,
@@ -43,8 +40,7 @@
     "class": "security",
     "kind": "staff",
     "name": {
-     "en": "Security room",
-     "ru": "Пост охраны"
+     "en": "Security room"
     },
     "area": 20,
     "count": 1,
@@ -55,8 +51,7 @@
     "class": "noc",
     "kind": "office",
     "name": {
-     "en": "Network operations centre",
-     "ru": "Центр управления сетью"
+     "en": "Network operations centre"
     },
     "area": 70,
     "count": 1,
@@ -67,8 +62,7 @@
     "class": "loading",
     "kind": "storage",
     "name": {
-     "en": "Loading and staging room",
-     "ru": "Приёмка и комплектация"
+     "en": "Loading and staging room"
     },
     "area": 70,
     "count": 1,
@@ -79,8 +73,7 @@
     "class": "wc_dc",
     "kind": "wc",
     "name": {
-     "en": "Toilet",
-     "ru": "Санузел"
+     "en": "Toilet"
     },
     "area": 5,
     "count": 2,
@@ -91,8 +84,7 @@
     "class": "hall",
     "kind": "technical",
     "name": {
-     "en": "Data hall",
-     "ru": "Машинный зал"
+     "en": "Data hall"
     },
     "area": 400,
     "count": 2,
@@ -128,8 +120,7 @@
     "class": "ups",
     "kind": "technical",
     "name": {
-     "en": "UPS and battery room",
-     "ru": "ИБП и аккумуляторная"
+     "en": "UPS and battery room"
     },
     "area": 120,
     "count": 2,
@@ -148,8 +139,7 @@
     "class": "switchgear",
     "kind": "technical",
     "name": {
-     "en": "Switchgear room",
-     "ru": "Распределительное устройство"
+     "en": "Switchgear room"
     },
     "area": 80,
     "count": 2,
@@ -166,8 +156,7 @@
     "class": "genset",
     "kind": "technical",
     "name": {
-     "en": "Generator room",
-     "ru": "Дизель-генераторная"
+     "en": "Generator room"
     },
     "area": 130,
     "count": 2,
@@ -183,8 +172,7 @@
     "class": "cooling",
     "kind": "technical",
     "name": {
-     "en": "Cooling plant room",
-     "ru": "Холодильный центр"
+     "en": "Cooling plant room"
     },
     "area": 150,
     "count": 2,
@@ -209,8 +197,7 @@
    {
     "id": "white",
     "name": {
-     "en": "Data halls",
-     "ru": "Машинные залы"
+     "en": "Data halls"
     },
     "adjacent_to": [
      {
@@ -226,8 +213,7 @@
    {
     "id": "power",
     "name": {
-     "en": "Power",
-     "ru": "Электроснабжение"
+     "en": "Power"
     },
     "adjacent_to": [
      {
@@ -239,8 +225,7 @@
    {
     "id": "cooling",
     "name": {
-     "en": "Cooling",
-     "ru": "Охлаждение"
+     "en": "Cooling"
     },
     "adjacent_to": [
      {
@@ -252,8 +237,7 @@
    {
     "id": "support",
     "name": {
-     "en": "Support",
-     "ru": "Обслуживание"
+     "en": "Support"
     },
     "adjacent_to": []
    }
@@ -270,8 +254,7 @@
    "grow_share": 0.6,
    "kind": "technical",
    "name": {
-    "en": "Plant space",
-    "ru": "Технические площади"
+    "en": "Plant space"
    }
   },
   "plant": [

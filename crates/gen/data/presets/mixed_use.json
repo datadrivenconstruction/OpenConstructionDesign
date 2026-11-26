@@ -9,8 +9,7 @@
  "note": "mixed_use: built as an office-type plan with shops on the ground floor; flats above an office plan are not laid out as apartments",
  "brief": {
   "name": {
-   "en": "Mixed-use building",
-   "ru": "Многофункциональное здание"
+   "en": "Mixed-use building"
   },
   "floors": 5
  },
@@ -23,8 +22,7 @@
     "area": 60,
     "count": 3,
     "name": {
-     "en": "Shop",
-     "ru": "Магазин"
+     "en": "Shop"
     },
     "floor": "ground"
    },
@@ -55,8 +53,7 @@
     "area": 60,
     "count": 3,
     "name": {
-     "en": "Shop",
-     "ru": "Магазин"
+     "en": "Shop"
     },
     "floor": "single"
    },

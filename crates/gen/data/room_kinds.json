@@ -2,9 +2,9 @@
   "schema": "gen_room_kinds.v1",
   "about": "Room words a brief may use beyond the built-in kinds. Each entry builds as `base`, takes the name and the rules below, and is found by its id or any alias in any language. min_area_rule names the rule holding the smallest area; ground_only keeps it off upper floors of a multi-storey building; in_apartment says whether an apartment may hold one.",
   "kinds": [
-    {"id": "lobby", "base": "lobby", "aliases": ["vestibule", "entrance hall", "reception", "вестибюль", "холл"], "name": {"en": "Lobby", "ru": "Вестибюль"}, "min_area_rule": null, "ground_only": false, "in_apartment": false},
-    {"id": "foyer", "base": "lobby", "aliases": ["фойе"], "name": {"en": "Foyer", "ru": "Фойе"}, "min_area_rule": "room.min_area_foyer", "ground_only": true, "in_apartment": false},
-    {"id": "gallery", "base": "lobby", "aliases": ["галерея"], "name": {"en": "Gallery", "ru": "Галерея"}, "min_area_rule": "room.min_area_gallery", "ground_only": false, "in_apartment": false},
-    {"id": "atrium", "base": "lobby", "aliases": ["атриум"], "name": {"en": "Atrium", "ru": "Атриум"}, "min_area_rule": "room.min_area_atrium", "ground_only": true, "in_apartment": false, "note": "a roofed court is design.atrium; this room is the hall that fills it"}
+    {"id": "lobby", "base": "lobby", "aliases": ["vestibule", "entrance hall", "reception", "вестибюль", "холл"], "name": {"en": "Lobby"}, "min_area_rule": null, "ground_only": false, "in_apartment": false},
+    {"id": "foyer", "base": "lobby", "aliases": ["фойе"], "name": {"en": "Foyer"}, "min_area_rule": "room.min_area_foyer", "ground_only": true, "in_apartment": false},
+    {"id": "gallery", "base": "lobby", "aliases": ["галерея"], "name": {"en": "Gallery"}, "min_area_rule": "room.min_area_gallery", "ground_only": false, "in_apartment": false},
+    {"id": "atrium", "base": "lobby", "aliases": ["атриум"], "name": {"en": "Atrium"}, "min_area_rule": "room.min_area_atrium", "ground_only": true, "in_apartment": false, "note": "a roofed court is design.atrium; this room is the hall that fills it"}
   ]
 }

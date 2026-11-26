@@ -5,6 +5,7 @@
 //! headroom and access it needs and the kinds it wants beside it. The builder reads the
 //! lines; the solver scores light, height and adjacency against them.
 
+use super::names::Text;
 use super::programme::{Line, Programme};
 use super::RoomKind;
 use serde_json::{json, Map, Value as J};
@@ -87,8 +88,8 @@ pub struct Space {
     /// Optional handle other lines name in `adjacent_to`.
     pub id: Option<String>,
     pub kind: RoomKind,
-    /// English and Russian names; `None` takes the typology's name of the kind.
-    pub name: Option<(String, String)>,
+    /// The name; `None` takes the typology's name of the kind.
+    pub name: Option<Text>,
     /// Area range, m2; `min == max` asks for one area.
     pub area: (f64, f64),
     pub count: u32,
@@ -239,13 +240,10 @@ fn space(i: usize, r: &J, errs: &mut Vec<String>) -> Option<Space> {
     }
     let name = match &r["name"] {
         J::Null => None,
-        J::String(x) => Some((x.clone(), x.clone())),
-        n if n.is_object() => {
-            let en = n["en"].as_str().unwrap_or(k).to_string();
-            Some((en.clone(), n["ru"].as_str().map_or(en, str::to_string)))
-        }
+        J::String(x) => Some(Text::fixed(x)),
+        n if n.is_object() => Text::from_json(n, "").or_else(|| Some(Text::src(k, ""))),
         _ => {
-            bad("name: text or {en, ru}".into());
+            bad("name: text or {en, <locale>..}".into());
             None
         }
     };
@@ -264,6 +262,14 @@ fn space(i: usize, r: &J, errs: &mut Vec<String>) -> Option<Space> {
 }
 
 impl Program {
+    /// The names translated under `scope` (a preset's), where they have none yet.
+    pub fn in_scope(mut self, scope: &str) -> Program {
+        for s in &mut self.spaces {
+            s.name = s.name.take().map(|n| n.in_scope(scope));
+        }
+        self
+    }
+
     /// Reads a programme; every problem names its path.
     pub fn from_json(v: &J) -> Result<Program, Vec<String>> {
         let mut errs = vec![];
@@ -321,8 +327,8 @@ impl Program {
                     o.insert("id".into(), json!(id));
                 }
                 o.insert("kind".into(), json!(s.kind.key()));
-                if let Some((en, ru)) = &s.name {
-                    o.insert("name".into(), json!({"en": en, "ru": ru}));
+                if let Some(n) = &s.name {
+                    o.insert("name".into(), n.to_json());
                 }
                 let area = if s.area.0 == s.area.1 { json!(s.area.0) } else { json!({"min": s.area.0, "max": s.area.1}) };
                 o.insert("area".into(), area);

@@ -1363,6 +1363,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         dropped.truncate(told);
                         continue;
                     }
+                    eprintln!("ZZDBG k{k} room{} {:?} board={} faults {:?}", rs[v].idx, rs[v].kind, v == board_room, faults.iter().take(4).collect::<Vec<_>>());
                     break None;
                 }
                 // clashes: drop what does not fit, else give the room up
@@ -1402,7 +1403,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         (pl, attempt) = (pl0.clone(), 0);
                         dropped.truncate(told);
                     }
-                    None => break None,
+                    None => { eprintln!("ZZDBG k{k} room{} {:?} board={} clash {:?} item {:?}", rs[v].idx, rs[v].kind, v == board_room, culprit.map(|ri| space.zzwhy(&b.runs[ri], svc::gap())), item.is_some()); break None }
                 }
             };
             let Some(b) = built else {

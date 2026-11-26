@@ -20,8 +20,7 @@
    "unit": "m",
    "value": 0.18,
    "text": {
-    "en": "Common stair riser at most 0.18 m",
-    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+    "en": "Common stair riser at most 0.18 m"
    },
    "source": {
     "doc": "ae-flsc",
@@ -55,8 +54,7 @@
    "unit": "m",
    "value": 0.28,
    "text": {
-    "en": "Common stair tread at least 0.28 m",
-    "ru": "Проступь общей лестницы не менее 0.28 м"
+    "en": "Common stair tread at least 0.28 m"
    },
    "source": {
     "doc": "ae-flsc",
@@ -90,8 +88,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Common stair flight width at least 1.2 m",
-    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+    "en": "Common stair flight width at least 1.2 m"
    },
    "source": {
     "doc": "ae-flsc",
@@ -124,8 +121,7 @@
    "unit": "m",
    "value": 30,
    "text": {
-    "en": "Travel distance to an exit or stair at most 30 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 30 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 30 m (residential)"
    },
    "source": {
     "doc": "ae-flsc",
@@ -157,8 +153,7 @@
    "unit": "m",
    "value": 61,
    "text": {
-    "en": "Travel distance to an exit or stair at most 61 m (office)",
-    "ru": "Путь до выхода или лестницы не более 61 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 61 m (office)"
    },
    "source": {
     "doc": "ae-flsc",

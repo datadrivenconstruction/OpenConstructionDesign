@@ -8,8 +8,7 @@
  "note": "school_campus: built as a school with a canteen and a sports hall on the ground floor",
  "brief": {
   "name": {
-   "en": "School campus",
-   "ru": "Школьный комплекс"
+   "en": "School campus"
   },
   "floors": 2
  },
@@ -32,8 +31,7 @@
     "kind": "dining",
     "area": 120,
     "name": {
-     "en": "Canteen",
-     "ru": "Столовая"
+     "en": "Canteen"
     },
     "floor": "ground"
    },
@@ -41,8 +39,7 @@
     "kind": "gym",
     "area": 144,
     "name": {
-     "en": "Sports hall",
-     "ru": "Спортивный зал"
+     "en": "Sports hall"
     },
     "floor": "ground"
    },
@@ -72,8 +69,7 @@
     "kind": "dining",
     "area": 90,
     "name": {
-     "en": "Canteen",
-     "ru": "Столовая"
+     "en": "Canteen"
     },
     "floor": "single"
    },
@@ -81,8 +77,7 @@
     "kind": "gym",
     "area": 144,
     "name": {
-     "en": "Sports hall",
-     "ru": "Спортивный зал"
+     "en": "Sports hall"
     },
     "floor": "single"
    },

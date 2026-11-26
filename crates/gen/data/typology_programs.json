@@ -2,30 +2,24 @@
  "schema": "gen_typology_programs.v1",
  "about": "Default programme of a brief that names a building type and no rooms: keyword lists per language, shares of the floor area, en/ru names. A type with `preset` or `typology` hands over to that preset or base typology instead of repeating its programme.",
  "note": {
-  "en": "no rooms in the brief: the default {what} programme was filled by rule, sized to the floor area",
-  "ru": "в брифе нет помещений: программа {what} по умолчанию набрана по правилам по площади этажа"
+  "en": "no rooms in the brief: the default {what} programme was filled by rule, sized to the floor area"
  },
  "upper_height": 4.0,
  "tall_words": ["tall", "high", "double height", "triple height", "soaring", "высок*", "двусветн*", "hoch", "alto", "alta", "高"],
  "levels_note": {
-  "en": "several storeys: the ground level is {h} m high for its tall room, the other levels keep the normal height",
-  "ru": "несколько этажей: нижний уровень высотой {h} м под высокий зал, остальные этажи обычной высоты"
+  "en": "several storeys: the ground level is {h} m high for its tall room, the other levels keep the normal height"
  },
  "delegate_note": {
-  "en": "the brief names a {what}: built from its {via}",
-  "ru": "бриф называет тип «{what}»: собрано по его {via}"
+  "en": "the brief names a {what}: built from its {via}"
  },
  "outline_note": {
-  "en": "no outline in the brief: a {w} x {d} m plan was derived from the floor area {a} m2",
-  "ru": "в брифе нет контура: план {w} x {d} м выведен из площади этажа {a} м2"
+  "en": "no outline in the brief: a {w} x {d} m plan was derived from the floor area {a} m2"
  },
  "tall_note": {
-  "en": "the tallest room needs {h} m: a one-storey building raises its storey to it (up to typology.tall_space_max); this one has {n} storeys of {f} m, so the tall room stays at that height",
-  "ru": "самому высокому залу нужно {h} м: одноэтажное здание поднимает этаж до этой высоты (до typology.tall_space_max); здесь {n} этажей по {f} м, зал остаётся такой высоты"
+  "en": "the tallest room needs {h} m: a one-storey building raises its storey to it (up to typology.tall_space_max); this one has {n} storeys of {f} m, so the tall room stays at that height"
  },
  "raise_note": {
-  "en": "a one-storey {what}: the storey is {h} m high for its tall space (typology.tall_space_max {cap} m)",
-  "ru": "одноэтажное здание «{what}»: этаж высотой {h} м под высокий зал (typology.tall_space_max {cap} м)"
+  "en": "a one-storey {what}: the storey is {h} m high for its tall space (typology.tall_space_max {cap} m)"
  },
  "qualifiers": [
   "corridor",
@@ -87,31 +81,31 @@
     {"kind": "bath", "area": 5, "count": 1},
     {"kind": "wc", "area": 2, "count": 1}
    ],
-   "spare": {"grow_share": 0.6, "kind": "office", "name": {"en": "Study", "ru": "Кабинет"}},
-   "core_rest": {"kind": "hall", "name": {"en": "Hall", "ru": "Холл"}},
-   "names": [{"kind": "parking", "name": {"en": "Garage", "ru": "Гараж"}}]
+   "spare": {"grow_share": 0.6, "kind": "office", "name": {"en": "Study"}},
+   "core_rest": {"kind": "hall", "name": {"en": "Hall"}},
+   "names": [{"kind": "parking", "name": {"en": "Garage"}}]
   },
   "apartment_section": {
    "traits": {"residential": true, "one_household": false, "flats": true},
    "ground": [],
    "typical": [],
    "single": [],
-   "spare": {"grow_share": 0.0, "kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
-   "core_rest": {"kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
+   "spare": {"grow_share": 0.0, "kind": "technical", "name": {"en": "Technical"}},
+   "core_rest": {"kind": "technical", "name": {"en": "Technical"}},
    "names": []
   },
   "office": {
    "traits": {"residential": false, "one_household": false, "flats": false},
    "ground": [
     {"kind": "lobby", "area": 48, "count": 1},
-    {"kind": "office", "area": 72, "count": 1, "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
+    {"kind": "office", "area": 72, "count": 1, "name": {"en": "Open space"}},
     {"kind": "office", "area": 18, "count": 2},
     {"kind": "meeting", "area": 24, "count": 1},
     {"kind": "wc", "area": 6, "count": 2},
     {"kind": "technical", "area": 8, "count": 1}
    ],
    "typical": [
-    {"kind": "office", "area": 72, "count": 2, "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
+    {"kind": "office", "area": 72, "count": 2, "name": {"en": "Open space"}},
     {"kind": "office", "area": 18, "count": 2},
     {"kind": "meeting", "area": 24, "count": 1},
     {"kind": "meeting", "area": 12, "count": 1},
@@ -121,15 +115,15 @@
    ],
    "single": [
     {"kind": "lobby", "area": 24, "count": 1},
-    {"kind": "office", "area": 72, "count": 1, "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
+    {"kind": "office", "area": 72, "count": 1, "name": {"en": "Open space"}},
     {"kind": "office", "area": 18, "count": 2},
     {"kind": "meeting", "area": 24, "count": 1},
     {"kind": "staff", "area": 12, "count": 1},
     {"kind": "wc", "area": 6, "count": 2}
    ],
-   "spare": {"grow_share": 0.5, "kind": "office", "name": {"en": "Open space", "ru": "Открытое рабочее пространство"}},
-   "core_rest": {"kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
-   "names": [{"kind": "staff", "name": {"en": "Staff room", "ru": "Комната персонала"}}]
+   "spare": {"grow_share": 0.5, "kind": "office", "name": {"en": "Open space"}},
+   "core_rest": {"kind": "technical", "name": {"en": "Technical"}},
+   "names": [{"kind": "staff", "name": {"en": "Staff room"}}]
   },
   "school": {
    "traits": {"residential": false, "one_household": false, "flats": false},
@@ -153,9 +147,9 @@
     {"kind": "wc", "area": 18, "count": 2},
     {"kind": "storage", "area": 8, "count": 1}
    ],
-   "spare": {"grow_share": 0.3, "kind": "lobby", "name": {"en": "Recreation", "ru": "Рекреация"}},
-   "core_rest": {"kind": "technical", "name": {"en": "Technical", "ru": "Техническое"}},
-   "names": [{"kind": "staff", "name": {"en": "Staff room", "ru": "Учительская"}}]
+   "spare": {"grow_share": 0.3, "kind": "lobby", "name": {"en": "Recreation"}},
+   "core_rest": {"kind": "technical", "name": {"en": "Technical"}},
+   "names": [{"kind": "staff", "name": {"en": "Staff room"}}]
   }
  },
  "types": [
@@ -174,16 +168,14 @@
     "消防站"
    ],
    "what": {
-    "en": "fire station",
-    "ru": "пожарного депо"
+    "en": "fire station"
    },
    "floors": 1,
    "floor_height": 6.0,
    "floor_area": 1400,
    "aspect": 2.0,
    "name": {
-    "en": "Fire station",
-    "ru": "Пожарное депо"
+    "en": "Fire station"
    },
    "lines": [
     {
@@ -194,8 +186,7 @@
      "min": 120,
      "max": 700,
      "name": {
-      "en": "Apparatus bay",
-      "ru": "Гараж техники"
+      "en": "Apparatus bay"
      },
      "tall": 7.5
     },
@@ -207,8 +198,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Equipment store",
-      "ru": "Склад снаряжения"
+      "en": "Equipment store"
      }
     },
     {
@@ -219,8 +209,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Workshop",
-      "ru": "Мастерская"
+      "en": "Workshop"
      }
     },
     {
@@ -231,8 +220,7 @@
      "min": 20,
      "max": 120,
      "name": {
-      "en": "Entrance",
-      "ru": "Вестибюль"
+      "en": "Entrance"
      }
     },
     {
@@ -243,8 +231,7 @@
      "min": 15,
      "max": 80,
      "name": {
-      "en": "Watch room",
-      "ru": "Дежурная часть"
+      "en": "Watch room"
      }
     },
     {
@@ -255,8 +242,7 @@
      "min": 8,
      "max": 40,
      "name": {
-      "en": "WC and showers",
-      "ru": "Санузел и душевые"
+      "en": "WC and showers"
      }
     },
     {
@@ -267,8 +253,7 @@
      "min": 40,
      "max": 200,
      "name": {
-      "en": "Training room",
-      "ru": "Спортзал"
+      "en": "Training room"
      }
     },
     {
@@ -279,8 +264,7 @@
      "min": 10,
      "max": 40,
      "name": {
-      "en": "Dormitory",
-      "ru": "Спальня"
+      "en": "Dormitory"
      }
     },
     {
@@ -291,8 +275,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Mess",
-      "ru": "Столовая"
+      "en": "Mess"
      }
     },
     {
@@ -303,8 +286,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Briefing room",
-      "ru": "Учебный класс"
+      "en": "Briefing room"
      }
     },
     {
@@ -315,8 +297,7 @@
      "min": 15,
      "max": 80,
      "name": {
-      "en": "Office",
-      "ru": "Кабинет"
+      "en": "Office"
      }
     }
    ]
@@ -340,16 +321,14 @@
     "体育館"
    ],
    "what": {
-    "en": "sports hall",
-    "ru": "спортивного зала"
+    "en": "sports hall"
    },
    "floors": 1,
    "floor_height": 6.0,
    "floor_area": 1800,
    "aspect": 1.8,
    "name": {
-    "en": "Sports hall",
-    "ru": "Спортивный зал"
+    "en": "Sports hall"
    },
    "lines": [
     {
@@ -360,8 +339,7 @@
      "min": 300,
      "max": 1500,
      "name": {
-      "en": "Main court",
-      "ru": "Игровой зал"
+      "en": "Main court"
      },
      "tall": 9.0
     },
@@ -373,8 +351,7 @@
      "min": 60,
      "max": 400,
      "name": {
-      "en": "Fitness room",
-      "ru": "Тренажёрный зал"
+      "en": "Fitness room"
      }
     },
     {
@@ -385,8 +362,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Entrance hall",
-      "ru": "Вестибюль"
+      "en": "Entrance hall"
      }
     },
     {
@@ -397,8 +373,7 @@
      "min": 20,
      "max": 150,
      "name": {
-      "en": "Changing room",
-      "ru": "Раздевалка"
+      "en": "Changing room"
      }
     },
     {
@@ -409,8 +384,7 @@
      "min": 10,
      "max": 60,
      "name": {
-      "en": "Showers and WC",
-      "ru": "Душевые и санузел"
+      "en": "Showers and WC"
      }
     },
     {
@@ -421,8 +395,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Equipment store",
-      "ru": "Инвентарная"
+      "en": "Equipment store"
      }
     },
     {
@@ -433,8 +406,7 @@
      "min": 20,
      "max": 150,
      "name": {
-      "en": "Cafe",
-      "ru": "Кафе"
+      "en": "Cafe"
      }
     },
     {
@@ -445,8 +417,7 @@
      "min": 12,
      "max": 60,
      "name": {
-      "en": "Office",
-      "ru": "Кабинет"
+      "en": "Office"
      }
     }
    ]
@@ -474,16 +445,14 @@
     "歌剧院"
    ],
    "what": {
-    "en": "theatre",
-    "ru": "театра"
+    "en": "theatre"
    },
    "floors": 1,
    "floor_height": 6.0,
    "floor_area": 2400,
    "aspect": 1.5,
    "name": {
-    "en": "Theatre",
-    "ru": "Театр"
+    "en": "Theatre"
    },
    "lines": [
     {
@@ -494,8 +463,7 @@
      "min": 80,
      "max": 600,
      "name": {
-      "en": "Foyer",
-      "ru": "Фойе"
+      "en": "Foyer"
      }
     },
     {
@@ -506,8 +474,7 @@
      "min": 200,
      "max": 1100,
      "name": {
-      "en": "Auditorium",
-      "ru": "Зрительный зал"
+      "en": "Auditorium"
      },
      "tall": 14.0
     },
@@ -519,8 +486,7 @@
      "min": 80,
      "max": 500,
      "name": {
-      "en": "Stage",
-      "ru": "Сцена"
+      "en": "Stage"
      },
      "tall": 14.0
     },
@@ -532,8 +498,7 @@
      "min": 12,
      "max": 80,
      "name": {
-      "en": "Dressing room",
-      "ru": "Гримёрная"
+      "en": "Dressing room"
      }
     },
     {
@@ -544,8 +509,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Scenery workshop",
-      "ru": "Декорационный цех"
+      "en": "Scenery workshop"
      }
     },
     {
@@ -556,8 +520,7 @@
      "min": 30,
      "max": 250,
      "name": {
-      "en": "Props store",
-      "ru": "Реквизиторская"
+      "en": "Props store"
      }
     },
     {
@@ -568,8 +531,7 @@
      "min": 30,
      "max": 250,
      "name": {
-      "en": "Bar",
-      "ru": "Буфет"
+      "en": "Bar"
      }
     },
     {
@@ -580,8 +542,7 @@
      "min": 20,
      "max": 120,
      "name": {
-      "en": "Rehearsal room",
-      "ru": "Репетиционная"
+      "en": "Rehearsal room"
      }
     },
     {
@@ -592,8 +553,7 @@
      "min": 8,
      "max": 60,
      "name": {
-      "en": "WC",
-      "ru": "Санузел"
+      "en": "WC"
      }
     },
     {
@@ -604,8 +564,7 @@
      "min": 12,
      "max": 80,
      "name": {
-      "en": "Office",
-      "ru": "Администрация"
+      "en": "Office"
      }
     }
    ]
@@ -639,16 +598,14 @@
     "清真寺"
    ],
    "what": {
-    "en": "church",
-    "ru": "храма"
+    "en": "church"
    },
    "floors": 1,
    "floor_height": 6.0,
    "floor_area": 900,
    "aspect": 1.4,
    "name": {
-    "en": "Church",
-    "ru": "Храм"
+    "en": "Church"
    },
    "lines": [
     {
@@ -659,8 +616,7 @@
      "min": 150,
      "max": 800,
      "name": {
-      "en": "Nave",
-      "ru": "Основной зал"
+      "en": "Nave"
      },
      "tall": 12.0
     },
@@ -672,8 +628,7 @@
      "min": 20,
      "max": 150,
      "name": {
-      "en": "Narthex",
-      "ru": "Притвор"
+      "en": "Narthex"
      }
     },
     {
@@ -684,8 +639,7 @@
      "min": 30,
      "max": 200,
      "name": {
-      "en": "Sanctuary",
-      "ru": "Алтарная часть"
+      "en": "Sanctuary"
      },
      "tall": 12.0
     },
@@ -697,8 +651,7 @@
      "min": 10,
      "max": 100,
      "name": {
-      "en": "Vestry",
-      "ru": "Ризница"
+      "en": "Vestry"
      }
     },
     {
@@ -709,8 +662,7 @@
      "min": 40,
      "max": 250,
      "name": {
-      "en": "Community hall",
-      "ru": "Приходской зал"
+      "en": "Community hall"
      }
     },
     {
@@ -721,8 +673,7 @@
      "min": 12,
      "max": 60,
      "name": {
-      "en": "Office",
-      "ru": "Канцелярия"
+      "en": "Office"
      }
     },
     {
@@ -733,8 +684,7 @@
      "min": 6,
      "max": 30,
      "name": {
-      "en": "WC",
-      "ru": "Санузел"
+      "en": "WC"
      }
     }
    ]
@@ -750,16 +700,14 @@
     "圖書館"
    ],
    "what": {
-    "en": "library",
-    "ru": "библиотеки"
+    "en": "library"
    },
    "floors": 2,
    "floor_height": 4.5,
    "floor_area": 1800,
    "aspect": 1.6,
    "name": {
-    "en": "Library",
-    "ru": "Библиотека"
+    "en": "Library"
    },
    "lines": [
     {
@@ -770,8 +718,7 @@
      "min": 30,
      "max": 250,
      "name": {
-      "en": "Entrance hall",
-      "ru": "Вестибюль"
+      "en": "Entrance hall"
      }
     },
     {
@@ -782,8 +729,7 @@
      "min": 80,
      "max": 600,
      "name": {
-      "en": "Reading hall",
-      "ru": "Читальный зал"
+      "en": "Reading hall"
      }
     },
     {
@@ -794,8 +740,7 @@
      "min": 60,
      "max": 500,
      "name": {
-      "en": "Stacks",
-      "ru": "Книгохранилище"
+      "en": "Stacks"
      }
     },
     {
@@ -806,8 +751,7 @@
      "min": 30,
      "max": 250,
      "name": {
-      "en": "Children's room",
-      "ru": "Детская комната"
+      "en": "Children's room"
      }
     },
     {
@@ -818,8 +762,7 @@
      "min": 20,
      "max": 200,
      "name": {
-      "en": "Cafe",
-      "ru": "Кафе"
+      "en": "Cafe"
      }
     },
     {
@@ -830,8 +773,7 @@
      "min": 12,
      "max": 80,
      "name": {
-      "en": "Office",
-      "ru": "Кабинет"
+      "en": "Office"
      }
     },
     {
@@ -842,8 +784,7 @@
      "min": 8,
      "max": 40,
      "name": {
-      "en": "WC",
-      "ru": "Санузел"
+      "en": "WC"
      }
     },
     {
@@ -854,8 +795,7 @@
      "min": 80,
      "max": 700,
      "name": {
-      "en": "Reading hall",
-      "ru": "Читальный зал"
+      "en": "Reading hall"
      }
     },
     {
@@ -866,8 +806,7 @@
      "min": 60,
      "max": 500,
      "name": {
-      "en": "Stacks",
-      "ru": "Книгохранилище"
+      "en": "Stacks"
      }
     },
     {
@@ -878,8 +817,7 @@
      "min": 10,
      "max": 60,
      "name": {
-      "en": "Study room",
-      "ru": "Кабинет для занятий"
+      "en": "Study room"
      }
     },
     {
@@ -890,8 +828,7 @@
      "min": 12,
      "max": 80,
      "name": {
-      "en": "Office",
-      "ru": "Кабинет"
+      "en": "Office"
      }
     },
     {
@@ -902,8 +839,7 @@
      "min": 8,
      "max": 40,
      "name": {
-      "en": "WC",
-      "ru": "Санузел"
+      "en": "WC"
      }
     }
    ]
@@ -928,16 +864,14 @@
     "展览馆"
    ],
    "what": {
-    "en": "museum",
-    "ru": "музея"
+    "en": "museum"
    },
    "floors": 3,
    "floor_height": 5.0,
    "floor_area": 2800,
    "aspect": 1.75,
    "name": {
-    "en": "Museum",
-    "ru": "Музей"
+    "en": "Museum"
    },
    "lines": [
     {
@@ -948,8 +882,7 @@
      "min": 60,
      "max": 900,
      "name": {
-      "en": "Atrium",
-      "ru": "Атриум"
+      "en": "Atrium"
      },
      "asked_by": ["atrium", "атриум*", "atrio", "atrium"],
      "tall_asked": 12.0
@@ -962,8 +895,7 @@
      "min": 30,
      "max": 400,
      "name": {
-      "en": "Foyer",
-      "ru": "Фойе"
+      "en": "Foyer"
      }
     },
     {
@@ -974,8 +906,7 @@
      "min": 60,
      "max": 500,
      "name": {
-      "en": "Gallery",
-      "ru": "Выставочный зал"
+      "en": "Gallery"
      }
     },
     {
@@ -986,8 +917,7 @@
      "min": 30,
      "max": 300,
      "name": {
-      "en": "Cafe",
-      "ru": "Кафе"
+      "en": "Cafe"
      }
     },
     {
@@ -998,8 +928,7 @@
      "min": 20,
      "max": 200,
      "name": {
-      "en": "Shop",
-      "ru": "Магазин"
+      "en": "Shop"
      }
     },
     {
@@ -1010,8 +939,7 @@
      "min": 20,
      "max": 200,
      "name": {
-      "en": "Workshop",
-      "ru": "Мастерская"
+      "en": "Workshop"
      }
     },
     {
@@ -1022,8 +950,7 @@
      "min": 20,
      "max": 300,
      "name": {
-      "en": "Storage",
-      "ru": "Фонды"
+      "en": "Storage"
      }
     },
     {
@@ -1034,8 +961,7 @@
      "min": 8,
      "max": 40,
      "name": {
-      "en": "WC",
-      "ru": "Санузел"
+      "en": "WC"
      }
     },
     {
@@ -1046,8 +972,7 @@
      "min": 12,
      "max": 80,
      "name": {
-      "en": "Office",
-      "ru": "Офис"
+      "en": "Office"
      }
     },
     {
@@ -1058,8 +983,7 @@
      "min": 60,
      "max": 600,
      "name": {
-      "en": "Gallery",
-      "ru": "Выставочный зал"
+      "en": "Gallery"
      }
     },
     {
@@ -1070,8 +994,7 @@
      "min": 20,
      "max": 200,
      "name": {
-      "en": "Workshop",
-      "ru": "Мастерская"
+      "en": "Workshop"
      }
     },
     {
@@ -1082,8 +1005,7 @@
      "min": 20,
      "max": 300,
      "name": {
-      "en": "Storage",
-      "ru": "Фонды"
+      "en": "Storage"
      }
     },
     {
@@ -1094,8 +1016,7 @@
      "min": 8,
      "max": 40,
      "name": {
-      "en": "WC",
-      "ru": "Санузел"
+      "en": "WC"
      }
     },
     {
@@ -1106,8 +1027,7 @@
      "min": 12,
      "max": 80,
      "name": {
-      "en": "Office",
-      "ru": "Офис"
+      "en": "Office"
      }
     }
    ]
@@ -1124,8 +1044,7 @@
     "旅館"
    ],
    "what": {
-    "en": "hotel",
-    "ru": "гостиницы"
+    "en": "hotel"
    },
    "preset": "hotel",
    "floors": 4,
@@ -1133,8 +1052,7 @@
    "floor_area": 1200,
    "aspect": 3.0,
    "name": {
-    "en": "Hotel",
-    "ru": "Гостиница"
+    "en": "Hotel"
    }
   },
   {
@@ -1150,8 +1068,7 @@
     "診所"
    ],
    "what": {
-    "en": "clinic",
-    "ru": "клиники"
+    "en": "clinic"
    },
    "preset": "clinic",
    "floors": 3,
@@ -1159,8 +1076,7 @@
    "floor_area": 900,
    "aspect": 2.5,
    "name": {
-    "en": "Clinic",
-    "ru": "Клиника"
+    "en": "Clinic"
    }
   },
   {
@@ -1174,8 +1090,7 @@
     "倉庫"
    ],
    "what": {
-    "en": "warehouse",
-    "ru": "склада"
+    "en": "warehouse"
    },
    "preset": "warehouse",
    "floors": 1,
@@ -1183,8 +1098,7 @@
    "floor_area": 4000,
    "aspect": 2.0,
    "name": {
-    "en": "Warehouse",
-    "ru": "Склад"
+    "en": "Warehouse"
    }
   },
   {
@@ -1199,8 +1113,7 @@
     "學校"
    ],
    "what": {
-    "en": "school",
-    "ru": "школы"
+    "en": "school"
    },
    "typology": "school",
    "floors": 3,
@@ -1208,8 +1121,7 @@
    "floor_area": 1500,
    "aspect": 2.5,
    "name": {
-    "en": "School",
-    "ru": "Школа"
+    "en": "School"
    }
   },
   {
@@ -1224,8 +1136,7 @@
     "办公大楼"
    ],
    "what": {
-    "en": "office",
-    "ru": "офиса"
+    "en": "office"
    },
    "typology": "office",
    "floors": 4,
@@ -1233,8 +1144,7 @@
    "floor_area": 1200,
    "aspect": 2.5,
    "name": {
-    "en": "Office building",
-    "ru": "Офисное здание"
+    "en": "Office building"
    }
   }
  ]

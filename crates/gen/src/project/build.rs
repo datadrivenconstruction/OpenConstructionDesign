@@ -353,7 +353,7 @@ fn full_depth(r: &RoomReq, d: Mm) -> Unit {
 }
 
 /// Rooms too narrow for the band share one strip, stacked from the corridor outwards.
-fn stack(small: &[RoomReq], d: Mm, ru: bool) -> Unit {
+fn stack(small: &[RoomReq], d: Mm, lang: &str) -> Unit {
     let total: f64 = small.iter().map(|r| r.area).sum();
     let dm = m(d);
     let mut w = total / dm;
@@ -396,7 +396,7 @@ fn stack(small: &[RoomReq], d: Mm, ru: bool) -> Unit {
             v0: v,
             v1: d,
             kind: RoomKind::Storage,
-            name: names::kind_name(RoomKind::Storage, ru).to_string(),
+            name: names::kind_name(RoomKind::Storage, lang).to_string(),
             asked: None,
         });
     }
@@ -411,10 +411,10 @@ fn stack(small: &[RoomReq], d: Mm, ru: bool) -> Unit {
 
 /// A room entered only through its anteroom: the anteroom takes the corridor side over the
 /// whole width, the room the rest of the depth, so the door between them is the only one.
-fn theatre_suite(r: &RoomReq, d: Mm, ru: bool) -> Unit {
+fn theatre_suite(r: &RoomReq, d: Mm, lang: &str) -> Unit {
     let a = rule_mm("room.anteroom_depth").min(d - min_unit());
     let len = mm(r.area / m(d - a));
-    let ante = if ru { crate::lang::ru("Scrub anteroom") } else { "Scrub anteroom" };
+    let ante = &names::tr(lang, "", "Scrub anteroom");
     let piece = |v0, v1, kind, name: &str, asked| Piece { u0: 0, u1: len, v0, v1, kind, name: name.to_string(), asked };
     Unit {
         len,
@@ -427,13 +427,13 @@ fn theatre_suite(r: &RoomReq, d: Mm, ru: bool) -> Unit {
 
 /// Wet rooms first and only with each other, so their strip is the same on every floor.
 fn room_units(rooms: &[RoomReq], d: Mm, spec: &ProjectSpec) -> Vec<Unit> {
-    let ru = spec.ru;
+    let lang = spec.lang;
     // an operating theatre comes with its anteroom: one block, the only way in is through it
     let theatre = super::RoomTags::parse("operating").unwrap_or_default();
     let (suites, rest): (Vec<RoomReq>, Vec<RoomReq>) =
         expand(rooms).into_iter().partition(|r| spec.room_tags.of(r.kind, &r.name).meets(theatre));
     let (wet, dry): (Vec<RoomReq>, Vec<RoomReq>) = rest.into_iter().partition(|r| is_wet(r.kind));
-    let mut out: Vec<Unit> = suites.iter().map(|r| theatre_suite(r, d, ru)).collect();
+    let mut out: Vec<Unit> = suites.iter().map(|r| theatre_suite(r, d, lang)).collect();
     for group in [wet, dry] {
         let mut small = vec![];
         // a stack holds at most one room people stay in, last, so it keeps the facade
@@ -448,13 +448,13 @@ fn room_units(rooms: &[RoomReq], d: Mm, spec: &ProjectSpec) -> Vec<Unit> {
                 g.extend(rest.next());
             }
             g.push(h);
-            out.push(stack(&g, d, ru));
+            out.push(stack(&g, d, lang));
         }
         for r in rest {
             if narrow(&r) {
                 small.push(r);
                 if small.len() == 3 {
-                    out.push(stack(&small, d, ru));
+                    out.push(stack(&small, d, lang));
                     small.clear();
                 }
             } else {
@@ -462,7 +462,7 @@ fn room_units(rooms: &[RoomReq], d: Mm, spec: &ProjectSpec) -> Vec<Unit> {
             }
         }
         if !small.is_empty() {
-            out.push(stack(&small, d, ru));
+            out.push(stack(&small, d, lang));
         }
     }
     out
@@ -470,7 +470,7 @@ fn room_units(rooms: &[RoomReq], d: Mm, spec: &ProjectSpec) -> Vec<Unit> {
 
 /// Inner zone (wet rooms, hall) along the corridor, rooms with windows along the facade. The
 /// inner depth grows until the facade is long enough for the inner rooms and a hall.
-fn apartment_unit(a: &ApartmentReq, d: Mm, ru: bool) -> Result<Unit, GenError> {
+fn apartment_unit(a: &ApartmentReq, d: Mm, lang: &str) -> Result<Unit, GenError> {
     let dm = m(d);
     // a line with a count (two bedrooms) is that many rooms
     let each = || a.rooms.iter().flat_map(|r| std::iter::repeat_n(r, r.count as usize));
@@ -481,7 +481,7 @@ fn apartment_unit(a: &ApartmentReq, d: Mm, ru: bool) -> Result<Unit, GenError> {
         .iter()
         .find(|r| r.kind == RoomKind::Hall)
         .map(|r| r.name.clone())
-        .unwrap_or_else(|| names::kind_name(RoomKind::Hall, ru).to_string());
+        .unwrap_or_else(|| names::kind_name(RoomKind::Hall, lang).to_string());
     let af: f64 = facade.iter().map(|r| r.area).sum();
     let ai: f64 = inner.iter().map(|r| r.area).sum();
     let short = |hi: f64| af / (dm - hi) - ai / hi - hall_min();
@@ -840,7 +840,7 @@ fn programs(spec: &ProjectSpec, d: Mm, plan: PlanKind, dn: Mm, room: Mm) -> Resu
     } else if spec.traits.flats {
         let mut units = vec![];
         for a in &spec.apartments {
-            let u = apartment_unit(a, d, spec.ru)?;
+            let u = apartment_unit(a, d, spec.lang)?;
             for _ in 0..a.count {
                 units.push(u.clone());
             }
@@ -931,8 +931,8 @@ fn cell(x0: Mm, y0: Mm, x1: Mm, y1: Mm, kind: RoomKind, name: &str, owner: PRole
 }
 
 fn floor_cells(spec: &ProjectSpec, f: &Frame, p: &Program, next_apt: &mut u32) -> Vec<Cell> {
-    let ru = spec.ru;
-    let nm = |k| names::kind_name(k, ru);
+    let lang = spec.lang;
+    let nm = |k| names::kind_name(k, lang);
     let pubr = PRole::Public;
     let x_corr = match f.strip {
         Some(sx) if spec.has_stair() => sx,
@@ -1120,13 +1120,13 @@ fn fill_spare(spec: &ProjectSpec, cells: &mut Vec<Cell>, (x, end): (Mm, Mm), nor
         } else {
             RoomKind::Technical
         };
-        (k, names::kind_name(k, spec.ru).to_string())
+        (k, names::kind_name(k, spec.lang).to_string())
     } else if spare >= min_unit() {
         let n = &spec.spare.name;
-        (spec.spare.kind, if spec.ru { &n.1 } else { &n.0 }.clone())
+        (spec.spare.kind, n.get(spec.lang))
     } else {
         let k = RoomKind::Storage;
-        (k, names::kind_name(k, spec.ru).to_string())
+        (k, names::kind_name(k, spec.lang).to_string())
     };
     cells.push(cell(x, y0, end, y1, k, &name, PRole::Public));
 }
@@ -1275,7 +1275,7 @@ fn seg_dist(p: (f64, f64), a: (f64, f64), b: (f64, f64)) -> f64 {
     (p.0 - a.0 - t * dx).hypot(p.1 - a.1 - t * dy)
 }
 
-fn grids(f: &Frame, grid: f64, ru: bool) -> Vec<GGrid> {
+fn grids(f: &Frame, grid: f64, lang: &str) -> Vec<GGrid> {
     let (xs, ys) = grid_lines(f, grid);
     let (w, d) = (m(f.w), m(f.d));
     let mut out = vec![];
@@ -1288,7 +1288,7 @@ fn grids(f: &Frame, grid: f64, ru: bool) -> Vec<GGrid> {
     }
     for (i, y) in ys.iter().enumerate() {
         out.push(GGrid {
-            name: ddc_geom::axes::axis_letter(i, ru),
+            name: ddc_geom::axes::axis_letter(i, names::cyrillic_axes(lang)),
             a: (-grid_overrun(), m(*y)),
             b: (w + grid_overrun(), m(*y)),
         });
@@ -1566,7 +1566,7 @@ pub fn build_project(spec: &ProjectSpec) -> Result<GProject, GenError> {
         }
     }
     let mut p = r?;
-    names::localize(&mut p, spec.lang);
+    names::default_rooms(&mut p, spec.lang);
     Ok(p)
 }
 
@@ -1966,7 +1966,7 @@ fn storey(
         }
     }
     if k == 0 {
-        l.grids = grids(f, spec.grid, spec.ru);
+        l.grids = grids(f, spec.grid, spec.lang);
     }
     l.columns = storey_columns(f, spec, &l, sh.stairs.first().map(|s| s.1.as_slice()));
     let rooms: Vec<super::furnish::RoomIn<'_>> = cells
@@ -2000,7 +2000,7 @@ fn storey(
     }
     crate::check::validate_layout(&l).map_err(|e| infeasible(format!("floor {}: {e}", k + 1)))?;
     Ok(PStorey {
-        name: names::level_name(k, spec.ru),
+        name: names::level_name(k, spec.lang),
         elevation: spec.storey_elevation(k),
         height: h,
         layout: l,
@@ -2022,7 +2022,7 @@ fn roof_of(spec: &ProjectSpec, w: f64, d: f64) -> PRoof {
         _ => vec![],
     };
     PRoof {
-        name: names::roof_name(spec.ru).to_string(),
+        name: names::roof_name(spec.lang).to_string(),
         elevation: spec.building_height(),
         ring,
         slope: if pitched {
@@ -2053,7 +2053,7 @@ mod tests {
             for depth in [s.band_depth, s.band_depth + 1.5] {
                 let d = mm(depth);
                 for a in &s.apartments {
-                    let Ok(u) = apartment_unit(a, d, false) else { continue };
+                    let Ok(u) = apartment_unit(a, d, "en") else { continue };
                     let hall = u.pieces.iter().find(|p| p.kind == RoomKind::Hall).expect("a hall");
                     let entry = mm(rule("room.door_wide")) + 2 * rule_mm("facade.edge_clear");
                     assert!(hall.u1 - hall.u0 >= entry, "{t} {} at {depth} m: hall {} mm wide for its entrance", a.name, hall.u1 - hall.u0);
@@ -2074,7 +2074,7 @@ mod tests {
     fn a_spare_too_short_for_a_door_widens_the_apartments() {
         let s = super::super::parse_spec(&serde_json::json!({"typology": "residential_tower"})).unwrap();
         let d = mm(s.band_depth);
-        let units: Vec<Unit> = s.apartments.iter().filter_map(|a| apartment_unit(a, d, false).ok()).collect();
+        let units: Vec<Unit> = s.apartments.iter().filter_map(|a| apartment_unit(a, d, "en").ok()).collect();
         assert!(units.len() >= 2 && units.iter().all(|u| !u.grows()));
         let list: Vec<usize> = (0..units.len()).collect();
         let door = rule_mm("room.door_wet") + 2 * rule_mm("facade.edge_clear");

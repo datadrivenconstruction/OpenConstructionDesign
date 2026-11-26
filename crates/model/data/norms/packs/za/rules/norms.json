@@ -20,8 +20,7 @@
    "unit": "m",
    "value": 0.2,
    "text": {
-    "en": "Common stair riser at most 0.2 m",
-    "ru": "Подъём ступени общей лестницы не более 0.2 м"
+    "en": "Common stair riser at most 0.2 m"
    },
    "source": {
     "doc": "za-sans10400-m",
@@ -55,8 +54,7 @@
    "unit": "m",
    "value": 0.25,
    "text": {
-    "en": "Common stair tread at least 0.25 m",
-    "ru": "Проступь общей лестницы не менее 0.25 м"
+    "en": "Common stair tread at least 0.25 m"
    },
    "source": {
     "doc": "za-sans10400-m",
@@ -89,8 +87,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Common stair flight width at least 1.0 m",
-    "ru": "Ширина марша общей лестницы не менее 1.0 м"
+    "en": "Common stair flight width at least 1.0 m"
    },
    "source": {
     "doc": "za-sans10400-t",
@@ -121,8 +118,7 @@
    "unit": "m",
    "value": 0.75,
    "text": {
-    "en": "Stair flight width in a house at least 0.75 m",
-    "ru": "Ширина марша в доме не менее 0.75 м"
+    "en": "Stair flight width in a house at least 0.75 m"
    },
    "source": {
     "doc": "za-sans10400-m",
@@ -160,8 +156,7 @@
    "unit": "m",
    "value": 2.4,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.4 m",
-    "ru": "Высота жилых помещений не менее 2.4 м"
+    "en": "Clear height of habitable rooms at least 2.4 m"
    },
    "source": {
     "doc": "za-sans10400-c",
@@ -196,8 +191,7 @@
    "unit": "m",
    "value": 2.4,
    "text": {
-    "en": "Clear height of work rooms at least 2.4 m",
-    "ru": "Высота рабочих помещений не менее 2.4 м"
+    "en": "Clear height of work rooms at least 2.4 m"
    },
    "source": {
     "doc": "za-sans10400-c",
@@ -233,8 +227,7 @@
    "unit": "m",
    "value": 0.9,
    "text": {
-    "en": "Accessible-route corridor clear width at least 0.9 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 0.9 м"
+    "en": "Accessible-route corridor clear width at least 0.9 m"
    },
    "source": {
     "doc": "za-sans10400-s",
@@ -267,8 +260,7 @@
    "unit": "m",
    "value": 45,
    "text": {
-    "en": "Travel distance to an exit or stair at most 45 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 45 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 45 m (residential)"
    },
    "source": {
     "doc": "za-sans10400-t",
@@ -300,8 +292,7 @@
    "unit": "m",
    "value": 45,
    "text": {
-    "en": "Travel distance to an exit or stair at most 45 m (office)",
-    "ru": "Путь до выхода или лестницы не более 45 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 45 m (office)"
    },
    "source": {
     "doc": "za-sans10400-t",
@@ -335,8 +326,7 @@
    "unit": "ratio",
    "value": 0.1,
    "text": {
-    "en": "Window area at least 10.0 % of the floor of a habitable room",
-    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+    "en": "Window area at least 10.0 % of the floor of a habitable room"
    },
    "source": {
     "doc": "za-sans10400-o",
@@ -364,8 +354,7 @@
    "na": true,
    "note": "na: the stair part sets riser and tread limits separately (za.riser, za.tread); no stride formula found in SANS 10400-M:2011 (read 2026-11-15)",
    "text": {
-    "en": "No stride formula: riser and tread are limited separately.",
-    "ru": "Нет формулы шага: подъём и проступь ограничены отдельно."
+    "en": "No stride formula: riser and tread are limited separately."
    }
   },
   {
@@ -374,8 +363,7 @@
    "na": true,
    "note": "na: the habitable-room part sizes dwelling rooms; no minimum office area per workplace in the national regulations read",
    "text": {
-    "en": "No minimum office area per workplace.",
-    "ru": "Нет минимальной площади на рабочее место."
+    "en": "No minimum office area per workplace."
    }
   }
  ]

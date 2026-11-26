@@ -157,8 +157,8 @@ fn care_air_follows_the_tags_and_the_model_wins_over_the_generic_rate() {
     let m = s.model.as_ref().unwrap();
     let clear = s.floor_height - s.rules.get("services.slab");
     for sp in m.spaces.iter().filter(|x| x.demand.pressure.is_some()) {
-        if let Some((a, b)) = m.air(sp.kind, &sp.name.0, 20.0, clear, &s.rules) {
-            assert!(a != b, "{}: {a} {b}", sp.name.0);
+        if let Some((a, b)) = m.air(sp.kind, &sp.name.en, 20.0, clear, &s.rules) {
+            assert!(a != b, "{}: {a} {b}", sp.name.en);
         }
     }
     // the model's own rate takes priority over the generic one for a class that states it

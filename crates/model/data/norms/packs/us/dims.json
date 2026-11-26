@@ -528,8 +528,7 @@
    "verified": false,
    "note": "na: the code groups buildings by construction type and occupancy with height tables (chapter 5), not by a height class; high-rise is building.high_rise_height",
    "text": {
-    "en": "No building height class: height limits come from construction type and occupancy tables.",
-    "ru": "Нет класса здания по высоте: пределы высоты задают таблицы по типу конструкции и классу функциональной опасности."
+    "en": "No building height class: height limits come from construction type and occupancy tables."
    }
   }
  ]

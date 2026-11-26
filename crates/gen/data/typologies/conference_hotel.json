@@ -10,8 +10,7 @@
  "note": "hotel: guest rooms and suites, each with its own ensuite bathroom, on both sides of one corridor over a two-storey podium; the ground floor holds the lobby, restaurant and its kitchen, the first floor the ballroom with its foyer and meeting rooms, one level below ground the laundry, stores, staff changing and plant",
  "brief": {
   "name": {
-   "en": "Hotel",
-   "ru": "Гостиница"
+   "en": "Hotel"
   },
   "floors": 9,
   "floor_height": 3.6,
@@ -31,16 +30,14 @@
  },
  "model": {
   "title": {
-   "en": "Hotel",
-   "ru": "Гостиница"
+   "en": "Hotel"
   },
   "spaces": [
    {
     "class": "lobby_h",
     "kind": "lobby",
     "name": {
-     "en": "Hotel lobby",
-     "ru": "Вестибюль гостиницы"
+     "en": "Hotel lobby"
     },
     "area": 120,
     "count": 1,
@@ -53,8 +50,7 @@
     "class": "reception_h",
     "kind": "office",
     "name": {
-     "en": "Reception",
-     "ru": "Стойка регистрации"
+     "en": "Reception"
     },
     "area": 24,
     "count": 1,
@@ -72,8 +68,7 @@
     "class": "restaurant",
     "kind": "dining",
     "name": {
-     "en": "Restaurant",
-     "ru": "Ресторан"
+     "en": "Restaurant"
     },
     "area": 160,
     "count": 1,
@@ -91,8 +86,7 @@
     "class": "kitchen_h",
     "kind": "kitchen",
     "name": {
-     "en": "Hotel kitchen",
-     "ru": "Кухня гостиницы"
+     "en": "Hotel kitchen"
     },
     "area": 70,
     "count": 1,
@@ -117,8 +111,7 @@
     "class": "staff_h",
     "kind": "staff",
     "name": {
-     "en": "Staff room",
-     "ru": "Комната персонала"
+     "en": "Staff room"
     },
     "area": 24,
     "count": 2,
@@ -130,8 +123,7 @@
     "class": "wc_h",
     "kind": "wc",
     "name": {
-     "en": "Public toilet",
-     "ru": "Общественный туалет"
+     "en": "Public toilet"
     },
     "area": 8,
     "count": 4,
@@ -143,8 +135,7 @@
     "class": "ballroom",
     "kind": "meeting",
     "name": {
-     "en": "Ballroom",
-     "ru": "Бальный зал"
+     "en": "Ballroom"
     },
     "area": 360,
     "count": 1,
@@ -162,8 +153,7 @@
     "class": "foyer_h",
     "kind": "lobby",
     "name": {
-     "en": "Pre-function foyer",
-     "ru": "Фойе бального зала"
+     "en": "Pre-function foyer"
     },
     "area": 90,
     "count": 1,
@@ -182,8 +172,7 @@
     "class": "meeting_h",
     "kind": "meeting",
     "name": {
-     "en": "Meeting room",
-     "ru": "Переговорная"
+     "en": "Meeting room"
     },
     "area": 36,
     "count": 4,
@@ -196,8 +185,7 @@
     "class": "wc_h2",
     "kind": "wc",
     "name": {
-     "en": "Event toilet",
-     "ru": "Туалет зала"
+     "en": "Event toilet"
     },
     "area": 8,
     "count": 4,
@@ -209,8 +197,7 @@
     "class": "laundry",
     "kind": "technical",
     "name": {
-     "en": "Laundry",
-     "ru": "Прачечная"
+     "en": "Laundry"
     },
     "area": 120,
     "count": 1,
@@ -227,8 +214,7 @@
     "class": "store_h",
     "kind": "storage",
     "name": {
-     "en": "Hotel store",
-     "ru": "Склад гостиницы"
+     "en": "Hotel store"
     },
     "area": 60,
     "count": 2,
@@ -240,8 +226,7 @@
     "class": "changing_h",
     "kind": "staff",
     "name": {
-     "en": "Staff changing room",
-     "ru": "Гардероб персонала"
+     "en": "Staff changing room"
     },
     "area": 40,
     "count": 2,
@@ -253,8 +238,7 @@
     "class": "plant_h",
     "kind": "technical",
     "name": {
-     "en": "Plant room",
-     "ru": "Венткамера"
+     "en": "Plant room"
     },
     "area": 100,
     "count": 1,
@@ -270,8 +254,7 @@
   "units": [
    {
     "name": {
-     "en": "Guest room",
-     "ru": "Номер"
+     "en": "Guest room"
     },
     "count": {
      "rule": "typology.hotel.rooms"
@@ -282,8 +265,7 @@
       "area": 22,
       "count": 1,
       "name": {
-       "en": "Guest room",
-       "ru": "Номер"
+       "en": "Guest room"
       }
      },
      {
@@ -291,8 +273,7 @@
       "area": 4.5,
       "count": 1,
       "name": {
-       "en": "Ensuite bathroom",
-       "ru": "Санузел номера"
+       "en": "Ensuite bathroom"
       }
      },
      {
@@ -304,8 +285,7 @@
    },
    {
     "name": {
-     "en": "Suite",
-     "ru": "Люкс"
+     "en": "Suite"
     },
     "count": {
      "rule": "typology.hotel.suites"
@@ -316,8 +296,7 @@
       "area": 22,
       "count": 1,
       "name": {
-       "en": "Suite sitting room",
-       "ru": "Гостиная люкса"
+       "en": "Suite sitting room"
       }
      },
      {
@@ -325,8 +304,7 @@
       "area": 20,
       "count": 1,
       "name": {
-       "en": "Suite bedroom",
-       "ru": "Спальня люкса"
+       "en": "Suite bedroom"
       }
      },
      {
@@ -334,8 +312,7 @@
       "area": 6,
       "count": 1,
       "name": {
-       "en": "Suite ensuite bathroom",
-       "ru": "Санузел люкса"
+       "en": "Suite ensuite bathroom"
       }
      },
      {
@@ -355,8 +332,7 @@
    {
     "id": "public",
     "name": {
-     "en": "Public",
-     "ru": "Общая зона"
+     "en": "Public"
     },
     "adjacent_to": [
      {
@@ -368,8 +344,7 @@
    {
     "id": "events",
     "name": {
-     "en": "Events",
-     "ru": "Банкетная зона"
+     "en": "Events"
     },
     "adjacent_to": [
      {
@@ -381,16 +356,14 @@
    {
     "id": "boh",
     "name": {
-     "en": "Back of house",
-     "ru": "Служебная зона"
+     "en": "Back of house"
     },
     "adjacent_to": []
    },
    {
     "id": "services",
     "name": {
-     "en": "Services",
-     "ru": "Инженерные помещения"
+     "en": "Services"
     },
     "adjacent_to": []
    }
@@ -425,8 +398,7 @@
    "levels": [
     {
      "name": {
-      "en": "Back-of-house level",
-      "ru": "Служебный уровень"
+      "en": "Back-of-house level"
      },
      "fill": "store_h"
     }

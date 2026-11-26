@@ -203,7 +203,7 @@ impl Rd {
         }
     }
 
-    fn rooms(&mut self, path: &str, v: &J, ru: bool, pg: Option<&Programme>) -> Vec<RoomReq> {
+    fn rooms(&mut self, path: &str, v: &J, lang: &str, pg: Option<&Programme>) -> Vec<RoomReq> {
         // `None`: rooms of an apartment, named generically
         let inside_apartment = pg.is_none();
         let Some(list) = v.as_array() else {
@@ -259,9 +259,9 @@ impl Rd {
             }
             let count = self.int(&format!("{p}.count"), &r["count"], 1, 1, MAX_ROOM_COUNT);
             let def = match (data_kind, pg) {
-                (Some(d), _) => if ru { &d.name.1 } else { &d.name.0 }.clone(),
-                (None, Some(g)) => g.room_name(kind, ru),
-                (None, None) => super::names::kind_name(kind, ru).to_string(),
+                (Some(d), _) => d.name.get(lang),
+                (None, Some(g)) => g.room_name(kind, lang),
+                (None, None) => super::names::kind_name(kind, lang).to_string(),
             };
             if let Some(def) = data_kind {
                 self.asked.push(super::kinds::Asked { path: p.clone(), def, area, apartment: inside_apartment });
@@ -338,9 +338,9 @@ fn defaults(t: Typology) -> Defaults {
     }
 }
 
-fn r(kind: RoomKind, area: f64, count: u32, ru: bool) -> RoomReq {
+fn r(kind: RoomKind, area: f64, count: u32, lang: &str) -> RoomReq {
     RoomReq {
-        name: super::names::kind_name(kind, ru).to_string(),
+        name: super::names::kind_name(kind, lang).to_string(),
         kind,
         area,
         count,
@@ -348,19 +348,19 @@ fn r(kind: RoomKind, area: f64, count: u32, ru: bool) -> RoomReq {
     }
 }
 
-fn default_apartments(ru: bool) -> Vec<ApartmentReq> {
+fn default_apartments(lang: &str) -> Vec<ApartmentReq> {
     use RoomKind::*;
     let one = vec![
-        r(Living, 19.0, 1, ru),
-        r(Kitchen, 10.0, 1, ru),
-        r(Bath, 4.0, 1, ru),
+        r(Living, 19.0, 1, lang),
+        r(Kitchen, 10.0, 1, lang),
+        r(Bath, 4.0, 1, lang),
     ];
     let two = vec![
-        r(Living, 18.0, 1, ru),
-        r(Bedroom, 13.0, 1, ru),
-        r(Kitchen, 10.0, 1, ru),
-        r(Bath, 4.4, 1, ru),
-        r(Wc, 1.8, 1, ru),
+        r(Living, 18.0, 1, lang),
+        r(Bedroom, 13.0, 1, lang),
+        r(Kitchen, 10.0, 1, lang),
+        r(Bath, 4.4, 1, lang),
+        r(Wc, 1.8, 1, lang),
     ];
     vec![
         ApartmentReq {
@@ -378,7 +378,7 @@ fn default_apartments(ru: bool) -> Vec<ApartmentReq> {
 
 /// Each line's count is bounded by the schema only: the floor total is checked against the
 /// footprint's cap after, so the refusal names the rule that sets it.
-fn read_apartments(rd: &mut Rd, v: &J, ru: bool) -> Vec<ApartmentReq> {
+fn read_apartments(rd: &mut Rd, v: &J, lang: &str) -> Vec<ApartmentReq> {
     let Some(list) = v.as_array() else {
         rd.bad("apartments", "must be a list of {name?, count?, rooms}");
         return vec![];
@@ -399,7 +399,7 @@ fn read_apartments(rd: &mut Rd, v: &J, ru: bool) -> Vec<ApartmentReq> {
             1,
             MAX_APARTMENTS_PER_FLOOR,
         );
-        let rooms = rd.rooms(&format!("{p}.rooms"), &a["rooms"], ru, None);
+        let rooms = rd.rooms(&format!("{p}.rooms"), &a["rooms"], lang, None);
         if !rooms.iter().any(|x| x.kind.habitable() && !x.kind.inner()) {
             rd.bad(
                 &format!("{p}.rooms"),
@@ -599,7 +599,6 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
             "en"
         }
     };
-    let ru = lang == "ru";
     // a one-storey building may stand taller than a floor: its tall space (nave, hall, bay)
     let tall = ParamDef { max: rules.get("typology.tall_space_max").max(FLOOR_HEIGHT.max), ..*FLOOR_HEIGHT };
     let fh_def = if v["floors"].as_u64() == Some(1) { tall } else { *FLOOR_HEIGHT };
@@ -672,12 +671,12 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
         }
     };
     let cap = apartments_cap(&rules, fp.width);
-    let (rooms, ground_rooms, mut apartments) = read_program(&mut rd, v, pg, floors, ru, cap);
-    let storey_rooms = read_storey_rooms(&mut rd, v, pg, floors, ru);
+    let (rooms, ground_rooms, mut apartments) = read_program(&mut rd, v, pg, floors, lang, cap);
+    let storey_rooms = read_storey_rooms(&mut rd, v, pg, floors, lang);
     // the apartments a typology model states, in the mix its rules give, unless the brief names its own
     if let Some(m) = tpl.as_deref().and_then(|t| t.model.as_deref()) {
         if pg.typology == Typology::ApartmentSection && v["apartments"].is_null() && !m.units.is_empty() {
-            apartments = m.apartments(ru, &rules);
+            apartments = m.apartments(lang, &rules);
             let n: u32 = apartments.iter().map(|a| a.count).sum();
             if n == 0 || n > cap {
                 let msg = format!(
@@ -698,7 +697,7 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
     let mut design = read_design(&mut rd, v, floors);
     let foundation = read_foundation(&mut rd, v);
     let services = read_services(&mut rd, v);
-    let name = rd.text("name", &v["name"], default_name(typology, ru));
+    let name = rd.text("name", &v["name"], &default_name(typology, lang));
     let furnish = read_furnish(&mut rd, v);
     let features = read_features(&mut rd, v);
     // a brief that asks for sprinklers gets them, whatever the height rule says
@@ -794,14 +793,14 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
             .chain(apartments.iter().flat_map(|a| &a.rooms))
             .filter(|r| !r.tags.is_empty())
             .map(|r| (r.kind, r.name.clone(), r.tags))
-            .chain(template.and_then(|t| t.model.as_deref()).map(|m| m.room_tags()).unwrap_or_default())
+            .chain(template.and_then(|t| t.model.as_deref()).map(|m| m.room_tags(lang)).unwrap_or_default())
             .collect(),
     );
     Ok(ProjectSpec {
         typology,
         traits,
         name,
-        ru,
+        ru: lang == "ru",
         lang,
         room_tags,
         floors,
@@ -833,7 +832,7 @@ pub fn parse_spec_with(v: &J, pg: Option<&Programme>) -> Result<ProjectSpec, Spe
         foundation,
         spare: pg.spare.clone(),
         furnish,
-        core_rest: (pg.core_rest.0, (if ru { &pg.core_rest.2 } else { &pg.core_rest.1 }).clone()),
+        core_rest: (pg.core_rest.0, pg.core_rest.1.get(lang)),
         design,
         services,
         template: template.map(|t| t.name.clone()),
@@ -1108,7 +1107,7 @@ fn read_stair(rd: &mut Rd, v: &J, d: &Defaults) -> (f64, f64) {
 /// either rooms or apartments.
 /// `storey_rooms`: {"<storey above ground, 0 the ground floor>": [rooms]}, rooms added to that
 /// storey only, on top of what the programme gives it.
-fn read_storey_rooms(rd: &mut Rd, v: &J, pg: &Programme, floors: u32, ru: bool) -> std::collections::BTreeMap<usize, Vec<RoomReq>> {
+fn read_storey_rooms(rd: &mut Rd, v: &J, pg: &Programme, floors: u32, lang: &str) -> std::collections::BTreeMap<usize, Vec<RoomReq>> {
     let mut out = std::collections::BTreeMap::new();
     let sv = &v["storey_rooms"];
     if sv.is_null() {
@@ -1122,7 +1121,7 @@ fn read_storey_rooms(rd: &mut Rd, v: &J, pg: &Programme, floors: u32, ru: bool) 
         let p = format!("storey_rooms.{key}");
         match key.parse::<usize>() {
             Ok(k) if k < floors as usize => {
-                let rooms = rd.rooms(&p, list, ru, Some(pg));
+                let rooms = rd.rooms(&p, list, lang, Some(pg));
                 let n: u32 = rooms.iter().map(|x| x.count).sum();
                 if n > MAX_ROOMS_PER_FLOOR {
                     rd.bad(&p, format!("{n} rooms on one floor; at most {MAX_ROOMS_PER_FLOOR}"));
@@ -1140,7 +1139,7 @@ fn read_program(
     v: &J,
     pg: &Programme,
     floors: u32,
-    ru: bool,
+    lang: &str,
     cap: u32,
 ) -> (Vec<RoomReq>, Vec<RoomReq>, Vec<ApartmentReq>) {
     let typology = pg.typology;
@@ -1149,8 +1148,8 @@ fn read_program(
     let rooms = match (&v["rooms"], apt) {
         // one storey: the rooms asked are the ground floor, or the whole single programme
         (J::Null, _) if single && !v["ground_rooms"].is_null() => vec![],
-        (J::Null, _) if single => pg.reqs(&pg.single, ru),
-        (J::Null, _) => pg.reqs(&pg.typical, ru),
+        (J::Null, _) if single => pg.reqs(&pg.single, lang),
+        (J::Null, _) => pg.reqs(&pg.typical, lang),
         (_, true) => {
             rd.bad(
                 "rooms",
@@ -1158,7 +1157,7 @@ fn read_program(
             );
             vec![]
         }
-        (x, false) => rd.rooms("rooms", x, ru, Some(pg)),
+        (x, false) => rd.rooms("rooms", x, lang, Some(pg)),
     };
     let ground_rooms = match (&v["ground_rooms"], apt) {
         (J::Null, true) => vec![],
@@ -1166,13 +1165,13 @@ fn read_program(
         // rooms asked without ground rooms hold on every floor (a house shares them out): a
         // parking deck or warehouse gets no default office lobby below
         (J::Null, false) if !v["rooms"].is_null() => vec![],
-        (J::Null, false) => pg.reqs(&pg.ground, ru),
+        (J::Null, false) => pg.reqs(&pg.ground, lang),
         (_, true) => {
             let msg = "an apartment section repeats its apartments on every floor";
             rd.bad("ground_rooms", msg);
             vec![]
         }
-        (x, false) => rd.rooms("ground_rooms", x, ru, Some(pg)),
+        (x, false) => rd.rooms("ground_rooms", x, lang, Some(pg)),
     };
     if single && !apt && !v["rooms"].is_null() && !v["ground_rooms"].is_null() {
         rd.bad("ground_rooms", "one storey takes rooms or ground_rooms, not both");
@@ -1184,9 +1183,9 @@ fn read_program(
         (rooms, ground_rooms)
     };
     let apartments = match (&v["apartments"], apt) {
-        (J::Null, true) => default_apartments(ru),
+        (J::Null, true) => default_apartments(lang),
         (J::Null, false) => vec![],
-        (x, true) => read_apartments(rd, x, ru),
+        (x, true) => read_apartments(rd, x, lang),
         (_, false) => {
             rd.bad(
                 "apartments",
@@ -1452,17 +1451,14 @@ fn read_origin(rd: &mut Rd, v: &J) -> (f64, f64) {
     }
 }
 
-fn default_name(typology: Typology, ru: bool) -> &'static str {
-    match (typology, ru) {
-        (Typology::House, false) => "House",
-        (Typology::ApartmentSection, false) => "Apartment section",
-        (Typology::Office, false) => "Office",
-        (Typology::School, false) => "School",
-        (Typology::House, true) => "\u{414}\u{43e}\u{43c}",
-        (Typology::ApartmentSection, true) => "\u{421}\u{435}\u{43a}\u{446}\u{438}\u{44f}",
-        (Typology::Office, true) => "\u{41e}\u{444}\u{438}\u{441}",
-        (Typology::School, true) => "\u{428}\u{43a}\u{43e}\u{43b}\u{430}",
-    }
+fn default_name(typology: Typology, lang: &str) -> String {
+    let en = match typology {
+        Typology::House => "House",
+        Typology::ApartmentSection => "Apartment section",
+        Typology::Office => "Office",
+        Typology::School => "School",
+    };
+    super::names::look(lang, &format!("gen.project.{}", typology.name())).unwrap_or(en).to_string()
 }
 
 #[cfg(test)]

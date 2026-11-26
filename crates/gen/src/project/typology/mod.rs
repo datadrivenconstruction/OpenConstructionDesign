@@ -11,6 +11,7 @@
 
 use super::program::{Access, Floor, Light, Program, Space};
 use super::rules::{self, RuleSet};
+use super::names::Text;
 use super::RoomKind;
 use serde_json::{json, Map, Value as J};
 
@@ -238,7 +239,7 @@ pub struct TSpace {
     pub class: String,
     /// The kind the plan builder lays the room out as.
     pub kind: RoomKind,
-    pub name: (String, String),
+    pub name: Text,
     /// Net area range of one room, m2.
     pub area: (f64, f64),
     pub count: u32,
@@ -267,7 +268,7 @@ pub struct TSpace {
 /// A kind of apartment: its rooms, and how many of it a storey holds (a rule gives the mix).
 #[derive(Clone, Debug, PartialEq)]
 pub struct Unit {
-    pub name: (String, String),
+    pub name: Text,
     pub count: Num,
     pub rooms: Vec<UnitRoom>,
 }
@@ -278,7 +279,7 @@ pub struct UnitRoom {
     pub kind: RoomKind,
     pub area: Num,
     pub count: u32,
-    pub name: Option<(String, String)>,
+    pub name: Option<Text>,
 }
 
 /// Storeys that repeat at an interval: the rooms of their spaces go on every `every`-th storey.
@@ -303,9 +304,9 @@ impl TSpace {
     }
 
     /// The room the plan builder is asked for on a periodic storey.
-    pub fn req(&self, ru: bool, rs: &RuleSet) -> super::RoomReq {
+    pub fn req(&self, lang: &str, rs: &RuleSet) -> super::RoomReq {
         super::RoomReq {
-            name: self.display(ru).to_string(),
+            name: self.display(lang).to_string(),
             kind: self.kind,
             area: self.target_area(),
             count: self.count_in(Some(rs)),
@@ -317,12 +318,8 @@ impl TSpace {
         (self.area.0 + self.area.1) / 2.0
     }
 
-    pub fn display(&self, ru: bool) -> &str {
-        if ru {
-            &self.name.1
-        } else {
-            &self.name.0
-        }
+    pub fn display(&self, lang: &str) -> String {
+        self.name.get(lang)
     }
 }
 
@@ -331,7 +328,7 @@ impl TSpace {
 #[derive(Clone, Debug, PartialEq)]
 pub struct Zone {
     pub id: String,
-    pub name: (String, String),
+    pub name: Text,
     /// Zones this one wants beside it, with weights.
     pub adjacent_to: Vec<(String, f64)>,
 }
@@ -353,11 +350,11 @@ pub struct Structure {
 /// One storey below ground.
 #[derive(Clone, Debug, PartialEq)]
 pub struct BelowLevel {
-    pub name: (String, String),
+    pub name: Text,
     /// Class of the space that takes what the named spaces leave of the level.
     pub fill: String,
     /// Name the through corridor of the level takes (the trackway of a station).
-    pub corridor: Option<(String, String)>,
+    pub corridor: Option<Text>,
 }
 
 /// Levels below ground; the first is right under the ground floor.
@@ -431,7 +428,7 @@ impl Qty {
 pub struct Model {
     /// The preset the model came with; empty for a model read alone.
     pub id: String,
-    pub title: (String, String),
+    pub title: Text,
     pub spaces: Vec<TSpace>,
     pub zones: Vec<Zone>,
     pub egress: Egress,
@@ -445,23 +442,11 @@ pub struct Model {
     pub units: Vec<Unit>,
 }
 
-fn text(v: &J, at: &str, errs: &mut Vec<String>) -> Option<(String, String)> {
-    match v {
-        J::String(s) if !s.trim().is_empty() => Some((s.clone(), s.clone())),
-        J::Object(_) => {
-            let en = v["en"].as_str().filter(|s| !s.trim().is_empty());
-            en.map(|en| (en.to_string(), v["ru"].as_str().unwrap_or(en).to_string()))
-        }
-        _ => None,
-    }
-    .or_else(|| {
-        errs.push(format!("{at}: a name, or {{en, ru}}"));
+fn text(v: &J, at: &str, errs: &mut Vec<String>) -> Option<Text> {
+    Text::from_json(v, "").or_else(|| {
+        errs.push(format!("{at}: a name, or {{en, <locale>..}}"));
         None
     })
-}
-
-fn name_json(n: &(String, String)) -> J {
-    json!({ "en": n.0, "ru": n.1 })
 }
 
 fn weights(v: &J, at: &str, errs: &mut Vec<String>) -> Vec<(String, f64)> {
@@ -761,7 +746,7 @@ impl Model {
             }
         }
         let title = match &v["title"] {
-            J::Null => Some((String::new(), String::new())),
+            J::Null => Some(Text::default()),
             t => text(t, "title", &mut errs),
         };
         let model = Model {
@@ -792,8 +777,8 @@ impl Model {
             if self.spaces[..i].iter().any(|o| o.class == s.class) {
                 errs.push(format!("spaces[{i}].class: '{}' twice", s.class));
             }
-            if self.spaces[..i].iter().any(|o| o.name.0 == s.name.0 || o.name.1 == s.name.1) {
-                errs.push(format!("spaces[{i}].name: '{}' twice; the demands find a room by its name", s.name.0));
+            if self.spaces[..i].iter().any(|o| o.name.en == s.name.en) {
+                errs.push(format!("spaces[{i}].name: '{}' twice; the demands find a room by its name", s.name.en));
             }
             if let Some(z) = &s.zone {
                 if !self.zones.iter().any(|x| &x.id == z) {
@@ -856,7 +841,7 @@ impl Model {
                 let mut o = Map::new();
                 o.insert("class".into(), json!(s.class));
                 o.insert("kind".into(), json!(s.kind.key()));
-                o.insert("name".into(), name_json(&s.name));
+                o.insert("name".into(), Text::to_json(&s.name));
                 let area = if s.area.0 == s.area.1 { json!(s.area.0) } else { json!({"min": s.area.0, "max": s.area.1}) };
                 o.insert("area".into(), area);
                 match &s.count_num {
@@ -905,11 +890,11 @@ impl Model {
         let zones: Vec<J> = self
             .zones
             .iter()
-            .map(|z| json!({"id": z.id, "name": name_json(&z.name), "adjacent_to": weights_json(&z.adjacent_to)}))
+            .map(|z| json!({"id": z.id, "name": Text::to_json(&z.name), "adjacent_to": weights_json(&z.adjacent_to)}))
             .collect();
         let mut o = Map::new();
-        if !self.title.0.is_empty() {
-            o.insert("title".into(), name_json(&self.title));
+        if !self.title.en.is_empty() {
+            o.insert("title".into(), Text::to_json(&self.title));
         }
         o.insert("spaces".into(), J::Array(spaces));
         o.insert("zones".into(), J::Array(zones));
@@ -926,10 +911,10 @@ impl Model {
                 .iter()
                 .map(|l| {
                     let mut x = Map::new();
-                    x.insert("name".into(), name_json(&l.name));
+                    x.insert("name".into(), Text::to_json(&l.name));
                     x.insert("fill".into(), json!(l.fill));
                     if let Some(c) = &l.corridor {
-                        x.insert("corridor".into(), name_json(c));
+                        x.insert("corridor".into(), Text::to_json(c));
                     }
                     J::Object(x)
                 })
@@ -954,12 +939,12 @@ impl Model {
                             x.insert("area".into(), r.area.to_json());
                             x.insert("count".into(), json!(r.count));
                             if let Some(n) = &r.name {
-                                x.insert("name".into(), name_json(n));
+                                x.insert("name".into(), Text::to_json(n));
                             }
                             J::Object(x)
                         })
                         .collect();
-                    json!({"name": name_json(&u.name), "count": u.count.to_json(), "rooms": rooms})
+                    json!({"name": Text::to_json(&u.name), "count": u.count.to_json(), "rooms": rooms})
                 })
                 .collect();
             o.insert("units".into(), J::Array(list));
@@ -979,7 +964,7 @@ impl Model {
             o.insert("periodic".into(), J::Array(list));
         }
         if let Some(sp) = &self.spare {
-            o.insert("spare".into(), json!({"grow_share": sp.grow_share, "kind": sp.kind.key(), "name": name_json(&sp.name)}));
+            o.insert("spare".into(), json!({"grow_share": sp.grow_share, "kind": sp.kind.key(), "name": Text::to_json(&sp.name)}));
         }
         if !self.plant.is_empty() {
             let plant: Vec<J> = self
@@ -1008,9 +993,33 @@ impl Model {
         J::Object(o)
     }
 
-    /// The space of a room by the layout kind and the name the plan gave it, in either language.
+    /// The space of a room by the layout kind and the name the plan gave it, in any language.
     pub fn of(&self, kind: RoomKind, name: &str) -> Option<&TSpace> {
-        self.spaces.iter().find(|s| s.kind == kind && (s.name.0 == name || s.name.1 == name))
+        self.spaces.iter().find(|s| s.kind == kind && s.name.names(name))
+    }
+
+    /// The names translated under the model's id (zones under `<id>.zone`), set once it is known.
+    pub fn set_scope(&mut self, id: &str) {
+        let z = format!("{id}.zone");
+        let sc = |t: &mut Text, s: &str| *t = std::mem::take(t).in_scope(s);
+        sc(&mut self.title, id);
+        self.spaces.iter_mut().for_each(|s| sc(&mut s.name, id));
+        self.zones.iter_mut().for_each(|x| sc(&mut x.name, &z));
+        for u in &mut self.units {
+            sc(&mut u.name, id);
+            u.rooms.iter_mut().filter_map(|r| r.name.as_mut()).for_each(|n| sc(n, id));
+        }
+        if let Some(b) = &mut self.below {
+            for l in &mut b.levels {
+                sc(&mut l.name, id);
+                if let Some(c) = &mut l.corridor {
+                    sc(c, id);
+                }
+            }
+        }
+        if let Some(sp) = &mut self.spare {
+            sc(&mut sp.name, id);
+        }
     }
 
     /// The spaces above ground as the programme the plan builder reads. A zone that wants
@@ -1057,13 +1066,13 @@ impl Model {
 
     /// The apartments of the section under `rs`: each kind as many times as its rule says. The
     /// apartment builder places one room per entry: a unit line with count 2 becomes two.
-    pub fn apartments(&self, ru: bool, rs: &RuleSet) -> Vec<super::ApartmentReq> {
+    pub fn apartments(&self, lang: &str, rs: &RuleSet) -> Vec<super::ApartmentReq> {
         self.units
             .iter()
             .filter_map(|u| {
                 let count = u.count.get(rs).round() as u32;
                 (count > 0).then(|| super::ApartmentReq {
-                    name: (if ru { &u.name.1 } else { &u.name.0 }).clone(),
+                    name: u.name.get(lang),
                     count,
                     rooms: u
                         .rooms
@@ -1073,7 +1082,7 @@ impl Model {
                                 name: r
                                     .name
                                     .as_ref()
-                                    .map_or_else(|| super::names::kind_name(r.kind, ru).to_string(), |n| (if ru { &n.1 } else { &n.0 }).clone()),
+                                    .map_or_else(|| super::names::kind_name(r.kind, lang).to_string(), |n| n.get(lang)),
                                 kind: r.kind,
                                 area: r.area.get(rs),
                                 count: 1,
@@ -1120,19 +1129,19 @@ impl Model {
 
     /// The rooms of storey `k` when it is a periodic one: the typical rooms `typical` plus the
     /// periodic spaces, or the periodic spaces alone when the storey replaces them.
-    pub fn periodic_rooms(&self, k: usize, floors: u32, ru: bool, rs: &RuleSet, typical: &[super::RoomReq]) -> Option<Vec<super::RoomReq>> {
+    pub fn periodic_rooms(&self, k: usize, floors: u32, lang: &str, rs: &RuleSet, typical: &[super::RoomReq]) -> Option<Vec<super::RoomReq>> {
         let p = self.periodic.iter().find(|p| self.is_periodic(&p.id, k, floors, rs))?;
         let mut out: Vec<super::RoomReq> = if p.replaces { vec![] } else { typical.to_vec() };
-        out.extend(self.spaces.iter().filter(|s| s.periodic.as_deref() == Some(p.id.as_str()) && s.count_in(Some(rs)) > 0).map(|s| s.req(ru, rs)));
+        out.extend(self.spaces.iter().filter(|s| s.periodic.as_deref() == Some(p.id.as_str()) && s.count_in(Some(rs)) > 0).map(|s| s.req(lang, rs)));
         Some(out)
     }
 
-    /// The tags of the spaces, by kind and either language's name, for the spec's tag table.
-    pub fn room_tags(&self) -> Vec<(RoomKind, String, super::RoomTags)> {
+    /// The tags of the spaces, by kind and the English and `lang` name, for the spec's tag table.
+    pub fn room_tags(&self, lang: &str) -> Vec<(RoomKind, String, super::RoomTags)> {
         self.spaces
             .iter()
             .filter(|s| !s.tags.is_empty())
-            .flat_map(|s| [(s.kind, s.name.0.clone(), s.tags), (s.kind, s.name.1.clone(), s.tags)])
+            .flat_map(|s| [(s.kind, s.name.en.clone(), s.tags), (s.kind, s.name.get(lang), s.tags)])
             .collect()
     }
 
@@ -1148,7 +1157,7 @@ impl Model {
 
     /// The loads of the whole building: every space, its rooms repeated on the storeys it
     /// belongs on.
-    pub fn schedule(&self, floors: u32, basements: u32, clear: f64, ru: bool, rs: &RuleSet) -> Schedule {
+    pub fn schedule(&self, floors: u32, basements: u32, clear: f64, lang: &str, rs: &RuleSet) -> Schedule {
         let (cool_k, power_k) = (rs.get("typology.cooling.scale"), rs.get("typology.power.scale"));
         let rows = self
             .spaces
@@ -1166,7 +1175,7 @@ impl Model {
                 let ppl = s.occupancy_m2.as_ref().map_or(0.0, |o| (area / o.get(rs).max(f64::EPSILON)).floor());
                 Some(Row {
                     class: s.class.clone(),
-                    name: s.display(ru).to_string(),
+                    name: s.display(lang).to_string(),
                     rooms,
                     area,
                     supply_m3h: one.0 * n,
@@ -1208,7 +1217,7 @@ impl Model {
                 let at = rows.iter().position(|r| r.class == s.class && r.below == below).unwrap_or_else(|| {
                     rows.push(Row {
                         class: s.class.clone(),
-                        name: s.display(spec.ru).to_string(),
+                        name: s.display(spec.lang).to_string(),
                         rooms: 0,
                         area: 0.0,
                         supply_m3h: 0.0,

@@ -895,7 +895,7 @@ fn convert(spec: &ProjectSpec, p: &mut GProject, rooms: &[(u32, usize)], shaft: 
         let Some(st) = block_mut(p, k) else { continue };
         let poly = st.layout.rooms[i].polygon.clone();
         st.rooms[i].kind = RoomKind::Lift;
-        st.layout.rooms[i].name = names::kind_name(RoomKind::Lift, spec.ru).to_string();
+        st.layout.rooms[i].name = names::kind_name(RoomKind::Lift, spec.lang).to_string();
         st.layout.shafts.push(GShaft::new(shaft.to_vec(), crate::ShaftKind::Lift));
         st.layout.fixtures.retain(|f| !(inside(f.at, &poly) || dist_ring(f.at, &poly) <= tol));
         st.fit.retain(|f| f.room != i);

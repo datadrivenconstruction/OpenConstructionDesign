@@ -1399,6 +1399,6 @@
     {"id": "timber.beam_span_max", "group": "timber", "unit": "m", "min": 2.0, "max": 14.0, "default": 8.0, "why": "Longest span of a glulam beam between two columns; a wider grid is reported, not built. Design choice (glulam beams commonly span 6 to 10 m)."},
     {"id": "timber.span_depth", "group": "timber", "unit": "factor", "min": 8.0, "max": 30.0, "default": 17.0, "why": "Span over depth of a glulam beam: the shallowest catalogue section whose depth carries the span is taken. Design choice."},
     {"id": "timber.panel_w", "group": "timber", "unit": "m", "min": 1.0, "max": 3.5, "default": 2.4, "why": "Widest cross-laminated floor panel; a floor is cut into equal strips no wider than this, a joint between each. Design choice (set by transport and the press)."},
-    {"id": "stair.spiral_headroom", "group": "stair", "unit": "m", "min": 1.8, "max": 3.0, "default": 2.05, "why": "Least rise of a spiral stair per full turn, so the next turn clears the head by this much. Design choice; checked where the spiral is generated.", "why_ru": "Наименьший подъём спиральной лестницы на полный оборот, чтобы следующий виток проходил над головой с таким запасом. Проектное решение; проверяется при генерации спирали."}
+    {"id": "stair.spiral_headroom", "group": "stair", "unit": "m", "min": 1.8, "max": 3.0, "default": 2.05, "why": "Least rise of a spiral stair per full turn, so the next turn clears the head by this much. Design choice; checked where the spiral is generated."}
   ]
 }

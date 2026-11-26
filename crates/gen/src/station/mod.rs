@@ -81,13 +81,13 @@ pub enum Lvl {
 impl Lvl {
     pub const BELOW: [Lvl; 3] = [Lvl::Concourse, Lvl::Platform, Lvl::Track];
 
-    /// Name in English and Russian.
-    pub fn names(self) -> (&'static str, &'static str) {
+    /// English name; `names::tr` gives it in a locale.
+    pub fn names(self) -> &'static str {
         match self {
-            Lvl::Ground => ("Ground", crate::lang::ru("Ground")),
-            Lvl::Concourse => ("Concourse level", crate::lang::ru("Concourse level")),
-            Lvl::Platform => ("Platform level", crate::lang::ru("Platform level")),
-            Lvl::Track => ("Track level", crate::lang::ru("Track level")),
+            Lvl::Ground => "Ground",
+            Lvl::Concourse => "Concourse level",
+            Lvl::Platform => "Platform level",
+            Lvl::Track => "Track level",
         }
     }
 }
@@ -176,7 +176,7 @@ pub struct SColumn {
 pub struct SRoom {
     pub level: Lvl,
     pub class: &'static str,
-    pub name: (&'static str, &'static str),
+    pub name: &'static str,
     pub point: (f64, f64),
     pub height: f64,
 }
@@ -624,12 +624,12 @@ pub fn plan(rs: &RuleSet) -> Result<GStation, GenError> {
 
     let ch = clear;
     let rooms = vec![
-        SRoom { level: Lvl::Platform, class: "platform", name: ("Platform", crate::lang::ru("Platform")), point: (len * 0.5, mid), height: ch },
-        SRoom { level: Lvl::Platform, class: "platform_services", name: ("Platform services room", crate::lang::ru("Platform services room")), point: (ez * 0.5, mid), height: ch },
-        SRoom { level: Lvl::Platform, class: "platform_services", name: ("Platform services room", crate::lang::ru("Platform services room")), point: (len - ez * 0.5, mid), height: ch },
-        SRoom { level: Lvl::Concourse, class: "concourse", name: ("Concourse and ticket hall", crate::lang::ru("Concourse and ticket hall")), point: (len * 0.5, mid), height: roof_bot - cz },
-        SRoom { level: Lvl::Concourse, class: "fan_room", name: ("Tunnel ventilation plant room", crate::lang::ru("Tunnel ventilation plant room")), point: (ez * 0.5, mid), height: roof_bot - cz },
-        SRoom { level: Lvl::Concourse, class: "substation", name: ("Traction substation and plant", crate::lang::ru("Traction substation and plant")), point: (len - ez * 0.5, mid), height: roof_bot - cz },
+        SRoom { level: Lvl::Platform, class: "platform", name: "Platform", point: (len * 0.5, mid), height: ch },
+        SRoom { level: Lvl::Platform, class: "platform_services", name: "Platform services room", point: (ez * 0.5, mid), height: ch },
+        SRoom { level: Lvl::Platform, class: "platform_services", name: "Platform services room", point: (len - ez * 0.5, mid), height: ch },
+        SRoom { level: Lvl::Concourse, class: "concourse", name: "Concourse and ticket hall", point: (len * 0.5, mid), height: roof_bot - cz },
+        SRoom { level: Lvl::Concourse, class: "fan_room", name: "Tunnel ventilation plant room", point: (ez * 0.5, mid), height: roof_bot - cz },
+        SRoom { level: Lvl::Concourse, class: "substation", name: "Traction substation and plant", point: (len - ez * 0.5, mid), height: roof_bot - cz },
     ];
 
     let metrics = vec![

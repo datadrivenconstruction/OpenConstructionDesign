@@ -10,8 +10,7 @@
  "note": "residential tower: flats of three sizes whose numbers per floor follow the unit mix rules, a refuge floor every N storeys by rule, two protected stairs and a firefighting lift; every flat is a suite of living room, bedrooms by type, kitchen, bath and hall laid out inside its cell",
  "brief": {
   "name": {
-   "en": "Residential tower",
-   "ru": "Жилая башня"
+   "en": "Residential tower"
   },
   "floors": 40,
   "floor_height": 3.3,
@@ -29,16 +28,14 @@
  },
  "model": {
   "title": {
-   "en": "Residential tower",
-   "ru": "Жилая башня"
+   "en": "Residential tower"
   },
   "spaces": [
    {
     "class": "refuge",
     "kind": "lobby",
     "name": {
-     "en": "Refuge area",
-     "ru": "Зона безопасности"
+     "en": "Refuge area"
     },
     "area": 120,
     "count": 1,
@@ -55,8 +52,7 @@
     "class": "refuge_plant",
     "kind": "technical",
     "name": {
-     "en": "Refuge services room",
-     "ru": "Служебное помещение зоны безопасности"
+     "en": "Refuge services room"
     },
     "area": 40,
     "count": 1,
@@ -74,8 +70,7 @@
   "units": [
    {
     "name": {
-     "en": "1",
-     "ru": "1"
+     "en": "1"
     },
     "count": {
      "rule": "typology.mix.one"
@@ -86,8 +81,7 @@
       "area": 18,
       "count": 1,
       "name": {
-       "en": "Living room",
-       "ru": "Гостиная"
+       "en": "Living room"
       }
      },
      {
@@ -95,8 +89,7 @@
       "area": 13,
       "count": 1,
       "name": {
-       "en": "Bedroom",
-       "ru": "Спальня"
+       "en": "Bedroom"
       }
      },
      {
@@ -123,8 +116,7 @@
    },
    {
     "name": {
-     "en": "2",
-     "ru": "2"
+     "en": "2"
     },
     "count": {
      "rule": "typology.mix.two"
@@ -135,8 +127,7 @@
       "area": 20,
       "count": 1,
       "name": {
-       "en": "Living room",
-       "ru": "Гостиная"
+       "en": "Living room"
       }
      },
      {
@@ -144,8 +135,7 @@
       "area": 13,
       "count": 2,
       "name": {
-       "en": "Bedroom",
-       "ru": "Спальня"
+       "en": "Bedroom"
       }
      },
      {
@@ -172,8 +162,7 @@
    },
    {
     "name": {
-     "en": "3",
-     "ru": "3"
+     "en": "3"
     },
     "count": {
      "rule": "typology.mix.three"
@@ -184,8 +173,7 @@
       "area": 24,
       "count": 1,
       "name": {
-       "en": "Living room",
-       "ru": "Гостиная"
+       "en": "Living room"
       }
      },
      {
@@ -193,8 +181,7 @@
       "area": 13,
       "count": 3,
       "name": {
-       "en": "Bedroom",
-       "ru": "Спальня"
+       "en": "Bedroom"
       }
      },
      {
@@ -224,16 +211,14 @@
    {
     "id": "services",
     "name": {
-     "en": "Services",
-     "ru": "Инженерные помещения"
+     "en": "Services"
     },
     "adjacent_to": []
    },
    {
     "id": "refuge",
     "name": {
-     "en": "Refuge",
-     "ru": "Зона безопасности"
+     "en": "Refuge"
     },
     "adjacent_to": [
      {

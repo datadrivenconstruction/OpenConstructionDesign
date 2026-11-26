@@ -20,8 +20,7 @@
    "unit": "m",
    "value": 0.18,
    "text": {
-    "en": "Common stair riser at most 0.18 m",
-    "ru": "Подъём ступени общей лестницы не более 0.18 м"
+    "en": "Common stair riser at most 0.18 m"
    },
    "source": {
     "doc": "kr-housing-std",
@@ -55,8 +54,7 @@
    "unit": "m",
    "value": 0.26,
    "text": {
-    "en": "Common stair tread at least 0.26 m",
-    "ru": "Проступь общей лестницы не менее 0.26 м"
+    "en": "Common stair tread at least 0.26 m"
    },
    "source": {
     "doc": "kr-housing-std",
@@ -90,8 +88,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Common stair flight width at least 1.2 m",
-    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+    "en": "Common stair flight width at least 1.2 m"
    },
    "source": {
     "doc": "kr-housing-std",
@@ -129,8 +126,7 @@
    "unit": "m",
    "value": 2.1,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.1 m",
-    "ru": "Высота жилых помещений не менее 2.1 м"
+    "en": "Clear height of habitable rooms at least 2.1 m"
    },
    "source": {
     "doc": "kr-evac-rule",
@@ -165,8 +161,7 @@
    "unit": "m",
    "value": 2.1,
    "text": {
-    "en": "Clear height of work rooms at least 2.1 m",
-    "ru": "Высота рабочих помещений не менее 2.1 м"
+    "en": "Clear height of work rooms at least 2.1 m"
    },
    "source": {
     "doc": "kr-evac-rule",
@@ -202,8 +197,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.2 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.2 м"
+    "en": "Accessible-route corridor clear width at least 1.2 m"
    },
    "source": {
     "doc": "kr-access-rule",
@@ -236,8 +230,7 @@
    "unit": "m",
    "value": 50,
    "text": {
-    "en": "Travel distance to an exit or stair at most 50 m (residential)",
-    "ru": "Путь до выхода или лестницы не более 50 м (жилые)"
+    "en": "Travel distance to an exit or stair at most 50 m (residential)"
    },
    "source": {
     "doc": "kr-bld-decree",
@@ -269,8 +262,7 @@
    "unit": "m",
    "value": 50,
    "text": {
-    "en": "Travel distance to an exit or stair at most 50 m (office)",
-    "ru": "Путь до выхода или лестницы не более 50 м (офисы)"
+    "en": "Travel distance to an exit or stair at most 50 m (office)"
    },
    "source": {
     "doc": "kr-bld-decree",
@@ -304,8 +296,7 @@
    "unit": "ratio",
    "value": 0.1,
    "text": {
-    "en": "Window area at least 10.0 % of the floor of a habitable room",
-    "ru": "Площадь окон не менее 10.0 % площади пола жилой комнаты"
+    "en": "Window area at least 10.0 % of the floor of a habitable room"
    },
    "source": {
     "doc": "kr-evac-rule",

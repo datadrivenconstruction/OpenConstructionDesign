@@ -463,7 +463,7 @@ fn wings(spec: &ProjectSpec, base: &ProjectSpec) -> Result<GProject, GenError> {
         }
         let mut s = acc.expect("a block has its bar");
         for (j, c) in corners.iter().enumerate() {
-            corner_hall(&mut s, *c, w, d, k, j, spec.ru);
+            corner_hall(&mut s, *c, w, d, k, j, spec.lang);
             let i = s.rooms.len() - 1;
             fit_added(spec, &mut s, i);
         }
@@ -730,14 +730,14 @@ fn fit_added(spec: &ProjectSpec, s: &mut PStorey, i: usize) {
 }
 
 /// The hall in corner `c`: its two outer walls with a window each, the entrance on the ground.
-fn corner_hall(s: &mut PStorey, c: Corner, w: f64, d: f64, k: usize, j: usize, ru: bool) {
+fn corner_hall(s: &mut PStorey, c: Corner, w: f64, d: f64, k: usize, j: usize, lang: &str) {
     let ((x0, y0), (x1, y1)) = corner_rect(c, w, d);
     let l = &mut s.layout;
     let first = l.walls.len();
     for (a, b) in corner_walls(c, w, d) {
         l.walls.push(GWall::line(a, b, WallRole::Exterior));
     }
-    let name = if ru { "\u{425}\u{43e}\u{43b}\u{43b}" } else { "Link hall" };
+    let name = &super::names::tr(lang, "", "Link hall");
     l.rooms.push(GRoom {
         name: name.to_string(),
         apartment: None,

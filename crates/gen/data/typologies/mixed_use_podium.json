@@ -10,8 +10,7 @@
  "note": "mixed-use podium: shops and a supermarket on the ground floor, offices above, two car-park levels below ground with plant and tank rooms; the outside walls below ground are retaining walls",
  "brief": {
   "name": {
-   "en": "Mixed-use podium",
-   "ru": "Многофункциональный подиум"
+   "en": "Mixed-use podium"
   },
   "floors": 6,
   "floor_height": 4.2,
@@ -28,16 +27,14 @@
  },
  "model": {
   "title": {
-   "en": "Mixed-use podium",
-   "ru": "Многофункциональный подиум"
+   "en": "Mixed-use podium"
   },
   "spaces": [
    {
     "class": "lobby_m",
     "kind": "lobby",
     "name": {
-     "en": "Podium lobby",
-     "ru": "Вестибюль подиума"
+     "en": "Podium lobby"
     },
     "area": 90,
     "count": 1,
@@ -48,8 +45,7 @@
     "class": "shop",
     "kind": "retail",
     "name": {
-     "en": "Shop",
-     "ru": "Магазин"
+     "en": "Shop"
     },
     "area": 90,
     "count": 5,
@@ -65,8 +61,7 @@
     "class": "market",
     "kind": "retail",
     "name": {
-     "en": "Supermarket",
-     "ru": "Супермаркет"
+     "en": "Supermarket"
     },
     "area": 420,
     "count": 1,
@@ -85,8 +80,7 @@
     "class": "dock",
     "kind": "storage",
     "name": {
-     "en": "Loading dock",
-     "ru": "Разгрузочная"
+     "en": "Loading dock"
     },
     "area": 90,
     "count": 1,
@@ -99,8 +93,7 @@
     "class": "wc_m",
     "kind": "wc",
     "name": {
-     "en": "Public toilet",
-     "ru": "Общественный туалет"
+     "en": "Public toilet"
     },
     "area": 6,
     "count": 4,
@@ -111,8 +104,7 @@
     "class": "open_m",
     "kind": "office",
     "name": {
-     "en": "Open-plan office",
-     "ru": "Открытый офис"
+     "en": "Open-plan office"
     },
     "area": 72,
     "count": 2,
@@ -123,8 +115,7 @@
     "class": "office_m",
     "kind": "office",
     "name": {
-     "en": "Cellular office",
-     "ru": "Офис"
+     "en": "Cellular office"
     },
     "area": 18,
     "count": 6,
@@ -135,8 +126,7 @@
     "class": "meeting_m",
     "kind": "meeting",
     "name": {
-     "en": "Meeting room",
-     "ru": "Переговорная"
+     "en": "Meeting room"
     },
     "area": 24,
     "count": 2,
@@ -147,8 +137,7 @@
     "class": "wc_m2",
     "kind": "wc",
     "name": {
-     "en": "Upper toilet",
-     "ru": "Санузел верхнего этажа"
+     "en": "Upper toilet"
     },
     "area": 6,
     "count": 2,
@@ -159,8 +148,7 @@
     "class": "plant_m",
     "kind": "technical",
     "name": {
-     "en": "Plant room",
-     "ru": "Венткамера"
+     "en": "Plant room"
     },
     "area": 80,
     "count": 1,
@@ -176,8 +164,7 @@
     "class": "bins",
     "kind": "storage",
     "name": {
-     "en": "Bin store",
-     "ru": "Мусорная"
+     "en": "Bin store"
     },
     "area": 30,
     "count": 1,
@@ -189,8 +176,7 @@
     "class": "park1",
     "kind": "parking",
     "name": {
-     "en": "Car park, upper level",
-     "ru": "Парковка, верхний уровень"
+     "en": "Car park, upper level"
     },
     "area": 600,
     "count": 1,
@@ -206,8 +192,7 @@
     "class": "pumps",
     "kind": "technical",
     "name": {
-     "en": "Pump and tank room",
-     "ru": "Насосная и ёмкости"
+     "en": "Pump and tank room"
     },
     "area": 70,
     "count": 1,
@@ -224,8 +209,7 @@
     "class": "park2",
     "kind": "parking",
     "name": {
-     "en": "Car park, lower level",
-     "ru": "Парковка, нижний уровень"
+     "en": "Car park, lower level"
     },
     "area": 600,
     "count": 1,
@@ -242,8 +226,7 @@
    {
     "id": "retail",
     "name": {
-     "en": "Retail",
-     "ru": "Торговая зона"
+     "en": "Retail"
     },
     "adjacent_to": [
      {
@@ -255,24 +238,21 @@
    {
     "id": "common",
     "name": {
-     "en": "Common",
-     "ru": "Общая зона"
+     "en": "Common"
     },
     "adjacent_to": []
    },
    {
     "id": "office",
     "name": {
-     "en": "Office",
-     "ru": "Офисы"
+     "en": "Office"
     },
     "adjacent_to": []
    },
    {
     "id": "service",
     "name": {
-     "en": "Service",
-     "ru": "Обслуживание"
+     "en": "Service"
     },
     "adjacent_to": [
      {
@@ -284,16 +264,14 @@
    {
     "id": "services",
     "name": {
-     "en": "Services",
-     "ru": "Инженерные помещения"
+     "en": "Services"
     },
     "adjacent_to": []
    },
    {
     "id": "parking",
     "name": {
-     "en": "Parking",
-     "ru": "Парковка"
+     "en": "Parking"
     },
     "adjacent_to": []
    }
@@ -310,15 +288,13 @@
    "levels": [
     {
      "name": {
-      "en": "Car park level 1",
-      "ru": "Парковка, уровень 1"
+      "en": "Car park level 1"
      },
      "fill": "park1"
     },
     {
      "name": {
-      "en": "Car park level 2",
-      "ru": "Парковка, уровень 2"
+      "en": "Car park level 2"
      },
      "fill": "park2"
     }
@@ -329,8 +305,7 @@
    "grow_share": 0.5,
    "kind": "retail",
    "name": {
-    "en": "Shop",
-    "ru": "Магазин"
+    "en": "Shop"
    }
   }
  }

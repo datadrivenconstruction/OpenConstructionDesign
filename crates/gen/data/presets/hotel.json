@@ -9,8 +9,7 @@
  "note": "hotel: built as a corridor plan of guest rooms (bedroom kind) with reception and restaurant below; en-suite baths are not separate rooms",
  "brief": {
   "name": {
-   "en": "Hotel",
-   "ru": "Гостиница"
+   "en": "Hotel"
   }
  },
  "rules": {
@@ -23,8 +22,7 @@
     "kind": "lobby",
     "area": 120,
     "name": {
-     "en": "Reception",
-     "ru": "Вестибюль"
+     "en": "Reception"
     },
     "floor": "ground"
    },
@@ -32,8 +30,7 @@
     "kind": "dining",
     "area": 150,
     "name": {
-     "en": "Restaurant",
-     "ru": "Ресторан"
+     "en": "Restaurant"
     },
     "floor": "ground"
    },
@@ -42,8 +39,7 @@
     "area": 20,
     "count": 2,
     "name": {
-     "en": "Back office",
-     "ru": "Служебное помещение"
+     "en": "Back office"
     },
     "floor": "ground"
    },
@@ -58,8 +54,7 @@
     "area": 24,
     "count": 14,
     "name": {
-     "en": "Guest room",
-     "ru": "Номер"
+     "en": "Guest room"
     },
     "floor": "typical"
    },
@@ -67,8 +62,7 @@
     "kind": "lobby",
     "area": 40,
     "name": {
-     "en": "Reception",
-     "ru": "Вестибюль"
+     "en": "Reception"
     },
     "floor": "single"
    },
@@ -77,8 +71,7 @@
     "area": 22,
     "count": 8,
     "name": {
-     "en": "Guest room",
-     "ru": "Номер"
+     "en": "Guest room"
     },
     "floor": "single"
    },

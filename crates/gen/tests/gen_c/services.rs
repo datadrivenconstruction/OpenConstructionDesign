@@ -416,3 +416,16 @@ fn the_corridor_of_an_apartment_section_powers_every_floor() {
         }
     }
 }
+
+#[test]
+fn zz_probe_power_unserved() {
+    for t in ["hospital_wing", "hotel"] {
+        let p = build_project(&parse_spec(&json!({"typology": t, "services": true})).unwrap()).unwrap();
+        let mut m: std::collections::BTreeMap<String, usize> = Default::default();
+        for i in p.services.issues.iter().filter(|i| i.contains("unpowered")) {
+            let key = i.split_whitespace().skip(4).collect::<Vec<_>>().join(" ");
+            *m.entry(key).or_default() += 1;
+        }
+        eprintln!("PROBE {t} pu={} floors={} {m:?}", metric(&p, "power_unserved_rooms"), p.storeys.len());
+    }
+}

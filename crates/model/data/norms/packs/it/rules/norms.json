@@ -19,8 +19,7 @@
    "unit": "m",
    "value": 0.3,
    "text": {
-    "en": "Common stair tread at least 0.3 m",
-    "ru": "Проступь общей лестницы не менее 0.3 м"
+    "en": "Common stair tread at least 0.3 m"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -53,8 +52,7 @@
    "unit": "m",
    "value": 1.2,
    "text": {
-    "en": "Common stair flight width at least 1.2 m",
-    "ru": "Ширина марша общей лестницы не менее 1.2 м"
+    "en": "Common stair flight width at least 1.2 m"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -85,8 +83,7 @@
    "unit": "m",
    "value": 0.25,
    "text": {
-    "en": "Stair tread in a house at least 0.25 m",
-    "ru": "Проступь в доме не менее 0.25 м"
+    "en": "Stair tread in a house at least 0.25 m"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -117,8 +114,7 @@
    "unit": "m",
    "value": 0.8,
    "text": {
-    "en": "Stair flight width in a house at least 0.8 m",
-    "ru": "Ширина марша в доме не менее 0.8 м"
+    "en": "Stair flight width in a house at least 0.8 m"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -156,8 +152,7 @@
    "unit": "m",
    "value": 2.7,
    "text": {
-    "en": "Clear height of habitable rooms at least 2.7 m",
-    "ru": "Высота жилых помещений не менее 2.7 м"
+    "en": "Clear height of habitable rooms at least 2.7 m"
    },
    "source": {
     "doc": "it-dm1975-mirror",
@@ -193,8 +188,7 @@
    "unit": "m",
    "value": 1.0,
    "text": {
-    "en": "Accessible-route corridor clear width at least 1.0 m",
-    "ru": "Ширина коридора на доступном маршруте не менее 1.0 м"
+    "en": "Accessible-route corridor clear width at least 1.0 m"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -228,8 +222,7 @@
    "unit": "ratio",
    "value": 0.125,
    "text": {
-    "en": "Window area at least 12.5 % of the floor of a habitable room",
-    "ru": "Площадь окон не менее 12.5 % площади пола жилой комнаты"
+    "en": "Window area at least 12.5 % of the floor of a habitable room"
    },
    "source": {
     "doc": "it-dm1975-mirror",
@@ -294,8 +287,7 @@
    "unit": "m",
    "value": 0.17,
    "text": {
-    "en": "Common stair riser at most 0.17 m (from the step rule)",
-    "ru": "Подъём ступени общей лестницы не более 0.17 м (из правила шага)"
+    "en": "Common stair riser at most 0.17 m (from the step rule)"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -325,8 +317,7 @@
    "unit": "m",
    "value": 0.195,
    "text": {
-    "en": "Private stair riser at most 0.195 m (from the step rule)",
-    "ru": "Подъём ступени внутренней лестницы не более 0.195 м (из правила шага)"
+    "en": "Private stair riser at most 0.195 m (from the step rule)"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -356,8 +347,7 @@
     0.64
    ],
    "text": {
-    "en": "Step rule: 2 risers + tread 0.62 to 0.64 m",
-    "ru": "Правило шага: 2 подъёма + проступь 0.62–0.64 м"
+    "en": "Step rule: 2 risers + tread 0.62 to 0.64 m"
    },
    "source": {
     "doc": "it-dm236-mirror",
@@ -387,8 +377,7 @@
    "unit": "m",
    "value": 3.0,
    "text": {
-    "en": "Workroom clear height at least 3 m (local rules may allow less for offices)",
-    "ru": "Высота рабочего помещения не менее 3 м (местные правила допускают меньше для офисов)"
+    "en": "Workroom clear height at least 3 m (local rules may allow less for offices)"
    },
    "source": {
     "doc": "it-dlgs81",
@@ -419,8 +408,7 @@
    "unit": "m",
    "value": 45.0,
    "text": {
-    "en": "Office escape route at most 45 m to a safe place (30 m to a protected stair)",
-    "ru": "Путь эвакуации в офисе не более 45 м до безопасной зоны (30 м до защищённой лестницы)"
+    "en": "Office escape route at most 45 m to a safe place (30 m to a protected stair)"
    },
    "source": {
     "doc": "it-dm2006-uffici",
@@ -439,8 +427,7 @@
    "na": true,
    "note": "na: the workplace decree sets floor area per worker (2 m2 each, annex IV 1.2.1.3) and volume per worker (10 m3), not a minimum room area",
    "text": {
-    "en": "No minimum office room area: the rule is area and volume per worker.",
-    "ru": "Нет минимальной площади офиса: норма задаёт площадь и объём на работника."
+    "en": "No minimum office room area: the rule is area and volume per worker."
    }
   },
   {

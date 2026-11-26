@@ -407,3 +407,35 @@ fn a_port_just_under_the_layer_keeps_its_elbow_tangent() {
         }
     }
 }
+
+#[test]
+fn ports_whose_straight_ends_just_past_the_layer_move_the_layer_to_them() {
+    // a 0.5 m plenum: the layer is 0.27 m over the ports, their own straight ends 0.05 m past
+    // it, far less than a leg; supply and then return share the plenum (the return may pass
+    // under the supply, so only the supply is held to the level)
+    let layer = 2.7667;
+    let mut r = Rules::new(0.2333, 1.18725, vec![layer], (v2(0.0, 0.0), v2(12.0, 8.0)));
+    r.tangent = 0.593625;
+    r.tee_leg = 0.8415;
+    r.zone = (layer - 0.01, layer + 0.01);
+    let end = EndRun { clearance: 0.1758, tangent: 0.3024 };
+    let up = v3(0.0, 0.0, 1.0);
+    let mut others = RoutedIndex::default();
+    let nets = [
+        (2.5, vec![(5.0, 2.5), (5.0, 5.5), (9.0, 2.5), (9.0, 5.5)]),
+        (1.5, vec![(4.0, 7.0), (7.0, 7.0), (10.0, 7.0)]),
+    ];
+    for (k, (sx, ts)) in nets.into_iter().enumerate() {
+        let t: Vec<Terminal> = ts.iter().map(|&(x, y)| port(x, y, 2.5, up)).collect();
+        r.ends = vec![Some(end); t.len()];
+        let src = Source::Terminal(port(sx, 4.0, 1.4, up));
+        let tree = route_tree(&Index::new(vec![]), &r, &src, &t, &mut others);
+        assert!(tree.failed.is_empty(), "{:?}", tree.failed);
+        let top = 2.5 + end.tangent * 1.05;
+        for b in tree.branches.iter().filter(|_| k == 0) {
+            for w in b.points.windows(2).filter(|w| (w[1].z - w[0].z).abs() < 1e-9) {
+                assert!((w[0].z - top).abs() < 1e-6, "level run off the ports' turn: {:?}", b.points);
+            }
+        }
+    }
+}
