@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Кутуда чийме примитивдери жок",
  "data_export.dwgpick.box": "Тандалган примитивдер: {n}",
  "data_export.dwgpick.box_rings": "Тандалган примитивдер: {n}, жабык контурлар: {rings}",
- "data_export.dwgpick.layer": "{layer} катмары: тандалган примитивдер {n}"
+ "data_export.dwgpick.layer": "{layer} катмары: тандалган примитивдер {n}",
+ "data_export.info.doc_lang_ui": "Интерфейстей",
+ "data_export.info.doc_lang": "Чийме тили"
 }

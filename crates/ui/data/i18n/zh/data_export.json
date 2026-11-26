@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "框选范围内没有图形图元",
  "data_export.dwgpick.box": "已选择图元:{n}",
  "data_export.dwgpick.box_rings": "已选择图元:{n},闭合轮廓:{rings}",
- "data_export.dwgpick.layer": "图层 {layer}:已选择图元 {n}"
+ "data_export.dwgpick.layer": "图层 {layer}:已选择图元 {n}",
+ "data_export.info.doc_lang_ui": "与界面一致",
+ "data_export.info.doc_lang": "图纸语言"
 }

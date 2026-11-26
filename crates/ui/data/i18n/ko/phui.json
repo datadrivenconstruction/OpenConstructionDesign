@@ -47,5 +47,8 @@
  "phui.kind.ramp": "경사로",
  "phui.kind.member": "부재",
  "phui.dates": "날짜 (시작, 종료)",
- "phui.show_calendar": "달력으로 보기"
+ "phui.show_calendar": "달력으로 보기",
+ "phui.phase.existing": "기존",
+ "phui.phase.demolition": "철거",
+ "phui.phase.new": "신축"
 }

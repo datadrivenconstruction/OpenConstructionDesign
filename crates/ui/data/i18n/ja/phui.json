@@ -47,5 +47,8 @@
  "phui.kind.ramp": "スロープ",
  "phui.kind.member": "部材",
  "phui.dates": "日付(開始、終了)",
- "phui.show_calendar": "カレンダー別に表示"
+ "phui.show_calendar": "カレンダー別に表示",
+ "phui.phase.existing": "既存",
+ "phui.phase.demolition": "解体",
+ "phui.phase.new": "新築"
 }

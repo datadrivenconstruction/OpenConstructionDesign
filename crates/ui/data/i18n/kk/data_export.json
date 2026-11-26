@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Рамкада сызба примитивтері жоқ",
  "data_export.dwgpick.box": "Таңдалған примитивтер: {n}",
  "data_export.dwgpick.box_rings": "Таңдалған примитивтер: {n}, тұйық контурлар: {rings}",
- "data_export.dwgpick.layer": "{layer} қабаты: таңдалған примитивтер {n}"
+ "data_export.dwgpick.layer": "{layer} қабаты: таңдалған примитивтер {n}",
+ "data_export.info.doc_lang_ui": "Интерфейс сияқты",
+ "data_export.info.doc_lang": "Сызба тілі"
 }

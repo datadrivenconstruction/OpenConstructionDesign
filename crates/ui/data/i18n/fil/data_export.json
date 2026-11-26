@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Walang primitive ng drawing sa kahon",
  "data_export.dwgpick.box": "Mga napiling primitive: {n}",
  "data_export.dwgpick.box_rings": "Mga napiling primitive: {n}, saradong contour: {rings}",
- "data_export.dwgpick.layer": "Layer {layer}: napiling primitive {n}"
+ "data_export.dwgpick.layer": "Layer {layer}: napiling primitive {n}",
+ "data_export.info.doc_lang_ui": "Gaya ng interface",
+ "data_export.info.doc_lang": "Wika ng drawing"
 }

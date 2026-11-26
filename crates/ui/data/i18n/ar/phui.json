@@ -47,5 +47,8 @@
  "phui.kind.ramp": "المنحدرات",
  "phui.kind.member": "العناصر الإنشائية",
  "phui.dates": "التواريخ (البداية، النهاية)",
- "phui.show_calendar": "عرض بحسب التقويم"
+ "phui.show_calendar": "عرض بحسب التقويم",
+ "phui.phase.existing": "قائم",
+ "phui.phase.demolition": "هدم",
+ "phui.phase.new": "إنشاء جديد"
 }

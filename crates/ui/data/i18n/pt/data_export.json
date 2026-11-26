@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Não há primitivas de desenho na caixa",
  "data_export.dwgpick.box": "Primitivas selecionadas: {n}",
  "data_export.dwgpick.box_rings": "Primitivas selecionadas: {n}, contornos fechados: {rings}",
- "data_export.dwgpick.layer": "Camada {layer}: primitivas selecionadas {n}"
+ "data_export.dwgpick.layer": "Camada {layer}: primitivas selecionadas {n}",
+ "data_export.info.doc_lang_ui": "Igual à interface",
+ "data_export.info.doc_lang": "Idioma do desenho"
 }

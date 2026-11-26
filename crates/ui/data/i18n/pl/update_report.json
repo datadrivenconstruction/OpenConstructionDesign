@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Twój tekst, dane kompilacji i systemu",
  "update_check.rep.file.crash": "Zapis awarii poprzedniego uruchomienia",
  "update_check.rep.file.shot": "Zrzut okna",
- "update_check.rep.file.model": "Kopia projektu bez dziennika AI"
+ "update_check.rep.file.model": "Kopia projektu bez dziennika AI",
+ "update_check.toast.title": "Dostępna jest wersja {v}",
+ "update_check.toast.news": "Nowości",
+ "update_check.later": "Później",
+ "update_check.skip": "Pomiń tę wersję",
+ "update_check.badge": "Aktualizacja {v}",
+ "update_check.badge.tip": "Dostępna jest wersja {v}. Otwórz, aby zobaczyć nowości.",
+ "update_check.up.download": "Pobierz {v}",
+ "update_check.news.title": "Nowości w {v}",
+ "update_check.news.body": "Używasz teraz wersji {v}. Oto, co się zmieniło.",
+ "update_check.news.done": "Rozumiem"
 }

@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Ramper",
  "phui.kind.member": "Konstruktionsdelar",
  "phui.dates": "Datum (start, slut)",
- "phui.show_calendar": "Visa per kalender"
+ "phui.show_calendar": "Visa per kalender",
+ "phui.phase.existing": "Befintlig",
+ "phui.phase.demolition": "Rivning",
+ "phui.phase.new": "Nybyggnad"
 }

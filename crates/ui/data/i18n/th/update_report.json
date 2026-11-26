@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "ข้อความ ข้อมูลบิลด์ และระบบของคุณ",
  "update_check.rep.file.crash": "บันทึกการหยุดทำงานของการรันก่อนหน้า",
  "update_check.rep.file.shot": "ภาพหน้าต่าง",
- "update_check.rep.file.model": "สำเนาโปรเจกต์โดยไม่มีบันทึก AI"
+ "update_check.rep.file.model": "สำเนาโปรเจกต์โดยไม่มีบันทึก AI",
+ "update_check.toast.title": "มีเวอร์ชัน {v} แล้ว",
+ "update_check.toast.news": "มีอะไรใหม่",
+ "update_check.later": "ภายหลัง",
+ "update_check.skip": "ข้ามเวอร์ชันนี้",
+ "update_check.badge": "อัปเดต {v}",
+ "update_check.badge.tip": "มีเวอร์ชัน {v} แล้ว เปิดเพื่อดูสิ่งใหม่",
+ "update_check.up.download": "ดาวน์โหลด {v}",
+ "update_check.news.title": "มีอะไรใหม่ใน {v}",
+ "update_check.news.body": "ตอนนี้คุณใช้เวอร์ชัน {v} นี่คือสิ่งที่เปลี่ยนแปลง",
+ "update_check.news.done": "รับทราบ"
 }

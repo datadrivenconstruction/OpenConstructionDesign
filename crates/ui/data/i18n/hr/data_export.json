@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "U okviru nema primitiva crteža",
  "data_export.dwgpick.box": "Odabrane primitive: {n}",
  "data_export.dwgpick.box_rings": "Odabrane primitive: {n}, zatvoreni obrisi: {rings}",
- "data_export.dwgpick.layer": "Sloj {layer}: odabrano primitiva {n}"
+ "data_export.dwgpick.layer": "Sloj {layer}: odabrano primitiva {n}",
+ "data_export.info.doc_lang_ui": "Kao sučelje",
+ "data_export.info.doc_lang": "Jezik crteža"
 }

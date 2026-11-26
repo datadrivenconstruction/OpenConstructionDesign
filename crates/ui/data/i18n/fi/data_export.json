@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Ei piirustuskohteita valintaikkunassa",
  "data_export.dwgpick.box": "Valittuja kohteita: {n}",
  "data_export.dwgpick.box_rings": "Valittuja kohteita: {n}, suljettuja ääriviivoja: {rings}",
- "data_export.dwgpick.layer": "Taso {layer}: valittuja kohteita {n}"
+ "data_export.dwgpick.layer": "Taso {layer}: valittuja kohteita {n}",
+ "data_export.info.doc_lang_ui": "Kuten käyttöliittymä",
+ "data_export.info.doc_lang": "Piirustuksen kieli"
 }

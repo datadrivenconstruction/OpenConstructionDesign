@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Aucune primitive de dessin dans la zone",
  "data_export.dwgpick.box": "Primitives sélectionnées : {n}",
  "data_export.dwgpick.box_rings": "Primitives sélectionnées : {n}, contours fermés : {rings}",
- "data_export.dwgpick.layer": "Calque {layer} : primitives sélectionnées {n}"
+ "data_export.dwgpick.layer": "Calque {layer} : primitives sélectionnées {n}",
+ "data_export.info.doc_lang_ui": "Comme l'interface",
+ "data_export.info.doc_lang": "Langue du dessin"
 }

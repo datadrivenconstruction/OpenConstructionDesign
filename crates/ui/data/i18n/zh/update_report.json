@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "您的文字、构建和系统信息",
  "update_check.rep.file.crash": "上次运行的崩溃记录",
  "update_check.rep.file.shot": "窗口截图",
- "update_check.rep.file.model": "不含 AI 日志的项目副本"
+ "update_check.rep.file.model": "不含 AI 日志的项目副本",
+ "update_check.toast.title": "版本 {v} 现已可用",
+ "update_check.toast.news": "新增内容",
+ "update_check.later": "稍后",
+ "update_check.skip": "跳过此版本",
+ "update_check.badge": "更新 {v}",
+ "update_check.badge.tip": "版本 {v} 现已可用。打开查看新增内容。",
+ "update_check.up.download": "下载 {v}",
+ "update_check.news.title": "{v} 新增内容",
+ "update_check.news.body": "您现在使用的是版本 {v}。以下是更新内容。",
+ "update_check.news.done": "知道了"
 }

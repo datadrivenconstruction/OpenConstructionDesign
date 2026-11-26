@@ -47,5 +47,8 @@
  "phui.kind.ramp": "रैंप",
  "phui.kind.member": "सदस्य",
  "phui.dates": "तिथियाँ (आरंभ, अंत)",
- "phui.show_calendar": "कैलेंडर के अनुसार दिखाएँ"
+ "phui.show_calendar": "कैलेंडर के अनुसार दिखाएँ",
+ "phui.phase.existing": "मौजूदा",
+ "phui.phase.demolition": "विध्वंस",
+ "phui.phase.new": "नया निर्माण"
 }

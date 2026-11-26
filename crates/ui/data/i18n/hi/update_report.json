@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "आपका टेक्स्ट, बिल्ड और सिस्टम की जानकारी",
  "update_check.rep.file.crash": "पिछले रन का क्रैश रिकॉर्ड",
  "update_check.rep.file.shot": "विंडो का चित्र",
- "update_check.rep.file.model": "AI जर्नल के बिना प्रोजेक्ट की प्रति"
+ "update_check.rep.file.model": "AI जर्नल के बिना प्रोजेक्ट की प्रति",
+ "update_check.toast.title": "संस्करण {v} उपलब्ध है",
+ "update_check.toast.news": "नया क्या है",
+ "update_check.later": "बाद में",
+ "update_check.skip": "यह संस्करण छोड़ें",
+ "update_check.badge": "अपडेट {v}",
+ "update_check.badge.tip": "संस्करण {v} उपलब्ध है। नया क्या है देखने के लिए खोलें।",
+ "update_check.up.download": "{v} डाउनलोड करें",
+ "update_check.news.title": "{v} में नया क्या है",
+ "update_check.news.body": "आप अब संस्करण {v} पर हैं। यह बदला है।",
+ "update_check.news.done": "समझ गया"
 }

@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Hellingbanen",
  "phui.kind.member": "Staven",
  "phui.dates": "Data (start, einde)",
- "phui.show_calendar": "Weergeven op kalender"
+ "phui.show_calendar": "Weergeven op kalender",
+ "phui.phase.existing": "Bestaand",
+ "phui.phase.demolition": "Sloop",
+ "phui.phase.new": "Nieuwbouw"
 }

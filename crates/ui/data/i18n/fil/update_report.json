@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Ang iyong teksto, build at impormasyon ng system",
  "update_check.rep.file.crash": "Crash record ng nakaraang takbo",
  "update_check.rep.file.shot": "Larawan ng window",
- "update_check.rep.file.model": "Kopya ng proyekto nang walang AI journal"
+ "update_check.rep.file.model": "Kopya ng proyekto nang walang AI journal",
+ "update_check.toast.title": "May bersyon {v}",
+ "update_check.toast.news": "Ano'ng bago",
+ "update_check.later": "Mamaya",
+ "update_check.skip": "Laktawan ang bersyong ito",
+ "update_check.badge": "Update {v}",
+ "update_check.badge.tip": "May bersyon {v}. Buksan para makita ang bago.",
+ "update_check.up.download": "I-download ang {v}",
+ "update_check.news.title": "Ano'ng bago sa {v}",
+ "update_check.news.body": "Nasa bersyon {v} ka na. Narito ang nagbago.",
+ "update_check.news.done": "Sige"
 }

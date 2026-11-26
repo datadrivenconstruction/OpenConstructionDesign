@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Таны текст, угсралт, системийн мэдээлэл",
  "update_check.rep.file.crash": "Өмнөх ажиллагааны алдааны бүртгэл",
  "update_check.rep.file.shot": "Цонхны зураг",
- "update_check.rep.file.model": "AI журналгүй төслийн хуулбар"
+ "update_check.rep.file.model": "AI журналгүй төслийн хуулбар",
+ "update_check.toast.title": "{v} хувилбар бэлэн боллоо",
+ "update_check.toast.news": "Шинэ зүйл",
+ "update_check.later": "Дараа нь",
+ "update_check.skip": "Энэ хувилбарыг алгасах",
+ "update_check.badge": "Шинэчлэлт {v}",
+ "update_check.badge.tip": "{v} хувилбар бэлэн боллоо. Шинэ зүйлийг үзэхийн тулд нээнэ үү.",
+ "update_check.up.download": "{v} татах",
+ "update_check.news.title": "{v} хувилбарын шинэчлэл",
+ "update_check.news.body": "Та одоо {v} хувилбар дээр байна. Юу өөрчлөгдсөнийг үзнэ үү.",
+ "update_check.news.done": "Ойлголоо"
 }

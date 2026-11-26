@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rámpák",
  "phui.kind.member": "Rudak",
  "phui.dates": "Dátumok (kezdet, vég)",
- "phui.show_calendar": "Megjelenítés naptár szerint"
+ "phui.show_calendar": "Megjelenítés naptár szerint",
+ "phui.phase.existing": "Meglévő",
+ "phui.phase.demolition": "Bontás",
+ "phui.phase.new": "Új építés"
 }

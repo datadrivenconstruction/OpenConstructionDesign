@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rampes",
  "phui.kind.member": "Éléments structurels",
  "phui.dates": "Dates (début, fin)",
- "phui.show_calendar": "Afficher par calendrier"
+ "phui.show_calendar": "Afficher par calendrier",
+ "phui.phase.existing": "Existant",
+ "phui.phase.demolition": "Démolition",
+ "phui.phase.new": "Construction neuve"
 }

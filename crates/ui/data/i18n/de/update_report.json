@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Ihr Text, Build- und Systemdaten",
  "update_check.rep.file.crash": "Absturzprotokoll des vorherigen Laufs",
  "update_check.rep.file.shot": "Fensterbild",
- "update_check.rep.file.model": "Projektkopie ohne KI-Journal"
+ "update_check.rep.file.model": "Projektkopie ohne KI-Journal",
+ "update_check.toast.title": "Version {v} ist verfügbar",
+ "update_check.toast.news": "Neuerungen",
+ "update_check.later": "Später",
+ "update_check.skip": "Diese Version überspringen",
+ "update_check.badge": "Update {v}",
+ "update_check.badge.tip": "Version {v} ist verfügbar. Öffnen, um die Neuerungen zu sehen.",
+ "update_check.up.download": "{v} herunterladen",
+ "update_check.news.title": "Neu in {v}",
+ "update_check.news.body": "Sie verwenden jetzt Version {v}. Das hat sich geändert.",
+ "update_check.news.done": "Verstanden"
 }

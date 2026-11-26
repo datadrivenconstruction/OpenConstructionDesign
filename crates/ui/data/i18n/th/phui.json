@@ -47,5 +47,8 @@
  "phui.kind.ramp": "ทางลาด",
  "phui.kind.member": "ชิ้นส่วน",
  "phui.dates": "วันที่ (เริ่ม สิ้นสุด)",
- "phui.show_calendar": "แสดงตามปฏิทิน"
+ "phui.show_calendar": "แสดงตามปฏิทิน",
+ "phui.phase.existing": "อาคารเดิม",
+ "phui.phase.demolition": "รื้อถอน",
+ "phui.phase.new": "ก่อสร้างใหม่"
 }

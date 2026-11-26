@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Metniniz, derleme ve sistem bilgileri",
  "update_check.rep.file.crash": "Önceki çalıştırmanın çökme kaydı",
  "update_check.rep.file.shot": "Pencere görüntüsü",
- "update_check.rep.file.model": "AI günlüğü olmayan proje kopyası"
+ "update_check.rep.file.model": "AI günlüğü olmayan proje kopyası",
+ "update_check.toast.title": "{v} sürümü hazır",
+ "update_check.toast.news": "Yenilikler",
+ "update_check.later": "Sonra",
+ "update_check.skip": "Bu sürümü atla",
+ "update_check.badge": "Güncelleme {v}",
+ "update_check.badge.tip": "{v} sürümü hazır. Yenilikleri görmek için açın.",
+ "update_check.up.download": "{v} indir",
+ "update_check.news.title": "{v} sürümünde yenilikler",
+ "update_check.news.body": "Artık {v} sürümündesiniz. İşte değişenler.",
+ "update_check.news.done": "Anladım"
 }

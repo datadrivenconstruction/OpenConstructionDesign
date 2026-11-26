@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Sizning matningiz, yig'ma va tizim ma'lumotlari",
  "update_check.rep.file.crash": "Oldingi ishga tushirishning xato yozuvi",
  "update_check.rep.file.shot": "Oyna rasmi",
- "update_check.rep.file.model": "AI jurnalisiz loyiha nusxasi"
+ "update_check.rep.file.model": "AI jurnalisiz loyiha nusxasi",
+ "update_check.toast.title": "{v} versiyasi mavjud",
+ "update_check.toast.news": "Yangiliklar",
+ "update_check.later": "Keyinroq",
+ "update_check.skip": "Bu versiyani o'tkazib yuborish",
+ "update_check.badge": "Yangilanish {v}",
+ "update_check.badge.tip": "{v} versiyasi mavjud. Yangiliklarni ko'rish uchun oching.",
+ "update_check.up.download": "{v} ni yuklab olish",
+ "update_check.news.title": "{v} da yangiliklar",
+ "update_check.news.body": "Siz endi {v} versiyasidasiz. Mana nima o'zgardi.",
+ "update_check.news.done": "Tushunarli"
 }

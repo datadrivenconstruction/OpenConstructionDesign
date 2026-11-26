@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rampe",
  "phui.kind.member": "Bare",
  "phui.dates": "Date (început, sfârșit)",
- "phui.show_calendar": "Afișează după calendar"
+ "phui.show_calendar": "Afișează după calendar",
+ "phui.phase.existing": "Existent",
+ "phui.phase.demolition": "Demolare",
+ "phui.phase.new": "Construcție nouă"
 }

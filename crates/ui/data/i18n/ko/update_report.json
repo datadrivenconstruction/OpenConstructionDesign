@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "입력한 설명, 빌드 및 시스템 정보",
  "update_check.rep.file.crash": "이전 실행의 충돌 기록",
  "update_check.rep.file.shot": "창 화면 캡처",
- "update_check.rep.file.model": "AI 기록을 제외한 프로젝트 사본"
+ "update_check.rep.file.model": "AI 기록을 제외한 프로젝트 사본",
+ "update_check.toast.title": "버전 {v}을(를) 사용할 수 있습니다",
+ "update_check.toast.news": "새로운 기능",
+ "update_check.later": "나중에",
+ "update_check.skip": "이 버전 건너뛰기",
+ "update_check.badge": "업데이트 {v}",
+ "update_check.badge.tip": "버전 {v}을(를) 사용할 수 있습니다. 열어서 새로운 기능을 확인하세요.",
+ "update_check.up.download": "{v} 다운로드",
+ "update_check.news.title": "{v}의 새로운 기능",
+ "update_check.news.body": "이제 버전 {v}입니다. 변경 내용은 다음과 같습니다.",
+ "update_check.news.done": "확인"
 }

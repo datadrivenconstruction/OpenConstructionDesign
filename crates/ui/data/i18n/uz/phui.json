@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Panduslar",
  "phui.kind.member": "Konstruktiv elementlar",
  "phui.dates": "Sanalar (boshlanishi, tugashi)",
- "phui.show_calendar": "Kalendar bo'yicha ko'rsatish"
+ "phui.show_calendar": "Kalendar bo'yicha ko'rsatish",
+ "phui.phase.existing": "Mavjud",
+ "phui.phase.demolition": "Buzish",
+ "phui.phase.new": "Yangi qurilish"
 }

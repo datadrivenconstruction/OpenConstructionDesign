@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Đường dốc",
  "phui.kind.member": "Thanh kết cấu",
  "phui.dates": "Ngày (bắt đầu, kết thúc)",
- "phui.show_calendar": "Hiển thị theo lịch"
+ "phui.show_calendar": "Hiển thị theo lịch",
+ "phui.phase.existing": "Hiện trạng",
+ "phui.phase.demolition": "Phá dỡ",
+ "phui.phase.new": "Xây mới"
 }

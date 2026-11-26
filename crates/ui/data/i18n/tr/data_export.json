@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Kutuda çizim öğesi yok",
  "data_export.dwgpick.box": "Seçilen çizim öğeleri: {n}",
  "data_export.dwgpick.box_rings": "Seçilen çizim öğeleri: {n}, kapalı konturlar: {rings}",
- "data_export.dwgpick.layer": "{layer} katmanı: seçilen öğeler {n}"
+ "data_export.dwgpick.layer": "{layer} katmanı: seçilen öğeler {n}",
+ "data_export.info.doc_lang_ui": "Arayüz gibi",
+ "data_export.info.doc_lang": "Çizim dili"
 }

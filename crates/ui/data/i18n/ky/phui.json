@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Ташмалар",
  "phui.kind.member": "Элементтер",
  "phui.dates": "Даталар (башы, аягы)",
- "phui.show_calendar": "Календарь боюнча көрсөтүү"
+ "phui.show_calendar": "Календарь боюнча көрсөтүү",
+ "phui.phase.existing": "Мурунтан бар",
+ "phui.phase.demolition": "Бузуу",
+ "phui.phase.new": "Жаңы курулуш"
 }

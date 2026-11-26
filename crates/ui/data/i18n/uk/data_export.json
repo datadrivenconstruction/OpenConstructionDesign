@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "У рамці немає примітивів креслення",
  "data_export.dwgpick.box": "Вибрано примітивів: {n}",
  "data_export.dwgpick.box_rings": "Вибрано примітивів: {n}, замкнених контурів: {rings}",
- "data_export.dwgpick.layer": "Шар {layer}: вибрано примітивів {n}"
+ "data_export.dwgpick.layer": "Шар {layer}: вибрано примітивів {n}",
+ "data_export.info.doc_lang_ui": "Як в інтерфейсі",
+ "data_export.info.doc_lang": "Мова креслення"
 }

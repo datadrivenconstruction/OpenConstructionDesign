@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rampalar",
  "phui.kind.member": "Elemanlar",
  "phui.dates": "Tarihler (başlangıç, bitiş)",
- "phui.show_calendar": "Takvime göre göster"
+ "phui.show_calendar": "Takvime göre göster",
+ "phui.phase.existing": "Mevcut",
+ "phui.phase.demolition": "Yıkım",
+ "phui.phase.new": "Yeni yapı"
 }

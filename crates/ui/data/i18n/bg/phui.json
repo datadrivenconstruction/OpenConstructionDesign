@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Рампи",
  "phui.kind.member": "Конструктивни елементи",
  "phui.dates": "Дати (начало, край)",
- "phui.show_calendar": "Покажи по календар"
+ "phui.show_calendar": "Покажи по календар",
+ "phui.phase.existing": "Съществуващо",
+ "phui.phase.demolition": "Демолиране",
+ "phui.phase.new": "Ново строителство"
 }

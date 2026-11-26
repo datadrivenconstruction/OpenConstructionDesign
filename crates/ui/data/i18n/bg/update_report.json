@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Вашият текст, компилация и системни данни",
  "update_check.rep.file.crash": "Запис за срив при предишното изпълнение",
  "update_check.rep.file.shot": "Снимка на прозореца",
- "update_check.rep.file.model": "Копие на проекта без журнала на AI"
+ "update_check.rep.file.model": "Копие на проекта без журнала на AI",
+ "update_check.toast.title": "Налична е версия {v}",
+ "update_check.toast.news": "Какво ново",
+ "update_check.later": "По-късно",
+ "update_check.skip": "Пропусни тази версия",
+ "update_check.badge": "Актуализация {v}",
+ "update_check.badge.tip": "Налична е версия {v}. Отворете, за да видите новостите.",
+ "update_check.up.download": "Изтегляне на {v}",
+ "update_check.news.title": "Какво ново във {v}",
+ "update_check.news.body": "Вече сте на версия {v}. Ето какво се промени.",
+ "update_check.news.done": "Разбрах"
 }

@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Το κείμενό σας, τα στοιχεία build και συστήματος",
  "update_check.rep.file.crash": "Αρχείο σφάλματος της προηγούμενης εκτέλεσης",
  "update_check.rep.file.shot": "Στιγμιότυπο παραθύρου",
- "update_check.rep.file.model": "Αντίγραφο έργου χωρίς το ημερολόγιο AI"
+ "update_check.rep.file.model": "Αντίγραφο έργου χωρίς το ημερολόγιο AI",
+ "update_check.toast.title": "Διατίθεται η έκδοση {v}",
+ "update_check.toast.news": "Τι νέο υπάρχει",
+ "update_check.later": "Αργότερα",
+ "update_check.skip": "Παράλειψη αυτής της έκδοσης",
+ "update_check.badge": "Ενημέρωση {v}",
+ "update_check.badge.tip": "Διατίθεται η έκδοση {v}. Ανοίξτε για να δείτε τα νέα.",
+ "update_check.up.download": "Λήψη {v}",
+ "update_check.news.title": "Τι νέο υπάρχει στην {v}",
+ "update_check.news.body": "Βρίσκεστε πλέον στην έκδοση {v}. Δείτε τι άλλαξε.",
+ "update_check.news.done": "Κατάλαβα"
 }

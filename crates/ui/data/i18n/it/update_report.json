@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Il tuo testo, i dati di build e di sistema",
  "update_check.rep.file.crash": "Registro di arresto dell'esecuzione precedente",
  "update_check.rep.file.shot": "Immagine della finestra",
- "update_check.rep.file.model": "Copia del progetto senza il registro IA"
+ "update_check.rep.file.model": "Copia del progetto senza il registro IA",
+ "update_check.toast.title": "La versione {v} è disponibile",
+ "update_check.toast.news": "Novità",
+ "update_check.later": "Più tardi",
+ "update_check.skip": "Salta questa versione",
+ "update_check.badge": "Aggiornamento {v}",
+ "update_check.badge.tip": "La versione {v} è disponibile. Aprila per vedere le novità.",
+ "update_check.up.download": "Scarica {v}",
+ "update_check.news.title": "Novità della {v}",
+ "update_check.news.body": "Ora sei alla versione {v}. Ecco cosa è cambiato.",
+ "update_check.news.done": "Ho capito"
 }

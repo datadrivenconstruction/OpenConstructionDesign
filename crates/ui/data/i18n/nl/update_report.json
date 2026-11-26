@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Uw tekst, build- en systeemgegevens",
  "update_check.rep.file.crash": "Crashrapport van de vorige run",
  "update_check.rep.file.shot": "Venstersfoto",
- "update_check.rep.file.model": "Projectkopie zonder AI-journaal"
+ "update_check.rep.file.model": "Projectkopie zonder AI-journaal",
+ "update_check.toast.title": "Versie {v} is beschikbaar",
+ "update_check.toast.news": "Nieuw",
+ "update_check.later": "Later",
+ "update_check.skip": "Deze versie overslaan",
+ "update_check.badge": "Update {v}",
+ "update_check.badge.tip": "Versie {v} is beschikbaar. Open om te zien wat er nieuw is.",
+ "update_check.up.download": "{v} downloaden",
+ "update_check.news.title": "Nieuw in {v}",
+ "update_check.news.body": "Je gebruikt nu versie {v}. Dit is er veranderd.",
+ "update_check.news.done": "Begrepen"
 }

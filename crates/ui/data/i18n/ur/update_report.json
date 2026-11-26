@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "آپ کا متن، بلڈ اور سسٹم کے حقائق",
  "update_check.rep.file.crash": "پچھلے رن کا کریش ریکارڈ",
  "update_check.rep.file.shot": "ونڈو کی تصویر",
- "update_check.rep.file.model": "AI جرنل کے بغیر پروجیکٹ کی نقل"
+ "update_check.rep.file.model": "AI جرنل کے بغیر پروجیکٹ کی نقل",
+ "update_check.toast.title": "ورژن {v} دستیاب ہے",
+ "update_check.toast.news": "نیا کیا ہے",
+ "update_check.later": "بعد میں",
+ "update_check.skip": "یہ ورژن چھوڑیں",
+ "update_check.badge": "اپ ڈیٹ {v}",
+ "update_check.badge.tip": "ورژن {v} دستیاب ہے۔ نیا کیا ہے دیکھنے کے لیے کھولیں۔",
+ "update_check.up.download": "{v} ڈاؤن لوڈ کریں",
+ "update_check.news.title": "{v} میں نیا کیا ہے",
+ "update_check.news.body": "اب آپ ورژن {v} پر ہیں۔ دیکھیں کیا بدلا۔",
+ "update_check.news.done": "سمجھ گیا"
 }

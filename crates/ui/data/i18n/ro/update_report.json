@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Textul tău, datele de compilare și de sistem",
  "update_check.rep.file.crash": "Înregistrarea erorii din rularea anterioară",
  "update_check.rep.file.shot": "Captură a ferestrei",
- "update_check.rep.file.model": "Copie a proiectului fără jurnalul AI"
+ "update_check.rep.file.model": "Copie a proiectului fără jurnalul AI",
+ "update_check.toast.title": "Versiunea {v} este disponibilă",
+ "update_check.toast.news": "Noutăți",
+ "update_check.later": "Mai târziu",
+ "update_check.skip": "Omite această versiune",
+ "update_check.badge": "Actualizare {v}",
+ "update_check.badge.tip": "Versiunea {v} este disponibilă. Deschide pentru noutăți.",
+ "update_check.up.download": "Descarcă {v}",
+ "update_check.news.title": "Noutăți în {v}",
+ "update_check.news.body": "Ești acum pe versiunea {v}. Iată ce s-a schimbat.",
+ "update_check.news.done": "Am înțeles"
 }

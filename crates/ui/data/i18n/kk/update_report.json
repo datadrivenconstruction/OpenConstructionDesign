@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Сіздің мәтініңіз, құрастыру және жүйе деректері",
  "update_check.rep.file.crash": "Алдыңғы іске қосудың қате журналы",
  "update_check.rep.file.shot": "Терезенің суреті",
- "update_check.rep.file.model": "AI журналынсыз жобаның көшірмесі"
+ "update_check.rep.file.model": "AI журналынсыз жобаның көшірмесі",
+ "update_check.toast.title": "{v} нұсқасы қолжетімді",
+ "update_check.toast.news": "Жаңалықтар",
+ "update_check.later": "Кейінірек",
+ "update_check.skip": "Бұл нұсқаны өткізіп жіберу",
+ "update_check.badge": "Жаңарту {v}",
+ "update_check.badge.tip": "{v} нұсқасы қолжетімді. Жаңалықтарды көру үшін ашыңыз.",
+ "update_check.up.download": "{v} жүктеу",
+ "update_check.news.title": "{v} нұсқасындағы жаңалықтар",
+ "update_check.news.body": "Енді сіз {v} нұсқасындасыз. Міне, не өзгерді.",
+ "update_check.news.done": "Түсінікті"
 }

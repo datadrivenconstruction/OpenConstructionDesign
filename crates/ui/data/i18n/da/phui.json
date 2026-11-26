@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rampe",
  "phui.kind.member": "Konstruktionsdele",
  "phui.dates": "Datoer (start, slut)",
- "phui.show_calendar": "Vis efter kalender"
+ "phui.show_calendar": "Vis efter kalender",
+ "phui.phase.existing": "Eksisterende",
+ "phui.phase.demolition": "Nedrivning",
+ "phui.phase.new": "Nybyggeri"
 }

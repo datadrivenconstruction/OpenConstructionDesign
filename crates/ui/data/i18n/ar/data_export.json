@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "لا توجد عناصر رسم داخل المستطيل",
  "data_export.dwgpick.box": "العناصر المحددة: {n}",
  "data_export.dwgpick.box_rings": "العناصر المحددة: {n}، المحيطات المغلقة: {rings}",
- "data_export.dwgpick.layer": "الطبقة {layer}: العناصر المحددة {n}"
+ "data_export.dwgpick.layer": "الطبقة {layer}: العناصر المحددة {n}",
+ "data_export.info.doc_lang_ui": "مثل الواجهة",
+ "data_export.info.doc_lang": "لغة الرسم"
 }

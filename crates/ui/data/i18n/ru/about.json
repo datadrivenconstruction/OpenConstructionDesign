@@ -21,7 +21,12 @@
  "about.licenses.close": "Закрыть",
  "about.licenses.col_name": "Компонент",
  "about.licenses.col_license": "Лицензия",
- "about.licenses.count": {"one": "# компонент", "few": "# компонента", "many": "# компонентов", "other": "# компонента"},
+ "about.licenses.count": {
+  "one": "# компонент",
+  "few": "# компонента",
+  "many": "# компонентов",
+  "other": "# компонента"
+ },
  "about.licenses.count_of": "{shown} из {total} компонентов",
  "about.licenses.search_hint": "Поиск по названию или лицензии…",
  "about.licenses.search_clear": "Сбросить поиск",

@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Няма примитиви на чертежа в рамката",
  "data_export.dwgpick.box": "Избрани примитиви: {n}",
  "data_export.dwgpick.box_rings": "Избрани примитиви: {n}, затворени контури: {rings}",
- "data_export.dwgpick.layer": "Слой {layer}: избрани примитиви {n}"
+ "data_export.dwgpick.layer": "Слой {layer}: избрани примитиви {n}",
+ "data_export.info.doc_lang_ui": "Като интерфейса",
+ "data_export.info.doc_lang": "Език на чертежа"
 }

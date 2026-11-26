@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Ваш текст, збірка і відомості про систему",
  "update_check.rep.file.crash": "Звіт про збій попереднього запуску",
  "update_check.rep.file.shot": "Знімок вікна",
- "update_check.rep.file.model": "Копія проєкту без журналу ШІ"
+ "update_check.rep.file.model": "Копія проєкту без журналу ШІ",
+ "update_check.toast.title": "Доступна версія {v}",
+ "update_check.toast.news": "Що нового",
+ "update_check.later": "Пізніше",
+ "update_check.skip": "Пропустити цю версію",
+ "update_check.badge": "Оновлення {v}",
+ "update_check.badge.tip": "Доступна версія {v}. Відкрийте, щоб побачити новинки.",
+ "update_check.up.download": "Завантажити {v}",
+ "update_check.news.title": "Що нового в {v}",
+ "update_check.news.body": "Тепер у вас версія {v}. Ось що змінилося.",
+ "update_check.news.done": "Зрозуміло"
 }

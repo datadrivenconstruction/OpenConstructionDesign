@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Votre texte, la compilation et les informations système",
  "update_check.rep.file.crash": "Journal de plantage de la session précédente",
  "update_check.rep.file.shot": "Capture de la fenêtre",
- "update_check.rep.file.model": "Copie du projet sans le journal de l'IA"
+ "update_check.rep.file.model": "Copie du projet sans le journal de l'IA",
+ "update_check.toast.title": "La version {v} est disponible",
+ "update_check.toast.news": "Nouveautés",
+ "update_check.later": "Plus tard",
+ "update_check.skip": "Ignorer cette version",
+ "update_check.badge": "Mise à jour {v}",
+ "update_check.badge.tip": "La version {v} est disponible. Ouvrez pour voir les nouveautés.",
+ "update_check.up.download": "Télécharger {v}",
+ "update_check.news.title": "Nouveautés de la {v}",
+ "update_check.news.body": "Vous êtes maintenant sur la version {v}. Voici ce qui a changé.",
+ "update_check.news.done": "Compris"
 }

@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Δεν υπάρχουν στοιχεία σχεδίου στο πλαίσιο",
  "data_export.dwgpick.box": "Επιλεγμένα στοιχεία: {n}",
  "data_export.dwgpick.box_rings": "Επιλεγμένα στοιχεία: {n}, κλειστά περιγράμματα: {rings}",
- "data_export.dwgpick.layer": "Στρώμα {layer}: επιλεγμένα στοιχεία {n}"
+ "data_export.dwgpick.layer": "Στρώμα {layer}: επιλεγμένα στοιχεία {n}",
+ "data_export.info.doc_lang_ui": "Όπως η διεπαφή",
+ "data_export.info.doc_lang": "Γλώσσα σχεδίου"
 }

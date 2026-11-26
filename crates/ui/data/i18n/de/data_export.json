@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Keine Zeichnungsobjekte im Rechteck",
  "data_export.dwgpick.box": "Gewählte Objekte: {n}",
  "data_export.dwgpick.box_rings": "Gewählte Objekte: {n}, geschlossene Umrisse: {rings}",
- "data_export.dwgpick.layer": "Ebene {layer}: gewählte Objekte {n}"
+ "data_export.dwgpick.layer": "Ebene {layer}: gewählte Objekte {n}",
+ "data_export.info.doc_lang_ui": "Wie die Oberfläche",
+ "data_export.info.doc_lang": "Zeichnungssprache"
 }

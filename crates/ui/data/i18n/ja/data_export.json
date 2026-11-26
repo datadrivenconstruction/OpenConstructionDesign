@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "範囲内に図面のプリミティブがありません",
  "data_export.dwgpick.box": "選択したプリミティブ: {n}",
  "data_export.dwgpick.box_rings": "選択したプリミティブ: {n}、閉じた輪郭: {rings}",
- "data_export.dwgpick.layer": "レイヤー {layer}: 選択したプリミティブ {n}"
+ "data_export.dwgpick.layer": "レイヤー {layer}: 選択したプリミティブ {n}",
+ "data_export.info.doc_lang_ui": "インターフェースに合わせる",
+ "data_export.info.doc_lang": "図面の言語"
 }

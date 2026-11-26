@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Seu texto, dados de compilação e do sistema",
  "update_check.rep.file.crash": "Registro de falha da execução anterior",
  "update_check.rep.file.shot": "Captura da janela",
- "update_check.rep.file.model": "Cópia do projeto sem o diário de IA"
+ "update_check.rep.file.model": "Cópia do projeto sem o diário de IA",
+ "update_check.toast.title": "Versão {v} disponível",
+ "update_check.toast.news": "Novidades",
+ "update_check.later": "Mais tarde",
+ "update_check.skip": "Ignorar esta versão",
+ "update_check.badge": "Atualização {v}",
+ "update_check.badge.tip": "A versão {v} está disponível. Abra para ver as novidades.",
+ "update_check.up.download": "Baixar {v}",
+ "update_check.news.title": "Novidades da {v}",
+ "update_check.news.body": "Você agora está na versão {v}. Veja o que mudou.",
+ "update_check.news.done": "Entendi"
 }

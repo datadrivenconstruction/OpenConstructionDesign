@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Din text, byggdata och systemuppgifter",
  "update_check.rep.file.crash": "Kraschlogg från den föregående körningen",
  "update_check.rep.file.shot": "Skärmbild av fönstret",
- "update_check.rep.file.model": "Projektkopia utan AI-journalen"
+ "update_check.rep.file.model": "Projektkopia utan AI-journalen",
+ "update_check.toast.title": "Version {v} finns tillgänglig",
+ "update_check.toast.news": "Nyheter",
+ "update_check.later": "Senare",
+ "update_check.skip": "Hoppa över denna version",
+ "update_check.badge": "Uppdatering {v}",
+ "update_check.badge.tip": "Version {v} finns tillgänglig. Öppna för att se nyheterna.",
+ "update_check.up.download": "Ladda ner {v}",
+ "update_check.news.title": "Nytt i {v}",
+ "update_check.news.body": "Du har nu version {v}. Här är vad som ändrats.",
+ "update_check.news.done": "Uppfattat"
 }

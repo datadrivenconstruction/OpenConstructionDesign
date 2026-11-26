@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Qutida chizma primitivlari yo'q",
  "data_export.dwgpick.box": "Tanlangan primitivlar: {n}",
  "data_export.dwgpick.box_rings": "Tanlangan primitivlar: {n}, yopiq konturlar: {rings}",
- "data_export.dwgpick.layer": "{layer} qatlami: tanlangan primitivlar {n}"
+ "data_export.dwgpick.layer": "{layer} qatlami: tanlangan primitivlar {n}",
+ "data_export.info.doc_lang_ui": "Interfeys kabi",
+ "data_export.info.doc_lang": "Chizma tili"
 }

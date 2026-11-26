@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Luiskat",
  "phui.kind.member": "Sauvat",
  "phui.dates": "Päivämäärät (alku, loppu)",
- "phui.show_calendar": "Näytä kalenterin mukaan"
+ "phui.show_calendar": "Näytä kalenterin mukaan",
+ "phui.phase.existing": "Olemassa oleva",
+ "phui.phase.demolition": "Purku",
+ "phui.phase.new": "Uudisrakennus"
 }

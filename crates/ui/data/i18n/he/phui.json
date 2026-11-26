@@ -47,5 +47,8 @@
  "phui.kind.ramp": "רמפות",
  "phui.kind.member": "אלמנטים",
  "phui.dates": "תאריכים (התחלה, סיום)",
- "phui.show_calendar": "הצג לפי לוח שנה"
+ "phui.show_calendar": "הצג לפי לוח שנה",
+ "phui.phase.existing": "קיים",
+ "phui.phase.demolition": "הריסה",
+ "phui.phase.new": "בנייה חדשה"
 }

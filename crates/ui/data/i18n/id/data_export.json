@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Tidak ada primitif gambar di dalam kotak",
  "data_export.dwgpick.box": "Primitif terpilih: {n}",
  "data_export.dwgpick.box_rings": "Primitif terpilih: {n}, kontur tertutup: {rings}",
- "data_export.dwgpick.layer": "Layer {layer}: primitif terpilih {n}"
+ "data_export.dwgpick.layer": "Layer {layer}: primitif terpilih {n}",
+ "data_export.info.doc_lang_ui": "Sama dengan antarmuka",
+ "data_export.info.doc_lang": "Bahasa gambar"
 }

@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "入力したテキスト、ビルド情報、システム情報",
  "update_check.rep.file.crash": "前回の実行のクラッシュ記録",
  "update_check.rep.file.shot": "ウィンドウのスクリーンショット",
- "update_check.rep.file.model": "AI ジャーナルを除いたプロジェクトのコピー"
+ "update_check.rep.file.model": "AI ジャーナルを除いたプロジェクトのコピー",
+ "update_check.toast.title": "バージョン {v} を利用できます",
+ "update_check.toast.news": "新機能",
+ "update_check.later": "後で",
+ "update_check.skip": "このバージョンをスキップ",
+ "update_check.badge": "更新 {v}",
+ "update_check.badge.tip": "バージョン {v} を利用できます。開いて新機能を確認してください。",
+ "update_check.up.download": "{v} をダウンロード",
+ "update_check.news.title": "{v} の新機能",
+ "update_check.news.body": "バージョン {v} になりました。変更点は次のとおりです。",
+ "update_check.news.done": "OK"
 }

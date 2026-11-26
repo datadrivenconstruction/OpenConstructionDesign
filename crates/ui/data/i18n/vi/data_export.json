@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Không có đối tượng vẽ trong khung",
  "data_export.dwgpick.box": "Đối tượng đã chọn: {n}",
  "data_export.dwgpick.box_rings": "Đối tượng đã chọn: {n}, đường bao khép kín: {rings}",
- "data_export.dwgpick.layer": "Lớp {layer}: đã chọn {n} đối tượng"
+ "data_export.dwgpick.layer": "Lớp {layer}: đã chọn {n} đối tượng",
+ "data_export.info.doc_lang_ui": "Theo giao diện",
+ "data_export.info.doc_lang": "Ngôn ngữ bản vẽ"
 }

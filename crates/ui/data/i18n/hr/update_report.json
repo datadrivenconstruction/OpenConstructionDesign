@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Vaš tekst, podaci o buildu i sustavu",
  "update_check.rep.file.crash": "Zapis o padu prethodnog pokretanja",
  "update_check.rep.file.shot": "Slika prozora",
- "update_check.rep.file.model": "Kopija projekta bez AI dnevnika"
+ "update_check.rep.file.model": "Kopija projekta bez AI dnevnika",
+ "update_check.toast.title": "Dostupna je verzija {v}",
+ "update_check.toast.news": "Novosti",
+ "update_check.later": "Kasnije",
+ "update_check.skip": "Preskoči ovu verziju",
+ "update_check.badge": "Ažuriranje {v}",
+ "update_check.badge.tip": "Dostupna je verzija {v}. Otvorite za novosti.",
+ "update_check.up.download": "Preuzmi {v}",
+ "update_check.news.title": "Novo u {v}",
+ "update_check.news.body": "Sada ste na verziji {v}. Evo što se promijenilo.",
+ "update_check.news.done": "Razumijem"
 }

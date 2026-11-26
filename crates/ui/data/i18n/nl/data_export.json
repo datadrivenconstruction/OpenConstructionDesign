@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Geen tekenprimitieven in het kader",
  "data_export.dwgpick.box": "Geselecteerde primitieven: {n}",
  "data_export.dwgpick.box_rings": "Geselecteerde primitieven: {n}, gesloten contouren: {rings}",
- "data_export.dwgpick.layer": "Laag {layer}: geselecteerde primitieven {n}"
+ "data_export.dwgpick.layer": "Laag {layer}: geselecteerde primitieven {n}",
+ "data_export.info.doc_lang_ui": "Zoals de interface",
+ "data_export.info.doc_lang": "Tekentaal"
 }

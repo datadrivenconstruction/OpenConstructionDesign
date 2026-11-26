@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Tekstisi, koonti- ja järjestelmätiedot",
  "update_check.rep.file.crash": "Edellisen ajon kaatumistiedot",
  "update_check.rep.file.shot": "Ikkunan kuva",
- "update_check.rep.file.model": "Projektin kopio ilman tekoälypäiväkirjaa"
+ "update_check.rep.file.model": "Projektin kopio ilman tekoälypäiväkirjaa",
+ "update_check.toast.title": "Versio {v} on saatavilla",
+ "update_check.toast.news": "Uutta",
+ "update_check.later": "Myöhemmin",
+ "update_check.skip": "Ohita tämä versio",
+ "update_check.badge": "Päivitys {v}",
+ "update_check.badge.tip": "Versio {v} on saatavilla. Avaa nähdäksesi uudistukset.",
+ "update_check.up.download": "Lataa {v}",
+ "update_check.news.title": "Uutta versiossa {v}",
+ "update_check.news.body": "Käytössäsi on nyt versio {v}. Tässä muutokset.",
+ "update_check.news.done": "Selvä"
 }

@@ -35,8 +35,18 @@
  "shv.del.title": "Удаление листа",
  "shv.del.lead": "Лист {name} будет удалён вместе со всем, что на нём размещено:",
  "shv.del.empty": "На этом листе ничего не размещено.",
- "shv.del.viewports": {"one": "# вид", "few": "# вида", "many": "# видов", "other": "# видов"},
- "shv.del.schedules": {"one": "# ведомость", "few": "# ведомости", "many": "# ведомостей", "other": "# ведомостей"},
+ "shv.del.viewports": {
+  "one": "# вид",
+  "few": "# вида",
+  "many": "# видов",
+  "other": "# видов"
+ },
+ "shv.del.schedules": {
+  "one": "# ведомость",
+  "few": "# ведомости",
+  "many": "# ведомостей",
+  "other": "# ведомостей"
+ },
  "shv.del.confirm": "Удалить лист",
  "shv.del.cancel": "Отмена",
  "shv.del.done": "Лист {name} удалён · Ctrl+Z возвращает его",

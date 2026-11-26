@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Váš text, sestavení a údaje o systému",
  "update_check.rep.file.crash": "Záznam pádu předchozího běhu",
  "update_check.rep.file.shot": "Snímek okna",
- "update_check.rep.file.model": "Kopie projektu bez deníku AI"
+ "update_check.rep.file.model": "Kopie projektu bez deníku AI",
+ "update_check.toast.title": "Je dostupná verze {v}",
+ "update_check.toast.news": "Novinky",
+ "update_check.later": "Později",
+ "update_check.skip": "Přeskočit tuto verzi",
+ "update_check.badge": "Aktualizace {v}",
+ "update_check.badge.tip": "Je dostupná verze {v}. Otevřete a zjistěte novinky.",
+ "update_check.up.download": "Stáhnout {v}",
+ "update_check.news.title": "Novinky ve verzi {v}",
+ "update_check.news.body": "Nyní používáte verzi {v}. Zde je přehled změn.",
+ "update_check.news.done": "Rozumím"
 }

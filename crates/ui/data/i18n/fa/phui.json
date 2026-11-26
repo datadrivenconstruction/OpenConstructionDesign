@@ -47,5 +47,8 @@
  "phui.kind.ramp": "رمپ‌ها",
  "phui.kind.member": "اعضا",
  "phui.dates": "تاریخ‌ها (شروع، پایان)",
- "phui.show_calendar": "نمایش بر پایه تقویم"
+ "phui.show_calendar": "نمایش بر پایه تقویم",
+ "phui.phase.existing": "موجود",
+ "phui.phase.demolition": "تخریب",
+ "phui.phase.new": "ساخت جدید"
 }

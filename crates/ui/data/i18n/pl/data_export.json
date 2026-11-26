@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Brak prymitywów rysunku w ramce",
  "data_export.dwgpick.box": "Zaznaczone prymitywy: {n}",
  "data_export.dwgpick.box_rings": "Zaznaczone prymitywy: {n}, zamknięte kontury: {rings}",
- "data_export.dwgpick.layer": "Warstwa {layer}: zaznaczone prymitywy {n}"
+ "data_export.dwgpick.layer": "Warstwa {layer}: zaznaczone prymitywy {n}",
+ "data_export.info.doc_lang_ui": "Jak interfejs",
+ "data_export.info.doc_lang": "Język rysunku"
 }

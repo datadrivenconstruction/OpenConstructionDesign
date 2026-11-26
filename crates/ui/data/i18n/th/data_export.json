@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "ไม่มีองค์ประกอบของแบบในกรอบ",
  "data_export.dwgpick.box": "องค์ประกอบที่เลือก: {n}",
  "data_export.dwgpick.box_rings": "องค์ประกอบที่เลือก: {n}, เส้นขอบปิด: {rings}",
- "data_export.dwgpick.layer": "เลเยอร์ {layer}: เลือกองค์ประกอบ {n}"
+ "data_export.dwgpick.layer": "เลเยอร์ {layer}: เลือกองค์ประกอบ {n}",
+ "data_export.info.doc_lang_ui": "ตามอินเทอร์เฟซ",
+ "data_export.info.doc_lang": "ภาษาของแบบ"
 }

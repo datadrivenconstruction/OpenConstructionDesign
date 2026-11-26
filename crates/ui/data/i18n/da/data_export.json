@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "Ingen tegneprimitiver i boksen",
  "data_export.dwgpick.box": "Valgte primitiver: {n}",
  "data_export.dwgpick.box_rings": "Valgte primitiver: {n}, lukkede konturer: {rings}",
- "data_export.dwgpick.layer": "Lag {layer}: valgte primitiver {n}"
+ "data_export.dwgpick.layer": "Lag {layer}: valgte primitiver {n}",
+ "data_export.info.doc_lang_ui": "Som grænsefladen",
+ "data_export.info.doc_lang": "Tegningssprog"
 }

@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Ramp",
  "phui.kind.member": "Batang",
  "phui.dates": "Tanggal (mulai, selesai)",
- "phui.show_calendar": "Tampilkan menurut kalender"
+ "phui.show_calendar": "Tampilkan menurut kalender",
+ "phui.phase.existing": "Eksisting",
+ "phui.phase.demolition": "Pembongkaran",
+ "phui.phase.new": "Bangunan baru"
 }

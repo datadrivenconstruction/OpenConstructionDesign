@@ -47,5 +47,8 @@
  "phui.kind.ramp": "র‍্যাম্প",
  "phui.kind.member": "সদস্য",
  "phui.dates": "তারিখ (শুরু, শেষ)",
- "phui.show_calendar": "ক্যালেন্ডার অনুযায়ী দেখান"
+ "phui.show_calendar": "ক্যালেন্ডার অনুযায়ী দেখান",
+ "phui.phase.existing": "বিদ্যমান",
+ "phui.phase.demolition": "ভাঙা",
+ "phui.phase.new": "নতুন নির্মাণ"
 }

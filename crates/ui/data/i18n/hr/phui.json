@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rampe",
  "phui.kind.member": "Članovi",
  "phui.dates": "Datumi (početak, kraj)",
- "phui.show_calendar": "Prikaži po kalendaru"
+ "phui.show_calendar": "Prikaži po kalendaru",
+ "phui.phase.existing": "Postojeće",
+ "phui.phase.demolition": "Rušenje",
+ "phui.phase.new": "Nova gradnja"
 }

@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rampy",
  "phui.kind.member": "Pruty",
  "phui.dates": "Data (začátek, konec)",
- "phui.show_calendar": "Zobrazit podle kalendáře"
+ "phui.show_calendar": "Zobrazit podle kalendáře",
+ "phui.phase.existing": "Stávající",
+ "phui.phase.demolition": "Demolice",
+ "phui.phase.new": "Novostavba"
 }

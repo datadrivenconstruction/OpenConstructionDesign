@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Налуу замууд",
  "phui.kind.member": "Бүтцийн гишүүд",
  "phui.dates": "Огноо (эхлэх, дуусах)",
- "phui.show_calendar": "Календарь харуулах"
+ "phui.show_calendar": "Календарь харуулах",
+ "phui.phase.existing": "Одоо байгаа",
+ "phui.phase.demolition": "Нураалт",
+ "phui.phase.new": "Шинэ барилга"
 }

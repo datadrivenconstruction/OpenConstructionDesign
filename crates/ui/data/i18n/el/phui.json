@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Ράμπες",
  "phui.kind.member": "Μέλη",
  "phui.dates": "Ημερομηνίες (έναρξη, λήξη)",
- "phui.show_calendar": "Εμφάνιση ανά ημερολόγιο"
+ "phui.show_calendar": "Εμφάνιση ανά ημερολόγιο",
+ "phui.phase.existing": "Υφιστάμενο",
+ "phui.phase.demolition": "Κατεδάφιση",
+ "phui.phase.new": "Νέα κατασκευή"
 }

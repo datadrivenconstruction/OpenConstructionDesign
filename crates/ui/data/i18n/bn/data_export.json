@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "বাক্সে কোনো ড্রয়িং প্রিমিটিভ নেই",
  "data_export.dwgpick.box": "নির্বাচিত প্রিমিটিভ: {n}",
  "data_export.dwgpick.box_rings": "নির্বাচিত প্রিমিটিভ: {n}, বন্ধ কনট্যুর: {rings}",
- "data_export.dwgpick.layer": "লেয়ার {layer}: নির্বাচিত প্রিমিটিভ {n}"
+ "data_export.dwgpick.layer": "লেয়ার {layer}: নির্বাচিত প্রিমিটিভ {n}",
+ "data_export.info.doc_lang_ui": "ইন্টারফেসের মতো",
+ "data_export.info.doc_lang": "ড্রয়িংয়ের ভাষা"
 }

@@ -47,5 +47,8 @@
  "phui.kind.ramp": "ریمپس",
  "phui.kind.member": "ممبرز",
  "phui.dates": "تاریخیں (آغاز، اختتام)",
- "phui.show_calendar": "کیلنڈر کے مطابق دکھائیں"
+ "phui.show_calendar": "کیلنڈر کے مطابق دکھائیں",
+ "phui.phase.existing": "موجودہ",
+ "phui.phase.demolition": "انہدام",
+ "phui.phase.new": "نئی تعمیر"
 }

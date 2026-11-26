@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Пандустар",
  "phui.kind.member": "Мүшелер",
  "phui.dates": "Күндер (басы, соңы)",
- "phui.show_calendar": "Күнтізбе бойынша көрсету"
+ "phui.show_calendar": "Күнтізбе бойынша көрсету",
+ "phui.phase.existing": "Бар",
+ "phui.phase.demolition": "Бұзу",
+ "phui.phase.new": "Жаңа құрылыс"
 }

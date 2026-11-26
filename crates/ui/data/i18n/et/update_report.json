@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Sinu tekst, koostenumber ja süsteemiandmed",
  "update_check.rep.file.crash": "Eelmise käivituse veateade",
  "update_check.rep.file.shot": "Akna pilt",
- "update_check.rep.file.model": "Projekti koopia ilma AI-päevikuta"
+ "update_check.rep.file.model": "Projekti koopia ilma AI-päevikuta",
+ "update_check.toast.title": "Saadaval on versioon {v}",
+ "update_check.toast.news": "Mis on uut",
+ "update_check.later": "Hiljem",
+ "update_check.skip": "Jäta see versioon vahele",
+ "update_check.badge": "Uuendus {v}",
+ "update_check.badge.tip": "Saadaval on versioon {v}. Ava, et näha uuendusi.",
+ "update_check.up.download": "Laadi alla {v}",
+ "update_check.news.title": "Mis on uut versioonis {v}",
+ "update_check.news.body": "Kasutad nüüd versiooni {v}. Siin on muudatused.",
+ "update_check.news.done": "Selge"
 }

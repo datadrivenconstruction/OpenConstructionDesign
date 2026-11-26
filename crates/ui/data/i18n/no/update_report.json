@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Teksten din, bygg- og systemfakta",
  "update_check.rep.file.crash": "Krasjrapport fra forrige kjøring",
  "update_check.rep.file.shot": "Bilde av vinduet",
- "update_check.rep.file.model": "Prosjektkopi uten AI-journalen"
+ "update_check.rep.file.model": "Prosjektkopi uten AI-journalen",
+ "update_check.toast.title": "Versjon {v} er tilgjengelig",
+ "update_check.toast.news": "Nytt",
+ "update_check.later": "Senere",
+ "update_check.skip": "Hopp over denne versjonen",
+ "update_check.badge": "Oppdatering {v}",
+ "update_check.badge.tip": "Versjon {v} er tilgjengelig. Åpne for å se hva som er nytt.",
+ "update_check.up.download": "Last ned {v}",
+ "update_check.news.title": "Nytt i {v}",
+ "update_check.news.body": "Du bruker nå versjon {v}. Dette er endret.",
+ "update_check.news.done": "Greit"
 }

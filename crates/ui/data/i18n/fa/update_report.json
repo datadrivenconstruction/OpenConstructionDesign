@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "متن شما، ساخت و اطلاعات سیستم",
  "update_check.rep.file.crash": "رکورد خرابی اجرای قبلی",
  "update_check.rep.file.shot": "تصویر پنجره",
- "update_check.rep.file.model": "نسخه پروژه بدون ژورنال هوش مصنوعی"
+ "update_check.rep.file.model": "نسخه پروژه بدون ژورنال هوش مصنوعی",
+ "update_check.toast.title": "نسخهٔ {v} در دسترس است",
+ "update_check.toast.news": "تازه‌ها",
+ "update_check.later": "بعداً",
+ "update_check.skip": "رد کردن این نسخه",
+ "update_check.badge": "به‌روزرسانی {v}",
+ "update_check.badge.tip": "نسخهٔ {v} در دسترس است. برای دیدن تازه‌ها باز کنید.",
+ "update_check.up.download": "دریافت {v}",
+ "update_check.news.title": "تازه‌های {v}",
+ "update_check.news.body": "اکنون روی نسخهٔ {v} هستید. تغییرات این است.",
+ "update_check.news.done": "متوجه شدم"
 }

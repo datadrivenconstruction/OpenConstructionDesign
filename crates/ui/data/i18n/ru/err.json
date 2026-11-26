@@ -1,4 +1,5 @@
 {
+ "cmd.ann.dim_auto.short": "Цепочка размеров",
  "cmd.view.template.short": "Шаблон вида",
  "cmd.view.elevation.short": "Фасады",
  "cmd.view.underlay.short": "Подложка",
@@ -62,6 +63,5 @@
  "browser.plan": "План",
  "browser.open": "Открыть",
  "browser.flip": "Развернуть направление взгляда",
- "browser.delete": "Удалить",
- "cmd.ann.dim_auto.short": "Цепочка размеров"
+ "browser.delete": "Удалить"
 }

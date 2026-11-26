@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Din tekst, build- og systemoplysninger",
  "update_check.rep.file.crash": "Nedbrudsrapport fra den forrige kørsel",
  "update_check.rep.file.shot": "Billede af vinduet",
- "update_check.rep.file.model": "Projektkopi uden AI-journalen"
+ "update_check.rep.file.model": "Projektkopi uden AI-journalen",
+ "update_check.toast.title": "Version {v} er tilgængelig",
+ "update_check.toast.news": "Nyheder",
+ "update_check.later": "Senere",
+ "update_check.skip": "Spring denne version over",
+ "update_check.badge": "Opdatering {v}",
+ "update_check.badge.tip": "Version {v} er tilgængelig. Åbn for at se nyhederne.",
+ "update_check.up.download": "Download {v}",
+ "update_check.news.title": "Nyt i {v}",
+ "update_check.news.body": "Du er nu på version {v}. Her er, hvad der er ændret.",
+ "update_check.news.done": "Forstået"
 }

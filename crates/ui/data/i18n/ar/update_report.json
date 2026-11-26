@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "نصك ووقائع البناء والنظام",
  "update_check.rep.file.crash": "سجل الانهيار للتشغيل السابق",
  "update_check.rep.file.shot": "لقطة النافذة",
- "update_check.rep.file.model": "نسخة المشروع دون سجل AI"
+ "update_check.rep.file.model": "نسخة المشروع دون سجل AI",
+ "update_check.toast.title": "الإصدار {v} متاح",
+ "update_check.toast.news": "الجديد",
+ "update_check.later": "لاحقاً",
+ "update_check.skip": "تخطي هذا الإصدار",
+ "update_check.badge": "تحديث {v}",
+ "update_check.badge.tip": "الإصدار {v} متاح. افتح لمعرفة الجديد.",
+ "update_check.up.download": "تنزيل {v}",
+ "update_check.news.title": "الجديد في {v}",
+ "update_check.news.body": "أنت الآن على الإصدار {v}. إليك ما تغيّر.",
+ "update_check.news.done": "فهمت"
 }

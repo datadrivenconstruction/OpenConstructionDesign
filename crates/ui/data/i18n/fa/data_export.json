@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "در کادر عنصر ترسیمی وجود ندارد",
  "data_export.dwgpick.box": "عناصر ترسیمی انتخاب‌شده: {n}",
  "data_export.dwgpick.box_rings": "عناصر ترسیمی انتخاب‌شده: {n}، کنتورهای بسته: {rings}",
- "data_export.dwgpick.layer": "لایه {layer}: عناصر ترسیمی انتخاب‌شده {n}"
+ "data_export.dwgpick.layer": "لایه {layer}: عناصر ترسیمی انتخاب‌شده {n}",
+ "data_export.info.doc_lang_ui": "مانند رابط",
+ "data_export.info.doc_lang": "زبان نقشه"
 }

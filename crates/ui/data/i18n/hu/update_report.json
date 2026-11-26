@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Az Ön szövege, a build és a rendszeradatok",
  "update_check.rep.file.crash": "Az előző futás összeomlási naplója",
  "update_check.rep.file.shot": "Ablakkép",
- "update_check.rep.file.model": "Projektmásolat az MI-napló nélkül"
+ "update_check.rep.file.model": "Projektmásolat az MI-napló nélkül",
+ "update_check.toast.title": "A(z) {v} verzió elérhető",
+ "update_check.toast.news": "Újdonságok",
+ "update_check.later": "Később",
+ "update_check.skip": "Verzió kihagyása",
+ "update_check.badge": "Frissítés {v}",
+ "update_check.badge.tip": "A(z) {v} verzió elérhető. Nyissa meg az újdonságokért.",
+ "update_check.up.download": "{v} letöltése",
+ "update_check.news.title": "Újdonságok a(z) {v} verzióban",
+ "update_check.news.body": "Most a(z) {v} verziót használja. Ez változott.",
+ "update_check.news.done": "Értem"
 }

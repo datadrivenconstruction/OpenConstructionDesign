@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rampen",
  "phui.kind.member": "Bauteile (Stäbe)",
  "phui.dates": "Daten (Beginn, Ende)",
- "phui.show_calendar": "Nach Kalender anzeigen"
+ "phui.show_calendar": "Nach Kalender anzeigen",
+ "phui.phase.existing": "Bestand",
+ "phui.phase.demolition": "Abbruch",
+ "phui.phase.new": "Neubau"
 }

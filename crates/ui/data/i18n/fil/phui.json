@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Mga ramp",
  "phui.kind.member": "Mga member",
  "phui.dates": "Mga petsa (simula, katapusan)",
- "phui.show_calendar": "Ipakita ayon sa kalendaryo"
+ "phui.show_calendar": "Ipakita ayon sa kalendaryo",
+ "phui.phase.existing": "Umiiral",
+ "phui.phase.demolition": "Demolisyon",
+ "phui.phase.new": "Bagong konstruksyon"
 }

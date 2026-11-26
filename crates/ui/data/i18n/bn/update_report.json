@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "আপনার লেখা, বিল্ড ও সিস্টেমের তথ্য",
  "update_check.rep.file.crash": "আগের রানের ক্র্যাশ রেকর্ড",
  "update_check.rep.file.shot": "উইন্ডোর ছবি",
- "update_check.rep.file.model": "AI জার্নাল ছাড়া প্রকল্পের কপি"
+ "update_check.rep.file.model": "AI জার্নাল ছাড়া প্রকল্পের কপি",
+ "update_check.toast.title": "সংস্করণ {v} উপলব্ধ",
+ "update_check.toast.news": "নতুন কী",
+ "update_check.later": "পরে",
+ "update_check.skip": "এই সংস্করণ বাদ দিন",
+ "update_check.badge": "আপডেট {v}",
+ "update_check.badge.tip": "সংস্করণ {v} উপলব্ধ। নতুন কী আছে দেখতে খুলুন।",
+ "update_check.up.download": "{v} ডাউনলোড",
+ "update_check.news.title": "{v}-এ নতুন কী",
+ "update_check.news.body": "আপনি এখন সংস্করণ {v}-এ আছেন। কী বদলেছে দেখুন।",
+ "update_check.news.done": "বুঝেছি"
 }

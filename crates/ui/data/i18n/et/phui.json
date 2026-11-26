@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Rambid",
  "phui.kind.member": "Liikmed",
  "phui.dates": "Kuupäevad (algus, lõpp)",
- "phui.show_calendar": "Näita kalendri järgi"
+ "phui.show_calendar": "Näita kalendri järgi",
+ "phui.phase.existing": "Olemasolev",
+ "phui.phase.demolition": "Lammutus",
+ "phui.phase.new": "Uusehitis"
 }

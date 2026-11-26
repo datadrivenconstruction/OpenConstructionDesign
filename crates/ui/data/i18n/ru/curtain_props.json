@@ -1,6 +1,6 @@
 {
  "curtain_props.cw.panel": "Панель",
- "curtain_props.cw.panel_cell": "Ячейка {i}\u00d7{j} \u00b7 витраж #{id}",
+ "curtain_props.cw.panel_cell": "Ячейка {i}×{j} · витраж #{id}",
  "curtain_props.cw.kind": "Тип",
  "curtain_props.cw.kind.glazed": "Стекло",
  "curtain_props.cw.kind.solid": "Глухая",
@@ -16,7 +16,7 @@
  "curtain_props.cw.prev": "Предыдущая панель",
  "curtain_props.cw.next": "Следующая панель",
  "curtain_props.cw.wall": "Выбрать стену",
- "curtain_props.cw.panel_hint": "Esc \u2014 выбор \u00b7 Ctrl+Z \u2014 отменить",
- "curtain_props.cw.status.panel": "Панель {i}\u00d7{j} \u2192 {kind}",
+ "curtain_props.cw.panel_hint": "Esc — выбор · Ctrl+Z — отменить",
+ "curtain_props.cw.status.panel": "Панель {i}×{j} → {kind}",
  "e3d.err.cw_height": "высота витража должна быть больше 100 мм"
 }

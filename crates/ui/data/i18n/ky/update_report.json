@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Сиздин текстиңиз, курама жана система маалыматтары",
  "update_check.rep.file.crash": "Мурунку иштөөнүн кыйрашы жөнүндөгү жазуу",
  "update_check.rep.file.shot": "Терезенин сүрөтү",
- "update_check.rep.file.model": "AI журналысыз долбоордун көчүрмөсү"
+ "update_check.rep.file.model": "AI журналысыз долбоордун көчүрмөсү",
+ "update_check.toast.title": "{v} версиясы жеткиликтүү",
+ "update_check.toast.news": "Жаңылыктар",
+ "update_check.later": "Кийинчерээк",
+ "update_check.skip": "Бул версияны өткөрүп жиберүү",
+ "update_check.badge": "Жаңыртуу {v}",
+ "update_check.badge.tip": "{v} версиясы жеткиликтүү. Жаңылыктарды көрүү үчүн ачыңыз.",
+ "update_check.up.download": "{v} жүктөп алуу",
+ "update_check.news.title": "{v} версиясындагы жаңылыктар",
+ "update_check.news.body": "Эми сиз {v} версиясындасыз. Мына эмнелер өзгөрдү.",
+ "update_check.news.done": "Түшүнүктүү"
 }
