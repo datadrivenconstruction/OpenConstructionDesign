@@ -128,7 +128,15 @@ pub fn open_with(
     pick: Pick,
     flags: wgpu::InstanceFlags,
 ) -> Result<(wgpu::Adapter, wgpu::Device, wgpu::Queue), String> {
+    #[cfg(target_arch = "wasm32")]
+    {
+        // no blocking wait in the browser: the page's device comes from eframe's runner
+        let _ = (pick, flags);
+        return Err("offscreen device not available in the browser".into());
+    }
+    #[cfg(not(target_arch = "wasm32"))]
     let inst = instance_with(pick, flags);
+    #[cfg(not(target_arch = "wasm32"))]
     pollster::block_on(async {
         let adapter = inst
             .request_adapter(&wgpu::RequestAdapterOptions {

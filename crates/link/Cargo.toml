@@ -10,10 +10,17 @@ description = "Client of the ERP link (contract ddc-erp-link/1): link file, toke
 
 [dependencies]
 web-time.workspace = true
-native-tls.workspace = true
 serde.workspace = true
 serde_json.workspace = true
+
+# desktop transport: TLS from the OS. In the browser the host page carries every ERP call
+# (its session authorises them), so the wasm build has no TLS and `Client::new` refuses there.
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
 ureq.workspace = true
+native-tls.workspace = true
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+ureq = { version = "2", default-features = false }
 
 # Other platforms have no vault integration: the token then lives for the session only.
 [target.'cfg(any(windows, target_os = "macos"))'.dependencies]

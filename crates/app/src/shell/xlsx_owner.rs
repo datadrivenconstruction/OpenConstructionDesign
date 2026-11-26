@@ -53,7 +53,7 @@ pub fn owner_files(book: &Path) -> Vec<PathBuf> {
 }
 
 fn modified(p: &Path) -> Option<SystemTime> {
-    std::fs::metadata(p).ok()?.modified().ok()
+    ddc_model::wtime::modified(&std::fs::metadata(p).ok()?).ok()
 }
 
 /// A sharing violation: another program holds the file.

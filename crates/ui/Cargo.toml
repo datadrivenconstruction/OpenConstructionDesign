@@ -29,6 +29,8 @@ sha2 = "0.10"
 [features]
 default = ["demo"]
 demo = ["dep:eframe"]
+# browser build: locales other than en/ru and the per-script fonts come from bundle files (src/assets.rs)
+external-assets = []
 
 [[bin]]
 name = "ddc-ui-demo"

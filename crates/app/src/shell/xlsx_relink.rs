@@ -72,7 +72,7 @@ pub type Stamp = (SystemTime, u64);
 
 pub fn stamp(path: &Path) -> Option<Stamp> {
     let m = std::fs::metadata(path).ok()?;
-    Some((m.modified().ok()?, m.len()))
+    Some((ddc_model::wtime::modified(&m).ok()?, m.len()))
 }
 
 /// Fingerprints by path, each valid while the file keeps its stamp. Opening a book parses its

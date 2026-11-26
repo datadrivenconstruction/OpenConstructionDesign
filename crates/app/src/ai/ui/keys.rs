@@ -296,18 +296,13 @@ pub fn clip_tick(ctx: &egui::Context) {
         return;
     }
     COPIED.with(|s| s.set(None));
-    #[cfg(feature = "gui")]
-    {
-        let Ok(mut board) = arboard::Clipboard::new() else {
-            return;
-        };
-        if should_clear(&c, now, board.get_text().ok().as_deref()) {
-            let _ = board.set_text(String::new());
-        }
+    // headless and browser builds: `new` fails, no OS clipboard was ever written
+    let Ok(mut board) = crate::os_clip::Clipboard::new() else {
+        return;
+    };
+    if should_clear(&c, now, board.get_text().ok().as_deref()) {
+        let _ = board.set_text(String::new());
     }
-    // headless build: no OS clipboard was ever written
-    #[cfg(not(feature = "gui"))]
-    let _ = (c, now);
 }
 
 /// At exit the wait is cut short: the copy goes if the clipboard still holds it.
@@ -320,17 +315,12 @@ pub fn clip_exit() {
     let Some(c) = COPIED.with(|s| s.take()) else {
         return;
     };
-    #[cfg(feature = "gui")]
-    {
-        let Ok(mut board) = arboard::Clipboard::new() else {
-            return;
-        };
-        if should_clear_on_exit(Some(&c), board.get_text().ok().as_deref()) {
-            let _ = board.set_text(String::new());
-        }
+    let Ok(mut board) = crate::os_clip::Clipboard::new() else {
+        return;
+    };
+    if should_clear_on_exit(Some(&c), board.get_text().ok().as_deref()) {
+        let _ = board.set_text(String::new());
     }
-    #[cfg(not(feature = "gui"))]
-    let _ = c;
 }
 
 /// A field value back to whole tokens inside the range; garbage gives the minimum.

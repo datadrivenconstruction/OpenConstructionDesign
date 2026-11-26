@@ -35,6 +35,7 @@ impl PureRun {
             cancel: CancelToken::new(),
             stop: CancelToken::new(),
             wake: Arc::new(OnceLock::new()),
+            memory: false,
         };
         let (core, conv) = open_core(init)?;
         Ok(PureRun {

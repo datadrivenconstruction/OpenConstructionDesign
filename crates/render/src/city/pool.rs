@@ -69,28 +69,32 @@ pub struct Pool {
 }
 
 impl Pool {
-    pub fn new(workers: usize, specs: Arc<Vec<Spec>>) -> Self {
+    /// `None` when no worker thread could start (the browser has none): the caller runs inline.
+    pub fn new(workers: usize, specs: Arc<Vec<Spec>>) -> Option<Self> {
         let shared = Arc::new(Shared {
             q: Mutex::new(Queue::default()),
             cv: Condvar::new(),
         });
         let (tx, rx) = mpsc::channel();
-        let threads = (0..workers.max(1))
-            .map(|i| {
+        let threads: Vec<_> = (0..workers.max(1))
+            .filter_map(|i| {
                 let shared = shared.clone();
                 let specs = specs.clone();
                 let tx = tx.clone();
                 std::thread::Builder::new()
                     .name(format!("ddc-city-{i}"))
                     .spawn(move || worker(&shared, &specs, &tx))
-                    .expect("spawn city worker")
+                    .ok()
             })
             .collect();
-        Self {
+        if threads.is_empty() {
+            return None;
+        }
+        Some(Self {
             shared,
             rx,
             threads,
-        }
+        })
     }
 
     /// Replaces the waiting jobs; a job already running is skipped.

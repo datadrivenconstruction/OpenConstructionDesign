@@ -221,7 +221,15 @@ impl<T: Send + 'static> Job<T> {
         let ctl = Progress::new();
         let (tx, rx) = channel();
         let c = ctl.clone();
+        #[cfg(target_arch = "wasm32")]
+        {
+            // no threads in the browser: the job runs now, its result waits in the channel
+            let _ = tx.send(work(&c));
+            return Self { title, ctl, rx, started: Instant::now(), eta: Eta::default() };
+        }
+        #[cfg(not(target_arch = "wasm32"))]
         let tx_panic = tx.clone();
+        #[cfg(not(target_arch = "wasm32"))]
         let spawned = spawn_guarded(
             &format!("job-{title}"),
             move || {
@@ -233,6 +241,7 @@ impl<T: Send + 'static> Job<T> {
                 let _ = tx_panic.send(Err(msg));
             },
         );
+        #[cfg(not(target_arch = "wasm32"))]
         if let Err(e) = spawned {
             // the receiver sees a closed channel and reports the failure
             log_spawn(&e);

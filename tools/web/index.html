@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DDC editor (browser build)</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #f4f4f4; }
+  canvas { display: block; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<canvas id="ddc"></canvas>
+<script type="module">
+  // ?empty starts without the DE example; ?webgpu uses WebGPU instead of WebGL2;
+  // ?view forces view-only, ?edit forces editing (default: view-only on touch or small screens)
+  import init, { WebEditor } from "./pkg/ddc_web_editor.js";
+  const q = new URLSearchParams(location.search);
+  const t0 = performance.now();
+  const wasm = await init();
+  const ed = new WebEditor();
+  window.ddc = { ed, wasm, t_init: performance.now() - t0 };
+  try {
+    await ed.start("ddc", !q.has("empty"), q.has("webgpu"));
+    const small = Math.min(screen.width, screen.height) < 820;
+    const touch = navigator.maxTouchPoints > 0 && !matchMedia("(pointer: fine)").matches;
+    ed.set_view_only(q.has("view") || (!q.has("edit") && (touch || small)));
+    window.ddc.started = true;
+  } catch (e) {
+    window.ddc.error = String(e);
+    console.error(e);
+  }
+</script>
+</body>
+</html>

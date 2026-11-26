@@ -206,7 +206,8 @@ pub fn apply_verified_src(
     ru: bool,
 ) -> Result<Option<AiError>, AiError> {
     let mut found: Option<Divergence> = None;
-    let res = if shown.base.is_file() {
+    // copies in memory are checked as files are
+    let res = if shown.base.is_file() || ddc_model::is_memory_copy(shown.base) {
         let since = ed.model.change_head();
         exec::apply_merge_verified_src(ed, p, merge, src, &mut |ed: &mut Editor, top: i64| {
             let Err(d) = check(&ed.model, shown, since) else {

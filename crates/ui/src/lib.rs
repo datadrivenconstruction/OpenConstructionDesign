@@ -2,6 +2,8 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! ddc-ui: application shell kit on egui — design tokens → style, icons, command registry,
 //! fuzzy palette, ribbon, context/status bars, toasts, en/ru localization.
+#[cfg(feature = "external-assets")]
+pub mod assets;
 pub mod cmdargs;
 pub mod cmdref;
 pub mod commands;

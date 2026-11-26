@@ -104,7 +104,7 @@ fn incoming(text: &str, own: &str) -> Incoming {
 }
 
 fn own_tag() -> String {
-    format!("{}-", std::process::id())
+    format!("{}-", ddc_model::process_id())
 }
 
 /// What is waiting for a click in the plan.

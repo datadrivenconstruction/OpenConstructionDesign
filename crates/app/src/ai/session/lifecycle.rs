@@ -26,6 +26,12 @@ impl UiSession {
         // a closed inbox wakes a worker blocked on it, dropped repliers one waiting for a shot
         self.tx = mpsc::channel().0;
         self.snapshots.clear();
+        // the threadless worker takes the End now and is dropped: `done` then disconnects
+        if let Some(mut s) = self.stepped.take() {
+            let super::Stepped { core, conv, .. } = &mut *s;
+            let _ = core.step(conv);
+            core.discard_pending();
+        }
         let Some(done) = &self.done else {
             return true;
         };

@@ -398,6 +398,10 @@ fn build_pipeline(device: &wgpu::Device, p: P) -> wgpu::RenderPipeline {
 /// one core. Error scopes belong to the device, not the thread, so one scope covers the batch;
 /// `None` if anything in it was rejected (the caller then builds one by one to see what).
 fn build_parallel(device: &wgpu::Device, ps: &[P]) -> Option<Vec<wgpu::RenderPipeline>> {
+    // no threads in the browser: the caller builds one by one
+    if cfg!(target_arch = "wasm32") {
+        return None;
+    }
     device.push_error_scope(wgpu::ErrorFilter::Validation);
     let out: Vec<wgpu::RenderPipeline> = std::thread::scope(|s| {
         let hs: Vec<_> = ps

@@ -59,7 +59,7 @@ type Key = (i64, i64, (i64, i64), Option<(PathBuf, [(u128, u64); 2])>);
 
 fn file_sig(p: &Path) -> (u128, u64) {
     std::fs::metadata(p).map_or((0, 0), |md| {
-        let t = md.modified().ok().and_then(|t| t.duration_since(UNIX_EPOCH).ok());
+        let t = ddc_model::wtime::modified(&md).ok().and_then(|t| t.duration_since(UNIX_EPOCH).ok());
         (t.map_or(0, |d| d.as_nanos()), md.len())
     })
 }

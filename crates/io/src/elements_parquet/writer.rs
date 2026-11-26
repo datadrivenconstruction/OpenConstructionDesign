@@ -7,7 +7,9 @@
 use std::io::Write;
 use std::sync::Arc;
 
-use parquet::basic::{Compression, ZstdLevel};
+use parquet::basic::Compression;
+#[cfg(not(target_arch = "wasm32"))]
+use parquet::basic::ZstdLevel;
 use parquet::data_type::{ByteArray, ByteArrayType, DoubleType, Int64Type};
 use parquet::file::properties::WriterProperties;
 use parquet::file::reader::{FileReader, SerializedFileReader};
@@ -188,11 +190,31 @@ fn doubles(it: impl Iterator<Item = Option<f64>>, required: bool) -> (Vec<f64>, 
 /// negative quantities become null, a non-finite box becomes zeros); malformed rows (key, class,
 /// hash, discipline) are an error and nothing is written.
 pub fn write_parquet<W: Write + Send>(rows: &[ElementRow], out: W) -> Result<Vec<Note>, String> {
+    write_parquet_with(rows, out, codec()?)
+}
+
+/// The codec of this build: zstd on desktop, snappy in the browser (zstd is C).
+/// Both are in [`crate::contract::ELEMENTS_CODECS`], what the ERP intake reads.
+#[cfg(not(target_arch = "wasm32"))]
+fn codec() -> Result<Compression, String> {
+    Ok(Compression::ZSTD(ZstdLevel::try_new(3).map_err(err)?))
+}
+
+#[cfg(target_arch = "wasm32")]
+fn codec() -> Result<Compression, String> {
+    Ok(Compression::SNAPPY)
+}
+
+pub(crate) fn write_parquet_with<W: Write + Send>(
+    rows: &[ElementRow],
+    out: W,
+    codec: Compression,
+) -> Result<Vec<Note>, String> {
     let (rows, notes) = checked(rows)?;
     let schema = Arc::new(parse_message_type(MESSAGE).map_err(err)?);
     let props = Arc::new(
         WriterProperties::builder()
-            .set_compression(Compression::ZSTD(ZstdLevel::try_new(3).map_err(err)?))
+            .set_compression(codec)
             .set_created_by("ddc-elements/1".into())
             .set_max_row_group_row_count(Some(ROW_GROUP_MAX))
             .build(),

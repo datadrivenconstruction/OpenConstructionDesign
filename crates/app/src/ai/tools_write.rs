@@ -1089,7 +1089,7 @@ fn generate_options(c: &mut Core, a: &J, _: &CallCx<'_>) -> Result<Done, String>
 /// The row stays, marked rejected: the same function as the Options tab Discard.
 fn discard_option(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let id = a["id"].as_i64().ok_or("id must be a whole number")?;
-    let (_, session_dir) = c.option_paths();
+    let (_, session_dir) = c.option_paths()?;
     let (dir, db) = super::options_keep::locate(&session_dir);
     if !db.is_file() {
         let why = format!("no option {id}: call list_options");

@@ -403,6 +403,38 @@ pub struct Report {
 
 /// Checks the brief, maps it, builds the project and saves it to `out` (a `.ddc`).
 pub fn generate(brief: &Value, out: &Path) -> Result<Report, GenError> {
+    let (mut ed, report) = build(brief)?;
+    ed.save_project_as(out).map_err(|e| GenError::Save(e.to_string()))?;
+    Ok(report)
+}
+
+/// The assistant tool call that drafts `brief` as a plan item for the person's review (preview,
+/// then Apply), as the desktop assistant does: `generate_project` on a model without a generated
+/// project, else `revise_project` of the newest stored one. Unconfirmed fields are named in `why`.
+pub fn brief_tool_call(m: &ddc_model::Model, brief: &Value) -> Result<Value, GenError> {
+    ddc_io::contract::validate(ddc_io::contract::Doc::Brief, brief).map_err(GenError::Schema)?;
+    let mapped = map_brief(brief)?;
+    let open = unconfirmed(brief, &mapped.mapped);
+    let mut why = if open.is_empty() {
+        "Brief confirmed in the ERP".to_string()
+    } else {
+        format!("Brief from the ERP; not confirmed yet: {}", open.join(", "))
+    };
+    if why.chars().count() > 290 {
+        why = why.chars().take(287).collect::<String>() + "...";
+    }
+    let stored = project_plan::stored(m).map_err(|e| GenError::Spec(e.to_string()))?;
+    Ok(match stored.last() {
+        Some((pid, _)) => json!({"name": "revise_project", "args": {"project": pid, "changes": mapped.spec, "why": why}}),
+        None => {
+            let title: String = brief["name"].as_str().unwrap_or("Project from the ERP brief").chars().take(80).collect();
+            json!({"name": "generate_project", "args": {"spec": mapped.spec, "title": title, "why": why}})
+        }
+    })
+}
+
+/// Checks the brief, maps it and builds the project in an in-memory editor (no file).
+pub fn build(brief: &Value) -> Result<(Editor, Report), GenError> {
     ddc_io::contract::validate(ddc_io::contract::Doc::Brief, brief).map_err(GenError::Schema)?;
     let m = map_brief(brief)?;
     let bad = unconfirmed(brief, &m.mapped);
@@ -437,8 +469,7 @@ pub fn generate(brief: &Value, out: &Path) -> Result<Report, GenError> {
     for (k, n) in crate::headless_file::counts(&ed.model) {
         counts.insert(k.to_string(), n);
     }
-    ed.save_project_as(out).map_err(|e| GenError::Save(e.to_string()))?;
-    Ok(Report {
+    let report = Report {
         spec: m.spec,
         mapped: m.mapped,
         unsupported: m.unsupported,
@@ -447,5 +478,18 @@ pub fn generate(brief: &Value, out: &Path) -> Result<Report, GenError> {
         counts,
         foundation,
         mep,
-    })
+    };
+    Ok((ed, report))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    // the browser build has no `link` feature: the schema gate must hold without it
+    #[test]
+    fn build_refuses_a_brief_off_the_schema_in_every_build() {
+        let e = build(&json!({ "schema": "ddc-brief/1", "nonsense": true })).err().expect("refused");
+        assert_eq!(e.kind(), "brief_invalid", "{e}");
+    }
 }

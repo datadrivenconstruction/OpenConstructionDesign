@@ -188,8 +188,7 @@ pub struct Stat {
 
 pub fn stat_of(path: &Path) -> std::io::Result<Stat> {
     let md = std::fs::metadata(path)?;
-    let mtime = md
-        .modified()
+    let mtime = crate::wtime::modified(&md)
         .ok()
         .and_then(|t| t.duration_since(UNIX_EPOCH).ok())
         .map_or(0, |d| d.as_millis() as i64);

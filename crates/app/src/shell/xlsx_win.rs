@@ -166,7 +166,7 @@ pub(crate) fn writable_default() -> PathBuf {
         .map(|h| h.join("Documents"))
         .filter(|d| d.is_dir())
         .or(home.filter(|h| h.is_dir()))
-        .unwrap_or_else(std::env::temp_dir)
+        .unwrap_or_else(ddc_model::temp_dir)
 }
 
 /// The file "Save to..." writes: none on cancel or when the pick is the book itself; `.xlsx`

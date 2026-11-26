@@ -113,7 +113,7 @@ pub(crate) struct SweepState {
 
 fn age(path: &Path, now: SystemTime) -> Duration {
     std::fs::metadata(path)
-        .and_then(|m| m.modified())
+        .and_then(|m| ddc_model::wtime::modified(&m))
         .ok()
         .and_then(|t| now.duration_since(t).ok())
         .unwrap_or(Duration::ZERO)

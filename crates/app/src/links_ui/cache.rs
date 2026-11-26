@@ -67,7 +67,7 @@ pub fn importer(format: &str, module: Option<&Path>) -> u64 {
 }
 
 fn mtime_ns(m: &std::fs::Metadata) -> u128 {
-    m.modified()
+    ddc_model::wtime::modified(m)
         .ok()
         .and_then(|t| t.duration_since(UNIX_EPOCH).ok())
         .map_or(0, |d| d.as_nanos())
@@ -273,7 +273,7 @@ pub fn read(dir: &Path, key: &Key) -> Option<Cached> {
 
 fn touch(path: &Path) {
     if let Ok(f) = std::fs::File::options().append(true).open(path) {
-        let _ = f.set_modified(SystemTime::now());
+        let _ = f.set_modified(ddc_model::wtime::to_std(SystemTime::now()));
     }
 }
 
@@ -406,7 +406,7 @@ pub fn evict(dir: &Path, keep: &[String], limit: u64) -> usize {
         if !m.is_file() {
             continue;
         }
-        let t = m.modified().unwrap_or(UNIX_EPOCH);
+        let t = ddc_model::wtime::modified(&m).unwrap_or(UNIX_EPOCH);
         if name.ends_with(".tmp") {
             if now.duration_since(t).is_ok_and(|d| d > TMP_AGE) {
                 let _ = std::fs::remove_file(e.path());

@@ -56,7 +56,7 @@ fn modified(paths: &[(i64, String)]) -> Vec<(i64, i64)> {
     paths
         .iter()
         .filter_map(|(id, p)| {
-            let t = std::fs::metadata(p).ok()?.modified().ok()?;
+            let t = ddc_model::wtime::modified(&std::fs::metadata(p).ok()?).ok()?;
             let s = t.duration_since(UNIX_EPOCH).ok()?.as_secs();
             Some((*id, s as i64))
         })

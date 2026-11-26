@@ -44,6 +44,7 @@ pub fn render_state_with(pick: Pick, flags: wgpu::InstanceFlags) -> Result<Rende
     let renderer = egui_wgpu::Renderer::new(&device, FORMAT, Some(DEPTH), SAMPLES, false);
     Ok(RenderState {
         adapter,
+        #[cfg(not(target_arch = "wasm32"))]
         available_adapters: Vec::new(),
         device,
         queue,

@@ -128,7 +128,7 @@ impl Default for View {
         let dir = std::env::var_os("USERPROFILE")
             .map(|h| std::path::PathBuf::from(h).join("Documents"))
             .filter(|d| d.is_dir())
-            .unwrap_or_else(std::env::temp_dir);
+            .unwrap_or_else(ddc_model::temp_dir);
         Self {
             cat: Cat::Walls,
             tabs: vec![TabState::default(); Cat::ALL.len()],

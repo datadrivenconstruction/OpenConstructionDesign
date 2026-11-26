@@ -9,21 +9,34 @@
 //! Every created element has a stable key (`group/name#n`) so a rerun with new params becomes
 //! reshape, create and delete ops on the elements of the recipe only (`rerun.rs`).
 
+#[cfg(feature = "lua")]
 mod audit;
+#[cfg(feature = "lua")]
 mod blocks;
+#[cfg(feature = "lua")]
 mod blocks_build;
+#[cfg(feature = "lua")]
 mod blocks_surf;
+#[cfg(feature = "lua")]
 mod emit;
+#[cfg(feature = "lua")]
 mod engine;
+#[cfg(feature = "lua")]
 mod geo_build;
+#[cfg(feature = "lua")]
 mod geo_curve;
+#[cfg(feature = "lua")]
 mod hint;
 pub mod recipes;
 mod rerun;
+#[cfg(feature = "lua")]
 mod span_blocks;
+#[cfg(feature = "lua")]
 mod span_check;
+#[cfg(feature = "lua")]
 mod stdlib;
 mod units;
+#[cfg(feature = "lua")]
 mod values;
 
 use std::fmt;
@@ -33,6 +46,7 @@ use ddc_ops::{Actor, Envelope, Ref};
 use serde_json::Value as J;
 use sha2::{Digest, Sha256};
 
+#[cfg(feature = "lua")]
 pub use blocks::{ifc_of, PartKind, ROLE_IFC};
 pub use rerun::{rerun_envelope, Held, Link, RerunPlan};
 pub use units::{parse_angle, parse_len};
@@ -194,8 +208,20 @@ pub trait GeoScript {
 pub struct Sandbox;
 
 impl GeoScript for Sandbox {
+    #[cfg(feature = "lua")]
     fn run(&self, script: &str, opts: &RunOpts) -> Result<ScriptRun, ScriptError> {
         engine::run(script, opts)
+    }
+
+    #[cfg(not(feature = "lua"))]
+    fn run(&self, _script: &str, _opts: &RunOpts) -> Result<ScriptRun, ScriptError> {
+        Err(ScriptError {
+            kind: ErrorKind::Runtime,
+            line: 0,
+            col: 0,
+            message: "scripts run in the desktop editor only".into(),
+            hint: "open the project in the desktop editor".into(),
+        })
     }
 
     fn version(&self) -> u32 {

@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["crates/bridge-proto", "crates/model", "crates/geom", "crates/solver", "crates/io", "crates/render", "crates/app", "crates/ui", "crates/ai", "crates/ops", "crates/gen", "crates/fem", "crates/calc", "crates/cli", "crates/script", "crates/link", "tools/bigfile_bench"]
+members = ["crates/bridge-proto", "crates/model", "crates/geom", "crates/solver", "crates/io", "crates/render", "crates/app", "crates/ui", "crates/ai", "crates/ops", "crates/gen", "crates/fem", "crates/calc", "crates/cli", "crates/script", "crates/link", "crates/web-editor", "tools/bigfile_bench"]
 
 [workspace.package]
 version = "1.2.0"
@@ -27,6 +27,15 @@ native-tls = "0.2"
 keyring = { version = "3", default-features = false, features = ["windows-native", "apple-native"] }
 
 # Fuzz/mutation runs: release speed with overflow and debug assertions on.
+# browser bundle (tools/web/build_bundle.sh): same code, smaller wasm; desktop builds keep `release`
+[profile.web]
+inherits = "release"
+opt-level = "s"
+# fat LTO with one codegen unit ran out of memory on a 16 GB machine shared with other builds
+lto = "thin"
+debug = false
+strip = "debuginfo"
+
 [profile.fuzz]
 inherits = "release"
 overflow-checks = true

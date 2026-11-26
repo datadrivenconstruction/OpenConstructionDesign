@@ -215,6 +215,26 @@ pub mod depth;
 pub use depth::{DepthSettings, Discipline, ElemDepth};
 pub mod recipe;
 pub use recipe::{Recipe, RecipeHeld, RecipePart};
+
+/// Process id for unique names and ids; 0 in the browser, where `std::process::id` panics
+/// (the clock and counters keep names apart there).
+pub fn process_id() -> u32 {
+    if cfg!(target_arch = "wasm32") {
+        0
+    } else {
+        std::process::id()
+    }
+}
+
+/// Temp folder; empty in the browser, where `std::env::temp_dir` panics (a file op there then
+/// fails with an error instead of stopping the editor).
+pub fn temp_dir() -> std::path::PathBuf {
+    if cfg!(target_arch = "wasm32") {
+        std::path::PathBuf::new()
+    } else {
+        std::env::temp_dir()
+    }
+}
 /// Parametric feature timelines of masses (param1).
 pub mod feature_tl;
 /// Assembly joints between component instances (param1, schema 53).
@@ -246,6 +266,7 @@ mod qa_misc_tests;
 mod topic_clip;
 mod topics;
 pub mod wall_types;
+pub mod wtime;
 pub use wall_types::{
     read_type_pack, Align, Conflict, ImportFate, ImportReport, LayerFn, TypeLayer, TypeLibStep,
     TypePack, TypeUse,
@@ -275,8 +296,8 @@ pub use ai_option::{materialize_options, Lower, OptionCopy, OptionMode, OptionRe
 pub use stage::{clean_stale_stages, stage_copy, stage_path, StageMarks};
 pub use names::free_name;
 pub use ai_plan::{
-    fnv1a, fnv1a_more, CellDiff, MaterialQty, ModelDiff, PlanCopies, RowDiff, RowKind, FNV1A_SEED,
-    PLAN_IGNORED,
+    fnv1a, fnv1a_more, is_memory_copy, CellDiff, CopyStore, MaterialQty, MemCopies, ModelDiff,
+    PlanCopies, RowDiff, RowKind, FNV1A_SEED, PLAN_IGNORED,
 };
 pub use analytical::{AnIssue, AnMember, AnPanel, AnSection, AnSupport, Analytical, AnalyticalAdj};
 pub use analytical_keys::{member_key, node_anchor, panel_key, station, OverrideUse};
@@ -434,7 +455,7 @@ pub use modify::{
     path_preview, surface_preview, GridDiv, PathCount, PatternFace, PatternPlacement,
     PatternPreview, SurfaceUp,
 };
-pub use keys::{KeySource, KEY_PROP, MINTED_PROP};
+pub use keys::{minted_key, KeySource, KEY_PROP, MINTED_PROP};
 pub use ops::Snapshots;
 pub use ops_apply::{ref_table, OptionApplyError, Receipt, Rejection, WorkerCopy};
 pub use options::{AcceptReport, DesignOption, HiddenByOption, OptionSet};
@@ -705,6 +726,17 @@ impl Model {
         // serialize needs a &mut connection; take it from an online in-memory copy
         let mut db = self.worker_copy()?.0;
         Ok(db.serialize(rusqlite::MAIN_DB)?.to_vec())
+    }
+
+    /// View-only (browser on a tablet or phone): SQLite itself refuses every write
+    /// (`PRAGMA query_only`), so no tool, script or AI step can change the model.
+    pub fn set_query_only(&self, on: bool) -> Result<(), Error> {
+        self.db.pragma_update(None, "query_only", on)?;
+        Ok(())
+    }
+
+    pub fn query_only(&self) -> bool {
+        self.db.pragma_query_value(None, "query_only", |r| r.get::<_, bool>(0)).unwrap_or(false)
     }
 
     /// Wraps an open connection (file or in-memory copy); `check` false keeps a copy row for row.

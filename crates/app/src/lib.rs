@@ -17,7 +17,6 @@ pub use eframe::egui_wgpu::RenderState;
 pub enum RenderState {}
 
 pub mod ai;
-#[cfg(feature = "link")]
 pub mod link;
 #[cfg(test)]
 mod app2_fx;
@@ -168,7 +167,10 @@ pub mod save;
 pub mod scene_ids;
 pub mod schedule;
 pub mod steel_text;
+#[cfg(all(feature = "web", target_arch = "wasm32"))]
+pub mod web;
 pub mod file_pick;
+pub mod os_clip;
 pub mod section_hud;
 pub mod section_view;
 pub mod bg_latest;

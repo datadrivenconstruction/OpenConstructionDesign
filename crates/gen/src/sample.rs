@@ -261,16 +261,22 @@ pub fn generate(
     let results: Mutex<Vec<Option<Result<GenOut, GenError>>>> = Mutex::new(vec![None; jobs.len()]);
     let next = AtomicUsize::new(0);
     let w = workers.clamp(1, jobs.len().max(1));
-    std::thread::scope(|s| {
-        for _ in 0..w {
-            s.spawn(|| loop {
-                let i = next.fetch_add(1, Ordering::Relaxed);
-                let Some(job) = jobs.get(i) else { break };
-                let r = g.build(&job.1, job.0);
-                results.lock().unwrap_or_else(|e| e.into_inner())[i] = Some(r);
-            });
-        }
-    });
+    let work = || loop {
+        let i = next.fetch_add(1, Ordering::Relaxed);
+        let Some(job) = jobs.get(i) else { break };
+        let r = g.build(&job.1, job.0);
+        results.lock().unwrap_or_else(|e| e.into_inner())[i] = Some(r);
+    };
+    if cfg!(target_arch = "wasm32") {
+        // no threads in the browser
+        work();
+    } else {
+        std::thread::scope(|s| {
+            for _ in 0..w {
+                s.spawn(&work);
+            }
+        });
+    }
     let results = results.into_inner().unwrap_or_else(|e| e.into_inner());
     let mut batch = Batch::default();
     for (i, (r, (s, params, criterion))) in results.into_iter().zip(jobs).enumerate() {

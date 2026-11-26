@@ -18,8 +18,8 @@ test = false
 test-hooks = ["ddc-model/test-hooks"]
 # DXF text writer, kept for test fixtures only; product builds leave it off
 dxf-write = []
-# revision package for the ERP link: elements.parquet writer (E2) and the contract schema check; off by default
-link = ["dep:parquet", "dep:bytes", "dep:regex"]
+# revision package for the ERP link: elements.parquet writer (E2); off by default
+link = ["dep:parquet", "dep:bytes"]
 
 [dependencies]
 web-time.workspace = true
@@ -40,9 +40,17 @@ calamine = "0.38.0"
 encoding_rs = "0.8"
 rust_xlsxwriter = "0.102"
 zip = { version = "9.0.5", default-features = false, features = ["deflate"] }
-parquet = { version = "60.1.0", default-features = false, features = ["zstd"], optional = true }
 bytes = { version = "1", optional = true }
-regex = { version = "1", optional = true }
+# contract schema patterns (brief check also in the browser build); already a ddc-model dependency
+regex = "1"
+
+# elements.parquet codec: desktop writes zstd; the browser writes snappy (pure Rust) and reads both
+# (zstd-sys C built by the wasm C compiler with its own wasm shim, BSD-3-Clause AND BSD-2-Clause)
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+parquet = { version = "60.1.0", default-features = false, features = ["zstd"], optional = true }
+
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+parquet = { version = "60.1.0", default-features = false, features = ["snap", "zstd"], optional = true }
 
 [target.'cfg(windows)'.dependencies]
 windows-sys = { version = "0.59", features = ["Win32_Foundation", "Win32_Security", "Win32_Security_Authorization", "Win32_Storage_FileSystem", "Win32_System_SystemInformation", "Win32_System_Threading"] }
@@ -53,3 +61,5 @@ ddc-io = { path = ".", features = ["dxf-write"] }
 ddc-gen = { path = "../gen" }
 proptest = { version = "1", default-features = false, features = ["std"] }
 roxmltree = "0.20"
+# the browser codec is tested on desktop too
+parquet = { version = "60.1.0", default-features = false, features = ["zstd", "snap"] }

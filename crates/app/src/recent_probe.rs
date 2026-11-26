@@ -75,7 +75,7 @@ impl Prober for DiskProber {
     fn stat(&self, file: &Path) -> Stat {
         match std::fs::metadata(file) {
             Ok(m) => Stat::Found {
-                modified: m.modified().ok(),
+                modified: ddc_model::wtime::modified(&m).ok(),
                 size: m.len(),
             },
             Err(e) if e.kind() == std::io::ErrorKind::NotFound => Stat::NotFound,

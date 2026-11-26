@@ -490,15 +490,23 @@ impl Core {
         if self.group_open(actor) {
             return busy_because("changeset_open");
         }
+        let dir = match self.scratch_dir() {
+            Ok(d) => d,
+            Err(e) => return ToolOutcome::error(e),
+        };
         let fz = Some((self.ed.tool.units, &self.sets));
-        dry_run_reply_in(runner(), &self.copies.base, &self.copies.dir, args, actor, fz)
+        dry_run_reply_in(runner(), self.copies.base(), &dir, args, actor, fz)
     }
 
     pub(super) fn ops_propose(&mut self, actor: &str, args: &J) -> ToolOutcome {
         if self.group_open(actor) {
             return busy_because("changeset_open");
         }
-        let (base, dir) = (self.copies.base.clone(), self.copies.dir.clone());
+        let dir = match self.scratch_dir() {
+            Ok(d) => d,
+            Err(e) => return ToolOutcome::error(e),
+        };
+        let base = self.copies.base().to_path_buf();
         let at = (base.as_path(), self.live_head);
         let fz = Some((self.ed.tool.units, &self.sets));
         let out = propose_reply_in(&mut self.proposals, runner(), at, &dir, args, actor, fz);

@@ -125,3 +125,29 @@ fn not_a_model_is_corrupt() {
     bytes[mid..].fill(0xA5);
     assert!(Model::from_bytes(&bytes).is_err());
 }
+
+#[test]
+fn a_view_only_model_refuses_every_write_and_still_reads() {
+    let (m, level, wt) = sample();
+    let mut m = Model::from_bytes(&m.to_bytes().unwrap()).unwrap();
+    let before = census(&m);
+    m.set_query_only(true).unwrap();
+    assert!(m.query_only());
+    assert!(m.add_level("L2", 3.0).is_err());
+    assert!(m.add_wall(&WallSpec {
+        a: (0.0, 9.0),
+        b: (6.0, 9.0),
+        level,
+        base_offset: 0.0,
+        height: 3.0,
+        wall_type: wt,
+        offset0: Some(0.0),
+    })
+    .is_err());
+    let _ = m.undo();
+    assert_eq!(census(&m), before, "nothing changed");
+    assert!(!m.to_bytes().unwrap().is_empty(), "a view-only model still gives its bytes");
+    m.set_query_only(false).unwrap();
+    assert!(!m.query_only());
+    m.add_level("L2", 3.0).unwrap();
+}

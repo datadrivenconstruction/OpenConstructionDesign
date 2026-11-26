@@ -109,10 +109,10 @@ impl PlanCopies {
             .chars()
             .filter(|c| c.is_ascii_alphanumeric() || *c == '-' || *c == '_')
             .collect();
-        let root = std::env::temp_dir();
+        let root = crate::temp_dir();
         sweep_abandoned(&root, ABANDONED_AGE);
         let n = NEXT_COPY.fetch_add(1, AtomicOrdering::Relaxed);
-        let dir = root.join(format!("ddc-ai-{}-{sid}-{n}", std::process::id()));
+        let dir = root.join(format!("ddc-ai-{}-{sid}-{n}", crate::process_id()));
         fs::create_dir_all(&dir)?;
         let lock = hold_lock(&dir)?;
         Ok(Self {
@@ -189,6 +189,185 @@ impl Drop for PlanCopies {
         }
         let _ = fs::remove_dir_all(&self.dir);
     }
+}
+
+/// Where a session's two plan copies live: files on desktop (`PlanCopies`), memory in the
+/// browser build (`MemCopies`). `base`/`work` open with `Model::open_copy` and ATTACH alike.
+pub trait CopyStore: Send + Sync + std::fmt::Debug {
+    fn base(&self) -> &Path;
+    fn work(&self) -> &Path;
+    /// The folder for further scratch files (options, agents' dry runs); `None` in memory.
+    fn dir(&self) -> Option<&Path>;
+    fn prepare(
+        &self,
+        source: &Path,
+        progress: &mut dyn FnMut(u64, u64) -> bool,
+    ) -> Result<(), Error>;
+    fn adopt(&self, snapshot: &Path) -> Result<(), Error>;
+    /// The bytes of a model file (`Model::to_bytes`) become the base, the work copy follows.
+    fn adopt_bytes(&self, bytes: &[u8]) -> Result<(), Error>;
+    fn reset_work(&self) -> Result<(), Error>;
+    fn promote_work(&self, work: &Model) -> Result<(), Error>;
+}
+
+impl CopyStore for PlanCopies {
+    fn base(&self) -> &Path {
+        &self.base
+    }
+    fn work(&self) -> &Path {
+        &self.work
+    }
+    fn dir(&self) -> Option<&Path> {
+        Some(&self.dir)
+    }
+    fn prepare(
+        &self,
+        source: &Path,
+        progress: &mut dyn FnMut(u64, u64) -> bool,
+    ) -> Result<(), Error> {
+        PlanCopies::prepare(self, source, progress)
+    }
+    fn adopt(&self, snapshot: &Path) -> Result<(), Error> {
+        PlanCopies::adopt(self, snapshot)
+    }
+    fn adopt_bytes(&self, bytes: &[u8]) -> Result<(), Error> {
+        let from = conn_of_bytes(bytes)?;
+        remove_sidecars(&self.base)?;
+        let tmp = sidecar(&self.base, ".part");
+        let _ = fs::remove_file(&tmp);
+        match backup_pages(&from, &tmp, &mut keep_going) {
+            Ok(_) => install(&tmp, &self.base)?,
+            Err(e) => {
+                let _ = fs::remove_file(&tmp);
+                return Err(e);
+            }
+        }
+        PlanCopies::reset_work(self)
+    }
+    fn reset_work(&self) -> Result<(), Error> {
+        PlanCopies::reset_work(self)
+    }
+    fn promote_work(&self, work: &Model) -> Result<(), Error> {
+        PlanCopies::promote_work(self, work)
+    }
+}
+
+/// The copies as shared in-memory databases (SQLite `memdb`): no file is ever written. Their
+/// names are URIs that `Model::open_copy`, ATTACH and the backup API open like paths; a copy
+/// lives while its keeper connection is open, so both go when the value drops.
+#[derive(Debug)]
+pub struct MemCopies {
+    base: PathBuf,
+    work: PathBuf,
+    keep: Mutex<Vec<Connection>>,
+}
+
+impl MemCopies {
+    pub fn new(session: &str) -> Result<Self, Error> {
+        let sid: String = session
+            .chars()
+            .filter(|c| c.is_ascii_alphanumeric() || *c == '-' || *c == '_')
+            .collect();
+        let n = NEXT_COPY.fetch_add(1, AtomicOrdering::Relaxed);
+        let name = |f: &str| PathBuf::from(format!("file:/ddc-ai-{sid}-{n}/{f}.db?vfs=memdb"));
+        let (base, work) = (name("base"), name("work"));
+        let keep = vec![Connection::open(&base)?, Connection::open(&work)?];
+        Ok(Self {
+            base,
+            work,
+            keep: Mutex::new(keep),
+        })
+    }
+
+    fn fill_base(
+        &self,
+        from: &Connection,
+        progress: &mut dyn FnMut(u64, u64) -> bool,
+    ) -> Result<(), Error> {
+        if !backup_pages(from, &self.base, progress)? {
+            return Err(Error::Invalid("model copy cancelled".into()));
+        }
+        Ok(())
+    }
+}
+
+/// A memory copy's name (`MemCopies`): it opens like a file but is none.
+pub fn is_memory_copy(p: &Path) -> bool {
+    p.to_str()
+        .is_some_and(|s| s.starts_with("file:/") && s.ends_with("?vfs=memdb"))
+}
+
+impl CopyStore for MemCopies {
+    fn base(&self) -> &Path {
+        &self.base
+    }
+    fn work(&self) -> &Path {
+        &self.work
+    }
+    fn dir(&self) -> Option<&Path> {
+        None
+    }
+    fn prepare(
+        &self,
+        source: &Path,
+        progress: &mut dyn FnMut(u64, u64) -> bool,
+    ) -> Result<(), Error> {
+        if !source.is_file() {
+            return Err(Error::Invalid(format!("no model file: {}", source.display())));
+        }
+        let from = Connection::open_with_flags(source, OpenFlags::SQLITE_OPEN_READ_ONLY)?;
+        hold_snapshot(&from)?;
+        self.fill_base(&from, progress)?;
+        drop(from);
+        self.reset_work()
+    }
+    fn adopt(&self, snapshot: &Path) -> Result<(), Error> {
+        let from = Connection::open_with_flags(snapshot, OpenFlags::SQLITE_OPEN_READ_ONLY)?;
+        self.fill_base(&from, &mut keep_going)?;
+        drop(from);
+        // as the file copies take the snapshot over: it never outlives the adoption
+        let _ = fs::remove_file(snapshot);
+        self.reset_work()
+    }
+    fn adopt_bytes(&self, bytes: &[u8]) -> Result<(), Error> {
+        self.fill_base(&conn_of_bytes(bytes)?, &mut keep_going)?;
+        self.reset_work()
+    }
+    fn reset_work(&self) -> Result<(), Error> {
+        let from = Connection::open(&self.base)?;
+        if !backup_pages(&from, &self.work, &mut keep_going)? {
+            return Err(Error::Invalid("model copy cancelled".into()));
+        }
+        Ok(())
+    }
+    fn promote_work(&self, work: &Model) -> Result<(), Error> {
+        self.fill_base(&work.db, &mut keep_going)
+    }
+}
+
+impl Drop for MemCopies {
+    fn drop(&mut self) {
+        if let Ok(k) = self.keep.get_mut() {
+            k.clear();
+        }
+    }
+}
+
+/// An in-memory connection holding the bytes of a model file (a WAL header is read as rollback).
+fn conn_of_bytes(bytes: &[u8]) -> Result<Connection, Error> {
+    if !bytes.starts_with(b"SQLite format 3\0") || bytes.len() < 100 {
+        return Err(Error::Corrupt("not a model file".into()));
+    }
+    let mut buf = bytes.to_vec();
+    for b in &mut buf[18..20] {
+        if *b == 2 {
+            *b = 1;
+        }
+    }
+    let mut db = Connection::open_in_memory()?;
+    db.deserialize_read_exact(rusqlite::MAIN_DB, &buf[..], buf.len(), false)
+        .map_err(|e| Error::Corrupt(e.to_string()))?;
+    Ok(db)
 }
 
 fn keep_going(_: u64, _: u64) -> bool {
@@ -544,7 +723,7 @@ impl Model {
         limit: usize,
     ) -> Result<ModelDiff, Error> {
         let _s = crate::perf::span("model.diff_from");
-        if !base.is_file() {
+        if !base.is_file() && !is_memory_copy(base) {
             return Err(Error::Invalid(format!("no base copy: {}", base.display())));
         }
         let path = base
@@ -640,6 +819,9 @@ fn backup_pages(
     progress: &mut dyn FnMut(u64, u64) -> bool,
 ) -> Result<bool, Error> {
     let mut to = Connection::open(tmp)?;
+    // a memory copy keeps its page size once made: an empty one takes the source's
+    let size: i64 = from.query_row("PRAGMA page_size", [], |r| r.get(0))?;
+    to.pragma_update(None, "page_size", size)?;
     {
         let b = Backup::new(from, &mut to)?;
         let mut last_move = Instant::now();

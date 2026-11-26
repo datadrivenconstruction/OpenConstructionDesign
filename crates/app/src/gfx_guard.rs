@@ -158,7 +158,7 @@ impl Why {
 pub fn start_key() -> String {
     let exe = std::env::current_exe()
         .and_then(fs::metadata)
-        .and_then(|m| m.modified())
+        .and_then(|m| ddc_model::wtime::modified(&m))
         .ok()
         .and_then(|t| t.duration_since(web_time::UNIX_EPOCH).ok())
         .map_or(0, |d| d.as_secs());

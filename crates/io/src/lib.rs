@@ -9,7 +9,6 @@ pub mod compimport;
 pub mod drawing_model;
 pub mod dwg;
 pub mod dxf;
-#[cfg(feature = "link")]
 pub mod contract;
 #[cfg(feature = "link")]
 pub mod elements_parquet;

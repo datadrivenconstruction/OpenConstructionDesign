@@ -205,11 +205,16 @@ pub fn scan(folder: &Path, crashed: bool) -> Option<Recover> {
     scan_for(folder, crashed, None)
 }
 
+/// Modification time of `p` through the clock that also runs in the browser build.
+fn file_time_of(p: &Path) -> Option<SystemTime> {
+    ddc_model::wtime::modified(&std::fs::metadata(p).ok()?).ok()
+}
+
 /// [`scan`] for a project file: snapshots live in the autosave folder under [`autosave_name`], and their time
 /// is compared with the file itself. They are not offered after a clean exit: "Don't save" is a decision.
 pub fn scan_for(folder: &Path, crashed: bool, project: Option<&Path>) -> Option<Recover> {
     let file = project.map_or_else(|| folder.join(autosave_name(None)), Path::to_path_buf);
-    let file_time = std::fs::metadata(&file).and_then(|m| m.modified()).ok();
+    let file_time = file_time_of(&file);
     let newer = |s: &SnapInfo| match file_time {
         Some(t) => {
             (crashed || project.is_none())
@@ -246,7 +251,7 @@ fn collect_snaps(
     let base = autosave_name(project);
     let virt = folder.join(&base);
     let file = project.map_or_else(|| virt.clone(), Path::to_path_buf);
-    let file_time = std::fs::metadata(&file).and_then(|m| m.modified()).ok();
+    let file_time = file_time_of(&file);
     let mut snaps: Vec<SnapInfo> =
         ddc_model::snapshot_infos(&virt).into_iter().filter(|s| keep(s)).collect();
     for f in side_families(folder, &base) {
@@ -502,7 +507,7 @@ pub fn with_held(
 ) -> Option<Recover> {
     let file_time = match &found {
         Some(r) => r.file_time,
-        None => project.and_then(|p| std::fs::metadata(p).and_then(|m| m.modified()).ok()),
+        None => project.and_then(file_time_of),
     };
     let held = held_for(folder, project, file_time);
     if held.is_empty() {

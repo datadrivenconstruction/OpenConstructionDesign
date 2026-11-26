@@ -224,7 +224,7 @@ impl CityView {
             base = base.saturating_add(end).saturating_add(1);
         }
         let specs = Arc::new(specs);
-        let pool = (cfg.workers > 0).then(|| Pool::new(cfg.workers, specs.clone()));
+        let pool = (cfg.workers > 0).then(|| Pool::new(cfg.workers, specs.clone())).flatten();
         Self {
             cfg,
             anchor,

@@ -57,6 +57,25 @@ fn every_column_type_survives_a_round_trip_bit_for_bit() {
     assert_eq!(back, vec![a, b]);
 }
 
+// contract: the browser writes SNAPPY (and reads both); the ERP intake must read it as it
+// reads the desktop's ZSTD, row for row
+#[test]
+fn both_build_codecs_are_contract_codecs_and_read_back_the_same_rows() {
+    use parquet::basic::{Compression, ZstdLevel};
+    use parquet::file::reader::FileReader;
+    let rows = vec![row("b1/s00/wall-N/0"), row("b1/s00/wall-S/0")];
+    for codec in [Compression::ZSTD(ZstdLevel::try_new(3).unwrap()), Compression::SNAPPY] {
+        let mut data = vec![];
+        write_parquet_with(&rows, &mut data, codec).unwrap();
+        let r = parquet::file::reader::SerializedFileReader::new(bytes::Bytes::from(data.clone())).unwrap();
+        let got = r.metadata().row_group(0).column(0).compression();
+        let name = format!("{got:?}");
+        let name = name.split('(').next().unwrap();
+        assert!(crate::contract::ELEMENTS_CODECS.contains(&name), "{name} not in the contract");
+        assert_eq!(read_parquet(data).unwrap(), rows, "{name}");
+    }
+}
+
 #[test]
 fn the_file_has_exactly_the_contract_columns_with_native_types() {
     let (data, _) = bytes(&[row("k1")]);

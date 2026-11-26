@@ -1122,7 +1122,7 @@ fn project_token(db: &Connection) -> Result<String, Error> {
     }
     let t = format!(
         "mem-{}-{}",
-        std::process::id(),
+        crate::process_id(),
         NEXT.fetch_add(1, Ordering::Relaxed)
     );
     db.execute("INSERT INTO temp.clip_token(t) VALUES (?1)", [&t])?;

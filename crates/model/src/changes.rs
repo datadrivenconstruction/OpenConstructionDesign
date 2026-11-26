@@ -254,7 +254,7 @@ pub(crate) fn install(db: &mut rusqlite::Connection) -> rusqlite::Result<Arc<Mut
     let nanos = web_time::SystemTime::now()
         .duration_since(web_time::UNIX_EPOCH)
         .map_or(0, |d| d.as_nanos() as u64);
-    let id = nanos ^ (u64::from(std::process::id()) << 32) ^ base.rotate_left(17);
+    let id = nanos ^ (u64::from(crate::process_id()) << 32) ^ base.rotate_left(17);
     let t = Arc::new(Mutex::new(Tracker {
         base,
         origin: base,

@@ -51,16 +51,27 @@ impl Model {
         Ok(prop(MINTED_PROP)?.map(|k| (k, KeySource::Minted)))
     }
 
+    /// Every keyed element at once, by (table, id): what [`Model::element_key`] gives one by one.
+    pub fn element_keys(&self) -> Result<HashMap<(String, i64), String>, Error> {
+        load_keys(self.sql(), "main")
+    }
+
     /// Same as [`Model::element_key`], minting and storing a key (undoable property write)
     /// when the element has none, so the next export names it the same.
     pub fn ensure_element_key(&mut self, kind: &str, id: i64) -> Result<(String, KeySource), Error> {
         if let Some(k) = self.element_key(kind, id)? {
             return Ok(k);
         }
-        let key = format!("x/{kind}/{}", crate::new_guid(&format!("minted|{kind}|{id}")));
+        let key = minted_key(kind, id);
         self.set_prop(kind, id, MINTED_PROP, Some((rusqlite::types::Value::Text(key.clone()), "")))?;
         Ok((key, KeySource::Minted))
     }
+}
+
+/// The key [`Model::ensure_element_key`] mints for element `id` of `kind`: derived from both,
+/// so a view that cannot write (or has not yet) names the element as the next export will.
+pub fn minted_key(kind: &str, id: i64) -> String {
+    format!("x/{kind}/{}", crate::new_guid(&format!("minted|{kind}|{id}")))
 }
 
 fn has_table(db: &Connection, schema: &str, name: &str) -> Result<bool, Error> {
@@ -167,6 +178,7 @@ mod tests {
         );
         let a = m.ensure_element_key("wall", walls[0]).unwrap();
         assert_eq!(a.1, KeySource::Minted);
+        assert_eq!(a.0, minted_key("wall", walls[0]), "known before it is stored");
         assert_eq!(m.ensure_element_key("wall", walls[0]).unwrap(), a, "a minted key is kept");
         let b = m.ensure_element_key("wall", walls[2]).unwrap();
         assert_ne!(a.0, b.0);
@@ -177,5 +189,11 @@ mod tests {
         // a generator key beats a minted one
         m.set_prop("wall", walls[2], KEY_PROP, Some((Value::Text("b1/s01/wall-x/0".into()), ""))).unwrap();
         assert_eq!(m.element_key("wall", walls[2]).unwrap().unwrap().1, KeySource::Generator);
+        // all at once: the same key per element as one by one
+        let all = m.element_keys().unwrap();
+        assert_eq!(all.len(), 3);
+        for w in &walls {
+            assert_eq!(all.get(&("wall".to_string(), *w)), m.element_key("wall", *w).unwrap().map(|k| k.0).as_ref());
+        }
     }
 }

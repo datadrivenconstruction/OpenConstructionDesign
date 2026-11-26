@@ -562,6 +562,7 @@ impl PanelUi {
     pub fn active_ready(&self) -> bool {
         self.active()
             .is_some_and(|p| !p.base_url.trim().is_empty() && !p.model.trim().is_empty())
+            || connect::default_profile().is_some()
     }
 
     fn end_session(&mut self) {
@@ -863,7 +864,7 @@ impl PanelUi {
             return;
         };
         self.again = false;
-        let profile = self.active().cloned();
+        let profile = self.active().cloned().or_else(connect::default_profile);
         let host = match connect::gate(&app.ed.model, profile.as_ref(), self.once_host.as_deref()) {
             Gate::NoProfile => {
                 self.settings_open = true;

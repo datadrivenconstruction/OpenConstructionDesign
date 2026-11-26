@@ -72,7 +72,7 @@ type Stamp = (u64, Option<web_time::SystemTime>);
 
 /// [`read_book`] once per book state: a changed or rewritten file (size or mtime) is read again.
 pub(crate) fn cached(path: &Path) -> Rc<HashMap<String, View>> {
-    let Some(stamp) = std::fs::metadata(path).ok().map(|m| (m.len(), m.modified().ok())) else {
+    let Some(stamp) = std::fs::metadata(path).ok().map(|m| (m.len(), ddc_model::wtime::modified(&m).ok())) else {
         return Rc::new(HashMap::new());
     };
     if let Some(v) = CACHE.with(|c| {

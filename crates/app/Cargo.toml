@@ -11,7 +11,7 @@ description = "DDC editor desktop application: views, tools, editing shell"
 [[bin]]
 name = "ddc-app"
 path = "src/main.rs"
-required-features = ["gui"]
+required-features = ["desktop"]
 
 [dependencies]
 web-time.workspace = true
@@ -21,7 +21,8 @@ ddc-model = { path = "../model" }
 ddc-ops = { path = "../ops" }
 ddc-ai = { path = "../ai" }
 ddc-gen = { path = "../gen" }
-ddc-script = { path = "../script" }
+# Lua interpreter (C) only with `desktop`; without it every script run answers "desktop only"
+ddc-script = { path = "../script", default-features = false }
 serde.workspace = true
 serde_json.workspace = true
 # eval case files and oracle patterns: MIT OR Apache-2.0, both already in the tree
@@ -30,13 +31,9 @@ regex = "1"
 schemars.workspace = true
 # link cache key and `ddc publish` package hashes; already in the tree: MIT OR Apache-2.0
 sha2 = "0.10"
-# notify-only update check (one GET, no download): MIT OR Apache-2.0
-ureq.workspace = true
-native-tls.workspace = true
 ddc-io = { path = "../io" }
 ddc-ui = { path = "../ui", default-features = false }
 rusqlite.workspace = true
-pollster = { version = "0.4", optional = true }
 # PNG encoder for --screenshot: MIT OR Apache-2.0
 png = "0.17"
 # JPEG decoder for textures: MIT OR Apache-2.0 OR Zlib
@@ -61,10 +58,29 @@ getrandom = { workspace = true, optional = true }
 [target.'cfg(windows)'.dependencies]
 windows-sys = { version = "0.59", features = ["Win32_Storage_FileSystem"] }
 
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+# notify-only update check (one GET, no download): MIT OR Apache-2.0
+ureq.workspace = true
+native-tls.workspace = true
+pollster = { version = "0.4", optional = true }
+
+# browser build: WebGL2/WebGPU through wgpu, glue to the page; all MIT OR Apache-2.0, already in the tree
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+wgpu = { version = "25", features = ["webgl", "fragile-send-sync-non-atomic-wasm"] }
+egui-wgpu = { version = "0.32", default-features = false, features = ["fragile-send-sync-non-atomic-wasm"] }
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.4"
+js-sys = "0.3"
+web-sys = { version = "0.3", features = ["Document", "Window", "Element", "HtmlCanvasElement", "Performance", "console"] }
+
 [features]
-default = ["gui"]
-# window, GPU, native dialogs and clipboard; off for the headless `ddc` CLI
-gui = ["dep:eframe", "dep:rfd", "dep:arboard", "dep:pollster", "ddc-render/gpu"]
+default = ["desktop"]
+# window and GPU (desktop and browser); off for the headless `ddc` CLI
+gui = ["dep:eframe", "dep:pollster", "ddc-render/gpu"]
+# the full desktop product: window, scripts, OS dialogs, clipboard key wiping
+desktop = ["gui", "ddc-script/lua", "dep:rfd", "dep:arboard"]
+# browser build (wasm32-unknown-unknown): the JS entry in `web`; see docs/BROWSER.md
+web = ["gui", "ddc-ui/external-assets"]
 # SQL statement counter of the model for tests/frame_budget.rs
 test-hooks = ["ddc-model/test-hooks"]
 # ERP link commands (`ddc gen`, `ddc publish`); off by default
@@ -94,6 +110,10 @@ ddc-cli = { path = "../cli" }
 [[test]]
 name = "link_erp"
 required-features = ["link-mock"]
+
+[[test]]
+name = "web_draft"
+required-features = ["link"]
 
 # drawing edits written out with Drawings::export_into, which the public build leaves out
 [[test]]

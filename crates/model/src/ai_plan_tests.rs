@@ -761,6 +761,48 @@ fn reset_promote_and_adopt_replace_the_copies() {
     );
 }
 
+/// The same steps on copies held in memory: the base diffs like a file, and no file appears.
+#[test]
+fn memory_copies_reset_promote_adopt_and_diff_like_the_files() {
+    let c = MemCopies::new("test-mem").unwrap();
+    let store: &dyn CopyStore = &c;
+    assert!(store.dir().is_none() && is_memory_copy(store.base()) && is_memory_copy(store.work()));
+    let mut live = Model::open(":memory:").unwrap();
+    live.add_level("L0", 0.0).unwrap();
+    store.adopt_bytes(&live.to_bytes().unwrap()).unwrap();
+    let h0 = hash(&live);
+    let open = |p: &Path| Model::open_copy(p.to_str().unwrap()).unwrap();
+    {
+        let mut w = open(store.work());
+        assert_eq!(hash(&w), h0, "the bytes became base and work");
+        w.add_level("L1", 3.0).unwrap();
+        let d = w.diff_from(store.base(), &all(), 100).unwrap();
+        assert!(d.rows.iter().any(|r| r.table == "level" && r.kind == RowKind::Created));
+    }
+    store.reset_work().unwrap();
+    let mut w = open(store.work());
+    assert_eq!(hash(&w), h0, "the reset drops the edits of the closed copy");
+    w.add_level("L2", 6.0).unwrap();
+    let h1 = hash(&w);
+    store.promote_work(&w).unwrap();
+    drop(w);
+    assert_eq!(hash(&open(store.base())), h1, "the work copy became the base");
+
+    // a second session's copies are its own
+    let other = MemCopies::new("test-mem").unwrap();
+    assert_ne!(other.base(), store.base());
+    other.adopt_bytes(&live.to_bytes().unwrap()).unwrap();
+    assert_eq!(hash(&open(other.base())), h0);
+    assert_eq!(hash(&open(store.base())), h1);
+
+    assert!(!store.base().exists() && !Path::new("ddc-ai-test-mem").exists(), "no file written");
+    let base = store.base().to_path_buf();
+    drop(c);
+    let gone = Connection::open(&base).unwrap();
+    let tables: i64 = gone.query_row("SELECT count(*) FROM sqlite_master", [], |r| r.get(0)).unwrap();
+    assert_eq!(tables, 0, "dropped copies are gone from memory");
+}
+
 #[test]
 fn stale_when_the_live_model_changed_and_only_then() {
     let c = copies("stale");

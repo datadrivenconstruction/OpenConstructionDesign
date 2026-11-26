@@ -72,7 +72,17 @@ impl<K: Clone + PartialEq + Send + 'static, T: Send + Sync + 'static> Latest<K, 
         let (tx, rx) = channel();
         let stop = Stop::default();
         let s2 = stop.clone();
+        #[cfg(target_arch = "wasm32")]
+        {
+            // no threads in the browser: build now, the result waits in the channel
+            let _ = tx.send(build(&s2));
+            self.started += 1;
+            self.flight = Some(Flight { key, stop, rx });
+            return;
+        }
+        #[cfg(not(target_arch = "wasm32"))]
         let tx2 = tx.clone();
+        #[cfg(not(target_arch = "wasm32"))]
         let spawned = crate::jobs::spawn_guarded(
             "ddc-bg-latest",
             move || {
@@ -82,6 +92,7 @@ impl<K: Clone + PartialEq + Send + 'static, T: Send + Sync + 'static> Latest<K, 
                 let _ = tx2.send(Err(msg));
             },
         );
+        #[cfg(not(target_arch = "wasm32"))]
         match spawned {
             Ok(_) => {
                 self.started += 1;

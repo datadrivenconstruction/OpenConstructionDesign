@@ -364,6 +364,9 @@ fn sync(st: &mut State, a: &mut EditorApp, ctx: &egui::Context) {
         if ld.plan_job.as_ref().is_none_or(|j| j.0 != want) {
             let (tx, rx) = std::sync::mpsc::channel();
             let (elems, walls, xf) = (ld.data.elems.clone(), ld.data.walls.clone(), l.xf);
+            #[cfg(target_arch = "wasm32")]
+            let _ = tx.send(plan_of(&elems, &walls, &xf, zc));
+            #[cfg(not(target_arch = "wasm32"))]
             std::thread::spawn(move || {
                 let _ = tx.send(plan_of(&elems, &walls, &xf, zc));
             });

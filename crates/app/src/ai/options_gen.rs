@@ -329,6 +329,10 @@ pub fn generate_options(
     units: Units,
     probe: &dyn Probe,
 ) -> Result<GenReport, String> {
+    // copies on disk and worker threads: neither exists in the browser
+    if cfg!(target_arch = "wasm32") {
+        return Err("design options are generated in the desktop editor only".into());
+    }
     let g = *gens
         .iter()
         .find(|g| g.id() == req.generator)
@@ -516,7 +520,7 @@ pub fn generate_options(
 /// no project file is opened for writing from the worker.
 pub fn handle(c: &mut Core, a: &J) -> Result<Done, String> {
     let (req, capped) = Request::parse(a, c.view.level)?;
-    let (base, session_dir) = c.option_paths();
+    let (base, session_dir) = c.option_paths()?;
     let head = Model::open_copy(&base.to_string_lossy())
         .and_then(|m| m.ai_option_head())
         .map_err(|e| e.to_string())?;

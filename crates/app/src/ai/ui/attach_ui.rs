@@ -307,14 +307,9 @@ pub fn pasted_paths(text: &str) -> Vec<PathBuf> {
 
 /// An image on the clipboard, as RGBA; a headless build has no clipboard.
 pub fn clipboard_image() -> Option<(u32, u32, Vec<u8>)> {
-    #[cfg(feature = "gui")]
-    {
-        let mut board = arboard::Clipboard::new().ok()?;
-        let img = board.get_image().ok()?;
-        Some((img.width as u32, img.height as u32, img.bytes.into_owned()))
-    }
-    #[cfg(not(feature = "gui"))]
-    None
+    let mut board = crate::os_clip::Clipboard::new().ok()?;
+    let img = board.get_image().ok()?;
+    Some((img.width as u32, img.height as u32, img.bytes.into_owned()))
 }
 
 /// The preview of a read table drawn alone, for the layout contract.

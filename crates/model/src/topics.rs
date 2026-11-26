@@ -475,7 +475,7 @@ fn fresh_guid(seed: &str) -> String {
         .duration_since(UNIX_EPOCH)
         .map(|d| d.as_nanos())
         .unwrap_or(0);
-    crate::new_guid(&format!("issue|{seed}|{t}|{n}|{}", std::process::id()))
+    crate::new_guid(&format!("issue|{seed}|{t}|{n}|{}", crate::process_id()))
 }
 
 fn is_element_table(t: &str) -> bool {

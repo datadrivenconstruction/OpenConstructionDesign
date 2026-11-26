@@ -1665,7 +1665,7 @@ impl From<Reply> for Done {
 
 fn list_options(c: &mut Core, a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
     let set = a["set"].as_str();
-    let (base, session_dir) = c.option_paths();
+    let (base, session_dir) = c.option_paths()?;
     let (_, db) = super::options_keep::locate(&session_dir);
     // no recipe file yet means no options were ever drafted
     let rows = if db.is_file() {

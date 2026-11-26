@@ -53,7 +53,7 @@ fn library_entries(ed: &Editor) -> std::rc::Rc<Vec<crate::complib::Entry>> {
     let dir = crate::complib::user_dir();
     let stamp = dir
         .as_deref()
-        .and_then(|d| std::fs::metadata(d).and_then(|m| m.modified()).ok());
+        .and_then(|d| std::fs::metadata(d).and_then(|m| ddc_model::wtime::modified(&m)).ok());
     let key = (&ed.model as *const Model as usize, ed.cache_key(), stamp);
     if let Some(v) = with(|s| s.lib_memo.as_ref().filter(|m| m.0 == key).map(|m| m.1.clone())) {
         return v;

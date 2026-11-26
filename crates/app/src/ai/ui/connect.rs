@@ -254,6 +254,41 @@ pub fn missing(p: &Profile, key_ready: bool) -> Vec<&'static str> {
     out
 }
 
+/// The browser build reaches the model through the host page (`ddc-web-bridge/1`): the page
+/// holds address and key, the editor neither. Its profile carries this address.
+pub const PAGE_URL: &str = "page://host";
+
+const ON_WEB: bool = cfg!(all(feature = "web", target_arch = "wasm32"));
+
+/// The profile of the host page; the browser build's default when none is set up.
+pub fn page_profile() -> Profile {
+    let mut p = blank_profile("page".into(), "Host page".into());
+    p.base_url = PAGE_URL.into();
+    p.model = "host".into();
+    p.auth = AuthKind::None;
+    p
+}
+
+/// What the panel uses with no profile chosen: the host page in the browser, nothing elsewhere.
+pub fn default_profile() -> Option<Profile> {
+    ON_WEB.then(page_profile)
+}
+
+/// Only the browser build has a host page: elsewhere this address is an ordinary (bad) one.
+fn uses_page(p: &Profile, on_web: bool) -> bool {
+    on_web && p.base_url == PAGE_URL
+}
+
+#[cfg(all(feature = "web", target_arch = "wasm32"))]
+fn page_provider() -> Result<Arc<dyn ddc_ai::Provider>, AiError> {
+    Ok(Arc::new(ddc_ai::host_bridge::HostProvider::new(crate::web::ai_mailbox())))
+}
+
+#[cfg(not(all(feature = "web", target_arch = "wasm32")))]
+fn page_provider() -> Result<Arc<dyn ddc_ai::Provider>, AiError> {
+    Err(AiError::Provider("the host page is reached only in the browser build".into()))
+}
+
 pub fn is_local(p: &Profile) -> bool {
     is_local_url(&p.base_url)
 }
@@ -318,9 +353,17 @@ pub enum Gate {
 
 /// `once` is the address answered "once" in this session.
 pub fn gate(m: &Model, p: Option<&Profile>, once: Option<&str>) -> Gate {
+    gate_on(m, p, once, ON_WEB)
+}
+
+fn gate_on(m: &Model, p: Option<&Profile>, once: Option<&str>, on_web: bool) -> Gate {
     let Some(p) = p else {
         return Gate::NoProfile;
     };
+    // the page is this editor's own frame: nothing leaves from here, the page owns egress
+    if uses_page(p, on_web) {
+        return Gate::Ready { host: None };
+    }
     if p.base_url.trim().is_empty() || p.model.trim().is_empty() {
         return Gate::NoProfile;
     }
@@ -356,18 +399,11 @@ pub fn open_session(
     view: ViewCtx,
 ) -> Result<UiSession, AiError> {
     let m = &app.ed.model;
-    let key = if p.auth == AuthKind::None {
-        None
+    let provider = if uses_page(p, ON_WEB) {
+        page_provider()?
     } else {
-        store()
-            .get(&p.id)
-            .map_err(|e| AiError::Internal(e.to_string()))?
+        direct_provider(m, p, host)?
     };
-    let guard = EgressGuard {
-        local_only: policy_flag(m, "egress.local_only", false),
-        consented_host: host,
-    };
-    let provider = build_provider(p, key, guard).map_err(|e| AiError::Provider(e.to_string()))?;
     let cfg = SessionCfg {
         provider,
         profile: p.clone(),
@@ -382,6 +418,25 @@ pub fn open_session(
         auto_replan: true,
     };
     UiSession::start(&app.ed, cfg, view)
+}
+
+fn direct_provider(
+    m: &Model,
+    p: &Profile,
+    host: Option<String>,
+) -> Result<Arc<dyn ddc_ai::Provider>, AiError> {
+    let key = if p.auth == AuthKind::None {
+        None
+    } else {
+        store()
+            .get(&p.id)
+            .map_err(|e| AiError::Internal(e.to_string()))?
+    };
+    let guard = EgressGuard {
+        local_only: policy_flag(m, "egress.local_only", false),
+        consented_host: host,
+    };
+    build_provider(p, key, guard).map_err(|e| AiError::Provider(e.to_string()))
 }
 
 /// What the next turn tells the model about where the person is.
@@ -480,6 +535,20 @@ mod tests {
             gate(&m, Some(&blank_profile("a".into(), "b".into())), None),
             Gate::NoProfile
         );
+    }
+
+    #[test]
+    fn the_host_page_needs_no_consent_in_the_browser_and_is_no_route_elsewhere() {
+        let m = model();
+        m.set_ai_policy("egress.local_only", "1").unwrap();
+        let p = page_profile();
+        assert_eq!(gate_on(&m, Some(&p), None, true), Gate::Ready { host: None });
+        assert!(!matches!(gate_on(&m, Some(&p), None, false), Gate::Ready { .. }));
+        assert!(!uses_page(&cloud(), true));
+        assert_eq!(default_profile().is_some(), ON_WEB);
+        if !ON_WEB {
+            assert!(page_provider().is_err());
+        }
     }
 
     #[test]

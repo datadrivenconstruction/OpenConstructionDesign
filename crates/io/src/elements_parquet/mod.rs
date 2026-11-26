@@ -15,6 +15,8 @@ mod tests;
 
 pub use rows::{collect, glb_box, short_hash, slug, Collected, Geo, GeoMap, GEOMETRY_NONE};
 pub use writer::{read_parquet, write_parquet, COLUMNS, ROW_GROUP_MAX};
+#[cfg(test)]
+use writer::write_parquet_with;
 
 /// One row of `elements.parquet`. `key` is written to `id`, `stable_id` and `element_key`.
 #[derive(Clone, Debug, PartialEq)]

@@ -304,8 +304,8 @@ impl Scratch {
     fn of(live: &Model) -> Result<Self, ddc_model::Error> {
         static SEQ: std::sync::atomic::AtomicU64 = std::sync::atomic::AtomicU64::new(0);
         let n = SEQ.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        let name = format!("ddc-ops-preview-{}-{n}.db", std::process::id());
-        let path = std::env::temp_dir().join(name);
+        let name = format!("ddc-ops-preview-{}-{n}.db", ddc_model::process_id());
+        let path = ddc_model::temp_dir().join(name);
         let mut s = Scratch { model: None, path };
         s.remove_files();
         live.snapshot_to(&s.path)?;

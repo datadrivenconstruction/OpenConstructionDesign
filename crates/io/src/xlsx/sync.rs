@@ -22,7 +22,7 @@ impl Stamp {
     pub fn of(path: &Path) -> Option<Stamp> {
         let m = std::fs::metadata(path).ok()?;
         Some(Stamp {
-            mtime: m.modified().ok(),
+            mtime: ddc_model::wtime::modified(&m).ok(),
             len: m.len(),
         })
     }

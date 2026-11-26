@@ -63,7 +63,41 @@ impl Script {
         }
     }
 
-    pub fn bytes(self) -> &'static [u8] {
+    /// File under `assets/fonts/i18n/` (and under `fonts/` in the browser bundle).
+    pub fn file(self) -> &'static str {
+        match self {
+            Script::Arabic => "NotoSansArabic.ttf",
+            Script::Hebrew => "NotoSansHebrew.ttf",
+            Script::Devanagari => "NotoSansDevanagari.ttf",
+            Script::Bengali => "NotoSansBengali.ttf",
+            Script::Thai => "NotoSansThai.ttf",
+            Script::LatinVi => "NotoSansLatinVi.ttf",
+            Script::ChineseSc => "NotoSansSC.ttf",
+            Script::Japanese => "NotoSansJP.ttf",
+            Script::Korean => "NotoSansKR.ttf",
+            Script::Symbols => "NotoSansSymbols2.ttf",
+            Script::Math => "NotoSansMath.ttf",
+            Script::Blocks => "NotoSansMono.ttf",
+            Script::Emoji => "NotoEmoji.ttf",
+        }
+    }
+
+    /// Loaded in every language; the browser build carries only these inside.
+    pub fn always(self) -> bool {
+        matches!(self, Script::Symbols | Script::Math | Script::Blocks | Script::Emoji)
+    }
+
+    /// Font bytes; `None` while the browser build still waits for the bundle file.
+    pub fn bytes(self) -> Option<&'static [u8]> {
+        #[cfg(feature = "external-assets")]
+        if !self.always() {
+            return crate::assets::get(&crate::assets::font_path(self.file()));
+        }
+        Some(self.embedded())
+    }
+
+    #[cfg(not(feature = "external-assets"))]
+    fn embedded(self) -> &'static [u8] {
         match self {
             Script::Arabic => include_bytes!("../assets/fonts/i18n/NotoSansArabic.ttf"),
             Script::Hebrew => include_bytes!("../assets/fonts/i18n/NotoSansHebrew.ttf"),
@@ -78,6 +112,17 @@ impl Script {
             Script::Math => include_bytes!("../assets/fonts/i18n/NotoSansMath.ttf"),
             Script::Blocks => include_bytes!("../assets/fonts/i18n/NotoSansMono.ttf"),
             Script::Emoji => include_bytes!("../assets/fonts/i18n/NotoEmoji.ttf"),
+        }
+    }
+
+    #[cfg(feature = "external-assets")]
+    fn embedded(self) -> &'static [u8] {
+        match self {
+            Script::Symbols => include_bytes!("../assets/fonts/i18n/NotoSansSymbols2.ttf"),
+            Script::Math => include_bytes!("../assets/fonts/i18n/NotoSansMath.ttf"),
+            Script::Blocks => include_bytes!("../assets/fonts/i18n/NotoSansMono.ttf"),
+            Script::Emoji => include_bytes!("../assets/fonts/i18n/NotoEmoji.ttf"),
+            _ => &[],
         }
     }
 }
@@ -101,22 +146,28 @@ pub fn scripts_for(lang: Lang) -> Vec<Script> {
 }
 
 /// Identity of the font set for `lang`; equal values need no font reinstall.
+/// A face arriving later (browser build) changes the key, so the set is reinstalled with it.
 pub fn set_key(lang: Lang) -> u16 {
-    scripts_for(lang).iter().fold(0, |m, s| m | 1 << Script::ALL.iter().position(|x| x == s).unwrap_or(0))
+    scripts_for(lang)
+        .iter()
+        .filter(|s| s.bytes().is_some())
+        .fold(0, |m, s| m | 1 << Script::ALL.iter().position(|x| x == s).unwrap_or(0))
 }
 
 /// Appends the fonts of `lang` to the end of every family, after the Latin faces. The toolkit's
 /// default fonts are not built in (feature `default_fonts` off): these are the only fallbacks.
 pub fn add_to(fd: &mut egui::FontDefinitions, lang: Lang) {
     for s in scripts_for(lang) {
-        fd.font_data.insert(s.name().to_owned(), std::sync::Arc::new(egui::FontData::from_static(s.bytes())));
+        let Some(bytes) = s.bytes() else { continue };
+        fd.font_data.insert(s.name().to_owned(), std::sync::Arc::new(egui::FontData::from_static(bytes)));
         for list in fd.families.values_mut() {
             list.push(s.name().to_owned());
         }
     }
 }
 
-#[cfg(test)]
+// the browser build's faces arrive at run time (assets.rs); these check the embedded set
+#[cfg(all(test, not(feature = "external-assets")))]
 mod tests {
     use super::*;
     use crate::theme::{font_definitions_for_lang, UiFont, W_REGULAR};
@@ -279,7 +330,8 @@ mod tests {
     #[test]
     fn subsets_stay_small() {
         for s in [Script::ChineseSc, Script::Japanese, Script::Korean] {
-            assert!(s.bytes().len() <= 3 * 1024 * 1024, "{s:?} is {} bytes", s.bytes().len());
+            let n = s.bytes().map_or(0, <[u8]>::len);
+            assert!(n <= 3 * 1024 * 1024, "{s:?} is {n} bytes");
         }
     }
 }

@@ -112,8 +112,15 @@ fn i18n_all(root: &str) -> String {
         .map(|e| e.file_name().to_string_lossy().into_owned())
         .collect();
     codes.sort();
+    // feature external-assets (browser build): only en and ru are compiled in, the rest arrive as
+    // bundle files (src/assets.rs)
+    let external = env::var_os("CARGO_FEATURE_EXTERNAL_ASSETS").is_some();
     let mut s = String::from("pub const I18N_ALL: &[(&str, &[(&str, &str)])] = &[\n");
     for c in codes {
+        if external && c != "en" && c != "ru" {
+            s += &format!("    ({c:?}, &[]),\n");
+            continue;
+        }
         let files = list(&format!("{root}/{c}"));
         let items: String = files
             .iter()

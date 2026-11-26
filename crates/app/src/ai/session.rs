@@ -28,7 +28,7 @@ use ddc_ai::{
 };
 use ddc_gen::Generator;
 use ddc_model::checks::{CheckRule, Finding, RuleDef};
-use ddc_model::{AuditEntry, Model, PlanCopies};
+use ddc_model::{AuditEntry, CopyStore, MemCopies, Model, PlanCopies};
 use ddc_render::Aabb;
 use serde_json::{json, Value as J};
 use std::cell::{Cell, RefCell};
@@ -95,11 +95,26 @@ pub struct ViewCtx {
 }
 
 /// `Done`: the project lives in memory, so the UI already made the copy with `snapshot_to`.
-#[derive(Clone, Debug)]
+/// `Bytes`: the same without a file (browser build), the model's own bytes.
+#[derive(Clone)]
 pub enum SourceCopy {
     File(PathBuf),
     Done(PathBuf),
+    Bytes(Arc<[u8]>),
 }
+
+impl std::fmt::Debug for SourceCopy {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            SourceCopy::File(p) => f.debug_tuple("File").field(p).finish(),
+            SourceCopy::Done(p) => f.debug_tuple("Done").field(p).finish(),
+            SourceCopy::Bytes(b) => write!(f, "Bytes({} bytes)", b.len()),
+        }
+    }
+}
+
+/// Copies in memory have no folder for more scratch copies.
+const NO_FOLDER: &str = "not available here: the session's copies are held in memory";
 
 pub struct SessionCfg {
     pub provider: Arc<dyn Provider>,
@@ -433,7 +448,8 @@ pub struct Core {
     /// Session language of refusal texts the chat model reads (`refusal::LANGS`, else English).
     pub(crate) lang: &'static str,
     before: Option<Editor>,
-    copies: PlanCopies,
+    /// Files on desktop, memory in the browser build (`MemCopies`): the same calls.
+    copies: Box<dyn CopyStore>,
     pub sets: Sets,
     pub plan: PlanState,
     pub view: ViewCtx,
@@ -508,6 +524,50 @@ pub struct Core {
     /// Marks on the change journal and the findings that stood at each.
     pub checkpoints: super::checkpoints::Checkpoints,
     target: catalog::Target,
+    /// A turn waiting for the host page's answer (browser build): what its end still needs.
+    turn_wait: Option<TurnWait>,
+}
+
+struct TurnWait {
+    kept: Option<String>,
+    last: Option<ddc_ai::UsageTotals>,
+}
+
+/// The conversation's events as worker messages; `last` keeps the latest usage for the audit.
+fn turn_events<'a>(
+    tx: mpsc::Sender<FromWorker>,
+    stop: CancelToken,
+    last: &'a mut Option<ddc_ai::UsageTotals>,
+) -> impl FnMut(ConvoEvent) + 'a {
+    move |e: ConvoEvent| {
+        if stop.is_cancelled() {
+            return;
+        }
+        let m = match e {
+            ConvoEvent::Text(t) => FromWorker::Text(t),
+            ConvoEvent::ToolStart { name } => FromWorker::Tool {
+                name,
+                ok: None,
+                err: None,
+            },
+            ConvoEvent::ToolEnd {
+                name,
+                is_error,
+                detail,
+            } => FromWorker::Tool {
+                name,
+                ok: Some(!is_error),
+                err: detail,
+            },
+            ConvoEvent::Usage(u) => {
+                *last = Some(u);
+                FromWorker::Usage(u)
+            }
+            ConvoEvent::Sent(s) => FromWorker::Sent(s),
+            ConvoEvent::Step(r) => FromWorker::Step(r),
+        };
+        let _ = tx.send(m);
+    }
 }
 
 impl Core {
@@ -621,8 +681,14 @@ impl Core {
     }
 
     /// Base snapshot and the folder for design option copies of this session.
-    pub fn option_paths(&self) -> (PathBuf, PathBuf) {
-        (self.copies.base.clone(), self.copies.dir.join("options"))
+    pub fn option_paths(&self) -> Result<(PathBuf, PathBuf), String> {
+        let dir = self.copies.dir().ok_or(NO_FOLDER)?;
+        Ok((self.copies.base().to_path_buf(), dir.join("options")))
+    }
+
+    /// The folder for agents' dry runs; copies in memory have none.
+    pub(super) fn scratch_dir(&self) -> Result<PathBuf, String> {
+        Ok(self.copies.dir().ok_or(NO_FOLDER)?.to_path_buf())
     }
 
     pub fn next_item_id(&self) -> u32 {
@@ -700,7 +766,7 @@ impl Core {
         let diff = match self
             .ed
             .model
-            .diff_from(&self.copies.base, &touched, DIFF_LIMIT)
+            .diff_from(self.copies.base(), &touched, DIFF_LIMIT)
         {
             Ok(d) => d,
             Err(e) => {
@@ -779,7 +845,7 @@ impl Core {
         if !self
             .ed
             .model
-            .diff_from(&self.copies.base, &touched, 1)?
+            .diff_from(self.copies.base(), &touched, 1)?
             .rows
             .is_empty()
         {
@@ -816,7 +882,7 @@ impl Core {
     }
 
     fn open_scratch(&mut self) -> Result<(), AiError> {
-        let work = Model::open_copy(&self.copies.work.to_string_lossy())?;
+        let work = Model::open_copy(&self.copies.work().to_string_lossy())?;
         // a throwaway copy, made again from the live model after a crash: its commits (one
         // per drafted operation) need not wait for the disk
         work.sql()
@@ -883,7 +949,7 @@ impl Core {
         let raw = self
             .ed
             .model
-            .diff_from(&self.copies.base, &touched, DIFF_LIMIT)?;
+            .diff_from(self.copies.base(), &touched, DIFF_LIMIT)?;
         drop(span);
         let span = ddc_model::perf::span("draft.view.group");
         let mut diff = plan::split_reused(plan::group_diff(&raw), &plan::reused_ids(&self.plan));
@@ -915,7 +981,7 @@ impl Core {
             });
             if old && self.before.is_none() {
                 let _b = ddc_model::perf::span("draft.view.before");
-                self.before = Some(open_editor(&self.copies.base, self.view.units)?);
+                self.before = Some(open_editor(self.copies.base(), self.view.units)?);
             }
             let before = if old { self.before.as_mut() } else { None };
             preview::build(&mut self.ed, before, &diff)
@@ -1056,6 +1122,9 @@ impl Core {
             }
             SourceCopy::Done(p) => {
                 self.copies.adopt(&p)?;
+            }
+            SourceCopy::Bytes(b) => {
+                self.copies.adopt_bytes(&b)?;
             }
         }
         Ok(())
@@ -1304,38 +1373,7 @@ impl Core {
         self.set_view(view);
         self.last_mode = Some(mode);
         let note = format!("{} {}", self.context_note(), self.depth_note(&text));
-        let tx = self.tx.clone();
-        let stop = self.stop.clone();
         let mut last = None;
-        let mut on_event = |e: ConvoEvent| {
-            if stop.is_cancelled() {
-                return;
-            }
-            let m = match e {
-                ConvoEvent::Text(t) => FromWorker::Text(t),
-                ConvoEvent::ToolStart { name } => FromWorker::Tool {
-                    name,
-                    ok: None,
-                    err: None,
-                },
-                ConvoEvent::ToolEnd {
-                    name,
-                    is_error,
-                    detail,
-                } => FromWorker::Tool {
-                    name,
-                    ok: Some(!is_error),
-                    err: detail,
-                },
-                ConvoEvent::Usage(u) => {
-                    last = Some(u);
-                    FromWorker::Usage(u)
-                }
-                ConvoEvent::Sent(s) => FromWorker::Sent(s),
-                ConvoEvent::Step(r) => FromWorker::Step(r),
-            };
-            let _ = tx.send(m);
-        };
         self.critic_cycles = 0;
         self.critic_left = 0;
         self.fam_repair.reset_all();
@@ -1346,7 +1384,69 @@ impl Core {
             Some(b) => format!("{b}{text}"),
             None => text,
         };
-        let res = conv.run_turn(text, note, mode, &mut *self, &mut on_event);
+        let res = {
+            let mut on_event = turn_events(self.tx.clone(), self.stop.clone(), &mut last);
+            conv.run_turn(text, note, mode, &mut *self, &mut on_event)
+        };
+        self.after_turn(res, kept, last);
+    }
+
+    /// Goes on with a turn that waited for the host page (browser build).
+    fn resume(&mut self, conv: &mut Conversation) {
+        let Some(w) = self.turn_wait.take() else {
+            return;
+        };
+        let mut last = w.last;
+        let res = {
+            let mut on_event = turn_events(self.tx.clone(), self.stop.clone(), &mut last);
+            conv.resume_turn(&mut *self, &mut on_event)
+        };
+        self.after_turn(res, w.kept, last);
+    }
+
+    /// One step without waiting (browser build, no threads): a waiting turn goes on once the
+    /// host page answered, then the messages that came meanwhile. `false`: the session is over.
+    pub(crate) fn step(&mut self, conv: &mut Conversation) -> bool {
+        if self.confirm_time_left() == Some(Duration::ZERO) {
+            self.expire_waiting();
+        }
+        loop {
+            if self.turn_wait.is_some() {
+                self.resume(conv);
+                if self.turn_wait.is_some() {
+                    // as between tool calls: only a new copy is taken while the turn waits
+                    self.drain_inbox();
+                    return true;
+                }
+            }
+            let m = match self.deferred.pop_front() {
+                Some(m) => m,
+                None => match self.rx.try_recv() {
+                    Ok(m) => m,
+                    Err(mpsc::TryRecvError::Empty) => return true,
+                    Err(mpsc::TryRecvError::Disconnected) => return false,
+                },
+            };
+            if self.stop.is_cancelled() {
+                lifecycle::discard_msg(m);
+                return false;
+            }
+            if !self.handle(m, conv) {
+                return false;
+            }
+        }
+    }
+
+    fn after_turn(
+        &mut self,
+        res: Result<TurnEnd, ddc_ai::ProviderError>,
+        kept: Option<String>,
+        last: Option<ddc_ai::UsageTotals>,
+    ) {
+        if matches!(&res, Err(e) if ddc_ai::host_bridge::is_pending(e)) {
+            self.turn_wait = Some(TurnWait { kept, last });
+            return;
+        }
         let status = match &res {
             Ok(TurnEnd::Answered) => "ok",
             Ok(TurnEnd::LimitHit(_)) => "limit",
@@ -1618,6 +1718,8 @@ struct WorkerInit {
     cancel: CancelToken,
     stop: CancelToken,
     wake: Arc<OnceLock<egui::Context>>,
+    /// The copies in memory (stepped session, browser build), not in a temp folder.
+    memory: bool,
 }
 
 fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
@@ -1631,8 +1733,13 @@ fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
         cancel,
         stop,
         wake,
+        memory,
     } = init;
-    let copies = PlanCopies::new(&cfg.session)?;
+    let copies: Box<dyn CopyStore> = if memory {
+        Box::new(MemCopies::new(&cfg.session)?)
+    } else {
+        Box::new(PlanCopies::new(&cfg.session)?)
+    };
     let mut gens: Vec<&'static dyn Generator> = ddc_gen::registry().to_vec();
     gens.extend(cfg.extra_generators.iter().copied());
     let mut conv = Conversation::new(
@@ -1700,6 +1807,7 @@ fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
         attachments: Vec::new(),
         requirements: Vec::new(),
         checkpoints: Default::default(),
+        turn_wait: None,
     };
     core.take_copy(source)?;
     core.open_scratch()?;
@@ -1721,33 +1829,9 @@ fn value_refusal(
 }
 
 fn worker(init: WorkerInit) {
-    let tx = init.tx.clone();
-    let head = init.head;
-    let orphan = match &init.source {
-        SourceCopy::Done(p) => Some(p.clone()),
-        SourceCopy::File(_) => None,
-    };
-    let (mut core, mut conv) = match open_core(init) {
-        Ok(x) => x,
-        Err(e) => {
-            if let Some(p) = orphan {
-                lifecycle::remove_snap(&p);
-            }
-            let _ = tx.send(FromWorker::Failed(e));
-            let _ = tx.send(FromWorker::Idle);
-            return;
-        }
-    };
-    if core.stop.is_cancelled() {
-        core.discard_pending();
+    let Some((mut core, mut conv)) = open_worker(init) else {
         return;
-    }
-    let _ = tx.send(FromWorker::Ready {
-        base: core.copies.base.clone(),
-        work: core.copies.work.clone(),
-    });
-    let _ = tx.send(FromWorker::Synced { head });
-    let _ = tx.send(FromWorker::Idle);
+    };
     while let Some(m) = core.next_msg() {
         // checked before every message: a late answer must not land in an ended session
         if core.stop.is_cancelled() {
@@ -1761,9 +1845,51 @@ fn worker(init: WorkerInit) {
     core.discard_pending();
 }
 
+/// The worker's start, shared by the thread (desktop) and the stepped session (browser):
+/// the copies open and Ready / Synced / Idle go out; `None` when it failed or was stopped.
+fn open_worker(init: WorkerInit) -> Option<(Core, Conversation)> {
+    let tx = init.tx.clone();
+    let head = init.head;
+    let orphan = match &init.source {
+        SourceCopy::Done(p) => Some(p.clone()),
+        SourceCopy::File(_) | SourceCopy::Bytes(_) => None,
+    };
+    let (mut core, conv) = match open_core(init) {
+        Ok(x) => x,
+        Err(e) => {
+            if let Some(p) = orphan {
+                lifecycle::remove_snap(&p);
+            }
+            let _ = tx.send(FromWorker::Failed(e));
+            let _ = tx.send(FromWorker::Idle);
+            return None;
+        }
+    };
+    if core.stop.is_cancelled() {
+        core.discard_pending();
+        return None;
+    }
+    let _ = tx.send(FromWorker::Ready {
+        base: core.copies.base().to_path_buf(),
+        work: core.copies.work().to_path_buf(),
+    });
+    let _ = tx.send(FromWorker::Synced { head });
+    let _ = tx.send(FromWorker::Idle);
+    Some((core, conv))
+}
+
+/// The worker without a thread (browser build): `UiSession::pump_core` steps it every frame.
+pub(crate) struct Stepped {
+    core: Core,
+    conv: Conversation,
+    /// Dropped when the stepped worker ends, as the thread's end drops its sender.
+    _done: mpsc::Sender<()>,
+}
+
 static SNAP_SEQ: AtomicU64 = AtomicU64::new(0);
 
-fn source_of(ed: &Editor) -> Result<SourceCopy, AiError> {
+/// `memory`: the copies live in memory, so a project in memory goes over as its bytes.
+fn source_of(ed: &Editor, memory: bool) -> Result<SourceCopy, AiError> {
     let file: String = ed
         .model
         .sql()
@@ -1772,8 +1898,11 @@ fn source_of(ed: &Editor) -> Result<SourceCopy, AiError> {
     if !file.is_empty() {
         return Ok(SourceCopy::File(PathBuf::from(file)));
     }
+    if memory {
+        return Ok(SourceCopy::Bytes(ed.model.to_bytes()?.into()));
+    }
     let n = SNAP_SEQ.fetch_add(1, Ordering::Relaxed);
-    let path = std::env::temp_dir().join(format!("ddc-ai-snap-{}-{n}.db", std::process::id()));
+    let path = ddc_model::temp_dir().join(format!("ddc-ai-snap-{}-{n}.db", ddc_model::process_id()));
     ed.model.snapshot_to(&path)?;
     Ok(SourceCopy::Done(path))
 }
@@ -1790,6 +1919,10 @@ pub fn live_policy(ed: &Editor) -> McpPolicy {
 
 /// The UI-side handle. `pump_core` must run once a frame on the thread that owns the live `Editor`.
 pub struct UiSession {
+    /// The worker without a thread (browser build), stepped in `pump_core`.
+    stepped: Option<Box<Stepped>>,
+    /// The worker's copies are in memory: syncs carry the model's bytes, never a temp file.
+    memory: bool,
     tx: mpsc::Sender<ToWorker>,
     rx: mpsc::Receiver<FromWorker>,
     cancel: CancelToken,
@@ -1860,10 +1993,34 @@ pub(crate) fn src_kind(items: &[plan::PlanItem]) -> ddc_model::SrcKind {
 }
 
 impl UiSession {
+    /// One step of the threadless worker: what came meanwhile, a waiting turn once answered.
+    fn step_worker(&mut self) {
+        let Some(s) = self.stepped.as_mut() else {
+            return;
+        };
+        let Stepped { core, conv, .. } = &mut **s;
+        if !core.step(conv) {
+            if let Some(mut s) = self.stepped.take() {
+                s.core.discard_pending();
+            }
+        }
+    }
+
+    /// A worker thread on desktop; in the browser (no threads) the stepped worker.
     pub fn start(ed: &Editor, cfg: SessionCfg, view: ViewCtx) -> Result<UiSession, AiError> {
+        Self::start_mode(ed, cfg, view, cfg!(target_arch = "wasm32"))
+    }
+
+    /// The worker runs inside `pump_core`, a step per frame, never blocking: the browser
+    /// build's mode (a provider over the host page answers "pending" until the reply is in).
+    pub fn start_stepped(ed: &Editor, cfg: SessionCfg, view: ViewCtx) -> Result<UiSession, AiError> {
+        Self::start_mode(ed, cfg, view, true)
+    }
+
+    fn start_mode(ed: &Editor, cfg: SessionCfg, view: ViewCtx, stepped: bool) -> Result<UiSession, AiError> {
         ddc_model::set_audit_scrubber(ddc_ai::secret::scrub_known);
         let head = ed.model.change_head();
-        let source = source_of(ed)?;
+        let source = source_of(ed, stepped)?;
         mcp_info::set_project(ed.project.path());
         let (to_tx, to_rx) = mpsc::channel();
         let (from_tx, from_rx) = mpsc::channel();
@@ -1884,19 +2041,29 @@ impl UiSession {
             cancel: cancel.clone(),
             stop: stop.clone(),
             wake: wake.clone(),
+            memory: stepped,
         };
-        // the worker never writes the live model: proposals come back and run on the main thread;
-        // a crash drops the channel and pump_core reports the internal error
-        let join = crate::jobs::spawn_guarded(
-            "ai-worker",
-            move || {
-                let _done = done_tx;
-                worker(init)
-            },
-            |_| {},
-        )
-        .map_err(|e| AiError::Internal(e.to_string()))?;
+        let (join, stepped_worker) = if stepped {
+            // a failed open already sent Failed + Idle; the dropped sender then ends the session
+            let s = open_worker(init).map(|(core, conv)| Box::new(Stepped { core, conv, _done: done_tx }));
+            (None, s)
+        } else {
+            // the worker never writes the live model: proposals come back and run on the main thread;
+            // a crash drops the channel and pump_core reports the internal error
+            let join = crate::jobs::spawn_guarded(
+                "ai-worker",
+                move || {
+                    let _done = done_tx;
+                    worker(init)
+                },
+                |_| {},
+            )
+            .map_err(|e| AiError::Internal(e.to_string()))?;
+            (Some(join), None)
+        };
         Ok(UiSession {
+            stepped: stepped_worker,
+            memory: stepped,
             tx: to_tx,
             rx: from_rx,
             cancel,
@@ -1920,7 +2087,7 @@ impl UiSession {
             events: VecDeque::new(),
             snapshots: VecDeque::new(),
             paths: None,
-            join: Some(join),
+            join,
             done: Some(done_rx),
             gesture: false,
             agent_out: 0,
@@ -2640,7 +2807,7 @@ impl UiSession {
     }
 
     fn send_sync(&mut self, ed: &Editor) {
-        match source_of(ed) {
+        match source_of(ed, self.memory) {
             Ok(source) => {
                 self.sync_out = true;
                 self.force_sync = false;
@@ -2661,6 +2828,7 @@ impl UiSession {
     pub fn pump_core(&mut self, ed: &mut Editor) {
         // Save As moves the project: agents must see the new file at once
         mcp_info::set_project(ed.project.path());
+        self.step_worker();
         loop {
             match self.rx.try_recv() {
                 Ok(m) => self.on_message(m, ed),

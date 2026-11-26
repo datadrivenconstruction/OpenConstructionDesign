@@ -9,6 +9,7 @@ pub mod egress;
 pub mod fake;
 pub mod family_draft;
 pub mod family_repair;
+pub mod host_bridge;
 mod http;
 pub mod journal;
 pub mod limits;

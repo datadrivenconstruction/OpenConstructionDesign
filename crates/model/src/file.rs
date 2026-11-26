@@ -70,7 +70,7 @@ pub(crate) fn tmp_path(dst: &Path) -> PathBuf {
     let mut s = dst.as_os_str().to_owned();
     s.push(format!(
         ".tmp-{}-{}-{ns}",
-        std::process::id(),
+        crate::process_id(),
         SEQ.fetch_add(1, Ordering::Relaxed)
     ));
     PathBuf::from(s)

@@ -15,13 +15,21 @@ ddc-gen = { path = "../gen" }
 ddc-geom = { path = "../geom" }
 ddc-model = { path = "../model" }
 ddc-ops = { path = "../ops" }
-ddc-script = { path = "../script" }
+# recipe texts only; the interpreter (feature `lua`) comes from the desktop editor
+ddc-script = { path = "../script", default-features = false }
 getrandom.workspace = true
-native-tls.workspace = true
 serde.workspace = true
 serde_json.workspace = true
 thiserror.workspace = true
+
+[target.'cfg(not(target_arch = "wasm32"))'.dependencies]
+native-tls.workspace = true
 ureq.workspace = true
+
+# browser build: no TLS stack of its own (AI goes through the ERP host); random from the browser
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+ureq = { version = "2", default-features = false }
+getrandom = { workspace = true, features = ["js"] }
 
 # Other platforms have no vault integration: keys stay in MemoryStore for the session.
 [target.'cfg(any(windows, target_os = "macos"))'.dependencies]

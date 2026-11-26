@@ -416,7 +416,7 @@ impl ProjectLock {
         let file = take_lock(&path)?;
         // the lock file itself cannot be read by others while it is held: the owner is told apart
         // by a second small file, for "switch to that window"
-        let _ = fs::write(side(target, ".lock.pid"), std::process::id().to_string());
+        let _ = fs::write(side(target, ".lock.pid"), crate::process_id().to_string());
         Ok(Self {
             file: Some(file),
             path,
@@ -464,7 +464,7 @@ fn take_lock(path: &Path) -> Result<File, LockError> {
             .open(path)
         {
             Ok(mut f) => {
-                let _ = write!(f, "{}", std::process::id());
+                let _ = write!(f, "{}", crate::process_id());
                 return Ok(f);
             }
             Err(e) if e.kind() == std::io::ErrorKind::AlreadyExists => {

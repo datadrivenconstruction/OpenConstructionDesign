@@ -350,6 +350,13 @@ fn cut_short(ev: &SseEvent, e: ProviderError) -> ProviderError {
 /// TLS and roots come from the OS (corporate networks). A local address never goes
 /// through a proxy: that would send local traffic off the machine. `https_only` repeats
 /// the guard's rule for keys, so one forgotten check cannot leak one.
+#[cfg(target_arch = "wasm32")]
+fn build_agent(_local: bool, _sends_secret: bool) -> Result<ureq::Agent, ProviderError> {
+    // the browser build has no sockets: AI calls go through the host (ERP AI profile)
+    Err(ProviderError::Network("AI providers are reached through the ERP in the browser".into()))
+}
+
+#[cfg(not(target_arch = "wasm32"))]
 fn build_agent(local: bool, sends_secret: bool) -> Result<ureq::Agent, ProviderError> {
     let tls =
         native_tls::TlsConnector::new().map_err(|e| ProviderError::Network(format!("tls: {e}")))?;

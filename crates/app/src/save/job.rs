@@ -291,7 +291,7 @@ fn sweep_stale(target: &Path) {
         }
         let old = e
             .metadata()
-            .and_then(|m| m.modified())
+            .and_then(|m| ddc_model::wtime::modified(&m))
             .ok()
             .and_then(|t| SystemTime::now().duration_since(t).ok())
             .is_some_and(|age| age.as_secs() > STALE_AFTER);

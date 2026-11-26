@@ -250,7 +250,9 @@ pub struct Catalog {
     tables: [OnceLock<BTreeMap<String, Value>>; N_LANGS],
 }
 
-use crate::fragments::{I18N_ALL, I18N_EN_FRAGMENTS, I18N_RU_FRAGMENTS};
+#[cfg(any(test, not(feature = "external-assets")))]
+use crate::fragments::I18N_ALL;
+use crate::fragments::{I18N_EN_FRAGMENTS, I18N_RU_FRAGMENTS};
 use std::sync::OnceLock;
 
 /// Base files plus fragments of one language; only `en` and `ru` have base files.
@@ -259,6 +261,13 @@ fn load_lang(lang: Lang) -> BTreeMap<String, Value> {
     let (base, frags): (&[&str], &[(&str, &str)]) = match lang {
         Lang::En => (&EN[..], I18N_EN_FRAGMENTS),
         Lang::Ru => (&RU[..], I18N_RU_FRAGMENTS),
+        // browser build: one merged catalog per locale from the bundle (`table` waits for it)
+        #[cfg(feature = "external-assets")]
+        _ => {
+            let bytes = crate::assets::get(&crate::assets::locale_path(lang.code())).unwrap_or(b"{}");
+            return load(&[std::str::from_utf8(bytes).unwrap_or("{}")], &[]);
+        }
+        #[cfg(not(feature = "external-assets"))]
         _ => (
             &[][..],
             I18N_ALL.iter().find(|e| e.0 == lang.code()).map_or(&[][..], |e| e.1),
@@ -290,7 +299,19 @@ impl Catalog {
     }
     /// Table of one language, parsed on first use.
     pub fn table(&self, lang: Lang) -> &BTreeMap<String, Value> {
-        self.tables[lang as usize].get_or_init(|| load_lang(lang))
+        let cell = &self.tables[lang as usize];
+        if let Some(t) = cell.get() {
+            return t;
+        }
+        // not cached while its bundle file is on the way: lookups fall back to the next language
+        #[cfg(feature = "external-assets")]
+        if !matches!(lang, Lang::En | Lang::Ru)
+            && crate::assets::get(&crate::assets::locale_path(lang.code())).is_none()
+        {
+            static EMPTY: BTreeMap<String, Value> = BTreeMap::new();
+            return &EMPTY;
+        }
+        cell.get_or_init(|| load_lang(lang))
     }
     fn lookup(&self, key: &str) -> Option<(Lang, &Value)> {
         self.lang

@@ -69,7 +69,7 @@ fn work_dir() -> PathBuf {
     if let Some(d) = std::env::var_os("DDC_WORK_DIR") {
         return PathBuf::from(d);
     }
-    app_dir().unwrap_or_else(std::env::temp_dir).join("work")
+    app_dir().unwrap_or_else(ddc_model::temp_dir).join("work")
 }
 
 fn beside(p: &Path, suffix: &str) -> PathBuf {
@@ -613,7 +613,7 @@ pub fn recent_from(list: &[String]) -> Vec<RecentProject> {
                 name: path
                     .file_stem()
                     .map_or_else(|| s.clone(), |n| n.to_string_lossy().into_owned()),
-                modified: std::fs::metadata(&path).and_then(|m| m.modified()).ok(),
+                modified: std::fs::metadata(&path).and_then(|m| ddc_model::wtime::modified(&m)).ok(),
                 thumbnail: thumb_path(&path).filter(|t| t.exists()),
                 path,
             }

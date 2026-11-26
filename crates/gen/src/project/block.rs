@@ -631,16 +631,22 @@ pub fn build_all(briefs: &[J], workers: usize) -> Vec<Result<Built, String>> {
     let results: Mutex<Vec<Option<Result<Built, String>>>> = Mutex::new(vec![None; briefs.len()]);
     let next = AtomicUsize::new(0);
     let w = workers.clamp(1, briefs.len().max(1));
-    std::thread::scope(|s| {
-        for _ in 0..w {
-            s.spawn(|| loop {
-                let i = next.fetch_add(1, Ordering::Relaxed);
-                let Some(b) = briefs.get(i) else { break };
-                let r = build_one(b);
-                results.lock().unwrap_or_else(|e| e.into_inner())[i] = Some(r);
-            });
-        }
-    });
+    let work = || loop {
+        let i = next.fetch_add(1, Ordering::Relaxed);
+        let Some(b) = briefs.get(i) else { break };
+        let r = build_one(b);
+        results.lock().unwrap_or_else(|e| e.into_inner())[i] = Some(r);
+    };
+    if cfg!(target_arch = "wasm32") {
+        // no threads in the browser
+        work();
+    } else {
+        std::thread::scope(|s| {
+            for _ in 0..w {
+                s.spawn(&work);
+            }
+        });
+    }
     results
         .into_inner()
         .unwrap_or_else(|e| e.into_inner())

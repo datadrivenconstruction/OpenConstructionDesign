@@ -17,6 +17,10 @@ pub const LINK: &str = include_str!("../contract/schemas/link.schema.json");
 pub const CONTEXT: &str = include_str!("../contract/schemas/context.schema.json");
 pub const ELEMENT_ROW: &str = include_str!("../contract/schemas/element-row.schema.json");
 
+/// Parquet codecs of `elements.parquet` the ERP intake reads (its reader is not limited to one
+/// codec; the intake only limits the zip member method). Desktop writes ZSTD, the browser SNAPPY.
+pub const ELEMENTS_CODECS: &[&str] = &["ZSTD", "SNAPPY"];
+
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Doc {
     Revision,

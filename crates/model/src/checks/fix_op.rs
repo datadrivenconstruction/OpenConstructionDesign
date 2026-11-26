@@ -369,10 +369,10 @@ impl Scratch {
     fn of(live: &Model) -> Result<Self, Error> {
         static SEQ: std::sync::atomic::AtomicU64 = std::sync::atomic::AtomicU64::new(0);
         let n = SEQ.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
-        let name = format!("ddc-fix-dry-{}-{n}.db", std::process::id());
+        let name = format!("ddc-fix-dry-{}-{n}.db", crate::process_id());
         let mut s = Scratch {
             model: None,
-            path: std::env::temp_dir().join(name),
+            path: crate::temp_dir().join(name),
         };
         s.remove_files();
         live.snapshot_to(&s.path)?;

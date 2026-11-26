@@ -62,11 +62,21 @@ pub fn read_all(path: &Path) -> Result<BTreeMap<String, Vec<u8>>, String> {
 fn read_capped(path: &Path, max: u64) -> Result<BTreeMap<String, Vec<u8>>, String> {
     let f = std::fs::File::open(path).map_err(|e| format!("{}: {e}", path.display()))?;
     let file_len = f.metadata().map_or(u64::MAX, |m| m.len());
-    let mut z = zip::ZipArchive::new(std::io::BufReader::new(f)).map_err(|e| format!("{}: not a zip: {e}", path.display()))?;
+    read_zip(std::io::BufReader::new(f), &path.display().to_string(), file_len, max)
+}
+
+/// Every entry of a package held in memory (the browser has no files), by name, with the same
+/// limits as [`read_all`].
+pub fn read_all_bytes(bytes: &[u8]) -> Result<BTreeMap<String, Vec<u8>>, String> {
+    read_zip(std::io::Cursor::new(bytes), "package", bytes.len() as u64, max_total())
+}
+
+fn read_zip<R: Read + std::io::Seek>(r: R, label: &str, file_len: u64, max: u64) -> Result<BTreeMap<String, Vec<u8>>, String> {
+    let mut z = zip::ZipArchive::new(r).map_err(|e| format!("{label}: not a zip: {e}"))?;
     if z.len() > MAX_ENTRIES {
-        return Err(format!("{}: {} entries, more than the {MAX_ENTRIES} a package may hold", path.display(), z.len()));
+        return Err(format!("{label}: {} entries, more than the {MAX_ENTRIES} a package may hold", z.len()));
     }
-    let limit = |name: &str| format!("{}: entry '{name}' goes past the package limit of {} MiB", path.display(), max >> 20);
+    let limit = |name: &str| format!("{label}: entry '{name}' goes past the package limit of {} MiB", max >> 20);
     let mut out = BTreeMap::new();
     let mut left = max;
     let mut chunk = vec![0u8; 64 << 10];
@@ -75,9 +85,9 @@ fn read_capped(path: &Path, max: u64) -> Result<BTreeMap<String, Vec<u8>>, Strin
         if e.is_dir() {
             continue;
         }
-        let name = e.name().map_err(|err| format!("{}: bad entry name: {err}", path.display()))?.into_owned();
+        let name = e.name().map_err(|err| format!("{label}: bad entry name: {err}"))?.into_owned();
         if name.contains("..") || name.starts_with('/') || name.contains('\\') {
-            return Err(format!("{}: unsafe entry name '{name}'", path.display()));
+            return Err(format!("{label}: unsafe entry name '{name}'"));
         }
         if e.size() > left {
             return Err(limit(&name));
@@ -97,8 +107,7 @@ fn read_capped(path: &Path, max: u64) -> Result<BTreeMap<String, Vec<u8>>, Strin
             let got = buf.len() as u64;
             if got > RATIO_FROM && got > packed.saturating_mul(MAX_RATIO) {
                 return Err(format!(
-                    "{}: entry '{name}' inflates more than {MAX_RATIO} times its packed size (a zip bomb?)",
-                    path.display()
+                    "{label}: entry '{name}' inflates more than {MAX_RATIO} times its packed size (a zip bomb?)"
                 ));
             }
         }
@@ -106,7 +115,7 @@ fn read_capped(path: &Path, max: u64) -> Result<BTreeMap<String, Vec<u8>>, Strin
         buf.shrink_to_fit();
         left -= buf.len() as u64;
         if out.insert(name.clone(), buf).is_some() {
-            return Err(format!("{}: entry '{name}' appears twice", path.display()));
+            return Err(format!("{label}: entry '{name}' appears twice"));
         }
     }
     Ok(out)
@@ -115,7 +124,15 @@ fn read_capped(path: &Path, max: u64) -> Result<BTreeMap<String, Vec<u8>>, Strin
 /// Re-reads a package and checks it against its own manifest: every listed file present with the
 /// listed hash and size, nothing unlisted. Returns the manifest.
 pub fn verify(path: &Path) -> Result<Value, String> {
-    let all = read_all(path)?;
+    verify_entries(&read_all(path)?)
+}
+
+/// [`verify`] of a package held in memory.
+pub fn verify_bytes(bytes: &[u8]) -> Result<Value, String> {
+    verify_entries(&read_all_bytes(bytes)?)
+}
+
+fn verify_entries(all: &BTreeMap<String, Vec<u8>>) -> Result<Value, String> {
     let m: Value = serde_json::from_slice(all.get("manifest.json").ok_or("no manifest.json")?).map_err(|e| format!("manifest.json: {e}"))?;
     let mut listed = std::collections::BTreeSet::from(["manifest.json".to_string()]);
     for f in m["files"].as_array().ok_or("manifest has no files list")? {
@@ -183,6 +200,15 @@ mod tests {
         std::fs::write(&p, zip_bytes(&e, &|_| false).unwrap()).unwrap();
         assert!(verify(&p).unwrap_err().contains("missing"));
         let _ = std::fs::remove_file(&p);
+    }
+
+    #[test]
+    fn a_package_in_memory_verifies_like_the_file() {
+        let good = pack(&[("model.ddc", b"abc")], false);
+        assert_eq!(read_all_bytes(&good).unwrap()["model.ddc"], b"abc");
+        verify_bytes(&good).unwrap();
+        assert!(verify_bytes(&pack(&[("model.ddc", b"abc")], true)).unwrap_err().contains("sha256"));
+        assert!(read_all_bytes(b"not a zip").is_err());
     }
 
     #[test]

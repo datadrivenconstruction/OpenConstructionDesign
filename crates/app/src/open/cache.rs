@@ -94,7 +94,7 @@ pub fn remember(dir: &Path, path: &Path, stat: Stat, hash: &str) {
 pub fn lookup(dir: &Path, key: &str) -> Option<PathBuf> {
     let p = entry_path(dir, key);
     let f = std::fs::OpenOptions::new().write(true).open(&p).ok()?;
-    let _ = f.set_modified(SystemTime::now());
+    let _ = f.set_modified(ddc_model::wtime::to_std(SystemTime::now()));
     Some(p)
 }
 
@@ -111,7 +111,7 @@ pub fn entries(dir: &Path) -> Vec<(PathBuf, u64, SystemTime)> {
         })
         .filter_map(|e| {
             let md = e.metadata().ok()?;
-            Some((e.path(), md.len(), md.modified().ok()?))
+            Some((e.path(), md.len(), ddc_model::wtime::modified(&md).ok()?))
         })
         .collect()
 }

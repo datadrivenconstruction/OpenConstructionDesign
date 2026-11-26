@@ -217,7 +217,12 @@ pub fn variants_of(brief: &J, seed: u64) -> Result<Vec<VarView>, String> {
 
 fn spawn<T: Send + 'static>(f: impl FnOnce() -> Result<T, String> + Send + 'static) -> Job<T> {
     let (tx, rx) = mpsc::channel();
+    // no threads in the browser: run now, the result waits in the channel
+    #[cfg(target_arch = "wasm32")]
+    let _ = tx.send(f());
+    #[cfg(not(target_arch = "wasm32"))]
     let tx_panic = tx.clone();
+    #[cfg(not(target_arch = "wasm32"))]
     let _ = crate::jobs::spawn_guarded(
         "ddc-gen-rules",
         move || {

@@ -5,6 +5,7 @@
 
 use std::fmt;
 use std::io::Read;
+#[cfg(not(target_arch = "wasm32"))]
 use std::net::{SocketAddr, ToSocketAddrs};
 use std::path::Path;
 use std::sync::{Arc, Mutex};
@@ -21,10 +22,12 @@ pub const API: &str = "/api/v1/design";
 /// Contract majors this client speaks, sent as `X-DDC-Link`.
 pub const LINK_VERSIONS: &[u32] = &[1];
 
+#[cfg(not(target_arch = "wasm32"))]
 const CONNECT_TIMEOUT: Duration = Duration::from_secs(10);
 const READ_TIMEOUT: Duration = Duration::from_secs(120);
 /// The ERP ingests the package before it answers the upload.
 const UPLOAD_READ_TIMEOUT: Duration = Duration::from_secs(30 * 60);
+#[cfg(not(target_arch = "wasm32"))]
 const WRITE_TIMEOUT: Duration = Duration::from_secs(120);
 const ERROR_BODY_MAX: u64 = 1 << 20;
 const JSON_BODY_MAX: u64 = 64 << 20;
@@ -122,6 +125,12 @@ impl fmt::Debug for Client {
     }
 }
 
+#[cfg(target_arch = "wasm32")]
+fn agent(_erp: &ErpUrl, _read: Duration) -> Result<ureq::Agent, LinkError> {
+    Err(LinkError::Network("in the browser the host page carries the ERP link".into()))
+}
+
+#[cfg(not(target_arch = "wasm32"))]
 fn agent(erp: &ErpUrl, read: Duration) -> Result<ureq::Agent, LinkError> {
     let tls = native_tls::TlsConnector::new().map_err(|e| LinkError::Network(format!("tls: {e}")))?;
     // No redirects: a bearer token must not follow one to another host. A loopback ERP is
@@ -137,6 +146,7 @@ fn agent(erp: &ErpUrl, read: Duration) -> Result<ureq::Agent, LinkError> {
     Ok(if erp.loopback { b.resolver(loopback_only).build() } else { b.build() })
 }
 
+#[cfg(not(target_arch = "wasm32"))]
 fn loopback_only(netloc: &str) -> std::io::Result<Vec<SocketAddr>> {
     let v: Vec<SocketAddr> = netloc.to_socket_addrs()?.filter(|a| a.ip().is_loopback()).collect();
     if v.is_empty() {

@@ -298,6 +298,13 @@ pub fn check(fetch: Fetch, base: &str, facts: &Facts) -> Outcome {
     }
 }
 
+#[cfg(target_arch = "wasm32")]
+fn http_get(_url: &str) -> Result<String, String> {
+    // the browser build is updated with the ERP, never by itself
+    Err("no update check in the browser".into())
+}
+
+#[cfg(not(target_arch = "wasm32"))]
 fn http_get(url: &str) -> Result<String, String> {
     let tls = native_tls::TlsConnector::new().map_err(|e| format!("tls: {e}"))?;
     let agent = ureq::AgentBuilder::new()

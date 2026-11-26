@@ -2,18 +2,19 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! The only place that talks to the native file dialogs. Builder methods mirror the dialog crate;
 //! the terminal calls return `None` (or `false`) without touching the OS while the screenshot
-//! flag is set, so an offscreen run can never block on a picker. A build without the `gui`
-//! feature has no window to parent a dialog: every call is blocked there.
+//! flag is set, so an offscreen run can never block on a picker. A build without the `desktop`
+//! feature (headless CLI, browser) has no OS dialog: every call is blocked there.
 use std::path::{Path, PathBuf};
 
-#[cfg(feature = "gui")]
+#[cfg(feature = "desktop")]
 use rfd::FileDialog;
 
-/// Headless build: the builder keeps nothing, and the pickers are never reached (always blocked).
-#[cfg(not(feature = "gui"))]
+/// Headless and browser builds: the builder keeps nothing, and the pickers are never reached
+/// (always blocked).
+#[cfg(not(feature = "desktop"))]
 struct FileDialog;
 
-#[cfg(not(feature = "gui"))]
+#[cfg(not(feature = "desktop"))]
 impl FileDialog {
     fn new() -> Self {
         Self
@@ -80,7 +81,7 @@ impl Dlg {
 
     /// Explicit gate, for tests that must not flip the global screenshot flag.
     pub fn with_blocked(blocked: bool) -> Self {
-        Self { inner: FileDialog::new(), blocked: blocked || cfg!(not(feature = "gui")) }
+        Self { inner: FileDialog::new(), blocked: blocked || cfg!(not(feature = "desktop")) }
     }
 
     pub fn add_filter(mut self, name: impl Into<String>, exts: &[impl ToString]) -> Self {
@@ -151,20 +152,23 @@ fn confirm_gated(blocked: bool, title: impl Into<String>, text: impl Into<String
     if blocked {
         return false;
     }
-    #[cfg(feature = "gui")]
-    {
-        rfd::MessageDialog::new()
-            .set_title(title)
-            .set_description(text)
-            .set_buttons(rfd::MessageButtons::YesNo)
-            .show()
-            == rfd::MessageDialogResult::Yes
-    }
-    #[cfg(not(feature = "gui"))]
-    {
-        let _ = (title, text);
-        false
-    }
+    ask_os(title.into(), text.into())
+}
+
+#[cfg(feature = "desktop")]
+fn ask_os(title: String, text: String) -> bool {
+    rfd::MessageDialog::new()
+        .set_title(title)
+        .set_description(text)
+        .set_buttons(rfd::MessageButtons::YesNo)
+        .show()
+        == rfd::MessageDialogResult::Yes
+}
+
+/// No OS message box without `desktop`: the answer is No.
+#[cfg(not(feature = "desktop"))]
+fn ask_os(_title: String, _text: String) -> bool {
+    false
 }
 
 #[cfg(test)]

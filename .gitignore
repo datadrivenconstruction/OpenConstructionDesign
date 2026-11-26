@@ -10,3 +10,4 @@ __pycache__/
 *.pyc
 _archive/
 tools/bigfile_bench/corpus.md
+/dist/

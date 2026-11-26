@@ -239,6 +239,33 @@ pub struct Conversation {
     /// The steps of the last turn, for the step feed and the export.
     journal: TaskJournal,
     step_started: Option<Instant>,
+    /// A turn waiting for the host page's answer (browser build): `resume_turn` goes on with it.
+    open: Option<OpenTurn>,
+}
+
+/// Where a turn stands between two model steps.
+struct OpenTurn {
+    mode: Mode,
+    deadline: Instant,
+    tools: Vec<ToolSchema>,
+    tools_tokens: u64,
+    sent_groups: usize,
+    turn_start: usize,
+    turn: Usage,
+    steps: u32,
+    tool_calls: u32,
+    empty_replies: u32,
+    /// per tool: the last refusal's signature and how many times in a row it came back
+    repeats: std::collections::HashMap<String, (String, u32)>,
+}
+
+fn schemas_for(mode: Mode, images: bool, loaded: &std::collections::BTreeSet<String>) -> (Vec<ToolSchema>, u64) {
+    let tools = toolset::chat_schemas(mode, images, loaded);
+    let tokens: u64 = tools
+        .iter()
+        .map(|t| text_tokens(&t.name) + text_tokens(&t.description) + text_tokens(&t.input_schema.to_string()))
+        .sum();
+    (tools, tokens)
 }
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -630,6 +657,7 @@ impl Conversation {
             turn_delta: 0.0,
             journal: TaskJournal::default(),
             step_started: None,
+            open: None,
         }
     }
 
@@ -681,14 +709,49 @@ impl Conversation {
     ) -> Result<TurnEnd, ProviderError> {
         REQUEST.with(|r| *r.borrow_mut() = user.clone());
         self.journal = TaskJournal::new(&user);
+        // a turn left waiting is over once a new one starts
+        self.open = None;
         let r = self.turn_steps(user, context_note, mode, host, ev);
-        self.journal.end = Some(match &r {
+        self.end_journal(&r);
+        r
+    }
+
+    /// A turn is waiting for the host page's answer ([`crate::host_bridge::PENDING`]).
+    pub fn turn_waiting(&self) -> bool {
+        self.open.is_some()
+    }
+
+    /// Goes on with the turn that waited for the host page: the same request is asked again
+    /// (the mailbox has its answer once the host replied). Pending again: the same error again.
+    pub fn resume_turn(
+        &mut self,
+        host: &mut dyn ToolHost,
+        ev: &mut dyn FnMut(ConvoEvent),
+    ) -> Result<TurnEnd, ProviderError> {
+        let Some(st) = self.open.take() else {
+            return Err(ProviderError::Protocol("no turn is waiting".into()));
+        };
+        // a stop while the host page has the request: the late answer is never read
+        let r = if self.cancel.is_cancelled() {
+            Ok(TurnEnd::Cancelled)
+        } else {
+            self.drive(st, host, ev)
+        };
+        self.end_journal(&r);
+        r
+    }
+
+    /// Records how the turn ended; a turn waiting for the host page has not ended yet.
+    fn end_journal(&mut self, r: &Result<TurnEnd, ProviderError>) {
+        if matches!(r, Err(e) if crate::host_bridge::is_pending(e)) {
+            return;
+        }
+        self.journal.end = Some(match r {
             Ok(TurnEnd::Answered) => "answered".to_string(),
             Ok(TurnEnd::LimitHit(l)) => format!("limit:{l}"),
             Ok(TurnEnd::Cancelled) => "cancelled".to_string(),
             Err(_) => "failed".to_string(),
         });
-        r
     }
 
     fn turn_steps(
@@ -708,26 +771,13 @@ impl Conversation {
                 self.loaded.insert(g.to_string());
             }
         }
-        let images = self.profile.images;
-        let schemas_now = move |loaded: &std::collections::BTreeSet<String>| {
-            let tools = toolset::chat_schemas(mode, images, loaded);
-            let tokens: u64 = tools
-                .iter()
-                .map(|t| {
-                    text_tokens(&t.name)
-                        + text_tokens(&t.description)
-                        + text_tokens(&t.input_schema.to_string())
-                })
-                .sum();
-            (tools, tokens)
-        };
-        let (mut tools, mut tools_tokens) = schemas_now(&self.loaded);
-        let mut sent_groups = self.loaded.len();
+        let (tools, tools_tokens) = schemas_for(mode, self.profile.images, &self.loaded);
+        let sent_groups = self.loaded.len();
         // once a turn, so the cached prefix breaks at most here; within a turn it only grows
         for p in self.messages.iter_mut().flat_map(|m| m.parts.iter_mut()) {
             settle_part(p);
         }
-        let mut turn_start = self.messages.len();
+        let turn_start = self.messages.len();
         let mut parts = Vec::with_capacity(2);
         if !context_note.is_empty() {
             // Level names and selection are model data: the marker keeps them from closing the block.
@@ -742,13 +792,43 @@ impl Conversation {
             parts,
         });
 
-        let mut turn = Usage::default();
-        let mut steps = 0u32;
-        let mut tool_calls = 0u32;
-        let mut empty_replies = 0u32;
         self.turn_delta = 0.0;
-        // per tool: the last refusal's signature and how many times in a row it came back
-        let mut repeats: std::collections::HashMap<String, (String, u32)> = Default::default();
+        let st = OpenTurn {
+            mode,
+            deadline,
+            tools,
+            tools_tokens,
+            sent_groups,
+            turn_start,
+            turn: Usage::default(),
+            steps: 0,
+            tool_calls: 0,
+            empty_replies: 0,
+            repeats: Default::default(),
+        };
+        self.drive(st, host, ev)
+    }
+
+    /// The step loop of a turn, from where `st` stands.
+    fn drive(
+        &mut self,
+        st: OpenTurn,
+        host: &mut dyn ToolHost,
+        ev: &mut dyn FnMut(ConvoEvent),
+    ) -> Result<TurnEnd, ProviderError> {
+        let OpenTurn {
+            mode,
+            deadline,
+            mut tools,
+            mut tools_tokens,
+            mut sent_groups,
+            mut turn_start,
+            mut turn,
+            mut steps,
+            mut tool_calls,
+            mut empty_replies,
+            mut repeats,
+        } = st;
         loop {
             if let Some(end) = self.budget_end(steps, turn, deadline) {
                 return Ok(end);
@@ -782,6 +862,23 @@ impl Conversation {
             };
             let step = match attempt {
                 Ok(s) => s,
+                Err(e) if crate::host_bridge::is_pending(&e) => {
+                    // the host page has not answered: the turn waits as it is, this step not taken
+                    self.open = Some(OpenTurn {
+                        mode,
+                        deadline,
+                        tools,
+                        tools_tokens,
+                        sent_groups,
+                        turn_start,
+                        turn,
+                        steps: steps - 1,
+                        tool_calls,
+                        empty_replies,
+                        repeats,
+                    });
+                    return Err(e);
+                }
                 Err(e) => {
                     // Nothing happened in this turn yet: leave no trace, so a retry
                     // of the same text does not send it twice.
@@ -957,7 +1054,7 @@ impl Conversation {
             }
             // a loaded group joins the next request; the list stays put otherwise (cache)
             if self.loaded.len() != sent_groups {
-                (tools, tools_tokens) = schemas_now(&self.loaded);
+                (tools, tools_tokens) = schemas_for(mode, self.profile.images, &self.loaded);
                 sent_groups = self.loaded.len();
             }
         }
@@ -1075,6 +1172,8 @@ impl Conversation {
                         None => self.backoff * (attempts + 1),
                     }
                 }
+                // waiting for the host page is no failure: the turn waits, nothing is retried
+                Err(e) if crate::host_bridge::is_pending(&e) => return Err(e),
                 Err(ProviderError::Network(_)) if attempts < MAX_RETRIES && !acc.any => {
                     self.backoff * (attempts + 1)
                 }
@@ -1214,6 +1313,42 @@ const CUT_HINT_ITEMS: usize = 40;
 mod tests {
     use super::*;
     use crate::fake::{profile, Script, ScriptedProvider};
+
+    // browser build: the host page answers a frame later; the turn waits and goes on, the
+    // person's text is sent once and nothing is retried in between
+    #[test]
+    fn a_turn_waits_for_the_host_page_and_resumes_where_it_stood() {
+        use crate::host_bridge::{is_pending, HostProvider, Mailbox, BRIDGE};
+        let mb = Arc::new(Mailbox::default());
+        let mut c = Conversation::new(Arc::new(HostProvider::new(mb.clone())), profile(), Limits::default(), CancelToken::new());
+        let mut host = Host::default();
+        let mut ev = |_e: ConvoEvent| {};
+        let e = c.run_turn("go".into(), String::new(), Mode::Propose, &mut host, &mut ev).unwrap_err();
+        assert!(is_pending(&e) && c.turn_waiting());
+        let out = mb.take_outbox();
+        assert_eq!(out.len(), 1);
+        mb.answer(out[0].0, json!({"bridge": BRIDGE, "tool_calls": [{"id": "c1", "name": "get_context", "args": {}}]}));
+        // the tool runs, then the next step waits again
+        assert!(is_pending(&c.resume_turn(&mut host, &mut ev).unwrap_err()));
+        assert_eq!(host.calls.len(), 1);
+        let out = mb.take_outbox();
+        assert_eq!(out.len(), 1, "one request per step");
+        mb.answer(out[0].0, json!({"bridge": BRIDGE, "text": "done"}));
+        assert_eq!(c.resume_turn(&mut host, &mut ev).unwrap(), TurnEnd::Answered);
+        assert!(!c.turn_waiting());
+        let users = c.messages().iter().filter(|m| m.role == Role::User).count();
+        assert_eq!(users, 1, "the text went once");
+        assert!(c.resume_turn(&mut host, &mut ev).is_err(), "nothing waits any more");
+
+        // stopped while the host page has the request: the turn ends, the answer is not asked again
+        let cancel = CancelToken::new();
+        let mut c = Conversation::new(Arc::new(HostProvider::new(mb.clone())), profile(), Limits::default(), cancel.clone());
+        assert!(is_pending(&c.run_turn("go".into(), String::new(), Mode::Propose, &mut host, &mut ev).unwrap_err()));
+        assert_eq!(mb.take_outbox().len(), 1);
+        cancel.cancel();
+        assert_eq!(c.resume_turn(&mut host, &mut ev).unwrap(), TurnEnd::Cancelled);
+        assert!(!c.turn_waiting() && mb.take_outbox().is_empty());
+    }
 
     #[test]
     fn text_estimate_is_shared_with_history_trim() {

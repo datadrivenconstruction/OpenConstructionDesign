@@ -222,22 +222,7 @@ pub fn publish(a: &PublishArgs, progress: &mut dyn FnMut(&str)) -> Result<Report
         Some(p) => Some(std::fs::read(p).map_err(|e| PubError { kind: "input", msg: format!("{}: {e}", p.display()), details: None })?),
         None => None,
     };
-    let brief: Option<Value> = match &brief_bytes {
-        Some(b) => {
-            let v: Value = serde_json::from_slice(b).map_err(|e| PubError { kind: "input", msg: format!("brief is not JSON: {e}"), details: None })?;
-            validate(Doc::Brief, &v).map_err(|e| PubError { kind: "input", msg: "the brief does not follow ddc-brief/1".into(), details: Some(json!(e)) })?;
-            Some(v)
-        }
-        None => None,
-    };
-    // the model does not record the depth: the flag, else the brief, else D2 (said in the log)
-    let depth = a.depth.clone().or_else(|| brief.as_ref().and_then(|b| b["depth_level"].as_str().map(String::from))).unwrap_or_else(|| "D2".into());
-    if !["D1", "D2", "D3", "D4", "D5"].contains(&depth.as_str()) {
-        return fail("input", format!("--depth must be D1..D5, not '{depth}'"));
-    }
-    if a.depth.is_none() && brief.as_ref().is_none_or(|b| b["depth_level"].as_str().is_none()) {
-        notes.push(json!({"step": "manifest", "what": "depth_level D2: the model does not record it, pass --depth to set it"}));
-    }
+    let (brief, depth) = brief_and_depth(a, &brief_bytes, &mut notes)?;
     let parent = match &a.parent {
         Some(p) => {
             if p == &a.out {
@@ -258,6 +243,72 @@ pub fn publish(a: &PublishArgs, progress: &mut dyn FnMut(&str)) -> Result<Report
     r
 }
 
+/// What a page passes for its draft package: no paths, the browser has no files.
+#[derive(Clone, Debug, Default)]
+pub struct DraftArgs {
+    pub project_id: String,
+    pub name: String,
+    /// The draft's own id (kept across saves); a new one when `None`.
+    pub revision_id: Option<String>,
+    /// The chain tip the draft builds on: its id and element rows (for `diff.json`).
+    pub parent: Option<(String, Vec<ElementRow>)>,
+    pub depth: Option<String>,
+    pub author: Option<String>,
+}
+
+/// The open model as a `.ddcrev` in memory (the browser's autosaved draft): the same keys, rows,
+/// geometry, diff and contract checks as [`publish`], without sheets and IFC. Mints missing keys
+/// into `ed` like `publish` does into the file. Returns the package and its element rows.
+pub fn package_draft(ed: &mut Editor, d: DraftArgs) -> Result<(Vec<u8>, Vec<ElementRow>), PubError> {
+    let a = PublishArgs {
+        project_id: Some(d.project_id),
+        name: Some(d.name),
+        depth: d.depth,
+        author: d.author,
+        ..Default::default()
+    };
+    let (mut steps, mut notes) = (vec![], vec![]);
+    let (brief, depth) = brief_and_depth(&a, &None, &mut notes)?;
+    let revision_id = match d.revision_id {
+        Some(r) => r,
+        None => new_uuid().map_err(|e| PubError { kind: "internal", msg: e, details: None })?,
+    };
+    let p = assemble(ed, &a, &mut steps, &mut notes, &mut |_| {}, None, &depth, None, brief, d.parent, &revision_id, &now_iso())?;
+    package::verify_bytes(&p.zip).map_err(|e| PubError { kind: "internal", msg: format!("the package does not match its manifest: {e}"), details: None })?;
+    Ok((p.zip, p.rows))
+}
+
+/// Element rows of a `.ddc` model (a parent the page has as a model, not as a package).
+pub fn rows_of_model(bytes: &[u8]) -> Result<Vec<ElementRow>, PubError> {
+    let perr = |m: String| PubError { kind: "parent", msg: m, details: None };
+    let m = ddc_model::Model::from_bytes(bytes).map_err(|e| perr(e.to_string()))?;
+    let mut ed = Editor::new_in_memory().map_err(|e| perr(e.to_string()))?;
+    ed.replace_model(m).map_err(|e| perr(e.to_string()))?;
+    let (_, rows) = parts(&mut ed, &mut vec![], &mut vec![], &mut |_| {})?;
+    Ok(rows)
+}
+
+/// The brief (checked against `ddc-brief/1`) and the depth level: flag, else brief, else D2.
+fn brief_and_depth(a: &PublishArgs, brief_bytes: &Option<Vec<u8>>, notes: &mut Vec<Value>) -> Result<(Option<Value>, String), PubError> {
+    let brief: Option<Value> = match brief_bytes {
+        Some(b) => {
+            let v: Value = serde_json::from_slice(b).map_err(|e| PubError { kind: "input", msg: format!("brief is not JSON: {e}"), details: None })?;
+            validate(Doc::Brief, &v).map_err(|e| PubError { kind: "input", msg: "the brief does not follow ddc-brief/1".into(), details: Some(json!(e)) })?;
+            Some(v)
+        }
+        None => None,
+    };
+    // the model does not record the depth: the flag, else the brief, else D2 (said in the log)
+    let depth = a.depth.clone().or_else(|| brief.as_ref().and_then(|b| b["depth_level"].as_str().map(String::from))).unwrap_or_else(|| "D2".into());
+    if !["D1", "D2", "D3", "D4", "D5"].contains(&depth.as_str()) {
+        return fail("input", format!("--depth must be D1..D5, not '{depth}'"));
+    }
+    if a.depth.is_none() && brief.as_ref().is_none_or(|b| b["depth_level"].as_str().is_none()) {
+        notes.push(json!({"step": "manifest", "what": "depth_level D2: the model does not record it, pass --depth to set it"}));
+    }
+    Ok((brief, depth))
+}
+
 #[allow(clippy::too_many_arguments)]
 fn build(
     a: &PublishArgs,
@@ -272,29 +323,56 @@ fn build(
     revision_id: &str,
     created_at: &str,
 ) -> Result<Report, PubError> {
-    let internal = |m: String| PubError { kind: "internal", msg: m, details: None };
     let t = Instant::now();
     let mut ed = open(&a.file)?;
-    let clean_on_open = !ed.is_dirty();
     step("open", t, steps, progress);
+    let p = assemble(&mut ed, a, steps, notes, progress, Some(work), depth, brief_bytes, brief, parent, revision_id, created_at)?;
 
-    // checks before anything is built: quantities of a model that fails them must not reach the ERP
     let t = Instant::now();
-    let (stop, rest) = super::qa::run(&ed.model, a.allow_unreviewed).map_err(|e| internal(format!("checks: {e}")))?;
-    for f in rest {
-        let what = format!("{} {}: {}", f["severity"].as_str().unwrap_or(""), f["rule"].as_str().unwrap_or(""), f["text"].as_str().unwrap_or(""));
-        notes.push(json!({"step": "qa", "what": what}));
+    if let Some(d) = a.out.parent().filter(|d| !d.as_os_str().is_empty()) {
+        std::fs::create_dir_all(d).map_err(|e| PubError { kind: "output", msg: format!("{}: {e}", d.display()), details: None })?;
     }
-    if !stop.is_empty() {
-        let n = stop.len();
-        let msg = format!("{n} check finding(s) stop the publish: fix them, or pass --allow-unreviewed for values filled by AI");
-        return Err(PubError { kind: "qa", msg, details: Some(json!(stop)) });
+    let part = PathBuf::from(format!("{}.part", a.out.display()));
+    std::fs::write(&part, &p.zip).map_err(|e| PubError { kind: "output", msg: format!("{}: {e}", part.display()), details: None })?;
+    if let Err(e) = package::verify(&part) {
+        let _ = std::fs::remove_file(&part);
+        return fail("internal", format!("the written package does not match its manifest: {e}"));
     }
-    step("qa", t, steps, progress);
+    std::fs::rename(&part, &a.out).map_err(|e| PubError { kind: "output", msg: format!("{}: {e}", a.out.display()), details: None })?;
+    step("zip", t, steps, progress);
 
-    // geometry and keys
+    if notes.len() > 200 {
+        let n = notes.len();
+        notes.truncate(200);
+        notes.push(json!({"step": "all", "what": format!("{} more notes not shown", n - 200)}));
+    }
+    Ok(Report {
+        revision_id: revision_id.into(),
+        out: a.out.clone(),
+        bytes: p.zip.len() as u64,
+        files: p.manifest["files"].as_array().cloned().unwrap_or_default(),
+        counts: p.counts,
+        notes: std::mem::take(notes),
+        steps: std::mem::take(steps),
+        keys_saved: p.keys_saved,
+    })
+}
+
+/// A package built in memory, before anything is written.
+struct Packed {
+    zip: Vec<u8>,
+    manifest: Value,
+    counts: Value,
+    keys_saved: bool,
+    rows: Vec<ElementRow>,
+}
+
+/// Geometry regrouped per element (keys minted where missing), then the element rows; the GLB
+/// items are the keyed bodies that have a row and are not spaces.
+fn parts(ed: &mut Editor, steps: &mut Vec<Value>, notes: &mut Vec<Value>, progress: &mut dyn FnMut(&str)) -> Result<(Vec<Item>, Vec<ElementRow>), PubError> {
+    let internal = |m: String| PubError { kind: "internal", msg: m, details: None };
     let t = Instant::now();
-    let bodies = regroup(&mut ed, notes)?;
+    let bodies = regroup(ed, notes)?;
     let mut glb_of: HashMap<(String, i64), (String, Body)> = HashMap::new();
     let mut geo = GeoMap::new();
     for ((table, id), body) in bodies {
@@ -329,12 +407,48 @@ fn build(
     if big > 0 {
         notes.push(json!({"step": "geometry", "what": format!("{big} elements lie more than 100 km from the origin: put the base point near the site")}));
     }
+    step("elements", t, steps, progress);
+    Ok((items, rows))
+}
+
+#[allow(clippy::too_many_arguments)]
+fn assemble(
+    ed: &mut Editor,
+    a: &PublishArgs,
+    steps: &mut Vec<Value>,
+    notes: &mut Vec<Value>,
+    progress: &mut dyn FnMut(&str),
+    work: Option<&Path>,
+    depth: &str,
+    brief_bytes: Option<Vec<u8>>,
+    brief: Option<Value>,
+    parent: Option<(String, Vec<ElementRow>)>,
+    revision_id: &str,
+    created_at: &str,
+) -> Result<Packed, PubError> {
+    let internal = |m: String| PubError { kind: "internal", msg: m, details: None };
+    let clean_on_open = !ed.is_dirty();
+    // checks before anything is built: quantities of a model that fails them must not reach the ERP
+    let t = Instant::now();
+    let (stop, rest) = super::qa::run(&ed.model, a.allow_unreviewed).map_err(|e| internal(format!("checks: {e}")))?;
+    for f in rest {
+        let what = format!("{} {}: {}", f["severity"].as_str().unwrap_or(""), f["rule"].as_str().unwrap_or(""), f["text"].as_str().unwrap_or(""));
+        notes.push(json!({"step": "qa", "what": what}));
+    }
+    if !stop.is_empty() {
+        let n = stop.len();
+        let msg = format!("{n} check finding(s) stop the publish: fix them, or pass --allow-unreviewed for values filled by AI");
+        return Err(PubError { kind: "qa", msg, details: Some(json!(stop)) });
+    }
+    step("qa", t, steps, progress);
+    let (items, rows) = parts(ed, steps, notes, progress)?;
+    let t = Instant::now();
     let mut parquet = vec![];
     let pn = write_parquet(&rows, &mut parquet).map_err(|e| internal(format!("elements.parquet: {e}")))?;
     for n in pn {
         notes.push(json!({"step": "elements", "key": n.key, "field": n.field, "what": n.what}));
     }
-    step("elements", t, steps, progress);
+    step("parquet", t, steps, progress);
 
     let t = Instant::now();
     let built = glb::write(&items).map_err(|e| internal(format!("geometry.glb: {e}")))?;
@@ -342,14 +456,21 @@ fn build(
 
     // keys into the source file, then the model bytes
     let t = Instant::now();
-    let keys_saved = clean_on_open && ed.is_dirty() && !ed.project.read_only() && {
-        ed.save_project().map_err(|e| PubError { kind: "output", msg: format!("saving the minted keys into {}: {e}", a.file.display()), details: None })?;
-        true
+    // in memory (the page) the keys stay in the open model and the bytes come from it
+    let (keys_saved, model_bytes) = match work {
+        Some(work) => {
+            let saved = clean_on_open && ed.is_dirty() && !ed.project.read_only() && {
+                ed.save_project().map_err(|e| PubError { kind: "output", msg: format!("saving the minted keys into {}: {e}", a.file.display()), details: None })?;
+                true
+            };
+            let copy = work.join("model.ddc");
+            ed.save_project_as(&copy).map_err(|e| PubError { kind: "output", msg: format!("model copy: {e}"), details: None })?;
+            (saved, std::fs::read(&copy).map_err(|e| internal(format!("model copy: {e}")))?)
+        }
+        None => (false, ed.model.to_bytes().map_err(|e| internal(format!("model: {e}")))?),
     };
-    let copy = work.join("model.ddc");
-    ed.save_project_as(&copy).map_err(|e| PubError { kind: "output", msg: format!("model copy: {e}"), details: None })?;
-    let model_bytes = std::fs::read(&copy).map_err(|e| internal(format!("model copy: {e}")))?;
     step("model", t, steps, progress);
+    let no_work = || PubError { kind: "input", msg: "sheets and IFC need a work folder (not in the browser)".into(), details: None };
 
     // diff
     let t = Instant::now();
@@ -370,7 +491,7 @@ fn build(
         if ids.is_empty() {
             notes.push(json!({"step": "sheets", "what": "the project has no sheets"}));
         } else {
-            let dir = work.join("sheets");
+            let dir = work.ok_or_else(no_work)?.join("sheets");
             std::fs::create_dir_all(&dir).map_err(|e| internal(e.to_string()))?;
             let mut p = crate::sheet_view::Print::new(None);
             p.separate = true;
@@ -394,7 +515,7 @@ fn build(
     let mut ifc_bytes = None;
     if a.ifc {
         let t = Instant::now();
-        let target = work.join("model.ifc");
+        let target = work.ok_or_else(no_work)?.join("model.ifc");
         let o = ddc_io::ifc::IfcOptions { schema: ddc_io::ifc::IfcSchema::Ifc4x3, timestamp: None, ..Default::default() };
         let st = ddc_io::ifc::export_ifc_file_with(&ed.model, &target, "model.ifc", None, &o).map_err(|e| PubError { kind: "output", msg: format!("model.ifc: {e}"), details: None })?;
         for w in st.warnings.iter().take(50) {
@@ -500,38 +621,10 @@ fn build(
     }
     step("manifest", t, steps, progress);
 
-    // zip, then read it back
-    let t = Instant::now();
     let mut entries = vec![("manifest.json".to_string(), pretty(&manifest))];
     entries.extend(files);
     let zip = package::zip_bytes(&entries, &|n| n == "elements.parquet").map_err(|e| internal(format!("zip: {e}")))?;
-    if let Some(d) = a.out.parent().filter(|d| !d.as_os_str().is_empty()) {
-        std::fs::create_dir_all(d).map_err(|e| PubError { kind: "output", msg: format!("{}: {e}", d.display()), details: None })?;
-    }
-    let part = PathBuf::from(format!("{}.part", a.out.display()));
-    std::fs::write(&part, &zip).map_err(|e| PubError { kind: "output", msg: format!("{}: {e}", part.display()), details: None })?;
-    if let Err(e) = package::verify(&part) {
-        let _ = std::fs::remove_file(&part);
-        return fail("internal", format!("the written package does not match its manifest: {e}"));
-    }
-    std::fs::rename(&part, &a.out).map_err(|e| PubError { kind: "output", msg: format!("{}: {e}", a.out.display()), details: None })?;
-    step("zip", t, steps, progress);
-
-    if notes.len() > 200 {
-        let n = notes.len();
-        notes.truncate(200);
-        notes.push(json!({"step": "all", "what": format!("{} more notes not shown", n - 200)}));
-    }
-    Ok(Report {
-        revision_id: revision_id.into(),
-        out: a.out.clone(),
-        bytes: zip.len() as u64,
-        files: manifest["files"].as_array().cloned().unwrap_or_default(),
-        counts,
-        notes: std::mem::take(notes),
-        steps: std::mem::take(steps),
-        keys_saved,
-    })
+    Ok(Packed { zip, manifest, counts, keys_saved, rows })
 }
 
 fn step(name: &str, t: Instant, steps: &mut Vec<Value>, progress: &mut dyn FnMut(&str)) {

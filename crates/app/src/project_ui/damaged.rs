@@ -59,7 +59,7 @@ pub(super) fn kept_copies(path: &Path) -> Vec<Kept> {
         .into_iter()
         .filter(|p| p.is_file() && ddc_model::probe_project(p).is_ok())
         .filter_map(|p| {
-            let at = std::fs::metadata(&p).and_then(|m| m.modified()).ok()?;
+            let at = std::fs::metadata(&p).and_then(|m| ddc_model::wtime::modified(&m)).ok()?;
             Some(Kept { path: p, at })
         })
         .collect();
