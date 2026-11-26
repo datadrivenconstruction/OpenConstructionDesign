@@ -20,7 +20,7 @@ No system libraries are needed for SQLite or Lua: both are built from bundled so
 | Windows x86_64 | Supported; primary development and test platform. |
 | macOS | Platform code paths exist (graphics backend selection, key storage); not regularly built or tested. |
 | Linux | Library crates and the headless `ddc` CLI. The editor's window layer is configured without a Linux windowing backend (`x11`/`wayland`), so the GUI is not supported on Linux yet. API keys are kept in memory only (no OS key store integration). |
-| Browser (wasm32) | Not available in this repository. The model, geometry and solver crates avoid APIs that do not exist on wasm32. |
+| Browser (wasm32) | The full editor as a WebAssembly bundle (`crates/web-editor`, `tools/web`); built and checked in CI. See [BROWSER.md](BROWSER.md). |
 
 The renderer uses wgpu: Direct3D 12, Vulkan or OpenGL on Windows, Metal on macOS. `--safe-graphics`
 starts the editor with conservative graphics settings.
