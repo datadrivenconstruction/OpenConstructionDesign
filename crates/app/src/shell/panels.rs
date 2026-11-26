@@ -1870,6 +1870,11 @@ enum Tab {
 /// Tab strip over the view area: plan, 3D and open sections/elevations. Tabs that do not fit go
 /// to an overflow menu, long names are elided with a tooltip, a context menu closes tabs.
 /// Returns the remaining rectangle and the requested action.
+/// Height of the view tab strip at the top of the viewport panel.
+pub(super) fn view_tabs_h() -> f32 {
+    ddc_ui::sem::control::TAB_H + ddc_ui::sem::space::XS
+}
+
 fn view_tabs(
     ui: &mut egui::Ui,
     t: &Tokens,
@@ -1883,7 +1888,7 @@ fn view_tabs(
     use ddc_ui::widgets::{menu_divider, menu_item_icon, paint_state, rich_tooltip, MenuTone};
     use tab_strip as ts;
     let th = ddc_ui::theme::of(ui.ctx());
-    let h = control::TAB_H + space::XS;
+    let h = view_tabs_h();
     let full = ui.max_rect();
     let strip = egui::Rect::from_min_size(full.min, egui::vec2(full.width(), h));
     let p = ui.painter_at(strip);

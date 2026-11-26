@@ -328,7 +328,7 @@ pub(crate) fn section_through(
 // ---------- selection sync ----------
 
 /// Bounding box of the selection in the 3D scene (world metres), every selected range.
-fn selection_box(a: &EditorApp) -> Option<ddc_render::Aabb> {
+pub(crate) fn selection_box(a: &EditorApp) -> Option<ddc_render::Aabb> {
     a.ed
         .highlight_all()
         .into_iter()

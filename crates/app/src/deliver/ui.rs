@@ -77,7 +77,7 @@ impl Review {
 /// The drawing set in one undo step when asked for, then the run of the files.
 pub fn start(app: &mut EditorApp, r: &Review, ru: bool) -> Result<Run, String> {
     let sheets = if r.drawings {
-        crate::sheet_view::build_drawing_set(&mut app.ed, r.dset.options(), ru)?
+        crate::sheet_view::build_drawing_set(&mut app.ed, r.dset.options(), app.sh.cat.lang)?
     } else {
         super::sheets_to_print(&app.ed)
     };
@@ -180,7 +180,7 @@ fn window(ctx: &egui::Context, app: &mut EditorApp, ru: bool, st: &mut Deliver) 
     let mut acts: Vec<Act> = vec![];
     if let Some(r) = &mut st.review {
         if r.drawings {
-            r.dset.refresh(&app.ed, ru);
+            r.dset.refresh(&app.ed, app.sh.cat.lang);
         }
     }
     let blocked = st.review.as_ref().and_then(|r| r.blocked(app, ru));

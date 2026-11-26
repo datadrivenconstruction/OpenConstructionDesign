@@ -6,6 +6,7 @@
 
 use super::props::pick_row;
 use super::*;
+use crate::doc_lang::AsLang;
 use ddc_io::sheets::DsetOptions;
 use ddc_ui::widgets;
 
@@ -99,11 +100,13 @@ pub fn mark_prefix(lang: Lang) -> ddc_model::MarkPrefix {
 }
 
 /// Tags, plans and writes the set in one undo step; the sheet ids in order. Sheet words and
-/// tags in the project's document language; a refusal in the UI language `ru`.
-pub fn build_drawing_set(ed: &mut Editor, o: DsetOptions, ru: bool) -> Result<Vec<i64>, String> {
+/// tags in the project's document language (else `ui`); a refusal in the interface language `ui`.
+pub fn build_drawing_set(ed: &mut Editor, o: DsetOptions, ui: impl AsLang) -> Result<Vec<i64>, String> {
+    let ui = ui.lang();
+    let ru = ui == Lang::Ru;
     let tables = set_tables(ed);
     let units = lu(ed.tool.units);
-    let lang = crate::doc_lang::doc_lang(&ed.model);
+    let lang = crate::doc_lang::doc_lang_in(&ed.model, ui);
     op_in(ed, ru, move |m| {
         m.atomic("drawing_set", |m| {
             let lv = io::tag_levels(m).map_err(sheet_error)?;
@@ -132,9 +135,10 @@ pub fn build_drawing_set(ed: &mut Editor, o: DsetOptions, ru: bool) -> Result<Ve
 fn preview(
     ed: &Editor,
     d: &DsetDialog,
-    ru: bool,
+    ui: Lang,
 ) -> Result<(String, Vec<(String, String)>), String> {
-    let p = plan_drawing_set_in(ed, &d.options(), crate::doc_lang::doc_lang(&ed.model))?;
+    let ru = ui == Lang::Ru;
+    let p = plan_drawing_set_in(ed, &d.options(), crate::doc_lang::doc_lang_in(&ed.model, ui))?;
     let rows: Vec<(String, String)> = p
         .plan
         .sheets
@@ -171,10 +175,11 @@ pub(super) fn cmd_drawing_set(app: &mut EditorApp) {
 }
 
 impl DsetDialog {
-    /// Builds the preview when an option changed since the last one.
-    pub fn refresh(&mut self, ed: &Editor, ru: bool) {
+    /// Builds the preview when an option changed since the last one; `ui` is the interface
+    /// language, the sheet words take the document language.
+    pub fn refresh(&mut self, ed: &Editor, ui: impl AsLang) {
         if self.preview.is_none() {
-            self.preview = Some(preview(ed, self, ru));
+            self.preview = Some(preview(ed, self, ui.lang()));
         }
     }
 
@@ -280,7 +285,7 @@ pub(super) fn dset_window(
     d: &mut DsetDialog,
 ) -> bool {
     let (mut keep, mut open, mut apply) = (true, true, false);
-    d.refresh(&app.ed, ru);
+    d.refresh(&app.ed, app.sh.cat.lang);
     kit::Dialog::new(
         "drawing_set",
         msg(ru, "dset.dlg.title", &[]),
@@ -307,7 +312,7 @@ pub(super) fn dset_window(
     if apply {
         let marks = marks_to_assign(&app.ed);
         let built = marks.and_then(|k| {
-            build_drawing_set(&mut app.ed, d.options(), ru).map(|ids| (k, ids))
+            build_drawing_set(&mut app.ed, d.options(), app.sh.cat.lang).map(|ids| (k, ids))
         });
         match built {
             Ok((marks, ids)) => {

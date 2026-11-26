@@ -64,6 +64,8 @@ pub mod k {
     pub const DOCK_BTN: f32 = 36.0;
     pub const DOCK_GAP: f32 = 4.0;
     pub const DOCK_TOOLS: usize = 8;
+    /// Enter and exit of the floating surfaces, seconds: `motion.duration_ms.fast`.
+    pub const MOTION_S: f32 = 0.12;
 }
 
 /// A rail section: its glyph and the ribbon tabs its flyout gathers.
@@ -134,6 +136,43 @@ pub struct RailState {
     pub expanded: bool,
     pub pinned: bool,
     pub last: [Option<String>; 4],
+    /// What the flyout and the context bar showed last, so they can fade out.
+    pub fly_shown: Option<usize>,
+    pub ctx_shown: Option<(String, String)>,
+}
+
+/// Opacity of a floating surface: `motion.duration_ms.fast` in and out from wherever it is,
+/// instant under reduced motion. A surface not drawn last pass starts again from 0.
+fn fade(ctx: &egui::Context, th: &ddc_ui::Theme, id: egui::Id, on: bool) -> f32 {
+    let (key, seen) = (id.with("fade"), id.with("fade.pass"));
+    let pass = ctx.cumulative_pass_nr();
+    let last: Option<u64> = ctx.data_mut(|d| d.get_temp(seen));
+    if on && last.is_none_or(|l| pass > l + 1) {
+        ctx.animate_bool_with_time(key, false, 0.0);
+    }
+    ctx.data_mut(|d| d.insert_temp(seen, pass));
+    let time = if th.reduced_motion { 0.0 } else { k::MOTION_S };
+    ctx.animate_bool_with_time_and_easing(key, on, time, egui::emath::easing::cubic_out)
+}
+
+/// The context bar's anchor and pivot: centred just above the selection's screen box, below it
+/// when the room above is short, top centre without a box. `bounds` is where it may go.
+pub fn ctxbar_anchor(sel: Option<Rect>, bounds: Rect) -> (egui::Pos2, Align2) {
+    let top = (pos2(bounds.center().x, bounds.top()), Align2::CENTER_TOP);
+    let Some(s) = sel.filter(|s| s.is_finite() && s.intersects(bounds)) else {
+        return top;
+    };
+    let x = s.center().x.clamp(bounds.left(), bounds.right());
+    let above = s.top() - k::CTXBAR_OFFSET;
+    let below = s.bottom() + k::CTXBAR_OFFSET;
+    if above - k::CTXBAR_H >= bounds.top() {
+        (pos2(x, above.min(bounds.bottom())), Align2::CENTER_BOTTOM)
+    } else if below + k::CTXBAR_H <= bounds.bottom() {
+        (pos2(x, below), Align2::CENTER_TOP)
+    } else {
+        // the box fills the view: the top edge, over it
+        (pos2(x, bounds.top()), Align2::CENTER_TOP)
+    }
 }
 
 /// One rail/dock/flyout button: plate by state, glyph, tooltip with mnemonic; true on click.
@@ -232,6 +271,9 @@ impl EditorApp {
         if mode == UiMode::Ribbon || !area.is_positive() || self.chrome_clean() {
             return;
         }
+        // the surfaces float over the canvas, under the view tab strip
+        let mut area = area;
+        area.min.y = (area.min.y + super::panels::view_tabs_h()).min(area.max.y);
         match mode {
             UiMode::Rail => self.rail(ctx, area, fire),
             _ => self.dock(ctx, area, fire),
@@ -276,10 +318,13 @@ impl EditorApp {
         let own = rail_cmds(&self.sh.reg);
         let mut picked: Option<String> = None;
         let mut toggle: Option<usize> = None;
-        let shown = egui::Area::new(egui::Id::new("ddc.rail"))
+        let rail_id = egui::Id::new("ddc.rail");
+        let t = fade(ctx, &th, rail_id, true);
+        let shown = egui::Area::new(rail_id)
             .order(egui::Order::Middle)
             .fixed_pos(snap(ctx, pos2(x, area.top() + k::EDGE)))
             .show(ctx, |ui| {
+                ui.set_opacity(t);
                 ui.spacing_mut().item_spacing = vec2(0.0, k::GAP);
                 let row = |ui: &mut egui::Ui| ui.allocate_exact_size(vec2(w, k::BUTTON), Sense::hover()).0;
                 capsule(&th).show(ui, |ui| {
@@ -321,9 +366,20 @@ impl EditorApp {
             let st = &mut self.chrome.rail;
             st.open = if st.open == Some(i) { None } else { Some(i) };
         }
-        if let Some(i) = self.chrome.rail.open {
-            let fx = if rtl { rail_rect.left() - k::GAP - k::FLYOUT_W } else { rail_rect.right() + k::GAP };
-            if let Some(id) = self.flyout_panel(ctx, i, pos2(fx, rail_rect.top()), rail_rect) {
+        let open = self.chrome.rail.open;
+        if open.is_some() {
+            self.chrome.rail.fly_shown = open;
+        }
+        let ft = fade(ctx, &th, egui::Id::new("ddc.rail.flyout"), open.is_some());
+        if ft <= 0.0 {
+            self.chrome.rail.fly_shown = None;
+        }
+        if let Some(i) = self.chrome.rail.fly_shown {
+            // slides out of the rail by one inset as it fades in
+            let slide = (1.0 - ft) * k::INSET * if rtl { 1.0 } else { -1.0 };
+            let fx = if rtl { rail_rect.left() - k::GAP - k::FLYOUT_W } else { rail_rect.right() + k::GAP } + slide;
+            let live = open == Some(i);
+            if let Some(id) = self.flyout_panel(ctx, i, pos2(fx, rail_rect.top()), rail_rect, ft, live) {
                 self.chrome.rail.last[i] = Some(id.clone());
                 if !self.chrome.rail.pinned {
                     self.chrome.rail.open = None;
@@ -339,26 +395,33 @@ impl EditorApp {
     fn rail_label(&self, ui: &egui::Ui, r: Rect, label: &str) {
         let th = &self.sh.theme;
         let x = r.left() + k::BUTTON + k::INSET;
-        let clip = Rect::from_min_max(pos2(x, r.top()), pos2((x + k::LABEL_MAX).min(r.right()), r.bottom()));
-        ui.painter().with_clip_rect(clip).text(
-            pos2(x, r.center().y),
-            Align2::LEFT_CENTER,
-            label,
-            th.font(Role::Body),
-            th.c("text.primary"),
-        );
+        let ink = th.c("text.primary");
+        let g = widgets::elide(ui, label, th.font(Role::Body), ink, k::LABEL_MAX.min(r.right() - x));
+        ui.painter().galley(pos2(x, r.center().y - g.size().y / 2.0), g, ink);
     }
 
     /// Tiles of section `i` by ribbon group; a pick returns the command. Esc or a press on the
     /// canvas closes it, the pin keeps it open as a palette.
-    fn flyout_panel(&mut self, ctx: &egui::Context, i: usize, at: egui::Pos2, rail: Rect) -> Option<String> {
+    /// `t` is its opacity; a flyout fading out (`live` false) takes no input.
+    #[allow(clippy::too_many_arguments)]
+    fn flyout_panel(
+        &mut self,
+        ctx: &egui::Context,
+        i: usize,
+        at: egui::Pos2,
+        rail: Rect,
+        t: f32,
+        live: bool,
+    ) -> Option<String> {
         let th = self.sh.theme.clone();
         let groups = flyout(&self.sh.reg, &SECTIONS[i]);
         let mut out = None;
         let shown = egui::Area::new(egui::Id::new("ddc.rail.flyout"))
             .order(egui::Order::Foreground)
+            .interactable(live)
             .fixed_pos(snap(ctx, at))
             .show(ctx, |ui| {
+                ui.set_opacity(t);
                 capsule(&th).inner_margin(egui::Margin::same(k::GAP as i8)).show(ui, |ui| {
                     ui.set_width(k::FLYOUT_W - 2.0 * k::GAP);
                     ui.horizontal(|ui| {
@@ -380,7 +443,7 @@ impl EditorApp {
                             ui.label(th.rich(Role::Caption, &title).color(th.c("text.secondary")));
                             for chunk in ids.chunks(3) {
                                 ui.horizontal(|ui| {
-                                    ui.spacing_mut().item_spacing.x = 4.0;
+                                    ui.spacing_mut().item_spacing.x = k::INSET;
                                     for id in chunk {
                                         if let Some(id) = self.tile(ui, id) {
                                             out = Some(id);
@@ -392,6 +455,9 @@ impl EditorApp {
                     });
                 });
             });
+        if !live {
+            return None;
+        }
         let r = shown.response.rect;
         let away = ctx.input(|inp| {
             inp.pointer.any_pressed()
@@ -421,12 +487,11 @@ impl EditorApp {
         let name = if on { format!("{icon}.fill") } else { icon };
         let ic = Rect::from_center_size(pos2(r.center().x, r.top() + 18.0), Vec2::splat(k::ICON));
         self.sh.icons.paint(ui, &name, k::ICON as u32, ic, ink);
+        // one line cut with an ellipsis at the budget; the tooltip carries the full name
+        let ink = th.c("text.primary");
+        let g = widgets::elide(ui, &label, th.font(Role::RibbonLabel), ink, k::TILE_LABEL_MAX);
         let p = ui.painter();
-        let clip = Rect::from_center_size(pos2(r.center().x, r.bottom() - 14.0), vec2(k::TILE_LABEL_MAX, 16.0));
-        let font = th.font(Role::RibbonLabel);
-        let g = p.layout_no_wrap(label.clone(), font, th.c("text.primary"));
-        let x = (clip.center().x - g.size().x / 2.0).max(clip.left());
-        p.with_clip_rect(clip).galley(pos2(x, clip.center().y - g.size().y / 2.0), g, th.c("text.primary"));
+        p.galley(pos2(r.center().x, r.bottom() - 14.0) - g.size() / 2.0, g, ink);
         if !keys.is_empty() {
             p.text(r.right_top() + vec2(-4.0, 4.0), Align2::RIGHT_TOP, &keys, th.font(Role::Caption), th.c("text.secondary"));
         }
@@ -442,10 +507,13 @@ impl EditorApp {
         let w = n * k::DOCK_BTN + (n - 1.0) * k::DOCK_GAP + 2.0 * k::INSET;
         let at = pos2(area.center().x - w / 2.0, area.bottom() - k::EDGE - k::DOCK_BTN - 2.0 * k::INSET);
         let mut out = None;
-        egui::Area::new(egui::Id::new("ddc.dock"))
+        let dock_id = egui::Id::new("ddc.dock");
+        let t = fade(ctx, &th, dock_id, true);
+        egui::Area::new(dock_id)
             .order(egui::Order::Middle)
             .fixed_pos(snap(ctx, at))
             .show(ctx, |ui| {
+                ui.set_opacity(t);
                 capsule(&th).show(ui, |ui| {
                     ui.spacing_mut().item_spacing.x = k::DOCK_GAP;
                     ui.horizontal(|ui| {
@@ -465,26 +533,56 @@ impl EditorApp {
     }
 
     /// Over a selection: its category's first commands, Ask AI, then delete after a rule.
+    /// Placed by `ctxbar_anchor` in the canvas less the rail or the dock; fades in and out.
     fn context_bar(&mut self, ctx: &egui::Context, area: Rect, fire: &mut Vec<String>) {
-        if self.ed.selection.is_empty() {
-            return;
+        let th = self.sh.theme.clone();
+        let now = self.sh.ribbon.context.clone().filter(|_| !self.ed.selection.is_empty());
+        let live = now.is_some();
+        if live {
+            self.chrome.rail.ctx_shown = now;
         }
-        let Some((cat_key, cat_label)) = self.sh.ribbon.context.clone() else {
+        let bar_id = egui::Id::new("ddc.ctxbar");
+        let t = fade(ctx, &th, bar_id, live);
+        if t <= 0.0 {
+            self.chrome.rail.ctx_shown = None;
+        }
+        let Some((cat_key, cat_label)) = self.chrome.rail.ctx_shown.clone() else {
             return;
         };
-        let th = self.sh.theme.clone();
+        let mut bounds = area.shrink(k::EDGE);
+        if self.ui_mode() == UiMode::Rail {
+            // the rail, and the flyout beside it while one is shown
+            let rail = if self.chrome.rail.expanded { k::RAIL_W_EXPANDED } else { k::RAIL_W };
+            let fly = if self.chrome.rail.fly_shown.is_some() { k::GAP + k::FLYOUT_W } else { 0.0 };
+            let w = rail + fly + k::GAP;
+            if ddc_ui::i18n::rtl() {
+                bounds.max.x -= w;
+            } else {
+                bounds.min.x += w;
+            }
+        } else {
+            bounds.max.y -= k::DOCK_BTN + 2.0 * k::INSET + k::GAP;
+        }
+        // while fading out it stays where it was
+        let sel_key = bar_id.with("sel");
+        let sel = if live { self.selection_screen() } else { ctx.data(|d| d.get_temp(sel_key)).flatten() };
+        ctx.data_mut(|d| d.insert_temp(sel_key, sel));
+        let (at, pivot) = ctxbar_anchor(sel, bounds);
         let mut ids = ctx_cmds(&self.sh.reg, &cat_key);
         ids.push(ribbon::ASK_AI_CMD.to_string());
         let mut out = None;
-        egui::Area::new(egui::Id::new("ddc.ctxbar"))
+        egui::Area::new(bar_id)
             .order(egui::Order::Middle)
-            .pivot(Align2::CENTER_TOP)
-            .fixed_pos(snap(ctx, pos2(area.center().x, area.top() + k::CTXBAR_OFFSET)))
+            .interactable(live)
+            .pivot(pivot)
+            .constrain_to(bounds)
+            .fixed_pos(snap(ctx, at))
             .show(ctx, |ui| {
+                ui.set_opacity(t);
                 capsule(&th).show(ui, |ui| {
                     ui.set_height(k::CTXBAR_H - 2.0 * k::INSET);
                     ui.horizontal_centered(|ui| {
-                        ui.spacing_mut().item_spacing.x = 2.0;
+                        ui.spacing_mut().item_spacing.x = k::INSET;
                         ui.add_space(k::INSET);
                         ui.label(th.rich(Role::BodyStrong, &cat_label).color(th.c("text.primary")));
                         ui.add_space(k::GAP);
@@ -514,7 +612,27 @@ impl EditorApp {
                     });
                 });
             });
-        fire.extend(out);
+        fire.extend(out.filter(|_| live));
+    }
+
+    /// Screen box of the selection in the view it is drawn in: plan, or 3D when that is shown.
+    fn selection_screen(&self) -> Option<Rect> {
+        let b = crate::view_cmds::selection_box(self)?;
+        let pts: Vec<egui::Pos2> = if self.view3d {
+            (0..8usize)
+                .filter_map(|i| {
+                    let pick = |bit: usize, lo: f32, hi: f32| if i & bit == 0 { lo } else { hi };
+                    let (x, y, z) = (pick(1, b.min.x, b.max.x), pick(2, b.min.y, b.max.y), pick(4, b.min.z, b.max.z));
+                    self.view.screen_of(ddc_render::glam::Vec3::new(x, y, z))
+                })
+                .collect()
+        } else {
+            [(b.min.x, b.min.y), (b.max.x, b.max.y)]
+                .iter()
+                .filter_map(|&(x, y)| self.plan.screen_of(ddc_geom::v2(f64::from(x), f64::from(y))))
+                .collect()
+        };
+        (!pts.is_empty()).then(|| Rect::from_points(&pts))
     }
 }
 
@@ -627,6 +745,7 @@ mod tests {
         assert_eq!(n("ctxbar", "commands") as usize, k::CTXBAR_CMDS);
         assert_eq!(n("dock", "tools") as usize, k::DOCK_TOOLS);
         assert_eq!(n("strip", "pinned") as usize, ribbon::PINNED_MAX);
+        assert_eq!(t["motion"]["duration_ms"]["fast"].as_f64().unwrap() as f32 / 1000.0, k::MOTION_S);
         // concentric corners: capsule = plate + inset; hit targets of at least 28 pt
         let r = &t["radius"];
         assert_eq!(r["lg"].as_f64().unwrap() as f32, r["md"].as_f64().unwrap() as f32 + k::INSET);
@@ -643,6 +762,54 @@ mod tests {
         // three tiles in a row fit the flyout
         assert!(3.0 * k::TILE_W + 2.0 * 4.0 <= k::FLYOUT_W - 2.0 * k::GAP);
         assert_eq!(k::RAIL_W, k::BUTTON + 2.0 * k::INSET);
+    }
+
+    #[test]
+    fn context_bar_sits_over_the_selection_flips_and_clamps() {
+        let view = Rect::from_min_max(pos2(0.0, 40.0), pos2(800.0, 600.0));
+        let bar = |sel: Rect| ctxbar_anchor(Some(sel), view);
+        // room above: centred on the box, bottom edge one offset over it
+        let (p, a) = bar(Rect::from_min_max(pos2(100.0, 300.0), pos2(300.0, 320.0)));
+        assert_eq!((p, a), (pos2(200.0, 300.0 - k::CTXBAR_OFFSET), Align2::CENTER_BOTTOM));
+        // no room above: flips below
+        let (p, a) = bar(Rect::from_min_max(pos2(100.0, 50.0), pos2(300.0, 70.0)));
+        assert_eq!((p, a), (pos2(200.0, 70.0 + k::CTXBAR_OFFSET), Align2::CENTER_TOP));
+        // a box over the whole view: pinned to its top edge; x clamped into the view
+        let (p, a) = bar(Rect::from_min_max(pos2(700.0, 0.0), pos2(2000.0, 900.0)));
+        assert_eq!((p, a), (pos2(800.0, 40.0), Align2::CENTER_TOP));
+        // nothing on screen: top centre
+        assert_eq!(ctxbar_anchor(None, view), (pos2(400.0, 40.0), Align2::CENTER_TOP));
+        let off = Rect::from_min_max(pos2(-500.0, -500.0), pos2(-400.0, -450.0));
+        assert_eq!(bar(off), (pos2(400.0, 40.0), Align2::CENTER_TOP));
+    }
+
+    /// Text on the floating capsules (chip over the canvas, and the active plate) reads at
+    /// WCAG AA in both themes.
+    #[test]
+    fn capsule_text_meets_aa() {
+        use ddc_ui::theme::{contrast, Mode, Tokens};
+        let t = Tokens::embedded().unwrap();
+        // premultiplied `top` over the opaque `under`
+        let over = |top: egui::Color32, under: egui::Color32| {
+            let a = 1.0 - top.a() as f32 / 255.0;
+            let m = |f: u8, b: u8| (f as f32 + b as f32 * a).round().min(255.0) as u8;
+            egui::Color32::from_rgb(m(top.r(), under.r()), m(top.g(), under.g()), m(top.b(), under.b()))
+        };
+        for mode in [Mode::Light, Mode::Dark] {
+            let c = |k: &str| t.color(mode, k).unwrap();
+            let chip = over(c("bg.canvas_chip"), c("bg.viewport"));
+            let plate = over(c("accent.subtle"), chip);
+            for (fg, bg, name) in [
+                ("text.primary", chip, "chip"),
+                ("text.secondary", chip, "chip"),
+                ("error", chip, "chip"),
+                ("text.primary", plate, "active plate"),
+                ("accent", plate, "active plate"),
+            ] {
+                let r = contrast(c(fg), bg);
+                assert!(r >= 4.5, "{mode:?} {fg} on {name}: {r:.2}");
+            }
+        }
     }
 }
 
@@ -691,7 +858,7 @@ mod shots {
                     app.plan.fit(&app.ed);
                     let size = ((1280.0 * scale) as u32, (800.0 * scale) as u32);
                     let ctx = egui::Context::default();
-                    let px = crate::shot::frame(&rs, &ctx, size, scale, 8, None, |c, _| app.ui(c, Some(&rs)));
+                    let px = crate::shot::frame(&rs, &ctx, size, scale, 12, None, |c, _| app.ui(c, Some(&rs)));
                     let f = format!("{dir}/{}_{theme}_{scale:.0}x.png", mode.key());
                     crate::shot::save_png(std::path::Path::new(&f), size, &px).unwrap();
                 }

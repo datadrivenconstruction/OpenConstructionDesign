@@ -28,9 +28,14 @@ impl AsLang for bool {
 
 /// The project's document language: the stored locale, else the interface language.
 pub fn doc_lang(m: &ddc_model::Model) -> Lang {
+    doc_lang_in(m, crate::ui_lang())
+}
+
+/// Same, with the interface language `ui` the caller shows (a dialog, the app's catalog).
+pub fn doc_lang_in(m: &ddc_model::Model, ui: impl AsLang) -> Lang {
     match m.document_lang() {
         Ok(Some(code)) => Lang::from_code(&code),
-        _ => crate::ui_lang(),
+        _ => ui.lang(),
     }
 }
 
