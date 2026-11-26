@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "نزّل المحرر الحالي من صفحة ERP {url}",
  "erp.err.unsupported.admin": "اطلب من مسؤول ERP لديك المحرر الحالي",
  "erp.err.throttled_in": "محاولات كثيرة جدًا. حاول مرة أخرى بعد {s} ث",
+ "erp.err.throttled_ready": "انتهى الانتظار. يمكنك المحاولة مجددًا",
  "erp.err.imported": "المراجعة {n} في ERP نموذج مستورد: لا يستطيع المحرر فتحها أو النشر فوقها بعد",
  "erp.action.download": "افتح صفحة تنزيل المحرر في ERP",
  "erp.action.new_link": "احصل على رابط جديد من صفحة ERP",

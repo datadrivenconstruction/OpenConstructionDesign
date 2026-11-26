@@ -90,6 +90,7 @@
  "fe.cons.redundant": "overflødig",
  "fe.cons.help": "Et mål bundet til en længdeparameter styrer planerne; en vinkel kræver en vinkelparameter",
  "fe.locks": "Justeringslåse",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Lås",
  "fe.unlock": "Lås op",
  "fe.locks.help": "Lås erstatter volumenets argument (fx rect #2) med planen, så volumenet følger den",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Udkastsnavnet er optaget",
  "fe.clash.body": "Et udkast ved navn “{name}” findes allerede. Erstat udkastet med dette, eller gå tilbage og gem under et nyt navn. Intet er gemt endnu.",
  "fe.clash.rename": "Gem under nyt navn",
- "fe.clash.replace": "Erstat udkastet",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Erstat udkastet"
 }

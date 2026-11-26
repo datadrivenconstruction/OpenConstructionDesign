@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Izbočina",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Umetni točku iza ove (luk se dijeli na pola)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Spremi",
  "roof_edge.pe.saved": "Profil spremljen",
  "roof_edge.pe.valid": "Profil je ispravan",
  "roof_edge.pe.invalid": "Profil se siječe sam sa sobom, premalen je ili ima manje od 3 točke",
  "roof_edge.pe.bad_number": "Koordinata ili izbočina nije broj",
- "roof_edge.pe.no_name": "Upišite naziv profila",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Upišite naziv profila"
 }

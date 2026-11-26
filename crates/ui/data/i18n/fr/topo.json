@@ -64,6 +64,7 @@
  "topo.import.title": "Importer un relevé",
  "topo.import.filter": "Relevé (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Cote du point",
  "topo.opt.thickness": "Épaisseur de la surface topographique",
  "topo.opt.add_to_active": "Ajouter à la surface topographique active",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importer",
  "topo.import.cancel": "Annuler",
  "topo.import.no_layers": "aucun calque choisi",
- "topo.info.warnings": "Non construit :",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Non construit :"
 }

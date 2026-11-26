@@ -72,6 +72,7 @@
  "quick.cat.beam": "Mga beam",
  "quick.cat.ceiling": "Mga kisame",
  "quick.cat.structure": "Istruktura",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} sa {all}",
  "quick.hud.type": "Uri",
  "quick.hud.height": "Taas",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Hindi mabasa ang halagang “{v}”",
  "quick.menu.repeat": "Ulitin: {cmd}",
  "quick.menu.enter": "Ipasok",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Kamakailan",
  "quick.bar.repeat_tip": "{cmd} · Enter para ulitin",
  "quick.repeat.none": "Wala pang uulitin",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Balik",
  "quick.tips.next": "Susunod",
  "quick.tips.finish": "Tapos",
- "quick.tips.never": "Huwag ipakita muli",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Huwag ipakita muli"
 }

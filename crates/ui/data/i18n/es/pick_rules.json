@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Seleccionar todas las categorías",
  "pick_rules.filter.tip": "Filtro de selección: las categorías desmarcadas se omiten al hacer clic y al pasar el cursor",
  "pick_rules.here": "Elementos aquí",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "seleccionados",
- "pick_rules.pinned": "Seleccionar elementos fijados",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Seleccionar elementos fijados"
 }

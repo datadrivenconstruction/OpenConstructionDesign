@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Zanjirlar",
+ "cmd.mep.circuits.desc": "Zanjirlar muharririni ochadi: har bir shitning zanjirlari, ularning yuklamalari, kabel kesimlari va qoidalar tekshiruvi.",
  "ce.title": "Zanjirlar",
  "ce.open": "Zanjirlar",
  "ce.empty": "Hali zanjirlar yo'q",

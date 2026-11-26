@@ -11,6 +11,7 @@
  "query.err.not_changed": "„{key}“ не може да се промени: {why}",
  "query.err.op_no_field": "оператор без поле",
  "query.err.positive": "{key}: стойността трябва да е по-голяма от нула",
+ "query.err.raw": "{text}",
  "query.err.text_field": "полето „{key}“ е текст, формулата не се прилага",
  "query.err.unclosed_paren": "липсва затваряща скоба",
  "query.err.unclosed_quote": "липсва затварящ кавичка",
@@ -27,6 +28,5 @@
  "query.why.curtain": "фасадните стени се променят в собствените си свойства",
  "query.why.opening_type": "типът на отвора следва размера му: „-> width=… height=…“",
  "query.why.slab_thickness": "дебелината на плочата се задава от типа: „-> type=…“",
- "query.why.wall_thickness": "дебелината на стената се задава от типа: „-> type=…“",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "дебелината на стената се задава от типа: „-> type=…“"
 }

@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Golul {w} este mai lat decât peretele {len}",
+ "ix.fix.opening_width": "Lățime {w} mm",
+ "ix.fix.wall_extend": "Prelungește peretele la {len} mm"
+}

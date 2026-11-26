@@ -52,6 +52,7 @@
  "mesh_tools.done": "Fertig",
  "mesh_tools.failed": "Fehlgeschlagen",
  "mesh_tools.note.outline_approx": "Umriss angenähert",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Flächen löschen, die nach",
  "mesh_tools.dir.up": "oben",
  "mesh_tools.dir.down": "unten",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Vereinfacht: {n} (zum Beispiel: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Vereinfacht: {n} (zum Beispiel: {first})"
 }

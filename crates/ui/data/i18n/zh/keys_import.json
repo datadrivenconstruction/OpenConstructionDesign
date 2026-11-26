@@ -5,6 +5,7 @@
  "keys_import.new_head": "新密钥",
  "keys_import.changed_head": "替换您自己的密钥",
  "keys_import.conflicts_head": "导入后的冲突",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "组合键",
  "keys_import.kind_seq": "两键序列",
  "keys_import.unbound": "无",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "未撤销：导入后密钥已被编辑。请在“密钥”窗口中逐一重置。",
  "keys_import.undo_none": "没有可撤销的内容：本次会话中没有密钥导入。",
  "keys_import.imported": "已导入密钥",
- "keys_import.imported_conflicts": "已导入密钥；冲突：{n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "已导入密钥；冲突：{n}"
 }

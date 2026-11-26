@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Täide",
  "text_style.lbl.detail": "Detail",
  "text_style.lbl.width": "Laius",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Sisesta number vahemikus {min} kuni {max}",
  "text_style.tip.next_ring": "Sulge see kontuur ja alusta samas piirkonnas uut",
  "text_style.tip.edit_text": "Muuda teksti kohapeal",
- "text_style.tip.add_leader": "Lisa sellele tekstile juhtjoon",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Lisa sellele tekstile juhtjoon"
 }

@@ -72,6 +72,7 @@
  "quick.cat.beam": "Palkit",
  "quick.cat.ceiling": "Katot",
  "quick.cat.structure": "Rakenne",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} / {all}",
  "quick.hud.type": "Tyyppi",
  "quick.hud.height": "Korkeus",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Arvoa ”{v}” ei voi lukea",
  "quick.menu.repeat": "Toista: {cmd}",
  "quick.menu.enter": "Syötä",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Viimeisimmät",
  "quick.bar.repeat_tip": "{cmd} · Enter toistaa sen",
  "quick.repeat.none": "Ei vielä mitään toistettavaa",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Takaisin",
  "quick.tips.next": "Seuraava",
  "quick.tips.finish": "Valmis",
- "quick.tips.never": "Älä näytä uudelleen",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Älä näytä uudelleen"
 }

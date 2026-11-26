@@ -41,5 +41,16 @@
  "library.ifc.window": "窓",
  "library.ifc.stair": "階段",
  "library.ifc.pipe_fitting": "配管継手",
- "library.ifc.duct_fitting": "ダクト継手"
+ "library.ifc.duct_fitting": "ダクト継手",
+ "library.ifc.beam": "梁",
+ "library.ifc.column": "柱",
+ "library.ifc.appliance": "家電",
+ "library.ifc.fire_terminal": "消火端末",
+ "library.ifc.heat_exchanger": "熱交換器",
+ "library.ifc.pump": "ポンプ",
+ "library.ifc.tank": "タンク",
+ "library.ifc.transport": "搬送要素",
+ "library.ifc.valve": "バルブ",
+ "library.ifc.waste_terminal": "排水端末",
+ "library.ifc.medical": "医療機器"
 }

@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Відстань",
+ "cmd.e3d.measure.gap": "Проміжок між гранями",
+ "cmd.e3d.measure.angle": "Кут",
+ "cmd.e3d.measure.area": "Площа / периметр грані чи приміщення",
+ "cmd.e3d.measure.volume": "Об’єм елемента",
+ "cmd.e3d.measure.slope": "Ухил",
+ "cmd.e3d.measure.chain": "Ланцюжок точок",
+ "measure.orphan": "Втрачене посилання",
+ "measure.not_planar": "Грані не паралельні",
+ "measure.unsupported": "Це виміряти неможливо",
+ "cmd.ann.measure_distance": "Виміряти відстань",
+ "cmd.ann.measure_gap": "Виміряти проміжок між гранями",
+ "cmd.ann.measure_angle": "Виміряти кут",
+ "cmd.ann.measure_area": "Виміряти площу",
+ "hint.measure.first": "Вимір: клацніть грань стіни (або точку) · Esc — вийти",
+ "hint.measure.second": "Вимір: клацніть другу грань · Esc — скасувати перший вибір",
+ "measure.no_face": "Тут немає грані стіни"
+}

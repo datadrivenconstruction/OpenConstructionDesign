@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatické technické zařízení budov",
+ "gen.mep_auto_hint": "Umožní generátoru a asistentovi AI vést potrubí, vzduchovody a kabeláž samostatně. Pro tento region je ve výchozím stavu vypnuto; můžete je zapnout. Ruční trasování je vždy k dispozici."
+}

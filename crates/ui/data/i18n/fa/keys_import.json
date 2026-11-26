@@ -5,6 +5,7 @@
  "keys_import.new_head": "کلیدهای جدید",
  "keys_import.changed_head": "کلیدهای خودتان را جایگزین می‌کند",
  "keys_import.conflicts_head": "تعارض‌ها پس از ورود",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "ترکیبی",
  "keys_import.kind_seq": "دو حرف",
  "keys_import.unbound": "هیچ",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "واگرد نشد: کلیدها پس از ورود ویرایش شدند. یکی‌یکی در پنجره کلیدها بازنشانی‌شان کنید.",
  "keys_import.undo_none": "چیزی برای واگرد نیست: در این نشست ورود کلیدی نبوده.",
  "keys_import.imported": "کلیدها وارد شدند",
- "keys_import.imported_conflicts": "کلیدها وارد شدند؛ تعارض‌ها: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "کلیدها وارد شدند؛ تعارض‌ها: {n}"
 }

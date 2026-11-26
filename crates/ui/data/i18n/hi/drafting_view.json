@@ -15,6 +15,7 @@
  "drafting_view.name": "नाम",
  "drafting_view.count": "{n} एनोटेशन",
  "drafting_view.tab": "ड्राफ्टिंग · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "खाली ड्राफ्टिंग दृश्य",
  "drafting_view.canvas_hint": "Annotate टूल इस्तेमाल करें: विवरण रेखाएँ, क्षेत्र, टेक्स्ट, विवरण घटक",
  "drafting_view.created": "ड्राफ्टिंग दृश्य \"{name}\" बनाया गया",
@@ -29,6 +30,5 @@
  "drafting_view.more": "और",
  "empty.drafting.title": "अभी कोई ड्राफ्टिंग दृश्य नहीं है",
  "empty.drafting.hint": "मॉडल से न कटने वाले 2D विवरणों के लिए एक बनाएँ।",
- "empty.drafting.action": "नया ड्राफ्टिंग दृश्य",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "नया ड्राफ्टिंग दृश्य"
 }

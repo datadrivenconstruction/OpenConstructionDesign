@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter áp dụng và Esc dừng yêu cầu cũng từ kế hoạch hoặc góc nhìn 3D, trừ khi đang gõ trong ô văn bản.",
  "ai.plan.rebased": "Đã cập nhật theo mô hình hiện tại: {what}",
  "ai.value.bad": "“{text}” không phải là giá trị hợp lệ cho {name}",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "Trợ lý AI đã đổi giá trị này thành {agent} trong khi bạn nhập {mine}. Hãy chọn giá trị giữ lại.",
  "ai.value.choose_first": "Trước tiên hãy chọn giá trị của bạn hoặc của trợ lý AI trên thẻ",
  "ai.value.elem": "Phần tử {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Nhập giá trị khác, hoặc bỏ đánh dấu mục để không đưa vào Áp dụng.",
  "ai.value.tip": "Sửa giá trị trong bản nháp; mô hình chỉ thay đổi khi Áp dụng. Enter xác nhận, Esc khôi phục.",
  "ai.value.use_mine": "Dùng {mine}",
- "ai.value.was": "trước là {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "trước là {old}"
 }

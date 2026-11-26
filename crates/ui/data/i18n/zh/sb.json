@@ -41,5 +41,7 @@
  "sb.save.fresh": "无更改",
  "sb.save.save": "保存",
  "sb.save.ifc": "保存 IFC 副本",
- "sb.save.autosave": "自动保存"
+ "sb.save.autosave": "自动保存",
+ "sb.more.title": "更多",
+ "sb.more.desc": "此宽度下放不下的状态栏项目。"
 }

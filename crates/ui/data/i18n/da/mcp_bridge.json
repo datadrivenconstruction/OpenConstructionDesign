@@ -18,6 +18,7 @@
  "mcp.set.error": "Serveren blev ikke startet: {error}",
  "mcp.set.new": "Nyt token",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Hver batch kontrolleres først og er ét fortrydelsestrin. Kun programmer på denne computer kan forbinde.",
  "mcp.set.show": "Vis",
  "mcp.set.state_failed": "Kører ikke",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Status",
  "mcp.set.access": "Adgang",
  "mcp.set.config": "Konfiguration",
- "mcp.set.policy": "Anvendelse",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Anvendelse"
 }

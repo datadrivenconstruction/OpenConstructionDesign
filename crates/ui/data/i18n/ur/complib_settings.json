@@ -48,5 +48,13 @@
  "settings.lib_open": "کمپونینٹ لائبریری",
  "settings.lib_open_desc": "بنیادی فیملیز، پروجیکٹ کی فیملیز اور اپنی فیملیز دیکھیں",
  "settings.lib_dir": "میرا لائبریری فولڈر",
- "settings.lib_dir_desc": "یہاں رکھی گئی فیملی فائلیں (.ddcf) میری لائبریری میں ظاہر ہوں گی۔ DDC_COMPONENTS_DIR اسے منتقل کرتا ہے۔"
+ "settings.lib_dir_desc": "یہاں رکھی گئی فیملی فائلیں (.ddcf) میری لائبریری میں ظاہر ہوں گی۔ DDC_COMPONENTS_DIR اسے منتقل کرتا ہے۔",
+ "complib.fam.sprinkler_head": "اسپرنکلر ہیڈ",
+ "complib.fam.fire_pump": "فائر پمپ",
+ "complib.fam.pressurisation_fan": "پریشرائزیشن پنکھا",
+ "complib.fam.lift_car": "لفٹ کار",
+ "complib.fam.lift_landing_door": "لفٹ لینڈنگ دروازہ",
+ "complib.fam.lift_pit": "لفٹ پٹ",
+ "complib.fam.lift_overrun": "لفٹ اوور رن",
+ "complib.fam.lift_machine": "لفٹ مشین"
 }

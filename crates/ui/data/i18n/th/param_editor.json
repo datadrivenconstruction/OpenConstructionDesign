@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "สาขาของ if() ไม่เหมือนกัน",
  "pe.msg_what_args": "อาร์กิวเมนต์",
  "pe.msg_and": " และ ",
+ "pe.msg_incompatible": "{w}: หน่วยไม่เข้ากัน {dims}",
  "pe.text_no_formula": "พารามิเตอร์ข้อความไม่รับสูตร",
  "pe.circular": "การอ้างอิงวนซ้ำ: {text}",
- "pe.depends_invalid": "ขึ้นอยู่กับ “{b}” ที่ไม่ถูกต้อง",
- "pe.msg_incompatible": "{w}: หน่วยไม่เข้ากัน {dims}"
+ "pe.depends_invalid": "ขึ้นอยู่กับ “{b}” ที่ไม่ถูกต้อง"
 }

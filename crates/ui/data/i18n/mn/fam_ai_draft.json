@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n} татгалзсан оролдлогын дараа засагдсан, ойролцоогоор {tokens} токен",
+ "ai.fam_offer": "Агент {name} гэр бүлийг санал болгов",
+ "ai.fam_offer.open": "Гэр бүлийн редактор дээр нээх",
+ "ai.fam_offer.dismiss": "Хаах",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Шалгаж байна…",
+ "fe.ai.clean": "Шалгалтаар юу ч олдсонгүй",
+ "fe.ai.check_values": "Утгатай шалгах",
+ "fe.ai.lines": "мөр {n}",
+ "fe.ai.changes": "Өмнөх хувилбараас {n} өөрчлөлт",
+ "fe.ai.added": "нэмсэн: {head} {name}",
+ "fe.ai.removed": "хассан: {head} {name}",
+ "fe.ai.changed": "өөрчилсөн: {head} {name}",
+ "fe.ai.reject": "Татгалзах"
+}

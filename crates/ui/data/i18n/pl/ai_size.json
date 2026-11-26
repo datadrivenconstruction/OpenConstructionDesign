@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "ok. {n} / {max} tokenów",
  "ai.size.block": "Za długie dla tego modelu: ok. {n} tokenów, mieści się do {max}, z miejscem na odpowiedź — skróć lub podziel",
  "ai.size.trim": "Przytnij do rozmiaru",
  "ai.size.trim_tip": "Obcina koniec wiadomości, aby się zmieściła. Nic nie jest obcinane, dopóki nie klikniesz.",
  "ai.size.drop_view": "Pomiń widok",
  "ai.size.drop_level": "Pomiń poziom",
- "ai.size.drop_selection": "Pomiń zaznaczenie",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "Pomiń zaznaczenie"
 }

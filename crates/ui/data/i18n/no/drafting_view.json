@@ -15,6 +15,7 @@
  "drafting_view.name": "Navn",
  "drafting_view.count": "{n} merknader",
  "drafting_view.tab": "Tegning · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Tom tegnevisning",
  "drafting_view.canvas_hint": "Bruk merkeverktøyene: detaljlinjer, flater, tekst, detaljkomponenter",
  "drafting_view.created": "Tegnevisning «{name}» opprettet",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Mer",
  "empty.drafting.title": "Ingen tegnevisninger ennå",
  "empty.drafting.hint": "Lag en for 2D-detaljer som ikke er kuttet fra modellen.",
- "empty.drafting.action": "Ny tegnevisning",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Ny tegnevisning"
 }

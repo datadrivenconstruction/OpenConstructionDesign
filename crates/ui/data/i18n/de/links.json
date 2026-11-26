@@ -12,6 +12,7 @@
  "links.loaded": "geladen",
  "links.not_loaded": "nicht geladen",
  "links.loading": "wird geladen…",
+ "links.loading_all": "Verknüpfungen werden geladen",
  "links.levels": "Geschosse",
  "links.elements": "Elemente",
  "links.offset": "Versatz:",

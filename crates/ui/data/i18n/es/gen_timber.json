@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Panel de forjado CLT",
+ "fam.name.glulam_beam": "Viga de madera laminada",
+ "fam.name.glulam_column": "Pilar de madera laminada",
+ "gen.group.timber": "Estructura de madera",
+ "gen.rule.timber.beam_span_max.desc": "Mayor luz de una viga de madera laminada entre dos pilares.",
+ "gen.rule.timber.beam_span_max.title": "Límite de luz de viga",
+ "gen.rule.timber.panel_w.desc": "Panel de forjado contralaminado más ancho; con una junta entre cada uno.",
+ "gen.rule.timber.panel_w.title": "Ancho de panel CLT",
+ "gen.rule.timber.span_depth.desc": "Relación luz/canto de una viga de madera laminada; elige la sección.",
+ "gen.rule.timber.span_depth.title": "Relación luz/canto de viga"
+}

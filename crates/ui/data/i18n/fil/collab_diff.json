@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Uri",
  "collab_diff.diff.col.field": "Field",
  "collab_diff.diff.col.old": "Dati",
- "collab_diff.diff.col.new": "Ngayon"
+ "collab_diff.diff.col.new": "Ngayon",
+ "collab_diff.reveal.title": "Pagbuo",
+ "collab_diff.reveal.start": "Ipakita ayon sa pagkakagawa",
+ "collab_diff.reveal.play": "I-play",
+ "collab_diff.reveal.pause": "I-pause",
+ "collab_diff.reveal.back": "Pabalik",
+ "collab_diff.reveal.close": "Isara",
+ "collab_diff.reveal.nothing": "Walang maipapakita: walang nabagong elemento sa 3D scene.",
+ "collab_diff.reveal.journal_busy": "Binabasa ang journal…",
+ "collab_diff.reveal.journal_play": "I-play ang journal"
 }

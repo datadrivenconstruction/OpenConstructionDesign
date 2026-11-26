@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Çeyrek noktası",
+ "snap.extension": "Uzantı",
+ "snap.parallel": "Duvara paralel",
+ "snap.tracking_x": "Yakalanan noktanın X'i",
+ "snap.tracking_y": "Yakalanan noktanın Y'si",
+ "snap.tracking_cross": "Kılavuz kesişimi",
+ "snap.equal_step": "Eşit adım"
+}

@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatische Gebäudetechnik",
+ "gen.mep_auto_hint": "Lässt den Generator und den KI-Assistenten Rohre, Kanäle und Leitungen selbstständig verlegen. Für diese Region standardmäßig deaktiviert; Sie können es einschalten. Manuelle Verlegung steht immer zur Verfügung."
+}

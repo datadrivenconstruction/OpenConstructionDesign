@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Baca teks definisi famili proyek",
+ "api.cmd.family_validate": "Periksa teks definisi famili",
+ "api.cmd.family_reference": "Baca referensi teks definisi famili",
+ "api.cmd.family_draft": "Tawarkan definisi famili sebagai draf di editor famili"
+}

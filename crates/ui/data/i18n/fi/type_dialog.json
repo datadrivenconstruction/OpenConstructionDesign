@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Perhe",
  "type_dialog.typedial.h_function": "Toiminto",
  "type_dialog.typedial.h_material": "Materiaali",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "Parametri",
  "type_dialog.typedial.h_thickness": "Paksuus",
  "type_dialog.typedial.h_value": "Arvo",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Seinän pohjapinta-ala",
  "type_dialog.warn.wall_vol": "Seinän tilavuus",
  "type_dialog.warn.walls": "Seinät",
- "type_dialog.warn.warnings_n": "⚠ Varoituksia: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ Varoituksia: {n}"
 }

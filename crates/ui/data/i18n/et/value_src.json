@@ -24,5 +24,21 @@
  "value_src.verified_n": "Kinnitatud väärtusi: {n}",
  "value_src.bulk_note": "AI täidetud väärtused, kinnitamata: {n}",
  "value_src.bulk_verify": "Märgi kinnitatuks ({n})",
- "value_src.bulk_tip": "Märgib valiku kõik AI täidetud väärtused kinnitatuks, ühe tagasivõtu sammuna"
+ "value_src.bulk_tip": "Märgib valiku kõik AI täidetud väärtused kinnitatuks, ühe tagasivõtu sammuna",
+ "origin.title": "Päritolu",
+ "origin.made_by": "Tegija",
+ "origin.request": "Päring",
+ "origin.at": "Rakendatud",
+ "origin.recipe": "retsept „{name}”, osa {part}",
+ "origin.ai": "tehisintellekti assistent ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "skript {name}",
+ "origin.xlsx": "XLSX-tabel",
+ "origin.user": "inimene",
+ "origin.import": "import",
+ "origin.import_file": "import failist {file}",
+ "origin.unknown": "ajaloos puudub",
+ "origin.held": "Muudetud käsitsi: retsepti uuesti käivitamine jätab selle nii, nagu on",
+ "origin.rebuilt": "Retsepti uuesti käivitamine ehitab selle uuesti; muuda käsitsi, et see jääks nii, nagu on",
+ "origin.ai_values": "Tehisintellekti täidetud väärtusi: {n}, kontrollimata: {open}"
 }

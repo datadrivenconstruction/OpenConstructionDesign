@@ -41,5 +41,7 @@
  "sb.save.fresh": "Aucune modification",
  "sb.save.save": "Enregistrer",
  "sb.save.ifc": "Enregistrer une copie IFC",
- "sb.save.autosave": "Enregistrement auto"
+ "sb.save.autosave": "Enregistrement auto",
+ "sb.more.title": "Plus",
+ "sb.more.desc": "Éléments de la barre d’état qui ne tiennent pas à cette largeur."
 }

@@ -90,6 +90,7 @@
  "fe.cons.redundant": "nadmiarowe",
  "fe.cons.help": "Wymiar powiązany z parametrem długości steruje płaszczyznami; kąt wymaga parametru kąta",
  "fe.locks": "Blokady wyrównania",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Zablokuj",
  "fe.unlock": "Odblokuj",
  "fe.locks.help": "Blokada zastępuje argument bryły (np. rect #2) płaszczyzną, więc bryła za nią podąża",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Nazwa szkicu jest zajęta",
  "fe.clash.body": "Szkic o nazwie „{name}” już istnieje. Zastąp go tym, albo wróć i zapisz pod nową nazwą. Nic jeszcze nie zostało zapisane.",
  "fe.clash.rename": "Zapisz pod nową nazwą",
- "fe.clash.replace": "Zastąp ten szkic",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Zastąp ten szkic"
 }

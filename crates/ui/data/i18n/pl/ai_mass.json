@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "Zostałoby usuniętych elementów: {0} z {1}. Wymaga to potwierdzenia przez użytkownika",
+ "ai.issue.wipe": "Plan usunąłby wszystkie elementy modelu ({1}; usunięto: {0}). Nigdy nie jest stosowany w jednym kroku"
+}

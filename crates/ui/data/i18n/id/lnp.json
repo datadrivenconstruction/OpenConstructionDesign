@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} bukaan tidak diubah ({why})",
  "lnp.params_changed": "nilai diubah: {n}",
  "lnp.params_same": "Tidak ada perubahan: {u} elemen sudah memiliki nilai ini",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Pilih hanya panel pertama untuk mengeditnya",
  "lnp.clip_from_wall": "Parameter disalin dari dinding #{id}",
  "lnp.clip_from_opening": "Parameter disalin dari bukaan #{id}",
- "lnp.match_from": "Properti #{id} diterapkan ke {n} elemen",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Properti #{id} diterapkan ke {n} elemen"
 }

@@ -41,5 +41,16 @@
  "library.ifc.window": "پنجره",
  "library.ifc.stair": "پله",
  "library.ifc.pipe_fitting": "اتصال لوله",
- "library.ifc.duct_fitting": "اتصال مجرا"
+ "library.ifc.duct_fitting": "اتصال مجرا",
+ "library.ifc.beam": "تیر",
+ "library.ifc.column": "ستون",
+ "library.ifc.appliance": "لوازم خانگی",
+ "library.ifc.fire_terminal": "ترمینال اطفای حریق",
+ "library.ifc.heat_exchanger": "مبدل حرارتی",
+ "library.ifc.pump": "پمپ",
+ "library.ifc.tank": "مخزن",
+ "library.ifc.transport": "عنصر حمل‌ونقل",
+ "library.ifc.valve": "شیر",
+ "library.ifc.waste_terminal": "ترمینال فاضلاب",
+ "library.ifc.medical": "دستگاه پزشکی"
 }

@@ -18,6 +18,7 @@
  "mcp.set.error": "Servidor não iniciado: {error}",
  "mcp.set.new": "Novo token",
  "mcp.set.port": "Porta",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Cada lote é verificado antes e é um único passo de desfazer. Somente programas deste computador podem se conectar.",
  "mcp.set.show": "Mostrar",
  "mcp.set.state_failed": "Não está em execução",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Status",
  "mcp.set.access": "Acesso",
  "mcp.set.config": "Configuração",
- "mcp.set.policy": "Aplicação",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Aplicação"
 }

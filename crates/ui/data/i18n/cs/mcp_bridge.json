@@ -18,6 +18,7 @@
  "mcp.set.error": "Server nebyl spuštěn: {error}",
  "mcp.set.new": "Nový token",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Každá dávka se nejprve zkontroluje a je jeden krok zpět. Připojit se mohou jen programy na tomto počítači.",
  "mcp.set.show": "Zobrazit",
  "mcp.set.state_failed": "Neběží",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Stav",
  "mcp.set.access": "Přístup",
  "mcp.set.config": "Konfigurace",
- "mcp.set.policy": "Použití",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Použití"
 }

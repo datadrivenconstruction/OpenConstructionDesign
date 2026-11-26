@@ -52,6 +52,7 @@
  "mesh_tools.done": "Дууссан",
  "mesh_tools.failed": "Амжилтгүй",
  "mesh_tools.note.outline_approx": "хил ойролцоо",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Дараахийг харсан гадаргууг устгах",
  "mesh_tools.dir.up": "дээш",
  "mesh_tools.dir.down": "доош",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Энгийсгэсэн: {n} (жишээ нь: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Энгийсгэсэн: {n} (жишээ нь: {first})"
 }

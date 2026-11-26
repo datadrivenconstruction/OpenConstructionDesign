@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "แผงพื้น CLT",
+ "fam.name.glulam_beam": "คานกลูแลม",
+ "fam.name.glulam_column": "เสากลูแลม",
+ "gen.group.timber": "โครงสร้างไม้",
+ "gen.rule.timber.beam_span_max.desc": "ช่วงพาดที่ยาวที่สุดของคานกลูแลมระหว่างเสาสองต้น",
+ "gen.rule.timber.beam_span_max.title": "ขีดจำกัดช่วงพาดคาน",
+ "gen.rule.timber.panel_w.desc": "แผงพื้นไม้ซ้อนขวางที่กว้างที่สุด โดยมีรอยต่อระหว่างแต่ละแผง",
+ "gen.rule.timber.panel_w.title": "ความกว้างแผง CLT",
+ "gen.rule.timber.span_depth.desc": "ช่วงพาดต่อความลึกของคานกลูแลม ใช้เลือกหน้าตัด",
+ "gen.rule.timber.span_depth.title": "อัตราส่วนช่วงพาดต่อความลึกคาน"
+}

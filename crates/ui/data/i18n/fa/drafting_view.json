@@ -15,6 +15,7 @@
  "drafting_view.name": "نام",
  "drafting_view.count": "{n} حاشیه‌نویسی",
  "drafting_view.tab": "نقشه‌کشی · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "نمای نقشه‌کشی خالی",
  "drafting_view.canvas_hint": "از ابزارهای حاشیه‌نویسی استفاده کنید: خطوط جزئیات، ناحیه‌ها، متن، اجزای جزئیات",
  "drafting_view.created": "نمای نقشه‌کشی «{name}» ساخته شد",
@@ -29,6 +30,5 @@
  "drafting_view.more": "بیشتر",
  "empty.drafting.title": "هنوز نمای نقشه‌کشی‌ای نیست",
  "empty.drafting.hint": "برای جزئیات دوبعدی که از مدل بریده نشده‌اند یکی بسازید.",
- "empty.drafting.action": "نمای نقشه‌کشی جدید",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "نمای نقشه‌کشی جدید"
 }

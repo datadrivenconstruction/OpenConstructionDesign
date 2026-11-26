@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Өнгөт",
+ "cmd.ui.icons.color": "Өнгөт дүрс",
+ "cmd.ui.icons.color.desc": "Дүрсүүдийн зурах хэв маяг",
+ "theme.icons.hierarchical": "Шатлалт",
+ "cmd.ui.icons.hierarchical": "Шатлалт дүрс",
+ "cmd.ui.icons.hierarchical.desc": "Дүрсүүдийн зурах хэв маяг",
+ "theme.icons.isometric": "Изометр",
+ "cmd.ui.icons.isometric": "Изометр дүрс",
+ "cmd.ui.icons.isometric.desc": "Дүрсүүдийн зурах хэв маяг",
+ "theme.icons.monoline": "Нэг шугамт",
+ "cmd.ui.icons.monoline": "Нэг шугамт дүрс",
+ "cmd.ui.icons.monoline.desc": "Дүрсүүдийн зурах хэв маяг"
+}

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "eskiz iptal edildi",
  "sketch_edit.sk_applied": "eskiz uygulandı",
  "sketch_edit.sk_tail": "kuyruk",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "döşeme",
  "sketch_edit.sk_host_roof": "çatı",
  "sketch_edit.sk_host_ceiling": "tavan",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Kat 2",
  "sketch_edit.seed_floor_200": "Döşeme 200",
  "sketch_edit.seed_section1": "Kesit 1",
- "sketch_edit.seed_section2": "Kesit 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Kesit 2"
 }

@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Valinta ({n})",
  "ai.ctx.add_tip": "Lisää takaisin tekoälyn näkemiin tietoihin",
  "ai.ctx.frame_tip": "Näytä nämä elementit",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Kaiteet",
  "ai.ctx.cat.roof": "Vesikatot",
  "ai.ctx.cat.stair": "Portaat",
- "ai.ctx.cat.other": "Muut",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Muut"
 }

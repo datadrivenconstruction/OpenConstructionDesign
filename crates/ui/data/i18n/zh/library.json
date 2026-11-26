@@ -41,5 +41,16 @@
  "library.ifc.window": "窗",
  "library.ifc.stair": "楼梯",
  "library.ifc.pipe_fitting": "管件",
- "library.ifc.duct_fitting": "风管管件"
+ "library.ifc.duct_fitting": "风管管件",
+ "library.ifc.beam": "梁",
+ "library.ifc.column": "柱",
+ "library.ifc.appliance": "电器",
+ "library.ifc.fire_terminal": "消防末端",
+ "library.ifc.heat_exchanger": "换热器",
+ "library.ifc.pump": "泵",
+ "library.ifc.tank": "水箱",
+ "library.ifc.transport": "运输构件",
+ "library.ifc.valve": "阀门",
+ "library.ifc.waste_terminal": "排水末端",
+ "library.ifc.medical": "医疗设备"
 }

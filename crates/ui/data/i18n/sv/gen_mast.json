@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Masthiss",
+ "fam.name.mast_lift": "Masthiss",
+ "gen.rule.steel.check.self_weight.desc": "Tornets vikt ovanför ett snitt, per meter höjd.",
+ "gen.rule.steel.check.self_weight.title": "Ståls vikt per meter",
+ "gen.rule.steel.check.strut_share.desc": "Andel av pelarkraften som en horisontal tar upp i sin knutpunkt.",
+ "gen.rule.steel.check.strut_share.title": "Horisontalandel",
+ "gen.rule.steel.out.lift_box_d.desc": "Plandjup som en masthiss behöver med sin mast; bjälklagen öppnas över den.",
+ "gen.rule.steel.out.lift_box_d.title": "Hisslådans djup",
+ "gen.rule.steel.out.lift_box_w.desc": "Planbredd som en masthiss behöver; bjälklagen öppnas över den.",
+ "gen.rule.steel.out.lift_box_w.title": "Hisslådans bredd",
+ "gen.rule.steel.out.lift_offset.desc": "Hissens avstånd från axeln, fritt från planförbandet.",
+ "gen.rule.steel.out.lift_offset.title": "Hissens förskjutning från axeln",
+ "gen.rule.steel.out.lifts.desc": "Hissar upp genom kärnan: till den andra plattformen, sedan till toppen.",
+ "gen.rule.steel.out.lifts.title": "Hisslinjer"
+}

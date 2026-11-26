@@ -20,6 +20,7 @@
  "sched_import.why_ro": "doar citire",
  "sched_import.why_locked": "valoare blocată",
  "sched_import.why_bad": "valoare greșită",
+ "sched_import.refusal": "{at} {col} „{text}”: {why}",
  "sched_import.apply": "Aplică {n} modificări",
  "sched_import.cancel": "Renunță",
  "sched_import.applied": "Importate {n} celule (un pas de anulare)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Rezultate de formulă, neaplicate: {n}",
  "sched_import.no_id_rows": "Rânduri fără Id, nu au fost citite: {n} (rândurile {rows})",
  "sched_import.more": "… încă {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(gol)",
  "sched_import.reading": "Se citește registrul…",
  "sched_import.resaved": "Registrul a fost salvat din nou după prima previzualizare: această previzualizare arată noul conținut",
- "sched_import.resaved_reading": "Registrul a fost salvat din nou: nimic aplicat, se citește din nou pentru o nouă previzualizare",
- "sched_import.refusal": "{at} {col} „{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Registrul a fost salvat din nou: nimic aplicat, se citește din nou pentru o nouă previzualizare"
 }

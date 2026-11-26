@@ -15,6 +15,7 @@
  "drafting_view.name": "Нэр",
  "drafting_view.count": "{n} тэмдэглэгээ",
  "drafting_view.tab": "Зурах · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Хоосон зурах харагдац",
  "drafting_view.canvas_hint": "Тэмдэглэгээний хэрэгслийг ашиглана уу: задаргааны шугам, бүс, текст, задаргааны бүрэлдэхүүн",
  "drafting_view.created": "Зурах харагдац “{name}” үүсгэгдлээ",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Бусад",
  "empty.drafting.title": "Зурах харагдац одоогоор алга",
  "empty.drafting.hint": "Загвараас таслаагүй 2D задаргаанд нэгийг үүсгэнэ үү.",
- "empty.drafting.action": "Шинэ зурах харагдац",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Шинэ зурах харагдац"
 }

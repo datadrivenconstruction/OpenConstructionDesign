@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "jako sítě",
  "dlg.imp.skipped": "přeskočeno",
  "dlg.imp.notes": "Poznámky: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "a dalších {n} druhů",
  "dlg.imp.no_levels": "Soubor neobsahuje podlaží: byla vytvořena výchozí podlaží",
  "dlg.imp.reimport_row": "Aktualizováno {updated}, beze změny {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} čar, {arcs} oblouků, {texts} textů, {fills} výplní, {layers} vrstev; jednotka {unit} mm",
  "dlg.dw.summary_paper": "; papírové listy {n} (nevloženy do podkladu)",
  "dlg.dw.summary_unknown": "; nepřeneseno: {list}",
- "dlg.dw.summary_more": " a dalších {n} druhů",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " a dalších {n} druhů"
 }

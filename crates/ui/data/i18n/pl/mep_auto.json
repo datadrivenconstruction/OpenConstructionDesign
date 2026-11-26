@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatyczne instalacje budynkowe",
+ "gen.mep_auto_hint": "Pozwala generatorowi i asystentowi AI samodzielnie układać rury, kanały i okablowanie. Dla tego regionu domyślnie wyłączone; można to włączyć. Ręczne trasowanie jest zawsze dostępne."
+}

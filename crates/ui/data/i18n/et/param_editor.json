@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() harud erinevad",
  "pe.msg_what_args": "argumendid",
  "pe.msg_and": " ja ",
+ "pe.msg_incompatible": "{w}: sobimatud ühikud {dims}",
  "pe.text_no_formula": "tekstiparameetritel valemit ei ole",
  "pe.circular": "tsirkulaarviide: {text}",
- "pe.depends_invalid": "sõltub vigasest „{b}“",
- "pe.msg_incompatible": "{w}: sobimatud ühikud {dims}"
+ "pe.depends_invalid": "sõltub vigasest „{b}“"
 }

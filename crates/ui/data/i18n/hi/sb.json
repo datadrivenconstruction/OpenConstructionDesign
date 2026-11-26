@@ -41,5 +41,7 @@
  "sb.save.fresh": "कोई बदलाव नहीं",
  "sb.save.save": "सहेजें",
  "sb.save.ifc": "IFC प्रति सहेजें",
- "sb.save.autosave": "स्वतः सहेजना"
+ "sb.save.autosave": "स्वतः सहेजना",
+ "sb.more.title": "और",
+ "sb.more.desc": "स्टेटस बार के वे आइटम जो इस चौड़ाई में नहीं समाते।"
 }

@@ -18,7 +18,7 @@
  "complib.ready.no": "ยังไม่ได้เขียน",
  "complib.edited": "แก้ไขแล้ว",
  "complib.edited_tip": "ตระกูลของโครงการต่างจากที่มาพร้อมระบบ",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "ค่า",
- "complib.armed": "ส่วนประกอบ: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "ส่วนประกอบ: {name}"
 }

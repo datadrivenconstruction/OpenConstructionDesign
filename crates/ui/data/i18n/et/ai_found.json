@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Peidetud",
  "ai_found.found.color": "Värvitud",
  "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Vastet ei ole. Proovi laiemat filtrit.",
  "ai_found.found.show_btn": "Näita",
  "ai_found.found.show_tip": "Vali need elemendid ja suumi neile plaanil ja 3D-vaates",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# element peidetud",
   "other": "# elementi peidetud"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

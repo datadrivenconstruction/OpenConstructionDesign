@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "تکثیر نوع",
  "wall_type.wt.duplicate_tip": "این لایه‌ها را به‌عنوان نوع جدید ذخیره می‌کند؛ نوعی که باز کرده‌اید همان‌طور می‌ماند.",
  "wall_type.wt.switch_dirty": "پیش از باز کردن نوع دیگر، تأیید یا انصراف را بزنید",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "کارکرد",
  "wall_type.wt.h_material": "مصالح",
  "wall_type.wt.h_thickness": "ضخامت",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "دیوارها را در نما انتخاب کنید، سپس نوعشان را عوض کنید.",
  "wall_type.swap.already": "دیوارهای انتخاب‌شده از قبل این نوع را دارند",
  "wall_type.swap.apply": "تعویض",
- "wall_type.swap.done": "نوع دیوار عوض شد: {n} از {m} دیوار",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "نوع دیوار عوض شد: {n} از {m} دیوار"
 }

@@ -24,5 +24,21 @@
  "value_src.verified_n": "Doğrulanan değerler: {n}",
  "value_src.bulk_note": "Yapay zeka tarafından doldurulan, doğrulanmamış değerler: {n}",
  "value_src.bulk_verify": "Doğrulandı olarak işaretle ({n})",
- "value_src.bulk_tip": "Seçimdeki yapay zeka tarafından doldurulan tüm değerleri doğrulanmış olarak işaretler, tek geri alma adımı"
+ "value_src.bulk_tip": "Seçimdeki yapay zeka tarafından doldurulan tüm değerleri doğrulanmış olarak işaretler, tek geri alma adımı",
+ "origin.title": "Kaynak",
+ "origin.made_by": "Oluşturan",
+ "origin.request": "İstek",
+ "origin.at": "Uygulandı",
+ "origin.recipe": "“{name}” tarifi, {part} bölümü",
+ "origin.ai": "yapay zeka asistanı ({model})",
+ "origin.agent": "{name} ajanı",
+ "origin.script": "{name} betiği",
+ "origin.xlsx": "XLSX tablosu",
+ "origin.user": "bir kullanıcı",
+ "origin.import": "içe aktarma",
+ "origin.import_file": "{file} dosyasından içe aktarma",
+ "origin.unknown": "geçmişte yok",
+ "origin.held": "Elle düzenlendi: tarifin yeniden çalıştırılması bunu olduğu gibi bırakır",
+ "origin.rebuilt": "Tarifin yeniden çalıştırılması bunu yeniden oluşturur; olduğu gibi kalması için elle düzenleyin",
+ "origin.ai_values": "Yapay zekanın doldurduğu değerler: {n}, doğrulanmamış: {open}"
 }

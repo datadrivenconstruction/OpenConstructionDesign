@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "پرکردن",
  "text_style.lbl.detail": "جزئیات",
  "text_style.lbl.width": "عرض",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "عددی از {min} تا {max} وارد کنید",
  "text_style.tip.next_ring": "این کانتور را ببند و یک کانتور دیگر در همان ناحیه شروع کن",
  "text_style.tip.edit_text": "متن را همان‌جا ویرایش کن",
- "text_style.tip.add_leader": "یک خط راهنما به این متن اضافه کن",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "یک خط راهنما به این متن اضافه کن"
 }

@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x،",
  "roof_edge.pe.y": "y،",
  "roof_edge.pe.bulge": "بلج",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "اس کے بعد نقطہ شامل کریں (قوس آدھی تقسیم ہوتی ہے)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "محفوظ کریں",
  "roof_edge.pe.saved": "پروفائل محفوظ ہو گئی",
  "roof_edge.pe.valid": "پروفائل درست ہے",
  "roof_edge.pe.invalid": "پروفائل خود کو کاٹتا ہے، بہت چھوٹا ہے یا 3 سے کم نقطے ہیں",
  "roof_edge.pe.bad_number": "کوآرڈینیٹ یا بلج عدد نہیں",
- "roof_edge.pe.no_name": "پروفائل کا نام لکھیں",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "پروفائل کا نام لکھیں"
 }

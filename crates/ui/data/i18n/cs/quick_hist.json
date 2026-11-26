@@ -72,6 +72,7 @@
  "quick.cat.beam": "Trámy",
  "quick.cat.ceiling": "Stropy",
  "quick.cat.structure": "Konstrukce",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} z {all}",
  "quick.hud.type": "Typ",
  "quick.hud.height": "Výška",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Hodnotu „{v}“ nelze přečíst",
  "quick.menu.repeat": "Opakovat: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Nedávné",
  "quick.bar.repeat_tip": "{cmd} · Enter jej zopakuje",
  "quick.repeat.none": "Zatím není co opakovat",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Zpět",
  "quick.tips.next": "Další",
  "quick.tips.finish": "Hotovo",
- "quick.tips.never": "Znovu nezobrazovat",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Znovu nezobrazovat"
 }

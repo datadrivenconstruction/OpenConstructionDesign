@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "đã sửa sau {n} lần thử bị từ chối, khoảng {tokens} token",
+ "ai.fam_offer": "Một tác nhân đã đề xuất họ đối tượng {name}",
+ "ai.fam_offer.open": "Mở trong trình chỉnh sửa họ đối tượng",
+ "ai.fam_offer.dismiss": "Bỏ qua",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Đang kiểm tra…",
+ "fe.ai.clean": "Kiểm tra không phát hiện gì",
+ "fe.ai.check_values": "Kiểm tra với giá trị",
+ "fe.ai.lines": "dòng {n}",
+ "fe.ai.changes": "{n} thay đổi so với phiên bản trước",
+ "fe.ai.added": "đã thêm: {head} {name}",
+ "fe.ai.removed": "đã xóa: {head} {name}",
+ "fe.ai.changed": "đã thay đổi: {head} {name}",
+ "fe.ai.reject": "Từ chối"
+}

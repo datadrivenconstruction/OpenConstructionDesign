@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF disimpan: {path} ({nodes} elemen, {meshes} mesh)",
  "data_export.gltf.partial": "glTF disimpan dengan {n} masalah, beberapa badan mungkin hilang: {path}",
  "data_export.gltf.failed": "Ekspor glTF gagal: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "Informasi proyek",
  "data_export.info.project": "Proyek",
  "data_export.info.site": "Koordinat dan utara",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "Tidak ada primitif gambar di dalam kotak",
  "data_export.dwgpick.box": "Primitif terpilih: {n}",
  "data_export.dwgpick.box_rings": "Primitif terpilih: {n}, kontur tertutup: {rings}",
- "data_export.dwgpick.layer": "Layer {layer}: primitif terpilih {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "Layer {layer}: primitif terpilih {n}"
 }

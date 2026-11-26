@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Ovojnica",
+ "gen.group.acoustic": "Zvučna izolacija",
+ "gen.rule.fire.insulation_class.title": "Požarni razred izolacije ovojnice",
+ "gen.rule.fire.insulation_class.desc": "Najlošiji razred reakcije na požar koji izolacija vanjskih zidova i krovova smije imati; sklopovi s lošijom izolacijom ne biraju se.",
+ "gen.rule.envelope.u_wall.title": "U-vrijednost vanjskog zida",
+ "gen.rule.envelope.u_wall.desc": "Najveći koeficijent prolaska topline vanjskog zida; izolacija zida dimenzionira se tako da ostane ispod njega, pa hladnija klima dobiva deblji zid.",
+ "gen.rule.envelope.u_roof.title": "U-vrijednost krova",
+ "gen.rule.envelope.u_roof.desc": "Najveći koeficijent prolaska topline krova; izolacija krova dimenzionira se tako da ostane ispod njega.",
+ "gen.rule.envelope.u_ground.title": "U-vrijednost ploče na tlu",
+ "gen.rule.envelope.u_ground.desc": "Najveći koeficijent prolaska topline podne ploče na tlu; izolacija ispod estriha dimenzionira se tako da ostane ispod njega.",
+ "gen.rule.acoustic.rw_party.title": "Zvučna izolacija međustanskog zida",
+ "gen.rule.acoustic.rw_party.desc": "Najmanji indeks zvučne izolacije Rw zida između stanova ili uz zajednički hodnik; zidana jezgra dimenzionira se prema zakonu mase da ga postigne.",
+ "gen.rule.acoustic.rw_floor.title": "Zvučna izolacija stropa",
+ "gen.rule.acoustic.rw_floor.desc": "Najmanji indeks zvučne izolacije Rw stropa između etaža; betonska ploča dimenzionira se prema zakonu mase da ga postigne.",
+ "gen.why.e.asm_wall": "vanjski zidovi debljine {t} m s {ins} m izolacije: U {u} W/m²K, najviše {lim}",
+ "gen.why.e.asm_roof": "krov debljine {t} m s {ins} m izolacije: U {u} W/m²K, najviše {lim}",
+ "gen.why.e.asm_ground": "ploča na tlu debljine {t} m s {ins} m izolacije: U {u} W/m²K, najviše {lim}",
+ "gen.why.e.asm_party": "međustanski zidovi debljine {t} m, {m} kg/m²: Rw {rw} dB prema zakonu mase, najmanje {lim}",
+ "gen.why.e.asm_floor": "stropovi debljine {t} m, {m} kg/m²: Rw {rw} dB prema zakonu mase, najmanje {lim}"
+}

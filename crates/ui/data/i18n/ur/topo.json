@@ -64,6 +64,7 @@
  "topo.import.title": "سروے درآمد کریں",
  "topo.import.filter": "سروے (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "نقطے کی بلندی",
  "topo.opt.thickness": "ٹوپوسولڈ کی موٹائی",
  "topo.opt.add_to_active": "فعال ٹوپوسولڈ میں شامل کریں",
@@ -121,6 +122,5 @@
  "topo.import.ok": "درآمد",
  "topo.import.cancel": "منسوخ",
  "topo.import.no_layers": "کوئی پرت منتخب نہیں",
- "topo.info.warnings": "نہیں بنا:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "نہیں بنا:"
 }

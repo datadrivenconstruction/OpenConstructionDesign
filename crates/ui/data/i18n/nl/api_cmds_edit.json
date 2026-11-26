@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Geometrieverbindingen samenvoegen, opheffen of wisselen",
  "api.cmd.place_footings": "Een funderingspunt plaatsen onder elke kolom van een verdieping",
  "api.cmd.create_terrain": "Maak een terrein van meetpunten of een hellend vlak",
- "api.cmd.script_recipes": "Lees de bouwblokken en recepten van scripts voor vrije constructies"
+ "api.cmd.set_material": "Stel in hoe een materiaal er in 3D uitziet",
+ "api.cmd.script_recipes": "Lees de bouwblokken en recepten van scripts voor vrije constructies",
+ "api.cmd.generate_block": "Plan een bouwblok met gebouwen op percelen met gedeelde terreinregels",
+ "api.cmd.measure_save": "Sla een meting op in een weergave",
+ "api.cmd.edit_mass": "Voeg een geschiedenisstap toe aan een massa: extruderen, helling, schil, afronding, afschuining, offset of splitsen",
+ "api.cmd.mass_to_family": "Maak een componentfamilie van een massatijdlijn"
 }

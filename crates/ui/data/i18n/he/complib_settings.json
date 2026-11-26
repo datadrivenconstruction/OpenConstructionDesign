@@ -48,5 +48,13 @@
  "settings.lib_open": "ספריית רכיבים",
  "settings.lib_open_desc": "עיון במשפחות המובנות, במשפחות הפרויקט ובמשפחות שלך",
  "settings.lib_dir": "תיקיית הספרייה שלי",
- "settings.lib_dir_desc": "קבצי משפחה (.ddcf) שיוצבו כאן יופיעו תחת “הספרייה שלי”. DDC_COMPONENTS_DIR מזיז את התיקייה."
+ "settings.lib_dir_desc": "קבצי משפחה (.ddcf) שיוצבו כאן יופיעו תחת “הספרייה שלי”. DDC_COMPONENTS_DIR מזיז את התיקייה.",
+ "complib.fam.sprinkler_head": "ראש ספרינקלר",
+ "complib.fam.fire_pump": "משאבת כיבוי אש",
+ "complib.fam.pressurisation_fan": "מפוח יצירת לחץ",
+ "complib.fam.lift_car": "תא מעלית",
+ "complib.fam.lift_landing_door": "דלת קומה של מעלית",
+ "complib.fam.lift_pit": "פיר תחתון של מעלית",
+ "complib.fam.lift_overrun": "מרחב עליון של מעלית",
+ "complib.fam.lift_machine": "מכונת מעלית"
 }

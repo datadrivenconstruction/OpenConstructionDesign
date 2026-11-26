@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "ブックを読み込めません。自身の列が失われるため、XLSX スプレッドシート で閉じてから再試行してください",
  "xl.msg.type_x_layer_x": "タイプ {} レイヤ {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} は存在しなくなりました。その列のセルは削除されました",
- "xl.msg.delsafe_type_param_on_elements": "パラメータ '{}' はタイプパラメータです。タイプシートで編集してください。適用されません"
+ "xl.msg.delsafe_type_param_on_elements": "パラメータ '{}' はタイプパラメータです。タイプシートで編集してください。適用されません",
+ "xl.msg.tag_x_is_removed_with_x_x": "タグ {} は {} {} とともに削除されます",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "寸法 {} は {} {} を失い、最後の形状を保持します",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "削除された要素の注釈は確認できません: {}"
 }

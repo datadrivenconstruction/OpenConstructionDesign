@@ -41,5 +41,7 @@
  "sb.save.fresh": "بدون تغییر",
  "sb.save.save": "ذخیره",
  "sb.save.ifc": "ذخیرهٔ نسخهٔ IFC",
- "sb.save.autosave": "ذخیره خودکار"
+ "sb.save.autosave": "ذخیره خودکار",
+ "sb.more.title": "بیشتر",
+ "sb.more.desc": "موارد نوار وضعیت که در این عرض جا نمی‌شوند."
 }

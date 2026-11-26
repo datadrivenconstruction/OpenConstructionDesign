@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter past toe en Esc stopt het verzoek ook vanuit het plan of de 3D-weergave, tenzij in een tekstveld wordt getypt.",
  "ai.plan.rebased": "Bijgewerkt tegen het huidige model: {what}",
  "ai.value.bad": "\"{text}\" is geen geldige waarde voor {name}",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "De AI-assistent heeft deze waarde naar {agent} gewijzigd terwijl u {mine} invoerde. Kies welke u wilt behouden.",
  "ai.value.choose_first": "Kies eerst uw waarde of die van de AI-assistent op de kaart",
  "ai.value.elem": "Bouwdeel {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Voer een andere waarde in, of vink het onderdeel uit om het buiten Toepassen te houden.",
  "ai.value.tip": "Corrigeer de waarde in het concept; het model verandert alleen bij Toepassen. Enter bevestigt, Esc herstelt.",
  "ai.value.use_mine": "{mine} gebruiken",
- "ai.value.was": "eerder: {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "eerder: {old}"
 }

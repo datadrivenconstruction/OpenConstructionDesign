@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "เป็นเมช",
  "dlg.imp.skipped": "ข้าม",
  "dlg.imp.notes": "หมายเหตุ: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "และอีก {n} ชนิด",
  "dlg.imp.no_levels": "ไฟล์ไม่มีระดับ จึงสร้างระดับเริ่มต้น",
  "dlg.imp.reimport_row": "อัปเดต {updated} ไม่เปลี่ยน {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} เส้น, {arcs} ส่วนโค้ง, {texts} ข้อความ, {fills} การเติม, {layers} เลเยอร์; หน่วย {unit} mm",
  "dlg.dw.summary_paper": "; แผ่นกระดาษ {n} (ไม่วางบนพื้นหลัง)",
  "dlg.dw.summary_unknown": "; ไม่ได้นำมาด้วย: {list}",
- "dlg.dw.summary_more": " และอีก {n} ชนิด",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " และอีก {n} ชนิด"
 }

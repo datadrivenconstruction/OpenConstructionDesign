@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "эскиз жокко чыгарылды",
  "sketch_edit.sk_applied": "эскиз колдонулду",
  "sketch_edit.sk_tail": "куйрук",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "плита",
  "sketch_edit.sk_host_roof": "чатыр",
  "sketch_edit.sk_host_ceiling": "шып",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "2-кабат",
  "sketch_edit.seed_floor_200": "Пол 200",
  "sketch_edit.seed_section1": "Кесим 1",
- "sketch_edit.seed_section2": "Кесим 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Кесим 2"
 }

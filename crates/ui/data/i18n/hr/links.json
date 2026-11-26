@@ -12,6 +12,7 @@
  "links.loaded": "učitano",
  "links.not_loaded": "nije učitano",
  "links.loading": "učitavanje…",
+ "links.loading_all": "Učitavanje poveznica",
  "links.levels": "razina",
  "links.elements": "elemenata",
  "links.offset": "Pomak:",

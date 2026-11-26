@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "ลิฟต์เสา",
+ "fam.name.mast_lift": "ลิฟต์เสา",
+ "gen.rule.steel.check.self_weight.desc": "น้ำหนักของหอเหนือรอยตัด ต่อเมตรของความสูง",
+ "gen.rule.steel.check.self_weight.title": "น้ำหนักเหล็กต่อเมตร",
+ "gen.rule.steel.check.strut_share.desc": "สัดส่วนของแรงในเสาหลักที่ชิ้นส่วนแนวนอนรับไว้ที่จุดต่อ",
+ "gen.rule.steel.check.strut_share.title": "สัดส่วนแนวนอน",
+ "gen.rule.steel.out.lift_box_d.desc": "ความลึกในผังที่ลิฟต์เสาต้องการพร้อมเสา พื้นจะเปิดช่องเหนือส่วนนี้",
+ "gen.rule.steel.out.lift_box_d.title": "ความลึกช่องลิฟต์",
+ "gen.rule.steel.out.lift_box_w.desc": "ความกว้างในผังที่ลิฟต์เสาต้องการ พื้นจะเปิดช่องเหนือส่วนนี้",
+ "gen.rule.steel.out.lift_box_w.title": "ความกว้างช่องลิฟต์",
+ "gen.rule.steel.out.lift_offset.desc": "ระยะของลิฟต์จากแกน โดยไม่ชนค้ำยันในผัง",
+ "gen.rule.steel.out.lift_offset.title": "ระยะลิฟต์จากแกน",
+ "gen.rule.steel.out.lifts.desc": "ลิฟต์ขึ้นตามแกนอาคาร: ไปยังแท่นที่สอง แล้วไปถึงยอด",
+ "gen.rule.steel.out.lifts.title": "ช่วงลิฟต์"
+}

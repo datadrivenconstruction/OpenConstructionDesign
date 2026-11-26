@@ -5,6 +5,7 @@
  "keys_import.new_head": "Жаңа кілттер",
  "keys_import.changed_head": "Сіздің өз кілттеріңізді ауыстырады",
  "keys_import.conflicts_head": "Импорттан кейінгі қайшылықтар",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "аккорд",
  "keys_import.kind_seq": "екі әріп",
  "keys_import.unbound": "жоқ",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Болдырылмады: импорттан кейін кілттер өңделді. Кілттер терезесінде оларды біртіндеп қалпына келтіріңіз.",
  "keys_import.undo_none": "Болдыратын ештеңе жоқ: осы сеансда кілт импорты болған жоқ.",
  "keys_import.imported": "Кілттер импортталды",
- "keys_import.imported_conflicts": "Кілттер импортталды; қайшылықтар: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Кілттер импортталды; қайшылықтар: {n}"
 }

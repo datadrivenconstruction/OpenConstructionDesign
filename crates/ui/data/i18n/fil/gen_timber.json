@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT Floor Panel",
+ "fam.name.glulam_beam": "Glulam Beam",
+ "fam.name.glulam_column": "Glulam Column",
+ "gen.group.timber": "Timber structure",
+ "gen.rule.timber.beam_span_max.desc": "Pinakamahabang span ng glulam beam sa pagitan ng dalawang haligi.",
+ "gen.rule.timber.beam_span_max.title": "Limitasyon ng span ng beam",
+ "gen.rule.timber.panel_w.desc": "Pinakamalapad na cross-laminated na floor panel; may dugtungan sa pagitan ng bawat isa.",
+ "gen.rule.timber.panel_w.title": "Lapad ng CLT panel",
+ "gen.rule.timber.span_depth.desc": "Span kumpara sa lalim ng glulam beam; pumipili ng section.",
+ "gen.rule.timber.span_depth.title": "Span sa lalim ng beam"
+}

@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Spojit, rozpojit nebo přepnout spoje geometrie",
  "api.cmd.place_footings": "Umístit patku pod každý sloup podlaží",
  "api.cmd.create_terrain": "Vytvořit terén z bodů měření nebo ze šikmé roviny",
- "api.cmd.script_recipes": "Přečíst stavební bloky skriptů a postupy volných konstrukcí"
+ "api.cmd.set_material": "Nastavit vzhled materiálu ve 3D",
+ "api.cmd.script_recipes": "Přečíst stavební bloky skriptů a postupy volných konstrukcí",
+ "api.cmd.generate_block": "Naplánovat blok budov na pozemcích se společnými pravidly lokality",
+ "api.cmd.measure_save": "Uložit měření do pohledu",
+ "api.cmd.edit_mass": "Přidat krok historie do hmoty: vytažení, návrh, skořepina, zaoblení, zkosení, odsazení nebo rozdělení",
+ "api.cmd.mass_to_family": "Vytvořit rodinu komponent z časové osy hmoty"
 }

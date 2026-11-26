@@ -18,7 +18,7 @@
  "complib.ready.no": "nicht geschrieben",
  "complib.edited": "Bearbeitet",
  "complib.edited_tip": "Die Familie des Projekts weicht von der eingebauten ab",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Wert",
- "complib.armed": "Bauteil: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Bauteil: {name}"
 }

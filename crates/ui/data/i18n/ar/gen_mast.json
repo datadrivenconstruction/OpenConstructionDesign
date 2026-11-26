@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "مصعد صاري",
+ "fam.name.mast_lift": "مصعد صاري",
+ "gen.rule.steel.check.self_weight.desc": "وزن البرج فوق مقطع، لكل متر من الارتفاع.",
+ "gen.rule.steel.check.self_weight.title": "وزن الفولاذ لكل متر",
+ "gen.rule.steel.check.strut_share.desc": "نسبة قوة الحزام التي يحملها العنصر الأفقي عند عقدته.",
+ "gen.rule.steel.check.strut_share.title": "النسبة الأفقية",
+ "gen.rule.steel.out.lift_box_d.desc": "العمق في المسقط الذي يحتاجه مصعد الصاري مع صاريه؛ تُفتح الأرضيات فوقه.",
+ "gen.rule.steel.out.lift_box_d.title": "عمق صندوق المصعد",
+ "gen.rule.steel.out.lift_box_w.desc": "العرض في المسقط الذي يحتاجه مصعد الصاري؛ تُفتح الأرضيات فوقه.",
+ "gen.rule.steel.out.lift_box_w.title": "عرض صندوق المصعد",
+ "gen.rule.steel.out.lift_offset.desc": "مسافة المصعد عن المحور، بعيدًا عن الشداد في المسقط.",
+ "gen.rule.steel.out.lift_offset.title": "إزاحة المصعد عن المحور",
+ "gen.rule.steel.out.lifts.desc": "المصاعد في النواة: إلى المنصة الثانية، ثم إلى القمة.",
+ "gen.rule.steel.out.lifts.title": "مسارات المصاعد"
+}

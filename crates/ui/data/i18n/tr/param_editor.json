@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() dallarının türleri farklı",
  "pe.msg_what_args": "argümanlar",
  "pe.msg_and": " ve ",
+ "pe.msg_incompatible": "{w}: uyumsuz birimler {dims}",
  "pe.text_no_formula": "metin parametreleri formül almaz",
  "pe.circular": "döngüsel referans: {text}",
- "pe.depends_invalid": "geçersiz “{b}” değerine bağlı",
- "pe.msg_incompatible": "{w}: uyumsuz birimler {dims}"
+ "pe.depends_invalid": "geçersiz “{b}” değerine bağlı"
 }

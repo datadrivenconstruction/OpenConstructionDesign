@@ -45,5 +45,7 @@
  "phui.kind.comp": "Komponentlar",
  "phui.kind.shaft": "Shaxtalar",
  "phui.kind.ramp": "Panduslar",
- "phui.kind.member": "Konstruktiv elementlar"
+ "phui.kind.member": "Konstruktiv elementlar",
+ "phui.dates": "Sanalar (boshlanishi, tugashi)",
+ "phui.show_calendar": "Kalendar bo'yicha ko'rsatish"
 }

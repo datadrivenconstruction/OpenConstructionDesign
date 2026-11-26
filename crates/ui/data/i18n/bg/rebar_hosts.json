@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Основи: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Колона",
  "rebar_hosts.kind.beam": "Греда",
  "rebar_hosts.kind.wall": "Стена",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Мрежата се поставя в стени, плочи и фундаменти, не в колони или греди.",
  "rebar_hosts.why.bars_plate": "Надлъжните пръти и хомутите се поставят в колони и греди, не в стени, плочи или фундаменти.",
  "rebar_hosts.why.no_common_face": "Избраните основи нямат обща защитна страна. Изберете основи от един вид.",
- "rebar_hosts.why.no_type": "Изберете тип арматура.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Изберете тип арматура."
 }

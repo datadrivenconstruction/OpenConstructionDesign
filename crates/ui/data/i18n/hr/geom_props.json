@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<različito>",
  "geom_props.tip": "Enter primjenjuje vrijednost na svih {n} odabranih, jedan korak poništavanja",
  "geom_props.roof_slope": "Nagib",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Uvezeni elementi",
  "geom_props.kind.mass": "Mase",
  "geom_props.kind.solid": "Tijela",
- "geom_props.kind.toposolid": "Teren",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Teren"
 }

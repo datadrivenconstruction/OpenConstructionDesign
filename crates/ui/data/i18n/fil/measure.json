@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Distansya",
+ "cmd.e3d.measure.gap": "Puwang sa pagitan ng mga mukha",
+ "cmd.e3d.measure.angle": "Anggulo",
+ "cmd.e3d.measure.area": "Lawak / perimeter ng mukha o silid",
+ "cmd.e3d.measure.volume": "Volume ng elemento",
+ "cmd.e3d.measure.slope": "Slope",
+ "cmd.e3d.measure.chain": "Kadena ng punto",
+ "measure.orphan": "Nawalang reference",
+ "measure.not_planar": "Hindi parallel ang mga mukha",
+ "measure.unsupported": "Hindi masusukat ito",
+ "cmd.ann.measure_distance": "Sukatin ang distansya",
+ "cmd.ann.measure_gap": "Sukatin ang puwang sa pagitan ng mga mukha",
+ "cmd.ann.measure_angle": "Sukatin ang anggulo",
+ "cmd.ann.measure_area": "Sukatin ang lawak",
+ "hint.measure.first": "Sukat: i-click ang mukha ng dingding (o punto) · Esc — lumabas",
+ "hint.measure.second": "Sukat: i-click ang pangalawang mukha · Esc — kanselahin ang unang napili",
+ "measure.no_face": "Walang mukha ng dingding dito"
+}

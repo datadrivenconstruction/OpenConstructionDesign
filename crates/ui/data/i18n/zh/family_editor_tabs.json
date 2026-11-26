@@ -90,6 +90,7 @@
  "fe.cons.redundant": "冗余",
  "fe.cons.help": "与长度参数绑定的尺寸驱动平面；角度需要角度参数",
  "fe.locks": "对齐锁定",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "锁定",
  "fe.unlock": "解锁",
  "fe.locks.help": "锁定会用平面替换实体的参数（例如矩形 #2），使实体跟随该平面",
@@ -160,6 +161,5 @@
  "fe.clash.title": "草稿名称已被占用",
  "fe.clash.body": "已存在名为“{name}”的草稿。可用此草稿替换它，或返回并以新名称保存。尚未保存任何内容。",
  "fe.clash.rename": "以新名称保存",
- "fe.clash.replace": "替换该草稿",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "替换该草稿"
 }

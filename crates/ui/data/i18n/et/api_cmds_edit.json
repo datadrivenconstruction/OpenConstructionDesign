@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Ühenda, eralda või vaheta geomeetria ühendusi",
  "api.cmd.place_footings": "Paiguta iga taseme posti alla vundament",
  "api.cmd.create_terrain": "Loo maastik mõõdistuspunktidest või kaldpinnast",
- "api.cmd.script_recipes": "Loe vabade konstruktsioonide skriptiplokke ja retsepte"
+ "api.cmd.set_material": "Määrab materjali välimuse 3D-s",
+ "api.cmd.script_recipes": "Loe vabade konstruktsioonide skriptiplokke ja retsepte",
+ "api.cmd.generate_block": "Kavandab hoonekvartali kruntidele ühiste kruntimisreeglitega",
+ "api.cmd.measure_save": "Salvestab mõõtmise vaatesse",
+ "api.cmd.edit_mass": "Lisab massile ajaloosammu: tõmme, mustand, kest, ümardus, faas, nihe või jagamine",
+ "api.cmd.mass_to_family": "Loob massi ajajoonest komponendiperekonna"
 }

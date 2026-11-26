@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: толук тон",
  "drawing_kit.reset_color": "{layer}: чийимдин түсүнө кайтаруу",
  "drawing_kit.unit.ft": "фт",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Бурч",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Артка кайтаруу (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m} ичинен {n}",
  "drawing_kit.accept_class": "Бул түрдөгүнүн баарын кабыл алуу",
- "drawing_kit.reject_class": "Бул түрдөгүнүн баарын четке кагуу",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Бул түрдөгүнүн баарын четке кагуу"
 }

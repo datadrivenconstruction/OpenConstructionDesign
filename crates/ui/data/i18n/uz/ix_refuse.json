@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "{w} tuynuk {len} devordan kengroq",
+ "ix.fix.opening_width": "Kenglik {w} mm",
+ "ix.fix.wall_extend": "Devorni {len} mm gacha uzaytirish"
+}

@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Punkt kwadrantu",
+ "snap.extension": "Przedłużenie",
+ "snap.parallel": "Równolegle do ściany",
+ "snap.tracking_x": "X przechwyconego punktu",
+ "snap.tracking_y": "Y przechwyconego punktu",
+ "snap.tracking_cross": "Przecięcie prowadnic",
+ "snap.equal_step": "Równy krok"
+}

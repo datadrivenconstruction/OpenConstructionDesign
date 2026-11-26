@@ -90,6 +90,7 @@
  "fe.cons.redundant": "päällekkäinen",
  "fe.cons.help": "Pituusparametriin sidottu mitta ohjaa tasoja; kulma vaatii kulmaparametrin",
  "fe.locks": "Kohdistuslukitukset",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Lukitse",
  "fe.unlock": "Poista lukitus",
  "fe.locks.help": "Lukitus korvaa kappaleen argumentin (esim. rect #2) tasolla, jolloin kappale seuraa sitä",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Luonnoksen nimi on varattu",
  "fe.clash.body": "Luonnos nimeltä ”{name}” on jo olemassa. Korvaa se tällä luonnoksella tai palaa ja tallenna uudella nimellä. Mitään ei ole vielä tallennettu.",
  "fe.clash.rename": "Tallenna uudella nimellä",
- "fe.clash.replace": "Korvaa tuo luonnos",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Korvaa tuo luonnos"
 }

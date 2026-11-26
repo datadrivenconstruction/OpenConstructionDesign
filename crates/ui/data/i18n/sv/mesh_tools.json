@@ -52,6 +52,7 @@
  "mesh_tools.done": "Klart",
  "mesh_tools.failed": "Misslyckades",
  "mesh_tools.note.outline_approx": "kontur ungefärlig",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Ta bort ytor som vetter mot",
  "mesh_tools.dir.up": "uppåt",
  "mesh_tools.dir.down": "nedåt",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Förenklat: {n} (till exempel: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Förenklat: {n} (till exempel: {first})"
 }

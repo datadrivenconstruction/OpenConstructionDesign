@@ -18,6 +18,7 @@
  "mcp.set.error": "سرور شروع نشد: {error}",
  "mcp.set.new": "کلید تازه",
  "mcp.set.port": "پورت",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "هر دسته ابتدا بررسی می‌شود و یک گام واگرد است. فقط برنامه‌های همین رایانه می‌توانند وصل شوند.",
  "mcp.set.show": "نمایش",
  "mcp.set.state_failed": "در حال اجرا نیست",
@@ -30,6 +31,5 @@
  "mcp.set.status": "وضعیت",
  "mcp.set.access": "دسترسی",
  "mcp.set.config": "پیکربندی",
- "mcp.set.policy": "اعمال",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "اعمال"
 }

@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF salvestatud: {path} ({nodes} elementi, {meshes} võrku)",
  "data_export.gltf.partial": "glTF salvestatud {n} probleemiga, osa kehi võib puududa: {path}",
  "data_export.gltf.failed": "glTF-eksport ebaõnnestus: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "Projekti teave",
  "data_export.info.project": "Projekt",
  "data_export.info.site": "Koordinaadid ja põhi",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "Kastis pole joonisobjekte",
  "data_export.dwgpick.box": "Valitud joonisobjekte: {n}",
  "data_export.dwgpick.box_rings": "Valitud joonisobjekte: {n}, suletud kontuure: {rings}",
- "data_export.dwgpick.layer": "Kiht {layer}: valitud joonisobjekte {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "Kiht {layer}: valitud joonisobjekte {n}"
 }

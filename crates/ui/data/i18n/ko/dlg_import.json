@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "메시로",
  "dlg.imp.skipped": "건너뜀",
  "dlg.imp.notes": "메모: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "그리고 {n}개 종류 더",
  "dlg.imp.no_levels": "파일에 레벨이 없어 기본 레벨을 만들었습니다",
  "dlg.imp.reimport_row": "업데이트 {updated}, 변경 없음 {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: 선 {lines}개, 호 {arcs}개, 문자 {texts}개, 채우기 {fills}개, 레이어 {layers}개; 단위 {unit} mm",
  "dlg.dw.summary_paper": "; 용지 시트 {n}개 (밑도면에 배치되지 않음)",
  "dlg.dw.summary_unknown": "; 가져오지 않음: {list}",
- "dlg.dw.summary_more": " 그리고 {n}개 종류 더",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " 그리고 {n}개 종류 더"
 }

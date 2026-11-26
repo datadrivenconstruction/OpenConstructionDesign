@@ -41,5 +41,7 @@
  "sb.save.fresh": "Ei muutoksia",
  "sb.save.save": "Tallenna",
  "sb.save.ifc": "Tallenna IFC-kopio",
- "sb.save.autosave": "Automaattinen tallennus"
+ "sb.save.autosave": "Automaattinen tallennus",
+ "sb.more.title": "Lisää",
+ "sb.more.desc": "Tilarivin kohteet, jotka eivät mahdu tähän leveyteen."
 }

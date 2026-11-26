@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Disembunyikan",
  "ai_found.found.color": "Diwarnai",
  "ai_found.found.count": "{n} dari {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Tidak ada yang cocok. Coba filter yang lebih luas.",
  "ai_found.found.show_btn": "Tampilkan",
  "ai_found.found.show_tip": "Pilih elemen ini dan zoom ke elemen tersebut di denah dan 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# elemen disembunyikan",
   "other": "# elemen disembunyikan"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

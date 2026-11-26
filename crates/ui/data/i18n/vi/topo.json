@@ -64,6 +64,7 @@
  "topo.import.title": "Nhập khảo sát",
  "topo.import.filter": "Khảo sát (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Cao độ điểm",
  "topo.opt.thickness": "Độ dày địa hình",
  "topo.opt.add_to_active": "Thêm vào địa hình đang chọn",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Nhập",
  "topo.import.cancel": "Hủy",
  "topo.import.no_layers": "chưa chọn lớp",
- "topo.info.warnings": "Chưa dựng:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Chưa dựng:"
 }

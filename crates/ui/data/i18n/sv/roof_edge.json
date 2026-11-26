@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Bule",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Infoga en punkt efter denna (en båge delas på mitten)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Spara",
  "roof_edge.pe.saved": "Profil sparad",
  "roof_edge.pe.valid": "Profilen är giltig",
  "roof_edge.pe.invalid": "Profilen skär sig själv, är för liten eller har färre än 3 punkter",
  "roof_edge.pe.bad_number": "En koordinat eller bule är inte ett tal",
- "roof_edge.pe.no_name": "Ange ett profilnamn",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Ange ett profilnamn"
 }

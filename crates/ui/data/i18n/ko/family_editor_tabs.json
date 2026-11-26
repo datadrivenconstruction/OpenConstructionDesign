@@ -90,6 +90,7 @@
  "fe.cons.redundant": "중복",
  "fe.cons.help": "길이 매개변수에 연결된 치수가 평면을 구동하며, 각도에는 각도 매개변수가 필요합니다",
  "fe.locks": "정렬 잠금",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "잠그기",
  "fe.unlock": "잠금 해제",
  "fe.locks.help": "잠금은 솔리드의 인수(예: rect #2)를 평면으로 바꿔, 솔리드가 평면을 따르게 합니다",
@@ -160,6 +161,5 @@
  "fe.clash.title": "초안 이름이 사용 중입니다",
  "fe.clash.body": "“{name}” 초안이 이미 있습니다. 그 초안을 이것으로 바꾸거나, 돌아가서 새 이름으로 저장하세요. 아직 아무것도 저장되지 않았습니다.",
  "fe.clash.rename": "새 이름으로 저장",
- "fe.clash.replace": "그 초안 바꾸기",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "그 초안 바꾸기"
 }

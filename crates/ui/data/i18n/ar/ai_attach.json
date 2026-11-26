@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "تتبع الجدران من مخطط",
  "api.cmd.attachments_list": "الملفات المرفقة بالمحادثة ومتطلبات المشروع المؤكدة",
  "api.cmd.attachments_read": "قراءة نطاق صفحات أو صفوف جدول أو صورة لملف مرفق",
- "api.cmd.underlay_trace": "مسودة جدران متتبَّعة من مخطط مرفق"
+ "api.cmd.underlay_trace": "مسودة جدران متتبَّعة من مخطط مرفق",
+ "ai.tool.plan_from_image": "قراءة مخطط من صورة",
+ "api.cmd.plan_from_image": "يرسم مسودة للجدران والأبواب والنوافذ والغرف المقروءة من صورة مخطط أو صفحة PDF مرفقة"
 }

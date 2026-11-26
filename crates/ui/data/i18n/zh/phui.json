@@ -45,5 +45,7 @@
  "phui.kind.comp": "构件",
  "phui.kind.shaft": "竖井",
  "phui.kind.ramp": "坡道",
- "phui.kind.member": "杆件"
+ "phui.kind.member": "杆件",
+ "phui.dates": "日期（开始、结束）",
+ "phui.show_calendar": "按日历显示"
 }

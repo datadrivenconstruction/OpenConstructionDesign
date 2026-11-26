@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<vaihtelee>",
  "geom_props.tip": "Enter asettaa arvon kaikille {n} valitulle, yksi kumoamisvaihe",
  "geom_props.roof_slope": "Kaltevuus",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Tuodut elementit",
  "geom_props.kind.mass": "Massat",
  "geom_props.kind.solid": "Kappaleet",
- "geom_props.kind.toposolid": "Maasto",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Maasto"
 }

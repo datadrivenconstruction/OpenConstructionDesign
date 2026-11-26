@@ -18,6 +18,7 @@
  "mcp.set.error": "Server tidak berjalan: {error}",
  "mcp.set.new": "Token baru",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Setiap batch diperiksa dulu dan merupakan satu langkah urung. Hanya program di komputer ini yang bisa terhubung.",
  "mcp.set.show": "Tampilkan",
  "mcp.set.state_failed": "Tidak berjalan",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Status",
  "mcp.set.access": "Akses",
  "mcp.set.config": "Konfigurasi",
- "mcp.set.policy": "Penerapan",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Penerapan"
 }

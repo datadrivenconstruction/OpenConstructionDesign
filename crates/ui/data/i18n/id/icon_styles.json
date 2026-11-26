@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Warna",
+ "cmd.ui.icons.color": "Ikon berwarna",
+ "cmd.ui.icons.color.desc": "Gaya gambar ikon",
+ "theme.icons.hierarchical": "Hierarkis",
+ "cmd.ui.icons.hierarchical": "Ikon hierarkis",
+ "cmd.ui.icons.hierarchical.desc": "Gaya gambar ikon",
+ "theme.icons.isometric": "Isometrik",
+ "cmd.ui.icons.isometric": "Ikon isometrik",
+ "cmd.ui.icons.isometric.desc": "Gaya gambar ikon",
+ "theme.icons.monoline": "Monoline",
+ "cmd.ui.icons.monoline": "Ikon monoline",
+ "cmd.ui.icons.monoline.desc": "Gaya gambar ikon"
+}

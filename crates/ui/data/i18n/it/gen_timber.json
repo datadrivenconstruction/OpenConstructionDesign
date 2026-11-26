@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Pannello di solaio CLT",
+ "fam.name.glulam_beam": "Trave in lamellare",
+ "fam.name.glulam_column": "Pilastro in lamellare",
+ "gen.group.timber": "Struttura in legno",
+ "gen.rule.timber.beam_span_max.desc": "Luce massima di una trave in lamellare tra due pilastri.",
+ "gen.rule.timber.beam_span_max.title": "Limite di luce della trave",
+ "gen.rule.timber.panel_w.desc": "Pannello di solaio in legno lamellare incrociato più largo; con un giunto tra l'uno e l'altro.",
+ "gen.rule.timber.panel_w.title": "Larghezza del pannello CLT",
+ "gen.rule.timber.span_depth.desc": "Luce rispetto all'altezza di una trave in lamellare; determina la sezione.",
+ "gen.rule.timber.span_depth.title": "Rapporto luce/altezza della trave"
+}

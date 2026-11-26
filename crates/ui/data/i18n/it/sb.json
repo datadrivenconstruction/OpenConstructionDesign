@@ -41,5 +41,7 @@
  "sb.save.fresh": "Nessuna modifica",
  "sb.save.save": "Salva",
  "sb.save.ifc": "Salva copia IFC",
- "sb.save.autosave": "Salvataggio automatico"
+ "sb.save.autosave": "Salvataggio automatico",
+ "sb.more.title": "Altro",
+ "sb.more.desc": "Elementi della barra di stato che non entrano a questa larghezza."
 }

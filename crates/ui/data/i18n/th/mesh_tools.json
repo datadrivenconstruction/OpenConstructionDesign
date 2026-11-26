@@ -52,6 +52,7 @@
  "mesh_tools.done": "เสร็จแล้ว",
  "mesh_tools.failed": "ล้มเหลว",
  "mesh_tools.note.outline_approx": "เส้นขอบเป็นค่าโดยประมาณ",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "ลบหน้าที่หันไปทาง",
  "mesh_tools.dir.up": "ขึ้น",
  "mesh_tools.dir.down": "ลง",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "ทำให้ง่ายขึ้น: {n} (เช่น: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "ทำให้ง่ายขึ้น: {n} (เช่น: {first})"
 }

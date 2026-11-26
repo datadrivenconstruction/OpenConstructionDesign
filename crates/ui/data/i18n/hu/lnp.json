@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} nyílás nem változott ({why})",
  "lnp.params_changed": "módosított értékek: {n}",
  "lnp.params_same": "Nincs változás: {u} elem már ezt az értéket tartalmazza",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Csak az első panel kijelölése a szerkesztéséhez",
  "lnp.clip_from_wall": "Paraméterek másolva a(z) #{id} falból",
  "lnp.clip_from_opening": "Paraméterek másolva a(z) #{id} nyílásból",
- "lnp.match_from": "A #{id} tulajdonságai {n} elemre illesztve",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "A #{id} tulajdonságai {n} elemre illesztve"
 }

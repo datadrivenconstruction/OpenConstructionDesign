@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Vaippa",
+ "gen.group.acoustic": "Ääneneristys",
+ "gen.rule.fire.insulation_class.title": "Vaipan eristeen paloluokka",
+ "gen.rule.fire.insulation_class.desc": "Ulkoseinien ja kattojen eristeen huonoin sallittu palokäyttäytymisluokka; huonomman eristeen rakenteita ei valita.",
+ "gen.rule.envelope.u_wall.title": "Ulkoseinän U-arvo",
+ "gen.rule.envelope.u_wall.desc": "Ulkoseinän suurin lämmönläpäisykerroin; seinän eriste mitoitetaan pysymään sen alla, joten kylmemmässä ilmastossa seinä on paksumpi.",
+ "gen.rule.envelope.u_roof.title": "Katon U-arvo",
+ "gen.rule.envelope.u_roof.desc": "Katon suurin lämmönläpäisykerroin; kattoeriste mitoitetaan pysymään sen alla.",
+ "gen.rule.envelope.u_ground.title": "Maanvaraisen laatan U-arvo",
+ "gen.rule.envelope.u_ground.desc": "Maanvaraisen alapohjalaatan suurin lämmönläpäisykerroin; tasoitteen alainen eriste mitoitetaan pysymään sen alla.",
+ "gen.rule.acoustic.rw_party.title": "Huoneistojen välisen seinän ääneneristys",
+ "gen.rule.acoustic.rw_party.desc": "Asuntojen välisen tai yhteiskäytävän viereisen seinän pienin ilmaääneneristysluku Rw; muuratun ytimen mitoitus tehdään massalain mukaan sen saavuttamiseksi.",
+ "gen.rule.acoustic.rw_floor.title": "Välipohjan ääneneristys",
+ "gen.rule.acoustic.rw_floor.desc": "Kerrosten välisen välipohjan pienin ilmaääneneristysluku Rw; betonilaatta mitoitetaan massalain mukaan sen saavuttamiseksi.",
+ "gen.why.e.asm_wall": "ulkoseinät {t} m paksuja, eristettä {ins} m: U {u} W/m2K, enintään {lim}",
+ "gen.why.e.asm_roof": "katto {t} m paksu, eristettä {ins} m: U {u} W/m2K, enintään {lim}",
+ "gen.why.e.asm_ground": "maanvarainen laatta {t} m paksu, eristettä {ins} m: U {u} W/m2K, enintään {lim}",
+ "gen.why.e.asm_party": "huoneistojen väliset seinät {t} m paksuja, {m} kg/m2: Rw {rw} dB massalain mukaan, vähintään {lim}",
+ "gen.why.e.asm_floor": "välipohjat {t} m paksuja, {m} kg/m2: Rw {rw} dB massalain mukaan, vähintään {lim}"
+}

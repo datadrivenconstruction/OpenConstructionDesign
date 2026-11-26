@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Duplicera typ",
  "wall_type.wt.duplicate_tip": "Sparar dessa lager som en ny typ; typen du öppnade lämnas som den är.",
  "wall_type.wt.switch_dirty": "Tryck på OK eller Avbryt innan du öppnar en annan typ",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funktion",
  "wall_type.wt.h_material": "Materialtyp",
  "wall_type.wt.h_thickness": "Tjocklek",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Markera väggar i vyn och byt sedan deras typ.",
  "wall_type.swap.already": "De markerade väggarna har redan den här typen",
  "wall_type.swap.apply": "Byt",
- "wall_type.swap.done": "Väggtyp bytt: {n} av {m} väggar",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Väggtyp bytt: {n} av {m} väggar"
 }

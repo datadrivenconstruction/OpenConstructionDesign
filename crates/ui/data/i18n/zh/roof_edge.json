@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x，",
  "roof_edge.pe.y": "y，",
  "roof_edge.pe.bulge": "凸度",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "在此点之后插入一个点（圆弧将被平分）",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "保存",
  "roof_edge.pe.saved": "轮廓已保存",
  "roof_edge.pe.valid": "轮廓有效",
  "roof_edge.pe.invalid": "轮廓自相交、过小或点数少于 3 个",
  "roof_edge.pe.bad_number": "坐标或凸度不是数字",
- "roof_edge.pe.no_name": "请输入轮廓名称",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "请输入轮廓名称"
 }

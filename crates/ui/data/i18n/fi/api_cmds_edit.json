@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Yhdistä, irrota tai vaihda geometrian liitoksia",
  "api.cmd.place_footings": "Sijoita perustus jokaisen tason pilarin alle",
  "api.cmd.create_terrain": "Luo maasto mittauspisteistä tai kaltevasta tasosta",
- "api.cmd.script_recipes": "Lue vapaiden rakenteiden skriptilohkot ja reseptit"
+ "api.cmd.set_material": "Aseta materiaalin ulkoasu 3D:ssä",
+ "api.cmd.script_recipes": "Lue vapaiden rakenteiden skriptilohkot ja reseptit",
+ "api.cmd.generate_block": "Suunnittele rakennuskortteli tonteille yhteisillä tonttisäännöillä",
+ "api.cmd.measure_save": "Tallenna mittaus näkymään",
+ "api.cmd.edit_mass": "Lisää massaan historiavaihe: työntö, vetokulma, kuori, pyöristys, viiste, siirros tai jako",
+ "api.cmd.mass_to_family": "Luo komponenttiperhe massan aikajanasta"
 }

@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: buong tono",
  "drawing_kit.reset_color": "{layer}: ibalik sa kulay ng drawing",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y-aksis",
  "drawing_kit.angle": "Anggulo",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "I-undo (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} sa {m}",
  "drawing_kit.accept_class": "Tanggapin lahat ng ganitong uri",
- "drawing_kit.reject_class": "Tanggihan lahat ng ganitong uri",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Tanggihan lahat ng ganitong uri"
 }

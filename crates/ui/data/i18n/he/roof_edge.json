@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "בליטה",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "הוספת נקודה אחרי זו (קשת מתפצלת לשניים)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "שמירה",
  "roof_edge.pe.saved": "הפרופיל נשמר",
  "roof_edge.pe.valid": "הפרופיל תקין",
  "roof_edge.pe.invalid": "הפרופיל נחתך בעצמו, קטן מדי או יש בו פחות מ-3 נקודות",
  "roof_edge.pe.bad_number": "קואורדינטה או בליטה אינן מספר",
- "roof_edge.pe.no_name": "הזינו שם לפרופיל",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "הזינו שם לפרופיל"
 }

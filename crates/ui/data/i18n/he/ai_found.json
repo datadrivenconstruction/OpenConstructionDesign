@@ -9,6 +9,7 @@
  "ai_found.found.hide": "מוסתר",
  "ai_found.found.color": "צבוע",
  "ai_found.found.count": "{n} מתוך {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "אין התאמות. נסה מסנן רחב יותר.",
  "ai_found.found.show_btn": "הצג",
  "ai_found.found.show_tip": "בחר את האלמנטים האלה והתמקד בהם בתוכנית ובתלת-ממד",
@@ -41,6 +42,5 @@
   "one": "# אלמנט מוסתר",
   "two": "# אלמנטים מוסתרים",
   "other": "# אלמנטים מוסתרים"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

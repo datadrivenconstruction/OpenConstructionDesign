@@ -18,6 +18,7 @@
  "mcp.set.error": "Ο διακομιστής δεν ξεκίνησε: {error}",
  "mcp.set.new": "Νέο token",
  "mcp.set.port": "Θύρα",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Κάθε ομάδα ελέγχεται πρώτα και είναι ένα βήμα αναίρεσης. Μόνο προγράμματα σε αυτόν τον υπολογιστή μπορούν να συνδεθούν.",
  "mcp.set.show": "Εμφάνιση",
  "mcp.set.state_failed": "Δεν εκτελείται",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Κατάσταση",
  "mcp.set.access": "Πρόσβαση",
  "mcp.set.config": "Ρυθμίσεις",
- "mcp.set.policy": "Εφαρμογή",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Εφαρμογή"
 }

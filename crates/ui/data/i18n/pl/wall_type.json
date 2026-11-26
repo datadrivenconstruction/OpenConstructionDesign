@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Duplikuj typ",
  "wall_type.wt.duplicate_tip": "Zapisuje te warstwy jako nowy typ; typ, który otworzyłeś, pozostaje bez zmian.",
  "wall_type.wt.switch_dirty": "Naciśnij OK lub Anuluj przed otwarciem innego typu",
+ "wall_type.wt.h_num": "Lp.",
  "wall_type.wt.h_function": "Funkcja",
  "wall_type.wt.h_material": "Materiał",
  "wall_type.wt.h_thickness": "Grubość",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Zaznacz ściany w widoku, a potem zamień ich typ.",
  "wall_type.swap.already": "Wybrane ściany mają już ten typ",
  "wall_type.swap.apply": "Zamień",
- "wall_type.swap.done": "Zamieniono typ ściany: {n} z {m} ścian",
- "wall_type.wt.h_num": "Lp."
+ "wall_type.swap.done": "Zamieniono typ ściany: {n} z {m} ścian"
 }

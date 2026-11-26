@@ -20,6 +20,7 @@
  "sched_import.why_ro": "faqat o'qish uchun",
  "sched_import.why_locked": "qulflangan qiymat",
  "sched_import.why_bad": "noto'g'ri qiymat",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "{n} ta o'zgarishni qo'llash",
  "sched_import.cancel": "Bekor qilish",
  "sched_import.applied": "{n} ta katak import qilindi (bitta bekor qilish qadami)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Formula natijalari, qo'llanmadi: {n}",
  "sched_import.no_id_rows": "Id siz qatorlar, o'qilmadi: {n} (qatorlar {rows})",
  "sched_import.more": "… yana {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(bo'sh)",
  "sched_import.reading": "Kitob o'qilmoqda…",
  "sched_import.resaved": "Kitob birinchi oldindan ko'rishdan keyin qayta saqlandi: bu oldindan ko'rish yangi mazmunni ko'rsatadi",
- "sched_import.resaved_reading": "Kitob qayta saqlandi: hech narsa qo'llanmadi, yangi oldindan ko'rish uchun qayta o'qilmoqda",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Kitob qayta saqlandi: hech narsa qo'llanmadi, yangi oldindan ko'rish uchun qayta o'qilmoqda"
 }

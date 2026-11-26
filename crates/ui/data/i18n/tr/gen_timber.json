@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT Döşeme Paneli",
+ "fam.name.glulam_beam": "Lamine Ahşap Kiriş",
+ "fam.name.glulam_column": "Lamine Ahşap Kolon",
+ "gen.group.timber": "Ahşap strüktür",
+ "gen.rule.timber.beam_span_max.desc": "İki kolon arasında lamine ahşap kirişin en uzun açıklığı.",
+ "gen.rule.timber.beam_span_max.title": "Kiriş açıklık sınırı",
+ "gen.rule.timber.panel_w.desc": "En geniş çapraz lamine döşeme paneli; her biri arasında bir derz.",
+ "gen.rule.timber.panel_w.title": "CLT panel genişliği",
+ "gen.rule.timber.span_depth.desc": "Lamine ahşap kirişin açıklık/derinlik oranı; kesiti seçer.",
+ "gen.rule.timber.span_depth.title": "Kiriş açıklık/derinlik oranı"
+}

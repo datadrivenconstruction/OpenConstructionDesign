@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "sebagai mesh",
  "dlg.imp.skipped": "dilewati",
  "dlg.imp.notes": "Catatan: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "dan {n} jenis lainnya",
  "dlg.imp.no_levels": "Berkas tidak punya level: level default dibuat",
  "dlg.imp.reimport_row": "Diperbarui {updated}, tidak berubah {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} garis, {arcs} busur, {texts} teks, {fills} isian, {layers} lapisan; satuan {unit} mm",
  "dlg.dw.summary_paper": "; lembar kertas {n} (tidak ditempatkan pada underlay)",
  "dlg.dw.summary_unknown": "; tidak dibawa: {list}",
- "dlg.dw.summary_more": " dan {n} jenis lainnya",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " dan {n} jenis lainnya"
 }

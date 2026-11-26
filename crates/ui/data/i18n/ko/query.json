@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\"은(는) 변경할 수 없습니다: {why}",
  "query.err.op_no_field": "필드가 없는 연산자입니다",
  "query.err.positive": "{key}: 값은 0보다 커야 합니다",
+ "query.err.raw": "{text}",
  "query.err.text_field": "\"{key}\" 필드는 텍스트이므로 수식을 적용할 수 없습니다",
  "query.err.unclosed_paren": "닫는 괄호가 없습니다",
  "query.err.unclosed_quote": "닫는 따옴표가 없습니다",
@@ -27,6 +28,5 @@
  "query.why.curtain": "커튼월은 자체 속성에서 변경합니다",
  "query.why.opening_type": "개구부의 유형은 크기를 따릅니다: \"-> width=… height=…\"",
  "query.why.slab_thickness": "바닥 두께는 유형으로 설정됩니다: \"-> type=…\"",
- "query.why.wall_thickness": "벽 두께는 유형으로 설정됩니다: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "벽 두께는 유형으로 설정됩니다: \"-> type=…\""
 }

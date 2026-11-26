@@ -15,6 +15,7 @@
  "drafting_view.name": "Аты",
  "drafting_view.count": "{n} аннотация",
  "drafting_view.tab": "Сызу · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Бос сызу көрінісі",
  "drafting_view.canvas_hint": "Аннотация құралдарын пайдаланыңыз: детальдық сызықтар, аймақтар, мәтін, детальдық компоненттер",
  "drafting_view.created": "«{name}» сызу көрінісі құрылды",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Көбірек",
  "empty.drafting.title": "Сызу көріністері әлі жоқ",
  "empty.drafting.hint": "Модельден кесілмеген 2D детальдар үшін жасаңыз.",
- "empty.drafting.action": "Жаңа сызу көрінісі",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Жаңа сызу көрінісі"
 }

@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Pročitaj tekst definicije obitelji projekta",
+ "api.cmd.family_validate": "Provjeri tekst definicije obitelji",
+ "api.cmd.family_reference": "Pročitaj referencu teksta definicije obitelji",
+ "api.cmd.family_draft": "Ponudi definiciju obitelji kao nacrt u uređivaču obitelji"
+}

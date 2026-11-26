@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "το σκαρίφημα ακυρώθηκε",
  "sketch_edit.sk_applied": "το σκαρίφημα εφαρμόστηκε",
  "sketch_edit.sk_tail": "ουρά",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "πλάκα",
  "sketch_edit.sk_host_roof": "στέγη",
  "sketch_edit.sk_host_ceiling": "οροφή",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Επίπεδο 2",
  "sketch_edit.seed_floor_200": "Δάπεδο 200",
  "sketch_edit.seed_section1": "Τομή 1",
- "sketch_edit.seed_section2": "Τομή 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Τομή 2"
 }

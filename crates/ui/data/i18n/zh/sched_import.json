@@ -20,6 +20,7 @@
  "sched_import.why_ro": "只读",
  "sched_import.why_locked": "数值已锁定",
  "sched_import.why_bad": "数值无效",
+ "sched_import.refusal": "{at} {col} “{text}”：{why}",
  "sched_import.apply": "应用 {n} 项更改",
  "sched_import.cancel": "取消",
  "sched_import.applied": "已导入 {n} 个单元格（一步撤销）",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "公式结果，未应用：{n}",
  "sched_import.no_id_rows": "没有 Id 的行，未读取：{n}（行 {rows}）",
  "sched_import.more": "… 另有 {n} 项",
+ "sched_import.change": "{at} · {el} · {col}：{before} → {after}",
  "sched_import.blank": "（空）",
  "sched_import.reading": "正在读取工作簿…",
  "sched_import.resaved": "首次预览后工作簿已重新保存：本次预览显示新内容",
- "sched_import.resaved_reading": "工作簿已重新保存：未应用任何内容，正在重新读取以生成新预览",
- "sched_import.refusal": "{at} {col} “{text}”：{why}",
- "sched_import.change": "{at} · {el} · {col}：{before} → {after}"
+ "sched_import.resaved_reading": "工作簿已重新保存：未应用任何内容，正在重新读取以生成新预览"
 }

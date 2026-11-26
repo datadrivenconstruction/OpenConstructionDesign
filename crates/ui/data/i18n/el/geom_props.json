@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<διαφορετικές>",
  "geom_props.tip": "Το Enter εφαρμόζει την τιμή και στα {n} επιλεγμένα, ένα βήμα αναίρεσης",
  "geom_props.roof_slope": "Κλίση",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Εισαγμένα στοιχεία",
  "geom_props.kind.mass": "Όγκοι",
  "geom_props.kind.solid": "Στερεά",
- "geom_props.kind.toposolid": "Έδαφος",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Έδαφος"
 }

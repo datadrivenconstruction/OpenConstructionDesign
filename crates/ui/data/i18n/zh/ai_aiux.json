@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "即使在计划或三维视图中，Ctrl+Enter 也可应用，Esc 也可停止请求；正在输入文本时除外。",
  "ai.plan.rebased": "已根据当前模型更新：{what}",
  "ai.value.bad": "“{text}”不是 {name} 的有效值",
+ "ai.value.bad_len": "{name}：{why}",
  "ai.value.both": "AI 助手在您输入 {mine} 期间已将此值改为 {agent}。请选择保留哪一个。",
  "ai.value.choose_first": "请先在卡片上选择您的值或 AI 助手的值",
  "ai.value.elem": "元素 {n}：{what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "请输入其他值，或取消勾选该项以将其排除在“应用”之外。",
  "ai.value.tip": "请在草稿中修改值；只有点击“应用”后模型才会更改。Enter 确认，Esc 恢复。",
  "ai.value.use_mine": "使用 {mine}",
- "ai.value.was": "原为 {old}",
- "ai.value.bad_len": "{name}：{why}"
+ "ai.value.was": "原为 {old}"
 }

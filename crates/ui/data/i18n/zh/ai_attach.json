@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "根据图纸描摹墙体",
  "api.cmd.attachments_list": "聊天中附加的文件及已确认的项目要求",
  "api.cmd.attachments_read": "读取已附加文件的页面范围、表格行或图片",
- "api.cmd.underlay_trace": "根据已附加的图纸描摹生成的墙体草图"
+ "api.cmd.underlay_trace": "根据已附加的图纸描摹生成的墙体草图",
+ "ai.tool.plan_from_image": "从图片读取平面图",
+ "api.cmd.plan_from_image": "根据附带的平面图图片或 PDF 页面，起草识别出的墙、门、窗和房间"
 }

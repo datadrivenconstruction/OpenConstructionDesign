@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Výplň",
  "text_style.lbl.detail": "Detail",
  "text_style.lbl.width": "Šířka",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Zadejte číslo od {min} do {max}",
  "text_style.tip.next_ring": "Uzavřít tuto konturu a začít další ve stejné oblasti",
  "text_style.tip.edit_text": "Upravit text na místě",
- "text_style.tip.add_leader": "Přidat odkazovou čáru k tomuto textu",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Přidat odkazovou čáru k tomuto textu"
 }

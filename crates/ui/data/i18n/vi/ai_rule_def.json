@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} phát hiện khác của quy tắc này không được liệt kê",
  "ai.check.integrity": "Dữ liệu hỏng trong {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: đỉnh không cao hơn đáy",
  "ai.check.level_host_differs": "Cấu kiện nằm ở cao độ khác với phần tử chủ ({0})",
  "ai.check.clash": "{0} xung đột với {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Quy tắc {1}: {3} phần tử, cho phép {4}",
  "ai.check.rule.clearance": "Quy tắc {1}: khoảng cách {3} m, cần ít nhất {4} m",
  "ai.check.rule.unsupported": "Không thể kiểm tra quy tắc {1}: hạng mục này chưa được hỗ trợ",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "Tham số {0}: \"{1}\" không phải nhóm chi phí DIN 276 (ba chữ số, từ 100 đến 899) trên {2} phần tử"
 }

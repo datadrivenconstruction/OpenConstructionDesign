@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Odabir ({n})",
  "ai.ctx.add_tip": "Vrati u ono što AI vidi",
  "ai.ctx.frame_tip": "Prikaži ove elemente",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Ograde",
  "ai.ctx.cat.roof": "Krovovi",
  "ai.ctx.cat.stair": "Stube",
- "ai.ctx.cat.other": "Ostalo",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Ostalo"
 }

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "náčrt zrušen",
  "sketch_edit.sk_applied": "náčrt použit",
  "sketch_edit.sk_tail": "konec",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "deska",
  "sketch_edit.sk_host_roof": "střecha",
  "sketch_edit.sk_host_ceiling": "strop",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Podlaží 2",
  "sketch_edit.seed_floor_200": "Podlaha 200",
  "sketch_edit.seed_section1": "Řez 1",
- "sketch_edit.seed_section2": "Řez 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Řez 2"
 }

@@ -64,6 +64,7 @@
  "topo.import.title": "Import zaměření",
  "topo.import.filter": "Zaměření (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Kóta bodu",
  "topo.opt.thickness": "Tloušťka topo tělesa",
  "topo.opt.add_to_active": "Přidat do aktivního topo tělesa",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importovat",
  "topo.import.cancel": "Zrušit",
  "topo.import.no_layers": "není vybrána žádná vrstva",
- "topo.info.warnings": "Nevytvořeno:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Nevytvořeno:"
 }

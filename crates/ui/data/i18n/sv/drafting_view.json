@@ -15,6 +15,7 @@
  "drafting_view.name": "Namn",
  "drafting_view.count": "{n} annoteringar",
  "drafting_view.tab": "Ritning · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Tom ritvy",
  "drafting_view.canvas_hint": "Använd annoteringsverktygen: detaljlinjer, områden, text, detaljkomponenter",
  "drafting_view.created": "Ritvyn “{name}” skapades",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Mer",
  "empty.drafting.title": "Inga ritvyer ännu",
  "empty.drafting.hint": "Skapa en för 2D-detaljer som inte skärs ut ur modellen.",
- "empty.drafting.action": "Ny ritvy",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Ny ritvy"
 }

@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Buehøjde",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Indsæt et punkt efter dette (en bue deles på midten)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Gem",
  "roof_edge.pe.saved": "Profil gemt",
  "roof_edge.pe.valid": "Profilen er gyldig",
  "roof_edge.pe.invalid": "Profilen skærer sig selv, er for lille eller har færre end 3 punkter",
  "roof_edge.pe.bad_number": "En koordinat eller buehøjde er ikke et tal",
- "roof_edge.pe.no_name": "Indtast et profilnavn",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Indtast et profilnavn"
 }

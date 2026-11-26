@@ -41,5 +41,16 @@
  "library.ifc.window": "Jendela",
  "library.ifc.stair": "Tangga",
  "library.ifc.pipe_fitting": "Fitting pipa",
- "library.ifc.duct_fitting": "Sambungan saluran udara"
+ "library.ifc.duct_fitting": "Sambungan saluran udara",
+ "library.ifc.beam": "Balok",
+ "library.ifc.column": "Kolom",
+ "library.ifc.appliance": "Peralatan",
+ "library.ifc.fire_terminal": "Terminal pemadam kebakaran",
+ "library.ifc.heat_exchanger": "Penukar panas",
+ "library.ifc.pump": "Pompa",
+ "library.ifc.tank": "Tangki",
+ "library.ifc.transport": "Elemen transportasi",
+ "library.ifc.valve": "Katup",
+ "library.ifc.waste_terminal": "Terminal limbah",
+ "library.ifc.medical": "Perangkat medis"
 }

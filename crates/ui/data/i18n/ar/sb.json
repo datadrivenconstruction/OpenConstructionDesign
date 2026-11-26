@@ -41,5 +41,7 @@
  "sb.save.fresh": "لا توجد تغييرات",
  "sb.save.save": "حفظ",
  "sb.save.ifc": "حفظ نسخة IFC",
- "sb.save.autosave": "حفظ تلقائي"
+ "sb.save.autosave": "حفظ تلقائي",
+ "sb.more.title": "المزيد",
+ "sb.more.desc": "عناصر شريط الحالة التي لا تتسع لها هذه العرض."
 }

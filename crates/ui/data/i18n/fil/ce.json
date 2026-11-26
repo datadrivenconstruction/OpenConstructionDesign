@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Mga circuit",
+ "cmd.mep.circuits.desc": "Binubuksan ang circuit editor: mga circuit ng bawat panel, ang kanilang mga load, laki ng kable at pagsusuri ng patakaran.",
  "ce.title": "Mga circuit",
  "ce.open": "Mga circuit",
  "ce.empty": "Wala pang circuit",

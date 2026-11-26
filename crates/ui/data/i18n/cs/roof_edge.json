@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Vyklenutí",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Vložit bod za tento (oblouk se rozdělí na půlku)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Uložit",
  "roof_edge.pe.saved": "Profil uložen",
  "roof_edge.pe.valid": "Profil je platný",
  "roof_edge.pe.invalid": "Profil se protíná, je příliš malý nebo má méně než 3 body",
  "roof_edge.pe.bad_number": "Souřadnice nebo vyklenutí není číslo",
- "roof_edge.pe.no_name": "Zadejte název profilu",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Zadejte název profilu"
 }

@@ -41,5 +41,7 @@
  "sb.save.fresh": "Ingen endringer",
  "sb.save.save": "Lagre",
  "sb.save.ifc": "Lagre IFC-kopi",
- "sb.save.autosave": "Autolagring"
+ "sb.save.autosave": "Autolagring",
+ "sb.more.title": "Mer",
+ "sb.more.desc": "Elementer i statuslinjen som ikke får plass ved denne bredden."
 }

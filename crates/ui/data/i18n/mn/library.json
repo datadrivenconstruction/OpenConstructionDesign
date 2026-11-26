@@ -41,5 +41,16 @@
  "library.ifc.window": "Цонх",
  "library.ifc.stair": "Шат",
  "library.ifc.pipe_fitting": "Хоолойн холбоос",
- "library.ifc.duct_fitting": "Агаарын сувгийн холбоос"
+ "library.ifc.duct_fitting": "Агаарын сувгийн холбоос",
+ "library.ifc.beam": "Дам нуруу",
+ "library.ifc.column": "Багана",
+ "library.ifc.appliance": "Цахилгаан хэрэгсэл",
+ "library.ifc.fire_terminal": "Гал унтраах терминал",
+ "library.ifc.heat_exchanger": "Дулаан солилцуур",
+ "library.ifc.pump": "Насос",
+ "library.ifc.tank": "Сав",
+ "library.ifc.transport": "Тээврийн элемент",
+ "library.ifc.valve": "Хавхлага",
+ "library.ifc.waste_terminal": "Хаягдлын терминал",
+ "library.ifc.medical": "Эмнэлгийн төхөөрөмж"
 }

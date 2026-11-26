@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "Таңдау үшін элементті басыңыз. Ctrl қосады, Shift алады.",
- "sel_chip.opt.units": "Бірліктер",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "Бірліктер"
 }

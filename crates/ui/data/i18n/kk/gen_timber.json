@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT еден панелі",
+ "fam.name.glulam_beam": "Желімделген ағаш арқалық",
+ "fam.name.glulam_column": "Желімделген ағаш баған",
+ "gen.group.timber": "Ағаш конструкция",
+ "gen.rule.timber.beam_span_max.desc": "Екі баған арасындағы желімделген арқалықтың ең ұзын аралығы.",
+ "gen.rule.timber.beam_span_max.title": "Арқалық аралығының шегі",
+ "gen.rule.timber.panel_w.desc": "Ең кең көлденең желімделген еден панелі; әрқайсысының арасында тігіс болады.",
+ "gen.rule.timber.panel_w.title": "CLT панелінің ені",
+ "gen.rule.timber.span_depth.desc": "Желімделген арқалықтың аралығының биіктігіне қатынасы; қиманы таңдайды.",
+ "gen.rule.timber.span_depth.title": "Арқалық аралығының биіктікке қатынасы"
+}

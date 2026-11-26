@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "grenene i if() er ulike",
  "pe.msg_what_args": "argumenter",
  "pe.msg_and": " og ",
+ "pe.msg_incompatible": "{w}: inkompatible enheter {dims}",
  "pe.text_no_formula": "tekstparametere tar ingen formel",
  "pe.circular": "sirkulær referanse: {text}",
- "pe.depends_invalid": "avhenger av ugyldig “{b}”",
- "pe.msg_incompatible": "{w}: inkompatible enheter {dims}"
+ "pe.depends_invalid": "avhenger av ugyldig “{b}”"
 }

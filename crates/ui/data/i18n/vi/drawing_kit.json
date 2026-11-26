@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: tông đầy đủ",
  "drawing_kit.reset_color": "{layer}: đặt lại màu bản vẽ",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Góc",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Hoàn tác (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} trên {m}",
  "drawing_kit.accept_class": "Chấp nhận tất cả loại này",
- "drawing_kit.reject_class": "Từ chối tất cả loại này",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Từ chối tất cả loại này"
 }

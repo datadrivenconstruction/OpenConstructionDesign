@@ -64,6 +64,7 @@
  "topo.import.title": "Vermessung importieren",
  "topo.import.filter": "Vermessung (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Punkthöhe",
  "topo.opt.thickness": "Geländedicke",
  "topo.opt.add_to_active": "Zum aktiven Gelände hinzufügen",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importieren",
  "topo.import.cancel": "Abbrechen",
  "topo.import.no_layers": "keine Ebene gewählt",
- "topo.info.warnings": "Nicht erstellt:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Nicht erstellt:"
 }

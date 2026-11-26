@@ -41,5 +41,16 @@
  "library.ifc.window": "Pencere",
  "library.ifc.stair": "Merdiven",
  "library.ifc.pipe_fitting": "Boru bağlantı parçası",
- "library.ifc.duct_fitting": "Kanal bağlantı parçası"
+ "library.ifc.duct_fitting": "Kanal bağlantı parçası",
+ "library.ifc.beam": "Kiriş",
+ "library.ifc.column": "Kolon",
+ "library.ifc.appliance": "Cihaz",
+ "library.ifc.fire_terminal": "Yangın söndürme terminali",
+ "library.ifc.heat_exchanger": "Isı eşanjörü",
+ "library.ifc.pump": "Pompa",
+ "library.ifc.tank": "Tank",
+ "library.ifc.transport": "Taşıma elemanı",
+ "library.ifc.valve": "Vana",
+ "library.ifc.waste_terminal": "Atık terminali",
+ "library.ifc.medical": "Tıbbi cihaz"
 }

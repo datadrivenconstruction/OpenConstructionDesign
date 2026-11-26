@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Ausgeblendet",
  "ai_found.found.color": "Gefärbt",
  "ai_found.found.count": "{n} von {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Keine Treffer. Filter erweitern.",
  "ai_found.found.show_btn": "Anzeigen",
  "ai_found.found.show_tip": "Diese Elemente auswählen und im Grundriss und 3D heranzoomen",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# Element ausgeblendet",
   "other": "# Elemente ausgeblendet"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

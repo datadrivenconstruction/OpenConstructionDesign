@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Pullistuma",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Lisää piste tämän jälkeen (kaari jaetaan kahtia)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Tallenna",
  "roof_edge.pe.saved": "Profiili tallennettu",
  "roof_edge.pe.valid": "Profiili on kelvollinen",
  "roof_edge.pe.invalid": "Profiili leikkaa itsensä, on liian pieni tai sillä on alle 3 pistettä",
  "roof_edge.pe.bad_number": "Koordinaatti tai pullistuma ei ole luku",
- "roof_edge.pe.no_name": "Anna profiilin nimi",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Anna profiilin nimi"
 }

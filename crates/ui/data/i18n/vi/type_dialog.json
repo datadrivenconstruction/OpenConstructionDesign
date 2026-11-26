@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Họ",
  "type_dialog.typedial.h_function": "Chức năng",
  "type_dialog.typedial.h_material": "Vật liệu",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "Tham số",
  "type_dialog.typedial.h_thickness": "Độ dày",
  "type_dialog.typedial.h_value": "Giá trị",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Diện tích chân tường",
  "type_dialog.warn.wall_vol": "Thể tích tường",
  "type_dialog.warn.walls": "Tường",
- "type_dialog.warn.warnings_n": "⚠ Cảnh báo: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ Cảnh báo: {n}"
 }

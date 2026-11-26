@@ -72,6 +72,7 @@
  "quick.cat.beam": "Греди",
  "quick.cat.ceiling": "Тавани",
  "quick.cat.structure": "Конструкция",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} от {all}",
  "quick.hud.type": "Тип",
  "quick.hud.height": "Височина",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Стойността „{v}“ не може да се прочете",
  "quick.menu.repeat": "Повтори: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Последни",
  "quick.bar.repeat_tip": "{cmd} · Enter го повтаря",
  "quick.repeat.none": "Още няма какво да се повтори",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Назад",
  "quick.tips.next": "Напред",
  "quick.tips.finish": "Готово",
- "quick.tips.never": "Не показвай отново",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Не показвай отново"
 }

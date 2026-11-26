@@ -90,6 +90,7 @@
  "fe.cons.redundant": "überzählig",
  "fe.cons.help": "Ein Maß, das an einen Längenparameter gebunden ist, steuert die Ebenen; ein Winkel braucht einen Winkelparameter",
  "fe.locks": "Ausrichtungssperren",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Sperren",
  "fe.unlock": "Entsperren",
  "fe.locks.help": "Eine Sperre ersetzt das Argument des Volumenkörpers (z. B. Rechteck #2) durch die Ebene, sodass der Volumenkörper ihr folgt",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Entwurfsname ist vergeben",
  "fe.clash.body": "Ein Entwurf namens „{name}“ existiert bereits. Diesen Entwurf durch den neuen ersetzen oder zurückgehen und unter einem neuen Namen speichern. Noch nichts wurde gespeichert.",
  "fe.clash.rename": "Unter neuem Namen speichern",
- "fe.clash.replace": "Diesen Entwurf ersetzen",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Diesen Entwurf ersetzen"
 }

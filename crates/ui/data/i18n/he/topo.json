@@ -64,6 +64,7 @@
  "topo.import.title": "ייבוא מדידה",
  "topo.import.filter": "מדידה (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " מ׳",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "מפלס נקודה",
  "topo.opt.thickness": "עובי הטופוסוליד",
  "topo.opt.add_to_active": "הוספה לטופוסוליד הפעיל",
@@ -121,6 +122,5 @@
  "topo.import.ok": "ייבוא",
  "topo.import.cancel": "ביטול",
  "topo.import.no_layers": "לא נבחרה שכבה",
- "topo.info.warnings": "לא נבנה:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "לא נבנה:"
 }

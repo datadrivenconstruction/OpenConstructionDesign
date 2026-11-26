@@ -48,5 +48,13 @@
  "settings.lib_open": "Biblioteca de componentes",
  "settings.lib_open_desc": "Explore las familias integradas, las del proyecto y las suyas",
  "settings.lib_dir": "Mi carpeta de biblioteca",
- "settings.lib_dir_desc": "Los archivos de familia (.ddcf) colocados aquí aparecen en Mi biblioteca. DDC_COMPONENTS_DIR la traslada."
+ "settings.lib_dir_desc": "Los archivos de familia (.ddcf) colocados aquí aparecen en Mi biblioteca. DDC_COMPONENTS_DIR la traslada.",
+ "complib.fam.sprinkler_head": "Rociador",
+ "complib.fam.fire_pump": "Bomba contra incendios",
+ "complib.fam.pressurisation_fan": "Ventilador de presurización",
+ "complib.fam.lift_car": "Cabina de ascensor",
+ "complib.fam.lift_landing_door": "Puerta de piso de ascensor",
+ "complib.fam.lift_pit": "Foso de ascensor",
+ "complib.fam.lift_overrun": "Huida de ascensor",
+ "complib.fam.lift_machine": "Máquina de ascensor"
 }

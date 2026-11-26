@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Приховано",
  "ai_found.found.color": "Забарвлено",
  "ai_found.found.count": "{n} із {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Нічого не збігається. Спробуйте ширший фільтр.",
  "ai_found.found.show_btn": "Показати",
  "ai_found.found.show_tip": "Вибрати ці елементи і наблизити їх у плані та 3D",
@@ -45,6 +46,5 @@
   "other": "# елементів приховано",
   "few": "# елементи приховано",
   "many": "# елементів приховано"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

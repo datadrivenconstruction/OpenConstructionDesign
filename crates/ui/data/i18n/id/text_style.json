@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Isian",
  "text_style.lbl.detail": "Detail",
  "text_style.lbl.width": "Lebar",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Masukkan angka dari {min} sampai {max}",
  "text_style.tip.next_ring": "Tutup kontur ini dan mulai kontur lain di area yang sama",
  "text_style.tip.edit_text": "Edit teks di tempat",
- "text_style.tip.add_leader": "Tambahkan garis pemimpin ke teks ini",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Tambahkan garis pemimpin ke teks ini"
 }

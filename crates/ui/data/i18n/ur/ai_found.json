@@ -9,6 +9,7 @@
  "ai_found.found.hide": "چھپا دیا گیا",
  "ai_found.found.color": "رنگ دیا گیا",
  "ai_found.found.count": "{m} میں سے {n}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "کوئی میل نہیں کھاتا۔ وسیع فلٹر آزمائیں۔",
  "ai_found.found.show_btn": "دکھائیں",
  "ai_found.found.show_tip": "یہ عناصر منتخب کریں اور پلان اور 3D میں ان پر زوم کریں",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# عنصر چھپا ہوا",
   "other": "# عناصر چھپے ہوئے"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Vzdálenost",
+ "cmd.e3d.measure.gap": "Mezera mezi plochami",
+ "cmd.e3d.measure.angle": "Úhel",
+ "cmd.e3d.measure.area": "Plocha / obvod plochy nebo místnosti",
+ "cmd.e3d.measure.volume": "Objem prvku",
+ "cmd.e3d.measure.slope": "Sklon",
+ "cmd.e3d.measure.chain": "Řetěz bodů",
+ "measure.orphan": "Ztracená reference",
+ "measure.not_planar": "Plochy nejsou rovnoběžné",
+ "measure.unsupported": "Toto nelze změřit",
+ "cmd.ann.measure_distance": "Změřit vzdálenost",
+ "cmd.ann.measure_gap": "Změřit mezeru mezi plochami",
+ "cmd.ann.measure_angle": "Změřit úhel",
+ "cmd.ann.measure_area": "Změřit plochu",
+ "hint.measure.first": "Měření: klikněte na líc stěny (nebo bod) · Esc — konec",
+ "hint.measure.second": "Měření: klikněte na druhý líc · Esc — zrušit první výběr",
+ "measure.no_face": "Zde není líc stěny"
+}

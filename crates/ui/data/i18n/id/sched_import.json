@@ -20,6 +20,7 @@
  "sched_import.why_ro": "hanya-baca",
  "sched_import.why_locked": "nilai terkunci",
  "sched_import.why_bad": "nilai tidak valid",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Terapkan {n} perubahan",
  "sched_import.cancel": "Batal",
  "sched_import.applied": "Diimpor {n} sel (satu langkah batal)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Hasil rumus, tidak diterapkan: {n}",
  "sched_import.no_id_rows": "Baris tanpa Id, tidak dibaca: {n} (baris {rows})",
  "sched_import.more": "… {n} lainnya",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(kosong)",
  "sched_import.reading": "Membaca buku kerja…",
  "sched_import.resaved": "Buku kerja disimpan ulang setelah pratinjau pertama: pratinjau ini menampilkan isi baru",
- "sched_import.resaved_reading": "Buku kerja disimpan ulang: tidak ada yang diterapkan, membaca ulang untuk pratinjau baru",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Buku kerja disimpan ulang: tidak ada yang diterapkan, membaca ulang untuk pratinjau baru"
 }

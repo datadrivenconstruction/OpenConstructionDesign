@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "请在 ERP 页面 {url} 下载当前编辑器",
  "erp.err.unsupported.admin": "请向 ERP 管理员索取当前编辑器",
  "erp.err.throttled_in": "尝试次数过多，请在 {s} 秒后重试",
+ "erp.err.throttled_ready": "等待结束，可以重试",
  "erp.err.imported": "ERP 中的修订 {n} 是导入的模型：编辑器暂时无法打开它或在其上发布",
  "erp.action.download": "在 ERP 中打开编辑器下载页面",
  "erp.action.new_link": "在 ERP 页面获取新链接",

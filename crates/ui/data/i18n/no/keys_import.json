@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nye taster",
  "keys_import.changed_head": "Erstatter dine egne taster",
  "keys_import.conflicts_head": "Konflikter etter importen",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "akkord",
  "keys_import.kind_seq": "to bokstaver",
  "keys_import.unbound": "ingen",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Ikke angret: taster ble redigert etter importen. Tilbakestill dem én og én i Taster-vinduet.",
  "keys_import.undo_none": "Ingenting å angre: ingen tastimport i denne økten.",
  "keys_import.imported": "Taster importert",
- "keys_import.imported_conflicts": "Taster importert; konflikter: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Taster importert; konflikter: {n}"
 }

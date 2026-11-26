@@ -12,6 +12,7 @@
  "links.loaded": "불러옴",
  "links.not_loaded": "불러오지 않음",
  "links.loading": "불러오는 중…",
+ "links.loading_all": "링크 불러오는 중",
  "links.levels": "레벨",
  "links.elements": "요소",
  "links.offset": "오프셋:",

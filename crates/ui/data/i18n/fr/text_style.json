@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Remplissage",
  "text_style.lbl.detail": "Détail",
  "text_style.lbl.width": "Épaisseur",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Saisissez un nombre de {min} à {max}",
  "text_style.tip.next_ring": "Fermer ce contour et en commencer un autre dans la même zone",
  "text_style.tip.edit_text": "Modifier le texte sur place",
- "text_style.tip.add_leader": "Ajouter un repère à ce texte",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Ajouter un repère à ce texte"
 }

@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF सहेजा गया: {path} ({nodes} तत्व, {meshes} मेश)",
  "data_export.gltf.partial": "glTF {n} समस्याओं के साथ सहेजा गया, कुछ भाग गायब हो सकते हैं: {path}",
  "data_export.gltf.failed": "glTF निर्यात विफल: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "परियोजना जानकारी",
  "data_export.info.project": "परियोजना",
  "data_export.info.site": "निर्देशांक और उत्तर",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "बॉक्स में कोई चित्र-प्रिमिटिव नहीं",
  "data_export.dwgpick.box": "चुने गए प्रिमिटिव: {n}",
  "data_export.dwgpick.box_rings": "चुने गए प्रिमिटिव: {n}, बंद कंटूर: {rings}",
- "data_export.dwgpick.layer": "परत {layer}: चुने गए प्रिमिटिव {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "परत {layer}: चुने गए प्रिमिटिव {n}"
 }

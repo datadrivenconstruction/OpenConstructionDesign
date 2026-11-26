@@ -64,6 +64,7 @@
  "topo.import.title": "Съёмканы импорттоо",
  "topo.import.filter": "Съёмка (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " м",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Чекиттин бийиктиги",
  "topo.opt.thickness": "Топосолиддин калыңдыгы",
  "topo.opt.add_to_active": "Активдүү топосолидге кошуу",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Импорттоо",
  "topo.import.cancel": "Жокко чыгаруу",
  "topo.import.no_layers": "катмар тандалган эмес",
- "topo.info.warnings": "Түзүлгөн эмес:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Түзүлгөн эмес:"
 }

@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "KLT-etagepanel",
+ "fam.name.glulam_beam": "Limtræsbjælke",
+ "fam.name.glulam_column": "Limtræssøjle",
+ "gen.group.timber": "Trækonstruktion",
+ "gen.rule.timber.beam_span_max.desc": "Længste spænd for en limtræsbjælke mellem to søjler.",
+ "gen.rule.timber.beam_span_max.title": "Bjælkespændgrænse",
+ "gen.rule.timber.panel_w.desc": "Bredeste krydslimede etagepanel; en samling mellem hvert.",
+ "gen.rule.timber.panel_w.title": "KLT-panelbredde",
+ "gen.rule.timber.span_depth.desc": "Spænd i forhold til højde på en limtræsbjælke; vælger tværsnittet.",
+ "gen.rule.timber.span_depth.title": "Bjælkespænd i forhold til højde"
+}

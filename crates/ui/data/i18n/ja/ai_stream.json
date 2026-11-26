@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "ツール 1 個",
  "ai.stream.tools_many": "{n} 個のツール",
  "ai.stream.secs": "{n} 秒",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "モデルサービスの応答をまだ待っています",
  "ai.stream.stop": "停止",
  "ai.stream.cancelled": "停止しました",
- "ai.stream.incomplete": "ドラフトは不完全です。モデルには何も適用されていません。",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "ドラフトは不完全です。モデルには何も適用されていません。"
 }

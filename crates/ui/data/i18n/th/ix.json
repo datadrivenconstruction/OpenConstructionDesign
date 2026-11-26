@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "จุดควอดแรนต์",
+ "snap.extension": "ส่วนต่อขยาย",
+ "snap.parallel": "ขนานกับผนัง",
+ "snap.tracking_x": "X ของจุดที่จับไว้",
+ "snap.tracking_y": "Y ของจุดที่จับไว้",
+ "snap.tracking_cross": "จุดตัดเส้นนำ",
+ "snap.equal_step": "ขั้นเท่ากัน"
+}

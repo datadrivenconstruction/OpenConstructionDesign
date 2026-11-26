@@ -1,6 +1,7 @@
 {
  "ai.check.more": "توجد {0} ملاحظات أخرى من هذه القاعدة غير مدرجة",
  "ai.check.integrity": "بيانات تالفة في {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: الأعلى ليس فوق القاعدة",
  "ai.check.level_host_differs": "المكوّن على مستوى مختلف عن العنصر المضيف ({0})",
  "ai.check.clash": "{0} يتعارض مع {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "القاعدة {1}: {3} عنصراً، والمسموح {4}",
  "ai.check.rule.clearance": "القاعدة {1}: المسافة {3} م، والمطلوب {4} م على الأقل",
  "ai.check.rule.unsupported": "تعذر فحص القاعدة {1}: هذه الفئة غير مدعومة",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "المعامل {0}: \"{1}\" ليس مجموعة تكلفة وفق DIN 276 (ثلاثة أرقام، من 100 إلى 899) في {2} عنصرًا"
 }

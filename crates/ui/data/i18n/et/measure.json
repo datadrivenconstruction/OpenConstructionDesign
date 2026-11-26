@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Kaugus",
+ "cmd.e3d.measure.gap": "Vahe pindade vahel",
+ "cmd.e3d.measure.angle": "Nurk",
+ "cmd.e3d.measure.area": "Pinna või ruumi pindala / ümbermõõt",
+ "cmd.e3d.measure.volume": "Elemendi maht",
+ "cmd.e3d.measure.slope": "Kalle",
+ "cmd.e3d.measure.chain": "Punktiahel",
+ "measure.orphan": "Viide kadunud",
+ "measure.not_planar": "Pinnad ei ole paralleelsed",
+ "measure.unsupported": "Seda ei saa mõõta",
+ "cmd.ann.measure_distance": "Mõõda kaugust",
+ "cmd.ann.measure_gap": "Mõõda vahet pindade vahel",
+ "cmd.ann.measure_angle": "Mõõda nurka",
+ "cmd.ann.measure_area": "Mõõda pindala",
+ "hint.measure.first": "Mõõtmine: klõpsa seina pinnal (või punktil) · Esc — välju",
+ "hint.measure.second": "Mõõtmine: klõpsa teisel pinnal · Esc — tühista esimene valik",
+ "measure.no_face": "Siin pole seina pinda"
+}

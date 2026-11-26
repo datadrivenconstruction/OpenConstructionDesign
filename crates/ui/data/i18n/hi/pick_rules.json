@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "सभी श्रेणियाँ चुनें",
  "pick_rules.filter.tip": "चयन फ़िल्टर: बिना चिह्न वाली श्रेणियाँ क्लिक और होवर से छोड़ी जाती हैं",
  "pick_rules.here": "यहाँ के आइटम",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "चुने गए",
- "pick_rules.pinned": "पिन किए आइटम चुनें",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "पिन किए आइटम चुनें"
 }

@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 інструмент",
  "ai.stream.tools_many": "Інструментів: {n}",
  "ai.stream.secs": "{n} с",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Досі чекаю на службу моделі",
  "ai.stream.stop": "Зупинити",
  "ai.stream.cancelled": "Зупинено",
- "ai.stream.incomplete": "Чернетка неповна. До моделі нічого не застосовано.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Чернетка неповна. До моделі нічого не застосовано."
 }

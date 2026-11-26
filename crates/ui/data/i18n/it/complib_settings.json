@@ -48,5 +48,13 @@
  "settings.lib_open": "Libreria componenti",
  "settings.lib_open_desc": "Sfoglia le famiglie integrate, quelle del progetto e le tue",
  "settings.lib_dir": "Cartella della mia libreria",
- "settings.lib_dir_desc": "I file di famiglia (.ddcf) collocati qui compaiono in Mia libreria. DDC_COMPONENTS_DIR la sposta."
+ "settings.lib_dir_desc": "I file di famiglia (.ddcf) collocati qui compaiono in Mia libreria. DDC_COMPONENTS_DIR la sposta.",
+ "complib.fam.sprinkler_head": "Erogatore sprinkler",
+ "complib.fam.fire_pump": "Pompa antincendio",
+ "complib.fam.pressurisation_fan": "Ventilatore di pressurizzazione",
+ "complib.fam.lift_car": "Cabina ascensore",
+ "complib.fam.lift_landing_door": "Porta di piano ascensore",
+ "complib.fam.lift_pit": "Fossa ascensore",
+ "complib.fam.lift_overrun": "Extracorsa ascensore",
+ "complib.fam.lift_machine": "Macchinario ascensore"
 }

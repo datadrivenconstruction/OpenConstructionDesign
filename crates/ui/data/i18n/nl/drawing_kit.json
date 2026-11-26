@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: volle toon",
  "drawing_kit.reset_color": "{layer}: terug naar de tekenkleur",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Hoek",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Ongedaan maken (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} van {m}",
  "drawing_kit.accept_class": "Alle van deze soort accepteren",
- "drawing_kit.reject_class": "Alle van deze soort afwijzen",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Alle van deze soort afwijzen"
 }

@@ -52,6 +52,7 @@
  "mesh_tools.done": "בוצע",
  "mesh_tools.failed": "נכשל",
  "mesh_tools.note.outline_approx": "קו מתאר משוער",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "מחיקת פאות הפונות אל",
  "mesh_tools.dir.up": "למעלה",
  "mesh_tools.dir.down": "למטה",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "פושט: {n} (למשל: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "פושט: {n} (למשל: {first})"
 }

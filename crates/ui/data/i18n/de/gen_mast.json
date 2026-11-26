@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Mastaufzug",
+ "fam.name.mast_lift": "Mastaufzug",
+ "gen.rule.steel.check.self_weight.desc": "Gewicht des Turms über einem Schnitt, pro Meter Höhe.",
+ "gen.rule.steel.check.self_weight.title": "Stahlgewicht pro Meter",
+ "gen.rule.steel.check.strut_share.desc": "Anteil der Gurtkraft, den eine Horizontale an ihrem Knoten hält.",
+ "gen.rule.steel.check.strut_share.title": "Anteil Horizontale",
+ "gen.rule.steel.out.lift_box_d.desc": "Grundrisstiefe, die ein Mastaufzug mit seinem Mast braucht; Decken bleiben darüber offen.",
+ "gen.rule.steel.out.lift_box_d.title": "Aufzugsschachttiefe",
+ "gen.rule.steel.out.lift_box_w.desc": "Grundrissbreite, die ein Mastaufzug braucht; Decken bleiben darüber offen.",
+ "gen.rule.steel.out.lift_box_w.title": "Aufzugsschachtbreite",
+ "gen.rule.steel.out.lift_offset.desc": "Abstand eines Aufzugs von der Achse, frei von der Grundrissaussteifung.",
+ "gen.rule.steel.out.lift_offset.title": "Aufzugsversatz von der Achse",
+ "gen.rule.steel.out.lifts.desc": "Aufzüge im Kern: bis zur zweiten Plattform, dann bis zur Spitze.",
+ "gen.rule.steel.out.lifts.title": "Aufzugsfahrten"
+}

@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Okruhy",
+ "cmd.mep.circuits.desc": "Otevře editor okruhů: okruhy všech rozvaděčů, jejich zátěže, průřezy kabelů a kontroly pravidel.",
  "ce.title": "Okruhy",
  "ce.open": "Okruhy",
  "ce.empty": "Zatím žádné okruhy",

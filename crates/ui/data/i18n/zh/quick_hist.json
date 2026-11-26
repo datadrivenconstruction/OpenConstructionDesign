@@ -72,6 +72,7 @@
  "quick.cat.beam": "梁",
  "quick.cat.ceiling": "天花板",
  "quick.cat.structure": "结构",
+ "quick.hud.head": "{cat}：{n}",
  "quick.hud.head_more": "{cat}：{n}（共 {all}）",
  "quick.hud.type": "类型",
  "quick.hud.height": "高度",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "无法读取数值“{v}”",
  "quick.menu.repeat": "重复：{cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}：{n}",
  "quick.bar.recent": "最近",
  "quick.bar.repeat_tip": "{cmd} · 按 Enter 重复",
  "quick.repeat.none": "尚无可重复的命令",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "上一条",
  "quick.tips.next": "下一条",
  "quick.tips.finish": "完成",
- "quick.tips.never": "不再显示",
- "quick.hud.head": "{cat}：{n}",
- "quick.menu.head": "{cat}：{n}"
+ "quick.tips.never": "不再显示"
 }

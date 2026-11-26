@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Kredsløb",
+ "cmd.mep.circuits.desc": "Åbner kredsløbseditoren: kredsløb for hver tavle, deres belastninger, kabeldimensioner og regelkontroller.",
  "ce.title": "Kredse",
  "ce.open": "Kredse",
  "ce.empty": "Ingen kredse endnu",

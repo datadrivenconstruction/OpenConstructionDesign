@@ -90,6 +90,7 @@
  "fe.cons.redundant": "redundante",
  "fe.cons.help": "Una cota vinculada a un parámetro de longitud controla los planos; un ángulo necesita un parámetro de ángulo",
  "fe.locks": "Bloqueos de alineación",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Bloquear",
  "fe.unlock": "Desbloquear",
  "fe.locks.help": "Bloquear sustituye el argumento del sólido (p. ej. rect n.º 2) por el plano, de modo que el sólido lo sigue",
@@ -160,6 +161,5 @@
  "fe.clash.title": "El nombre del borrador ya está en uso",
  "fe.clash.body": "Ya existe un borrador llamado «{name}». Sustituya ese borrador por este o vuelva atrás y guarde con otro nombre. Todavía no se ha guardado nada.",
  "fe.clash.rename": "Guardar con otro nombre",
- "fe.clash.replace": "Sustituir ese borrador",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Sustituir ese borrador"
 }

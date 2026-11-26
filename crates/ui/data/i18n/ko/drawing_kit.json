@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: 원래 톤",
  "drawing_kit.reset_color": "{layer}: 도면 색으로 재설정",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "각도",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "실행 취소 (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m}개 중 {n}개",
  "drawing_kit.accept_class": "이 종류 모두 수락",
- "drawing_kit.reject_class": "이 종류 모두 거부",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "이 종류 모두 거부"
 }

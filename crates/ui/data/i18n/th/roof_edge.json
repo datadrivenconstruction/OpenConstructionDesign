@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "ค่าโค้ง",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "แทรกจุดหลังจุดนี้ (ส่วนโค้งจะถูกแบ่งครึ่ง)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "บันทึก",
  "roof_edge.pe.saved": "บันทึกโปรไฟล์แล้ว",
  "roof_edge.pe.valid": "โปรไฟล์ถูกต้อง",
  "roof_edge.pe.invalid": "โปรไฟล์ตัดกันเอง เล็กเกินไป หรือมีจุดน้อยกว่า 3 จุด",
  "roof_edge.pe.bad_number": "พิกัดหรือค่าโค้งไม่ใช่ตัวเลข",
- "roof_edge.pe.no_name": "กรอกชื่อโปรไฟล์",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "กรอกชื่อโปรไฟล์"
 }

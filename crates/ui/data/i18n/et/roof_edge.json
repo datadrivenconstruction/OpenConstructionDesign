@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Kumerus",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Lisa punkt selle järele (kaar jagatakse pooleks)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Salvesta",
  "roof_edge.pe.saved": "Profiil salvestatud",
  "roof_edge.pe.valid": "Profiil on korrektne",
  "roof_edge.pe.invalid": "Profiil lõikub endaga, on liiga väike või sisaldab alla 3 punkti",
  "roof_edge.pe.bad_number": "Koordinaat või kumerus ei ole number",
- "roof_edge.pe.no_name": "Sisesta profiili nimi",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Sisesta profiili nimi"
 }

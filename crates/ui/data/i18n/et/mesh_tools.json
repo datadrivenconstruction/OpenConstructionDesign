@@ -52,6 +52,7 @@
  "mesh_tools.done": "Valmis",
  "mesh_tools.failed": "Ebaõnnestus",
  "mesh_tools.note.outline_approx": "ääris on ligikaudne",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Kustuta tahud, mis on suunatud",
  "mesh_tools.dir.up": "üles",
  "mesh_tools.dir.down": "alla",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Lihtsustatud: {n} (näiteks: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Lihtsustatud: {n} (näiteks: {first})"
 }

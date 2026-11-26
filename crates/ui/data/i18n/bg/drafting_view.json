@@ -15,6 +15,7 @@
  "drafting_view.name": "Име",
  "drafting_view.count": "Анотации: {n}",
  "drafting_view.tab": "Чертеж · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Празен чертежен изглед",
  "drafting_view.canvas_hint": "Използвайте инструментите за анотации: линии на детайл, области, текст, детайлни компоненти",
  "drafting_view.created": "Чертежен изглед „{name}“ е създаден",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Още",
  "empty.drafting.title": "Все още няма чертежни изгледи",
  "empty.drafting.hint": "Създайте такъв за 2D детайли, които не се отрязват от модела.",
- "empty.drafting.action": "Нов чертежен изглед",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Нов чертежен изглед"
 }

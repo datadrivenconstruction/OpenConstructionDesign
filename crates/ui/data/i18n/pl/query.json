@@ -11,6 +11,7 @@
  "query.err.not_changed": "„{key}” nie może zostać zmienione: {why}",
  "query.err.op_no_field": "operator bez pola",
  "query.err.positive": "{key}: wartość musi być większa od zera",
+ "query.err.raw": "{text}",
  "query.err.text_field": "pole „{key}” jest tekstowe, formuła nie ma zastosowania",
  "query.err.unclosed_paren": "brak nawiasu zamykającego",
  "query.err.unclosed_quote": "brak cudzysłowu zamykającego",
@@ -27,6 +28,5 @@
  "query.why.curtain": "ściany osłonowe zmienia się we właściwościach samej ściany",
  "query.why.opening_type": "typ otworu zależy od jego rozmiaru: „-> width=… height=…”",
  "query.why.slab_thickness": "grubość płyty ustawia typ: „-> type=…”",
- "query.why.wall_thickness": "grubość ściany ustawia typ: „-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "grubość ściany ustawia typ: „-> type=…”"
 }

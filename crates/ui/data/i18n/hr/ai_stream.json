@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 alat",
  "ai.stream.tools_many": "{n} alata",
  "ai.stream.secs": "{n} s",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Još čekam servis modela",
  "ai.stream.stop": "Zaustavi",
  "ai.stream.cancelled": "Zaustavljeno",
- "ai.stream.incomplete": "Nacrt je nepotpun. Ništa nije primijenjeno na model.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Nacrt je nepotpun. Ništa nije primijenjeno na model."
 }

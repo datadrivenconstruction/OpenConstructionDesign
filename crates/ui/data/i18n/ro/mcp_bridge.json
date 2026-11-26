@@ -18,6 +18,7 @@
  "mcp.set.error": "Serverul nu a pornit: {error}",
  "mcp.set.new": "Token nou",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Fiecare lot este verificat mai întâi și este un singur pas de anulare. Doar programele de pe acest calculator se pot conecta.",
  "mcp.set.show": "Arată",
  "mcp.set.state_failed": "Nu rulează",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Stare",
  "mcp.set.access": "Acces",
  "mcp.set.config": "Configurație",
- "mcp.set.policy": "Aplicare",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Aplicare"
 }

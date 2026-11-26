@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "Sẽ xóa {0} trên {1} phần tử. Người dùng phải xác nhận việc này",
+ "ai.issue.wipe": "Kế hoạch sẽ xóa toàn bộ {1} phần tử của mô hình (đã xóa {0}). Không bao giờ được áp dụng trong một bước"
+}

@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: pełny ton",
  "drawing_kit.reset_color": "{layer}: przywróć kolor rysunku",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Kąt",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Cofnij (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} z {m}",
  "drawing_kit.accept_class": "Akceptuj wszystkie tego rodzaju",
- "drawing_kit.reject_class": "Odrzuć wszystkie tego rodzaju",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Odrzuć wszystkie tego rodzaju"
 }

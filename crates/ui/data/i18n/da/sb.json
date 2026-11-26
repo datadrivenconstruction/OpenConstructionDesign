@@ -41,5 +41,7 @@
  "sb.save.fresh": "Ingen ændringer",
  "sb.save.save": "Gem",
  "sb.save.ifc": "Gem IFC-kopi",
- "sb.save.autosave": "Automatisk gem"
+ "sb.save.autosave": "Automatisk gem",
+ "sb.more.title": "Mere",
+ "sb.more.desc": "Statuslinjeelementer, der ikke er plads til ved denne bredde."
 }

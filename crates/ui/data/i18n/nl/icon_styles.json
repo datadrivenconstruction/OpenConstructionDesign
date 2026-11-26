@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Kleur",
+ "cmd.ui.icons.color": "Kleurpictogrammen",
+ "cmd.ui.icons.color.desc": "Tekenstijl van de pictogrammen",
+ "theme.icons.hierarchical": "Hiërarchisch",
+ "cmd.ui.icons.hierarchical": "Hiërarchische pictogrammen",
+ "cmd.ui.icons.hierarchical.desc": "Tekenstijl van de pictogrammen",
+ "theme.icons.isometric": "Isometrisch",
+ "cmd.ui.icons.isometric": "Isometrische pictogrammen",
+ "cmd.ui.icons.isometric.desc": "Tekenstijl van de pictogrammen",
+ "theme.icons.monoline": "Monolijn",
+ "cmd.ui.icons.monoline": "Monolijnpictogrammen",
+ "cmd.ui.icons.monoline.desc": "Tekenstijl van de pictogrammen"
+}

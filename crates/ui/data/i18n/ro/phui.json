@@ -45,5 +45,7 @@
  "phui.kind.comp": "Elemente",
  "phui.kind.shaft": "Puțuri",
  "phui.kind.ramp": "Rampe",
- "phui.kind.member": "Bare"
+ "phui.kind.member": "Bare",
+ "phui.dates": "Date (început, sfârșit)",
+ "phui.show_calendar": "Afișează după calendar"
 }

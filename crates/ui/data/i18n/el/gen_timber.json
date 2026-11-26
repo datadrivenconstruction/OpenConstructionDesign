@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Πάνελ δαπέδου CLT",
+ "fam.name.glulam_beam": "Δοκός ξυλείας κολλητής",
+ "fam.name.glulam_column": "Υποστύλωμα ξυλείας κολλητής",
+ "gen.group.timber": "Ξύλινος φορέας",
+ "gen.rule.timber.beam_span_max.desc": "Μεγαλύτερο άνοιγμα δοκού ξυλείας κολλητής μεταξύ δύο υποστυλωμάτων.",
+ "gen.rule.timber.beam_span_max.title": "Όριο ανοίγματος δοκού",
+ "gen.rule.timber.panel_w.desc": "Πλατύτερο πάνελ δαπέδου από σταυρωτά κολλημένη ξυλεία· με αρμό μεταξύ τους.",
+ "gen.rule.timber.panel_w.title": "Πλάτος πάνελ CLT",
+ "gen.rule.timber.span_depth.desc": "Άνοιγμα προς ύψος δοκού ξυλείας κολλητής· επιλέγει τη διατομή.",
+ "gen.rule.timber.span_depth.title": "Άνοιγμα προς ύψος δοκού"
+}

@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{0} av {1} element skulle raderas. Detta måste bekräftas av användaren",
+ "ai.issue.wipe": "Planen skulle radera alla {1} element i modellen ({0} raderade). Den tillämpas aldrig i ett enda steg"
+}

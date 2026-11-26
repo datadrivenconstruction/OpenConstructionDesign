@@ -12,6 +12,7 @@
  "links.loaded": "লোড হয়েছে",
  "links.not_loaded": "লোড হয়নি",
  "links.loading": "লোড হচ্ছে…",
+ "links.loading_all": "লিংক লোড হচ্ছে",
  "links.levels": "লেভেল",
  "links.elements": "উপাদান",
  "links.offset": "অফসেট:",

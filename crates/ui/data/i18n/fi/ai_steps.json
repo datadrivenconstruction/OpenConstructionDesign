@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Tiedot",
  "ai.step.copy": "Kopioi tiedot",
  "ai.step.group.read": "Lukee mallia",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Malli muuttui vaiheen aikana",
  "ai.step.why.skipped": "Vaihetta ei suoritettu: vuoro päättyi",
  "ai.step.why.other": "Vaihe ei päättynyt",
- "ai.step.unknown": "Tuntematon työkalu",
- "ai.step.dec": ","
+ "ai.step.unknown": "Tuntematon työkalu"
 }

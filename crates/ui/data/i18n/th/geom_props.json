@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<แตกต่างกัน>",
  "geom_props.tip": "กด Enter เพื่อใช้ค่ากับทั้ง {n} รายการที่เลือก เป็นหนึ่งขั้นตอนของเลิกทำ",
  "geom_props.roof_slope": "ความลาด",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "องค์ประกอบที่นำเข้า",
  "geom_props.kind.mass": "มวล",
  "geom_props.kind.solid": "ของแข็ง",
- "geom_props.kind.toposolid": "ภูมิประเทศ",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "ภูมิประเทศ"
 }

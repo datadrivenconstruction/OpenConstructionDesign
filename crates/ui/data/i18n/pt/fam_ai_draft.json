@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "corrigido após {n} tentativas recusadas, cerca de {tokens} tokens",
+ "ai.fam_offer": "Um agente ofereceu a família {name}",
+ "ai.fam_offer.open": "Abrir no editor de famílias",
+ "ai.fam_offer.dismiss": "Dispensar",
+ "fe.ai.badge": "IA",
+ "fe.ai.checking": "A verificar…",
+ "fe.ai.clean": "A verificação não encontrou nada",
+ "fe.ai.check_values": "Verificar com valores",
+ "fe.ai.lines": "linhas {n}",
+ "fe.ai.changes": "{n} alterações em relação à versão anterior",
+ "fe.ai.added": "adicionado: {head} {name}",
+ "fe.ai.removed": "removido: {head} {name}",
+ "fe.ai.changed": "alterado: {head} {name}",
+ "fe.ai.reject": "Rejeitar"
+}

@@ -64,6 +64,7 @@
  "topo.import.title": "Import pomiaru",
  "topo.import.filter": "Pomiar (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Rzędna punktu",
  "topo.opt.thickness": "Grubość bryły terenu",
  "topo.opt.add_to_active": "Dodaj do aktywnej bryły terenu",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importuj",
  "topo.import.cancel": "Anuluj",
  "topo.import.no_layers": "nie wybrano warstwy",
- "topo.info.warnings": "Nie zbudowano:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Nie zbudowano:"
 }

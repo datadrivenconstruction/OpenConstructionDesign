@@ -2,8 +2,8 @@
  "clash.col.x": "X",
  "clash.col.y": "Y",
  "clash.col.z": "Z",
+ "clash.col.unit": "{name}, {unit}",
  "clash.unit.ft3": "ft³",
  "clash.exported_n": "Raport salvat: {n} din {m}, {path}",
- "clash.exported_f": "Raport salvat: {n} din {m} (filtru: {filter}), {path}",
- "clash.col.unit": "{name}, {unit}"
+ "clash.exported_f": "Raport salvat: {n} din {m} (filtru: {filter}), {path}"
 }

@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Độ phồng",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Chèn một điểm sau điểm này (cung sẽ được chia đôi)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Lưu",
  "roof_edge.pe.saved": "Đã lưu biên dạng",
  "roof_edge.pe.valid": "Biên dạng hợp lệ",
  "roof_edge.pe.invalid": "Biên dạng tự cắt, quá nhỏ hoặc có ít hơn 3 điểm",
  "roof_edge.pe.bad_number": "Tọa độ hoặc độ phồng không phải là số",
- "roof_edge.pe.no_name": "Nhập tên biên dạng",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Nhập tên biên dạng"
 }

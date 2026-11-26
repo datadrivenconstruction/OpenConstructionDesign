@@ -18,6 +18,7 @@
  "mcp.set.error": "A szerver nem indult el: {error}",
  "mcp.set.new": "Új token",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Minden köteg előzetesen ellenőrzött, és egy visszavonási lépés. Csak ezen a számítógépen futó programok csatlakozhatnak.",
  "mcp.set.show": "Megjelenítés",
  "mcp.set.state_failed": "Nem fut",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Állapot",
  "mcp.set.access": "Hozzáférés",
  "mcp.set.config": "Konfiguráció",
- "mcp.set.policy": "Alkalmazás",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Alkalmazás"
 }

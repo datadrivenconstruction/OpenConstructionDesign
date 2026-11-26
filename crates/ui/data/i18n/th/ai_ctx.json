@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ ที่เลือก ({n})",
  "ai.ctx.add_tip": "เพิ่มกลับไปยังสิ่งที่ AI เห็น",
  "ai.ctx.frame_tip": "แสดงองค์ประกอบเหล่านี้",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "ราวกันตก",
  "ai.ctx.cat.roof": "หลังคา",
  "ai.ctx.cat.stair": "บันได",
- "ai.ctx.cat.other": "อื่นๆ",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "อื่นๆ"
 }

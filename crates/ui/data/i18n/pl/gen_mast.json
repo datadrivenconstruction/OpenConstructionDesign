@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Winda masztowa",
+ "fam.name.mast_lift": "Winda masztowa",
+ "gen.rule.steel.check.self_weight.desc": "Ciężar wieży powyżej przekroju, na metr wysokości.",
+ "gen.rule.steel.check.self_weight.title": "Ciężar stali na metr",
+ "gen.rule.steel.check.strut_share.desc": "Część siły w pasie, którą przejmuje poziomy element w swoim węźle.",
+ "gen.rule.steel.check.strut_share.title": "Udział elementów poziomych",
+ "gen.rule.steel.out.lift_box_d.desc": "Głębokość w rzucie, jakiej potrzebuje winda masztowa z masztem; stropy otwierają się nad nią.",
+ "gen.rule.steel.out.lift_box_d.title": "Głębokość szybu windy",
+ "gen.rule.steel.out.lift_box_w.desc": "Szerokość w rzucie, jakiej potrzebuje winda masztowa; stropy otwierają się nad nią.",
+ "gen.rule.steel.out.lift_box_w.title": "Szerokość szybu windy",
+ "gen.rule.steel.out.lift_offset.desc": "Odległość windy od osi, z pominięciem stężenia w rzucie.",
+ "gen.rule.steel.out.lift_offset.title": "Odsunięcie windy od osi",
+ "gen.rule.steel.out.lifts.desc": "Windy wzdłuż rdzenia: do drugiej platformy, a potem na górę.",
+ "gen.rule.steel.out.lifts.title": "Odcinki windy"
+}

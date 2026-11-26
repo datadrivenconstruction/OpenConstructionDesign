@@ -64,6 +64,7 @@
  "topo.import.title": "測量データを取り込み",
  "topo.import.filter": "測量データ (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "点の標高",
  "topo.opt.thickness": "トポソリッドの厚さ",
  "topo.opt.add_to_active": "アクティブなトポソリッドに追加",
@@ -121,6 +122,5 @@
  "topo.import.ok": "取り込み",
  "topo.import.cancel": "キャンセル",
  "topo.import.no_layers": "レイヤーが選択されていません",
- "topo.info.warnings": "作成されていません:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "作成されていません:"
 }

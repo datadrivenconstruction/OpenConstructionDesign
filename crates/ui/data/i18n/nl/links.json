@@ -12,6 +12,7 @@
  "links.loaded": "geladen",
  "links.not_loaded": "niet geladen",
  "links.loading": "laden…",
+ "links.loading_all": "Koppelingen laden",
  "links.levels": "verdiepingen",
  "links.elements": "elementen",
  "links.offset": "Verschuiving:",

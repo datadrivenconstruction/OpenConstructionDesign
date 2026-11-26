@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} otvorů nezměněno ({why})",
  "lnp.params_changed": "změněných hodnot: {n}",
  "lnp.params_same": "Žádné změny: {u} prvků tuto hodnotu už má",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Pro úpravu vyberte jen první panel",
  "lnp.clip_from_wall": "Parametry zkopírovány ze stěny #{id}",
  "lnp.clip_from_opening": "Parametry zkopírovány z otvoru #{id}",
- "lnp.match_from": "Vlastnosti #{id} přiřazeny k {n} prvkům",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Vlastnosti #{id} přiřazeny k {n} prvkům"
 }

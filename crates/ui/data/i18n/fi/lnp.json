@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} aukkoa ei muutettu ({why})",
  "lnp.params_changed": "arvoja muutettu: {n}",
  "lnp.params_same": "Ei muutoksia: {u} elementillä on jo tämä arvo",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Valitse vain ensimmäinen paneeli muokataksesi sitä",
  "lnp.clip_from_wall": "Parametrit kopioitu seinästä #{id}",
  "lnp.clip_from_opening": "Parametrit kopioitu aukosta #{id}",
- "lnp.match_from": "#{id}:n ominaisuudet sovitettu {n} elementille",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "#{id}:n ominaisuudet sovitettu {n} elementille"
 }

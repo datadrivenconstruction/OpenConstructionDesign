@@ -24,5 +24,21 @@
  "value_src.verified_n": "Ellenőrzött értékek: {n}",
  "value_src.bulk_note": "MI által kitöltött, nem ellenőrzött értékek: {n}",
  "value_src.bulk_verify": "Ellenőrzöttnek jelölés ({n})",
- "value_src.bulk_tip": "A kijelölés minden MI által kitöltött értékét ellenőrzöttnek jelöli egyetlen visszavonási lépésben"
+ "value_src.bulk_tip": "A kijelölés minden MI által kitöltött értékét ellenőrzöttnek jelöli egyetlen visszavonási lépésben",
+ "origin.title": "Eredet",
+ "origin.made_by": "Készítette",
+ "origin.request": "Kérés",
+ "origin.at": "Alkalmazva",
+ "origin.recipe": "„{name}” recept, {part}. rész",
+ "origin.ai": "az AI-asszisztens ({model})",
+ "origin.agent": "ügynök: {name}",
+ "origin.script": "szkript: {name}",
+ "origin.xlsx": "XLSX-táblázat",
+ "origin.user": "személy",
+ "origin.import": "importálás",
+ "origin.import_file": "importálás innen: {file}",
+ "origin.unknown": "nincs az előzményekben",
+ "origin.held": "Kézzel szerkesztve: a recept újrafuttatása érintetlenül hagyja",
+ "origin.rebuilt": "A recept újrafuttatása újraépíti; szerkessze kézzel, hogy változatlan maradjon",
+ "origin.ai_values": "AI által kitöltött értékek: {n}, nem ellenőrzött: {open}"
 }

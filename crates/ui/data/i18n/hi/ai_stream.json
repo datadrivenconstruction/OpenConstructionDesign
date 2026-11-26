@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 टूल",
  "ai.stream.tools_many": "{n} टूल",
  "ai.stream.secs": "{n} सेकंड",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "अभी भी मॉडल सेवा की प्रतीक्षा है",
  "ai.stream.stop": "रोकें",
  "ai.stream.cancelled": "रोका गया",
- "ai.stream.incomplete": "ड्राफ़्ट अधूरा है। मॉडल में कुछ लागू नहीं हुआ।",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "ड्राफ़्ट अधूरा है। मॉडल में कुछ लागू नहीं हुआ।"
 }

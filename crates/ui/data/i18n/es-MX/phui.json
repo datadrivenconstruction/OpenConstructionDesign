@@ -45,5 +45,7 @@
  "phui.kind.comp": "Componentes",
  "phui.kind.shaft": "Patinillos",
  "phui.kind.ramp": "Rampas",
- "phui.kind.member": "Elementos"
+ "phui.kind.member": "Elementos",
+ "phui.dates": "Fechas (inicio, fin)",
+ "phui.show_calendar": "Mostrar por calendario"
 }

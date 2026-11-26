@@ -64,6 +64,7 @@
  "topo.import.title": "Importer måleunderlag",
  "topo.import.filter": "Måleunderlag (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Punktkote",
  "topo.opt.thickness": "Tykkelse på terrengflate",
  "topo.opt.add_to_active": "Legg til i aktiv terrengflate",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importer",
  "topo.import.cancel": "Avbryt",
  "topo.import.no_layers": "ingen lag valgt",
- "topo.info.warnings": "Ikke bygget:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Ikke bygget:"
 }

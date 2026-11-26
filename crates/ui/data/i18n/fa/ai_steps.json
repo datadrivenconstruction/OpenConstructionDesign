@@ -11,6 +11,7 @@
  "ai.step.s": "{n} ثانیه",
  "ai.step.min": "{m} دقیقه",
  "ai.step.min_s": "{m} دقیقه {s} ثانیه",
+ "ai.step.dec": ".",
  "ai.step.details": "جزئیات",
  "ai.step.copy": "کپی جزئیات",
  "ai.step.group.read": "مدل را می‌خواند",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "مدل در حین اجرای گام تغییر کرد",
  "ai.step.why.skipped": "گام اجرا نشد: نوبت تمام شد",
  "ai.step.why.other": "گام تمام نشد",
- "ai.step.unknown": "ابزار ناشناخته",
- "ai.step.dec": "."
+ "ai.step.unknown": "ابزار ناشناخته"
 }

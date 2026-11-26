@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Зай",
+ "cmd.e3d.measure.gap": "Гадаргуу хоорондын зай",
+ "cmd.e3d.measure.angle": "Өнцөг",
+ "cmd.e3d.measure.area": "Гадаргуу эсвэл өрөөний талбай / периметр",
+ "cmd.e3d.measure.volume": "Элементийн эзлэхүүн",
+ "cmd.e3d.measure.slope": "Налуу",
+ "cmd.e3d.measure.chain": "Цэгийн гинж",
+ "measure.orphan": "Лавлагаа алдагдсан",
+ "measure.not_planar": "Гадаргуу параллель биш",
+ "measure.unsupported": "Үүнийг хэмжих боломжгүй",
+ "cmd.ann.measure_distance": "Зай хэмжих",
+ "cmd.ann.measure_gap": "Гадаргуу хоорондын зай хэмжих",
+ "cmd.ann.measure_angle": "Өнцөг хэмжих",
+ "cmd.ann.measure_area": "Талбай хэмжих",
+ "hint.measure.first": "Хэмжилт: ханын гадаргуу (эсвэл цэг) дээр товшино уу · Esc — гарах",
+ "hint.measure.second": "Хэмжилт: хоёр дахь гадаргуу дээр товшино уу · Esc — эхний сонголтыг цуцлах",
+ "measure.no_face": "Энд ханын гадаргуу алга"
+}

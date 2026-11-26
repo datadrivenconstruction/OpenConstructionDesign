@@ -2,8 +2,8 @@
  "clash.col.x": "X",
  "clash.col.y": "Y",
  "clash.col.z": "Z",
+ "clash.col.unit": "{name}، {unit}",
  "clash.unit.ft3": "قدم³",
  "clash.exported_n": "حُفظ التقرير: {n} من {m}، {path}",
- "clash.exported_f": "حُفظ التقرير: {n} من {m} (المرشّح: {filter})، {path}",
- "clash.col.unit": "{name}، {unit}"
+ "clash.exported_f": "حُفظ التقرير: {n} من {m} (المرشّح: {filter})، {path}"
 }

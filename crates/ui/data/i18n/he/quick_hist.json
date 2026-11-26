@@ -72,6 +72,7 @@
  "quick.cat.beam": "קורות",
  "quick.cat.ceiling": "תקרות",
  "quick.cat.structure": "שלד",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} מתוך {all}",
  "quick.hud.type": "טיפוס",
  "quick.hud.height": "גובה",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "לא ניתן לקרוא את הערך “{v}”",
  "quick.menu.repeat": "חזרה על: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "אחרונים",
  "quick.bar.repeat_tip": "{cmd} · Enter מבצע שוב",
  "quick.repeat.none": "אין עדיין מה לחזור עליו",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "הקודם",
  "quick.tips.next": "הבא",
  "quick.tips.finish": "סיום",
- "quick.tips.never": "אל תציג שוב",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "אל תציג שוב"
 }

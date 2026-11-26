@@ -52,6 +52,7 @@
  "mesh_tools.done": "সম্পন্ন",
  "mesh_tools.failed": "ব্যর্থ",
  "mesh_tools.note.outline_approx": "রূপরেখা আনুমানিক",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "মুখোমুখি তল মুছুন",
  "mesh_tools.dir.up": "উপরে",
  "mesh_tools.dir.down": "নিচে",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "সরলীকৃত: {n} (উদাহরণ: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "সরলীকৃত: {n} (উদাহরণ: {first})"
 }

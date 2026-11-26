@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF gespeichert: {path} ({nodes} Elemente, {meshes} Netze)",
  "data_export.gltf.partial": "glTF mit {n} Problemen gespeichert, einige Körper fehlen möglicherweise: {path}",
  "data_export.gltf.failed": "glTF-Export fehlgeschlagen: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "Projektinformationen",
  "data_export.info.project": "Projekt",
  "data_export.info.site": "Koordinaten und Nord",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "Keine Zeichnungsobjekte im Rechteck",
  "data_export.dwgpick.box": "Gewählte Objekte: {n}",
  "data_export.dwgpick.box_rings": "Gewählte Objekte: {n}, geschlossene Umrisse: {rings}",
- "data_export.dwgpick.layer": "Ebene {layer}: gewählte Objekte {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "Ebene {layer}: gewählte Objekte {n}"
 }

@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "ทำสำเนาประเภท",
  "wall_type.wt.duplicate_tip": "บันทึกเลเยอร์เหล่านี้เป็นประเภทใหม่ ประเภทที่เปิดอยู่จะคงเดิม",
  "wall_type.wt.switch_dirty": "กดตกลงหรือยกเลิกก่อนเปิดประเภทอื่น",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "หน้าที่",
  "wall_type.wt.h_material": "วัสดุ",
  "wall_type.wt.h_thickness": "ความหนา",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "เลือกผนังในมุมมอง แล้วสลับประเภท",
  "wall_type.swap.already": "ผนังที่เลือกมีประเภทนี้อยู่แล้ว",
  "wall_type.swap.apply": "สลับ",
- "wall_type.swap.done": "สลับประเภทผนังแล้ว: {n} จาก {m} ผนัง",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "สลับประเภทผนังแล้ว: {n} จาก {m} ผนัง"
 }

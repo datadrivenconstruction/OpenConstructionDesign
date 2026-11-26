@@ -18,6 +18,7 @@
  "mcp.set.error": "سرور شروع نہیں ہوا: {error}",
  "mcp.set.new": "نیا ٹوکن",
  "mcp.set.port": "پورٹ",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "ہر بیچ پہلے جانچا جاتا ہے اور ایک undo مرحلہ ہے۔ صرف اس کمپیوٹر کے پروگرام منسلک ہو سکتے ہیں۔",
  "mcp.set.show": "دکھائیں",
  "mcp.set.state_failed": "نہیں چل رہا",
@@ -30,6 +31,5 @@
  "mcp.set.status": "حیثیت",
  "mcp.set.access": "رسائی",
  "mcp.set.config": "ترتیب",
- "mcp.set.policy": "لاگو کرنا",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "لاگو کرنا"
 }

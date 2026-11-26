@@ -64,6 +64,7 @@
  "topo.import.title": "측량 가져오기",
  "topo.import.filter": "측량 (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "점 고도",
  "topo.opt.thickness": "토포솔리드 두께",
  "topo.opt.add_to_active": "활성 토포솔리드에 추가",
@@ -121,6 +122,5 @@
  "topo.import.ok": "가져오기",
  "topo.import.cancel": "취소",
  "topo.import.no_layers": "선택된 레이어 없음",
- "topo.info.warnings": "생성되지 않음:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "생성되지 않음:"
 }

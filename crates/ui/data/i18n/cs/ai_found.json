@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Skryto",
  "ai_found.found.color": "Obarveno",
  "ai_found.found.count": "{n} z {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Nic neodpovídá. Zkuste širší filtr.",
  "ai_found.found.show_btn": "Zobrazit",
  "ai_found.found.show_tip": "Vybrat tyto prvky a přiblížit je v půdorysu i 3D",
@@ -41,6 +42,5 @@
   "one": "# skrytý prvek",
   "few": "# skryté prvky",
   "other": "# skrytých prvků"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

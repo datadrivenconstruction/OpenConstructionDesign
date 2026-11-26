@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Falak követése rajzról",
  "api.cmd.attachments_list": "A csevegéshez csatolt fájlok és a megerősített projektkövetelmények",
  "api.cmd.attachments_read": "Oldaltartomány, táblázatsorok vagy egy csatolt fájl képének olvasása",
- "api.cmd.underlay_trace": "Csatolt rajzról követett falvázlatok"
+ "api.cmd.underlay_trace": "Csatolt rajzról követett falvázlatok",
+ "ai.tool.plan_from_image": "Alaprajz beolvasása képről",
+ "api.cmd.plan_from_image": "Falak, ajtók, ablakok és helyiségek vázolása csatolt alaprajzképből vagy PDF-oldalból"
 }

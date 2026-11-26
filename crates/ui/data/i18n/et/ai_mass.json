@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "Kustutataks {0} elementi {1}-st. Kasutaja peab selle kinnitama",
+ "ai.issue.wipe": "Plaan kustutaks kõik {1} mudeli elementi (kustutatud {0}). Seda ei rakendata kunagi ühe sammuga"
+}

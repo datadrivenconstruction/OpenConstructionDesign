@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "النوع",
  "collab_diff.diff.col.field": "الحقل",
  "collab_diff.diff.col.old": "كان",
- "collab_diff.diff.col.new": "أصبح"
+ "collab_diff.diff.col.new": "أصبح",
+ "collab_diff.reveal.title": "التشييد التدريجي",
+ "collab_diff.reveal.start": "عرض كما نُفّذ",
+ "collab_diff.reveal.play": "تشغيل",
+ "collab_diff.reveal.pause": "إيقاف مؤقت",
+ "collab_diff.reveal.back": "للخلف",
+ "collab_diff.reveal.close": "إغلاق",
+ "collab_diff.reveal.nothing": "لا شيء لعرضه: لا يوجد عنصر متغيّر في المشهد ثلاثي الأبعاد.",
+ "collab_diff.reveal.journal_busy": "جارٍ قراءة السجل…",
+ "collab_diff.reveal.journal_play": "تشغيل السجل"
 }

@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} פתחים לא שונו ({why})",
  "lnp.params_changed": "ערכים ששונו: {n}",
  "lnp.params_same": "אין שינויים: ל-{u} אלמנטים כבר יש ערך זה",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "בחרו רק את הלוח הראשון כדי לערוך אותו",
  "lnp.clip_from_wall": "הפרמטרים הועתקו מהקיר #{id}",
  "lnp.clip_from_opening": "הפרמטרים הועתקו מהפתח #{id}",
- "lnp.match_from": "המאפיינים של #{id} הותאמו ל-{n} אלמנטים",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "המאפיינים של #{id} הותאמו ל-{n} אלמנטים"
 }

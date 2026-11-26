@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Nối, tách nối hoặc đổi kiểu nối hình học",
  "api.cmd.place_footings": "Đặt móng dưới mọi cột của một cao độ",
  "api.cmd.create_terrain": "Tạo địa hình từ các điểm khảo sát hoặc mặt phẳng dốc",
- "api.cmd.script_recipes": "Đọc các khối lệnh và công thức của kết cấu tự do"
+ "api.cmd.set_material": "Đặt giao diện của vật liệu trong 3D",
+ "api.cmd.script_recipes": "Đọc các khối lệnh và công thức của kết cấu tự do",
+ "api.cmd.generate_block": "Lập kế hoạch một dãy công trình trên các lô đất với quy tắc công trường chung",
+ "api.cmd.measure_save": "Lưu một phép đo vào khung nhìn",
+ "api.cmd.edit_mass": "Thêm một bước lịch sử vào khối: đẩy, phác thảo, vỏ, bo tròn, vát mép, offset hoặc tách",
+ "api.cmd.mass_to_family": "Tạo họ cấu kiện từ dòng thời gian của khối"
 }

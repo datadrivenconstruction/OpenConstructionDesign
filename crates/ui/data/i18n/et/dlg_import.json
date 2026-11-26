@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "võrkudena",
  "dlg.imp.skipped": "vahele jäetud",
  "dlg.imp.notes": "Märkused: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "ja veel {n} liiki",
  "dlg.imp.no_levels": "Failis pole korruseid: loodi vaikekorrus",
  "dlg.imp.reimport_row": "Uuendatud {updated}, muutumata {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} joont, {arcs} kaart, {texts} teksti, {fills} täidet, {layers} kihti; ühik {unit} mm",
  "dlg.dw.summary_paper": "; paberilehti {n} (aluspildile ei paigutatud)",
  "dlg.dw.summary_unknown": "; ei kantud üle: {list}",
- "dlg.dw.summary_more": " ja veel {n} liiki",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " ja veel {n} liiki"
 }

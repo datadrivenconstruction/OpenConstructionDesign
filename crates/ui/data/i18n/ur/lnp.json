@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} بازشیں تبدیل نہیں ہوئیں ({why})",
  "lnp.params_changed": "تبدیل شدہ قدریں: {n}",
  "lnp.params_same": "کوئی تبدیلی نہیں: {u} عناصر میں یہ قدر پہلے سے ہے",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "ترمیم کے لیے صرف پہلا پینل منتخب کریں",
  "lnp.clip_from_wall": "دیوار #{id} سے پیرامیٹرز کاپی ہوئے",
  "lnp.clip_from_opening": "بازش #{id} سے پیرامیٹرز کاپی ہوئے",
- "lnp.match_from": "#{id} کی پراپرٹیز {n} عناصر پر لاگو ہوئیں",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "#{id} کی پراپرٹیز {n} عناصر پر لاگو ہوئیں"
 }

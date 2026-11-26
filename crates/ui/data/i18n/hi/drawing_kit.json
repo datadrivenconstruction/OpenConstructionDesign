@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: पूरा टोन",
  "drawing_kit.reset_color": "{layer}: ड्रॉइंग रंग पर वापस",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "कोण",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "वापस लें (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m} में से {n}",
  "drawing_kit.accept_class": "इस प्रकार के सभी स्वीकारें",
- "drawing_kit.reject_class": "इस प्रकार के सभी अस्वीकारें",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "इस प्रकार के सभी अस्वीकारें"
 }

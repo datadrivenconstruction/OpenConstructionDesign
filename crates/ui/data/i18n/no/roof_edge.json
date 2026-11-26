@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y:",
  "roof_edge.pe.bulge": "Buktning",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Sett inn et punkt etter dette (en bue deles på midten)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Lagre",
  "roof_edge.pe.saved": "Profil lagret",
  "roof_edge.pe.valid": "Profilen er gyldig",
  "roof_edge.pe.invalid": "Profilen skjærer seg selv, er for liten eller har færre enn 3 punkter",
  "roof_edge.pe.bad_number": "En koordinat eller buktning er ikke et tall",
- "roof_edge.pe.no_name": "Skriv inn et profilnavn",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Skriv inn et profilnavn"
 }

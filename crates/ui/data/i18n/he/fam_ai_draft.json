@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "תוקן לאחר {n} ניסיונות שנדחו, כ-{tokens} אסימונים",
+ "ai.fam_offer": "סוכן הציע את המשפחה {name}",
+ "ai.fam_offer.open": "פתח בעורך המשפחות",
+ "ai.fam_offer.dismiss": "התעלם",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "בודק…",
+ "fe.ai.clean": "הבדיקה לא מצאה דבר",
+ "fe.ai.check_values": "בדיקה עם ערכים",
+ "fe.ai.lines": "שורות {n}",
+ "fe.ai.changes": "{n} שינויים לעומת הגרסה הקודמת",
+ "fe.ai.added": "נוסף: {head} {name}",
+ "fe.ai.removed": "הוסר: {head} {name}",
+ "fe.ai.changed": "שונה: {head} {name}",
+ "fe.ai.reject": "דחה"
+}

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "ескіз скасовано",
  "sketch_edit.sk_applied": "ескіз застосовано",
  "sketch_edit.sk_tail": "хвіст",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "перекриття",
  "sketch_edit.sk_host_roof": "даху",
  "sketch_edit.sk_host_ceiling": "стелі",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Рівень 2",
  "sketch_edit.seed_floor_200": "Підлога 200",
  "sketch_edit.seed_section1": "Розріз 1",
- "sketch_edit.seed_section2": "Розріз 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Розріз 2"
 }

@@ -15,6 +15,7 @@
  "drafting_view.name": "이름",
  "drafting_view.count": "주석 {n}개",
  "drafting_view.tab": "제도 · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "빈 제도 뷰",
  "drafting_view.canvas_hint": "주석 도구를 사용하세요: 상세 선, 영역, 텍스트, 상세 구성요소",
  "drafting_view.created": "제도 뷰 \"{name}\"을(를) 만들었습니다",
@@ -29,6 +30,5 @@
  "drafting_view.more": "더 보기",
  "empty.drafting.title": "아직 제도 뷰가 없습니다",
  "empty.drafting.hint": "모델에서 잘라낸 것이 아닌 2D 상세를 위해 하나 만드세요.",
- "empty.drafting.action": "새 제도 뷰",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "새 제도 뷰"
 }

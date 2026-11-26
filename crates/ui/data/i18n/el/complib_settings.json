@@ -48,5 +48,13 @@
  "settings.lib_open": "Βιβλιοθήκη εξαρτημάτων",
  "settings.lib_open_desc": "Περιήγηση στις ενσωματωμένες οικογένειες, σε αυτές του έργου και στις δικές σας",
  "settings.lib_dir": "Ο φάκελος της βιβλιοθήκης μου",
- "settings.lib_dir_desc": "Τα αρχεία οικογενειών (.ddcf) που τοποθετούνται εδώ εμφανίζονται στην ενότητα Η βιβλιοθήκη μου. Το DDC_COMPONENTS_DIR τη μετακινεί."
+ "settings.lib_dir_desc": "Τα αρχεία οικογενειών (.ddcf) που τοποθετούνται εδώ εμφανίζονται στην ενότητα Η βιβλιοθήκη μου. Το DDC_COMPONENTS_DIR τη μετακινεί.",
+ "complib.fam.sprinkler_head": "Κεφαλή καταιονητήρα",
+ "complib.fam.fire_pump": "Αντλία πυρόσβεσης",
+ "complib.fam.pressurisation_fan": "Ανεμιστήρας πίεσης",
+ "complib.fam.lift_car": "Θάλαμος ανελκυστήρα",
+ "complib.fam.lift_landing_door": "Θύρα ορόφου ανελκυστήρα",
+ "complib.fam.lift_pit": "Φρεάτιο πυθμένα ανελκυστήρα",
+ "complib.fam.lift_overrun": "Υπερύψωση ανελκυστήρα",
+ "complib.fam.lift_machine": "Μηχανή ανελκυστήρα"
 }

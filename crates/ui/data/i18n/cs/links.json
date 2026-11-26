@@ -12,6 +12,7 @@
  "links.loaded": "načteno",
  "links.not_loaded": "nenačteno",
  "links.loading": "načítání…",
+ "links.loading_all": "Načítání odkazů",
  "links.levels": "podlaží",
  "links.elements": "prvků",
  "links.offset": "Posun:",

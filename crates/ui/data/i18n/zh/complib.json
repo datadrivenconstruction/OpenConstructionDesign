@@ -18,7 +18,7 @@
  "complib.ready.no": "不写入",
  "complib.edited": "已编辑",
  "complib.edited_tip": "项目中的族与内置族不同",
+ "complib.format_tip": "{fmt}：{state}",
  "complib.value": "值",
- "complib.armed": "构件：{name}",
- "complib.format_tip": "{fmt}：{state}"
+ "complib.armed": "构件：{name}"
 }

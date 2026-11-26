@@ -52,6 +52,7 @@
  "mesh_tools.done": "완료",
  "mesh_tools.failed": "실패",
  "mesh_tools.note.outline_approx": "윤곽 근사",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "다음을 향하는 면 삭제",
  "mesh_tools.dir.up": "위",
  "mesh_tools.dir.down": "아래",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "단순화: {n} (예: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "단순화: {n} (예: {first})"
 }

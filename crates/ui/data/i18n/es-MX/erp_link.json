@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Descargue el editor actual en la página de ERP {url}",
  "erp.err.unsupported.admin": "Pida a su administrador de ERP el editor actual",
  "erp.err.throttled_in": "Demasiados intentos. Vuelva a intentarlo en {s} s",
+ "erp.err.throttled_ready": "La espera terminó. Puedes intentarlo de nuevo",
  "erp.err.imported": "La revisión {n} del ERP es un modelo importado: el editor todavía no puede abrirla ni publicar sobre ella",
  "erp.action.download": "Abrir la página de descarga del editor en el ERP",
  "erp.action.new_link": "Obtenga un enlace nuevo en la página del ERP",

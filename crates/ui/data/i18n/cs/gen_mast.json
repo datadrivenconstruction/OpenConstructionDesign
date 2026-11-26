@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Stožárový výtah",
+ "fam.name.mast_lift": "Stožárový výtah",
+ "gen.rule.steel.check.self_weight.desc": "Hmotnost věže nad řezem na metr výšky.",
+ "gen.rule.steel.check.self_weight.title": "Hmotnost oceli na metr",
+ "gen.rule.steel.check.strut_share.desc": "Podíl síly v pásnici, který přenáší vodorovná výztuha v uzlu.",
+ "gen.rule.steel.check.strut_share.title": "Podíl vodorovné výztuhy",
+ "gen.rule.steel.out.lift_box_d.desc": "Půdorysná hloubka, kterou stožárový výtah potřebuje se stožárem; podlaží nad ním zůstávají otevřená.",
+ "gen.rule.steel.out.lift_box_d.title": "Hloubka výtahové skříně",
+ "gen.rule.steel.out.lift_box_w.desc": "Půdorysná šířka, kterou stožárový výtah potřebuje; podlaží nad ním zůstávají otevřená.",
+ "gen.rule.steel.out.lift_box_w.title": "Šířka výtahové skříně",
+ "gen.rule.steel.out.lift_offset.desc": "Vzdálenost výtahu od osy, mimo půdorysné ztužení.",
+ "gen.rule.steel.out.lift_offset.title": "Odsazení výtahu od osy",
+ "gen.rule.steel.out.lifts.desc": "Výtahy v jádru: k druhé plošině a pak na vrchol.",
+ "gen.rule.steel.out.lifts.title": "Dráhy výtahů"
+}

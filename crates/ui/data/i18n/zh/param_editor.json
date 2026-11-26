@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() 分支不一致",
  "pe.msg_what_args": "参数",
  "pe.msg_and": " 和 ",
+ "pe.msg_incompatible": "{w}：单位不兼容 {dims}",
  "pe.text_no_formula": "文本参数不支持公式",
  "pe.circular": "循环引用：{text}",
- "pe.depends_invalid": "依赖于无效的“{b}”",
- "pe.msg_incompatible": "{w}：单位不兼容 {dims}"
+ "pe.depends_invalid": "依赖于无效的“{b}”"
 }

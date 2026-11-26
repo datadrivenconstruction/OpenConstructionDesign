@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Download de huidige editor op de ERP-pagina {url}",
  "erp.err.unsupported.admin": "Vraag uw ERP-beheerder om de huidige editor",
  "erp.err.throttled_in": "Te veel pogingen. Probeer het over {s} s opnieuw",
+ "erp.err.throttled_ready": "Het wachten is voorbij. U kunt het opnieuw proberen",
  "erp.err.imported": "Revisie {n} in de ERP is een geïmporteerd model: de editor kan het nog niet openen of erop publiceren",
  "erp.action.download": "Open de downloadpagina van de editor in de ERP",
  "erp.action.new_link": "Haal een nieuwe link op de ERP-pagina op",

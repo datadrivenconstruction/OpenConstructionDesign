@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "رنگین",
+ "cmd.ui.icons.color": "رنگین آئیکنز",
+ "cmd.ui.icons.color.desc": "آئیکنز کا ڈرائنگ اسٹائل",
+ "theme.icons.hierarchical": "درجہ وار",
+ "cmd.ui.icons.hierarchical": "درجہ وار آئیکنز",
+ "cmd.ui.icons.hierarchical.desc": "آئیکنز کا ڈرائنگ اسٹائل",
+ "theme.icons.isometric": "آئسومیٹرک",
+ "cmd.ui.icons.isometric": "آئسومیٹرک آئیکنز",
+ "cmd.ui.icons.isometric.desc": "آئیکنز کا ڈرائنگ اسٹائل",
+ "theme.icons.monoline": "مونو لائن",
+ "cmd.ui.icons.monoline": "مونو لائن آئیکنز",
+ "cmd.ui.icons.monoline.desc": "آئیکنز کا ڈرائنگ اسٹائل"
+}

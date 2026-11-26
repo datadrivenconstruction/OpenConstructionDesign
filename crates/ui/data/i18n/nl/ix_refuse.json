@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "De opening {w} is breder dan de wand {len}",
+ "ix.fix.opening_width": "Breedte {w} mm",
+ "ix.fix.wall_extend": "Wand verlengen tot {len} mm"
+}

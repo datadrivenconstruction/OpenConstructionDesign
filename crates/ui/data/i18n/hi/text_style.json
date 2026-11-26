@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "भराव",
  "text_style.lbl.detail": "विवरण",
  "text_style.lbl.width": "चौड़ाई",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "{min} से {max} तक संख्या लिखें",
  "text_style.tip.next_ring": "यह कंटूर बंद करें और उसी क्षेत्र में दूसरा शुरू करें",
  "text_style.tip.edit_text": "टेक्स्ट वहीं संपादित करें",
- "text_style.tip.add_leader": "इस टेक्स्ट में लीडर लाइन जोड़ें",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "इस टेक्स्ट में लीडर लाइन जोड़ें"
 }

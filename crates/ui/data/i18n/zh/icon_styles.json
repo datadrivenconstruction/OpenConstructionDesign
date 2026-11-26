@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "彩色",
+ "cmd.ui.icons.color": "彩色图标",
+ "cmd.ui.icons.color.desc": "图标的绘制样式",
+ "theme.icons.hierarchical": "层次",
+ "cmd.ui.icons.hierarchical": "层次图标",
+ "cmd.ui.icons.hierarchical.desc": "图标的绘制样式",
+ "theme.icons.isometric": "等轴测",
+ "cmd.ui.icons.isometric": "等轴测图标",
+ "cmd.ui.icons.isometric.desc": "图标的绘制样式",
+ "theme.icons.monoline": "单线",
+ "cmd.ui.icons.monoline": "单线图标",
+ "cmd.ui.icons.monoline.desc": "图标的绘制样式"
+}

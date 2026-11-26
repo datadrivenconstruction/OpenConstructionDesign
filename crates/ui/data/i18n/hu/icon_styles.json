@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Színes",
+ "cmd.ui.icons.color": "Színes ikonok",
+ "cmd.ui.icons.color.desc": "Az ikonok rajzstílusa",
+ "theme.icons.hierarchical": "Hierarchikus",
+ "cmd.ui.icons.hierarchical": "Hierarchikus ikonok",
+ "cmd.ui.icons.hierarchical.desc": "Az ikonok rajzstílusa",
+ "theme.icons.isometric": "Izometrikus",
+ "cmd.ui.icons.isometric": "Izometrikus ikonok",
+ "cmd.ui.icons.isometric.desc": "Az ikonok rajzstílusa",
+ "theme.icons.monoline": "Egyvonalas",
+ "cmd.ui.icons.monoline": "Egyvonalas ikonok",
+ "cmd.ui.icons.monoline.desc": "Az ikonok rajzstílusa"
+}

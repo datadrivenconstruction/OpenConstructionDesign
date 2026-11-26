@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "図面から壁をトレース中",
  "api.cmd.attachments_list": "チャットに添付されたファイルと確認済みのプロジェクト要件",
  "api.cmd.attachments_read": "添付ファイルのページ範囲、表の行、または画像を読み取る",
- "api.cmd.underlay_trace": "添付図面からトレースされた壁の下書き"
+ "api.cmd.underlay_trace": "添付図面からトレースされた壁の下書き",
+ "ai.tool.plan_from_image": "添付した平面図の画像またはPDFページから読み取った壁、ドア、窓、部屋を下書きにします",
+ "api.cmd.plan_from_image": "画像から平面図を読み取り中"
 }

@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Abombamiento",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Inserte un punto después de este (un arco se divide por la mitad)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Guardar",
  "roof_edge.pe.saved": "Perfil guardado",
  "roof_edge.pe.valid": "El perfil es válido",
  "roof_edge.pe.invalid": "El perfil se corta a sí mismo, es demasiado pequeño o tiene menos de 3 puntos",
  "roof_edge.pe.bad_number": "Una coordenada o un abombamiento no es un número",
- "roof_edge.pe.no_name": "Introduzca un nombre de perfil",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Introduzca un nombre de perfil"
 }

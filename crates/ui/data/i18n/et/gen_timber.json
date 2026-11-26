@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT-vahelaepaneel",
+ "fam.name.glulam_beam": "Liimpuittala",
+ "fam.name.glulam_column": "Liimpuitsammas",
+ "gen.group.timber": "Puitkonstruktsioon",
+ "gen.rule.timber.beam_span_max.desc": "Liimpuittala pikim ava kahe samba vahel.",
+ "gen.rule.timber.beam_span_max.title": "Tala ava piir",
+ "gen.rule.timber.panel_w.desc": "Laiim ristkihtliimpuidust põrandapaneel; igaühe vahel on vuuk.",
+ "gen.rule.timber.panel_w.title": "CLT-paneeli laius",
+ "gen.rule.timber.span_depth.desc": "Liimpuittala ava ja kõrguse suhe; valib ristlõike.",
+ "gen.rule.timber.span_depth.title": "Tala ava ja kõrguse suhe"
+}

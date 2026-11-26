@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT মেঝে প্যানেল",
+ "fam.name.glulam_beam": "গ্লুলাম বিম",
+ "fam.name.glulam_column": "গ্লুলাম কলাম",
+ "gen.group.timber": "কাঠের কাঠামো",
+ "gen.rule.timber.beam_span_max.desc": "দুই কলামের মাঝে গ্লুলাম বিমের দীর্ঘতম স্প্যান।",
+ "gen.rule.timber.beam_span_max.title": "বিমের স্প্যানের সীমা",
+ "gen.rule.timber.panel_w.desc": "চওড়াতম ক্রস-ল্যামিনেটেড মেঝে প্যানেল; প্রতিটির মাঝে একটি জোড়া।",
+ "gen.rule.timber.panel_w.title": "CLT প্যানেলের প্রস্থ",
+ "gen.rule.timber.span_depth.desc": "গ্লুলাম বিমের গভীরতার তুলনায় স্প্যান; সেকশন বাছে।",
+ "gen.rule.timber.span_depth.title": "বিমের স্প্যান ও গভীরতার অনুপাত"
+}

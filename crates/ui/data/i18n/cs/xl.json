@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "sešit nelze přečíst, jeho vlastní sloupce by se ztratily; zavřete jej v tabulce XLSX a zkuste to znovu",
  "xl.msg.type_x_layer_x": "typ {} vrstva {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} již neexistuje, buňky jeho vlastních sloupců byly zahozeny",
- "xl.msg.delsafe_type_param_on_elements": "parametr „{}“ je parametr typu; upravte jej na listu typů, nepoužito"
+ "xl.msg.delsafe_type_param_on_elements": "parametr „{}“ je parametr typu; upravte jej na listu typů, nepoužito",
+ "xl.msg.tag_x_is_removed_with_x_x": "štítek {} je odstraněn spolu s {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "kóta {} ztrácí {} {} a ponechává si poslední tvar",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "nelze zkontrolovat anotace smazaných prvků: {}"
 }

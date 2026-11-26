@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Mastelift",
+ "fam.name.mast_lift": "Mastelift",
+ "gen.rule.steel.check.self_weight.desc": "Tårnets vægt over et snit, pr. meter højde.",
+ "gen.rule.steel.check.self_weight.title": "Stålvægt pr. meter",
+ "gen.rule.steel.check.strut_share.desc": "Andel af hovedstængernes kraft, en vandret stang holder i sin knude.",
+ "gen.rule.steel.check.strut_share.title": "Vandret andel",
+ "gen.rule.steel.out.lift_box_d.desc": "Plandybde, en mastelift har brug for med sin mast; etagerne er åbne over den.",
+ "gen.rule.steel.out.lift_box_d.title": "Liftskakts dybde",
+ "gen.rule.steel.out.lift_box_w.desc": "Planbredde, en mastelift har brug for; etagerne er åbne over den.",
+ "gen.rule.steel.out.lift_box_w.title": "Liftskakts bredde",
+ "gen.rule.steel.out.lift_offset.desc": "Liftens afstand fra aksen, fri af planafstivningen.",
+ "gen.rule.steel.out.lift_offset.title": "Liftforskydning fra aksen",
+ "gen.rule.steel.out.lifts.desc": "Lifte op gennem kernen: til anden platform, derefter til toppen.",
+ "gen.rule.steel.out.lifts.title": "Liftstrækninger"
+}

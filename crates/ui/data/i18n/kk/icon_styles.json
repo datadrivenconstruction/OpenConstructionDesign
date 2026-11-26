@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Түсті",
+ "cmd.ui.icons.color": "Түсті белгішелер",
+ "cmd.ui.icons.color.desc": "Белгішелердің сызу стилі",
+ "theme.icons.hierarchical": "Иерархиялық",
+ "cmd.ui.icons.hierarchical": "Иерархиялық белгішелер",
+ "cmd.ui.icons.hierarchical.desc": "Белгішелердің сызу стилі",
+ "theme.icons.isometric": "Изометриялық",
+ "cmd.ui.icons.isometric": "Изометриялық белгішелер",
+ "cmd.ui.icons.isometric.desc": "Белгішелердің сызу стилі",
+ "theme.icons.monoline": "Бір сызықты",
+ "cmd.ui.icons.monoline": "Бір сызықты белгішелер",
+ "cmd.ui.icons.monoline.desc": "Белгішелердің сызу стилі"
+}

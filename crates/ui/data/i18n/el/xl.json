@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "το βιβλίο δεν διαβάστηκε, οι δικές του στήλες θα χάνονταν· κλείστε το στο υπολογιστικό φύλλο και δοκιμάστε ξανά",
  "xl.msg.type_x_layer_x": "τύπος {} στρώμα {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: το {} δεν υπάρχει πια, τα κελιά των δικών του στηλών αφαιρέθηκαν",
- "xl.msg.delsafe_type_param_on_elements": "η παράμετρος '{}' είναι παράμετρος τύπου· επεξεργαστείτε την στο φύλλο τύπων, δεν εφαρμόστηκε"
+ "xl.msg.delsafe_type_param_on_elements": "η παράμετρος '{}' είναι παράμετρος τύπου· επεξεργαστείτε την στο φύλλο τύπων, δεν εφαρμόστηκε",
+ "xl.msg.tag_x_is_removed_with_x_x": "η ετικέτα {} αφαιρείται μαζί με {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "η διάσταση {} χάνει {} {} και κρατά την τελευταία της μορφή",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "δεν είναι δυνατός ο έλεγχος σχολιασμών διαγραμμένων στοιχείων: {}"
 }

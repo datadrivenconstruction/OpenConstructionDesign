@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Lire le texte de définition d’une famille du projet",
+ "api.cmd.family_validate": "Vérifier un texte de définition de famille",
+ "api.cmd.family_reference": "Lire la référence du texte de définition de famille",
+ "api.cmd.family_draft": "Proposer une définition de famille comme brouillon dans l’éditeur de familles"
+}

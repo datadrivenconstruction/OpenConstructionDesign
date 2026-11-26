@@ -72,6 +72,7 @@
  "quick.cat.beam": "বিম",
  "quick.cat.ceiling": "সিলিং",
  "quick.cat.structure": "কাঠামো",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {all}-এর মধ্যে {n}",
  "quick.hud.type": "টাইপ",
  "quick.hud.height": "উচ্চতা",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "মান “{v}” পড়া যায়নি",
  "quick.menu.repeat": "পুনরাবৃত্তি: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "সাম্প্রতিক",
  "quick.bar.repeat_tip": "{cmd} · Enter পুনরাবৃত্তি করে",
  "quick.repeat.none": "পুনরাবৃত্তির কিছু এখনো নেই",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "পিছনে",
  "quick.tips.next": "পরের",
  "quick.tips.finish": "সম্পন্ন",
- "quick.tips.never": "আর দেখাবেন না",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "আর দেখাবেন না"
 }

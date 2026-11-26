@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "হোস্ট: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "কলাম",
  "rebar_hosts.kind.beam": "বিম",
  "rebar_hosts.kind.wall": "দেয়াল",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "মেশ যায় দেয়াল, স্ল্যাব ও ফাউন্ডেশনে, কলাম বা বিমে নয়।",
  "rebar_hosts.why.bars_plate": "লম্বা রড ও স্টিরাপ যায় কলাম ও বিমে, দেয়াল, স্ল্যাব বা ফাউন্ডেশনে নয়।",
  "rebar_hosts.why.no_common_face": "বাছাই করা হোস্টগুলোর কোনো সাধারণ কভার তল নেই। একই ধরনের হোস্ট বাছুন।",
- "rebar_hosts.why.no_type": "একটি বার টাইপ বাছুন।",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "একটি বার টাইপ বাছুন।"
 }

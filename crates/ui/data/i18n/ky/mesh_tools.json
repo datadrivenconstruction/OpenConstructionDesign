@@ -52,6 +52,7 @@
  "mesh_tools.done": "Даяр",
  "mesh_tools.failed": "Ийгиликсиз",
  "mesh_tools.note.outline_approx": "контур болжолдуу",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Бул жакка караган беттерди өчүрүү",
  "mesh_tools.dir.up": "үстүнө",
  "mesh_tools.dir.down": "төмөн",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Жөнөкөйлөтүлдү: {n} (мисалы: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Жөнөкөйлөтүлдү: {n} (мисалы: {first})"
 }

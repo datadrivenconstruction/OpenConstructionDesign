@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" не можна змінити: {why}",
  "query.err.op_no_field": "оператор без поля",
  "query.err.positive": "{key}: значення має бути більшим за нуль",
+ "query.err.raw": "{text}",
  "query.err.text_field": "поле \"{key}\" текстове, формула не застосовується",
  "query.err.unclosed_paren": "відсутня закриваюча дужка",
  "query.err.unclosed_quote": "відсутні закриваючі лапки",
@@ -27,6 +28,5 @@
  "query.why.curtain": "навісні стіни змінюються у їхніх власних властивостях",
  "query.why.opening_type": "тип отвору залежить від його розміру: \"-> width=… height=…\"",
  "query.why.slab_thickness": "товщину перекриття задає тип: \"-> type=…\"",
- "query.why.wall_thickness": "товщину стіни задає тип: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "товщину стіни задає тип: \"-> type=…\""
 }

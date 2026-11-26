@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Đã ẩn",
  "ai_found.found.color": "Đã tô màu",
  "ai_found.found.count": "{n} trong {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Không có kết quả khớp. Hãy thử bộ lọc rộng hơn.",
  "ai_found.found.show_btn": "Hiện",
  "ai_found.found.show_tip": "Chọn các phần tử này và phóng tới chúng trên mặt bằng và 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# phần tử đã ẩn",
   "other": "# phần tử đã ẩn"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

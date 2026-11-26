@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 eszköz",
  "ai.stream.tools_many": "{n} eszköz",
  "ai.stream.secs": "{n} mp",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Még mindig várakozás az MI-modell szolgáltatására",
  "ai.stream.stop": "Leállítás",
  "ai.stream.cancelled": "Leállítva",
- "ai.stream.incomplete": "A vázlat hiányos. Semmi nem lett alkalmazva a modellre.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "A vázlat hiányos. Semmi nem lett alkalmazva a modellre."
 }

@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "ورک بک نہیں پڑھی جا سکی، اس کے اپنے کالم ضائع ہو جائیں گے؛ XLSX اسپریڈشیٹ میں بند کریں اور دوبارہ کوشش کریں",
  "xl.msg.type_x_layer_x": "قسم {} تہہ {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} اب موجود نہیں، اس کے اپنے کالموں کے خانے ہٹا دیے گئے",
- "xl.msg.delsafe_type_param_on_elements": "پیرامیٹر '{}' قسم کا پیرامیٹر ہے؛ اسے قسمیں شیٹ پر بدلیں، لاگو نہیں ہوا"
+ "xl.msg.delsafe_type_param_on_elements": "پیرامیٹر '{}' قسم کا پیرامیٹر ہے؛ اسے قسمیں شیٹ پر بدلیں، لاگو نہیں ہوا",
+ "xl.msg.tag_x_is_removed_with_x_x": "ٹیگ {} کو {} {} کے ساتھ ہٹا دیا جاتا ہے",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "ڈائمینشن {} سے {} {} ہٹ جاتا ہے اور وہ اپنی آخری شکل رکھتی ہے",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "حذف شدہ عناصر کے نوٹ کی جانچ نہیں ہو سکتی: {}"
 }

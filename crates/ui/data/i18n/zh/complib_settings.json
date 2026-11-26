@@ -48,5 +48,13 @@
  "settings.lib_open": "构件库",
  "settings.lib_open_desc": "浏览内置族、项目中的族以及您自己的族",
  "settings.lib_dir": "我的族库文件夹",
- "settings.lib_dir_desc": "放在此处的族文件（.ddcf）会显示在“我的族库”下。DDC_COMPONENTS_DIR 可更改此位置。"
+ "settings.lib_dir_desc": "放在此处的族文件（.ddcf）会显示在“我的族库”下。DDC_COMPONENTS_DIR 可更改此位置。",
+ "complib.fam.sprinkler_head": "喷淋头",
+ "complib.fam.fire_pump": "消防泵",
+ "complib.fam.pressurisation_fan": "加压风机",
+ "complib.fam.lift_car": "电梯轿厢",
+ "complib.fam.lift_landing_door": "电梯层门",
+ "complib.fam.lift_pit": "电梯底坑",
+ "complib.fam.lift_overrun": "电梯顶层高度",
+ "complib.fam.lift_machine": "电梯曳引机"
 }

@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "도구 1개",
  "ai.stream.tools_many": "도구 {n}개",
  "ai.stream.secs": "{n}초",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "모델 서비스를 계속 기다리는 중",
  "ai.stream.stop": "중지",
  "ai.stream.cancelled": "중지됨",
- "ai.stream.incomplete": "초안이 불완전합니다. 모델에는 아무것도 적용되지 않았습니다.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "초안이 불완전합니다. 모델에는 아무것도 적용되지 않았습니다."
 }

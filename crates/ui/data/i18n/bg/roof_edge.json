@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Изпъкналост",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Вмъкни точка след тази (дъгата се разделя наполовина)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Запази",
  "roof_edge.pe.saved": "Профилът е запазен",
  "roof_edge.pe.valid": "Профилът е валиден",
  "roof_edge.pe.invalid": "Профилът се пресича сам себе си, е твърде малък или има по-малко от 3 точки",
  "roof_edge.pe.bad_number": "Координата или изпъкналост не е число",
- "roof_edge.pe.no_name": "Въведете име на профила",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Въведете име на профила"
 }

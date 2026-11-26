@@ -18,6 +18,7 @@
  "mcp.set.error": "Sunucu başlatılmadı: {error}",
  "mcp.set.new": "Yeni belirteç",
  "mcp.set.port": "Bağlantı noktası",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Her grup önce denetlenir ve tek geri alma adımıdır. Yalnızca bu bilgisayardaki programlar bağlanabilir.",
  "mcp.set.show": "Göster",
  "mcp.set.state_failed": "Çalışmıyor",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Durum",
  "mcp.set.access": "Erişim",
  "mcp.set.config": "Yapılandırma",
- "mcp.set.policy": "Uygulama",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Uygulama"
 }

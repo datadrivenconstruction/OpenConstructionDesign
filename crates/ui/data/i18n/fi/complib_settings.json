@@ -48,5 +48,13 @@
  "settings.lib_open": "Komponenttikirjasto",
  "settings.lib_open_desc": "Selaa sisäänrakennettuja perheitä, projektin perheitä ja omia perheitäsi",
  "settings.lib_dir": "Oma kirjastokansio",
- "settings.lib_dir_desc": "Tähän sijoitetut perhetiedostot (.ddcf) näkyvät kohdassa Oma kirjasto. DDC_COMPONENTS_DIR siirtää kansion."
+ "settings.lib_dir_desc": "Tähän sijoitetut perhetiedostot (.ddcf) näkyvät kohdassa Oma kirjasto. DDC_COMPONENTS_DIR siirtää kansion.",
+ "complib.fam.sprinkler_head": "Sprinklerisuutin",
+ "complib.fam.fire_pump": "Palopumppu",
+ "complib.fam.pressurisation_fan": "Ylipainepuhallin",
+ "complib.fam.lift_car": "Hissikori",
+ "complib.fam.lift_landing_door": "Hissin kerrosovi",
+ "complib.fam.lift_pit": "Hissikuilun pohja",
+ "complib.fam.lift_overrun": "Hissikuilun yläosa",
+ "complib.fam.lift_machine": "Hissikone"
 }

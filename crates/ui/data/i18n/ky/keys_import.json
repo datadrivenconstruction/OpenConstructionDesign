@@ -5,6 +5,7 @@
  "keys_import.new_head": "Жаңы ачкычтар",
  "keys_import.changed_head": "Сиздин өз ачкычтарыңызды алмаштырат",
  "keys_import.conflicts_head": "Импорттон кийинки карама-каршылыктар",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "аккорд",
  "keys_import.kind_seq": "эки тамга",
  "keys_import.unbound": "жок",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Артка кайтарылган жок: импорттон кийин ачкычтар түзөтүлгөн. Ачкычтар терезесинде аларды бирден калыбына келтириңиз.",
  "keys_import.undo_none": "Артка кайтарууга эч нерсе жок: бул сеансында ачкычтарды импорттоо жок.",
  "keys_import.imported": "Ачкычтар импорттолду",
- "keys_import.imported_conflicts": "Ачкычтар импорттолду; карама-каршылыктар: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Ачкычтар импорттолду; карама-каршылыктар: {n}"
 }

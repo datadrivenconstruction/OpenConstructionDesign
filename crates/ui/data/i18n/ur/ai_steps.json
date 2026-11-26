@@ -11,6 +11,7 @@
  "ai.step.s": "{n} سیکنڈ",
  "ai.step.min": "{m} منٹ",
  "ai.step.min_s": "{m} منٹ {s} سیکنڈ",
+ "ai.step.dec": ".",
  "ai.step.details": "تفصیلات",
  "ai.step.copy": "تفصیلات نقل کریں",
  "ai.step.group.read": "ماڈل پڑھتا ہے",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "مرحلہ چلنے کے دوران ماڈل بدل گیا",
  "ai.step.why.skipped": "مرحلہ نہیں چلا: موڑ ختم ہو گیا",
  "ai.step.why.other": "مرحلہ مکمل نہیں ہوا",
- "ai.step.unknown": "نامعلوم ٹول",
- "ai.step.dec": "."
+ "ai.step.unknown": "نامعلوم ٹول"
 }

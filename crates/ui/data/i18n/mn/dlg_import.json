@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "тор хэлбэрээр",
  "dlg.imp.skipped": "алгассан",
  "dlg.imp.notes": "Тэмдэглэл: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "ба {n} бусад төрөл",
  "dlg.imp.no_levels": "Файлд түвшин байхгүй: анхдагч түвшин үүсгэлээ",
  "dlg.imp.reimport_row": "Шинэчлэгдсэн {updated}, өөрчлөгдөөгүй {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} шугам, {arcs} нум, {texts} текст, {fills} дүүргэлт, {layers} давхарга; нэгж {unit} мм",
  "dlg.dw.summary_paper": "; цаасан хуудас {n} (хавтан дээр байрлаагүй)",
  "dlg.dw.summary_unknown": "; авч чадаагүй: {list}",
- "dlg.dw.summary_more": " ба {n} бусад төрөл",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " ба {n} бусад төрөл"
 }

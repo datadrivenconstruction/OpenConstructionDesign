@@ -90,6 +90,7 @@
  "fe.cons.redundant": "nadbytečné",
  "fe.cons.help": "Kóta vázaná na délkový parametr řídí roviny; úhel vyžaduje úhlový parametr",
  "fe.locks": "Zámky zarovnání",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Uzamknout",
  "fe.unlock": "Odemknout",
  "fe.locks.help": "Zámek nahradí argument tělesa (např. obdélník #2) rovinou, takže těleso ji bude sledovat",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Název konceptu je obsazen",
  "fe.clash.body": "Koncept s názvem „{name}“ už existuje. Nahraďte jej tímto konceptem, nebo se vraťte a uložte pod novým názvem. Zatím nic uloženo nebylo.",
  "fe.clash.rename": "Uložit pod novým názvem",
- "fe.clash.replace": "Nahradit tento koncept",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Nahradit tento koncept"
 }

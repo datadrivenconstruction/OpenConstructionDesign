@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Έγχρωμα",
+ "cmd.ui.icons.color": "Έγχρωμα εικονίδια",
+ "cmd.ui.icons.color.desc": "Στυλ σχεδίασης των εικονιδίων",
+ "theme.icons.hierarchical": "Ιεραρχικά",
+ "cmd.ui.icons.hierarchical": "Ιεραρχικά εικονίδια",
+ "cmd.ui.icons.hierarchical.desc": "Στυλ σχεδίασης των εικονιδίων",
+ "theme.icons.isometric": "Ισομετρικά",
+ "cmd.ui.icons.isometric": "Ισομετρικά εικονίδια",
+ "cmd.ui.icons.isometric.desc": "Στυλ σχεδίασης των εικονιδίων",
+ "theme.icons.monoline": "Μίας γραμμής",
+ "cmd.ui.icons.monoline": "Εικονίδια μίας γραμμής",
+ "cmd.ui.icons.monoline.desc": "Στυλ σχεδίασης των εικονιδίων"
+}

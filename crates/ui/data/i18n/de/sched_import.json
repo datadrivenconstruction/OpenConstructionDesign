@@ -20,6 +20,7 @@
  "sched_import.why_ro": "schreibgeschützt",
  "sched_import.why_locked": "gesperrter Wert",
  "sched_import.why_bad": "ungültiger Wert",
+ "sched_import.refusal": "{at} {col} „{text}“: {why}",
  "sched_import.apply": "{n} Änderungen übernehmen",
  "sched_import.cancel": "Abbrechen",
  "sched_import.applied": "{n} Zellen importiert (ein Rückgängig-Schritt)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Formelergebnisse, nicht übernommen: {n}",
  "sched_import.no_id_rows": "Zeilen ohne Id, nicht gelesen: {n} (Zeilen {rows})",
  "sched_import.more": "… {n} weitere",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(leer)",
  "sched_import.reading": "Arbeitsmappe wird gelesen…",
  "sched_import.resaved": "Die Arbeitsmappe wurde nach der ersten Vorschau erneut gespeichert: Diese Vorschau zeigt den neuen Inhalt",
- "sched_import.resaved_reading": "Die Arbeitsmappe wurde erneut gespeichert: nichts übernommen, sie wird für eine neue Vorschau neu gelesen",
- "sched_import.refusal": "{at} {col} „{text}“: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Die Arbeitsmappe wurde erneut gespeichert: nichts übernommen, sie wird für eine neue Vorschau neu gelesen"
 }

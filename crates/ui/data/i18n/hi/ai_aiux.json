@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter लागू करता है और Esc अनुरोध रोकता है, योजना या 3D दृश्य से भी, जब तक कोई टेक्स्ट फ़ील्ड में टाइप न हो रहा हो।",
  "ai.plan.rebased": "वर्तमान मॉडल के सापेक्ष अद्यतन: {what}",
  "ai.value.bad": "“{text}” {name} के लिए मान्य मान नहीं है",
+ "ai.value.bad_len": "फ़ील्ड «{name}»: {why}",
  "ai.value.both": "आपने {mine} दर्ज करते समय AI सहायक ने इस मान को {agent} में बदल दिया। जो रखना है वह चुनें।",
  "ai.value.choose_first": "पहले कार्ड पर अपना मान या AI सहायक का मान चुनें",
  "ai.value.elem": "तत्व {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "कोई दूसरा मान दर्ज करें, या आइटम का निशान हटाकर उसे लागू से बाहर रखें।",
  "ai.value.tip": "ड्राफ़्ट में मान सुधारें; मॉडल केवल लागू करने पर बदलता है। Enter पुष्टि करता है, Esc पुनर्स्थापित करता है।",
  "ai.value.use_mine": "{mine} उपयोग करें",
- "ai.value.was": "पहले {old}",
- "ai.value.bad_len": "फ़ील्ड «{name}»: {why}"
+ "ai.value.was": "पहले {old}"
 }

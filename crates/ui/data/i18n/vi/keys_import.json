@@ -5,6 +5,7 @@
  "keys_import.new_head": "Phím mới",
  "keys_import.changed_head": "Thay các phím của bạn",
  "keys_import.conflicts_head": "Xung đột sau khi nhập",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "tổ hợp",
  "keys_import.kind_seq": "hai chữ cái",
  "keys_import.unbound": "không có",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Chưa hoàn tác: phím đã được sửa sau lần nhập. Hãy đặt lại từng cái trong cửa sổ Phím.",
  "keys_import.undo_none": "Không có gì để hoàn tác: không có lần nhập phím trong phiên này.",
  "keys_import.imported": "Đã nhập phím",
- "keys_import.imported_conflicts": "Đã nhập phím; xung đột: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Đã nhập phím; xung đột: {n}"
 }

@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Art",
  "collab_diff.diff.col.field": "Feld",
  "collab_diff.diff.col.old": "Vorher",
- "collab_diff.diff.col.new": "Jetzt"
+ "collab_diff.diff.col.new": "Jetzt",
+ "collab_diff.reveal.title": "Aufbau",
+ "collab_diff.reveal.start": "Als gebaut anzeigen",
+ "collab_diff.reveal.play": "Abspielen",
+ "collab_diff.reveal.pause": "Pause",
+ "collab_diff.reveal.back": "Rückwärts",
+ "collab_diff.reveal.close": "Schließen",
+ "collab_diff.reveal.nothing": "Nichts anzuzeigen: Kein geändertes Element befindet sich in der 3D-Szene.",
+ "collab_diff.reveal.journal_busy": "Journal wird gelesen…",
+ "collab_diff.reveal.journal_play": "Journal abspielen"
 }

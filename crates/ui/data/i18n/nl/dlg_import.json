@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "als meshes",
  "dlg.imp.skipped": "overgeslagen",
  "dlg.imp.notes": "Notities: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "en {n} andere soorten",
  "dlg.imp.no_levels": "Het bestand heeft geen verdiepingen: er is een standaardverdieping aangemaakt",
  "dlg.imp.reimport_row": "Bijgewerkt {updated}, ongewijzigd {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} lijnen, {arcs} bogen, {texts} teksten, {fills} vullingen, {layers} lagen; eenheid {unit} mm",
  "dlg.dw.summary_paper": "; papieren bladen {n} (niet op de onderlegger geplaatst)",
  "dlg.dw.summary_unknown": "; niet overgenomen: {list}",
- "dlg.dw.summary_more": " en {n} andere soorten",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " en {n} andere soorten"
 }

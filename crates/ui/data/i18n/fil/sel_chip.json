@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "I-click ang elemento para piliin. Ctrl para magdagdag, Shift para mag-alis.",
- "sel_chip.opt.units": "Mga yunit",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "Mga yunit"
 }

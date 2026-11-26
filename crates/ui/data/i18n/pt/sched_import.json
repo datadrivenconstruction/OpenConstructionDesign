@@ -20,6 +20,7 @@
  "sched_import.why_ro": "somente leitura",
  "sched_import.why_locked": "valor bloqueado",
  "sched_import.why_bad": "valor inválido",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Aplicar {n} alterações",
  "sched_import.cancel": "Cancelar",
  "sched_import.applied": "Importadas {n} células (uma etapa de desfazer)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Resultados de fórmula, não aplicados: {n}",
  "sched_import.no_id_rows": "Linhas sem Id, não lidas: {n} (linhas {rows})",
  "sched_import.more": "… mais {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(vazio)",
  "sched_import.reading": "Lendo pasta de trabalho…",
  "sched_import.resaved": "A pasta de trabalho foi salva novamente após a primeira pré-visualização: esta pré-visualização mostra o novo conteúdo",
- "sched_import.resaved_reading": "A pasta de trabalho foi salva novamente: nada aplicado, lendo-a de novo para uma nova pré-visualização",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "A pasta de trabalho foi salva novamente: nada aplicado, lendo-a de novo para uma nova pré-visualização"
 }

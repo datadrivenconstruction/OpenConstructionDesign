@@ -64,6 +64,7 @@
  "topo.import.title": "Εισαγωγή τοπογραφίας",
  "topo.import.filter": "Τοπογραφία (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Υψόμετρο σημείου",
  "topo.opt.thickness": "Πάχος τοποστερεού",
  "topo.opt.add_to_active": "Προσθήκη στο ενεργό τοποστερεό",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Εισαγωγή",
  "topo.import.cancel": "Ακύρωση",
  "topo.import.no_layers": "δεν επιλέχθηκε στρώμα",
- "topo.info.warnings": "Δεν δημιουργήθηκε:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Δεν δημιουργήθηκε:"
 }

@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "نقطة الربع",
+ "snap.extension": "امتداد",
+ "snap.parallel": "موازٍ للجدار",
+ "snap.tracking_x": "X لنقطة ملتقطة",
+ "snap.tracking_y": "Y لنقطة ملتقطة",
+ "snap.tracking_cross": "تقاطع الدليل",
+ "snap.equal_step": "خطوة متساوية"
+}

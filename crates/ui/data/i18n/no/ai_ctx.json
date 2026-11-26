@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Utvalg ({n})",
  "ai.ctx.add_tip": "Legg tilbake i det AI-en ser",
  "ai.ctx.frame_tip": "Vis disse elementene",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Rekkverk",
  "ai.ctx.cat.roof": "Takflater",
  "ai.ctx.cat.stair": "Trapper",
- "ai.ctx.cat.other": "Annet",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Annet"
 }

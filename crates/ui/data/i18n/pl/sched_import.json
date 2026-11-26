@@ -20,6 +20,7 @@
  "sched_import.why_ro": "tylko do odczytu",
  "sched_import.why_locked": "zablokowana wartość",
  "sched_import.why_bad": "zła wartość",
+ "sched_import.refusal": "{at} {col} „{text}”: {why}",
  "sched_import.apply": "Zastosuj {n} zmian",
  "sched_import.cancel": "Anuluj",
  "sched_import.applied": "Zaimportowano {n} komórek (jeden krok cofania)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Wyniki formuł, nie zastosowane: {n}",
  "sched_import.no_id_rows": "Wiersze bez Id, nieodczytane: {n} (wiersze {rows})",
  "sched_import.more": "… jeszcze {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(pusto)",
  "sched_import.reading": "Odczytywanie skoroszytu…",
  "sched_import.resaved": "Skoroszyt został zapisany ponownie po pierwszym podglądzie: ten podgląd pokazuje nową zawartość",
- "sched_import.resaved_reading": "Skoroszyt został zapisany ponownie: nic nie zastosowano, odczytuję go od nowa na potrzeby podglądu",
- "sched_import.refusal": "{at} {col} „{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Skoroszyt został zapisany ponownie: nic nie zastosowano, odczytuję go od nowa na potrzeby podglądu"
 }

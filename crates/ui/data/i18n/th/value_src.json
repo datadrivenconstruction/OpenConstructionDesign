@@ -24,5 +24,21 @@
  "value_src.verified_n": "ค่าที่ตรวจสอบแล้ว: {n}",
  "value_src.bulk_note": "ค่าที่ AI กรอกและยังไม่ได้ตรวจสอบ: {n}",
  "value_src.bulk_verify": "ทำเครื่องหมายว่าตรวจสอบแล้ว ({n})",
- "value_src.bulk_tip": "ทำเครื่องหมายค่าที่ AI กรอกทั้งหมดในที่เลือกว่าตรวจสอบแล้ว เป็นการเลิกทำหนึ่งขั้น"
+ "value_src.bulk_tip": "ทำเครื่องหมายค่าที่ AI กรอกทั้งหมดในที่เลือกว่าตรวจสอบแล้ว เป็นการเลิกทำหนึ่งขั้น",
+ "origin.title": "ที่มา",
+ "origin.made_by": "สร้างโดย",
+ "origin.request": "คำขอ",
+ "origin.at": "นำไปใช้",
+ "origin.recipe": "สูตรสร้าง “{name}” ส่วน {part}",
+ "origin.ai": "ผู้ช่วย AI ({model})",
+ "origin.agent": "เอเจนต์ {name}",
+ "origin.script": "สคริปต์ {name}",
+ "origin.xlsx": "สเปรดชีต XLSX",
+ "origin.user": "ผู้ใช้",
+ "origin.import": "นำเข้า",
+ "origin.import_file": "นำเข้าจาก {file}",
+ "origin.unknown": "ไม่อยู่ในประวัติ",
+ "origin.held": "แก้ไขด้วยมือ: การรันสูตรสร้างซ้ำจะปล่อยไว้ตามเดิม",
+ "origin.rebuilt": "การรันสูตรสร้างซ้ำจะสร้างใหม่ แก้ไขด้วยมือเพื่อคงไว้ตามเดิม",
+ "origin.ai_values": "ค่าที่ AI กรอก: {n} ยังไม่ได้ตรวจสอบ: {open}"
 }

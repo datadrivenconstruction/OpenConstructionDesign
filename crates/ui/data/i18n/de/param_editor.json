@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "Zweige von if() unterscheiden sich",
  "pe.msg_what_args": "Argumente",
  "pe.msg_and": " und ",
+ "pe.msg_incompatible": "{w}: inkompatible Einheiten {dims}",
  "pe.text_no_formula": "Textparameter erlauben keine Formel",
  "pe.circular": "zirkulärer Bezug: {text}",
- "pe.depends_invalid": "hängt von ungültigem „{b}“ ab",
- "pe.msg_incompatible": "{w}: inkompatible Einheiten {dims}"
+ "pe.depends_invalid": "hängt von ungültigem „{b}“ ab"
 }

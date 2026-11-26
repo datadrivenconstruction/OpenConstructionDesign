@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 narzędzie",
  "ai.stream.tools_many": "{n} narzędzi",
  "ai.stream.secs": "{n} s",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Wciąż czekam na usługę modelu AI",
  "ai.stream.stop": "Zatrzymaj",
  "ai.stream.cancelled": "Zatrzymano",
- "ai.stream.incomplete": "Szkic jest niekompletny. Nic nie zastosowano do modelu.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Szkic jest niekompletny. Nic nie zastosowano do modelu."
 }

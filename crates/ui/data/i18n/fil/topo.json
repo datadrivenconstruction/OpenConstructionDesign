@@ -64,6 +64,7 @@
  "topo.import.title": "Mag-import ng survey",
  "topo.import.filter": "Sarbey (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Elevation ng punto",
  "topo.opt.thickness": "Kapal ng toposolid",
  "topo.opt.add_to_active": "Idagdag sa aktibong toposolid",
@@ -121,6 +122,5 @@
  "topo.import.ok": "I-import",
  "topo.import.cancel": "Kanselahin",
  "topo.import.no_layers": "walang napiling layer",
- "topo.info.warnings": "Hindi nabuo:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Hindi nabuo:"
 }

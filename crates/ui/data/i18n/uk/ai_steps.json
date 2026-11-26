@@ -13,6 +13,7 @@
  "ai.step.s": "{n} с",
  "ai.step.min": "{m} хв",
  "ai.step.min_s": "{m} хв {s} с",
+ "ai.step.dec": ",",
  "ai.step.details": "Деталі",
  "ai.step.copy": "Копіювати деталі",
  "ai.step.group.read": "Читає модель",
@@ -38,6 +39,5 @@
  "ai.step.why.stale": "Модель змінилася під час виконання кроку",
  "ai.step.why.skipped": "Крок не виконувався: хід завершено",
  "ai.step.why.other": "Крок не завершився",
- "ai.step.unknown": "Невідомий інструмент",
- "ai.step.dec": ","
+ "ai.step.unknown": "Невідомий інструмент"
 }

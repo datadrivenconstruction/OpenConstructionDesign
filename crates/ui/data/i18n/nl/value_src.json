@@ -24,5 +24,21 @@
  "value_src.verified_n": "Geverifieerde waarden: {n}",
  "value_src.bulk_note": "Door AI ingevulde waarden, niet geverifieerd: {n}",
  "value_src.bulk_verify": "Markeren als geverifieerd ({n})",
- "value_src.bulk_tip": "Markeert elke door AI ingevulde waarde van de selectie als geverifieerd, in één ongedaan-stap"
+ "value_src.bulk_tip": "Markeert elke door AI ingevulde waarde van de selectie als geverifieerd, in één ongedaan-stap",
+ "origin.title": "Herkomst",
+ "origin.made_by": "Gemaakt door",
+ "origin.request": "Verzoek",
+ "origin.at": "Toegepast",
+ "origin.recipe": "recept “{name}”, deel {part}",
+ "origin.ai": "de AI-assistent ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "script {name}",
+ "origin.xlsx": "XLSX-spreadsheet",
+ "origin.user": "een persoon",
+ "origin.import": "import",
+ "origin.import_file": "import uit {file}",
+ "origin.unknown": "niet in de geschiedenis",
+ "origin.held": "Handmatig bewerkt: een nieuwe run van het recept laat het ongewijzigd",
+ "origin.rebuilt": "Een nieuwe run van het recept bouwt het opnieuw op; bewerk het handmatig om het te behouden",
+ "origin.ai_values": "Door AI ingevulde waarden: {n}, niet geverifieerd: {open}"
 }

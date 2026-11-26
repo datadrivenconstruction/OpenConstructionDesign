@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Strujni krugovi",
+ "cmd.mep.circuits.desc": "Otvara uređivač strujnih krugova: krugovi svakog razvodnog ormara, njihova opterećenja, presjeci kabela i provjere pravila.",
  "ce.title": "Strujni krugovi",
  "ce.open": "Strujni krugovi",
  "ce.empty": "Još nema strujnih krugova",

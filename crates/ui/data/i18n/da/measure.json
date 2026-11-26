@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Afstand",
+ "cmd.e3d.measure.gap": "Mellemrum mellem flader",
+ "cmd.e3d.measure.angle": "Vinkel",
+ "cmd.e3d.measure.area": "Areal / omkreds af en flade eller et rum",
+ "cmd.e3d.measure.volume": "Volumen af et element",
+ "cmd.e3d.measure.slope": "Hældning",
+ "cmd.e3d.measure.chain": "Punktkæde",
+ "measure.orphan": "Reference mistet",
+ "measure.not_planar": "Fladerne er ikke parallelle",
+ "measure.unsupported": "Kan ikke måle dette",
+ "cmd.ann.measure_distance": "Mål afstand",
+ "cmd.ann.measure_gap": "Mål mellemrum mellem flader",
+ "cmd.ann.measure_angle": "Mål vinkel",
+ "cmd.ann.measure_area": "Mål areal",
+ "hint.measure.first": "Mål: klik på en vægflade (eller et punkt) · Esc — afslut",
+ "hint.measure.second": "Mål: klik på den anden flade · Esc — annuller det første valg",
+ "measure.no_face": "Ingen vægflade her"
+}

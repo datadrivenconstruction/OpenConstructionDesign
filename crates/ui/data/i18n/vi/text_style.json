@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Tô",
  "text_style.lbl.detail": "Chi tiết",
  "text_style.lbl.width": "Độ rộng",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Nhập số từ {min} đến {max}",
  "text_style.tip.next_ring": "Đóng đường viền này và bắt đầu đường khác trong cùng vùng",
  "text_style.tip.edit_text": "Sửa chữ ngay tại chỗ",
- "text_style.tip.add_leader": "Thêm đường dẫn cho chữ này",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Thêm đường dẫn cho chữ này"
 }

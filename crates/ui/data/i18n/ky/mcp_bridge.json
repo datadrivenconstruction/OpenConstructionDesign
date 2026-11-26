@@ -18,6 +18,7 @@
  "mcp.set.error": "Сервер иштеген жок: {error}",
  "mcp.set.new": "Жаңы токен",
  "mcp.set.port": "Порт",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Ар бир топтом алгач текшерилет жана бир кайтаруу кадамы болот. Ушул компьютердеги программалар гана туташа алат.",
  "mcp.set.show": "Көрсөтүү",
  "mcp.set.state_failed": "Иштеп жатпайт",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Абалы",
  "mcp.set.access": "Жеткиликтүүлүк",
  "mcp.set.config": "Конфигурация",
- "mcp.set.policy": "Колдонуу",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Колдонуу"
 }

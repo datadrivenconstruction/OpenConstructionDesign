@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Kabuk",
+ "gen.group.acoustic": "Ses yalıtımı",
+ "gen.rule.fire.insulation_class.title": "Kabuk yalıtımı yangın sınıfı",
+ "gen.rule.fire.insulation_class.desc": "Dış duvar ve çatı yalıtımının sahip olabileceği en kötü yangına tepki sınıfı; daha kötü yalıtımlı yapılar seçilmez.",
+ "gen.rule.envelope.u_wall.title": "Dış duvar U değeri",
+ "gen.rule.envelope.u_wall.desc": "Bir dış duvarın en yüksek ısı geçirgenliği; duvar yalıtımı bunun altında kalacak şekilde boyutlandırılır, bu yüzden daha soğuk iklimde duvar daha kalın olur.",
+ "gen.rule.envelope.u_roof.title": "Çatı U değeri",
+ "gen.rule.envelope.u_roof.desc": "Bir çatının en yüksek ısı geçirgenliği; çatı yalıtımı bunun altında kalacak şekilde boyutlandırılır.",
+ "gen.rule.envelope.u_ground.title": "Zemine oturan döşeme U değeri",
+ "gen.rule.envelope.u_ground.desc": "Zemine oturan döşemenin en yüksek ısı geçirgenliği; şap altındaki yalıtım bunun altında kalacak şekilde boyutlandırılır.",
+ "gen.rule.acoustic.rw_party.title": "Ortak duvar ses yalıtımı",
+ "gen.rule.acoustic.rw_party.desc": "Konutlar arasındaki veya ortak koridora bitişik duvarın en düşük ses azaltma indeksi Rw; yığma çekirdek, bunu sağlamak için kütle yasasına göre boyutlandırılır.",
+ "gen.rule.acoustic.rw_floor.title": "Döşeme ses yalıtımı",
+ "gen.rule.acoustic.rw_floor.desc": "Katlar arasındaki döşemenin en düşük ses azaltma indeksi Rw; beton döşeme, bunu sağlamak için kütle yasasına göre boyutlandırılır.",
+ "gen.why.e.asm_wall": "{t} m kalınlığında dış duvarlar, {ins} m yalıtımlı: U {u} W/m²K, en çok {lim}",
+ "gen.why.e.asm_roof": "{t} m kalınlığında çatı, {ins} m yalıtımlı: U {u} W/m²K, en çok {lim}",
+ "gen.why.e.asm_ground": "{t} m kalınlığında zemin döşemesi, {ins} m yalıtımlı: U {u} W/m²K, en çok {lim}",
+ "gen.why.e.asm_party": "{t} m kalınlığında, {m} kg/m² ortak duvarlar: kütle yasasına göre Rw {rw} dB, en az {lim}",
+ "gen.why.e.asm_floor": "{t} m kalınlığında, {m} kg/m² döşemeler: kütle yasasına göre Rw {rw} dB, en az {lim}"
+}

@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Таңдау ({n})",
  "ai.ctx.add_tip": "AI көретін нәрселерге қайта қосу",
  "ai.ctx.frame_tip": "Осы элементтерді көрсету",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Қоршаулар",
  "ai.ctx.cat.roof": "Шатырлар",
  "ai.ctx.cat.stair": "Баспалдақтар",
- "ai.ctx.cat.other": "Басқалары",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Басқалары"
 }

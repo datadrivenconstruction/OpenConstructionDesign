@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Distanță",
+ "cmd.e3d.measure.gap": "Distanță între fețe",
+ "cmd.e3d.measure.angle": "Unghi",
+ "cmd.e3d.measure.area": "Arie / perimetru al unei fețe sau încăperi",
+ "cmd.e3d.measure.volume": "Volumul unui element",
+ "cmd.e3d.measure.slope": "Pantă",
+ "cmd.e3d.measure.chain": "Lanț de puncte",
+ "measure.orphan": "Referință pierdută",
+ "measure.not_planar": "Fețele nu sunt paralele",
+ "measure.unsupported": "Nu se poate măsura aceasta",
+ "cmd.ann.measure_distance": "Măsoară distanța",
+ "cmd.ann.measure_gap": "Măsoară distanța dintre fețe",
+ "cmd.ann.measure_angle": "Măsoară unghiul",
+ "cmd.ann.measure_area": "Măsoară aria",
+ "hint.measure.first": "Măsurare: faceți clic pe fața unui perete (sau pe un punct) · Esc — ieșire",
+ "hint.measure.second": "Măsurare: faceți clic pe a doua față · Esc — anulează prima alegere",
+ "measure.no_face": "Nicio față de perete aici"
+}

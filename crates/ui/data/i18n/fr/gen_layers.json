@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Enveloppe",
+ "gen.group.acoustic": "Isolation acoustique",
+ "gen.rule.fire.insulation_class.title": "Classe de réaction au feu de l’isolant d’enveloppe",
+ "gen.rule.fire.insulation_class.desc": "Pire classe de réaction au feu que peut avoir l’isolant des murs extérieurs et des toitures ; les complexes à isolant moins bon ne sont pas retenus.",
+ "gen.rule.envelope.u_wall.title": "Valeur U du mur extérieur",
+ "gen.rule.envelope.u_wall.desc": "Transmission thermique maximale d’un mur extérieur ; l’isolant du mur est dimensionné pour rester en dessous, de sorte qu’un climat plus froid donne un mur plus épais.",
+ "gen.rule.envelope.u_roof.title": "Valeur U de la toiture",
+ "gen.rule.envelope.u_roof.desc": "Transmission thermique maximale d’une toiture ; l’isolant de toiture est dimensionné pour rester en dessous.",
+ "gen.rule.envelope.u_ground.title": "Valeur U du plancher sur terre-plein",
+ "gen.rule.envelope.u_ground.desc": "Transmission thermique maximale du plancher sur terre-plein ; l’isolant sous la chape est dimensionné pour rester en dessous.",
+ "gen.rule.acoustic.rw_party.title": "Isolation acoustique des murs mitoyens",
+ "gen.rule.acoustic.rw_party.desc": "Indice d’affaiblissement acoustique Rw minimal d’un mur entre logements ou le long d’un couloir commun ; le noyau de maçonnerie est dimensionné selon la loi de masse pour l’atteindre.",
+ "gen.rule.acoustic.rw_floor.title": "Isolation acoustique des planchers",
+ "gen.rule.acoustic.rw_floor.desc": "Indice d’affaiblissement acoustique Rw minimal d’un plancher entre niveaux ; la dalle en béton est dimensionnée selon la loi de masse pour l’atteindre.",
+ "gen.why.e.asm_wall": "murs extérieurs de {t} m d’épaisseur avec {ins} m d’isolant : U {u} W/m²K, au plus {lim}",
+ "gen.why.e.asm_roof": "toiture de {t} m d’épaisseur avec {ins} m d’isolant : U {u} W/m²K, au plus {lim}",
+ "gen.why.e.asm_ground": "plancher sur terre-plein de {t} m d’épaisseur avec {ins} m d’isolant : U {u} W/m²K, au plus {lim}",
+ "gen.why.e.asm_party": "murs mitoyens de {t} m d’épaisseur, {m} kg/m² : Rw {rw} dB selon la loi de masse, au moins {lim}",
+ "gen.why.e.asm_floor": "planchers de {t} m d’épaisseur, {m} kg/m² : Rw {rw} dB selon la loi de masse, au moins {lim}"
+}

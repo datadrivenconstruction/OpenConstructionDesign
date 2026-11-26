@@ -52,6 +52,7 @@
  "mesh_tools.done": "Concluído",
  "mesh_tools.failed": "Falhou",
  "mesh_tools.note.outline_approx": "contorno aproximado",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Excluir faces voltadas para",
  "mesh_tools.dir.up": "para cima",
  "mesh_tools.dir.down": "para baixo",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Simplificadas: {n} (por exemplo: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Simplificadas: {n} (por exemplo: {first})"
 }

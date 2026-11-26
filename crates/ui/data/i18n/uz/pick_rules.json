@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Barcha kategoriyalarni tanlash",
  "pick_rules.filter.tip": "Tanlash filtri: belgilanmagan kategoriyalar bosish va sichqoncha ustida o'tishda o'tkazib yuboriladi",
  "pick_rules.here": "Bu yerdagi elementlar",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "tanlangan",
- "pick_rules.pinned": "Mahkamlangan elementlarni tanlash",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Mahkamlangan elementlarni tanlash"
 }

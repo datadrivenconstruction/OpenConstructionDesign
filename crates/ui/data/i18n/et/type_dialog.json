@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Perekond",
  "type_dialog.typedial.h_function": "Funktsioon",
  "type_dialog.typedial.h_material": "Materjal",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "Parameeter",
  "type_dialog.typedial.h_thickness": "Paksus",
  "type_dialog.typedial.h_value": "Väärtus",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Seina jalajälje pindala",
  "type_dialog.warn.wall_vol": "Seina maht",
  "type_dialog.warn.walls": "Seinad",
- "type_dialog.warn.warnings_n": "⚠ Hoiatusi: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ Hoiatusi: {n}"
 }

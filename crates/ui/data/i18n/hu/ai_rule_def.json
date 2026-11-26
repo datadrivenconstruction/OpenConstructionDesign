@@ -1,6 +1,7 @@
 {
  "ai.check.more": "Ennek a szabálynak még {0} találata nincs felsorolva",
  "ai.check.integrity": "Sérült adatok itt: {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: a felső nincs az alsó fölött",
  "ai.check.level_host_differs": "Az elem más szinten van, mint a gazdája ({0})",
  "ai.check.clash": "{0} ütközik ezzel: {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "{1}. szabály: {3} elem, megengedett: {4}",
  "ai.check.rule.clearance": "{1}. szabály: távolság {3} m, legalább {4} m szükséges",
  "ai.check.rule.unsupported": "A(z) {1}. szabályt nem lehetett ellenőrizni: ez a kategória nem támogatott",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "{0} paraméter: a(z) \"{1}\" nem DIN 276 költségcsoport (három számjegy, 100–899) {2} elemen"
 }

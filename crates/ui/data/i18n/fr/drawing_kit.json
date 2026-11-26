@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer} : ton plein",
  "drawing_kit.reset_color": "{layer} : rétablir la couleur du plan",
  "drawing_kit.unit.ft": "pi",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Angle",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Annuler (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} sur {m}",
  "drawing_kit.accept_class": "Accepter tous les éléments de cette nature",
- "drawing_kit.reject_class": "Refuser tous les éléments de cette nature",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Refuser tous les éléments de cette nature"
 }

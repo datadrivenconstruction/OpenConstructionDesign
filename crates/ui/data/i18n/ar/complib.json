@@ -18,7 +18,7 @@
  "complib.ready.no": "غير مكتوب",
  "complib.edited": "معدَّلة",
  "complib.edited_tip": "عائلة المشروع تختلف عن العائلة المضمّنة",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "القيمة",
- "complib.armed": "المكوِّن: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "المكوِّن: {name}"
 }

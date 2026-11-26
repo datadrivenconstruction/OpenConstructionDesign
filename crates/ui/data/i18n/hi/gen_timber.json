@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT फ़र्श पैनल",
+ "fam.name.glulam_beam": "ग्लूलैम बीम",
+ "fam.name.glulam_column": "ग्लूलैम कॉलम",
+ "gen.group.timber": "लकड़ी की संरचना",
+ "gen.rule.timber.beam_span_max.desc": "दो कॉलमों के बीच ग्लूलैम बीम का सबसे लंबा स्पैन।",
+ "gen.rule.timber.beam_span_max.title": "बीम स्पैन सीमा",
+ "gen.rule.timber.panel_w.desc": "सबसे चौड़ा क्रॉस-लैमिनेटेड फ़र्श पैनल; हर दो के बीच जोड़।",
+ "gen.rule.timber.panel_w.title": "CLT पैनल की चौड़ाई",
+ "gen.rule.timber.span_depth.desc": "ग्लूलैम बीम का स्पैन और गहराई का अनुपात; सेक्शन चुनता है।",
+ "gen.rule.timber.span_depth.title": "बीम स्पैन और गहराई का अनुपात"
+}

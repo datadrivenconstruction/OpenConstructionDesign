@@ -1,6 +1,7 @@
 {
  "ai.check.more": "Bu qoidaning yana {0} ta topilmasi ro'yxatda yo'q",
  "ai.check.integrity": "{0} dagi buzilgan ma'lumotlar: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: yuqori qismi pastki qismdan baland emas",
  "ai.check.level_host_differs": "Komponent o'z xostidan ({0}) boshqa qavatda",
  "ai.check.clash": "{0} {1} bilan to'qnashadi",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Qoida {1}: {3} ta element, ruxsat etilgan {4}",
  "ai.check.rule.clearance": "Qoida {1}: masofa {3} m, kamida {4} m talab qilinadi",
  "ai.check.rule.unsupported": "Qoida {1} tekshirilmadi: bu kategoriya qo'llab-quvvatlanmaydi",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "{0} parametri: \"{1}\" DIN 276 xarajat guruhi emas (uch raqam, 100 dan 899 gacha), {2} ta elementda"
 }

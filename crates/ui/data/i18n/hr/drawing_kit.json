@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: puni ton",
  "drawing_kit.reset_color": "{layer}: vrati na boju crteža",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Kut",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Poništi (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} od {m}",
  "drawing_kit.accept_class": "Prihvati sve ove vrste",
- "drawing_kit.reject_class": "Odbaci sve ove vrste",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Odbaci sve ove vrste"
 }

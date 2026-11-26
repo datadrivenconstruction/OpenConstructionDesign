@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Otomatik bina tesisatı",
+ "gen.mep_auto_hint": "Üretecin ve yapay zeka asistanının boruları, kanalları ve kablolamayı kendi başlarına döşemesine izin verir. Bu bölge için varsayılan olarak kapalıdır; açabilirsiniz. Elle güzergah çizimi her zaman kullanılabilir."
+}

@@ -15,6 +15,7 @@
  "drafting_view.name": "名前",
  "drafting_view.count": "注釈 {n} 件",
  "drafting_view.tab": "製図 · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "空の製図ビュー",
  "drafting_view.canvas_hint": "注釈ツールを使用: ディテール線、領域、テキスト、ディテール部品",
  "drafting_view.created": "製図ビュー「{name}」を作成しました",
@@ -29,6 +30,5 @@
  "drafting_view.more": "その他",
  "empty.drafting.title": "製図ビューはまだありません",
  "empty.drafting.hint": "モデルから切り出されない 2D ディテールのために作成します。",
- "empty.drafting.action": "新規製図ビュー",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "新規製図ビュー"
 }

@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Nhân đôi loại",
  "wall_type.wt.duplicate_tip": "Lưu các lớp này thành loại mới; loại bạn đã mở được giữ nguyên.",
  "wall_type.wt.switch_dirty": "Nhấn OK hoặc Hủy trước khi mở loại khác",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Chức năng",
  "wall_type.wt.h_material": "Vật liệu",
  "wall_type.wt.h_thickness": "Độ dày",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Chọn tường trong góc nhìn, sau đó đổi loại của chúng.",
  "wall_type.swap.already": "Các tường đã chọn đã có loại này",
  "wall_type.swap.apply": "Đổi",
- "wall_type.swap.done": "Đã đổi loại tường: {n} trong {m} tường",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Đã đổi loại tường: {n} trong {m} tường"
 }

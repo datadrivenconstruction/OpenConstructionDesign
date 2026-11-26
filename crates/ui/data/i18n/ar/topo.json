@@ -64,6 +64,7 @@
  "topo.import.title": "استيراد المسح",
  "topo.import.filter": "مسح (CSV، XYZ، DXF، IFC)",
  "topo.unit.m": " م",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "منسوب النقطة",
  "topo.opt.thickness": "سماكة الطبقة الطبوغرافية",
  "topo.opt.add_to_active": "إضافة إلى الطبقة الطبوغرافية النشطة",
@@ -121,6 +122,5 @@
  "topo.import.ok": "استيراد",
  "topo.import.cancel": "إلغاء",
  "topo.import.no_layers": "لم تُختر أي طبقة",
- "topo.info.warnings": "لم يُنشأ:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "لم يُنشأ:"
 }

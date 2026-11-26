@@ -15,6 +15,7 @@
  "drafting_view.name": "الاسم",
  "drafting_view.count": "{n} تعليقات",
  "drafting_view.tab": "رسم · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "منظر رسم فارغ",
  "drafting_view.canvas_hint": "استخدم أدوات التعليق: خطوط التفصيل والمناطق والنصوص ومكونات التفصيل",
  "drafting_view.created": "تم إنشاء منظر الرسم “{name}”",
@@ -29,6 +30,5 @@
  "drafting_view.more": "المزيد",
  "empty.drafting.title": "لا توجد مناظر رسم بعد",
  "empty.drafting.hint": "أنشئ منظراً للتفاصيل ثنائية الأبعاد غير المقتطعة من النموذج.",
- "empty.drafting.action": "منظر رسم جديد",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "منظر رسم جديد"
 }

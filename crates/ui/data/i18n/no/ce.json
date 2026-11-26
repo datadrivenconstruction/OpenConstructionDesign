@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Kretser",
+ "cmd.mep.circuits.desc": "Åpner kretsredigereren: kretser for hver tavle, belastninger, kabeldimensjoner og regelkontroller.",
  "ce.title": "Kretser",
  "ce.open": "Kretser",
  "ce.empty": "Ingen kretser ennå",

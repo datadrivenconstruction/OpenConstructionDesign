@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Вид",
  "collab_diff.diff.col.field": "Поле",
  "collab_diff.diff.col.old": "Беше",
- "collab_diff.diff.col.new": "Сега"
+ "collab_diff.diff.col.new": "Сега",
+ "collab_diff.reveal.title": "Изграждане",
+ "collab_diff.reveal.start": "Покажи как е построено",
+ "collab_diff.reveal.play": "Пусни",
+ "collab_diff.reveal.pause": "Пауза",
+ "collab_diff.reveal.back": "Назад",
+ "collab_diff.reveal.close": "Затвори",
+ "collab_diff.reveal.nothing": "Няма какво да се покаже: никой променен елемент не е в 3D сцената.",
+ "collab_diff.reveal.journal_busy": "Четене на дневника…",
+ "collab_diff.reveal.journal_play": "Пусни дневника"
 }

@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varia>",
  "geom_props.tip": "Invio applica il valore a tutti i {n} selezionati, in un solo passo di annulla",
  "geom_props.roof_slope": "Pendenza",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Elementi importati",
  "geom_props.kind.mass": "Masse",
  "geom_props.kind.solid": "Solidi",
- "geom_props.kind.toposolid": "Terreno",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terreno"
 }

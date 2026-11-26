@@ -41,5 +41,7 @@
  "sb.save.fresh": "Өзгөрүүлөр жок",
  "sb.save.save": "Сактоо",
  "sb.save.ifc": "IFC көчүрмөсүн сактоо",
- "sb.save.autosave": "Автосактоо"
+ "sb.save.autosave": "Автосактоо",
+ "sb.more.title": "Дагы",
+ "sb.more.desc": "Бул туурада батпаган абал тилкесинин элементтери."
 }

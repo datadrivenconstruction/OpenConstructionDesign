@@ -20,6 +20,7 @@
  "sched_import.why_ro": "basa lang",
  "sched_import.why_locked": "naka-lock na halaga",
  "sched_import.why_bad": "maling halaga",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "Ilapat ang {n} pagbabago",
  "sched_import.cancel": "Kanselahin",
  "sched_import.applied": "Na-import ang {n} cell (isang undo step)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Mga resulta ng formula, hindi inilapat: {n}",
  "sched_import.no_id_rows": "Mga row na walang Id, hindi binasa: {n} (mga row {rows})",
  "sched_import.more": "… {n} pa",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(walang laman)",
  "sched_import.reading": "Binabasa ang workbook…",
  "sched_import.resaved": "Na-save ulit ang workbook pagkatapos ng unang preview: ipinapakita ng preview na ito ang bagong nilalaman",
- "sched_import.resaved_reading": "Na-save ulit ang workbook: walang nailapat, binabasa ito muli para sa bagong preview",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Na-save ulit ang workbook: walang nailapat, binabasa ito muli para sa bagong preview"
 }

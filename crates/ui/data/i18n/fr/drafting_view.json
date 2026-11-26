@@ -15,6 +15,7 @@
  "drafting_view.name": "Nom",
  "drafting_view.count": "{n} annotations",
  "drafting_view.tab": "Dessin · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Vue de dessin vide",
  "drafting_view.canvas_hint": "Utilisez les outils d'annotation : lignes de détail, zones, texte, composants de détail",
  "drafting_view.created": "Vue de dessin « {name} » créée",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Plus",
  "empty.drafting.title": "Aucune vue de dessin pour l'instant",
  "empty.drafting.hint": "En créer une pour les détails 2D qui ne sont pas issus du modèle.",
- "empty.drafting.action": "Nouvelle vue de dessin",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Nouvelle vue de dessin"
 }

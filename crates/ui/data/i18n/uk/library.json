@@ -41,5 +41,16 @@
  "library.ifc.window": "Вікно",
  "library.ifc.stair": "Сходи",
  "library.ifc.pipe_fitting": "Фітинг труби",
- "library.ifc.duct_fitting": "Фасонна частина повітроводу"
+ "library.ifc.duct_fitting": "Фасонна частина повітроводу",
+ "library.ifc.beam": "Балка",
+ "library.ifc.column": "Колона",
+ "library.ifc.appliance": "Прилад",
+ "library.ifc.fire_terminal": "Пожежогасний пристрій",
+ "library.ifc.heat_exchanger": "Теплообмінник",
+ "library.ifc.pump": "Насос",
+ "library.ifc.tank": "Резервуар",
+ "library.ifc.transport": "Транспортний елемент",
+ "library.ifc.valve": "Клапан",
+ "library.ifc.waste_terminal": "Каналізаційний пристрій",
+ "library.ifc.medical": "Медичний пристрій"
 }

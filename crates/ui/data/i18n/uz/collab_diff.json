@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Tur",
  "collab_diff.diff.col.field": "Maydon",
  "collab_diff.diff.col.old": "Avval",
- "collab_diff.diff.col.new": "Hozir"
+ "collab_diff.diff.col.new": "Hozir",
+ "collab_diff.reveal.title": "Qurilish bosqichlari",
+ "collab_diff.reveal.start": "Qurilish tartibida ko'rsatish",
+ "collab_diff.reveal.play": "Ijro etish",
+ "collab_diff.reveal.pause": "To'xtatib turish",
+ "collab_diff.reveal.back": "Orqaga",
+ "collab_diff.reveal.close": "Yopish",
+ "collab_diff.reveal.nothing": "Ko'rsatadigan narsa yo'q: 3D sahnada o'zgargan element yo'q.",
+ "collab_diff.reveal.journal_busy": "Jurnal o'qilmoqda…",
+ "collab_diff.reveal.journal_play": "Jurnalni ijro etish"
 }

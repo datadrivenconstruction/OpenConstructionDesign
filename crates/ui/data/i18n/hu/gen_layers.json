@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Épülethatároló",
+ "gen.group.acoustic": "Hangszigetelés",
+ "gen.rule.fire.insulation_class.title": "Épülethatároló szigetelésének tűzvédelmi osztálya",
+ "gen.rule.fire.insulation_class.desc": "A külső falak és tetők szigetelésének legrosszabb megengedett tűzvédelmi osztálya; rosszabb szigetelésű szerkezetek nem kerülnek kiválasztásra.",
+ "gen.rule.envelope.u_wall.title": "Külső fal U-értéke",
+ "gen.rule.envelope.u_wall.desc": "A külső fal legnagyobb hőátbocsátási tényezője; a falszigetelést úgy méretezik, hogy ez alatt maradjon, ezért hidegebb éghajlaton vastagabb a fal.",
+ "gen.rule.envelope.u_roof.title": "Tető U-értéke",
+ "gen.rule.envelope.u_roof.desc": "A tető legnagyobb hőátbocsátási tényezője; a tetőszigetelést úgy méretezik, hogy ez alatt maradjon.",
+ "gen.rule.envelope.u_ground.title": "Talajon fekvő födém U-értéke",
+ "gen.rule.envelope.u_ground.desc": "A talajon fekvő padlólemez legnagyobb hőátbocsátási tényezője; az esztrich alatti szigetelést úgy méretezik, hogy ez alatt maradjon.",
+ "gen.rule.acoustic.rw_party.title": "Lakáselválasztó fal hangszigetelése",
+ "gen.rule.acoustic.rw_party.desc": "Lakások közötti vagy közös folyosó melletti fal legkisebb léghangszigetelési mutatója (Rw); a falazott mag vastagságát a tömegtörvény szerint méretezik ennek eléréséhez.",
+ "gen.rule.acoustic.rw_floor.title": "Födém hangszigetelése",
+ "gen.rule.acoustic.rw_floor.desc": "Szintek közötti födém legkisebb léghangszigetelési mutatója (Rw); a beton födém vastagságát a tömegtörvény szerint méretezik ennek eléréséhez.",
+ "gen.why.e.asm_wall": "{t} m vastag külső falak {ins} m szigeteléssel: U {u} W/m2K, legfeljebb {lim}",
+ "gen.why.e.asm_roof": "{t} m vastag tető {ins} m szigeteléssel: U {u} W/m2K, legfeljebb {lim}",
+ "gen.why.e.asm_ground": "{t} m vastag talajon fekvő födém {ins} m szigeteléssel: U {u} W/m2K, legfeljebb {lim}",
+ "gen.why.e.asm_party": "{t} m vastag, {m} kg/m2 tömegű lakáselválasztó falak: Rw {rw} dB a tömegtörvény szerint, legalább {lim}",
+ "gen.why.e.asm_floor": "{t} m vastag, {m} kg/m2 tömegű födémek: Rw {rw} dB a tömegtörvény szerint, legalább {lim}"
+}

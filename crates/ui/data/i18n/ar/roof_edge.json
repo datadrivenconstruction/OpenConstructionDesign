@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x،",
  "roof_edge.pe.y": "y،",
  "roof_edge.pe.bulge": "الانحناء",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "أدرج نقطة بعد هذه (القوس يُقسم إلى نصفين)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "حفظ",
  "roof_edge.pe.saved": "تم حفظ المقطع",
  "roof_edge.pe.valid": "المقطع صالح",
  "roof_edge.pe.invalid": "المقطع متقاطع مع نفسه أو صغير جداً أو يحتوي على أقل من 3 نقاط",
  "roof_edge.pe.bad_number": "الإحداثي أو الانحناء ليس رقماً",
- "roof_edge.pe.no_name": "أدخل اسم المقطع",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "أدخل اسم المقطع"
 }

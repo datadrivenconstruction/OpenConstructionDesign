@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: تُن کامل",
  "drawing_kit.reset_color": "{layer}: بازگشت به رنگ نقشه",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "زاویه",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "واگرد (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} از {m}",
  "drawing_kit.accept_class": "پذیرفتن همه از این نوع",
- "drawing_kit.reject_class": "رد کردن همه از این نوع",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "رد کردن همه از این نوع"
 }

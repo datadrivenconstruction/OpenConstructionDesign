@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "מעקב קירות משרטוט",
  "api.cmd.attachments_list": "קבצים שצורפו לצ׳אט ודרישות הפרויקט שאושרו",
  "api.cmd.attachments_read": "קרא טווח עמודים, שורות טבלה או את התמונה של קובץ מצורף",
- "api.cmd.underlay_trace": "קירות טיוטה שנוקו משרטוט מצורף"
+ "api.cmd.underlay_trace": "קירות טיוטה שנוקו משרטוט מצורף",
+ "ai.tool.plan_from_image": "קריאת תוכנית מתמונה",
+ "api.cmd.plan_from_image": "טיוטת קירות, דלתות, חלונות וחדרים שנקראו מתמונת תוכנית או מעמוד PDF מצורף"
 }

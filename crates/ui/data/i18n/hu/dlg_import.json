@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "hálóként",
  "dlg.imp.skipped": "kihagyva",
  "dlg.imp.notes": "Megjegyzések: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "és még {n} fajta",
  "dlg.imp.no_levels": "A fájlban nincsenek szintek: létrejött egy alapértelmezett szint",
  "dlg.imp.reimport_row": "Frissítve: {updated}, változatlan: {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} vonal, {arcs} ív, {texts} szöveg, {fills} kitöltés, {layers} réteg; egység {unit} mm",
  "dlg.dw.summary_paper": "; papírlapok: {n} (nincs az alátétrajzra helyezve)",
  "dlg.dw.summary_unknown": "; nincs átvéve: {list}",
- "dlg.dw.summary_more": " és még {n} fajta",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " és még {n} fajta"
 }

@@ -12,6 +12,7 @@
  "links.loaded": "已加载",
  "links.not_loaded": "未加载",
  "links.loading": "加载中…",
+ "links.loading_all": "正在加载链接",
  "links.levels": "标高",
  "links.elements": "构件",
  "links.offset": "偏移：",

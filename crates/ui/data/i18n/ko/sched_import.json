@@ -20,6 +20,7 @@
  "sched_import.why_ro": "읽기 전용",
  "sched_import.why_locked": "잠긴 값",
  "sched_import.why_bad": "잘못된 값",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "변경 {n}개 적용",
  "sched_import.cancel": "취소",
  "sched_import.applied": "셀 {n}개 가져옴(실행 취소 1단계)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "수식 결과, 적용하지 않음: {n}",
  "sched_import.no_id_rows": "Id가 없는 행, 읽지 않음: {n}개(행 {rows})",
  "sched_import.more": "… 외 {n}개",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(비어 있음)",
  "sched_import.reading": "통합 문서 읽는 중…",
  "sched_import.resaved": "첫 미리보기 후 통합 문서가 다시 저장되었습니다: 이 미리보기는 새 내용을 보여줍니다",
- "sched_import.resaved_reading": "통합 문서가 다시 저장되었습니다: 아무것도 적용되지 않았으며, 새 미리보기를 위해 다시 읽는 중",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "통합 문서가 다시 저장되었습니다: 아무것도 적용되지 않았으며, 새 미리보기를 위해 다시 읽는 중"
 }

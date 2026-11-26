@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Tracé des murs à partir d’un plan",
  "api.cmd.attachments_list": "Fichiers joints au chat et exigences du projet confirmées",
  "api.cmd.attachments_read": "Lire une plage de pages, des lignes de tableau ou l’image d’un fichier joint",
- "api.cmd.underlay_trace": "Murs d’ébauche tracés à partir d’un plan joint"
+ "api.cmd.underlay_trace": "Murs d’ébauche tracés à partir d’un plan joint",
+ "ai.tool.plan_from_image": "Lecture d’un plan à partir d’une image",
+ "api.cmd.plan_from_image": "Ébauche de murs, portes, fenêtres et pièces lus à partir d’une image de plan ou d’une page PDF jointe"
 }

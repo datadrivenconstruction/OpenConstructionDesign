@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Жасырылған",
  "ai_found.found.color": "Түсті",
  "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Сәйкес келетіні жоқ. Сүзгіні кеңейтіп көріңіз.",
  "ai_found.found.show_btn": "Көрсету",
  "ai_found.found.show_tip": "Осы элементтерді таңдап, жоспар мен 3D-де оларға жақындату",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# элемент жасырылған",
   "other": "# элемент жасырылған"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

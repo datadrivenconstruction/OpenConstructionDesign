@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Výběr ({n})",
  "ai.ctx.add_tip": "Vrátit do toho, co AI vidí",
  "ai.ctx.frame_tip": "Zobrazit tyto prvky",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Zábradlí",
  "ai.ctx.cat.roof": "Střechy",
  "ai.ctx.cat.stair": "Schodiště",
- "ai.ctx.cat.other": "Ostatní",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Ostatní"
 }

@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Wölbung",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Einen Punkt nach diesem einfügen (ein Bogen wird halbiert)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Speichern",
  "roof_edge.pe.saved": "Profil gespeichert",
  "roof_edge.pe.valid": "Profil ist gültig",
  "roof_edge.pe.invalid": "Profil schneidet sich selbst, ist zu klein oder hat weniger als 3 Punkte",
  "roof_edge.pe.bad_number": "Eine Koordinate oder Wölbung ist keine Zahl",
- "roof_edge.pe.no_name": "Einen Profilnamen eingeben",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Einen Profilnamen eingeben"
 }

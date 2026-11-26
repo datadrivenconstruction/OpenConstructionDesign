@@ -12,6 +12,7 @@
  "links.loaded": "ladattu",
  "links.not_loaded": "ei ladattu",
  "links.loading": "ladataan…",
+ "links.loading_all": "Ladataan linkkejä",
  "links.levels": "tasoa",
  "links.elements": "elementtiä",
  "links.offset": "Siirto:",

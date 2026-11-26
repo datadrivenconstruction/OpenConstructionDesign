@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} token",
  "ai.size.block": "Masyadong mahaba para sa model na ito: ~{n} tokens, hanggang {max} lang ang kasya at may iiwang puwang para sa sagot — paikliin o hatiin ito",
  "ai.size.trim": "Paikliin para magkasya",
  "ai.size.trim_tip": "Puputulin ang dulo ng mensahe para magkasya. Walang puputulin hangga't hindi ka nag-click.",
  "ai.size.drop_view": "Iwan sa labas ang view",
  "ai.size.drop_level": "Iwan sa labas ang level",
- "ai.size.drop_selection": "Iwan sa labas ang pagpili",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "Iwan sa labas ang pagpili"
 }

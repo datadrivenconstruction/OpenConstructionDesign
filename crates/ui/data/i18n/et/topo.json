@@ -64,6 +64,7 @@
  "topo.import.title": "Impordi mõõdistus",
  "topo.import.filter": "Mõõdistus (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Punkti kõrgus",
  "topo.opt.thickness": "Topotahke paksus",
  "topo.opt.add_to_active": "Lisa aktiivsesse topotahkku",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Impordi",
  "topo.import.cancel": "Tühista",
  "topo.import.no_layers": "kihti pole valitud",
- "topo.info.warnings": "Ei loodud:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Ei loodud:"
 }

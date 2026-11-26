@@ -11,6 +11,7 @@
  "ai.step.s": "{n} с",
  "ai.step.min": "{m} мин",
  "ai.step.min_s": "{m} мин {s} с",
+ "ai.step.dec": ",",
  "ai.step.details": "Чоо-жай",
  "ai.step.copy": "Чоо-жайды көчүрүү",
  "ai.step.group.read": "Моделди окуйт",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Кадам иштеп жатканда модель өзгөрдү",
  "ai.step.why.skipped": "Кадам иштеген жок: жооп аяктады",
  "ai.step.why.other": "Кадам аяктаган жок",
- "ai.step.unknown": "Белгисиз курал",
- "ai.step.dec": ","
+ "ai.step.unknown": "Белгисиз курал"
 }

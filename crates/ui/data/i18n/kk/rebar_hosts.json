@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Негіздер: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Баған",
  "rebar_hosts.kind.beam": "Арқалық",
  "rebar_hosts.kind.wall": "Қабырға",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Тор қабырғаларға, плиталар мен іргетастарға кіреді, бағаналар мен арқалықтарға емес.",
  "rebar_hosts.why.bars_plate": "Бойлық арматура мен тік байланыстар бағаналар мен арқалықтарға кіреді, қабырғаларға, плиталар мен іргетастарға емес.",
  "rebar_hosts.why.no_common_face": "Таңдалған негіздердің ортақ қорғаныс беті жоқ. Бір түрдегі негіздерді таңдаңыз.",
- "rebar_hosts.why.no_type": "Арматура түрін таңдаңыз.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Арматура түрін таңдаңыз."
 }

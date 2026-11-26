@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "メッシュとして",
  "dlg.imp.skipped": "スキップ",
  "dlg.imp.notes": "注記: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "ほか {n} 種類",
  "dlg.imp.no_levels": "ファイルにレベルがないため、既定のレベルを作成しました",
  "dlg.imp.reimport_row": "更新 {updated}、変更なし {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: 線 {lines}、円弧 {arcs}、文字 {texts}、塗りつぶし {fills}、レイヤ {layers}; 単位 {unit} mm",
  "dlg.dw.summary_paper": "; 用紙シート {n} (下敷きには配置されません)",
  "dlg.dw.summary_unknown": "; 引き継がれないもの: {list}",
- "dlg.dw.summary_more": " ほか {n} 種類",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " ほか {n} 種類"
 }

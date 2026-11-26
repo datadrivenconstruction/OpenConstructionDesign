@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Wanden overtrekken uit een tekening",
  "api.cmd.attachments_list": "Bestanden bijgevoegd aan de chat en de bevestigde projecteisen",
  "api.cmd.attachments_read": "Lees een paginabereik, tabelrijen of de afbeelding van een bijgevoegd bestand",
- "api.cmd.underlay_trace": "Concept-wanden overgetrokken uit een bijgevoegde tekening"
+ "api.cmd.underlay_trace": "Concept-wanden overgetrokken uit een bijgevoegde tekening",
+ "ai.tool.plan_from_image": "Plattegrond uit afbeelding lezen",
+ "api.cmd.plan_from_image": "Schets wanden, deuren, ramen en ruimtes op basis van een bijgevoegde plattegrondafbeelding of pdf-pagina"
 }

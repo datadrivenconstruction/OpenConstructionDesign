@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter প্রয়োগ করে এবং Esc অনুরোধ থামায়; প্ল্যান বা 3D ভিউ থেকেও, যদি কোনো লেখার ঘরে টাইপ না হয়।",
  "ai.plan.rebased": "বর্তমান মডেলের সঙ্গে হালনাগাদ: {what}",
  "ai.value.bad": "\"{text}\" {name}-এর জন্য বৈধ মান নয়",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "আপনি {mine} লেখার সময় AI সহকারী এই মান {agent}-এ বদলেছে। কোনটি রাখবেন বাছুন।",
  "ai.value.choose_first": "আগে কার্ডে আপনার মান বা AI সহকারীর মান বাছুন",
  "ai.value.elem": "উপাদান {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "অন্য একটি মান লিখুন, অথবা প্রয়োগ থেকে বাদ দিতে আইটেমের টিক খুলুন।",
  "ai.value.tip": "ড্রাফটে মান সংশোধন করুন; মডেল শুধু প্রয়োগে বদলায়। Enter নিশ্চিত করে, Esc ফেরত আনে।",
  "ai.value.use_mine": "{mine} ব্যবহার করুন",
- "ai.value.was": "আগে ছিল {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "আগে ছিল {old}"
 }

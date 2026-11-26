@@ -5,6 +5,7 @@
  "keys_import.new_head": "מקשים חדשים",
  "keys_import.changed_head": "מחליף את המקשים שלך",
  "keys_import.conflicts_head": "התנגשויות אחרי הייבוא",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "צירוף",
  "keys_import.kind_seq": "שתי אותיות",
  "keys_import.unbound": "אין",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "לא בוטל: המקשים נערכו אחרי הייבוא. אפס אותם אחד אחד בחלון המקשים.",
  "keys_import.undo_none": "אין מה לבטל: אין ייבוא מקשים בהפעלה הזו.",
  "keys_import.imported": "המקשים יובאו",
- "keys_import.imported_conflicts": "המקשים יובאו; התנגשויות: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "המקשים יובאו; התנגשויות: {n}"
 }

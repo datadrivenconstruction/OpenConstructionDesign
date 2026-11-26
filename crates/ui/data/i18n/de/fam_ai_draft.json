@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "nach {n} abgelehnten Versuchen korrigiert, etwa {tokens} Token",
+ "ai.fam_offer": "Ein Agent hat die Familie {name} angeboten",
+ "ai.fam_offer.open": "Im Familieneditor öffnen",
+ "ai.fam_offer.dismiss": "Verwerfen",
+ "fe.ai.badge": "KI",
+ "fe.ai.checking": "Prüfung läuft…",
+ "fe.ai.clean": "Die Prüfung hat nichts gefunden",
+ "fe.ai.check_values": "Mit Werten prüfen",
+ "fe.ai.lines": "Zeilen {n}",
+ "fe.ai.changes": "{n} Änderungen gegenüber der früheren Version",
+ "fe.ai.added": "hinzugefügt: {head} {name}",
+ "fe.ai.removed": "entfernt: {head} {name}",
+ "fe.ai.changed": "geändert: {head} {name}",
+ "fe.ai.reject": "Ablehnen"
+}

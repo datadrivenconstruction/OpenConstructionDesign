@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ בחירה ({n})",
  "ai.ctx.add_tip": "החזר למה שעוזר ה-AI רואה",
  "ai.ctx.frame_tip": "הצג את האלמנטים האלה",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "מעקות",
  "ai.ctx.cat.roof": "גגות",
  "ai.ctx.cat.stair": "מדרגות",
- "ai.ctx.cat.other": "אחר",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "אחר"
 }

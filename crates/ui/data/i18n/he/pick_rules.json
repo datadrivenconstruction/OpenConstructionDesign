@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "בחר את כל הקטגוריות",
  "pick_rules.filter.tip": "מסנן בחירה: קטגוריות לא מסומנות מדולגות בלחיצה ובריחוף",
  "pick_rules.here": "פריטים כאן",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "נבחרו",
- "pick_rules.pinned": "בחר פריטים מקובעים",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "בחר פריטים מקובעים"
 }

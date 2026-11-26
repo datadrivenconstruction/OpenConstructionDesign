@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Typ",
  "collab_diff.diff.col.field": "Fält",
  "collab_diff.diff.col.old": "Förut",
- "collab_diff.diff.col.new": "Nu"
+ "collab_diff.diff.col.new": "Nu",
+ "collab_diff.reveal.title": "Uppbyggnad",
+ "collab_diff.reveal.start": "Visa som byggt",
+ "collab_diff.reveal.play": "Spela upp",
+ "collab_diff.reveal.pause": "Pausa",
+ "collab_diff.reveal.back": "Bakåt",
+ "collab_diff.reveal.close": "Stäng",
+ "collab_diff.reveal.nothing": "Inget att visa: inget ändrat element finns i 3D-scenen.",
+ "collab_diff.reveal.journal_busy": "Läser journalen…",
+ "collab_diff.reveal.journal_play": "Spela upp journal"
 }

@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Иіндік",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Осыдан кейін нүкте қосу (доға екіге бөлінеді)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Сақтау",
  "roof_edge.pe.saved": "Профиль сақталды",
  "roof_edge.pe.valid": "Профиль жарамды",
  "roof_edge.pe.invalid": "Профиль өзін-өзі қияды, тым кіші немесе 3-тен аз нүкте бар",
  "roof_edge.pe.bad_number": "Координат немесе иіндік сан емес",
- "roof_edge.pe.no_name": "Профиль атауын енгізіңіз",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Профиль атауын енгізіңіз"
 }

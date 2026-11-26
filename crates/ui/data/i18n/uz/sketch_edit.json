@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "eskiz bekor qilindi",
  "sketch_edit.sk_applied": "eskiz qo'llandi",
  "sketch_edit.sk_tail": "dum",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "pol",
  "sketch_edit.sk_host_roof": "tom",
  "sketch_edit.sk_host_ceiling": "shift",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "2-qavat",
  "sketch_edit.seed_floor_200": "Pol 200",
  "sketch_edit.seed_section1": "Kesim 1",
- "sketch_edit.seed_section2": "Kesim 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Kesim 2"
 }

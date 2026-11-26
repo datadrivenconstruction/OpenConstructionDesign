@@ -23,5 +23,6 @@
  "ai.check.rule.param_in": "Regra {1}: {2} = {3}, permitido {4}",
  "ai.check.rule.count": "Regra {1}: {3} elementos, permitido {4}",
  "ai.check.rule.clearance": "Regra {1}: distância {3} m, é necessário pelo menos {4} m",
- "ai.check.rule.unsupported": "Não foi possível verificar a regra {1}: esta categoria não é suportada"
+ "ai.check.rule.unsupported": "Não foi possível verificar a regra {1}: esta categoria não é suportada",
+ "ai.check.din276_bad": "Parâmetro {0}: \"{1}\" não é um grupo de custo DIN 276 (três dígitos, de 100 a 899) em {2} elementos"
 }

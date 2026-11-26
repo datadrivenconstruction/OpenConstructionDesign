@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "ispravljeno nakon {n} odbijenih pokušaja, oko {tokens} tokena",
+ "ai.fam_offer": "Agent je ponudio obitelj {name}",
+ "ai.fam_offer.open": "Otvori u uređivaču obitelji",
+ "ai.fam_offer.dismiss": "Odbaci",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Provjera…",
+ "fe.ai.clean": "Provjera nije ništa pronašla",
+ "fe.ai.check_values": "Provjeri s vrijednostima",
+ "fe.ai.lines": "redaka: {n}",
+ "fe.ai.changes": "Izmjena: {n} u odnosu na raniju verziju",
+ "fe.ai.added": "dodano: {head} {name}",
+ "fe.ai.removed": "uklonjeno: {head} {name}",
+ "fe.ai.changed": "promijenjeno: {head} {name}",
+ "fe.ai.reject": "Odbij"
+}

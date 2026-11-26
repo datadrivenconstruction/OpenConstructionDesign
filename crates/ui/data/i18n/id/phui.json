@@ -45,5 +45,7 @@
  "phui.kind.comp": "Komponen",
  "phui.kind.shaft": "Shaft",
  "phui.kind.ramp": "Ramp",
- "phui.kind.member": "Batang"
+ "phui.kind.member": "Batang",
+ "phui.dates": "Tanggal (mulai, selesai)",
+ "phui.show_calendar": "Tampilkan menurut kalender"
 }

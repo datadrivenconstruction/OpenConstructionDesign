@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<nhiều giá trị>",
  "geom_props.tip": "Enter áp dụng giá trị cho tất cả {n} mục đã chọn, một bước hoàn tác",
  "geom_props.roof_slope": "Độ dốc",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Cấu kiện đã nhập",
  "geom_props.kind.mass": "Khối",
  "geom_props.kind.solid": "Khối đặc",
- "geom_props.kind.toposolid": "Địa hình",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Địa hình"
 }

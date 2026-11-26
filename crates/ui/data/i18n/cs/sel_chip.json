@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "Klikněte na prvek pro výběr. Ctrl přidává, Shift odebírá.",
- "sel_chip.opt.units": "Jednotky",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "Jednotky"
 }

@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "работната книга не можа да бъде прочетена, собствените ѝ колони биха се загубили; затворете я в електронната таблица и опитайте отново",
  "xl.msg.type_x_layer_x": "тип {} слой {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} вече не съществува, клетките на собствените му колони са отпаднали",
- "xl.msg.delsafe_type_param_on_elements": "параметър „{}“ е параметър на тип; редактирайте го в листа с типове, не е приложено"
+ "xl.msg.delsafe_type_param_on_elements": "параметър „{}“ е параметър на тип; редактирайте го в листа с типове, не е приложено",
+ "xl.msg.tag_x_is_removed_with_x_x": "маркерът {} се премахва заедно с {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "размерът {} губи {} {} и запазва последната си форма",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "не могат да се проверят анотациите на изтрити елементи: {}"
 }

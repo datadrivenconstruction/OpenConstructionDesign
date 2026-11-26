@@ -18,7 +18,7 @@
  "complib.ready.no": "жазылган эмес",
  "complib.edited": "Түзөтүлгөн",
  "complib.edited_tip": "Долбоордун үй-бүлөсү курулган үй-бүлөдөн айырмаланат",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Маани",
- "complib.armed": "Компонент: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Компонент: {name}"
 }

@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "remediat după {n} încercări refuzate, aprox. {tokens} tokeni",
+ "ai.fam_offer": "Un agent a propus familia {name}",
+ "ai.fam_offer.open": "Deschide în editorul de familii",
+ "ai.fam_offer.dismiss": "Ignoră",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Se verifică…",
+ "fe.ai.clean": "Verificarea nu a găsit nimic",
+ "fe.ai.check_values": "Verifică cu valori",
+ "fe.ai.lines": "liniile {n}",
+ "fe.ai.changes": "{n} modificări față de versiunea anterioară",
+ "fe.ai.added": "adăugat: {head} {name}",
+ "fe.ai.removed": "eliminat: {head} {name}",
+ "fe.ai.changed": "modificat: {head} {name}",
+ "fe.ai.reject": "Respinge"
+}

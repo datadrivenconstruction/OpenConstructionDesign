@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() の分岐が一致しません",
  "pe.msg_what_args": "引数",
  "pe.msg_and": " と ",
+ "pe.msg_incompatible": "{w}: 互換性のない単位 {dims}",
  "pe.text_no_formula": "テキストパラメータには数式を使用できません",
  "pe.circular": "循環参照: {text}",
- "pe.depends_invalid": "無効な「{b}」に依存しています",
- "pe.msg_incompatible": "{w}: 互換性のない単位 {dims}"
+ "pe.depends_invalid": "無効な「{b}」に依存しています"
 }

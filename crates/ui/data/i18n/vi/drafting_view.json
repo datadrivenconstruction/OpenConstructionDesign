@@ -15,6 +15,7 @@
  "drafting_view.name": "Tên",
  "drafting_view.count": "{n} chú thích",
  "drafting_view.tab": "Bản vẽ 2D · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Góc nhìn bản vẽ 2D trống",
  "drafting_view.canvas_hint": "Dùng công cụ Chú thích: đường chi tiết, vùng, chữ, cấu kiện chi tiết",
  "drafting_view.created": "Đã tạo góc nhìn bản vẽ 2D \"{name}\"",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Thêm",
  "empty.drafting.title": "Chưa có góc nhìn bản vẽ 2D nào",
  "empty.drafting.hint": "Tạo một góc nhìn cho chi tiết 2D không được cắt từ mô hình.",
- "empty.drafting.action": "Góc nhìn bản vẽ 2D mới",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Góc nhìn bản vẽ 2D mới"
 }

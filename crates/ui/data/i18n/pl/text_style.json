@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Wypełnienie",
  "text_style.lbl.detail": "Detal",
  "text_style.lbl.width": "Grubość",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Wpisz liczbę od {min} do {max}",
  "text_style.tip.next_ring": "Zamknij ten kontur i zacznij kolejny w tym samym obszarze",
  "text_style.tip.edit_text": "Edytuj tekst w miejscu",
- "text_style.tip.add_leader": "Dodaj linię odniesienia do tego tekstu",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Dodaj linię odniesienia do tego tekstu"
 }

@@ -45,5 +45,7 @@
  "phui.kind.comp": "المكونات",
  "phui.kind.shaft": "المداخن",
  "phui.kind.ramp": "المنحدرات",
- "phui.kind.member": "العناصر الإنشائية"
+ "phui.kind.member": "العناصر الإنشائية",
+ "phui.dates": "التواريخ (البداية، النهاية)",
+ "phui.show_calendar": "عرض بحسب التقويم"
 }

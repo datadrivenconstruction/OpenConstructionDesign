@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<різні>",
  "geom_props.tip": "Enter застосовує значення до всіх {n} вибраних, один крок скасування",
  "geom_props.roof_slope": "Нахил",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Імпортовані елементи",
  "geom_props.kind.mass": "Маси",
  "geom_props.kind.solid": "Тіла",
- "geom_props.kind.toposolid": "Рельєф",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Рельєф"
 }

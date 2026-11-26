@@ -11,6 +11,7 @@
  "ai.step.s": "{n} mp",
  "ai.step.min": "{m} p",
  "ai.step.min_s": "{m} p {s} mp",
+ "ai.step.dec": ",",
  "ai.step.details": "Részletek",
  "ai.step.copy": "Részletek másolása",
  "ai.step.group.read": "Olvassa a modellt",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "A modell megváltozott a lépés futása közben",
  "ai.step.why.skipped": "A lépés nem futott le: a kör véget ért",
  "ai.step.why.other": "A lépés nem fejeződött be",
- "ai.step.unknown": "Ismeretlen eszköz",
- "ai.step.dec": ","
+ "ai.step.unknown": "Ismeretlen eszköz"
 }

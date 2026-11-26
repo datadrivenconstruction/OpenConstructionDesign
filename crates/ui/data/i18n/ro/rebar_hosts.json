@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Gazde: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Stâlp",
  "rebar_hosts.kind.beam": "Grindă",
  "rebar_hosts.kind.wall": "Perete",
@@ -41,6 +42,5 @@
  "rebar_hosts.why.area_linear": "Plasa intră în pereți, plăci și fundații, nu în stâlpi sau grinzi.",
  "rebar_hosts.why.bars_plate": "Barele longitudinale și etrierii intră în stâlpi și grinzi, nu în pereți, plăci sau fundații.",
  "rebar_hosts.why.no_common_face": "Gazdele selectate nu au o față de acoperire comună. Selectează gazde de un singur tip.",
- "rebar_hosts.why.no_type": "Alege un tip de bară.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Alege un tip de bară."
 }

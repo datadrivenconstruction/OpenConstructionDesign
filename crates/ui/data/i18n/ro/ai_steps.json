@@ -12,6 +12,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Detalii",
  "ai.step.copy": "Copiază detaliile",
  "ai.step.group.read": "Citește modelul",
@@ -37,6 +38,5 @@
  "ai.step.why.stale": "Modelul s-a schimbat în timpul rulării pasului",
  "ai.step.why.skipped": "Pasul nu a rulat: runda s-a încheiat",
  "ai.step.why.other": "Pasul nu s-a încheiat",
- "ai.step.unknown": "Unealtă necunoscută",
- "ai.step.dec": ","
+ "ai.step.unknown": "Unealtă necunoscută"
 }

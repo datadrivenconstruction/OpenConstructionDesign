@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Szczegóły",
  "ai.step.copy": "Kopiuj szczegóły",
  "ai.step.group.read": "Czyta model",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Model zmienił się podczas działania kroku",
  "ai.step.why.skipped": "Krok nie został uruchomiony: tura się zakończyła",
  "ai.step.why.other": "Krok nie został zakończony",
- "ai.step.unknown": "Nieznane narzędzie",
- "ai.step.dec": ","
+ "ai.step.unknown": "Nieznane narzędzie"
 }

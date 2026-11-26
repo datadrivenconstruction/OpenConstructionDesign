@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Obálka budovy",
+ "gen.group.acoustic": "Zvuková izolace",
+ "gen.rule.fire.insulation_class.title": "Třída reakce na oheň izolace obálky",
+ "gen.rule.fire.insulation_class.desc": "Nejhorší třída reakce na oheň, kterou smí mít izolace vnějších stěn a střech; skladby s horší izolací se nevolí.",
+ "gen.rule.envelope.u_wall.title": "Součinitel U vnější stěny",
+ "gen.rule.envelope.u_wall.desc": "Nejvyšší součinitel prostupu tepla vnější stěny; izolace stěny se dimenzuje tak, aby jej nepřekročila, takže chladnější klima dostane silnější stěnu.",
+ "gen.rule.envelope.u_roof.title": "Součinitel U střechy",
+ "gen.rule.envelope.u_roof.desc": "Nejvyšší součinitel prostupu tepla střechy; izolace střechy se dimenzuje tak, aby jej nepřekročila.",
+ "gen.rule.envelope.u_ground.title": "Součinitel U desky na terénu",
+ "gen.rule.envelope.u_ground.desc": "Nejvyšší součinitel prostupu tepla podlahové desky na terénu; izolace pod potěrem se dimenzuje tak, aby jej nepřekročila.",
+ "gen.rule.acoustic.rw_party.title": "Zvuková izolace dělicí stěny",
+ "gen.rule.acoustic.rw_party.desc": "Nejmenší vážená vzduchová neprůzvučnost Rw stěny mezi byty nebo u společné chodby; zděné jádro se podle zákona hmotnosti dimenzuje tak, aby ji dosáhlo.",
+ "gen.rule.acoustic.rw_floor.title": "Zvuková izolace podlahy",
+ "gen.rule.acoustic.rw_floor.desc": "Nejmenší vážená vzduchová neprůzvučnost Rw podlahy mezi podlažími; betonová deska se podle zákona hmotnosti dimenzuje tak, aby ji dosáhla.",
+ "gen.why.e.asm_wall": "vnější stěny tl. {t} m s {ins} m izolace: U {u} W/m2K, nejvýše {lim}",
+ "gen.why.e.asm_roof": "střecha tl. {t} m s {ins} m izolace: U {u} W/m2K, nejvýše {lim}",
+ "gen.why.e.asm_ground": "deska na terénu tl. {t} m s {ins} m izolace: U {u} W/m2K, nejvýše {lim}",
+ "gen.why.e.asm_party": "dělicí stěny tl. {t} m, {m} kg/m2: Rw {rw} dB podle zákona hmotnosti, požadováno alespoň {lim}",
+ "gen.why.e.asm_floor": "podlahy tl. {t} m, {m} kg/m2: Rw {rw} dB podle zákona hmotnosti, požadováno alespoň {lim}"
+}

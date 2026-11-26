@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "тор катары",
  "dlg.imp.skipped": "өткөрүлдү",
  "dlg.imp.notes": "Эскертмелер: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "жана дагы {n} түр",
  "dlg.imp.no_levels": "Файлда деңгээлдер жок: демейки деңгээл түзүлдү",
  "dlg.imp.reimport_row": "Жаңыртылган {updated}, өзгөрүүсүз {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} сызык, {arcs} аркасы, {texts} текст, {fills} толтуру, {layers} катмар; бирдик {unit} мм",
  "dlg.dw.summary_paper": "; кагаз барактары {n} (подложкага жайланган эмес)",
  "dlg.dw.summary_unknown": "; өткөрүлгөн эмес: {list}",
- "dlg.dw.summary_more": " жана дагы {n} түр",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " жана дагы {n} түр"
 }

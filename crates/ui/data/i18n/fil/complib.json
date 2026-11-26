@@ -18,7 +18,7 @@
  "complib.ready.no": "hindi naisulat",
  "complib.edited": "Na-edit",
  "complib.edited_tip": "Iba ang family ng proyekto sa built-in na bersyon",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Halaga",
- "complib.armed": "Komponent: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponent: {name}"
 }

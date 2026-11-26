@@ -45,5 +45,7 @@
  "phui.kind.comp": "کمپونینٹس",
  "phui.kind.shaft": "شافٹس",
  "phui.kind.ramp": "ریمپس",
- "phui.kind.member": "ممبرز"
+ "phui.kind.member": "ممبرز",
+ "phui.dates": "تاریخیں (آغاز، اختتام)",
+ "phui.show_calendar": "کیلنڈر کے مطابق دکھائیں"
 }

@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF 저장됨: {path} (요소 {nodes}개, 메시 {meshes}개)",
  "data_export.gltf.partial": "glTF를 {n}개 문제와 함께 저장했습니다. 일부 바디가 빠질 수 있습니다: {path}",
  "data_export.gltf.failed": "glTF 내보내기 실패: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "프로젝트 정보",
  "data_export.info.project": "프로젝트",
  "data_export.info.site": "좌표 및 북쪽",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "상자 안에 도면 도형이 없습니다",
  "data_export.dwgpick.box": "선택한 도형: {n}",
  "data_export.dwgpick.box_rings": "선택한 도형: {n}, 닫힌 윤곽: {rings}",
- "data_export.dwgpick.layer": "레이어 {layer}: 선택한 도형 {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "레이어 {layer}: 선택한 도형 {n}"
 }

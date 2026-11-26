@@ -11,6 +11,7 @@
  "query.err.not_changed": "„{key}” kan ikke ændres: {why}",
  "query.err.op_no_field": "operator uden felt",
  "query.err.positive": "{key}: værdien skal være større end nul",
+ "query.err.raw": "{text}",
  "query.err.text_field": "feltet „{key}” er tekst, en formel gælder ikke",
  "query.err.unclosed_paren": "lukkende parentes mangler",
  "query.err.unclosed_quote": "lukkende anførselstegn mangler",
@@ -27,6 +28,5 @@
  "query.why.curtain": "gardinvægge ændres i deres egne egenskaber",
  "query.why.opening_type": "typen på en åbning følger dens størrelse: „-> width=… height=…”",
  "query.why.slab_thickness": "gulvtykkelsen angives af typen: „-> type=…”",
- "query.why.wall_thickness": "vægtykkelsen angives af typen: „-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "vægtykkelsen angives af typen: „-> type=…”"
 }

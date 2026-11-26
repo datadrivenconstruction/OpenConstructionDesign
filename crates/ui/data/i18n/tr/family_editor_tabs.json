@@ -90,6 +90,7 @@
  "fe.cons.redundant": "fazla",
  "fe.cons.help": "Uzunluk parametresine bağlı bir ölçü düzlemleri yönlendirir; açı için bir açı parametresi gerekir",
  "fe.locks": "Hizalama kilitleri",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Kilitle",
  "fe.unlock": "Kilidi aç",
  "fe.locks.help": "Kilit, katının argümanını (örn. rect #2) düzlemle değiştirir; böylece katı onu izler",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Taslak adı kullanımda",
  "fe.clash.body": "“{name}” adında bir taslak zaten var. Bu taslağın yerine bunu koyabilir veya geri dönüp yeni bir adla kaydedebilirsiniz. Henüz hiçbir şey kaydedilmedi.",
  "fe.clash.rename": "Yeni bir adla kaydet",
- "fe.clash.replace": "Bu taslağın yerine koy",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Bu taslağın yerine koy"
 }

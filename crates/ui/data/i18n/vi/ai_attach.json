@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Đang dò tường từ bản vẽ",
  "api.cmd.attachments_list": "Tệp đính kèm vào chat và yêu cầu dự án đã xác nhận",
  "api.cmd.attachments_read": "Đọc khoảng trang, hàng bảng hoặc hình của tệp đính kèm",
- "api.cmd.underlay_trace": "Tường nháp được dò từ bản vẽ đính kèm"
+ "api.cmd.underlay_trace": "Tường nháp được dò từ bản vẽ đính kèm",
+ "ai.tool.plan_from_image": "Đang đọc mặt bằng từ hình ảnh",
+ "api.cmd.plan_from_image": "Phác thảo tường, cửa đi, cửa sổ và phòng đọc từ hình ảnh mặt bằng hoặc trang PDF đính kèm"
 }

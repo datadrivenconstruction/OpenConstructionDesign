@@ -48,5 +48,13 @@
  "settings.lib_open": "Komponentide raamatukogu",
  "settings.lib_open_desc": "Sirvi sisseehitatud perekondi, projekti perekondi ja enda omi",
  "settings.lib_dir": "Minu raamatukogu kaust",
- "settings.lib_dir_desc": "Siia pandud perekonnafailid (.ddcf) ilmuvad jaotisse Minu raamatukogu. DDC_COMPONENTS_DIR teisaldab selle."
+ "settings.lib_dir_desc": "Siia pandud perekonnafailid (.ddcf) ilmuvad jaotisse Minu raamatukogu. DDC_COMPONENTS_DIR teisaldab selle.",
+ "complib.fam.sprinkler_head": "Sprinklerpea",
+ "complib.fam.fire_pump": "Tulekahjupump",
+ "complib.fam.pressurisation_fan": "Ülerõhuventilaator",
+ "complib.fam.lift_car": "Liftikabiin",
+ "complib.fam.lift_landing_door": "Liftiuks korrusel",
+ "complib.fam.lift_pit": "Liftišahti süvend",
+ "complib.fam.lift_overrun": "Liftišahti pealne",
+ "complib.fam.lift_machine": "Liftimasin"
 }

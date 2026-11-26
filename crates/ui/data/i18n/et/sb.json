@@ -41,5 +41,7 @@
  "sb.save.fresh": "Muudatusi pole",
  "sb.save.save": "Salvesta",
  "sb.save.ifc": "Salvesta IFC-koopia",
- "sb.save.autosave": "Automaatsalvestus"
+ "sb.save.autosave": "Automaatsalvestus",
+ "sb.more.title": "Veel",
+ "sb.more.desc": "Olekuriba kirjed, mis sellele laiusele ei mahu."
 }

@@ -11,6 +11,7 @@
  "query.err.not_changed": "το “{key}” δεν μπορεί να αλλάξει: {why}",
  "query.err.op_no_field": "τελεστής χωρίς πεδίο",
  "query.err.positive": "{key}: η τιμή πρέπει να είναι μεγαλύτερη από μηδέν",
+ "query.err.raw": "{text}",
  "query.err.text_field": "το πεδίο “{key}” είναι κείμενο, ο τύπος δεν εφαρμόζεται",
  "query.err.unclosed_paren": "λείπει η παρένθεση κλεισίματος",
  "query.err.unclosed_quote": "λείπει το εισαγωγικό κλεισίματος",
@@ -27,6 +28,5 @@
  "query.why.curtain": "οι κουρτινοτοίχοι αλλάζουν στις δικές τους ιδιότητες",
  "query.why.opening_type": "ο τύπος ενός ανοίγματος ακολουθεί το μέγεθός του: “-> width=… height=…”",
  "query.why.slab_thickness": "το πάχος πλάκας ορίζεται από τον τύπο: “-> type=…”",
- "query.why.wall_thickness": "το πάχος τοίχου ορίζεται από τον τύπο: “-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "το πάχος τοίχου ορίζεται από τον τύπο: “-> type=…”"
 }

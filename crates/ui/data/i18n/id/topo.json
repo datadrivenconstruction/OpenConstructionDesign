@@ -64,6 +64,7 @@
  "topo.import.title": "Impor survei",
  "topo.import.filter": "Survei (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Elevasi titik",
  "topo.opt.thickness": "Tebal toposolid",
  "topo.opt.add_to_active": "Tambahkan ke toposolid aktif",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Impor",
  "topo.import.cancel": "Batal",
  "topo.import.no_layers": "tidak ada layer yang dipilih",
- "topo.info.warnings": "Tidak dibuat:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Tidak dibuat:"
 }

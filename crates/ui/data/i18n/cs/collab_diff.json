@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Druh",
  "collab_diff.diff.col.field": "Pole",
  "collab_diff.diff.col.old": "Bylo",
- "collab_diff.diff.col.new": "Nyní"
+ "collab_diff.diff.col.new": "Nyní",
+ "collab_diff.reveal.title": "Postup výstavby",
+ "collab_diff.reveal.start": "Zobrazit postup výstavby",
+ "collab_diff.reveal.play": "Přehrát",
+ "collab_diff.reveal.pause": "Pozastavit",
+ "collab_diff.reveal.back": "Zpět",
+ "collab_diff.reveal.close": "Zavřít",
+ "collab_diff.reveal.nothing": "Není co zobrazit: žádný změněný prvek není ve 3D scéně.",
+ "collab_diff.reveal.journal_busy": "Čtení deníku…",
+ "collab_diff.reveal.journal_play": "Přehrát deník"
 }

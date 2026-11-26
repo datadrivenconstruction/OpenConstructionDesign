@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y;",
  "roof_edge.pe.bulge": "Bolling",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Voeg na dit punt een punt in (een boog wordt in tweeën gedeeld)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Opslaan",
  "roof_edge.pe.saved": "Profiel opgeslagen",
  "roof_edge.pe.valid": "Profiel is geldig",
  "roof_edge.pe.invalid": "Profiel snijdt zichzelf, is te klein of heeft minder dan 3 punten",
  "roof_edge.pe.bad_number": "Een coördinaat of bolling is geen getal",
- "roof_edge.pe.no_name": "Voer een profielnaam in",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Voer een profielnaam in"
 }

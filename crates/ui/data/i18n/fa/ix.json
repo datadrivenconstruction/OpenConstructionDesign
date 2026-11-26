@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "نقطه ربع",
+ "snap.extension": "امتداد",
+ "snap.parallel": "موازی با دیوار",
+ "snap.tracking_x": "X نقطه ثبت‌شده",
+ "snap.tracking_y": "Y نقطه ثبت‌شده",
+ "snap.tracking_cross": "تقاطع راهنما",
+ "snap.equal_step": "گام مساوی"
+}

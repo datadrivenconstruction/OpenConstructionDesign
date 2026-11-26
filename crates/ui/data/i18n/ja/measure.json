@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "距離",
+ "cmd.e3d.measure.gap": "面間の隙間",
+ "cmd.e3d.measure.angle": "角度",
+ "cmd.e3d.measure.area": "面または部屋の面積/周長",
+ "cmd.e3d.measure.volume": "要素の体積",
+ "cmd.e3d.measure.slope": "勾配",
+ "cmd.e3d.measure.chain": "点の連鎖",
+ "measure.orphan": "参照が失われました",
+ "measure.not_planar": "面が平行ではありません",
+ "measure.unsupported": "これは測定できません",
+ "cmd.ann.measure_distance": "距離を測定",
+ "cmd.ann.measure_gap": "面間の隙間を測定",
+ "cmd.ann.measure_angle": "角度を測定",
+ "cmd.ann.measure_area": "面積を測定",
+ "hint.measure.first": "測定: 壁面(または点)をクリック · Esc — 終了",
+ "hint.measure.second": "測定: 2つ目の面をクリック · Esc — 1つ目の選択を取り消し",
+ "measure.no_face": "ここに壁面がありません"
+}

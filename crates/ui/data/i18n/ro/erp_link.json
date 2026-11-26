@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Descărcați editorul actual de pe pagina ERP {url}",
  "erp.err.unsupported.admin": "Cereți administratorului ERP editorul actual",
  "erp.err.throttled_in": "Prea multe încercări. Încercați din nou în {s} s",
+ "erp.err.throttled_ready": "Așteptarea s-a terminat. Puteți încerca din nou",
  "erp.err.imported": "Revizia {n} din ERP este un model importat: editorul nu o poate deschide sau publica peste ea încă",
  "erp.action.download": "Deschideți pagina de descărcare a editorului din ERP",
  "erp.action.new_link": "Obțineți un link nou de pe pagina ERP",

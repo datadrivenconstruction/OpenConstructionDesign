@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n} reddedilen denemeden sonra düzeltildi, yaklaşık {tokens} belirteç",
+ "ai.fam_offer": "Bir ajan {name} ailesini önerdi",
+ "ai.fam_offer.open": "Aile düzenleyicide aç",
+ "ai.fam_offer.dismiss": "Yoksay",
+ "fe.ai.badge": "YZ",
+ "fe.ai.checking": "Denetleniyor…",
+ "fe.ai.clean": "Denetim hiçbir şey bulmadı",
+ "fe.ai.check_values": "Değerlerle denetle",
+ "fe.ai.lines": "satır {n}",
+ "fe.ai.changes": "Önceki sürüme göre {n} değişiklik",
+ "fe.ai.added": "eklendi: {head} {name}",
+ "fe.ai.removed": "kaldırıldı: {head} {name}",
+ "fe.ai.changed": "değişti: {head} {name}",
+ "fe.ai.reject": "Reddet"
+}

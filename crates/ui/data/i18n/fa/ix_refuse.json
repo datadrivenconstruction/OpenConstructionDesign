@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "بازشوی {w} از دیوار {len} پهن‌تر است",
+ "ix.fix.opening_width": "عرض {w} mm",
+ "ix.fix.wall_extend": "دیوار را تا {len} mm بلند کنید"
+}

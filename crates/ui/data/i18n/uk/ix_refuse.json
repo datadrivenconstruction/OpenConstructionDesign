@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Отвір {w} ширший за стіну {len}",
+ "ix.fix.opening_width": "Ширина {w} мм",
+ "ix.fix.wall_extend": "Подовжити стіну до {len} мм"
+}

@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Kvadrantpunkt",
+ "snap.extension": "Forlengelse",
+ "snap.parallel": "Parallelt med vegg",
+ "snap.tracking_x": "X for et fanget punkt",
+ "snap.tracking_y": "Y for et fanget punkt",
+ "snap.tracking_cross": "Hjelpelinjekryss",
+ "snap.equal_step": "Likt steg"
+}

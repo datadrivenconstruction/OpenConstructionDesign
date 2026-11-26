@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varierer>",
  "geom_props.tip": "Enter anvender værdien på alle {n} valgte, ét fortrydelsestrin",
  "geom_props.roof_slope": "Hældning",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Importerede elementer",
  "geom_props.kind.mass": "Masser",
  "geom_props.kind.solid": "Solider",
- "geom_props.kind.toposolid": "Terræn",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terræn"
 }

@@ -24,5 +24,21 @@
  "value_src.verified_n": "Provjerenih vrijednosti: {n}",
  "value_src.bulk_note": "Vrijednosti koje je popunio AI, neprovjerene: {n}",
  "value_src.bulk_verify": "Označi provjereno ({n})",
- "value_src.bulk_tip": "Označava sve vrijednosti odabira koje je popunio AI kao provjerene, jedan korak poništavanja"
+ "value_src.bulk_tip": "Označava sve vrijednosti odabira koje je popunio AI kao provjerene, jedan korak poništavanja",
+ "origin.title": "Podrijetlo",
+ "origin.made_by": "Izradio",
+ "origin.request": "Zahtjev",
+ "origin.at": "Primijenjeno",
+ "origin.recipe": "recept „{name}”, dio {part}",
+ "origin.ai": "AI asistent ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "skripta {name}",
+ "origin.xlsx": "XLSX proračunska tablica",
+ "origin.user": "osoba",
+ "origin.import": "uvoz",
+ "origin.import_file": "uvoz iz {file}",
+ "origin.unknown": "nije u povijesti",
+ "origin.held": "Uređeno ručno: ponovno pokretanje recepta ostavlja ga kakav jest",
+ "origin.rebuilt": "Ponovno pokretanje recepta ponovno ga gradi; uredite ga ručno da ostane kakav jest",
+ "origin.ai_values": "Vrijednosti koje je popunio AI: {n}, neprovjereno: {open}"
 }

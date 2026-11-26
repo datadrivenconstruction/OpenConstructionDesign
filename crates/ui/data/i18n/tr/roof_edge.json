@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Kabartma",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Bu noktanın arkasına bir nokta ekle (yay ikiye bölünür)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Kaydet",
  "roof_edge.pe.saved": "Profil kaydedildi",
  "roof_edge.pe.valid": "Profil geçerli",
  "roof_edge.pe.invalid": "Profil kendini kesiyor, çok küçük veya 3 noktadan az",
  "roof_edge.pe.bad_number": "Bir koordinat veya kabartma sayı değil",
- "roof_edge.pe.no_name": "Bir profil adı girin",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Bir profil adı girin"
 }

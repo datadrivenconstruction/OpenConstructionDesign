@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<متغيّر>",
  "geom_props.tip": "Enter يطبّق القيمة على جميع الـ{n} المحددة، خطوة تراجع واحدة",
  "geom_props.roof_slope": "الميل",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "عناصر مستوردة",
  "geom_props.kind.mass": "الكتل",
  "geom_props.kind.solid": "المجسمات",
- "geom_props.kind.toposolid": "التضاريس",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "التضاريس"
 }

@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Laadige praegune redaktor alla ERP-lehel {url}",
  "erp.err.unsupported.admin": "Küsige praegust redaktorit oma ERP-administraatorilt",
  "erp.err.throttled_in": "Liiga palju katseid. Proovige uuesti {s} s pärast",
+ "erp.err.throttled_ready": "Ootamine on läbi. Võid uuesti proovida",
  "erp.err.imported": "Revisjon {n} ERP-s on imporditud mudel: redaktor ei saa seda veel avada ega selle peale avaldada",
  "erp.action.download": "Avage redaktori allalaadimise leht ERP-s",
  "erp.action.new_link": "Hankige ERP-lehelt uus link",

@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Gebäudehülle",
+ "gen.group.acoustic": "Schalldämmung",
+ "gen.rule.fire.insulation_class.title": "Brandklasse der Hüllendämmung",
+ "gen.rule.fire.insulation_class.desc": "Schlechteste Brandverhaltensklasse, die die Dämmung von Außenwänden und Dächern haben darf; Aufbauten mit schlechterer Dämmung werden nicht gewählt.",
+ "gen.rule.envelope.u_wall.title": "U-Wert Außenwand",
+ "gen.rule.envelope.u_wall.desc": "Höchster Wärmedurchgangskoeffizient einer Außenwand; die Wanddämmung wird so bemessen, dass er unterschritten bleibt, ein kälteres Klima ergibt also eine dickere Wand.",
+ "gen.rule.envelope.u_roof.title": "U-Wert Dach",
+ "gen.rule.envelope.u_roof.desc": "Höchster Wärmedurchgangskoeffizient eines Dachs; die Dachdämmung wird so bemessen, dass er unterschritten bleibt.",
+ "gen.rule.envelope.u_ground.title": "U-Wert Bodenplatte",
+ "gen.rule.envelope.u_ground.desc": "Höchster Wärmedurchgangskoeffizient der Bodenplatte auf Erdreich; die Dämmung unter dem Estrich wird so bemessen, dass er unterschritten bleibt.",
+ "gen.rule.acoustic.rw_party.title": "Schalldämmung Trennwand",
+ "gen.rule.acoustic.rw_party.desc": "Mindest-Schalldämm-Maß Rw einer Wand zwischen Wohnungen oder neben einem gemeinsamen Flur; der Mauerwerkskern wird nach dem Massegesetz bemessen, um es zu erreichen.",
+ "gen.rule.acoustic.rw_floor.title": "Trittschall- und Luftschalldämmung Decke",
+ "gen.rule.acoustic.rw_floor.desc": "Mindest-Schalldämm-Maß Rw einer Decke zwischen Geschossen; die Betondecke wird nach dem Massegesetz bemessen, um es zu erreichen.",
+ "gen.why.e.asm_wall": "Außenwände {t} m dick mit {ins} m Dämmung: U {u} W/m²K, höchstens {lim}",
+ "gen.why.e.asm_roof": "Dach {t} m dick mit {ins} m Dämmung: U {u} W/m²K, höchstens {lim}",
+ "gen.why.e.asm_ground": "Bodenplatte {t} m dick mit {ins} m Dämmung: U {u} W/m²K, höchstens {lim}",
+ "gen.why.e.asm_party": "Trennwände {t} m dick, {m} kg/m²: Rw {rw} dB nach dem Massegesetz, mindestens {lim}",
+ "gen.why.e.asm_floor": "Decken {t} m dick, {m} kg/m²: Rw {rw} dB nach dem Massegesetz, mindestens {lim}"
+}

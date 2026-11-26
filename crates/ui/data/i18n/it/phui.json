@@ -45,5 +45,7 @@
  "phui.kind.comp": "Componenti",
  "phui.kind.shaft": "Vani",
  "phui.kind.ramp": "Rampe",
- "phui.kind.member": "Membrature"
+ "phui.kind.member": "Membrature",
+ "phui.dates": "Date (inizio, fine)",
+ "phui.show_calendar": "Mostra per calendario"
 }

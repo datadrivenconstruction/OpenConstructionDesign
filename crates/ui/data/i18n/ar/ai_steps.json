@@ -15,6 +15,7 @@
  "ai.step.s": "{n} ث",
  "ai.step.min": "{m} د",
  "ai.step.min_s": "{m} د {s} ث",
+ "ai.step.dec": ".",
  "ai.step.details": "التفاصيل",
  "ai.step.copy": "نسخ التفاصيل",
  "ai.step.group.read": "يقرأ النموذج",
@@ -40,6 +41,5 @@
  "ai.step.why.stale": "تغير النموذج أثناء تنفيذ الخطوة",
  "ai.step.why.skipped": "لم تُنفَّذ الخطوة: انتهت الجولة",
  "ai.step.why.other": "لم تكتمل الخطوة",
- "ai.step.unknown": "أداة غير معروفة",
- "ai.step.dec": "."
+ "ai.step.unknown": "أداة غير معروفة"
 }

@@ -64,6 +64,7 @@
  "topo.import.title": "Opmeting importeren",
  "topo.import.filter": "Opmeting (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Peil van punt",
  "topo.opt.thickness": "Dikte toposolid",
  "topo.opt.add_to_active": "Toevoegen aan de actieve toposolid",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importeren",
  "topo.import.cancel": "Annuleren",
  "topo.import.no_layers": "geen laag gekozen",
- "topo.info.warnings": "Niet opgebouwd:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Niet opgebouwd:"
 }

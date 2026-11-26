@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<әртүрлі>",
  "geom_props.tip": "Enter мәнді таңдалған барлық {n} элементке қолданады, бір қайтару қадамы",
  "geom_props.roof_slope": "Еңіс",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Импортталған элементтер",
  "geom_props.kind.mass": "Массалар",
  "geom_props.kind.solid": "Денелер",
- "geom_props.kind.toposolid": "Жер бедері",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Жер бедері"
 }

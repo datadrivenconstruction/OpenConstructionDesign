@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() 분기가 다릅니다",
  "pe.msg_what_args": "인수",
  "pe.msg_and": " 그리고 ",
+ "pe.msg_incompatible": "{w}: 호환되지 않는 단위 {dims}",
  "pe.text_no_formula": "텍스트 매개변수는 수식을 사용할 수 없습니다",
  "pe.circular": "순환 참조: {text}",
- "pe.depends_invalid": "잘못된 “{b}”에 의존합니다",
- "pe.msg_incompatible": "{w}: 호환되지 않는 단위 {dims}"
+ "pe.depends_invalid": "잘못된 “{b}”에 의존합니다"
 }

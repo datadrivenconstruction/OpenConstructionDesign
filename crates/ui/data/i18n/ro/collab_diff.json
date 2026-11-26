@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Tip",
  "collab_diff.diff.col.field": "Câmp",
  "collab_diff.diff.col.old": "Era",
- "collab_diff.diff.col.new": "Acum"
+ "collab_diff.diff.col.new": "Acum",
+ "collab_diff.reveal.title": "Etapizare",
+ "collab_diff.reveal.start": "Arată cum a fost construit",
+ "collab_diff.reveal.play": "Redare",
+ "collab_diff.reveal.pause": "Pauză",
+ "collab_diff.reveal.back": "Înapoi",
+ "collab_diff.reveal.close": "Închide",
+ "collab_diff.reveal.nothing": "Nimic de afișat: niciun element modificat nu se află în scena 3D.",
+ "collab_diff.reveal.journal_busy": "Se citește jurnalul…",
+ "collab_diff.reveal.journal_play": "Redă jurnalul"
 }

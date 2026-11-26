@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Oftegner vægge fra en tegning",
  "api.cmd.attachments_list": "Filer vedhæftet chatten og de bekræftede projektkrav",
  "api.cmd.attachments_read": "Læs et sideinterval, tabelrækker eller billedet af en vedhæftet fil",
- "api.cmd.underlay_trace": "Udkast til vægge oftegnet fra en vedhæftet tegning"
+ "api.cmd.underlay_trace": "Udkast til vægge oftegnet fra en vedhæftet tegning",
+ "ai.tool.plan_from_image": "Aflæser en plan fra et billede",
+ "api.cmd.plan_from_image": "Udkast til vægge, døre, vinduer og rum aflæst fra et vedhæftet plantegningsbillede eller en PDF-side"
 }

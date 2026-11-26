@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "Bilo bi izbrisano {0} od {1} elemenata. Osoba to mora potvrditi",
+ "ai.issue.wipe": "Plan bi izbrisao sve elemente modela: {1} ({0} izbrisano). Nikad se ne primjenjuje u jednom koraku"
+}

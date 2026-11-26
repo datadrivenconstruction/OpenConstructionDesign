@@ -24,5 +24,21 @@
  "value_src.verified_n": "ערכים שאומתו: {n}",
  "value_src.bulk_note": "ערכים שמולאו על ידי AI ולא אומתו: {n}",
  "value_src.bulk_verify": "סמן כמאומת ({n})",
- "value_src.bulk_tip": "מסמן כמאומת כל ערך שמולא על ידי AI בבחירה, בשלב ביטול אחד"
+ "value_src.bulk_tip": "מסמן כמאומת כל ערך שמולא על ידי AI בבחירה, בשלב ביטול אחד",
+ "origin.title": "מקור",
+ "origin.made_by": "נוצר על ידי",
+ "origin.request": "בקשה",
+ "origin.at": "הוחל",
+ "origin.recipe": "מתכון ״{name}״, חלק {part}",
+ "origin.ai": "עוזר ה-AI ({model})",
+ "origin.agent": "סוכן {name}",
+ "origin.script": "סקריפט {name}",
+ "origin.xlsx": "גיליון XLSX",
+ "origin.user": "אדם",
+ "origin.import": "ייבוא",
+ "origin.import_file": "ייבוא מ-{file}",
+ "origin.unknown": "לא בהיסטוריה",
+ "origin.held": "נערך ידנית: הרצה חוזרת של המתכון משאירה אותו כפי שהוא",
+ "origin.rebuilt": "הרצה חוזרת של המתכון בונה אותו מחדש; ערכו אותו ידנית כדי לשמור אותו כפי שהוא",
+ "origin.ai_values": "ערכים שמולאו על ידי AI: {n}, לא אומתו: {open}"
 }

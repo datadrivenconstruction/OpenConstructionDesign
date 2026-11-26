@@ -41,5 +41,7 @@
  "sb.save.fresh": "Değişiklik yok",
  "sb.save.save": "Kaydet",
  "sb.save.ifc": "IFC kopyasını kaydet",
- "sb.save.autosave": "Otomatik kayıt"
+ "sb.save.autosave": "Otomatik kayıt",
+ "sb.more.title": "Daha fazla",
+ "sb.more.desc": "Bu genişliğe sığmayan durum çubuğu öğeleri."
 }

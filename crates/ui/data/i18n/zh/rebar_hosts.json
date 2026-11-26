@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "宿主：{list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "柱",
  "rebar_hosts.kind.beam": "梁",
  "rebar_hosts.kind.wall": "墙",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "网片用于墙、楼板和基础，不用于柱或梁。",
  "rebar_hosts.why.bars_plate": "纵筋和箍筋用于柱和梁，不用于墙、楼板或基础。",
  "rebar_hosts.why.no_common_face": "所选宿主没有共同的保护层面。请选择同一类型的宿主。",
- "rebar_hosts.why.no_type": "请选择钢筋类型。",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "请选择钢筋类型。"
 }

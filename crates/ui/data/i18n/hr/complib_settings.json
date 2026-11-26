@@ -48,5 +48,13 @@
  "settings.lib_open": "Biblioteka komponenti",
  "settings.lib_open_desc": "Pregledajte ugrađene obitelji, one u projektu i vlastite",
  "settings.lib_dir": "Moja mapa biblioteke",
- "settings.lib_dir_desc": "Datoteke obitelji (.ddcf) smještene ovdje pojavit će se pod Moja biblioteka. DDC_COMPONENTS_DIR ju premješta."
+ "settings.lib_dir_desc": "Datoteke obitelji (.ddcf) smještene ovdje pojavit će se pod Moja biblioteka. DDC_COMPONENTS_DIR ju premješta.",
+ "complib.fam.sprinkler_head": "Sprinkler glava",
+ "complib.fam.fire_pump": "Protupožarna pumpa",
+ "complib.fam.pressurisation_fan": "Ventilator za nadtlak",
+ "complib.fam.lift_car": "Kabina dizala",
+ "complib.fam.lift_landing_door": "Etažna vrata dizala",
+ "complib.fam.lift_pit": "Jama dizala",
+ "complib.fam.lift_overrun": "Nadvišenje okna dizala",
+ "complib.fam.lift_machine": "Stroj dizala"
 }

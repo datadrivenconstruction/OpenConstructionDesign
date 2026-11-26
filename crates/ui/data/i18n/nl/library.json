@@ -41,5 +41,16 @@
  "library.ifc.window": "Raam",
  "library.ifc.stair": "Trap",
  "library.ifc.pipe_fitting": "Leidingstuk",
- "library.ifc.duct_fitting": "Kanaalstuk"
+ "library.ifc.duct_fitting": "Kanaalstuk",
+ "library.ifc.beam": "Balk",
+ "library.ifc.column": "Kolom",
+ "library.ifc.appliance": "Apparaat",
+ "library.ifc.fire_terminal": "Brandblusuiteinde",
+ "library.ifc.heat_exchanger": "Warmtewisselaar",
+ "library.ifc.pump": "Pomp",
+ "library.ifc.tank": "Tank",
+ "library.ifc.transport": "Transportelement",
+ "library.ifc.valve": "Afsluiter",
+ "library.ifc.waste_terminal": "Afvoeruiteinde",
+ "library.ifc.medical": "Medisch apparaat"
 }

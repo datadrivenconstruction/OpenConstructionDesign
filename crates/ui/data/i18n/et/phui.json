@@ -45,5 +45,7 @@
  "phui.kind.comp": "Komponendid",
  "phui.kind.shaft": "Šahtid",
  "phui.kind.ramp": "Rambid",
- "phui.kind.member": "Liikmed"
+ "phui.kind.member": "Liikmed",
+ "phui.dates": "Kuupäevad (algus, lõpp)",
+ "phui.show_calendar": "Näita kalendri järgi"
 }

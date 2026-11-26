@@ -11,6 +11,7 @@
  "ai.step.s": "{n} dtk",
  "ai.step.min": "{m} mnt",
  "ai.step.min_s": "{m} mnt {s} dtk",
+ "ai.step.dec": ",",
  "ai.step.details": "Rincian",
  "ai.step.copy": "Salin rincian",
  "ai.step.group.read": "Membaca model",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Model berubah saat langkah berjalan",
  "ai.step.why.skipped": "Langkah tidak berjalan: giliran berakhir",
  "ai.step.why.other": "Langkah tidak selesai",
- "ai.step.unknown": "Alat tidak dikenal",
- "ai.step.dec": ","
+ "ai.step.unknown": "Alat tidak dikenal"
 }

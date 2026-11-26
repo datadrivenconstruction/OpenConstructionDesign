@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "拒否された試行 {n} 回の後に修正、約 {tokens} トークン",
+ "ai.fam_offer": "エージェントがファミリ {name} を提案しました",
+ "ai.fam_offer.open": "ファミリエディタで開く",
+ "ai.fam_offer.dismiss": "却下",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "確認中…",
+ "fe.ai.clean": "確認で問題は見つかりませんでした",
+ "fe.ai.check_values": "値で確認",
+ "fe.ai.lines": "{n} 行",
+ "fe.ai.changes": "以前のバージョンから {n} 件の変更",
+ "fe.ai.added": "追加: {head} {name}",
+ "fe.ai.removed": "削除: {head} {name}",
+ "fe.ai.changed": "変更: {head} {name}",
+ "fe.ai.reject": "却下"
+}

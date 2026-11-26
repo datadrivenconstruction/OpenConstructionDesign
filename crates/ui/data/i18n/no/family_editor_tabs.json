@@ -90,6 +90,7 @@
  "fe.cons.redundant": "overflødig",
  "fe.cons.help": "Et mål knyttet til en lengdeparameter styrer planene; en vinkel krever en vinkelparameter",
  "fe.locks": "Justeringslåser",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Lås",
  "fe.unlock": "Lås opp",
  "fe.locks.help": "Lås erstatter solidens argument (f.eks. rect #2) med planet, slik at solidet følger det",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Utkastnavnet er i bruk",
  "fe.clash.body": "Et utkast med navnet “{name}” finnes allerede. Erstatt utkastet med dette, eller gå tilbake og lagre under et nytt navn. Ingenting er lagret ennå.",
  "fe.clash.rename": "Lagre under nytt navn",
- "fe.clash.replace": "Erstatt utkastet",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Erstatt utkastet"
 }

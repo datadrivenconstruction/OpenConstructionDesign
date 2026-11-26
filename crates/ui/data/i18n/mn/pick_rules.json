@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Бүх ангиллыг сонгож болно",
  "pick_rules.filter.tip": "Сонголтын шүүлтүүр: тэмдэглээгүй ангиллууд дарж болон хулганаар дээрлэхэд алгасагдана",
  "pick_rules.here": "Энд байгаа зүйлс",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "сонгогдсон",
- "pick_rules.pinned": "Бэхлэгдсэн зүйлсийг сонгох",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Бэхлэгдсэн зүйлсийг сонгох"
 }

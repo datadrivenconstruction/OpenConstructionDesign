@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<可変>",
  "geom_props.tip": "Enter で、選択した {n} 個すべてに値を適用します（元に戻すは 1 回）",
  "geom_props.roof_slope": "勾配",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "取り込み要素",
  "geom_props.kind.mass": "マス",
  "geom_props.kind.solid": "ソリッド",
- "geom_props.kind.toposolid": "地形",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "地形"
 }

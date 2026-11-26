@@ -18,6 +18,7 @@
  "mcp.set.error": "サーバーが起動していません: {error}",
  "mcp.set.new": "新しいトークン",
  "mcp.set.port": "ポート",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "各バッチは先にチェックされ、1 回の元に戻す操作になります。このコンピュータ上のプログラムのみ接続できます。",
  "mcp.set.show": "表示",
  "mcp.set.state_failed": "停止中",
@@ -30,6 +31,5 @@
  "mcp.set.status": "状態",
  "mcp.set.access": "アクセス",
  "mcp.set.config": "設定",
- "mcp.set.policy": "適用",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "適用"
 }

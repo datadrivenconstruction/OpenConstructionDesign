@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "Το glTF αποθηκεύτηκε: {path} ({nodes} στοιχεία, {meshes} πλέγματα)",
  "data_export.gltf.partial": "Το glTF αποθηκεύτηκε με {n} προβλήματα, ορισμένα σώματα μπορεί να λείπουν: {path}",
  "data_export.gltf.failed": "Η εξαγωγή glTF απέτυχε: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "Πληροφορίες έργου",
  "data_export.info.project": "Έργο",
  "data_export.info.site": "Συντεταγμένες και βορράς",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "Δεν υπάρχουν στοιχεία σχεδίου στο πλαίσιο",
  "data_export.dwgpick.box": "Επιλεγμένα στοιχεία: {n}",
  "data_export.dwgpick.box_rings": "Επιλεγμένα στοιχεία: {n}, κλειστά περιγράμματα: {rings}",
- "data_export.dwgpick.layer": "Στρώμα {layer}: επιλεγμένα στοιχεία {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "Στρώμα {layer}: επιλεγμένα στοιχεία {n}"
 }

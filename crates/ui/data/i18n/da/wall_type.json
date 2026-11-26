@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Dublér type",
  "wall_type.wt.duplicate_tip": "Gemmer disse lag som en ny type; den type, du åbnede, forbliver uændret.",
  "wall_type.wt.switch_dirty": "Tryk på OK eller Annuller, før du åbner en anden type",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funktion",
  "wall_type.wt.h_material": "Materiale",
  "wall_type.wt.h_thickness": "Tykkelse",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Vælg vægge i visningen, og skift derefter deres type.",
  "wall_type.swap.already": "De valgte vægge har allerede denne type",
  "wall_type.swap.apply": "Byt",
- "wall_type.swap.done": "Vægtype skiftet: {n} af {m} vægge",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Vægtype skiftet: {n} af {m} vægge"
 }

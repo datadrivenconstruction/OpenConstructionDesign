@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}” o'zgartirilmaydi: {why}",
  "query.err.op_no_field": "maydonsiz operator",
  "query.err.positive": "{key}: qiymat noldan katta bo'lishi kerak",
+ "query.err.raw": "{text}",
  "query.err.text_field": "“{key}” maydoni matn, formula qo'llanmaydi",
  "query.err.unclosed_paren": "yopuvchi qavs yo'q",
  "query.err.unclosed_quote": "yopuvchi tirnoq yo'q",
@@ -27,6 +28,5 @@
  "query.why.curtain": "pardali devorlar o'z xususiyatlarida o'zgartiriladi",
  "query.why.opening_type": "teshik turi o'lchamiga bog'liq: “-> width=… height=…”",
  "query.why.slab_thickness": "pol qalinligi tur bilan belgilanadi: “-> type=…”",
- "query.why.wall_thickness": "devor qalinligi tur bilan belgilanadi: “-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "devor qalinligi tur bilan belgilanadi: “-> type=…”"
 }

@@ -52,6 +52,7 @@
  "mesh_tools.done": "مکمل",
  "mesh_tools.failed": "ناکام",
  "mesh_tools.note.outline_approx": "خاکہ تقریبی",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "ان سطحوں کو حذف کریں جو رخ کرتی ہیں",
  "mesh_tools.dir.up": "اوپر",
  "mesh_tools.dir.down": "نیچے",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "سادہ بنایا گیا: {n} (مثلاً: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "سادہ بنایا گیا: {n} (مثلاً: {first})"
 }

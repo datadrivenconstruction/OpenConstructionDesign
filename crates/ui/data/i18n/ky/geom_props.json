@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<ар кандай>",
  "geom_props.tip": "Enter маанини тандалган баарына, {n} элементке колдонот, бир Кайтаруу кадамы",
  "geom_props.roof_slope": "Нөйүм",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Импорттолгон элементтер",
  "geom_props.kind.mass": "Массалар",
  "geom_props.kind.solid": "Катуу телолор",
- "geom_props.kind.toposolid": "Рельеф",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Рельеф"
 }

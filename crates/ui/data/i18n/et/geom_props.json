@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<erinev>",
  "geom_props.tip": "Enter rakendab väärtuse kõigile {n} valitule, ühe tagasivõtmise sammuna",
  "geom_props.roof_slope": "Kalle",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Imporditud elemendid",
  "geom_props.kind.mass": "Mahud",
  "geom_props.kind.solid": "Tahkised",
- "geom_props.kind.toposolid": "Reljeef",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Reljeef"
 }

@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Tải trình chỉnh sửa hiện tại từ trang ERP {url}",
  "erp.err.unsupported.admin": "Yêu cầu quản trị viên ERP cấp trình chỉnh sửa hiện tại",
  "erp.err.throttled_in": "Quá nhiều lần thử. Thử lại sau {s} giây",
+ "erp.err.throttled_ready": "Đã hết thời gian chờ. Bạn có thể thử lại",
  "erp.err.imported": "Bản sửa đổi {n} trong ERP là mô hình đã nhập: trình chỉnh sửa chưa thể mở hoặc xuất bản đè lên nó",
  "erp.action.download": "Mở trang tải xuống trình chỉnh sửa trong ERP",
  "erp.action.new_link": "Lấy liên kết mới trên trang ERP",

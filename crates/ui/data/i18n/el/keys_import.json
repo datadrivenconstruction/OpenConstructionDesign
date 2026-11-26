@@ -5,6 +5,7 @@
  "keys_import.new_head": "Νέα πλήκτρα",
  "keys_import.changed_head": "Αντικαθιστά δικά σας πλήκτρα",
  "keys_import.conflicts_head": "Συγκρούσεις μετά την εισαγωγή",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "συνδυασμός",
  "keys_import.kind_seq": "δύο γράμματα",
  "keys_import.unbound": "κανένα",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Δεν αναιρέθηκε: τα πλήκτρα επεξεργάστηκαν μετά την εισαγωγή. Επαναφέρετέ τα ένα ένα στο παράθυρο Πλήκτρων.",
  "keys_import.undo_none": "Τίποτα να αναιρεθεί: δεν υπάρχει εισαγωγή πλήκτρων σε αυτή τη συνεδρία.",
  "keys_import.imported": "Τα πλήκτρα εισήχθησαν",
- "keys_import.imported_conflicts": "Τα πλήκτρα εισήχθησαν· συγκρούσεις: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Τα πλήκτρα εισήχθησαν· συγκρούσεις: {n}"
 }

@@ -9,6 +9,7 @@
  "ai_found.found.hide": "مخفي",
  "ai_found.found.color": "ملوَّن",
  "ai_found.found.count": "{n} من {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "لا توجد نتائج مطابقة. جرّب مرشحًا أوسع.",
  "ai_found.found.show_btn": "إظهار",
  "ai_found.found.show_tip": "تحديد هذه العناصر والتكبير عليها في المسقط والمجسم",
@@ -53,6 +54,5 @@
   "few": "# عناصر مخفية",
   "many": "# عنصرًا مخفيًا",
   "other": "# عنصر مخفٍ"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

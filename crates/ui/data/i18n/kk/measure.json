@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Қашықтық",
+ "cmd.e3d.measure.gap": "Беттер арасындағы саңылау",
+ "cmd.e3d.measure.angle": "Бұрыш",
+ "cmd.e3d.measure.area": "Бет немесе бөлменің ауданы / периметрі",
+ "cmd.e3d.measure.volume": "Элемент көлемі",
+ "cmd.e3d.measure.slope": "Еңіс",
+ "cmd.e3d.measure.chain": "Нүктелер тізбегі",
+ "measure.orphan": "Сілтеме жоғалды",
+ "measure.not_planar": "Беттер параллель емес",
+ "measure.unsupported": "Мұны өлшеу мүмкін емес",
+ "cmd.ann.measure_distance": "Қашықтықты өлшеу",
+ "cmd.ann.measure_gap": "Беттер арасындағы саңылауды өлшеу",
+ "cmd.ann.measure_angle": "Бұрышты өлшеу",
+ "cmd.ann.measure_area": "Ауданды өлшеу",
+ "hint.measure.first": "Өлшеу: қабырға бетін (немесе нүктені) басыңыз · Esc — шығу",
+ "hint.measure.second": "Өлшеу: екінші бетті басыңыз · Esc — бірінші таңдауды болдырмау",
+ "measure.no_face": "Мұнда қабырға беті жоқ"
+}

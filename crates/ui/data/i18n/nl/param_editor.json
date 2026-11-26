@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "takken van if() verschillen",
  "pe.msg_what_args": "argumenten",
  "pe.msg_and": " en ",
+ "pe.msg_incompatible": "{w}: onverenigbare eenheden {dims}",
  "pe.text_no_formula": "tekstparameters hebben geen formule",
  "pe.circular": "circulaire verwijzing: {text}",
- "pe.depends_invalid": "is afhankelijk van ongeldige “{b}”",
- "pe.msg_incompatible": "{w}: onverenigbare eenheden {dims}"
+ "pe.depends_invalid": "is afhankelijk van ongeldige “{b}”"
 }

@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "BSP-Deckenplatte",
+ "fam.name.glulam_beam": "Brettschichtholzträger",
+ "fam.name.glulam_column": "Brettschichtholzstütze",
+ "gen.group.timber": "Holzbau",
+ "gen.rule.timber.beam_span_max.desc": "Größte Spannweite eines Brettschichtholzträgers zwischen zwei Stützen.",
+ "gen.rule.timber.beam_span_max.title": "Spannweitengrenze Träger",
+ "gen.rule.timber.panel_w.desc": "Breiteste Brettsperrholz-Deckenplatte; zwischen je zwei Platten ein Stoß.",
+ "gen.rule.timber.panel_w.title": "BSP-Plattenbreite",
+ "gen.rule.timber.span_depth.desc": "Spannweite im Verhältnis zur Höhe eines Brettschichtholzträgers; wählt den Querschnitt.",
+ "gen.rule.timber.span_depth.title": "Schlankheit Träger (Spannweite zu Höhe)"
+}

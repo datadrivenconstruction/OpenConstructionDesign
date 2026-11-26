@@ -18,7 +18,7 @@
  "complib.ready.no": "yozilmagan",
  "complib.edited": "Tahrirlangan",
  "complib.edited_tip": "Loyihaning oilasi o'rnatilgan oiladan farq qiladi",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Qiymat",
- "complib.armed": "Komponent: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponent: {name}"
 }

@@ -18,6 +18,7 @@
  "mcp.set.error": "सर्वर शुरू नहीं हुआ: {error}",
  "mcp.set.new": "नया टोकन",
  "mcp.set.port": "पोर्ट",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "हर बैच पहले जाँचा जाता है और एक पूर्ववत-चरण है। केवल इस कंप्यूटर के प्रोग्राम जुड़ सकते हैं।",
  "mcp.set.show": "दिखाएँ",
  "mcp.set.state_failed": "चल नहीं रहा",
@@ -30,6 +31,5 @@
  "mcp.set.status": "स्थिति",
  "mcp.set.access": "पहुँच",
  "mcp.set.config": "कॉन्फ़िग",
- "mcp.set.policy": "लागू करना",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "लागू करना"
 }

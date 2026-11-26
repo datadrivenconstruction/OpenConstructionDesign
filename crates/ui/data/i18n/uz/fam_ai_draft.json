@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n} ta rad etilgan urinishdan keyin tuzatildi, taxminan {tokens} token",
+ "ai.fam_offer": "Agent {name} oilasini taklif qildi",
+ "ai.fam_offer.open": "Oila muharririda ochish",
+ "ai.fam_offer.dismiss": "Yopish",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Tekshirilmoqda…",
+ "fe.ai.clean": "Tekshiruv hech narsa topmadi",
+ "fe.ai.check_values": "Qiymatlar bilan tekshirish",
+ "fe.ai.lines": "qatorlar {n}",
+ "fe.ai.changes": "Oldingi versiyaga nisbatan {n} ta o'zgarish",
+ "fe.ai.added": "qo'shildi: {head} {name}",
+ "fe.ai.removed": "olib tashlandi: {head} {name}",
+ "fe.ai.changed": "o'zgartirildi: {head} {name}",
+ "fe.ai.reject": "Rad etish"
+}

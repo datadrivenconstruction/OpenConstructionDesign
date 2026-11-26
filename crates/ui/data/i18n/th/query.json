@@ -11,6 +11,7 @@
  "query.err.not_changed": "ไม่สามารถเปลี่ยน \"{key}\" ได้: {why}",
  "query.err.op_no_field": "ตัวดำเนินการที่ไม่มีฟิลด์",
  "query.err.positive": "{key}: ค่าต้องมากกว่าศูนย์",
+ "query.err.raw": "{text}",
  "query.err.text_field": "ฟิลด์ \"{key}\" เป็นข้อความ ไม่สามารถใช้สูตรได้",
  "query.err.unclosed_paren": "ขาดวงเล็บปิด",
  "query.err.unclosed_quote": "ขาดเครื่องหมายคำพูดปิด",
@@ -27,6 +28,5 @@
  "query.why.curtain": "ผนังม่านถูกเปลี่ยนในคุณสมบัติของตัวเอง",
  "query.why.opening_type": "ชนิดของช่องเปิดขึ้นกับขนาด: \"-> width=… height=…\"",
  "query.why.slab_thickness": "ความหนาของพื้นถูกกำหนดโดยชนิด: \"-> type=…\"",
- "query.why.wall_thickness": "ความหนาของผนังถูกกำหนดโดยชนิด: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "ความหนาของผนังถูกกำหนดโดยชนิด: \"-> type=…\""
 }

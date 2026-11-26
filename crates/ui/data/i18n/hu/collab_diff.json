@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Típus",
  "collab_diff.diff.col.field": "Mező",
  "collab_diff.diff.col.old": "Korábban",
- "collab_diff.diff.col.new": "Most"
+ "collab_diff.diff.col.new": "Most",
+ "collab_diff.reveal.title": "Felépítés",
+ "collab_diff.reveal.start": "Megjelenítés megépített állapotban",
+ "collab_diff.reveal.play": "Lejátszás",
+ "collab_diff.reveal.pause": "Szünet",
+ "collab_diff.reveal.back": "Visszafelé",
+ "collab_diff.reveal.close": "Bezárás",
+ "collab_diff.reveal.nothing": "Nincs mit megjeleníteni: egyetlen módosult elem sincs a 3D jelenetben.",
+ "collab_diff.reveal.journal_busy": "Napló beolvasása…",
+ "collab_diff.reveal.journal_play": "Napló lejátszása"
 }

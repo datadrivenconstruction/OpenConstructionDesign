@@ -12,6 +12,7 @@
  "links.loaded": "محمّل",
  "links.not_loaded": "غير محمّل",
  "links.loading": "جارٍ التحميل…",
+ "links.loading_all": "جارٍ تحميل الروابط",
  "links.levels": "مستويات",
  "links.elements": "عناصر",
  "links.offset": "الإزاحة:",

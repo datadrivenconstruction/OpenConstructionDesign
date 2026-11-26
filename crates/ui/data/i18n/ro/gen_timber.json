@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Panou de planșeu CLT",
+ "fam.name.glulam_beam": "Grindă din lemn lamelat",
+ "fam.name.glulam_column": "Stâlp din lemn lamelat",
+ "gen.group.timber": "Structură din lemn",
+ "gen.rule.timber.beam_span_max.desc": "Cea mai lungă deschidere a unei grinzi din lemn lamelat între doi stâlpi.",
+ "gen.rule.timber.beam_span_max.title": "Limită deschidere grindă",
+ "gen.rule.timber.panel_w.desc": "Cel mai lat panou de planșeu din lemn stratificat încrucișat; o îmbinare între fiecare.",
+ "gen.rule.timber.panel_w.title": "Lățime panou CLT",
+ "gen.rule.timber.span_depth.desc": "Deschiderea raportată la înălțimea unei grinzi din lemn lamelat; alege secțiunea.",
+ "gen.rule.timber.span_depth.title": "Raport deschidere - înălțime grindă"
+}

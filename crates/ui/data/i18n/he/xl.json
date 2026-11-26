@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "לא ניתן לקרוא את חוברת העבודה, העמודות שלה היו הולכות לאיבוד; סגור אותה בגיליון האלקטרוני ונסה שוב",
  "xl.msg.type_x_layer_x": "סוג {} שכבה {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} כבר אינו קיים, תאי העמודות שלו הושמטו",
- "xl.msg.delsafe_type_param_on_elements": "הפרמטר '{}' הוא פרמטר סוג; ערוך אותו בגיליון הסוגים, לא הוחל"
+ "xl.msg.delsafe_type_param_on_elements": "הפרמטר '{}' הוא פרמטר סוג; ערוך אותו בגיליון הסוגים, לא הוחל",
+ "xl.msg.tag_x_is_removed_with_x_x": "התג {} מוסר יחד עם {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "המידה {} מאבדת {} {} ושומרת את צורתה האחרונה",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "לא ניתן לבדוק הערות של אלמנטים שנמחקו: {}"
 }

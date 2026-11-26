@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Jäljitetään seinät piirustuksesta",
  "api.cmd.attachments_list": "Keskusteluun liitetyt tiedostot ja vahvistetut projektin vaatimukset",
  "api.cmd.attachments_read": "Lue liitetyn tiedoston sivualue, taulukkorivit tai kuva",
- "api.cmd.underlay_trace": "Piirustuksesta jäljitetyt luonnosseinät"
+ "api.cmd.underlay_trace": "Piirustuksesta jäljitetyt luonnosseinät",
+ "ai.tool.plan_from_image": "Luetaan pohjakuvaa kuvasta",
+ "api.cmd.plan_from_image": "Luonnostele seinät, ovet, ikkunat ja huoneet liitetystä pohjakuvasta tai PDF-sivulta"
 }

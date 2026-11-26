@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "চতুর্থাংশ বিন্দু",
+ "snap.extension": "সম্প্রসারণ",
+ "snap.parallel": "দেয়ালের সমান্তরাল",
+ "snap.tracking_x": "ধরা বিন্দুর X",
+ "snap.tracking_y": "ধরা বিন্দুর Y",
+ "snap.tracking_cross": "গাইডের ছেদ",
+ "snap.equal_step": "সমান ধাপ"
+}

@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "فاصلہ",
+ "cmd.e3d.measure.gap": "رخوں کے درمیان خلا",
+ "cmd.e3d.measure.angle": "زاویہ",
+ "cmd.e3d.measure.area": "رخ یا کمرے کا رقبہ / احاطہ",
+ "cmd.e3d.measure.volume": "عنصر کا حجم",
+ "cmd.e3d.measure.slope": "ڈھلوان",
+ "cmd.e3d.measure.chain": "نقطوں کی زنجیر",
+ "measure.orphan": "حوالہ کھو گیا",
+ "measure.not_planar": "رخ متوازی نہیں",
+ "measure.unsupported": "اسے ناپا نہیں جا سکتا",
+ "cmd.ann.measure_distance": "فاصلہ ناپیں",
+ "cmd.ann.measure_gap": "رخوں کے درمیان خلا ناپیں",
+ "cmd.ann.measure_angle": "زاویہ ناپیں",
+ "cmd.ann.measure_area": "رقبہ ناپیں",
+ "hint.measure.first": "پیمائش: دیوار کے رخ (یا نقطے) پر کلک کریں · Esc — باہر نکلیں",
+ "hint.measure.second": "پیمائش: دوسرے رخ پر کلک کریں · Esc — پہلا انتخاب منسوخ کریں",
+ "measure.no_face": "یہاں دیوار کا رخ نہیں"
+}

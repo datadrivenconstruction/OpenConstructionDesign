@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT-lattiapaneeli",
+ "fam.name.glulam_beam": "Liimapuupalkki",
+ "fam.name.glulam_column": "Liimapuupilari",
+ "gen.group.timber": "Puurakenne",
+ "gen.rule.timber.beam_span_max.desc": "Liimapuupalkin pisin jänneväli kahden pilarin välillä.",
+ "gen.rule.timber.beam_span_max.title": "Palkin jänneväliraja",
+ "gen.rule.timber.panel_w.desc": "Levein ristikkolaminoitu lattiapaneeli; liitos kunkin välillä.",
+ "gen.rule.timber.panel_w.title": "CLT-paneelin leveys",
+ "gen.rule.timber.span_depth.desc": "Liimapuupalkin jännevälin suhde korkeuteen; valitsee poikkileikkauksen.",
+ "gen.rule.timber.span_depth.title": "Palkin jännevälin ja korkeuden suhde"
+}

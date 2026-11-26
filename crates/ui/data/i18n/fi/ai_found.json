@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Piilotettu",
  "ai_found.found.color": "Värjätty",
  "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Mikään ei täsmää. Kokeile laajempaa suodatinta.",
  "ai_found.found.show_btn": "Näytä",
  "ai_found.found.show_tip": "Valitse nämä elementit ja zoomaa niihin pohjapiirroksessa ja 3D-näkymässä",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# elementti piilotettu",
   "other": "# elementtiä piilotettu"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Ойук {w} дубалдан {len} кең",
+ "ix.fix.opening_width": "Туурасы {w} мм",
+ "ix.fix.wall_extend": "Дубалды {len} ммге чейин узартуу"
+}

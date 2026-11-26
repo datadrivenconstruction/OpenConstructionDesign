@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Нуусан",
  "ai_found.found.color": "Будсан",
  "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Тохирох зүйл байхгүй. Шүүлтүүрээ өргөсгөнө үү.",
  "ai_found.found.show_btn": "Харуулах",
  "ai_found.found.show_tip": "Эдгээр элементийг сонгож, план болон 3D дээр ойртуулна",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# элемент нуусан",
   "other": "# элемент нуусан"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

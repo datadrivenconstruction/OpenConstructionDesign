@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Кольорові",
+ "cmd.ui.icons.color": "Кольорові значки",
+ "cmd.ui.icons.color.desc": "Стиль малювання значків",
+ "theme.icons.hierarchical": "Ієрархічні",
+ "cmd.ui.icons.hierarchical": "Ієрархічні значки",
+ "cmd.ui.icons.hierarchical.desc": "Стиль малювання значків",
+ "theme.icons.isometric": "Ізометричні",
+ "cmd.ui.icons.isometric": "Ізометричні значки",
+ "cmd.ui.icons.isometric.desc": "Стиль малювання значків",
+ "theme.icons.monoline": "Однолінійні",
+ "cmd.ui.icons.monoline": "Однолінійні значки",
+ "cmd.ui.icons.monoline.desc": "Стиль малювання значків"
+}

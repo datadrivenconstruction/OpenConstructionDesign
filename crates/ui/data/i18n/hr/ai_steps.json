@@ -12,6 +12,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Detalji",
  "ai.step.copy": "Kopiraj detalje",
  "ai.step.group.read": "Čita model",
@@ -37,6 +38,5 @@
  "ai.step.why.stale": "Model se promijenio dok je korak radio",
  "ai.step.why.skipped": "Korak nije pokrenut: odgovor je završio",
  "ai.step.why.other": "Korak nije završio",
- "ai.step.unknown": "Nepoznat alat",
- "ai.step.dec": ","
+ "ai.step.unknown": "Nepoznat alat"
 }

@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter uygular, Esc isteği durdurur; plandan ve 3B görünümden de çalışır, metin alanına yazılmıyorsa.",
  "ai.plan.rebased": "Mevcut modele göre güncellendi: {what}",
  "ai.value.bad": "\"{text}\", {name} için geçerli bir değer değil",
+ "ai.value.bad_len": "Alan “{name}”: {why}",
  "ai.value.both": "Siz {mine} girerken yapay zeka asistanı bu değeri {agent} olarak değiştirdi. Tutulacağını seçin.",
  "ai.value.choose_first": "Önce kartta kendi değerinizi veya yapay zeka asistanınınkini seçin",
  "ai.value.elem": "Eleman {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Başka bir değer girin veya Uygula dışında bırakmak için öğeyi işaretten çıkarın.",
  "ai.value.tip": "Değeri taslakta düzeltin; model yalnızca Uygula'da değişir. Enter onaylar, Esc geri yükler.",
  "ai.value.use_mine": "{mine} kullan",
- "ai.value.was": "eskisi {old}",
- "ai.value.bad_len": "Alan “{name}”: {why}"
+ "ai.value.was": "eskisi {old}"
 }

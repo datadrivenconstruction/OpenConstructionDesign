@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\"-ийг өөрчлөх боломжгүй: {why}",
  "query.err.op_no_field": "талбаргүй оператор",
  "query.err.positive": "{key}: утга тэгээс их байх ёстой",
+ "query.err.raw": "{text}",
  "query.err.text_field": "талбар \"{key}\" текст, томьёо хамаарахгүй",
  "query.err.unclosed_paren": "хаалтын тэмдэг дутуу",
  "query.err.unclosed_quote": "хашилтын тэмдэг дутуу",
@@ -27,6 +28,5 @@
  "query.why.curtain": "шилэн ханыг өөрийн шинж чанараар өөрчилнө",
  "query.why.opening_type": "нүхний төрөл нь хэмжээгээ дагана: \"-> width=… height=…\"",
  "query.why.slab_thickness": "шалны зузаан төрлөөр тогтоогддог: \"-> type=…\"",
- "query.why.wall_thickness": "ханын зузаан төрлөөр тогтоогддог: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "ханын зузаан төрлөөр тогтоогддог: \"-> type=…\""
 }

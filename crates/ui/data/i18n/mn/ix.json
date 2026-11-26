@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Квадрантын цэг",
+ "snap.extension": "Үргэлжлэл",
+ "snap.parallel": "Ханатай параллель",
+ "snap.tracking_x": "Барьсан цэгийн X",
+ "snap.tracking_y": "Барьсан цэгийн Y",
+ "snap.tracking_cross": "Чиглүүлэгчийн огтлолцол",
+ "snap.equal_step": "Тэнцүү алхам"
+}

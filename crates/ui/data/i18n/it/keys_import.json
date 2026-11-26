@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nuovi tasti",
  "keys_import.changed_head": "Sostituisce i tuoi tasti",
  "keys_import.conflicts_head": "Conflitti dopo l'importazione",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "accordo",
  "keys_import.kind_seq": "due lettere",
  "keys_import.unbound": "nessuno",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Non annullato: i tasti sono stati modificati dopo l'importazione. Reimpostali uno per uno nella finestra Tasti.",
  "keys_import.undo_none": "Niente da annullare: nessuna importazione di tasti in questa sessione.",
  "keys_import.imported": "Tasti importati",
- "keys_import.imported_conflicts": "Tasti importati; conflitti: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Tasti importati; conflitti: {n}"
 }

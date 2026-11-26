@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "werkboek kon niet worden gelezen, de eigen kolommen zouden verloren gaan; sluit het in de spreadsheet en probeer opnieuw",
  "xl.msg.type_x_layer_x": "type {} laag {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} bestaat niet meer, de cellen van de eigen kolommen zijn verwijderd",
- "xl.msg.delsafe_type_param_on_elements": "parameter '{}' is een typeparameter; bewerk die op het typeblad, niet toegepast"
+ "xl.msg.delsafe_type_param_on_elements": "parameter '{}' is een typeparameter; bewerk die op het typeblad, niet toegepast",
+ "xl.msg.tag_x_is_removed_with_x_x": "label {} wordt verwijderd met {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "maatlijn {} verliest {} {} en behoudt zijn laatste vorm",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "kan aantekeningen van verwijderde elementen niet controleren: {}"
 }

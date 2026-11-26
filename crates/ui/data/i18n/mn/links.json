@@ -12,6 +12,7 @@
  "links.loaded": "ачаалагдсан",
  "links.not_loaded": "ачаалагдаагүй",
  "links.loading": "ачаалж байна…",
+ "links.loading_all": "Холбоосыг ачаалж байна",
  "links.levels": "түвшин",
  "links.elements": "элемент",
  "links.offset": "Шилжилт:",

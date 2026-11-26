@@ -20,6 +20,7 @@
  "sched_import.why_ro": "зөвхөн уншихад",
  "sched_import.why_locked": "түгжээтэй утга",
  "sched_import.why_bad": "буруу утга",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "{n} өөрчлөлтийг хэрэглэх",
  "sched_import.cancel": "Болих",
  "sched_import.applied": "{n} нүд импортлогдлоо (нэг буцаах алхам)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Томьёоны үр дүн, хэрэглээгүй: {n}",
  "sched_import.no_id_rows": "Id-гүй мөрүүд, уншаагүй: {n} (мөр {rows})",
  "sched_import.more": "… өөр {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(хоосон)",
  "sched_import.reading": "Номыг уншиж байна…",
  "sched_import.resaved": "Номыг урьдчилсан харагдацын дараа дахин хадгалсан: энэ харагдац шинэ агуулгыг харуулна",
- "sched_import.resaved_reading": "Номыг дахин хадгалсан: юу ч хэрэглээгүй, шинэ урьдчилсан харагдацад зориулж дахин уншиж байна",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Номыг дахин хадгалсан: юу ч хэрэглээгүй, шинэ урьдчилсан харагдацад зориулж дахин уншиж байна"
 }

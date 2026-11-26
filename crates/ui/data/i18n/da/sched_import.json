@@ -20,6 +20,7 @@
  "sched_import.why_ro": "skrivebeskyttet",
  "sched_import.why_locked": "låst værdi",
  "sched_import.why_bad": "ugyldig værdi",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "Anvend {n} ændringer",
  "sched_import.cancel": "Annuller",
  "sched_import.applied": "Importerede {n} celler (ét fortrydelsestrin)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Formelresultater, ikke anvendt: {n}",
  "sched_import.no_id_rows": "Rækker uden Id, ikke læst: {n} (rækker {rows})",
  "sched_import.more": "… {n} flere",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(tom)",
  "sched_import.reading": "Læser projektmappe…",
  "sched_import.resaved": "Projektmappen blev gemt igen efter den første forhåndsvisning: denne forhåndsvisning viser det nye indhold",
- "sched_import.resaved_reading": "Projektmappen blev gemt igen: intet anvendt, læser den påny til en ny forhåndsvisning",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Projektmappen blev gemt igen: intet anvendt, læser den påny til en ny forhåndsvisning"
 }

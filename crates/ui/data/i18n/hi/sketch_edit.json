@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "स्केच रद्द",
  "sketch_edit.sk_applied": "स्केच लागू हुआ",
  "sketch_edit.sk_tail": "पूँछ",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "स्लैब",
  "sketch_edit.sk_host_roof": "रूफ़",
  "sketch_edit.sk_host_ceiling": "छत",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "लेवल 2",
  "sketch_edit.seed_floor_200": "फ़्लोर 200",
  "sketch_edit.seed_section1": "सेक्शन 1",
- "sketch_edit.seed_section2": "सेक्शन 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "सेक्शन 2"
 }

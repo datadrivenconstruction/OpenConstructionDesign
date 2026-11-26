@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "Se eliminarían {0} de {1} elementos. La persona debe confirmarlo",
+ "ai.issue.wipe": "El plan eliminaría los {1} elementos del modelo ({0} eliminados). Nunca se aplica en un solo paso"
+}

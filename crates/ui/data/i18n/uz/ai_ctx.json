@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Tanlov ({n})",
  "ai.ctx.add_tip": "AI ko'radigan narsalarga qaytarish",
  "ai.ctx.frame_tip": "Shu elementlarni ko'rsatish",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Panjaralar",
  "ai.ctx.cat.roof": "Tomlar",
  "ai.ctx.cat.stair": "Zinalar",
- "ai.ctx.cat.other": "Boshqa",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Boshqa"
 }

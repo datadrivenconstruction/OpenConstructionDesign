@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "jako siatki",
  "dlg.imp.skipped": "pominięto",
  "dlg.imp.notes": "Notatki: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "i {n} innych rodzajów",
  "dlg.imp.no_levels": "Plik nie ma poziomów: utworzono poziom domyślny",
  "dlg.imp.reimport_row": "Zaktualizowano {updated}, bez zmian {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} linii, {arcs} łuków, {texts} tekstów, {fills} wypełnień, {layers} warstw; jednostka {unit} mm",
  "dlg.dw.summary_paper": "; arkusze papierowe {n} (nie umieszczone na podkładzie)",
  "dlg.dw.summary_unknown": "; nie przeniesiono: {list}",
- "dlg.dw.summary_more": " i {n} innych rodzajów",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " i {n} innych rodzajów"
 }

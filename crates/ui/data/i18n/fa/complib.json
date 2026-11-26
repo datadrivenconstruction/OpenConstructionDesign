@@ -18,7 +18,7 @@
  "complib.ready.no": "نوشته نشده",
  "complib.edited": "ویرایش‌شده",
  "complib.edited_tip": "خانواده‌ی پروژه با نسخهٔ داخلی متفاوت است",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "مقدار",
- "complib.armed": "جزء: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "جزء: {name}"
 }

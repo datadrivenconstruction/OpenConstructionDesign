@@ -5,6 +5,7 @@
  "keys_import.new_head": "নতুন কী",
  "keys_import.changed_head": "আপনার নিজের কী প্রতিস্থাপন করে",
  "keys_import.conflicts_head": "আমদানির পরে দ্বন্দ্ব",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "কর্ড",
  "keys_import.kind_seq": "দুটি অক্ষর",
  "keys_import.unbound": "কিছু নেই",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "আনডু হয়নি: আমদানির পরে কী সম্পাদনা হয়েছে। Keys উইন্ডোতে একটি একটি করে রিসেট করুন।",
  "keys_import.undo_none": "আনডু করার কিছু নেই: এই সেশনে কী আমদানি হয়নি।",
  "keys_import.imported": "কী আমদানি হয়েছে",
- "keys_import.imported_conflicts": "কী আমদানি হয়েছে; দ্বন্দ্ব: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "কী আমদানি হয়েছে; দ্বন্দ্ব: {n}"
 }

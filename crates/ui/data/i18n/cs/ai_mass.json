@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "Bude smazáno {0} z {1} prvků. Toto musí potvrdit uživatel",
+ "ai.issue.wipe": "Plán by smazal všech {1} prvků modelu (smazáno {0}). Nikdy se neuplatní jedním krokem"
+}

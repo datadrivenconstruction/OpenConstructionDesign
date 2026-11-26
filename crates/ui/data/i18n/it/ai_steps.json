@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Dettagli",
  "ai.step.copy": "Copia dettagli",
  "ai.step.group.read": "Legge il modello",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Il modello è cambiato durante il passaggio",
  "ai.step.why.skipped": "Il passaggio non è stato eseguito: il turno è terminato",
  "ai.step.why.other": "Il passaggio non si è concluso",
- "ai.step.unknown": "Strumento sconosciuto",
- "ai.step.dec": ","
+ "ai.step.unknown": "Strumento sconosciuto"
 }

@@ -52,6 +52,7 @@
  "mesh_tools.done": "Selesai",
  "mesh_tools.failed": "Gagal",
  "mesh_tools.note.outline_approx": "garis tepi perkiraan",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Hapus muka yang menghadap",
  "mesh_tools.dir.up": "atas",
  "mesh_tools.dir.down": "bawah",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Disederhanakan: {n} (misalnya: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Disederhanakan: {n} (misalnya: {first})"
 }

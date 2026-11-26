@@ -41,5 +41,7 @@
  "sb.save.fresh": "Tidak ada perubahan",
  "sb.save.save": "Simpan",
  "sb.save.ifc": "Simpan salinan IFC",
- "sb.save.autosave": "Simpan otomatis"
+ "sb.save.autosave": "Simpan otomatis",
+ "sb.more.title": "Lainnya",
+ "sb.more.desc": "Item bilah status yang tidak muat pada lebar ini."
 }

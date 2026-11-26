@@ -1,0 +1,3 @@
+{
+ "api.cmd.mark_checkpoint": "Segna il modello e i suoi rilievi come punto di partenza per run_checks"
+}

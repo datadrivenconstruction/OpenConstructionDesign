@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<variază>",
  "geom_props.tip": "Enter aplică valoarea tuturor celor {n} selectate, un pas de anulare",
  "geom_props.roof_slope": "Pantă",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Elemente importate",
  "geom_props.kind.mass": "Volume",
  "geom_props.kind.solid": "Solide",
- "geom_props.kind.toposolid": "Teren",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Teren"
 }

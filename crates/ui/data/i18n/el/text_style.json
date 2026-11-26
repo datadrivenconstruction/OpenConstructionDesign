@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Γέμισμα",
  "text_style.lbl.detail": "Λεπτομέρεια",
  "text_style.lbl.width": "Πλάτος",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Εισάγετε αριθμό από {min} έως {max}",
  "text_style.tip.next_ring": "Κλείσιμο αυτού του περιγράμματος και έναρξη άλλου στην ίδια περιοχή",
  "text_style.tip.edit_text": "Επεξεργασία του κειμένου επί τόπου",
- "text_style.tip.add_leader": "Προσθήκη γραμμής οδηγού σε αυτό το κείμενο",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Προσθήκη γραμμής οδηγού σε αυτό το κείμενο"
 }

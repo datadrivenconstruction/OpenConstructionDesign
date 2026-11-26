@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Przegrody zewnętrzne",
+ "gen.group.acoustic": "Izolacyjność akustyczna",
+ "gen.rule.fire.insulation_class.title": "Klasa ogniowa izolacji przegród zewnętrznych",
+ "gen.rule.fire.insulation_class.desc": "Najgorsza klasa reakcji na ogień, jaką może mieć izolacja ścian zewnętrznych i dachów; układy z gorszą izolacją nie są wybierane.",
+ "gen.rule.envelope.u_wall.title": "Współczynnik U ściany zewnętrznej",
+ "gen.rule.envelope.u_wall.desc": "Najwyższy współczynnik przenikania ciepła ściany zewnętrznej; izolacja ściany jest dobierana tak, aby go nie przekroczyć, więc w zimniejszym klimacie ściana jest grubsza.",
+ "gen.rule.envelope.u_roof.title": "Współczynnik U dachu",
+ "gen.rule.envelope.u_roof.desc": "Najwyższy współczynnik przenikania ciepła dachu; izolacja dachu jest dobierana tak, aby go nie przekroczyć.",
+ "gen.rule.envelope.u_ground.title": "Współczynnik U płyty na gruncie",
+ "gen.rule.envelope.u_ground.desc": "Najwyższy współczynnik przenikania ciepła płyty podłogi na gruncie; izolacja pod wylewką jest dobierana tak, aby go nie przekroczyć.",
+ "gen.rule.acoustic.rw_party.title": "Izolacyjność akustyczna ściany międzymieszkaniowej",
+ "gen.rule.acoustic.rw_party.desc": "Najmniejszy wskaźnik izolacyjności akustycznej Rw ściany między mieszkaniami lub przy wspólnym korytarzu; rdzeń murowy jest dobierany według prawa masy, aby go osiągnąć.",
+ "gen.rule.acoustic.rw_floor.title": "Izolacyjność akustyczna stropu",
+ "gen.rule.acoustic.rw_floor.desc": "Najmniejszy wskaźnik izolacyjności akustycznej Rw stropu między kondygnacjami; żelbetowa płyta jest dobierana według prawa masy, aby go osiągnąć.",
+ "gen.why.e.asm_wall": "ściany zewnętrzne grubości {t} m z izolacją {ins} m: U {u} W/m²K, maks. {lim}",
+ "gen.why.e.asm_roof": "dach grubości {t} m z izolacją {ins} m: U {u} W/m²K, maks. {lim}",
+ "gen.why.e.asm_ground": "płyta na gruncie grubości {t} m z izolacją {ins} m: U {u} W/m²K, maks. {lim}",
+ "gen.why.e.asm_party": "ściany międzymieszkaniowe grubości {t} m, {m} kg/m²: Rw {rw} dB według prawa masy, co najmniej {lim}",
+ "gen.why.e.asm_floor": "stropy grubości {t} m, {m} kg/m²: Rw {rw} dB według prawa masy, co najmniej {lim}"
+}

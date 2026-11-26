@@ -5,6 +5,7 @@
  "keys_import.new_head": "新しいキー",
  "keys_import.changed_head": "既存のキーを置き換えます",
  "keys_import.conflicts_head": "取り込み後の競合",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "コード",
  "keys_import.kind_seq": "2 文字",
  "keys_import.unbound": "なし",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "元に戻せません: 取り込み後にキーが編集されました。キー一覧で 1 つずつリセットしてください。",
  "keys_import.undo_none": "元に戻すものがありません: このセッションにキーの取り込みはありません。",
  "keys_import.imported": "キーを取り込みました",
- "keys_import.imported_conflicts": "キーを取り込みました。競合: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "キーを取り込みました。競合: {n}"
 }

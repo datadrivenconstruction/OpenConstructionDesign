@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Instalații automate ale clădirii",
+ "gen.mep_auto_hint": "Permite generatorului și asistentului AI să traseze singuri conducte, canale de aer și cabluri. Dezactivat implicit pentru această regiune; îl puteți activa. Trasarea manuală este mereu disponibilă."
+}

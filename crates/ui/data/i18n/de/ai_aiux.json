@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Strg+Enter wendet an und Esc stoppt die Anfrage auch aus dem Plan oder der 3D-Ansicht, außer wenn gerade in ein Textfeld getippt wird.",
  "ai.plan.rebased": "Gegen das aktuelle Modell aktualisiert: {what}",
  "ai.value.bad": "„{text}“ ist kein gültiger Wert für {name}",
+ "ai.value.bad_len": "Feld „{name}“: {why}",
  "ai.value.both": "Der KI-Assistent hat diesen Wert auf {agent} geändert, während Sie {mine} eingegeben haben. Wählen Sie, welcher bleibt.",
  "ai.value.choose_first": "Wählen Sie zuerst Ihren Wert oder den des KI-Assistenten auf der Karte",
  "ai.value.elem": "Element {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Anderen Wert eingeben oder den Punkt abwählen, damit er nicht angewendet wird.",
  "ai.value.tip": "Den Wert im Entwurf korrigieren; das Modell ändert sich erst beim Anwenden. Enter bestätigt, Esc stellt wieder her.",
  "ai.value.use_mine": "{mine} verwenden",
- "ai.value.was": "war {old}",
- "ai.value.bad_len": "Feld „{name}“: {why}"
+ "ai.value.was": "war {old}"
 }

@@ -64,6 +64,7 @@
  "topo.import.title": "Felmérés importálása",
  "topo.import.filter": "Felmérés (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Pont magassága",
  "topo.opt.thickness": "Topo-test vastagsága",
  "topo.opt.add_to_active": "Hozzáadás az aktív topo-teshez",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importálás",
  "topo.import.cancel": "Mégse",
  "topo.import.no_layers": "nincs réteg kiválasztva",
- "topo.info.warnings": "Nem készült el:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Nem készült el:"
 }

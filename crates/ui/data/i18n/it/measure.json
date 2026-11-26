@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Distanza",
+ "cmd.e3d.measure.gap": "Distanza tra facce",
+ "cmd.e3d.measure.angle": "Angolo",
+ "cmd.e3d.measure.area": "Area / perimetro di una faccia o di un locale",
+ "cmd.e3d.measure.volume": "Volume di un elemento",
+ "cmd.e3d.measure.slope": "Pendenza",
+ "cmd.e3d.measure.chain": "Catena di punti",
+ "measure.orphan": "Riferimento perso",
+ "measure.not_planar": "Le facce non sono parallele",
+ "measure.unsupported": "Impossibile misurare questo",
+ "cmd.ann.measure_distance": "Misura distanza",
+ "cmd.ann.measure_gap": "Misura distanza tra facce",
+ "cmd.ann.measure_angle": "Misura angolo",
+ "cmd.ann.measure_area": "Misura area",
+ "hint.measure.first": "Misura: clic su una faccia di muro (o su un punto) · Esc — esci",
+ "hint.measure.second": "Misura: clic sulla seconda faccia · Esc — annulla la prima selezione",
+ "measure.no_face": "Nessuna faccia di muro qui"
+}

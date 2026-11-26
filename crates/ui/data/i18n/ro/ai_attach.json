@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Se trasează pereți dintr-un desen",
  "api.cmd.attachments_list": "Fișiere atașate la chat și cerințele confirmate ale proiectului",
  "api.cmd.attachments_read": "Citește un interval de pagini, rânduri de tabel sau imaginea unui fișier atașat",
- "api.cmd.underlay_trace": "Pereți schiță trasați dintr-un desen atașat"
+ "api.cmd.underlay_trace": "Pereți schiță trasați dintr-un desen atașat",
+ "ai.tool.plan_from_image": "Citirea unui plan dintr-o imagine",
+ "api.cmd.plan_from_image": "Schițează pereți, uși, ferestre și încăperi citite dintr-o imagine de plan sau o pagină PDF atașată"
 }

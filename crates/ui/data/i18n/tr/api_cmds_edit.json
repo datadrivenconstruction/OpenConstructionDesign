@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Elemanları birleştir, ayır veya geometri birleşimini değiştir",
  "api.cmd.place_footings": "Bir seviyedeki her kolonun altına temel yerleştir",
  "api.cmd.create_terrain": "Ölçüm noktalarından ya da eğimli bir düzlemden arazi oluştur",
- "api.cmd.script_recipes": "Serbest yapıların betik yapı taşlarını ve tariflerini oku"
+ "api.cmd.set_material": "Bir malzemenin 3D görünümünü ayarla",
+ "api.cmd.script_recipes": "Serbest yapıların betik yapı taşlarını ve tariflerini oku",
+ "api.cmd.generate_block": "Ortak saha kurallarıyla parseller üzerinde bir bina adası planla",
+ "api.cmd.measure_save": "Ölçümü bir görünüme kaydet",
+ "api.cmd.edit_mass": "Bir kütleye geçmiş adımı ekle: it, taslak, kabuk, yuvarlat, pah kır, ofset veya böl",
+ "api.cmd.mass_to_family": "Bir kütle zaman çizelgesinden bileşen ailesi oluştur"
 }

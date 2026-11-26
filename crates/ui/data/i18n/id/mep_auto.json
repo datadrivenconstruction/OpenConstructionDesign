@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Utilitas bangunan otomatis",
+ "gen.mep_auto_hint": "Memungkinkan generator dan asisten AI memasang pipa, duct, dan kabel secara mandiri. Dinonaktifkan secara default untuk wilayah ini; Anda dapat mengaktifkannya. Perutean manual selalu tersedia."
+}

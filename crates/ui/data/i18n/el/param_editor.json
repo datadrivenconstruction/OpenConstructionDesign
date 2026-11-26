@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "οι κλάδοι του if() διαφέρουν",
  "pe.msg_what_args": "ορίσματα",
  "pe.msg_and": " και ",
+ "pe.msg_incompatible": "{w}: ασύμβατες μονάδες {dims}",
  "pe.text_no_formula": "οι παράμετροι κειμένου δεν δέχονται τύπο",
  "pe.circular": "κυκλική αναφορά: {text}",
- "pe.depends_invalid": "εξαρτάται από το μη έγκυρο “{b}”",
- "pe.msg_incompatible": "{w}: ασύμβατες μονάδες {dims}"
+ "pe.depends_invalid": "εξαρτάται από το μη έγκυρο “{b}”"
 }

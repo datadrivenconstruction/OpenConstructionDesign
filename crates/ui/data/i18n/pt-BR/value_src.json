@@ -24,5 +24,21 @@
  "value_src.verified_n": "Valores verificados: {n}",
  "value_src.bulk_note": "Valores preenchidos por IA, não verificados: {n}",
  "value_src.bulk_verify": "Marcar como verificados ({n})",
- "value_src.bulk_tip": "Marca como verificados todos os valores preenchidos por IA da seleção, num único passo de anulação"
+ "value_src.bulk_tip": "Marca como verificados todos os valores preenchidos por IA da seleção, num único passo de anulação",
+ "origin.title": "Origem",
+ "origin.made_by": "Criado por",
+ "origin.request": "Solicitação",
+ "origin.at": "Aplicado",
+ "origin.recipe": "receita “{name}”, parte {part}",
+ "origin.ai": "o assistente de IA ({model})",
+ "origin.agent": "agente {name}",
+ "origin.script": "script {name}",
+ "origin.xlsx": "Planilha XLSX",
+ "origin.user": "uma pessoa",
+ "origin.import": "importação",
+ "origin.import_file": "importação de {file}",
+ "origin.unknown": "não está no histórico",
+ "origin.held": "Editado à mão: uma nova execução da receita o mantém como está",
+ "origin.rebuilt": "Uma nova execução da receita o reconstrói; edite-o à mão para mantê-lo como está",
+ "origin.ai_values": "Valores preenchidos por IA: {n}, não verificados: {open}"
 }

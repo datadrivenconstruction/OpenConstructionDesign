@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter primjenjuje, a Esc zaustavlja zahtjev i iz plana ili 3D pogleda, osim ako se upisuje u tekstualno polje.",
  "ai.plan.rebased": "Ažurirano prema trenutnom modelu: {what}",
  "ai.value.bad": "„{text}“ nije ispravna vrijednost za {name}",
+ "ai.value.bad_len": "Polje „{name}“: {why}",
  "ai.value.both": "AI asistent je ovu vrijednost promijenio u {agent} dok si ti unosio {mine}. Odaberi koju zadržati.",
  "ai.value.choose_first": "Prvo odaberi svoju vrijednost ili vrijednost AI asistenta na kartici",
  "ai.value.elem": "Element {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Unesi drugu vrijednost ili odznači stavku da je izuzmeš iz Primijeni.",
  "ai.value.tip": "Ispravi vrijednost u nacrtu; model se mijenja tek pri Primijeni. Enter potvrđuje, Esc vraća.",
  "ai.value.use_mine": "Koristi {mine}",
- "ai.value.was": "bilo {old}",
- "ai.value.bad_len": "Polje „{name}“: {why}"
+ "ai.value.was": "bilo {old}"
 }

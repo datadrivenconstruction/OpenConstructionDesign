@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Нугалт",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Энэ цэгийн дараа цэг нэмнэ (нуман хэсэг хагасаар хуваагдана)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Хадгалах",
  "roof_edge.pe.saved": "Профиль хадгалагдлаа",
  "roof_edge.pe.valid": "Профиль зөв байна",
  "roof_edge.pe.invalid": "Профиль өөрөө огтлолцсон, хэт жижиг эсвэл 3-аас цөөн цэгтэй байна",
  "roof_edge.pe.bad_number": "Координат эсвэл нугалт тоо биш байна",
- "roof_edge.pe.no_name": "Профилийн нэрийг оруулна уу",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Профилийн нэрийг оруулна уу"
 }

@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Подробности",
  "ai.step.copy": "Копирай подробностите",
  "ai.step.group.read": "Чете модела",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Моделът се промени, докато стъпката работеше",
  "ai.step.why.skipped": "Стъпката не се изпълни: отговорът приключи",
  "ai.step.why.other": "Стъпката не приключи",
- "ai.step.unknown": "Непознат инструмент",
- "ai.step.dec": ","
+ "ai.step.unknown": "Непознат инструмент"
 }

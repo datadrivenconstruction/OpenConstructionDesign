@@ -41,5 +41,16 @@
  "library.ifc.window": "Vindue",
  "library.ifc.stair": "Trappe",
  "library.ifc.pipe_fitting": "Rørdele",
- "library.ifc.duct_fitting": "Kanaldele"
+ "library.ifc.duct_fitting": "Kanaldele",
+ "library.ifc.beam": "Bjælke",
+ "library.ifc.column": "Søjle",
+ "library.ifc.appliance": "Apparat",
+ "library.ifc.fire_terminal": "Brandslukningsterminal",
+ "library.ifc.heat_exchanger": "Varmeveksler",
+ "library.ifc.pump": "Pumpe",
+ "library.ifc.tank": "Tank",
+ "library.ifc.transport": "Transportelement",
+ "library.ifc.valve": "Ventil",
+ "library.ifc.waste_terminal": "Afløbsterminal",
+ "library.ifc.medical": "Medicinsk udstyr"
 }

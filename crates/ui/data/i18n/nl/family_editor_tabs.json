@@ -90,6 +90,7 @@
  "fe.cons.redundant": "overbodig",
  "fe.cons.help": "Een maat die aan een lengteparameter is gekoppeld, stuurt de vlakken aan; een hoek vereist een hoekparameter",
  "fe.locks": "Uitlijnvergrendelingen",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Vergrendelen",
  "fe.unlock": "Ontgrendelen",
  "fe.locks.help": "Vergrendelen vervangt het argument van het volume (bijv. rechthoek #2) door het vlak, zodat het volume dit volgt",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Conceptnaam is al in gebruik",
  "fe.clash.body": "Er bestaat al een concept met de naam “{name}”. Vervang dat concept door dit, of ga terug en sla op onder een nieuwe naam. Er is nog niets opgeslagen.",
  "fe.clash.rename": "Opslaan onder een nieuwe naam",
- "fe.clash.replace": "Dat concept vervangen",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Dat concept vervangen"
 }

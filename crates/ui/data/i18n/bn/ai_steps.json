@@ -11,6 +11,7 @@
  "ai.step.s": "{n} সেকেন্ড",
  "ai.step.min": "{m} মিনিট",
  "ai.step.min_s": "{m} মিনিট {s} সেকেন্ড",
+ "ai.step.dec": ".",
  "ai.step.details": "বিবরণ",
  "ai.step.copy": "বিবরণ কপি",
  "ai.step.group.read": "মডেল পড়ে",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "ধাপ চলার সময় মডেল বদলেছে",
  "ai.step.why.skipped": "ধাপটি চলেনি: পর্ব শেষ হয়েছে",
  "ai.step.why.other": "ধাপটি শেষ হয়নি",
- "ai.step.unknown": "অজানা টুল",
- "ai.step.dec": "."
+ "ai.step.unknown": "অজানা টুল"
 }

@@ -24,5 +24,21 @@
  "value_src.verified_n": "Nilai terverifikasi: {n}",
  "value_src.bulk_note": "Nilai diisi oleh AI, belum diverifikasi: {n}",
  "value_src.bulk_verify": "Tandai terverifikasi ({n})",
- "value_src.bulk_tip": "Menandai setiap nilai yang diisi AI pada pilihan sebagai terverifikasi, satu langkah urung"
+ "value_src.bulk_tip": "Menandai setiap nilai yang diisi AI pada pilihan sebagai terverifikasi, satu langkah urung",
+ "origin.title": "Asal",
+ "origin.made_by": "Dibuat oleh",
+ "origin.request": "Permintaan",
+ "origin.at": "Diterapkan",
+ "origin.recipe": "resep “{name}”, bagian {part}",
+ "origin.ai": "asisten AI ({model})",
+ "origin.agent": "agen {name}",
+ "origin.script": "skrip {name}",
+ "origin.xlsx": "Spreadsheet XLSX",
+ "origin.user": "seseorang",
+ "origin.import": "impor",
+ "origin.import_file": "impor dari {file}",
+ "origin.unknown": "tidak ada dalam riwayat",
+ "origin.held": "Diedit manual: menjalankan ulang resep membiarkannya apa adanya",
+ "origin.rebuilt": "Menjalankan ulang resep membangunnya kembali; edit manual untuk mempertahankannya",
+ "origin.ai_values": "Nilai yang diisi AI: {n}, belum diverifikasi: {open}"
 }

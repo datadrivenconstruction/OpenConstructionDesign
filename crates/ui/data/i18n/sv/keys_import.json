@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nya nycklar",
  "keys_import.changed_head": "Ersätter dina egna nycklar",
  "keys_import.conflicts_head": "Konflikter efter importen",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "ackord",
  "keys_import.kind_seq": "två bokstäver",
  "keys_import.unbound": "ingen",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Inte ångrat: nycklar redigerades efter importen. Återställ dem en och en i fönstret Nycklar.",
  "keys_import.undo_none": "Inget att ångra: ingen nyckelimport i den här sessionen.",
  "keys_import.imported": "Nycklar importerade",
- "keys_import.imported_conflicts": "Nycklar importerade; konflikter: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Nycklar importerade; konflikter: {n}"
 }

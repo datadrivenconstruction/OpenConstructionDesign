@@ -24,5 +24,21 @@
  "value_src.verified_n": "確認済みの値: {n}",
  "value_src.bulk_note": "AIが入力した未確認の値: {n}",
  "value_src.bulk_verify": "確認済みにする ({n})",
- "value_src.bulk_tip": "選択内のすべてのAI入力値を確認済みにします。元に戻すは 1 回"
+ "value_src.bulk_tip": "選択内のすべてのAI入力値を確認済みにします。元に戻すは 1 回",
+ "origin.title": "由来",
+ "origin.made_by": "作成者",
+ "origin.request": "リクエスト",
+ "origin.at": "適用日時",
+ "origin.recipe": "レシピ「{name}」、パート {part}",
+ "origin.ai": "AIアシスタント({model})",
+ "origin.agent": "エージェント {name}",
+ "origin.script": "スクリプト {name}",
+ "origin.xlsx": "XLSXスプレッドシート",
+ "origin.user": "ユーザー",
+ "origin.import": "インポート",
+ "origin.import_file": "{file} からインポート",
+ "origin.unknown": "履歴にありません",
+ "origin.held": "手動で編集済み: レシピを再実行してもそのまま残ります",
+ "origin.rebuilt": "レシピを再実行すると再構築されます。そのまま残すには手動で編集してください",
+ "origin.ai_values": "AIが入力した値: {n}、未確認: {open}"
 }

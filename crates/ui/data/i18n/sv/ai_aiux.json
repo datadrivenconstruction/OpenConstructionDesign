@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter tillämpar och Esc stoppar begäran även från plan- eller 3D-vyn, såvida du inte skriver i ett textfält.",
  "ai.plan.rebased": "Uppdaterad mot aktuell modell: {what}",
  "ai.value.bad": "\"{text}\" är inte ett giltigt värde för {name}",
+ "ai.value.bad_len": "Fältet «{name}»: {why}",
  "ai.value.both": "AI-assistenten ändrade detta värde till {agent} medan du angav {mine}. Välj vilket som ska behållas.",
  "ai.value.choose_first": "Välj ditt värde eller AI-assistentens på kortet först",
  "ai.value.elem": "Objekt {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Ange ett annat värde, eller avmarkera posten för att lämna den utanför Tillämpa.",
  "ai.value.tip": "Rätta värdet i utkastet; modellen ändras först vid Tillämpa. Enter bekräftar, Esc återställer.",
  "ai.value.use_mine": "Använd {mine}",
- "ai.value.was": "var {old}",
- "ai.value.bad_len": "Fältet «{name}»: {why}"
+ "ai.value.was": "var {old}"
 }

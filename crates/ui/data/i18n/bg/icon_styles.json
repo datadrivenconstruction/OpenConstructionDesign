@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Цветни",
+ "cmd.ui.icons.color": "Цветни икони",
+ "cmd.ui.icons.color.desc": "Стил на чертане на иконите",
+ "theme.icons.hierarchical": "Йерархични",
+ "cmd.ui.icons.hierarchical": "Йерархични икони",
+ "cmd.ui.icons.hierarchical.desc": "Стил на чертане на иконите",
+ "theme.icons.isometric": "Изометрични",
+ "cmd.ui.icons.isometric": "Изометрични икони",
+ "cmd.ui.icons.isometric.desc": "Стил на чертане на иконите",
+ "theme.icons.monoline": "Монолинейни",
+ "cmd.ui.icons.monoline": "Монолинейни икони",
+ "cmd.ui.icons.monoline.desc": "Стил на чертане на иконите"
+}

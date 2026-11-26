@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF enregistré : {path} ({nodes} éléments, {meshes} maillages)",
  "data_export.gltf.partial": "glTF enregistré avec {n} problèmes, certains volumes peuvent manquer : {path}",
  "data_export.gltf.failed": "Échec de l'export glTF : {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "Informations du projet",
  "data_export.info.project": "Projet",
  "data_export.info.site": "Coordonnées et nord",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "Aucune primitive de dessin dans la zone",
  "data_export.dwgpick.box": "Primitives sélectionnées : {n}",
  "data_export.dwgpick.box_rings": "Primitives sélectionnées : {n}, contours fermés : {rings}",
- "data_export.dwgpick.layer": "Calque {layer} : primitives sélectionnées {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "Calque {layer} : primitives sélectionnées {n}"
 }

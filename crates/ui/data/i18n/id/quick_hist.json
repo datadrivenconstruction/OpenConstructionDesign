@@ -72,6 +72,7 @@
  "quick.cat.beam": "Balok",
  "quick.cat.ceiling": "Plafon",
  "quick.cat.structure": "Struktur",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} dari {all}",
  "quick.hud.type": "Tipe",
  "quick.hud.height": "Tinggi",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Nilai “{v}” tidak dapat dibaca",
  "quick.menu.repeat": "Ulangi: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Terakhir",
  "quick.bar.repeat_tip": "{cmd} · Enter mengulanginya",
  "quick.repeat.none": "Belum ada yang bisa diulangi",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Kembali",
  "quick.tips.next": "Berikutnya",
  "quick.tips.finish": "Selesai",
- "quick.tips.never": "Jangan tampilkan lagi",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Jangan tampilkan lagi"
 }

@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "KL-träbjälklagspanel",
+ "fam.name.glulam_beam": "Limträbalk",
+ "fam.name.glulam_column": "Limträpelare",
+ "gen.group.timber": "Trästomme",
+ "gen.rule.timber.beam_span_max.desc": "Längsta spann för en limträbalk mellan två pelare.",
+ "gen.rule.timber.beam_span_max.title": "Balkspannsgräns",
+ "gen.rule.timber.panel_w.desc": "Bredaste korslimmade bjälklagspanel; en fog mellan varje.",
+ "gen.rule.timber.panel_w.title": "KL-träpanelens bredd",
+ "gen.rule.timber.span_depth.desc": "Spann i förhållande till höjd för en limträbalk; väljer tvärsnittet.",
+ "gen.rule.timber.span_depth.title": "Balkens spann i förhållande till höjd"
+}

@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "외피",
+ "gen.group.acoustic": "차음",
+ "gen.rule.fire.insulation_class.title": "외피 단열재 화재 등급",
+ "gen.rule.fire.insulation_class.desc": "외벽과 지붕의 단열재가 가질 수 있는 최저 화재 반응 등급. 이보다 나쁜 단열재를 사용하는 구성은 선택되지 않습니다.",
+ "gen.rule.envelope.u_wall.title": "외벽 U값",
+ "gen.rule.envelope.u_wall.desc": "외벽의 최대 열관류율. 벽 단열재는 이 값 이하가 되도록 산정되므로 기후가 추울수록 벽이 두꺼워집니다.",
+ "gen.rule.envelope.u_roof.title": "지붕 U값",
+ "gen.rule.envelope.u_roof.desc": "지붕의 최대 열관류율. 지붕 단열재는 이 값 이하가 되도록 산정됩니다.",
+ "gen.rule.envelope.u_ground.title": "지반 슬래브 U값",
+ "gen.rule.envelope.u_ground.desc": "지반에 접한 바닥 슬래브의 최대 열관류율. 마감 모르타르 아래 단열재는 이 값 이하가 되도록 산정됩니다.",
+ "gen.rule.acoustic.rw_party.title": "세대 간 벽 차음",
+ "gen.rule.acoustic.rw_party.desc": "세대 사이 또는 공용 복도와 접한 벽의 최소 차음 지수 Rw. 조적 코어는 질량 법칙에 따라 이 값에 도달하도록 산정됩니다.",
+ "gen.rule.acoustic.rw_floor.title": "바닥 차음",
+ "gen.rule.acoustic.rw_floor.desc": "층간 바닥의 최소 차음 지수 Rw. 콘크리트 슬래브는 질량 법칙에 따라 이 값에 도달하도록 산정됩니다.",
+ "gen.why.e.asm_wall": "단열재 {ins} m를 포함한 두께 {t} m의 외벽: U {u} W/m2K, 최대 {lim}",
+ "gen.why.e.asm_roof": "단열재 {ins} m를 포함한 두께 {t} m의 지붕: U {u} W/m2K, 최대 {lim}",
+ "gen.why.e.asm_ground": "단열재 {ins} m를 포함한 두께 {t} m의 지반 슬래브: U {u} W/m2K, 최대 {lim}",
+ "gen.why.e.asm_party": "두께 {t} m, {m} kg/m2의 세대 간 벽: 질량 법칙에 따른 Rw {rw} dB, 최소 {lim}",
+ "gen.why.e.asm_floor": "두께 {t} m, {m} kg/m2의 바닥: 질량 법칙에 따른 Rw {rw} dB, 최소 {lim}"
+}

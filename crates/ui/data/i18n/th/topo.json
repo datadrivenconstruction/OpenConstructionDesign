@@ -64,6 +64,7 @@
  "topo.import.title": "นำเข้าข้อมูลสำรวจ",
  "topo.import.filter": "ข้อมูลสำรวจ (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "ระดับความสูงของจุด",
  "topo.opt.thickness": "ความหนาโทโพโซลิด",
  "topo.opt.add_to_active": "เพิ่มในโทโพโซลิดที่กำลังใช้งาน",
@@ -121,6 +122,5 @@
  "topo.import.ok": "นำเข้า",
  "topo.import.cancel": "ยกเลิก",
  "topo.import.no_layers": "ยังไม่ได้เลือกเลเยอร์",
- "topo.info.warnings": "ยังไม่สร้าง:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "ยังไม่สร้าง:"
 }

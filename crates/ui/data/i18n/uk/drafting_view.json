@@ -15,6 +15,7 @@
  "drafting_view.name": "Назва",
  "drafting_view.count": "Анотацій: {n}",
  "drafting_view.tab": "Креслення · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Порожній вид креслення",
  "drafting_view.canvas_hint": "Скористайтеся інструментами анотацій: лінії деталей, області, текст, компоненти деталей",
  "drafting_view.created": "Вид креслення «{name}» створено",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Ще",
  "empty.drafting.title": "Видів креслень ще немає",
  "empty.drafting.hint": "Створіть його для 2D-деталей, які не вирізаються з моделі.",
- "empty.drafting.action": "Новий вид креслення",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Новий вид креслення"
 }

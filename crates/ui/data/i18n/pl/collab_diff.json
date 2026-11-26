@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Rodzaj",
  "collab_diff.diff.col.field": "Pole",
  "collab_diff.diff.col.old": "Było",
- "collab_diff.diff.col.new": "Jest"
+ "collab_diff.diff.col.new": "Jest",
+ "collab_diff.reveal.title": "Narastanie",
+ "collab_diff.reveal.start": "Pokaż etapy budowy",
+ "collab_diff.reveal.play": "Odtwórz",
+ "collab_diff.reveal.pause": "Wstrzymaj",
+ "collab_diff.reveal.back": "Wstecz",
+ "collab_diff.reveal.close": "Zamknij",
+ "collab_diff.reveal.nothing": "Nie ma czego pokazać: żaden zmieniony element nie znajduje się w scenie 3D.",
+ "collab_diff.reveal.journal_busy": "Odczyt dziennika…",
+ "collab_diff.reveal.journal_play": "Odtwórz dziennik"
 }

@@ -20,6 +20,7 @@
  "sched_import.why_ro": "solo lectura",
  "sched_import.why_locked": "valor bloqueado",
  "sched_import.why_bad": "valor no válido",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Aplicar {n} cambios",
  "sched_import.cancel": "Cancelar",
  "sched_import.applied": "Importadas {n} celdas (un paso de deshacer)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Resultados de fórmula, no aplicados: {n}",
  "sched_import.no_id_rows": "Filas sin Id, no leídas: {n} (filas {rows})",
  "sched_import.more": "… {n} más",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(vacío)",
  "sched_import.reading": "Leyendo el libro…",
  "sched_import.resaved": "El libro se volvió a guardar tras la primera vista previa: esta vista muestra el contenido nuevo",
- "sched_import.resaved_reading": "El libro se volvió a guardar: nada aplicado, leyéndolo de nuevo para una nueva vista previa",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "El libro se volvió a guardar: nada aplicado, leyéndolo de nuevo para una nueva vista previa"
 }

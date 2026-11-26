@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Dizalo na jarbolu",
+ "fam.name.mast_lift": "Dizalo na jarbolu",
+ "gen.rule.steel.check.self_weight.desc": "Težina tornja iznad presjeka, po metru visine.",
+ "gen.rule.steel.check.self_weight.title": "Težina čelika po metru",
+ "gen.rule.steel.check.strut_share.desc": "Udio sile pojasa koju vodoravni štap preuzima u svom čvoru.",
+ "gen.rule.steel.check.strut_share.title": "Udio vodoravnog štapa",
+ "gen.rule.steel.out.lift_box_d.desc": "Tlocrtna dubina koju dizalo na jarbolu treba s jarbolom; etaže su iznad njega otvorene.",
+ "gen.rule.steel.out.lift_box_d.title": "Dubina okna dizala",
+ "gen.rule.steel.out.lift_box_w.desc": "Tlocrtna širina koju dizalo na jarbolu treba; etaže su iznad njega otvorene.",
+ "gen.rule.steel.out.lift_box_w.title": "Širina okna dizala",
+ "gen.rule.steel.out.lift_offset.desc": "Udaljenost dizala od osi, izvan tlocrtnog ukrućenja.",
+ "gen.rule.steel.out.lift_offset.title": "Odmak dizala od osi",
+ "gen.rule.steel.out.lifts.desc": "Dizala uz jezgru: do druge platforme, zatim do vrha.",
+ "gen.rule.steel.out.lifts.title": "Vožnje dizala"
+}

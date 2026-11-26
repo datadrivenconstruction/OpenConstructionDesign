@@ -12,6 +12,7 @@
  "links.loaded": "yüklendi",
  "links.not_loaded": "yüklenmedi",
  "links.loading": "yükleniyor…",
+ "links.loading_all": "Bağlantılar yükleniyor",
  "links.levels": "kat",
  "links.elements": "eleman",
  "links.offset": "Ofset:",

@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Bombatura",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Inserisci un punto dopo questo (un arco viene diviso a metà)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Salva",
  "roof_edge.pe.saved": "Profilo salvato",
  "roof_edge.pe.valid": "Il profilo è valido",
  "roof_edge.pe.invalid": "Il profilo si autointerseca, è troppo piccolo o ha meno di 3 punti",
  "roof_edge.pe.bad_number": "Una coordinata o un'alzata non è un numero",
- "roof_edge.pe.no_name": "Inserisci un nome per il profilo",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Inserisci un nome per il profilo"
 }

@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "پس از {n} تلاش ردشده رفع شد، حدود {tokens} توکن",
+ "ai.fam_offer": "یک عامل خانواده {name} را پیشنهاد داد",
+ "ai.fam_offer.open": "باز کردن در ویرایشگر خانواده",
+ "ai.fam_offer.dismiss": "رد کردن",
+ "fe.ai.badge": "هوش مصنوعی",
+ "fe.ai.checking": "در حال بررسی…",
+ "fe.ai.clean": "بررسی چیزی نیافت",
+ "fe.ai.check_values": "بررسی با مقادیر",
+ "fe.ai.lines": "خط‌ها {n}",
+ "fe.ai.changes": "{n} تغییر نسبت به نسخه پیشین",
+ "fe.ai.added": "افزوده شد: {head} {name}",
+ "fe.ai.removed": "حذف شد: {head} {name}",
+ "fe.ai.changed": "تغییر کرد: {head} {name}",
+ "fe.ai.reject": "رد"
+}

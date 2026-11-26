@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Jenis",
  "collab_diff.diff.col.field": "Bidang",
  "collab_diff.diff.col.old": "Sebelumnya",
- "collab_diff.diff.col.new": "Sekarang"
+ "collab_diff.diff.col.new": "Sekarang",
+ "collab_diff.reveal.title": "Tahap pembangunan",
+ "collab_diff.reveal.start": "Tampilkan sebagai terbangun",
+ "collab_diff.reveal.play": "Putar",
+ "collab_diff.reveal.pause": "Jeda",
+ "collab_diff.reveal.back": "Mundur",
+ "collab_diff.reveal.close": "Tutup",
+ "collab_diff.reveal.nothing": "Tidak ada yang ditampilkan: tidak ada elemen yang berubah di adegan 3D.",
+ "collab_diff.reveal.journal_busy": "Membaca jurnal…",
+ "collab_diff.reveal.journal_play": "Putar jurnal"
 }

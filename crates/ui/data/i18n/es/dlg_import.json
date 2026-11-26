@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "como mallas",
  "dlg.imp.skipped": "omitido",
  "dlg.imp.notes": "Notas: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "y {n} tipos más",
  "dlg.imp.no_levels": "El archivo no tiene niveles: se creó un nivel predeterminado",
  "dlg.imp.reimport_row": "Actualizados {updated}, sin cambios {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} líneas, {arcs} arcos, {texts} textos, {fills} rellenos, {layers} capas; unidad {unit} mm",
  "dlg.dw.summary_paper": "; láminas de papel {n} (no colocadas en la base)",
  "dlg.dw.summary_unknown": "; no se conservó: {list}",
- "dlg.dw.summary_more": " y {n} tipos más",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " y {n} tipos más"
 }

@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" は変更できません: {why}",
  "query.err.op_no_field": "フィールドのない演算子です",
  "query.err.positive": "{key}: 値はゼロより大きい必要があります",
+ "query.err.raw": "{text}",
  "query.err.text_field": "フィールド \"{key}\" はテキストのため、数式は使用できません",
  "query.err.unclosed_paren": "閉じ括弧がありません",
  "query.err.unclosed_quote": "閉じ引用符がありません",
@@ -27,6 +28,5 @@
  "query.why.curtain": "カーテンウォールは、それぞれのプロパティで変更します",
  "query.why.opening_type": "開口のタイプはそのサイズに従います: \"-> width=… height=…\"",
  "query.why.slab_thickness": "床の厚さはタイプで設定されます: \"-> type=…\"",
- "query.why.wall_thickness": "壁の厚さはタイプで設定されます: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "壁の厚さはタイプで設定されます: \"-> type=…\""
 }

@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ انتخاب ({n})",
  "ai.ctx.add_tip": "دوباره به آنچه هوش مصنوعی می‌بیند اضافه کن",
  "ai.ctx.frame_tip": "نشان دادن این عنصرها",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "نرده‌ها",
  "ai.ctx.cat.roof": "بام‌ها",
  "ai.ctx.cat.stair": "پله‌ها",
- "ai.ctx.cat.other": "دیگر",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "دیگر"
 }

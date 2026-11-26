@@ -48,5 +48,13 @@
  "settings.lib_open": "Pustaka komponen",
  "settings.lib_open_desc": "Telusuri famili bawaan, famili yang ada di proyek, dan famili Anda sendiri",
  "settings.lib_dir": "Folder pustaka saya",
- "settings.lib_dir_desc": "File famili (.ddcf) yang ditaruh di sini muncul di bawah Pustaka saya. DDC_COMPONENTS_DIR memindahkannya."
+ "settings.lib_dir_desc": "File famili (.ddcf) yang ditaruh di sini muncul di bawah Pustaka saya. DDC_COMPONENTS_DIR memindahkannya.",
+ "complib.fam.sprinkler_head": "Kepala Sprinkler",
+ "complib.fam.fire_pump": "Pompa Kebakaran",
+ "complib.fam.pressurisation_fan": "Kipas Pressurisasi",
+ "complib.fam.lift_car": "Kereta Lift",
+ "complib.fam.lift_landing_door": "Pintu Lantai Lift",
+ "complib.fam.lift_pit": "Pit Lift",
+ "complib.fam.lift_overrun": "Ruang Atas Lift",
+ "complib.fam.lift_machine": "Mesin Lift"
 }

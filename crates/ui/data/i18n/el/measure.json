@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Απόσταση",
+ "cmd.e3d.measure.gap": "Διάκενο μεταξύ όψεων",
+ "cmd.e3d.measure.angle": "Γωνία",
+ "cmd.e3d.measure.area": "Εμβαδόν / περίμετρος όψης ή χώρου",
+ "cmd.e3d.measure.volume": "Όγκος στοιχείου",
+ "cmd.e3d.measure.slope": "Κλίση",
+ "cmd.e3d.measure.chain": "Αλυσίδα σημείων",
+ "measure.orphan": "Χαμένη αναφορά",
+ "measure.not_planar": "Οι όψεις δεν είναι παράλληλες",
+ "measure.unsupported": "Δεν είναι δυνατή η μέτρηση αυτού",
+ "cmd.ann.measure_distance": "Μέτρηση απόστασης",
+ "cmd.ann.measure_gap": "Μέτρηση διακένου μεταξύ όψεων",
+ "cmd.ann.measure_angle": "Μέτρηση γωνίας",
+ "cmd.ann.measure_area": "Μέτρηση εμβαδού",
+ "hint.measure.first": "Μέτρηση: κάντε κλικ σε όψη τοίχου (ή σε σημείο) · Esc — έξοδος",
+ "hint.measure.second": "Μέτρηση: κάντε κλικ στη δεύτερη όψη · Esc — ακύρωση της πρώτης επιλογής",
+ "measure.no_face": "Δεν υπάρχει όψη τοίχου εδώ"
+}

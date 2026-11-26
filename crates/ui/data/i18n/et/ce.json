@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Vooluringid",
+ "cmd.mep.circuits.desc": "Avab vooluringide redaktori: iga jaotuskilbi vooluringid, nende koormused, kaablite ristlõiked ja reeglikontrollid.",
  "ce.title": "Vooluringid",
  "ce.open": "Vooluringid",
  "ce.empty": "Vooluringe veel pole",

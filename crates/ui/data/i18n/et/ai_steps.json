@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ".",
  "ai.step.details": "Üksikasjad",
  "ai.step.copy": "Kopeeri üksikasjad",
  "ai.step.group.read": "Loeb mudelit",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Mudel muutus sammu ajal",
  "ai.step.why.skipped": "Samm ei käivitunud: vestlus lõppes",
  "ai.step.why.other": "Samm ei lõppenud",
- "ai.step.unknown": "Tundmatu tööriist",
- "ai.step.dec": "."
+ "ai.step.unknown": "Tundmatu tööriist"
 }

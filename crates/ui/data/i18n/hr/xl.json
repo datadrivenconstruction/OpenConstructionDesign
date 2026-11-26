@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "radna knjiga se ne može pročitati, vlastiti stupci bi se izgubili; zatvorite je u proračunskoj tablici i pokušajte ponovno",
  "xl.msg.type_x_layer_x": "tip {} sloj {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} više ne postoji, ćelije njegovih vlastitih stupaca su odbačene",
- "xl.msg.delsafe_type_param_on_elements": "parametar '{}' je parametar tipa; uredite ga na listu tipova, nije primijenjeno"
+ "xl.msg.delsafe_type_param_on_elements": "parametar '{}' je parametar tipa; uredite ga na listu tipova, nije primijenjeno",
+ "xl.msg.tag_x_is_removed_with_x_x": "oznaka {} uklanja se s {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "kota {} gubi {} {} i zadržava svoj posljednji oblik",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "nije moguće provjeriti bilješke izbrisanih elemenata: {}"
 }

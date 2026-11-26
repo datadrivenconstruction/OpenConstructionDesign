@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "виправлено після відхилених спроб: {n}, приблизно {tokens} токенів",
+ "ai.fam_offer": "Агент запропонував сімейство {name}",
+ "ai.fam_offer.open": "Відкрити в редакторі сімейств",
+ "ai.fam_offer.dismiss": "Закрити",
+ "fe.ai.badge": "ШІ",
+ "fe.ai.checking": "Перевірка…",
+ "fe.ai.clean": "Перевірка нічого не виявила",
+ "fe.ai.check_values": "Перевірити зі значеннями",
+ "fe.ai.lines": "рядків {n}",
+ "fe.ai.changes": "Змін щодо попередньої версії: {n}",
+ "fe.ai.added": "додано: {head} {name}",
+ "fe.ai.removed": "видалено: {head} {name}",
+ "fe.ai.changed": "змінено: {head} {name}",
+ "fe.ai.reject": "Відхилити"
+}

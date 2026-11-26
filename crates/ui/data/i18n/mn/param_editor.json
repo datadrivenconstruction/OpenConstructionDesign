@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() салбарууд ялгаатай",
  "pe.msg_what_args": "аргументууд",
  "pe.msg_and": " ба ",
+ "pe.msg_incompatible": "{w}: нийцгүй нэгжүүд {dims}",
  "pe.text_no_formula": "текст параметрт томьёо байхгүй",
  "pe.circular": "дугуй лавлагаа: {text}",
- "pe.depends_invalid": "буруу “{b}”-оос хамаарч байна",
- "pe.msg_incompatible": "{w}: нийцгүй нэгжүүд {dims}"
+ "pe.depends_invalid": "буруу “{b}”-оос хамаарч байна"
 }

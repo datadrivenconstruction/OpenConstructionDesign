@@ -64,6 +64,7 @@
  "topo.import.title": "Ölçüyü içe aktar",
  "topo.import.filter": "Ölçü (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Nokta kotu",
  "topo.opt.thickness": "Toposolid kalınlığı",
  "topo.opt.add_to_active": "Etkin Toposolid'e ekle",
@@ -121,6 +122,5 @@
  "topo.import.ok": "İçe aktar",
  "topo.import.cancel": "İptal",
  "topo.import.no_layers": "katman seçilmedi",
- "topo.info.warnings": "Oluşturulamadı:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Oluşturulamadı:"
 }

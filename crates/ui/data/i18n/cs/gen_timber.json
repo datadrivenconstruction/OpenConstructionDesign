@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Stropní panel CLT",
+ "fam.name.glulam_beam": "Nosník z lepeného lamelového dřeva",
+ "fam.name.glulam_column": "Sloup z lepeného lamelového dřeva",
+ "gen.group.timber": "Dřevěná konstrukce",
+ "gen.rule.timber.beam_span_max.desc": "Nejdelší rozpětí nosníku z lepeného lamelového dřeva mezi dvěma sloupy.",
+ "gen.rule.timber.beam_span_max.title": "Mez rozpětí nosníku",
+ "gen.rule.timber.panel_w.desc": "Nejširší křížem lepený stropní panel; mezi každým je spára.",
+ "gen.rule.timber.panel_w.title": "Šířka panelu CLT",
+ "gen.rule.timber.span_depth.desc": "Rozpětí ku výšce nosníku z lepeného lamelového dřeva; určuje průřez.",
+ "gen.rule.timber.span_depth.title": "Rozpětí ku výšce nosníku"
+}

@@ -15,6 +15,7 @@
  "drafting_view.name": "Ad",
  "drafting_view.count": "{n} açıklama",
  "drafting_view.tab": "Çizim · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Boş çizim görünümü",
  "drafting_view.canvas_hint": "Açıklama araçlarını kullanın: detay çizgileri, bölgeler, metin, detay bileşenleri",
  "drafting_view.created": "“{name}” çizim görünümü oluşturuldu",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Daha fazla",
  "empty.drafting.title": "Henüz çizim görünümü yok",
  "empty.drafting.hint": "Modelden kesilmeyen 2B detaylar için bir tane oluşturun.",
- "empty.drafting.action": "Yeni çizim görünümü",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Yeni çizim görünümü"
 }

@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "قسم",
  "collab_diff.diff.col.field": "فیلڈ",
  "collab_diff.diff.col.old": "پہلے",
- "collab_diff.diff.col.new": "اب"
+ "collab_diff.diff.col.new": "اب",
+ "collab_diff.reveal.title": "تعمیراتی ترتیب",
+ "collab_diff.reveal.start": "تعمیر کے مطابق دکھائیں",
+ "collab_diff.reveal.play": "چلائیں",
+ "collab_diff.reveal.pause": "توقف",
+ "collab_diff.reveal.back": "پیچھے",
+ "collab_diff.reveal.close": "بند کریں",
+ "collab_diff.reveal.nothing": "دکھانے کو کچھ نہیں: 3D منظر میں کوئی تبدیل شدہ جزو نہیں۔",
+ "collab_diff.reveal.journal_busy": "جرنل پڑھا جا رہا ہے…",
+ "collab_diff.reveal.journal_play": "جرنل چلائیں"
 }

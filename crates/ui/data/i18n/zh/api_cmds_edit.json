@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "连接、取消连接或切换几何连接",
  "api.cmd.place_footings": "在楼层每根柱下放置基础",
  "api.cmd.create_terrain": "通过测量点或倾斜平面创建地形",
- "api.cmd.script_recipes": "阅读自由形态结构的脚本构件块与配方"
+ "api.cmd.set_material": "设置材质在 3D 中的外观",
+ "api.cmd.script_recipes": "阅读自由形态结构的脚本构件块与配方",
+ "api.cmd.generate_block": "按共同的场地规则在地块上规划建筑街区",
+ "api.cmd.measure_save": "将测量保存到视图中",
+ "api.cmd.edit_mass": "为体量添加历史步骤：推拉、草稿、抽壳、圆角、倒角、偏移或拆分",
+ "api.cmd.mass_to_family": "根据体量时间线创建构件族"
 }

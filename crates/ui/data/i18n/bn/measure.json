@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "দূরত্ব",
+ "cmd.e3d.measure.gap": "তলগুলোর মধ্যে ফাঁক",
+ "cmd.e3d.measure.angle": "কোণ",
+ "cmd.e3d.measure.area": "তল বা কক্ষের ক্ষেত্রফল / পরিসীমা",
+ "cmd.e3d.measure.volume": "এলিমেন্টের আয়তন",
+ "cmd.e3d.measure.slope": "ঢাল",
+ "cmd.e3d.measure.chain": "বিন্দু শৃঙ্খল",
+ "measure.orphan": "রেফারেন্স হারিয়ে গেছে",
+ "measure.not_planar": "তলগুলো সমান্তরাল নয়",
+ "measure.unsupported": "এটি মাপা যায় না",
+ "cmd.ann.measure_distance": "দূরত্ব মাপুন",
+ "cmd.ann.measure_gap": "তলগুলোর মধ্যে ফাঁক মাপুন",
+ "cmd.ann.measure_angle": "কোণ মাপুন",
+ "cmd.ann.measure_area": "ক্ষেত্রফল মাপুন",
+ "hint.measure.first": "পরিমাপ: দেয়ালের তলে (বা বিন্দুতে) ক্লিক করুন · Esc — প্রস্থান",
+ "hint.measure.second": "পরিমাপ: দ্বিতীয় তলে ক্লিক করুন · Esc — প্রথম বাছাই বাতিল",
+ "measure.no_face": "এখানে কোনো দেয়ালের তল নেই"
+}

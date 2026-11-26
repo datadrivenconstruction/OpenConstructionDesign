@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Сімейство",
  "type_dialog.typedial.h_function": "Функція",
  "type_dialog.typedial.h_material": "Матеріал",
+ "type_dialog.typedial.h_num": "№",
  "type_dialog.typedial.h_param": "Параметр",
  "type_dialog.typedial.h_thickness": "Товщина",
  "type_dialog.typedial.h_value": "Значення",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Площа стіни в плані",
  "type_dialog.warn.wall_vol": "Об’єм стіни",
  "type_dialog.warn.walls": "Стіни",
- "type_dialog.warn.warnings_n": "⚠ Попереджень: {n}",
- "type_dialog.typedial.h_num": "№"
+ "type_dialog.warn.warnings_n": "⚠ Попереджень: {n}"
 }

@@ -12,6 +12,7 @@
  "ai.step.s": "{n} שנ׳",
  "ai.step.min": "{m} דק׳",
  "ai.step.min_s": "{m} דק׳ {s} שנ׳",
+ "ai.step.dec": ".",
  "ai.step.details": "פרטים",
  "ai.step.copy": "העתק פרטים",
  "ai.step.group.read": "קורא את המודל",
@@ -37,6 +38,5 @@
  "ai.step.why.stale": "המודל השתנה בזמן שהצעד רץ",
  "ai.step.why.skipped": "הצעד לא רץ: התור הסתיים",
  "ai.step.why.other": "הצעד לא הסתיים",
- "ai.step.unknown": "כלי לא מוכר",
- "ai.step.dec": "."
+ "ai.step.unknown": "כלי לא מוכר"
 }

@@ -2,8 +2,8 @@
  "clash.col.x": "X",
  "clash.col.y": "Koordinate Y",
  "clash.col.z": "Z",
+ "clash.col.unit": "{name}, {unit}",
  "clash.unit.ft3": "ft³",
  "clash.exported_n": "Na-save ang report: {n} sa {m}, {path}",
- "clash.exported_f": "Na-save ang report: {n} sa {m} (filter: {filter}), {path}",
- "clash.col.unit": "{name}, {unit}"
+ "clash.exported_f": "Na-save ang report: {n} sa {m} (filter: {filter}), {path}"
 }

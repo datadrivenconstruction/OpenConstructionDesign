@@ -18,7 +18,7 @@
  "complib.ready.no": "δεν έχει γραφτεί",
  "complib.edited": "Τροποποιημένο",
  "complib.edited_tip": "Η οικογένεια του έργου διαφέρει από την ενσωματωμένη",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Τιμή",
- "complib.armed": "Στοιχείο: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Στοιχείο: {name}"
 }

@@ -64,6 +64,7 @@
  "topo.import.title": "Судалгаа импортлох",
  "topo.import.filter": "Судалгаа (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " м",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Цэгийн өндөр",
  "topo.opt.thickness": "Топосолидын зузаан",
  "topo.opt.add_to_active": "Идэвхтэй топосолидод нэмэх",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Импорт",
  "topo.import.cancel": "Болих",
  "topo.import.no_layers": "давхарга сонгоогүй",
- "topo.info.warnings": "Бүтээгдээгүй:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Бүтээгдээгүй:"
 }

@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "parandatud pärast {n} tagasilükatud katset, umbes {tokens} tokenit",
+ "ai.fam_offer": "Agent pakkus välja perekonna {name}",
+ "ai.fam_offer.open": "Ava perekonnaredaktoris",
+ "ai.fam_offer.dismiss": "Loobu",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Kontrollimine…",
+ "fe.ai.clean": "Kontroll ei leidnud midagi",
+ "fe.ai.check_values": "Kontrolli väärtustega",
+ "fe.ai.lines": "ridu {n}",
+ "fe.ai.changes": "{n} muudatust varasema versiooniga võrreldes",
+ "fe.ai.added": "lisatud: {head} {name}",
+ "fe.ai.removed": "eemaldatud: {head} {name}",
+ "fe.ai.changed": "muudetud: {head} {name}",
+ "fe.ai.reject": "Lükka tagasi"
+}

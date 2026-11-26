@@ -20,6 +20,7 @@
  "sched_import.why_ro": "للقراءة فقط",
  "sched_import.why_locked": "قيمة مقفلة",
  "sched_import.why_bad": "قيمة غير صالحة",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "تطبيق {n} تغييرًا",
  "sched_import.cancel": "إلغاء",
  "sched_import.applied": "استُوردت {n} خلية (خطوة تراجع واحدة)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "نتائج صيغ، لم تُطبَّق: {n}",
  "sched_import.no_id_rows": "صفوف بلا Id، لم تُقرأ: {n} (الصفوف {rows})",
  "sched_import.more": "… {n} أخرى",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(فارغ)",
  "sched_import.reading": "جارٍ قراءة المصنف…",
  "sched_import.resaved": "حُفظ المصنف من جديد بعد المعاينة الأولى: هذه المعاينة تُظهر المحتوى الجديد",
- "sched_import.resaved_reading": "حُفظ المصنف من جديد: لم يُطبَّق شيء، ويُقرأ من جديد لمعاينة جديدة",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "حُفظ المصنف من جديد: لم يُطبَّق شيء، ويُقرأ من جديد لمعاينة جديدة"
 }

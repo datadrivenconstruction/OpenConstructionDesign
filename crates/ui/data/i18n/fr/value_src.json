@@ -24,5 +24,21 @@
  "value_src.verified_n": "Valeurs vérifiées : {n}",
  "value_src.bulk_note": "Valeurs renseignées par l'IA, non vérifiées : {n}",
  "value_src.bulk_verify": "Marquer comme vérifiées ({n})",
- "value_src.bulk_tip": "Marque comme vérifiées toutes les valeurs de la sélection renseignées par l'IA, en une seule étape d'annulation"
+ "value_src.bulk_tip": "Marque comme vérifiées toutes les valeurs de la sélection renseignées par l'IA, en une seule étape d'annulation",
+ "origin.title": "Origine",
+ "origin.made_by": "Créé par",
+ "origin.request": "Demande",
+ "origin.at": "Appliqué",
+ "origin.recipe": "recette « {name} », partie {part}",
+ "origin.ai": "l’assistant IA ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "script {name}",
+ "origin.xlsx": "Tableur XLSX",
+ "origin.user": "une personne",
+ "origin.import": "import",
+ "origin.import_file": "import depuis {file}",
+ "origin.unknown": "absent de l’historique",
+ "origin.held": "Modifié à la main : une nouvelle exécution de la recette le laisse tel quel",
+ "origin.rebuilt": "Une nouvelle exécution de la recette le reconstruit ; modifiez-le à la main pour le conserver tel quel",
+ "origin.ai_values": "Valeurs renseignées par l’IA : {n}, non vérifiées : {open}"
 }

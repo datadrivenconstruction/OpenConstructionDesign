@@ -72,6 +72,7 @@
  "quick.cat.beam": "Арқалықтар",
  "quick.cat.ceiling": "Төбелер",
  "quick.cat.structure": "Конструкция",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {all} ішінен {n}",
  "quick.hud.type": "Түрі",
  "quick.hud.height": "Биіктік",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "“{v}” мәнін оқу мүмкін емес",
  "quick.menu.repeat": "Қайталау: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Соңғылар",
  "quick.bar.repeat_tip": "{cmd} · Enter қайталайды",
  "quick.repeat.none": "Қайталауға әлі ештеңе жоқ",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Артқа",
  "quick.tips.next": "Келесі",
  "quick.tips.finish": "Дайын",
- "quick.tips.never": "Қайта көрсетпеу",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Қайта көрсетпеу"
 }

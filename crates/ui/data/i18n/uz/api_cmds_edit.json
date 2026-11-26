@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Elementlarni birlashtirish, ajratish yoki geometriya ulanishini almashtirish",
  "api.cmd.place_footings": "Qavatdagi har bir ustun ostiga poydevor joylashtirish",
  "api.cmd.create_terrain": "Geodezik nuqtalar yoki qiya tekislik asosida relyef yaratish",
- "api.cmd.script_recipes": "Erkin konstruksiyalarning skript bloklari va retseptlarini o'qish"
+ "api.cmd.set_material": "Materialning 3D da ko'rinishini sozlash",
+ "api.cmd.script_recipes": "Erkin konstruksiyalarning skript bloklari va retseptlarini o'qish",
+ "api.cmd.generate_block": "Umumiy uchastka qoidalari bilan uchastkalardagi binolar kvartalini rejalash",
+ "api.cmd.measure_save": "O'lchovni ko'rinishga saqlash",
+ "api.cmd.edit_mass": "Massaga tarix qadamini qo'shish: cho'zish, qoralama, qobiq, yumaloqlash, faska, siljitish yoki bo'lish",
+ "api.cmd.mass_to_family": "Massa xronologiyasidan komponentlar oilasini yaratish"
 }

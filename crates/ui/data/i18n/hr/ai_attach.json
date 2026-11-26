@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Praćenje zidova iz crteža",
  "api.cmd.attachments_list": "Datoteke priložene razgovoru i potvrđeni zahtjevi projekta",
  "api.cmd.attachments_read": "Pročitaj raspon stranica, retke tablice ili sliku priložene datoteke",
- "api.cmd.underlay_trace": "Nacrt zidova praćen iz priloženog crteža"
+ "api.cmd.underlay_trace": "Nacrt zidova praćen iz priloženog crteža",
+ "ai.tool.plan_from_image": "Čitanje tlocrta sa slike",
+ "api.cmd.plan_from_image": "Nacrt zidova, vrata, prozora i prostorija pročitanih iz priložene slike tlocrta ili stranice PDF-a"
 }

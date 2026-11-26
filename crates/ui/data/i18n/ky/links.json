@@ -12,6 +12,7 @@
  "links.loaded": "жүктөлдү",
  "links.not_loaded": "жүктөлгөн эмес",
  "links.loading": "жүктөлүүдө…",
+ "links.loading_all": "Шилтемелер жүктөлүүдө",
  "links.levels": "деңгээлдер",
  "links.elements": "элементтер",
  "links.offset": "Жылыш:",

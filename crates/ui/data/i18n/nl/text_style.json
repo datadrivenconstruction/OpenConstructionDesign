@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Vulling",
  "text_style.lbl.detail": "Toelichting",
  "text_style.lbl.width": "Breedte",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Voer een getal in van {min} tot {max}",
  "text_style.tip.next_ring": "Dit contour sluiten en in hetzelfde gebied een nieuw contour beginnen",
  "text_style.tip.edit_text": "De tekst ter plaatse bewerken",
- "text_style.tip.add_leader": "Een leiderlijn aan deze tekst toevoegen",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Een leiderlijn aan deze tekst toevoegen"
 }

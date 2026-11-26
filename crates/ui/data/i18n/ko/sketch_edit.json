@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "스케치 취소됨",
  "sketch_edit.sk_applied": "스케치 적용됨",
  "sketch_edit.sk_tail": "꼬리",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "바닥",
  "sketch_edit.sk_host_roof": "지붕",
  "sketch_edit.sk_host_ceiling": "천장",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "레벨 2",
  "sketch_edit.seed_floor_200": "바닥 200",
  "sketch_edit.seed_section1": "단면 1",
- "sketch_edit.seed_section2": "단면 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "단면 2"
 }

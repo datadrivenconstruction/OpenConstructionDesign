@@ -45,5 +45,7 @@
  "phui.kind.comp": "Bileşenler",
  "phui.kind.shaft": "Şaftlar",
  "phui.kind.ramp": "Rampalar",
- "phui.kind.member": "Elemanlar"
+ "phui.kind.member": "Elemanlar",
+ "phui.dates": "Tarihler (başlangıç, bitiş)",
+ "phui.show_calendar": "Takvime göre göster"
 }

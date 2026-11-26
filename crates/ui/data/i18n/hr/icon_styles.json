@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "U boji",
+ "cmd.ui.icons.color": "Ikone u boji",
+ "cmd.ui.icons.color.desc": "Stil crtanja ikona",
+ "theme.icons.hierarchical": "Hijerarhijski",
+ "cmd.ui.icons.hierarchical": "Hijerarhijske ikone",
+ "cmd.ui.icons.hierarchical.desc": "Stil crtanja ikona",
+ "theme.icons.isometric": "Izometrijski",
+ "cmd.ui.icons.isometric": "Izometrijske ikone",
+ "cmd.ui.icons.isometric.desc": "Stil crtanja ikona",
+ "theme.icons.monoline": "Jednolinijski",
+ "cmd.ui.icons.monoline": "Jednolinijske ikone",
+ "cmd.ui.icons.monoline.desc": "Stil crtanja ikona"
+}

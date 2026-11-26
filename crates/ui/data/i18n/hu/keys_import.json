@@ -5,6 +5,7 @@
  "keys_import.new_head": "Új billentyűk",
  "keys_import.changed_head": "Saját billentyűit cseréli",
  "keys_import.conflicts_head": "Ütközések az importálás után",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "akkord",
  "keys_import.kind_seq": "két betű",
  "keys_import.unbound": "nincs",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Nincs visszavonva: a billentyűket az importálás után szerkesztették. Állítsa vissza őket egyenként a Billentyűk ablakban.",
  "keys_import.undo_none": "Nincs visszavonható: ebben a munkamenetben nem volt billentyűimport.",
  "keys_import.imported": "Billentyűk importálva",
- "keys_import.imported_conflicts": "Billentyűk importálva; ütközések: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Billentyűk importálva; ütközések: {n}"
 }

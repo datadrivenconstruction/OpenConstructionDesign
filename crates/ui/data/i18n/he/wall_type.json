@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "שכפל סוג",
  "wall_type.wt.duplicate_tip": "שומר את השכבות האלה כסוג חדש; הסוג שפתחת נשאר כמות שהוא.",
  "wall_type.wt.switch_dirty": "לחץ על אישור או בטל לפני פתיחת סוג אחר",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "תפקיד",
  "wall_type.wt.h_material": "חומר",
  "wall_type.wt.h_thickness": "עובי",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "בחר קירות במבט, ואז החלף את הסוג שלהם.",
  "wall_type.swap.already": "לקירות שנבחרו כבר יש את הסוג הזה",
  "wall_type.swap.apply": "החלף",
- "wall_type.swap.done": "סוג הקיר הוחלף: {n} מתוך {m} קירות",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "סוג הקיר הוחלף: {n} מתוך {m} קירות"
 }

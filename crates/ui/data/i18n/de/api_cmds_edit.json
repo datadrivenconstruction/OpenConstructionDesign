@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Geometrien verbinden, trennen oder Verbindungen umschalten",
  "api.cmd.place_footings": "Unter jeder Stütze eines Geschosses ein Fundament setzen",
  "api.cmd.create_terrain": "Gelände aus Vermessungspunkten oder einer geneigten Ebene erstellen",
- "api.cmd.script_recipes": "Bausteine und Rezepte freier Konstruktionen aus Skripten lesen"
+ "api.cmd.set_material": "Darstellung eines Materials in 3D festlegen",
+ "api.cmd.script_recipes": "Bausteine und Rezepte freier Konstruktionen aus Skripten lesen",
+ "api.cmd.generate_block": "Gebäudeblock auf Grundstücken mit gemeinsamen Grundstücksregeln planen",
+ "api.cmd.measure_save": "Messung in einer Ansicht speichern",
+ "api.cmd.edit_mass": "Einer Masse einen Verlaufsschritt hinzufügen: Ziehen, Entwurf, Schale, Verrundung, Fase, Versatz oder Teilen",
+ "api.cmd.mass_to_family": "Bauteilfamilie aus dem Verlauf einer Masse erstellen"
 }

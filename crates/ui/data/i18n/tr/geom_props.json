@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<değişken>",
  "geom_props.tip": "Enter değeri seçili {n} öğenin tümüne uygular, tek geri alma adımı",
  "geom_props.roof_slope": "Eğim",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "İçe aktarılmış öğeler",
  "geom_props.kind.mass": "Kütleler",
  "geom_props.kind.solid": "Katı cisimler",
- "geom_props.kind.toposolid": "Arazi",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Arazi"
 }

@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Quadrantenpunkt",
+ "snap.extension": "Verlängerung",
+ "snap.parallel": "Parallel zur Wand",
+ "snap.tracking_x": "X eines erfassten Punkts",
+ "snap.tracking_y": "Y eines erfassten Punkts",
+ "snap.tracking_cross": "Hilfslinienkreuzung",
+ "snap.equal_step": "Gleicher Schritt"
+}

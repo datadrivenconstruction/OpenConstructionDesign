@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "১টি টুল",
  "ai.stream.tools_many": "{n}টি টুল",
  "ai.stream.secs": "{n} সে.",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "এখনও মডেল পরিষেবার অপেক্ষা",
  "ai.stream.stop": "থামান",
  "ai.stream.cancelled": "থামানো হয়েছে",
- "ai.stream.incomplete": "ড্রাফট অসম্পূর্ণ। মডেলে কিছু প্রয়োগ হয়নি।",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "ড্রাফট অসম্পূর্ণ। মডেলে কিছু প্রয়োগ হয়নি।"
 }

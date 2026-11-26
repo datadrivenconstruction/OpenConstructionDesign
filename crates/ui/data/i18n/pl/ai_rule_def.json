@@ -1,6 +1,7 @@
 {
  "ai.check.more": "Kolejne {0} znalezisk tej reguły nie są wymienione",
  "ai.check.integrity": "Uszkodzone dane w {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: góra nie jest powyżej podstawy",
  "ai.check.level_host_differs": "Komponent jest na innym poziomie niż jego element nadrzędny ({0})",
  "ai.check.clash": "{0} koliduje z {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Reguła {1}: elementów {3}, dozwolone {4}",
  "ai.check.rule.clearance": "Reguła {1}: odległość {3} m, wymagane co najmniej {4} m",
  "ai.check.rule.unsupported": "Nie można sprawdzić reguły {1}: ta kategoria nie jest obsługiwana",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "Parametr {0}: „{1}” nie jest grupą kosztów DIN 276 (trzy cyfry, od 100 do 899) w {2} elementach"
 }

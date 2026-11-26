@@ -18,6 +18,7 @@
  "mcp.set.error": "Serveur non démarré : {error}",
  "mcp.set.new": "Nouveau jeton",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Chaque lot est vérifié d'abord et forme une seule étape d'annulation. Seuls les programmes de cet ordinateur peuvent se connecter.",
  "mcp.set.show": "Afficher",
  "mcp.set.state_failed": "Arrêté",
@@ -30,6 +31,5 @@
  "mcp.set.status": "État",
  "mcp.set.access": "Accès",
  "mcp.set.config": "Configuration",
- "mcp.set.policy": "Application",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Application"
 }

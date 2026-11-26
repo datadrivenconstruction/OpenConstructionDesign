@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ التحديد ({n})",
  "ai.ctx.add_tip": "أعده إلى ما يراه الذكاء",
  "ai.ctx.frame_tip": "أظهر هذه العناصر",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "الدرابزينات",
  "ai.ctx.cat.roof": "الأسطح",
  "ai.ctx.cat.stair": "السلالم",
- "ai.ctx.cat.other": "أخرى",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "أخرى"
 }

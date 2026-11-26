@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Klimaskærm",
+ "gen.group.acoustic": "Lydisolering",
+ "gen.rule.fire.insulation_class.title": "Brandklasse for klimaskærmens isolering",
+ "gen.rule.fire.insulation_class.desc": "Dårligste brandklasse, isoleringen i ydervægge og tage må have; opbygninger med dårligere isolering vælges ikke.",
+ "gen.rule.envelope.u_wall.title": "U-værdi, ydervæg",
+ "gen.rule.envelope.u_wall.desc": "Højeste varmetransmission for en ydervæg; vægisoleringen dimensioneres, så den holder sig under det, så et koldere klima giver en tykkere væg.",
+ "gen.rule.envelope.u_roof.title": "U-værdi, tag",
+ "gen.rule.envelope.u_roof.desc": "Højeste varmetransmission for et tag; tagisoleringen dimensioneres, så den holder sig under det.",
+ "gen.rule.envelope.u_ground.title": "U-værdi, terrændæk",
+ "gen.rule.envelope.u_ground.desc": "Højeste varmetransmission for terrændækket; isoleringen under afretningslaget dimensioneres, så den holder sig under det.",
+ "gen.rule.acoustic.rw_party.title": "Lydisolering, lejlighedsskel",
+ "gen.rule.acoustic.rw_party.desc": "Mindste lydreduktionstal Rw for en væg mellem boliger eller ved siden af en fælles korridor; murværkskernen dimensioneres efter masseloven for at nå det.",
+ "gen.rule.acoustic.rw_floor.title": "Lydisolering, etageadskillelse",
+ "gen.rule.acoustic.rw_floor.desc": "Mindste lydreduktionstal Rw for en etageadskillelse; betondækket dimensioneres efter masseloven for at nå det.",
+ "gen.why.e.asm_wall": "ydervægge {t} m tykke med {ins} m isolering: U {u} W/m²K, højst {lim}",
+ "gen.why.e.asm_roof": "tag {t} m tykt med {ins} m isolering: U {u} W/m²K, højst {lim}",
+ "gen.why.e.asm_ground": "terrændæk {t} m tykt med {ins} m isolering: U {u} W/m²K, højst {lim}",
+ "gen.why.e.asm_party": "lejlighedsskel {t} m tykke, {m} kg/m²: Rw {rw} dB efter masseloven, mindst {lim}",
+ "gen.why.e.asm_floor": "etageadskillelser {t} m tykke, {m} kg/m²: Rw {rw} dB efter masseloven, mindst {lim}"
+}

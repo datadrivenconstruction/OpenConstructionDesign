@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Circuiti",
+ "cmd.mep.circuits.desc": "Apre l'editor dei circuiti: circuiti di ogni quadro, relativi carichi, sezioni dei cavi e verifiche delle regole.",
  "ce.title": "Circuiti",
  "ce.open": "Circuiti",
  "ce.empty": "Nessun circuito",

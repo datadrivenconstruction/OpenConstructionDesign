@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "Die Arbeitsmappe konnte nicht gelesen werden, ihre eigenen Spalten gingen verloren; in einer Tabellenkalkulation schließen und erneut versuchen",
  "xl.msg.type_x_layer_x": "Typ {} Schicht {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} existiert nicht mehr, die Zellen der eigenen Spalten wurden verworfen",
- "xl.msg.delsafe_type_param_on_elements": "Parameter '{}' ist ein Typparameter; bearbeiten Sie ihn im Typen-Blatt, nicht übernommen"
+ "xl.msg.delsafe_type_param_on_elements": "Parameter '{}' ist ein Typparameter; bearbeiten Sie ihn im Typen-Blatt, nicht übernommen",
+ "xl.msg.tag_x_is_removed_with_x_x": "Kennzeichnung {} wird mit {} {} entfernt",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "Bemaßung {} verliert {} {} und behält ihre letzte Form",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "Beschriftungen gelöschter Elemente lassen sich nicht prüfen: {}"
 }

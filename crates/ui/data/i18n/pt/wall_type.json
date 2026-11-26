@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Duplicar tipo",
  "wall_type.wt.duplicate_tip": "Guarda estas camadas como um novo tipo; o tipo aberto mantém-se como está.",
  "wall_type.wt.switch_dirty": "Prima OK ou Cancelar antes de abrir outro tipo",
+ "wall_type.wt.h_num": "Nº",
  "wall_type.wt.h_function": "Função",
  "wall_type.wt.h_material": "Material",
  "wall_type.wt.h_thickness": "Espessura",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Selecione paredes na vista e depois troque o seu tipo.",
  "wall_type.swap.already": "As paredes selecionadas já têm este tipo",
  "wall_type.swap.apply": "Trocar",
- "wall_type.swap.done": "Tipo de parede trocado: {n} de {m} paredes",
- "wall_type.wt.h_num": "Nº"
+ "wall_type.swap.done": "Tipo de parede trocado: {n} de {m} paredes"
 }

@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n} қабылданбаған әрекеттен кейін түзетілді, шамамен {tokens} токен",
+ "ai.fam_offer": "Агент {name} отбасын ұсынды",
+ "ai.fam_offer.open": "Отбасы редакторында ашу",
+ "ai.fam_offer.dismiss": "Жабу",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Тексерілуде…",
+ "fe.ai.clean": "Тексеру ештеңе таппады",
+ "fe.ai.check_values": "Мәндермен тексеру",
+ "fe.ai.lines": "жолдар {n}",
+ "fe.ai.changes": "Алдыңғы нұсқамен салыстырғанда {n} өзгеріс",
+ "fe.ai.added": "қосылды: {head} {name}",
+ "fe.ai.removed": "жойылды: {head} {name}",
+ "fe.ai.changed": "өзгертілді: {head} {name}",
+ "fe.ai.reject": "Қабылдамау"
+}

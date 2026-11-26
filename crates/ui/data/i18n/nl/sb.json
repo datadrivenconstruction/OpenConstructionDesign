@@ -41,5 +41,7 @@
  "sb.save.fresh": "Geen wijzigingen",
  "sb.save.save": "Opslaan",
  "sb.save.ifc": "IFC-kopie opslaan",
- "sb.save.autosave": "Automatisch opslaan"
+ "sb.save.autosave": "Automatisch opslaan",
+ "sb.more.title": "Meer",
+ "sb.more.desc": "Items van de statusbalk die bij deze breedte niet passen."
 }

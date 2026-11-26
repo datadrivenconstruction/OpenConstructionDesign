@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "{w} genişliğindeki açıklık, {len} uzunluğundaki duvardan geniş",
+ "ix.fix.opening_width": "Genişlik {w} mm",
+ "ix.fix.wall_extend": "Duvarı {len} mm'ye uzat"
+}

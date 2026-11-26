@@ -11,6 +11,7 @@
  "ai.step.s": "{n} วินาที",
  "ai.step.min": "{m} นาที",
  "ai.step.min_s": "{m} นาที {s} วินาที",
+ "ai.step.dec": ".",
  "ai.step.details": "รายละเอียด",
  "ai.step.copy": "คัดลอกรายละเอียด",
  "ai.step.group.read": "อ่านโมเดล",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "โมเดลเปลี่ยนระหว่างที่ขั้นตอนทำงาน",
  "ai.step.why.skipped": "ขั้นตอนไม่ได้ทำงาน: รอบจบแล้ว",
  "ai.step.why.other": "ขั้นตอนยังไม่เสร็จ",
- "ai.step.unknown": "เครื่องมือที่ไม่รู้จัก",
- "ai.step.dec": "."
+ "ai.step.unknown": "เครื่องมือที่ไม่รู้จัก"
 }

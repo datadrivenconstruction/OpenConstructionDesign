@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Duplică tipul",
  "wall_type.wt.duplicate_tip": "Salvează aceste straturi ca tip nou; tipul deschis rămâne neschimbat.",
  "wall_type.wt.switch_dirty": "Apasă OK sau Anulează înainte de a deschide alt tip",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funcție",
  "wall_type.wt.h_material": "Material",
  "wall_type.wt.h_thickness": "Grosime",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Selectează pereții din vedere, apoi schimbă-le tipul.",
  "wall_type.swap.already": "Pereții selectați au deja acest tip",
  "wall_type.swap.apply": "Schimbă",
- "wall_type.swap.done": "Tip de perete schimbat: {n} din {m} pereți",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Tip de perete schimbat: {n} din {m} pereți"
 }

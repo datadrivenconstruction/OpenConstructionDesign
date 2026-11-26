@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" nu poate fi modificat: {why}",
  "query.err.op_no_field": "operator fără câmp",
  "query.err.positive": "{key}: valoarea trebuie să fie mai mare decât zero",
+ "query.err.raw": "{text}",
  "query.err.text_field": "câmpul \"{key}\" este text, o formulă nu se aplică",
  "query.err.unclosed_paren": "lipsește paranteza de închidere",
  "query.err.unclosed_quote": "lipsește ghilimeaua de închidere",
@@ -27,6 +28,5 @@
  "query.why.curtain": "fațadele cortină se modifică în proprietățile lor",
  "query.why.opening_type": "tipul unui gol urmează dimensiunea sa: \"-> width=… height=…\"",
  "query.why.slab_thickness": "grosimea planșeului este dată de tip: \"-> type=…\"",
- "query.why.wall_thickness": "grosimea peretelui este dată de tip: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "grosimea peretelui este dată de tip: \"-> type=…\""
 }

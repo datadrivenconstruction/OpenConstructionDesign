@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "Kliknite element za odabir. Ctrl dodaje, Shift uklanja.",
- "sel_chip.opt.units": "Jedinice",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "Jedinice"
 }

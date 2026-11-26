@@ -11,6 +11,7 @@
  "ai.step.s": "{n} सेकंड",
  "ai.step.min": "{m} मिनट",
  "ai.step.min_s": "{m} मिनट {s} सेकंड",
+ "ai.step.dec": ".",
  "ai.step.details": "विवरण",
  "ai.step.copy": "विवरण कॉपी करें",
  "ai.step.group.read": "मॉडल पढ़ता है",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "चरण चलते समय मॉडल बदल गया",
  "ai.step.why.skipped": "चरण नहीं चला: बातचीत समाप्त हो गई",
  "ai.step.why.other": "चरण पूरा नहीं हुआ",
- "ai.step.unknown": "अज्ञात टूल",
- "ai.step.dec": "."
+ "ai.step.unknown": "अज्ञात टूल"
 }

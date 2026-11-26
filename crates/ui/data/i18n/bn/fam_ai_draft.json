@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n}টি প্রত্যাখ্যাত চেষ্টার পর ঠিক করা হয়েছে, প্রায় {tokens} টোকেন",
+ "ai.fam_offer": "একটি এজেন্ট ফ্যামিলি {name} প্রস্তাব করেছে",
+ "ai.fam_offer.open": "ফ্যামিলি এডিটরে খুলুন",
+ "ai.fam_offer.dismiss": "বাতিল করুন",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "পরীক্ষা হচ্ছে…",
+ "fe.ai.clean": "পরীক্ষায় কিছু পাওয়া যায়নি",
+ "fe.ai.check_values": "মানসহ পরীক্ষা করুন",
+ "fe.ai.lines": "লাইন {n}",
+ "fe.ai.changes": "আগের সংস্করণের তুলনায় {n}টি পরিবর্তন",
+ "fe.ai.added": "যোগ করা হয়েছে: {head} {name}",
+ "fe.ai.removed": "সরানো হয়েছে: {head} {name}",
+ "fe.ai.changed": "পরিবর্তিত: {head} {name}",
+ "fe.ai.reject": "প্রত্যাখ্যান"
+}

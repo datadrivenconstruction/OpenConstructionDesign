@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "ERP 페이지 {url}에서 최신 편집기를 다운로드하세요",
  "erp.err.unsupported.admin": "ERP 관리자에게 최신 편집기를 요청하세요",
  "erp.err.throttled_in": "시도 횟수가 너무 많습니다. {s}초 후에 다시 시도하세요",
+ "erp.err.throttled_ready": "대기 시간이 끝났습니다. 다시 시도할 수 있습니다",
  "erp.err.imported": "ERP의 리비전 {n}은 가져온 모델이라 편집기에서 아직 열거나 그 위에 게시할 수 없습니다",
  "erp.action.download": "ERP에서 편집기 다운로드 페이지 열기",
  "erp.action.new_link": "ERP 페이지에서 새 링크 받기",

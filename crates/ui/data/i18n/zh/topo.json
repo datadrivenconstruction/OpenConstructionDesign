@@ -64,6 +64,7 @@
  "topo.import.title": "导入测量数据",
  "topo.import.filter": "测量数据 (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "点标高",
  "topo.opt.thickness": "地形厚度",
  "topo.opt.add_to_active": "添加到当前地形",
@@ -121,6 +122,5 @@
  "topo.import.ok": "导入",
  "topo.import.cancel": "取消",
  "topo.import.no_layers": "未选择图层",
- "topo.info.warnings": "未生成：",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "未生成："
 }

@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Đọc văn bản định nghĩa của một họ đối tượng trong dự án",
+ "api.cmd.family_validate": "Kiểm tra văn bản định nghĩa họ đối tượng",
+ "api.cmd.family_reference": "Đọc tài liệu tham chiếu về văn bản định nghĩa họ đối tượng",
+ "api.cmd.family_draft": "Đề xuất định nghĩa họ đối tượng dưới dạng bản nháp trong trình chỉnh sửa họ đối tượng"
+}

@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Painel de piso CLT",
+ "fam.name.glulam_beam": "Viga de lamelado-colado",
+ "fam.name.glulam_column": "Pilar de lamelado-colado",
+ "gen.group.timber": "Estrutura de madeira",
+ "gen.rule.timber.beam_span_max.desc": "Maior vão de uma viga de lamelado-colado entre dois pilares.",
+ "gen.rule.timber.beam_span_max.title": "Limite do vão da viga",
+ "gen.rule.timber.panel_w.desc": "Maior largura de painel de piso em madeira lamelada cruzada; uma junta entre cada.",
+ "gen.rule.timber.panel_w.title": "Largura do painel CLT",
+ "gen.rule.timber.span_depth.desc": "Vão sobre altura de uma viga de lamelado-colado; escolhe a secção.",
+ "gen.rule.timber.span_depth.title": "Vão/altura da viga"
+}

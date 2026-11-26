@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Wände aus einer Zeichnung nachzeichnen",
  "api.cmd.attachments_list": "Dem Chat angehängte Dateien und bestätigte Projektanforderungen",
  "api.cmd.attachments_read": "Seitenbereich, Tabellenzeilen oder das Bild einer angehängten Datei lesen",
- "api.cmd.underlay_trace": "Aus einer angehängten Zeichnung entworfene Wände nachzeichnen"
+ "api.cmd.underlay_trace": "Aus einer angehängten Zeichnung entworfene Wände nachzeichnen",
+ "ai.tool.plan_from_image": "Plan wird aus einem Bild gelesen",
+ "api.cmd.plan_from_image": "Wände, Türen, Fenster und Räume aus einem angehängten Planbild oder einer PDF-Seite als Entwurf erstellen"
 }

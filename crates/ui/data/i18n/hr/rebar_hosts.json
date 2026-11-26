@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Domaćini: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Stup",
  "rebar_hosts.kind.beam": "Greda",
  "rebar_hosts.kind.wall": "Zid",
@@ -41,6 +42,5 @@
  "rebar_hosts.why.area_linear": "Mreža ide u zidove, ploče i temelje, a ne u stupove ili grede.",
  "rebar_hosts.why.bars_plate": "Uzdužne šipke i spone idu u stupove i grede, a ne u zidove, ploče ili temelje.",
  "rebar_hosts.why.no_common_face": "Odabrani domaćini nemaju zajedničku plohu zaštitnog sloja. Odaberite domaćine jedne vrste.",
- "rebar_hosts.why.no_type": "Odaberite tip šipke.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Odaberite tip šipke."
 }

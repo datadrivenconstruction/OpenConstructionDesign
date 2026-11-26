@@ -18,6 +18,7 @@
  "mcp.set.error": "Сервер эхлээгүй: {error}",
  "mcp.set.new": "Шинэ токен",
  "mcp.set.port": "Порт",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Багц бүрийг эхлээд шалгана ба нэг буцаах алхам. Зөвхөн энэ компьютер дээрх програмууд холбогдож чадна.",
  "mcp.set.show": "Харуулах",
  "mcp.set.state_failed": "Ажиллахгүй байна",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Төлөв",
  "mcp.set.access": "Хандалт",
  "mcp.set.config": "Тохиргоо",
- "mcp.set.policy": "Хэрэгжүүлэлт",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Хэрэгжүүлэлт"
 }

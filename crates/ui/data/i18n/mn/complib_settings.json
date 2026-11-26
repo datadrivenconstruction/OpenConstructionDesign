@@ -48,5 +48,13 @@
  "settings.lib_open": "Бүрэлдэхүүний сан",
  "settings.lib_open_desc": "Суулгагдсан, төсөл дэх болон өөрийн гэр бүлүүдийг үзэх",
  "settings.lib_dir": "Миний сангийн хавтас",
- "settings.lib_dir_desc": "Энд байрлуулсан гэр бүлийн файлууд (.ddcf) Миний сан дор харагдана. DDC_COMPONENTS_DIR үүнийг зөөнө."
+ "settings.lib_dir_desc": "Энд байрлуулсан гэр бүлийн файлууд (.ddcf) Миний сан дор харагдана. DDC_COMPONENTS_DIR үүнийг зөөнө.",
+ "complib.fam.sprinkler_head": "Спринклерийн хошуу",
+ "complib.fam.fire_pump": "Гал унтраах насос",
+ "complib.fam.pressurisation_fan": "Даралт үүсгэх сэнс",
+ "complib.fam.lift_car": "Лифтийн кабин",
+ "complib.fam.lift_landing_door": "Лифтийн давхрын хаалга",
+ "complib.fam.lift_pit": "Лифтийн нүх",
+ "complib.fam.lift_overrun": "Лифтийн дээд зай",
+ "complib.fam.lift_machine": "Лифтийн машин"
 }

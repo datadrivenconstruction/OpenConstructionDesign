@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Stromkreise",
+ "cmd.mep.circuits.desc": "Öffnet den Stromkreis-Editor: Stromkreise aller Verteiler, ihre Lasten, Kabelquerschnitte und Regelprüfungen.",
  "ce.title": "Stromkreise",
  "ce.open": "Stromkreise",
  "ce.empty": "Noch keine Stromkreise",

@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "پوسته ساختمان",
+ "gen.group.acoustic": "عایق صوتی",
+ "gen.rule.fire.insulation_class.title": "رده آتش عایق پوسته",
+ "gen.rule.fire.insulation_class.desc": "بدترین رده واکنش در برابر آتش که عایق دیوارهای خارجی و بام‌ها می‌تواند داشته باشد؛ لایه‌بندی‌هایی با عایق بدتر انتخاب نمی‌شوند.",
+ "gen.rule.envelope.u_wall.title": "مقدار U دیوار خارجی",
+ "gen.rule.envelope.u_wall.desc": "بیشترین ضریب انتقال حرارت دیوار خارجی؛ عایق دیوار برای ماندن زیر آن اندازه‌گیری می‌شود، پس اقلیم سردتر دیوار ضخیم‌تری می‌گیرد.",
+ "gen.rule.envelope.u_roof.title": "مقدار U بام",
+ "gen.rule.envelope.u_roof.desc": "بیشترین ضریب انتقال حرارت بام؛ عایق بام برای ماندن زیر آن اندازه‌گیری می‌شود.",
+ "gen.rule.envelope.u_ground.title": "مقدار U دال روی زمین",
+ "gen.rule.envelope.u_ground.desc": "بیشترین ضریب انتقال حرارت دال کف روی زمین؛ عایق زیر ملات برای ماندن زیر آن اندازه‌گیری می‌شود.",
+ "gen.rule.acoustic.rw_party.title": "عایق صوتی دیوار مشترک",
+ "gen.rule.acoustic.rw_party.desc": "کمترین شاخص کاهش صدای Rw دیوار بین واحدها یا کنار راهرو مشترک؛ هسته بنایی بر پایه قانون جرم برای رسیدن به آن اندازه‌گیری می‌شود.",
+ "gen.rule.acoustic.rw_floor.title": "عایق صوتی کف",
+ "gen.rule.acoustic.rw_floor.desc": "کمترین شاخص کاهش صدای Rw کف بین طبقه‌ها؛ دال بتنی بر پایه قانون جرم برای رسیدن به آن اندازه‌گیری می‌شود.",
+ "gen.why.e.asm_wall": "دیوارهای خارجی به ضخامت {t} m با {ins} m عایق: U برابر {u} W/m²K، حداکثر {lim}",
+ "gen.why.e.asm_roof": "بام به ضخامت {t} m با {ins} m عایق: U برابر {u} W/m²K، حداکثر {lim}",
+ "gen.why.e.asm_ground": "دال روی زمین به ضخامت {t} m با {ins} m عایق: U برابر {u} W/m²K، حداکثر {lim}",
+ "gen.why.e.asm_party": "دیوارهای مشترک به ضخامت {t} m، {m} kg/m²: Rw برابر {rw} dB بر پایه قانون جرم، دست‌کم {lim}",
+ "gen.why.e.asm_floor": "کف‌ها به ضخامت {t} m، {m} kg/m²: Rw برابر {rw} dB بر پایه قانون جرم، دست‌کم {lim}"
+}

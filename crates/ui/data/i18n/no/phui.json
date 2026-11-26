@@ -45,5 +45,7 @@
  "phui.kind.comp": "Komponenter",
  "phui.kind.shaft": "Sjakter",
  "phui.kind.ramp": "Rampe",
- "phui.kind.member": "Konstruksjonsdeler"
+ "phui.kind.member": "Konstruksjonsdeler",
+ "phui.dates": "Datoer (start, slutt)",
+ "phui.show_calendar": "Vis etter kalender"
 }

@@ -41,5 +41,7 @@
  "sb.save.fresh": "کوئی تبدیلی نہیں",
  "sb.save.save": "محفوظ کریں",
  "sb.save.ifc": "IFC کاپی محفوظ کریں",
- "sb.save.autosave": "خودکار محفوظ"
+ "sb.save.autosave": "خودکار محفوظ",
+ "sb.more.title": "مزید",
+ "sb.more.desc": "اسٹیٹس بار کے وہ آئٹمز جو اس چوڑائی میں نہیں سماتے۔"
 }

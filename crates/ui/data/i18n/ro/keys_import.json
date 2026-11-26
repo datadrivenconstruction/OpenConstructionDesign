@@ -5,6 +5,7 @@
  "keys_import.new_head": "Taste noi",
  "keys_import.changed_head": "Înlocuiește tastele tale",
  "keys_import.conflicts_head": "Conflicte după import",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "acord",
  "keys_import.kind_seq": "două litere",
  "keys_import.unbound": "niciuna",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Nu s-a anulat: tastele au fost editate după import. Resetează-le una câte una în fereastra Taste.",
  "keys_import.undo_none": "Nimic de anulat: niciun import de taste în această sesiune.",
  "keys_import.imported": "Taste importate",
- "keys_import.imported_conflicts": "Taste importate; conflicte: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Taste importate; conflicte: {n}"
 }

@@ -90,6 +90,7 @@
  "fe.cons.redundant": "redondant",
  "fe.cons.help": "Une cote liée à un paramètre de longueur pilote les plans ; un angle nécessite un paramètre d'angle",
  "fe.locks": "Verrous d'alignement",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Verrouiller",
  "fe.unlock": "Déverrouiller",
  "fe.locks.help": "Le verrou remplace l'argument du solide (par ex. rect #2) par le plan, pour que le solide le suive",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Nom de brouillon déjà utilisé",
  "fe.clash.body": "Un brouillon nommé « {name} » existe déjà. Remplacez ce brouillon par celui-ci, ou revenez en arrière et enregistrez sous un nouveau nom. Rien n'a encore été enregistré.",
  "fe.clash.rename": "Enregistrer sous un nouveau nom",
- "fe.clash.replace": "Remplacer ce brouillon",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Remplacer ce brouillon"
 }

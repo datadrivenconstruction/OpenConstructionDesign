@@ -12,6 +12,7 @@
  "links.loaded": "yuklangan",
  "links.not_loaded": "yuklanmagan",
  "links.loading": "yuklanmoqda…",
+ "links.loading_all": "Havolalar yuklanmoqda",
  "links.levels": "sathlar",
  "links.elements": "elementlar",
  "links.offset": "Siljish:",

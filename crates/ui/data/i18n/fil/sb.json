@@ -41,5 +41,7 @@
  "sb.save.fresh": "Walang pagbabago",
  "sb.save.save": "I-save",
  "sb.save.ifc": "I-save ang IFC copy",
- "sb.save.autosave": "Awtomatikong i-save"
+ "sb.save.autosave": "Awtomatikong i-save",
+ "sb.more.title": "Higit pa",
+ "sb.more.desc": "Mga item ng status bar na hindi kasya sa lapad na ito."
 }

@@ -9,6 +9,7 @@
  "ai_found.found.hide": "লুকানো",
  "ai_found.found.color": "রঙ করা",
  "ai_found.found.count": "{m}টির মধ্যে {n}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "কিছুই মেলেনি। আরও বিস্তৃত ফিল্টার চেষ্টা করুন।",
  "ai_found.found.show_btn": "দেখান",
  "ai_found.found.show_tip": "এই উপাদানগুলো নির্বাচন করুন এবং প্ল্যান ও 3D-তে এগুলোতে জুম করুন",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# টি উপাদান লুকানো",
   "other": "# টি উপাদান লুকানো"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

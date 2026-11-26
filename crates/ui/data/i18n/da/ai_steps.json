@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Detaljer",
  "ai.step.copy": "Kopiér detaljer",
  "ai.step.group.read": "Læser modellen",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Modellen ændrede sig, mens trinnet kørte",
  "ai.step.why.skipped": "Trinnet kørte ikke: turen sluttede",
  "ai.step.why.other": "Trinnet blev ikke afsluttet",
- "ai.step.unknown": "Ukendt værktøj",
- "ai.step.dec": ","
+ "ai.step.unknown": "Ukendt værktøj"
 }

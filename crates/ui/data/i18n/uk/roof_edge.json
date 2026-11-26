@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Опуклість",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Вставити точку після цієї (дуга ділиться навпіл)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Зберегти",
  "roof_edge.pe.saved": "Профіль збережено",
  "roof_edge.pe.valid": "Профіль коректний",
  "roof_edge.pe.invalid": "Профіль самоперетинається, занадто малий або має менше 3 точок",
  "roof_edge.pe.bad_number": "Координата або опуклість не є числом",
- "roof_edge.pe.no_name": "Введіть назву профілю",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Введіть назву профілю"
 }

@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "ওয়ার্কবুক পড়া যায়নি, এর নিজস্ব কলাম হারিয়ে যাবে; XLSX-এ বন্ধ করে আবার চেষ্টা করুন",
  "xl.msg.type_x_layer_x": "টাইপ {} স্তর {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} আর নেই, এর নিজস্ব কলামের সেল বাদ দেওয়া হয়েছে",
- "xl.msg.delsafe_type_param_on_elements": "প্যারামিটার '{}' একটি টাইপ প্যারামিটার; টাইপ শিটে সম্পাদনা করুন, প্রয়োগ হয়নি"
+ "xl.msg.delsafe_type_param_on_elements": "প্যারামিটার '{}' একটি টাইপ প্যারামিটার; টাইপ শিটে সম্পাদনা করুন, প্রয়োগ হয়নি",
+ "xl.msg.tag_x_is_removed_with_x_x": "ট্যাগ {} মুছে যায় {} {}-এর সাথে",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "ডাইমেনশন {} হারায় {} {} এবং শেষ আকার ধরে রাখে",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "মোছা এলিমেন্টের অ্যানোটেশন পরীক্ষা করা যায় না: {}"
 }

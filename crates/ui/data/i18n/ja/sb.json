@@ -41,5 +41,7 @@
  "sb.save.fresh": "変更なし",
  "sb.save.save": "保存",
  "sb.save.ifc": "IFC コピーを保存",
- "sb.save.autosave": "自動保存"
+ "sb.save.autosave": "自動保存",
+ "sb.more.title": "その他",
+ "sb.more.desc": "この幅に収まらないステータスバー項目。"
 }

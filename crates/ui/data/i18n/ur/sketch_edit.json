@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "اسکیچ منسوخ",
  "sketch_edit.sk_applied": "اسکیچ لاگو ہو گیا",
  "sketch_edit.sk_tail": "دم",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "سلیب",
  "sketch_edit.sk_host_roof": "چھت",
  "sketch_edit.sk_host_ceiling": "چھت",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "لیول 2",
  "sketch_edit.seed_floor_200": "فرش 200",
  "sketch_edit.seed_section1": "سیکشن 1",
- "sketch_edit.seed_section2": "سیکشن 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "سیکشن 2"
 }

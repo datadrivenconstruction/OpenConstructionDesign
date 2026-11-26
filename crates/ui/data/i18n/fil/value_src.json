@@ -24,5 +24,21 @@
  "value_src.verified_n": "Mga halagang na-verify: {n}",
  "value_src.bulk_note": "Mga halagang pinunan ng AI, hindi pa na-verify: {n}",
  "value_src.bulk_verify": "Markahang na-verify ({n})",
- "value_src.bulk_tip": "Mamarkahang na-verify ang bawat halagang pinunan ng AI sa pagpili, isang undo step"
+ "value_src.bulk_tip": "Mamarkahang na-verify ang bawat halagang pinunan ng AI sa pagpili, isang undo step",
+ "origin.title": "Pinagmulan",
+ "origin.made_by": "Ginawa ni/ng",
+ "origin.request": "Kahilingan",
+ "origin.at": "Inilapat",
+ "origin.recipe": "recipe na “{name}”, bahagi {part}",
+ "origin.ai": "ang AI assistant ({model})",
+ "origin.agent": "agent na {name}",
+ "origin.script": "script na {name}",
+ "origin.xlsx": "XLSX spreadsheet",
+ "origin.user": "isang tao",
+ "origin.import": "import",
+ "origin.import_file": "import mula sa {file}",
+ "origin.unknown": "wala sa history",
+ "origin.held": "Na-edit nang mano-mano: iniiwan ito ng muling pagpapatakbo ng recipe",
+ "origin.rebuilt": "Binubuo itong muli ng muling pagpapatakbo ng recipe; i-edit ito nang mano-mano para panatilihin",
+ "origin.ai_values": "Mga value na pinunan ng AI: {n}, hindi pa na-verify: {open}"
 }

@@ -18,6 +18,7 @@
  "mcp.set.error": "Servern startades inte: {error}",
  "mcp.set.new": "Ny token",
  "mcp.set.port": "Portnummer",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Varje batch kontrolleras först och är ett ångra-steg. Endast program på den här datorn kan ansluta.",
  "mcp.set.show": "Visa",
  "mcp.set.state_failed": "Körs inte",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Läge",
  "mcp.set.access": "Åtkomst",
  "mcp.set.config": "Konfiguration",
- "mcp.set.policy": "Tillämpning",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Tillämpning"
 }

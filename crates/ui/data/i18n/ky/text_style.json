@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Толтуруу",
  "text_style.lbl.detail": "Деталь",
  "text_style.lbl.width": "Туурасы",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "{min} менен {max} ортосундагы санды киргизиңиз",
  "text_style.tip.next_ring": "Бул контурду жабып, ошол эле аймакта башкасын баштоо",
  "text_style.tip.edit_text": "Текстти ордунда түзөтүү",
- "text_style.tip.add_leader": "Бул текстке көрсөткүч сызыгын кошуу",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Бул текстке көрсөткүч сызыгын кошуу"
 }

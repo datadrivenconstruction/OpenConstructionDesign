@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "प्रकार की प्रति बनाएँ",
  "wall_type.wt.duplicate_tip": "इन परतों को नए प्रकार के रूप में सहेजता है; जो प्रकार खोला था वह जैसा है वैसा रहता है।",
  "wall_type.wt.switch_dirty": "कोई अन्य प्रकार खोलने से पहले ठीक है या रद्द करें दबाएँ",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "कार्य",
  "wall_type.wt.h_material": "सामग्री",
  "wall_type.wt.h_thickness": "मोटाई",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "दृश्य में दीवारें चुनें, फिर उनका प्रकार बदलें।",
  "wall_type.swap.already": "चुनी गई दीवारों का यही प्रकार पहले से है",
  "wall_type.swap.apply": "बदलें",
- "wall_type.swap.done": "दीवार प्रकार बदला गया: {n} में से {m} दीवारें",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "दीवार प्रकार बदला गया: {n} में से {m} दीवारें"
 }

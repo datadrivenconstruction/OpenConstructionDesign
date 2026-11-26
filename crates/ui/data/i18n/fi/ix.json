@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Neljännespiste",
+ "snap.extension": "Jatke",
+ "snap.parallel": "Yhdensuuntainen seinän kanssa",
+ "snap.tracking_x": "Kiinnitetyn pisteen X",
+ "snap.tracking_y": "Kiinnitetyn pisteen Y",
+ "snap.tracking_cross": "Apuviivojen risteys",
+ "snap.equal_step": "Tasaväli"
+}

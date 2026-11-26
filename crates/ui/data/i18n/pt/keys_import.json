@@ -5,6 +5,7 @@
  "keys_import.new_head": "Novas teclas",
  "keys_import.changed_head": "Substitui suas próprias teclas",
  "keys_import.conflicts_head": "Conflitos após a importação",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "acorde",
  "keys_import.kind_seq": "duas letras",
  "keys_import.unbound": "nenhuma",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Não desfeito: as teclas foram editadas após a importação. Redefina-as uma a uma na janela Teclas.",
  "keys_import.undo_none": "Nada a desfazer: nenhuma importação de teclas nesta sessão.",
  "keys_import.imported": "Teclas importadas",
- "keys_import.imported_conflicts": "Teclas importadas; conflitos: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Teclas importadas; conflitos: {n}"
 }

@@ -72,6 +72,7 @@
  "quick.cat.beam": "Bjælker",
  "quick.cat.ceiling": "Lofter",
  "quick.cat.structure": "Konstruktion",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} af {all}",
  "quick.hud.type": "Type",
  "quick.hud.height": "Højde",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Kan ikke læse værdien “{v}”",
  "quick.menu.repeat": "Gentag: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Seneste",
  "quick.bar.repeat_tip": "{cmd} · Enter gentager den",
  "quick.repeat.none": "Intet at gentage endnu",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Tilbage",
  "quick.tips.next": "Næste",
  "quick.tips.finish": "Færdig",
- "quick.tips.never": "Vis ikke igen",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Vis ikke igen"
 }

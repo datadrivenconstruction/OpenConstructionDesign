@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "プロジェクトファミリの定義テキストを読み取る",
+ "api.cmd.family_validate": "ファミリ定義テキストを検証",
+ "api.cmd.family_reference": "ファミリ定義テキストのリファレンスを読み取る",
+ "api.cmd.family_draft": "ファミリ定義をファミリエディタに下書きとして提案"
+}

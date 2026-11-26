@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "El hueco {w} es más ancho que el muro {len}",
+ "ix.fix.opening_width": "Ancho {w} mm",
+ "ix.fix.wall_extend": "Extender el muro a {len} mm"
+}

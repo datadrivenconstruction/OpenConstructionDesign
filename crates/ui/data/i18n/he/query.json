@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}” לא ניתן לשינוי: {why}",
  "query.err.op_no_field": "אופרטור ללא שדה",
  "query.err.positive": "{key}: הערך חייב להיות גדול מאפס",
+ "query.err.raw": "{text}",
  "query.err.text_field": "השדה “{key}” הוא טקסט, נוסחה אינה חלה",
  "query.err.unclosed_paren": "חסר סוגר",
  "query.err.unclosed_quote": "חסר סוגר מירכאות",
@@ -27,6 +28,5 @@
  "query.why.curtain": "קירות מסך משתנים במאפיינים שלהם",
  "query.why.opening_type": "הטיפוס של פתח נגזר מגודלו: “-> width=… height=…”",
  "query.why.slab_thickness": "עובי הרצפה נקבע על ידי הטיפוס: “-> type=…”",
- "query.why.wall_thickness": "עובי הקיר נקבע על ידי הטיפוס: “-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "עובי הקיר נקבע על ידי הטיפוס: “-> type=…”"
 }

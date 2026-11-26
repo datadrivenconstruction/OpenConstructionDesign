@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Détails",
  "ai.step.copy": "Copier les détails",
  "ai.step.group.read": "Lit le modèle",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Le modèle a changé pendant l’étape",
  "ai.step.why.skipped": "L’étape n’a pas été exécutée : le tour s’est terminé",
  "ai.step.why.other": "L’étape ne s’est pas terminée",
- "ai.step.unknown": "Outil inconnu",
- "ai.step.dec": ","
+ "ai.step.unknown": "Outil inconnu"
 }

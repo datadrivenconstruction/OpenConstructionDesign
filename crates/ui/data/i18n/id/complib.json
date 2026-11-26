@@ -18,7 +18,7 @@
  "complib.ready.no": "tidak tertulis",
  "complib.edited": "Diedit",
  "complib.edited_tip": "Famili proyek berbeda dari bawaan",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Nilai",
- "complib.armed": "Komponen: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponen: {name}"
 }

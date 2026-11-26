@@ -48,5 +48,13 @@
  "settings.lib_open": "Komponentlar kutubxonasi",
  "settings.lib_open_desc": "Ichki, loyihadagi va o'zingizning oilalarni ko'rib chiqing",
  "settings.lib_dir": "Mening kutubxonam papkasi",
- "settings.lib_dir_desc": "Bu yerga joylangan oila fayllari (.ddcf) “Mening kutubxonam” ostida ko'rinadi. DDC_COMPONENTS_DIR uni boshqa joyga ko'chiradi."
+ "settings.lib_dir_desc": "Bu yerga joylangan oila fayllari (.ddcf) “Mening kutubxonam” ostida ko'rinadi. DDC_COMPONENTS_DIR uni boshqa joyga ko'chiradi.",
+ "complib.fam.sprinkler_head": "Sprinkler boshchasi",
+ "complib.fam.fire_pump": "Yong'in nasosi",
+ "complib.fam.pressurisation_fan": "Havo bosimini oshirish ventilyatori",
+ "complib.fam.lift_car": "Lift kabinasi",
+ "complib.fam.lift_landing_door": "Lift maydonchasi eshigi",
+ "complib.fam.lift_pit": "Lift chuqurligi",
+ "complib.fam.lift_overrun": "Lift shaxtasining yuqori qismi",
+ "complib.fam.lift_machine": "Lift mexanizmi"
 }

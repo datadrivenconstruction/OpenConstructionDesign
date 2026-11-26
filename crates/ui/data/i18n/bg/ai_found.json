@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Скрити",
  "ai_found.found.color": "Оцветени",
  "ai_found.found.count": "{n} от {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Няма съвпадения. Опитайте по-широк филтър.",
  "ai_found.found.show_btn": "Покажи",
  "ai_found.found.show_tip": "Избира тези елементи и ги показва в план и 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# скрит елемент",
   "other": "# скрити елемента"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

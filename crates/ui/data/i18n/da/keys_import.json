@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nye taster",
  "keys_import.changed_head": "Erstatter dine egne taster",
  "keys_import.conflicts_head": "Konflikter efter importen",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "akkord",
  "keys_import.kind_seq": "to bogstaver",
  "keys_import.unbound": "ingen",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Ikke fortrudt: taster blev redigeret efter importen. Nulstil dem én for én i vinduet Taster.",
  "keys_import.undo_none": "Intet at fortryde: ingen tastimport i denne session.",
  "keys_import.imported": "Taster importeret",
- "keys_import.imported_conflicts": "Taster importeret; konflikter: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Taster importeret; konflikter: {n}"
 }

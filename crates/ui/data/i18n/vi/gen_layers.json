@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Vỏ bao che",
+ "gen.group.acoustic": "Cách âm",
+ "gen.rule.fire.insulation_class.title": "Cấp cháy lớp cách nhiệt vỏ bao che",
+ "gen.rule.fire.insulation_class.desc": "Cấp phản ứng với lửa kém nhất mà lớp cách nhiệt của tường ngoài và mái được phép có; các cấu tạo có lớp cách nhiệt kém hơn không được chọn.",
+ "gen.rule.envelope.u_wall.title": "Hệ số U tường ngoài",
+ "gen.rule.envelope.u_wall.desc": "Hệ số truyền nhiệt cao nhất của tường ngoài; lớp cách nhiệt tường được chọn kích thước để không vượt quá, nên khí hậu lạnh hơn có tường dày hơn.",
+ "gen.rule.envelope.u_roof.title": "Hệ số U mái",
+ "gen.rule.envelope.u_roof.desc": "Hệ số truyền nhiệt cao nhất của mái; lớp cách nhiệt mái được chọn kích thước để không vượt quá.",
+ "gen.rule.envelope.u_ground.title": "Hệ số U sàn nền",
+ "gen.rule.envelope.u_ground.desc": "Hệ số truyền nhiệt cao nhất của sàn nền trên đất; lớp cách nhiệt dưới lớp vữa cán được chọn kích thước để không vượt quá.",
+ "gen.rule.acoustic.rw_party.title": "Cách âm tường ngăn căn hộ",
+ "gen.rule.acoustic.rw_party.desc": "Chỉ số cách âm Rw tối thiểu của tường giữa các căn hộ hoặc cạnh hành lang chung; lõi xây được chọn kích thước theo định luật khối lượng để đạt được.",
+ "gen.rule.acoustic.rw_floor.title": "Cách âm sàn",
+ "gen.rule.acoustic.rw_floor.desc": "Chỉ số cách âm Rw tối thiểu của sàn giữa các tầng; sàn bê tông được chọn kích thước theo định luật khối lượng để đạt được.",
+ "gen.why.e.asm_wall": "tường ngoài dày {t} m với {ins} m cách nhiệt: U {u} W/m2K, tối đa {lim}",
+ "gen.why.e.asm_roof": "mái dày {t} m với {ins} m cách nhiệt: U {u} W/m2K, tối đa {lim}",
+ "gen.why.e.asm_ground": "sàn nền dày {t} m với {ins} m cách nhiệt: U {u} W/m2K, tối đa {lim}",
+ "gen.why.e.asm_party": "tường ngăn căn hộ dày {t} m, {m} kg/m2: Rw {rw} dB theo định luật khối lượng, tối thiểu {lim}",
+ "gen.why.e.asm_floor": "sàn dày {t} m, {m} kg/m2: Rw {rw} dB theo định luật khối lượng, tối thiểu {lim}"
+}

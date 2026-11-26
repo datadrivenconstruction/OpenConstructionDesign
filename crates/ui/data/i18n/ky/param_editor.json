@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() тармактары ар кандай",
  "pe.msg_what_args": "аргументтер",
  "pe.msg_and": " жана ",
+ "pe.msg_incompatible": "{w}: шайкеш келбеген бирдиктер {dims}",
  "pe.text_no_formula": "текст параметрлерине формула колдонулбайт",
  "pe.circular": "айлануучу шилтеме: {text}",
- "pe.depends_invalid": "жараксыз “{b}”га көз каранды",
- "pe.msg_incompatible": "{w}: шайкеш келбеген бирдиктер {dims}"
+ "pe.depends_invalid": "жараксыз “{b}”га көз каранды"
 }

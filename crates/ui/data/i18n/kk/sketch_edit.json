@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "эскиз бас тартылды",
  "sketch_edit.sk_applied": "эскиз қолданылды",
  "sketch_edit.sk_tail": "соңы",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "плита",
  "sketch_edit.sk_host_roof": "шатыр",
  "sketch_edit.sk_host_ceiling": "төбе",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "2-деңгей",
  "sketch_edit.seed_floor_200": "Еден 200",
  "sketch_edit.seed_section1": "Кесінді 1",
- "sketch_edit.seed_section2": "Кесінді 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Кесінді 2"
 }

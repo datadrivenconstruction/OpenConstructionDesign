@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Sirkuit",
+ "cmd.mep.circuits.desc": "Membuka editor sirkuit: sirkuit setiap panel, bebannya, ukuran kabel, dan pemeriksaan aturan.",
  "ce.title": "Sirkuit",
  "ce.open": "Sirkuit",
  "ce.empty": "Belum ada sirkuit",

@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "유형 복제",
  "wall_type.wt.duplicate_tip": "이 레이어들을 새 유형으로 저장합니다; 열어 둔 유형은 그대로 유지됩니다.",
  "wall_type.wt.switch_dirty": "다른 유형을 열기 전에 확인 또는 취소를 누르세요",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "기능",
  "wall_type.wt.h_material": "재료",
  "wall_type.wt.h_thickness": "두께",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "뷰에서 벽을 선택한 후 유형을 교체하세요.",
  "wall_type.swap.already": "선택한 벽에 이미 이 유형이 있습니다",
  "wall_type.swap.apply": "교체",
- "wall_type.swap.done": "벽 유형 교체됨: 벽 {m}개 중 {n}개",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "벽 유형 교체됨: 벽 {m}개 중 {n}개"
 }

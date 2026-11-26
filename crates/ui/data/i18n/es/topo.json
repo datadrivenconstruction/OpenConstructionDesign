@@ -64,6 +64,7 @@
  "topo.import.title": "Importar levantamiento",
  "topo.import.filter": "Levantamiento (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Cota del punto",
  "topo.opt.thickness": "Espesor del topo-sólido",
  "topo.opt.add_to_active": "Añadir al topo-sólido activo",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importar",
  "topo.import.cancel": "Cancelar",
  "topo.import.no_layers": "no se ha elegido ninguna capa",
- "topo.info.warnings": "No construido:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "No construido:"
 }

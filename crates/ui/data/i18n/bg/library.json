@@ -41,5 +41,16 @@
  "library.ifc.window": "Прозорец",
  "library.ifc.stair": "Стълба",
  "library.ifc.pipe_fitting": "Фитинг на тръба",
- "library.ifc.duct_fitting": "Фасонна част на въздуховод"
+ "library.ifc.duct_fitting": "Фасонна част на въздуховод",
+ "library.ifc.beam": "Греда",
+ "library.ifc.column": "Колона",
+ "library.ifc.appliance": "Уред",
+ "library.ifc.fire_terminal": "Противопожарен терминал",
+ "library.ifc.heat_exchanger": "Топлообменник",
+ "library.ifc.pump": "Помпа",
+ "library.ifc.tank": "Резервоар",
+ "library.ifc.transport": "Транспортен елемент",
+ "library.ifc.valve": "Вентил",
+ "library.ifc.waste_terminal": "Канализационен терминал",
+ "library.ifc.medical": "Медицинско устройство"
 }

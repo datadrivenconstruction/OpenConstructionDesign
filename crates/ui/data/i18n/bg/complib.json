@@ -18,7 +18,7 @@
  "complib.ready.no": "не е записано",
  "complib.edited": "Редактиран",
  "complib.edited_tip": "Семейството в проекта се различава от вградения",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Стойност",
- "complib.armed": "Компонент: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Компонент: {name}"
 }

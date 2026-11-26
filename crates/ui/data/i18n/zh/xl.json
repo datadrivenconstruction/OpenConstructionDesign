@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "无法读取工作簿，其自身的列将丢失；请在 XLSX 电子表格 中关闭后重试",
  "xl.msg.type_x_layer_x": "类型 {} 层 {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}：{} 已不存在，其自身列的单元格已丢弃",
- "xl.msg.delsafe_type_param_on_elements": "参数“{}”是类型参数；请在类型表中编辑，未应用"
+ "xl.msg.delsafe_type_param_on_elements": "参数“{}”是类型参数；请在类型表中编辑，未应用",
+ "xl.msg.tag_x_is_removed_with_x_x": "标记 {} 将随 {} {} 一并移除",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "尺寸标注 {} 失去 {} {}，并保持其最后的形状",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "无法检查已删除构件的标注：{}"
 }

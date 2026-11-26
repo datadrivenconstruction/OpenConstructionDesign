@@ -41,5 +41,7 @@
  "sb.save.fresh": "Keine Änderungen",
  "sb.save.save": "Speichern",
  "sb.save.ifc": "IFC-Kopie speichern",
- "sb.save.autosave": "Automatisch speichern"
+ "sb.save.autosave": "Automatisch speichern",
+ "sb.more.title": "Mehr",
+ "sb.more.desc": "Statusleistenelemente, die bei dieser Breite nicht passen."
 }

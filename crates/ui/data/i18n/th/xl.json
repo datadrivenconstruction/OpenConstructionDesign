@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "อ่านสมุดงานไม่ได้ คอลัมน์ของมันจะหาย ปิดในโปรแกรมสเปรดชีตแล้วลองใหม่",
  "xl.msg.type_x_layer_x": "ประเภท {} เลเยอร์ {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} ไม่มีอยู่แล้ว เซลล์ของคอลัมน์ของมันถูกทิ้ง",
- "xl.msg.delsafe_type_param_on_elements": "พารามิเตอร์ '{}' เป็นพารามิเตอร์ประเภท แก้ไขในแผ่นประเภท ยังไม่ได้นำไปใช้"
+ "xl.msg.delsafe_type_param_on_elements": "พารามิเตอร์ '{}' เป็นพารามิเตอร์ประเภท แก้ไขในแผ่นประเภท ยังไม่ได้นำไปใช้",
+ "xl.msg.tag_x_is_removed_with_x_x": "แท็ก {} จะถูกลบพร้อมกับ {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "มิติ {} สูญเสีย {} {} และคงรูปร่างสุดท้ายไว้",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "ตรวจสอบคำอธิบายประกอบขององค์ประกอบที่ถูกลบไม่ได้: {}"
 }

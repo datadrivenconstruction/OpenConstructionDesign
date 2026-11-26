@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "javítva {n} elutasított próbálkozás után, kb. {tokens} token",
+ "ai.fam_offer": "Egy ügynök felkínálta a(z) {name} családot",
+ "ai.fam_offer.open": "Megnyitás a családszerkesztőben",
+ "ai.fam_offer.dismiss": "Elvetés",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Ellenőrzés…",
+ "fe.ai.clean": "Az ellenőrzés nem talált semmit",
+ "fe.ai.check_values": "Ellenőrzés értékekkel",
+ "fe.ai.lines": "sorok: {n}",
+ "fe.ai.changes": "{n} módosítás a korábbi verzióhoz képest",
+ "fe.ai.added": "hozzáadva: {head} {name}",
+ "fe.ai.removed": "eltávolítva: {head} {name}",
+ "fe.ai.changed": "módosítva: {head} {name}",
+ "fe.ai.reject": "Elutasítás"
+}

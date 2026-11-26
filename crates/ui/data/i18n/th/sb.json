@@ -41,5 +41,7 @@
  "sb.save.fresh": "ไม่มีการเปลี่ยนแปลง",
  "sb.save.save": "บันทึก",
  "sb.save.ifc": "บันทึกสำเนา IFC",
- "sb.save.autosave": "บันทึกอัตโนมัติ"
+ "sb.save.autosave": "บันทึกอัตโนมัติ",
+ "sb.more.title": "เพิ่มเติม",
+ "sb.more.desc": "รายการแถบสถานะที่ไม่พอดีกับความกว้างนี้"
 }

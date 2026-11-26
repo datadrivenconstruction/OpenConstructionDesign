@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "poprawiono po {n} odrzuconych próbach, ok. {tokens} tokenów",
+ "ai.fam_offer": "Agent zaproponował rodzinę {name}",
+ "ai.fam_offer.open": "Otwórz w edytorze rodzin",
+ "ai.fam_offer.dismiss": "Odrzuć",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Sprawdzanie…",
+ "fe.ai.clean": "Kontrola niczego nie wykryła",
+ "fe.ai.check_values": "Sprawdź z wartościami",
+ "fe.ai.lines": "wiersze {n}",
+ "fe.ai.changes": "Zmiany względem wcześniejszej wersji: {n}",
+ "fe.ai.added": "dodano: {head} {name}",
+ "fe.ai.removed": "usunięto: {head} {name}",
+ "fe.ai.changed": "zmieniono: {head} {name}",
+ "fe.ai.reject": "Odrzuć"
+}

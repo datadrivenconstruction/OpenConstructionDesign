@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Заливка",
  "text_style.lbl.detail": "Деталь",
  "text_style.lbl.width": "Товщина",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Введіть число від {min} до {max}",
  "text_style.tip.next_ring": "Замкнути цей контур і почати інший у тій самій області",
  "text_style.tip.edit_text": "Редагувати текст на місці",
- "text_style.tip.add_leader": "Додати виноску до цього тексту",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Додати виноску до цього тексту"
 }

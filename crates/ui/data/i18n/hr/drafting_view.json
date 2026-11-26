@@ -15,6 +15,7 @@
  "drafting_view.name": "Naziv",
  "drafting_view.count": "{n} napomena",
  "drafting_view.tab": "Crtež · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Prazan crtežni pogled",
  "drafting_view.canvas_hint": "Koristite alate za napomene: detaljne linije, površine, tekst, detaljne elemente",
  "drafting_view.created": "Crtežni pogled „{name}” je izrađen",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Više",
  "empty.drafting.title": "Još nema crtežnih pogleda",
  "empty.drafting.hint": "Izradite ga za 2D detalje koji nisu izrezani iz modela.",
- "empty.drafting.action": "Novi crtežni pogled",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Novi crtežni pogled"
 }

@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} aperture non modificate ({why})",
  "lnp.params_changed": "valori modificati: {n}",
  "lnp.params_same": "Nessuna modifica: {u} elementi hanno già questo valore",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Seleziona solo il primo pannello per modificarlo",
  "lnp.clip_from_wall": "Parametri copiati dal muro n. {id}",
  "lnp.clip_from_opening": "Parametri copiati dall'apertura n. {id}",
- "lnp.match_from": "Proprietà di n. {id} applicate a {n} elementi",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Proprietà di n. {id} applicate a {n} elementi"
 }

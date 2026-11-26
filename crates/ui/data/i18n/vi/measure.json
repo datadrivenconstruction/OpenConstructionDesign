@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Khoảng cách",
+ "cmd.e3d.measure.gap": "Khe hở giữa các mặt",
+ "cmd.e3d.measure.angle": "Góc",
+ "cmd.e3d.measure.area": "Diện tích / chu vi của một mặt hoặc phòng",
+ "cmd.e3d.measure.volume": "Thể tích của một phần tử",
+ "cmd.e3d.measure.slope": "Độ dốc",
+ "cmd.e3d.measure.chain": "Chuỗi điểm",
+ "measure.orphan": "Tham chiếu bị mất",
+ "measure.not_planar": "Các mặt không song song",
+ "measure.unsupported": "Không thể đo đối tượng này",
+ "cmd.ann.measure_distance": "Đo khoảng cách",
+ "cmd.ann.measure_gap": "Đo khe hở giữa các mặt",
+ "cmd.ann.measure_angle": "Đo góc",
+ "cmd.ann.measure_area": "Đo diện tích",
+ "hint.measure.first": "Đo: nhấp vào mặt tường (hoặc một điểm) · Esc — thoát",
+ "hint.measure.second": "Đo: nhấp vào mặt thứ hai · Esc — hủy lựa chọn đầu",
+ "measure.no_face": "Không có mặt tường ở đây"
+}

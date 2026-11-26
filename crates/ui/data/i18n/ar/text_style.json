@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "التعبئة",
  "text_style.lbl.detail": "التفصيل",
  "text_style.lbl.width": "العرض",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "أدخل رقماً من {min} إلى {max}",
  "text_style.tip.next_ring": "أغلق هذا المحيط وابدأ آخر في المنطقة نفسها",
  "text_style.tip.edit_text": "حرّر النص في مكانه",
- "text_style.tip.add_leader": "أضف خط إشارة إلى هذا النص",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "أضف خط إشارة إلى هذا النص"
 }

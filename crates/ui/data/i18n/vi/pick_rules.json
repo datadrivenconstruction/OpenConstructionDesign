@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Chọn tất cả danh mục",
  "pick_rules.filter.tip": "Bộ lọc chọn: danh mục không đánh dấu sẽ bị bỏ qua khi nhấp và di chuột",
  "pick_rules.here": "Mục ở đây",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "đã chọn",
- "pick_rules.pinned": "Chọn mục đã ghim",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Chọn mục đã ghim"
 }

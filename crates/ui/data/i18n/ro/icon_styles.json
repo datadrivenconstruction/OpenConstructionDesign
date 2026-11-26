@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Color",
+ "cmd.ui.icons.color": "Pictograme color",
+ "cmd.ui.icons.color.desc": "Stilul de desenare al pictogramelor",
+ "theme.icons.hierarchical": "Ierarhic",
+ "cmd.ui.icons.hierarchical": "Pictograme ierarhice",
+ "cmd.ui.icons.hierarchical.desc": "Stilul de desenare al pictogramelor",
+ "theme.icons.isometric": "Izometric",
+ "cmd.ui.icons.isometric": "Pictograme izometrice",
+ "cmd.ui.icons.isometric.desc": "Stilul de desenare al pictogramelor",
+ "theme.icons.monoline": "Linie simplă",
+ "cmd.ui.icons.monoline": "Pictograme dintr-o singură linie",
+ "cmd.ui.icons.monoline.desc": "Stilul de desenare al pictogramelor"
+}

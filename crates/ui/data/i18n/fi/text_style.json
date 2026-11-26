@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Täyttö",
  "text_style.lbl.detail": "Yksityiskohta",
  "text_style.lbl.width": "Leveys",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Anna luku väliltä {min}–{max}",
  "text_style.tip.next_ring": "Sulje tämä ääriviiva ja aloita toinen samalla alueella",
  "text_style.tip.edit_text": "Muokkaa tekstiä paikallaan",
- "text_style.tip.add_leader": "Lisää johtoviiva tähän tekstiin",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Lisää johtoviiva tähän tekstiin"
 }

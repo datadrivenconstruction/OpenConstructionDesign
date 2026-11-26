@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Instalaciones del edificio automáticas",
+ "gen.mep_auto_hint": "Permite que el generador y el asistente de IA tracen por sí solos tuberías, conductos y cableado. Desactivado por defecto en esta región; puede activarlo. El trazado manual siempre está disponible."
+}

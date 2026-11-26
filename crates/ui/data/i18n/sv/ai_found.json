@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Dold",
  "ai_found.found.color": "Färgad",
  "ai_found.found.count": "{n} av {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Inget matchar. Prova ett bredare filter.",
  "ai_found.found.show_btn": "Visa",
  "ai_found.found.show_tip": "Markera dessa element och zooma till dem i plan och 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# element dolt",
   "other": "# element dolda"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

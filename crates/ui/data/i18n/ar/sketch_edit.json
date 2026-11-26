@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "أُلغي الرسم التخطيطي",
  "sketch_edit.sk_applied": "طُبّق الرسم التخطيطي",
  "sketch_edit.sk_tail": "ذيل",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "البلاطة",
  "sketch_edit.sk_host_roof": "السطح",
  "sketch_edit.sk_host_ceiling": "السقف",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "المستوى 2",
  "sketch_edit.seed_floor_200": "أرضية 200",
  "sketch_edit.seed_section1": "المقطع 1",
- "sketch_edit.seed_section2": "المقطع 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "المقطع 2"
 }

@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "ramurile if() diferă",
  "pe.msg_what_args": "argumente",
  "pe.msg_and": " și ",
+ "pe.msg_incompatible": "{w}: unități incompatibile {dims}",
  "pe.text_no_formula": "parametrii text nu acceptă formulă",
  "pe.circular": "referință circulară: {text}",
- "pe.depends_invalid": "depinde de „{b}” invalid",
- "pe.msg_incompatible": "{w}: unități incompatibile {dims}"
+ "pe.depends_invalid": "depinde de „{b}” invalid"
 }

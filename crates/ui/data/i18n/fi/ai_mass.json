@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "Poistettaisiin {0}/{1} elementtiä. Henkilön on vahvistettava tämä",
+ "ai.issue.wipe": "Suunnitelma poistaisi kaikki {1} mallin elementtiä ({0} poistettu). Sitä ei koskaan toteuteta yhdellä kertaa"
+}

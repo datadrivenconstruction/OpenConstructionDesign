@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Mga host: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Kolum",
  "rebar_hosts.kind.beam": "Biga",
  "rebar_hosts.kind.wall": "Pader",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Napupunta ang mesh sa pader, slab at foundation, hindi sa column o beam.",
  "rebar_hosts.why.bars_plate": "Napupunta ang longitudinal bar at stirrup sa column at beam, hindi sa pader, slab o foundation.",
  "rebar_hosts.why.no_common_face": "Walang iisang cover face ang mga napiling host. Pumili ng host na iisa ang uri.",
- "rebar_hosts.why.no_type": "Pumili ng bar type.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Pumili ng bar type."
 }

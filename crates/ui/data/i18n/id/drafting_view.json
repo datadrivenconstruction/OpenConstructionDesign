@@ -15,6 +15,7 @@
  "drafting_view.name": "Nama",
  "drafting_view.count": "{n} anotasi",
  "drafting_view.tab": "Gambar kerja · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Tampilan gambar kerja kosong",
  "drafting_view.canvas_hint": "Gunakan alat Anotasi: garis detail, area, teks, komponen detail",
  "drafting_view.created": "Tampilan gambar kerja \"{name}\" dibuat",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Lainnya",
  "empty.drafting.title": "Belum ada tampilan gambar kerja",
  "empty.drafting.hint": "Buat satu untuk detail 2D yang tidak dipotong dari model.",
- "empty.drafting.action": "Tampilan gambar kerja baru",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Tampilan gambar kerja baru"
 }

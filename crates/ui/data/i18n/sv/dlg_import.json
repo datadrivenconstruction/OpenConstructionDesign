@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "som nät",
  "dlg.imp.skipped": "hoppades över",
  "dlg.imp.notes": "Anteckningar: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "och {n} till typer",
  "dlg.imp.no_levels": "Filen har inga nivåer: en standardnivå skapades",
  "dlg.imp.reimport_row": "Uppdaterade {updated}, oförändrade {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} linjer, {arcs} bågar, {texts} texter, {fills} fyllningar, {layers} lager; enhet {unit} mm",
  "dlg.dw.summary_paper": "; pappersblad {n} (placeras inte på underlaget)",
  "dlg.dw.summary_unknown": "; överförs inte: {list}",
- "dlg.dw.summary_more": " och {n} till typer",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " och {n} till typer"
 }

@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Toelichting",
  "ai.step.copy": "Details kopiëren",
  "ai.step.group.read": "Leest het model",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Het model is gewijzigd terwijl de stap liep",
  "ai.step.why.skipped": "De stap is niet uitgevoerd: de beurt is beëindigd",
  "ai.step.why.other": "De stap is niet voltooid",
- "ai.step.unknown": "Onbekend hulpmiddel",
- "ai.step.dec": ","
+ "ai.step.unknown": "Onbekend hulpmiddel"
 }

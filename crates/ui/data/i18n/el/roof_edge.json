@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Κυρτό",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Εισαγωγή σημείου μετά από αυτό (ένα τόξο διχοτομείται)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Αποθήκευση",
  "roof_edge.pe.saved": "Το προφίλ αποθηκεύτηκε",
  "roof_edge.pe.valid": "Το προφίλ είναι έγκυρο",
  "roof_edge.pe.invalid": "Το προφίλ τέμνει τον εαυτό του, είναι πολύ μικρό ή έχει λιγότερα από 3 σημεία",
  "roof_edge.pe.bad_number": "Μια συντεταγμένη ή το bulge δεν είναι αριθμός",
- "roof_edge.pe.no_name": "Εισαγάγετε όνομα προφίλ",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Εισαγάγετε όνομα προφίλ"
 }

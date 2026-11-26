@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ".",
  "ai.size.count": "~{n} / {max} tokeni",
  "ai.size.block": "Prea lung pentru acest model: ~{n} tokeni, încap până la {max} și rămâne loc pentru răspuns — scurtează-l sau împarte-l",
  "ai.size.trim": "Taie ca să încapă",
  "ai.size.trim_tip": "Taie finalul mesajului ca să încapă. Nimic nu se taie până nu faci clic.",
  "ai.size.drop_view": "Lasă vederea afară",
  "ai.size.drop_level": "Lasă nivelul afară",
- "ai.size.drop_selection": "Lasă selecția afară",
- "ai.size.sep": "."
+ "ai.size.drop_selection": "Lasă selecția afară"
 }

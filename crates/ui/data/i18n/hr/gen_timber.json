@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT podni panel",
+ "fam.name.glulam_beam": "Greda od lijepljenog drva",
+ "fam.name.glulam_column": "Stup od lijepljenog drva",
+ "gen.group.timber": "Drvena konstrukcija",
+ "gen.rule.timber.beam_span_max.desc": "Najveći raspon grede od lijepljenog drva između dva stupa.",
+ "gen.rule.timber.beam_span_max.title": "Granica raspona grede",
+ "gen.rule.timber.panel_w.desc": "Najširi unakrsno lamelirani podni panel; između svakog je spoj.",
+ "gen.rule.timber.panel_w.title": "Širina CLT panela",
+ "gen.rule.timber.span_depth.desc": "Raspon u odnosu na visinu grede od lijepljenog drva; bira presjek.",
+ "gen.rule.timber.span_depth.title": "Omjer raspona i visine grede"
+}

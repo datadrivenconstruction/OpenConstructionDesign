@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 alat",
  "ai.stream.tools_many": "{n} alat",
  "ai.stream.secs": "{n} dtk",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Masih menunggu layanan model",
  "ai.stream.stop": "Hentikan",
  "ai.stream.cancelled": "Dihentikan",
- "ai.stream.incomplete": "Draf belum lengkap. Tidak ada yang diterapkan ke model.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Draf belum lengkap. Tidak ada yang diterapkan ke model."
 }

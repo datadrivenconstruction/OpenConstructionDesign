@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Το άνοιγμα {w} είναι πλατύτερο από τον τοίχο {len}",
+ "ix.fix.opening_width": "Πλάτος {w} mm",
+ "ix.fix.wall_extend": "Προέκταση του τοίχου έως {len} mm"
+}

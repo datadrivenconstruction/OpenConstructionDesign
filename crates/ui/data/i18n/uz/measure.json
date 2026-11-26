@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Masofa",
+ "cmd.e3d.measure.gap": "Yuzalar orasidagi oraliq",
+ "cmd.e3d.measure.angle": "Burchak",
+ "cmd.e3d.measure.area": "Yuz yoki xonaning maydoni / perimetri",
+ "cmd.e3d.measure.volume": "Elementning hajmi",
+ "cmd.e3d.measure.slope": "Qiyalik",
+ "cmd.e3d.measure.chain": "Nuqtalar zanjiri",
+ "measure.orphan": "Havola yo'qolgan",
+ "measure.not_planar": "Yuzalar parallel emas",
+ "measure.unsupported": "Buni o'lchab bo'lmaydi",
+ "cmd.ann.measure_distance": "Masofani o'lchash",
+ "cmd.ann.measure_gap": "Yuzalar orasidagi oraliqni o'lchash",
+ "cmd.ann.measure_angle": "Burchakni o'lchash",
+ "cmd.ann.measure_area": "Maydonni o'lchash",
+ "hint.measure.first": "O'lchash: devor yuzini (yoki nuqtani) bosing · Esc — chiqish",
+ "hint.measure.second": "O'lchash: ikkinchi yuzani bosing · Esc — birinchi tanlovni bekor qilish",
+ "measure.no_face": "Bu yerda devor yuzi yo'q"
+}

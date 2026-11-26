@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Type dupliceren",
  "wall_type.wt.duplicate_tip": "Slaat deze lagen op als nieuw type; het type dat u opende blijft ongewijzigd.",
  "wall_type.wt.switch_dirty": "Druk op OK of Annuleren voordat u een ander type opent",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Functie",
  "wall_type.wt.h_material": "Materiaal",
  "wall_type.wt.h_thickness": "Dikte",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Selecteer wanden in de weergave en wissel daarna hun type.",
  "wall_type.swap.already": "De geselecteerde wanden hebben dit type al",
  "wall_type.swap.apply": "Wisselen",
- "wall_type.swap.done": "Wandtype gewisseld: {n} van {m} wanden",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Wandtype gewisseld: {n} van {m} wanden"
 }

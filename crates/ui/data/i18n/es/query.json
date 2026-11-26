@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}” no se puede modificar: {why}",
  "query.err.op_no_field": "operador sin campo",
  "query.err.positive": "{key}: el valor debe ser mayor que cero",
+ "query.err.raw": "{text}",
  "query.err.text_field": "el campo “{key}” es de texto; una fórmula no se aplica",
  "query.err.unclosed_paren": "falta el paréntesis de cierre",
  "query.err.unclosed_quote": "falta la comilla de cierre",
@@ -27,6 +28,5 @@
  "query.why.curtain": "los muros cortina se modifican en sus propias propiedades",
  "query.why.opening_type": "el tipo de un hueco depende de su tamaño: “-> width=… height=…”",
  "query.why.slab_thickness": "el espesor del forjado lo define el tipo: “-> type=…”",
- "query.why.wall_thickness": "el espesor del muro lo define el tipo: “-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "el espesor del muro lo define el tipo: “-> type=…”"
 }

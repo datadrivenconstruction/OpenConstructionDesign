@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Download den aktuelle editor på ERP-siden {url}",
  "erp.err.unsupported.admin": "Bed din ERP-administrator om den aktuelle editor",
  "erp.err.throttled_in": "For mange forsøg. Prøv igen om {s} s",
+ "erp.err.throttled_ready": "Ventetiden er slut. Du kan prøve igen",
  "erp.err.imported": "Revision {n} i ERP er en importeret model: editoren kan endnu ikke åbne den eller publicere oven på den",
  "erp.action.download": "Åbn editorens downloadside i ERP",
  "erp.action.new_link": "Hent et nyt link på ERP-siden",

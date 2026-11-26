@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "schizzo annullato",
  "sketch_edit.sk_applied": "schizzo applicato",
  "sketch_edit.sk_tail": "coda",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "solaio",
  "sketch_edit.sk_host_roof": "copertura",
  "sketch_edit.sk_host_ceiling": "soffitto",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Livello 2",
  "sketch_edit.seed_floor_200": "Pavimento 200",
  "sketch_edit.seed_section1": "Sezione 1",
- "sketch_edit.seed_section2": "Sezione 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Sezione 2"
 }

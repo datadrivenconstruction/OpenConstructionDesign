@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Tipo",
  "collab_diff.diff.col.field": "Campo",
  "collab_diff.diff.col.old": "Antes",
- "collab_diff.diff.col.new": "Agora"
+ "collab_diff.diff.col.new": "Agora",
+ "collab_diff.reveal.title": "Construção",
+ "collab_diff.reveal.start": "Mostrar como construído",
+ "collab_diff.reveal.play": "Reproduzir",
+ "collab_diff.reveal.pause": "Pausa",
+ "collab_diff.reveal.back": "Para trás",
+ "collab_diff.reveal.close": "Fechar",
+ "collab_diff.reveal.nothing": "Nada a mostrar: nenhum elemento alterado está na cena 3D.",
+ "collab_diff.reveal.journal_busy": "A ler o diário…",
+ "collab_diff.reveal.journal_play": "Reproduzir diário"
 }

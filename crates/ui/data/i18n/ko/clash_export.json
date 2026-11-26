@@ -2,8 +2,8 @@
  "clash.col.x": "X",
  "clash.col.y": "Y",
  "clash.col.z": "Z",
+ "clash.col.unit": "{name}, {unit}",
  "clash.unit.ft3": "ft³",
  "clash.exported_n": "보고서 저장됨: {n} / {m}, {path}",
- "clash.exported_f": "보고서 저장됨: {n} / {m} (필터: {filter}), {path}",
- "clash.col.unit": "{name}, {unit}"
+ "clash.exported_f": "보고서 저장됨: {n} / {m} (필터: {filter}), {path}"
 }

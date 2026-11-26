@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<verschieden>",
  "geom_props.tip": "Enter überträgt den Wert auf alle {n} gewählten, ein Rückgängig-Schritt",
  "geom_props.roof_slope": "Neigung",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Importierte Elemente",
  "geom_props.kind.mass": "Massen",
  "geom_props.kind.solid": "Volumenkörper",
- "geom_props.kind.toposolid": "Gelände",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Gelände"
 }

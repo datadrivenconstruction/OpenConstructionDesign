@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Tashqi to'siq",
+ "gen.group.acoustic": "Tovush izolyatsiyasi",
+ "gen.rule.fire.insulation_class.title": "To'siq izolyatsiyasi yong'in sinfi",
+ "gen.rule.fire.insulation_class.desc": "Tashqi devorlar va tomlar izolyatsiyasi ega bo'lishi mumkin bo'lgan eng yomon yong'inga reaksiya sinfi; izolyatsiyasi yomonroq konstruksiyalar tanlanmaydi.",
+ "gen.rule.envelope.u_wall.title": "Tashqi devor U qiymati",
+ "gen.rule.envelope.u_wall.desc": "Tashqi devorning eng yuqori issiqlik o'tkazuvchanligi; devor izolyatsiyasi undan oshmaydigan qilib hisoblanadi, shuning uchun sovuqroq iqlimda devor qalinroq bo'ladi.",
+ "gen.rule.envelope.u_roof.title": "Tom U qiymati",
+ "gen.rule.envelope.u_roof.desc": "Tomning eng yuqori issiqlik o'tkazuvchanligi; tom izolyatsiyasi undan oshmaydigan qilib hisoblanadi.",
+ "gen.rule.envelope.u_ground.title": "Gruntdagi plita U qiymati",
+ "gen.rule.envelope.u_ground.desc": "Gruntdagi pol plitasining eng yuqori issiqlik o'tkazuvchanligi; qoplama ostidagi izolyatsiya undan oshmaydigan qilib hisoblanadi.",
+ "gen.rule.acoustic.rw_party.title": "Xonadonlararo devor tovush izolyatsiyasi",
+ "gen.rule.acoustic.rw_party.desc": "Xonadonlar orasidagi yoki umumiy yo'lak yonidagi devorning eng kam tovush izolyatsiyasi indeksi Rw; g'isht o'zagi unga yetish uchun massa qonuni bo'yicha hisoblanadi.",
+ "gen.rule.acoustic.rw_floor.title": "Qavatlararo tovush izolyatsiyasi",
+ "gen.rule.acoustic.rw_floor.desc": "Qavatlar orasidagi tomning eng kam tovush izolyatsiyasi indeksi Rw; beton plita unga yetish uchun massa qonuni bo'yicha hisoblanadi.",
+ "gen.why.e.asm_wall": "tashqi devorlar qalinligi {t} m, {ins} m izolyatsiya bilan: U {u} W/m2K, ko'pi bilan {lim}",
+ "gen.why.e.asm_roof": "tom qalinligi {t} m, {ins} m izolyatsiya bilan: U {u} W/m2K, ko'pi bilan {lim}",
+ "gen.why.e.asm_ground": "gruntdagi plita qalinligi {t} m, {ins} m izolyatsiya bilan: U {u} W/m2K, ko'pi bilan {lim}",
+ "gen.why.e.asm_party": "xonadonlararo devorlar qalinligi {t} m, {m} kg/m2: massa qonuni bo'yicha Rw {rw} dB, kamida {lim}",
+ "gen.why.e.asm_floor": "qavatlararo plitalar qalinligi {t} m, {m} kg/m2: massa qonuni bo'yicha Rw {rw} dB, kamida {lim}"
+}

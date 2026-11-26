@@ -11,6 +11,7 @@
  "ai.step.s": "{n}초",
  "ai.step.min": "{m}분",
  "ai.step.min_s": "{m}분 {s}초",
+ "ai.step.dec": ".",
  "ai.step.details": "세부 정보",
  "ai.step.copy": "세부 정보 복사",
  "ai.step.group.read": "모델 읽기",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "단계 실행 중 모델이 변경됨",
  "ai.step.why.skipped": "단계가 실행되지 않음: 턴이 끝남",
  "ai.step.why.other": "단계가 완료되지 않음",
- "ai.step.unknown": "알 수 없는 도구",
- "ai.step.dec": "."
+ "ai.step.unknown": "알 수 없는 도구"
 }

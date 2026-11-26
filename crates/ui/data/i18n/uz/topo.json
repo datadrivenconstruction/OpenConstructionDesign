@@ -64,6 +64,7 @@
  "topo.import.title": "So'rovni import qilish",
  "topo.import.filter": "So'rov (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Nuqta belgisi",
  "topo.opt.thickness": "Topojism qalinligi",
  "topo.opt.add_to_active": "Faol topojismga qo'shish",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Import qilish",
  "topo.import.cancel": "Bekor qilish",
  "topo.import.no_layers": "qatlam tanlanmagan",
- "topo.info.warnings": "Qurilmadi:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Qurilmadi:"
 }

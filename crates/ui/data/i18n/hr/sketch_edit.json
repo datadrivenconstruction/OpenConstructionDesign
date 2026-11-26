@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "skica otkazana",
  "sketch_edit.sk_applied": "skica primijenjena",
  "sketch_edit.sk_tail": "rep",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "ploča",
  "sketch_edit.sk_host_roof": "krov",
  "sketch_edit.sk_host_ceiling": "strop",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Razina 2",
  "sketch_edit.seed_floor_200": "Pod 200",
  "sketch_edit.seed_section1": "Presjek 1",
- "sketch_edit.seed_section2": "Presjek 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Presjek 2"
 }

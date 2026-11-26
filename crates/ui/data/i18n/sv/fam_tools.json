@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Läs definitionstexten för en projektfamilj",
+ "api.cmd.family_validate": "Kontrollera en familjedefinitionstext",
+ "api.cmd.family_reference": "Läs referensen för familjedefinitionstext",
+ "api.cmd.family_draft": "Erbjud en familjedefinition som utkast i familjeeditorn"
+}

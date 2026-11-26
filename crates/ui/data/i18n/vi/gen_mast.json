@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Thang nâng cột",
+ "fam.name.mast_lift": "Thang nâng cột",
+ "gen.rule.steel.check.self_weight.desc": "Trọng lượng của tháp phía trên một mặt cắt, trên mỗi mét chiều cao.",
+ "gen.rule.steel.check.self_weight.title": "Trọng lượng thép mỗi mét",
+ "gen.rule.steel.check.strut_share.desc": "Tỷ lệ lực thanh biên mà thanh ngang chịu tại nút của nó.",
+ "gen.rule.steel.check.strut_share.title": "Tỷ lệ thanh ngang",
+ "gen.rule.steel.out.lift_box_d.desc": "Chiều sâu mặt bằng mà thang nâng cột cần cùng với cột; các sàn mở phía trên nó.",
+ "gen.rule.steel.out.lift_box_d.title": "Chiều sâu hộp thang",
+ "gen.rule.steel.out.lift_box_w.desc": "Chiều rộng mặt bằng mà thang nâng cột cần; các sàn mở phía trên nó.",
+ "gen.rule.steel.out.lift_box_w.title": "Chiều rộng hộp thang",
+ "gen.rule.steel.out.lift_offset.desc": "Khoảng cách của thang nâng so với trục, tránh giằng mặt bằng.",
+ "gen.rule.steel.out.lift_offset.title": "Độ lệch thang nâng so với trục",
+ "gen.rule.steel.out.lifts.desc": "Các thang nâng dọc lõi: đến sàn công tác thứ hai, rồi lên đỉnh.",
+ "gen.rule.steel.out.lifts.title": "Các chặng thang nâng"
+}

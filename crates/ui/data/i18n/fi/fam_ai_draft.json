@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "korjattu {n} hylätyn yrityksen jälkeen, noin {tokens} tokenia",
+ "ai.fam_offer": "Agentti ehdotti perhettä {name}",
+ "ai.fam_offer.open": "Avaa perhe-editorissa",
+ "ai.fam_offer.dismiss": "Hylkää",
+ "fe.ai.badge": "Tekoäly",
+ "fe.ai.checking": "Tarkistetaan…",
+ "fe.ai.clean": "Tarkistus ei löytänyt mitään",
+ "fe.ai.check_values": "Tarkista arvoilla",
+ "fe.ai.lines": "rivit {n}",
+ "fe.ai.changes": "{n} muutosta aiempaan versioon verrattuna",
+ "fe.ai.added": "lisätty: {head} {name}",
+ "fe.ai.removed": "poistettu: {head} {name}",
+ "fe.ai.changed": "muutettu: {head} {name}",
+ "fe.ai.reject": "Hylkää"
+}

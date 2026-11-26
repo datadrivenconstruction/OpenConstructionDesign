@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Åpningen {w} er bredere enn veggen {len}",
+ "ix.fix.opening_width": "Bredde {w} mm",
+ "ix.fix.wall_extend": "Forleng veggen til {len} mm"
+}

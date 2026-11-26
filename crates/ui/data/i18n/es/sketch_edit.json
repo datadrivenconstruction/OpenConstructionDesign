@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "boceto cancelado",
  "sketch_edit.sk_applied": "boceto aplicado",
  "sketch_edit.sk_tail": "cola",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "losa",
  "sketch_edit.sk_host_roof": "cubierta",
  "sketch_edit.sk_host_ceiling": "techo",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Planta 2",
  "sketch_edit.seed_floor_200": "Forjado 200",
  "sketch_edit.seed_section1": "Sección 1",
- "sketch_edit.seed_section2": "Sección 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Sección 2"
 }

@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "מעטפת",
+ "gen.group.acoustic": "בידוד אקוסטי",
+ "gen.rule.fire.insulation_class.title": "דירוג אש של בידוד המעטפת",
+ "gen.rule.fire.insulation_class.desc": "הדירוג הגרוע ביותר של תגובה לאש שהבידוד של קירות חיצוניים וגגות רשאי לקבל; מכלולים עם בידוד גרוע יותר אינם נבחרים.",
+ "gen.rule.envelope.u_wall.title": "ערך U של קיר חיצוני",
+ "gen.rule.envelope.u_wall.desc": "מקדם מעבר החום המרבי של קיר חיצוני; בידוד הקיר מותאם כך שיישאר מתחתיו, ולכן באקלים קר יותר הקיר עבה יותר.",
+ "gen.rule.envelope.u_roof.title": "ערך U של גג",
+ "gen.rule.envelope.u_roof.desc": "מקדם מעבר החום המרבי של גג; בידוד הגג מותאם כך שיישאר מתחתיו.",
+ "gen.rule.envelope.u_ground.title": "ערך U של רצפת קרקע",
+ "gen.rule.envelope.u_ground.desc": "מקדם מעבר החום המרבי של לוח הרצפה על הקרקע; הבידוד מתחת לשכבת היישור מותאם כך שיישאר מתחתיו.",
+ "gen.rule.acoustic.rw_party.title": "בידוד אקוסטי של קיר משותף",
+ "gen.rule.acoustic.rw_party.desc": "מדד הנחתת הקול Rw המינימלי של קיר בין דירות או לצד מסדרון משותף; ליבת הבנייה מותאמת לפי חוק המסה כדי להשיגו.",
+ "gen.rule.acoustic.rw_floor.title": "בידוד אקוסטי של רצפה",
+ "gen.rule.acoustic.rw_floor.desc": "מדד הנחתת הקול Rw המינימלי של רצפה בין קומות; לוח הבטון מותאם לפי חוק המסה כדי להשיגו.",
+ "gen.why.e.asm_wall": "קירות חיצוניים בעובי {t} מ׳ עם {ins} מ׳ בידוד: U {u} W/m²K, לכל היותר {lim}",
+ "gen.why.e.asm_roof": "גג בעובי {t} מ׳ עם {ins} מ׳ בידוד: U {u} W/m²K, לכל היותר {lim}",
+ "gen.why.e.asm_ground": "רצפת קרקע בעובי {t} מ׳ עם {ins} מ׳ בידוד: U {u} W/m²K, לכל היותר {lim}",
+ "gen.why.e.asm_party": "קירות משותפים בעובי {t} מ׳, {m} ק״ג/מ״ר: Rw {rw} dB לפי חוק המסה, לפחות {lim}",
+ "gen.why.e.asm_floor": "רצפות בעובי {t} מ׳, {m} ק״ג/מ״ר: Rw {rw} dB לפי חוק המסה, לפחות {lim}"
+}

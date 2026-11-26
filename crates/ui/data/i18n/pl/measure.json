@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Odległość",
+ "cmd.e3d.measure.gap": "Odstęp między licami",
+ "cmd.e3d.measure.angle": "Kąt",
+ "cmd.e3d.measure.area": "Powierzchnia / obwód lica lub pomieszczenia",
+ "cmd.e3d.measure.volume": "Objętość elementu",
+ "cmd.e3d.measure.slope": "Nachylenie",
+ "cmd.e3d.measure.chain": "Łańcuch punktów",
+ "measure.orphan": "Utracone odwołanie",
+ "measure.not_planar": "Lica nie są równoległe",
+ "measure.unsupported": "Nie można tego zmierzyć",
+ "cmd.ann.measure_distance": "Zmierz odległość",
+ "cmd.ann.measure_gap": "Zmierz odstęp między licami",
+ "cmd.ann.measure_angle": "Zmierz kąt",
+ "cmd.ann.measure_area": "Zmierz powierzchnię",
+ "hint.measure.first": "Pomiar: kliknij lico ściany (lub punkt) · Esc — wyjście",
+ "hint.measure.second": "Pomiar: kliknij drugie lico · Esc — anuluj pierwszy wybór",
+ "measure.no_face": "Brak lica ściany w tym miejscu"
+}

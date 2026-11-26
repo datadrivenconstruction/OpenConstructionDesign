@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF збережено: {path} ({nodes} елементів, {meshes} сіток)",
  "data_export.gltf.partial": "glTF збережено з {n} проблемами, частину тіл може бракувати: {path}",
  "data_export.gltf.failed": "Не вдалося експортувати glTF: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "Інформація про проєкт",
  "data_export.info.project": "Проєкт",
  "data_export.info.site": "Координати і північ",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "У рамці немає примітивів креслення",
  "data_export.dwgpick.box": "Вибрано примітивів: {n}",
  "data_export.dwgpick.box_rings": "Вибрано примітивів: {n}, замкнених контурів: {rings}",
- "data_export.dwgpick.layer": "Шар {layer}: вибрано примітивів {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "Шар {layer}: вибрано примітивів {n}"
 }

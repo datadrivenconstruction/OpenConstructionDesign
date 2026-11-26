@@ -45,5 +45,7 @@
  "phui.kind.comp": "Στοιχεία",
  "phui.kind.shaft": "Φρέατα",
  "phui.kind.ramp": "Ράμπες",
- "phui.kind.member": "Μέλη"
+ "phui.kind.member": "Μέλη",
+ "phui.dates": "Ημερομηνίες (έναρξη, λήξη)",
+ "phui.show_calendar": "Εμφάνιση ανά ημερολόγιο"
 }

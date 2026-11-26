@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Vùng chọn ({n})",
  "ai.ctx.add_tip": "Thêm lại vào những gì AI thấy",
  "ai.ctx.frame_tip": "Hiện các phần tử này",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Lan can",
  "ai.ctx.cat.roof": "Mái",
  "ai.ctx.cat.stair": "Cầu thang",
- "ai.ctx.cat.other": "Khác",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Khác"
 }

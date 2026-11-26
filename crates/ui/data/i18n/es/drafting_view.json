@@ -15,6 +15,7 @@
  "drafting_view.name": "Nombre",
  "drafting_view.count": "{n} anotaciones",
  "drafting_view.tab": "Delineación · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Vista de delineación vacía",
  "drafting_view.canvas_hint": "Use las herramientas de anotación: líneas de detalle, regiones, texto, componentes de detalle",
  "drafting_view.created": "Vista de delineación «{name}» creada",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Más",
  "empty.drafting.title": "Aún no hay vistas de delineación",
  "empty.drafting.hint": "Cree una para detalles 2D que no se obtienen del modelo.",
- "empty.drafting.action": "Nueva vista de delineación",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Nueva vista de delineación"
 }

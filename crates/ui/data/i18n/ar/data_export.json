@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "تم حفظ glTF: {path} ({nodes} عنصرًا، {meshes} شبكة)",
  "data_export.gltf.partial": "حُفظ glTF مع {n} مشكلة، وقد تكون بعض الأجسام مفقودة: {path}",
  "data_export.gltf.failed": "فشل تصدير glTF: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "معلومات المشروع",
  "data_export.info.project": "المشروع",
  "data_export.info.site": "الإحداثيات والشمال",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "لا توجد عناصر رسم داخل المستطيل",
  "data_export.dwgpick.box": "العناصر المحددة: {n}",
  "data_export.dwgpick.box_rings": "العناصر المحددة: {n}، المحيطات المغلقة: {rings}",
- "data_export.dwgpick.layer": "الطبقة {layer}: العناصر المحددة {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "الطبقة {layer}: العناصر المحددة {n}"
 }

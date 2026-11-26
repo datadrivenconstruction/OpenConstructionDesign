@@ -24,5 +24,21 @@
  "value_src.verified_n": "Ověřené hodnoty: {n}",
  "value_src.bulk_note": "Hodnoty doplněné AI, neověřené: {n}",
  "value_src.bulk_verify": "Označit jako ověřené ({n})",
- "value_src.bulk_tip": "Označí všechny hodnoty výběru doplněné AI jako ověřené, jeden krok zpět"
+ "value_src.bulk_tip": "Označí všechny hodnoty výběru doplněné AI jako ověřené, jeden krok zpět",
+ "origin.title": "Původ",
+ "origin.made_by": "Vytvořil",
+ "origin.request": "Požadavek",
+ "origin.at": "Použito",
+ "origin.recipe": "recept „{name}“, část {part}",
+ "origin.ai": "asistent AI ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "skript {name}",
+ "origin.xlsx": "tabulka XLSX",
+ "origin.user": "uživatel",
+ "origin.import": "import",
+ "origin.import_file": "import ze souboru {file}",
+ "origin.unknown": "není v historii",
+ "origin.held": "Upraveno ručně: opětovné spuštění receptu to nechá beze změny",
+ "origin.rebuilt": "Opětovné spuštění receptu to znovu sestaví; upravte to ručně, aby to zůstalo beze změny",
+ "origin.ai_values": "Hodnoty vyplněné AI: {n}, neověřeno: {open}"
 }

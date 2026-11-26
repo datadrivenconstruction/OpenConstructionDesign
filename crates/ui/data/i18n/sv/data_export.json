@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF sparad: {path} ({nodes} element, {meshes} meshar)",
  "data_export.gltf.partial": "glTF sparad med {n} problem, vissa kroppar kan saknas: {path}",
  "data_export.gltf.failed": "glTF-export misslyckades: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "Projektinformation",
  "data_export.info.project": "Projekt",
  "data_export.info.site": "Koordinater och nord",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "Inga ritningsprimitiver i rutan",
  "data_export.dwgpick.box": "Valda primitiver: {n}",
  "data_export.dwgpick.box_rings": "Valda primitiver: {n}, slutna konturer: {rings}",
- "data_export.dwgpick.layer": "Lager {layer}: valda primitiver {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "Lager {layer}: valda primitiver {n}"
 }

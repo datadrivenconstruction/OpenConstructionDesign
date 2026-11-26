@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "קריאת טקסט ההגדרה של משפחה בפרויקט",
+ "api.cmd.family_validate": "בדיקת טקסט הגדרה של משפחה",
+ "api.cmd.family_reference": "קריאת מדריך העזר לטקסט הגדרת משפחה",
+ "api.cmd.family_draft": "הצעת הגדרת משפחה כטיוטה בעורך המשפחות"
+}

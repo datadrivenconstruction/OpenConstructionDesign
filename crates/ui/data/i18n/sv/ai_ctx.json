@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Markering ({n})",
  "ai.ctx.add_tip": "Lägg tillbaka i det AI:n ser",
  "ai.ctx.frame_tip": "Visa dessa element",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Räcken",
  "ai.ctx.cat.roof": "Tak",
  "ai.ctx.cat.stair": "Trappor",
- "ai.ctx.cat.other": "Övrigt",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Övrigt"
 }

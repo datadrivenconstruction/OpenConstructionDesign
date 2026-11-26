@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Түрді көшіру",
  "wall_type.wt.duplicate_tip": "Бұл қабаттарды жаңа түр ретінде сақтайды; ашылған түр өзгеріссіз қалады.",
  "wall_type.wt.switch_dirty": "Басқа түрді ашпас бұрын OK немесе Бас тарту басыңыз",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Қызметі",
  "wall_type.wt.h_material": "Материал",
  "wall_type.wt.h_thickness": "Қалыңдық",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Көрініс ішінде қабырғаларды таңдап, содан кейін түрін ауыстырыңыз.",
  "wall_type.swap.already": "Таңдалған қабырғаларда бұл түр бар",
  "wall_type.swap.apply": "Ауыстыру",
- "wall_type.swap.done": "Қабырға түрі ауыстырылды: {n} / {m} қабырға",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Қабырға түрі ауыстырылды: {n} / {m} қабырға"
 }

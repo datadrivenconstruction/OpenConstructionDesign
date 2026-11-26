@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "ช่องเปิด {w} กว้างกว่าผนัง {len}",
+ "ix.fix.opening_width": "ความกว้าง {w} mm",
+ "ix.fix.wall_extend": "ขยายผนังเป็น {len} mm"
+}

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "esquisse annulée",
  "sketch_edit.sk_applied": "esquisse appliquée",
  "sketch_edit.sk_tail": "queue",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "dalle",
  "sketch_edit.sk_host_roof": "toiture",
  "sketch_edit.sk_host_ceiling": "plafond",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Niveau 2",
  "sketch_edit.seed_floor_200": "Dalle 200",
  "sketch_edit.seed_section1": "Coupe 1",
- "sketch_edit.seed_section2": "Coupe 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Coupe 2"
 }

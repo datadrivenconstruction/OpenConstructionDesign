@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "قسم کی نقل",
  "wall_type.wt.duplicate_tip": "ان پرتوں کو نئی قسم کے طور پر محفوظ کرتا ہے؛ جو قسم آپ نے کھولی وہ جیسی ہے ویسی رہتی ہے۔",
  "wall_type.wt.switch_dirty": "کوئی اور قسم کھولنے سے پہلے ٹھیک ہے یا منسوخ دبائیں",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "کام",
  "wall_type.wt.h_material": "مواد",
  "wall_type.wt.h_thickness": "موٹائی",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "منظر میں دیواریں منتخب کریں، پھر ان کی قسم بدلیں۔",
  "wall_type.swap.already": "منتخب دیواروں کی یہی قسم پہلے سے ہے",
  "wall_type.swap.apply": "بدلیں",
- "wall_type.swap.done": "دیوار کی قسم بدل گئی: {m} میں سے {n} دیواریں",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "دیوار کی قسم بدل گئی: {m} میں سے {n} دیواریں"
 }

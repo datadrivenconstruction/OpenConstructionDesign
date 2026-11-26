@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "schets geannuleerd",
  "sketch_edit.sk_applied": "schets toegepast",
  "sketch_edit.sk_tail": "staart",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "vloer",
  "sketch_edit.sk_host_roof": "dak",
  "sketch_edit.sk_host_ceiling": "plafond",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Verdieping 2",
  "sketch_edit.seed_floor_200": "Vloer 200",
  "sketch_edit.seed_section1": "Doorsnede 1",
- "sketch_edit.seed_section2": "Doorsnede 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Doorsnede 2"
 }

@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Renkli",
+ "cmd.ui.icons.color": "Renkli simgeler",
+ "cmd.ui.icons.color.desc": "Simgelerin çizim stili",
+ "theme.icons.hierarchical": "Hiyerarşik",
+ "cmd.ui.icons.hierarchical": "Hiyerarşik simgeler",
+ "cmd.ui.icons.hierarchical.desc": "Simgelerin çizim stili",
+ "theme.icons.isometric": "İzometrik",
+ "cmd.ui.icons.isometric": "İzometrik simgeler",
+ "cmd.ui.icons.isometric.desc": "Simgelerin çizim stili",
+ "theme.icons.monoline": "Tek çizgi",
+ "cmd.ui.icons.monoline": "Tek çizgili simgeler",
+ "cmd.ui.icons.monoline.desc": "Simgelerin çizim stili"
+}

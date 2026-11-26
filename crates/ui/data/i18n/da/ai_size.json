@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} tokens",
  "ai.size.block": "For lang til denne model: ~{n} tokens, op til {max} passer og lader plads til svaret — forkort den eller del den op",
  "ai.size.trim": "Beskær, så den passer",
  "ai.size.trim_tip": "Klipper enden af beskeden, så den passer. Intet klippes, før du klikker.",
  "ai.size.drop_view": "Udelad visningen",
  "ai.size.drop_level": "Udelad etagen",
- "ai.size.drop_selection": "Udelad markeringen",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "Udelad markeringen"
 }

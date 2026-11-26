@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Oila",
  "type_dialog.typedial.h_function": "Vazifa",
  "type_dialog.typedial.h_material": "Material",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "Parametr",
  "type_dialog.typedial.h_thickness": "Qalinlik",
  "type_dialog.typedial.h_value": "Qiymat",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Devor egallagan maydon",
  "type_dialog.warn.wall_vol": "Devor hajmi",
  "type_dialog.warn.walls": "Devorlar",
- "type_dialog.warn.warnings_n": "⚠ Ogohlantirishlar: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ Ogohlantirishlar: {n}"
 }

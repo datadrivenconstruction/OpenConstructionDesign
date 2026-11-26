@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Groepen",
+ "cmd.mep.circuits.desc": "Opent de groependitor: groepen van elk verdeelbord, hun belastingen, kabeldoorsneden en regelcontroles.",
  "ce.title": "Stroomkringen",
  "ce.open": "Stroomkringen",
  "ce.empty": "Nog geen circuits",

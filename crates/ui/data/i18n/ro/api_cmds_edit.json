@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Îmbină, desparte sau schimbă îmbinările geometriei",
  "api.cmd.place_footings": "Plasează o fundație sub fiecare stâlp al unui nivel",
  "api.cmd.create_terrain": "Creează un teren din puncte de măsurătoare sau dintr-un plan înclinat",
- "api.cmd.script_recipes": "Citește blocurile de scriere și rețetele structurilor libere"
+ "api.cmd.set_material": "Setează aspectul unui material în 3D",
+ "api.cmd.script_recipes": "Citește blocurile de scriere și rețetele structurilor libere",
+ "api.cmd.generate_block": "Planifică un grup de clădiri pe parcele cu reguli de amplasament comune",
+ "api.cmd.measure_save": "Salvează o măsurătoare într-o vizualizare",
+ "api.cmd.edit_mass": "Adaugă un pas de istoric unui volum: extrudare, schiță, înveliș, racordare, șanfren, decalare sau divizare",
+ "api.cmd.mass_to_family": "Creează o familie de componente dintr-o cronologie de volum"
 }

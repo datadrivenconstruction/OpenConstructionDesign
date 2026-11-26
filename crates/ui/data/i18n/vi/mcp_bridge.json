@@ -18,6 +18,7 @@
  "mcp.set.error": "Máy chủ chưa khởi động: {error}",
  "mcp.set.new": "Token mới",
  "mcp.set.port": "Cổng",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Mỗi lô được kiểm tra trước và là một bước hoàn tác. Chỉ chương trình trên máy tính này mới có thể kết nối.",
  "mcp.set.show": "Hiện",
  "mcp.set.state_failed": "Không chạy",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Trạng thái",
  "mcp.set.access": "Truy cập",
  "mcp.set.config": "Cấu hình",
- "mcp.set.policy": "Áp dụng",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Áp dụng"
 }

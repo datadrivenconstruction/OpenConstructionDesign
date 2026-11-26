@@ -11,6 +11,7 @@
  "ai.step.s": "{n} 秒",
  "ai.step.min": "{m} 分钟",
  "ai.step.min_s": "{m} 分 {s} 秒",
+ "ai.step.dec": ".",
  "ai.step.details": "详情",
  "ai.step.copy": "复制详情",
  "ai.step.group.read": "读取模型",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "步骤运行期间模型已更改",
  "ai.step.why.skipped": "该步骤未运行：本轮已结束",
  "ai.step.why.other": "该步骤未能完成",
- "ai.step.unknown": "未知工具",
- "ai.step.dec": "."
+ "ai.step.unknown": "未知工具"
 }

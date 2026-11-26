@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Piirit",
+ "cmd.mep.circuits.desc": "Avaa piirieditorin: kaikkien keskusten piirit, niiden kuormat, kaapelikoot ja sääntötarkistukset.",
  "ce.title": "Piirit",
  "ce.open": "Piirit",
  "ce.empty": "Ei vielä piirejä",

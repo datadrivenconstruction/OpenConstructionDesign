@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "הפתח {w} רחב מהקיר {len}",
+ "ix.fix.opening_width": "רוחב {w} מ״מ",
+ "ix.fix.wall_extend": "הארך את הקיר ל-{len} מ״מ"
+}

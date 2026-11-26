@@ -5,6 +5,7 @@
  "keys_import.new_head": "نئی کلیدیں",
  "keys_import.changed_head": "آپ کی اپنی کلیدیں بدلتی ہیں",
  "keys_import.conflicts_head": "درآمد کے بعد تصادم",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "کورڈ",
  "keys_import.kind_seq": "دو حروف",
  "keys_import.unbound": "کوئی نہیں",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "واپس نہیں ہوا: درآمد کے بعد کلیدیں بدلیں۔ Keys ونڈو میں ایک ایک کر کے ری سیٹ کریں۔",
  "keys_import.undo_none": "واپس کرنے کو کچھ نہیں: اس سیشن میں کلید درآمد نہیں ہوئی۔",
  "keys_import.imported": "کلیدیں درآمد ہوئیں",
- "keys_import.imported_conflicts": "کلیدیں درآمد ہوئیں؛ تصادم: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "کلیدیں درآمد ہوئیں؛ تصادم: {n}"
 }

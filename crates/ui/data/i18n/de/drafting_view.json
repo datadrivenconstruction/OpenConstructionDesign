@@ -15,6 +15,7 @@
  "drafting_view.name": "Name",
  "drafting_view.count": "{n} Beschriftungen",
  "drafting_view.tab": "Detail · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Leere Detailansicht",
  "drafting_view.canvas_hint": "Die Werkzeuge des Reiters Beschriften nutzen: Detaillinien, Flächen, Text, Detailbauteile",
  "drafting_view.created": "Detailansicht „{name}“ erstellt",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Mehr",
  "empty.drafting.title": "Noch keine Detailansichten",
  "empty.drafting.hint": "Eine anlegen für 2D-Details, die nicht aus dem Modell geschnitten werden.",
- "empty.drafting.action": "Neue Detailansicht",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Neue Detailansicht"
 }

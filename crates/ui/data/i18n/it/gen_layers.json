@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Involucro",
+ "gen.group.acoustic": "Isolamento acustico",
+ "gen.rule.fire.insulation_class.title": "Classe antincendio dell'isolamento dell'involucro",
+ "gen.rule.fire.insulation_class.desc": "Peggiore classe di reazione al fuoco che l'isolamento di muri esterni e tetti può avere; le stratigrafie con un isolamento peggiore non vengono scelte.",
+ "gen.rule.envelope.u_wall.title": "Valore U del muro esterno",
+ "gen.rule.envelope.u_wall.desc": "Trasmittanza termica massima di un muro esterno; l'isolamento del muro viene dimensionato per restare al di sotto, quindi un clima più freddo dà un muro più spesso.",
+ "gen.rule.envelope.u_roof.title": "Valore U del tetto",
+ "gen.rule.envelope.u_roof.desc": "Trasmittanza termica massima di un tetto; l'isolamento del tetto viene dimensionato per restare al di sotto.",
+ "gen.rule.envelope.u_ground.title": "Valore U del solaio a terra",
+ "gen.rule.envelope.u_ground.desc": "Trasmittanza termica massima del solaio appoggiato sul terreno; l'isolamento sotto il massetto viene dimensionato per restare al di sotto.",
+ "gen.rule.acoustic.rw_party.title": "Isolamento acustico del muro divisorio",
+ "gen.rule.acoustic.rw_party.desc": "Indice di potere fonoisolante Rw minimo di un muro tra abitazioni o accanto a un corridoio comune; il nucleo in muratura viene dimensionato con la legge di massa per raggiungerlo.",
+ "gen.rule.acoustic.rw_floor.title": "Isolamento acustico del solaio",
+ "gen.rule.acoustic.rw_floor.desc": "Indice di potere fonoisolante Rw minimo di un solaio tra piani; la soletta in calcestruzzo viene dimensionata con la legge di massa per raggiungerlo.",
+ "gen.why.e.asm_wall": "muri esterni spessi {t} m con {ins} m di isolamento: U {u} W/m2K, al massimo {lim}",
+ "gen.why.e.asm_roof": "tetto spesso {t} m con {ins} m di isolamento: U {u} W/m2K, al massimo {lim}",
+ "gen.why.e.asm_ground": "solaio a terra spesso {t} m con {ins} m di isolamento: U {u} W/m2K, al massimo {lim}",
+ "gen.why.e.asm_party": "muri divisori spessi {t} m, {m} kg/m2: Rw {rw} dB secondo la legge di massa, almeno {lim}",
+ "gen.why.e.asm_floor": "solai spessi {t} m, {m} kg/m2: Rw {rw} dB secondo la legge di massa, almeno {lim}"
+}

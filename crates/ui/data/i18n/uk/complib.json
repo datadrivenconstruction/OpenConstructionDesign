@@ -18,7 +18,7 @@
  "complib.ready.no": "не записано",
  "complib.edited": "Змінено",
  "complib.edited_tip": "Сімейство проєкту відрізняється від вбудованого",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Значення",
- "complib.armed": "Компонент: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Компонент: {name}"
 }

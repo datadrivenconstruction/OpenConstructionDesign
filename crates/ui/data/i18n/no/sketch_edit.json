@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "skisse avbrutt",
  "sketch_edit.sk_applied": "skisse brukt",
  "sketch_edit.sk_tail": "hale",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "plate",
  "sketch_edit.sk_host_roof": "takflate",
  "sketch_edit.sk_host_ceiling": "tak",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Etasje 2",
  "sketch_edit.seed_floor_200": "Gulv 200",
  "sketch_edit.seed_section1": "Snitt 1",
- "sketch_edit.seed_section2": "Snitt 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Snitt 2"
 }

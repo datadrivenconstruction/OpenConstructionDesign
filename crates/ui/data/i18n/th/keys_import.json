@@ -5,6 +5,7 @@
  "keys_import.new_head": "คีย์ใหม่",
  "keys_import.changed_head": "แทนที่คีย์ของคุณเอง",
  "keys_import.conflicts_head": "ความขัดแย้งหลังการนำเข้า",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "คอร์ด",
  "keys_import.kind_seq": "สองตัวอักษร",
  "keys_import.unbound": "ไม่มี",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "ยังไม่ได้เลิกทำ: มีการแก้ไขคีย์หลังการนำเข้า รีเซ็ตทีละอันในหน้าต่างคีย์",
  "keys_import.undo_none": "ไม่มีอะไรให้เลิกทำ: ไม่มีการนำเข้าคีย์ในเซสชันนี้",
  "keys_import.imported": "นำเข้าคีย์แล้ว",
- "keys_import.imported_conflicts": "นำเข้าคีย์แล้ว; ความขัดแย้ง: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "นำเข้าคีย์แล้ว; ความขัดแย้ง: {n}"
 }

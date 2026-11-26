@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "schița a fost anulată",
  "sketch_edit.sk_applied": "schița a fost aplicată",
  "sketch_edit.sk_tail": "coadă",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "planșeu",
  "sketch_edit.sk_host_roof": "acoperiș",
  "sketch_edit.sk_host_ceiling": "tavan",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Nivelul 2",
  "sketch_edit.seed_floor_200": "Planșeu 200",
  "sketch_edit.seed_section1": "Secțiunea 1",
- "sketch_edit.seed_section2": "Secțiunea 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Secțiunea 2"
 }

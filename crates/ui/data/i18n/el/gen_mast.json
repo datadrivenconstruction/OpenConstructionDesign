@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Ανελκυστήρας ιστού",
+ "fam.name.mast_lift": "Ανελκυστήρας ιστού",
+ "gen.rule.steel.check.self_weight.desc": "Βάρος του πύργου πάνω από μια τομή, ανά μέτρο ύψους.",
+ "gen.rule.steel.check.self_weight.title": "Βάρος χάλυβα ανά μέτρο",
+ "gen.rule.steel.check.strut_share.desc": "Ποσοστό της δύναμης του πέλματος που κρατά μια οριζόντια στον κόμβο της.",
+ "gen.rule.steel.check.strut_share.title": "Ποσοστό οριζόντιων",
+ "gen.rule.steel.out.lift_box_d.desc": "Βάθος κάτοψης που χρειάζεται ένας ανελκυστήρας ιστού με τον ιστό του· τα δάπεδα ανοίγουν πάνω από αυτό.",
+ "gen.rule.steel.out.lift_box_d.title": "Βάθος κιβωτίου ανελκυστήρα",
+ "gen.rule.steel.out.lift_box_w.desc": "Πλάτος κάτοψης που χρειάζεται ένας ανελκυστήρας ιστού· τα δάπεδα ανοίγουν πάνω από αυτό.",
+ "gen.rule.steel.out.lift_box_w.title": "Πλάτος κιβωτίου ανελκυστήρα",
+ "gen.rule.steel.out.lift_offset.desc": "Απόσταση ανελκυστήρα από τον άξονα, μακριά από τον διαγώνιο σύνδεσμο κάτοψης.",
+ "gen.rule.steel.out.lift_offset.title": "Μετατόπιση ανελκυστήρα από τον άξονα",
+ "gen.rule.steel.out.lifts.desc": "Ανελκυστήρες στον πυρήνα: έως τη δεύτερη πλατφόρμα και μετά έως την κορυφή.",
+ "gen.rule.steel.out.lifts.title": "Διαδρομές ανελκυστήρα"
+}

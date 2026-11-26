@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{0} din {1} elemente ar fi șterse. Utilizatorul trebuie să confirme acest lucru",
+ "ai.issue.wipe": "Planul ar șterge toate cele {1} elemente ale modelului ({0} șterse). Nu se aplică niciodată dintr-un singur pas"
+}

@@ -11,6 +11,7 @@
  "query.err.not_changed": "„{key}” ne može se promijeniti: {why}",
  "query.err.op_no_field": "operator bez polja",
  "query.err.positive": "{key}: vrijednost mora biti veća od nule",
+ "query.err.raw": "{text}",
  "query.err.text_field": "polje „{key}” je tekst, formula se ne primjenjuje",
  "query.err.unclosed_paren": "nedostaje zagrada za zatvaranje",
  "query.err.unclosed_quote": "nedostaje navodnik za zatvaranje",
@@ -27,6 +28,5 @@
  "query.why.curtain": "zavjesni zidovi mijenjaju se u vlastitim svojstvima",
  "query.why.opening_type": "tip otvora slijedi njegovu veličinu: „-> width=… height=…”",
  "query.why.slab_thickness": "debljinu ploče određuje tip: „-> type=…”",
- "query.why.wall_thickness": "debljinu zida određuje tip: „-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "debljinu zida određuje tip: „-> type=…”"
 }

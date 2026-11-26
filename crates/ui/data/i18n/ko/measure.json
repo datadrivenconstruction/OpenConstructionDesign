@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "거리",
+ "cmd.e3d.measure.gap": "면 사이 간격",
+ "cmd.e3d.measure.angle": "각도",
+ "cmd.e3d.measure.area": "면 또는 실의 면적 / 둘레",
+ "cmd.e3d.measure.volume": "요소의 체적",
+ "cmd.e3d.measure.slope": "경사",
+ "cmd.e3d.measure.chain": "점 체인",
+ "measure.orphan": "참조 끊김",
+ "measure.not_planar": "면이 평행하지 않습니다",
+ "measure.unsupported": "측정할 수 없습니다",
+ "cmd.ann.measure_distance": "거리 측정",
+ "cmd.ann.measure_gap": "면 사이 간격 측정",
+ "cmd.ann.measure_angle": "각도 측정",
+ "cmd.ann.measure_area": "면적 측정",
+ "hint.measure.first": "측정: 벽면(또는 점) 클릭 · Esc — 종료",
+ "hint.measure.second": "측정: 두 번째 면 클릭 · Esc — 첫 번째 선택 취소",
+ "measure.no_face": "여기에 벽면이 없습니다"
+}

@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "διορθώθηκε μετά από {n} απορριφθείσες προσπάθειες, περίπου {tokens} tokens",
+ "ai.fam_offer": "Ένας πράκτορας πρότεινε την οικογένεια {name}",
+ "ai.fam_offer.open": "Άνοιγμα στον επεξεργαστή οικογενειών",
+ "ai.fam_offer.dismiss": "Παράβλεψη",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Έλεγχος…",
+ "fe.ai.clean": "Ο έλεγχος δεν βρήκε τίποτα",
+ "fe.ai.check_values": "Έλεγχος με τιμές",
+ "fe.ai.lines": "γραμμές {n}",
+ "fe.ai.changes": "{n} αλλαγές σε σχέση με την προηγούμενη έκδοση",
+ "fe.ai.added": "προστέθηκε: {head} {name}",
+ "fe.ai.removed": "αφαιρέθηκε: {head} {name}",
+ "fe.ai.changed": "άλλαξε: {head} {name}",
+ "fe.ai.reject": "Απόρριψη"
+}

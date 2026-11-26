@@ -2,8 +2,8 @@
  "clash.col.x": "X",
  "clash.col.y": "Y",
  "clash.col.z": "Z",
+ "clash.col.unit": "{name}, {unit}",
  "clash.unit.ft3": "ft³",
  "clash.exported_n": "Αναφορά αποθηκεύτηκε: {n} από {m}, {path}",
- "clash.exported_f": "Αναφορά αποθηκεύτηκε: {n} από {m} (φίλτρο: {filter}), {path}",
- "clash.col.unit": "{name}, {unit}"
+ "clash.exported_f": "Αναφορά αποθηκεύτηκε: {n} από {m} (φίλτρο: {filter}), {path}"
 }

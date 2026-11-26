@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "không đọc được sổ làm việc, các cột riêng của nó sẽ bị mất; hãy đóng trong bảng tính rồi thử lại",
  "xl.msg.type_x_layer_x": "loại {} lớp {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} không còn tồn tại, các ô của cột riêng của nó đã bị bỏ",
- "xl.msg.delsafe_type_param_on_elements": "tham số '{}' là tham số loại; hãy sửa trên tờ loại, chưa áp dụng"
+ "xl.msg.delsafe_type_param_on_elements": "tham số '{}' là tham số loại; hãy sửa trên tờ loại, chưa áp dụng",
+ "xl.msg.tag_x_is_removed_with_x_x": "thẻ {} bị xóa cùng với {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "kích thước {} mất {} {} và giữ hình dạng cuối cùng",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "không thể kiểm tra chú thích của các phần tử đã xóa: {}"
 }

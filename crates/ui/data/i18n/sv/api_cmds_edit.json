@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Sammanfoga, lös upp eller byt geometrisk sammanfogning",
  "api.cmd.place_footings": "Placera en grund under varje pelare på en våning",
  "api.cmd.create_terrain": "Skapa terräng från mätpunkter eller ett lutande plan",
- "api.cmd.script_recipes": "Läs skriptbyggstenar och recept för fria konstruktioner"
+ "api.cmd.set_material": "Ange hur ett material ser ut i 3D",
+ "api.cmd.script_recipes": "Läs skriptbyggstenar och recept för fria konstruktioner",
+ "api.cmd.generate_block": "Planera ett kvarter med byggnader på tomter med gemensamma platsregler",
+ "api.cmd.measure_save": "Spara ett mått i en vy",
+ "api.cmd.edit_mass": "Lägg till ett historiksteg i en volym: extrudera, skissa, skal, rundning, fasning, förskjutning eller delning",
+ "api.cmd.mass_to_family": "Skapa en komponentfamilj från en volyms tidslinje"
 }

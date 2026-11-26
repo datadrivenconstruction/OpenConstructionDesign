@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "کھلی جگہ {w} دیوار {len} سے چوڑی ہے",
+ "ix.fix.opening_width": "چوڑائی {w} mm",
+ "ix.fix.wall_extend": "دیوار کو {len} mm تک بڑھائیں"
+}

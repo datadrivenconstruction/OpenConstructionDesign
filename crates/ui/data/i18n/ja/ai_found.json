@@ -9,6 +9,7 @@
  "ai_found.found.hide": "非表示",
  "ai_found.found.color": "色分け",
  "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "一致するものがありません。フィルタを広げてみてください。",
  "ai_found.found.show_btn": "表示",
  "ai_found.found.show_tip": "これらの要素を選択し、平面図と 3D でズーム",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# 要素を非表示",
   "other": "# 要素を非表示"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

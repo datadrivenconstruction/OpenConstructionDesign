@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "種類",
  "collab_diff.diff.col.field": "フィールド",
  "collab_diff.diff.col.old": "変更前",
- "collab_diff.diff.col.new": "変更後"
+ "collab_diff.diff.col.new": "変更後",
+ "collab_diff.reveal.title": "施工過程",
+ "collab_diff.reveal.start": "施工順に表示",
+ "collab_diff.reveal.play": "再生",
+ "collab_diff.reveal.pause": "一時停止",
+ "collab_diff.reveal.back": "逆再生",
+ "collab_diff.reveal.close": "閉じる",
+ "collab_diff.reveal.nothing": "表示するものがありません: 変更された要素が3Dシーンにありません。",
+ "collab_diff.reveal.journal_busy": "ジャーナルを読み込み中…",
+ "collab_diff.reveal.journal_play": "ジャーナルを再生"
 }

@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "cabang if() berbeda",
  "pe.msg_what_args": "argumen",
  "pe.msg_and": " dan ",
+ "pe.msg_incompatible": "{w}: satuan tidak cocok {dims}",
  "pe.text_no_formula": "parameter teks tidak menerima rumus",
  "pe.circular": "referensi melingkar: {text}",
- "pe.depends_invalid": "bergantung pada “{b}” yang tidak valid",
- "pe.msg_incompatible": "{w}: satuan tidak cocok {dims}"
+ "pe.depends_invalid": "bergantung pada “{b}” yang tidak valid"
 }

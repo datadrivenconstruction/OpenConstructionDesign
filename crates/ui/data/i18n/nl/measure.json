@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Afstand",
+ "cmd.e3d.measure.gap": "Afstand tussen vlakken",
+ "cmd.e3d.measure.angle": "Hoek",
+ "cmd.e3d.measure.area": "Oppervlakte / omtrek van een vlak of ruimte",
+ "cmd.e3d.measure.volume": "Volume van een element",
+ "cmd.e3d.measure.slope": "Helling",
+ "cmd.e3d.measure.chain": "Puntketen",
+ "measure.orphan": "Verwijzing kwijt",
+ "measure.not_planar": "Vlakken zijn niet evenwijdig",
+ "measure.unsupported": "Dit kan niet worden gemeten",
+ "cmd.ann.measure_distance": "Afstand meten",
+ "cmd.ann.measure_gap": "Afstand tussen vlakken meten",
+ "cmd.ann.measure_angle": "Hoek meten",
+ "cmd.ann.measure_area": "Oppervlakte meten",
+ "hint.measure.first": "Meten: klik op een wandvlak (of een punt) · Esc — afsluiten",
+ "hint.measure.second": "Meten: klik op het tweede vlak · Esc — eerste keuze annuleren",
+ "measure.no_face": "Hier geen wandvlak"
+}

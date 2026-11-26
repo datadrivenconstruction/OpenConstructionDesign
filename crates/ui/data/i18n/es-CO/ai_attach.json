@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Trazando muros desde un plano",
  "api.cmd.attachments_list": "Archivos adjuntos al chat y requisitos del proyecto confirmados",
  "api.cmd.attachments_read": "Lee un rango de páginas, filas de tabla o la imagen de un archivo adjunto",
- "api.cmd.underlay_trace": "Muros en borrador trazados desde un plano adjunto"
+ "api.cmd.underlay_trace": "Muros en borrador trazados desde un plano adjunto",
+ "ai.tool.plan_from_image": "Lectura de un plano a partir de una imagen",
+ "api.cmd.plan_from_image": "Genera borradores de muros, puertas, ventanas y espacios leídos de una imagen de plano o una página PDF adjunta"
 }

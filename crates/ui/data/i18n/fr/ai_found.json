@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Masqués",
  "ai_found.found.color": "Colorés",
  "ai_found.found.count": "{n} sur {m}",
+ "ai_found.found.line": "{what} : {count}",
  "ai_found.found.none": "Aucune correspondance. Essayez un filtre plus large.",
  "ai_found.found.show_btn": "Afficher",
  "ai_found.found.show_tip": "Sélectionner ces éléments et les zoomer en plan et en 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# élément masqué",
   "other": "# éléments masqués"
- },
- "ai_found.found.line": "{what} : {count}"
+ }
 }

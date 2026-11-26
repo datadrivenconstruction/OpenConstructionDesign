@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "La baie {w} est plus large que le mur {len}",
+ "ix.fix.opening_width": "Largeur {w} mm",
+ "ix.fix.wall_extend": "Prolonger le mur à {len} mm"
+}

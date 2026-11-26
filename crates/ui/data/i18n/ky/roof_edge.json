@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Бүк (bulge)",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Бул чекиттен кийин чекит кошуу (аркасы экиге бөлүнөт)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Сактоо",
  "roof_edge.pe.saved": "Профиль сакталды",
  "roof_edge.pe.valid": "Профиль туура",
  "roof_edge.pe.invalid": "Профиль өзүн кесип өтөт, өтө кичине же 3 чекиттен аз",
  "roof_edge.pe.bad_number": "Координата же бүк сан эмес",
- "roof_edge.pe.no_name": "Профилдин атын жазыңыз",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Профилдин атын жазыңыз"
 }

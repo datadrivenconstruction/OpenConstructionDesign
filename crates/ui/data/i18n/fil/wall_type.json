@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Doblehin ang uri",
  "wall_type.wt.duplicate_tip": "Sine-save ang mga layer na ito bilang bagong uri; mananatili ang uring binuksan mo.",
  "wall_type.wt.switch_dirty": "Pindutin ang OK o Cancel bago magbukas ng ibang uri",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Tungkulin",
  "wall_type.wt.h_material": "Materyales",
  "wall_type.wt.h_thickness": "Kapal",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Pumili ng mga dingding sa view, pagkatapos palitan ang uri ng mga ito.",
  "wall_type.swap.already": "May ganitong uri na ang mga napiling dingding",
  "wall_type.swap.apply": "Palitan",
- "wall_type.swap.done": "Napalitan ang uri ng dingding: {n} sa {m} dingding",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Napalitan ang uri ng dingding: {n} sa {m} dingding"
 }

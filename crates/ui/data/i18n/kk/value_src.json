@@ -24,5 +24,21 @@
  "value_src.verified_n": "Тексерілген мәндер: {n}",
  "value_src.bulk_note": "AI толтырған, тексерілмеген мәндер: {n}",
  "value_src.bulk_verify": "Тексерілген деп белгілеу ({n})",
- "value_src.bulk_tip": "Таңдаудың барлық AI толтырған мәнін тексерілген деп белгілейді, бір қайтару қадамы"
+ "value_src.bulk_tip": "Таңдаудың барлық AI толтырған мәнін тексерілген деп белгілейді, бір қайтару қадамы",
+ "origin.title": "Шығу тегі",
+ "origin.made_by": "Жасаған",
+ "origin.request": "Сұрау",
+ "origin.at": "Қолданылды",
+ "origin.recipe": "«{name}» рецепті, {part} бөлігі",
+ "origin.ai": "AI көмекшісі ({model})",
+ "origin.agent": "агент {name}",
+ "origin.script": "скрипт {name}",
+ "origin.xlsx": "XLSX кестесі",
+ "origin.user": "адам",
+ "origin.import": "импорт",
+ "origin.import_file": "{file} файлынан импорт",
+ "origin.unknown": "тарихта жоқ",
+ "origin.held": "Қолмен өзгертілген: рецепті қайта іске қосу оны өзгеріссіз қалдырады",
+ "origin.rebuilt": "Рецепті қайта іске қосу оны қайта құрады; қалдыру үшін қолмен өзгертіңіз",
+ "origin.ai_values": "AI толтырған мәндер: {n}, тексерілмеген: {open}"
 }

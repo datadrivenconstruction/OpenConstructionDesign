@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n} مسترد کوششوں کے بعد درست کیا گیا، تقریباً {tokens} ٹوکن",
+ "ai.fam_offer": "ایک ایجنٹ نے فیملی {name} پیش کی",
+ "ai.fam_offer.open": "فیملی ایڈیٹر میں کھولیں",
+ "ai.fam_offer.dismiss": "مسترد کریں",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "جانچ ہو رہی ہے…",
+ "fe.ai.clean": "جانچ میں کچھ نہیں ملا",
+ "fe.ai.check_values": "قدروں کے ساتھ جانچیں",
+ "fe.ai.lines": "سطریں {n}",
+ "fe.ai.changes": "پچھلے ورژن کے مقابلے میں {n} تبدیلیاں",
+ "fe.ai.added": "شامل کیا گیا: {head} {name}",
+ "fe.ai.removed": "ہٹایا گیا: {head} {name}",
+ "fe.ai.changed": "تبدیل کیا گیا: {head} {name}",
+ "fe.ai.reject": "رد کریں"
+}

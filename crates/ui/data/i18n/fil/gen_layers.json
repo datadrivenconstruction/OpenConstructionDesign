@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Envelope",
+ "gen.group.acoustic": "Sound insulation",
+ "gen.rule.fire.insulation_class.title": "Fire class ng insulation ng envelope",
+ "gen.rule.fire.insulation_class.desc": "Pinakamasamang reaction-to-fire class na maaaring taglayin ng insulation ng mga panlabas na dingding at bubong; hindi pinipili ang mga build-up na may mas masamang insulation.",
+ "gen.rule.envelope.u_wall.title": "U-value ng panlabas na dingding",
+ "gen.rule.envelope.u_wall.desc": "Pinakamataas na heat transmittance ng panlabas na dingding; ang insulation ng dingding ay sinusukat para manatili sa ibaba nito, kaya ang mas malamig na klima ay nagkakaroon ng mas makapal na dingding.",
+ "gen.rule.envelope.u_roof.title": "U-value ng bubong",
+ "gen.rule.envelope.u_roof.desc": "Pinakamataas na heat transmittance ng bubong; ang insulation ng bubong ay sinusukat para manatili sa ibaba nito.",
+ "gen.rule.envelope.u_ground.title": "U-value ng slab sa lupa",
+ "gen.rule.envelope.u_ground.desc": "Pinakamataas na heat transmittance ng slab ng sahig sa lupa; ang insulation sa ilalim ng screed ay sinusukat para manatili sa ibaba nito.",
+ "gen.rule.acoustic.rw_party.title": "Sound insulation ng party wall",
+ "gen.rule.acoustic.rw_party.desc": "Pinakamababang sound reduction index Rw ng dingding sa pagitan ng mga tirahan o katabi ng karaniwang koridor; ang sukat ng masonry core ay itinatakda ng mass law para maabot ito.",
+ "gen.rule.acoustic.rw_floor.title": "Sound insulation ng sahig",
+ "gen.rule.acoustic.rw_floor.desc": "Pinakamababang sound reduction index Rw ng sahig sa pagitan ng mga palapag; ang sukat ng kongkretong slab ay itinatakda ng mass law para maabot ito.",
+ "gen.why.e.asm_wall": "mga panlabas na dingding na {t} m ang kapal na may {ins} m na insulation: U {u} W/m2K, hindi hihigit sa {lim}",
+ "gen.why.e.asm_roof": "bubong na {t} m ang kapal na may {ins} m na insulation: U {u} W/m2K, hindi hihigit sa {lim}",
+ "gen.why.e.asm_ground": "slab sa lupa na {t} m ang kapal na may {ins} m na insulation: U {u} W/m2K, hindi hihigit sa {lim}",
+ "gen.why.e.asm_party": "mga party wall na {t} m ang kapal, {m} kg/m2: Rw {rw} dB ayon sa mass law, hindi bababa sa {lim}",
+ "gen.why.e.asm_floor": "mga sahig na {t} m ang kapal, {m} kg/m2: Rw {rw} dB ayon sa mass law, hindi bababa sa {lim}"
+}

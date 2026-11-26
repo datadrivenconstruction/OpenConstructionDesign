@@ -5,6 +5,7 @@
  "keys_import.new_head": "Mga bagong key",
  "keys_import.changed_head": "Pinapalitan ang sarili mong key",
  "keys_import.conflicts_head": "Mga conflict pagkatapos ng import",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "kuwerdas",
  "keys_import.kind_seq": "dalawang letra",
  "keys_import.unbound": "wala",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Hindi na-undo: na-edit ang mga key pagkatapos ng import. I-reset ang mga ito nang paisa-isa sa Keys window.",
  "keys_import.undo_none": "Walang maaaring i-undo: walang key import sa session na ito.",
  "keys_import.imported": "Na-import ang mga key",
- "keys_import.imported_conflicts": "Na-import ang mga key; mga conflict: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Na-import ang mga key; mga conflict: {n}"
 }

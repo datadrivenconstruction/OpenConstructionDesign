@@ -5,6 +5,7 @@
  "keys_import.new_head": "Uudet näppäimet",
  "keys_import.changed_head": "Korvaa omat näppäimet",
  "keys_import.conflicts_head": "Ristiriidat tuonnin jälkeen",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "yhdistelmä",
  "keys_import.kind_seq": "kaksi kirjainta",
  "keys_import.unbound": "ei mitään",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Ei kumottu: näppäimiä muokattiin tuonnin jälkeen. Palauta ne yksi kerrallaan Näppäimet-ikkunassa.",
  "keys_import.undo_none": "Ei kumottavaa: tässä istunnossa ei ole näppäintuontia.",
  "keys_import.imported": "Näppäimet tuotu",
- "keys_import.imported_conflicts": "Näppäimet tuotu; ristiriitoja: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Näppäimet tuotu; ristiriitoja: {n}"
 }

@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "ระยะทาง",
+ "cmd.e3d.measure.gap": "ช่องว่างระหว่างผิว",
+ "cmd.e3d.measure.angle": "มุม",
+ "cmd.e3d.measure.area": "พื้นที่ / เส้นรอบรูปของผิวหรือห้อง",
+ "cmd.e3d.measure.volume": "ปริมาตรขององค์ประกอบ",
+ "cmd.e3d.measure.slope": "ความลาด",
+ "cmd.e3d.measure.chain": "ลูกโซ่จุด",
+ "measure.orphan": "การอ้างอิงสูญหาย",
+ "measure.not_planar": "ผิวไม่ขนานกัน",
+ "measure.unsupported": "ไม่สามารถวัดสิ่งนี้ได้",
+ "cmd.ann.measure_distance": "วัดระยะทาง",
+ "cmd.ann.measure_gap": "วัดช่องว่างระหว่างผิว",
+ "cmd.ann.measure_angle": "วัดมุม",
+ "cmd.ann.measure_area": "วัดพื้นที่",
+ "hint.measure.first": "วัด: คลิกผิวผนัง (หรือจุด) · Esc — ออก",
+ "hint.measure.second": "วัด: คลิกผิวที่สอง · Esc — ยกเลิกการเลือกแรก",
+ "measure.no_face": "ไม่มีผิวผนังตรงนี้"
+}

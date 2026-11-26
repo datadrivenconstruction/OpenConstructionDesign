@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Lift Tiang",
+ "fam.name.mast_lift": "Lift Tiang",
+ "gen.rule.steel.check.self_weight.desc": "Berat menara di atas potongan, per meter tinggi.",
+ "gen.rule.steel.check.self_weight.title": "Berat baja per meter",
+ "gen.rule.steel.check.strut_share.desc": "Bagian gaya chord yang ditahan elemen horizontal pada nodanya.",
+ "gen.rule.steel.check.strut_share.title": "Bagian horizontal",
+ "gen.rule.steel.out.lift_box_d.desc": "Kedalaman denah yang dibutuhkan lift tiang beserta tiangnya; lantai terbuka di atasnya.",
+ "gen.rule.steel.out.lift_box_d.title": "Kedalaman boks lift",
+ "gen.rule.steel.out.lift_box_w.desc": "Lebar denah yang dibutuhkan lift tiang; lantai terbuka di atasnya.",
+ "gen.rule.steel.out.lift_box_w.title": "Lebar boks lift",
+ "gen.rule.steel.out.lift_offset.desc": "Jarak lift dari sumbu, bebas dari bracing denah.",
+ "gen.rule.steel.out.lift_offset.title": "Offset lift dari sumbu",
+ "gen.rule.steel.out.lifts.desc": "Lift sepanjang inti: ke platform kedua, lalu ke puncak.",
+ "gen.rule.steel.out.lifts.title": "Lintasan lift"
+}

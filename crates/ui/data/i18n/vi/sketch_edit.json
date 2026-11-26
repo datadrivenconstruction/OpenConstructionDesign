@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "đã hủy phác thảo",
  "sketch_edit.sk_applied": "đã áp dụng phác thảo",
  "sketch_edit.sk_tail": "đuôi",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "sàn",
  "sketch_edit.sk_host_roof": "mái",
  "sketch_edit.sk_host_ceiling": "trần",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Cao độ 2",
  "sketch_edit.seed_floor_200": "Sàn 200",
  "sketch_edit.seed_section1": "Mặt cắt 1",
- "sketch_edit.seed_section2": "Mặt cắt 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Mặt cắt 2"
 }

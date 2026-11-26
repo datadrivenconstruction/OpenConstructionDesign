@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "magkaiba ang mga branch ng if()",
  "pe.msg_what_args": "mga argumento",
  "pe.msg_and": " at ",
+ "pe.msg_incompatible": "{w}: hindi magkatugmang unit {dims}",
  "pe.text_no_formula": "walang formula ang text parameter",
  "pe.circular": "pabilog na sanggunian: {text}",
- "pe.depends_invalid": "umaasa sa hindi valid na “{b}”",
- "pe.msg_incompatible": "{w}: hindi magkatugmang unit {dims}"
+ "pe.depends_invalid": "umaasa sa hindi valid na “{b}”"
 }

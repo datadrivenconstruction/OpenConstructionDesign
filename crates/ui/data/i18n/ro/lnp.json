@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} deschideri nemodificate ({why})",
  "lnp.params_changed": "valori modificate: {n}",
  "lnp.params_same": "Nicio modificare: {u} elemente au deja această valoare",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Selectați doar primul panou pentru a-l edita",
  "lnp.clip_from_wall": "Parametri copiați de la peretele nr. {id}",
  "lnp.clip_from_opening": "Parametri copiați de la deschiderea nr. {id}",
- "lnp.match_from": "Proprietățile lui #{id} aplicate la {n} elemente",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Proprietățile lui #{id} aplicate la {n} elemente"
 }

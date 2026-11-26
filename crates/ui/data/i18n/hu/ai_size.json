@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ".",
  "ai.size.count": "~{n} / {max} token",
  "ai.size.block": "Túl hosszú ehhez a modellhez: ~{n} token, legfeljebb {max} fér bele úgy, hogy hely maradjon a válasznak — rövidítse vagy ossza fel",
  "ai.size.trim": "Illesztés a méretre",
  "ai.size.trim_tip": "Levágja az üzenet végét, hogy beleférjen. Semmi nem vágódik le, amíg nem kattint.",
  "ai.size.drop_view": "A nézet kihagyása",
  "ai.size.drop_level": "A szint kihagyása",
- "ai.size.drop_selection": "A kijelölés kihagyása",
- "ai.size.sep": "."
+ "ai.size.drop_selection": "A kijelölés kihagyása"
 }

@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "वर्कबुक नहीं पढ़ी जा सकी, उसके अपने कॉलम खो जाएंगे; उसे XLSX स्प्रेडशीट में बंद करके फिर कोशिश करें",
  "xl.msg.type_x_layer_x": "प्रकार {} लेयर {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} अब मौजूद नहीं है, उसके अपने कॉलम के सेल हटा दिए गए",
- "xl.msg.delsafe_type_param_on_elements": "पैरामीटर '{}' टाइप पैरामीटर है; उसे प्रकार शीट पर संपादित करें, लागू नहीं हुआ"
+ "xl.msg.delsafe_type_param_on_elements": "पैरामीटर '{}' टाइप पैरामीटर है; उसे प्रकार शीट पर संपादित करें, लागू नहीं हुआ",
+ "xl.msg.tag_x_is_removed_with_x_x": "टैग {} को {} {} के साथ हटाया जाता है",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "आयाम {} {} {} खो देता है और अपना आख़िरी आकार रखता है",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "हटाए गए तत्वों के एनोटेशन जाँचे नहीं जा सकते: {}"
 }

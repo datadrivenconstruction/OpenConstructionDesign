@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Mastohissi",
+ "fam.name.mast_lift": "Mastohissi",
+ "gen.rule.steel.check.self_weight.desc": "Tornin paino leikkauksen yläpuolella korkeusmetriä kohti.",
+ "gen.rule.steel.check.self_weight.title": "Teräksen paino metriä kohti",
+ "gen.rule.steel.check.strut_share.desc": "Osuus pääsauvan voimasta, jonka vaakasauva ottaa solmussaan.",
+ "gen.rule.steel.check.strut_share.title": "Vaakasauvan osuus",
+ "gen.rule.steel.out.lift_box_d.desc": "Mastohissin masto mukaan lukien tarvitsema pohjan syvyys; kerrokset avautuvat sen yli.",
+ "gen.rule.steel.out.lift_box_d.title": "Hissilaatikon syvyys",
+ "gen.rule.steel.out.lift_box_w.desc": "Mastohissin tarvitsema pohjan leveys; kerrokset avautuvat sen yli.",
+ "gen.rule.steel.out.lift_box_w.title": "Hissilaatikon leveys",
+ "gen.rule.steel.out.lift_offset.desc": "Hissin etäisyys akselista, pohjan ristikon ulkopuolella.",
+ "gen.rule.steel.out.lift_offset.title": "Hissin siirtymä akselista",
+ "gen.rule.steel.out.lifts.desc": "Hissit ytimessä: toiselle tasolle ja sieltä ylös.",
+ "gen.rule.steel.out.lifts.title": "Hissiosuudet"
+}

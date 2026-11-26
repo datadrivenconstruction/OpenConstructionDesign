@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Family",
  "type_dialog.typedial.h_function": "कार्य",
  "type_dialog.typedial.h_material": "सामग्री",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "पैरामीटर",
  "type_dialog.typedial.h_thickness": "मोटाई",
  "type_dialog.typedial.h_value": "मान",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Wall का फ़ुटप्रिंट क्षेत्रफल",
  "type_dialog.warn.wall_vol": "Wall आयतन",
  "type_dialog.warn.walls": "दीवारें",
- "type_dialog.warn.warnings_n": "⚠ चेतावनियाँ: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ चेतावनियाँ: {n}"
 }

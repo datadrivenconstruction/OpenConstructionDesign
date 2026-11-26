@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "som net",
  "dlg.imp.skipped": "sprunget over",
  "dlg.imp.notes": "Noter: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "og {n} flere typer",
  "dlg.imp.no_levels": "Filen har ingen etager: der blev oprettet en standardetage",
  "dlg.imp.reimport_row": "Opdateret {updated}, uændret {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} linjer, {arcs} buer, {texts} tekster, {fills} udfyldninger, {layers} lag; enhed {unit} mm",
  "dlg.dw.summary_paper": "; papirark {n} (ikke placeret på underlaget)",
  "dlg.dw.summary_unknown": "; ikke overført: {list}",
- "dlg.dw.summary_more": " og {n} flere typer",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " og {n} flere typer"
 }

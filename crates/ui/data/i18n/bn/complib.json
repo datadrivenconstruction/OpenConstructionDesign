@@ -18,7 +18,7 @@
  "complib.ready.no": "লেখা হয়নি",
  "complib.edited": "সম্পাদিত",
  "complib.edited_tip": "প্রজেক্টের ফ্যামিলি বিল্ট-ইনের থেকে আলাদা",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "মান",
- "complib.armed": "কম্পোনেন্ট: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "কম্পোনেন্ট: {name}"
 }

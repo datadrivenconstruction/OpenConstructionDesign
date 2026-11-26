@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Rangli",
+ "cmd.ui.icons.color": "Rangli ikonkalar",
+ "cmd.ui.icons.color.desc": "Ikonkalarning chizilish uslubi",
+ "theme.icons.hierarchical": "Ierarxik",
+ "cmd.ui.icons.hierarchical": "Ierarxik ikonkalar",
+ "cmd.ui.icons.hierarchical.desc": "Ikonkalarning chizilish uslubi",
+ "theme.icons.isometric": "Izometrik",
+ "cmd.ui.icons.isometric": "Izometrik ikonkalar",
+ "cmd.ui.icons.isometric.desc": "Ikonkalarning chizilish uslubi",
+ "theme.icons.monoline": "Bir chiziqli",
+ "cmd.ui.icons.monoline": "Bir chiziqli ikonkalar",
+ "cmd.ui.icons.monoline.desc": "Ikonkalarning chizilish uslubi"
+}

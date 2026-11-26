@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT 바닥 패널",
+ "fam.name.glulam_beam": "집성재 보",
+ "fam.name.glulam_column": "집성재 기둥",
+ "gen.group.timber": "목구조",
+ "gen.rule.timber.beam_span_max.desc": "기둥 두 개 사이 집성재 보의 최대 경간.",
+ "gen.rule.timber.beam_span_max.title": "보 경간 한계",
+ "gen.rule.timber.panel_w.desc": "가장 넓은 직교 적층 바닥 패널. 패널 사이마다 이음이 있습니다.",
+ "gen.rule.timber.panel_w.title": "CLT 패널 폭",
+ "gen.rule.timber.span_depth.desc": "집성재 보의 춤 대비 경간. 단면을 선택합니다.",
+ "gen.rule.timber.span_depth.title": "보 경간 대 춤"
+}

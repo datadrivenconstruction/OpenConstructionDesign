@@ -20,6 +20,7 @@
  "sched_import.why_ro": "sola lettura",
  "sched_import.why_locked": "valore bloccato",
  "sched_import.why_bad": "valore non valido",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Applica {n} modifiche",
  "sched_import.cancel": "Annulla",
  "sched_import.applied": "Importate {n} celle (un solo passo di annullamento)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Risultati di formula, non applicati: {n}",
  "sched_import.no_id_rows": "Righe senza Id, non lette: {n} (righe {rows})",
  "sched_import.more": "… altre {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(vuoto)",
  "sched_import.reading": "Lettura della cartella di lavoro…",
  "sched_import.resaved": "La cartella è stata salvata di nuovo dopo la prima anteprima: questa anteprima mostra il nuovo contenuto",
- "sched_import.resaved_reading": "La cartella è stata salvata di nuovo: nulla applicato, rileggo per una nuova anteprima",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "La cartella è stata salvata di nuovo: nulla applicato, rileggo per una nuova anteprima"
 }

@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ 선택 항목 ({n})",
  "ai.ctx.add_tip": "AI가 보는 항목에 다시 추가",
  "ai.ctx.frame_tip": "이 요소 표시",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "난간",
  "ai.ctx.cat.roof": "지붕",
  "ai.ctx.cat.stair": "계단",
- "ai.ctx.cat.other": "기타",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "기타"
 }

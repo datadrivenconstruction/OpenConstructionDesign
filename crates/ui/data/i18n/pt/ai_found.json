@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Ocultado",
  "ai_found.found.color": "Colorido",
  "ai_found.found.count": "{n} de {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Nenhum resultado. Experimente um filtro mais amplo.",
  "ai_found.found.show_btn": "Mostrar",
  "ai_found.found.show_tip": "Seleciona estes elementos e aproxima-os em planta e 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# elemento oculto",
   "other": "# elementos ocultos"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "होस्ट: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "कॉलम",
  "rebar_hosts.kind.beam": "बीम",
  "rebar_hosts.kind.wall": "दीवार",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "मेश दीवारों, स्लैब और नींव में जाता है, कॉलम या बीम में नहीं।",
  "rebar_hosts.why.bars_plate": "लॉन्गिट्यूडिनल बार और स्टिरप कॉलम और बीम में जाते हैं, दीवार, स्लैब या नींव में नहीं।",
  "rebar_hosts.why.no_common_face": "चुने होस्ट का कोई साझा कवर फ़लक नहीं है। एक प्रकार के होस्ट चुनें।",
- "rebar_hosts.why.no_type": "बार प्रकार चुनें।",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "बार प्रकार चुनें।"
 }

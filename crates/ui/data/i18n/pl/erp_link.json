@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Pobierz bieżący edytor ze strony ERP {url}",
  "erp.err.unsupported.admin": "Poproś administratora ERP o bieżący edytor",
  "erp.err.throttled_in": "Zbyt wiele prób. Spróbuj ponownie za {s} s",
+ "erp.err.throttled_ready": "Czas oczekiwania minął. Możesz spróbować ponownie",
  "erp.err.imported": "Rewizja {n} w ERP to zaimportowany model: edytor nie może jeszcze go otworzyć ani opublikować na jego podstawie",
  "erp.action.download": "Otwórz stronę pobierania edytora w ERP",
  "erp.action.new_link": "Uzyskaj nowy link na stronie ERP",

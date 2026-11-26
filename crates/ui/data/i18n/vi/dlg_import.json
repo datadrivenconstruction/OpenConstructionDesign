@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "dưới dạng lưới",
  "dlg.imp.skipped": "đã bỏ qua",
  "dlg.imp.notes": "Ghi chú: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "và {n} loại khác",
  "dlg.imp.no_levels": "Tệp không có cao độ: đã tạo một cao độ mặc định",
  "dlg.imp.reimport_row": "Đã cập nhật {updated}, không đổi {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} đường, {arcs} cung, {texts} chữ, {fills} vùng tô, {layers} lớp; đơn vị {unit} mm",
  "dlg.dw.summary_paper": "; tờ giấy {n} (không đặt lên nền)",
  "dlg.dw.summary_unknown": "; không chuyển sang: {list}",
- "dlg.dw.summary_more": " và {n} loại khác",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " và {n} loại khác"
 }

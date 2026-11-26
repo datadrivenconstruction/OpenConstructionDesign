@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Devreler",
+ "cmd.mep.circuits.desc": "Devre düzenleyiciyi açar: tüm panoların devreleri, yükleri, kablo kesitleri ve kural denetimleri.",
  "ce.title": "Devreler",
  "ce.open": "Devreler",
  "ce.empty": "Henüz devre yok",

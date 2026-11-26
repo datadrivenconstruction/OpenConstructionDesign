@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "ERP sahifasidagi {url} dan joriy tahrirchini yuklab oling",
  "erp.err.unsupported.admin": "ERP administratoridan joriy tahrirchini so'rang",
  "erp.err.throttled_in": "Juda ko'p urinish. {s} soniyadan keyin qayta urinib ko'ring",
+ "erp.err.throttled_ready": "Kutish tugadi. Qayta urinib ko'rishingiz mumkin",
  "erp.err.imported": "ERP dagi {n} reviziya import qilingan model: tahrirchi uni hali ochish yoki ustiga nashr qilish imkoniga ega emas",
  "erp.action.download": "ERP da tahrirchi yuklab olish sahifasini oching",
  "erp.action.new_link": "ERP sahifasidan yangi havola oling",

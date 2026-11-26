@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Väri",
+ "cmd.ui.icons.color": "Värikuvakkeet",
+ "cmd.ui.icons.color.desc": "Kuvakkeiden piirtotyyli",
+ "theme.icons.hierarchical": "Hierarkkinen",
+ "cmd.ui.icons.hierarchical": "Hierarkkiset kuvakkeet",
+ "cmd.ui.icons.hierarchical.desc": "Kuvakkeiden piirtotyyli",
+ "theme.icons.isometric": "Isometrinen",
+ "cmd.ui.icons.isometric": "Isometriset kuvakkeet",
+ "cmd.ui.icons.isometric.desc": "Kuvakkeiden piirtotyyli",
+ "theme.icons.monoline": "Yksiviivainen",
+ "cmd.ui.icons.monoline": "Yksiviivaiset kuvakkeet",
+ "cmd.ui.icons.monoline.desc": "Kuvakkeiden piirtotyyli"
+}

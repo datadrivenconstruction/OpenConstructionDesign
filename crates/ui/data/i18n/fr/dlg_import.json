@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "en maillages",
  "dlg.imp.skipped": "ignoré",
  "dlg.imp.notes": "Notes : {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "et {n} autres natures",
  "dlg.imp.no_levels": "Le fichier ne contient aucun niveau : un niveau par défaut a été créé",
  "dlg.imp.reimport_row": "Mis à jour {updated}, inchangés {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name} : {lines} lignes, {arcs} arcs, {texts} textes, {fills} remplissages, {layers} calques ; unité {unit} mm",
  "dlg.dw.summary_paper": " ; feuilles papier {n} (non placées sur le fond de plan)",
  "dlg.dw.summary_unknown": " ; non reprises : {list}",
- "dlg.dw.summary_more": " et {n} autres natures",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " et {n} autres natures"
 }

@@ -41,5 +41,16 @@
  "library.ifc.window": "Finestra",
  "library.ifc.stair": "Scala",
  "library.ifc.pipe_fitting": "Raccordo di tubazione",
- "library.ifc.duct_fitting": "Raccordo di canalizzazione"
+ "library.ifc.duct_fitting": "Raccordo di canalizzazione",
+ "library.ifc.beam": "Trave",
+ "library.ifc.column": "Pilastro",
+ "library.ifc.appliance": "Apparecchio",
+ "library.ifc.fire_terminal": "Terminale antincendio",
+ "library.ifc.heat_exchanger": "Scambiatore di calore",
+ "library.ifc.pump": "Pompa",
+ "library.ifc.tank": "Serbatoio",
+ "library.ifc.transport": "Elemento di trasporto",
+ "library.ifc.valve": "Valvola",
+ "library.ifc.waste_terminal": "Terminale di scarico",
+ "library.ifc.medical": "Dispositivo medico"
 }

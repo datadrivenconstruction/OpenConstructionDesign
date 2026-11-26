@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT аралык панели",
+ "fam.name.glulam_beam": "Клеенген жыгач устуну",
+ "fam.name.glulam_column": "Клеенген жыгач мамысы",
+ "gen.group.timber": "Жыгач конструкция",
+ "gen.rule.timber.beam_span_max.desc": "Эки мамынын ортосундагы клеенген жыгач устунунун эң узун пролети.",
+ "gen.rule.timber.beam_span_max.title": "Устун пролет чеги",
+ "gen.rule.timber.panel_w.desc": "Эң кең кайчы клеенген аралык панели; ар бирөөнүн ортосунда түйүн.",
+ "gen.rule.timber.panel_w.title": "CLT панелинин туурасы",
+ "gen.rule.timber.span_depth.desc": "Клеенген жыгач устунунун пролетинин бийиктигине катышы; кесилишти тандайт.",
+ "gen.rule.timber.span_depth.title": "Устун пролетинин бийиктикке катышы"
+}

@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<مختلف>",
  "geom_props.tip": "Enter قدر کو منتخب {n} پر لاگو کرتا ہے، ایک واپسی قدم",
  "geom_props.roof_slope": "ڈھلوان",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "درآمد شدہ عناصر",
  "geom_props.kind.mass": "ماس",
  "geom_props.kind.solid": "ٹھوس اجسام",
- "geom_props.kind.toposolid": "زمین",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "زمین"
 }

@@ -52,6 +52,7 @@
  "mesh_tools.done": "Tapos",
  "mesh_tools.failed": "Nabigo",
  "mesh_tools.note.outline_approx": "tinatayang ang outline",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Burahin ang mga mukhang nakaharap sa",
  "mesh_tools.dir.up": "pataas",
  "mesh_tools.dir.down": "pababa",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Pinasimple: {n} (halimbawa: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Pinasimple: {n} (halimbawa: {first})"
 }

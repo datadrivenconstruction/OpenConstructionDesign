@@ -45,5 +45,7 @@
  "phui.kind.comp": "Komponentit",
  "phui.kind.shaft": "Kuilut",
  "phui.kind.ramp": "Luiskat",
- "phui.kind.member": "Sauvat"
+ "phui.kind.member": "Sauvat",
+ "phui.dates": "Päivämäärät (alku, loppu)",
+ "phui.show_calendar": "Näytä kalenterin mukaan"
 }

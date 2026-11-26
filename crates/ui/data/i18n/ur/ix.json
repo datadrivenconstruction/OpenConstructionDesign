@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "ربع کا نقطہ",
+ "snap.extension": "توسیع",
+ "snap.parallel": "دیوار کے متوازی",
+ "snap.tracking_x": "پکڑے گئے نقطے کا X",
+ "snap.tracking_y": "پکڑے گئے نقطے کا Y",
+ "snap.tracking_cross": "گائیڈ کا تقاطع",
+ "snap.equal_step": "برابر قدم"
+}

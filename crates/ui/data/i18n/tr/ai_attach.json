@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Bir çizimden duvarlar izleniyor",
  "api.cmd.attachments_list": "Sohbete eklenen dosyalar ve onaylanmış proje gereksinimleri",
  "api.cmd.attachments_read": "Eklenen bir dosyanın sayfa aralığını, tablo satırlarını veya görselini oku",
- "api.cmd.underlay_trace": "Eklenen bir çizimden çizilen taslak duvarlar"
+ "api.cmd.underlay_trace": "Eklenen bir çizimden çizilen taslak duvarlar",
+ "ai.tool.plan_from_image": "Plan görselden okunuyor",
+ "api.cmd.plan_from_image": "Ekli plan görselinden veya PDF sayfasından okunan duvar, kapı, pencere ve oda taslağı"
 }

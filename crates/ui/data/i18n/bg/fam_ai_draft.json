@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "поправено след {n} отказани опита, около {tokens} токена",
+ "ai.fam_offer": "Агент предложи фамилията {name}",
+ "ai.fam_offer.open": "Отвори в редактора на фамилии",
+ "ai.fam_offer.dismiss": "Скрий",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Проверка…",
+ "fe.ai.clean": "Проверката не намери нищо",
+ "fe.ai.check_values": "Провери със стойности",
+ "fe.ai.lines": "редове {n}",
+ "fe.ai.changes": "{n} промени спрямо предишната версия",
+ "fe.ai.added": "добавено: {head} {name}",
+ "fe.ai.removed": "премахнато: {head} {name}",
+ "fe.ai.changed": "променено: {head} {name}",
+ "fe.ai.reject": "Отхвърли"
+}

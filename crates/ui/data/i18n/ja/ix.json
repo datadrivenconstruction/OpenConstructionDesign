@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "四分点",
+ "snap.extension": "延長線",
+ "snap.parallel": "壁に平行",
+ "snap.tracking_x": "捕捉点のX",
+ "snap.tracking_y": "捕捉点のY",
+ "snap.tracking_cross": "ガイド交点",
+ "snap.equal_step": "等間隔"
+}

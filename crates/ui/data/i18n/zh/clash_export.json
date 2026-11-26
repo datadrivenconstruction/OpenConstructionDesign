@@ -2,8 +2,8 @@
  "clash.col.x": "X",
  "clash.col.y": "Y",
  "clash.col.z": "Z",
+ "clash.col.unit": "{name}，{unit}",
  "clash.unit.ft3": "立方英尺",
  "clash.exported_n": "报告已保存：{n} / {m}，{path}",
- "clash.exported_f": "报告已保存：{n} / {m}（过滤器：{filter}），{path}",
- "clash.col.unit": "{name}，{unit}"
+ "clash.exported_f": "报告已保存：{n} / {m}（过滤器：{filter}），{path}"
 }

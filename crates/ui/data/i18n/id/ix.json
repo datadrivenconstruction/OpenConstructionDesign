@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Titik kuadran",
+ "snap.extension": "Perpanjangan",
+ "snap.parallel": "Sejajar dinding",
+ "snap.tracking_x": "X titik yang ditangkap",
+ "snap.tracking_y": "Y titik yang ditangkap",
+ "snap.tracking_cross": "Persilangan panduan",
+ "snap.equal_step": "Langkah sama"
+}

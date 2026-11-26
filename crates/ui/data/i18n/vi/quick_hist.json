@@ -72,6 +72,7 @@
  "quick.cat.beam": "Dầm",
  "quick.cat.ceiling": "Trần",
  "quick.cat.structure": "Kết cấu",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} trên {all}",
  "quick.hud.type": "Loại",
  "quick.hud.height": "Chiều cao",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Không đọc được giá trị “{v}”",
  "quick.menu.repeat": "Lặp lại: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Gần đây",
  "quick.bar.repeat_tip": "{cmd} · Enter để lặp lại",
  "quick.repeat.none": "Chưa có gì để lặp lại",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Quay lại",
  "quick.tips.next": "Tiếp",
  "quick.tips.finish": "Xong",
- "quick.tips.never": "Không hiện lại",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Không hiện lại"
 }

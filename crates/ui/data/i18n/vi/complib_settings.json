@@ -48,5 +48,13 @@
  "settings.lib_open": "Thư viện cấu kiện",
  "settings.lib_open_desc": "Duyệt các họ có sẵn, họ trong dự án và họ của riêng bạn",
  "settings.lib_dir": "Thư mục thư viện của tôi",
- "settings.lib_dir_desc": "Tệp họ (.ddcf) đặt tại đây sẽ hiện trong Thư viện của tôi. DDC_COMPONENTS_DIR sẽ đổi vị trí thư mục này."
+ "settings.lib_dir_desc": "Tệp họ (.ddcf) đặt tại đây sẽ hiện trong Thư viện của tôi. DDC_COMPONENTS_DIR sẽ đổi vị trí thư mục này.",
+ "complib.fam.sprinkler_head": "Đầu phun sprinkler",
+ "complib.fam.fire_pump": "Bơm chữa cháy",
+ "complib.fam.pressurisation_fan": "Quạt tăng áp",
+ "complib.fam.lift_car": "Cabin thang máy",
+ "complib.fam.lift_landing_door": "Cửa tầng thang máy",
+ "complib.fam.lift_pit": "Hố thang máy",
+ "complib.fam.lift_overrun": "Phần vượt đỉnh thang máy",
+ "complib.fam.lift_machine": "Máy kéo thang máy"
 }

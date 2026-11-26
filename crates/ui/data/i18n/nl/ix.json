@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Kwadrantpunt",
+ "snap.extension": "Verlenging",
+ "snap.parallel": "Evenwijdig aan wand",
+ "snap.tracking_x": "X van een vastgelegd punt",
+ "snap.tracking_y": "Y van een vastgelegd punt",
+ "snap.tracking_cross": "Hulplijnkruising",
+ "snap.equal_step": "Gelijke stap"
+}

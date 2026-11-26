@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT床パネル",
+ "fam.name.glulam_beam": "集成材梁",
+ "fam.name.glulam_column": "集成材柱",
+ "gen.group.timber": "木造構造",
+ "gen.rule.timber.beam_span_max.desc": "2本の柱間の集成材梁の最大スパン。",
+ "gen.rule.timber.beam_span_max.title": "梁スパン上限",
+ "gen.rule.timber.panel_w.desc": "直交集成板の床パネルの最大幅。各パネル間に継ぎ目があります。",
+ "gen.rule.timber.panel_w.title": "CLTパネル幅",
+ "gen.rule.timber.span_depth.desc": "集成材梁のせいに対するスパンの比。断面を選択します。",
+ "gen.rule.timber.span_depth.title": "梁のスパンせい比"
+}

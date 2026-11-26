@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Típus duplikálása",
  "wall_type.wt.duplicate_tip": "Ezeket a rétegeket új típusként menti; a megnyitott típus változatlan marad.",
  "wall_type.wt.switch_dirty": "Nyomja meg az OK vagy a Mégse gombot, mielőtt másik típust nyitna meg",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funkció",
  "wall_type.wt.h_material": "Anyag",
  "wall_type.wt.h_thickness": "Vastagság",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Jelöljön ki falakat a nézetben, majd cserélje a típusukat.",
  "wall_type.swap.already": "A kijelölt falak már ezt a típust használják",
  "wall_type.swap.apply": "Csere",
- "wall_type.swap.done": "Faltípus cserélve: {n} / {m} fal",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Faltípus cserélve: {n} / {m} fal"
 }

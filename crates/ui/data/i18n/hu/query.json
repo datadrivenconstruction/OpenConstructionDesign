@@ -11,6 +11,7 @@
  "query.err.not_changed": "a(z) „{key}” nem módosítható: {why}",
  "query.err.op_no_field": "mező nélküli operátor",
  "query.err.positive": "{key}: az értéknek nullánál nagyobbnak kell lennie",
+ "query.err.raw": "{text}",
  "query.err.text_field": "a(z) „{key}” mező szöveg, képlet nem alkalmazható",
  "query.err.unclosed_paren": "hiányzik a záró zárójel",
  "query.err.unclosed_quote": "hiányzik a záró idézőjel",
@@ -27,6 +28,5 @@
  "query.why.curtain": "a függönyfalakat a saját tulajdonságaikban kell módosítani",
  "query.why.opening_type": "a nyílás típusa a méretét követi: „-> width=… height=…”",
  "query.why.slab_thickness": "a födém vastagságát a típus határozza meg: „-> type=…”",
- "query.why.wall_thickness": "a fal vastagságát a típus határozza meg: „-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "a fal vastagságát a típus határozza meg: „-> type=…”"
 }

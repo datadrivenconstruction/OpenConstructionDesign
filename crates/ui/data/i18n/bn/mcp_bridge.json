@@ -18,6 +18,7 @@
  "mcp.set.error": "সার্ভার শুরু হয়নি: {error}",
  "mcp.set.new": "নতুন টোকেন",
  "mcp.set.port": "পোর্ট",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "প্রতিটি ব্যাচ আগে যাচাই হয় এবং এক পূর্বাবস্থা ধাপ। শুধু এই কম্পিউটারের প্রোগ্রাম সংযুক্ত হতে পারে।",
  "mcp.set.show": "দেখান",
  "mcp.set.state_failed": "চলছে না",
@@ -30,6 +31,5 @@
  "mcp.set.status": "অবস্থা",
  "mcp.set.access": "অ্যাক্সেস",
  "mcp.set.config": "কনফিগ",
- "mcp.set.policy": "প্রয়োগ",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "প্রয়োগ"
 }

@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Zaznaczenie ({n})",
  "ai.ctx.add_tip": "Dodaj z powrotem do tego, co widzi AI",
  "ai.ctx.frame_tip": "Pokaż te elementy",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Balustrady",
  "ai.ctx.cat.roof": "Dachy",
  "ai.ctx.cat.stair": "Schody",
- "ai.ctx.cat.other": "Inne",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Inne"
 }

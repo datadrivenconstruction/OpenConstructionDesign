@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "개구부 {w}이(가) 벽 {len}보다 넓습니다",
+ "ix.fix.opening_width": "폭 {w} mm",
+ "ix.fix.wall_extend": "벽을 {len} mm로 연장"
+}

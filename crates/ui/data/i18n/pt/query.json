@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}” não pode ser alterado: {why}",
  "query.err.op_no_field": "operador sem campo",
  "query.err.positive": "{key}: o valor deve ser maior que zero",
+ "query.err.raw": "{text}",
  "query.err.text_field": "o campo “{key}” é texto; uma fórmula não se aplica",
  "query.err.unclosed_paren": "parêntese de fechamento ausente",
  "query.err.unclosed_quote": "aspas de fechamento ausentes",
@@ -27,6 +28,5 @@
  "query.why.curtain": "fachadas-cortina são alteradas em suas próprias propriedades",
  "query.why.opening_type": "o tipo de uma abertura segue o seu tamanho: “-> largura=… altura=…”",
  "query.why.slab_thickness": "a espessura da laje é definida pelo tipo: “-> tipo=…”",
- "query.why.wall_thickness": "a espessura da parede é definida pelo tipo: “-> tipo=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "a espessura da parede é definida pelo tipo: “-> tipo=…”"
 }

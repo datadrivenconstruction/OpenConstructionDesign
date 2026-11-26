@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "العائلة",
  "type_dialog.typedial.h_function": "الوظيفة",
  "type_dialog.typedial.h_material": "المادة",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "المعلمة",
  "type_dialog.typedial.h_thickness": "السماكة",
  "type_dialog.typedial.h_value": "القيمة",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "مساحة مسقط الجدار",
  "type_dialog.warn.wall_vol": "حجم الجدار",
  "type_dialog.warn.walls": "الجدران",
- "type_dialog.warn.warnings_n": "⚠ التحذيرات: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ التحذيرات: {n}"
 }

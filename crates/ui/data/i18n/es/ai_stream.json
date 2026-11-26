@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 herramienta",
  "ai.stream.tools_many": "{n} herramientas",
  "ai.stream.secs": "{n} s",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Sigue esperando al servicio del modelo",
  "ai.stream.stop": "Detener",
  "ai.stream.cancelled": "Detenido",
- "ai.stream.incomplete": "El borrador está incompleto. No se aplicó nada al modelo.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "El borrador está incompleto. No se aplicó nada al modelo."
 }

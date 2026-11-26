@@ -15,6 +15,7 @@
  "drafting_view.name": "Όνομα",
  "drafting_view.count": "{n} σχόλια",
  "drafting_view.tab": "Σχεδίαση · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Κενή προβολή σχεδίασης",
  "drafting_view.canvas_hint": "Χρησιμοποιήστε τα εργαλεία σχολίων: γραμμές λεπτομέρειας, περιοχές, κείμενο, στοιχεία λεπτομέρειας",
  "drafting_view.created": "Η προβολή σχεδίασης \"{name}\" δημιουργήθηκε",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Περισσότερα",
  "empty.drafting.title": "Δεν υπάρχουν ακόμη προβολές σχεδίασης",
  "empty.drafting.hint": "Δημιουργήστε μία για 2D λεπτομέρειες που δεν προκύπτουν από το μοντέλο.",
- "empty.drafting.action": "Νέα προβολή σχεδίασης",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Νέα προβολή σχεδίασης"
 }

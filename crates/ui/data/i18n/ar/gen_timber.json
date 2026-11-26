@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "لوح أرضية CLT",
+ "fam.name.glulam_beam": "كمرة خشب رقائقي",
+ "fam.name.glulam_column": "عمود خشب رقائقي",
+ "gen.group.timber": "هيكل خشبي",
+ "gen.rule.timber.beam_span_max.desc": "أطول بحر لكمرة خشب رقائقي بين عمودين.",
+ "gen.rule.timber.beam_span_max.title": "حد بحر الكمرة",
+ "gen.rule.timber.panel_w.desc": "أعرض لوح أرضية خشبي متعامد الطبقات؛ بوصلة بين كل لوحين.",
+ "gen.rule.timber.panel_w.title": "عرض لوح CLT",
+ "gen.rule.timber.span_depth.desc": "البحر إلى العمق لكمرة خشب رقائقي؛ يختار المقطع.",
+ "gen.rule.timber.span_depth.title": "البحر إلى عمق الكمرة"
+}

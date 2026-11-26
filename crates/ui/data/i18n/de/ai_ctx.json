@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Auswahl ({n})",
  "ai.ctx.add_tip": "Wieder in das aufnehmen, was der KI-Assistent sieht",
  "ai.ctx.frame_tip": "Diese Elemente zeigen",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Geländer",
  "ai.ctx.cat.roof": "Dächer",
  "ai.ctx.cat.stair": "Treppen",
- "ai.ctx.cat.other": "Sonstige",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Sonstige"
 }

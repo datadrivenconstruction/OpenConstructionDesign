@@ -24,5 +24,21 @@
  "value_src.verified_n": "已核实的值：{n}",
  "value_src.bulk_note": "AI填充但未核实的值：{n}",
  "value_src.bulk_verify": "标记为已核实（{n}）",
- "value_src.bulk_tip": "将所选构件中所有AI填充的值标记为已核实，单次撤销"
+ "value_src.bulk_tip": "将所选构件中所有AI填充的值标记为已核实，单次撤销",
+ "origin.title": "来源",
+ "origin.made_by": "创建者",
+ "origin.request": "请求",
+ "origin.at": "应用于",
+ "origin.recipe": "配方“{name}”，第 {part} 部分",
+ "origin.ai": "AI 助手（{model}）",
+ "origin.agent": "智能体 {name}",
+ "origin.script": "脚本 {name}",
+ "origin.xlsx": "XLSX 电子表格",
+ "origin.user": "用户",
+ "origin.import": "导入",
+ "origin.import_file": "从 {file} 导入",
+ "origin.unknown": "不在历史记录中",
+ "origin.held": "已手动编辑：重新运行配方时将保持原样",
+ "origin.rebuilt": "重新运行配方会将其重建；如需保持原样，请手动编辑",
+ "origin.ai_values": "由 AI 填写的值：{n}，未验证：{open}"
 }

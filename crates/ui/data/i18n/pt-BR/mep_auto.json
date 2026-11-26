@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Instalações prediais automáticas",
+ "gen.mep_auto_hint": "Permite que o gerador e o assistente de IA tracem tubulações, dutos e fiação por conta própria. Desativado por padrão nesta região; você pode ativá-lo. O traçado manual está sempre disponível."
+}

@@ -64,6 +64,7 @@
  "topo.import.title": "Tuo mittausaineisto",
  "topo.import.filter": "Mittausaineisto (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Pisteen korkeusasema",
  "topo.opt.thickness": "Topopinnan paksuus",
  "topo.opt.add_to_active": "Lisää aktiiviseen topopintaan",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Tuo",
  "topo.import.cancel": "Peruuta",
  "topo.import.no_layers": "tasoa ei valittu",
- "topo.info.warnings": "Ei rakennettu:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Ei rakennettu:"
 }

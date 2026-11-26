@@ -48,5 +48,13 @@
  "settings.lib_open": "コンポーネントライブラリ",
  "settings.lib_open_desc": "内蔵ファミリ、プロジェクト内のファミリ、自作のファミリを参照",
  "settings.lib_dir": "マイライブラリのフォルダー",
- "settings.lib_dir_desc": "ここに置いたファミリファイル (.ddcf) は「マイライブラリ」に表示されます。DDC_COMPONENTS_DIR で場所を変更できます。"
+ "settings.lib_dir_desc": "ここに置いたファミリファイル (.ddcf) は「マイライブラリ」に表示されます。DDC_COMPONENTS_DIR で場所を変更できます。",
+ "complib.fam.sprinkler_head": "スプリンクラーヘッド",
+ "complib.fam.fire_pump": "消防ポンプ",
+ "complib.fam.pressurisation_fan": "加圧ファン",
+ "complib.fam.lift_car": "エレベーターかご",
+ "complib.fam.lift_landing_door": "エレベーター乗場ドア",
+ "complib.fam.lift_pit": "エレベーターピット",
+ "complib.fam.lift_overrun": "エレベーター頭部余裕",
+ "complib.fam.lift_machine": "エレベーター機械"
 }

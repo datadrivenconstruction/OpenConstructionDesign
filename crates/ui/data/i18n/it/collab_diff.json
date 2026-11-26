@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Tipo",
  "collab_diff.diff.col.field": "Campo",
  "collab_diff.diff.col.old": "Era",
- "collab_diff.diff.col.new": "Ora"
+ "collab_diff.diff.col.new": "Ora",
+ "collab_diff.reveal.title": "Costruzione",
+ "collab_diff.reveal.start": "Mostra come costruito",
+ "collab_diff.reveal.play": "Riproduci",
+ "collab_diff.reveal.pause": "Pausa",
+ "collab_diff.reveal.back": "Indietro",
+ "collab_diff.reveal.close": "Chiudi",
+ "collab_diff.reveal.nothing": "Niente da mostrare: nessun elemento modificato è nella scena 3D.",
+ "collab_diff.reveal.journal_busy": "Lettura del registro…",
+ "collab_diff.reveal.journal_play": "Riproduci registro"
 }

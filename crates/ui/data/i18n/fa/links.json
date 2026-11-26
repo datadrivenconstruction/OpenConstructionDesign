@@ -12,6 +12,7 @@
  "links.loaded": "بارگذاری‌شده",
  "links.not_loaded": "بارگذاری نشده",
  "links.loading": "در حال بارگذاری…",
+ "links.loading_all": "در حال بارگذاری پیوندها",
  "links.levels": "ترازها",
  "links.elements": "عناصر",
  "links.offset": "انحراف:",

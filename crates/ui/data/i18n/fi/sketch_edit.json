@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "luonnos peruutettu",
  "sketch_edit.sk_applied": "luonnos otettu käyttöön",
  "sketch_edit.sk_tail": "häntä",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "laatta",
  "sketch_edit.sk_host_roof": "katto",
  "sketch_edit.sk_host_ceiling": "alakatto",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Taso 2",
  "sketch_edit.seed_floor_200": "Lattia 200",
  "sketch_edit.seed_section1": "Leikkaus 1",
- "sketch_edit.seed_section2": "Leikkaus 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Leikkaus 2"
 }

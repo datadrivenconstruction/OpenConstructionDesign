@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "diperbaiki setelah {n} percobaan ditolak, sekitar {tokens} token",
+ "ai.fam_offer": "Agen menawarkan famili {name}",
+ "ai.fam_offer.open": "Buka di editor famili",
+ "ai.fam_offer.dismiss": "Abaikan",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Memeriksa…",
+ "fe.ai.clean": "Pemeriksaan tidak menemukan apa pun",
+ "fe.ai.check_values": "Periksa dengan nilai",
+ "fe.ai.lines": "baris {n}",
+ "fe.ai.changes": "{n} perubahan dibanding versi sebelumnya",
+ "fe.ai.added": "ditambahkan: {head} {name}",
+ "fe.ai.removed": "dihapus: {head} {name}",
+ "fe.ai.changed": "diubah: {head} {name}",
+ "fe.ai.reject": "Tolak"
+}

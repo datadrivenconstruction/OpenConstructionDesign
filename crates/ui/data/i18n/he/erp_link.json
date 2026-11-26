@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "הורידו את העורך הנוכחי מעמוד ה-ERP {url}",
  "erp.err.unsupported.admin": "בקשו ממנהל ה-ERP את העורך הנוכחי",
  "erp.err.throttled_in": "יותר מדי ניסיונות. נסו שוב בעוד {s} שנ׳",
+ "erp.err.throttled_ready": "ההמתנה הסתיימה. אפשר לנסות שוב",
  "erp.err.imported": "גרסה {n} ב-ERP היא מודל מיובא: העורך עדיין לא יכול לפתוח אותה או לפרסם מעליה",
  "erp.action.download": "פתחו את עמוד ההורדה של העורך ב-ERP",
  "erp.action.new_link": "קבלו קישור חדש מעמוד ה-ERP",

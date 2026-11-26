@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "ERP صفحہ {url} سے موجودہ ایڈیٹر ڈاؤن لوڈ کریں",
  "erp.err.unsupported.admin": "اپنے ERP ایڈمن سے موجودہ ایڈیٹر کی درخواست کریں",
  "erp.err.throttled_in": "بہت زیادہ کوششیں۔ {s} سیکنڈ بعد دوبارہ کوشش کریں",
+ "erp.err.throttled_ready": "انتظار ختم ہو گیا۔ آپ دوبارہ کوشش کر سکتے ہیں",
  "erp.err.imported": "ERP میں ریویژن {n} ایک درآمد شدہ ماڈل ہے: ایڈیٹر ابھی اسے کھول یا اس پر شائع نہیں کر سکتا",
  "erp.action.download": "ERP میں ایڈیٹر کا ڈاؤن لوڈ صفحہ کھولیں",
  "erp.action.new_link": "ERP صفحہ سے نیا لنک حاصل کریں",

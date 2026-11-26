@@ -12,6 +12,7 @@
  "links.loaded": "carregado",
  "links.not_loaded": "não carregado",
  "links.loading": "a carregar…",
+ "links.loading_all": "Carregando vínculos",
  "links.levels": "pisos",
  "links.elements": "elementos",
  "links.offset": "Desvio:",

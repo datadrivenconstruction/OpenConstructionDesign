@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Tấm sàn CLT",
+ "fam.name.glulam_beam": "Dầm gỗ glulam",
+ "fam.name.glulam_column": "Cột gỗ glulam",
+ "gen.group.timber": "Kết cấu gỗ",
+ "gen.rule.timber.beam_span_max.desc": "Nhịp dài nhất của dầm glulam giữa hai cột.",
+ "gen.rule.timber.beam_span_max.title": "Giới hạn nhịp dầm",
+ "gen.rule.timber.panel_w.desc": "Tấm sàn gỗ dán chéo (CLT) rộng nhất; có một mối nối giữa các tấm.",
+ "gen.rule.timber.panel_w.title": "Chiều rộng tấm CLT",
+ "gen.rule.timber.span_depth.desc": "Nhịp trên chiều cao của dầm glulam; quyết định tiết diện.",
+ "gen.rule.timber.span_depth.title": "Nhịp trên chiều cao dầm"
+}

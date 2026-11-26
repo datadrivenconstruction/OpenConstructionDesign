@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "kitob o'qilmadi, uning o'z ustunlari yo'qolardi; uni XLSX jadval da yoping va qayta urinib ko'ring",
  "xl.msg.type_x_layer_x": "tur {} qatlam {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} endi mavjud emas, uning o'z ustunlari katakchalari olib tashlandi",
- "xl.msg.delsafe_type_param_on_elements": "'{}' parametri tur parametri; uni turlar varag'ida tahrirlang, qo'llanmadi"
+ "xl.msg.delsafe_type_param_on_elements": "'{}' parametri tur parametri; uni turlar varag'ida tahrirlang, qo'llanmadi",
+ "xl.msg.tag_x_is_removed_with_x_x": "{} tegi {} {} bilan birga olib tashlanadi",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "{} o'lchami {} {} ni yo'qotadi va oxirgi shaklini saqlaydi",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "o'chirilgan elementlarning izohlarini tekshirib bo'lmaydi: {}"
 }

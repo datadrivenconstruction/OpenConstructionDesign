@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "L'apertura {w} è più larga del muro {len}",
+ "ix.fix.opening_width": "Larghezza {w} mm",
+ "ix.fix.wall_extend": "Prolunga il muro a {len} mm"
+}

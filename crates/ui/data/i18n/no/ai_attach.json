@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Sporer vegger fra en tegning",
  "api.cmd.attachments_list": "Filer vedlagt chatten og de bekreftede prosjektkravene",
  "api.cmd.attachments_read": "Les et sideutvalg, tabellrader eller bildet i en vedlagt fil",
- "api.cmd.underlay_trace": "Utkastveggene sporet fra en vedlagt tegning"
+ "api.cmd.underlay_trace": "Utkastveggene sporet fra en vedlagt tegning",
+ "ai.tool.plan_from_image": "Leser en plan fra et bilde",
+ "api.cmd.plan_from_image": "Utkast til vegger, dører, vinduer og rom lest fra et vedlagt planbilde eller en PDF-side"
 }

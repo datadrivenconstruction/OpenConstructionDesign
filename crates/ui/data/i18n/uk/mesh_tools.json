@@ -52,6 +52,7 @@
  "mesh_tools.done": "Готово",
  "mesh_tools.failed": "Помилка",
  "mesh_tools.note.outline_approx": "контур приблизний",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Видалити грані, звернені до",
  "mesh_tools.dir.up": "вгору",
  "mesh_tools.dir.down": "вниз",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Спрощено: {n} (наприклад: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Спрощено: {n} (наприклад: {first})"
 }

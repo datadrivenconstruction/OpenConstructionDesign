@@ -41,5 +41,7 @@
  "sb.save.fresh": "কোনো পরিবর্তন নেই",
  "sb.save.save": "সংরক্ষণ",
  "sb.save.ifc": "IFC কপি সংরক্ষণ",
- "sb.save.autosave": "স্বয়ংক্রিয় সংরক্ষণ"
+ "sb.save.autosave": "স্বয়ংক্রিয় সংরক্ষণ",
+ "sb.more.title": "আরও",
+ "sb.more.desc": "এই প্রস্থে ধরে না এমন স্ট্যাটাস বারের আইটেম।"
 }

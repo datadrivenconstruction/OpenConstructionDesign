@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Asoslar: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Ustun",
  "rebar_hosts.kind.beam": "To'sin",
  "rebar_hosts.kind.wall": "Devor",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "To'r devor, plita va poydevorlarga kiradi, ustun yoki to'sinlarga emas.",
  "rebar_hosts.why.bars_plate": "Bo'ylama armatura va bog'lamlar ustun va to'sinlarga kiradi, devor, plita yoki poydevorlarga emas.",
  "rebar_hosts.why.no_common_face": "Tanlangan asoslarda umumiy qoplama yuzi yo'q. Bir turdagi asoslarni tanlang.",
- "rebar_hosts.why.no_type": "Armatura turini tanlang.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Armatura turini tanlang."
 }

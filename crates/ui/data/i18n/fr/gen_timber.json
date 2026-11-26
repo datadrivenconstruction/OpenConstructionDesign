@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Panneau de plancher CLT",
+ "fam.name.glulam_beam": "Poutre en lamellé-collé",
+ "fam.name.glulam_column": "Poteau en lamellé-collé",
+ "gen.group.timber": "Structure bois",
+ "gen.rule.timber.beam_span_max.desc": "Plus grande portée d’une poutre en lamellé-collé entre deux poteaux.",
+ "gen.rule.timber.beam_span_max.title": "Limite de portée des poutres",
+ "gen.rule.timber.panel_w.desc": "Plus large panneau de plancher en bois lamellé croisé ; un joint entre chacun.",
+ "gen.rule.timber.panel_w.title": "Largeur des panneaux CLT",
+ "gen.rule.timber.span_depth.desc": "Portée rapportée à la hauteur d’une poutre en lamellé-collé ; détermine la section.",
+ "gen.rule.timber.span_depth.title": "Portée sur hauteur des poutres"
+}

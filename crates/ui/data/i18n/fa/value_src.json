@@ -24,5 +24,21 @@
  "value_src.verified_n": "مقادیر تأییدشده: {n}",
  "value_src.bulk_note": "مقادیر پرشدهٔ هوش مصنوعی، بدون تأیید: {n}",
  "value_src.bulk_verify": "علامت‌گذاری تأییدشده ({n})",
- "value_src.bulk_tip": "همهٔ مقادیر پرشدهٔ هوش مصنوعی در انتخاب را تأییدشده علامت می‌زند، در یک گام واگرد"
+ "value_src.bulk_tip": "همهٔ مقادیر پرشدهٔ هوش مصنوعی در انتخاب را تأییدشده علامت می‌زند، در یک گام واگرد",
+ "origin.title": "منشأ",
+ "origin.made_by": "ساخته‌شده توسط",
+ "origin.request": "درخواست",
+ "origin.at": "اعمال‌شده",
+ "origin.recipe": "دستورالعمل «{name}»، بخش {part}",
+ "origin.ai": "دستیار هوش مصنوعی ({model})",
+ "origin.agent": "عامل {name}",
+ "origin.script": "اسکریپت {name}",
+ "origin.xlsx": "صفحه‌گسترده XLSX",
+ "origin.user": "یک نفر",
+ "origin.import": "ورود",
+ "origin.import_file": "ورود از {file}",
+ "origin.unknown": "در تاریخچه نیست",
+ "origin.held": "دستی ویرایش شده: اجرای دوباره دستورالعمل آن را همان‌طور که هست می‌گذارد",
+ "origin.rebuilt": "اجرای دوباره دستورالعمل آن را از نو می‌سازد؛ برای حفظ وضعیت فعلی آن را دستی ویرایش کنید",
+ "origin.ai_values": "مقادیر پرشده توسط هوش مصنوعی: {n}، تأییدنشده: {open}"
 }

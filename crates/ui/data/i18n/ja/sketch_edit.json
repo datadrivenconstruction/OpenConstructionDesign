@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "スケッチをキャンセルしました",
  "sketch_edit.sk_applied": "スケッチを適用しました",
  "sketch_edit.sk_tail": "末尾",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "床",
  "sketch_edit.sk_host_roof": "屋根",
  "sketch_edit.sk_host_ceiling": "天井",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "レベル 2",
  "sketch_edit.seed_floor_200": "床 200",
  "sketch_edit.seed_section1": "断面 1",
- "sketch_edit.seed_section2": "断面 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "断面 2"
 }

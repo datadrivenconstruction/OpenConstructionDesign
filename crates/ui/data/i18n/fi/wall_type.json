@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Kopioi tyyppi",
  "wall_type.wt.duplicate_tip": "Tallentaa nämä kerrokset uutena tyyppinä; avaamasi tyyppi säilyy ennallaan.",
  "wall_type.wt.switch_dirty": "Paina OK tai Peruuta ennen toisen tyypin avaamista",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Tehtävä",
  "wall_type.wt.h_material": "Materiaali",
  "wall_type.wt.h_thickness": "Paksuus",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Valitse seinät näkymästä ja vaihda niiden tyyppi.",
  "wall_type.swap.already": "Valituilla seinillä on jo tämä tyyppi",
  "wall_type.swap.apply": "Vaihda",
- "wall_type.swap.done": "Seinätyyppi vaihdettu: {n} / {m} seinää",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Seinätyyppi vaihdettu: {n} / {m} seinää"
 }

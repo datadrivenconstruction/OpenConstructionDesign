@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Түстүү",
+ "cmd.ui.icons.color": "Түстүү иконкалар",
+ "cmd.ui.icons.color.desc": "Иконкалардын сүрөттөө стили",
+ "theme.icons.hierarchical": "Иерархиялык",
+ "cmd.ui.icons.hierarchical": "Иерархиялык иконкалар",
+ "cmd.ui.icons.hierarchical.desc": "Иконкалардын сүрөттөө стили",
+ "theme.icons.isometric": "Изометриялык",
+ "cmd.ui.icons.isometric": "Изометриялык иконкалар",
+ "cmd.ui.icons.isometric.desc": "Иконкалардын сүрөттөө стили",
+ "theme.icons.monoline": "Бир сызыктуу",
+ "cmd.ui.icons.monoline": "Бир сызыктуу иконкалар",
+ "cmd.ui.icons.monoline.desc": "Иконкалардын сүрөттөө стили"
+}

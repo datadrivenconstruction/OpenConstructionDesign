@@ -5,6 +5,7 @@
  "keys_import.new_head": "Нові клавіші",
  "keys_import.changed_head": "Замінює ваші власні клавіші",
  "keys_import.conflicts_head": "Конфлікти після імпорту",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "комбінація",
  "keys_import.kind_seq": "дві літери",
  "keys_import.unbound": "немає",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Не скасовано: клавіші редагували після імпорту. Скиньте їх по одній у вікні клавіш.",
  "keys_import.undo_none": "Немає що скасовувати: у цьому сеансі не було імпорту клавіш.",
  "keys_import.imported": "Клавіші імпортовано",
- "keys_import.imported_conflicts": "Клавіші імпортовано; конфліктів: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Клавіші імпортовано; конфліктів: {n}"
 }

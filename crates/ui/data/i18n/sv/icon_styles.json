@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Färg",
+ "cmd.ui.icons.color": "Färgikoner",
+ "cmd.ui.icons.color.desc": "Ikonernas ritstil",
+ "theme.icons.hierarchical": "Hierarkisk",
+ "cmd.ui.icons.hierarchical": "Hierarkiska ikoner",
+ "cmd.ui.icons.hierarchical.desc": "Ikonernas ritstil",
+ "theme.icons.isometric": "Isometrisk",
+ "cmd.ui.icons.isometric": "Isometriska ikoner",
+ "cmd.ui.icons.isometric.desc": "Ikonernas ritstil",
+ "theme.icons.monoline": "Enlinje",
+ "cmd.ui.icons.monoline": "Enlinjeikoner",
+ "cmd.ui.icons.monoline.desc": "Ikonernas ritstil"
+}

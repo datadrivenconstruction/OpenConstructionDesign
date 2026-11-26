@@ -11,6 +11,7 @@
  "query.err.not_changed": "„{key}“ ei saa muuta: {why}",
  "query.err.op_no_field": "operaator ilma väljata",
  "query.err.positive": "{key}: väärtus peab olema suurem kui null",
+ "query.err.raw": "{text}",
  "query.err.text_field": "väli „{key}“ on tekst, valem ei kehti",
  "query.err.unclosed_paren": "sulgev sulg puudub",
  "query.err.unclosed_quote": "sulgev jutumärk puudub",
@@ -27,6 +28,5 @@
  "query.why.curtain": "kardinaseinu muudetakse nende enda omadustes",
  "query.why.opening_type": "ava tüüp järgib selle suurust: „-> width=… height=…“",
  "query.why.slab_thickness": "põranda paksuse määrab tüüp: „-> type=…“",
- "query.why.wall_thickness": "seina paksuse määrab tüüp: „-> type=…“",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "seina paksuse määrab tüüp: „-> type=…“"
 }

@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} fler fynd av denna regel visas inte",
  "ai.check.integrity": "Trasiga data i {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: överkanten är inte över basen",
  "ai.check.level_host_differs": "Komponenten finns på en annan nivå än sin värd ({0})",
  "ai.check.clash": "{0} krockar med {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Regel {1}: {3} element, tillåtna {4}",
  "ai.check.rule.clearance": "Regel {1}: avstånd {3} m, minst {4} m krävs",
  "ai.check.rule.unsupported": "Regel {1} kunde inte kontrolleras: kategorin stöds inte",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "Parameter {0}: \"{1}\" är inte en DIN 276-kostnadsgrupp (tre siffror, 100 till 899) på {2} element"
 }

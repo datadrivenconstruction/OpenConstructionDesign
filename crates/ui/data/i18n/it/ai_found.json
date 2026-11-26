@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Nascosti",
  "ai_found.found.color": "Colorati",
  "ai_found.found.count": "{n} di {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Nessuna corrispondenza. Prova un filtro più ampio.",
  "ai_found.found.show_btn": "Mostra",
  "ai_found.found.show_tip": "Seleziona questi elementi e ingrandiscili in pianta e in 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# elemento nascosto",
   "other": "# elementi nascosti"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

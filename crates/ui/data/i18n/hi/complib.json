@@ -18,7 +18,7 @@
  "complib.ready.no": "नहीं लिखा गया",
  "complib.edited": "संपादित",
  "complib.edited_tip": "प्रोजेक्ट की फ़ैमिली अंतर्निहित से भिन्न है",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "मान",
- "complib.armed": "घटक: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "घटक: {name}"
 }

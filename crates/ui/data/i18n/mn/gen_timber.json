@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT шалны панел",
+ "fam.name.glulam_beam": "Нааталдсан модон дам нуруу",
+ "fam.name.glulam_column": "Нааталдсан модон багана",
+ "gen.group.timber": "Модон бүтэц",
+ "gen.rule.timber.beam_span_max.desc": "Хоёр баганы хоорондох нааталдсан модон дам нурууны хамгийн урт завсар.",
+ "gen.rule.timber.beam_span_max.title": "Дам нурууны завсрын хязгаар",
+ "gen.rule.timber.panel_w.desc": "Хамгийн өргөн хөндлөн нааталдсан шалны панел; тус бүрийн хооронд холбоос.",
+ "gen.rule.timber.panel_w.title": "CLT панелийн өргөн",
+ "gen.rule.timber.span_depth.desc": "Нааталдсан модон дам нурууны завсрын өндөрт харьцаа; хэсгийг сонгоно.",
+ "gen.rule.timber.span_depth.title": "Дам нурууны завсар ба өндрийн харьцаа"
+}

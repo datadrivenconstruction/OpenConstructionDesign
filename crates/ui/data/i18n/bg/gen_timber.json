@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Подов панел CLT",
+ "fam.name.glulam_beam": "Лепена дървена греда",
+ "fam.name.glulam_column": "Лепена дървена колона",
+ "gen.group.timber": "Дървена конструкция",
+ "gen.rule.timber.beam_span_max.desc": "Най-голям отвор на лепена греда между две колони.",
+ "gen.rule.timber.beam_span_max.title": "Граница на отвора на гредата",
+ "gen.rule.timber.panel_w.desc": "Най-широк кръстосано слепен подов панел; между всеки има фуга.",
+ "gen.rule.timber.panel_w.title": "Ширина на панел CLT",
+ "gen.rule.timber.span_depth.desc": "Отвор спрямо височина на лепена греда; избира сечението.",
+ "gen.rule.timber.span_depth.title": "Отвор спрямо височина на гредата"
+}

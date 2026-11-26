@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<változó>",
  "geom_props.tip": "Az Enter az értéket mind a {n} kijelölt elemre alkalmazza, egy visszavonási lépésként",
  "geom_props.roof_slope": "Lejtés",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Importált elemek",
  "geom_props.kind.mass": "Tömegek",
  "geom_props.kind.solid": "Testek",
- "geom_props.kind.toposolid": "Terep",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terep"
 }

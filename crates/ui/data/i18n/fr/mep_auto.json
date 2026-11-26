@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Équipements techniques automatiques",
+ "gen.mep_auto_hint": "Permet au générateur et à l’assistant IA de tracer eux-mêmes tuyaux, gaines et câblage. Désactivé par défaut pour cette région ; vous pouvez l’activer. Le tracé manuel reste toujours disponible."
+}

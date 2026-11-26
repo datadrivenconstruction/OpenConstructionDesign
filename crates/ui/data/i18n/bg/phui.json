@@ -45,5 +45,7 @@
  "phui.kind.comp": "Компоненти",
  "phui.kind.shaft": "Шахти",
  "phui.kind.ramp": "Рампи",
- "phui.kind.member": "Конструктивни елементи"
+ "phui.kind.member": "Конструктивни елементи",
+ "phui.dates": "Дати (начало, край)",
+ "phui.show_calendar": "Покажи по календар"
 }

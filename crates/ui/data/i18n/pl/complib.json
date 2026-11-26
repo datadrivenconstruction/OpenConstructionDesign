@@ -18,7 +18,7 @@
  "complib.ready.no": "nie zapisano",
  "complib.edited": "Edytowany",
  "complib.edited_tip": "Rodzina projektu różni się od wbudowanej",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Wartość",
- "complib.armed": "Komponent: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponent: {name}"
 }

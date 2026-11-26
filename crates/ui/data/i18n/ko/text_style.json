@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "채우기",
  "text_style.lbl.detail": "상세",
  "text_style.lbl.width": "너비",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "{min}부터 {max}까지의 숫자를 입력하세요",
  "text_style.tip.next_ring": "이 윤곽을 닫고 같은 영역에 다른 윤곽 시작",
  "text_style.tip.edit_text": "문자를 그 자리에서 편집",
- "text_style.tip.add_leader": "이 문자에 지시선 추가",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "이 문자에 지시선 추가"
 }

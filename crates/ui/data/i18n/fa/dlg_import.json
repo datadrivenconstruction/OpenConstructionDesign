@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "به‌صورت مش",
  "dlg.imp.skipped": "رد شد",
  "dlg.imp.notes": "یادداشت‌ها: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "و {n} نوع دیگر",
  "dlg.imp.no_levels": "فایل تراز ندارد: یک تراز پیش‌فرض ساخته شد",
  "dlg.imp.reimport_row": "به‌روز شده {updated}، بدون تغییر {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} خط، {arcs} کمان، {texts} متن، {fills} پرکردن، {layers} لایه؛ واحد {unit} mm",
  "dlg.dw.summary_paper": "; برگه‌های کاغذی {n} (روی زیرنقشه قرار نگرفتند)",
  "dlg.dw.summary_unknown": "; منتقل نشد: {list}",
- "dlg.dw.summary_more": " و {n} نوع دیگر",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " و {n} نوع دیگر"
 }

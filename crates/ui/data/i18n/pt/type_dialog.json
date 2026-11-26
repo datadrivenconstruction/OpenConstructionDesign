@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Família",
  "type_dialog.typedial.h_function": "Função",
  "type_dialog.typedial.h_material": "Material",
+ "type_dialog.typedial.h_num": "Nº",
  "type_dialog.typedial.h_param": "Parâmetro",
  "type_dialog.typedial.h_thickness": "Espessura",
  "type_dialog.typedial.h_value": "Valor",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Área de implantação da parede",
  "type_dialog.warn.wall_vol": "Volume da parede",
  "type_dialog.warn.walls": "Paredes",
- "type_dialog.warn.warnings_n": "⚠ Avisos: {n}",
- "type_dialog.typedial.h_num": "Nº"
+ "type_dialog.warn.warnings_n": "⚠ Avisos: {n}"
 }

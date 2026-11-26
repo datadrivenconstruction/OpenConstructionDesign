@@ -41,5 +41,7 @@
  "sb.save.fresh": "O'zgarishlar yo'q",
  "sb.save.save": "Saqlash",
  "sb.save.ifc": "IFC nusxasini saqlash",
- "sb.save.autosave": "Avtosaqlash"
+ "sb.save.autosave": "Avtosaqlash",
+ "sb.more.title": "Yana",
+ "sb.more.desc": "Shu kenglikka sig'maydigan holat paneli elementlari."
 }

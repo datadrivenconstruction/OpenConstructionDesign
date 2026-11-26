@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} 토큰",
  "ai.size.block": "이 모델에 비해 너무 깁니다: 약 {n}토큰, 답변 공간을 남기려면 최대 {max}토큰까지만 들어갑니다 — 줄이거나 나누세요",
  "ai.size.trim": "맞게 줄이기",
  "ai.size.trim_tip": "맞도록 메시지 끝을 자릅니다. 클릭하기 전에는 아무것도 잘리지 않습니다.",
  "ai.size.drop_view": "뷰 제외",
  "ai.size.drop_level": "레벨 제외",
- "ai.size.drop_selection": "선택 항목 제외",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "선택 항목 제외"
 }

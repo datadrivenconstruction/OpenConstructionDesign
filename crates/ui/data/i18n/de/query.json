@@ -11,6 +11,7 @@
  "query.err.not_changed": "„{key}“ kann nicht geändert werden: {why}",
  "query.err.op_no_field": "Operator ohne Feld",
  "query.err.positive": "{key}: der Wert muss größer als null sein",
+ "query.err.raw": "{text}",
  "query.err.text_field": "Feld „{key}“ ist Text, eine Formel ist hier nicht zulässig",
  "query.err.unclosed_paren": "schließende Klammer fehlt",
  "query.err.unclosed_quote": "schließendes Anführungszeichen fehlt",
@@ -27,6 +28,5 @@
  "query.why.curtain": "Vorhangfassaden werden in ihren eigenen Eigenschaften geändert",
  "query.why.opening_type": "der Typ einer Öffnung folgt ihrer Größe: „-> width=… height=…“",
  "query.why.slab_thickness": "die Deckendicke wird durch den Typ festgelegt: „-> type=…“",
- "query.why.wall_thickness": "die Wanddicke wird durch den Typ festgelegt: „-> type=…“",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "die Wanddicke wird durch den Typ festgelegt: „-> type=…“"
 }

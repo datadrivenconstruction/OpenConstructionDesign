@@ -45,5 +45,7 @@
  "phui.kind.comp": "Composants",
  "phui.kind.shaft": "Gaines",
  "phui.kind.ramp": "Rampes",
- "phui.kind.member": "Éléments structurels"
+ "phui.kind.member": "Éléments structurels",
+ "phui.dates": "Dates (début, fin)",
+ "phui.show_calendar": "Afficher par calendrier"
 }

@@ -41,5 +41,16 @@
  "library.ifc.window": "Aken",
  "library.ifc.stair": "Trepp",
  "library.ifc.pipe_fitting": "Torude liitmik",
- "library.ifc.duct_fitting": "Õhukanali liitmik"
+ "library.ifc.duct_fitting": "Õhukanali liitmik",
+ "library.ifc.beam": "Tala",
+ "library.ifc.column": "Sammas",
+ "library.ifc.appliance": "Seade",
+ "library.ifc.fire_terminal": "Tulekustutuse lõppseade",
+ "library.ifc.heat_exchanger": "Soojusvaheti",
+ "library.ifc.pump": "Pump",
+ "library.ifc.tank": "Mahuti",
+ "library.ifc.transport": "Transpordielement",
+ "library.ifc.valve": "Ventiil",
+ "library.ifc.waste_terminal": "Reovee lõppseade",
+ "library.ifc.medical": "Meditsiiniseade"
 }

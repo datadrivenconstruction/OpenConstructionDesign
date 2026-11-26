@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "องค์ประกอบหลัก: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "เสา",
  "rebar_hosts.kind.beam": "คาน",
  "rebar_hosts.kind.wall": "ผนัง",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "ตาข่ายใส่ในผนัง พื้น และฐานราก ไม่ใช่เสาหรือคาน",
  "rebar_hosts.why.bars_plate": "เหล็กยืนและเหล็กปลอกใส่ในเสาและคาน ไม่ใช่ผนัง พื้น หรือฐานราก",
  "rebar_hosts.why.no_common_face": "องค์ประกอบหลักที่เลือกไม่มีหน้าหุ้มร่วมกัน เลือกองค์ประกอบหลักชนิดเดียวกัน",
- "rebar_hosts.why.no_type": "เลือกประเภทเหล็กเสริม",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "เลือกประเภทเหล็กเสริม"
 }

@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "تعذّرت قراءة المصنف، وستفقد أعمدته الخاصة؛ أغلقه في جدول XLSX ثم أعد المحاولة",
  "xl.msg.type_x_layer_x": "النوع {} الطبقة {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} لم يعد موجوداً، وتم إسقاط خلايا أعمدته الخاصة",
- "xl.msg.delsafe_type_param_on_elements": "المعامل '{}' معامل نوع؛ عدّله في ورقة الأنواع، لم يتم التطبيق"
+ "xl.msg.delsafe_type_param_on_elements": "المعامل '{}' معامل نوع؛ عدّله في ورقة الأنواع، لم يتم التطبيق",
+ "xl.msg.tag_x_is_removed_with_x_x": "تُحذف العلامة {} مع {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "البُعد {} يفقد {} {} ويحتفظ بآخر شكل له",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "تعذّر فحص التعليقات التوضيحية للعناصر المحذوفة: {}"
 }

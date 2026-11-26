@@ -24,5 +24,21 @@
  "value_src.verified_n": "Баталгаажсан утга: {n}",
  "value_src.bulk_note": "AI бөглөсөн, баталгаажаагүй утга: {n}",
  "value_src.bulk_verify": "Баталгаажуулах ({n})",
- "value_src.bulk_tip": "Сонголтын AI бөглөсөн бүх утгыг баталгаажсан гэж тэмдэглэх, нэг буцаах алхам"
+ "value_src.bulk_tip": "Сонголтын AI бөглөсөн бүх утгыг баталгаажсан гэж тэмдэглэх, нэг буцаах алхам",
+ "origin.title": "Гарал",
+ "origin.made_by": "Үүсгэгч",
+ "origin.request": "Хүсэлт",
+ "origin.at": "Хэрэгжүүлсэн",
+ "origin.recipe": "жор “{name}”, хэсэг {part}",
+ "origin.ai": "AI туслах ({model})",
+ "origin.agent": "агент {name}",
+ "origin.script": "скрипт {name}",
+ "origin.xlsx": "XLSX хүснэгт",
+ "origin.user": "хүн",
+ "origin.import": "импорт",
+ "origin.import_file": "{file}-аас импорт",
+ "origin.unknown": "түүхэнд байхгүй",
+ "origin.held": "Гараар засагдсан: жор дахин ажиллахад үүнийг хэвээр үлдээнэ",
+ "origin.rebuilt": "Жор дахин ажиллахад үүнийг дахин байгуулна; хэвээр хадгалахын тулд гараар засна уу",
+ "origin.ai_values": "AI-аар бөглөсөн утга: {n}, баталгаажаагүй: {open}"
 }

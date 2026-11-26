@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "रंगीन",
+ "cmd.ui.icons.color": "रंगीन आइकन",
+ "cmd.ui.icons.color.desc": "आइकन की चित्रण शैली",
+ "theme.icons.hierarchical": "श्रेणीबद्ध",
+ "cmd.ui.icons.hierarchical": "श्रेणीबद्ध आइकन",
+ "cmd.ui.icons.hierarchical.desc": "आइकन की चित्रण शैली",
+ "theme.icons.isometric": "आइसोमेट्रिक",
+ "cmd.ui.icons.isometric": "आइसोमेट्रिक आइकन",
+ "cmd.ui.icons.isometric.desc": "आइकन की चित्रण शैली",
+ "theme.icons.monoline": "मोनोलाइन",
+ "cmd.ui.icons.monoline": "मोनोलाइन आइकन",
+ "cmd.ui.icons.monoline.desc": "आइकन की चित्रण शैली"
+}

@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Familie",
  "type_dialog.typedial.h_function": "Funktion",
  "type_dialog.typedial.h_material": "Materiale",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "Parameter",
  "type_dialog.typedial.h_thickness": "Tykkelse",
  "type_dialog.typedial.h_value": "Værdi",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Vægfodaftryk",
  "type_dialog.warn.wall_vol": "Vægvolumen",
  "type_dialog.warn.walls": "Vægge",
- "type_dialog.warn.warnings_n": "⚠ Advarsler: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ Advarsler: {n}"
 }

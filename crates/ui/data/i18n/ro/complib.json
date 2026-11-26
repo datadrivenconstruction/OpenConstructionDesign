@@ -18,7 +18,7 @@
  "complib.ready.no": "nescris",
  "complib.edited": "Modificat",
  "complib.edited_tip": "Familia proiectului diferă de cea integrată",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Valoare",
- "complib.armed": "Element: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Element: {name}"
 }

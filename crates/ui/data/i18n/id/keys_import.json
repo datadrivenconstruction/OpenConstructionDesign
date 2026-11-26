@@ -5,6 +5,7 @@
  "keys_import.new_head": "Kunci baru",
  "keys_import.changed_head": "Menggantikan kunci Anda sendiri",
  "keys_import.conflicts_head": "Konflik setelah impor",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "kombinasi",
  "keys_import.kind_seq": "dua huruf",
  "keys_import.unbound": "tidak ada",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Tidak diurungkan: kunci diedit setelah impor. Atur ulang satu per satu di jendela Kunci.",
  "keys_import.undo_none": "Tidak ada yang dapat diurungkan: tidak ada impor kunci di sesi ini.",
  "keys_import.imported": "Kunci diimpor",
- "keys_import.imported_conflicts": "Kunci diimpor; konflik: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Kunci diimpor; konflik: {n}"
 }

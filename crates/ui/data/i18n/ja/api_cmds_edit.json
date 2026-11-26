@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "形状の結合を作成、解除、または切り替え",
  "api.cmd.place_footings": "レベル内のすべての柱の下に基礎を配置",
  "api.cmd.create_terrain": "測量点または傾斜面から地形を作成",
- "api.cmd.script_recipes": "自由形状の構造のスクリプト部品とレシピを読む"
+ "api.cmd.set_material": "マテリアルの3D表示を設定",
+ "api.cmd.script_recipes": "自由形状の構造のスクリプト部品とレシピを読む",
+ "api.cmd.generate_block": "共通の敷地ルールで区画上の街区を計画",
+ "api.cmd.measure_save": "計測をビューに保存",
+ "api.cmd.edit_mass": "マスに履歴ステップを追加: 押し出し、勾配、シェル、フィレット、面取り、オフセット、分割",
+ "api.cmd.mass_to_family": "マスのタイムラインからコンポーネントファミリを作成"
 }

@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<משתנה>",
  "geom_props.tip": "Enter מחיל את הערך על כל {n} הנבחרים, בשלב ביטול אחד",
  "geom_props.roof_slope": "שיפוע",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "אלמנטים מיובאים",
  "geom_props.kind.mass": "מסות",
  "geom_props.kind.solid": "מוצקים",
- "geom_props.kind.toposolid": "שטח",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "שטח"
 }

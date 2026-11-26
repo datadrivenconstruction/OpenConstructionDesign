@@ -20,6 +20,7 @@
  "sched_import.why_ro": "skrivskyddad",
  "sched_import.why_locked": "låst värde",
  "sched_import.why_bad": "ogiltigt värde",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Tillämpa {n} ändringar",
  "sched_import.cancel": "Avbryt",
  "sched_import.applied": "Importerade {n} celler (ett steg att ångra)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Formelresultat, inte tillämpade: {n}",
  "sched_import.no_id_rows": "Rader utan Id, lästes inte: {n} (rader {rows})",
  "sched_import.more": "… {n} till",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(tom)",
  "sched_import.reading": "Läser arbetsboken…",
  "sched_import.resaved": "Arbetsboken sparades på nytt efter första förhandsvisningen: den här förhandsvisningen visar det nya innehållet",
- "sched_import.resaved_reading": "Arbetsboken sparades på nytt: inget tillämpat, läser den på nytt för en ny förhandsvisning",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Arbetsboken sparades på nytt: inget tillämpat, läser den på nytt för en ny förhandsvisning"
 }

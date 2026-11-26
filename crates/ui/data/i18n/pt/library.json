@@ -41,5 +41,16 @@
  "library.ifc.window": "Janela",
  "library.ifc.stair": "Escada",
  "library.ifc.pipe_fitting": "Acessório de tubagem",
- "library.ifc.duct_fitting": "Acessório de conduta"
+ "library.ifc.duct_fitting": "Acessório de conduta",
+ "library.ifc.beam": "Viga",
+ "library.ifc.column": "Pilar",
+ "library.ifc.appliance": "Eletrodoméstico",
+ "library.ifc.fire_terminal": "Terminal de combate a incêndio",
+ "library.ifc.heat_exchanger": "Permutador de calor",
+ "library.ifc.pump": "Bomba",
+ "library.ifc.tank": "Depósito",
+ "library.ifc.transport": "Elemento de transporte",
+ "library.ifc.valve": "Válvula",
+ "library.ifc.waste_terminal": "Terminal de águas residuais",
+ "library.ifc.medical": "Dispositivo médico"
 }

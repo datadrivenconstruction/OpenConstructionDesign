@@ -45,5 +45,7 @@
  "phui.kind.comp": "Elemek",
  "phui.kind.shaft": "Aknák",
  "phui.kind.ramp": "Rámpák",
- "phui.kind.member": "Rudak"
+ "phui.kind.member": "Rudak",
+ "phui.dates": "Dátumok (kezdet, vég)",
+ "phui.show_calendar": "Megjelenítés naptár szerint"
 }

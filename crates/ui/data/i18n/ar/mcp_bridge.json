@@ -18,6 +18,7 @@
  "mcp.set.error": "لم يبدأ الخادم: {error}",
  "mcp.set.new": "رمز جديد",
  "mcp.set.port": "المنفذ",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "تُفحص كل دفعة أولاً وتُعد خطوة تراجع واحدة. يمكن للبرامج على هذا الحاسوب فقط الاتصال.",
  "mcp.set.show": "عرض",
  "mcp.set.state_failed": "غير قيد التشغيل",
@@ -30,6 +31,5 @@
  "mcp.set.status": "الحالة",
  "mcp.set.access": "الوصول",
  "mcp.set.config": "الإعداد",
- "mcp.set.policy": "التطبيق",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "التطبيق"
 }

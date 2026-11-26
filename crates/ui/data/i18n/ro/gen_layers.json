@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Anvelopă",
+ "gen.group.acoustic": "Izolare fonică",
+ "gen.rule.fire.insulation_class.title": "Clasă de reacție la foc a izolației anvelopei",
+ "gen.rule.fire.insulation_class.desc": "Cea mai slabă clasă de reacție la foc pe care o poate avea izolația pereților exteriori și a acoperișurilor; ansamblurile cu o izolație mai slabă nu sunt alese.",
+ "gen.rule.envelope.u_wall.title": "Valoare U perete exterior",
+ "gen.rule.envelope.u_wall.desc": "Cea mai mare transmitanță termică a unui perete exterior; izolația peretelui este dimensionată să rămână sub aceasta, deci un climat mai rece dă un perete mai gros.",
+ "gen.rule.envelope.u_roof.title": "Valoare U acoperiș",
+ "gen.rule.envelope.u_roof.desc": "Cea mai mare transmitanță termică a unui acoperiș; izolația acoperișului este dimensionată să rămână sub aceasta.",
+ "gen.rule.envelope.u_ground.title": "Valoare U placă pe sol",
+ "gen.rule.envelope.u_ground.desc": "Cea mai mare transmitanță termică a plăcii de pardoseală pe sol; izolația de sub șapă este dimensionată să rămână sub aceasta.",
+ "gen.rule.acoustic.rw_party.title": "Izolare fonică perete despărțitor",
+ "gen.rule.acoustic.rw_party.desc": "Cel mai mic indice de reducere a sunetului Rw al unui perete dintre locuințe sau lângă un coridor comun; miezul de zidărie este dimensionat prin legea masei pentru a-l atinge.",
+ "gen.rule.acoustic.rw_floor.title": "Izolare fonică planșeu",
+ "gen.rule.acoustic.rw_floor.desc": "Cel mai mic indice de reducere a sunetului Rw al unui planșeu între niveluri; placa de beton este dimensionată prin legea masei pentru a-l atinge.",
+ "gen.why.e.asm_wall": "pereți exteriori groși de {t} m cu {ins} m de izolație: U {u} W/m2K, cel mult {lim}",
+ "gen.why.e.asm_roof": "acoperiș gros de {t} m cu {ins} m de izolație: U {u} W/m2K, cel mult {lim}",
+ "gen.why.e.asm_ground": "placă pe sol groasă de {t} m cu {ins} m de izolație: U {u} W/m2K, cel mult {lim}",
+ "gen.why.e.asm_party": "pereți despărțitori groși de {t} m, {m} kg/m2: Rw {rw} dB prin legea masei, cel puțin {lim}",
+ "gen.why.e.asm_floor": "planșee groase de {t} m, {m} kg/m2: Rw {rw} dB prin legea masei, cel puțin {lim}"
+}

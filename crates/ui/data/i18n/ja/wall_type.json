@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "タイプを複製",
  "wall_type.wt.duplicate_tip": "これらのレイヤーを新しいタイプとして保存します。開いたタイプはそのまま残ります。",
  "wall_type.wt.switch_dirty": "別のタイプを開く前に OK またはキャンセルを押してください",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "機能",
  "wall_type.wt.h_material": "マテリアル",
  "wall_type.wt.h_thickness": "厚さ",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "ビューで壁を選択してから、タイプを入れ替えます。",
  "wall_type.swap.already": "選択した壁にはすでにこのタイプが設定されています",
  "wall_type.swap.apply": "入れ替え",
- "wall_type.swap.done": "壁タイプを入れ替えました: {n} / {m} 壁",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "壁タイプを入れ替えました: {n} / {m} 壁"
 }

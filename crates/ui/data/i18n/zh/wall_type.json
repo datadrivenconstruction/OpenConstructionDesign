@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "复制类型",
  "wall_type.wt.duplicate_tip": "将这些层保存为新类型；所打开的类型保持不变。",
  "wall_type.wt.switch_dirty": "打开其他类型前请先点击确定或取消",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "功能",
  "wall_type.wt.h_material": "材料",
  "wall_type.wt.h_thickness": "厚度",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "请在视图中选择墙，然后替换其类型。",
  "wall_type.swap.already": "所选墙已使用此类型",
  "wall_type.swap.apply": "替换",
- "wall_type.swap.done": "墙类型已替换：{n}/{m} 面墙",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "墙类型已替换：{n}/{m} 面墙"
 }

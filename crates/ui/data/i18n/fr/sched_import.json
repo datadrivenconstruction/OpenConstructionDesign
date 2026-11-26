@@ -20,6 +20,7 @@
  "sched_import.why_ro": "lecture seule",
  "sched_import.why_locked": "valeur verrouillée",
  "sched_import.why_bad": "valeur incorrecte",
+ "sched_import.refusal": "{at} {col} « {text} » : {why}",
  "sched_import.apply": "Appliquer {n} modifications",
  "sched_import.cancel": "Annuler",
  "sched_import.applied": "{n} cellules importées (une étape d'annulation)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Résultats de formule, non appliqués : {n}",
  "sched_import.no_id_rows": "Lignes sans Id, non lues : {n} (lignes {rows})",
  "sched_import.more": "… {n} de plus",
+ "sched_import.change": "{at} · {el} · {col} : {before} → {after}",
  "sched_import.blank": "(vide)",
  "sched_import.reading": "Lecture du classeur…",
  "sched_import.resaved": "Le classeur a été enregistré à nouveau après le premier aperçu : cet aperçu montre le nouveau contenu",
- "sched_import.resaved_reading": "Le classeur a été enregistré à nouveau : rien n'a été appliqué, relecture pour un nouvel aperçu",
- "sched_import.refusal": "{at} {col} « {text} » : {why}",
- "sched_import.change": "{at} · {el} · {col} : {before} → {after}"
+ "sched_import.resaved_reading": "Le classeur a été enregistré à nouveau : rien n'a été appliqué, relecture pour un nouvel aperçu"
 }

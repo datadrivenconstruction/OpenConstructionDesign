@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Tipi çoğalt",
  "wall_type.wt.duplicate_tip": "Bu katmanları yeni bir tip olarak kaydeder; açtığınız tip olduğu gibi kalır.",
  "wall_type.wt.switch_dirty": "Başka bir tipi açmadan önce Tamam veya İptal'e basın",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "İşlev",
  "wall_type.wt.h_material": "Malzeme",
  "wall_type.wt.h_thickness": "Kalınlık",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Görünümde duvar seçin, ardından tiplerini değiştirin.",
  "wall_type.swap.already": "Seçili duvarlar zaten bu tipte",
  "wall_type.swap.apply": "Değiştir",
- "wall_type.swap.done": "Duvar tipi değiştirildi: {m} duvardan {n}",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Duvar tipi değiştirildi: {m} duvardan {n}"
 }

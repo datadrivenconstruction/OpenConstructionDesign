@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: teljes tónus",
  "drawing_kit.reset_color": "{layer}: visszaállítás a rajz színére",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Szög",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Visszavonás (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} / {m}",
  "drawing_kit.accept_class": "Ilyen fajta mindegyikének elfogadása",
- "drawing_kit.reject_class": "Ilyen fajta mindegyikének elutasítása",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Ilyen fajta mindegyikének elutasítása"
 }

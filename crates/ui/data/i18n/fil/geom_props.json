@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<nag-iiba>",
  "geom_props.tip": "Ipinapasa ng Enter ang value sa lahat ng {n} napili, isang undo step",
  "geom_props.roof_slope": "Dalisdis",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Mga inangkat na elemento",
  "geom_props.kind.mass": "Mga mass",
  "geom_props.kind.solid": "Mga solid",
- "geom_props.kind.toposolid": "Lupain",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Lupain"
 }

@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Dupliciraj tip",
  "wall_type.wt.duplicate_tip": "Sprema ove slojeve kao novi tip; tip koji si otvorio ostaje kakav jest.",
  "wall_type.wt.switch_dirty": "Pritisni U redu ili Odustani prije otvaranja drugog tipa",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funkcija",
  "wall_type.wt.h_material": "Materijal",
  "wall_type.wt.h_thickness": "Debljina",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Odaberi zidove u pogledu, zatim zamijeni njihov tip.",
  "wall_type.swap.already": "Odabrani zidovi već imaju ovaj tip",
  "wall_type.swap.apply": "Zamijeni",
- "wall_type.swap.done": "Tip zida zamijenjen: {n} od {m} zidova",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Tip zida zamijenjen: {n} od {m} zidova"
 }

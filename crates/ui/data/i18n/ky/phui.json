@@ -45,5 +45,7 @@
  "phui.kind.comp": "Компоненттер",
  "phui.kind.shaft": "Шахталар",
  "phui.kind.ramp": "Ташмалар",
- "phui.kind.member": "Элементтер"
+ "phui.kind.member": "Элементтер",
+ "phui.dates": "Даталар (башы, аягы)",
+ "phui.show_calendar": "Календарь боюнча көрсөтүү"
 }

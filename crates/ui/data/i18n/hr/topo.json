@@ -64,6 +64,7 @@
  "topo.import.title": "Uvoz geodetskih podataka",
  "topo.import.filter": "Geodetski podaci (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Kota točke",
  "topo.opt.thickness": "Debljina toposolida",
  "topo.opt.add_to_active": "Dodaj u aktivni toposolid",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Uvezi",
  "topo.import.cancel": "Odustani",
  "topo.import.no_layers": "nije odabran sloj",
- "topo.info.warnings": "Nije izgrađeno:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Nije izgrađeno:"
 }

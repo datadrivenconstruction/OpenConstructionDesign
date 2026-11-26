@@ -12,6 +12,7 @@
  "links.loaded": "読み込み済み",
  "links.not_loaded": "未読み込み",
  "links.loading": "読み込み中…",
+ "links.loading_all": "リンクを読み込み中",
  "links.levels": "レベル",
  "links.elements": "要素",
  "links.offset": "オフセット:",

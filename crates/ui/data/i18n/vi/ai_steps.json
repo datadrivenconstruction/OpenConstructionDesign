@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} phút",
  "ai.step.min_s": "{m} phút {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Chi tiết",
  "ai.step.copy": "Sao chép chi tiết",
  "ai.step.group.read": "Đọc mô hình",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Mô hình đã đổi trong lúc bước chạy",
  "ai.step.why.skipped": "Bước không chạy: lượt đã kết thúc",
  "ai.step.why.other": "Bước chưa hoàn thành",
- "ai.step.unknown": "Công cụ không xác định",
- "ai.step.dec": ","
+ "ai.step.unknown": "Công cụ không xác định"
 }

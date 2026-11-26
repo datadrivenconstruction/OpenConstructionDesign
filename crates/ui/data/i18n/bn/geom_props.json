@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<ভিন্ন>",
  "geom_props.tip": "Enter দিলে মানটি নির্বাচিত সবগুলো ({n})-এ প্রয়োগ হবে, এক Undo ধাপে",
  "geom_props.roof_slope": "ঢাল",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "আমদানি করা উপাদান",
  "geom_props.kind.mass": "ভর",
  "geom_props.kind.solid": "সলিড",
- "geom_props.kind.toposolid": "ভূমিরূপ",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "ভূমিরূপ"
 }

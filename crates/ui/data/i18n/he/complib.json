@@ -18,7 +18,7 @@
  "complib.ready.no": "לא נכתב",
  "complib.edited": "נערך",
  "complib.edited_tip": "המשפחה של הפרויקט שונה מהמובנית",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "ערך",
- "complib.armed": "רכיב: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "רכיב: {name}"
 }

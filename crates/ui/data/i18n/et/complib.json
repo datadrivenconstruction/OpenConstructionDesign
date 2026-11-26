@@ -18,7 +18,7 @@
  "complib.ready.no": "ei ole kirjutatud",
  "complib.edited": "Muudetud",
  "complib.edited_tip": "Projekti perekond erineb sisseehitatust",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Väärtus",
- "complib.armed": "Komponent: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponent: {name}"
 }

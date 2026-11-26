@@ -11,6 +11,7 @@
  "ai.step.s": "{n} sn",
  "ai.step.min": "{m} dk",
  "ai.step.min_s": "{m} dk {s} sn",
+ "ai.step.dec": ",",
  "ai.step.details": "Ayrıntılar",
  "ai.step.copy": "Ayrıntıları kopyala",
  "ai.step.group.read": "Modeli okur",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Adım çalışırken model değişti",
  "ai.step.why.skipped": "Adım çalışmadı: tur bitti",
  "ai.step.why.other": "Adım tamamlanmadı",
- "ai.step.unknown": "Bilinmeyen araç",
- "ai.step.dec": ","
+ "ai.step.unknown": "Bilinmeyen araç"
 }

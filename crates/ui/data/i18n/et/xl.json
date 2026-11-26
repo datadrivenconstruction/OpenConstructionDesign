@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "töövihikut ei saanud lugeda, selle enda veerud kaoksid; sulge see XLSX-tabelis ja proovi uuesti",
  "xl.msg.type_x_layer_x": "tüüp {} kiht {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} enam ei eksisteeri, selle enda veergude lahtrid jäeti välja",
- "xl.msg.delsafe_type_param_on_elements": "parameeter '{}' on tüübi parameeter; muuda seda tüüpide lehel, ei rakendatud"
+ "xl.msg.delsafe_type_param_on_elements": "parameeter '{}' on tüübi parameeter; muuda seda tüüpide lehel, ei rakendatud",
+ "xl.msg.tag_x_is_removed_with_x_x": "silt {} eemaldatakse koos {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "mõõt {} kaotab {} {} ja jätab oma viimase kuju",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "kustutatud elementide märkusi ei saa kontrollida: {}"
 }

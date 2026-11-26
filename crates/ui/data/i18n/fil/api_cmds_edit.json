@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Pagdugtungin, tanggalin ang pagdudugtong o palitan ang geometry joins",
  "api.cmd.place_footings": "Maglagay ng footing sa ilalim ng bawat column ng antas",
  "api.cmd.create_terrain": "Gumawa ng terrain mula sa mga survey point o sloped na eroplano",
- "api.cmd.script_recipes": "Basahin ang mga building block at recipe ng script para sa malayang konstruksyon"
+ "api.cmd.set_material": "Itakda ang hitsura ng material sa 3D",
+ "api.cmd.script_recipes": "Basahin ang mga building block at recipe ng script para sa malayang konstruksyon",
+ "api.cmd.generate_block": "Magplano ng bloke ng mga gusali sa mga lote na may magkakabahaging patakaran ng site",
+ "api.cmd.measure_save": "I-save ang sukat sa isang view",
+ "api.cmd.edit_mass": "Magdagdag ng hakbang sa history ng mass: push, draft, shell, fillet, chamfer, offset o split",
+ "api.cmd.mass_to_family": "Gumawa ng component family mula sa timeline ng mass"
 }

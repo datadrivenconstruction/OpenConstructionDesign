@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 个工具",
  "ai.stream.tools_many": "{n} 个工具",
  "ai.stream.secs": "{n} 秒",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "仍在等待模型服务",
  "ai.stream.stop": "停止",
  "ai.stream.cancelled": "已停止",
- "ai.stream.incomplete": "草稿不完整。未向模型应用任何内容。",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "草稿不完整。未向模型应用任何内容。"
 }

@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nove tipke",
  "keys_import.changed_head": "Zamjenjuje vaše tipke",
  "keys_import.conflicts_head": "Sukobi nakon uvoza",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "kombinacija",
  "keys_import.kind_seq": "dva slova",
  "keys_import.unbound": "nijedna",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Nije poništeno: tipke su uređivane nakon uvoza. Vratite ih jednu po jednu u prozoru Tipke.",
  "keys_import.undo_none": "Nema što poništiti: u ovoj sesiji nema uvoza tipki.",
  "keys_import.imported": "Tipke uvezene",
- "keys_import.imported_conflicts": "Tipke uvezene; sukobi: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Tipke uvezene; sukobi: {n}"
 }

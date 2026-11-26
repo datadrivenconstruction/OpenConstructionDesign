@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "प्रवेश {w} दीवार {len} से चौड़ा है",
+ "ix.fix.opening_width": "चौड़ाई {w} mm",
+ "ix.fix.wall_extend": "दीवार को {len} mm तक बढ़ाएँ"
+}

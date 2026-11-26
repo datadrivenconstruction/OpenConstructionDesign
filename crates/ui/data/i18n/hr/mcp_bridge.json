@@ -18,6 +18,7 @@
  "mcp.set.error": "Poslužitelj nije pokrenut: {error}",
  "mcp.set.new": "Novi token",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Svaka serija prvo se provjerava i jedan je korak poništavanja. Povezati se mogu samo programi na ovom računalu.",
  "mcp.set.show": "Prikaži",
  "mcp.set.state_failed": "Nije pokrenuto",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Status",
  "mcp.set.access": "Pristup",
  "mcp.set.config": "Postavke",
- "mcp.set.policy": "Primjena",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Primjena"
 }

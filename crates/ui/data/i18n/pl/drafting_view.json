@@ -15,6 +15,7 @@
  "drafting_view.name": "Nazwa",
  "drafting_view.count": "Adnotacje: {n}",
  "drafting_view.tab": "Rysunkowy · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Pusty widok rysunkowy",
  "drafting_view.canvas_hint": "Użyj narzędzi adnotacji: linie detalu, obszary, tekst, komponenty detali",
  "drafting_view.created": "Utworzono widok rysunkowy „{name}”",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Więcej",
  "empty.drafting.title": "Brak widoków rysunkowych",
  "empty.drafting.hint": "Utwórz go dla detali 2D, które nie są wycinane z modelu.",
- "empty.drafting.action": "Nowy widok rysunkowy",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Nowy widok rysunkowy"
 }

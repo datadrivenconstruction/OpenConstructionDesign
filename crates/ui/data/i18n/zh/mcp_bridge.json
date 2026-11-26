@@ -18,6 +18,7 @@
  "mcp.set.error": "服务器未启动：{error}",
  "mcp.set.new": "新建令牌",
  "mcp.set.port": "端口",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "每个批次都会先经过检查，并可作为一步撤销。只有本计算机上的程序可以连接。",
  "mcp.set.show": "显示",
  "mcp.set.state_failed": "未运行",
@@ -30,6 +31,5 @@
  "mcp.set.status": "状态",
  "mcp.set.access": "访问",
  "mcp.set.config": "配置",
- "mcp.set.policy": "应用方式",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "应用方式"
 }

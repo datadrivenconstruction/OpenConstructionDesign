@@ -52,6 +52,7 @@
  "mesh_tools.done": "Valmis",
  "mesh_tools.failed": "Epäonnistui",
  "mesh_tools.note.outline_approx": "ääriviiva likimääräinen",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Poista pinnat, jotka osoittavat",
  "mesh_tools.dir.up": "ylös",
  "mesh_tools.dir.down": "alas",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Yksinkertaistettu: {n} (esimerkiksi: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Yksinkertaistettu: {n} (esimerkiksi: {first})"
 }

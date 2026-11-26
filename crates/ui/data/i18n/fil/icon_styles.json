@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "May kulay",
+ "cmd.ui.icons.color": "Mga icon na may kulay",
+ "cmd.ui.icons.color.desc": "Istilo ng pagguhit ng mga icon",
+ "theme.icons.hierarchical": "Hierarchical",
+ "cmd.ui.icons.hierarchical": "Mga hierarchical na icon",
+ "cmd.ui.icons.hierarchical.desc": "Istilo ng pagguhit ng mga icon",
+ "theme.icons.isometric": "Isometric",
+ "cmd.ui.icons.isometric": "Mga isometric na icon",
+ "cmd.ui.icons.isometric.desc": "Istilo ng pagguhit ng mga icon",
+ "theme.icons.monoline": "Monoline",
+ "cmd.ui.icons.monoline": "Mga monoline na icon",
+ "cmd.ui.icons.monoline.desc": "Istilo ng pagguhit ng mga icon"
+}

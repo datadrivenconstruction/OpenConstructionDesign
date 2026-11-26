@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "สี",
+ "cmd.ui.icons.color": "ไอคอนสี",
+ "cmd.ui.icons.color.desc": "รูปแบบการวาดของไอคอน",
+ "theme.icons.hierarchical": "ตามลำดับชั้น",
+ "cmd.ui.icons.hierarchical": "ไอคอนตามลำดับชั้น",
+ "cmd.ui.icons.hierarchical.desc": "รูปแบบการวาดของไอคอน",
+ "theme.icons.isometric": "ไอโซเมตริก",
+ "cmd.ui.icons.isometric": "ไอคอนไอโซเมตริก",
+ "cmd.ui.icons.isometric.desc": "รูปแบบการวาดของไอคอน",
+ "theme.icons.monoline": "เส้นเดียว",
+ "cmd.ui.icons.monoline": "ไอคอนเส้นเดียว",
+ "cmd.ui.icons.monoline.desc": "รูปแบบการวาดของไอคอน"
+}

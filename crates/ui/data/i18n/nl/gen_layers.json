@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Schil",
+ "gen.group.acoustic": "Geluidsisolatie",
+ "gen.rule.fire.insulation_class.title": "Brandklasse isolatie schil",
+ "gen.rule.fire.insulation_class.desc": "Slechtste brandklasse (reactie bij brand) die de isolatie van buitenwanden en daken mag hebben; opbouwen met slechtere isolatie worden niet gekozen.",
+ "gen.rule.envelope.u_wall.title": "U-waarde buitenwand",
+ "gen.rule.envelope.u_wall.desc": "Hoogste warmtedoorgangscoëfficiënt van een buitenwand; de wandisolatie wordt zo gedimensioneerd dat deze eronder blijft, dus een kouder klimaat geeft een dikkere wand.",
+ "gen.rule.envelope.u_roof.title": "U-waarde dak",
+ "gen.rule.envelope.u_roof.desc": "Hoogste warmtedoorgangscoëfficiënt van een dak; de dakisolatie wordt zo gedimensioneerd dat deze eronder blijft.",
+ "gen.rule.envelope.u_ground.title": "U-waarde grondplaat",
+ "gen.rule.envelope.u_ground.desc": "Hoogste warmtedoorgangscoëfficiënt van de vloerplaat op de grond; de isolatie onder de dekvloer wordt zo gedimensioneerd dat deze eronder blijft.",
+ "gen.rule.acoustic.rw_party.title": "Geluidsisolatie woningscheidende wand",
+ "gen.rule.acoustic.rw_party.desc": "Minimale geluidsisolatie-index Rw van een wand tussen woningen of naast een gemeenschappelijke gang; de metselwerkkern wordt volgens de massawet gedimensioneerd om die te halen.",
+ "gen.rule.acoustic.rw_floor.title": "Geluidsisolatie vloer",
+ "gen.rule.acoustic.rw_floor.desc": "Minimale geluidsisolatie-index Rw van een vloer tussen verdiepingen; de betonplaat wordt volgens de massawet gedimensioneerd om die te halen.",
+ "gen.why.e.asm_wall": "buitenwanden {t} m dik met {ins} m isolatie: U {u} W/m2K, maximaal {lim}",
+ "gen.why.e.asm_roof": "dak {t} m dik met {ins} m isolatie: U {u} W/m2K, maximaal {lim}",
+ "gen.why.e.asm_ground": "grondplaat {t} m dik met {ins} m isolatie: U {u} W/m2K, maximaal {lim}",
+ "gen.why.e.asm_party": "woningscheidende wanden {t} m dik, {m} kg/m2: Rw {rw} dB volgens de massawet, minimaal {lim}",
+ "gen.why.e.asm_floor": "vloeren {t} m dik, {m} kg/m2: Rw {rw} dB volgens de massawet, minimaal {lim}"
+}

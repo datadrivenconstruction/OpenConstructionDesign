@@ -48,5 +48,13 @@
  "settings.lib_open": "Библиотека с компоненти",
  "settings.lib_open_desc": "Преглед на вградените семейства, на тези в проекта и на вашите собствени",
  "settings.lib_dir": "Папка на моята библиотека",
- "settings.lib_dir_desc": "Файловете със семейства (.ddcf), поставени тук, се показват в Моята библиотека. DDC_COMPONENTS_DIR я премества."
+ "settings.lib_dir_desc": "Файловете със семейства (.ddcf), поставени тук, се показват в Моята библиотека. DDC_COMPONENTS_DIR я премества.",
+ "complib.fam.sprinkler_head": "Спринклерна глава",
+ "complib.fam.fire_pump": "Пожарна помпа",
+ "complib.fam.pressurisation_fan": "Вентилатор за свръхналягане",
+ "complib.fam.lift_car": "Кабина на асансьор",
+ "complib.fam.lift_landing_door": "Шахтна врата на асансьор",
+ "complib.fam.lift_pit": "Шахта на асансьор (приямка)",
+ "complib.fam.lift_overrun": "Надшахтово пространство на асансьор",
+ "complib.fam.lift_machine": "Машина на асансьор"
 }

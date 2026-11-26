@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Сонголт ({n})",
  "ai.ctx.add_tip": "AI-ийн харж буйд буцаан нэмэх",
  "ai.ctx.frame_tip": "Эдгээр элементүүдийг харуулах",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Хашлагууд",
  "ai.ctx.cat.roof": "Дээвэр",
  "ai.ctx.cat.stair": "Шатууд",
- "ai.ctx.cat.other": "Бусад",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Бусад"
 }

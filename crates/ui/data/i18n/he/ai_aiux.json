@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter מחיל ו-Esc עוצר את הבקשה גם מהתוכנית או ממבט התלת-ממד, אלא אם מקלידים בשדה טקסט.",
  "ai.plan.rebased": "עודכן מול המודל הנוכחי: {what}",
  "ai.value.bad": "“{text}” אינו ערך תקין עבור {name}",
+ "ai.value.bad_len": "שדה “{name}”: {why}",
  "ai.value.both": "עוזר ה-AI שינה את הערך הזה ל-{agent} בזמן שהזנת {mine}. בחר איזה להשאיר.",
  "ai.value.choose_first": "קודם בחר את הערך שלך או של עוזר ה-AI בכרטיס",
  "ai.value.elem": "אלמנט {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "הזן ערך אחר, או בטל את הסימון של הפריט כדי להשאיר אותו מחוץ להחלה.",
  "ai.value.tip": "תקן את הערך בטיוטה; המודל משתנה רק בהחלה. Enter מאשר, Esc משחזר.",
  "ai.value.use_mine": "השתמש ב-{mine}",
- "ai.value.was": "היה {old}",
- "ai.value.bad_len": "שדה “{name}”: {why}"
+ "ai.value.was": "היה {old}"
 }

@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Punto ng quadrant",
+ "snap.extension": "Extension",
+ "snap.parallel": "Parallel sa dingding",
+ "snap.tracking_x": "X ng nakuhang punto",
+ "snap.tracking_y": "Y ng nakuhang punto",
+ "snap.tracking_cross": "Krus ng guide",
+ "snap.equal_step": "Pantay na hakbang"
+}

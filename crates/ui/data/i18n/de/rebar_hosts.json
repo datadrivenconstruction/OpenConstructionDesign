@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Träger: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Stütze",
  "rebar_hosts.kind.beam": "Träger",
  "rebar_hosts.kind.wall": "Wand",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Matten gehen in Wände, Decken und Gründungen, nicht in Stützen oder Träger.",
  "rebar_hosts.why.bars_plate": "Längsstäbe und Bügel gehen in Stützen und Träger, nicht in Wände, Decken oder Gründungen.",
  "rebar_hosts.why.no_common_face": "Die gewählten Träger haben keine gemeinsame Betondeckungsfläche. Wählen Sie Träger einer Art.",
- "rebar_hosts.why.no_type": "Wählen Sie einen Stabtyp.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Wählen Sie einen Stabtyp."
 }

@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "사분점",
+ "snap.extension": "연장선",
+ "snap.parallel": "벽과 평행",
+ "snap.tracking_x": "캡처한 점의 X",
+ "snap.tracking_y": "캡처한 점의 Y",
+ "snap.tracking_cross": "가이드 교차",
+ "snap.equal_step": "동일 간격"
+}

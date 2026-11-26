@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "Hindi nabago ang {n} opening ({why})",
  "lnp.params_changed": "nabagong halaga: {n}",
  "lnp.params_same": "Walang pagbabago: may halagang ito na ang {u} elemento",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Piliin lang ang unang panel para ma-edit ito",
  "lnp.clip_from_wall": "Nakopya ang mga parameter mula sa pader #{id}",
  "lnp.clip_from_opening": "Nakopya ang mga parameter mula sa opening #{id}",
- "lnp.match_from": "Tumugma ang mga property ng #{id} sa {n} elemento",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Tumugma ang mga property ng #{id} sa {n} elemento"
 }

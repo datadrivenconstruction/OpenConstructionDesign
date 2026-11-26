@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ चयन ({n})",
  "ai.ctx.add_tip": "AI के देखे हुए में वापस जोड़ें",
  "ai.ctx.frame_tip": "ये तत्व दिखाएँ",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "रेलिंग",
  "ai.ctx.cat.roof": "छत",
  "ai.ctx.cat.stair": "सीढ़ियाँ",
- "ai.ctx.cat.other": "अन्य",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "अन्य"
 }

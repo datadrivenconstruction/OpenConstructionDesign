@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Elemek csatlakozásának összekapcsolása, szétválasztása vagy átállítása",
  "api.cmd.place_footings": "Alap elhelyezése a szint minden pillére alatt",
  "api.cmd.create_terrain": "Terep létrehozása felmérési pontokból vagy lejtős síkból",
- "api.cmd.script_recipes": "Szabad szerkezetek szkriptelemeinek és receptjeinek elolvasása"
+ "api.cmd.set_material": "Anyag 3D megjelenésének beállítása",
+ "api.cmd.script_recipes": "Szabad szerkezetek szkriptelemeinek és receptjeinek elolvasása",
+ "api.cmd.generate_block": "Épületblokk tervezése telkeken, közös telekszabályokkal",
+ "api.cmd.measure_save": "Mérés mentése nézetbe",
+ "api.cmd.edit_mass": "Előzménylépés hozzáadása egy tömeghez: kihúzás, dőlés, héj, lekerekítés, letörés, eltolás vagy szétvágás",
+ "api.cmd.mass_to_family": "Építőelem-család készítése egy tömeg idővonalából"
 }

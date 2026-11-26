@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Monte-matériaux à mât",
+ "fam.name.mast_lift": "Monte-matériaux à mât",
+ "gen.rule.steel.check.self_weight.desc": "Poids de la tour au-dessus d’une coupe, par mètre de hauteur.",
+ "gen.rule.steel.check.self_weight.title": "Poids de l’acier par mètre",
+ "gen.rule.steel.check.strut_share.desc": "Part de l’effort du membre qu’une horizontale reprend à son nœud.",
+ "gen.rule.steel.check.strut_share.title": "Part horizontale",
+ "gen.rule.steel.out.lift_box_d.desc": "Profondeur en plan dont un monte-matériaux à mât a besoin avec son mât ; les planchers s’ouvrent au-dessus.",
+ "gen.rule.steel.out.lift_box_d.title": "Profondeur de la cage de monte-charge",
+ "gen.rule.steel.out.lift_box_w.desc": "Largeur en plan dont un monte-matériaux à mât a besoin ; les planchers s’ouvrent au-dessus.",
+ "gen.rule.steel.out.lift_box_w.title": "Largeur de la cage de monte-charge",
+ "gen.rule.steel.out.lift_offset.desc": "Distance d’un monte-charge à l’axe, à l’écart du contreventement en plan.",
+ "gen.rule.steel.out.lift_offset.title": "Décalage du monte-charge par rapport à l’axe",
+ "gen.rule.steel.out.lifts.desc": "Monte-charge le long du noyau : jusqu’à la deuxième plateforme, puis jusqu’au sommet.",
+ "gen.rule.steel.out.lifts.title": "Trajets de monte-charge"
+}

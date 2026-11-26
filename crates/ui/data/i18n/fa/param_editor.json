@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "شاخه‌های if() متفاوت‌اند",
  "pe.msg_what_args": "آرگومان‌ها",
  "pe.msg_and": " و ",
+ "pe.msg_incompatible": "{w}: واحدهای ناسازگار {dims}",
  "pe.text_no_formula": "پارامترهای متنی فرمول نمی‌پذیرند",
  "pe.circular": "ارجاع چرخشی: {text}",
- "pe.depends_invalid": "به “{b}” نامعتبر وابسته است",
- "pe.msg_incompatible": "{w}: واحدهای ناسازگار {dims}"
+ "pe.depends_invalid": "به “{b}” نامعتبر وابسته است"
 }

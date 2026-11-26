@@ -15,6 +15,7 @@
  "drafting_view.name": "نام",
  "drafting_view.count": "{n} تشریحات",
  "drafting_view.tab": "ڈرافٹنگ · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "خالی ڈرافٹنگ ویو",
  "drafting_view.canvas_hint": "تشریحی ٹولز استعمال کریں: ڈیٹیل لائنز، ریجنز، ٹیکسٹ، ڈیٹیل کمپوننٹس",
  "drafting_view.created": "ڈرافٹنگ ویو \"{name}\" بن گیا",
@@ -29,6 +30,5 @@
  "drafting_view.more": "مزید",
  "empty.drafting.title": "ابھی کوئی ڈرافٹنگ ویو نہیں",
  "empty.drafting.hint": "ان 2D ڈیٹیلز کے لیے بنائیں جو ماڈل سے نہیں کاٹے گئے۔",
- "empty.drafting.action": "نیا ڈرافٹنگ ویو",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "نیا ڈرافٹنگ ویو"
 }

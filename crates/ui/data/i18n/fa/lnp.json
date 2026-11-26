@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} بازشو تغییر نکرد ({why})",
  "lnp.params_changed": "مقادیر تغییر کردند: {n}",
  "lnp.params_same": "بدون تغییر: {u} عنصر از قبل این مقدار را دارند",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "برای ویرایش فقط اولین پانل را انتخاب کنید",
  "lnp.clip_from_wall": "پارامترهای دیوار #{id} کپی شدند",
  "lnp.clip_from_opening": "پارامترهای بازشوی #{id} کپی شدند",
- "lnp.match_from": "ویژگی‌های #{id} روی {n} عنصر اعمال شد",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "ویژگی‌های #{id} روی {n} عنصر اعمال شد"
 }

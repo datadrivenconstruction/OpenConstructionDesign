@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Duplica tipo",
  "wall_type.wt.duplicate_tip": "Salva questi strati come nuovo tipo; il tipo aperto resta com'è.",
  "wall_type.wt.switch_dirty": "Premi OK o Annulla prima di aprire un altro tipo",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funzione",
  "wall_type.wt.h_material": "Materiale",
  "wall_type.wt.h_thickness": "Spessore",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Seleziona i muri nella vista, poi sostituisci il loro tipo.",
  "wall_type.swap.already": "I muri selezionati hanno già questo tipo",
  "wall_type.swap.apply": "Sostituisci",
- "wall_type.swap.done": "Tipo di muro sostituito: {n} di {m} muri",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Tipo di muro sostituito: {n} di {m} muri"
 }

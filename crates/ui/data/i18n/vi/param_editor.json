@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "các nhánh if() khác nhau",
  "pe.msg_what_args": "đối số",
  "pe.msg_and": " và ",
+ "pe.msg_incompatible": "{w}: đơn vị không tương thích {dims}",
  "pe.text_no_formula": "tham số văn bản không nhận công thức",
  "pe.circular": "tham chiếu vòng: {text}",
- "pe.depends_invalid": "phụ thuộc vào “{b}” không hợp lệ",
- "pe.msg_incompatible": "{w}: đơn vị không tương thích {dims}"
+ "pe.depends_invalid": "phụ thuộc vào “{b}” không hợp lệ"
 }

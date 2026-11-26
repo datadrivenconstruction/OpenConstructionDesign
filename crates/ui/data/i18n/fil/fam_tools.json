@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Basahin ang teksto ng definition ng family ng proyekto",
+ "api.cmd.family_validate": "Suriin ang teksto ng definition ng family",
+ "api.cmd.family_reference": "Basahin ang reference ng teksto ng definition ng family",
+ "api.cmd.family_draft": "Mag-alok ng definition ng family bilang draft sa family editor"
+}

@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Stáhněte si aktuální editor na stránce ERP {url}",
  "erp.err.unsupported.admin": "Požádejte správce ERP o aktuální editor",
  "erp.err.throttled_in": "Příliš mnoho pokusů. Zkuste to znovu za {s} s",
+ "erp.err.throttled_ready": "Čekání skončilo. Můžete to zkusit znovu",
  "erp.err.imported": "Revize {n} v ERP je importovaný model: editor ji zatím nemůže otevřít ani na ni publikovat",
  "erp.action.download": "Otevřít stránku ke stažení editoru v ERP",
  "erp.action.new_link": "Získat nový odkaz na stránce ERP",

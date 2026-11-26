@@ -52,6 +52,7 @@
  "mesh_tools.done": "Kész",
  "mesh_tools.failed": "Sikertelen",
  "mesh_tools.note.outline_approx": "körvonal közelítő",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Törlés, ha a felület ez felé néz",
  "mesh_tools.dir.up": "felfelé",
  "mesh_tools.dir.down": "lefelé",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Egyszerűsítve: {n} (például: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Egyszerűsítve: {n} (például: {first})"
 }

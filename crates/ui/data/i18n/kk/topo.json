@@ -64,6 +64,7 @@
  "topo.import.title": "Түсірімді импорттау",
  "topo.import.filter": "Геодезиялық түсірім (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " м",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Нүкте белгісі",
  "topo.opt.thickness": "Топосолид қалыңдығы",
  "topo.opt.add_to_active": "Белсенді топосолидке қосу",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Импорттау",
  "topo.import.cancel": "Бас тарту",
  "topo.import.no_layers": "қабат таңдалмады",
- "topo.info.warnings": "Салынбады:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Салынбады:"
 }

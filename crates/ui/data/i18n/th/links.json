@@ -12,6 +12,7 @@
  "links.loaded": "โหลดแล้ว",
  "links.not_loaded": "ยังไม่โหลด",
  "links.loading": "กำลังโหลด…",
+ "links.loading_all": "กำลังโหลดลิงก์",
  "links.levels": "ระดับ",
  "links.elements": "องค์ประกอบ",
  "links.offset": "ออฟเซ็ต:",

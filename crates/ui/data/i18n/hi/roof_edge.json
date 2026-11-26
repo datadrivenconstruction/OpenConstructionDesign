@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "बल्ज",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "इस बिंदु के बाद एक बिंदु जोड़ें (चाप आधा कट जाता है)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "सहेजें",
  "roof_edge.pe.saved": "प्रोफ़ाइल सहेजी गई",
  "roof_edge.pe.valid": "प्रोफ़ाइल मान्य है",
  "roof_edge.pe.invalid": "प्रोफ़ाइल स्वयं को काटती है, बहुत छोटी है या उसमें 3 से कम बिंदु हैं",
  "roof_edge.pe.bad_number": "निर्देशांक या बल्ज संख्या नहीं है",
- "roof_edge.pe.no_name": "प्रोफ़ाइल का नाम लिखें",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "प्रोफ़ाइल का नाम लिखें"
 }

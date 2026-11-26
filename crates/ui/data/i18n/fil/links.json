@@ -12,6 +12,7 @@
  "links.loaded": "na-load",
  "links.not_loaded": "hindi pa na-load",
  "links.loading": "naglo-load…",
+ "links.loading_all": "Naglo-load ng mga link",
  "links.levels": "mga level",
  "links.elements": "mga elemento",
  "links.offset": "Layo:",

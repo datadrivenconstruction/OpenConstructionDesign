@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Typ duplizieren",
  "wall_type.wt.duplicate_tip": "Speichert diese Schichten als neuen Typ; der geöffnete Typ bleibt unverändert.",
  "wall_type.wt.switch_dirty": "Vor dem Öffnen eines anderen Typs OK oder Abbrechen drücken",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funktion",
  "wall_type.wt.h_material": "Material",
  "wall_type.wt.h_thickness": "Dicke",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Wände in der Ansicht wählen, dann Typ tauschen.",
  "wall_type.swap.already": "Die gewählten Wände haben bereits diesen Typ",
  "wall_type.swap.apply": "Tauschen",
- "wall_type.swap.done": "Wandtyp getauscht: {n} von {m} Wänden",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Wandtyp getauscht: {n} von {m} Wänden"
 }

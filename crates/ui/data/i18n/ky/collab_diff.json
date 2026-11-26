@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Түрү",
  "collab_diff.diff.col.field": "Талаа",
  "collab_diff.diff.col.old": "Мурда",
- "collab_diff.diff.col.new": "Азыр"
+ "collab_diff.diff.col.new": "Азыр",
+ "collab_diff.reveal.title": "Курулуш жүрүшү",
+ "collab_diff.reveal.start": "Курулуш тартибинде көрсөтүү",
+ "collab_diff.reveal.play": "Ойнотуу",
+ "collab_diff.reveal.pause": "Тындыруу",
+ "collab_diff.reveal.back": "Артка",
+ "collab_diff.reveal.close": "Жабуу",
+ "collab_diff.reveal.nothing": "Көрсөтүүгө эч нерсе жок: 3D сахнада өзгөргөн элемент жок.",
+ "collab_diff.reveal.journal_busy": "Журнал окулууда…",
+ "collab_diff.reveal.journal_play": "Журналды ойнотуу"
 }

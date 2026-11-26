@@ -72,6 +72,7 @@
  "quick.cat.beam": "Travi",
  "quick.cat.ceiling": "Soffitti",
  "quick.cat.structure": "Struttura",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} di {all}",
  "quick.hud.type": "Tipo",
  "quick.hud.height": "Altezza",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Impossibile leggere il valore “{v}”",
  "quick.menu.repeat": "Ripeti: {cmd}",
  "quick.menu.enter": "Invio",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Recenti",
  "quick.bar.repeat_tip": "{cmd} · Invio lo ripete",
  "quick.repeat.none": "Nulla da ripetere",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Indietro",
  "quick.tips.next": "Avanti",
  "quick.tips.finish": "Fatto",
- "quick.tips.never": "Non mostrare più",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Non mostrare più"
 }

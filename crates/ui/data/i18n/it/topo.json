@@ -64,6 +64,7 @@
  "topo.import.title": "Importa rilievo",
  "topo.import.filter": "Rilievo (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Quota del punto",
  "topo.opt.thickness": "Spessore del toposolido",
  "topo.opt.add_to_active": "Aggiungi al toposolido attivo",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importa",
  "topo.import.cancel": "Annulla",
  "topo.import.no_layers": "nessun livello scelto",
- "topo.info.warnings": "Non costruiti:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Non costruiti:"
 }

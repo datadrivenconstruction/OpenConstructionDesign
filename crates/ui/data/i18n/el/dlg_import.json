@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "ως πλέγματα",
  "dlg.imp.skipped": "παραλείφθηκε",
  "dlg.imp.notes": "Σημειώσεις: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "και {n} ακόμα είδη",
  "dlg.imp.no_levels": "Το αρχείο δεν έχει επίπεδα: δημιουργήθηκε ένα προεπιλεγμένο επίπεδο",
  "dlg.imp.reimport_row": "Ενημερώθηκαν {updated}, αμετάβλητα {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} γραμμές, {arcs} τόξα, {texts} κείμενα, {fills} γεμίσματα, {layers} στρώματα· μονάδα {unit} mm",
  "dlg.dw.summary_paper": "· φύλλα χαρτιού {n} (δεν τοποθετούνται στο υπόβαθρο)",
  "dlg.dw.summary_unknown": "· δεν μεταφέρθηκαν: {list}",
- "dlg.dw.summary_more": " και {n} ακόμα είδη",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " και {n} ακόμα είδη"
 }

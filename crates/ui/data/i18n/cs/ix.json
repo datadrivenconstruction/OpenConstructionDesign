@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Kvadrant",
+ "snap.extension": "Prodloužení",
+ "snap.parallel": "Rovnoběžně se stěnou",
+ "snap.tracking_x": "X zachyceného bodu",
+ "snap.tracking_y": "Y zachyceného bodu",
+ "snap.tracking_cross": "Průsečík vodicích čar",
+ "snap.equal_step": "Stejný krok"
+}

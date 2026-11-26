@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Kretsar",
+ "cmd.mep.circuits.desc": "Öppnar kretseditorn: kretsar för varje central, deras laster, kabelareor och regelkontroller.",
  "ce.title": "Kretsar",
  "ce.open": "Kretsar",
  "ce.empty": "Inga kretsar ännu",

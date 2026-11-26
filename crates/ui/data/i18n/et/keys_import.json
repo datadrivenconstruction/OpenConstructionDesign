@@ -5,6 +5,7 @@
  "keys_import.new_head": "Uued võtmed",
  "keys_import.changed_head": "Asendab sinu enda võtmed",
  "keys_import.conflicts_head": "Konfliktid pärast importi",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "kombinatsioon",
  "keys_import.kind_seq": "kaks tähte",
  "keys_import.unbound": "puudub",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Ei võetud tagasi: pärast importi muudeti võtmeid. Lähtesta need ükshaaval aknas Võtmed.",
  "keys_import.undo_none": "Tagasivõetavat pole: sel seansil võtmete importi ei olnud.",
  "keys_import.imported": "Võtmed imporditud",
- "keys_import.imported_conflicts": "Võtmed imporditud; konflikte: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Võtmed imporditud; konflikte: {n}"
 }

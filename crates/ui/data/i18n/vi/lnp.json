@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} lỗ mở không đổi ({why})",
  "lnp.params_changed": "giá trị đã đổi: {n}",
  "lnp.params_same": "Không có thay đổi: {u} phần tử đã có giá trị này",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Chỉ chọn tấm đầu tiên để sửa",
  "lnp.clip_from_wall": "Đã sao chép tham số từ tường #{id}",
  "lnp.clip_from_opening": "Đã sao chép tham số từ lỗ mở #{id}",
- "lnp.match_from": "Thuộc tính của #{id} đã khớp cho {n} phần tử",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Thuộc tính của #{id} đã khớp cho {n} phần tử"
 }

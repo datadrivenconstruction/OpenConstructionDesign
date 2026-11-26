@@ -15,6 +15,7 @@
  "drafting_view.name": "Nimi",
  "drafting_view.count": "{n} märkust",
  "drafting_view.tab": "Joonistus · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Tühi joonistusvaade",
  "drafting_view.canvas_hint": "Kasuta märkimistööriistu: detailjooned, alad, tekst, detailelemendid",
  "drafting_view.created": "Joonistusvaade „{name}“ loodud",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Rohkem",
  "empty.drafting.title": "Joonistusvaateid veel pole",
  "empty.drafting.hint": "Loo see 2D-detailide jaoks, mida ei lõigata mudelist.",
- "empty.drafting.action": "Uus joonistusvaade",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Uus joonistusvaade"
 }

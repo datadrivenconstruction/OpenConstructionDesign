@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() کی شاخیں مختلف ہیں",
  "pe.msg_what_args": "دلائل",
  "pe.msg_and": " اور ",
+ "pe.msg_incompatible": "{w}: ناقابلِ مطابقت اکائیاں {dims}",
  "pe.text_no_formula": "متنی پیرامیٹرز میں فارمولا نہیں ہوتا",
  "pe.circular": "سرکلر حوالہ: {text}",
- "pe.depends_invalid": "غلط “{b}” پر منحصر ہے",
- "pe.msg_incompatible": "{w}: ناقابلِ مطابقت اکائیاں {dims}"
+ "pe.depends_invalid": "غلط “{b}” پر منحصر ہے"
 }

@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Barevné",
+ "cmd.ui.icons.color": "Barevné ikony",
+ "cmd.ui.icons.color.desc": "Styl kresby ikon",
+ "theme.icons.hierarchical": "Hierarchické",
+ "cmd.ui.icons.hierarchical": "Hierarchické ikony",
+ "cmd.ui.icons.hierarchical.desc": "Styl kresby ikon",
+ "theme.icons.isometric": "Izometrické",
+ "cmd.ui.icons.isometric": "Izometrické ikony",
+ "cmd.ui.icons.isometric.desc": "Styl kresby ikon",
+ "theme.icons.monoline": "Jednočárové",
+ "cmd.ui.icons.monoline": "Jednočárové ikony",
+ "cmd.ui.icons.monoline.desc": "Styl kresby ikon"
+}

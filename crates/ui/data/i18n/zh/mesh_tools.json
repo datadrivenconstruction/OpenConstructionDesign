@@ -52,6 +52,7 @@
  "mesh_tools.done": "完成",
  "mesh_tools.failed": "失败",
  "mesh_tools.note.outline_approx": "轮廓为近似值",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "删除朝向以下方向的面",
  "mesh_tools.dir.up": "向上",
  "mesh_tools.dir.down": "向下",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "已简化：{n}（例如：{first}）",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "已简化：{n}（例如：{first}）"
 }

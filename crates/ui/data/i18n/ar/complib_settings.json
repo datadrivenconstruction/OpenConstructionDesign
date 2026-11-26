@@ -48,5 +48,13 @@
  "settings.lib_open": "مكتبة المكونات",
  "settings.lib_open_desc": "تصفح العائلات المدمجة وتلك الموجودة في المشروع وعائلاتك",
  "settings.lib_dir": "مجلد مكتبتي",
- "settings.lib_dir_desc": "ملفات العائلات (.ddcf) الموضوعة هنا تظهر ضمن مكتبتي. يغيّر موقعها المتغير DDC_COMPONENTS_DIR."
+ "settings.lib_dir_desc": "ملفات العائلات (.ddcf) الموضوعة هنا تظهر ضمن مكتبتي. يغيّر موقعها المتغير DDC_COMPONENTS_DIR.",
+ "complib.fam.sprinkler_head": "رأس رشاش",
+ "complib.fam.fire_pump": "مضخة الحريق",
+ "complib.fam.pressurisation_fan": "مروحة الضغط",
+ "complib.fam.lift_car": "كابينة المصعد",
+ "complib.fam.lift_landing_door": "باب طابق المصعد",
+ "complib.fam.lift_pit": "حفرة المصعد",
+ "complib.fam.lift_overrun": "حيّز علوي للمصعد",
+ "complib.fam.lift_machine": "ماكينة المصعد"
 }

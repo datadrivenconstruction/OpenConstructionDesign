@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "টাইপ কপি করুন",
  "wall_type.wt.duplicate_tip": "এই স্তরগুলো নতুন টাইপ হিসেবে সংরক্ষিত হবে; আপনার খোলা টাইপ যেমন আছে তেমনই থাকবে।",
  "wall_type.wt.switch_dirty": "অন্য টাইপ খোলার আগে ঠিক আছে বা বাতিল চাপুন",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "কার্য",
  "wall_type.wt.h_material": "উপকরণ",
  "wall_type.wt.h_thickness": "পুরুত্ব",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "ভিউতে দেওয়াল নির্বাচন করুন, তারপর তাদের টাইপ বদলান।",
  "wall_type.swap.already": "নির্বাচিত দেওয়ালগুলোতে এই টাইপ আগে থেকেই আছে",
  "wall_type.swap.apply": "বদলান",
- "wall_type.swap.done": "দেওয়াল টাইপ বদলানো হয়েছে: {m}টির মধ্যে {n}টি দেওয়াল",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "দেওয়াল টাইপ বদলানো হয়েছে: {m}টির মধ্যে {n}টি দেওয়াল"
 }

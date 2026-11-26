@@ -12,6 +12,7 @@
  "links.loaded": "indlæst",
  "links.not_loaded": "ikke indlæst",
  "links.loading": "indlæser…",
+ "links.loading_all": "Indlæser links",
  "links.levels": "etager",
  "links.elements": "elementer",
  "links.offset": "Forskydning:",

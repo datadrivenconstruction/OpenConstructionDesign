@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varierer>",
  "geom_props.tip": "Enter bruker verdien på alle {n} valgte, ett angrertrinn",
  "geom_props.roof_slope": "Fall",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Importerte elementer",
  "geom_props.kind.mass": "Volumer",
  "geom_props.kind.solid": "Massiver",
- "geom_props.kind.toposolid": "Terreng",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terreng"
 }

@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: Volltonfarbe",
  "drawing_kit.reset_color": "{layer}: auf die Zeichnungsfarbe zurücksetzen",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Winkel",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Rückgängig (Strg+Z)",
  "drawing_kit.n_of_m": "{n} von {m}",
  "drawing_kit.accept_class": "Alle dieser Art übernehmen",
- "drawing_kit.reject_class": "Alle dieser Art ablehnen",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Alle dieser Art ablehnen"
 }

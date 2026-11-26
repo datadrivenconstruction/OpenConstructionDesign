@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "verkkoina",
  "dlg.imp.skipped": "ohitettu",
  "dlg.imp.notes": "Muistiinpanot: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "ja {n} muuta lajia",
  "dlg.imp.no_levels": "Tiedostossa ei ole tasoja: luotiin oletustaso",
  "dlg.imp.reimport_row": "Päivitetty {updated}, ennallaan {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} viivaa, {arcs} kaarta, {texts} tekstiä, {fills} täyttöä, {layers} kerrosta; yksikkö {unit} mm",
  "dlg.dw.summary_paper": "; paperiarkit {n} (ei sijoitettu taustapiirrokseen)",
  "dlg.dw.summary_unknown": "; ei siirretty: {list}",
- "dlg.dw.summary_more": " ja {n} muuta lajia",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " ja {n} muuta lajia"
 }

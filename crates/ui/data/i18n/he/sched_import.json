@@ -20,6 +20,7 @@
  "sched_import.why_ro": "לקריאה בלבד",
  "sched_import.why_locked": "ערך נעול",
  "sched_import.why_bad": "ערך לא תקין",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "החל {n} שינויים",
  "sched_import.cancel": "ביטול",
  "sched_import.applied": "יובאו {n} תאים (צעד ביטול אחד)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "תוצאות נוסחה, לא הוחלו: {n}",
  "sched_import.no_id_rows": "שורות ללא Id, לא נקראו: {n} (שורות {rows})",
  "sched_import.more": "… עוד {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(ריק)",
  "sched_import.reading": "קורא חוברת…",
  "sched_import.resaved": "החוברת נשמרה מחדש לאחר התצוגה המקדימה הראשונה: תצוגה זו מציגה את התוכן החדש",
- "sched_import.resaved_reading": "החוברת נשמרה מחדש: דבר לא הוחל, הקריאה מתבצעת מחדש לתצוגה מקדימה חדשה",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "החוברת נשמרה מחדש: דבר לא הוחל, הקריאה מתבצעת מחדש לתצוגה מקדימה חדשה"
 }

@@ -90,6 +90,7 @@
  "fe.cons.redundant": "ortiqcha",
  "fe.cons.help": "Uzunlik parametriga bog'langan o'lcham tekisliklarni boshqaradi; burchakka burchak parametri kerak",
  "fe.locks": "Tekislash qulflari",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Qulflash",
  "fe.unlock": "Qulfni ochish",
  "fe.locks.help": "Qulf jismning argumentini (masalan rect #2) tekislik bilan almashtiradi, shunda jism unga ergashadi",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Qoralama nomi band",
  "fe.clash.body": "“{name}” nomli qoralama allaqachon mavjud. Shu qoralamani almashtiring yoki orqaga qaytib, yangi nom bilan saqlang. Hali hech narsa saqlanmadi.",
  "fe.clash.rename": "Yangi nom bilan saqlash",
- "fe.clash.replace": "Shu qoralamani almashtirish",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Shu qoralamani almashtirish"
 }

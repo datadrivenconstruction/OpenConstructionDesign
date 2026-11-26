@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatische gebouwinstallaties",
+ "gen.mep_auto_hint": "Laat de generator en de AI-assistent zelf leidingen, kanalen en bedrading aanleggen. Voor deze regio standaard uitgeschakeld; u kunt het inschakelen. Handmatig tracéren is altijd beschikbaar."
+}

@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Värviline",
+ "cmd.ui.icons.color": "Värvilised ikoonid",
+ "cmd.ui.icons.color.desc": "Ikoonide joonistusstiil",
+ "theme.icons.hierarchical": "Hierarhiline",
+ "cmd.ui.icons.hierarchical": "Hierarhilised ikoonid",
+ "cmd.ui.icons.hierarchical.desc": "Ikoonide joonistusstiil",
+ "theme.icons.isometric": "Isomeetriline",
+ "cmd.ui.icons.isometric": "Isomeetrilised ikoonid",
+ "cmd.ui.icons.isometric.desc": "Ikoonide joonistusstiil",
+ "theme.icons.monoline": "Ühejooneline",
+ "cmd.ui.icons.monoline": "Ühejoonelised ikoonid",
+ "cmd.ui.icons.monoline.desc": "Ikoonide joonistusstiil"
+}

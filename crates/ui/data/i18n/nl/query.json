@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" kan niet worden gewijzigd: {why}",
  "query.err.op_no_field": "operator zonder veld",
  "query.err.positive": "{key}: de waarde moet groter zijn dan nul",
+ "query.err.raw": "{text}",
  "query.err.text_field": "veld \"{key}\" is tekst, een formule is niet van toepassing",
  "query.err.unclosed_paren": "sluithaakje ontbreekt",
  "query.err.unclosed_quote": "afsluitend aanhalingsteken ontbreekt",
@@ -27,6 +28,5 @@
  "query.why.curtain": "gordijngevels worden in hun eigen eigenschappen gewijzigd",
  "query.why.opening_type": "het type van een opening volgt zijn maat: \"-> width=… height=…\"",
  "query.why.slab_thickness": "vloerdikte wordt door het type bepaald: \"-> type=…\"",
- "query.why.wall_thickness": "wanddikte wordt door het type bepaald: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "wanddikte wordt door het type bepaald: \"-> type=…\""
 }

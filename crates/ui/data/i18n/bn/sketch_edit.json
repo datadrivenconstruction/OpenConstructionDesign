@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "স্কেচ বাতিল",
  "sketch_edit.sk_applied": "স্কেচ প্রয়োগ হয়েছে",
  "sketch_edit.sk_tail": "লেজ",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "স্ল্যাব",
  "sketch_edit.sk_host_roof": "ছাদ",
  "sketch_edit.sk_host_ceiling": "সিলিং",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "লেভেল ২",
  "sketch_edit.seed_floor_200": "ফ্লোর 200",
  "sketch_edit.seed_section1": "সেকশন ১",
- "sketch_edit.seed_section2": "সেকশন ২",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "সেকশন ২"
 }

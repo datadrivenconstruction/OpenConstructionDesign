@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Obwody",
+ "cmd.mep.circuits.desc": "Otwiera edytor obwodów: obwody każdej rozdzielnicy, ich obciążenia, przekroje kabli i kontrole reguł.",
  "ce.title": "Obwody",
  "ce.open": "Obwody",
  "ce.empty": "Brak obwodów",

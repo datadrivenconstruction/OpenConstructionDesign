@@ -9,6 +9,7 @@
  "ai_found.found.hide": "پنهان شد",
  "ai_found.found.color": "رنگی شد",
  "ai_found.found.count": "{n} از {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "موردی مطابقت ندارد. فیلتر گسترده‌تری امتحان کنید.",
  "ai_found.found.show_btn": "نمایش",
  "ai_found.found.show_tip": "این عنصرها را انتخاب کن و در پلان و سه‌بعدی بزرگ‌نمایی کن",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# عنصر پنهان شد",
   "other": "# عنصر پنهان شد"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

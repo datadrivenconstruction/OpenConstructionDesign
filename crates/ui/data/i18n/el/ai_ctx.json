@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Επιλογή ({n})",
  "ai.ctx.add_tip": "Επαναφορά σε αυτά που βλέπει ο βοηθός AI",
  "ai.ctx.frame_tip": "Εμφάνιση αυτών των αντικειμένων",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Κάγκελα",
  "ai.ctx.cat.roof": "Στέγες",
  "ai.ctx.cat.stair": "Σκάλες",
- "ai.ctx.cat.other": "Άλλα",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Άλλα"
 }

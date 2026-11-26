@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{0} dari {1} elemen akan dihapus. Pengguna harus mengonfirmasi ini",
+ "ai.issue.wipe": "Rencana ini akan menghapus seluruh {1} elemen model ({0} dihapus). Tidak pernah diterapkan dalam satu langkah"
+}

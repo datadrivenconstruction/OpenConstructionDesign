@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "回路",
+ "cmd.mep.circuits.desc": "打开回路编辑器：各配电盘的回路、负荷、电缆规格及规则检查。",
  "ce.title": "回路",
  "ce.open": "回路",
  "ce.empty": "尚无回路",

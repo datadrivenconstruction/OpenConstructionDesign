@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Bukaan {w} lebih lebar dari dinding {len}",
+ "ix.fix.opening_width": "Lebar {w} mm",
+ "ix.fix.wall_extend": "Perpanjang dinding menjadi {len} mm"
+}

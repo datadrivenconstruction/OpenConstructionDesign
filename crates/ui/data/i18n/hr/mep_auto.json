@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatske instalacije zgrade",
+ "gen.mep_auto_hint": "Dopušta generatoru i AI asistentu da samostalno polažu cijevi, kanale i vodove. Za ovu regiju prema zadanim postavkama isključeno; možete ga uključiti. Ručno trasiranje uvijek je dostupno."
+}

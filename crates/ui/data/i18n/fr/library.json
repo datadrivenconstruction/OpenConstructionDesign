@@ -41,5 +41,16 @@
  "library.ifc.window": "Fenêtre",
  "library.ifc.stair": "Escalier",
  "library.ifc.pipe_fitting": "Raccord de tuyauterie",
- "library.ifc.duct_fitting": "Raccord de gaine"
+ "library.ifc.duct_fitting": "Raccord de gaine",
+ "library.ifc.beam": "Poutre",
+ "library.ifc.column": "Poteau",
+ "library.ifc.appliance": "Appareil",
+ "library.ifc.fire_terminal": "Terminal d’extinction incendie",
+ "library.ifc.heat_exchanger": "Échangeur de chaleur",
+ "library.ifc.pump": "Pompe",
+ "library.ifc.tank": "Réservoir",
+ "library.ifc.transport": "Élément de transport",
+ "library.ifc.valve": "Vanne",
+ "library.ifc.waste_terminal": "Terminal d’évacuation",
+ "library.ifc.medical": "Dispositif médical"
 }

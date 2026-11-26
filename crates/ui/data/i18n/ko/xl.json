@@ -46,6 +46,7 @@
  "xl.msg.arc_wall_x": "호 벽: {}",
  "xl.msg.unknown_opening_id_x": "알 수 없는 개구부 ID {}",
  "xl.msg.x_expected_x_or_x": "'{}' (예상: {} 또는 {})",
+ "xl.msg.unknown_or_deleted_wall_x": "벽 {}을(를) 찾을 수 없거나 삭제되었습니다",
  "xl.msg.kind_x_door_window_void": "종류 '{}' (door/window/void)",
  "xl.msg.opening_kind_x_door_window_void": "개구부 종류 '{}' (door/window/void)",
  "xl.msg.width_must_be_0_got_x": "너비는 0보다 커야 합니다. 입력값 {}",
@@ -182,5 +183,7 @@
  "xl.msg.type_x_layer_x": "유형 {} 레이어 {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {}이(가) 더 이상 없습니다. 자체 열의 셀은 삭제되었습니다",
  "xl.msg.delsafe_type_param_on_elements": "매개변수 '{}'은(는) 유형 매개변수입니다. 유형 시트에서 편집하세요. 적용하지 않음",
- "xl.msg.unknown_or_deleted_wall_x": "벽 {}을(를) 찾을 수 없거나 삭제되었습니다"
+ "xl.msg.tag_x_is_removed_with_x_x": "태그 {}이(가) {} {}와(과) 함께 제거됩니다",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "치수 {}이(가) {} {}을(를) 잃고 마지막 형태를 유지합니다",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "삭제된 요소의 주석을 검사할 수 없습니다: {}"
 }

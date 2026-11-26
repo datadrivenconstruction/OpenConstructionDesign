@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "종류",
  "collab_diff.diff.col.field": "필드",
  "collab_diff.diff.col.old": "이전",
- "collab_diff.diff.col.new": "현재"
+ "collab_diff.diff.col.new": "현재",
+ "collab_diff.reveal.title": "시공 순서",
+ "collab_diff.reveal.start": "시공 상태로 보기",
+ "collab_diff.reveal.play": "재생",
+ "collab_diff.reveal.pause": "일시 정지",
+ "collab_diff.reveal.back": "거꾸로",
+ "collab_diff.reveal.close": "닫기",
+ "collab_diff.reveal.nothing": "표시할 항목이 없습니다. 3D 장면에 변경된 요소가 없습니다.",
+ "collab_diff.reveal.journal_busy": "저널 읽는 중…",
+ "collab_diff.reveal.journal_play": "저널 재생"
 }

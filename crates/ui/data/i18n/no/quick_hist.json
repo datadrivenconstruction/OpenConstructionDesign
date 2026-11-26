@@ -72,6 +72,7 @@
  "quick.cat.beam": "Bjelker",
  "quick.cat.ceiling": "Tak",
  "quick.cat.structure": "Konstruksjon",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} av {all}",
  "quick.hud.type": "Type",
  "quick.hud.height": "Høyde",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Kan ikke lese verdien “{v}”",
  "quick.menu.repeat": "Gjenta: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Nylige",
  "quick.bar.repeat_tip": "{cmd} · Enter gjentar den",
  "quick.repeat.none": "Ingenting å gjenta ennå",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Tilbake",
  "quick.tips.next": "Neste",
  "quick.tips.finish": "Ferdig",
- "quick.tips.never": "Vis ikke igjen",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Vis ikke igjen"
 }

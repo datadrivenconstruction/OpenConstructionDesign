@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Lees de definitietekst van een projectfamilie",
+ "api.cmd.family_validate": "Controleer een familiedefinitietekst",
+ "api.cmd.family_reference": "Lees de naslag voor familiedefinitieteksten",
+ "api.cmd.family_draft": "Bied een familiedefinitie aan als concept in de familie-editor"
+}

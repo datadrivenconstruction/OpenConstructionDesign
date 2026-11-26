@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "يطبّق Ctrl+Enter ويوقف Esc الطلب أيضاً من الخطة أو عرض ثلاثي الأبعاد، ما لم يكن هناك حقل نص قيد الكتابة.",
  "ai.plan.rebased": "حُدّث مقابل النموذج الحالي: {what}",
  "ai.value.bad": "\"{text}\" ليست قيمة صالحة لـ {name}",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "غيّر المساعد الذكي هذه القيمة إلى {agent} بينما أدخلت {mine}. اختر القيمة التي تُحتفظ بها.",
  "ai.value.choose_first": "اختر قيمتك أو قيمة المساعد الذكي في البطاقة أولاً",
  "ai.value.elem": "العنصر {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "أدخل قيمة أخرى، أو ألغِ تحديد العنصر لاستبعاده من التطبيق.",
  "ai.value.tip": "صحّح القيمة في المسودة؛ لا يتغير النموذج إلا عند التطبيق. Enter للتأكيد، وEsc للاستعادة.",
  "ai.value.use_mine": "استخدم {mine}",
- "ai.value.was": "كانت {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "كانت {old}"
 }

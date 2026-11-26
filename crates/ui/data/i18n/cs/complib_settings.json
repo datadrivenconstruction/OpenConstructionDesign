@@ -48,5 +48,13 @@
  "settings.lib_open": "Knihovna komponent",
  "settings.lib_open_desc": "Procházejte vestavěné rodiny, rodiny v projektu a vlastní",
  "settings.lib_dir": "Moje složka knihovny",
- "settings.lib_dir_desc": "Soubory rodin (.ddcf) uložené sem se zobrazí v sekci Moje knihovna. DDC_COMPONENTS_DIR ji přesune."
+ "settings.lib_dir_desc": "Soubory rodin (.ddcf) uložené sem se zobrazí v sekci Moje knihovna. DDC_COMPONENTS_DIR ji přesune.",
+ "complib.fam.sprinkler_head": "Sprinklerová hlavice",
+ "complib.fam.fire_pump": "Požární čerpadlo",
+ "complib.fam.pressurisation_fan": "Přetlakový ventilátor",
+ "complib.fam.lift_car": "Kabina výtahu",
+ "complib.fam.lift_landing_door": "Šachetní dveře výtahu",
+ "complib.fam.lift_pit": "Výtahová jáma",
+ "complib.fam.lift_overrun": "Nadjezd výtahu",
+ "complib.fam.lift_machine": "Stroj výtahu"
 }

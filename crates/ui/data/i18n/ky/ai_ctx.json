@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Тандоо ({n})",
  "ai.ctx.add_tip": "AI жардамчысы көргөн нерсеге кайра кошуу",
  "ai.ctx.frame_tip": "Ушул элементтерди көрсөтүү",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Тосмолор",
  "ai.ctx.cat.roof": "Чатырлар",
  "ai.ctx.cat.stair": "Баскычтар",
- "ai.ctx.cat.other": "Башка",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Башка"
 }

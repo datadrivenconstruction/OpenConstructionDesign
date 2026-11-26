@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Punct de cadran",
+ "snap.extension": "Prelungire",
+ "snap.parallel": "Paralel cu peretele",
+ "snap.tracking_x": "X al unui punct captat",
+ "snap.tracking_y": "Y al unui punct captat",
+ "snap.tracking_cross": "Intersecție de ghidaj",
+ "snap.equal_step": "Pas egal"
+}

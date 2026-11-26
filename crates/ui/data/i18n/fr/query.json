@@ -11,6 +11,7 @@
  "query.err.not_changed": "« {key} » ne peut pas être modifié : {why}",
  "query.err.op_no_field": "opérateur sans champ",
  "query.err.positive": "{key} : la valeur doit être supérieure à zéro",
+ "query.err.raw": "{text}",
  "query.err.text_field": "le champ « {key} » est du texte, une formule ne s'applique pas",
  "query.err.unclosed_paren": "parenthèse fermante manquante",
  "query.err.unclosed_quote": "guillemet fermant manquant",
@@ -27,6 +28,5 @@
  "query.why.curtain": "les murs-rideaux se modifient dans leurs propres propriétés",
  "query.why.opening_type": "le type d'une ouverture suit ses dimensions : « -> largeur=… hauteur=… »",
  "query.why.slab_thickness": "l'épaisseur du plancher est définie par le type : « -> type=… »",
- "query.why.wall_thickness": "l'épaisseur du mur est définie par le type : « -> type=… »",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "l'épaisseur du mur est définie par le type : « -> type=… »"
 }

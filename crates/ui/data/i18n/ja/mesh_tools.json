@@ -52,6 +52,7 @@
  "mesh_tools.done": "完了",
  "mesh_tools.failed": "失敗",
  "mesh_tools.note.outline_approx": "輪郭は概算です",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "次の方向を向く面を削除",
  "mesh_tools.dir.up": "上",
  "mesh_tools.dir.down": "下",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "簡略化: {n} 件 (例: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "簡略化: {n} 件 (例: {first})"
 }

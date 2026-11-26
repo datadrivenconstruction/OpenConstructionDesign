@@ -72,6 +72,7 @@
  "quick.cat.beam": "Gerendák",
  "quick.cat.ceiling": "Mennyezetek",
  "quick.cat.structure": "Szerkezet",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} / {all}",
  "quick.hud.type": "Típus",
  "quick.hud.height": "Magasság",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Nem olvasható az érték: „{v}”",
  "quick.menu.repeat": "Ismétlés: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Legutóbbi",
  "quick.bar.repeat_tip": "{cmd} · Enter megismétli",
  "quick.repeat.none": "Még nincs mit ismételni",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Vissza",
  "quick.tips.next": "Következő",
  "quick.tips.finish": "Kész",
- "quick.tips.never": "Ne mutassa újra",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Ne mutassa újra"
 }

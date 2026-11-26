@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() tarmoqlari farq qiladi",
  "pe.msg_what_args": "argumentlar",
  "pe.msg_and": " va ",
+ "pe.msg_incompatible": "{w}: noto'g'ri birliklar {dims}",
  "pe.text_no_formula": "matn parametrlari formulaga ega bo'lmaydi",
  "pe.circular": "aylanma havola: {text}",
- "pe.depends_invalid": "noto'g'ri “{b}” ga bog'liq",
- "pe.msg_incompatible": "{w}: noto'g'ri birliklar {dims}"
+ "pe.depends_invalid": "noto'g'ri “{b}” ga bog'liq"
 }

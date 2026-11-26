@@ -52,6 +52,7 @@
  "mesh_tools.done": "Tayyor",
  "mesh_tools.failed": "Xato",
  "mesh_tools.note.outline_approx": "kontur taxminiy",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Quyidagiga qaragan yuzlarni o'chirish",
  "mesh_tools.dir.up": "yuqoriga",
  "mesh_tools.dir.down": "pastga",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Soddalashtirildi: {n} (masalan: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Soddalashtirildi: {n} (masalan: {first})"
 }

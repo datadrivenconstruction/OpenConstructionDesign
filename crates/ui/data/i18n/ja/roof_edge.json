@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "膨らみ",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "この点の後ろに点を挿入します (円弧は半分に分割されます)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "保存",
  "roof_edge.pe.saved": "プロファイルを保存しました",
  "roof_edge.pe.valid": "プロファイルは有効です",
  "roof_edge.pe.invalid": "プロファイルが自己交差しているか、小さすぎるか、点が 3 つ未満です",
  "roof_edge.pe.bad_number": "座標または膨らみが数値ではありません",
- "roof_edge.pe.no_name": "プロファイル名を入力してください",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "プロファイル名を入力してください"
 }

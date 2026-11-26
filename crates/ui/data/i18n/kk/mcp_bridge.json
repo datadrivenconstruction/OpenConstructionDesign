@@ -18,6 +18,7 @@
  "mcp.set.error": "Сервер іске қосылмады: {error}",
  "mcp.set.new": "Жаңа токен",
  "mcp.set.port": "Порт",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Әр топтама алдын ала тексеріледі және бір қайтару қадамы. Тек осы компьютердегі бағдарламалар қосыла алады.",
  "mcp.set.show": "Көрсету",
  "mcp.set.state_failed": "Іске қосылмаған",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Күйі",
  "mcp.set.access": "Қолжетімділік",
  "mcp.set.config": "Конфигурация",
- "mcp.set.policy": "Қолдану",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Қолдану"
 }

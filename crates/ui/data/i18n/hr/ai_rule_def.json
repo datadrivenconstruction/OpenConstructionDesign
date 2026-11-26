@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} više nalaza ovog pravila nije navedeno",
  "ai.check.integrity": "Pokvareni podaci u {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: vrh nije iznad podnožja",
  "ai.check.level_host_differs": "Element je na drugoj razini od svog domaćina ({0})",
  "ai.check.clash": "{0} sudara s {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Pravilo {1}: {3} elemenata, dopušteno {4}",
  "ai.check.rule.clearance": "Pravilo {1}: udaljenost {3} m, potrebno je najmanje {4} m",
  "ai.check.rule.unsupported": "Pravilo {1} se nije moglo provjeriti: ova kategorija nije podržana",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "Parametar {0}: \"{1}\" nije kostenska skupina DIN 276 (tri znamenke, od 100 do 899) na {2} elemenata"
 }

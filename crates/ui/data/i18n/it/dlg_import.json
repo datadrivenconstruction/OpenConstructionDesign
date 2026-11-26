@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "come mesh",
  "dlg.imp.skipped": "saltato",
  "dlg.imp.notes": "Note: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "e altri {n} tipi",
  "dlg.imp.no_levels": "Il file non ha livelli: è stato creato un livello predefinito",
  "dlg.imp.reimport_row": "Aggiornati {updated}, invariati {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} linee, {arcs} archi, {texts} testi, {fills} campiture, {layers} strati; unità {unit} mm",
  "dlg.dw.summary_paper": "; tavole cartacee {n} (non posizionate sul sottofondo)",
  "dlg.dw.summary_unknown": "; non riportati: {list}",
- "dlg.dw.summary_more": " e altri {n} tipi",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " e altri {n} tipi"
 }

@@ -45,5 +45,7 @@
  "phui.kind.comp": "コンポーネント",
  "phui.kind.shaft": "シャフト",
  "phui.kind.ramp": "スロープ",
- "phui.kind.member": "部材"
+ "phui.kind.member": "部材",
+ "phui.dates": "日付(開始、終了)",
+ "phui.show_calendar": "カレンダー別に表示"
 }

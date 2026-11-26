@@ -12,6 +12,7 @@
  "links.loaded": "wczytano",
  "links.not_loaded": "nie wczytano",
  "links.loading": "wczytywanie…",
+ "links.loading_all": "Wczytywanie powiązań",
  "links.levels": "poziomy",
  "links.elements": "elementy",
  "links.offset": "Przesunięcie:",

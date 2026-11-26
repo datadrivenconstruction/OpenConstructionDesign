@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "텍스트 필드에 입력 중이 아니라면, 평면이나 3D 뷰에서도 Ctrl+Enter는 적용하고 Esc는 요청을 중지합니다.",
  "ai.plan.rebased": "현재 모델 기준으로 업데이트됨: {what}",
  "ai.value.bad": "“{text}”은(는) {name}에 유효한 값이 아닙니다",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "AI 어시스턴트가 이 값을 {agent}(으)로 바꿨는데 {mine}을(를) 입력하셨습니다. 유지할 값을 고르세요.",
  "ai.value.choose_first": "먼저 카드에서 사용자 값 또는 AI 어시스턴트의 값을 고르세요",
  "ai.value.elem": "요소 {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "다른 값을 입력하거나 항목을 선택 해제해 적용에서 제외하세요.",
  "ai.value.tip": "초안에서 값을 수정하세요; 모델은 적용할 때만 바뀝니다. Enter는 확인, Esc는 복원.",
  "ai.value.use_mine": "{mine} 사용",
- "ai.value.was": "이전: {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "이전: {old}"
 }

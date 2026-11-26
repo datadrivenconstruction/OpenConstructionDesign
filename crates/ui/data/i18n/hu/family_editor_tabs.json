@@ -90,6 +90,7 @@
  "fe.cons.redundant": "felesleges",
  "fe.cons.help": "Hosszparaméterhez kötött méretezés vezérli a síkokat; szöghöz szögparaméter kell",
  "fe.locks": "Igazítási zárak",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Zárolás",
  "fe.unlock": "Feloldás",
  "fe.locks.help": "A zár a test argumentumát (pl. téglalap #2) a síkkal helyettesíti, így a test követi azt",
@@ -160,6 +161,5 @@
  "fe.clash.title": "A vázlatnév foglalt",
  "fe.clash.body": "„{name}” nevű vázlat már létezik. Cserélje le ezt a vázlatot erre, vagy térjen vissza, és mentsen új néven. Még semmi nem lett mentve.",
  "fe.clash.rename": "Mentés új néven",
- "fe.clash.replace": "Vázlat cseréje",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Vázlat cseréje"
 }

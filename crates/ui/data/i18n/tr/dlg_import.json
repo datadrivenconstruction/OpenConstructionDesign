@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "ağ olarak",
  "dlg.imp.skipped": "atlandı",
  "dlg.imp.notes": "Notlar: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "ve {n} tür daha",
  "dlg.imp.no_levels": "Dosyada kat yok: varsayılan bir kat oluşturuldu",
  "dlg.imp.reimport_row": "Güncellendi {updated}, değişmedi {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} çizgi, {arcs} yay, {texts} metin, {fills} dolgu, {layers} katman; birim {unit} mm",
  "dlg.dw.summary_paper": "; kâğıt sayfaları {n} (altlığa yerleştirilmedi)",
  "dlg.dw.summary_unknown": "; aktarılmadı: {list}",
- "dlg.dw.summary_more": " ve {n} tür daha",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " ve {n} tür daha"
 }

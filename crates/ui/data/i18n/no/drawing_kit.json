@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: fulltone",
  "drawing_kit.reset_color": "{layer}: tilbakestill til tegningens farge",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Vinkel",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Angre (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} av {m}",
  "drawing_kit.accept_class": "Godta alle av denne typen",
- "drawing_kit.reject_class": "Avvis alle av denne typen",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Avvis alle av denne typen"
 }

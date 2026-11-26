@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Távolság",
+ "cmd.e3d.measure.gap": "Felületek közötti rés",
+ "cmd.e3d.measure.angle": "Szög",
+ "cmd.e3d.measure.area": "Felület vagy helyiség területe / kerülete",
+ "cmd.e3d.measure.volume": "Elem térfogata",
+ "cmd.e3d.measure.slope": "Lejtés",
+ "cmd.e3d.measure.chain": "Ponthálózat",
+ "measure.orphan": "Elveszett hivatkozás",
+ "measure.not_planar": "A felületek nem párhuzamosak",
+ "measure.unsupported": "Ez nem mérhető",
+ "cmd.ann.measure_distance": "Távolság mérése",
+ "cmd.ann.measure_gap": "Felületek közötti rés mérése",
+ "cmd.ann.measure_angle": "Szög mérése",
+ "cmd.ann.measure_area": "Terület mérése",
+ "hint.measure.first": "Mérés: kattintson egy falfelületre (vagy pontra) · Esc — kilépés",
+ "hint.measure.second": "Mérés: kattintson a második felületre · Esc — az első kijelölés megszakítása",
+ "measure.no_face": "Itt nincs falfelület"
+}

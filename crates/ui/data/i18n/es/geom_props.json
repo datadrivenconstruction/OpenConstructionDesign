@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varía>",
  "geom_props.tip": "Intro aplica el valor a los {n} seleccionados, en un solo paso de deshacer",
  "geom_props.roof_slope": "Pendiente",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Elementos importados",
  "geom_props.kind.mass": "Masas",
  "geom_props.kind.solid": "Sólidos",
- "geom_props.kind.toposolid": "Terreno",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terreno"
 }

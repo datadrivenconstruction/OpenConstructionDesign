@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<다양함>",
  "geom_props.tip": "Enter를 누르면 선택한 {n}개 전체에 값이 적용되며 실행 취소는 한 단계입니다",
  "geom_props.roof_slope": "기울기",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "가져온 요소",
  "geom_props.kind.mass": "매스",
  "geom_props.kind.solid": "솔리드",
- "geom_props.kind.toposolid": "지형",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "지형"
 }

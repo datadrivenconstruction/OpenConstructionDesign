@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "grane if() se razlikuju",
  "pe.msg_what_args": "argumenti",
  "pe.msg_and": " i ",
+ "pe.msg_incompatible": "{w}: nekompatibilne jedinice {dims}",
  "pe.text_no_formula": "tekstualni parametri ne podržavaju formulu",
  "pe.circular": "kružna referenca: {text}",
- "pe.depends_invalid": "ovisi o neispravnom „{b}”",
- "pe.msg_incompatible": "{w}: nekompatibilne jedinice {dims}"
+ "pe.depends_invalid": "ovisi o neispravnom „{b}”"
 }

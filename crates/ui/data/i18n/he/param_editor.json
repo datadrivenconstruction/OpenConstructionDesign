@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "ענפי if() שונים",
  "pe.msg_what_args": "ארגומנטים",
  "pe.msg_and": " ו-",
+ "pe.msg_incompatible": "{w}: יחידות לא תואמות {dims}",
  "pe.text_no_formula": "פרמטרי טקסט אינם מקבלים נוסחה",
  "pe.circular": "הפניה מעגלית: {text}",
- "pe.depends_invalid": "תלוי ב-“{b}” שאינו תקין",
- "pe.msg_incompatible": "{w}: יחידות לא תואמות {dims}"
+ "pe.depends_invalid": "תלוי ב-“{b}” שאינו תקין"
 }

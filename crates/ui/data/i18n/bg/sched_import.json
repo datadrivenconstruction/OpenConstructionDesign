@@ -20,6 +20,7 @@
  "sched_import.why_ro": "само за четене",
  "sched_import.why_locked": "заключена стойност",
  "sched_import.why_bad": "невалидна стойност",
+ "sched_import.refusal": "{at} {col} „{text}“: {why}",
  "sched_import.apply": "Приложи {n} промени",
  "sched_import.cancel": "Отказ",
  "sched_import.applied": "Импортирани клетки: {n} (една стъпка за отмяна)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Резултати от формули, не са приложени: {n}",
  "sched_import.no_id_rows": "Редове без Id, не са прочетени: {n} (редове {rows})",
  "sched_import.more": "… още {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(празно)",
  "sched_import.reading": "Четене на книгата…",
  "sched_import.resaved": "Книгата беше записана отново след първия преглед: този преглед показва новото съдържание",
- "sched_import.resaved_reading": "Книгата беше записана отново: нищо не е приложено, чете се наново за нов преглед",
- "sched_import.refusal": "{at} {col} „{text}“: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Книгата беше записана отново: нищо не е приложено, чете се наново за нов преглед"
 }

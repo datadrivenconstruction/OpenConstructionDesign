@@ -41,5 +41,16 @@
  "library.ifc.window": "창",
  "library.ifc.stair": "계단",
  "library.ifc.pipe_fitting": "배관 피팅",
- "library.ifc.duct_fitting": "덕트 피팅"
+ "library.ifc.duct_fitting": "덕트 피팅",
+ "library.ifc.beam": "보",
+ "library.ifc.column": "기둥",
+ "library.ifc.appliance": "가전·기기",
+ "library.ifc.fire_terminal": "소화 말단 기기",
+ "library.ifc.heat_exchanger": "열교환기",
+ "library.ifc.pump": "펌프",
+ "library.ifc.tank": "탱크",
+ "library.ifc.transport": "운송 요소",
+ "library.ifc.valve": "밸브",
+ "library.ifc.waste_terminal": "배수 말단 기기",
+ "library.ifc.medical": "의료 기기"
 }

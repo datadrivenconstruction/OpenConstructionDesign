@@ -20,6 +20,7 @@
  "sched_import.why_ro": "อ่านอย่างเดียว",
  "sched_import.why_locked": "ค่าที่ล็อก",
  "sched_import.why_bad": "ค่าไม่ถูกต้อง",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "นำไปใช้ {n} การเปลี่ยนแปลง",
  "sched_import.cancel": "ยกเลิก",
  "sched_import.applied": "นำเข้า {n} เซลล์แล้ว (เลิกทำได้หนึ่งขั้น)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "ผลลัพธ์ของสูตร ไม่ได้นำไปใช้: {n}",
  "sched_import.no_id_rows": "แถวที่ไม่มี Id ไม่ได้อ่าน: {n} (แถว {rows})",
  "sched_import.more": "… อีก {n} รายการ",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(ว่าง)",
  "sched_import.reading": "กำลังอ่านสมุดงาน…",
  "sched_import.resaved": "สมุดงานถูกบันทึกใหม่หลังดูตัวอย่างครั้งแรก: การดูตัวอย่างนี้แสดงเนื้อหาใหม่",
- "sched_import.resaved_reading": "สมุดงานถูกบันทึกใหม่: ยังไม่ได้นำไปใช้ กำลังอ่านใหม่เพื่อดูตัวอย่างใหม่",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "สมุดงานถูกบันทึกใหม่: ยังไม่ได้นำไปใช้ กำลังอ่านใหม่เพื่อดูตัวอย่างใหม่"
 }

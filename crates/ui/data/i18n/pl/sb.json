@@ -41,5 +41,7 @@
  "sb.save.fresh": "Brak zmian",
  "sb.save.save": "Zapisz",
  "sb.save.ifc": "Zapisz kopię IFC",
- "sb.save.autosave": "Autozapis"
+ "sb.save.autosave": "Autozapis",
+ "sb.more.title": "Więcej",
+ "sb.more.desc": "Elementy paska stanu, które nie mieszczą się przy tej szerokości."
 }

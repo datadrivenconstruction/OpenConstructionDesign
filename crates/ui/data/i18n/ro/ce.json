@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Circuite",
+ "cmd.mep.circuits.desc": "Deschide editorul de circuite: circuitele fiecărui tablou, sarcinile lor, secțiunile cablurilor și verificările de reguli.",
  "ce.title": "Circuite",
  "ce.open": "Circuite",
  "ce.empty": "Încă nu există circuite",

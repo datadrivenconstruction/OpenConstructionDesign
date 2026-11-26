@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Avstand",
+ "cmd.e3d.measure.gap": "Avstand mellom flater",
+ "cmd.e3d.measure.angle": "Vinkel",
+ "cmd.e3d.measure.area": "Areal / omkrets for en flate eller et rom",
+ "cmd.e3d.measure.volume": "Volum av et element",
+ "cmd.e3d.measure.slope": "Helning",
+ "cmd.e3d.measure.chain": "Punktkjede",
+ "measure.orphan": "Mistet referanse",
+ "measure.not_planar": "Flatene er ikke parallelle",
+ "measure.unsupported": "Kan ikke måle dette",
+ "cmd.ann.measure_distance": "Mål avstand",
+ "cmd.ann.measure_gap": "Mål avstand mellom flater",
+ "cmd.ann.measure_angle": "Mål vinkel",
+ "cmd.ann.measure_area": "Mål areal",
+ "hint.measure.first": "Mål: klikk på en veggflate (eller et punkt) · Esc — avslutt",
+ "hint.measure.second": "Mål: klikk på den andre flaten · Esc — avbryt det første valget",
+ "measure.no_face": "Ingen veggflate her"
+}

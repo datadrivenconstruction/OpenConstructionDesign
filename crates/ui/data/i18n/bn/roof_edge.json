@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "বাল্জ",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "এর পরে একটি বিন্দু যোগ করুন (চাপ অর্ধেক ভাগ হয়)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "সংরক্ষণ",
  "roof_edge.pe.saved": "প্রোফাইল সংরক্ষিত",
  "roof_edge.pe.valid": "প্রোফাইল বৈধ",
  "roof_edge.pe.invalid": "প্রোফাইল নিজেকে ছেদ করে, খুব ছোট বা ৩টির কম বিন্দু",
  "roof_edge.pe.bad_number": "স্থানাঙ্ক বা বাল্জ সংখ্যা নয়",
- "roof_edge.pe.no_name": "প্রোফাইলের নাম লিখুন",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "প্রোফাইলের নাম লিখুন"
 }

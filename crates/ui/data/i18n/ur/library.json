@@ -41,5 +41,16 @@
  "library.ifc.window": "کھڑکی",
  "library.ifc.stair": "زینہ",
  "library.ifc.pipe_fitting": "پائپ فٹنگ",
- "library.ifc.duct_fitting": "ڈکٹ فٹنگ"
+ "library.ifc.duct_fitting": "ڈکٹ فٹنگ",
+ "library.ifc.beam": "بیم",
+ "library.ifc.column": "ستون",
+ "library.ifc.appliance": "آلہ",
+ "library.ifc.fire_terminal": "آگ بجھانے کا ٹرمینل",
+ "library.ifc.heat_exchanger": "ہیٹ ایکسچینجر",
+ "library.ifc.pump": "پمپ",
+ "library.ifc.tank": "ٹینک",
+ "library.ifc.transport": "نقل و حمل کا عنصر",
+ "library.ifc.valve": "والو",
+ "library.ifc.waste_terminal": "فضلہ ٹرمینل",
+ "library.ifc.medical": "طبی آلہ"
 }

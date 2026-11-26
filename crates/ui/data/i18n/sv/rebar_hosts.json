@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Värdar: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Pelare",
  "rebar_hosts.kind.beam": "Balk",
  "rebar_hosts.kind.wall": "Vägg",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Nät läggs i väggar, plattor och grundplattor, inte i pelare eller balkar.",
  "rebar_hosts.why.bars_plate": "Längsgående stänger och bygel läggs i pelare och balkar, inte i väggar, plattor eller grunder.",
  "rebar_hosts.why.no_common_face": "De valda värdarna har ingen gemensam täckyta. Markera värdar av en typ.",
- "rebar_hosts.why.no_type": "Välj en stångtyp.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Välj en stångtyp."
 }

@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "میش کے طور پر",
  "dlg.imp.skipped": "چھوڑا گیا",
  "dlg.imp.notes": "نوٹس: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "اور {n} مزید اقسام",
  "dlg.imp.no_levels": "فائل میں کوئی سطح نہیں: ڈیفالٹ سطح بنائی گئی",
  "dlg.imp.reimport_row": "{updated} اپ ڈیٹ، {same} بغیر تبدیلی",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} لائنیں، {arcs} آرکس، {texts} متن، {fills} فِلز، {layers} تہیں؛ اکائی {unit} mm",
  "dlg.dw.summary_paper": "؛ کاغذی شیٹس {n} (انڈرلے پر نہیں رکھی گئیں)",
  "dlg.dw.summary_unknown": "؛ منتقل نہیں ہوا: {list}",
- "dlg.dw.summary_more": " اور {n} مزید اقسام",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " اور {n} مزید اقسام"
 }

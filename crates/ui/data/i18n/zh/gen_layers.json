@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "围护结构",
+ "gen.group.acoustic": "隔声",
+ "gen.rule.fire.insulation_class.title": "围护保温燃烧性能等级",
+ "gen.rule.fire.insulation_class.desc": "外墙和屋面保温材料允许的最差燃烧性能等级；不会选用保温性能更差的构造。",
+ "gen.rule.envelope.u_wall.title": "外墙 U 值",
+ "gen.rule.envelope.u_wall.desc": "外墙的最大传热系数；墙体保温层按不超过该值确定尺寸，因此气候越冷墙越厚。",
+ "gen.rule.envelope.u_roof.title": "屋面 U 值",
+ "gen.rule.envelope.u_roof.desc": "屋面的最大传热系数；屋面保温层按不超过该值确定尺寸。",
+ "gen.rule.envelope.u_ground.title": "地面楼板 U 值",
+ "gen.rule.envelope.u_ground.desc": "地面楼板的最大传热系数；找平层下的保温层按不超过该值确定尺寸。",
+ "gen.rule.acoustic.rw_party.title": "分户墙隔声",
+ "gen.rule.acoustic.rw_party.desc": "住户之间或临公共走廊的墙体的最小计权隔声量 Rw；砌体核心层按质量定律确定尺寸以达到该值。",
+ "gen.rule.acoustic.rw_floor.title": "楼板隔声",
+ "gen.rule.acoustic.rw_floor.desc": "楼层之间楼板的最小计权隔声量 Rw；混凝土楼板按质量定律确定尺寸以达到该值。",
+ "gen.why.e.asm_wall": "外墙厚 {t} m，保温层 {ins} m：U {u} W/m²K，不超过 {lim}",
+ "gen.why.e.asm_roof": "屋面厚 {t} m，保温层 {ins} m：U {u} W/m²K，不超过 {lim}",
+ "gen.why.e.asm_ground": "地面楼板厚 {t} m，保温层 {ins} m：U {u} W/m²K，不超过 {lim}",
+ "gen.why.e.asm_party": "分户墙厚 {t} m，{m} kg/m²：按质量定律 Rw {rw} dB，不低于 {lim}",
+ "gen.why.e.asm_floor": "楼板厚 {t} m，{m} kg/m²：按质量定律 Rw {rw} dB，不低于 {lim}"
+}

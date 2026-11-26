@@ -15,6 +15,7 @@
  "drafting_view.name": "Navn",
  "drafting_view.count": "{n} annoteringer",
  "drafting_view.tab": "Tegning · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Tom tegnevisning",
  "drafting_view.canvas_hint": "Brug annoteringsværktøjerne: detaljelinjer, områder, tekst, detaljekomponenter",
  "drafting_view.created": "Tegnevisning „{name}“ oprettet",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Mere",
  "empty.drafting.title": "Ingen tegnevisninger endnu",
  "empty.drafting.hint": "Opret en til 2D-detaljer, der ikke er udtrukket fra modellen.",
- "empty.drafting.action": "Ny tegnevisning",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Ny tegnevisning"
 }

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "зураг цуцлагдлаа",
  "sketch_edit.sk_applied": "зураг хэрэглэгдлээ",
  "sketch_edit.sk_tail": "сүүл",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "шал",
  "sketch_edit.sk_host_roof": "дээвэр",
  "sketch_edit.sk_host_ceiling": "тааз",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Давхар 2",
  "sketch_edit.seed_floor_200": "Шал 200",
  "sketch_edit.seed_section1": "Огтлолт 1",
- "sketch_edit.seed_section2": "Огтлолт 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Огтлолт 2"
 }

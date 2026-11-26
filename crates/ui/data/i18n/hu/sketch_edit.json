@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "a vázlat megszakítva",
  "sketch_edit.sk_applied": "a vázlat alkalmazva",
  "sketch_edit.sk_tail": "farok",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "födém",
  "sketch_edit.sk_host_roof": "tető",
  "sketch_edit.sk_host_ceiling": "mennyezet",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "2. szint",
  "sketch_edit.seed_floor_200": "Padló 200",
  "sketch_edit.seed_section1": "1. metszet",
- "sketch_edit.seed_section2": "2. metszet",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "2. metszet"
 }

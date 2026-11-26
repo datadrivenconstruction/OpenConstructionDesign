@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Толтыру",
  "text_style.lbl.detail": "Детальдар",
  "text_style.lbl.width": "Ені",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "{min} мен {max} аралығындағы санды енгізіңіз",
  "text_style.tip.next_ring": "Осы контурды жауып, сол аймақта жаңасын бастау",
  "text_style.tip.edit_text": "Мәтінді орнында өңдеу",
- "text_style.tip.add_leader": "Осы мәтінге көшбасшы сызық қосу",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Осы мәтінге көшбасшы сызық қосу"
 }

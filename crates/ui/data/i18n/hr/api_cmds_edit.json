@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Spoji, odspoji ili zamijeni spojeve geometrije",
  "api.cmd.place_footings": "Postavi temelj ispod svakog stupa razine",
  "api.cmd.create_terrain": "Stvori teren od točaka snimanja ili nagnute ravnine",
- "api.cmd.script_recipes": "Pročitaj gradivne blokove skripti i recepte slobodnih konstrukcija"
+ "api.cmd.set_material": "Postavi izgled materijala u 3D-u",
+ "api.cmd.script_recipes": "Pročitaj gradivne blokove skripti i recepte slobodnih konstrukcija",
+ "api.cmd.generate_block": "Planiraj blok zgrada na parcelama sa zajedničkim pravilima lokacije",
+ "api.cmd.measure_save": "Spremi mjerenje u prikaz",
+ "api.cmd.edit_mass": "Dodaj korak povijesti masi: izvlačenje, nacrt, ljuska, zaobljenje, skošenje, odmak ili podjela",
+ "api.cmd.mass_to_family": "Izradi obitelj komponenti iz vremenske crte mase"
 }

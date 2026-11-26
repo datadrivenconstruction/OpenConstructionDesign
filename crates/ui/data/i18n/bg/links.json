@@ -12,6 +12,7 @@
  "links.loaded": "зареден",
  "links.not_loaded": "не е зареден",
  "links.loading": "зареждане…",
+ "links.loading_all": "Зареждане на връзките",
  "links.levels": "нива",
  "links.elements": "елемента",
  "links.offset": "Отместване:",

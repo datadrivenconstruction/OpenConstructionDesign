@@ -11,6 +11,7 @@
  "query.err.not_changed": "„{key}“ nelze změnit: {why}",
  "query.err.op_no_field": "operátor bez pole",
  "query.err.positive": "{key}: hodnota musí být větší než nula",
+ "query.err.raw": "{text}",
  "query.err.text_field": "pole „{key}“ je text, vzorec se nepoužije",
  "query.err.unclosed_paren": "chybí uzavírací závorka",
  "query.err.unclosed_quote": "chybí uzavírací uvozovka",
@@ -27,6 +28,5 @@
  "query.why.curtain": "fasádní stěny se mění v jejich vlastních vlastnostech",
  "query.why.opening_type": "typ otvoru se řídí jeho velikostí: „-> width=… height=…“",
  "query.why.slab_thickness": "tloušťka desky je dána typem: „-> type=…“",
- "query.why.wall_thickness": "tloušťka stěny je dána typem: „-> type=…“",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "tloušťka stěny je dána typem: „-> type=…“"
 }

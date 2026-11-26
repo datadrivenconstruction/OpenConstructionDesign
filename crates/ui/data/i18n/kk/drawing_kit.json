@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: толық тон",
  "drawing_kit.reset_color": "{layer}: сызба түсіне қайтару",
  "drawing_kit.unit.ft": "фут",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Бұрыш",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Болдырмау (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m} ішінен {n}",
  "drawing_kit.accept_class": "Осы түрдегінің барлығын қабылдау",
- "drawing_kit.reject_class": "Осы түрдегінің барлығын қабылдамау",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Осы түрдегінің барлығын қабылдамау"
 }

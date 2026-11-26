@@ -90,6 +90,7 @@
  "fe.cons.redundant": "berlebih",
  "fe.cons.help": "Dimensi yang terikat pada parameter panjang menggerakkan bidang; sudut membutuhkan parameter sudut",
  "fe.locks": "Kunci perataan",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Kunci",
  "fe.unlock": "Buka kunci",
  "fe.locks.help": "Kunci mengganti argumen solid (mis. persegi #2) dengan bidang, sehingga solid mengikutinya",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Nama draf sudah dipakai",
  "fe.clash.body": "Draf bernama “{name}” sudah ada. Ganti draf itu dengan yang ini, atau kembali dan simpan dengan nama baru. Belum ada yang disimpan.",
  "fe.clash.rename": "Simpan dengan nama baru",
- "fe.clash.replace": "Ganti draf itu",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Ganti draf itu"
 }

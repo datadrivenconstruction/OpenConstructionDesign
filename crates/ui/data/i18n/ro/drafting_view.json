@@ -15,6 +15,7 @@
  "drafting_view.name": "Nume",
  "drafting_view.count": "{n} adnotări",
  "drafting_view.tab": "Desenare · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Vedere de desenare goală",
  "drafting_view.canvas_hint": "Folosiți uneltele de adnotare: linii de detaliu, regiuni, text, elemente de detaliu",
  "drafting_view.created": "Vederea de desenare „{name}” a fost creată",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Mai mult",
  "empty.drafting.title": "Încă nu există vederi de desenare",
  "empty.drafting.hint": "Creați una pentru detalii 2D care nu sunt tăiate din model.",
- "empty.drafting.action": "Vedere de desenare nouă",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Vedere de desenare nouă"
 }

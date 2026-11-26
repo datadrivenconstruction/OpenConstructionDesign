@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Ascensor de mástil",
+ "fam.name.mast_lift": "Ascensor de mástil",
+ "gen.rule.steel.check.self_weight.desc": "Peso de la torre sobre un corte, por metro de altura.",
+ "gen.rule.steel.check.self_weight.title": "Peso de acero por metro",
+ "gen.rule.steel.check.strut_share.desc": "Proporción del esfuerzo del cordón que absorbe un horizontal en su nudo.",
+ "gen.rule.steel.check.strut_share.title": "Proporción horizontal",
+ "gen.rule.steel.out.lift_box_d.desc": "Profundidad en planta que necesita un ascensor de mástil con su mástil; los pisos se abren sobre él.",
+ "gen.rule.steel.out.lift_box_d.title": "Profundidad del hueco del ascensor",
+ "gen.rule.steel.out.lift_box_w.desc": "Ancho en planta que necesita un ascensor de mástil; los pisos se abren sobre él.",
+ "gen.rule.steel.out.lift_box_w.title": "Ancho del hueco del ascensor",
+ "gen.rule.steel.out.lift_offset.desc": "Distancia de un ascensor al eje, fuera del arriostramiento en planta.",
+ "gen.rule.steel.out.lift_offset.title": "Desfase del ascensor respecto al eje",
+ "gen.rule.steel.out.lifts.desc": "Tramos de ascensor por el núcleo: hasta la segunda plataforma y luego hasta la cima.",
+ "gen.rule.steel.out.lifts.title": "Tramos de ascensor"
+}

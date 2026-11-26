@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "kao mreže",
  "dlg.imp.skipped": "preskočeno",
  "dlg.imp.notes": "Bilješke: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "i još {n} vrsta",
  "dlg.imp.no_levels": "Datoteka nema razina: stvorena je zadana razina",
  "dlg.imp.reimport_row": "ažurirano {updated}, nepromijenjeno {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} linija, {arcs} lukova, {texts} tekstova, {fills} ispuna, {layers} slojeva; jedinica {unit} mm",
  "dlg.dw.summary_paper": "; papirnatih listova {n} (nisu postavljeni na podlogu)",
  "dlg.dw.summary_unknown": "; nije preneseno: {list}",
- "dlg.dw.summary_more": " i još {n} vrsta",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " i još {n} vrsta"
 }

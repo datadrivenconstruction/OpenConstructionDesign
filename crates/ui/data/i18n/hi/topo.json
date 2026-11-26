@@ -64,6 +64,7 @@
  "topo.import.title": "सर्वे आयात करें",
  "topo.import.filter": "सर्वे (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "बिंदु की ऊँचाई",
  "topo.opt.thickness": "टोपोसॉलिड की मोटाई",
  "topo.opt.add_to_active": "सक्रिय टोपोसॉलिड में जोड़ें",
@@ -121,6 +122,5 @@
  "topo.import.ok": "आयात",
  "topo.import.cancel": "रद्द करें",
  "topo.import.no_layers": "कोई परत नहीं चुनी गई",
- "topo.info.warnings": "नहीं बना:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "नहीं बना:"
 }

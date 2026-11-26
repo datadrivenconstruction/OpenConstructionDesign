@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Щогловий ліфт",
+ "fam.name.mast_lift": "Щогловий ліфт",
+ "gen.rule.steel.check.self_weight.desc": "Вага вежі над перерізом на метр висоти.",
+ "gen.rule.steel.check.self_weight.title": "Вага сталі на метр",
+ "gen.rule.steel.check.strut_share.desc": "Частка зусилля пояса, яку горизонтальний елемент сприймає у своєму вузлі.",
+ "gen.rule.steel.check.strut_share.title": "Частка горизонтального елемента",
+ "gen.rule.steel.out.lift_box_d.desc": "Глибина в плані, потрібна щогловому ліфту разом із щоглою; перекриття над ним відкриті.",
+ "gen.rule.steel.out.lift_box_d.title": "Глибина шахти ліфта",
+ "gen.rule.steel.out.lift_box_w.desc": "Ширина в плані, потрібна щогловому ліфту; перекриття над ним відкриті.",
+ "gen.rule.steel.out.lift_box_w.title": "Ширина шахти ліфта",
+ "gen.rule.steel.out.lift_offset.desc": "Відстань ліфта від осі, поза плановим в’язевим розкосом.",
+ "gen.rule.steel.out.lift_offset.title": "Зсув ліфта від осі",
+ "gen.rule.steel.out.lifts.desc": "Ліфти вздовж ядра: до другого майданчика, потім до верху.",
+ "gen.rule.steel.out.lifts.title": "Ділянки ліфтів"
+}

@@ -5,6 +5,7 @@
  "keys_import.new_head": "नई कुंजियाँ",
  "keys_import.changed_head": "आपकी अपनी कुंजियों को बदलता है",
  "keys_import.conflicts_head": "आयात के बाद टकराव",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "कॉर्ड",
  "keys_import.kind_seq": "दो अक्षर",
  "keys_import.unbound": "कोई नहीं",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "पूर्ववत नहीं हुआ: आयात के बाद कुंजियाँ संपादित हुईं। कुंजी विंडो में एक-एक करके रीसेट करें।",
  "keys_import.undo_none": "पूर्ववत करने को कुछ नहीं: इस सत्र में कोई कुंजी आयात नहीं हुई।",
  "keys_import.imported": "कुंजियाँ आयात हुईं",
- "keys_import.imported_conflicts": "कुंजियाँ आयात हुईं; टकराव: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "कुंजियाँ आयात हुईं; टकराव: {n}"
 }

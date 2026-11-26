@@ -20,6 +20,7 @@
  "sched_import.why_ro": "окула гана турган",
  "sched_import.why_locked": "бекитилген маани",
  "sched_import.why_bad": "туура эмес маани",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "{n} өзгөртүүнү колдонуу",
  "sched_import.cancel": "Жокко чыгаруу",
  "sched_import.applied": "{n} уяча импорттолду (бир артка кайтаруу кадамы)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Формуланын натыйжалары, колдонулган жок: {n}",
  "sched_import.no_id_rows": "Id жок катарлар, окулган жок: {n} (катарлар {rows})",
  "sched_import.more": "… дагы {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(бош)",
  "sched_import.reading": "Китеп окулууда…",
  "sched_import.resaved": "Китеп алгачкы алдын ала көрүнүштөн кийин кайра сакталды: бул алдын ала көрүнүш жаңы мазмунду көрсөтөт",
- "sched_import.resaved_reading": "Китеп кайра сакталды: эч нерсе колдонулган жок, жаңы алдын ала көрүнүш үчүн ал кайра окулууда",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Китеп кайра сакталды: эч нерсе колдонулган жок, жаңы алдын ала көрүнүш үчүн ал кайра окулууда"
 }

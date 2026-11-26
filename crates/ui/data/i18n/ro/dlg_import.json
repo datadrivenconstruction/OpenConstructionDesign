@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "ca plase",
  "dlg.imp.skipped": "omis",
  "dlg.imp.notes": "Note: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "și încă {n} tipuri",
  "dlg.imp.no_levels": "Fișierul nu are niveluri: a fost creat un nivel implicit",
  "dlg.imp.reimport_row": "Actualizate {updated}, neschimbate {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} linii, {arcs} arce, {texts} texte, {fills} umpleri, {layers} straturi; unitate {unit} mm",
  "dlg.dw.summary_paper": "; foi de hârtie {n} (nu sunt plasate pe suport)",
  "dlg.dw.summary_unknown": "; nu sunt preluate: {list}",
- "dlg.dw.summary_more": " și încă {n} tipuri",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " și încă {n} tipuri"
 }

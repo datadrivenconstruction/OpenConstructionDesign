@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Unisci, separa o inverti le giunzioni della geometria",
  "api.cmd.place_footings": "Posa un plinto sotto ogni pilastro di un livello",
  "api.cmd.create_terrain": "Crea un terreno da punti di rilievo o da un piano inclinato",
- "api.cmd.script_recipes": "Leggi i blocchi e le ricette di script delle costruzioni a forma libera"
+ "api.cmd.set_material": "Imposta l'aspetto di un materiale in 3D",
+ "api.cmd.script_recipes": "Leggi i blocchi e le ricette di script delle costruzioni a forma libera",
+ "api.cmd.generate_block": "Pianifica un isolato di edifici su lotti con regole di sito condivise",
+ "api.cmd.measure_save": "Salva una misura in una vista",
+ "api.cmd.edit_mass": "Aggiunge un passo di cronologia a un volume: estrusione, bozza, guscio, raccordo, smusso, offset o divisione",
+ "api.cmd.mass_to_family": "Crea una famiglia di componenti da una cronologia di volume"
 }

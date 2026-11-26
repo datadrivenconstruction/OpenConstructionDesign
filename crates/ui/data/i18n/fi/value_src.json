@@ -24,5 +24,21 @@
  "value_src.verified_n": "Tarkistettuja arvoja: {n}",
  "value_src.bulk_note": "Tekoälyn täyttämiä arvoja, joita ei ole tarkistettu: {n}",
  "value_src.bulk_verify": "Merkitse tarkistetuksi ({n})",
- "value_src.bulk_tip": "Merkitsee valinnan kaikki tekoälyn täyttämät arvot tarkistetuiksi yhdellä kumoamisaskeleella"
+ "value_src.bulk_tip": "Merkitsee valinnan kaikki tekoälyn täyttämät arvot tarkistetuiksi yhdellä kumoamisaskeleella",
+ "origin.title": "Alkuperä",
+ "origin.made_by": "Tekijä",
+ "origin.request": "Pyyntö",
+ "origin.at": "Käytetty",
+ "origin.recipe": "resepti \"{name}\", osa {part}",
+ "origin.ai": "tekoälyavustaja ({model})",
+ "origin.agent": "agentti {name}",
+ "origin.script": "skripti {name}",
+ "origin.xlsx": "XLSX-taulukko",
+ "origin.user": "henkilö",
+ "origin.import": "tuonti",
+ "origin.import_file": "tuonti tiedostosta {file}",
+ "origin.unknown": "ei historiassa",
+ "origin.held": "Muokattu käsin: reseptin uudelleenajo jättää sen ennalleen",
+ "origin.rebuilt": "Reseptin uudelleenajo rakentaa sen uudelleen; muokkaa sitä käsin säilyttääksesi sen ennallaan",
+ "origin.ai_values": "Tekoälyn täyttämät arvot: {n}, vahvistamatta: {open}"
 }

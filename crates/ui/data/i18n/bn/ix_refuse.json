@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "খোলা অংশ {w} দেয়াল {len}-এর চেয়ে চওড়া",
+ "ix.fix.opening_width": "প্রস্থ {w} mm",
+ "ix.fix.wall_extend": "দেয়াল {len} mm পর্যন্ত বাড়ান"
+}

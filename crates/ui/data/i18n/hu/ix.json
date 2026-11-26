@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Negyedpont",
+ "snap.extension": "Meghosszabbítás",
+ "snap.parallel": "Fallal párhuzamos",
+ "snap.tracking_x": "Rögzített pont X koordinátája",
+ "snap.tracking_y": "Rögzített pont Y koordinátája",
+ "snap.tracking_cross": "Segédvonal-metszéspont",
+ "snap.equal_step": "Egyenlő lépés"
+}

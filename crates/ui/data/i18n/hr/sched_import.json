@@ -20,6 +20,7 @@
  "sched_import.why_ro": "samo za čitanje",
  "sched_import.why_locked": "zaključana vrijednost",
  "sched_import.why_bad": "neispravna vrijednost",
+ "sched_import.refusal": "{at} {col} „{text}“: {why}",
  "sched_import.apply": "Primijeni {n} izmjena",
  "sched_import.cancel": "Odustani",
  "sched_import.applied": "Uvezeno ćelija: {n} (jedan korak poništavanja)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Rezultati formula, nisu primijenjeni: {n}",
  "sched_import.no_id_rows": "Reci bez Id-a, nisu pročitani: {n} (reci {rows})",
  "sched_import.more": "… još {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(prazno)",
  "sched_import.reading": "Čitanje radne knjige…",
  "sched_import.resaved": "Radna knjiga je ponovno spremljena nakon prvog pregleda: ovaj pregled prikazuje novi sadržaj",
- "sched_import.resaved_reading": "Radna knjiga je ponovno spremljena: ništa nije primijenjeno, čita se iznova za novi pregled",
- "sched_import.refusal": "{at} {col} „{text}“: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Radna knjiga je ponovno spremljena: ništa nije primijenjeno, čita se iznova za novi pregled"
 }

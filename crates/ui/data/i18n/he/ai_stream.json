@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "כלי אחד",
  "ai.stream.tools_many": "{n} כלים",
  "ai.stream.secs": "{n} שנ׳",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "עדיין ממתין לשירות המודל",
  "ai.stream.stop": "עצור",
  "ai.stream.cancelled": "נעצר",
- "ai.stream.incomplete": "הטיוטה לא שלמה. שום דבר לא הוחל על המודל.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "הטיוטה לא שלמה. שום דבר לא הוחל על המודל."
 }

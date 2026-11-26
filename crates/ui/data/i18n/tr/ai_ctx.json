@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Seçim ({n})",
  "ai.ctx.add_tip": "Yapay zekanın gördüklerine geri ekle",
  "ai.ctx.frame_tip": "Bu elemanları göster",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Korkuluklar",
  "ai.ctx.cat.roof": "Çatılar",
  "ai.ctx.cat.stair": "Merdivenler",
- "ai.ctx.cat.other": "Diğer",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Diğer"
 }

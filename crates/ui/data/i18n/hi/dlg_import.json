@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "मेश के रूप में",
  "dlg.imp.skipped": "छोड़े गए",
  "dlg.imp.notes": "नोट्स: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "और {n} प्रकार",
  "dlg.imp.no_levels": "फ़ाइल में कोई लेवल नहीं है: डिफ़ॉल्ट लेवल बनाया गया",
  "dlg.imp.reimport_row": "अपडेट किए गए {updated}, अपरिवर्तित {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} रेखाएं, {arcs} चाप, {texts} पाठ, {fills} भराव, {layers} लेयर; इकाई {unit} mm",
  "dlg.dw.summary_paper": "; पेपर शीट {n} (अंडरले पर नहीं रखी गईं)",
  "dlg.dw.summary_unknown": "; साथ नहीं लाए गए: {list}",
- "dlg.dw.summary_more": " और {n} प्रकार",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " और {n} प्रकार"
 }

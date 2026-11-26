@@ -72,6 +72,7 @@
  "quick.cat.beam": "Talad",
  "quick.cat.ceiling": "Laed",
  "quick.cat.structure": "Konstruktsioon",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} / {all}",
  "quick.hud.type": "Tüüp",
  "quick.hud.height": "Kõrgus",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Väärtust “{v}” ei saa lugeda",
  "quick.menu.repeat": "Korda: {cmd}",
  "quick.menu.enter": "Sisesta",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Viimased",
  "quick.bar.repeat_tip": "{cmd} · Enter kordab seda",
  "quick.repeat.none": "Kordamiseks pole veel midagi",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Tagasi",
  "quick.tips.next": "Järgmine",
  "quick.tips.finish": "Valmis",
- "quick.tips.never": "Ära enam näita",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Ära enam näita"
 }

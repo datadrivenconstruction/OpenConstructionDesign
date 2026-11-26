@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "הסקיצה בוטלה",
  "sketch_edit.sk_applied": "הסקיצה הוחלה",
  "sketch_edit.sk_tail": "זנב",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "רצפה",
  "sketch_edit.sk_host_roof": "גג",
  "sketch_edit.sk_host_ceiling": "תקרה",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "מפלס 2",
  "sketch_edit.seed_floor_200": "רצפה 200",
  "sketch_edit.seed_section1": "חתך 1",
- "sketch_edit.seed_section2": "חתך 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "חתך 2"
 }

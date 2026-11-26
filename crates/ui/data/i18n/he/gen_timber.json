@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "פנל רצפה CLT",
+ "fam.name.glulam_beam": "קורת עץ למינציה",
+ "fam.name.glulam_column": "עמוד עץ למינציה",
+ "gen.group.timber": "מבנה עץ",
+ "gen.rule.timber.beam_span_max.desc": "המפתח הארוך ביותר של קורת עץ למינציה בין שני עמודים.",
+ "gen.rule.timber.beam_span_max.title": "מגבלת מפתח קורה",
+ "gen.rule.timber.panel_w.desc": "פנל רצפה צולב-למינציה רחב ביותר; חיבור בין כל אחד.",
+ "gen.rule.timber.panel_w.title": "רוחב פנל CLT",
+ "gen.rule.timber.span_depth.desc": "מפתח ביחס לעומק של קורת עץ למינציה; בוחר את החתך.",
+ "gen.rule.timber.span_depth.title": "יחס מפתח לעומק קורה"
+}

@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: пълен тон",
  "drawing_kit.reset_color": "{layer}: връщане към цвета на чертежа",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Ъгъл",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Отмяна (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} от {m}",
  "drawing_kit.accept_class": "Приемане на всички от този вид",
- "drawing_kit.reject_class": "Отхвърляне на всички от този вид",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Отхвърляне на всички от този вид"
 }

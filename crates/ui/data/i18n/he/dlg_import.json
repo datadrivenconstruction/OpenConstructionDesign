@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "כרשתות",
  "dlg.imp.skipped": "דולג",
  "dlg.imp.notes": "הערות: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "ועוד {n} סוגים",
  "dlg.imp.no_levels": "אין במקור מפלסים: נוצר מפלס ברירת מחדל",
  "dlg.imp.reimport_row": "עודכנו {updated}, ללא שינוי {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} קווים, {arcs} קשתות, {texts} טקסטים, {fills} מילויים, {layers} שכבות; יחידה {unit} mm",
  "dlg.dw.summary_paper": "; גיליונות נייר {n} (לא מוצבים על הרקע)",
  "dlg.dw.summary_unknown": "; לא הועברו: {list}",
- "dlg.dw.summary_more": " ועוד {n} סוגים",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " ועוד {n} סוגים"
 }

@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" ei voi muuttaa: {why}",
  "query.err.op_no_field": "operaattori ilman kenttää",
  "query.err.positive": "{key}: arvon on oltava suurempi kuin nolla",
+ "query.err.raw": "{text}",
  "query.err.text_field": "kenttä \"{key}\" on tekstiä, kaava ei sovellu",
  "query.err.unclosed_paren": "sulkeva sulkumerkki puuttuu",
  "query.err.unclosed_quote": "sulkeva lainausmerkki puuttuu",
@@ -27,6 +28,5 @@
  "query.why.curtain": "verhoseinät muutetaan niiden omista ominaisuuksista",
  "query.why.opening_type": "aukon tyyppi seuraa sen kokoa: \"-> width=… height=…\"",
  "query.why.slab_thickness": "laatan paksuus asetetaan tyypin mukaan: \"-> type=…\"",
- "query.why.wall_thickness": "seinän paksuus asetetaan tyypin mukaan: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "seinän paksuus asetetaan tyypin mukaan: \"-> type=…\""
 }

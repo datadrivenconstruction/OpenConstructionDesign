@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "Щракнете върху елемент, за да го изберете. Ctrl добавя, Shift премахва.",
- "sel_chip.opt.units": "Мерни единици",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "Мерни единици"
 }

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "skiss avbruten",
  "sketch_edit.sk_applied": "skiss tillämpad",
  "sketch_edit.sk_tail": "svans",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "platta",
  "sketch_edit.sk_host_roof": "takkonstruktion",
  "sketch_edit.sk_host_ceiling": "tak",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Våning 2",
  "sketch_edit.seed_floor_200": "Golv 200",
  "sketch_edit.seed_section1": "Sektion 1",
- "sketch_edit.seed_section2": "Sektion 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Sektion 2"
 }

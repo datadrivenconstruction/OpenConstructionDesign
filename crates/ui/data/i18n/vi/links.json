@@ -12,6 +12,7 @@
  "links.loaded": "đã tải",
  "links.not_loaded": "chưa tải",
  "links.loading": "đang tải…",
+ "links.loading_all": "Đang tải các liên kết",
  "links.levels": "cao độ",
  "links.elements": "phần tử",
  "links.offset": "Độ lệch:",

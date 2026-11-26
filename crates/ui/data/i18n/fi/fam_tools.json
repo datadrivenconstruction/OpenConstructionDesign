@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Lue projektin perheen määritysteksti",
+ "api.cmd.family_validate": "Tarkista perheen määritysteksti",
+ "api.cmd.family_reference": "Lue perheen määritystekstin ohje",
+ "api.cmd.family_draft": "Tarjoa perhemääritys luonnoksena perhe-editorissa"
+}

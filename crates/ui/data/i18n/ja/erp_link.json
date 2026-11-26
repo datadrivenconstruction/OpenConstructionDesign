@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "ERPページ {url} から最新のエディターをダウンロードしてください",
  "erp.err.unsupported.admin": "ERP管理者に最新のエディターを依頼してください",
  "erp.err.throttled_in": "試行回数が多すぎます。{s} 秒後にもう一度お試しください",
+ "erp.err.throttled_ready": "待機が完了しました。もう一度お試しください",
  "erp.err.imported": "ERP のリビジョン {n} はインポートされたモデルのため、エディターでは開くことも、その上に公開することもまだできません",
  "erp.action.download": "ERP でエディターのダウンロードページを開く",
  "erp.action.new_link": "ERP ページで新しいリンクを取得する",

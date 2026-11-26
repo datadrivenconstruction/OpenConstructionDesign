@@ -24,5 +24,21 @@
  "value_src.verified_n": "Verifierade värden: {n}",
  "value_src.bulk_note": "Värden ifyllda av AI, ej verifierade: {n}",
  "value_src.bulk_verify": "Markera verifierad ({n})",
- "value_src.bulk_tip": "Markerar alla AI-ifyllda värden i markeringen som verifierade, ett ångra-steg"
+ "value_src.bulk_tip": "Markerar alla AI-ifyllda värden i markeringen som verifierade, ett ångra-steg",
+ "origin.title": "Ursprung",
+ "origin.made_by": "Skapad av",
+ "origin.request": "Begäran",
+ "origin.at": "Tillämpad",
+ "origin.recipe": "recept “{name}”, del {part}",
+ "origin.ai": "AI-assistenten ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "skript {name}",
+ "origin.xlsx": "XLSX-kalkylblad",
+ "origin.user": "en person",
+ "origin.import": "import",
+ "origin.import_file": "import från {file}",
+ "origin.unknown": "finns inte i historiken",
+ "origin.held": "Redigerad för hand: en omkörning av receptet lämnar den som den är",
+ "origin.rebuilt": "En omkörning av receptet bygger om den; redigera den för hand för att behålla den som den är",
+ "origin.ai_values": "Värden ifyllda av AI: {n}, inte verifierade: {open}"
 }

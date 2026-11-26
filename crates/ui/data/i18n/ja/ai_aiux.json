@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "テキスト欄に入力中でない限り、平面図や 3D ビューからでも Ctrl+Enter で適用、Esc で停止できます。",
  "ai.plan.rebased": "現在のモデルに合わせて更新: {what}",
  "ai.value.bad": "「{text}」は {name} の有効な値ではありません",
+ "ai.value.bad_len": "「{name}」: {why}",
  "ai.value.both": "あなたが {mine} を入力している間に、AIアシスタントがこの値を {agent} に変更しました。残す方を選んでください。",
  "ai.value.choose_first": "先にカードで自分の値またはAIアシスタントの値を選んでください",
  "ai.value.elem": "要素 {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "別の値を入力するか、適用から外すには項目のチェックを外してください。",
  "ai.value.tip": "ドラフトで値を修正します。モデルは「適用」の時にのみ変わります。Enter で確定、Esc で戻します。",
  "ai.value.use_mine": "{mine} を使用",
- "ai.value.was": "以前は {old}",
- "ai.value.bad_len": "「{name}」: {why}"
+ "ai.value.was": "以前は {old}"
 }

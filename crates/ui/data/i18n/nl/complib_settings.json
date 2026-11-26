@@ -48,5 +48,13 @@
  "settings.lib_open": "Componentenbibliotheek",
  "settings.lib_open_desc": "Blader door de ingebouwde families, die in het project en je eigen families",
  "settings.lib_dir": "Mijn bibliotheekmap",
- "settings.lib_dir_desc": "Familiebestanden (.ddcf) die hier staan verschijnen onder Mijn bibliotheek. DDC_COMPONENTS_DIR verplaatst deze map."
+ "settings.lib_dir_desc": "Familiebestanden (.ddcf) die hier staan verschijnen onder Mijn bibliotheek. DDC_COMPONENTS_DIR verplaatst deze map.",
+ "complib.fam.sprinkler_head": "Sprinklerkop",
+ "complib.fam.fire_pump": "Brandpomp",
+ "complib.fam.pressurisation_fan": "Overdrukventilator",
+ "complib.fam.lift_car": "Liftkooi",
+ "complib.fam.lift_landing_door": "Liftverdiepingsdeur",
+ "complib.fam.lift_pit": "Liftput",
+ "complib.fam.lift_overrun": "Liftschachtkop",
+ "complib.fam.lift_machine": "Liftmachine"
 }

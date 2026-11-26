@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatiske bygningsinstallationer",
+ "gen.mep_auto_hint": "Lader generatoren og AI-assistenten selv lægge rør, kanaler og ledninger. Slået fra som standard i denne region; du kan slå det til. Manuel føring er altid tilgængelig."
+}

@@ -90,6 +90,7 @@
  "fe.cons.redundant": "redundante",
  "fe.cons.help": "Uma cota associada a um parâmetro de comprimento controla os planos; um ângulo precisa de um parâmetro de ângulo",
  "fe.locks": "Bloqueios de alinhamento",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Bloquear",
  "fe.unlock": "Desbloquear",
  "fe.locks.help": "O bloqueio substitui o argumento do sólido (p. ex. retângulo n.º 2) pelo plano, para que o sólido o siga",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Nome de rascunho já utilizado",
  "fe.clash.body": "Já existe um rascunho com o nome “{name}”. Substitua esse rascunho por este ou volte atrás e guarde com um novo nome. Ainda nada foi guardado.",
  "fe.clash.rename": "Guardar com novo nome",
- "fe.clash.replace": "Substituir esse rascunho",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Substituir esse rascunho"
 }

@@ -11,6 +11,7 @@
  "ai.step.s": "{n} сек",
  "ai.step.min": "{m} мин",
  "ai.step.min_s": "{m} мин {s} сек",
+ "ai.step.dec": ",",
  "ai.step.details": "Дэлгэрэнгүй",
  "ai.step.copy": "Дэлгэрэнгүйг хуулах",
  "ai.step.group.read": "Загварыг уншиж байна",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Алхам ажиллах үед загвар өөрчлөгдсөн",
  "ai.step.why.skipped": "Алхам ажиллаагүй: эргэлт дууссан",
  "ai.step.why.other": "Алхам дуусаагүй",
- "ai.step.unknown": "Тодорхойгүй хэрэгсэл",
- "ai.step.dec": ","
+ "ai.step.unknown": "Тодорхойгүй хэрэгсэл"
 }

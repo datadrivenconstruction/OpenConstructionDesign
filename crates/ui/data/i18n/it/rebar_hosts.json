@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Ospiti: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Pilastro",
  "rebar_hosts.kind.beam": "Trave",
  "rebar_hosts.kind.wall": "Muro",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "La mesh va in muri, solai e fondazioni, non in pilastri o travi.",
  "rebar_hosts.why.bars_plate": "Barre longitudinali e staffe vanno in pilastri e travi, non in muri, solai o fondazioni.",
  "rebar_hosts.why.no_common_face": "Gli elementi ospitanti selezionati non hanno una faccia di copriferro in comune. Seleziona ospiti dello stesso tipo.",
- "rebar_hosts.why.no_type": "Scegli un tipo di barra.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Scegli un tipo di barra."
 }

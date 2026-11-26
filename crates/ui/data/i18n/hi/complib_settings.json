@@ -48,5 +48,13 @@
  "settings.lib_open": "घटक लाइब्रेरी",
  "settings.lib_open_desc": "अंतर्निहित परिवार, प्रोजेक्ट परिवार और अपने परिवार देखें",
  "settings.lib_dir": "मेरी लाइब्रेरी का फ़ोल्डर",
- "settings.lib_dir_desc": "यहाँ रखी गई परिवार फ़ाइलें (.ddcf) “मेरी लाइब्रेरी” में दिखेंगी। DDC_COMPONENTS_DIR फ़ोल्डर बदलता है।"
+ "settings.lib_dir_desc": "यहाँ रखी गई परिवार फ़ाइलें (.ddcf) “मेरी लाइब्रेरी” में दिखेंगी। DDC_COMPONENTS_DIR फ़ोल्डर बदलता है।",
+ "complib.fam.sprinkler_head": "स्प्रिंकलर हेड",
+ "complib.fam.fire_pump": "फ़ायर पंप",
+ "complib.fam.pressurisation_fan": "प्रेशराइज़ेशन फ़ैन",
+ "complib.fam.lift_car": "लिफ़्ट कार",
+ "complib.fam.lift_landing_door": "लिफ़्ट लैंडिंग डोर",
+ "complib.fam.lift_pit": "लिफ़्ट पिट",
+ "complib.fam.lift_overrun": "लिफ़्ट ओवररन",
+ "complib.fam.lift_machine": "लिफ़्ट मशीन"
 }

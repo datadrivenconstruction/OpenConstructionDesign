@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "草图已取消",
  "sketch_edit.sk_applied": "草图已应用",
  "sketch_edit.sk_tail": "尾部",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "楼板",
  "sketch_edit.sk_host_roof": "屋顶",
  "sketch_edit.sk_host_ceiling": "天花板",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "标高 2",
  "sketch_edit.seed_floor_200": "楼板 200",
  "sketch_edit.seed_section1": "剖面 1",
- "sketch_edit.seed_section2": "剖面 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "剖面 2"
 }

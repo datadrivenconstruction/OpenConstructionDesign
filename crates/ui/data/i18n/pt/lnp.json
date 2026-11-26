@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} aberturas não alteradas ({why})",
  "lnp.params_changed": "valores alterados: {n}",
  "lnp.params_same": "Sem alterações: {u} elementos já têm este valor",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Selecione apenas o primeiro painel para o editar",
  "lnp.clip_from_wall": "Parâmetros copiados da parede #{id}",
  "lnp.clip_from_opening": "Parâmetros copiados da abertura #{id}",
- "lnp.match_from": "Propriedades de #{id} aplicadas a {n} elementos",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Propriedades de #{id} aplicadas a {n} elementos"
 }

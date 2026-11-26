@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Mastheis",
+ "fam.name.mast_lift": "Mastheis",
+ "gen.rule.steel.check.self_weight.desc": "Vekt av tårnet over et snitt, per meter høyde.",
+ "gen.rule.steel.check.self_weight.title": "Stålvekt per meter",
+ "gen.rule.steel.check.strut_share.desc": "Andel av stolpekraften en horisontal tar ved knutepunktet.",
+ "gen.rule.steel.check.strut_share.title": "Horisontalandel",
+ "gen.rule.steel.out.lift_box_d.desc": "Plandybde en mastheis trenger med masten; gulv er åpne over den.",
+ "gen.rule.steel.out.lift_box_d.title": "Heisboksdybde",
+ "gen.rule.steel.out.lift_box_w.desc": "Planbredde en mastheis trenger; gulv er åpne over den.",
+ "gen.rule.steel.out.lift_box_w.title": "Heisboksbredde",
+ "gen.rule.steel.out.lift_offset.desc": "Avstand fra heisen til aksen, fri for planavstivningen.",
+ "gen.rule.steel.out.lift_offset.title": "Heisavstand fra aksen",
+ "gen.rule.steel.out.lifts.desc": "Heiser opp kjernen: til den andre plattformen, så til toppen.",
+ "gen.rule.steel.out.lifts.title": "Heisstrekk"
+}

@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "프로젝트 패밀리의 정의 텍스트 읽기",
+ "api.cmd.family_validate": "패밀리 정의 텍스트 검사",
+ "api.cmd.family_reference": "패밀리 정의 텍스트 참조 읽기",
+ "api.cmd.family_draft": "패밀리 편집기에 패밀리 정의를 초안으로 제안"
+}

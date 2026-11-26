@@ -41,5 +41,16 @@
  "library.ifc.window": "Okno",
  "library.ifc.stair": "Schody",
  "library.ifc.pipe_fitting": "Kształtka rurowa",
- "library.ifc.duct_fitting": "Kształtka kanału wentylacyjnego"
+ "library.ifc.duct_fitting": "Kształtka kanału wentylacyjnego",
+ "library.ifc.beam": "Belka",
+ "library.ifc.column": "Słup",
+ "library.ifc.appliance": "Urządzenie",
+ "library.ifc.fire_terminal": "Zakończenie instalacji gaśniczej",
+ "library.ifc.heat_exchanger": "Wymiennik ciepła",
+ "library.ifc.pump": "Pompa",
+ "library.ifc.tank": "Zbiornik",
+ "library.ifc.transport": "Element transportu",
+ "library.ifc.valve": "Zawór",
+ "library.ifc.waste_terminal": "Zakończenie instalacji ściekowej",
+ "library.ifc.medical": "Urządzenie medyczne"
 }

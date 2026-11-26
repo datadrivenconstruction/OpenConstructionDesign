@@ -41,5 +41,16 @@
  "library.ifc.window": "Prozor",
  "library.ifc.stair": "Stube",
  "library.ifc.pipe_fitting": "Cijevni spojni komad",
- "library.ifc.duct_fitting": "Spojni komad kanala"
+ "library.ifc.duct_fitting": "Spojni komad kanala",
+ "library.ifc.beam": "Greda",
+ "library.ifc.column": "Stup",
+ "library.ifc.appliance": "Uređaj",
+ "library.ifc.fire_terminal": "Završni element protupožarnog gašenja",
+ "library.ifc.heat_exchanger": "Izmjenjivač topline",
+ "library.ifc.pump": "Pumpa",
+ "library.ifc.tank": "Spremnik",
+ "library.ifc.transport": "Transportni element",
+ "library.ifc.valve": "Ventil",
+ "library.ifc.waste_terminal": "Završni element odvodnje",
+ "library.ifc.medical": "Medicinski uređaj"
 }

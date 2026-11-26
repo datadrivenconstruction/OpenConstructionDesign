@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Виділення ({n})",
  "ai.ctx.add_tip": "Повернути до того, що бачить AI",
  "ai.ctx.frame_tip": "Показати ці елементи",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Огорожі",
  "ai.ctx.cat.roof": "Дахи",
  "ai.ctx.cat.stair": "Сходи",
- "ai.ctx.cat.other": "Інше",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Інше"
 }

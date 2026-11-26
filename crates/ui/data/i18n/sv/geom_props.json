@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varierar>",
  "geom_props.tip": "Enter tillämpar värdet på alla {n} markerade, ett ångrasteg",
  "geom_props.roof_slope": "Lutning",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Importerade element",
  "geom_props.kind.mass": "Massor",
  "geom_props.kind.solid": "Solider",
- "geom_props.kind.toposolid": "Terräng",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terräng"
 }

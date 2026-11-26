@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "ধরন",
  "collab_diff.diff.col.field": "ফিল্ড",
  "collab_diff.diff.col.old": "আগে",
- "collab_diff.diff.col.new": "এখন"
+ "collab_diff.diff.col.new": "এখন",
+ "collab_diff.reveal.title": "নির্মাণ ক্রম",
+ "collab_diff.reveal.start": "নির্মিত অবস্থায় দেখান",
+ "collab_diff.reveal.play": "চালান",
+ "collab_diff.reveal.pause": "বিরতি",
+ "collab_diff.reveal.back": "পিছনে",
+ "collab_diff.reveal.close": "বন্ধ করুন",
+ "collab_diff.reveal.nothing": "দেখানোর কিছু নেই: 3D দৃশ্যে পরিবর্তিত কোনো এলিমেন্ট নেই।",
+ "collab_diff.reveal.journal_busy": "জার্নাল পড়া হচ্ছে…",
+ "collab_diff.reveal.journal_play": "জার্নাল চালান"
 }

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "esboço cancelado",
  "sketch_edit.sk_applied": "esboço aplicado",
  "sketch_edit.sk_tail": "cauda",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "laje",
  "sketch_edit.sk_host_roof": "cobertura",
  "sketch_edit.sk_host_ceiling": "teto",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Nível 2",
  "sketch_edit.seed_floor_200": "Laje 200",
  "sketch_edit.seed_section1": "Corte 1",
- "sketch_edit.seed_section2": "Corte 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Corte 2"
 }

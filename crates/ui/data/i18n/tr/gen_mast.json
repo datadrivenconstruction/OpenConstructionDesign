@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Direkli Asansör",
+ "fam.name.mast_lift": "Direkli Asansör",
+ "gen.rule.steel.check.self_weight.desc": "Bir kesitin üstündeki kule ağırlığı, yükseklik metresi başına.",
+ "gen.rule.steel.check.self_weight.title": "Metre başına çelik ağırlığı",
+ "gen.rule.steel.check.strut_share.desc": "Bir yatay elemanın düğümünde taşıdığı başlık kuvveti payı.",
+ "gen.rule.steel.check.strut_share.title": "Yatay eleman payı",
+ "gen.rule.steel.out.lift_box_d.desc": "Direkli asansörün direğiyle birlikte ihtiyaç duyduğu plan derinliği; döşemeler üstünde açık kalır.",
+ "gen.rule.steel.out.lift_box_d.title": "Asansör kutusu derinliği",
+ "gen.rule.steel.out.lift_box_w.desc": "Direkli asansörün ihtiyaç duyduğu plan genişliği; döşemeler üstünde açık kalır.",
+ "gen.rule.steel.out.lift_box_w.title": "Asansör kutusu genişliği",
+ "gen.rule.steel.out.lift_offset.desc": "Asansörün, plan çaprazından uzak olacak şekilde eksenden uzaklığı.",
+ "gen.rule.steel.out.lift_offset.title": "Asansörün eksenden ofseti",
+ "gen.rule.steel.out.lifts.desc": "Çekirdek boyunca asansörler: ikinci platforma, sonra tepeye.",
+ "gen.rule.steel.out.lifts.title": "Asansör hatları"
+}

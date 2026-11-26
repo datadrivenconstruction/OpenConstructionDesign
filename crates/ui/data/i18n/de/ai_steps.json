@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} Min",
  "ai.step.min_s": "{m} Min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Details",
  "ai.step.copy": "Details kopieren",
  "ai.step.group.read": "Liest das Modell",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Das Modell hat sich während des Schritts geändert",
  "ai.step.why.skipped": "Der Schritt lief nicht: der Durchlauf wurde beendet",
  "ai.step.why.other": "Der Schritt wurde nicht beendet",
- "ai.step.unknown": "Unbekanntes Werkzeug",
- "ai.step.dec": ","
+ "ai.step.unknown": "Unbekanntes Werkzeug"
 }

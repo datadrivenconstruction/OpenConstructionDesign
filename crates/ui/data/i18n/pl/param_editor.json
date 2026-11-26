@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "gałęzie if() są różne",
  "pe.msg_what_args": "argumenty",
  "pe.msg_and": " i ",
+ "pe.msg_incompatible": "{w}: niezgodne jednostki {dims}",
  "pe.text_no_formula": "parametry tekstowe nie przyjmują formuły",
  "pe.circular": "cykliczne odwołanie: {text}",
- "pe.depends_invalid": "zależy od nieprawidłowego „{b}”",
- "pe.msg_incompatible": "{w}: niezgodne jednostki {dims}"
+ "pe.depends_invalid": "zależy od nieprawidłowego „{b}”"
 }

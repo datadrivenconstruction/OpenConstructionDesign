@@ -5,6 +5,7 @@
  "keys_import.new_head": "Neue Tastenkürzel",
  "keys_import.changed_head": "Ersetzt Ihre eigenen Tastenkürzel",
  "keys_import.conflicts_head": "Konflikte nach dem Import",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "Akkord",
  "keys_import.kind_seq": "zwei Buchstaben",
  "keys_import.unbound": "keine",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Nicht rückgängig gemacht: Die Tastenkürzel wurden nach dem Import bearbeitet. Setzen Sie sie einzeln im Fenster „Tastenkürzel“ zurück.",
  "keys_import.undo_none": "Nichts rückgängig zu machen: In dieser Sitzung gab es keinen Tastenimport.",
  "keys_import.imported": "Tastenkürzel importiert",
- "keys_import.imported_conflicts": "Tastenkürzel importiert; Konflikte: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Tastenkürzel importiert; Konflikte: {n}"
 }

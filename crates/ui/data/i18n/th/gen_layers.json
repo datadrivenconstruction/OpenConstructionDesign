@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "เปลือกอาคาร",
+ "gen.group.acoustic": "การป้องกันเสียง",
+ "gen.rule.fire.insulation_class.title": "ระดับการติดไฟของฉนวนเปลือกอาคาร",
+ "gen.rule.fire.insulation_class.desc": "ระดับปฏิกิริยาต่อไฟที่แย่ที่สุดที่ฉนวนของผนังภายนอกและหลังคาอาจมีได้ ชั้นประกอบที่มีฉนวนแย่กว่านี้จะไม่ถูกเลือก",
+ "gen.rule.envelope.u_wall.title": "ค่า U ผนังภายนอก",
+ "gen.rule.envelope.u_wall.desc": "ค่าการส่งผ่านความร้อนสูงสุดของผนังภายนอก ฉนวนผนังถูกกำหนดขนาดให้ไม่เกินค่านี้ ภูมิอากาศที่เย็นกว่าจึงได้ผนังที่หนากว่า",
+ "gen.rule.envelope.u_roof.title": "ค่า U หลังคา",
+ "gen.rule.envelope.u_roof.desc": "ค่าการส่งผ่านความร้อนสูงสุดของหลังคา ฉนวนหลังคาถูกกำหนดขนาดให้ไม่เกินค่านี้",
+ "gen.rule.envelope.u_ground.title": "ค่า U พื้นบนดิน",
+ "gen.rule.envelope.u_ground.desc": "ค่าการส่งผ่านความร้อนสูงสุดของพื้นคอนกรีตบนดิน ฉนวนใต้ชั้นปูนทรายถูกกำหนดขนาดให้ไม่เกินค่านี้",
+ "gen.rule.acoustic.rw_party.title": "การป้องกันเสียงของผนังกั้นระหว่างยูนิต",
+ "gen.rule.acoustic.rw_party.desc": "ค่าลดเสียง Rw ขั้นต่ำของผนังระหว่างยูนิตที่พักอาศัยหรือติดทางเดินส่วนกลาง แกนก่ออิฐถูกกำหนดขนาดตามกฎมวลให้ถึงค่านี้",
+ "gen.rule.acoustic.rw_floor.title": "การป้องกันเสียงของพื้น",
+ "gen.rule.acoustic.rw_floor.desc": "ค่าลดเสียง Rw ขั้นต่ำของพื้นระหว่างชั้น พื้นคอนกรีตถูกกำหนดขนาดตามกฎมวลให้ถึงค่านี้",
+ "gen.why.e.asm_wall": "ผนังภายนอกหนา {t} m ฉนวน {ins} m: U {u} W/m²K ไม่เกิน {lim}",
+ "gen.why.e.asm_roof": "หลังคาหนา {t} m ฉนวน {ins} m: U {u} W/m²K ไม่เกิน {lim}",
+ "gen.why.e.asm_ground": "พื้นบนดินหนา {t} m ฉนวน {ins} m: U {u} W/m²K ไม่เกิน {lim}",
+ "gen.why.e.asm_party": "ผนังกั้นระหว่างยูนิตหนา {t} m {m} kg/m²: Rw {rw} dB ตามกฎมวล อย่างน้อย {lim}",
+ "gen.why.e.asm_floor": "พื้นหนา {t} m {m} kg/m²: Rw {rw} dB ตามกฎมวล อย่างน้อย {lim}"
+}

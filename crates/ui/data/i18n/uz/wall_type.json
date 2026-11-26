@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Turni nusxalash",
  "wall_type.wt.duplicate_tip": "Bu qatlamlarni yangi tur sifatida saqlaydi; ochilgan tur o'zgarishsiz qoladi.",
  "wall_type.wt.switch_dirty": "Boshqa turni ochishdan oldin OK yoki Bekor qilish ni bosing",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Vazifa",
  "wall_type.wt.h_material": "Material",
  "wall_type.wt.h_thickness": "Qalinlik",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Ko'rinishda devorlarni tanlang, so'ngra ularning turini almashtiring.",
  "wall_type.swap.already": "Tanlangan devorlarda bu tur allaqachon bor",
  "wall_type.swap.apply": "Almashtirish",
- "wall_type.swap.done": "Devor turi almashtirildi: {m} ta devordan {n} tasi",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Devor turi almashtirildi: {m} ta devordan {n} tasi"
 }

@@ -12,6 +12,7 @@
  "links.loaded": "betöltve",
  "links.not_loaded": "nincs betöltve",
  "links.loading": "betöltés…",
+ "links.loading_all": "Hivatkozások betöltése",
  "links.levels": "szint",
  "links.elements": "elem",
  "links.offset": "Eltolás:",

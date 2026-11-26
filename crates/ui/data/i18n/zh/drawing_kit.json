@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}：全色调",
  "drawing_kit.reset_color": "{layer}：恢复为图形颜色",
  "drawing_kit.unit.ft": "英尺",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "角度",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "撤销（Ctrl+Z）",
  "drawing_kit.n_of_m": "第 {n} 个，共 {m} 个",
  "drawing_kit.accept_class": "接受此类的全部对象",
- "drawing_kit.reject_class": "拒绝此类的全部对象",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "拒绝此类的全部对象"
 }

@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Pagpili ({n})",
  "ai.ctx.add_tip": "Ibalik sa nakikita ng AI",
  "ai.ctx.frame_tip": "Ipakita ang mga elementong ito",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Mga riles",
  "ai.ctx.cat.roof": "Bubong",
  "ai.ctx.cat.stair": "Hagdan",
- "ai.ctx.cat.other": "Iba pa",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Iba pa"
 }

@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{1} elemandan {0} tanesi silinecek. Kullanıcının bunu onaylaması gerekir",
+ "ai.issue.wipe": "Plan, modelin tüm {1} elemanını silecek ({0} silindi). Tek adımda asla uygulanmaz"
+}

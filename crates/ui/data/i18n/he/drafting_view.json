@@ -15,6 +15,7 @@
  "drafting_view.name": "שם",
  "drafting_view.count": "{n} ביאורים",
  "drafting_view.tab": "שרטוט · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "מבט שרטוט ריק",
  "drafting_view.canvas_hint": "השתמש בכלי הביאור: קווי פרט, אזורים, טקסט, רכיבי פרט",
  "drafting_view.created": "מבט השרטוט \"{name}\" נוצר",
@@ -29,6 +30,5 @@
  "drafting_view.more": "עוד",
  "empty.drafting.title": "אין עדיין מבטי שרטוט",
  "empty.drafting.hint": "צור מבט כזה לפרטים דו-ממדיים שאינם נחתכים מהמודל.",
- "empty.drafting.action": "מבט שרטוט חדש",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "מבט שרטוט חדש"
 }

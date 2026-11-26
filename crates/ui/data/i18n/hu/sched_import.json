@@ -20,6 +20,7 @@
  "sched_import.why_ro": "csak olvasható",
  "sched_import.why_locked": "zárolt érték",
  "sched_import.why_bad": "hibás érték",
+ "sched_import.refusal": "{at} {col} „{text}”: {why}",
  "sched_import.apply": "{n} módosítás alkalmazása",
  "sched_import.cancel": "Mégse",
  "sched_import.applied": "{n} cella importálva (egy visszavonási lépés)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Képleteredmények, nem alkalmazva: {n}",
  "sched_import.no_id_rows": "Id nélküli sorok, nem olvasva: {n} (sorok: {rows})",
  "sched_import.more": "… még {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(üres)",
  "sched_import.reading": "Munkafüzet olvasása…",
  "sched_import.resaved": "A munkafüzetet az első előnézet után újra mentették: ez az előnézet az új tartalmat mutatja",
- "sched_import.resaved_reading": "A munkafüzetet újra mentették: semmi nem lett alkalmazva, új előnézethez újraolvasás",
- "sched_import.refusal": "{at} {col} „{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "A munkafüzetet újra mentették: semmi nem lett alkalmazva, új előnézethez újraolvasás"
 }

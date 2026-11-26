@@ -12,6 +12,7 @@
  "links.loaded": "laddad",
  "links.not_loaded": "inte laddad",
  "links.loading": "laddar…",
+ "links.loading_all": "Läser in länkar",
  "links.levels": "nivåer",
  "links.elements": "element",
  "links.offset": "Förskjutning:",

@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT-vloerpaneel",
+ "fam.name.glulam_beam": "Gelamineerde houten ligger",
+ "fam.name.glulam_column": "Gelamineerde houten kolom",
+ "gen.group.timber": "Houtconstructie",
+ "gen.rule.timber.beam_span_max.desc": "Langste overspanning van een gelamineerde houten ligger tussen twee kolommen.",
+ "gen.rule.timber.beam_span_max.title": "Grens liggeroverspanning",
+ "gen.rule.timber.panel_w.desc": "Breedste kruislaags verlijmde vloerpaneel; tussen elk een voeg.",
+ "gen.rule.timber.panel_w.title": "Breedte CLT-paneel",
+ "gen.rule.timber.span_depth.desc": "Overspanning gedeeld door de hoogte van een gelamineerde houten ligger; kiest de doorsnede.",
+ "gen.rule.timber.span_depth.title": "Overspanning tot hoogte ligger"
+}

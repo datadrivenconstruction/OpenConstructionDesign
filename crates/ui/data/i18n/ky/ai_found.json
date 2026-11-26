@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Жашырылган",
  "ai_found.found.color": "Боёлгон",
  "ai_found.found.count": "{m} ичинен {n}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Эч нерсе туура келбейт. Чыпканы кеңирээк коюп көрүңүз.",
  "ai_found.found.show_btn": "Көрсөтүү",
  "ai_found.found.show_tip": "Ушул элементтерди тандап, план жана 3D көрүнүштө чоңойтуу",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# элемент жашырылган",
   "other": "# элемент жашырылган"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatikus épületgépészet",
+ "gen.mep_auto_hint": "Lehetővé teszi, hogy a generátor és az AI-asszisztens önállóan vezesse a csöveket, légcsatornákat és vezetékeket. Ebben a régióban alapértelmezés szerint ki van kapcsolva; bekapcsolhatja. A kézi nyomvonalvezetés mindig elérhető."
+}

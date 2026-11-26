@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} weitere Befunde dieser Regel werden nicht aufgeführt",
  "ai.check.integrity": "Fehlerhafte Daten in {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: die Oberkante liegt nicht über der Unterkante",
  "ai.check.level_host_differs": "Das Bauteil liegt auf einem anderen Geschoss als seine Basis ({0})",
  "ai.check.clash": "{0} kollidiert mit {1}",
@@ -23,6 +24,5 @@
  "ai.check.rule.count": "Regel {1}: {3} Elemente, zulässig {4}",
  "ai.check.rule.clearance": "Regel {1}: Abstand {3} m, mindestens {4} m erforderlich",
  "ai.check.rule.unsupported": "Regel {1} konnte nicht geprüft werden: diese Kategorie wird nicht unterstützt",
- "ai.check.wall_warning": "{0}",
  "ai.check.din276_bad": "Parameter {0}: „{1}“ ist keine Kostengruppe nach DIN 276 (drei Ziffern, 100 bis 899), {2} Elemente"
 }

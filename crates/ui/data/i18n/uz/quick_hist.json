@@ -72,6 +72,7 @@
  "quick.cat.beam": "To'sinlar",
  "quick.cat.ceiling": "Shiftlar",
  "quick.cat.structure": "Konstruksiya",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {all} tadan {n}",
  "quick.hud.type": "Turi",
  "quick.hud.height": "Balandlik",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "“{v}” qiymatini o'qib bo'lmaydi",
  "quick.menu.repeat": "Takrorlash: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "So'nggi",
  "quick.bar.repeat_tip": "{cmd} · Enter uni takrorlaydi",
  "quick.repeat.none": "Takrorlash uchun hali hech narsa yo'q",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Orqaga",
  "quick.tips.next": "Keyingi",
  "quick.tips.finish": "Tayyor",
- "quick.tips.never": "Boshqa ko'rsatilmasin",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Boshqa ko'rsatilmasin"
 }

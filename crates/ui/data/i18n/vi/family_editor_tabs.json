@@ -90,6 +90,7 @@
  "fe.cons.redundant": "dư thừa",
  "fe.cons.help": "Kích thước gắn với tham số chiều dài sẽ điều khiển các mặt phẳng; góc cần một tham số góc",
  "fe.locks": "Khóa căn chỉnh",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Khóa",
  "fe.unlock": "Mở khóa",
  "fe.locks.help": "Khóa thay đối số của khối (ví dụ rect #2) bằng mặt phẳng, để khối đi theo nó",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Tên bản nháp đã được dùng",
  "fe.clash.body": "Bản nháp tên “{name}” đã tồn tại. Thay bản nháp đó bằng bản này, hoặc quay lại và lưu với tên mới. Chưa có gì được lưu.",
  "fe.clash.rename": "Lưu với tên mới",
- "fe.clash.replace": "Thay bản nháp đó",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Thay bản nháp đó"
 }

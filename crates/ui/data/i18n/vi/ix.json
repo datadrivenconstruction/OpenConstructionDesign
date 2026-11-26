@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Điểm góc phần tư",
+ "snap.extension": "Kéo dài",
+ "snap.parallel": "Song song với tường",
+ "snap.tracking_x": "X của điểm đã bắt",
+ "snap.tracking_y": "Y của điểm đã bắt",
+ "snap.tracking_cross": "Giao điểm đường dẫn",
+ "snap.equal_step": "Bước đều"
+}

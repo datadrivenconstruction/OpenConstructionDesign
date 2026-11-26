@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Trasování stěn z výkresu",
  "api.cmd.attachments_list": "Soubory připojené k chatu a potvrzené požadavky projektu",
  "api.cmd.attachments_read": "Přečíst rozsah stran, řádky tabulky nebo obrázek připojeného souboru",
- "api.cmd.underlay_trace": "Návrh stěn trasovaný z připojeného výkresu"
+ "api.cmd.underlay_trace": "Návrh stěn trasovaný z připojeného výkresu",
+ "ai.tool.plan_from_image": "Čtení plánu z obrázku",
+ "api.cmd.plan_from_image": "Návrh stěn, dveří, oken a místností přečtených z přiloženého obrázku plánu nebo stránky PDF"
 }

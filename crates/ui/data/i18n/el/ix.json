@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Σημείο τεταρτημορίου",
+ "snap.extension": "Προέκταση",
+ "snap.parallel": "Παράλληλα στον τοίχο",
+ "snap.tracking_x": "X καταγεγραμμένου σημείου",
+ "snap.tracking_y": "Y καταγεγραμμένου σημείου",
+ "snap.tracking_cross": "Τομή οδηγών",
+ "snap.equal_step": "Ίσο βήμα"
+}

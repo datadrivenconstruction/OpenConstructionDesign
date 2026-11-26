@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Hệ thống kỹ thuật công trình tự động",
+ "gen.mep_auto_hint": "Cho phép bộ sinh và trợ lý AI tự bố trí đường ống, ống gió và dây điện. Mặc định tắt đối với khu vực này; bạn có thể bật. Luôn có thể định tuyến thủ công."
+}

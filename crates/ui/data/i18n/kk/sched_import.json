@@ -20,6 +20,7 @@
  "sched_import.why_ro": "тек оқуға",
  "sched_import.why_locked": "құлыптаулы мән",
  "sched_import.why_bad": "жарамсыз мән",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "{n} өзгерісті қолдану",
  "sched_import.cancel": "Бас тарту",
  "sched_import.applied": "{n} ұяшық импортталды (бір болдырмау қадамы)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Формула нәтижелері, қолданылмады: {n}",
  "sched_import.no_id_rows": "Id жоқ жолдар, оқылмады: {n} (жолдар {rows})",
  "sched_import.more": "… тағы {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(бос)",
  "sched_import.reading": "Кітап оқылуда…",
  "sched_import.resaved": "Кітап алдын ала қараудан кейін қайта сақталды: бұл алдын ала қарау жаңа мазмұнды көрсетеді",
- "sched_import.resaved_reading": "Кітап қайта сақталды: ештеңе қолданылмады, жаңа алдын ала қарау үшін қайта оқылуда",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Кітап қайта сақталды: ештеңе қолданылмады, жаңа алдын ала қарау үшін қайта оқылуда"
 }

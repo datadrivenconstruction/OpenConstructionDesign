@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "szkic anulowany",
  "sketch_edit.sk_applied": "szkic zastosowany",
  "sketch_edit.sk_tail": "ogon",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "płyta",
  "sketch_edit.sk_host_roof": "dach",
  "sketch_edit.sk_host_ceiling": "sufit",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Kondygnacja 2",
  "sketch_edit.seed_floor_200": "Strop 200",
  "sketch_edit.seed_section1": "Przekrój 1",
- "sketch_edit.seed_section2": "Przekrój 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Przekrój 2"
 }

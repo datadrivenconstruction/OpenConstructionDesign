@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "ফ্যামিলি",
  "type_dialog.typedial.h_function": "কার্যকারিতা",
  "type_dialog.typedial.h_material": "উপাদান",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "প্যারামিটার",
  "type_dialog.typedial.h_thickness": "পুরুত্ব",
  "type_dialog.typedial.h_value": "মান",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "দেয়ালের ভূমি-ক্ষেত্রফল",
  "type_dialog.warn.wall_vol": "দেয়ালের আয়তন",
  "type_dialog.warn.walls": "দেয়াল",
- "type_dialog.warn.warnings_n": "⚠ সতর্কতা: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ সতর্কতা: {n}"
 }

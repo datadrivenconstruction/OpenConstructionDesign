@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Entrée applique et Échap arrête la demande aussi depuis le plan ou la vue 3D, sauf si un champ de texte est en cours de saisie.",
  "ai.plan.rebased": "Mis à jour sur le modèle actuel : {what}",
  "ai.value.bad": "« {text} » n'est pas une valeur valide pour {name}",
+ "ai.value.bad_len": "« {name} » : {why}",
  "ai.value.both": "L'assistant IA a changé cette valeur en {agent} pendant que vous saisissiez {mine}. Choisissez celle à conserver.",
  "ai.value.choose_first": "Choisissez d'abord votre valeur ou celle de l'assistant IA sur la carte",
  "ai.value.elem": "Élément {n} : {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Saisissez une autre valeur, ou décochez l'élément pour l'exclure de l'application.",
  "ai.value.tip": "Corrigez la valeur dans le brouillon ; le modèle ne change qu'à l'application. Entrée valide, Échap restaure.",
  "ai.value.use_mine": "Utiliser {mine}",
- "ai.value.was": "était {old}",
- "ai.value.bad_len": "« {name} » : {why}"
+ "ai.value.was": "était {old}"
 }

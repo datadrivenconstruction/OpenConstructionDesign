@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "ملوّن",
+ "cmd.ui.icons.color": "أيقونات ملونة",
+ "cmd.ui.icons.color.desc": "نمط رسم الأيقونات",
+ "theme.icons.hierarchical": "هرمي",
+ "cmd.ui.icons.hierarchical": "أيقونات هرمية",
+ "cmd.ui.icons.hierarchical.desc": "نمط رسم الأيقونات",
+ "theme.icons.isometric": "أيزومتري",
+ "cmd.ui.icons.isometric": "أيقونات أيزومترية",
+ "cmd.ui.icons.isometric.desc": "نمط رسم الأيقونات",
+ "theme.icons.monoline": "خط واحد",
+ "cmd.ui.icons.monoline": "أيقونات بخط واحد",
+ "cmd.ui.icons.monoline.desc": "نمط رسم الأيقونات"
+}

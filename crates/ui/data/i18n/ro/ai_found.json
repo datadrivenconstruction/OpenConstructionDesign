@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Ascunse",
  "ai_found.found.color": "Colorate",
  "ai_found.found.count": "{n} din {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Nimic nu corespunde. Încearcă un filtru mai larg.",
  "ai_found.found.show_btn": "Arată",
  "ai_found.found.show_tip": "Selectează aceste elemente și apropie vederea de ele în plan și 3D",
@@ -41,6 +42,5 @@
   "one": "# element ascuns",
   "few": "# elemente ascunse",
   "other": "# de elemente ascunse"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

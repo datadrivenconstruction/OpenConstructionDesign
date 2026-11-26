@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}” değiştirilemez: {why}",
  "query.err.op_no_field": "alansız operatör",
  "query.err.positive": "{key}: değer sıfırdan büyük olmalı",
+ "query.err.raw": "{text}",
  "query.err.text_field": "“{key}” alanı metin, formül uygulanmaz",
  "query.err.unclosed_paren": "kapanış parantezi eksik",
  "query.err.unclosed_quote": "kapanış tırnağı eksik",
@@ -27,6 +28,5 @@
  "query.why.curtain": "giydirme cepheler kendi özelliklerinde değiştirilir",
  "query.why.opening_type": "boşluğun tipi boyutuna bağlıdır: “-> genişlik=… yükseklik=…”",
  "query.why.slab_thickness": "döşeme kalınlığı tip tarafından belirlenir: “-> tip=…”",
- "query.why.wall_thickness": "duvar kalınlığı tip tarafından belirlenir: “-> tip=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "duvar kalınlığı tip tarafından belirlenir: “-> tip=…”"
 }

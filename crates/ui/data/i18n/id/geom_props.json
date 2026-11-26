@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<bervariasi>",
  "geom_props.tip": "Enter menerapkan nilai ke semua {n} yang dipilih, dalam satu langkah urungkan",
  "geom_props.roof_slope": "Kemiringan",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Elemen impor",
  "geom_props.kind.mass": "Massa",
  "geom_props.kind.solid": "Solid",
- "geom_props.kind.toposolid": "Medan",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Medan"
 }

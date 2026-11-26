@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<متغیر>",
  "geom_props.tip": "Enter مقدار را برای همه‌ی {n} مورد انتخاب‌شده اعمال می‌کند، در یک مرحله‌ی واگرد",
  "geom_props.roof_slope": "شیب",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "عناصر وارد‌شده",
  "geom_props.kind.mass": "حجم‌ها",
  "geom_props.kind.solid": "جامدها",
- "geom_props.kind.toposolid": "سطح زمین",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "سطح زمین"
 }

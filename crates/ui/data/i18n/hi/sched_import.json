@@ -20,6 +20,7 @@
  "sched_import.why_ro": "केवल-पढ़ने योग्य",
  "sched_import.why_locked": "लॉक मान",
  "sched_import.why_bad": "अमान्य मान",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "{n} बदलाव लागू करें",
  "sched_import.cancel": "रद्द करें",
  "sched_import.applied": "{n} सेल आयात हुए (एक undo चरण)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "सूत्र परिणाम, लागू नहीं: {n}",
  "sched_import.no_id_rows": "Id के बिना पंक्तियाँ, नहीं पढ़ी गईं: {n} (पंक्तियाँ {rows})",
  "sched_import.more": "… {n} और",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(खाली)",
  "sched_import.reading": "वर्कबुक पढ़ी जा रही है…",
  "sched_import.resaved": "पहले प्रीव्यू के बाद वर्कबुक फिर से सहेजी गई: यह प्रीव्यू नई सामग्री दिखाता है",
- "sched_import.resaved_reading": "वर्कबुक फिर से सहेजी गई: कुछ लागू नहीं हुआ, नए प्रीव्यू के लिए फिर से पढ़ी जा रही है",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "वर्कबुक फिर से सहेजी गई: कुछ लागू नहीं हुआ, नए प्रीव्यू के लिए फिर से पढ़ी जा रही है"
 }

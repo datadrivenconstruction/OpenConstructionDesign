@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Dubleeri tüüp",
  "wall_type.wt.duplicate_tip": "Salvestab need kihid uue tüübina; avatud tüüp jääb samaks.",
  "wall_type.wt.switch_dirty": "Vajuta enne teise tüübi avamist OK või Loobu",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Funktsioon",
  "wall_type.wt.h_material": "Materjal",
  "wall_type.wt.h_thickness": "Paksus",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Vali vaates seinad ja vaheta nende tüüp.",
  "wall_type.swap.already": "Valitud seintel on juba see tüüp",
  "wall_type.swap.apply": "Vaheta",
- "wall_type.swap.done": "Seinatüüp vahetatud: {n} / {m} seina",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Seinatüüp vahetatud: {n} / {m} seina"
 }

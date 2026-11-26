@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Төрлийг хуулбарлах",
  "wall_type.wt.duplicate_tip": "Эдгээр давхаргыг шинэ төрөл болгон хадгална; нээсэн төрөл хэвээрээ үлдэнэ.",
  "wall_type.wt.switch_dirty": "Өөр төрөл нээхээс өмнө ОК эсвэл Цуцлах дарна уу",
+ "wall_type.wt.h_num": "№",
  "wall_type.wt.h_function": "Үүрэг",
  "wall_type.wt.h_material": "Материал",
  "wall_type.wt.h_thickness": "Зузаан",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Харагдацад хана сонгоод, төрлийг нь солино уу.",
  "wall_type.swap.already": "Сонгосон ханад аль хэдийн энэ төрөл байна",
  "wall_type.swap.apply": "Солих",
- "wall_type.swap.done": "Ханын төрөл солигдлоо: {n} / {m} хана",
- "wall_type.wt.h_num": "№"
+ "wall_type.swap.done": "Ханын төрөл солигдлоо: {n} / {m} хана"
 }

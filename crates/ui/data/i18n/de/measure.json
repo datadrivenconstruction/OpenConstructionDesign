@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Abstand",
+ "cmd.e3d.measure.gap": "Abstand zwischen Flächen",
+ "cmd.e3d.measure.angle": "Winkel",
+ "cmd.e3d.measure.area": "Fläche / Umfang einer Fläche oder eines Raums",
+ "cmd.e3d.measure.volume": "Volumen eines Elements",
+ "cmd.e3d.measure.slope": "Neigung",
+ "cmd.e3d.measure.chain": "Punktkette",
+ "measure.orphan": "Bezug verloren",
+ "measure.not_planar": "Die Flächen sind nicht parallel",
+ "measure.unsupported": "Dies lässt sich nicht messen",
+ "cmd.ann.measure_distance": "Abstand messen",
+ "cmd.ann.measure_gap": "Abstand zwischen Flächen messen",
+ "cmd.ann.measure_angle": "Winkel messen",
+ "cmd.ann.measure_area": "Fläche messen",
+ "hint.measure.first": "Messen: Wandfläche (oder Punkt) anklicken · Esc — beenden",
+ "hint.measure.second": "Messen: zweite Fläche anklicken · Esc — erste Auswahl verwerfen",
+ "measure.no_face": "Hier keine Wandfläche"
+}

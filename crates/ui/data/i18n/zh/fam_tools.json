@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "读取项目族的定义文本",
+ "api.cmd.family_validate": "检查族定义文本",
+ "api.cmd.family_reference": "读取族定义文本参考",
+ "api.cmd.family_draft": "在族编辑器中以草稿形式提供族定义"
+}

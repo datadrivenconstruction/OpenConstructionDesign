@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "المسافة",
+ "cmd.e3d.measure.gap": "الفراغ بين وجهين",
+ "cmd.e3d.measure.angle": "الزاوية",
+ "cmd.e3d.measure.area": "مساحة / محيط وجه أو غرفة",
+ "cmd.e3d.measure.volume": "حجم عنصر",
+ "cmd.e3d.measure.slope": "الميل",
+ "cmd.e3d.measure.chain": "سلسلة نقاط",
+ "measure.orphan": "مرجع مفقود",
+ "measure.not_planar": "الأوجه غير متوازية",
+ "measure.unsupported": "لا يمكن قياس هذا",
+ "cmd.ann.measure_distance": "قياس المسافة",
+ "cmd.ann.measure_gap": "قياس الفراغ بين وجهين",
+ "cmd.ann.measure_angle": "قياس الزاوية",
+ "cmd.ann.measure_area": "قياس المساحة",
+ "hint.measure.first": "قياس: انقر وجه جدار (أو نقطة) · Esc — خروج",
+ "hint.measure.second": "قياس: انقر الوجه الثاني · Esc — إلغاء الاختيار الأول",
+ "measure.no_face": "لا يوجد وجه جدار هنا"
+}

@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Panel stropowy CLT",
+ "fam.name.glulam_beam": "Belka z drewna klejonego",
+ "fam.name.glulam_column": "Słup z drewna klejonego",
+ "gen.group.timber": "Konstrukcja drewniana",
+ "gen.rule.timber.beam_span_max.desc": "Największa rozpiętość belki z drewna klejonego między dwoma słupami.",
+ "gen.rule.timber.beam_span_max.title": "Limit rozpiętości belki",
+ "gen.rule.timber.panel_w.desc": "Największa szerokość krzyżowo klejonego panelu stropowego; między panelami jest złącze.",
+ "gen.rule.timber.panel_w.title": "Szerokość panelu CLT",
+ "gen.rule.timber.span_depth.desc": "Rozpiętość względem wysokości belki z drewna klejonego; dobiera przekrój.",
+ "gen.rule.timber.span_depth.title": "Smukłość belki"
+}

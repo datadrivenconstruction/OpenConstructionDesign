@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "أُصلح بعد {n} محاولات مرفوضة، نحو {tokens} رمز",
+ "ai.fam_offer": "اقترح وكيل العائلة {name}",
+ "ai.fam_offer.open": "فتح في محرر العائلات",
+ "ai.fam_offer.dismiss": "تجاهل",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "جارٍ الفحص…",
+ "fe.ai.clean": "لم يجد الفحص شيئًا",
+ "fe.ai.check_values": "فحص بالقيم",
+ "fe.ai.lines": "الأسطر {n}",
+ "fe.ai.changes": "{n} تغييرات مقارنة بالإصدار السابق",
+ "fe.ai.added": "مضاف: {head} {name}",
+ "fe.ai.removed": "محذوف: {head} {name}",
+ "fe.ai.changed": "معدّل: {head} {name}",
+ "fe.ai.reject": "رفض"
+}

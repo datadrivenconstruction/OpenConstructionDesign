@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "चतुर्थांश बिंदु",
+ "snap.extension": "विस्तार",
+ "snap.parallel": "दीवार के समानांतर",
+ "snap.tracking_x": "पकड़े गए बिंदु का X",
+ "snap.tracking_y": "पकड़े गए बिंदु का Y",
+ "snap.tracking_cross": "गाइड का कटाव",
+ "snap.equal_step": "समान चरण"
+}

@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Nakatago",
  "ai_found.found.color": "Kinulayan",
  "ai_found.found.count": "{n} sa {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Walang tumutugma. Subukan ang mas malawak na filter.",
  "ai_found.found.show_btn": "Ipakita",
  "ai_found.found.show_tip": "Piliin ang mga elementong ito at i-zoom sa mga ito sa plan at 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# elemento ang nakatago",
   "other": "# elemento ang nakatago"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

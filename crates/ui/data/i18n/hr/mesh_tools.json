@@ -52,6 +52,7 @@
  "mesh_tools.done": "Gotovo",
  "mesh_tools.failed": "Neuspjelo",
  "mesh_tools.note.outline_approx": "obris je približan",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Obriši plohe okrenute prema",
  "mesh_tools.dir.up": "gore",
  "mesh_tools.dir.down": "dolje",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Pojednostavljeno: {n} (npr. {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Pojednostavljeno: {n} (npr. {first})"
 }

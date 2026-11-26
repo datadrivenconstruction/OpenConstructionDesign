@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 araç",
  "ai.stream.tools_many": "{n} araç",
  "ai.stream.secs": "{n} sn",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Hâlâ model servisi bekleniyor",
  "ai.stream.stop": "Durdur",
  "ai.stream.cancelled": "Durduruldu",
- "ai.stream.incomplete": "Taslak eksik. Modele hiçbir şey uygulanmadı.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Taslak eksik. Modele hiçbir şey uygulanmadı."
 }

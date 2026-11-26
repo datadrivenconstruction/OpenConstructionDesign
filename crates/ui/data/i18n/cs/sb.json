@@ -41,5 +41,7 @@
  "sb.save.fresh": "Bez změn",
  "sb.save.save": "Uložit",
  "sb.save.ifc": "Uložit kopii IFC",
- "sb.save.autosave": "Automatické ukládání"
+ "sb.save.autosave": "Automatické ukládání",
+ "sb.more.title": "Více",
+ "sb.more.desc": "Položky stavového řádku, které se při této šířce nevejdou."
 }

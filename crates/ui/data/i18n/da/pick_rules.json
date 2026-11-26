@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Vælg alle kategorier",
  "pick_rules.filter.tip": "Valgfilter: kategorier uden flueben springes over ved klik og svæv",
  "pick_rules.here": "Elementer her",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "valgt",
- "pick_rules.pinned": "Vælg låste elementer",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Vælg låste elementer"
 }

@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Befogadó elemek: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Pillér",
  "rebar_hosts.kind.beam": "Gerenda",
  "rebar_hosts.kind.wall": "Fal",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "A háló falakba, födémekbe és alapokba kerül, nem pillérekbe vagy gerendákba.",
  "rebar_hosts.why.bars_plate": "A hosszanti rudak és kengyelek pillérekbe és gerendákba kerülnek, nem falakba, födémekbe vagy alapokba.",
  "rebar_hosts.why.no_common_face": "A kijelölt befogadó elemeknek nincs közös betonfedési oldala. Válasszon egy fajtájú befogadó elemeket.",
- "rebar_hosts.why.no_type": "Válasszon rúdtípust.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Válasszon rúdtípust."
 }

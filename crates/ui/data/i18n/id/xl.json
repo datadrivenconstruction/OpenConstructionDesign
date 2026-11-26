@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "buku kerja tidak dapat dibaca, kolomnya sendiri akan hilang; tutup di spreadsheet XLSX lalu coba lagi",
  "xl.msg.type_x_layer_x": "tipe {} lapisan {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} tidak ada lagi, sel kolomnya sendiri dibuang",
- "xl.msg.delsafe_type_param_on_elements": "parameter '{}' adalah parameter tipe; edit di lembar tipe, tidak diterapkan"
+ "xl.msg.delsafe_type_param_on_elements": "parameter '{}' adalah parameter tipe; edit di lembar tipe, tidak diterapkan",
+ "xl.msg.tag_x_is_removed_with_x_x": "tag {} dihapus bersama {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "dimensi {} kehilangan {} {} dan mempertahankan bentuk terakhirnya",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "tidak dapat memeriksa anotasi elemen yang dihapus: {}"
 }

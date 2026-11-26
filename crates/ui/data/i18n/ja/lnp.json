@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "開口 {n} 件は変更されませんでした ({why})",
  "lnp.params_changed": "変更された値: {n}",
  "lnp.params_same": "変更なし: {u} 個の要素が既にこの値です",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "最初のパネルのみを選択して編集します",
  "lnp.clip_from_wall": "壁 #{id} からパラメータをコピーしました",
  "lnp.clip_from_opening": "開口 #{id} からパラメータをコピーしました",
- "lnp.match_from": "#{id} のプロパティを {n} 個の要素に適用しました",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "#{id} のプロパティを {n} 個の要素に適用しました"
 }

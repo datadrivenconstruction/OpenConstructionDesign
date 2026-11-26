@@ -48,5 +48,13 @@
  "settings.lib_open": "Bileşen kütüphanesi",
  "settings.lib_open_desc": "Yerleşik aileleri, projedekileri ve kendi ailelerinizi görüntüleyin",
  "settings.lib_dir": "Kütüphane klasörüm",
- "settings.lib_dir_desc": "Buraya konan aile dosyaları (.ddcf) Kütüphanem altında görünür. DDC_COMPONENTS_DIR konumunu değiştirir."
+ "settings.lib_dir_desc": "Buraya konan aile dosyaları (.ddcf) Kütüphanem altında görünür. DDC_COMPONENTS_DIR konumunu değiştirir.",
+ "complib.fam.sprinkler_head": "Yağmurlama Başlığı",
+ "complib.fam.fire_pump": "Yangın Pompası",
+ "complib.fam.pressurisation_fan": "Basınçlandırma Fanı",
+ "complib.fam.lift_car": "Asansör Kabini",
+ "complib.fam.lift_landing_door": "Asansör Kat Kapısı",
+ "complib.fam.lift_pit": "Asansör Kuyusu Dibi",
+ "complib.fam.lift_overrun": "Asansör Baş Mesafesi",
+ "complib.fam.lift_machine": "Asansör Makinesi"
 }

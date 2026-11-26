@@ -72,6 +72,7 @@
  "quick.cat.beam": "Träger",
  "quick.cat.ceiling": "Decken",
  "quick.cat.structure": "Tragwerk",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} von {all}",
  "quick.hud.type": "Typ",
  "quick.hud.height": "Höhe",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Der Wert „{v}“ kann nicht gelesen werden",
  "quick.menu.repeat": "Wiederholen: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Zuletzt",
  "quick.bar.repeat_tip": "{cmd} · Enter wiederholt ihn",
  "quick.repeat.none": "Noch nichts zu wiederholen",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Zurück",
  "quick.tips.next": "Weiter",
  "quick.tips.finish": "Fertig",
- "quick.tips.never": "Nicht mehr anzeigen",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Nicht mehr anzeigen"
 }

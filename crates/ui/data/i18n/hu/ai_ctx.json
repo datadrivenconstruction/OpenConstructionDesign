@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Kijelölés ({n})",
  "ai.ctx.add_tip": "Visszaadás ahhoz, amit az MI lát",
  "ai.ctx.frame_tip": "Ezen elemek megjelenítése",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Korlátok",
  "ai.ctx.cat.roof": "Tetők",
  "ai.ctx.cat.stair": "Lépcsők",
- "ai.ctx.cat.other": "Egyéb",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Egyéb"
 }

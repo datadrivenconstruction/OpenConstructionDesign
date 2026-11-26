@@ -45,5 +45,7 @@
  "phui.kind.comp": "Cấu kiện",
  "phui.kind.shaft": "Giếng",
  "phui.kind.ramp": "Đường dốc",
- "phui.kind.member": "Thanh kết cấu"
+ "phui.kind.member": "Thanh kết cấu",
+ "phui.dates": "Ngày (bắt đầu, kết thúc)",
+ "phui.show_calendar": "Hiển thị theo lịch"
 }

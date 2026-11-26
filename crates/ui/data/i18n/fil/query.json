@@ -11,6 +11,7 @@
  "query.err.not_changed": "hindi mababago ang \"{key}\": {why}",
  "query.err.op_no_field": "operator na walang field",
  "query.err.positive": "{key}: dapat mas malaki sa zero ang value",
+ "query.err.raw": "{text}",
  "query.err.text_field": "teksto ang field na \"{key}\", hindi ito tinatanggap ng formula",
  "query.err.unclosed_paren": "kulang ang pansarang bracket",
  "query.err.unclosed_quote": "kulang ang pansarang quote",
@@ -27,6 +28,5 @@
  "query.why.curtain": "binabago ang curtain wall sa sarili nitong properties",
  "query.why.opening_type": "ang type ng opening ay sumusunod sa laki nito: \"-> width=… height=…\"",
  "query.why.slab_thickness": "itinatakda ng type ang kapal ng slab: \"-> type=…\"",
- "query.why.wall_thickness": "itinatakda ng type ang kapal ng wall: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "itinatakda ng type ang kapal ng wall: \"-> type=…\""
 }

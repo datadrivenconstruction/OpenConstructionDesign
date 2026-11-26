@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Loeb projekti perekonna definitsiooni teksti",
+ "api.cmd.family_validate": "Kontrollib perekonna definitsiooni teksti",
+ "api.cmd.family_reference": "Loeb perekonna definitsiooni teksti viidet",
+ "api.cmd.family_draft": "Pakub perekonna definitsiooni mustandina perekonnaredaktorisse"
+}

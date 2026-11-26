@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter لاگو کرتا ہے اور Esc درخواست روکتا ہے، پلان یا 3D منظر سے بھی، جب تک کسی متنی خانے میں ٹائپ نہ ہو رہا ہو۔",
  "ai.plan.rebased": "موجودہ ماڈل کے مقابل اپ ڈیٹ: {what}",
  "ai.value.bad": "\"{text}\" {name} کے لیے درست قدر نہیں ہے",
+ "ai.value.bad_len": "فیلڈ “{name}”: {why}",
  "ai.value.both": "آپ کے {mine} لکھنے کے دوران AI معاون نے یہ قدر {agent} کر دی۔ رکھنے والی قدر چنیں۔",
  "ai.value.choose_first": "پہلے کارڈ پر اپنی قدر یا AI معاون کی قدر چنیں",
  "ai.value.elem": "عنصر {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "کوئی اور قدر لکھیں، یا آئٹم کا نشان ہٹا کر اسے Apply سے باہر رکھیں۔",
  "ai.value.tip": "مسودے میں قدر درست کریں؛ ماڈل صرف Apply پر بدلتا ہے۔ Enter تصدیق کرتا ہے، Esc واپس لاتا ہے۔",
  "ai.value.use_mine": "{mine} استعمال کریں",
- "ai.value.was": "پہلے {old} تھا",
- "ai.value.bad_len": "فیلڈ “{name}”: {why}"
+ "ai.value.was": "پہلے {old} تھا"
 }

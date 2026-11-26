@@ -24,5 +24,21 @@
  "value_src.verified_n": "قيم متحقَّق منها: {n}",
  "value_src.bulk_note": "قيم مُلئت بالذكاء الاصطناعي دون تحقق: {n}",
  "value_src.bulk_verify": "وضع علامة «متحقَّق» ({n})",
- "value_src.bulk_tip": "يعلّم كل قيمة مُلئت بالذكاء الاصطناعي في التحديد بأنها متحقَّق منها، بخطوة تراجع واحدة"
+ "value_src.bulk_tip": "يعلّم كل قيمة مُلئت بالذكاء الاصطناعي في التحديد بأنها متحقَّق منها، بخطوة تراجع واحدة",
+ "origin.title": "المصدر",
+ "origin.made_by": "أنشأه",
+ "origin.request": "الطلب",
+ "origin.at": "طُبّق",
+ "origin.recipe": "الوصفة «{name}»، الجزء {part}",
+ "origin.ai": "مساعد الذكاء الاصطناعي ({model})",
+ "origin.agent": "الوكيل {name}",
+ "origin.script": "السكربت {name}",
+ "origin.xlsx": "جدول XLSX",
+ "origin.user": "شخص",
+ "origin.import": "استيراد",
+ "origin.import_file": "استيراد من {file}",
+ "origin.unknown": "غير موجود في السجل",
+ "origin.held": "حُرّر يدويًا: إعادة تشغيل الوصفة تتركه كما هو",
+ "origin.rebuilt": "إعادة تشغيل الوصفة تعيد بناءه؛ حرّره يدويًا للإبقاء عليه كما هو",
+ "origin.ai_values": "قيم ملأها الذكاء الاصطناعي: {n}، غير متحقق منها: {open}"
 }

@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Forbind, afbryd eller skift geometriforbindelser",
  "api.cmd.place_footings": "Placér et fundament under hver søjle på en etage",
  "api.cmd.create_terrain": "Opret et terræn ud fra opmålingspunkter eller et skråt plan",
- "api.cmd.script_recipes": "Læs byggeblokkene og opskrifterne i scripts til frie konstruktioner"
+ "api.cmd.set_material": "Angiv materialets udseende i 3D",
+ "api.cmd.script_recipes": "Læs byggeblokkene og opskrifterne i scripts til frie konstruktioner",
+ "api.cmd.generate_block": "Planlæg en bygningsblok på grunde med fælles byggepladsregler",
+ "api.cmd.measure_save": "Gem en måling i en visning",
+ "api.cmd.edit_mass": "Tilføj et historiktrin til en masse: skub/træk, kladde, skal, afrunding, affasning, forskydning eller opdeling",
+ "api.cmd.mass_to_family": "Lav en komponentfamilie ud fra en massetidslinje"
 }

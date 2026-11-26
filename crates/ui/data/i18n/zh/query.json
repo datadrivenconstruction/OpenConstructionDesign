@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}”无法更改：{why}",
  "query.err.op_no_field": "运算符前没有字段",
  "query.err.positive": "{key}：值必须大于零",
+ "query.err.raw": "{text}",
  "query.err.text_field": "字段“{key}”为文本，不适用公式",
  "query.err.unclosed_paren": "缺少右括号",
  "query.err.unclosed_quote": "缺少右引号",
@@ -27,6 +28,5 @@
  "query.why.curtain": "幕墙需在其自身属性中更改",
  "query.why.opening_type": "洞口的类型随其尺寸而定：“-> width=… height=…”",
  "query.why.slab_thickness": "楼板厚度由类型决定：“-> type=…”",
- "query.why.wall_thickness": "墙厚度由类型决定：“-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "墙厚度由类型决定：“-> type=…”"
 }

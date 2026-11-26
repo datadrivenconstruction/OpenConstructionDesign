@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Traçando paredes a partir de um desenho",
  "api.cmd.attachments_list": "Arquivos anexados ao chat e os requisitos confirmados do projeto",
  "api.cmd.attachments_read": "Ler um intervalo de páginas, linhas de tabela ou a imagem de um arquivo anexado",
- "api.cmd.underlay_trace": "Rascunho de paredes traçadas a partir de um desenho anexado"
+ "api.cmd.underlay_trace": "Rascunho de paredes traçadas a partir de um desenho anexado",
+ "ai.tool.plan_from_image": "A ler uma planta a partir de uma imagem",
+ "api.cmd.plan_from_image": "Rascunho de paredes, portas, janelas e divisões lidas de uma imagem de planta ou página PDF anexada"
 }

@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Lataa nykyinen editori ERP-sivulta {url}",
  "erp.err.unsupported.admin": "Pyydä ERP-ylläpitäjältä nykyinen editori",
  "erp.err.throttled_in": "Liian monta yritystä. Yritä uudelleen {s} s kuluttua",
+ "erp.err.throttled_ready": "Odotus on ohi. Voit yrittää uudelleen",
  "erp.err.imported": "Revisio {n} ERP:ssä on tuotu malli: editori ei vielä pysty avaamaan sitä tai julkaisemaan sen päälle",
  "erp.action.download": "Avaa editorin lataussivu ERP:ssä",
  "erp.action.new_link": "Hae uusi linkki ERP-sivulta",

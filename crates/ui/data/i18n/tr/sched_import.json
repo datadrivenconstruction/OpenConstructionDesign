@@ -20,6 +20,7 @@
  "sched_import.why_ro": "salt okunur",
  "sched_import.why_locked": "kilitli değer",
  "sched_import.why_bad": "geçersiz değer",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "{n} değişikliği uygula",
  "sched_import.cancel": "İptal",
  "sched_import.applied": "{n} hücre içe aktarıldı (tek geri alma adımı)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Formül sonuçları, uygulanmadı: {n}",
  "sched_import.no_id_rows": "Id'si olmayan satırlar, okunmadı: {n} (satırlar {rows})",
  "sched_import.more": "… {n} daha",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(boş)",
  "sched_import.reading": "Çalışma kitabı okunuyor…",
  "sched_import.resaved": "Çalışma kitabı ilk önizlemeden sonra yeniden kaydedildi: bu önizleme yeni içeriği gösterir",
- "sched_import.resaved_reading": "Çalışma kitabı yeniden kaydedildi: hiçbir şey uygulanmadı, yeni bir önizleme için yeniden okunuyor",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Çalışma kitabı yeniden kaydedildi: hiçbir şey uygulanmadı, yeni bir önizleme için yeniden okunuyor"
 }

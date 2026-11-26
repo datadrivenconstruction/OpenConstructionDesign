@@ -18,6 +18,7 @@
  "mcp.set.error": "เซิร์ฟเวอร์ยังไม่เริ่ม: {error}",
  "mcp.set.new": "โทเคนใหม่",
  "mcp.set.port": "พอร์ต",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "แต่ละชุดจะถูกตรวจก่อนและเป็นการเลิกทำหนึ่งขั้น เฉพาะโปรแกรมบนคอมพิวเตอร์เครื่องนี้เท่านั้นที่เชื่อมต่อได้",
  "mcp.set.show": "แสดง",
  "mcp.set.state_failed": "ไม่ได้ทำงาน",
@@ -30,6 +31,5 @@
  "mcp.set.status": "สถานะ",
  "mcp.set.access": "การเข้าถึง",
  "mcp.set.config": "การตั้งค่า",
- "mcp.set.policy": "การนำไปใช้",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "การนำไปใช้"
 }

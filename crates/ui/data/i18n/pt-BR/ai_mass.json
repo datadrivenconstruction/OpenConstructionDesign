@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{0} de {1} elementos seriam excluídos. A pessoa precisa confirmar isso",
+ "ai.issue.wipe": "O plano excluiria todos os {1} elementos do modelo ({0} excluídos). Nunca é aplicado em uma única etapa"
+}

@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} Öffnungen nicht geändert ({why})",
  "lnp.params_changed": "geänderte Werte: {n}",
  "lnp.params_same": "Keine Änderungen: {u} Elemente haben diesen Wert bereits",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Nur das erste Paneel wählen, um es zu bearbeiten",
  "lnp.clip_from_wall": "Parameter aus Wand #{id} kopiert",
  "lnp.clip_from_opening": "Parameter aus Öffnung #{id} kopiert",
- "lnp.match_from": "Eigenschaften von #{id} auf {n} Elemente übertragen",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Eigenschaften von #{id} auf {n} Elemente übertragen"
 }

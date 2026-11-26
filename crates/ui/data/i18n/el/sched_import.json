@@ -20,6 +20,7 @@
  "sched_import.why_ro": "μόνο για ανάγνωση",
  "sched_import.why_locked": "κλειδωμένη τιμή",
  "sched_import.why_bad": "μη έγκυρη τιμή",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Εφαρμογή {n} αλλαγών",
  "sched_import.cancel": "Ακύρωση",
  "sched_import.applied": "Εισήχθησαν {n} κελιά (ένα βήμα αναίρεσης)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Αποτελέσματα τύπων, δεν εφαρμόστηκαν: {n}",
  "sched_import.no_id_rows": "Γραμμές χωρίς Id, δεν διαβάστηκαν: {n} (γραμμές {rows})",
  "sched_import.more": "… {n} ακόμη",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(κενό)",
  "sched_import.reading": "Ανάγνωση βιβλίου…",
  "sched_import.resaved": "Το βιβλίο αποθηκεύτηκε ξανά μετά την πρώτη προεπισκόπηση: αυτή η προεπισκόπηση δείχνει το νέο περιεχόμενο",
- "sched_import.resaved_reading": "Το βιβλίο αποθηκεύτηκε ξανά: δεν εφαρμόστηκε τίποτα, γίνεται νέα ανάγνωση για νέα προεπισκόπηση",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Το βιβλίο αποθηκεύτηκε ξανά: δεν εφαρμόστηκε τίποτα, γίνεται νέα ανάγνωση για νέα προεπισκόπηση"
 }

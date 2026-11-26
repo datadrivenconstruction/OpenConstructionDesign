@@ -72,6 +72,7 @@
  "quick.cat.beam": "Балки",
  "quick.cat.ceiling": "Стелі",
  "quick.cat.structure": "Конструкції",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} із {all}",
  "quick.hud.type": "Тип",
  "quick.hud.height": "Висота",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Не вдалося прочитати значення «{v}»",
  "quick.menu.repeat": "Повторити: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Нещодавні",
  "quick.bar.repeat_tip": "{cmd} · Enter повторює її",
  "quick.repeat.none": "Ще нічого повторювати",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Назад",
  "quick.tips.next": "Далі",
  "quick.tips.finish": "Готово",
- "quick.tips.never": "Більше не показувати",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Більше не показувати"
 }

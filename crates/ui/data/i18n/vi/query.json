@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" không thể thay đổi: {why}",
  "query.err.op_no_field": "toán tử không có trường",
  "query.err.positive": "{key}: giá trị phải lớn hơn không",
+ "query.err.raw": "{text}",
  "query.err.text_field": "trường \"{key}\" là văn bản, công thức không áp dụng",
  "query.err.unclosed_paren": "thiếu dấu ngoặc đóng",
  "query.err.unclosed_quote": "thiếu dấu nháy đóng",
@@ -27,6 +28,5 @@
  "query.why.curtain": "tường rèm được thay đổi trong thuộc tính riêng của nó",
  "query.why.opening_type": "loại của lỗ mở theo kích thước của nó: \"-> width=… height=…\"",
  "query.why.slab_thickness": "độ dày sàn do loại quyết định: \"-> type=…\"",
- "query.why.wall_thickness": "độ dày tường do loại quyết định: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "độ dày tường do loại quyết định: \"-> type=…\""
 }

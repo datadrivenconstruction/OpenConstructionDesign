@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Udaljenost",
+ "cmd.e3d.measure.gap": "Razmak između ploha",
+ "cmd.e3d.measure.angle": "Kut",
+ "cmd.e3d.measure.area": "Površina / opseg plohe ili prostorije",
+ "cmd.e3d.measure.volume": "Volumen elementa",
+ "cmd.e3d.measure.slope": "Nagib",
+ "cmd.e3d.measure.chain": "Lanac točaka",
+ "measure.orphan": "Izgubljena referenca",
+ "measure.not_planar": "Plohe nisu paralelne",
+ "measure.unsupported": "Ovo se ne može izmjeriti",
+ "cmd.ann.measure_distance": "Izmjeri udaljenost",
+ "cmd.ann.measure_gap": "Izmjeri razmak između ploha",
+ "cmd.ann.measure_angle": "Izmjeri kut",
+ "cmd.ann.measure_area": "Izmjeri površinu",
+ "hint.measure.first": "Mjerenje: kliknite lice zida (ili točku) · Esc — izlaz",
+ "hint.measure.second": "Mjerenje: kliknite drugu plohu · Esc — poništi prvi odabir",
+ "measure.no_face": "Ovdje nema lica zida"
+}

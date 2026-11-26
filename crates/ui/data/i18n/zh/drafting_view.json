@@ -15,6 +15,7 @@
  "drafting_view.name": "名称",
  "drafting_view.count": "{n} 个注释",
  "drafting_view.tab": "绘图 · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "空白绘图视图",
  "drafting_view.canvas_hint": "使用“注释”工具：详图线、填充区域、文字、详图构件",
  "drafting_view.created": "已创建绘图视图“{name}”",
@@ -29,6 +30,5 @@
  "drafting_view.more": "更多",
  "empty.drafting.title": "尚无绘图视图",
  "empty.drafting.hint": "用于创建无法从模型剖切得到的二维详图。",
- "empty.drafting.action": "新建绘图视图",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "新建绘图视图"
 }

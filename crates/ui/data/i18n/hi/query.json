@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" नहीं बदला जा सकता: {why}",
  "query.err.op_no_field": "फ़ील्ड के बिना ऑपरेटर",
  "query.err.positive": "{key}: मान शून्य से बड़ा होना चाहिए",
+ "query.err.raw": "{text}",
  "query.err.text_field": "फ़ील्ड \"{key}\" टेक्स्ट है, फ़ॉर्मूला लागू नहीं होता",
  "query.err.unclosed_paren": "बंद कोष्ठक नहीं है",
  "query.err.unclosed_quote": "बंद उद्धरण चिह्न नहीं है",
@@ -27,6 +28,5 @@
  "query.why.curtain": "कर्टेन वॉल उनकी अपनी प्रॉपर्टी में बदली जाती हैं",
  "query.why.opening_type": "ओपनिंग का प्रकार उसके आकार का अनुसरण करता है: \"-> width=… height=…\"",
  "query.why.slab_thickness": "फ़्लोर की मोटाई प्रकार से तय होती है: \"-> type=…\"",
- "query.why.wall_thickness": "दीवार की मोटाई प्रकार से तय होती है: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "दीवार की मोटाई प्रकार से तय होती है: \"-> type=…\""
 }

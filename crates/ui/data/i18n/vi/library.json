@@ -41,5 +41,16 @@
  "library.ifc.window": "Cửa sổ",
  "library.ifc.stair": "Cầu thang",
  "library.ifc.pipe_fitting": "Phụ kiện ống",
- "library.ifc.duct_fitting": "Phụ kiện ống gió"
+ "library.ifc.duct_fitting": "Phụ kiện ống gió",
+ "library.ifc.beam": "Dầm",
+ "library.ifc.column": "Cột",
+ "library.ifc.appliance": "Thiết bị gia dụng",
+ "library.ifc.fire_terminal": "Đầu chữa cháy",
+ "library.ifc.heat_exchanger": "Bộ trao đổi nhiệt",
+ "library.ifc.pump": "Bơm",
+ "library.ifc.tank": "Bồn chứa",
+ "library.ifc.transport": "Phần tử vận chuyển",
+ "library.ifc.valve": "Van",
+ "library.ifc.waste_terminal": "Đầu thoát nước thải",
+ "library.ifc.medical": "Thiết bị y tế"
 }

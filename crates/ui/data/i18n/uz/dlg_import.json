@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "to'r sifatida",
  "dlg.imp.skipped": "o'tkazib yuborildi",
  "dlg.imp.notes": "Izohlar: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "va yana {n} tur",
  "dlg.imp.no_levels": "Faylda sathlar yo'q: standart sath yaratildi",
  "dlg.imp.reimport_row": "Yangilandi {updated}, o'zgarishsiz {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} chiziq, {arcs} yoy, {texts} matn, {fills} to'ldirish, {layers} qatlam; birlik {unit} mm",
  "dlg.dw.summary_paper": "; qog'oz varaqlar {n} (qatlamga joylashtirilmagan)",
  "dlg.dw.summary_unknown": "; ko'chirilmadi: {list}",
- "dlg.dw.summary_more": " va yana {n} tur",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " va yana {n} tur"
 }

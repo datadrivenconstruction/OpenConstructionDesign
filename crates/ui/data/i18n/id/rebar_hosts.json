@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Host: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Kolom",
  "rebar_hosts.kind.beam": "Balok",
  "rebar_hosts.kind.wall": "Dinding",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Mesh masuk ke dinding, pelat, dan pondasi, bukan kolom atau balok.",
  "rebar_hosts.why.bars_plate": "Batang memanjang dan sengkang masuk ke kolom dan balok, bukan dinding, pelat, atau pondasi.",
  "rebar_hosts.why.no_common_face": "Host yang dipilih tidak punya sisi selimut yang sama. Pilih host dari satu jenis.",
- "rebar_hosts.why.no_type": "Pilih tipe batang.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Pilih tipe batang."
 }

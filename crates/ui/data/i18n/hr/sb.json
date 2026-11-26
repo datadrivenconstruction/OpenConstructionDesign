@@ -41,5 +41,7 @@
  "sb.save.fresh": "Nema izmjena",
  "sb.save.save": "Spremi",
  "sb.save.ifc": "Spremi IFC kopiju",
- "sb.save.autosave": "Automatsko spremanje"
+ "sb.save.autosave": "Automatsko spremanje",
+ "sb.more.title": "Više",
+ "sb.more.desc": "Stavke trake stanja koje ne stanu pri ovoj širini."
 }

@@ -12,6 +12,7 @@
  "links.loaded": "dimuat",
  "links.not_loaded": "belum dimuat",
  "links.loading": "memuat…",
+ "links.loading_all": "Memuat tautan",
  "links.levels": "level",
  "links.elements": "elemen",
  "links.offset": "Ofset:",

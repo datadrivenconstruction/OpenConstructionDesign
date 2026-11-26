@@ -12,6 +12,7 @@
  "links.loaded": "завантажено",
  "links.not_loaded": "не завантажено",
  "links.loading": "завантаження…",
+ "links.loading_all": "Завантаження посилань",
  "links.levels": "рівнів",
  "links.elements": "елементів",
  "links.offset": "Зсув:",

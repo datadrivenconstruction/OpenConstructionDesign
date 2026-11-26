@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "میزبان‌ها: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "ستون",
  "rebar_hosts.kind.beam": "تیر",
  "rebar_hosts.kind.wall": "دیوار",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "مش به دیوارها، دال‌ها و پی‌ها می‌رود، نه ستون‌ها یا تیرها.",
  "rebar_hosts.why.bars_plate": "میلگرد طولی و خاموت به ستون‌ها و تیرها می‌رود، نه دیوارها، دال‌ها یا پی‌ها.",
  "rebar_hosts.why.no_common_face": "میزبان‌های انتخاب‌شده وجه پوششی مشترک ندارند. میزبان‌های از یک نوع را انتخاب کنید.",
- "rebar_hosts.why.no_type": "یک نوع میلگرد انتخاب کنید.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "یک نوع میلگرد انتخاب کنید."
 }

@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "A Ctrl+Enter alkalmaz, az Esc pedig leállítja a kérést a tervből vagy a 3D-nézetből is, kivéve ha szövegmezőbe gépel.",
  "ai.plan.rebased": "Frissítve az aktuális modellhez: {what}",
  "ai.value.bad": "„{text}” nem érvényes érték ehhez: {name}",
+ "ai.value.bad_len": "A(z) «{name}» mező: {why}",
  "ai.value.both": "Az MI-asszisztens erre az értékre változtatta: {agent}, miközben Ön ezt adta meg: {mine}. Válassza ki, melyiket tartsa meg.",
  "ai.value.choose_first": "Előbb válassza ki a saját értékét vagy az MI-asszisztensét a kártyán",
  "ai.value.elem": "{n}. elem: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Adjon meg másik értéket, vagy vegye ki a tételt a jelölésből, hogy ne kerüljön az Alkalmazásba.",
  "ai.value.tip": "Javítsa az értéket a vázlatban; a modell csak az Alkalmazás után változik. Az Enter megerősít, az Esc visszaállít.",
  "ai.value.use_mine": "Ezt használja: {mine}",
- "ai.value.was": "korábban: {old}",
- "ai.value.bad_len": "A(z) «{name}» mező: {why}"
+ "ai.value.was": "korábban: {old}"
 }

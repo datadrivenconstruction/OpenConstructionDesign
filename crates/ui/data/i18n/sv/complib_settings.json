@@ -48,5 +48,13 @@
  "settings.lib_open": "Komponentbibliotek",
  "settings.lib_open_desc": "Bläddra bland de inbyggda familjerna, de i projektet och dina egna",
  "settings.lib_dir": "Min bibliotekmapp",
- "settings.lib_dir_desc": "Familjefiler (.ddcf) som placeras här visas under Mitt bibliotek. DDC_COMPONENTS_DIR flyttar den."
+ "settings.lib_dir_desc": "Familjefiler (.ddcf) som placeras här visas under Mitt bibliotek. DDC_COMPONENTS_DIR flyttar den.",
+ "complib.fam.sprinkler_head": "Sprinklerhuvud",
+ "complib.fam.fire_pump": "Brandpump",
+ "complib.fam.pressurisation_fan": "Övertrycksfläkt",
+ "complib.fam.lift_car": "Hisskorg",
+ "complib.fam.lift_landing_door": "Hissdörr (plan)",
+ "complib.fam.lift_pit": "Hissgrop",
+ "complib.fam.lift_overrun": "Hisschaktets överslag",
+ "complib.fam.lift_machine": "Hissmaskin"
 }

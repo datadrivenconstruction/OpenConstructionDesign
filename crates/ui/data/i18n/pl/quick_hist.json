@@ -72,6 +72,7 @@
  "quick.cat.beam": "Belki",
  "quick.cat.ceiling": "Sufity",
  "quick.cat.structure": "Konstrukcja",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} z {all}",
  "quick.hud.type": "Typ",
  "quick.hud.height": "Wysokość",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Nie można odczytać wartości „{v}”",
  "quick.menu.repeat": "Powtórz: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Ostatnie",
  "quick.bar.repeat_tip": "{cmd} · Enter powtarza",
  "quick.repeat.none": "Nie ma jeszcze czego powtórzyć",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Wstecz",
  "quick.tips.next": "Dalej",
  "quick.tips.finish": "Gotowe",
- "quick.tips.never": "Nie pokazuj ponownie",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Nie pokazuj ponownie"
 }

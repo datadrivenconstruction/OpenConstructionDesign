@@ -20,6 +20,7 @@
  "sched_import.why_ro": "فقط‌خواندنی",
  "sched_import.why_locked": "مقدار قفل‌شده",
  "sched_import.why_bad": "مقدار نامعتبر",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "اعمال {n} تغییر",
  "sched_import.cancel": "لغو",
  "sched_import.applied": "{n} سلول وارد شد (یک مرحله واگرد)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "نتیجه‌ی فرمول، اعمال نشد: {n}",
  "sched_import.no_id_rows": "ردیف‌های بدون Id، خوانده نشد: {n} (ردیف‌های {rows})",
  "sched_import.more": "… {n} مورد دیگر",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(خالی)",
  "sched_import.reading": "در حال خواندن کتاب…",
  "sched_import.resaved": "کتاب پس از اولین پیش‌نمایش دوباره ذخیره شد: این پیش‌نمایش محتوای جدید را نشان می‌دهد",
- "sched_import.resaved_reading": "کتاب دوباره ذخیره شد: چیزی اعمال نشد، برای پیش‌نمایش تازه دوباره خوانده می‌شود",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "کتاب دوباره ذخیره شد: چیزی اعمال نشد، برای پیش‌نمایش تازه دوباره خوانده می‌شود"
 }

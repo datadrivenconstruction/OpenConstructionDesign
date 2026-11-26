@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Ricalco dei muri da un disegno",
  "api.cmd.attachments_list": "File allegati alla chat e requisiti di progetto confermati",
  "api.cmd.attachments_read": "Leggi un intervallo di pagine, righe di tabella o l'immagine di un file allegato",
- "api.cmd.underlay_trace": "Muri in bozza ricalcati da un disegno allegato"
+ "api.cmd.underlay_trace": "Muri in bozza ricalcati da un disegno allegato",
+ "ai.tool.plan_from_image": "Lettura di una pianta da un'immagine",
+ "api.cmd.plan_from_image": "Bozza di muri, porte, finestre e locali ricavata da un'immagine di pianta o da una pagina PDF allegata"
 }

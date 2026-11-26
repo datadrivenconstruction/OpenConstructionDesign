@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "rettet efter {n} afviste forsøg, ca. {tokens} tokens",
+ "ai.fam_offer": "En agent foreslog familien {name}",
+ "ai.fam_offer.open": "Åbn i familieeditoren",
+ "ai.fam_offer.dismiss": "Afvis",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Kontrollerer…",
+ "fe.ai.clean": "Kontrollen fandt intet",
+ "fe.ai.check_values": "Kontrollér med værdier",
+ "fe.ai.lines": "linjer {n}",
+ "fe.ai.changes": "{n} ændringer i forhold til den tidligere version",
+ "fe.ai.added": "tilføjet: {head} {name}",
+ "fe.ai.removed": "fjernet: {head} {name}",
+ "fe.ai.changed": "ændret: {head} {name}",
+ "fe.ai.reject": "Afvis"
+}

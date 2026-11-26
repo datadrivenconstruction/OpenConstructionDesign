@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Farbig",
+ "cmd.ui.icons.color": "Farbige Symbole",
+ "cmd.ui.icons.color.desc": "Zeichenstil der Symbole",
+ "theme.icons.hierarchical": "Hierarchisch",
+ "cmd.ui.icons.hierarchical": "Hierarchische Symbole",
+ "cmd.ui.icons.hierarchical.desc": "Zeichenstil der Symbole",
+ "theme.icons.isometric": "Isometrisch",
+ "cmd.ui.icons.isometric": "Isometrische Symbole",
+ "cmd.ui.icons.isometric.desc": "Zeichenstil der Symbole",
+ "theme.icons.monoline": "Einlinie",
+ "cmd.ui.icons.monoline": "Einlinien-Symbole",
+ "cmd.ui.icons.monoline.desc": "Zeichenstil der Symbole"
+}

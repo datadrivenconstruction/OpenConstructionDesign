@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name} : {n}",
  "sel_chip.opt.sel_hint": "Cliquez un élément pour le sélectionner. Ctrl ajoute, Maj retire.",
- "sel_chip.opt.units": "Unités",
- "sel_chip.sel_chip": "{name} : {n}"
+ "sel_chip.opt.units": "Unités"
 }

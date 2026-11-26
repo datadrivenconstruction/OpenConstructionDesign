@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if()-haarat eroavat",
  "pe.msg_what_args": "argumentit",
  "pe.msg_and": " ja ",
+ "pe.msg_incompatible": "{w}: yhteensopimattomat yksiköt {dims}",
  "pe.text_no_formula": "tekstiparametreihin ei voi antaa kaavaa",
  "pe.circular": "kehäviite: {text}",
- "pe.depends_invalid": "riippuu virheellisestä “{b}”",
- "pe.msg_incompatible": "{w}: yhteensopimattomat yksiköt {dims}"
+ "pe.depends_invalid": "riippuu virheellisestä “{b}”"
 }

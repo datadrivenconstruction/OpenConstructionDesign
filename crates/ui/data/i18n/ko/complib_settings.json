@@ -48,5 +48,13 @@
  "settings.lib_open": "구성요소 라이브러리",
  "settings.lib_open_desc": "기본 제공 패밀리, 프로젝트의 패밀리와 내 패밀리를 찾아봅니다",
  "settings.lib_dir": "내 라이브러리 폴더",
- "settings.lib_dir_desc": "여기에 둔 패밀리 파일(.ddcf)은 내 라이브러리 아래에 표시됩니다. DDC_COMPONENTS_DIR로 위치를 옮길 수 있습니다."
+ "settings.lib_dir_desc": "여기에 둔 패밀리 파일(.ddcf)은 내 라이브러리 아래에 표시됩니다. DDC_COMPONENTS_DIR로 위치를 옮길 수 있습니다.",
+ "complib.fam.sprinkler_head": "스프링클러 헤드",
+ "complib.fam.fire_pump": "소방 펌프",
+ "complib.fam.pressurisation_fan": "가압 팬",
+ "complib.fam.lift_car": "승강기 카",
+ "complib.fam.lift_landing_door": "승강장 도어",
+ "complib.fam.lift_pit": "승강기 피트",
+ "complib.fam.lift_overrun": "승강기 오버헤드",
+ "complib.fam.lift_machine": "승강기 구동기"
 }

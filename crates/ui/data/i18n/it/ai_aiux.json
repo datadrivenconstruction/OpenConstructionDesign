@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Invio applica ed Esc ferma la richiesta anche dal piano o dalla vista 3D, a meno che non si stia scrivendo in un campo di testo.",
  "ai.plan.rebased": "Aggiornato sul modello attuale: {what}",
  "ai.value.bad": "\"{text}\" non è un valore valido per {name}",
+ "ai.value.bad_len": "Campo «{name}»: {why}",
  "ai.value.both": "L'assistente IA ha cambiato questo valore in {agent} mentre tu inserivi {mine}. Scegli quale tenere.",
  "ai.value.choose_first": "Prima scegli il tuo valore o quello dell'assistente IA sulla scheda",
  "ai.value.elem": "Elemento {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Inserisci un altro valore, oppure deseleziona la voce per escluderla da Applica.",
  "ai.value.tip": "Correggi il valore nella bozza; il modello cambia solo con Applica. Invio conferma, Esc ripristina.",
  "ai.value.use_mine": "Usa {mine}",
- "ai.value.was": "era {old}",
- "ai.value.bad_len": "Campo «{name}»: {why}"
+ "ai.value.was": "era {old}"
 }

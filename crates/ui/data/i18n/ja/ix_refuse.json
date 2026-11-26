@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "開口部 {w} は壁 {len} より広くなっています",
+ "ix.fix.opening_width": "幅 {w} mm",
+ "ix.fix.wall_extend": "壁を {len} mm まで延長"
+}

@@ -5,6 +5,7 @@
  "keys_import.new_head": "Шинэ түлхүүрүүд",
  "keys_import.changed_head": "Таны өөрийн түлхүүрүүдийг солино",
  "keys_import.conflicts_head": "Импортын дараах зөрчлүүд",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "хослол",
  "keys_import.kind_seq": "хоёр үсэг",
  "keys_import.unbound": "байхгүй",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Буцаагдаагүй: импортын дараа түлхүүрүүд засагдсан. Түлхүүрийн цонхоос тус тусад нь дахин тохируулна уу.",
  "keys_import.undo_none": "Буцаах зүйл алга: энэ сесст түлхүүрийн импорт байхгүй.",
  "keys_import.imported": "Түлхүүрүүд импортлогдлоо",
- "keys_import.imported_conflicts": "Түлхүүрүүд импортлогдлоо; зөрчил: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Түлхүүрүүд импортлогдлоо; зөрчил: {n}"
 }

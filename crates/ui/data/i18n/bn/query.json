@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}” বদলানো যায় না: {why}",
  "query.err.op_no_field": "ক্ষেত্র ছাড়া অপারেটর",
  "query.err.positive": "{key}: মান শূন্যের বেশি হতে হবে",
+ "query.err.raw": "{text}",
  "query.err.text_field": "ক্ষেত্র “{key}” টেক্সট, সূত্র প্রযোজ্য নয়",
  "query.err.unclosed_paren": "বন্ধনী বন্ধ করা হয়নি",
  "query.err.unclosed_quote": "উদ্ধৃতি চিহ্ন বন্ধ করা হয়নি",
@@ -27,6 +28,5 @@
  "query.why.curtain": "কার্টেন ওয়াল তাদের নিজস্ব প্রপার্টিতে বদলানো হয়",
  "query.why.opening_type": "ওপেনিংয়ের টাইপ তার আকার অনুসরণ করে: “-> width=… height=…”",
  "query.why.slab_thickness": "ফ্লোরের পুরুত্ব টাইপ দিয়ে ঠিক হয়: “-> type=…”",
- "query.why.wall_thickness": "দেয়ালের পুরুত্ব টাইপ দিয়ে ঠিক হয়: “-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "দেয়ালের পুরুত্ব টাইপ দিয়ে ঠিক হয়: “-> type=…”"
 }

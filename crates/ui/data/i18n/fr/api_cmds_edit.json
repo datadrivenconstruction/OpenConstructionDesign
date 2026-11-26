@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Joindre, désolidariser ou changer les jonctions de géométrie",
  "api.cmd.place_footings": "Placer une semelle sous chaque poteau d’un niveau",
  "api.cmd.create_terrain": "Créer un terrain à partir de points de relevé ou d'un plan incliné",
- "api.cmd.script_recipes": "Lire les blocs de script et les recettes des constructions libres"
+ "api.cmd.set_material": "Définir l’aspect d’un matériau en 3D",
+ "api.cmd.script_recipes": "Lire les blocs de script et les recettes des constructions libres",
+ "api.cmd.generate_block": "Planifier un îlot de bâtiments sur des parcelles avec des règles de site communes",
+ "api.cmd.measure_save": "Enregistrer une mesure dans une vue",
+ "api.cmd.edit_mass": "Ajouter une étape d’historique à un volume : extrusion, ébauche, coque, congé, chanfrein, décalage ou scission",
+ "api.cmd.mass_to_family": "Créer une famille de composants à partir d’une chronologie de volume"
 }

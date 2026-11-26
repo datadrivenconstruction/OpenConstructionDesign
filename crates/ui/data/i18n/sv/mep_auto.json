@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatiska byggnadsinstallationer",
+ "gen.mep_auto_hint": "Låter generatorn och AI-assistenten dra rör, kanaler och ledningar på egen hand. Avstängt som standard för denna region; du kan slå på det. Manuell dragning finns alltid tillgänglig."
+}

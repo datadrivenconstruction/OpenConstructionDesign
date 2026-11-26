@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Töltse le az aktuális szerkesztőt az ERP oldalon: {url}",
  "erp.err.unsupported.admin": "Kérje el az aktuális szerkesztőt az ERP-adminisztrátortól",
  "erp.err.throttled_in": "Túl sok próbálkozás. Próbálja újra {s} mp múlva",
+ "erp.err.throttled_ready": "A várakozás véget ért. Próbálja újra",
  "erp.err.imported": "Az ERP {n}. revíziója importált modell: a szerkesztő egyelőre nem tudja megnyitni, és nem tud rá publikálni",
  "erp.action.download": "Nyissa meg a szerkesztő letöltési oldalát az ERP-ben",
  "erp.action.new_link": "Kérjen új hivatkozást az ERP oldalon",

@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "距离",
+ "cmd.e3d.measure.gap": "面之间的间隙",
+ "cmd.e3d.measure.angle": "角度",
+ "cmd.e3d.measure.area": "面或房间的面积 / 周长",
+ "cmd.e3d.measure.volume": "构件体积",
+ "cmd.e3d.measure.slope": "坡度",
+ "cmd.e3d.measure.chain": "点链",
+ "measure.orphan": "引用丢失",
+ "measure.not_planar": "面不平行",
+ "measure.unsupported": "无法测量此对象",
+ "cmd.ann.measure_distance": "测量距离",
+ "cmd.ann.measure_gap": "测量面之间的间隙",
+ "cmd.ann.measure_angle": "测量角度",
+ "cmd.ann.measure_area": "测量面积",
+ "hint.measure.first": "测量：单击墙面（或点）· Esc — 退出",
+ "hint.measure.second": "测量：单击第二个面 · Esc — 取消第一次拾取",
+ "measure.no_face": "此处没有墙面"
+}

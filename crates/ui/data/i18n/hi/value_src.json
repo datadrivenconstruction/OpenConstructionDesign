@@ -24,5 +24,21 @@
  "value_src.verified_n": "सत्यापित मान: {n}",
  "value_src.bulk_note": "AI द्वारा भरे मान, असत्यापित: {n}",
  "value_src.bulk_verify": "सत्यापित चिह्नित करें ({n})",
- "value_src.bulk_tip": "चयन के हर AI-भरे मान को सत्यापित चिह्नित करता है, एक पूर्ववत चरण"
+ "value_src.bulk_tip": "चयन के हर AI-भरे मान को सत्यापित चिह्नित करता है, एक पूर्ववत चरण",
+ "origin.title": "मूल स्रोत",
+ "origin.made_by": "बनाने वाला",
+ "origin.request": "अनुरोध",
+ "origin.at": "लागू किया गया",
+ "origin.recipe": "रेसिपी “{name}”, भाग {part}",
+ "origin.ai": "AI असिस्टेंट ({model})",
+ "origin.agent": "एजेंट {name}",
+ "origin.script": "स्क्रिप्ट {name}",
+ "origin.xlsx": "XLSX स्प्रेडशीट",
+ "origin.user": "एक व्यक्ति",
+ "origin.import": "इम्पोर्ट",
+ "origin.import_file": "{file} से इम्पोर्ट",
+ "origin.unknown": "इतिहास में नहीं",
+ "origin.held": "हाथ से संपादित: रेसिपी दोबारा चलाने पर यह जैसा है वैसा रहता है",
+ "origin.rebuilt": "रेसिपी दोबारा चलाने पर यह फिर बनता है; इसे जैसा है वैसा रखने के लिए हाथ से संपादित करें",
+ "origin.ai_values": "AI द्वारा भरे मान: {n}, असत्यापित: {open}"
 }

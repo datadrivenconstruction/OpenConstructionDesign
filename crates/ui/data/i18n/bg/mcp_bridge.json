@@ -18,6 +18,7 @@
  "mcp.set.error": "Сървърът не е стартиран: {error}",
  "mcp.set.new": "Нов токен",
  "mcp.set.port": "Порт",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Всеки пакет се проверява първо и е една стъпка за отмяна. Могат да се свързват само програми на този компютър.",
  "mcp.set.show": "Покажи",
  "mcp.set.state_failed": "Не работи",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Състояние",
  "mcp.set.access": "Достъп",
  "mcp.set.config": "Конфигурация",
- "mcp.set.policy": "Прилагане",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Прилагане"
 }

@@ -24,5 +24,21 @@
  "value_src.verified_n": "Zweryfikowane wartości: {n}",
  "value_src.bulk_note": "Wartości uzupełnione przez AI, niezweryfikowane: {n}",
  "value_src.bulk_verify": "Oznacz jako zweryfikowane ({n})",
- "value_src.bulk_tip": "Oznacza wszystkie wartości uzupełnione przez AI w zaznaczeniu jako zweryfikowane, jednym krokiem cofania"
+ "value_src.bulk_tip": "Oznacza wszystkie wartości uzupełnione przez AI w zaznaczeniu jako zweryfikowane, jednym krokiem cofania",
+ "origin.title": "Pochodzenie",
+ "origin.made_by": "Utworzył",
+ "origin.request": "Żądanie",
+ "origin.at": "Zastosowano",
+ "origin.recipe": "przepis „{name}”, część {part}",
+ "origin.ai": "asystent AI ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "skrypt {name}",
+ "origin.xlsx": "Arkusz XLSX",
+ "origin.user": "osoba",
+ "origin.import": "import",
+ "origin.import_file": "import z {file}",
+ "origin.unknown": "brak w historii",
+ "origin.held": "Edytowane ręcznie: ponowne uruchomienie przepisu pozostawia je bez zmian",
+ "origin.rebuilt": "Ponowne uruchomienie przepisu odbuduje je; edytuj ręcznie, aby zostało bez zmian",
+ "origin.ai_values": "Wartości wypełnione przez AI: {n}, niezweryfikowane: {open}"
 }

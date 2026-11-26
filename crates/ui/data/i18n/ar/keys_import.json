@@ -5,6 +5,7 @@
  "keys_import.new_head": "مفاتيح جديدة",
  "keys_import.changed_head": "يستبدل مفاتيحك الخاصة",
  "keys_import.conflicts_head": "تعارضات بعد الاستيراد",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "اختصار مركّب",
  "keys_import.kind_seq": "حرفان",
  "keys_import.unbound": "لا شيء",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "لم يُتراجع: عُدّلت المفاتيح بعد الاستيراد. أعِد ضبطها واحداً واحداً في نافذة المفاتيح.",
  "keys_import.undo_none": "لا يوجد ما يُتراجع عنه: لا يوجد استيراد مفاتيح في هذه الجلسة.",
  "keys_import.imported": "تم استيراد المفاتيح",
- "keys_import.imported_conflicts": "تم استيراد المفاتيح؛ التعارضات: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "تم استيراد المفاتيح؛ التعارضات: {n}"
 }

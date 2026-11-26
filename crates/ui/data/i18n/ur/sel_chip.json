@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "منتخب کرنے کے لیے عنصر پر کلک کریں۔ Ctrl شامل کرتا ہے، Shift ہٹاتا ہے۔",
- "sel_chip.opt.units": "اکائیاں",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "اکائیاں"
 }

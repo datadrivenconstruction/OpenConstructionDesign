@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Gabung, lepas, atau ganti sambungan geometri",
  "api.cmd.place_footings": "Tempatkan pondasi di setiap kolom pada level",
  "api.cmd.create_terrain": "Buat medan dari titik survei atau bidang miring",
- "api.cmd.script_recipes": "Baca blok skrip dan resep konstruksi bebas"
+ "api.cmd.set_material": "Atur tampilan material dalam 3D",
+ "api.cmd.script_recipes": "Baca blok skrip dan resep konstruksi bebas",
+ "api.cmd.generate_block": "Rencanakan blok bangunan pada persil dengan aturan tapak bersama",
+ "api.cmd.measure_save": "Simpan pengukuran ke dalam tampilan",
+ "api.cmd.edit_mass": "Tambah langkah riwayat ke massa: dorong, draf, cangkang, fillet, chamfer, offset, atau pisah",
+ "api.cmd.mass_to_family": "Buat famili komponen dari lini masa massa"
 }

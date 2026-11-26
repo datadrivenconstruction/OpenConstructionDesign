@@ -11,6 +11,7 @@
  "ai.step.s": "{n} 秒",
  "ai.step.min": "{m} 分",
  "ai.step.min_s": "{m} 分 {s} 秒",
+ "ai.step.dec": ".",
  "ai.step.details": "詳細",
  "ai.step.copy": "詳細をコピー",
  "ai.step.group.read": "モデルを読み取り",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "手順の実行中にモデルが変更されました",
  "ai.step.why.skipped": "この手順は実行されませんでした: ターンが終了しました",
  "ai.step.why.other": "この手順は完了しませんでした",
- "ai.step.unknown": "不明なツール",
- "ai.step.dec": "."
+ "ai.step.unknown": "不明なツール"
 }

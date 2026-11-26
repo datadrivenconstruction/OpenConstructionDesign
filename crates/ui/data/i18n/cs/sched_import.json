@@ -20,6 +20,7 @@
  "sched_import.why_ro": "jen pro čtení",
  "sched_import.why_locked": "zamčená hodnota",
  "sched_import.why_bad": "chybná hodnota",
+ "sched_import.refusal": "{at} {col} „{text}“: {why}",
  "sched_import.apply": "Použít změny: {n}",
  "sched_import.cancel": "Zrušit",
  "sched_import.applied": "Naimportováno buněk: {n} (jeden krok zpět)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Výsledky vzorců, neuplatněno: {n}",
  "sched_import.no_id_rows": "Řádky bez Id, nenačteno: {n} (řádky {rows})",
  "sched_import.more": "… ještě {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(prázdné)",
  "sched_import.reading": "Čtení sešitu…",
  "sched_import.resaved": "Sešit byl po prvním náhledu znovu uložen: tento náhled zobrazuje nový obsah",
- "sched_import.resaved_reading": "Sešit byl znovu uložen: nic nepoužito, pro nový náhled se načítá znovu",
- "sched_import.refusal": "{at} {col} „{text}“: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Sešit byl znovu uložen: nic nepoužito, pro nový náhled se načítá znovu"
 }

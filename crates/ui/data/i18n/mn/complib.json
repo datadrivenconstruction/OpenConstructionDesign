@@ -18,7 +18,7 @@
  "complib.ready.no": "бичигдээгүй",
  "complib.edited": "Засагдсан",
  "complib.edited_tip": "Төслийн гэр бүл суурилагдсан хувилбараасаа ялгаатай",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Утга",
- "complib.armed": "Бүрэлдэхүүн: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Бүрэлдэхүүн: {name}"
 }

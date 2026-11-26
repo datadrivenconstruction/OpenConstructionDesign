@@ -20,6 +20,7 @@
  "sched_import.why_ro": "vain luettavissa",
  "sched_import.why_locked": "lukittu arvo",
  "sched_import.why_bad": "virheellinen arvo",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Käytä {n} muutosta",
  "sched_import.cancel": "Peruuta",
  "sched_import.applied": "Tuotiin {n} solua (yksi kumoamisvaihe)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Kaavatulokset, ei sovellettu: {n}",
  "sched_import.no_id_rows": "Rivit ilman Id:tä, ei luettu: {n} (rivit {rows})",
  "sched_import.more": "… {n} lisää",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(tyhjä)",
  "sched_import.reading": "Luetaan työkirjaa…",
  "sched_import.resaved": "Työkirja tallennettiin uudelleen ensimmäisen esikatselun jälkeen: tämä esikatselu näyttää uuden sisällön",
- "sched_import.resaved_reading": "Työkirja tallennettiin uudelleen: mitään ei käytetty, luetaan se uudelleen uutta esikatselua varten",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Työkirja tallennettiin uudelleen: mitään ei käytetty, luetaan se uudelleen uutta esikatselua varten"
 }

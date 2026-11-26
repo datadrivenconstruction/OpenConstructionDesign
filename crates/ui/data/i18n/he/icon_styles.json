@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "צבע",
+ "cmd.ui.icons.color": "סמלים צבעוניים",
+ "cmd.ui.icons.color.desc": "סגנון הציור של הסמלים",
+ "theme.icons.hierarchical": "היררכי",
+ "cmd.ui.icons.hierarchical": "סמלים היררכיים",
+ "cmd.ui.icons.hierarchical.desc": "סגנון הציור של הסמלים",
+ "theme.icons.isometric": "איזומטרי",
+ "cmd.ui.icons.isometric": "סמלים איזומטריים",
+ "cmd.ui.icons.isometric.desc": "סגנון הציור של הסמלים",
+ "theme.icons.monoline": "קו יחיד",
+ "cmd.ui.icons.monoline": "סמלי קו יחיד",
+ "cmd.ui.icons.monoline.desc": "סגנון הציור של הסמלים"
+}

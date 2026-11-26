@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "като мрежи",
  "dlg.imp.skipped": "пропуснати",
  "dlg.imp.notes": "Бележки: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "и още {n} вида",
  "dlg.imp.no_levels": "Файлът няма нива: създадено е ниво по подразбиране",
  "dlg.imp.reimport_row": "Актуализирани {updated}, непроменени {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} линии, {arcs} дъги, {texts} текста, {fills} запълвания, {layers} слоя; мерна единица {unit} mm",
  "dlg.dw.summary_paper": "; листа за печат {n} (не са поставени на подложката)",
  "dlg.dw.summary_unknown": "; не са прехвърлени: {list}",
- "dlg.dw.summary_more": " и още {n} вида",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " и още {n} вида"
 }

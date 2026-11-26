@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Мачталуу көтөргүч",
+ "fam.name.mast_lift": "Мачталуу көтөргүч",
+ "gen.rule.steel.check.self_weight.desc": "Кесимден жогорку мунаранын бир метр бийиктигине салмагы.",
+ "gen.rule.steel.check.self_weight.title": "Болоттун метрине салмагы",
+ "gen.rule.steel.check.strut_share.desc": "Горизонталь өз түйүнүндө кармаган пояс күчүнүн үлүшү.",
+ "gen.rule.steel.check.strut_share.title": "Горизонталдын үлүшү",
+ "gen.rule.steel.out.lift_box_d.desc": "Мачталуу көтөргүчкө мачтасы менен керек план тереңдиги; кабаттар анын үстүндө ачык.",
+ "gen.rule.steel.out.lift_box_d.title": "Көтөргүч кутусунун тереңдиги",
+ "gen.rule.steel.out.lift_box_w.desc": "Мачталуу көтөргүчкө керек план туурасы; кабаттар анын үстүндө ачык.",
+ "gen.rule.steel.out.lift_box_w.title": "Көтөргүч кутусунун туурасы",
+ "gen.rule.steel.out.lift_offset.desc": "Көтөргүчтүн огунан, план байланышынан бош аралыгы.",
+ "gen.rule.steel.out.lift_offset.title": "Көтөргүчтүн огунан четтөөсү",
+ "gen.rule.steel.out.lifts.desc": "Өзөк боюнча көтөргүчтөр: экинчи аянтчага, анан үстүнө чейин.",
+ "gen.rule.steel.out.lifts.title": "Көтөргүч рейстери"
+}

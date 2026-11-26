@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Tür",
  "collab_diff.diff.col.field": "Alan",
  "collab_diff.diff.col.old": "Önceki",
- "collab_diff.diff.col.new": "Şimdi"
+ "collab_diff.diff.col.new": "Şimdi",
+ "collab_diff.reveal.title": "İnşa süreci",
+ "collab_diff.reveal.start": "İnşa edildiği gibi göster",
+ "collab_diff.reveal.play": "Oynat",
+ "collab_diff.reveal.pause": "Duraklat",
+ "collab_diff.reveal.back": "Geriye",
+ "collab_diff.reveal.close": "Kapat",
+ "collab_diff.reveal.nothing": "Gösterilecek bir şey yok: değişen hiçbir eleman 3D sahnede değil.",
+ "collab_diff.reveal.journal_busy": "Günlük okunuyor…",
+ "collab_diff.reveal.journal_play": "Günlüğü oynat"
 }

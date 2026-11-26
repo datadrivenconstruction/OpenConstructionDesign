@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Основи: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Колона",
  "rebar_hosts.kind.beam": "Балка",
  "rebar_hosts.kind.wall": "Стіна",
@@ -47,6 +48,5 @@
  "rebar_hosts.why.area_linear": "Сітка йде в стіни, плити і фундаменти, а не в колони чи балки.",
  "rebar_hosts.why.bars_plate": "Поздовжні стрижні і хомути йдуть у колони і балки, а не в стіни, плити чи фундаменти.",
  "rebar_hosts.why.no_common_face": "Вибрані основи не мають спільної грані захисного шару. Виберіть основи одного типу.",
- "rebar_hosts.why.no_type": "Виберіть тип арматури.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Виберіть тип арматури."
 }

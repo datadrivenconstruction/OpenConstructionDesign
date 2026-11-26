@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "ホスト: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "柱",
  "rebar_hosts.kind.beam": "梁",
  "rebar_hosts.kind.wall": "壁",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "メッシュは壁、スラブ、基礎に配置され、柱や梁には配置されません。",
  "rebar_hosts.why.bars_plate": "主筋とスターラップは柱と梁に配置され、壁、スラブ、基礎には配置されません。",
  "rebar_hosts.why.no_common_face": "選択したホストに共通のかぶり面がありません。同じ種類のホストを選択してください。",
- "rebar_hosts.why.no_type": "鉄筋タイプを選択してください。",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "鉄筋タイプを選択してください。"
 }

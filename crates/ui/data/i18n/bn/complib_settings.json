@@ -48,5 +48,13 @@
  "settings.lib_open": "কম্পোনেন্ট লাইব্রেরি",
  "settings.lib_open_desc": "অন্তর্নির্মিত ফ্যামিলি, প্রকল্পের ফ্যামিলি ও নিজের ফ্যামিলি দেখুন",
  "settings.lib_dir": "আমার লাইব্রেরি ফোল্ডার",
- "settings.lib_dir_desc": "এখানে রাখা ফ্যামিলি ফাইল (.ddcf) আমার লাইব্রেরিতে দেখা যাবে। DDC_COMPONENTS_DIR দিয়ে এর অবস্থান বদলায়।"
+ "settings.lib_dir_desc": "এখানে রাখা ফ্যামিলি ফাইল (.ddcf) আমার লাইব্রেরিতে দেখা যাবে। DDC_COMPONENTS_DIR দিয়ে এর অবস্থান বদলায়।",
+ "complib.fam.sprinkler_head": "স্প্রিংকলার হেড",
+ "complib.fam.fire_pump": "ফায়ার পাম্প",
+ "complib.fam.pressurisation_fan": "চাপ-বৃদ্ধি ফ্যান",
+ "complib.fam.lift_car": "লিফট কার",
+ "complib.fam.lift_landing_door": "লিফট ল্যান্ডিং দরজা",
+ "complib.fam.lift_pit": "লিফট পিট",
+ "complib.fam.lift_overrun": "লিফট ওভাররান",
+ "complib.fam.lift_machine": "লিফট মেশিন"
 }

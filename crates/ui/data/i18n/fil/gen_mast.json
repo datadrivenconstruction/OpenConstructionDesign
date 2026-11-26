@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Mast Lift",
+ "fam.name.mast_lift": "Mast Lift",
+ "gen.rule.steel.check.self_weight.desc": "Bigat ng tore sa itaas ng isang hiwa, kada metro ng taas.",
+ "gen.rule.steel.check.self_weight.title": "Bigat ng bakal kada metro",
+ "gen.rule.steel.check.strut_share.desc": "Bahagi ng puwersa ng chord na hawak ng horizontal sa node nito.",
+ "gen.rule.steel.check.strut_share.title": "Bahagi ng horizontal",
+ "gen.rule.steel.out.lift_box_d.desc": "Lalim sa plano na kailangan ng mast lift kasama ang mast nito; bukas ang mga sahig sa ibabaw nito.",
+ "gen.rule.steel.out.lift_box_d.title": "Lalim ng lift box",
+ "gen.rule.steel.out.lift_box_w.desc": "Lapad sa plano na kailangan ng mast lift; bukas ang mga sahig sa ibabaw nito.",
+ "gen.rule.steel.out.lift_box_w.title": "Lapad ng lift box",
+ "gen.rule.steel.out.lift_offset.desc": "Layo ng lift mula sa axis, malayo sa plan brace.",
+ "gen.rule.steel.out.lift_offset.title": "Offset ng lift mula sa axis",
+ "gen.rule.steel.out.lifts.desc": "Mga lift paakyat sa core: hanggang sa ikalawang platform, saka hanggang sa tuktok.",
+ "gen.rule.steel.out.lifts.title": "Mga takbo ng lift"
+}

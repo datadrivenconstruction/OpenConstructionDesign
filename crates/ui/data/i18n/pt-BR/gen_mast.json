@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Elevador de mastro",
+ "fam.name.mast_lift": "Elevador de mastro",
+ "gen.rule.steel.check.self_weight.desc": "Peso da torre acima de um corte, por metro de altura.",
+ "gen.rule.steel.check.self_weight.title": "Peso do aço por metro",
+ "gen.rule.steel.check.strut_share.desc": "Fração do esforço do banzo que um horizontal absorve em seu nó.",
+ "gen.rule.steel.check.strut_share.title": "Fração do horizontal",
+ "gen.rule.steel.out.lift_box_d.desc": "Profundidade em planta de que um elevador de mastro precisa com seu mastro; os pisos ficam abertos sobre ele.",
+ "gen.rule.steel.out.lift_box_d.title": "Profundidade da caixa do elevador",
+ "gen.rule.steel.out.lift_box_w.desc": "Largura em planta de que um elevador de mastro precisa; os pisos ficam abertos sobre ele.",
+ "gen.rule.steel.out.lift_box_w.title": "Largura da caixa do elevador",
+ "gen.rule.steel.out.lift_offset.desc": "Distância de um elevador ao eixo, livre do contraventamento em planta.",
+ "gen.rule.steel.out.lift_offset.title": "Afastamento do elevador ao eixo",
+ "gen.rule.steel.out.lifts.desc": "Elevadores ao longo do núcleo: até a segunda plataforma, depois até o topo.",
+ "gen.rule.steel.out.lifts.title": "Percursos dos elevadores"
+}

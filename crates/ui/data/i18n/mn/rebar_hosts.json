@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Хостууд: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Багана",
  "rebar_hosts.kind.beam": "Дам",
  "rebar_hosts.kind.wall": "Хана",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Тор нь хана, дал, суурьд орно; багана, дамд орохгүй.",
  "rebar_hosts.why.bars_plate": "Босоо арматур ба хүнд хүрээ нь багана, дамд орно; хана, дал, суурьд орохгүй.",
  "rebar_hosts.why.no_common_face": "Сонгосон хостууд нийтлэг хамгаалалтын гадаргуугүй байна. Нэг төрлийн хост сонгоно уу.",
- "rebar_hosts.why.no_type": "Арматурын төрлийг сонгоно уу.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Арматурын төрлийг сонгоно уу."
 }

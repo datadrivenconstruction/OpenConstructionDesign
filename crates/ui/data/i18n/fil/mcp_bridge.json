@@ -18,6 +18,7 @@
  "mcp.set.error": "Hindi nagsimula ang server: {error}",
  "mcp.set.new": "Bagong token",
  "mcp.set.port": "Daungan",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Sinusuri muna ang bawat batch at isang undo step ito. Ang mga program lang sa computer na ito ang makakakonekta.",
  "mcp.set.show": "Ipakita",
  "mcp.set.state_failed": "Hindi tumatakbo",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Katayuan",
  "mcp.set.access": "Pahintulot",
  "mcp.set.config": "Pagsasaayos",
- "mcp.set.policy": "Pag-apply",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Pag-apply"
 }

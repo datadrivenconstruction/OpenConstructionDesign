@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Kvadrantpunkt",
+ "snap.extension": "Pikendus",
+ "snap.parallel": "Seinaga paralleelselt",
+ "snap.tracking_x": "Jäädvustatud punkti X",
+ "snap.tracking_y": "Jäädvustatud punkti Y",
+ "snap.tracking_cross": "Juhtjoonte lõikumine",
+ "snap.equal_step": "Võrdne samm"
+}

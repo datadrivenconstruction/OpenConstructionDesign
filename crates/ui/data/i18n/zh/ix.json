@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "象限点",
+ "snap.extension": "延长线",
+ "snap.parallel": "平行于墙",
+ "snap.tracking_x": "已捕捉点的 X",
+ "snap.tracking_y": "已捕捉点的 Y",
+ "snap.tracking_cross": "辅助线交点",
+ "snap.equal_step": "等间距"
+}

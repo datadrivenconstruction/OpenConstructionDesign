@@ -64,6 +64,7 @@
  "topo.import.title": "Importă releveul",
  "topo.import.filter": "Releveu (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Cota punctului",
  "topo.opt.thickness": "Grosimea topo-solidului",
  "topo.opt.add_to_active": "Adaugă la topo-solidul activ",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importă",
  "topo.import.cancel": "Anulare",
  "topo.import.no_layers": "niciun strat ales",
- "topo.info.warnings": "Nu s-a construit:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Nu s-a construit:"
 }

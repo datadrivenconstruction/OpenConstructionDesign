@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "тор ретінде",
  "dlg.imp.skipped": "өткізілді",
  "dlg.imp.notes": "Ескертпелер: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "және тағы {n} түр",
  "dlg.imp.no_levels": "Файлда деңгейлер жоқ: әдепкі деңгей жасалды",
  "dlg.imp.reimport_row": "Жаңартылды {updated}, өзгеріссіз {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} сызық, {arcs} доға, {texts} мәтін, {fills} толтыру, {layers} қабат; бірлік {unit} мм",
  "dlg.dw.summary_paper": "; қағаз парақтары {n} (астыңғы сызбаға орналастырылмады)",
  "dlg.dw.summary_unknown": "; көшірілмеді: {list}",
- "dlg.dw.summary_more": " және тағы {n} түр",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " және тағы {n} түр"
 }

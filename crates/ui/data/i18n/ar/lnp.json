@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "لم تُغيَّر {n} فتحات ({why})",
  "lnp.params_changed": "القيم المتغيرة: {n}",
  "lnp.params_same": "لا تغييرات: {u} عنصر يحمل هذه القيمة بالفعل",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "حدّد اللوح الأول فقط لتحريره",
  "lnp.clip_from_wall": "نُسخت المعاملات من الجدار #{id}",
  "lnp.clip_from_opening": "نُسخت المعاملات من الفتحة #{id}",
- "lnp.match_from": "طُبّقت خصائص #{id} على {n} عنصر",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "طُبّقت خصائص #{id} على {n} عنصر"
 }

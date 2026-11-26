@@ -11,6 +11,7 @@
  "query.err.not_changed": "«{key}» قابل تغییر نیست: {why}",
  "query.err.op_no_field": "عملگر بدون فیلد",
  "query.err.positive": "{key}: مقدار باید بزرگ‌تر از صفر باشد",
+ "query.err.raw": "{text}",
  "query.err.text_field": "فیلد «{key}» متنی است و فرمول در آن کاربرد ندارد",
  "query.err.unclosed_paren": "پرانتز بسته‌کننده وجود ندارد",
  "query.err.unclosed_quote": "علامت نقل‌قول بسته‌کننده وجود ندارد",
@@ -27,6 +28,5 @@
  "query.why.curtain": "دیوارهای پرده‌ای در ویژگی‌های خودشان تغییر می‌کنند",
  "query.why.opening_type": "نوع بازشو تابع اندازه‌اش است: «-> width=… height=…»",
  "query.why.slab_thickness": "ضخامت دال توسط نوع تعیین می‌شود: «-> type=…»",
- "query.why.wall_thickness": "ضخامت دیوار توسط نوع تعیین می‌شود: «-> type=…»",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "ضخامت دیوار توسط نوع تعیین می‌شود: «-> type=…»"
 }

@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Unduh editor terbaru di halaman ERP {url}",
  "erp.err.unsupported.admin": "Minta admin ERP Anda untuk editor terbaru",
  "erp.err.throttled_in": "Terlalu banyak percobaan. Coba lagi dalam {s} dtk",
+ "erp.err.throttled_ready": "Waktu tunggu selesai. Anda dapat mencoba lagi",
  "erp.err.imported": "Revisi {n} di ERP adalah model yang diimpor: editor belum dapat membukanya atau mempublikasikan di atasnya",
  "erp.action.download": "Buka halaman unduhan editor di ERP",
  "erp.action.new_link": "Dapatkan tautan baru di halaman ERP",

@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Envolvente",
+ "gen.group.acoustic": "Aislación acústica",
+ "gen.rule.fire.insulation_class.title": "Clase de fuego de la aislación de la envolvente",
+ "gen.rule.fire.insulation_class.desc": "Peor clase de reacción al fuego que puede tener la aislación de muros exteriores y cubiertas; no se eligen composiciones con una aislación peor.",
+ "gen.rule.envelope.u_wall.title": "Valor U de muro exterior",
+ "gen.rule.envelope.u_wall.desc": "Mayor transmitancia térmica de un muro exterior; la aislación del muro se dimensiona para quedar bajo ese valor, así un clima más frío da un muro más grueso.",
+ "gen.rule.envelope.u_roof.title": "Valor U de cubierta",
+ "gen.rule.envelope.u_roof.desc": "Mayor transmitancia térmica de una cubierta; la aislación de la cubierta se dimensiona para quedar bajo ese valor.",
+ "gen.rule.envelope.u_ground.title": "Valor U de losa sobre terreno",
+ "gen.rule.envelope.u_ground.desc": "Mayor transmitancia térmica de la losa de piso sobre el terreno; la aislación bajo el radier se dimensiona para quedar bajo ese valor.",
+ "gen.rule.acoustic.rw_party.title": "Aislación acústica de muro medianero",
+ "gen.rule.acoustic.rw_party.desc": "Menor índice de reducción sonora Rw de un muro entre viviendas o junto a un pasillo común; el núcleo de albañilería se dimensiona por la ley de masa para alcanzarlo.",
+ "gen.rule.acoustic.rw_floor.title": "Aislación acústica de piso",
+ "gen.rule.acoustic.rw_floor.desc": "Menor índice de reducción sonora Rw de un piso entre pisos; la losa de hormigón se dimensiona por la ley de masa para alcanzarlo.",
+ "gen.why.e.asm_wall": "muros exteriores de {t} m de espesor con {ins} m de aislación: U {u} W/m2K, máximo {lim}",
+ "gen.why.e.asm_roof": "cubierta de {t} m de espesor con {ins} m de aislación: U {u} W/m2K, máximo {lim}",
+ "gen.why.e.asm_ground": "losa sobre terreno de {t} m de espesor con {ins} m de aislación: U {u} W/m2K, máximo {lim}",
+ "gen.why.e.asm_party": "muros medianeros de {t} m de espesor, {m} kg/m2: Rw {rw} dB por la ley de masa, mínimo {lim}",
+ "gen.why.e.asm_floor": "pisos de {t} m de espesor, {m} kg/m2: Rw {rw} dB por la ley de masa, mínimo {lim}"
+}

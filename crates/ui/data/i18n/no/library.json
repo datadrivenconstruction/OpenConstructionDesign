@@ -41,5 +41,16 @@
  "library.ifc.window": "Vindu",
  "library.ifc.stair": "Trapp",
  "library.ifc.pipe_fitting": "Rørdel",
- "library.ifc.duct_fitting": "Kanaldel"
+ "library.ifc.duct_fitting": "Kanaldel",
+ "library.ifc.beam": "Bjelke",
+ "library.ifc.column": "Søyle",
+ "library.ifc.appliance": "Apparat",
+ "library.ifc.fire_terminal": "Brannslokkingsterminal",
+ "library.ifc.heat_exchanger": "Varmeveksler",
+ "library.ifc.pump": "Pumpe",
+ "library.ifc.tank": "Tank",
+ "library.ifc.transport": "Transportelement",
+ "library.ifc.valve": "Ventil",
+ "library.ifc.waste_terminal": "Avløpsterminal",
+ "library.ifc.medical": "Medisinsk utstyr"
 }

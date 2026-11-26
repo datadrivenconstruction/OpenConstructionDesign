@@ -72,6 +72,7 @@
  "quick.cat.beam": "تیرها",
  "quick.cat.ceiling": "سقف‌ها",
  "quick.cat.structure": "سازه",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} از {all}",
  "quick.hud.type": "نوع",
  "quick.hud.height": "ارتفاع",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "مقدار «{v}» خوانده نشد",
  "quick.menu.repeat": "تکرار: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "اخیر",
  "quick.bar.repeat_tip": "{cmd} · Enter آن را تکرار می‌کند",
  "quick.repeat.none": "هنوز چیزی برای تکرار نیست",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "قبلی",
  "quick.tips.next": "بعدی",
  "quick.tips.finish": "انجام شد",
- "quick.tips.never": "دیگر نشان نده",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "دیگر نشان نده"
 }

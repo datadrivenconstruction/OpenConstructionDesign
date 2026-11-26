@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: täistoon",
  "drawing_kit.reset_color": "{layer}: lähtesta joonise värvile",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Nurk",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Võta tagasi (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} / {m}",
  "drawing_kit.accept_class": "Nõustu kõigi selle liigiga",
- "drawing_kit.reject_class": "Keeldu kõigist selle liigi üksustest",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Keeldu kõigist selle liigi üksustest"
 }

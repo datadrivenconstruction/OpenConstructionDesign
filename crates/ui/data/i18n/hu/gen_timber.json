@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT födémpanel",
+ "fam.name.glulam_beam": "Rétegelt ragasztott fagerenda",
+ "fam.name.glulam_column": "Rétegelt ragasztott faoszlop",
+ "gen.group.timber": "Faszerkezet",
+ "gen.rule.timber.beam_span_max.desc": "A rétegelt ragasztott fagerenda leghosszabb támaszköze két oszlop között.",
+ "gen.rule.timber.beam_span_max.title": "Gerenda támaszközének határa",
+ "gen.rule.timber.panel_w.desc": "A legszélesebb keresztirányban rétegelt födémpanel; mindegyik között illesztés.",
+ "gen.rule.timber.panel_w.title": "CLT panel szélessége",
+ "gen.rule.timber.span_depth.desc": "A rétegelt ragasztott fagerenda támaszközének és magasságának aránya; ez választja ki a szelvényt.",
+ "gen.rule.timber.span_depth.title": "Gerenda támaszköz/magasság"
+}

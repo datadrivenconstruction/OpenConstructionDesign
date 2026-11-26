@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "الفتحة {w} أعرض من الجدار {len}",
+ "ix.fix.opening_width": "العرض {w} mm",
+ "ix.fix.wall_extend": "مدّد الجدار إلى {len} mm"
+}

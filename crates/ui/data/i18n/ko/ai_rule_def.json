@@ -1,6 +1,7 @@
 {
  "ai.check.more": "이 규칙의 발견 사항 {0}개는 목록에 없습니다",
  "ai.check.integrity": "{0}의 데이터 손상: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: 상단이 기준면보다 위에 있지 않음",
  "ai.check.level_host_differs": "구성요소가 호스트({0})와 다른 레벨에 있습니다",
  "ai.check.clash": "{0}, {1} 충돌",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "규칙 {1}: 요소 {3}개, 허용 {4}",
  "ai.check.rule.clearance": "규칙 {1}: 거리 {3} m, 최소 {4} m 필요",
  "ai.check.rule.unsupported": "규칙 {1}을 검사할 수 없음: 이 카테고리는 지원되지 않습니다",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "매개변수 {0}: \"{1}\"은(는) 요소 {2}개에서 DIN 276 비용 그룹(세 자리, 100~899)이 아닙니다"
 }

@@ -52,6 +52,7 @@
  "mesh_tools.done": "Færdig",
  "mesh_tools.failed": "Mislykkedes",
  "mesh_tools.note.outline_approx": "omrids approksimeret",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Slet flader der vender mod",
  "mesh_tools.dir.up": "op",
  "mesh_tools.dir.down": "ned",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Forenklet: {n} (fx: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Forenklet: {n} (fx: {first})"
 }

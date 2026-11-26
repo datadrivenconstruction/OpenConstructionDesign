@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Түрдү көчүрүү",
  "wall_type.wt.duplicate_tip": "Бул катмарларды жаңы түр катары сактайт; ачылган түр өзгөрүүсүз калат.",
  "wall_type.wt.switch_dirty": "Башка түрдү ачуудан мурун OK же Жокко чыгаруу баскычын басыңыз",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Функция",
  "wall_type.wt.h_material": "Материал",
  "wall_type.wt.h_thickness": "Калыңдык",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Көрүнүштө дубалдарды тандап, андан кийин түрүн алмаштырыңыз.",
  "wall_type.swap.already": "Тандалган дубалдарда мындай түр бар",
  "wall_type.swap.apply": "Алмаштыруу",
- "wall_type.swap.done": "Дубал түрү алмаштырылды: {m} дубалдын {n}",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Дубал түрү алмаштырылды: {m} дубалдын {n}"
 }

@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "Клацніть елемент, щоб вибрати. Ctrl додає, Shift знімає.",
- "sel_chip.opt.units": "Одиниці",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "Одиниці"
 }

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "nakansela ang sketch",
  "sketch_edit.sk_applied": "nailapat ang sketch",
  "sketch_edit.sk_tail": "buntot",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "plato",
  "sketch_edit.sk_host_roof": "bubong",
  "sketch_edit.sk_host_ceiling": "kisame",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Antas 2",
  "sketch_edit.seed_floor_200": "Palapag 200",
  "sketch_edit.seed_section1": "Seksyon 1",
- "sketch_edit.seed_section2": "Seksyon 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Seksyon 2"
 }

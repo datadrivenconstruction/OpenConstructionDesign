@@ -45,5 +45,7 @@
  "phui.kind.comp": "اجزا",
  "phui.kind.shaft": "شفت‌ها",
  "phui.kind.ramp": "رمپ‌ها",
- "phui.kind.member": "اعضا"
+ "phui.kind.member": "اعضا",
+ "phui.dates": "تاریخ‌ها (شروع، پایان)",
+ "phui.show_calendar": "نمایش بر پایه تقویم"
 }

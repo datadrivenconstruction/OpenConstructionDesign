@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} åpninger ikke endret ({why})",
  "lnp.params_changed": "verdier endret: {n}",
  "lnp.params_same": "Ingen endringer: {u} elementer har allerede denne verdien",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Velg bare det første panelet for å redigere det",
  "lnp.clip_from_wall": "Parametere kopiert fra vegg #{id}",
  "lnp.clip_from_opening": "Parametere kopiert fra åpning #{id}",
- "lnp.match_from": "Egenskaper for #{id} overført til {n} elementer",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Egenskaper for #{id} overført til {n} elementer"
 }

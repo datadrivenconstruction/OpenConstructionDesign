@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Menelusuri dinding dari gambar",
  "api.cmd.attachments_list": "File yang dilampirkan ke chat dan persyaratan proyek yang dikonfirmasi",
  "api.cmd.attachments_read": "Baca rentang halaman, baris tabel, atau gambar dari file terlampir",
- "api.cmd.underlay_trace": "Dinding draf yang ditelusuri dari gambar terlampir"
+ "api.cmd.underlay_trace": "Dinding draf yang ditelusuri dari gambar terlampir",
+ "ai.tool.plan_from_image": "Membaca denah dari gambar",
+ "api.cmd.plan_from_image": "Draf dinding, pintu, jendela, dan ruang yang dibaca dari gambar denah atau halaman PDF terlampir"
 }

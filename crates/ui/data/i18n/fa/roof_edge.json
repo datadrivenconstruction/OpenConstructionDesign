@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x،",
  "roof_edge.pe.y": "y،",
  "roof_edge.pe.bulge": "برآمدگی",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "یک نقطه بعد از این یکی درج کنید (کمان به دو نیم تقسیم می‌شود)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "ذخیره",
  "roof_edge.pe.saved": "پروفیل ذخیره شد",
  "roof_edge.pe.valid": "پروفیل معتبر است",
  "roof_edge.pe.invalid": "پروفیل خودتقاطعی دارد، خیلی کوچک است یا کمتر از 3 نقطه دارد",
  "roof_edge.pe.bad_number": "مختصات یا برآمدگی عدد نیست",
- "roof_edge.pe.no_name": "نام پروفیل را وارد کنید",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "نام پروفیل را وارد کنید"
 }

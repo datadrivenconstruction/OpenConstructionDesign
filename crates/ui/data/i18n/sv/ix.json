@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Kvadrantpunkt",
+ "snap.extension": "Förlängning",
+ "snap.parallel": "Parallellt med vägg",
+ "snap.tracking_x": "X för en fångad punkt",
+ "snap.tracking_y": "Y för en fångad punkt",
+ "snap.tracking_cross": "Hjälplinjekorsning",
+ "snap.equal_step": "Lika steg"
+}

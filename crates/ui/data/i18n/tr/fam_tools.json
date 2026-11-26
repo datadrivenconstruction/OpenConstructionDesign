@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Bir proje ailesinin tanım metnini oku",
+ "api.cmd.family_validate": "Bir aile tanımı metnini denetle",
+ "api.cmd.family_reference": "Aile tanımı metni başvurusunu oku",
+ "api.cmd.family_draft": "Bir aile tanımını aile düzenleyicide taslak olarak öner"
+}

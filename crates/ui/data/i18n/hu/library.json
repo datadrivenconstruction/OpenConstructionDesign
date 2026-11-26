@@ -41,5 +41,16 @@
  "library.ifc.window": "Ablak",
  "library.ifc.stair": "Lépcső",
  "library.ifc.pipe_fitting": "Csőidom",
- "library.ifc.duct_fitting": "Légcsatorna-idom"
+ "library.ifc.duct_fitting": "Légcsatorna-idom",
+ "library.ifc.beam": "Gerenda",
+ "library.ifc.column": "Oszlop",
+ "library.ifc.appliance": "Háztartási készülék",
+ "library.ifc.fire_terminal": "Tűzoltó végelem",
+ "library.ifc.heat_exchanger": "Hőcserélő",
+ "library.ifc.pump": "Szivattyú",
+ "library.ifc.tank": "Tartály",
+ "library.ifc.transport": "Szállítóelem",
+ "library.ifc.valve": "Szelep",
+ "library.ifc.waste_terminal": "Szennyvíz-végelem",
+ "library.ifc.medical": "Orvosi eszköz"
 }

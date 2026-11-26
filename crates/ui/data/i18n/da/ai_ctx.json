@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Markering ({n})",
  "ai.ctx.add_tip": "Føj tilbage til det AI ser",
  "ai.ctx.frame_tip": "Vis disse elementer",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Gelændere",
  "ai.ctx.cat.roof": "Tage",
  "ai.ctx.cat.stair": "Trapper",
- "ai.ctx.cat.other": "Andet",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Andet"
 }

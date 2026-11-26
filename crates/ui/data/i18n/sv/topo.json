@@ -64,6 +64,7 @@
  "topo.import.title": "Importera mätning",
  "topo.import.filter": "Mätning (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Punktens höjd",
  "topo.opt.thickness": "Terrängvolymens tjocklek",
  "topo.opt.add_to_active": "Lägg till i den aktiva terrängvolymen",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importera",
  "topo.import.cancel": "Avbryt",
  "topo.import.no_layers": "inget lager valt",
- "topo.info.warnings": "Inte byggt:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Inte byggt:"
 }

@@ -41,5 +41,16 @@
  "library.ifc.window": "खिड़की",
  "library.ifc.stair": "सीढ़ी",
  "library.ifc.pipe_fitting": "पाइप फ़िटिंग",
- "library.ifc.duct_fitting": "डक्ट फ़िटिंग"
+ "library.ifc.duct_fitting": "डक्ट फ़िटिंग",
+ "library.ifc.beam": "बीम",
+ "library.ifc.column": "कॉलम",
+ "library.ifc.appliance": "उपकरण",
+ "library.ifc.fire_terminal": "अग्नि शमन टर्मिनल",
+ "library.ifc.heat_exchanger": "हीट एक्सचेंजर",
+ "library.ifc.pump": "पंप",
+ "library.ifc.tank": "टैंक",
+ "library.ifc.transport": "परिवहन तत्व",
+ "library.ifc.valve": "वाल्व",
+ "library.ifc.waste_terminal": "अपशिष्ट टर्मिनल",
+ "library.ifc.medical": "मेडिकल उपकरण"
 }

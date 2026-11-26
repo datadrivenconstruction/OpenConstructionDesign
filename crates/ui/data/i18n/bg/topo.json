@@ -64,6 +64,7 @@
  "topo.import.title": "Импорт на геодезично заснемане",
  "topo.import.filter": "Геодезично заснемане (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Кота на точката",
  "topo.opt.thickness": "Дебелина на топотялото",
  "topo.opt.add_to_active": "Добави към активното топотяло",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Импорт",
  "topo.import.cancel": "Отказ",
  "topo.import.no_layers": "не е избран слой",
- "topo.info.warnings": "Не е построено:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Не е построено:"
 }

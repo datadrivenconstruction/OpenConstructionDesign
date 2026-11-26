@@ -41,5 +41,16 @@
  "library.ifc.window": "Терезе",
  "library.ifc.stair": "Баспалдақ",
  "library.ifc.pipe_fitting": "Құбыр фитингі",
- "library.ifc.duct_fitting": "Ауа арнасының фасонды бөлігі"
+ "library.ifc.duct_fitting": "Ауа арнасының фасонды бөлігі",
+ "library.ifc.beam": "Арқалық",
+ "library.ifc.column": "Баған",
+ "library.ifc.appliance": "Аспап",
+ "library.ifc.fire_terminal": "Өрт сөндіру терминалы",
+ "library.ifc.heat_exchanger": "Жылу алмастырғыш",
+ "library.ifc.pump": "Сорғы",
+ "library.ifc.tank": "Резервуар",
+ "library.ifc.transport": "Көлік элементі",
+ "library.ifc.valve": "Клапан",
+ "library.ifc.waste_terminal": "Ағын терминалы",
+ "library.ifc.medical": "Медициналық құрылғы"
 }

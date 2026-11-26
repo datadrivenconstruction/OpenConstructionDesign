@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Verborgen",
  "ai_found.found.color": "Ingekleurd",
  "ai_found.found.count": "{n} van {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Niets komt overeen. Probeer een ruimer filter.",
  "ai_found.found.show_btn": "Tonen",
  "ai_found.found.show_tip": "Selecteer deze elementen en zoom er in plattegrond en 3D naartoe",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# element verborgen",
   "other": "# elementen verborgen"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

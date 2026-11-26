@@ -52,6 +52,7 @@
  "mesh_tools.done": "Klaar",
  "mesh_tools.failed": "Mislukt",
  "mesh_tools.note.outline_approx": "omtrek benaderd",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Vlakken verwijderen die naar",
  "mesh_tools.dir.up": "boven",
  "mesh_tools.dir.down": "beneden",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Vereenvoudigd: {n} (bijvoorbeeld: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Vereenvoudigd: {n} (bijvoorbeeld: {first})"
 }

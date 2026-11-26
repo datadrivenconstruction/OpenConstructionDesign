@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Ang butas na {w} ay mas malapad kaysa sa dingding na {len}",
+ "ix.fix.opening_width": "Lapad {w} mm",
+ "ix.fix.wall_extend": "Pahabain ang dingding hanggang {len} mm"
+}

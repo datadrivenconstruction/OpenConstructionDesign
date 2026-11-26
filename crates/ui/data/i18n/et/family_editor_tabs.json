@@ -90,6 +90,7 @@
  "fe.cons.redundant": "üleliigne",
  "fe.cons.help": "Pikkusparameetriga seotud mõõde juhib tasandeid; nurk nõuab nurgaparameetrit",
  "fe.locks": "Joonduslukud",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Lukusta",
  "fe.unlock": "Ava lukk",
  "fe.locks.help": "Lukk asendab tahke argumendi (nt rect #2) tasandiga, nii et tahke järgib seda",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Mustandi nimi on hõivatud",
  "fe.clash.body": "Mustand nimega “{name}” on juba olemas. Asenda see mustand selle omaga või mine tagasi ja salvesta uue nime all. Midagi pole veel salvestatud.",
  "fe.clash.rename": "Salvesta uue nime all",
- "fe.clash.replace": "Asenda see mustand",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Asenda see mustand"
 }

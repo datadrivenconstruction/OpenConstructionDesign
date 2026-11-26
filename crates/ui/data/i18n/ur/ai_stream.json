@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 ٹول",
  "ai.stream.tools_many": "{n} ٹولز",
  "ai.stream.secs": "{n} سیکنڈ",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "ابھی تک ماڈل سروس کا انتظار",
  "ai.stream.stop": "روکیں",
  "ai.stream.cancelled": "رک گیا",
- "ai.stream.incomplete": "مسودہ نامکمل ہے۔ ماڈل میں کچھ لاگو نہیں ہوا۔",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "مسودہ نامکمل ہے۔ ماڈل میں کچھ لاگو نہیں ہوا۔"
 }

@@ -18,7 +18,7 @@
  "complib.ready.no": "жазылмаған",
  "complib.edited": "Өңделген",
  "complib.edited_tip": "Жобадағы отбасы кірістірілгеннен өзгеше",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Мән",
- "complib.armed": "Компонент: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Компонент: {name}"
 }

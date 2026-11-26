@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "Skizze abgebrochen",
  "sketch_edit.sk_applied": "Skizze übernommen",
  "sketch_edit.sk_tail": "Ende",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "Decke",
  "sketch_edit.sk_host_roof": "Dach",
  "sketch_edit.sk_host_ceiling": "Decke",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Geschoss 2",
  "sketch_edit.seed_floor_200": "Bodenplatte 200",
  "sketch_edit.seed_section1": "Schnitt 1",
- "sketch_edit.seed_section2": "Schnitt 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Schnitt 2"
 }

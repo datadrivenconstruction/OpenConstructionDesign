@@ -41,5 +41,7 @@
  "sb.save.fresh": "Inga ändringar",
  "sb.save.save": "Spara",
  "sb.save.ifc": "Spara IFC-kopia",
- "sb.save.autosave": "Autosparning"
+ "sb.save.autosave": "Autosparning",
+ "sb.more.title": "Mer",
+ "sb.more.desc": "Statusradens poster som inte ryms i den här bredden."
 }

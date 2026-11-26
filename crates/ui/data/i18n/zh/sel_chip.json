@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "点击元素以选中。Ctrl 加选，Shift 减选。",
- "sel_chip.opt.units": "单位",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "单位"
 }

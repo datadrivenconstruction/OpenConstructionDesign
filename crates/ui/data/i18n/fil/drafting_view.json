@@ -15,6 +15,7 @@
  "drafting_view.name": "Pangalan",
  "drafting_view.count": "{n} annotation",
  "drafting_view.tab": "Tanaw · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Walang laman na drafting view",
  "drafting_view.canvas_hint": "Gamitin ang Annotate tools: detail line, region, text, detail component",
  "drafting_view.created": "Nagawa ang drafting view na “{name}”",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Higit pa",
  "empty.drafting.title": "Wala pang drafting view",
  "empty.drafting.hint": "Gumawa ng isa para sa 2D na detalye na hindi kinuha sa modelo.",
- "empty.drafting.action": "Bagong drafting view",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Bagong drafting view"
 }

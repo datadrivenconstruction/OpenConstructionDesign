@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n} अस्वीकृत प्रयासों के बाद ठीक किया, लगभग {tokens} टोकन",
+ "ai.fam_offer": "एजेंट ने फ़ैमिली {name} प्रस्तावित की",
+ "ai.fam_offer.open": "फ़ैमिली एडिटर में खोलें",
+ "ai.fam_offer.dismiss": "खारिज करें",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "जाँच हो रही है…",
+ "fe.ai.clean": "जाँच में कुछ नहीं मिला",
+ "fe.ai.check_values": "मानों के साथ जाँचें",
+ "fe.ai.lines": "पंक्तियाँ {n}",
+ "fe.ai.changes": "पिछले संस्करण की तुलना में {n} बदलाव",
+ "fe.ai.added": "जोड़ा: {head} {name}",
+ "fe.ai.removed": "हटाया: {head} {name}",
+ "fe.ai.changed": "बदला: {head} {name}",
+ "fe.ai.reject": "अस्वीकार करें"
+}

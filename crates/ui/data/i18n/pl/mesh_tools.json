@@ -52,6 +52,7 @@
  "mesh_tools.done": "Gotowe",
  "mesh_tools.failed": "Niepowodzenie",
  "mesh_tools.note.outline_approx": "obrys przybliżony",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Usuń ściany zwrócone w stronę",
  "mesh_tools.dir.up": "góra",
  "mesh_tools.dir.down": "dół",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Uproszczono: {n} (na przykład: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Uproszczono: {n} (na przykład: {first})"
 }

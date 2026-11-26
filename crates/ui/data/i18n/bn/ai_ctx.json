@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ নির্বাচন ({n})",
  "ai.ctx.add_tip": "AI যা দেখে তাতে আবার যোগ করুন",
  "ai.ctx.frame_tip": "এই উপাদানগুলো দেখান",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "রেলিং",
  "ai.ctx.cat.roof": "ছাদ",
  "ai.ctx.cat.stair": "সিঁড়ি",
- "ai.ctx.cat.other": "অন্যান্য",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "অন্যান্য"
 }

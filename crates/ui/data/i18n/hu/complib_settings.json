@@ -48,5 +48,13 @@
  "settings.lib_open": "Komponenskönyvtár",
  "settings.lib_open_desc": "A beépített családok, a projektben lévők és a saját családok böngészése",
  "settings.lib_dir": "Saját könyvtármappa",
- "settings.lib_dir_desc": "Az ide helyezett családfájlok (.ddcf) a Saját könyvtár alatt jelennek meg. A DDC_COMPONENTS_DIR áthelyezi."
+ "settings.lib_dir_desc": "Az ide helyezett családfájlok (.ddcf) a Saját könyvtár alatt jelennek meg. A DDC_COMPONENTS_DIR áthelyezi.",
+ "complib.fam.sprinkler_head": "Sprinklerfej",
+ "complib.fam.fire_pump": "Tűzoltószivattyú",
+ "complib.fam.pressurisation_fan": "Túlnyomásos ventilátor",
+ "complib.fam.lift_car": "Liftkabin",
+ "complib.fam.lift_landing_door": "Lift szintajtó",
+ "complib.fam.lift_pit": "Liftakna alja",
+ "complib.fam.lift_overrun": "Lift felső szabad tér",
+ "complib.fam.lift_machine": "Liftgép"
 }

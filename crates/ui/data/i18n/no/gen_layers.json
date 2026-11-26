@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Klimaskjerm",
+ "gen.group.acoustic": "Lydisolasjon",
+ "gen.rule.fire.insulation_class.title": "Brannklasse for isolasjon i klimaskjerm",
+ "gen.rule.fire.insulation_class.desc": "Dårligste brannreaksjonsklasse isolasjonen i yttervegger og tak kan ha; oppbygginger med dårligere isolasjon velges ikke.",
+ "gen.rule.envelope.u_wall.title": "U-verdi yttervegg",
+ "gen.rule.envelope.u_wall.desc": "Høyeste varmegjennomgang for en yttervegg; veggisolasjonen dimensjoneres for å holde seg under den, så kaldere klima gir tykkere vegg.",
+ "gen.rule.envelope.u_roof.title": "U-verdi tak",
+ "gen.rule.envelope.u_roof.desc": "Høyeste varmegjennomgang for et tak; takisolasjonen dimensjoneres for å holde seg under den.",
+ "gen.rule.envelope.u_ground.title": "U-verdi gulv på grunn",
+ "gen.rule.envelope.u_ground.desc": "Høyeste varmegjennomgang for gulvplaten på grunn; isolasjonen under avrettingen dimensjoneres for å holde seg under den.",
+ "gen.rule.acoustic.rw_party.title": "Lydisolasjon skillevegg",
+ "gen.rule.acoustic.rw_party.desc": "Minste lydreduksjonstall Rw for en vegg mellom boliger eller ved en felles korridor; murkjernen dimensjoneres etter masseloven for å nå det.",
+ "gen.rule.acoustic.rw_floor.title": "Lydisolasjon etasjeskille",
+ "gen.rule.acoustic.rw_floor.desc": "Minste lydreduksjonstall Rw for et etasjeskille; betongdekket dimensjoneres etter masseloven for å nå det.",
+ "gen.why.e.asm_wall": "yttervegger {t} m tykke med {ins} m isolasjon: U {u} W/m2K, høyst {lim}",
+ "gen.why.e.asm_roof": "tak {t} m tykt med {ins} m isolasjon: U {u} W/m2K, høyst {lim}",
+ "gen.why.e.asm_ground": "gulv på grunn {t} m tykt med {ins} m isolasjon: U {u} W/m2K, høyst {lim}",
+ "gen.why.e.asm_party": "skillevegger {t} m tykke, {m} kg/m2: Rw {rw} dB etter masseloven, minst {lim}",
+ "gen.why.e.asm_floor": "etasjeskiller {t} m tykke, {m} kg/m2: Rw {rw} dB etter masseloven, minst {lim}"
+}

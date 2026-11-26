@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "মেশ হিসেবে",
  "dlg.imp.skipped": "বাদ দেওয়া হয়েছে",
  "dlg.imp.notes": "নোট: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "এবং আরও {n} ধরন",
  "dlg.imp.no_levels": "ফাইলে কোনো লেভেল নেই: একটি ডিফল্ট লেভেল তৈরি হয়েছে",
  "dlg.imp.reimport_row": "আপডেট {updated}, অপরিবর্তিত {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines}টি লাইন, {arcs}টি আর্ক, {texts}টি টেক্সট, {fills}টি ফিল, {layers}টি স্তর; একক {unit} mm",
  "dlg.dw.summary_paper": "; কাগজের শিট {n} (আন্ডারলেতে বসানো হয়নি)",
  "dlg.dw.summary_unknown": "; স্থানান্তর হয়নি: {list}",
- "dlg.dw.summary_more": " এবং আরও {n} ধরন",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " এবং আরও {n} ধরন"
 }

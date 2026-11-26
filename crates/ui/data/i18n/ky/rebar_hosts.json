@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Негиздер: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Колонна",
  "rebar_hosts.kind.beam": "Тирөө",
  "rebar_hosts.kind.wall": "Дубал",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Тор дубалдарга, плиталарга жана фундаменттерге кирет, колонна же тирөөлөргө эмес.",
  "rebar_hosts.why.bars_plate": "Бойлук арматура жана хомуттар колонна жана тирөөлөргө кирет, дубал, плита же фундаменттерге эмес.",
  "rebar_hosts.why.no_common_face": "Тандалган негиздердин жалпы коргоо бети жок. Бир түрдөгү негиздерди тандаңыз.",
- "rebar_hosts.why.no_type": "Арматура түрүн тандаңыз.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Арматура түрүн тандаңыз."
 }

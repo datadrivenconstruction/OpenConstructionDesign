@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} ava ei muudetud ({why})",
  "lnp.params_changed": "muudetud väärtusi: {n}",
  "lnp.params_same": "Muudatusi pole: {u} elemendil on see väärtus juba",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Muutmiseks vali ainult esimene paneel",
  "lnp.clip_from_wall": "Parameetrid kopeeritud seinalt #{id}",
  "lnp.clip_from_opening": "Parameetrid kopeeritud avalt #{id}",
- "lnp.match_from": "#{id} omadused sobitati {n} elemendile",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "#{id} omadused sobitati {n} elemendile"
 }

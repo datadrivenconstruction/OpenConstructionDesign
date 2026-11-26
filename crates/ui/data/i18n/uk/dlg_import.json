@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "як сітки",
  "dlg.imp.skipped": "пропущено",
  "dlg.imp.notes": "Нотатки: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "та ще {n} видів",
  "dlg.imp.no_levels": "У файлі немає рівнів: створено рівень за замовчуванням",
  "dlg.imp.reimport_row": "Оновлено {updated}, без змін {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: ліній {lines}, дуг {arcs}, текстів {texts}, заливок {fills}, шарів {layers}; одиниця {unit} мм",
  "dlg.dw.summary_paper": "; паперових аркушів {n} (не розміщено на підкладці)",
  "dlg.dw.summary_unknown": "; не перенесено: {list}",
- "dlg.dw.summary_more": " та ще {n} видів",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " та ще {n} видів"
 }

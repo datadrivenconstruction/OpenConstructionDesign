@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Välispiire",
+ "gen.group.acoustic": "Heliisolatsioon",
+ "gen.rule.fire.insulation_class.title": "Välispiirde soojustuse tuletundlikkuse klass",
+ "gen.rule.fire.insulation_class.desc": "Välisseinte ja katuste soojustuse halvim lubatud tuletundlikkuse klass; halvema soojustusega ehitusvõtteid ei valita.",
+ "gen.rule.envelope.u_wall.title": "Välisseina U-väärtus",
+ "gen.rule.envelope.u_wall.desc": "Välisseina suurim soojusläbivus; seina soojustus mõõdetakse selle alla jääma, seega külmema kliima korral on sein paksem.",
+ "gen.rule.envelope.u_roof.title": "Katuse U-väärtus",
+ "gen.rule.envelope.u_roof.desc": "Katuse suurim soojusläbivus; katuse soojustus mõõdetakse selle alla jääma.",
+ "gen.rule.envelope.u_ground.title": "Maapealse põrandaplaadi U-väärtus",
+ "gen.rule.envelope.u_ground.desc": "Maapealse põrandaplaadi suurim soojusläbivus; ühtlustuskihi aluse soojustus mõõdetakse selle alla jääma.",
+ "gen.rule.acoustic.rw_party.title": "Korteritevahelise seina heliisolatsioon",
+ "gen.rule.acoustic.rw_party.desc": "Korterite vahelise või ühise koridori kõrval oleva seina vähim õhumüra isolatsiooniindeks Rw; müüritise südamik mõõdetakse massiseaduse järgi selle saavutamiseks.",
+ "gen.rule.acoustic.rw_floor.title": "Vahelae heliisolatsioon",
+ "gen.rule.acoustic.rw_floor.desc": "Korruste vahelise vahelae vähim õhumüra isolatsiooniindeks Rw; betoonplaat mõõdetakse massiseaduse järgi selle saavutamiseks.",
+ "gen.why.e.asm_wall": "välisseinad paksusega {t} m ja {ins} m soojustust: U {u} W/m2K, lubatud kuni {lim}",
+ "gen.why.e.asm_roof": "katus paksusega {t} m ja {ins} m soojustust: U {u} W/m2K, lubatud kuni {lim}",
+ "gen.why.e.asm_ground": "põrandaplaat maapinnal paksusega {t} m ja {ins} m soojustust: U {u} W/m2K, lubatud kuni {lim}",
+ "gen.why.e.asm_party": "korteritevahelised seinad paksusega {t} m, {m} kg/m2: Rw {rw} dB massiseaduse järgi, vähemalt {lim}",
+ "gen.why.e.asm_floor": "vahelaed paksusega {t} m, {m} kg/m2: Rw {rw} dB massiseaduse järgi, vähemalt {lim}"
+}

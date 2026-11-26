@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Elementy nadrzędne: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Słup",
  "rebar_hosts.kind.beam": "Belka",
  "rebar_hosts.kind.wall": "Ściana",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Siatka trafia do ścian, płyt i fundamentów, nie do słupów ani belek.",
  "rebar_hosts.why.bars_plate": "Pręty podłużne i strzemiona trafiają do słupów i belek, nie do ścian, płyt ani fundamentów.",
  "rebar_hosts.why.no_common_face": "Wybrane elementy nadrzędne nie mają wspólnej ściany otuliny. Zaznacz elementy jednego rodzaju.",
- "rebar_hosts.why.no_type": "Wybierz typ pręta.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Wybierz typ pręta."
 }

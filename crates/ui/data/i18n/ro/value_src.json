@@ -24,5 +24,21 @@
  "value_src.verified_n": "Valori verificate: {n}",
  "value_src.bulk_note": "Valori completate de AI, neverificate: {n}",
  "value_src.bulk_verify": "Marchează verificate ({n})",
- "value_src.bulk_tip": "Marchează verificate toate valorile completate de AI din selecție, într-un singur pas de anulare"
+ "value_src.bulk_tip": "Marchează verificate toate valorile completate de AI din selecție, într-un singur pas de anulare",
+ "origin.title": "Origine",
+ "origin.made_by": "Creat de",
+ "origin.request": "Solicitare",
+ "origin.at": "Aplicat",
+ "origin.recipe": "rețeta „{name}”, partea {part}",
+ "origin.ai": "asistentul AI ({model})",
+ "origin.agent": "agentul {name}",
+ "origin.script": "scriptul {name}",
+ "origin.xlsx": "foaie de calcul XLSX",
+ "origin.user": "o persoană",
+ "origin.import": "import",
+ "origin.import_file": "import din {file}",
+ "origin.unknown": "nu se află în istoric",
+ "origin.held": "Editat manual: o nouă rulare a rețetei îl lasă neschimbat",
+ "origin.rebuilt": "O nouă rulare a rețetei îl reconstruiește; editați-l manual pentru a-l păstra",
+ "origin.ai_values": "Valori completate de AI: {n}, neverificate: {open}"
 }

@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automatiske tekniske anlegg",
+ "gen.mep_auto_hint": "Lar generatoren og AI-assistenten legge rør, kanaler og ledninger på egen hånd. Slått av som standard for denne regionen; du kan slå det på. Manuell føring er alltid tilgjengelig."
+}

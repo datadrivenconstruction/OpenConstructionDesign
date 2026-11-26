@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Valik ({n})",
  "ai.ctx.add_tip": "Lisa tagasi sellele, mida tehisintellekt näeb",
  "ai.ctx.frame_tip": "Näita neid elemente",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Piirded",
  "ai.ctx.cat.roof": "Katused",
  "ai.ctx.cat.stair": "Trepid",
- "ai.ctx.cat.other": "Muu",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Muu"
 }

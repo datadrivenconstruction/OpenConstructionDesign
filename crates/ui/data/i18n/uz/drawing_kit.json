@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: to'liq ton",
  "drawing_kit.reset_color": "{layer}: chizma rangiga qaytarish",
  "drawing_kit.unit.ft": "fut",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Burchak",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Bekor qilish (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m} tadan {n}",
  "drawing_kit.accept_class": "Bu turdagilarning hammasini qabul qilish",
- "drawing_kit.reject_class": "Bu turdagilarning hammasini rad etish",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Bu turdagilarning hammasini rad etish"
 }

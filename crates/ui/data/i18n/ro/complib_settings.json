@@ -48,5 +48,13 @@
  "settings.lib_open": "Bibliotecă de componente",
  "settings.lib_open_desc": "Răsfoiește familiile integrate, cele din proiect și pe ale tale",
  "settings.lib_dir": "Dosarul meu de bibliotecă",
- "settings.lib_dir_desc": "Fișierele de familie (.ddcf) plasate aici apar la Biblioteca mea. DDC_COMPONENTS_DIR mută dosarul."
+ "settings.lib_dir_desc": "Fișierele de familie (.ddcf) plasate aici apar la Biblioteca mea. DDC_COMPONENTS_DIR mută dosarul.",
+ "complib.fam.sprinkler_head": "Cap de sprinkler",
+ "complib.fam.fire_pump": "Pompă de incendiu",
+ "complib.fam.pressurisation_fan": "Ventilator de suprapresiune",
+ "complib.fam.lift_car": "Cabină de lift",
+ "complib.fam.lift_landing_door": "Ușă de palier lift",
+ "complib.fam.lift_pit": "Cuvă de lift",
+ "complib.fam.lift_overrun": "Spațiu superior liftului",
+ "complib.fam.lift_machine": "Mașinărie de lift"
 }

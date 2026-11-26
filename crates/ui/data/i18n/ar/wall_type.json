@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "نسخ النوع",
  "wall_type.wt.duplicate_tip": "يحفظ هذه الطبقات كنوع جديد، ويبقى النوع الذي فتحته كما هو.",
  "wall_type.wt.switch_dirty": "اضغط «موافق» أو «إلغاء» قبل فتح نوع آخر",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "الوظيفة",
  "wall_type.wt.h_material": "المادة",
  "wall_type.wt.h_thickness": "السمك",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "حدّد الجدران في العرض، ثم استبدل نوعها.",
  "wall_type.swap.already": "الجدران المحدَّدة لها هذا النوع بالفعل",
  "wall_type.swap.apply": "استبدال",
- "wall_type.swap.done": "استُبدل نوع الجدار: {n} من {m} جدارًا",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "استُبدل نوع الجدار: {n} من {m} جدارًا"
 }

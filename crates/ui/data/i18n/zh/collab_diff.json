@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "类型",
  "collab_diff.diff.col.field": "字段",
  "collab_diff.diff.col.old": "原值",
- "collab_diff.diff.col.new": "现值"
+ "collab_diff.diff.col.new": "现值",
+ "collab_diff.reveal.title": "建造过程",
+ "collab_diff.reveal.start": "按施工顺序显示",
+ "collab_diff.reveal.play": "播放",
+ "collab_diff.reveal.pause": "暂停",
+ "collab_diff.reveal.back": "倒放",
+ "collab_diff.reveal.close": "关闭",
+ "collab_diff.reveal.nothing": "无可显示内容：3D 场景中没有已更改的构件。",
+ "collab_diff.reveal.journal_busy": "正在读取日志…",
+ "collab_diff.reveal.journal_play": "播放日志"
 }

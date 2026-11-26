@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Punto de cuadrante",
+ "snap.extension": "Prolongación",
+ "snap.parallel": "Paralelo al muro",
+ "snap.tracking_x": "X de un punto capturado",
+ "snap.tracking_y": "Y de un punto capturado",
+ "snap.tracking_cross": "Cruce de guías",
+ "snap.equal_step": "Paso igual"
+}

@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Mạch điện",
+ "cmd.mep.circuits.desc": "Mở trình chỉnh sửa mạch điện: mạch của mọi tủ điện, phụ tải, tiết diện cáp và kiểm tra quy tắc.",
  "ce.title": "Mạch điện",
  "ce.open": "Mạch điện",
  "ce.empty": "Chưa có mạch nào",

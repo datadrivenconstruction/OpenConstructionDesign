@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Hostitelé: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Sloup",
  "rebar_hosts.kind.beam": "Trám",
  "rebar_hosts.kind.wall": "Stěna",
@@ -41,6 +42,5 @@
  "rebar_hosts.why.area_linear": "Síť patří do stěn, desek a základů, ne do sloupů nebo trámů.",
  "rebar_hosts.why.bars_plate": "Podélné pruty a třmínky patří do sloupů a trámů, ne do stěn, desek nebo základů.",
  "rebar_hosts.why.no_common_face": "Vybraní hostitelé nemají společnou krycí plochu. Vyberte hostitele jednoho druhu.",
- "rebar_hosts.why.no_type": "Vyberte typ prutu.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Vyberte typ prutu."
 }

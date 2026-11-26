@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "แก้ไขหลังถูกปฏิเสธ {n} ครั้ง ประมาณ {tokens} โทเคน",
+ "ai.fam_offer": "เอเจนต์เสนอแฟมิลี {name}",
+ "ai.fam_offer.open": "เปิดในตัวแก้ไขแฟมิลี",
+ "ai.fam_offer.dismiss": "ปิด",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "กำลังตรวจสอบ…",
+ "fe.ai.clean": "การตรวจสอบไม่พบสิ่งใด",
+ "fe.ai.check_values": "ตรวจสอบด้วยค่า",
+ "fe.ai.lines": "บรรทัด {n}",
+ "fe.ai.changes": "{n} การเปลี่ยนแปลงเทียบกับเวอร์ชันก่อนหน้า",
+ "fe.ai.added": "เพิ่ม: {head} {name}",
+ "fe.ai.removed": "ลบ: {head} {name}",
+ "fe.ai.changed": "เปลี่ยนแปลง: {head} {name}",
+ "fe.ai.reject": "ปฏิเสธ"
+}

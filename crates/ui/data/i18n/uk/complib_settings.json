@@ -48,5 +48,13 @@
  "settings.lib_open": "Бібліотека компонентів",
  "settings.lib_open_desc": "Переглянути вбудовані сімейства, сімейства проєкту та власні",
  "settings.lib_dir": "Моя тека бібліотеки",
- "settings.lib_dir_desc": "Файли сімейств (.ddcf), покладені сюди, з'являються в розділі «Моя бібліотека». DDC_COMPONENTS_DIR змінює розташування."
+ "settings.lib_dir_desc": "Файли сімейств (.ddcf), покладені сюди, з'являються в розділі «Моя бібліотека». DDC_COMPONENTS_DIR змінює розташування.",
+ "complib.fam.sprinkler_head": "Спринклерний зрошувач",
+ "complib.fam.fire_pump": "Пожежний насос",
+ "complib.fam.pressurisation_fan": "Вентилятор підпору",
+ "complib.fam.lift_car": "Кабіна ліфта",
+ "complib.fam.lift_landing_door": "Двері ліфта на поверсі",
+ "complib.fam.lift_pit": "Приямок ліфта",
+ "complib.fam.lift_overrun": "Верхня частина шахти ліфта",
+ "complib.fam.lift_machine": "Машина ліфта"
 }

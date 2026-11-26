@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "回路",
+ "cmd.mep.circuits.desc": "回路エディタを開きます。各盤の回路、負荷、ケーブルサイズ、ルールチェックを確認できます。",
  "ce.title": "回路",
  "ce.open": "回路",
  "ce.empty": "回路はまだありません",

@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "hersteld na {n} geweigerde pogingen, ca. {tokens} tokens",
+ "ai.fam_offer": "Een agent bood de familie {name} aan",
+ "ai.fam_offer.open": "Openen in de familie-editor",
+ "ai.fam_offer.dismiss": "Negeren",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Controleren…",
+ "fe.ai.clean": "De controle vond niets",
+ "fe.ai.check_values": "Controleren met waarden",
+ "fe.ai.lines": "regels {n}",
+ "fe.ai.changes": "{n} wijzigingen ten opzichte van de eerdere versie",
+ "fe.ai.added": "toegevoegd: {head} {name}",
+ "fe.ai.removed": "verwijderd: {head} {name}",
+ "fe.ai.changed": "gewijzigd: {head} {name}",
+ "fe.ai.reject": "Afwijzen"
+}

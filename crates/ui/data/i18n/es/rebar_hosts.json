@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Elementos base: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Pilar",
  "rebar_hosts.kind.beam": "Viga",
  "rebar_hosts.kind.wall": "Muro",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "La malla va en muros, forjados y cimentaciones, no en pilares ni vigas.",
  "rebar_hosts.why.bars_plate": "Las barras longitudinales y los estribos van en pilares y vigas, no en muros, forjados ni cimentaciones.",
  "rebar_hosts.why.no_common_face": "Los elementos base seleccionados no tienen una cara de recubrimiento común. Seleccione elementos base de un solo tipo.",
- "rebar_hosts.why.no_type": "Elija un tipo de barra.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Elija un tipo de barra."
 }

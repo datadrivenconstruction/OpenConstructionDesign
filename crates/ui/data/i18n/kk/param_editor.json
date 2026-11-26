@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() тармақтары әртүрлі",
  "pe.msg_what_args": "аргументтер",
  "pe.msg_and": " және ",
+ "pe.msg_incompatible": "{w}: сәйкес келмейтін бірліктер {dims}",
  "pe.text_no_formula": "мәтіндік параметрлерде формула болмайды",
  "pe.circular": "айналмалы сілтеме: {text}",
- "pe.depends_invalid": "жарамсыз “{b}” мәніне тәуелді",
- "pe.msg_incompatible": "{w}: сәйкес келмейтін бірліктер {dims}"
+ "pe.depends_invalid": "жарамсыз “{b}” мәніне тәуелді"
 }

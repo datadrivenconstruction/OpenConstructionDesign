@@ -72,6 +72,7 @@
  "quick.cat.beam": "보",
  "quick.cat.ceiling": "천장",
  "quick.cat.structure": "구조",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {all}개 중 {n}개",
  "quick.hud.type": "유형",
  "quick.hud.height": "높이",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "“{v}” 값을 읽을 수 없습니다",
  "quick.menu.repeat": "반복: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "최근",
  "quick.bar.repeat_tip": "{cmd} · Enter로 반복",
  "quick.repeat.none": "반복할 내용이 아직 없습니다",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "이전",
  "quick.tips.next": "다음",
  "quick.tips.finish": "완료",
- "quick.tips.never": "다시 표시 안 함",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "다시 표시 안 함"
 }

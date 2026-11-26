@@ -64,6 +64,7 @@
  "topo.import.title": "জরিপ আমদানি",
  "topo.import.filter": "জরিপ (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "বিন্দুর উচ্চতা",
  "topo.opt.thickness": "টপোসলিডের পুরুত্ব",
  "topo.opt.add_to_active": "সক্রিয় টপোসলিডে যোগ করুন",
@@ -121,6 +122,5 @@
  "topo.import.ok": "আমদানি",
  "topo.import.cancel": "বাতিল",
  "topo.import.no_layers": "কোনো স্তর বেছে নেওয়া হয়নি",
- "topo.info.warnings": "তৈরি হয়নি:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "তৈরি হয়নি:"
 }

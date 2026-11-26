@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "åtgärdad efter {n} nekade försök, cirka {tokens} tokens",
+ "ai.fam_offer": "En agent erbjöd familjen {name}",
+ "ai.fam_offer.open": "Öppna i familjeeditorn",
+ "ai.fam_offer.dismiss": "Avfärda",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Kontrollerar…",
+ "fe.ai.clean": "Kontrollen hittade inget",
+ "fe.ai.check_values": "Kontrollera med värden",
+ "fe.ai.lines": "rader {n}",
+ "fe.ai.changes": "{n} ändringar jämfört med den tidigare versionen",
+ "fe.ai.added": "tillagd: {head} {name}",
+ "fe.ai.removed": "borttagen: {head} {name}",
+ "fe.ai.changed": "ändrad: {head} {name}",
+ "fe.ai.reject": "Avvisa"
+}

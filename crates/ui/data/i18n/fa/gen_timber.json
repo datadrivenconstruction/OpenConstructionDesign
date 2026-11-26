@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "پانل کف CLT",
+ "fam.name.glulam_beam": "تیر گلولم",
+ "fam.name.glulam_column": "ستون گلولم",
+ "gen.group.timber": "سازه چوبی",
+ "gen.rule.timber.beam_span_max.desc": "طولانی‌ترین دهانه تیر گلولم بین دو ستون.",
+ "gen.rule.timber.beam_span_max.title": "حد دهانه تیر",
+ "gen.rule.timber.panel_w.desc": "پهن‌ترین پانل کف چوب چندلایه متقاطع؛ بین هرکدام یک درز.",
+ "gen.rule.timber.panel_w.title": "عرض پانل CLT",
+ "gen.rule.timber.span_depth.desc": "نسبت دهانه به عمق تیر گلولم؛ مقطع را انتخاب می‌کند.",
+ "gen.rule.timber.span_depth.title": "نسبت دهانه به عمق تیر"
+}

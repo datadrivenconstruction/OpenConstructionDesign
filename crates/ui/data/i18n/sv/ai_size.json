@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} tokenenheter",
  "ai.size.block": "För lång för denna modell: ~{n} tokens, upp till {max} ryms och lämnar plats för svaret — korta den eller dela upp den",
  "ai.size.trim": "Korta till att passa",
  "ai.size.trim_tip": "Kapar slutet av meddelandet så att det får plats. Inget kapas förrän du klickar.",
  "ai.size.drop_view": "Lämna vyn utanför",
  "ai.size.drop_level": "Lämna nivån utanför",
- "ai.size.drop_selection": "Lämna markeringen utanför",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "Lämna markeringen utanför"
 }

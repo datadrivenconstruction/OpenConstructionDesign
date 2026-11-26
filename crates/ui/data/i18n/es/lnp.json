@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} huecos no modificados ({why})",
  "lnp.params_changed": "valores modificados: {n}",
  "lnp.params_same": "Sin cambios: {u} elementos ya tienen este valor",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Seleccione solo el primer panel para editarlo",
  "lnp.clip_from_wall": "Parámetros copiados del muro #{id}",
  "lnp.clip_from_opening": "Parámetros copiados del hueco #{id}",
- "lnp.match_from": "Propiedades de #{id} aplicadas a {n} elementos",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Propiedades de #{id} aplicadas a {n} elementos"
 }

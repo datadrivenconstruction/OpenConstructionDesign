@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Sélectionner toutes les catégories",
  "pick_rules.filter.tip": "Filtre de sélection : les catégories décochées sont ignorées au clic et au survol",
  "pick_rules.here": "Éléments ici",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "sélectionnés",
- "pick_rules.pinned": "Sélectionner les éléments épinglés",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Sélectionner les éléments épinglés"
 }

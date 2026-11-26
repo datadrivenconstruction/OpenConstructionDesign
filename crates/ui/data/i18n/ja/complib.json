@@ -18,7 +18,7 @@
  "complib.ready.no": "未書き込み",
  "complib.edited": "編集済み",
  "complib.edited_tip": "プロジェクトのファミリは組み込みのものと異なります",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "値",
- "complib.armed": "コンポーネント: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "コンポーネント: {name}"
 }

@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "마스트 승강기",
+ "fam.name.mast_lift": "마스트 승강기",
+ "gen.rule.steel.check.self_weight.desc": "절단면 위 타워의 높이 1 m당 무게.",
+ "gen.rule.steel.check.self_weight.title": "미터당 강재 무게",
+ "gen.rule.steel.check.strut_share.desc": "수평재가 절점에서 부담하는 현재 힘의 비율.",
+ "gen.rule.steel.check.strut_share.title": "수평재 분담률",
+ "gen.rule.steel.out.lift_box_d.desc": "마스트 승강기가 마스트를 포함해 필요로 하는 평면 깊이. 바닥은 그 위에서 개구됩니다.",
+ "gen.rule.steel.out.lift_box_d.title": "승강기 박스 깊이",
+ "gen.rule.steel.out.lift_box_w.desc": "마스트 승강기가 필요로 하는 평면 폭. 바닥은 그 위에서 개구됩니다.",
+ "gen.rule.steel.out.lift_box_w.title": "승강기 박스 폭",
+ "gen.rule.steel.out.lift_offset.desc": "평면 가새를 피한 승강기와 축 사이의 거리.",
+ "gen.rule.steel.out.lift_offset.title": "축에서 승강기까지의 오프셋",
+ "gen.rule.steel.out.lifts.desc": "코어를 따라 오르는 승강기: 두 번째 플랫폼까지, 이어서 최상부까지.",
+ "gen.rule.steel.out.lifts.title": "승강기 구간"
+}

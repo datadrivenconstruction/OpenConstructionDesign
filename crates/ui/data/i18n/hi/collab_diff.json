@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "प्रकार",
  "collab_diff.diff.col.field": "फ़ील्ड",
  "collab_diff.diff.col.old": "पहले",
- "collab_diff.diff.col.new": "अब"
+ "collab_diff.diff.col.new": "अब",
+ "collab_diff.reveal.title": "निर्माण क्रम",
+ "collab_diff.reveal.start": "निर्मित रूप में दिखाएँ",
+ "collab_diff.reveal.play": "चलाएँ",
+ "collab_diff.reveal.pause": "रोकें",
+ "collab_diff.reveal.back": "पीछे",
+ "collab_diff.reveal.close": "बंद करें",
+ "collab_diff.reveal.nothing": "दिखाने के लिए कुछ नहीं: 3D दृश्य में कोई बदला हुआ तत्व नहीं है।",
+ "collab_diff.reveal.journal_busy": "जर्नल पढ़ा जा रहा है…",
+ "collab_diff.reveal.journal_play": "जर्नल चलाएँ"
 }

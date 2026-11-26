@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nouveaux raccourcis",
  "keys_import.changed_head": "Remplace vos propres raccourcis",
  "keys_import.conflicts_head": "Conflits après l'import",
+ "keys_import.line": "{cmd} ({kind}) : {from} → {to}",
  "keys_import.kind_chord": "accord",
  "keys_import.kind_seq": "deux lettres",
  "keys_import.unbound": "aucun",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Non annulé : les raccourcis ont été modifiés après l'import. Réinitialisez-les un à un dans la fenêtre Raccourcis.",
  "keys_import.undo_none": "Rien à annuler : aucun import de raccourcis dans cette session.",
  "keys_import.imported": "Raccourcis importés",
- "keys_import.imported_conflicts": "Raccourcis importés ; conflits : {n}",
- "keys_import.line": "{cmd} ({kind}) : {from} → {to}"
+ "keys_import.imported_conflicts": "Raccourcis importés ; conflits : {n}"
 }

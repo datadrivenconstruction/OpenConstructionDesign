@@ -9,6 +9,7 @@
  "ai_found.found.hide": "ซ่อนแล้ว",
  "ai_found.found.color": "ระบายสีแล้ว",
  "ai_found.found.count": "{n} จาก {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "ไม่มีรายการที่ตรงกัน ลองใช้ตัวกรองที่กว้างขึ้น",
  "ai_found.found.show_btn": "แสดง",
  "ai_found.found.show_tip": "เลือกองค์ประกอบเหล่านี้และซูมไปยังองค์ประกอบในแปลนและ 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "ซ่อนองค์ประกอบ # รายการ",
   "other": "ซ่อนองค์ประกอบ # รายการ"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

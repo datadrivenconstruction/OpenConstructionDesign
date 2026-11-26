@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() की शाखाएँ अलग हैं",
  "pe.msg_what_args": "तर्क",
  "pe.msg_and": " और ",
+ "pe.msg_incompatible": "{w}: असंगत इकाइयाँ {dims}",
  "pe.text_no_formula": "टेक्स्ट पैरामीटर में फ़ॉर्मूला नहीं होता",
  "pe.circular": "वृत्तीय संदर्भ: {text}",
- "pe.depends_invalid": "अमान्य “{b}” पर निर्भर",
- "pe.msg_incompatible": "{w}: असंगत इकाइयाँ {dims}"
+ "pe.depends_invalid": "अमान्य “{b}” पर निर्भर"
 }

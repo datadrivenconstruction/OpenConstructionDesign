@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "if() শাখাগুলো আলাদা",
  "pe.msg_what_args": "আর্গুমেন্ট",
  "pe.msg_and": " এবং ",
+ "pe.msg_incompatible": "{w}: অসামঞ্জস্যপূর্ণ একক {dims}",
  "pe.text_no_formula": "টেক্সট প্যারামিটারে সূত্র নেওয়া যায় না",
  "pe.circular": "বৃত্তাকার রেফারেন্স: {text}",
- "pe.depends_invalid": "অবৈধ “{b}”-এর উপর নির্ভরশীল",
- "pe.msg_incompatible": "{w}: অসামঞ্জস্যপূর্ণ একক {dims}"
+ "pe.depends_invalid": "অবৈধ “{b}”-এর উপর নির্ভরশীল"
 }

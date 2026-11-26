@@ -41,5 +41,7 @@
  "sb.save.fresh": "Өзгерістер жоқ",
  "sb.save.save": "Сақтау",
  "sb.save.ifc": "IFC көшірмесін сақтау",
- "sb.save.autosave": "Автосақтау"
+ "sb.save.autosave": "Автосақтау",
+ "sb.more.title": "Тағы",
+ "sb.more.desc": "Осы енге сыймайтын күй жолағының элементтері."
 }

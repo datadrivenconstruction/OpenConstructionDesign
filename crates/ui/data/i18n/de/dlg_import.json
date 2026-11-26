@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "als Netze",
  "dlg.imp.skipped": "übersprungen",
  "dlg.imp.notes": "Hinweise: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "und {n} weitere Arten",
  "dlg.imp.no_levels": "Die Datei hat keine Ebenen: Eine Standardebene wurde erstellt",
  "dlg.imp.reimport_row": "Aktualisiert {updated}, unverändert {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} Linien, {arcs} Bögen, {texts} Texte, {fills} Flächen, {layers} Ebenen; Einheit {unit} mm",
  "dlg.dw.summary_paper": "; Papierblätter {n} (nicht auf die Unterlage gesetzt)",
  "dlg.dw.summary_unknown": "; nicht übernommen: {list}",
- "dlg.dw.summary_more": " und {n} weitere Arten",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " und {n} weitere Arten"
 }

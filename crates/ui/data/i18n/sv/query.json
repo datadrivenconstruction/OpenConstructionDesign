@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" kan inte ändras: {why}",
  "query.err.op_no_field": "operator utan fält",
  "query.err.positive": "{key}: värdet måste vara större än noll",
+ "query.err.raw": "{text}",
  "query.err.text_field": "fältet \"{key}\" är text, en formel gäller inte",
  "query.err.unclosed_paren": "avslutande parentes saknas",
  "query.err.unclosed_quote": "avslutande citattecken saknas",
@@ -27,6 +28,5 @@
  "query.why.curtain": "glasfasader ändras i sina egna egenskaper",
  "query.why.opening_type": "typen för en öppning följer dess storlek: \"-> bredd=… höjd=…\"",
  "query.why.slab_thickness": "golvets tjocklek anges av typen: \"-> type=…\"",
- "query.why.wall_thickness": "väggens tjocklek anges av typen: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "väggens tjocklek anges av typen: \"-> type=…\""
 }

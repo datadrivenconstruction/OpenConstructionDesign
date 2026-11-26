@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "клоновете на if() се различават",
  "pe.msg_what_args": "аргументи",
  "pe.msg_and": " и ",
+ "pe.msg_incompatible": "{w}: несъвместими единици {dims}",
  "pe.text_no_formula": "текстовите параметри не приемат формула",
  "pe.circular": "кръгова препратка: {text}",
- "pe.depends_invalid": "зависи от невалидния „{b}“",
- "pe.msg_incompatible": "{w}: несъвместими единици {dims}"
+ "pe.depends_invalid": "зависи от невалидния „{b}“"
 }

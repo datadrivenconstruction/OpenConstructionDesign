@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "кітап оқылмады, оның өз бағандары жоғалады; оны XLSX-де жабыңыз да, қайталаңыз",
  "xl.msg.type_x_layer_x": "түр {} қабат {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} енді жоқ, оның өз бағандарының ұяшықтары түсірілді",
- "xl.msg.delsafe_type_param_on_elements": "'{}' параметрі — түр параметрі; оны түрлер парағында өңдеңіз, қолданылмады"
+ "xl.msg.delsafe_type_param_on_elements": "'{}' параметрі — түр параметрі; оны түрлер парағында өңдеңіз, қолданылмады",
+ "xl.msg.tag_x_is_removed_with_x_x": "{} белгісі {} {} бірге жойылады",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "{} өлшемі {} {} жоғалтады және соңғы пішінін сақтайды",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "жойылған элементтердің аннотацияларын тексеру мүмкін емес: {}"
 }

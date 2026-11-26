@@ -12,6 +12,7 @@
  "links.loaded": "lastet",
  "links.not_loaded": "ikke lastet",
  "links.loading": "laster…",
+ "links.loading_all": "Laster koblinger",
  "links.levels": "etasjer",
  "links.elements": "elementer",
  "links.offset": "Forskyvning:",

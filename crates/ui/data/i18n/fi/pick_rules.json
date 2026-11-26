@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Valitse kaikki luokat",
  "pick_rules.filter.tip": "Valintasuodatin: napsautus ja osoitin ohittavat ruksaamattomat luokat",
  "pick_rules.here": "Kohteet tässä",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "valittu",
- "pick_rules.pinned": "Valitse lukitut kohteet",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Valitse lukitut kohteet"
 }

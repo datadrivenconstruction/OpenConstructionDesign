@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Unir, separar ou alternar junções de geometria",
  "api.cmd.place_footings": "Posicionar uma sapata sob cada pilar de um pavimento",
  "api.cmd.create_terrain": "Criar terreno a partir de pontos de levantamento ou de um plano inclinado",
- "api.cmd.script_recipes": "Ler os blocos de script e as receitas de construções livres"
+ "api.cmd.set_material": "Definir a aparência de um material em 3D",
+ "api.cmd.script_recipes": "Ler os blocos de script e as receitas de construções livres",
+ "api.cmd.generate_block": "Planejar um quarteirão de edifícios em lotes com regras de implantação compartilhadas",
+ "api.cmd.measure_save": "Salvar uma medição em uma vista",
+ "api.cmd.edit_mass": "Adicionar uma etapa de histórico a uma massa: extrudar, rascunho, casca, arredondar, chanfrar, deslocar ou dividir",
+ "api.cmd.mass_to_family": "Criar uma família de componentes a partir da linha do tempo de uma massa"
 }

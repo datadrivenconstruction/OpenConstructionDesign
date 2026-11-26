@@ -41,5 +41,16 @@
  "library.ifc.window": "Fereastră",
  "library.ifc.stair": "Scară",
  "library.ifc.pipe_fitting": "Fiting de conductă",
- "library.ifc.duct_fitting": "Piesă de conductă de ventilație"
+ "library.ifc.duct_fitting": "Piesă de conductă de ventilație",
+ "library.ifc.beam": "Grindă",
+ "library.ifc.column": "Stâlp",
+ "library.ifc.appliance": "Aparat",
+ "library.ifc.fire_terminal": "Terminal de stingere a incendiilor",
+ "library.ifc.heat_exchanger": "Schimbător de căldură",
+ "library.ifc.pump": "Pompă",
+ "library.ifc.tank": "Rezervor",
+ "library.ifc.transport": "Element de transport",
+ "library.ifc.valve": "Vană",
+ "library.ifc.waste_terminal": "Terminal de evacuare ape uzate",
+ "library.ifc.medical": "Dispozitiv medical"
 }

@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} टोकन",
  "ai.size.block": "इस मॉडल के लिए बहुत लंबा: लगभग {n} टोकन, जबकि उत्तर के लिए जगह छोड़ते हुए अधिकतम {max} आते हैं — छोटा करें या बाँटें",
  "ai.size.trim": "फ़िट करने के लिए काटें",
  "ai.size.trim_tip": "संदेश का अंत काटें ताकि वह फ़िट हो जाए। आपके क्लिक तक कुछ नहीं कटता।",
  "ai.size.drop_view": "दृश्य छोड़ें",
  "ai.size.drop_level": "लेवल छोड़ें",
- "ai.size.drop_selection": "चयन छोड़ें",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "चयन छोड़ें"
 }

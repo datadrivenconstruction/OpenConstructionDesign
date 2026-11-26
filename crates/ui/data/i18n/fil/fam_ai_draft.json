@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "naayos matapos ang {n} tinanggihang subok, humigit-kumulang {tokens} token",
+ "ai.fam_offer": "Nag-alok ang isang agent ng family na {name}",
+ "ai.fam_offer.open": "Buksan sa family editor",
+ "ai.fam_offer.dismiss": "Isara",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Sinusuri…",
+ "fe.ai.clean": "Walang nakita ang pagsusuri",
+ "fe.ai.check_values": "Suriin gamit ang mga value",
+ "fe.ai.lines": "mga linya {n}",
+ "fe.ai.changes": "{n} pagbabago kumpara sa naunang bersyon",
+ "fe.ai.added": "idinagdag: {head} {name}",
+ "fe.ai.removed": "inalis: {head} {name}",
+ "fe.ai.changed": "binago: {head} {name}",
+ "fe.ai.reject": "Tanggihan"
+}

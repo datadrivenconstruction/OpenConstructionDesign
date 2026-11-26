@@ -24,5 +24,21 @@
  "value_src.verified_n": "যাচাইকৃত মান: {n}",
  "value_src.bulk_note": "AI দ্বারা পূরণ মান, যাচাই হয়নি: {n}",
  "value_src.bulk_verify": "যাচাইকৃত চিহ্নিত করুন ({n})",
- "value_src.bulk_tip": "নির্বাচনের সব AI-পূরণ মান যাচাইকৃত হিসেবে চিহ্নিত করে, এক পূর্বাবস্থা ধাপে"
+ "value_src.bulk_tip": "নির্বাচনের সব AI-পূরণ মান যাচাইকৃত হিসেবে চিহ্নিত করে, এক পূর্বাবস্থা ধাপে",
+ "origin.title": "উৎস",
+ "origin.made_by": "তৈরি করেছে",
+ "origin.request": "অনুরোধ",
+ "origin.at": "প্রয়োগ করা হয়েছে",
+ "origin.recipe": "রেসিপি “{name}”, অংশ {part}",
+ "origin.ai": "AI সহকারী ({model})",
+ "origin.agent": "এজেন্ট {name}",
+ "origin.script": "স্ক্রিপ্ট {name}",
+ "origin.xlsx": "XLSX স্প্রেডশিট",
+ "origin.user": "একজন ব্যবহারকারী",
+ "origin.import": "ইমপোর্ট",
+ "origin.import_file": "{file} থেকে ইমপোর্ট",
+ "origin.unknown": "ইতিহাসে নেই",
+ "origin.held": "হাতে সম্পাদিত: রেসিপি পুনরায় চালালে এটি যেমন আছে তেমনই থাকে",
+ "origin.rebuilt": "রেসিপি পুনরায় চালালে এটি আবার তৈরি হয়; যেমন আছে রাখতে হাতে সম্পাদনা করুন",
+ "origin.ai_values": "AI-পূরণ করা মান: {n}, যাচাই হয়নি: {open}"
 }

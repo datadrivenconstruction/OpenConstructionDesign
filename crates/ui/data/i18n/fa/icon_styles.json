@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "رنگی",
+ "cmd.ui.icons.color": "نمادهای رنگی",
+ "cmd.ui.icons.color.desc": "سبک ترسیم نمادها",
+ "theme.icons.hierarchical": "سلسله‌مراتبی",
+ "cmd.ui.icons.hierarchical": "نمادهای سلسله‌مراتبی",
+ "cmd.ui.icons.hierarchical.desc": "سبک ترسیم نمادها",
+ "theme.icons.isometric": "ایزومتریک",
+ "cmd.ui.icons.isometric": "نمادهای ایزومتریک",
+ "cmd.ui.icons.isometric.desc": "سبک ترسیم نمادها",
+ "theme.icons.monoline": "تک‌خطی",
+ "cmd.ui.icons.monoline": "نمادهای تک‌خطی",
+ "cmd.ui.icons.monoline.desc": "سبک ترسیم نمادها"
+}

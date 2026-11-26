@@ -24,5 +24,21 @@
  "value_src.verified_n": "Giá trị đã xác minh: {n}",
  "value_src.bulk_note": "Giá trị do AI điền, chưa xác minh: {n}",
  "value_src.bulk_verify": "Đánh dấu đã xác minh ({n})",
- "value_src.bulk_tip": "Đánh dấu đã xác minh mọi giá trị do AI điền trong vùng chọn, một bước hoàn tác"
+ "value_src.bulk_tip": "Đánh dấu đã xác minh mọi giá trị do AI điền trong vùng chọn, một bước hoàn tác",
+ "origin.title": "Nguồn gốc",
+ "origin.made_by": "Tạo bởi",
+ "origin.request": "Yêu cầu",
+ "origin.at": "Đã áp dụng",
+ "origin.recipe": "công thức “{name}”, phần {part}",
+ "origin.ai": "trợ lý AI ({model})",
+ "origin.agent": "tác nhân {name}",
+ "origin.script": "tập lệnh {name}",
+ "origin.xlsx": "Bảng tính XLSX",
+ "origin.user": "một người dùng",
+ "origin.import": "nhập",
+ "origin.import_file": "nhập từ {file}",
+ "origin.unknown": "không có trong lịch sử",
+ "origin.held": "Đã sửa thủ công: chạy lại công thức sẽ giữ nguyên",
+ "origin.rebuilt": "Chạy lại công thức sẽ dựng lại nó; hãy sửa thủ công để giữ nguyên",
+ "origin.ai_values": "Giá trị do AI điền: {n}, chưa xác minh: {open}"
 }

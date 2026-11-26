@@ -20,6 +20,7 @@
  "sched_import.why_ro": "chỉ đọc",
  "sched_import.why_locked": "giá trị đã khóa",
  "sched_import.why_bad": "giá trị không hợp lệ",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "Áp dụng {n} thay đổi",
  "sched_import.cancel": "Hủy",
  "sched_import.applied": "Đã nhập {n} ô (một bước hoàn tác)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Kết quả công thức, không áp dụng: {n}",
  "sched_import.no_id_rows": "Hàng không có Id, không được đọc: {n} (hàng {rows})",
  "sched_import.more": "… còn {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(trống)",
  "sched_import.reading": "Đang đọc sổ…",
  "sched_import.resaved": "Sổ đã được lưu lại sau lần xem trước đầu tiên: bản xem trước này hiển thị nội dung mới",
- "sched_import.resaved_reading": "Sổ đã được lưu lại: chưa áp dụng gì, đang đọc lại để tạo bản xem trước mới",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Sổ đã được lưu lại: chưa áp dụng gì, đang đọc lại để tạo bản xem trước mới"
 }

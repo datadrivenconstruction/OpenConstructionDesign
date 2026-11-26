@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Projektcsalád definíciós szövegének olvasása",
+ "api.cmd.family_validate": "Családdefiníció szövegének ellenőrzése",
+ "api.cmd.family_reference": "A családdefiníció szövegének referenciájának olvasása",
+ "api.cmd.family_draft": "Családdefiníció felkínálása vázlatként a családszerkesztőben"
+}

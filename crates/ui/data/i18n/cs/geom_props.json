@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<různé>",
  "geom_props.tip": "Enter použije hodnotu na všech {n} vybraných, jeden krok zpět",
  "geom_props.roof_slope": "Sklon",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Importované prvky",
  "geom_props.kind.mass": "Hmoty",
  "geom_props.kind.solid": "Tělesa",
- "geom_props.kind.toposolid": "Terén",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terén"
 }

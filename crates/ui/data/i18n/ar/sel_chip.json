@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "انقر عنصراً لتحديده. Ctrl للإضافة، وShift للإزالة.",
- "sel_chip.opt.units": "الوحدات",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "الوحدات"
 }

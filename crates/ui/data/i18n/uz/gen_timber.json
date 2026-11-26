@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT pol paneli",
+ "fam.name.glulam_beam": "Yelimlangan yog'och to'sin",
+ "fam.name.glulam_column": "Yelimlangan yog'och ustun",
+ "gen.group.timber": "Yog'och konstruksiya",
+ "gen.rule.timber.beam_span_max.desc": "Ikki ustun orasidagi yelimlangan yog'och to'sinning eng uzun oralig'i.",
+ "gen.rule.timber.beam_span_max.title": "To'sin oralig'i chegarasi",
+ "gen.rule.timber.panel_w.desc": "Eng keng o'zaro yelimlangan pol paneli; har orasida bitta tutashuv.",
+ "gen.rule.timber.panel_w.title": "CLT panel kengligi",
+ "gen.rule.timber.span_depth.desc": "Yelimlangan yog'och to'sin oralig'ining balandligiga nisbati; kesimni tanlaydi.",
+ "gen.rule.timber.span_depth.title": "To'sin oralig'i va balandligi"
+}

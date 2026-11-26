@@ -45,5 +45,7 @@
  "phui.kind.comp": "কম্পোনেন্ট",
  "phui.kind.shaft": "শ্যাফট",
  "phui.kind.ramp": "র‍্যাম্প",
- "phui.kind.member": "সদস্য"
+ "phui.kind.member": "সদস্য",
+ "phui.dates": "তারিখ (শুরু, শেষ)",
+ "phui.show_calendar": "ক্যালেন্ডার অনুযায়ী দেখান"
 }

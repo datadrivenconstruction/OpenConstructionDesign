@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "סוג",
  "collab_diff.diff.col.field": "שדה",
  "collab_diff.diff.col.old": "היה",
- "collab_diff.diff.col.new": "עכשיו"
+ "collab_diff.diff.col.new": "עכשיו",
+ "collab_diff.reveal.title": "בנייה הדרגתית",
+ "collab_diff.reveal.start": "הצג כפי שנבנה",
+ "collab_diff.reveal.play": "הפעל",
+ "collab_diff.reveal.pause": "השהה",
+ "collab_diff.reveal.back": "אחורה",
+ "collab_diff.reveal.close": "סגור",
+ "collab_diff.reveal.nothing": "אין מה להציג: אף אלמנט ששונה אינו בסצנת התלת-ממד.",
+ "collab_diff.reveal.journal_busy": "קורא את היומן…",
+ "collab_diff.reveal.journal_play": "הפעל יומן"
 }

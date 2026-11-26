@@ -1,6 +1,7 @@
 {
  "ai.check.more": "עוד {0} ממצאים של הכלל הזה לא מופיעים ברשימה",
  "ai.check.integrity": "נתונים פגומים ב-{0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: הקצה אינו מעל הבסיס",
  "ai.check.level_host_differs": "הרכיב נמצא במפלס אחר מהמארח שלו ({0})",
  "ai.check.clash": "{0} מתנגש עם {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "כלל {1}: {3} אלמנטים, מותרים {4}",
  "ai.check.rule.clearance": "כלל {1}: מרחק {3} מ׳, נדרשים לפחות {4} מ׳",
  "ai.check.rule.unsupported": "לא ניתן לבדוק את הכלל {1}: הקטגוריה הזו אינה נתמכת",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "פרמטר {0}: \"{1}\" אינו קבוצת עלות לפי DIN 276 (שלוש ספרות, 100 עד 899) ב-{2} אלמנטים"
 }

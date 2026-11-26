@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "요소 결합, 결합 해제 또는 결합 방식 전환",
  "api.cmd.place_footings": "레벨의 모든 기둥 아래에 기초 배치",
  "api.cmd.create_terrain": "측량점 또는 경사면으로 지형 만들기",
- "api.cmd.script_recipes": "자유형 구조의 스크립트 블록과 레시피 읽기"
+ "api.cmd.set_material": "3D에서 재료의 표현 방식 설정",
+ "api.cmd.script_recipes": "자유형 구조의 스크립트 블록과 레시피 읽기",
+ "api.cmd.generate_block": "공통 대지 규칙을 적용하여 대지 위의 건물 블록 계획",
+ "api.cmd.measure_save": "측정값을 뷰에 저장",
+ "api.cmd.edit_mass": "매스에 이력 단계 추가: 밀기, 초안, 쉘, 필렛, 모따기, 오프셋 또는 분할",
+ "api.cmd.mass_to_family": "매스 타임라인에서 구성 요소 패밀리 생성"
 }

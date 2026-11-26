@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{0} sa {1} elemento ang made-delete. Kailangan itong kumpirmahin ng tao",
+ "ai.issue.wipe": "Ide-delete ng plano ang lahat ng {1} elemento ng model ({0} na-delete). Hindi ito kailanman inilalapat sa isang hakbang"
+}

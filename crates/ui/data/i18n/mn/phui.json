@@ -45,5 +45,7 @@
  "phui.kind.comp": "Бүрэлдэхүүн",
  "phui.kind.shaft": "Шахтууд",
  "phui.kind.ramp": "Налуу замууд",
- "phui.kind.member": "Бүтцийн гишүүд"
+ "phui.kind.member": "Бүтцийн гишүүд",
+ "phui.dates": "Огноо (эхлэх, дуусах)",
+ "phui.show_calendar": "Календарь харуулах"
 }

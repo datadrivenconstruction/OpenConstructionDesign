@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Elrejtve",
  "ai_found.found.color": "Színezve",
  "ai_found.found.count": "{n} / {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Nincs találat. Próbáljon szélesebb szűrőt.",
  "ai_found.found.show_btn": "Megjelenítés",
  "ai_found.found.show_tip": "Ezen elemek kijelölése és nagyítás rájuk az alaprajzon és 3D-ben",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# elem elrejtve",
   "other": "# elem elrejtve"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

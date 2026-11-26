@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "les branches de if() diffèrent",
  "pe.msg_what_args": "arguments",
  "pe.msg_and": " et ",
+ "pe.msg_incompatible": "{w} : unités incompatibles {dims}",
  "pe.text_no_formula": "les paramètres texte n'acceptent pas de formule",
  "pe.circular": "référence circulaire : {text}",
- "pe.depends_invalid": "dépend de « {b} » non valide",
- "pe.msg_incompatible": "{w} : unités incompatibles {dims}"
+ "pe.depends_invalid": "dépend de « {b} » non valide"
 }

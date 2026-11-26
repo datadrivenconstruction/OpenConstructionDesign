@@ -45,5 +45,7 @@
  "phui.kind.comp": "구성요소",
  "phui.kind.shaft": "샤프트",
  "phui.kind.ramp": "경사로",
- "phui.kind.member": "부재"
+ "phui.kind.member": "부재",
+ "phui.dates": "날짜 (시작, 종료)",
+ "phui.show_calendar": "달력으로 보기"
 }

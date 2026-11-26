@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Pilihan ({n})",
  "ai.ctx.add_tip": "Tambahkan kembali ke yang dilihat AI",
  "ai.ctx.frame_tip": "Tampilkan elemen ini",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Railing",
  "ai.ctx.cat.roof": "Atap",
  "ai.ctx.cat.stair": "Tangga",
- "ai.ctx.cat.other": "Lainnya",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Lainnya"
 }

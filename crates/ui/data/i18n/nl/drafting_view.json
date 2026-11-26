@@ -15,6 +15,7 @@
  "drafting_view.name": "Naam",
  "drafting_view.count": "{n} annotaties",
  "drafting_view.tab": "Tekenen · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Lege tekenweergave",
  "drafting_view.canvas_hint": "Gebruik de annotatiegereedschappen: detaillijnen, vlakken, tekst, detailcomponenten",
  "drafting_view.created": "Tekenweergave \"{name}\" aangemaakt",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Meer",
  "empty.drafting.title": "Nog geen tekenweergaven",
  "empty.drafting.hint": "Maak er een aan voor 2D-details die niet uit het model zijn gesneden.",
- "empty.drafting.action": "Nieuwe tekenweergave",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Nieuwe tekenweergave"
 }

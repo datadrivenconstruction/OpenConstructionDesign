@@ -18,7 +18,7 @@
  "complib.ready.no": "nezapsáno",
  "complib.edited": "Upraveno",
  "complib.edited_tip": "Rodina projektu se liší od vestavěné",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Hodnota",
- "complib.armed": "Komponenta: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponenta: {name}"
 }

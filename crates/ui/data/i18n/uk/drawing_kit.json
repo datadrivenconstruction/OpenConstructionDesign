@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: повний тон",
  "drawing_kit.reset_color": "{layer}: скинути до кольору креслення",
  "drawing_kit.unit.ft": "фт",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Кут",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Скасувати (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} з {m}",
  "drawing_kit.accept_class": "Прийняти всі цього типу",
- "drawing_kit.reject_class": "Відхилити всі цього типу",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Відхилити всі цього типу"
 }

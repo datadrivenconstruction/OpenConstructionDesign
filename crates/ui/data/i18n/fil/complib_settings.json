@@ -48,5 +48,13 @@
  "settings.lib_open": "Library ng component",
  "settings.lib_open_desc": "Mag-browse ng mga built-in na family, mga nasa proyekto at sarili mong mga family",
  "settings.lib_dir": "Sarili kong library folder",
- "settings.lib_dir_desc": "Ang mga family file (.ddcf) na ilalagay dito ay lilitaw sa ilalim ng My library. Inililipat ng DDC_COMPONENTS_DIR ang folder."
+ "settings.lib_dir_desc": "Ang mga family file (.ddcf) na ilalagay dito ay lilitaw sa ilalim ng My library. Inililipat ng DDC_COMPONENTS_DIR ang folder.",
+ "complib.fam.sprinkler_head": "Ulo ng Sprinkler",
+ "complib.fam.fire_pump": "Pampasunog na Bomba",
+ "complib.fam.pressurisation_fan": "Pressurisation Fan",
+ "complib.fam.lift_car": "Kabina ng Elevator",
+ "complib.fam.lift_landing_door": "Pinto ng Landing ng Elevator",
+ "complib.fam.lift_pit": "Hukay ng Elevator",
+ "complib.fam.lift_overrun": "Overrun ng Elevator",
+ "complib.fam.lift_machine": "Makina ng Elevator"
 }

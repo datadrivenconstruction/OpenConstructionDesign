@@ -18,7 +18,7 @@
  "complib.ready.no": "não gravado",
  "complib.edited": "Editado",
  "complib.edited_tip": "A família do projeto difere da integrada",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Valor",
- "complib.armed": "Componente: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Componente: {name}"
 }

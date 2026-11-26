@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "거부된 시도 {n}회 후 수정됨, 약 {tokens} 토큰",
+ "ai.fam_offer": "에이전트가 패밀리 {name}을(를) 제안했습니다",
+ "ai.fam_offer.open": "패밀리 편집기에서 열기",
+ "ai.fam_offer.dismiss": "닫기",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "검사 중…",
+ "fe.ai.clean": "검사에서 문제가 발견되지 않았습니다",
+ "fe.ai.check_values": "값으로 검사",
+ "fe.ai.lines": "{n}줄",
+ "fe.ai.changes": "이전 버전 대비 변경 {n}건",
+ "fe.ai.added": "추가됨: {head} {name}",
+ "fe.ai.removed": "삭제됨: {head} {name}",
+ "fe.ai.changed": "변경됨: {head} {name}",
+ "fe.ai.reject": "거부"
+}

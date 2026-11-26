@@ -18,7 +18,7 @@
  "complib.ready.no": "نہیں لکھا گیا",
  "complib.edited": "ترمیم شدہ",
  "complib.edited_tip": "پروجیکٹ کی فیملی بلٹ ان سے مختلف ہے",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "قدر",
- "complib.armed": "جزو: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "جزو: {name}"
 }

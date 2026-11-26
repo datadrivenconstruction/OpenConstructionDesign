@@ -41,5 +41,16 @@
  "library.ifc.window": "Ikkuna",
  "library.ifc.stair": "Portaat",
  "library.ifc.pipe_fitting": "Putkiliitin",
- "library.ifc.duct_fitting": "Kanavan sovite"
+ "library.ifc.duct_fitting": "Kanavan sovite",
+ "library.ifc.beam": "Palkki",
+ "library.ifc.column": "Pilari",
+ "library.ifc.appliance": "Kodinkone",
+ "library.ifc.fire_terminal": "Palonsammutuspääte",
+ "library.ifc.heat_exchanger": "Lämmönsiirrin",
+ "library.ifc.pump": "Pumppu",
+ "library.ifc.tank": "Säiliö",
+ "library.ifc.transport": "Kuljetuselementti",
+ "library.ifc.valve": "Venttiili",
+ "library.ifc.waste_terminal": "Jätevesipääte",
+ "library.ifc.medical": "Lääkintälaite"
 }

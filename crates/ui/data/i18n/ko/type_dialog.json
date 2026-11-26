@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "패밀리",
  "type_dialog.typedial.h_function": "기능",
  "type_dialog.typedial.h_material": "재료",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "매개변수",
  "type_dialog.typedial.h_thickness": "두께",
  "type_dialog.typedial.h_value": "값",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "벽 바닥 면적",
  "type_dialog.warn.wall_vol": "벽 체적",
  "type_dialog.warn.walls": "벽",
- "type_dialog.warn.warnings_n": "⚠ 경고: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ 경고: {n}"
 }

@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "sketsa dibatalkan",
  "sketch_edit.sk_applied": "sketsa diterapkan",
  "sketch_edit.sk_tail": "ekor",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "pelat",
  "sketch_edit.sk_host_roof": "atap",
  "sketch_edit.sk_host_ceiling": "plafon",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Tingkat 2",
  "sketch_edit.seed_floor_200": "Lantai 200",
  "sketch_edit.seed_section1": "Potongan 1",
- "sketch_edit.seed_section2": "Potongan 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Potongan 2"
 }

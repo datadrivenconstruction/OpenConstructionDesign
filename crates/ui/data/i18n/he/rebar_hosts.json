@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "מארחים: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "עמוד",
  "rebar_hosts.kind.beam": "קורה",
  "rebar_hosts.kind.wall": "קיר",
@@ -41,6 +42,5 @@
  "rebar_hosts.why.area_linear": "רשת נכנסת לקירות, לרצפות וליסודות, לא לעמודים או לקורות.",
  "rebar_hosts.why.bars_plate": "מוטות אורך וכריכים נכנסים לעמודים ולקורות, לא לקירות, לרצפות או ליסודות.",
  "rebar_hosts.why.no_common_face": "למארחים הנבחרים אין פאת כיסוי משותפת. בחר מארחים מסוג אחד.",
- "rebar_hosts.why.no_type": "בחר סוג מוט.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "בחר סוג מוט."
 }

@@ -48,5 +48,13 @@
  "settings.lib_open": "Компоненттер китепканасы",
  "settings.lib_open_desc": "Орнотулган үй-бүлөлөрдү, долбоордогуларды жана өзүңүздүкүн карап чыгыңыз",
  "settings.lib_dir": "Менин китепканамдын папкасы",
- "settings.lib_dir_desc": "Бул жерге коюлган үй-бүлө файлдары (.ddcf) Менин китепканам астында көрүнөт. DDC_COMPONENTS_DIR аны жылдырат."
+ "settings.lib_dir_desc": "Бул жерге коюлган үй-бүлө файлдары (.ddcf) Менин китепканам астында көрүнөт. DDC_COMPONENTS_DIR аны жылдырат.",
+ "complib.fam.sprinkler_head": "Спринклер башы",
+ "complib.fam.fire_pump": "Өрт насосу",
+ "complib.fam.pressurisation_fan": "Басым берүүчү желдеткич",
+ "complib.fam.lift_car": "Лифт кабинасы",
+ "complib.fam.lift_landing_door": "Лифттин кабат эшиги",
+ "complib.fam.lift_pit": "Лифт чуңкуру",
+ "complib.fam.lift_overrun": "Лифттин жогорку зонасы",
+ "complib.fam.lift_machine": "Лифт механизми"
 }

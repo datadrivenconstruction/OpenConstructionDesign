@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" kan ikke endres: {why}",
  "query.err.op_no_field": "operator uten felt",
  "query.err.positive": "{key}: verdien må være større enn null",
+ "query.err.raw": "{text}",
  "query.err.text_field": "feltet \"{key}\" er tekst, en formel gjelder ikke",
  "query.err.unclosed_paren": "lukkende parentes mangler",
  "query.err.unclosed_quote": "lukkende anførselstegn mangler",
@@ -27,6 +28,5 @@
  "query.why.curtain": "glassfasader endres i sine egne egenskaper",
  "query.why.opening_type": "typen til en åpning følger størrelsen: \"-> bredde=… høyde=…\"",
  "query.why.slab_thickness": "platetykkelsen settes av typen: \"-> type=…\"",
- "query.why.wall_thickness": "veggtykkelsen settes av typen: \"-> type=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "veggtykkelsen settes av typen: \"-> type=…\""
 }

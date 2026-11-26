@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Loyiha oilasi ta'rifining matnini o'qish",
+ "api.cmd.family_validate": "Oila ta'rifi matnini tekshirish",
+ "api.cmd.family_reference": "Oila ta'rifi matni bo'yicha qo'llanmani o'qish",
+ "api.cmd.family_draft": "Oila ta'rifini oila muharririda qoralama sifatida taklif qilish"
+}

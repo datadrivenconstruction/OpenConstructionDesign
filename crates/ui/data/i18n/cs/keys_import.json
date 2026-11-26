@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nové zkratky",
  "keys_import.changed_head": "Nahrazuje vaše vlastní zkratky",
  "keys_import.conflicts_head": "Konflikty po importu",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "akord",
  "keys_import.kind_seq": "dvě písmena",
  "keys_import.unbound": "žádná",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Nevráceno: zkratky byly po importu upraveny. Obnovte je jednotlivě v okně Zkratky.",
  "keys_import.undo_none": "Není co vrátit: v této relaci nebyl import zkratek.",
  "keys_import.imported": "Zkratky importovány",
- "keys_import.imported_conflicts": "Zkratky importovány; konflikty: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Zkratky importovány; konflikty: {n}"
 }

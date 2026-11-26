@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<zmienne>",
  "geom_props.tip": "Enter stosuje wartość do wszystkich {n} zaznaczonych, jednym krokiem cofnięcia",
  "geom_props.roof_slope": "Spadek",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Importowane elementy",
  "geom_props.kind.mass": "Bryły",
  "geom_props.kind.solid": "Bryły pełne",
- "geom_props.kind.toposolid": "Teren",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Teren"
 }

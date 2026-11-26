@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Loại",
  "collab_diff.diff.col.field": "Trường",
  "collab_diff.diff.col.old": "Trước",
- "collab_diff.diff.col.new": "Hiện tại"
+ "collab_diff.diff.col.new": "Hiện tại",
+ "collab_diff.reveal.title": "Quá trình xây dựng",
+ "collab_diff.reveal.start": "Hiển thị quá trình xây dựng",
+ "collab_diff.reveal.play": "Phát",
+ "collab_diff.reveal.pause": "Tạm dừng",
+ "collab_diff.reveal.back": "Lùi lại",
+ "collab_diff.reveal.close": "Đóng",
+ "collab_diff.reveal.nothing": "Không có gì để hiển thị: không có phần tử đã thay đổi nào trong cảnh 3D.",
+ "collab_diff.reveal.journal_busy": "Đang đọc nhật ký…",
+ "collab_diff.reveal.journal_play": "Phát nhật ký"
 }

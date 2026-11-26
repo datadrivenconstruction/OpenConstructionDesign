@@ -48,5 +48,13 @@
  "settings.lib_open": "Komponentbibliotek",
  "settings.lib_open_desc": "Gennemse de indbyggede familier, dem i projektet og dine egne",
  "settings.lib_dir": "Min biblioteksmappe",
- "settings.lib_dir_desc": "Familiefiler (.ddcf) placeret her vises under Mit bibliotek. DDC_COMPONENTS_DIR flytter den."
+ "settings.lib_dir_desc": "Familiefiler (.ddcf) placeret her vises under Mit bibliotek. DDC_COMPONENTS_DIR flytter den.",
+ "complib.fam.sprinkler_head": "Sprinklerhoved",
+ "complib.fam.fire_pump": "Brandpumpe",
+ "complib.fam.pressurisation_fan": "Overtryksventilator",
+ "complib.fam.lift_car": "Elevatorkabine",
+ "complib.fam.lift_landing_door": "Elevatorskaktdør",
+ "complib.fam.lift_pit": "Elevatorgrube",
+ "complib.fam.lift_overrun": "Elevatoroverløb",
+ "complib.fam.lift_machine": "Elevatormaskine"
 }

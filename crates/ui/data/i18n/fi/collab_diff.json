@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Laji",
  "collab_diff.diff.col.field": "Kenttä",
  "collab_diff.diff.col.old": "Ennen",
- "collab_diff.diff.col.new": "Nyt"
+ "collab_diff.diff.col.new": "Nyt",
+ "collab_diff.reveal.title": "Rakentuminen",
+ "collab_diff.reveal.start": "Näytä rakentumisjärjestyksessä",
+ "collab_diff.reveal.play": "Toista",
+ "collab_diff.reveal.pause": "Tauko",
+ "collab_diff.reveal.back": "Taaksepäin",
+ "collab_diff.reveal.close": "Sulje",
+ "collab_diff.reveal.nothing": "Ei näytettävää: mikään muuttunut elementti ei ole 3D-näkymässä.",
+ "collab_diff.reveal.journal_busy": "Luetaan lokia…",
+ "collab_diff.reveal.journal_play": "Toista loki"
 }

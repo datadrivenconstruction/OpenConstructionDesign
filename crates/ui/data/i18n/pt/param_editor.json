@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "os ramos de if() são diferentes",
  "pe.msg_what_args": "argumentos",
  "pe.msg_and": " e ",
+ "pe.msg_incompatible": "{w}: unidades incompatíveis {dims}",
  "pe.text_no_formula": "parâmetros de texto não aceitam fórmula",
  "pe.circular": "referência circular: {text}",
- "pe.depends_invalid": "depende de “{b}” inválido",
- "pe.msg_incompatible": "{w}: unidades incompatíveis {dims}"
+ "pe.depends_invalid": "depende de “{b}” inválido"
 }

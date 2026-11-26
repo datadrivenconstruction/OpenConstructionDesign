@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Барлық санаттарды таңдау",
  "pick_rules.filter.tip": "Таңдау сүзгісі: белгіленбеген санаттар басу мен үстіне апарудан өткізіледі",
  "pick_rules.here": "Мұнда элементтер",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "таңдалған",
- "pick_rules.pinned": "Бекітілген элементтерді таңдау",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Бекітілген элементтерді таңдау"
 }

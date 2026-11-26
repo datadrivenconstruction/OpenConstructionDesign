@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 құрал",
  "ai.stream.tools_many": "{n} құрал",
  "ai.stream.secs": "{n} с",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Модель қызметін әлі күтуде",
  "ai.stream.stop": "Тоқтату",
  "ai.stream.cancelled": "Тоқтатылды",
- "ai.stream.incomplete": "Жоба толық емес. Модельге ештеңе қолданылған жоқ.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Жоба толық емес. Модельге ештеңе қолданылған жоқ."
 }

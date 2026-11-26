@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Põhielemendid: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Post",
  "rebar_hosts.kind.beam": "Tala",
  "rebar_hosts.kind.wall": "Sein",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Võrk läheb seintesse, plaatidesse ja vundamentidesse, mitte postidesse ega taladesse.",
  "rebar_hosts.why.bars_plate": "Pikivardad ja vardaraud lähevad postidesse ja taladesse, mitte seintesse, plaatidesse ega vundamentidesse.",
  "rebar_hosts.why.no_common_face": "Valitud põhielementidel pole ühist katvuspinda. Vali ühte liiki põhielemendid.",
- "rebar_hosts.why.no_type": "Vali varrastüüp.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Vali varrastüüp."
 }

@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Είδος",
  "collab_diff.diff.col.field": "Πεδίο",
  "collab_diff.diff.col.old": "Πριν",
- "collab_diff.diff.col.new": "Τώρα"
+ "collab_diff.diff.col.new": "Τώρα",
+ "collab_diff.reveal.title": "Σταδιακή δόμηση",
+ "collab_diff.reveal.start": "Εμφάνιση ως κατασκευασμένο",
+ "collab_diff.reveal.play": "Αναπαραγωγή",
+ "collab_diff.reveal.pause": "Παύση",
+ "collab_diff.reveal.back": "Προς τα πίσω",
+ "collab_diff.reveal.close": "Κλείσιμο",
+ "collab_diff.reveal.nothing": "Δεν υπάρχει τίποτα για εμφάνιση: κανένα αλλαγμένο στοιχείο δεν βρίσκεται στην τρισδιάστατη σκηνή.",
+ "collab_diff.reveal.journal_busy": "Ανάγνωση ημερολογίου…",
+ "collab_diff.reveal.journal_play": "Αναπαραγωγή ημερολογίου"
 }

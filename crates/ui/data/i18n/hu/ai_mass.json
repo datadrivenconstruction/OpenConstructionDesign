@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{1} elemből {0} törlődne. Ezt a felhasználónak jóvá kell hagynia",
+ "ai.issue.wipe": "A terv a modell mind a(z) {1} elemét törölné ({0} törölve). Egy lépésben soha nem kerül alkalmazásra"
+}

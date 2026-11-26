@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Αντίγραφο τύπου",
  "wall_type.wt.duplicate_tip": "Αποθηκεύει αυτά τα στρώματα ως νέο τύπο· ο τύπος που ανοίξατε μένει ως έχει.",
  "wall_type.wt.switch_dirty": "Πατήστε OK ή Ακύρωση πριν ανοίξετε άλλον τύπο",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Λειτουργία",
  "wall_type.wt.h_material": "Υλικό",
  "wall_type.wt.h_thickness": "Πάχος",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Επιλέξτε τοίχους στην προβολή και μετά αλλάξτε τον τύπο τους.",
  "wall_type.swap.already": "Οι επιλεγμένοι τοίχοι έχουν ήδη αυτόν τον τύπο",
  "wall_type.swap.apply": "Αλλαγή",
- "wall_type.swap.done": "Ο τύπος τοίχου άλλαξε: {n} από {m} τοίχους",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Ο τύπος τοίχου άλλαξε: {n} από {m} τοίχους"
 }

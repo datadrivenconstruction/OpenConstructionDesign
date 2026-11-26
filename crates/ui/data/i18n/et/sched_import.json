@@ -20,6 +20,7 @@
  "sched_import.why_ro": "kirjutuskaitstud",
  "sched_import.why_locked": "lukustatud väärtus",
  "sched_import.why_bad": "vale väärtus",
+ "sched_import.refusal": "{at} {col} „{text}“: {why}",
  "sched_import.apply": "Rakenda {n} muudatust",
  "sched_import.cancel": "Tühista",
  "sched_import.applied": "Imporditud {n} lahtrit (üks tagasivõtmise samm)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Valemi tulemused, ei rakendatud: {n}",
  "sched_import.no_id_rows": "Read ilma ID-ta, ei loetud: {n} (read {rows})",
  "sched_import.more": "… veel {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(tühi)",
  "sched_import.reading": "Töövihikut loetakse…",
  "sched_import.resaved": "Töövihikut salvestati pärast esimest eelvaadet uuesti: see eelvaade näitab uut sisu",
- "sched_import.resaved_reading": "Töövihikut salvestati uuesti: midagi ei rakendatud, loetakse see uuesti uue eelvaate jaoks",
- "sched_import.refusal": "{at} {col} „{text}“: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Töövihikut salvestati uuesti: midagi ei rakendatud, loetakse see uuesti uue eelvaate jaoks"
 }

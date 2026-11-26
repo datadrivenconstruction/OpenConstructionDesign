@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Přečíst text definice rodiny projektu",
+ "api.cmd.family_validate": "Zkontrolovat text definice rodiny",
+ "api.cmd.family_reference": "Přečíst referenci textu definice rodiny",
+ "api.cmd.family_draft": "Nabídnout definici rodiny jako návrh v editoru rodin"
+}

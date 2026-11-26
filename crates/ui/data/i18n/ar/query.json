@@ -11,6 +11,7 @@
  "query.err.not_changed": "لا يمكن تغيير “{key}”: {why}",
  "query.err.op_no_field": "عامل بلا حقل",
  "query.err.positive": "{key}: يجب أن تكون القيمة أكبر من صفر",
+ "query.err.raw": "{text}",
  "query.err.text_field": "الحقل “{key}” نصي، والصيغة لا تُطبَّق عليه",
  "query.err.unclosed_paren": "قوس الإغلاق مفقود",
  "query.err.unclosed_quote": "علامة الاقتباس الإغلاقية مفقودة",
@@ -27,6 +28,5 @@
  "query.why.curtain": "الواجهات الزجاجية تُعدَّل في خصائصها",
  "query.why.opening_type": "نوع الفتحة يتبع مقاسها: “-> width=… height=…”",
  "query.why.slab_thickness": "سماكة البلاطة يحددها النوع: “-> type=…”",
- "query.why.wall_thickness": "سماكة الجدار يحددها النوع: “-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "سماكة الجدار يحددها النوع: “-> type=…”"
 }

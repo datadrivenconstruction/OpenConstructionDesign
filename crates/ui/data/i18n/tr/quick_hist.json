@@ -72,6 +72,7 @@
  "quick.cat.beam": "Kirişler",
  "quick.cat.ceiling": "Tavanlar",
  "quick.cat.structure": "Yapı",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {all} içinden {n}",
  "quick.hud.type": "Tip",
  "quick.hud.height": "Yükseklik",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "“{v}” değeri okunamıyor",
  "quick.menu.repeat": "Yinele: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Son kullanılanlar",
  "quick.bar.repeat_tip": "{cmd} · Yinelemek için Enter",
  "quick.repeat.none": "Henüz yinelenecek bir şey yok",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Geri",
  "quick.tips.next": "İleri",
  "quick.tips.finish": "Tamam",
- "quick.tips.never": "Bir daha gösterme",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Bir daha gösterme"
 }

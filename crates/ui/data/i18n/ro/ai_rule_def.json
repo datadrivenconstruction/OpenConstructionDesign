@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} constatări în plus ale acestei reguli nu sunt listate",
  "ai.check.integrity": "Date defecte în {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: partea de sus nu este deasupra bazei",
  "ai.check.level_host_differs": "Elementul este pe alt nivel decât gazda sa ({0})",
  "ai.check.clash": "{0} se suprapune cu {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Regula {1}: {3} elemente, permise {4}",
  "ai.check.rule.clearance": "Regula {1}: distanța {3} m, este necesar cel puțin {4} m",
  "ai.check.rule.unsupported": "Regula {1} nu a putut fi verificată: această categorie nu este acceptată",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "Parametrul {0}: „{1}” nu este un grup de costuri DIN 276 (trei cifre, de la 100 la 899) la {2} elemente"
 }

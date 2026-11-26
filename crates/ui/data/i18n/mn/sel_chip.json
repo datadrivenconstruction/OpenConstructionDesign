@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "Элемент дээр дарж сонгоно. Ctrl нэмнэ, Shift хасна.",
- "sel_chip.opt.units": "Нэгжүүд",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "Нэгжүүд"
 }

@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "ดาวน์โหลดตัวแก้ไขปัจจุบันจากหน้า ERP {url}",
  "erp.err.unsupported.admin": "ขอตัวแก้ไขปัจจุบันจากผู้ดูแล ERP ของคุณ",
  "erp.err.throttled_in": "พยายามมากเกินไป ลองอีกครั้งใน {s} วินาที",
+ "erp.err.throttled_ready": "หมดเวลารอแล้ว คุณลองใหม่ได้",
  "erp.err.imported": "รีวิชัน {n} ใน ERP เป็นโมเดลที่นำเข้ามา ตัวแก้ไขยังเปิดหรือเผยแพร่ทับไม่ได้",
  "erp.action.download": "เปิดหน้าดาวน์โหลดตัวแก้ไขใน ERP",
  "erp.action.new_link": "รับลิงก์ใหม่จากหน้า ERP",

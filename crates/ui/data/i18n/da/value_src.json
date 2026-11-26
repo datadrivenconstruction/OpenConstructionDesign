@@ -24,5 +24,21 @@
  "value_src.verified_n": "Værdier verificeret: {n}",
  "value_src.bulk_note": "Værdier udfyldt af AI, ikke verificeret: {n}",
  "value_src.bulk_verify": "Markér verificeret ({n})",
- "value_src.bulk_tip": "Markerer alle AI-udfyldte værdier i markeringen som verificeret, ét fortrydelsestrin"
+ "value_src.bulk_tip": "Markerer alle AI-udfyldte værdier i markeringen som verificeret, ét fortrydelsestrin",
+ "origin.title": "Oprindelse",
+ "origin.made_by": "Lavet af",
+ "origin.request": "Forespørgsel",
+ "origin.at": "Anvendt",
+ "origin.recipe": "opskrift “{name}”, del {part}",
+ "origin.ai": "AI-assistenten ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "script {name}",
+ "origin.xlsx": "XLSX-regneark",
+ "origin.user": "en person",
+ "origin.import": "import",
+ "origin.import_file": "import fra {file}",
+ "origin.unknown": "ikke i historikken",
+ "origin.held": "Redigeret manuelt: en ny kørsel af opskriften lader det være, som det er",
+ "origin.rebuilt": "En ny kørsel af opskriften genopbygger det; rediger manuelt for at beholde det, som det er",
+ "origin.ai_values": "Værdier udfyldt af AI: {n}, ikke verificeret: {open}"
 }

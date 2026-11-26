@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "Citește textul definiției unei familii din proiect",
+ "api.cmd.family_validate": "Verifică textul unei definiții de familie",
+ "api.cmd.family_reference": "Citește referința textului de definiție a familiei",
+ "api.cmd.family_draft": "Propune o definiție de familie ca schiță în editorul de familii"
+}

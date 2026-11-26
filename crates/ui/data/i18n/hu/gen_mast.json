@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Árbóclift",
+ "fam.name.mast_lift": "Árbóclift",
+ "gen.rule.steel.check.self_weight.desc": "A torony súlya egy metszet felett, a magasság méterére vetítve.",
+ "gen.rule.steel.check.self_weight.title": "Acélsúly méterenként",
+ "gen.rule.steel.check.strut_share.desc": "A pillér erőjének az a hányada, amelyet egy vízszintes elem tart a csomópontjában.",
+ "gen.rule.steel.check.strut_share.title": "Vízszintes elemek részesedése",
+ "gen.rule.steel.out.lift_box_d.desc": "Az árbóclifthez szükséges alaprajzi mélység az árbóccal együtt; a padlók nyitottak felette.",
+ "gen.rule.steel.out.lift_box_d.title": "Liftakna mélysége",
+ "gen.rule.steel.out.lift_box_w.desc": "Az árbócliftnek szükséges alaprajzi szélesség; a padlók nyitottak felette.",
+ "gen.rule.steel.out.lift_box_w.title": "Liftakna szélessége",
+ "gen.rule.steel.out.lift_offset.desc": "A lift távolsága a tengelytől, az alaprajzi merevítést kikerülve.",
+ "gen.rule.steel.out.lift_offset.title": "Lift eltolása a tengelytől",
+ "gen.rule.steel.out.lifts.desc": "Liftek a magban: a második platformig, majd a tetőig.",
+ "gen.rule.steel.out.lifts.title": "Liftszakaszok"
+}

@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "az if() ágak eltérnek",
  "pe.msg_what_args": "argumentumok",
  "pe.msg_and": " és ",
+ "pe.msg_incompatible": "{w}: nem kompatibilis mértékegységek: {dims}",
  "pe.text_no_formula": "a szöveges paraméterekhez nem tartozik képlet",
  "pe.circular": "körkörös hivatkozás: {text}",
- "pe.depends_invalid": "érvénytelen „{b}” elemtől függ",
- "pe.msg_incompatible": "{w}: nem kompatibilis mértékegységek: {dims}"
+ "pe.depends_invalid": "érvénytelen „{b}” elemtől függ"
 }

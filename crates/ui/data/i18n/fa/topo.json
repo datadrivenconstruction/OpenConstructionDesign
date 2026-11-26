@@ -64,6 +64,7 @@
  "topo.import.title": "واردسازی نقشه‌برداری",
  "topo.import.filter": "نقشه‌برداری (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "ارتفاع نقطه",
  "topo.opt.thickness": "ضخامت توپوسالید",
  "topo.opt.add_to_active": "افزودن به توپوسالید فعال",
@@ -121,6 +122,5 @@
  "topo.import.ok": "واردسازی",
  "topo.import.cancel": "انصراف",
  "topo.import.no_layers": "هیچ لایه‌ای انتخاب نشده",
- "topo.info.warnings": "ساخته نشد:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "ساخته نشد:"
 }

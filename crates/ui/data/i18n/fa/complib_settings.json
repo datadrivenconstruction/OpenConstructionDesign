@@ -48,5 +48,13 @@
  "settings.lib_open": "کتابخانهٔ اجزا",
  "settings.lib_open_desc": "خانواده‌های داخلی، خانواده‌های پروژه و خانواده‌های خودتان را مرور کنید",
  "settings.lib_dir": "پوشهٔ کتابخانهٔ من",
- "settings.lib_dir_desc": "فایل‌های خانواده (.ddcf) که اینجا قرار داده شوند در کتابخانهٔ من ظاهر می‌شوند. DDC_COMPONENTS_DIR آن را جابه‌جا می‌کند."
+ "settings.lib_dir_desc": "فایل‌های خانواده (.ddcf) که اینجا قرار داده شوند در کتابخانهٔ من ظاهر می‌شوند. DDC_COMPONENTS_DIR آن را جابه‌جا می‌کند.",
+ "complib.fam.sprinkler_head": "سرِ آب‌پاش",
+ "complib.fam.fire_pump": "پمپ آتش‌نشانی",
+ "complib.fam.pressurisation_fan": "فن فشارافزا",
+ "complib.fam.lift_car": "کابین آسانسور",
+ "complib.fam.lift_landing_door": "درِ طبقه آسانسور",
+ "complib.fam.lift_pit": "چاهک آسانسور",
+ "complib.fam.lift_overrun": "فضای بالاسری آسانسور",
+ "complib.fam.lift_machine": "موتورخانه آسانسور"
 }

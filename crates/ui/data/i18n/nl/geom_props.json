@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varieert>",
  "geom_props.tip": "Enter past de waarde toe op alle {n} geselecteerde, in één ongedaan-stap",
  "geom_props.roof_slope": "Helling",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Geïmporteerde elementen",
  "geom_props.kind.mass": "Massa's",
  "geom_props.kind.solid": "Volumes",
- "geom_props.kind.toposolid": "Terrein",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terrein"
 }

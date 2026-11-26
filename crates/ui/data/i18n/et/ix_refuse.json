@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Avaus {w} on laiem kui sein {len}",
+ "ix.fix.opening_width": "Laius {w} mm",
+ "ix.fix.wall_extend": "Pikenda seina pikkuseni {len} mm"
+}

@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Κρυμμένα",
  "ai_found.found.color": "Χρωματισμένα",
  "ai_found.found.count": "{n} από {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Δεν υπάρχει αντιστοιχία. Δοκιμάστε ένα ευρύτερο φίλτρο.",
  "ai_found.found.show_btn": "Εμφάνιση",
  "ai_found.found.show_tip": "Επιλογή αυτών των αντικειμένων και εστίαση σε κάτοψη και 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# αντικείμενο κρυμμένο",
   "other": "# αντικείμενα κρυμμένα"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

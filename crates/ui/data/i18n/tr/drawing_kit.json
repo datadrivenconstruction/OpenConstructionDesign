@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: tam ton",
  "drawing_kit.reset_color": "{layer}: çizim rengine sıfırla",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Açı",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Geri al (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m} içinde {n}",
  "drawing_kit.accept_class": "Bu türün tümünü kabul et",
- "drawing_kit.reject_class": "Bu türün tümünü reddet",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Bu türün tümünü reddet"
 }

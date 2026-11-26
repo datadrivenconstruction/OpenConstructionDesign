@@ -17,8 +17,8 @@
  "pe.msg_what_branches": "větve if() se liší",
  "pe.msg_what_args": "argumenty",
  "pe.msg_and": " a ",
+ "pe.msg_incompatible": "{w}: nekompatibilní jednotky {dims}",
  "pe.text_no_formula": "textové parametry nepřijímají vzorec",
  "pe.circular": "cyklický odkaz: {text}",
- "pe.depends_invalid": "závisí na neplatném „{b}“",
- "pe.msg_incompatible": "{w}: nekompatibilní jednotky {dims}"
+ "pe.depends_invalid": "závisí na neplatném „{b}“"
 }

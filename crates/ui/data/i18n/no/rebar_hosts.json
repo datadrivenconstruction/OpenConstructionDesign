@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Verter: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Søyle",
  "rebar_hosts.kind.beam": "Bjelke",
  "rebar_hosts.kind.wall": "Vegg",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Nett går i vegger, dekker og fundamenter, ikke søyler eller bjelker.",
  "rebar_hosts.why.bars_plate": "Langsgående armeringsjern og bøyler går i søyler og bjelker, ikke vegger, dekker eller fundamenter.",
  "rebar_hosts.why.no_common_face": "De valgte vertene har ingen felles dekkflate. Velg verter av én type.",
- "rebar_hosts.why.no_type": "Velg en armeringsjerntype.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Velg en armeringsjerntype."
 }

@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Вид",
  "collab_diff.diff.col.field": "Поле",
  "collab_diff.diff.col.old": "Було",
- "collab_diff.diff.col.new": "Тепер"
+ "collab_diff.diff.col.new": "Тепер",
+ "collab_diff.reveal.title": "Зведення",
+ "collab_diff.reveal.start": "Показати як збудовано",
+ "collab_diff.reveal.play": "Відтворити",
+ "collab_diff.reveal.pause": "Пауза",
+ "collab_diff.reveal.back": "Назад",
+ "collab_diff.reveal.close": "Закрити",
+ "collab_diff.reveal.nothing": "Нічого показувати: жоден змінений елемент не перебуває в 3D-сцені.",
+ "collab_diff.reveal.journal_busy": "Читання журналу…",
+ "collab_diff.reveal.journal_play": "Відтворити журнал"
 }

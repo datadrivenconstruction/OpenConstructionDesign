@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Gizlendi",
  "ai_found.found.color": "Renklendirildi",
  "ai_found.found.count": "{m} içinden {n}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Eşleşen yok. Filtreyi genişletin.",
  "ai_found.found.show_btn": "Göster",
  "ai_found.found.show_tip": "Bu elemanları seç ve plan ile 3B'de yakınlaştır",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# eleman gizlendi",
   "other": "# eleman gizlendi"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

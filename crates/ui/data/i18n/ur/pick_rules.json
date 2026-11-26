@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "تمام زمرے چنیں",
  "pick_rules.filter.tip": "انتخاب فلٹر: غیر نشان زد زمرے کلک اور ہوور میں چھوڑ دیے جاتے ہیں",
  "pick_rules.here": "یہاں کے آئٹمز",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "منتخب",
- "pick_rules.pinned": "پن شدہ آئٹمز منتخب کریں",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "پن شدہ آئٹمز منتخب کریں"
 }

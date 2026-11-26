@@ -15,6 +15,7 @@
  "drafting_view.name": "ชื่อ",
  "drafting_view.count": "คำอธิบายประกอบ {n} รายการ",
  "drafting_view.tab": "เขียนแบบ · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "มุมมองเขียนแบบว่างเปล่า",
  "drafting_view.canvas_hint": "ใช้เครื่องมือคำอธิบาย: เส้นรายละเอียด พื้นที่ ข้อความ ส่วนประกอบรายละเอียด",
  "drafting_view.created": "สร้างมุมมองเขียนแบบ “{name}” แล้ว",
@@ -29,6 +30,5 @@
  "drafting_view.more": "เพิ่มเติม",
  "empty.drafting.title": "ยังไม่มีมุมมองเขียนแบบ",
  "empty.drafting.hint": "สร้างมุมมองสำหรับรายละเอียด 2D ที่ไม่ได้ตัดจากโมเดล",
- "empty.drafting.action": "มุมมองเขียนแบบใหม่",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "มุมมองเขียนแบบใหม่"
 }

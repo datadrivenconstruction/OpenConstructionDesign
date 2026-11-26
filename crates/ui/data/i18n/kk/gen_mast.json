@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Діңгекті лифт",
+ "fam.name.mast_lift": "Діңгекті лифт",
+ "gen.rule.steel.check.self_weight.desc": "Кесіндінің үстіндегі мұнараның биіктіктің бір метріне салмағы.",
+ "gen.rule.steel.check.self_weight.title": "Болаттың метрлік салмағы",
+ "gen.rule.steel.check.strut_share.desc": "Көлденең элемент өз торабында ұстайтын белдеу күшінің үлесі.",
+ "gen.rule.steel.check.strut_share.title": "Көлденең элемент үлесі",
+ "gen.rule.steel.out.lift_box_d.desc": "Діңгекті лифтке діңгегімен қоса қажет жоспардағы тереңдік; аражабындар оның үстінде ашылады.",
+ "gen.rule.steel.out.lift_box_d.title": "Лифт шахтасының тереңдігі",
+ "gen.rule.steel.out.lift_box_w.desc": "Діңгекті лифтке қажет жоспардағы ен; аражабындар оның үстінде ашылады.",
+ "gen.rule.steel.out.lift_box_w.title": "Лифт шахтасының ені",
+ "gen.rule.steel.out.lift_offset.desc": "Жоспардағы байланыстан тыс лифттің осьтен қашықтығы.",
+ "gen.rule.steel.out.lift_offset.title": "Лифттің осьтен ығысуы",
+ "gen.rule.steel.out.lifts.desc": "Өзек бойымен көтерілетін лифттер: екінші алаңға дейін, содан кейін жоғарыға дейін.",
+ "gen.rule.steel.out.lifts.title": "Лифт жүрістері"
+}

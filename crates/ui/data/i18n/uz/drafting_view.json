@@ -15,6 +15,7 @@
  "drafting_view.name": "Nomi",
  "drafting_view.count": "{n} izoh",
  "drafting_view.tab": "Chizma · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Bo'sh chizma ko'rinishi",
  "drafting_view.canvas_hint": "Izohlash asboblaridan foydalaning: detal chiziqlari, sohalar, matn, detal komponentlari",
  "drafting_view.created": "\"{name}\" chizma ko'rinishi yaratildi",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Yana",
  "empty.drafting.title": "Hali chizma ko'rinishlari yo'q",
  "empty.drafting.hint": "Modeldan kesib olinmagan 2D detallar uchun yarating.",
- "empty.drafting.action": "Yangi chizma ko'rinishi",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Yangi chizma ko'rinishi"
 }

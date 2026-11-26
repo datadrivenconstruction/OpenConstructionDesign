@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Отворът {w} е по-широк от стената {len}",
+ "ix.fix.opening_width": "Ширина {w} mm",
+ "ix.fix.wall_extend": "Удължи стената до {len} mm"
+}

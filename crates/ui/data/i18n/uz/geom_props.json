@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<turlicha>",
  "geom_props.tip": "Enter qiymatni tanlangan {n} ta elementning barchasiga qo'llaydi, bitta bekor qilish qadami",
  "geom_props.roof_slope": "Qiyalik",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Import qilingan elementlar",
  "geom_props.kind.mass": "Massalar",
  "geom_props.kind.solid": "Jismlar",
- "geom_props.kind.toposolid": "Relyef",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Relyef"
 }

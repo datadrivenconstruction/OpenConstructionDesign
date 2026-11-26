@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} โทเคน",
  "ai.size.block": "ยาวเกินไปสำหรับโมเดลนี้: ~{n} โทเคน ได้สูงสุด {max} และต้องเหลือที่สำหรับคำตอบ — ย่อหรือแบ่งข้อความ",
  "ai.size.trim": "ตัดให้พอดี",
  "ai.size.trim_tip": "ตัดส่วนท้ายของข้อความให้พอดี จะไม่ตัดจนกว่าคุณจะคลิก",
  "ai.size.drop_view": "ไม่รวมมุมมอง",
  "ai.size.drop_level": "ไม่รวมระดับ",
- "ai.size.drop_selection": "ไม่รวมที่เลือก",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "ไม่รวมที่เลือก"
 }

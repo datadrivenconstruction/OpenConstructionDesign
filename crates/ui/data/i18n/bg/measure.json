@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Разстояние",
+ "cmd.e3d.measure.gap": "Междина между лица",
+ "cmd.e3d.measure.angle": "Ъгъл",
+ "cmd.e3d.measure.area": "Площ / периметър на лице или помещение",
+ "cmd.e3d.measure.volume": "Обем на елемент",
+ "cmd.e3d.measure.slope": "Наклон",
+ "cmd.e3d.measure.chain": "Верига от точки",
+ "measure.orphan": "Загубена препратка",
+ "measure.not_planar": "Лицата не са успоредни",
+ "measure.unsupported": "Това не може да се измери",
+ "cmd.ann.measure_distance": "Измерване на разстояние",
+ "cmd.ann.measure_gap": "Измерване на междина между лица",
+ "cmd.ann.measure_angle": "Измерване на ъгъл",
+ "cmd.ann.measure_area": "Измерване на площ",
+ "hint.measure.first": "Измерване: щракнете лице на стена (или точка) · Esc — изход",
+ "hint.measure.second": "Измерване: щракнете второто лице · Esc — отмяна на първия избор",
+ "measure.no_face": "Тук няма лице на стена"
+}

@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<варира>",
  "geom_props.tip": "Enter прилага стойността към всичките {n} избрани, една стъпка за отмяна",
  "geom_props.roof_slope": "Наклон",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Импортирани елементи",
  "geom_props.kind.mass": "Маси",
  "geom_props.kind.solid": "Тела",
- "geom_props.kind.toposolid": "Терен",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Терен"
 }

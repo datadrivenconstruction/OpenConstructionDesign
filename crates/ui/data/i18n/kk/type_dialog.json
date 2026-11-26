@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Отбасы",
  "type_dialog.typedial.h_function": "Қызметі",
  "type_dialog.typedial.h_material": "Материал",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "Параметр",
  "type_dialog.typedial.h_thickness": "Қалыңдығы",
  "type_dialog.typedial.h_value": "Мән",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Қабырға табаны ауданы",
  "type_dialog.warn.wall_vol": "Қабырға көлемі",
  "type_dialog.warn.walls": "Қабырғалар",
- "type_dialog.warn.warnings_n": "⚠ Ескертулер: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ Ескертулер: {n}"
 }

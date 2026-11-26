@@ -15,6 +15,7 @@
  "drafting_view.name": "Аталышы",
  "drafting_view.count": "Аннотациялар: {n}",
  "drafting_view.tab": "Чийме · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Бош чийме көрүнүшү",
  "drafting_view.canvas_hint": "Аннотация куралдарын колдонуңуз: деталдык сызыктар, аймактар, текст, деталдык компоненттер",
  "drafting_view.created": "«{name}» чийме көрүнүшү түзүлдү",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Дагы",
  "empty.drafting.title": "Азырынча чийме көрүнүштөрү жок",
  "empty.drafting.hint": "Модельден кесилбеген 2D деталдар үчүн түзүңүз.",
- "empty.drafting.action": "Жаңы чийме көрүнүшү",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Жаңы чийме көрүнүшү"
 }

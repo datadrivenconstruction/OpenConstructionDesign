@@ -48,5 +48,13 @@
  "settings.lib_open": "Komponentbibliotek",
  "settings.lib_open_desc": "Bla gjennom de innebygde familiene, de i prosjektet og dine egne",
  "settings.lib_dir": "Mappe for mitt bibliotek",
- "settings.lib_dir_desc": "Familiefiler (.ddcf) lagt her vises under Mitt bibliotek. DDC_COMPONENTS_DIR flytter den."
+ "settings.lib_dir_desc": "Familiefiler (.ddcf) lagt her vises under Mitt bibliotek. DDC_COMPONENTS_DIR flytter den.",
+ "complib.fam.sprinkler_head": "Sprinklerhode",
+ "complib.fam.fire_pump": "Brannpumpe",
+ "complib.fam.pressurisation_fan": "Trykksettingsvifte",
+ "complib.fam.lift_car": "Heiskurv",
+ "complib.fam.lift_landing_door": "Heisdør (etasjeplan)",
+ "complib.fam.lift_pit": "Heisgrop",
+ "complib.fam.lift_overrun": "Heisoverslag",
+ "complib.fam.lift_machine": "Heismaskin"
 }

@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ".",
  "ai.step.details": "Mga detalye",
  "ai.step.copy": "Kopyahin ang detalye",
  "ai.step.group.read": "Nagbabasa ng model",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Nagbago ang model habang tumatakbo ang hakbang",
  "ai.step.why.skipped": "Hindi tumakbo ang hakbang: natapos ang turn",
  "ai.step.why.other": "Hindi natapos ang hakbang",
- "ai.step.unknown": "Hindi kilalang tool",
- "ai.step.dec": "."
+ "ai.step.unknown": "Hindi kilalang tool"
 }

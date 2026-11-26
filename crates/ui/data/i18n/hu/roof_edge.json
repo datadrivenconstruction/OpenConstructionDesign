@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Ívesség",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Szúrjon be egy pontot ez után (az ív felezve lesz)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Mentés",
  "roof_edge.pe.saved": "Profil mentve",
  "roof_edge.pe.valid": "A profil érvényes",
  "roof_edge.pe.invalid": "A profil önmagát metszi, túl kicsi, vagy 3-nál kevesebb pontja van",
  "roof_edge.pe.bad_number": "Egy koordináta vagy ívesség nem szám",
- "roof_edge.pe.no_name": "Adjon meg profilnevet",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Adjon meg profilnevet"
 }

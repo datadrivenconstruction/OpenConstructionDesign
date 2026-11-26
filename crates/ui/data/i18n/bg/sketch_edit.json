@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "скицата е отказана",
  "sketch_edit.sk_applied": "скицата е приложена",
  "sketch_edit.sk_tail": "опашка",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "плоча",
  "sketch_edit.sk_host_roof": "покрив",
  "sketch_edit.sk_host_ceiling": "таван",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "Ниво 2",
  "sketch_edit.seed_floor_200": "Под 200",
  "sketch_edit.seed_section1": "Разрез 1",
- "sketch_edit.seed_section2": "Разрез 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "Разрез 2"
 }

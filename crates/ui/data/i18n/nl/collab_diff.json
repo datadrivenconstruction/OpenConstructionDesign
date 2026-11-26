@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Soort",
  "collab_diff.diff.col.field": "Veld",
  "collab_diff.diff.col.old": "Was",
- "collab_diff.diff.col.new": "Nu"
+ "collab_diff.diff.col.new": "Nu",
+ "collab_diff.reveal.title": "Opbouw",
+ "collab_diff.reveal.start": "Weergeven zoals gebouwd",
+ "collab_diff.reveal.play": "Afspelen",
+ "collab_diff.reveal.pause": "Pauzeren",
+ "collab_diff.reveal.back": "Achteruit",
+ "collab_diff.reveal.close": "Sluiten",
+ "collab_diff.reveal.nothing": "Niets om weer te geven: geen gewijzigd element staat in de 3D-scène.",
+ "collab_diff.reveal.journal_busy": "Journaal lezen…",
+ "collab_diff.reveal.journal_play": "Journaal afspelen"
 }

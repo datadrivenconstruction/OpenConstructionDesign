@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Phần chủ: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Cột",
  "rebar_hosts.kind.beam": "Dầm",
  "rebar_hosts.kind.wall": "Tường",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Lưới thép đặt vào tường, sàn và móng, không phải cột hay dầm.",
  "rebar_hosts.why.bars_plate": "Thép dọc và cốt đai đặt vào cột và dầm, không phải tường, sàn hay móng.",
  "rebar_hosts.why.no_common_face": "Các phần chủ đã chọn không có mặt bảo vệ chung. Hãy chọn phần chủ cùng loại.",
- "rebar_hosts.why.no_type": "Chọn một loại thanh.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Chọn một loại thanh."
 }

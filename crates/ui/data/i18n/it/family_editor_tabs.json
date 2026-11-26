@@ -90,6 +90,7 @@
  "fe.cons.redundant": "ridondante",
  "fe.cons.help": "Una quota legata a un parametro di lunghezza guida i piani; un angolo richiede un parametro di angolo",
  "fe.locks": "Blocchi di allineamento",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Blocca",
  "fe.unlock": "Sblocca",
  "fe.locks.help": "Il blocco sostituisce l'argomento del solido (es. rett. #2) con il piano, così il solido lo segue",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Nome della bozza già in uso",
  "fe.clash.body": "Esiste già una bozza chiamata “{name}”. Sostituisci quella bozza con questa, oppure torna indietro e salva con un nuovo nome. Non è ancora stato salvato nulla.",
  "fe.clash.rename": "Salva con un nuovo nome",
- "fe.clash.replace": "Sostituisci quella bozza",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Sostituisci quella bozza"
 }

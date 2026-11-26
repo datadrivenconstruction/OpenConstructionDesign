@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ina-apply ng Ctrl+Enter at itinitigil ng Esc ang kahilingan pati sa plan o 3D view, maliban kung may tina-type sa text field.",
  "ai.plan.rebased": "Na-update laban sa kasalukuyang model: {what}",
  "ai.value.bad": "Hindi wastong halaga para sa {name} ang “{text}”",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "Binago ng AI katulong ang halagang ito tungo sa {agent} habang inilagay mo ang {mine}. Piliin ang itatago.",
  "ai.value.choose_first": "Piliin muna ang iyong halaga o ang sa AI katulong sa card",
  "ai.value.elem": "Elemento {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Maglagay ng ibang halaga, o alisan ng tsek ang item para hindi ito isama sa Apply.",
  "ai.value.tip": "Itama ang halaga sa draft; nagbabago lang ang model sa Apply. Kinukumpirma ng Enter, ibinabalik ng Esc.",
  "ai.value.use_mine": "Gamitin ang {mine}",
- "ai.value.was": "dati {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "dati {old}"
 }

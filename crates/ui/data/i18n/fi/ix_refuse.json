@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Aukko {w} on seinää {len} leveämpi",
+ "ix.fix.opening_width": "Leveys {w} mm",
+ "ix.fix.wall_extend": "Jatka seinää pituuteen {len} mm"
+}

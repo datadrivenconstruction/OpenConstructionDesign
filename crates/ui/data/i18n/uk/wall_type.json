@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Дублювати тип",
  "wall_type.wt.duplicate_tip": "Зберігає ці шари як новий тип; тип, який ви відкрили, залишається без змін.",
  "wall_type.wt.switch_dirty": "Натисніть ОК або Скасувати, перш ніж відкривати інший тип",
+ "wall_type.wt.h_num": "№",
  "wall_type.wt.h_function": "Функція",
  "wall_type.wt.h_material": "Матеріал",
  "wall_type.wt.h_thickness": "Товщина",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Виберіть стіни у вигляді, потім замініть їх тип.",
  "wall_type.swap.already": "Вибрані стіни вже мають цей тип",
  "wall_type.swap.apply": "Замінити",
- "wall_type.swap.done": "Тип стін замінено: {n} із {m} стін",
- "wall_type.wt.h_num": "№"
+ "wall_type.swap.done": "Тип стін замінено: {n} із {m} стін"
 }

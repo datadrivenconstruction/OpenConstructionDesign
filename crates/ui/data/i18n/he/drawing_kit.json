@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: גוון מלא",
  "drawing_kit.reset_color": "{layer}: החזר לצבע השרטוט",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "זווית",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "בטל (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} מתוך {m}",
  "drawing_kit.accept_class": "קבל את כל הסוג הזה",
- "drawing_kit.reject_class": "דחה את כל הסוג הזה",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "דחה את כל הסוג הזה"
 }

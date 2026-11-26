@@ -52,6 +52,7 @@
  "mesh_tools.done": "पूर्ण",
  "mesh_tools.failed": "विफल",
  "mesh_tools.note.outline_approx": "रूपरेखा अनुमानित",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "इनकी ओर वाले फ़ेस हटाएँ",
  "mesh_tools.dir.up": "ऊपर",
  "mesh_tools.dir.down": "नीचे",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "सरल किया गया: {n} (जैसे: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "सरल किया गया: {n} (जैसे: {first})"
 }

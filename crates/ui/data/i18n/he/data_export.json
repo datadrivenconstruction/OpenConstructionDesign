@@ -4,6 +4,7 @@
  "data_export.gltf.saved": "glTF נשמר: {path} ({nodes} אלמנטים, {meshes} רשתות)",
  "data_export.gltf.partial": "glTF נשמר עם {n} בעיות, חלק מהגופים עשויים להיעדר: {path}",
  "data_export.gltf.failed": "ייצוא glTF נכשל: {error}",
+ "data_export.unit.deg": "°",
  "data_export.info.title": "מידע על הפרויקט",
  "data_export.info.project": "פרויקט",
  "data_export.info.site": "קואורדינטות וצפון",
@@ -46,6 +47,5 @@
  "data_export.dwgpick.none": "אין אלמנטי שרטוט בתיבה",
  "data_export.dwgpick.box": "אלמנטים שנבחרו: {n}",
  "data_export.dwgpick.box_rings": "אלמנטים שנבחרו: {n}, קווי מתאר סגורים: {rings}",
- "data_export.dwgpick.layer": "שכבה {layer}: אלמנטים שנבחרו {n}",
- "data_export.unit.deg": "°"
+ "data_export.dwgpick.layer": "שכבה {layer}: אלמנטים שנבחרו {n}"
 }

@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Áramkörök",
+ "cmd.mep.circuits.desc": "Megnyitja az áramkörszerkesztőt: az összes kapcsolótábla áramkörei, terheléseik, kábelméreteik és szabályellenőrzéseik.",
  "ce.title": "Áramkörök",
  "ce.open": "Áramkörök",
  "ce.empty": "Még nincsenek áramkörök",

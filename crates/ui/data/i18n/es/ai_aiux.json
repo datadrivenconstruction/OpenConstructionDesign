@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Intro aplica y Esc detiene la solicitud también desde el plan o la vista 3D, salvo que esté escribiendo en un campo de texto.",
  "ai.plan.rebased": "Actualizado con el modelo actual: {what}",
  "ai.value.bad": "«{text}» no es un valor válido para {name}",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "El asistente de IA cambió este valor a {agent} mientras usted introducía {mine}. Elija cuál conservar.",
  "ai.value.choose_first": "Primero elija su valor o el del asistente de IA en la tarjeta",
  "ai.value.elem": "Elemento {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Introduzca otro valor o desmarque el elemento para excluirlo de Aplicar.",
  "ai.value.tip": "Corrija el valor en el borrador; el modelo cambia solo al Aplicar. Intro confirma, Esc restaura.",
  "ai.value.use_mine": "Usar {mine}",
- "ai.value.was": "era {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "era {old}"
 }

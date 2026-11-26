@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<өөр өөр>",
  "geom_props.tip": "Enter нь утгыг сонгосон бүх {n}-д хэрэглэнэ, нэг буцаах алхам",
  "geom_props.roof_slope": "Налуу",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Импортолсон элементүүд",
  "geom_props.kind.mass": "Массууд",
  "geom_props.kind.solid": "Биетүүд",
- "geom_props.kind.toposolid": "Газрын гадаргуу",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Газрын гадаргуу"
 }

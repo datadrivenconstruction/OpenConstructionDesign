@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} tokenia",
  "ai.size.block": "Liian pitkä tälle mallille: ~{n} tokenia, enintään {max} mahtuu ja jättää tilaa vastaukselle — lyhennä tai jaa se",
  "ai.size.trim": "Lyhennä sopivaksi",
  "ai.size.trim_tip": "Leikkaa viestin loppu, jotta se mahtuu. Mitään ei leikata ennen napsautusta.",
  "ai.size.drop_view": "Jätä näkymä pois",
  "ai.size.drop_level": "Jätä taso pois",
- "ai.size.drop_selection": "Jätä valinta pois",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "Jätä valinta pois"
 }

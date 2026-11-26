@@ -41,5 +41,16 @@
  "library.ifc.window": "نافذة",
  "library.ifc.stair": "درج",
  "library.ifc.pipe_fitting": "قطعة وصل للأنابيب",
- "library.ifc.duct_fitting": "قطعة وصل للمجاري الهوائية"
+ "library.ifc.duct_fitting": "قطعة وصل للمجاري الهوائية",
+ "library.ifc.beam": "كمرة",
+ "library.ifc.column": "عمود",
+ "library.ifc.appliance": "جهاز",
+ "library.ifc.fire_terminal": "طرفية إطفاء الحريق",
+ "library.ifc.heat_exchanger": "مبادل حراري",
+ "library.ifc.pump": "مضخة",
+ "library.ifc.tank": "خزان",
+ "library.ifc.transport": "عنصر نقل",
+ "library.ifc.valve": "صمام",
+ "library.ifc.waste_terminal": "طرفية صرف",
+ "library.ifc.medical": "جهاز طبي"
 }

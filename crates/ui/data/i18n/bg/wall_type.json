@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Дублирай тип",
  "wall_type.wt.duplicate_tip": "Запазва тези слоеве като нов тип; отвореният тип остава непроменен.",
  "wall_type.wt.switch_dirty": "Натиснете OK или Отказ, преди да отворите друг тип",
+ "wall_type.wt.h_num": "№",
  "wall_type.wt.h_function": "Функция",
  "wall_type.wt.h_material": "Материал",
  "wall_type.wt.h_thickness": "Дебелина",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Изберете стени в изгледа, после сменете техния тип.",
  "wall_type.swap.already": "Избраните стени вече имат този тип",
  "wall_type.swap.apply": "Смени",
- "wall_type.swap.done": "Типът стена е сменен: {n} от {m} стени",
- "wall_type.wt.h_num": "№"
+ "wall_type.swap.done": "Типът стена е сменен: {n} от {m} стени"
 }

@@ -41,5 +41,7 @@
  "sb.save.fresh": "Nincs módosítás",
  "sb.save.save": "Mentés",
  "sb.save.ifc": "IFC-másolat mentése",
- "sb.save.autosave": "Automatikus mentés"
+ "sb.save.autosave": "Automatikus mentés",
+ "sb.more.title": "Továbbiak",
+ "sb.more.desc": "Az ezen a szélességen el nem férő állapotsor-elemek."
 }

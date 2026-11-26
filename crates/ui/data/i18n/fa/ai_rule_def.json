@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} یافتهٔ بیشتر از این قاعده فهرست نشده است",
  "ai.check.integrity": "داده‌های خراب در {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: بالا از پایه بالاتر نیست",
  "ai.check.level_host_differs": "جزء روی تراز دیگری غیر از میزبانش ({0}) است",
  "ai.check.clash": "{0} با {1} برخورد دارد",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "قاعدهٔ {1}: {3} عنصر، مجاز {4}",
  "ai.check.rule.clearance": "قاعدهٔ {1}: فاصله {3} متر، دست‌کم {4} متر لازم است",
  "ai.check.rule.unsupported": "قاعدهٔ {1} بررسی نشد: این رده پشتیبانی نمی‌شود",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "پارامتر {0}: «{1}» گروه هزینه DIN 276 نیست (سه رقم، ۱۰۰ تا ۸۹۹) در {2} عنصر"
 }

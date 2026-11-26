@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Selectie ({n})",
  "ai.ctx.add_tip": "Terugzetten bij wat de AI ziet",
  "ai.ctx.frame_tip": "Toon deze elementen",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Leuningen",
  "ai.ctx.cat.roof": "Daken",
  "ai.ctx.cat.stair": "Trappen",
- "ai.ctx.cat.other": "Overig",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Overig"
 }

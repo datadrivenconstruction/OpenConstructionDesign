@@ -52,6 +52,7 @@
  "mesh_tools.done": "Ολοκληρώθηκε",
  "mesh_tools.failed": "Απέτυχε",
  "mesh_tools.note.outline_approx": "το περίγραμμα είναι κατά προσέγγιση",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Διαγραφή επιφανειών που κοιτούν",
  "mesh_tools.dir.up": "πάνω",
  "mesh_tools.dir.down": "κάτω",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Απλοποιήθηκαν: {n} (για παράδειγμα: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Απλοποιήθηκαν: {n} (για παράδειγμα: {first})"
 }

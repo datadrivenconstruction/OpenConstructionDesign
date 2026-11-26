@@ -52,6 +52,7 @@
  "mesh_tools.done": "Xong",
  "mesh_tools.failed": "Lỗi",
  "mesh_tools.note.outline_approx": "đường bao gần đúng",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Xóa các mặt hướng",
  "mesh_tools.dir.up": "lên",
  "mesh_tools.dir.down": "xuống",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Đã đơn giản hóa: {n} (ví dụ: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Đã đơn giản hóa: {n} (ví dụ: {first})"
 }

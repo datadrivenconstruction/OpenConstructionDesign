@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "রঙিন",
+ "cmd.ui.icons.color": "রঙিন আইকন",
+ "cmd.ui.icons.color.desc": "আইকনের অঙ্কন শৈলী",
+ "theme.icons.hierarchical": "হায়ারার্কিক্যাল",
+ "cmd.ui.icons.hierarchical": "হায়ারার্কিক্যাল আইকন",
+ "cmd.ui.icons.hierarchical.desc": "আইকনের অঙ্কন শৈলী",
+ "theme.icons.isometric": "আইসোমেট্রিক",
+ "cmd.ui.icons.isometric": "আইসোমেট্রিক আইকন",
+ "cmd.ui.icons.isometric.desc": "আইকনের অঙ্কন শৈলী",
+ "theme.icons.monoline": "মনোলাইন",
+ "cmd.ui.icons.monoline": "মনোলাইন আইকন",
+ "cmd.ui.icons.monoline.desc": "আইকনের অঙ্কন শৈলী"
+}

@@ -16,5 +16,10 @@
  "api.cmd.join_elements": "Połącz, rozłącz lub zamień połączenia geometrii",
  "api.cmd.place_footings": "Umieść stopę fundamentową pod każdym słupem poziomu",
  "api.cmd.create_terrain": "Utwórz teren z punktów pomiarowych lub z nachylonej płaszczyzny",
- "api.cmd.script_recipes": "Przeczytaj bloki skryptów i przepisy swobodnych konstrukcji"
+ "api.cmd.set_material": "Ustaw wygląd materiału w 3D",
+ "api.cmd.script_recipes": "Przeczytaj bloki skryptów i przepisy swobodnych konstrukcji",
+ "api.cmd.generate_block": "Zaplanuj kwartał budynków na działkach ze wspólnymi regułami zagospodarowania",
+ "api.cmd.measure_save": "Zapisz pomiar w widoku",
+ "api.cmd.edit_mass": "Dodaj krok historii do bryły: wyciągnięcie, szkic, powłoka, zaokrąglenie, fazowanie, odsunięcie lub podział",
+ "api.cmd.mass_to_family": "Utwórz rodzinę komponentów z osi czasu bryły"
 }

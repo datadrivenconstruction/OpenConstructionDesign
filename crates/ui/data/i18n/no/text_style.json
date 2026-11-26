@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Fyll",
  "text_style.lbl.detail": "Detalj",
  "text_style.lbl.width": "Bredde",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Skriv inn et tall fra {min} til {max}",
  "text_style.tip.next_ring": "Lukk denne konturen og start en ny i samme område",
  "text_style.tip.edit_text": "Rediger teksten på stedet",
- "text_style.tip.add_leader": "Legg til en ledelinje til denne teksten",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Legg til en ledelinje til denne teksten"
 }

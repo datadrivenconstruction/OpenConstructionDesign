@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "在 {n} 次被拒绝的尝试后已修复，约 {tokens} 个 token",
+ "ai.fam_offer": "智能体提供了族 {name}",
+ "ai.fam_offer.open": "在族编辑器中打开",
+ "ai.fam_offer.dismiss": "忽略",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "正在检查…",
+ "fe.ai.clean": "检查未发现问题",
+ "fe.ai.check_values": "带数值检查",
+ "fe.ai.lines": "第 {n} 行",
+ "fe.ai.changes": "与早期版本相比有 {n} 处更改",
+ "fe.ai.added": "已添加：{head} {name}",
+ "fe.ai.removed": "已移除：{head} {name}",
+ "fe.ai.changed": "已更改：{head} {name}",
+ "fe.ai.reject": "拒绝"
+}

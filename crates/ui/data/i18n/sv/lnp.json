@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} öppningar ändrades inte ({why})",
  "lnp.params_changed": "ändrade värden: {n}",
  "lnp.params_same": "Inga ändringar: {u} element har redan det här värdet",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Markera bara den första panelen för att redigera den",
  "lnp.clip_from_wall": "Parametrar kopierade från vägg #{id}",
  "lnp.clip_from_opening": "Parametrar kopierade från öppning #{id}",
- "lnp.match_from": "Egenskaper för #{id} matchade till {n} element",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Egenskaper för #{id} matchade till {n} element"
 }

@@ -15,6 +15,7 @@
  "drafting_view.name": "Nimi",
  "drafting_view.count": "{n} merkintää",
  "drafting_view.tab": "Piirustus · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Tyhjä piirustusnäkymä",
  "drafting_view.canvas_hint": "Käytä merkintätyökaluja: detaljiviivat, alueet, teksti, detaljikomponentit",
  "drafting_view.created": "Piirustusnäkymä ”{name}” luotu",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Lisää",
  "empty.drafting.title": "Ei vielä piirustusnäkymiä",
  "empty.drafting.hint": "Luo sellainen 2D-detaljeja varten, joita ei leikata mallista.",
- "empty.drafting.action": "Uusi piirustusnäkymä",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Uusi piirustusnäkymä"
 }

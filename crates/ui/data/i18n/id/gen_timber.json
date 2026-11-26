@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "Panel Lantai CLT",
+ "fam.name.glulam_beam": "Balok Glulam",
+ "fam.name.glulam_column": "Kolom Glulam",
+ "gen.group.timber": "Struktur kayu",
+ "gen.rule.timber.beam_span_max.desc": "Bentang terpanjang balok glulam di antara dua kolom.",
+ "gen.rule.timber.beam_span_max.title": "Batas bentang balok",
+ "gen.rule.timber.panel_w.desc": "Panel lantai cross-laminated terlebar; dengan sambungan di antaranya.",
+ "gen.rule.timber.panel_w.title": "Lebar panel CLT",
+ "gen.rule.timber.span_depth.desc": "Bentang terhadap tinggi balok glulam; menentukan penampang.",
+ "gen.rule.timber.span_depth.title": "Rasio bentang terhadap tinggi balok"
+}

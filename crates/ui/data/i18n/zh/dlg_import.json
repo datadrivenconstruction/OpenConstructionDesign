@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "作为网格",
  "dlg.imp.skipped": "已跳过",
  "dlg.imp.notes": "备注：{n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "以及另外 {n} 种",
  "dlg.imp.no_levels": "文件中没有楼层：已创建默认楼层",
  "dlg.imp.reimport_row": "已更新 {updated}，未变 {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}：{lines} 条线，{arcs} 段弧，{texts} 个文字，{fills} 个填充，{layers} 个图层；单位 {unit} mm",
  "dlg.dw.summary_paper": "；图纸 {n} 张（未放置在底图上）",
  "dlg.dw.summary_unknown": "；未保留：{list}",
- "dlg.dw.summary_more": "以及另外 {n} 种",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": "以及另外 {n} 种"
 }

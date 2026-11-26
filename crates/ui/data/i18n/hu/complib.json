@@ -18,7 +18,7 @@
  "complib.ready.no": "nincs írva",
  "complib.edited": "Szerkesztve",
  "complib.edited_tip": "A projekt családja eltér a beépítetttől",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Érték",
- "complib.armed": "Elem: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Elem: {name}"
 }

@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "classeur illisible, ses propres colonnes seraient perdues ; fermez-le dans un tableur et réessayez",
  "xl.msg.type_x_layer_x": "type {} couche {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{} : {} n'existe plus, les cellules de ses propres colonnes ont été supprimées",
- "xl.msg.delsafe_type_param_on_elements": "le paramètre « {} » est un paramètre de type ; modifiez-le dans la feuille des types, non appliqué"
+ "xl.msg.delsafe_type_param_on_elements": "le paramètre « {} » est un paramètre de type ; modifiez-le dans la feuille des types, non appliqué",
+ "xl.msg.tag_x_is_removed_with_x_x": "l’étiquette {} est supprimée avec {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "la cote {} perd {} {} et conserve sa dernière forme",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "impossible de vérifier les annotations des éléments supprimés : {}"
 }

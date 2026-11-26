@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Type",
  "collab_diff.diff.col.field": "Champ",
  "collab_diff.diff.col.old": "Avant",
- "collab_diff.diff.col.new": "Maintenant"
+ "collab_diff.diff.col.new": "Maintenant",
+ "collab_diff.reveal.title": "Montage",
+ "collab_diff.reveal.start": "Afficher la construction",
+ "collab_diff.reveal.play": "Lire",
+ "collab_diff.reveal.pause": "Pause",
+ "collab_diff.reveal.back": "En arrière",
+ "collab_diff.reveal.close": "Fermer",
+ "collab_diff.reveal.nothing": "Rien à afficher : aucun élément modifié n’est dans la scène 3D.",
+ "collab_diff.reveal.journal_busy": "Lecture du journal…",
+ "collab_diff.reveal.journal_play": "Lire le journal"
 }

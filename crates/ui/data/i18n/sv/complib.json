@@ -18,7 +18,7 @@
  "complib.ready.no": "inte skriven",
  "complib.edited": "Redigerad",
  "complib.edited_tip": "Projektets familj skiljer sig från den inbyggda",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Värde",
- "complib.armed": "Komponent: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponent: {name}"
 }

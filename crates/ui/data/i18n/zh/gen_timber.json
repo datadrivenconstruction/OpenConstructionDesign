@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT 楼板板块",
+ "fam.name.glulam_beam": "胶合木梁",
+ "fam.name.glulam_column": "胶合木柱",
+ "gen.group.timber": "木结构",
+ "gen.rule.timber.beam_span_max.desc": "两柱之间胶合木梁的最大跨度。",
+ "gen.rule.timber.beam_span_max.title": "梁跨度限值",
+ "gen.rule.timber.panel_w.desc": "最宽的正交胶合木楼板板块；板块之间设缝。",
+ "gen.rule.timber.panel_w.title": "CLT 板宽度",
+ "gen.rule.timber.span_depth.desc": "胶合木梁的跨度与截面高度之比；决定所选截面。",
+ "gen.rule.timber.span_depth.title": "梁跨高比"
+}

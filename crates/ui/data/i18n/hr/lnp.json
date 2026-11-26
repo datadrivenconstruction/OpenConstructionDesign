@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} otvora nije promijenjeno ({why})",
  "lnp.params_changed": "promijenjenih vrijednosti: {n}",
  "lnp.params_same": "Nema promjena: {u} elemenata već ima ovu vrijednost",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Odaberite samo prvi panel za uređivanje",
  "lnp.clip_from_wall": "Parametri kopirani sa zida #{id}",
  "lnp.clip_from_opening": "Parametri kopirani s otvora #{id}",
- "lnp.match_from": "Svojstva iz #{id} primijenjena na {n} elemenata",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Svojstva iz #{id} primijenjena na {n} elemenata"
 }

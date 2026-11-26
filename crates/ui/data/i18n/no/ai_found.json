@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Skjult",
  "ai_found.found.color": "Farget",
  "ai_found.found.count": "{n} av {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Ingen treff. Prøv et bredere filter.",
  "ai_found.found.show_btn": "Vis",
  "ai_found.found.show_tip": "Velg disse elementene og zoom til dem i plan og 3D",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# element skjult",
   "other": "# elementer skjult"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

@@ -41,5 +41,7 @@
  "sb.save.fresh": "אין שינויים",
  "sb.save.save": "שמור",
  "sb.save.ifc": "שמור עותק IFC",
- "sb.save.autosave": "שמירה אוטומטית"
+ "sb.save.autosave": "שמירה אוטומטית",
+ "sb.more.title": "עוד",
+ "sb.more.desc": "פריטי שורת מצב שאינם נכנסים ברוחב זה."
 }

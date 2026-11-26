@@ -5,6 +5,7 @@
  "keys_import.new_head": "Нови клавиши",
  "keys_import.changed_head": "Замества вашите собствени клавиши",
  "keys_import.conflicts_head": "Конфликти след импорта",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "комбинация",
  "keys_import.kind_seq": "две букви",
  "keys_import.unbound": "няма",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Не е отменено: клавишите са редактирани след импорта. Нулирайте ги един по един в прозореца Клавиши.",
  "keys_import.undo_none": "Няма какво да се отмени: в тази сесия няма импорт на клавиши.",
  "keys_import.imported": "Клавишите са импортирани",
- "keys_import.imported_conflicts": "Клавишите са импортирани; конфликти: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Клавишите са импортирани; конфликти: {n}"
 }

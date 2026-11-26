@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Etäisyys",
+ "cmd.e3d.measure.gap": "Pintojen väli",
+ "cmd.e3d.measure.angle": "Kulma",
+ "cmd.e3d.measure.area": "Pinnan tai huoneen ala / piiri",
+ "cmd.e3d.measure.volume": "Elementin tilavuus",
+ "cmd.e3d.measure.slope": "Kaltevuus",
+ "cmd.e3d.measure.chain": "Pisteketju",
+ "measure.orphan": "Kadonnut viite",
+ "measure.not_planar": "Pinnat eivät ole yhdensuuntaisia",
+ "measure.unsupported": "Tätä ei voi mitata",
+ "cmd.ann.measure_distance": "Mittaa etäisyys",
+ "cmd.ann.measure_gap": "Mittaa pintojen väli",
+ "cmd.ann.measure_angle": "Mittaa kulma",
+ "cmd.ann.measure_area": "Mittaa pinta-ala",
+ "hint.measure.first": "Mittaa: napsauta seinän pintaa (tai pistettä) · Esc · poistu",
+ "hint.measure.second": "Mittaa: napsauta toista pintaa · Esc · peruuta ensimmäinen valinta",
+ "measure.no_face": "Tässä ei ole seinän pintaa"
+}

@@ -12,6 +12,7 @@
  "links.loaded": "încărcat",
  "links.not_loaded": "neîncărcat",
  "links.loading": "se încarcă…",
+ "links.loading_all": "Se încarcă legăturile",
  "links.levels": "niveluri",
  "links.elements": "elemente",
  "links.offset": "Decalaj:",

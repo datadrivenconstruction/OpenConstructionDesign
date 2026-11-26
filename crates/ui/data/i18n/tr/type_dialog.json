@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Aile",
  "type_dialog.typedial.h_function": "İşlev",
  "type_dialog.typedial.h_material": "Malzeme",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "Parametre",
  "type_dialog.typedial.h_thickness": "Kalınlık",
  "type_dialog.typedial.h_value": "Değer",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Duvar izdüşüm alanı",
  "type_dialog.warn.wall_vol": "Duvar hacmi",
  "type_dialog.warn.walls": "Duvarlar",
- "type_dialog.warn.warnings_n": "⚠ Uyarılar: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ Uyarılar: {n}"
 }

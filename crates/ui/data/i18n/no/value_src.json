@@ -24,5 +24,21 @@
  "value_src.verified_n": "Verdier verifisert: {n}",
  "value_src.bulk_note": "Verdier fylt ut av AI, ikke verifisert: {n}",
  "value_src.bulk_verify": "Merk verifisert ({n})",
- "value_src.bulk_tip": "Merker alle AI-utfylte verdier i utvalget som verifisert, ett angrertrinn"
+ "value_src.bulk_tip": "Merker alle AI-utfylte verdier i utvalget som verifisert, ett angrertrinn",
+ "origin.title": "Opphav",
+ "origin.made_by": "Laget av",
+ "origin.request": "Forespørsel",
+ "origin.at": "Brukt",
+ "origin.recipe": "oppskrift «{name}», del {part}",
+ "origin.ai": "AI-assistenten ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "skript {name}",
+ "origin.xlsx": "XLSX-regneark",
+ "origin.user": "en person",
+ "origin.import": "import",
+ "origin.import_file": "import fra {file}",
+ "origin.unknown": "ikke i historikken",
+ "origin.held": "Redigert for hånd: en ny kjøring av oppskriften lar den stå som den er",
+ "origin.rebuilt": "En ny kjøring av oppskriften bygger den på nytt; rediger den for hånd for å beholde den som den er",
+ "origin.ai_values": "Verdier fylt ut av AI: {n}, ikke verifisert: {open}"
 }

@@ -41,5 +41,16 @@
  "library.ifc.window": "Bintana",
  "library.ifc.stair": "Hagdan",
  "library.ifc.pipe_fitting": "Pipe fitting",
- "library.ifc.duct_fitting": "Duct fitting"
+ "library.ifc.duct_fitting": "Duct fitting",
+ "library.ifc.beam": "Beam",
+ "library.ifc.column": "Haligi",
+ "library.ifc.appliance": "Appliance",
+ "library.ifc.fire_terminal": "Terminal ng pagpatay ng sunog",
+ "library.ifc.heat_exchanger": "Heat exchanger",
+ "library.ifc.pump": "Bomba",
+ "library.ifc.tank": "Tangke",
+ "library.ifc.transport": "Elemento ng transportasyon",
+ "library.ifc.valve": "Valve",
+ "library.ifc.waste_terminal": "Terminal ng basura",
+ "library.ifc.medical": "Medikal na device"
 }

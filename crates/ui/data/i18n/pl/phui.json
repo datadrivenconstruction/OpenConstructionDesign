@@ -45,5 +45,7 @@
  "phui.kind.comp": "Komponenty",
  "phui.kind.shaft": "Szyby",
  "phui.kind.ramp": "Rampy",
- "phui.kind.member": "Elementy konstrukcyjne"
+ "phui.kind.member": "Elementy konstrukcyjne",
+ "phui.dates": "Daty (początek, koniec)",
+ "phui.show_calendar": "Pokaż według kalendarza"
 }

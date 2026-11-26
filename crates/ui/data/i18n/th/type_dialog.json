@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "แฟมิลี",
  "type_dialog.typedial.h_function": "หน้าที่",
  "type_dialog.typedial.h_material": "วัสดุ",
+ "type_dialog.typedial.h_num": "#",
  "type_dialog.typedial.h_param": "พารามิเตอร์",
  "type_dialog.typedial.h_thickness": "ความหนา",
  "type_dialog.typedial.h_value": "ค่า",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "พื้นที่ฐานผนัง",
  "type_dialog.warn.wall_vol": "ปริมาตรผนัง",
  "type_dialog.warn.walls": "ผนัง",
- "type_dialog.warn.warnings_n": "⚠ คำเตือน: {n}",
- "type_dialog.typedial.h_num": "#"
+ "type_dialog.warn.warnings_n": "⚠ คำเตือน: {n}"
 }

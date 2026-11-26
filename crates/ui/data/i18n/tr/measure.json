@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Mesafe",
+ "cmd.e3d.measure.gap": "Yüzler arası boşluk",
+ "cmd.e3d.measure.angle": "Açı",
+ "cmd.e3d.measure.area": "Bir yüzün veya odanın alanı / çevresi",
+ "cmd.e3d.measure.volume": "Bir elemanın hacmi",
+ "cmd.e3d.measure.slope": "Eğim",
+ "cmd.e3d.measure.chain": "Nokta zinciri",
+ "measure.orphan": "Kayıp referans",
+ "measure.not_planar": "Yüzeyler paralel değil",
+ "measure.unsupported": "Bu ölçülemez",
+ "cmd.ann.measure_distance": "Mesafe ölç",
+ "cmd.ann.measure_gap": "Yüzler arası boşluğu ölç",
+ "cmd.ann.measure_angle": "Açı ölç",
+ "cmd.ann.measure_area": "Alan ölç",
+ "hint.measure.first": "Ölç: bir duvar yüzünü (veya noktayı) tıklayın · Esc — çık",
+ "hint.measure.second": "Ölç: ikinci yüzü tıklayın · Esc — ilk seçimi iptal et",
+ "measure.no_face": "Burada duvar yüzü yok"
+}

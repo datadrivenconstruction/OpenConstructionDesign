@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "נקודת רבע",
+ "snap.extension": "הארכה",
+ "snap.parallel": "מקביל לקיר",
+ "snap.tracking_x": "X של נקודה שנתפסה",
+ "snap.tracking_y": "Y של נקודה שנתפסה",
+ "snap.tracking_cross": "חיתוך קווי עזר",
+ "snap.equal_step": "צעד שווה"
+}

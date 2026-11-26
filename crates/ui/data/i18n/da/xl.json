@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "regnearket kunne ikke læses; dets egne kolonner ville gå tabt. Luk det i regnearksprogrammet og prøv igen",
  "xl.msg.type_x_layer_x": "type {} lag {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: {} findes ikke længere, dens egne kolonners celler blev fjernet",
- "xl.msg.delsafe_type_param_on_elements": "parameteren '{}' er en typeparameter; redigér den på typearket, ikke anvendt"
+ "xl.msg.delsafe_type_param_on_elements": "parameteren '{}' er en typeparameter; redigér den på typearket, ikke anvendt",
+ "xl.msg.tag_x_is_removed_with_x_x": "tag {} fjernes sammen med {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "mål {} mister {} {} og beholder sin sidste form",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "kan ikke kontrollere annotationer for slettede elementer: {}"
 }

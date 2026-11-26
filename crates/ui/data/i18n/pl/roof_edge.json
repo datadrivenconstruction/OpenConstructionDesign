@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Wybrzuszenie",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Wstaw punkt za tym (łuk zostanie przepołowiony)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Zapisz",
  "roof_edge.pe.saved": "Zapisano profil",
  "roof_edge.pe.valid": "Profil jest poprawny",
  "roof_edge.pe.invalid": "Profil przecina sam siebie, jest za mały lub ma mniej niż 3 punkty",
  "roof_edge.pe.bad_number": "Współrzędna lub wybrzuszenie nie jest liczbą",
- "roof_edge.pe.no_name": "Wpisz nazwę profilu",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Wpisz nazwę profilu"
 }

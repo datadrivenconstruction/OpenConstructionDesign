@@ -11,6 +11,7 @@
  "ai.step.s": "{n} с",
  "ai.step.min": "{m} мин",
  "ai.step.min_s": "{m} мин {s} с",
+ "ai.step.dec": ",",
  "ai.step.details": "Мәліметтер",
  "ai.step.copy": "Мәліметтерді көшіру",
  "ai.step.group.read": "Модельді оқиды",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Қадам орындалып жатқанда модель өзгерді",
  "ai.step.why.skipped": "Қадам орындалмады: жауап аяқталды",
  "ai.step.why.other": "Қадам аяқталмады",
- "ai.step.unknown": "Белгісіз құрал",
- "ai.step.dec": ","
+ "ai.step.unknown": "Белгісіз құрал"
 }

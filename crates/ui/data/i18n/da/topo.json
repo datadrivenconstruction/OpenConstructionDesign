@@ -64,6 +64,7 @@
  "topo.import.title": "Importér opmåling",
  "topo.import.filter": "Opmåling (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Punktets kote",
  "topo.opt.thickness": "Topo-solidens tykkelse",
  "topo.opt.add_to_active": "Tilføj til den aktive topo-solid",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importér",
  "topo.import.cancel": "Annuller",
  "topo.import.no_layers": "intet lag valgt",
- "topo.info.warnings": "Ikke bygget:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Ikke bygget:"
 }

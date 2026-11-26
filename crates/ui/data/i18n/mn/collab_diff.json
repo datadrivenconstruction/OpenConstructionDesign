@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Төрөл",
  "collab_diff.diff.col.field": "Талбар",
  "collab_diff.diff.col.old": "Өмнө",
- "collab_diff.diff.col.new": "Одоо"
+ "collab_diff.diff.col.new": "Одоо",
+ "collab_diff.reveal.title": "Босгох явц",
+ "collab_diff.reveal.start": "Баригдсан дарааллаар харуулах",
+ "collab_diff.reveal.play": "Тоглуулах",
+ "collab_diff.reveal.pause": "Түр зогсоох",
+ "collab_diff.reveal.back": "Ухраах",
+ "collab_diff.reveal.close": "Хаах",
+ "collab_diff.reveal.nothing": "Харуулах зүйл алга: 3D дүр зураг дээр өөрчлөгдсөн элемент байхгүй.",
+ "collab_diff.reveal.journal_busy": "Журналыг уншиж байна…",
+ "collab_diff.reveal.journal_play": "Журналыг тоглуулах"
 }

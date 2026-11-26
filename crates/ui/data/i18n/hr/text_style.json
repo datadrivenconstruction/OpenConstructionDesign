@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Ispuna",
  "text_style.lbl.detail": "Detalj",
  "text_style.lbl.width": "Širina",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Unesite broj od {min} do {max}",
  "text_style.tip.next_ring": "Zatvori ovu konturu i započni drugu u istom području",
  "text_style.tip.edit_text": "Uredi tekst na mjestu",
- "text_style.tip.add_leader": "Dodaj vodilicu ovom tekstu",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Dodaj vodilicu ovom tekstu"
 }

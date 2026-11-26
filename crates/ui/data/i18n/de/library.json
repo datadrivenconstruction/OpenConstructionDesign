@@ -41,5 +41,16 @@
  "library.ifc.window": "Fenster",
  "library.ifc.stair": "Treppe",
  "library.ifc.pipe_fitting": "Rohrformstück",
- "library.ifc.duct_fitting": "Luftleitungsformstück"
+ "library.ifc.duct_fitting": "Luftleitungsformstück",
+ "library.ifc.beam": "Träger",
+ "library.ifc.column": "Stütze",
+ "library.ifc.appliance": "Gerät",
+ "library.ifc.fire_terminal": "Brandbekämpfungs-Endgerät",
+ "library.ifc.heat_exchanger": "Wärmetauscher",
+ "library.ifc.pump": "Pumpe",
+ "library.ifc.tank": "Tank",
+ "library.ifc.transport": "Fördertechnik",
+ "library.ifc.valve": "Ventil",
+ "library.ifc.waste_terminal": "Abwasser-Endgerät",
+ "library.ifc.medical": "Medizingerät"
 }

@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Güncel düzenleyiciyi ERP sayfasından indirin {url}",
  "erp.err.unsupported.admin": "ERP yöneticinizden güncel düzenleyiciyi isteyin",
  "erp.err.throttled_in": "Çok fazla deneme. {s} sn sonra tekrar deneyin",
+ "erp.err.throttled_ready": "Bekleme bitti. Yeniden deneyebilirsiniz",
  "erp.err.imported": "ERP'deki {n} revizyonu içe aktarılmış bir model: düzenleyici onu henüz açamaz veya üzerine yayımlayamaz",
  "erp.action.download": "ERP'de düzenleyici indirme sayfasını açın",
  "erp.action.new_link": "ERP sayfasından yeni bir bağlantı alın",

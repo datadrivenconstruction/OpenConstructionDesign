@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Bo'rtma",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Bundan keyin nuqta qo'shish (yoy ikkiga bo'linadi)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Saqlash",
  "roof_edge.pe.saved": "Profil saqlandi",
  "roof_edge.pe.valid": "Profil to'g'ri",
  "roof_edge.pe.invalid": "Profil o'z-o'zini kesadi, juda kichik yoki 3 tadan kam nuqta",
  "roof_edge.pe.bad_number": "Koordinata yoki bulge raqam emas",
- "roof_edge.pe.no_name": "Profil nomini kiriting",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Profil nomini kiriting"
 }

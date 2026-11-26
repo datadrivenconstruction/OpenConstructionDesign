@@ -18,7 +18,7 @@
  "complib.ready.no": "niet geschreven",
  "complib.edited": "Bewerkt",
  "complib.edited_tip": "De familie van het project wijkt af van de ingebouwde",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Waarde",
- "complib.armed": "Onderdeel: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Onderdeel: {name}"
 }

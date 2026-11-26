@@ -90,6 +90,7 @@
  "fe.cons.redundant": "冗長",
  "fe.cons.help": "長さパラメータに結び付けた寸法で面を制御します。角度には角度パラメータが必要です",
  "fe.locks": "整列ロック",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "ロック",
  "fe.unlock": "ロック解除",
  "fe.locks.help": "ロックすると、ソリッドの引数 (例: rect #2) が平面に置き換わり、ソリッドはその平面に追従します",
@@ -160,6 +161,5 @@
  "fe.clash.title": "下書きの名前が使われています",
  "fe.clash.body": "「{name}」という下書きは既に存在します。この下書きで置き換えるか、戻って新しい名前で保存してください。まだ何も保存されていません。",
  "fe.clash.rename": "新しい名前で保存",
- "fe.clash.replace": "その下書きを置き換える",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "その下書きを置き換える"
 }

@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Hôtes : {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Poteau",
  "rebar_hosts.kind.beam": "Poutre",
  "rebar_hosts.kind.wall": "Mur",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Le treillis va dans les murs, dalles et radiers, pas dans les poteaux ni les poutres.",
  "rebar_hosts.why.bars_plate": "Les barres longitudinales et les étriers vont dans les poteaux et poutres, pas dans les murs, dalles ou radiers.",
  "rebar_hosts.why.no_common_face": "Les hôtes sélectionnés n'ont pas de face d'enrobage en commun. Sélectionnez des hôtes d'un même type.",
- "rebar_hosts.why.no_type": "Choisissez un type de barre.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Choisissez un type de barre."
 }

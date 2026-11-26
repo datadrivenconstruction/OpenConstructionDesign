@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Spårar väggar från en ritning",
  "api.cmd.attachments_list": "Filer bifogade i chatten och de bekräftade projektkraven",
  "api.cmd.attachments_read": "Läs ett sidintervall, tabellrader eller bilden i en bifogad fil",
- "api.cmd.underlay_trace": "Utkastväggar spårade från en bifogad ritning"
+ "api.cmd.underlay_trace": "Utkastväggar spårade från en bifogad ritning",
+ "ai.tool.plan_from_image": "Läser en planritning från en bild",
+ "api.cmd.plan_from_image": "Skissa väggar, dörrar, fönster och rum utlästa från en bifogad planbild eller PDF-sida"
 }

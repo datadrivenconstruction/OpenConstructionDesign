@@ -16,6 +16,7 @@
  "wall_type.wt.duplicate_type": "Duplikat tipe",
  "wall_type.wt.duplicate_tip": "Menyimpan lapisan ini sebagai tipe baru; tipe yang dibuka tetap tidak berubah.",
  "wall_type.wt.switch_dirty": "Tekan OK atau Batal sebelum membuka tipe lain",
+ "wall_type.wt.h_num": "#",
  "wall_type.wt.h_function": "Fungsi",
  "wall_type.wt.h_material": "Bahan",
  "wall_type.wt.h_thickness": "Ketebalan",
@@ -90,6 +91,5 @@
  "wall_type.swap.none_hint": "Pilih dinding di tampilan, lalu tukar tipenya.",
  "wall_type.swap.already": "Dinding yang dipilih sudah memiliki tipe ini",
  "wall_type.swap.apply": "Tukar",
- "wall_type.swap.done": "Tipe dinding ditukar: {n} dari {m} dinding",
- "wall_type.wt.h_num": "#"
+ "wall_type.swap.done": "Tipe dinding ditukar: {n} dari {m} dinding"
 }

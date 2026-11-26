@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 Werkzeug",
  "ai.stream.tools_many": "{n} Werkzeuge",
  "ai.stream.secs": "{n} s",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Wartet immer noch auf den Modelldienst",
  "ai.stream.stop": "Stopp",
  "ai.stream.cancelled": "Gestoppt",
- "ai.stream.incomplete": "Der Entwurf ist unvollständig. Am Modell wurde nichts angewendet.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Der Entwurf ist unvollständig. Am Modell wurde nichts angewendet."
 }

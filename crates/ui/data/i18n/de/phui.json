@@ -45,5 +45,7 @@
  "phui.kind.comp": "Bauteile",
  "phui.kind.shaft": "Schächte",
  "phui.kind.ramp": "Rampen",
- "phui.kind.member": "Bauteile (Stäbe)"
+ "phui.kind.member": "Bauteile (Stäbe)",
+ "phui.dates": "Daten (Beginn, Ende)",
+ "phui.show_calendar": "Nach Kalender anzeigen"
 }

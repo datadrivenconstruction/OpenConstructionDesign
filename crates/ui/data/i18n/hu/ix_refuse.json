@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "A(z) {w} nyílás szélesebb a falnál ({len})",
+ "ix.fix.opening_width": "Szélesség: {w} mm",
+ "ix.fix.wall_extend": "Fal meghosszabbítása {len} mm-re"
+}

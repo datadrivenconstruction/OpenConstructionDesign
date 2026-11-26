@@ -6,9 +6,9 @@
  "ai.stream.tools_one": "1 verktøy",
  "ai.stream.tools_many": "{n} verktøy",
  "ai.stream.secs": "{n} s",
+ "ai.stream.sep": " · ",
  "ai.stream.stalled": "Venter fortsatt på modelltjenesten",
  "ai.stream.stop": "Stopp",
  "ai.stream.cancelled": "Stoppet",
- "ai.stream.incomplete": "Utkastet er ufullstendig. Ingenting ble brukt på modellen.",
- "ai.stream.sep": " · "
+ "ai.stream.incomplete": "Utkastet er ufullstendig. Ingenting ble brukt på modellen."
 }

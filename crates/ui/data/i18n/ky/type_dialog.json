@@ -110,6 +110,7 @@
  "type_dialog.typedial.family": "Үй-бүлө",
  "type_dialog.typedial.h_function": "Функция",
  "type_dialog.typedial.h_material": "Материал",
+ "type_dialog.typedial.h_num": "№",
  "type_dialog.typedial.h_param": "Параметр",
  "type_dialog.typedial.h_thickness": "Калыңдык",
  "type_dialog.typedial.h_value": "Маани",
@@ -141,6 +142,5 @@
  "type_dialog.warn.wall_area": "Дубалдын проекциялык аянты",
  "type_dialog.warn.wall_vol": "Дубалдын көлөмү",
  "type_dialog.warn.walls": "Дубалдар",
- "type_dialog.warn.warnings_n": "⚠ Эскертүүлөр: {n}",
- "type_dialog.typedial.h_num": "№"
+ "type_dialog.warn.warnings_n": "⚠ Эскертүүлөр: {n}"
 }

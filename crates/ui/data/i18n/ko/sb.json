@@ -41,5 +41,7 @@
  "sb.save.fresh": "변경 사항 없음",
  "sb.save.save": "저장",
  "sb.save.ifc": "IFC 사본 저장",
- "sb.save.autosave": "자동 저장"
+ "sb.save.autosave": "자동 저장",
+ "sb.more.title": "더 보기",
+ "sb.more.desc": "이 너비에 맞지 않는 상태 표시줄 항목."
 }

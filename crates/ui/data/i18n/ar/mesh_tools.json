@@ -52,6 +52,7 @@
  "mesh_tools.done": "تم",
  "mesh_tools.failed": "فشل",
  "mesh_tools.note.outline_approx": "المخطط تقريبي",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "حذف الأوجه المواجهة",
  "mesh_tools.dir.up": "أعلى",
  "mesh_tools.dir.down": "أسفل",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "مُبسّط: {n} (مثلاً: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "مُبسّط: {n} (مثلاً: {first})"
 }

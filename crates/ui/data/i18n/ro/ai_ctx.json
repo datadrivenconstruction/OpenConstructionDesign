@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Selecția ({n})",
  "ai.ctx.add_tip": "Adaugă înapoi la ce vede AI",
  "ai.ctx.frame_tip": "Arată aceste elemente",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Balustrade",
  "ai.ctx.cat.roof": "Acoperișuri",
  "ai.ctx.cat.stair": "Scări",
- "ai.ctx.cat.other": "Altele",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Altele"
 }

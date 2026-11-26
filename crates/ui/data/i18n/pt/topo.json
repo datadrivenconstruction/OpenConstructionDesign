@@ -64,6 +64,7 @@
  "topo.import.title": "Importar levantamento",
  "topo.import.filter": "Levantamento (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " m",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Cota do ponto",
  "topo.opt.thickness": "Espessura do topossólido",
  "topo.opt.add_to_active": "Adicionar ao topossólido ativo",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Importar",
  "topo.import.cancel": "Cancelar",
  "topo.import.no_layers": "nenhuma camada escolhida",
- "topo.info.warnings": "Não construído:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Não construído:"
 }

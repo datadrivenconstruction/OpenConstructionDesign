@@ -12,6 +12,7 @@
  "links.loaded": "लोड हुआ",
  "links.not_loaded": "लोड नहीं हुआ",
  "links.loading": "लोड हो रहा है…",
+ "links.loading_all": "लिंक लोड हो रहे हैं",
  "links.levels": "स्तर",
  "links.elements": "तत्व",
  "links.offset": "ऑफ़सेट:",

@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Тулгуурт лифт",
+ "fam.name.mast_lift": "Тулгуурт лифт",
+ "gen.rule.steel.check.self_weight.desc": "Огтлолоос дээших цамхгийн жин, өндрийн метр тутамд.",
+ "gen.rule.steel.check.self_weight.title": "Метр тутмын ган жин",
+ "gen.rule.steel.check.strut_share.desc": "Хөндлөнгийн зангилаан дахь хүрээний хүчнээс авах хувь.",
+ "gen.rule.steel.check.strut_share.title": "Хөндлөнгийн хувь",
+ "gen.rule.steel.out.lift_box_d.desc": "Тулгуурт лифтэд тулгуураараа хамт хэрэгтэй төлөвлөгөөний гүн; шал түүний дээр нээгдэнэ.",
+ "gen.rule.steel.out.lift_box_d.title": "Лифтийн хайрцгийн гүн",
+ "gen.rule.steel.out.lift_box_w.desc": "Тулгуурт лифтэд хэрэгтэй төлөвлөгөөний өргөн; шал түүний дээр нээгдэнэ.",
+ "gen.rule.steel.out.lift_box_w.title": "Лифтийн хайрцгийн өргөн",
+ "gen.rule.steel.out.lift_offset.desc": "Төлөвлөгөөний диагональ холбооноос чөлөөтэй лифтийн тэнхлэгээс зай.",
+ "gen.rule.steel.out.lift_offset.title": "Лифтийн тэнхлэгээс офсет",
+ "gen.rule.steel.out.lifts.desc": "Цөмийн дагуух лифтүүд: хоёр дахь тавцан хүртэл, дараа нь орой хүртэл.",
+ "gen.rule.steel.out.lifts.title": "Лифтийн хэсгүүд"
+}

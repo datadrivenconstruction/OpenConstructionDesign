@@ -52,6 +52,7 @@
  "mesh_tools.done": "Hotovo",
  "mesh_tools.failed": "Selhalo",
  "mesh_tools.note.outline_approx": "obrys přibližně",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Smazat plochy směřující",
  "mesh_tools.dir.up": "nahoru",
  "mesh_tools.dir.down": "dolů",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Zjednodušeno: {n} (například: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Zjednodušeno: {n} (například: {first})"
 }

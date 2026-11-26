@@ -45,5 +45,7 @@
  "phui.kind.comp": "רכיבים",
  "phui.kind.shaft": "שפתים",
  "phui.kind.ramp": "רמפות",
- "phui.kind.member": "אלמנטים"
+ "phui.kind.member": "אלמנטים",
+ "phui.dates": "תאריכים (התחלה, סיום)",
+ "phui.show_calendar": "הצג לפי לוח שנה"
 }

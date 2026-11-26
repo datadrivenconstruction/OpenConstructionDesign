@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} flere funn av denne regelen er ikke listet",
  "ai.check.integrity": "Ødelagte data i {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: toppen er ikke over bunnen",
  "ai.check.level_host_differs": "Komponenten er på en annen etasje enn sin vert ({0})",
  "ai.check.clash": "{0} kolliderer med {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Regel {1}: {3} elementer, tillatt {4}",
  "ai.check.rule.clearance": "Regel {1}: avstand {3} m, minst {4} m kreves",
  "ai.check.rule.unsupported": "Regel {1} kunne ikke kontrolleres: kategorien støttes ikke",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "Parameter {0}: «{1}» er ikke en DIN 276-kostnadsgruppe (tre sifre, 100 til 899) på {2} elementer"
 }

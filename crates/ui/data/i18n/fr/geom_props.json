@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<variable>",
  "geom_props.tip": "Entrée applique la valeur aux {n} sélectionnés, en une seule étape d’annulation",
  "geom_props.roof_slope": "Pente",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Éléments importés",
  "geom_props.kind.mass": "Volumes",
  "geom_props.kind.solid": "Solides",
- "geom_props.kind.toposolid": "Terrain",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terrain"
 }

@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "מרחק",
+ "cmd.e3d.measure.gap": "פער בין פנים",
+ "cmd.e3d.measure.angle": "זווית",
+ "cmd.e3d.measure.area": "שטח / היקף של פן או חדר",
+ "cmd.e3d.measure.volume": "נפח של אלמנט",
+ "cmd.e3d.measure.slope": "שיפוע",
+ "cmd.e3d.measure.chain": "שרשרת נקודות",
+ "measure.orphan": "הפניה אבדה",
+ "measure.not_planar": "הפנים אינם מקבילים",
+ "measure.unsupported": "לא ניתן למדוד זאת",
+ "cmd.ann.measure_distance": "מדידת מרחק",
+ "cmd.ann.measure_gap": "מדידת פער בין פנים",
+ "cmd.ann.measure_angle": "מדידת זווית",
+ "cmd.ann.measure_area": "מדידת שטח",
+ "hint.measure.first": "מדידה: לחצו על פני קיר (או נקודה) · Esc — יציאה",
+ "hint.measure.second": "מדידה: לחצו על הפן השני · Esc — ביטול הבחירה הראשונה",
+ "measure.no_face": "אין כאן פני קיר"
+}

@@ -15,6 +15,7 @@
  "drafting_view.name": "Název",
  "drafting_view.count": "{n} anotací",
  "drafting_view.tab": "Kreslení — {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Prázdný výkresový pohled",
  "drafting_view.canvas_hint": "Použijte nástroje anotací: detailní čáry, plochy, text, detailní komponenty",
  "drafting_view.created": "Výkresový pohled „{name}“ vytvořen",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Více",
  "empty.drafting.title": "Zatím žádné výkresové pohledy",
  "empty.drafting.hint": "Vytvořte jej pro 2D detaily, které nejsou vyříznuty z modelu.",
- "empty.drafting.action": "Nový výkresový pohled",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Nový výkresový pohled"
 }

@@ -45,5 +45,7 @@
  "phui.kind.comp": "Mga component",
  "phui.kind.shaft": "Mga shaft",
  "phui.kind.ramp": "Mga ramp",
- "phui.kind.member": "Mga member"
+ "phui.kind.member": "Mga member",
+ "phui.dates": "Mga petsa (simula, katapusan)",
+ "phui.show_calendar": "Ipakita ayon sa kalendaryo"
 }

@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ".",
  "ai.size.count": "~{n} / {max} tokena",
  "ai.size.block": "Predugo za ovaj model: ~{n} tokena, stane najviše {max} i ostavlja prostora za odgovor — skrati ili podijeli",
  "ai.size.trim": "Skrati da stane",
  "ai.size.trim_tip": "Odreži kraj poruke da stane. Ništa se ne reže dok ne klikneš.",
  "ai.size.drop_view": "Izostavi pogled",
  "ai.size.drop_level": "Izostavi razinu",
- "ai.size.drop_selection": "Izostavi odabir",
- "ai.size.sep": "."
+ "ai.size.drop_selection": "Izostavi odabir"
 }

@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Detaljer",
  "ai.step.copy": "Kopier detaljer",
  "ai.step.group.read": "Leser modellen",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Modellen ble endret mens steget kjørte",
  "ai.step.why.skipped": "Steget kjørte ikke: turen ble avsluttet",
  "ai.step.why.other": "Steget ble ikke fullført",
- "ai.step.unknown": "Ukjent verktøy",
- "ai.step.dec": ","
+ "ai.step.unknown": "Ukjent verktøy"
 }

@@ -90,6 +90,7 @@
  "fe.cons.redundant": "sobra",
  "fe.cons.help": "Ang dimensyong nakatali sa length parameter ang nagpapagalaw sa mga plane; kailangan ng anggulo ng angle parameter",
  "fe.locks": "Mga alignment lock",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "I-lock",
  "fe.unlock": "I-unlock",
  "fe.locks.help": "Pinapalitan ng lock ang argument ng solid (hal. rect #2) ng plane, kaya sumusunod dito ang solid",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Okupado na ang pangalan ng draft",
  "fe.clash.body": "May draft na nagngangalang “{name}” na. Palitan ang draft na iyon ng ito, o bumalik at i-save sa bagong pangalan. Wala pang na-save.",
  "fe.clash.rename": "I-save sa bagong pangalan",
- "fe.clash.replace": "Palitan ang draft na iyon",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Palitan ang draft na iyon"
 }

@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} λεπτά",
  "ai.step.min_s": "{m} λεπτά {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Λεπτομέρειες",
  "ai.step.copy": "Αντιγραφή λεπτομερειών",
  "ai.step.group.read": "Διαβάζει το μοντέλο",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Το μοντέλο άλλαξε ενώ εκτελούνταν το βήμα",
  "ai.step.why.skipped": "Το βήμα δεν εκτελέστηκε: ο γύρος τελείωσε",
  "ai.step.why.other": "Το βήμα δεν ολοκληρώθηκε",
- "ai.step.unknown": "Άγνωστο εργαλείο",
- "ai.step.dec": ","
+ "ai.step.unknown": "Άγνωστο εργαλείο"
 }

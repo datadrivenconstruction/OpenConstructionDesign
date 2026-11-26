@@ -1,4 +1,6 @@
 {
+ "cmd.mep.circuits": "Circuits",
+ "cmd.mep.circuits.desc": "Ouvre l’éditeur de circuits : circuits de chaque tableau, leurs charges, sections de câble et contrôles de règles.",
  "ce.title": "Circuits",
  "ce.open": "Circuits",
  "ce.empty": "Aucun circuit pour l'instant",

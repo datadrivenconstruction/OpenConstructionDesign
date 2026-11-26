@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Automaattinen talotekniikka",
+ "gen.mep_auto_hint": "Antaa generaattorin ja tekoälyavustajan suunnitella putket, kanavat ja johdotukset itse. Tälle alueelle oletuksena pois käytöstä; voit ottaa sen käyttöön. Manuaalinen reititys on aina käytettävissä."
+}

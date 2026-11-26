@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "طرح اولیه لغو شد",
  "sketch_edit.sk_applied": "طرح اولیه اعمال شد",
  "sketch_edit.sk_tail": "دم",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "دال",
  "sketch_edit.sk_host_roof": "بام",
  "sketch_edit.sk_host_ceiling": "سقف کاذب",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "تراز 2",
  "sketch_edit.seed_floor_200": "کف 200",
  "sketch_edit.seed_section1": "برش 1",
- "sketch_edit.seed_section2": "برش 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "برش 2"
 }

@@ -90,6 +90,7 @@
  "fe.cons.redundant": "redundant",
  "fe.cons.help": "O cotă legată de un parametru de lungime comandă planurile; un unghi necesită un parametru de unghi",
  "fe.locks": "Blocări de aliniere",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Blochează",
  "fe.unlock": "Deblochează",
  "fe.locks.help": "Blocarea înlocuiește argumentul solidului (de ex. dreptunghi nr. 2) cu planul, astfel încât solidul îl urmează",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Numele ciornei este ocupat",
  "fe.clash.body": "Există deja o ciornă numită „{name}”. Înlocuiți ciorna cu aceasta sau reveniți și salvați sub un nume nou. Nu s-a salvat încă nimic.",
  "fe.clash.rename": "Salvează sub un nume nou",
- "fe.clash.replace": "Înlocuiește ciorna",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Înlocuiește ciorna"
 }

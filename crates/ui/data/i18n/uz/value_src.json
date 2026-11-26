@@ -24,5 +24,21 @@
  "value_src.verified_n": "Tekshirilgan qiymatlar: {n}",
  "value_src.bulk_note": "AI to'ldirgan, tekshirilmagan qiymatlar: {n}",
  "value_src.bulk_verify": "Tekshirilgan deb belgilash ({n})",
- "value_src.bulk_tip": "Tanlovdagi AI to'ldirgan barcha qiymatlarni bitta bekor qilish qadami bilan tekshirilgan deb belgilaydi"
+ "value_src.bulk_tip": "Tanlovdagi AI to'ldirgan barcha qiymatlarni bitta bekor qilish qadami bilan tekshirilgan deb belgilaydi",
+ "origin.title": "Kelib chiqishi",
+ "origin.made_by": "Yaratuvchi",
+ "origin.request": "So'rov",
+ "origin.at": "Qo'llangan",
+ "origin.recipe": "retsept “{name}”, {part}-qism",
+ "origin.ai": "AI yordamchi ({model})",
+ "origin.agent": "agent {name}",
+ "origin.script": "skript {name}",
+ "origin.xlsx": "XLSX jadvali",
+ "origin.user": "inson",
+ "origin.import": "import",
+ "origin.import_file": "{file} dan import",
+ "origin.unknown": "tarixda yo'q",
+ "origin.held": "Qo'lda tahrirlangan: retseptni qayta ishga tushirish uni o'z holicha qoldiradi",
+ "origin.rebuilt": "Retseptni qayta ishga tushirish uni qayta quradi; o'z holicha qoldirish uchun qo'lda tahrirlang",
+ "origin.ai_values": "AI to'ldirgan qiymatlar: {n}, tekshirilmagan: {open}"
 }

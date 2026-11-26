@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Аралык",
+ "cmd.e3d.measure.gap": "Беттер ортосундагы боштук",
+ "cmd.e3d.measure.angle": "Бурч",
+ "cmd.e3d.measure.area": "Беттин же бөлмөнүн аянты / периметри",
+ "cmd.e3d.measure.volume": "Элементтин көлөмү",
+ "cmd.e3d.measure.slope": "Эңкейиш",
+ "cmd.e3d.measure.chain": "Чекиттер чынжыры",
+ "measure.orphan": "Шилтеме жоголду",
+ "measure.not_planar": "Беттер параллель эмес",
+ "measure.unsupported": "Муну өлчөөгө болбойт",
+ "cmd.ann.measure_distance": "Аралыкты өлчөө",
+ "cmd.ann.measure_gap": "Беттер ортосундагы боштукту өлчөө",
+ "cmd.ann.measure_angle": "Бурчту өлчөө",
+ "cmd.ann.measure_area": "Аянтты өлчөө",
+ "hint.measure.first": "Өлчөө: дубал бетин (же чекитти) чыкылдатыңыз · Esc — чыгуу",
+ "hint.measure.second": "Өлчөө: экинчи бетти чыкылдатыңыз · Esc — биринчи тандоону жокко чыгаруу",
+ "measure.no_face": "Бул жерде дубал бети жок"
+}

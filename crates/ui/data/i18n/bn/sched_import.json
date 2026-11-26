@@ -20,6 +20,7 @@
  "sched_import.why_ro": "শুধু-পঠনযোগ্য",
  "sched_import.why_locked": "লক করা মান",
  "sched_import.why_bad": "অবৈধ মান",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "{n}টি পরিবর্তন প্রয়োগ করুন",
  "sched_import.cancel": "বাতিল",
  "sched_import.applied": "{n}টি ঘর আমদানি হয়েছে (এক ধাপে ফিরিয়ে আনা যাবে)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "সূত্রের ফলাফল, প্রয়োগ হয়নি: {n}",
  "sched_import.no_id_rows": "Id-বিহীন সারি, পড়া হয়নি: {n} (সারি {rows})",
  "sched_import.more": "… আরও {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(খালি)",
  "sched_import.reading": "ওয়ার্কবুক পড়া হচ্ছে…",
  "sched_import.resaved": "প্রথম প্রিভিউয়ের পর ওয়ার্কবুক আবার সংরক্ষিত হয়েছে: এই প্রিভিউ নতুন বিষয়বস্তু দেখাচ্ছে",
- "sched_import.resaved_reading": "ওয়ার্কবুক আবার সংরক্ষিত হয়েছে: কিছু প্রয়োগ হয়নি, নতুন প্রিভিউয়ের জন্য আবার পড়া হচ্ছে",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "ওয়ার্কবুক আবার সংরক্ষিত হয়েছে: কিছু প্রয়োগ হয়নি, নতুন প্রিভিউয়ের জন্য আবার পড়া হচ্ছে"
 }

@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Type",
  "collab_diff.diff.col.field": "Felt",
  "collab_diff.diff.col.old": "Før",
- "collab_diff.diff.col.new": "Nå"
+ "collab_diff.diff.col.new": "Nå",
+ "collab_diff.reveal.title": "Oppbygging",
+ "collab_diff.reveal.start": "Vis som bygget",
+ "collab_diff.reveal.play": "Spill av",
+ "collab_diff.reveal.pause": "Pause",
+ "collab_diff.reveal.back": "Bakover",
+ "collab_diff.reveal.close": "Lukk",
+ "collab_diff.reveal.nothing": "Ingenting å vise: ingen endrede elementer finnes i 3D-scenen.",
+ "collab_diff.reveal.journal_busy": "Leser journalen…",
+ "collab_diff.reveal.journal_play": "Spill av journal"
 }

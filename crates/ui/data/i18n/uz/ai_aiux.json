@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter qo'llaydi va Esc so'rovni to'xtatadi, reja yoki 3D ko'rinishdan ham, matn maydoni tahrirlanmayotgan bo'lsa.",
  "ai.plan.rebased": "Joriy model bo'yicha yangilandi: {what}",
  "ai.value.bad": "“{text}” {name} uchun to'g'ri qiymat emas",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "AI yordamchisi siz {mine} kiritayotganda bu qiymatni {agent} ga o'zgartirdi. Saqlab qolinadiganini tanlang.",
  "ai.value.choose_first": "Avval kartadagi qiymatingizni yoki AI yordamchisinikini tanlang",
  "ai.value.elem": "{n}-element: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Boshqa qiymat kiriting yoki bandni Qo'llash dan chiqarish uchun belgisini olib tashlang.",
  "ai.value.tip": "Qoralamadagi qiymatni tuzating; model faqat Qo'llash da o'zgaradi. Enter tasdiqlaydi, Esc tiklaydi.",
  "ai.value.use_mine": "{mine} ni ishlatish",
- "ai.value.was": "avval {old} edi",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "avval {old} edi"
 }

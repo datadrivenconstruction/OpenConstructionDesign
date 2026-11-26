@@ -31,6 +31,7 @@
  "sketch_edit.sk_cancelled": "ยกเลิกสเกตช์แล้ว",
  "sketch_edit.sk_applied": "นำสเกตช์ไปใช้แล้ว",
  "sketch_edit.sk_tail": "หาง",
+ "sketch_edit.sk_rise": "+{rise} · {pct} %",
  "sketch_edit.sk_host_slab": "พื้น",
  "sketch_edit.sk_host_roof": "หลังคา",
  "sketch_edit.sk_host_ceiling": "เพดาน",
@@ -132,6 +133,5 @@
  "sketch_edit.seed_level2": "ระดับ 2",
  "sketch_edit.seed_floor_200": "พื้น 200",
  "sketch_edit.seed_section1": "หน้าตัด 1",
- "sketch_edit.seed_section2": "หน้าตัด 2",
- "sketch_edit.sk_rise": "+{rise} · {pct} %"
+ "sketch_edit.seed_section2": "หน้าตัด 2"
 }

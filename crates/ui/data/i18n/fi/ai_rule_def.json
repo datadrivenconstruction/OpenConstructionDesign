@@ -1,6 +1,7 @@
 {
  "ai.check.more": "{0} lisää tämän säännön havaintoa ei ole listattu",
  "ai.check.integrity": "Rikkinäistä dataa kohteessa {0}: {1}",
+ "ai.check.wall_warning": "{0}",
  "ai.check.level_top_below_base": "{0}: yläreuna ei ole alareunan yläpuolella",
  "ai.check.level_host_differs": "Komponentti on eri tasolla kuin sen isäntä ({0})",
  "ai.check.clash": "{0} törmää kohteeseen {1}",
@@ -23,5 +24,5 @@
  "ai.check.rule.count": "Sääntö {1}: {3} elementtiä, sallittu {4}",
  "ai.check.rule.clearance": "Sääntö {1}: etäisyys {3} m, vaaditaan vähintään {4} m",
  "ai.check.rule.unsupported": "Sääntöä {1} ei voitu tarkistaa: tätä luokkaa ei tueta",
- "ai.check.wall_warning": "{0}"
+ "ai.check.din276_bad": "Parametri {0}: \"{1}\" ei ole DIN 276 -kustannusryhmä (kolme numeroa, 100–899) {2} elementillä"
 }

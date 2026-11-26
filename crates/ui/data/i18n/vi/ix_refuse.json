@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Ô cửa {w} rộng hơn tường {len}",
+ "ix.fix.opening_width": "Chiều rộng {w} mm",
+ "ix.fix.wall_extend": "Kéo dài tường đến {len} mm"
+}

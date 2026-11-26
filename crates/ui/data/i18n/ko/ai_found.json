@@ -9,6 +9,7 @@
  "ai_found.found.hide": "숨김",
  "ai_found.found.color": "색상 지정됨",
  "ai_found.found.count": "{m}개 중 {n}개",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "일치하는 항목이 없습니다. 필터를 넓혀 보세요.",
  "ai_found.found.show_btn": "표시",
  "ai_found.found.show_tip": "이 요소를 선택하고 평면과 3D에서 확대",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "요소 #개 숨김",
   "other": "요소 #개 숨김"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

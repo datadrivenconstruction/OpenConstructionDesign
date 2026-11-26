@@ -15,6 +15,7 @@
  "drafting_view.name": "Név",
  "drafting_view.count": "{n} megjegyzés",
  "drafting_view.tab": "Rajzi · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "Üres rajzi nézet",
  "drafting_view.canvas_hint": "Használja az Annotálás eszközeit: részletvonalak, területek, szöveg, részlet elemek",
  "drafting_view.created": "A(z) „{name}” rajzi nézet létrehozva",
@@ -29,6 +30,5 @@
  "drafting_view.more": "Több",
  "empty.drafting.title": "Még nincsenek rajzi nézetek",
  "empty.drafting.hint": "Hozzon létre egyet a modellből nem vágott 2D részletekhez.",
- "empty.drafting.action": "Új rajzi nézet",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "Új rajzi nézet"
 }

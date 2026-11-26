@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "Śledzenie ścian z rysunku",
  "api.cmd.attachments_list": "Pliki dołączone do czatu i zatwierdzone wymagania projektu",
  "api.cmd.attachments_read": "Odczytaj zakres stron, wiersze tabeli lub obraz dołączonego pliku",
- "api.cmd.underlay_trace": "Szkicowe ściany prześledzone z dołączonego rysunku"
+ "api.cmd.underlay_trace": "Szkicowe ściany prześledzone z dołączonego rysunku",
+ "ai.tool.plan_from_image": "Odczyt rzutu z obrazu",
+ "api.cmd.plan_from_image": "Szkic ścian, drzwi, okien i pomieszczeń odczytanych z załączonego obrazu rzutu lub strony PDF"
 }

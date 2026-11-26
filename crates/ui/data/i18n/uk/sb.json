@@ -41,5 +41,7 @@
  "sb.save.fresh": "Змін немає",
  "sb.save.save": "Зберегти",
  "sb.save.ifc": "Зберегти копію IFC",
- "sb.save.autosave": "Автозбереження"
+ "sb.save.autosave": "Автозбереження",
+ "sb.more.title": "Більше",
+ "sb.more.desc": "Елементи рядка стану, що не вміщуються за цієї ширини."
 }

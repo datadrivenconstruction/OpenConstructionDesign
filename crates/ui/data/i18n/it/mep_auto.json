@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Impianti dell'edificio automatici",
+ "gen.mep_auto_hint": "Consente al generatore e all'assistente AI di tracciare tubazioni, canali e cablaggi in autonomia. Disattivato per impostazione predefinita per questa regione; puoi attivarlo. Il tracciamento manuale è sempre disponibile."
+}

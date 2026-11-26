@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "Otwór {w} jest szerszy niż ściana {len}",
+ "ix.fix.opening_width": "Szerokość {w} mm",
+ "ix.fix.wall_extend": "Wydłuż ścianę do {len} mm"
+}

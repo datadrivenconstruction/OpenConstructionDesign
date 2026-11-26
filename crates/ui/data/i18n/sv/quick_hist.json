@@ -72,6 +72,7 @@
  "quick.cat.beam": "Balkar",
  "quick.cat.ceiling": "Tak",
  "quick.cat.structure": "Konstruktion",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} av {all}",
  "quick.hud.type": "Typ",
  "quick.hud.height": "Höjd",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Kan inte läsa värdet “{v}”",
  "quick.menu.repeat": "Upprepa: {cmd}",
  "quick.menu.enter": "Ange",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Senaste",
  "quick.bar.repeat_tip": "{cmd} · Enter upprepar den",
  "quick.repeat.none": "Inget att upprepa än",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Tillbaka",
  "quick.tips.next": "Nästa",
  "quick.tips.finish": "Klart",
- "quick.tips.never": "Visa inte igen",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Visa inte igen"
 }

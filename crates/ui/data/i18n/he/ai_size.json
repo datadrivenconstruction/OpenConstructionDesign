@@ -1,10 +1,10 @@
 {
+ "ai.size.sep": ",",
  "ai.size.count": "~{n} / {max} טוקנים",
  "ai.size.block": "ארוך מדי למודל הזה: כ-{n} טוקנים, עד {max} נכנסים ומשאירים מקום לתשובה — קצר או פצל אותו",
  "ai.size.trim": "קצץ כדי להתאים",
  "ai.size.trim_tip": "חותך את סוף ההודעה כדי שתיכנס. שום דבר לא נחתך עד שתלחץ.",
  "ai.size.drop_view": "השאר את המבט בחוץ",
  "ai.size.drop_level": "השאר את המפלס בחוץ",
- "ai.size.drop_selection": "השאר את הבחירה בחוץ",
- "ai.size.sep": ","
+ "ai.size.drop_selection": "השאר את הבחירה בחוץ"
 }

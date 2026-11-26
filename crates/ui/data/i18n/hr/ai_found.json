@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Sakriveno",
  "ai_found.found.color": "Obojano",
  "ai_found.found.count": "{n} od {m}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Ništa ne odgovara. Pokušaj širi filtar.",
  "ai_found.found.show_btn": "Prikaži",
  "ai_found.found.show_tip": "Odaberi ove elemente i približi ih u tlocrtu i 3D-u",
@@ -41,6 +42,5 @@
   "one": "# element skriven",
   "few": "# elementa skrivena",
   "other": "# elemenata skriveno"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

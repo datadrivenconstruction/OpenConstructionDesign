@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nieuwe sneltoetsen",
  "keys_import.changed_head": "Vervangt uw eigen sneltoetsen",
  "keys_import.conflicts_head": "Conflicten na de import",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "akkoordtoets",
  "keys_import.kind_seq": "twee letters",
  "keys_import.unbound": "geen",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Niet ongedaan gemaakt: sneltoetsen zijn na de import bewerkt. Zet ze één voor één terug in het venster Sneltoetsen.",
  "keys_import.undo_none": "Niets om ongedaan te maken: geen sneltoetsenimport in deze sessie.",
  "keys_import.imported": "Sneltoetsen geïmporteerd",
- "keys_import.imported_conflicts": "Sneltoetsen geïmporteerd; conflicten: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Sneltoetsen geïmporteerd; conflicten: {n}"
 }

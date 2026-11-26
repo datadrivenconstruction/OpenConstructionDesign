@@ -1,5 +1,5 @@
 {
+ "sel_chip.sel_chip": "{name}: {n}",
  "sel_chip.opt.sel_hint": "요소를 클릭하여 선택합니다. Ctrl은 추가, Shift는 제외합니다.",
- "sel_chip.opt.units": "단위",
- "sel_chip.sel_chip": "{name}: {n}"
+ "sel_chip.opt.units": "단위"
 }

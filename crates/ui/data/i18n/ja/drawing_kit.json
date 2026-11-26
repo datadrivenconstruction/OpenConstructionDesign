@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: 通常の濃度",
  "drawing_kit.reset_color": "{layer}: 図面の色に戻す",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "角度",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "元に戻す (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m} 件中 {n} 件",
  "drawing_kit.accept_class": "この種類をすべて承認",
- "drawing_kit.reject_class": "この種類をすべて却下",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "この種類をすべて却下"
 }

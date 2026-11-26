@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Točka kvadranta",
+ "snap.extension": "Produžetak",
+ "snap.parallel": "Paralelno sa zidom",
+ "snap.tracking_x": "X uhvaćene točke",
+ "snap.tracking_y": "Y uhvaćene točke",
+ "snap.tracking_cross": "Sjecište vodilica",
+ "snap.equal_step": "Jednaki korak"
+}

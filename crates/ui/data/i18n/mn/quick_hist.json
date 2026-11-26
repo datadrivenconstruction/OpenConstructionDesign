@@ -72,6 +72,7 @@
  "quick.cat.beam": "Дамууд",
  "quick.cat.ceiling": "Таазууд",
  "quick.cat.structure": "Бүтэц",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {all}-с {n}",
  "quick.hud.type": "Төрөл",
  "quick.hud.height": "Өндөр",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "“{v}” утгыг уншиж чадахгүй байна",
  "quick.menu.repeat": "Давтах: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Сүүлийн",
  "quick.bar.repeat_tip": "{cmd} · Enter түүнийг давтана",
  "quick.repeat.none": "Давтах зүйл байхгүй",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Буцах",
  "quick.tips.next": "Дараах",
  "quick.tips.finish": "Дууссан",
- "quick.tips.never": "Дахин бүү харуул",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Дахин бүү харуул"
 }

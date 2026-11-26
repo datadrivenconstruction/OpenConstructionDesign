@@ -1,4 +1,5 @@
 {
+ "ai.ctx.add": "+ {what}",
  "ai.ctx.add_selection": "+ Избрано ({n})",
  "ai.ctx.add_tip": "Добави обратно към това, което вижда AI",
  "ai.ctx.frame_tip": "Покажи тези елементи",
@@ -19,6 +20,5 @@
  "ai.ctx.cat.railing": "Парапети",
  "ai.ctx.cat.roof": "Покриви",
  "ai.ctx.cat.stair": "Стълби",
- "ai.ctx.cat.other": "Други",
- "ai.ctx.add": "+ {what}"
+ "ai.ctx.cat.other": "Други"
 }

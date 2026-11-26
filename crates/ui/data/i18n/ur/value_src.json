@@ -24,5 +24,21 @@
  "value_src.verified_n": "تصدیق شدہ قدریں: {n}",
  "value_src.bulk_note": "AI کی بھری ہوئی قدریں، غیر تصدیق شدہ: {n}",
  "value_src.bulk_verify": "تصدیق شدہ نشان زد کریں ({n})",
- "value_src.bulk_tip": "انتخاب کی ہر AI سے بھری قدر کو تصدیق شدہ نشان زد کرتا ہے، ایک undo مرحلہ"
+ "value_src.bulk_tip": "انتخاب کی ہر AI سے بھری قدر کو تصدیق شدہ نشان زد کرتا ہے، ایک undo مرحلہ",
+ "origin.title": "ماخذ",
+ "origin.made_by": "بنانے والا",
+ "origin.request": "درخواست",
+ "origin.at": "لاگو ہوا",
+ "origin.recipe": "ریسیپی “{name}”، حصہ {part}",
+ "origin.ai": "AI معاون ({model})",
+ "origin.agent": "ایجنٹ {name}",
+ "origin.script": "اسکرپٹ {name}",
+ "origin.xlsx": "XLSX اسپریڈشیٹ",
+ "origin.user": "ایک شخص",
+ "origin.import": "امپورٹ",
+ "origin.import_file": "{file} سے امپورٹ",
+ "origin.unknown": "تاریخ میں نہیں",
+ "origin.held": "ہاتھ سے ترمیم شدہ: ریسیپی کا دوبارہ چلنا اسے جوں کا توں چھوڑتا ہے",
+ "origin.rebuilt": "ریسیپی کا دوبارہ چلنا اسے دوبارہ بناتا ہے؛ جوں کا توں رکھنے کے لیے ہاتھ سے ترمیم کریں",
+ "origin.ai_values": "AI کی بھری قدریں: {n}، غیر تصدیق شدہ: {open}"
 }

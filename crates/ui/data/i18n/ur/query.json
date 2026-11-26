@@ -11,6 +11,7 @@
  "query.err.not_changed": "“{key}” نہیں بدلی جا سکتی: {why}",
  "query.err.op_no_field": "فیلڈ کے بغیر آپریٹر",
  "query.err.positive": "{key}: قدر صفر سے زیادہ ہونی چاہیے",
+ "query.err.raw": "{text}",
  "query.err.text_field": "فیلڈ “{key}” متن ہے، فارمولا لاگو نہیں ہوتا",
  "query.err.unclosed_paren": "بند کرنے والا قوسین غائب ہے",
  "query.err.unclosed_quote": "بند کرنے والا اقتباس غائب ہے",
@@ -27,6 +28,5 @@
  "query.why.curtain": "پردے کی دیواریں ان کی اپنی خصوصیات میں بدلی جاتی ہیں",
  "query.why.opening_type": "بازش کی ٹائپ اس کے سائز کے مطابق ہوتی ہے: “-> width=… height=…”",
  "query.why.slab_thickness": "فرش کی موٹائی ٹائپ سے طے ہوتی ہے: “-> type=…”",
- "query.why.wall_thickness": "دیوار کی موٹائی ٹائپ سے طے ہوتی ہے: “-> type=…”",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "دیوار کی موٹائی ٹائپ سے طے ہوتی ہے: “-> type=…”"
 }

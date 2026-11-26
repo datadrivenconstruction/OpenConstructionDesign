@@ -41,5 +41,7 @@
  "sb.save.fresh": "Nicio modificare",
  "sb.save.save": "Salvează",
  "sb.save.ifc": "Salvează copie IFC",
- "sb.save.autosave": "Salvare automată"
+ "sb.save.autosave": "Salvare automată",
+ "sb.more.title": "Mai multe",
+ "sb.more.desc": "Elemente ale barei de stare care nu încap la această lățime."
 }

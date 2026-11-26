@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "Màu",
+ "cmd.ui.icons.color": "Biểu tượng màu",
+ "cmd.ui.icons.color.desc": "Kiểu vẽ của các biểu tượng",
+ "theme.icons.hierarchical": "Phân cấp",
+ "cmd.ui.icons.hierarchical": "Biểu tượng phân cấp",
+ "cmd.ui.icons.hierarchical.desc": "Kiểu vẽ của các biểu tượng",
+ "theme.icons.isometric": "Đẳng cự",
+ "cmd.ui.icons.isometric": "Biểu tượng đẳng cự",
+ "cmd.ui.icons.isometric.desc": "Kiểu vẽ của các biểu tượng",
+ "theme.icons.monoline": "Một nét",
+ "cmd.ui.icons.monoline": "Biểu tượng một nét",
+ "cmd.ui.icons.monoline.desc": "Kiểu vẽ của các biểu tượng"
+}

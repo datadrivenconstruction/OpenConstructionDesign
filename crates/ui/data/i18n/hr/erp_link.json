@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "Preuzmite trenutačni editor na stranici ERP-a {url}",
  "erp.err.unsupported.admin": "Zatražite od administratora ERP-a trenutačni editor",
  "erp.err.throttled_in": "Previše pokušaja. Pokušajte ponovo za {s} s",
+ "erp.err.throttled_ready": "Čekanje je završeno. Možete pokušati ponovno",
  "erp.err.imported": "Revizija {n} u ERP-u je uvezeni model: editor ga još ne može otvoriti niti objaviti preko njega",
  "erp.action.download": "Otvorite stranicu za preuzimanje editora u ERP-u",
  "erp.action.new_link": "Zatražite novu poveznicu na stranici ERP-a",

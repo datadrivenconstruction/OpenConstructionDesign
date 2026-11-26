@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "Nie zmieniono otworów: {n} ({why})",
  "lnp.params_changed": "zmienionych wartości: {n}",
  "lnp.params_same": "Brak zmian: {u} elementów ma już tę wartość",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Zaznacz tylko pierwszy panel, aby go edytować",
  "lnp.clip_from_wall": "Skopiowano parametry ze ściany nr {id}",
  "lnp.clip_from_opening": "Skopiowano parametry z otworu nr {id}",
- "lnp.match_from": "Właściwości nr {id} dopasowano do elementów: {n}",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "Właściwości nr {id} dopasowano do elementów: {n}"
 }

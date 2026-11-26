@@ -1,0 +1,9 @@
+{
+ "snap.quadrant": "Квадрант нүктесі",
+ "snap.extension": "Жалғасы",
+ "snap.parallel": "Қабырғаға параллель",
+ "snap.tracking_x": "Алынған нүктенің X мәні",
+ "snap.tracking_y": "Алынған нүктенің Y мәні",
+ "snap.tracking_cross": "Бағыттауыштар қиылысы",
+ "snap.equal_step": "Тең қадам"
+}

@@ -41,5 +41,16 @@
  "library.ifc.window": "หน้าต่าง",
  "library.ifc.stair": "บันได",
  "library.ifc.pipe_fitting": "ข้อต่อท่อ",
- "library.ifc.duct_fitting": "ข้อต่อท่อลม"
+ "library.ifc.duct_fitting": "ข้อต่อท่อลม",
+ "library.ifc.beam": "คาน",
+ "library.ifc.column": "เสา",
+ "library.ifc.appliance": "เครื่องใช้ไฟฟ้า",
+ "library.ifc.fire_terminal": "จุดดับเพลิง",
+ "library.ifc.heat_exchanger": "เครื่องแลกเปลี่ยนความร้อน",
+ "library.ifc.pump": "ปั๊ม",
+ "library.ifc.tank": "ถัง",
+ "library.ifc.transport": "องค์ประกอบขนส่ง",
+ "library.ifc.valve": "วาล์ว",
+ "library.ifc.waste_terminal": "จุดระบายของเสีย",
+ "library.ifc.medical": "อุปกรณ์การแพทย์"
 }

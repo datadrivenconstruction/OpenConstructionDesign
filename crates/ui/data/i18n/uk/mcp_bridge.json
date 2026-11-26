@@ -18,6 +18,7 @@
  "mcp.set.error": "Сервер не запущено: {error}",
  "mcp.set.new": "Новий токен",
  "mcp.set.port": "Порт",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Кожен пакет перевіряється першим і є одним кроком скасування. Підключитися можуть лише програми на цьому комп’ютері.",
  "mcp.set.show": "Показати",
  "mcp.set.state_failed": "Не запущено",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Стан",
  "mcp.set.access": "Доступ",
  "mcp.set.config": "Конфігурація",
- "mcp.set.policy": "Застосування",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Застосування"
 }

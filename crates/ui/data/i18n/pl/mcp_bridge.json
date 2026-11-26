@@ -18,6 +18,7 @@
  "mcp.set.error": "Serwer nie działa: {error}",
  "mcp.set.new": "Nowy token",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Każda partia jest najpierw sprawdzana i stanowi jeden krok cofania. Połączyć się mogą tylko programy na tym komputerze.",
  "mcp.set.show": "Pokaż",
  "mcp.set.state_failed": "Nie działa",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Status",
  "mcp.set.access": "Dostęp",
  "mcp.set.config": "Konfiguracja",
- "mcp.set.policy": "Stosowanie",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Stosowanie"
 }

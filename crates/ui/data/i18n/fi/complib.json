@@ -18,7 +18,7 @@
  "complib.ready.no": "ei kirjoitettu",
  "complib.edited": "Muokattu",
  "complib.edited_tip": "Projektin perhe eroaa sisäänrakennetusta",
+ "complib.format_tip": "{fmt}: {state}",
  "complib.value": "Arvo",
- "complib.armed": "Komponentti: {name}",
- "complib.format_tip": "{fmt}: {state}"
+ "complib.armed": "Komponentti: {name}"
 }

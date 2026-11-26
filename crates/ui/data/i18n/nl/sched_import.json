@@ -20,6 +20,7 @@
  "sched_import.why_ro": "alleen-lezen",
  "sched_import.why_locked": "vergrendelde waarde",
  "sched_import.why_bad": "ongeldige waarde",
+ "sched_import.refusal": "{at} {col} “{text}”: {why}",
  "sched_import.apply": "{n} wijzigingen toepassen",
  "sched_import.cancel": "Annuleren",
  "sched_import.applied": "{n} cellen geïmporteerd (één stap ongedaan maken)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Formuleresultaten, niet toegepast: {n}",
  "sched_import.no_id_rows": "Rijen zonder Id, niet gelezen: {n} (rijen {rows})",
  "sched_import.more": "… {n} meer",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(leeg)",
  "sched_import.reading": "Werkmap lezen…",
  "sched_import.resaved": "De werkmap is na het eerste voorbeeld opnieuw opgeslagen: dit voorbeeld toont de nieuwe inhoud",
- "sched_import.resaved_reading": "De werkmap is opnieuw opgeslagen: niets toegepast, opnieuw gelezen voor een nieuw voorbeeld",
- "sched_import.refusal": "{at} {col} “{text}”: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "De werkmap is opnieuw opgeslagen: niets toegepast, opnieuw gelezen voor een nieuw voorbeeld"
 }

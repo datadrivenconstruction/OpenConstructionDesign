@@ -1,0 +1,14 @@
+{
+ "theme.icons.color": "カラー",
+ "cmd.ui.icons.color": "カラーアイコン",
+ "cmd.ui.icons.color.desc": "アイコンの描画スタイル",
+ "theme.icons.hierarchical": "階層型",
+ "cmd.ui.icons.hierarchical": "階層型アイコン",
+ "cmd.ui.icons.hierarchical.desc": "アイコンの描画スタイル",
+ "theme.icons.isometric": "アイソメ図",
+ "cmd.ui.icons.isometric": "アイソメ図アイコン",
+ "cmd.ui.icons.isometric.desc": "アイコンの描画スタイル",
+ "theme.icons.monoline": "モノライン",
+ "cmd.ui.icons.monoline": "モノライン アイコン",
+ "cmd.ui.icons.monoline.desc": "アイコンの描画スタイル"
+}

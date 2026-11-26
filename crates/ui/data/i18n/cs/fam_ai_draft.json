@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "opraveno po {n} odmítnutých pokusech, asi {tokens} tokenů",
+ "ai.fam_offer": "Agent nabídl rodinu {name}",
+ "ai.fam_offer.open": "Otevřít v editoru rodin",
+ "ai.fam_offer.dismiss": "Zavřít",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Kontrola…",
+ "fe.ai.clean": "Kontrola nic nenašla",
+ "fe.ai.check_values": "Zkontrolovat s hodnotami",
+ "fe.ai.lines": "řádky {n}",
+ "fe.ai.changes": "{n} změn oproti dřívější verzi",
+ "fe.ai.added": "přidáno: {head} {name}",
+ "fe.ai.removed": "odebráno: {head} {name}",
+ "fe.ai.changed": "změněno: {head} {name}",
+ "fe.ai.reject": "Odmítnout"
+}

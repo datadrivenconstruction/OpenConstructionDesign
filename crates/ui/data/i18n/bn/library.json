@@ -41,5 +41,16 @@
  "library.ifc.window": "জানালা",
  "library.ifc.stair": "সিঁড়ি",
  "library.ifc.pipe_fitting": "পাইপ ফিটিং",
- "library.ifc.duct_fitting": "ডাক্ট ফিটিং"
+ "library.ifc.duct_fitting": "ডাক্ট ফিটিং",
+ "library.ifc.beam": "বিম",
+ "library.ifc.column": "কলাম",
+ "library.ifc.appliance": "যন্ত্রসামগ্রী",
+ "library.ifc.fire_terminal": "অগ্নি-নির্বাপণ টার্মিনাল",
+ "library.ifc.heat_exchanger": "হিট এক্সচেঞ্জার",
+ "library.ifc.pump": "পাম্প",
+ "library.ifc.tank": "ট্যাংক",
+ "library.ifc.transport": "পরিবহন এলিমেন্ট",
+ "library.ifc.valve": "ভালভ",
+ "library.ifc.waste_terminal": "বর্জ্য টার্মিনাল",
+ "library.ifc.medical": "চিকিৎসা যন্ত্র"
 }

@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: مکمل ٹون",
  "drawing_kit.reset_color": "{layer}: ڈرائنگ کے رنگ پر واپس",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "زاویہ",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "واپس (Ctrl+Z)",
  "drawing_kit.n_of_m": "{m} میں سے {n}",
  "drawing_kit.accept_class": "اس قسم کے سب قبول کریں",
- "drawing_kit.reject_class": "اس قسم کے سب مسترد کریں",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "اس قسم کے سب مسترد کریں"
 }

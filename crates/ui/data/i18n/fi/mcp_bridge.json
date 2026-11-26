@@ -18,6 +18,7 @@
  "mcp.set.error": "Palvelinta ei käynnistetty: {error}",
  "mcp.set.new": "Uusi tunnus",
  "mcp.set.port": "Portti",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Jokainen erä tarkistetaan ensin, ja se on yksi kumoamisaskel. Vain tällä tietokoneella olevat ohjelmat voivat yhdistää.",
  "mcp.set.show": "Näytä",
  "mcp.set.state_failed": "Ei käynnissä",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Tila",
  "mcp.set.access": "Käyttöoikeus",
  "mcp.set.config": "Asetukset",
- "mcp.set.policy": "Käyttö",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Käyttö"
 }

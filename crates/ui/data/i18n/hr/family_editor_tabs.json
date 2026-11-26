@@ -90,6 +90,7 @@
  "fe.cons.redundant": "suvišno",
  "fe.cons.help": "Kota vezana uz parametar duljine upravlja ravninama; kut zahtijeva parametar kuta",
  "fe.locks": "Zaključavanja poravnanja",
+ "fe.lock.row": "{solid} ↔ {plane}",
  "fe.lock": "Zaključaj",
  "fe.unlock": "Otključaj",
  "fe.locks.help": "Zaključavanje zamjenjuje argument tijela (npr. pravokutnik #2) ravninom, pa tijelo prati nju",
@@ -160,6 +161,5 @@
  "fe.clash.title": "Naziv nacrta je zauzet",
  "fe.clash.body": "Nacrt pod nazivom “{name}” već postoji. Zamijenite taj nacrt ovim ili se vratite i spremite pod novim nazivom. Još ništa nije spremljeno.",
  "fe.clash.rename": "Spremi pod novim nazivom",
- "fe.clash.replace": "Zamijeni taj nacrt",
- "fe.lock.row": "{solid} ↔ {plane}"
+ "fe.clash.replace": "Zamijeni taj nacrt"
 }

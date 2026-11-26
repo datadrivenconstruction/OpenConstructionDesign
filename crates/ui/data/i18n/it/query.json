@@ -11,6 +11,7 @@
  "query.err.not_changed": "\"{key}\" non può essere modificato: {why}",
  "query.err.op_no_field": "operatore senza campo",
  "query.err.positive": "{key}: il valore deve essere maggiore di zero",
+ "query.err.raw": "{text}",
  "query.err.text_field": "il campo \"{key}\" è testo, una formula non si applica",
  "query.err.unclosed_paren": "parentesi di chiusura mancante",
  "query.err.unclosed_quote": "virgolette di chiusura mancanti",
@@ -27,6 +28,5 @@
  "query.why.curtain": "le facciate continue si modificano nelle loro proprietà",
  "query.why.opening_type": "il tipo di un'apertura segue le sue dimensioni: \"-> larghezza=… altezza=…\"",
  "query.why.slab_thickness": "lo spessore del solaio è impostato dal tipo: \"-> tipo=…\"",
- "query.why.wall_thickness": "lo spessore del muro è impostato dal tipo: \"-> tipo=…\"",
- "query.err.raw": "{text}"
+ "query.why.wall_thickness": "lo spessore del muro è impostato dal tipo: \"-> tipo=…\""
 }

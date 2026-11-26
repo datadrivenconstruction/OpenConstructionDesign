@@ -72,6 +72,7 @@
  "quick.cat.beam": "Vigas",
  "quick.cat.ceiling": "Tetos",
  "quick.cat.structure": "Estrutura",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {n} de {all}",
  "quick.hud.type": "Tipo",
  "quick.hud.height": "Altura",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "Não é possível ler o valor “{v}”",
  "quick.menu.repeat": "Repetir: {cmd}",
  "quick.menu.enter": "Enter",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "Recentes",
  "quick.bar.repeat_tip": "{cmd} · Enter repete",
  "quick.repeat.none": "Nada para repetir ainda",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "Voltar",
  "quick.tips.next": "Próxima",
  "quick.tips.finish": "Concluído",
- "quick.tips.never": "Não mostrar novamente",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "Não mostrar novamente"
 }

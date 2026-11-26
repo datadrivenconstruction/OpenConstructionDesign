@@ -52,6 +52,7 @@
  "mesh_tools.done": "Ferdig",
  "mesh_tools.failed": "Mislyktes",
  "mesh_tools.note.outline_approx": "omriss tilnærmet",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "Slett flater som vender mot",
  "mesh_tools.dir.up": "opp",
  "mesh_tools.dir.down": "ned",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "Forenklet: {n} (for eksempel: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "Forenklet: {n} (for eksempel: {first})"
 }

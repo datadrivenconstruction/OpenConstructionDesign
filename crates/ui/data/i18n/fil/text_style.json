@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Punan",
  "text_style.lbl.detail": "Detalye",
  "text_style.lbl.width": "Lapad",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Maglagay ng numero mula {min} hanggang {max}",
  "text_style.tip.next_ring": "Isara ang contour na ito at magsimula ng isa pa sa parehong region",
  "text_style.tip.edit_text": "I-edit ang text sa lugar",
- "text_style.tip.add_leader": "Magdagdag ng leader line sa text na ito",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Magdagdag ng leader line sa text na ito"
 }

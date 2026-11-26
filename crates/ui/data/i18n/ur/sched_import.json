@@ -20,6 +20,7 @@
  "sched_import.why_ro": "صرف پڑھنے کے لیے",
  "sched_import.why_locked": "مقفل قدر",
  "sched_import.why_bad": "غلط قدر",
+ "sched_import.refusal": "{at} {col} \"{text}\": {why}",
  "sched_import.apply": "{n} تبدیلیاں لاگو کریں",
  "sched_import.cancel": "منسوخ",
  "sched_import.applied": "{n} خانے درآمد ہوئے (ایک واپسی مرحلہ)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "فارمولا کے نتائج، لاگو نہیں: {n}",
  "sched_import.no_id_rows": "Id کے بغیر قطاریں، نہیں پڑھی گئیں: {n} (قطاریں {rows})",
  "sched_import.more": "… {n} مزید",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(خالی)",
  "sched_import.reading": "ورک بک پڑھی جا رہی ہے…",
  "sched_import.resaved": "پہلے پیش نظارے کے بعد ورک بک دوبارہ محفوظ ہوئی: یہ پیش نظارہ نیا مواد دکھاتا ہے",
- "sched_import.resaved_reading": "ورک بک دوبارہ محفوظ ہوئی: کچھ لاگو نہیں ہوا، نئے پیش نظارے کے لیے دوبارہ پڑھی جا رہی ہے",
- "sched_import.refusal": "{at} {col} \"{text}\": {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "ورک بک دوبارہ محفوظ ہوئی: کچھ لاگو نہیں ہوا، نئے پیش نظارے کے لیے دوبارہ پڑھی جا رہی ہے"
 }

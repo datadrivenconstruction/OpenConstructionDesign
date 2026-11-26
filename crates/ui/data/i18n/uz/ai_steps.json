@@ -11,6 +11,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} daq",
  "ai.step.min_s": "{m} daq {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Tafsilotlar",
  "ai.step.copy": "Tafsilotlarni nusxalash",
  "ai.step.group.read": "Modelni o'qiydi",
@@ -36,6 +37,5 @@
  "ai.step.why.stale": "Qadam ishlayotganda model o'zgardi",
  "ai.step.why.skipped": "Qadam ishlamadi: navbat tugadi",
  "ai.step.why.other": "Qadam tugamadi",
- "ai.step.unknown": "Noma'lum vosita",
- "ai.step.dec": ","
+ "ai.step.unknown": "Noma'lum vosita"
 }

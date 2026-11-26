@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "الغلاف",
+ "gen.group.acoustic": "العزل الصوتي",
+ "gen.rule.fire.insulation_class.title": "فئة حريق عزل الغلاف",
+ "gen.rule.fire.insulation_class.desc": "أسوأ فئة تفاعل مع الحريق يجوز أن يكون عليها عزل الجدران الخارجية والأسقف؛ لا تُختار التركيبات ذات العزل الأسوأ.",
+ "gen.rule.envelope.u_wall.title": "معامل U للجدار الخارجي",
+ "gen.rule.envelope.u_wall.desc": "أعلى معامل انتقال حراري لجدار خارجي؛ يُحدد مقاس عزل الجدار ليبقى دونه، فيحصل المناخ الأبرد على جدار أسمك.",
+ "gen.rule.envelope.u_roof.title": "معامل U للسقف",
+ "gen.rule.envelope.u_roof.desc": "أعلى معامل انتقال حراري لسقف؛ يُحدد مقاس عزل السقف ليبقى دونه.",
+ "gen.rule.envelope.u_ground.title": "معامل U لبلاطة الأرضية",
+ "gen.rule.envelope.u_ground.desc": "أعلى معامل انتقال حراري لبلاطة الأرضية على التربة؛ يُحدد مقاس العزل تحت المونة ليبقى دونه.",
+ "gen.rule.acoustic.rw_party.title": "العزل الصوتي للجدار المشترك",
+ "gen.rule.acoustic.rw_party.desc": "أقل مؤشر لتخفيض الصوت Rw لجدار بين وحدات سكنية أو بجوار ممر مشترك؛ يُحدد مقاس القلب المبني بقانون الكتلة ليبلغه.",
+ "gen.rule.acoustic.rw_floor.title": "العزل الصوتي للأرضية",
+ "gen.rule.acoustic.rw_floor.desc": "أقل مؤشر لتخفيض الصوت Rw لأرضية بين طابقين؛ يُحدد مقاس البلاطة الخرسانية بقانون الكتلة لتبلغه.",
+ "gen.why.e.asm_wall": "جدران خارجية بسماكة {t} m مع عزل {ins} m: U {u} W/m2K، بحد أقصى {lim}",
+ "gen.why.e.asm_roof": "سقف بسماكة {t} m مع عزل {ins} m: U {u} W/m2K، بحد أقصى {lim}",
+ "gen.why.e.asm_ground": "بلاطة أرضية بسماكة {t} m مع عزل {ins} m: U {u} W/m2K، بحد أقصى {lim}",
+ "gen.why.e.asm_party": "جدران مشتركة بسماكة {t} m، {m} kg/m2: Rw {rw} dB بقانون الكتلة، بحد أدنى {lim}",
+ "gen.why.e.asm_floor": "أرضيات بسماكة {t} m، {m} kg/m2: Rw {rw} dB بقانون الكتلة، بحد أدنى {lim}"
+}

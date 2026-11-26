@@ -1,0 +1,6 @@
+{
+ "api.cmd.family_read": "قراءة نص تعريف عائلة في المشروع",
+ "api.cmd.family_validate": "فحص نص تعريف عائلة",
+ "api.cmd.family_reference": "قراءة مرجع نص تعريف العائلة",
+ "api.cmd.family_draft": "عرض تعريف عائلة كمسودة في محرر العائلات"
+}

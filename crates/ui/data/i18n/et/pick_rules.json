@@ -5,7 +5,7 @@
  "pick_rules.filter.all": "Vali kõik kategooriad",
  "pick_rules.filter.tip": "Valikufilter: märkimata kategooriaid klõps ja hõljutamine vahele jätab",
  "pick_rules.here": "Siin olevad üksused",
+ "pick_rules.here.row": "{cat} · {len}",
  "pick_rules.here.selected": "valitud",
- "pick_rules.pinned": "Vali kinnitatud üksused",
- "pick_rules.here.row": "{cat} · {len}"
+ "pick_rules.pinned": "Vali kinnitatud üksused"
 }

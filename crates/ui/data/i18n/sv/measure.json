@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Avstånd",
+ "cmd.e3d.measure.gap": "Mellanrum mellan ytor",
+ "cmd.e3d.measure.angle": "Vinkel",
+ "cmd.e3d.measure.area": "Area / omkrets för en yta eller ett rum",
+ "cmd.e3d.measure.volume": "Volym för ett element",
+ "cmd.e3d.measure.slope": "Lutning",
+ "cmd.e3d.measure.chain": "Punktkedja",
+ "measure.orphan": "Förlorad referens",
+ "measure.not_planar": "Ytorna är inte parallella",
+ "measure.unsupported": "Kan inte mäta detta",
+ "cmd.ann.measure_distance": "Mät avstånd",
+ "cmd.ann.measure_gap": "Mät mellanrum mellan ytor",
+ "cmd.ann.measure_angle": "Mät vinkel",
+ "cmd.ann.measure_area": "Mät area",
+ "hint.measure.first": "Mät: klicka på en väggyta (eller en punkt) · Esc — avsluta",
+ "hint.measure.second": "Mät: klicka på den andra ytan · Esc — avbryt det första valet",
+ "measure.no_face": "Ingen väggyta här"
+}

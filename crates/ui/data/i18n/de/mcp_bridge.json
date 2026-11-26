@@ -18,6 +18,7 @@
  "mcp.set.error": "Server nicht gestartet: {error}",
  "mcp.set.new": "Neues Token",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Jeder Stapel wird vorab geprüft und ist ein Rückgängig-Schritt. Nur Programme auf diesem Computer können sich verbinden.",
  "mcp.set.show": "Anzeigen",
  "mcp.set.state_failed": "Läuft nicht",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Status",
  "mcp.set.access": "Zugriff",
  "mcp.set.config": "Konfiguration",
- "mcp.set.policy": "Anwenden",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Anwenden"
 }

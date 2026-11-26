@@ -182,5 +182,8 @@
  "xl.msg.book_could_not_be_read_its_own_columns_would_be_lost_close_it_in_a_spreadsheet_app_and_retry": "hindi mabasa ang workbook, mawawala ang sarili nitong column; isara ito sa spreadsheet na XLSX at subukan muli",
  "xl.msg.type_x_layer_x": "uri {} layer {}",
  "xl.msg.x_x_no_longer_exists_its_own_columns_cells_were_dropped": "{}: wala na ang {}, tinanggal ang sarili nitong column cell",
- "xl.msg.delsafe_type_param_on_elements": "type parameter ang '{}'; i-edit ito sa types sheet, hindi na-apply"
+ "xl.msg.delsafe_type_param_on_elements": "type parameter ang '{}'; i-edit ito sa types sheet, hindi na-apply",
+ "xl.msg.tag_x_is_removed_with_x_x": "inaalis ang tag na {} kasama ng {} {}",
+ "xl.msg.dimension_x_loses_x_x_and_keeps_its_last_shape": "nawawalan ang dimensyon na {} ng {} {} at pinananatili ang huling hugis nito",
+ "xl.msg.cannot_check_annotations_of_deleted_elements_x": "hindi masuri ang mga anotasyon ng mga na-delete na elemento: {}"
 }

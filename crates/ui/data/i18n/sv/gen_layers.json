@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Klimatskärm",
+ "gen.group.acoustic": "Ljudisolering",
+ "gen.rule.fire.insulation_class.title": "Klimatskärmsisoleringens brandklass",
+ "gen.rule.fire.insulation_class.desc": "Sämsta brandreaktionsklass som isoleringen i ytterväggar och tak får ha; uppbyggnader med sämre isolering väljs inte.",
+ "gen.rule.envelope.u_wall.title": "U-värde, yttervägg",
+ "gen.rule.envelope.u_wall.desc": "Högsta värmegenomgångstal för en yttervägg; väggisoleringen dimensioneras för att ligga under det, så ett kallare klimat ger en tjockare vägg.",
+ "gen.rule.envelope.u_roof.title": "U-värde, tak",
+ "gen.rule.envelope.u_roof.desc": "Högsta värmegenomgångstal för ett tak; takisoleringen dimensioneras för att ligga under det.",
+ "gen.rule.envelope.u_ground.title": "U-värde, platta på mark",
+ "gen.rule.envelope.u_ground.desc": "Högsta värmegenomgångstal för golvplattan mot mark; isoleringen under avjämningsskiktet dimensioneras för att ligga under det.",
+ "gen.rule.acoustic.rw_party.title": "Lägenhetsskiljande väggs ljudisolering",
+ "gen.rule.acoustic.rw_party.desc": "Minsta reduktionstal Rw för en vägg mellan bostäder eller intill en gemensam korridor; murverkskärnan dimensioneras med massalagen för att nå det.",
+ "gen.rule.acoustic.rw_floor.title": "Bjälklagets ljudisolering",
+ "gen.rule.acoustic.rw_floor.desc": "Minsta reduktionstal Rw för ett bjälklag mellan våningar; betongbjälklaget dimensioneras med massalagen för att nå det.",
+ "gen.why.e.asm_wall": "ytterväggar {t} m tjocka med {ins} m isolering: U {u} W/m2K, högst {lim}",
+ "gen.why.e.asm_roof": "tak {t} m tjockt med {ins} m isolering: U {u} W/m2K, högst {lim}",
+ "gen.why.e.asm_ground": "platta på mark {t} m tjock med {ins} m isolering: U {u} W/m2K, högst {lim}",
+ "gen.why.e.asm_party": "lägenhetsskiljande väggar {t} m tjocka, {m} kg/m2: Rw {rw} dB enligt massalagen, minst {lim}",
+ "gen.why.e.asm_floor": "bjälklag {t} m tjocka, {m} kg/m2: Rw {rw} dB enligt massalagen, minst {lim}"
+}

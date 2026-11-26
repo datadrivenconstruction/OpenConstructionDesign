@@ -18,6 +18,7 @@
  "mcp.set.error": "Server ei käivitunud: {error}",
  "mcp.set.new": "Uus žeton",
  "mcp.set.port": "Port",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Iga partii kontrollitakse enne ja see on üks tagasivõtu samm. Ühenduda saavad ainult selles arvutis töötavad programmid.",
  "mcp.set.show": "Näita",
  "mcp.set.state_failed": "Ei tööta",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Olek",
  "mcp.set.access": "Juurdepääs",
  "mcp.set.config": "Seadistus",
- "mcp.set.policy": "Rakendamine",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Rakendamine"
 }

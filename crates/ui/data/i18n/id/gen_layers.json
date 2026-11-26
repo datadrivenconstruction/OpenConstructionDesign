@@ -1,0 +1,21 @@
+{
+ "gen.group.envelope": "Selubung",
+ "gen.group.acoustic": "Insulasi suara",
+ "gen.rule.fire.insulation_class.title": "Kelas api isolasi selubung",
+ "gen.rule.fire.insulation_class.desc": "Kelas reaksi terhadap api terburuk yang boleh dimiliki isolasi dinding luar dan atap; susunan dengan isolasi yang lebih buruk tidak dipilih.",
+ "gen.rule.envelope.u_wall.title": "Nilai U dinding luar",
+ "gen.rule.envelope.u_wall.desc": "Transmitansi panas tertinggi dinding luar; isolasi dinding diukur agar tetap di bawahnya, sehingga iklim lebih dingin mendapat dinding lebih tebal.",
+ "gen.rule.envelope.u_roof.title": "Nilai U atap",
+ "gen.rule.envelope.u_roof.desc": "Transmitansi panas tertinggi atap; isolasi atap diukur agar tetap di bawahnya.",
+ "gen.rule.envelope.u_ground.title": "Nilai U pelat tanah",
+ "gen.rule.envelope.u_ground.desc": "Transmitansi panas tertinggi pelat lantai di atas tanah; isolasi di bawah screed diukur agar tetap di bawahnya.",
+ "gen.rule.acoustic.rw_party.title": "Insulasi suara dinding pemisah",
+ "gen.rule.acoustic.rw_party.desc": "Indeks reduksi suara Rw minimum dinding antar hunian atau di samping koridor bersama; inti pasangan bata diukur dengan hukum massa untuk mencapainya.",
+ "gen.rule.acoustic.rw_floor.title": "Insulasi suara lantai",
+ "gen.rule.acoustic.rw_floor.desc": "Indeks reduksi suara Rw minimum lantai antar tingkat; pelat beton diukur dengan hukum massa untuk mencapainya.",
+ "gen.why.e.asm_wall": "dinding luar setebal {t} m dengan isolasi {ins} m: U {u} W/m²K, maksimum {lim}",
+ "gen.why.e.asm_roof": "atap setebal {t} m dengan isolasi {ins} m: U {u} W/m²K, maksimum {lim}",
+ "gen.why.e.asm_ground": "pelat tanah setebal {t} m dengan isolasi {ins} m: U {u} W/m²K, maksimum {lim}",
+ "gen.why.e.asm_party": "dinding pemisah setebal {t} m, {m} kg/m²: Rw {rw} dB menurut hukum massa, minimum {lim}",
+ "gen.why.e.asm_floor": "lantai setebal {t} m, {m} kg/m²: Rw {rw} dB menurut hukum massa, minimum {lim}"
+}

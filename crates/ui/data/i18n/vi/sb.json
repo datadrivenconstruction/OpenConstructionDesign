@@ -41,5 +41,7 @@
  "sb.save.fresh": "Không có thay đổi",
  "sb.save.save": "Lưu",
  "sb.save.ifc": "Lưu bản sao IFC",
- "sb.save.autosave": "Tự động lưu"
+ "sb.save.autosave": "Tự động lưu",
+ "sb.more.title": "Thêm",
+ "sb.more.desc": "Các mục thanh trạng thái không vừa ở độ rộng này."
 }

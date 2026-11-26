@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "दूरी",
+ "cmd.e3d.measure.gap": "सतहों के बीच अंतर",
+ "cmd.e3d.measure.angle": "कोण",
+ "cmd.e3d.measure.area": "सतह या कमरे का क्षेत्रफल / परिमाप",
+ "cmd.e3d.measure.volume": "तत्व का आयतन",
+ "cmd.e3d.measure.slope": "ढलान",
+ "cmd.e3d.measure.chain": "बिंदु शृंखला",
+ "measure.orphan": "संदर्भ खो गया",
+ "measure.not_planar": "सतहें समानांतर नहीं हैं",
+ "measure.unsupported": "इसे मापा नहीं जा सकता",
+ "cmd.ann.measure_distance": "दूरी मापें",
+ "cmd.ann.measure_gap": "सतहों के बीच अंतर मापें",
+ "cmd.ann.measure_angle": "कोण मापें",
+ "cmd.ann.measure_area": "क्षेत्रफल मापें",
+ "hint.measure.first": "माप: दीवार की सतह (या बिंदु) पर क्लिक करें · Esc — बाहर निकलें",
+ "hint.measure.second": "माप: दूसरी सतह पर क्लिक करें · Esc — पहला चयन रद्द करें",
+ "measure.no_face": "यहाँ कोई दीवार सतह नहीं"
+}

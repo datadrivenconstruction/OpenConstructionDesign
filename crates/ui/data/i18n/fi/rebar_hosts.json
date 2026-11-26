@@ -1,5 +1,6 @@
 {
  "rebar_hosts.hosts": "Isännät: {list}",
+ "rebar_hosts.kind_type": "{kind} · {type}",
  "rebar_hosts.kind.column": "Pilari",
  "rebar_hosts.kind.beam": "Palkki",
  "rebar_hosts.kind.wall": "Seinä",
@@ -35,6 +36,5 @@
  "rebar_hosts.why.area_linear": "Verkko menee seinille, laatoille ja perustuksille, ei pilareille tai palkeille.",
  "rebar_hosts.why.bars_plate": "Pituus- ja jousiteräkset menevät pilareille ja palkeille, ei seinille, laatoille tai perustuksille.",
  "rebar_hosts.why.no_common_face": "Valituilla isännillä ei ole yhteistä suojapintaa. Valitse saman lajin isännät.",
- "rebar_hosts.why.no_type": "Valitse teräksen tyyppi.",
- "rebar_hosts.kind_type": "{kind} · {type}"
+ "rebar_hosts.why.no_type": "Valitse teräksen tyyppi."
 }

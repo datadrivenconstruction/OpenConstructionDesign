@@ -38,5 +38,7 @@
  "ai.tool.underlay_trace": "도면에서 벽 추적 중",
  "api.cmd.attachments_list": "채팅에 첨부된 파일과 확인된 프로젝트 요구사항",
  "api.cmd.attachments_read": "첨부 파일의 페이지 범위, 표 행 또는 그림 읽기",
- "api.cmd.underlay_trace": "첨부 도면에서 추적한 초안 벽"
+ "api.cmd.underlay_trace": "첨부 도면에서 추적한 초안 벽",
+ "ai.tool.plan_from_image": "이미지에서 도면 읽는 중",
+ "api.cmd.plan_from_image": "첨부한 도면 이미지 또는 PDF 페이지에서 읽은 벽, 문, 창, 실의 초안 작성"
 }

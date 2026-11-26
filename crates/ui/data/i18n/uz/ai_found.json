@@ -9,6 +9,7 @@
  "ai_found.found.hide": "Yashirilgan",
  "ai_found.found.color": "Rangli",
  "ai_found.found.count": "{m} tadan {n}",
+ "ai_found.found.line": "{what}: {count}",
  "ai_found.found.none": "Mos keladigan narsa yo'q. Filtrni kengroq qiling.",
  "ai_found.found.show_btn": "Ko'rsatish",
  "ai_found.found.show_tip": "Shu elementlarni tanlab, plan va 3D da ularga yaqinlashtirish",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "one": "# ta element yashirildi",
   "other": "# ta element yashirildi"
- },
- "ai_found.found.line": "{what}: {count}"
+ }
 }

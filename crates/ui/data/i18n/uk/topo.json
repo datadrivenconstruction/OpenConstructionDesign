@@ -64,6 +64,7 @@
  "topo.import.title": "Імпорт зйомки",
  "topo.import.filter": "Зйомка (CSV, XYZ, DXF, IFC)",
  "topo.unit.m": " м",
+ "topo.unit.deg": "°",
  "topo.opt.elevation": "Відмітка точки",
  "topo.opt.thickness": "Товщина топоповерхні",
  "topo.opt.add_to_active": "Додати до активної топоповерхні",
@@ -121,6 +122,5 @@
  "topo.import.ok": "Імпорт",
  "topo.import.cancel": "Скасувати",
  "topo.import.no_layers": "шар не вибрано",
- "topo.info.warnings": "Не побудовано:",
- "topo.unit.deg": "°"
+ "topo.info.warnings": "Не побудовано:"
 }

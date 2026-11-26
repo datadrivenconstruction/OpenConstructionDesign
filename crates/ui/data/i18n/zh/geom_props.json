@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<不同>",
  "geom_props.tip": "按 Enter 将该值应用于全部 {n} 个所选元素，作为一步撤销",
  "geom_props.roof_slope": "坡度",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "导入元素",
  "geom_props.kind.mass": "体量",
  "geom_props.kind.solid": "实体",
- "geom_props.kind.toposolid": "地形",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "地形"
 }

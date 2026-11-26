@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "KL-tre-gulvpanel",
+ "fam.name.glulam_beam": "Limtrebjelke",
+ "fam.name.glulam_column": "Limtresøyle",
+ "gen.group.timber": "Trekonstruksjon",
+ "gen.rule.timber.beam_span_max.desc": "Lengste spenn for en limtrebjelke mellom to søyler.",
+ "gen.rule.timber.beam_span_max.title": "Spenngrense for bjelke",
+ "gen.rule.timber.panel_w.desc": "Bredeste krysslimte gulvpanel; en skjøt mellom hver.",
+ "gen.rule.timber.panel_w.title": "Bredde på KL-tre-panel",
+ "gen.rule.timber.span_depth.desc": "Spenn over høyde for en limtrebjelke; velger tverrsnittet.",
+ "gen.rule.timber.span_depth.title": "Bjelkens spenn i forhold til høyde"
+}

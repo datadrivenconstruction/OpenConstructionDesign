@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "Vrsta",
  "collab_diff.diff.col.field": "Polje",
  "collab_diff.diff.col.old": "Bilo je",
- "collab_diff.diff.col.new": "Sada je"
+ "collab_diff.diff.col.new": "Sada je",
+ "collab_diff.reveal.title": "Izgradnja",
+ "collab_diff.reveal.start": "Prikaži kako je izgrađeno",
+ "collab_diff.reveal.play": "Reproduciraj",
+ "collab_diff.reveal.pause": "Pauziraj",
+ "collab_diff.reveal.back": "Unatrag",
+ "collab_diff.reveal.close": "Zatvori",
+ "collab_diff.reveal.nothing": "Nema ničega za prikaz: nijedan promijenjeni element nije u 3D sceni.",
+ "collab_diff.reveal.journal_busy": "Čitanje dnevnika…",
+ "collab_diff.reveal.journal_play": "Reproduciraj dnevnik"
 }

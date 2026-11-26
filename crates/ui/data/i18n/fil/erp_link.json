@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "I-download ang kasalukuyang editor sa pahina ng ERP {url}",
  "erp.err.unsupported.admin": "Hilingin sa iyong ERP admin ang kasalukuyang editor",
  "erp.err.throttled_in": "Masyadong maraming pagsubok. Subukang muli sa loob ng {s} s",
+ "erp.err.throttled_ready": "Tapos na ang paghihintay. Maaari mo nang subukan muli",
  "erp.err.imported": "Ang revision {n} sa ERP ay na-import na modelo: hindi pa ito mabubuksan o mapa-publish ng editor",
  "erp.action.download": "Buksan ang pahina ng pag-download ng editor sa ERP",
  "erp.action.new_link": "Kumuha ng bagong link sa pahina ng ERP",

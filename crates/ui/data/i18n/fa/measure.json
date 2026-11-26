@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "فاصله",
+ "cmd.e3d.measure.gap": "فاصله بین وجوه",
+ "cmd.e3d.measure.angle": "زاویه",
+ "cmd.e3d.measure.area": "مساحت / محیط یک وجه یا فضا",
+ "cmd.e3d.measure.volume": "حجم یک عنصر",
+ "cmd.e3d.measure.slope": "شیب",
+ "cmd.e3d.measure.chain": "زنجیره نقاط",
+ "measure.orphan": "ارجاع گم شد",
+ "measure.not_planar": "وجه‌ها موازی نیستند",
+ "measure.unsupported": "این را نمی‌توان اندازه گرفت",
+ "cmd.ann.measure_distance": "اندازه‌گیری فاصله",
+ "cmd.ann.measure_gap": "اندازه‌گیری فاصله بین وجوه",
+ "cmd.ann.measure_angle": "اندازه‌گیری زاویه",
+ "cmd.ann.measure_area": "اندازه‌گیری مساحت",
+ "hint.measure.first": "اندازه‌گیری: روی وجه دیوار (یا یک نقطه) کلیک کنید · Esc — خروج",
+ "hint.measure.second": "اندازه‌گیری: روی وجه دوم کلیک کنید · Esc — لغو انتخاب اول",
+ "measure.no_face": "اینجا وجه دیواری نیست"
+}

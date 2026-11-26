@@ -1,0 +1,4 @@
+{
+ "ai.issue.mass_delete": "{0} av {1} elementer ville blitt slettet. Personen må bekrefte dette",
+ "ai.issue.wipe": "Planen ville slettet alle {1} elementer i modellen ({0} slettet). Den brukes aldri i ett trinn"
+}

@@ -5,6 +5,7 @@
  "keys_import.new_head": "Yeni tuşlar",
  "keys_import.changed_head": "Kendi tuşlarınızın yerini alır",
  "keys_import.conflicts_head": "İçe aktarmadan sonra çakışmalar",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "kombinasyon",
  "keys_import.kind_seq": "iki harf",
  "keys_import.unbound": "yok",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Geri alınmadı: içe aktarmadan sonra tuşlar düzenlendi. Tuşları Tuşlar penceresinde tek tek sıfırlayın.",
  "keys_import.undo_none": "Geri alınacak bir şey yok: bu oturumda tuş içe aktarması yok.",
  "keys_import.imported": "Tuşlar içe aktarıldı",
- "keys_import.imported_conflicts": "Tuşlar içe aktarıldı; çakışmalar: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Tuşlar içe aktarıldı; çakışmalar: {n}"
 }

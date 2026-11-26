@@ -6,10 +6,10 @@
  "text_style.lbl.fill": "Kitöltés",
  "text_style.lbl.detail": "Részlet",
  "text_style.lbl.width": "Szélesség",
+ "text_style.unit.pct": "%",
+ "text_style.unit.deg": "°",
  "text_style.bad_number": "Adjon meg számot {min} és {max} között",
  "text_style.tip.next_ring": "Zárja le ezt a kontúrt, és kezdjen egy másikat ugyanabban a területben",
  "text_style.tip.edit_text": "A szöveg szerkesztése helyben",
- "text_style.tip.add_leader": "Mutatóvonal hozzáadása ehhez a szöveghez",
- "text_style.unit.pct": "%",
- "text_style.unit.deg": "°"
+ "text_style.tip.add_leader": "Mutatóvonal hozzáadása ehhez a szöveghez"
 }

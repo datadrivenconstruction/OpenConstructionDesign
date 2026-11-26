@@ -44,6 +44,7 @@
  "erp.err.unsupported.page": "ERP पेज {url} से वर्तमान एडिटर डाउनलोड करें",
  "erp.err.unsupported.admin": "अपने ERP एडमिन से वर्तमान एडिटर माँगें",
  "erp.err.throttled_in": "बहुत अधिक प्रयास। {s} सेकंड में फिर से कोशिश करें",
+ "erp.err.throttled_ready": "प्रतीक्षा समाप्त। आप फिर कोशिश कर सकते हैं",
  "erp.err.imported": "ERP में रिविज़न {n} एक आयातित मॉडल है: एडिटर अभी इसे खोल या इस पर प्रकाशित नहीं कर सकता",
  "erp.action.download": "ERP में एडिटर का डाउनलोड पेज खोलें",
  "erp.action.new_link": "ERP पेज पर नया लिंक प्राप्त करें",

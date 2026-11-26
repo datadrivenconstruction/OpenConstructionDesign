@@ -7,6 +7,7 @@
  "drawing_kit.tip.half_off": "{layer}: nada penuh",
  "drawing_kit.reset_color": "{layer}: atur ulang ke warna gambar",
  "drawing_kit.unit.ft": "ft",
+ "drawing_kit.unit.deg": "°",
  "drawing_kit.axis_x": "X",
  "drawing_kit.axis_y": "Y",
  "drawing_kit.angle": "Sudut",
@@ -33,6 +34,5 @@
  "drawing_kit.undo": "Urungkan (Ctrl+Z)",
  "drawing_kit.n_of_m": "{n} dari {m}",
  "drawing_kit.accept_class": "Terima semua jenis ini",
- "drawing_kit.reject_class": "Tolak semua jenis ini",
- "drawing_kit.unit.deg": "°"
+ "drawing_kit.reject_class": "Tolak semua jenis ini"
 }

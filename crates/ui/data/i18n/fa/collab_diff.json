@@ -22,5 +22,14 @@
  "collab_diff.diff.col.group": "نوع",
  "collab_diff.diff.col.field": "فیلد",
  "collab_diff.diff.col.old": "قبلی",
- "collab_diff.diff.col.new": "اکنون"
+ "collab_diff.diff.col.new": "اکنون",
+ "collab_diff.reveal.title": "روند ساخت",
+ "collab_diff.reveal.start": "نمایش به‌صورت ساخته‌شده",
+ "collab_diff.reveal.play": "پخش",
+ "collab_diff.reveal.pause": "مکث",
+ "collab_diff.reveal.back": "به عقب",
+ "collab_diff.reveal.close": "بستن",
+ "collab_diff.reveal.nothing": "چیزی برای نمایش نیست: هیچ عنصر تغییرکرده‌ای در صحنه سه‌بعدی نیست.",
+ "collab_diff.reveal.journal_busy": "در حال خواندن ژورنال…",
+ "collab_diff.reveal.journal_play": "پخش ژورنال"
 }

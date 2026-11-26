@@ -1,0 +1,12 @@
+{
+ "fam.name.clt_floor_panel": "CLT فرشی پینل",
+ "fam.name.glulam_beam": "گلولم بیم",
+ "fam.name.glulam_column": "گلولم کالم",
+ "gen.group.timber": "لکڑی کا ڈھانچہ",
+ "gen.rule.timber.beam_span_max.desc": "دو ستونوں کے درمیان گلولم بیم کا سب سے لمبا اسپین۔",
+ "gen.rule.timber.beam_span_max.title": "بیم اسپین کی حد",
+ "gen.rule.timber.panel_w.desc": "سب سے چوڑا کراس لیمینیٹڈ فرشی پینل؛ ہر ایک کے درمیان جوڑ۔",
+ "gen.rule.timber.panel_w.title": "CLT پینل کی چوڑائی",
+ "gen.rule.timber.span_depth.desc": "گلولم بیم کا اسپین بمقابلہ گہرائی؛ سیکشن چنتا ہے۔",
+ "gen.rule.timber.span_depth.title": "بیم اسپین بمقابلہ گہرائی"
+}

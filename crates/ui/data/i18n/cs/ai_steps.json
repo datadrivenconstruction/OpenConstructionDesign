@@ -12,6 +12,7 @@
  "ai.step.s": "{n} s",
  "ai.step.min": "{m} min",
  "ai.step.min_s": "{m} min {s} s",
+ "ai.step.dec": ",",
  "ai.step.details": "Podrobnosti",
  "ai.step.copy": "Kopírovat podrobnosti",
  "ai.step.group.read": "Čte model",
@@ -37,6 +38,5 @@
  "ai.step.why.stale": "Model se změnil během běhu kroku",
  "ai.step.why.skipped": "Krok neproběhl: kolo skončilo",
  "ai.step.why.other": "Krok nebyl dokončen",
- "ai.step.unknown": "Neznámý nástroj",
- "ai.step.dec": ","
+ "ai.step.unknown": "Neznámý nástroj"
 }

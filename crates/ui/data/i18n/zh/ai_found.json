@@ -9,6 +9,7 @@
  "ai_found.found.hide": "已隐藏",
  "ai_found.found.color": "按颜色",
  "ai_found.found.count": "{n}/{m}",
+ "ai_found.found.line": "{what}：{count}",
  "ai_found.found.none": "没有匹配项。请尝试更宽的筛选条件。",
  "ai_found.found.show_btn": "显示",
  "ai_found.found.show_tip": "选择这些构件，并在平面图和三维视图中缩放至它们",
@@ -37,6 +38,5 @@
  "ai_found.view.hidden": {
   "other": "已隐藏 # 个构件",
   "one": "已隐藏 # 个构件"
- },
- "ai_found.found.line": "{what}：{count}"
+ }
 }

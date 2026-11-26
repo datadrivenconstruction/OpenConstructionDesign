@@ -3,6 +3,7 @@
  "ai.plan.keys_anywhere": "Ctrl+Enter rakendab ja Esc peatab päringu ka plaanilt või 3D-vaatelt, välja arvatud juhul, kui sisestatakse tekstiväljale.",
  "ai.plan.rebased": "Uuendatud praeguse mudeli järgi: {what}",
  "ai.value.bad": "„{text}” ei ole sobiv väärtus väljale {name}",
+ "ai.value.bad_len": "{name}: {why}",
  "ai.value.both": "Tehisintellekti assistent muutis selle väärtuse väärtuseks {agent}, kui sisestasid {mine}. Vali, milline jätta.",
  "ai.value.choose_first": "Vali kõigepealt kaardil oma väärtus või tehisintellekti assistendi oma",
  "ai.value.elem": "Element {n}: {what}",
@@ -14,6 +15,5 @@
  "ai.value.refused_next": "Sisesta teine väärtus või eemalda rida märgist, et see jääks Rakendamisest välja.",
  "ai.value.tip": "Paranda väärtus mustandis; mudel muutub ainult Rakenda korral. Enter kinnitab, Esc taastab.",
  "ai.value.use_mine": "Kasuta {mine}",
- "ai.value.was": "oli {old}",
- "ai.value.bad_len": "{name}: {why}"
+ "ai.value.was": "oli {old}"
 }

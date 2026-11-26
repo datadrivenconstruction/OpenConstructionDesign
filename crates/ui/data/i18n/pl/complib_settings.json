@@ -48,5 +48,13 @@
  "settings.lib_open": "Biblioteka komponentów",
  "settings.lib_open_desc": "Przeglądaj wbudowane rodziny, te w projekcie i własne",
  "settings.lib_dir": "Folder mojej biblioteki",
- "settings.lib_dir_desc": "Pliki rodzin (.ddcf) umieszczone tutaj pojawią się w Mojej bibliotece. DDC_COMPONENTS_DIR przenosi ten folder."
+ "settings.lib_dir_desc": "Pliki rodzin (.ddcf) umieszczone tutaj pojawią się w Mojej bibliotece. DDC_COMPONENTS_DIR przenosi ten folder.",
+ "complib.fam.sprinkler_head": "Głowica tryskacza",
+ "complib.fam.fire_pump": "Pompa pożarowa",
+ "complib.fam.pressurisation_fan": "Wentylator nadciśnienia",
+ "complib.fam.lift_car": "Kabina windy",
+ "complib.fam.lift_landing_door": "Drzwi przystankowe windy",
+ "complib.fam.lift_pit": "Podszybie windy",
+ "complib.fam.lift_overrun": "Nadszybie windy",
+ "complib.fam.lift_machine": "Maszyna windy"
 }

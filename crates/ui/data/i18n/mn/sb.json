@@ -41,5 +41,7 @@
  "sb.save.fresh": "Өөрчлөлт байхгүй",
  "sb.save.save": "Хадгалах",
  "sb.save.ifc": "IFC хуулбар хадгалах",
- "sb.save.autosave": "Автомат хадгалалт"
+ "sb.save.autosave": "Автомат хадгалалт",
+ "sb.more.title": "Бусад",
+ "sb.more.desc": "Төлөвийн мөрийн энэ өргөнд багтахгүй зүйлс."
 }

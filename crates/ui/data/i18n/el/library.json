@@ -41,5 +41,16 @@
  "library.ifc.window": "Παράθυρο",
  "library.ifc.stair": "Σκάλα",
  "library.ifc.pipe_fitting": "Εξάρτημα σωλήνα",
- "library.ifc.duct_fitting": "Εξάρτημα αεραγωγού"
+ "library.ifc.duct_fitting": "Εξάρτημα αεραγωγού",
+ "library.ifc.beam": "Δοκός",
+ "library.ifc.column": "Υποστύλωμα",
+ "library.ifc.appliance": "Συσκευή",
+ "library.ifc.fire_terminal": "Τερματικό πυρόσβεσης",
+ "library.ifc.heat_exchanger": "Εναλλάκτης θερμότητας",
+ "library.ifc.pump": "Αντλία",
+ "library.ifc.tank": "Δεξαμενή",
+ "library.ifc.transport": "Στοιχείο μεταφοράς",
+ "library.ifc.valve": "Βαλβίδα",
+ "library.ifc.waste_terminal": "Τερματικό αποβλήτων",
+ "library.ifc.medical": "Ιατρική συσκευή"
 }

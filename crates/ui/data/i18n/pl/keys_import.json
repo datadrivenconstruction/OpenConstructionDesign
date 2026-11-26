@@ -5,6 +5,7 @@
  "keys_import.new_head": "Nowe klawisze",
  "keys_import.changed_head": "Zastępuje Twoje własne klawisze",
  "keys_import.conflicts_head": "Konflikty po imporcie",
+ "keys_import.line": "{cmd} ({kind}): {from} → {to}",
  "keys_import.kind_chord": "akord",
  "keys_import.kind_seq": "dwie litery",
  "keys_import.unbound": "brak",
@@ -19,6 +20,5 @@
  "keys_import.undo_later": "Nie cofnięto: klawisze edytowano po imporcie. Zresetuj je pojedynczo w oknie Klawisze.",
  "keys_import.undo_none": "Nie ma czego cofnąć: brak importu klawiszy w tej sesji.",
  "keys_import.imported": "Zaimportowano klawisze",
- "keys_import.imported_conflicts": "Zaimportowano klawisze; konflikty: {n}",
- "keys_import.line": "{cmd} ({kind}): {from} → {to}"
+ "keys_import.imported_conflicts": "Zaimportowano klawisze; konflikty: {n}"
 }

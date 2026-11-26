@@ -18,6 +18,7 @@
  "mcp.set.error": "Server niet gestart: {error}",
  "mcp.set.new": "Nieuw token",
  "mcp.set.port": "Poort",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "Elke batch wordt eerst gecontroleerd en is één ongedaan-stap. Alleen programma's op deze computer kunnen verbinden.",
  "mcp.set.show": "Tonen",
  "mcp.set.state_failed": "Niet actief",
@@ -30,6 +31,5 @@
  "mcp.set.status": "Toestand",
  "mcp.set.access": "Toegang",
  "mcp.set.config": "Configuratie",
- "mcp.set.policy": "Toepassen",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "Toepassen"
 }

@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "Mastlift",
+ "fam.name.mast_lift": "Mastlift",
+ "gen.rule.steel.check.self_weight.desc": "Lõikest kõrgema torni kaal kõrgusmeetri kohta.",
+ "gen.rule.steel.check.self_weight.title": "Terase kaal meetri kohta",
+ "gen.rule.steel.check.strut_share.desc": "Osa vööjõust, mida horisontaaltugi oma sõlmes kannab.",
+ "gen.rule.steel.check.strut_share.title": "Horisontaaltoe osa",
+ "gen.rule.steel.out.lift_box_d.desc": "Mastlifti vajalik plaanisügavus koos mastiga; korrused jäävad selle kohal avatuks.",
+ "gen.rule.steel.out.lift_box_d.title": "Liftikasti sügavus",
+ "gen.rule.steel.out.lift_box_w.desc": "Mastlifti vajalik plaanilaius; korrused jäävad selle kohal avatuks.",
+ "gen.rule.steel.out.lift_box_w.title": "Liftikasti laius",
+ "gen.rule.steel.out.lift_offset.desc": "Lifti kaugus teljest, plaanis toestikust vabana.",
+ "gen.rule.steel.out.lift_offset.title": "Lifti nihe teljest",
+ "gen.rule.steel.out.lifts.desc": "Liftid mööda südamikku: teise platvormini, seejärel tippu.",
+ "gen.rule.steel.out.lifts.title": "Lifti lõigud"
+}

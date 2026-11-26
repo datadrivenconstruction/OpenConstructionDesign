@@ -1,0 +1,4 @@
+{
+ "gen.mep_auto": "Instalações técnicas automáticas",
+ "gen.mep_auto_hint": "Permite que o gerador e o assistente de IA tracem tubagens, condutas e cablagem por si. Desativado por predefinição nesta região; pode ativá-lo. O traçado manual está sempre disponível."
+}

@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varies>",
  "geom_props.tip": "Enter चुने गए सभी {n} पर मान लागू करता है, एक पूर्ववत चरण",
  "geom_props.roof_slope": "ढलान",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "आयातित तत्व",
  "geom_props.kind.mass": "मास",
  "geom_props.kind.solid": "ठोस",
- "geom_props.kind.toposolid": "भू-भाग",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "भू-भाग"
 }

@@ -18,6 +18,7 @@
  "mcp.set.error": "השרת לא התחיל: {error}",
  "mcp.set.new": "טוקן חדש",
  "mcp.set.port": "יציאה",
+ "mcp.set.port_range": "1024-65535",
  "mcp.set.safety": "כל קבוצה נבדקת קודם והיא שלב ביטול אחד. רק תוכניות על המחשב הזה יכולות להתחבר.",
  "mcp.set.show": "הצג",
  "mcp.set.state_failed": "לא פועל",
@@ -30,6 +31,5 @@
  "mcp.set.status": "מצב",
  "mcp.set.access": "גישה",
  "mcp.set.config": "הגדרות",
- "mcp.set.policy": "החלה",
- "mcp.set.port_range": "1024-65535"
+ "mcp.set.policy": "החלה"
 }

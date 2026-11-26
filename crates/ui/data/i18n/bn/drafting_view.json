@@ -15,6 +15,7 @@
  "drafting_view.name": "নাম",
  "drafting_view.count": "{n} টি অ্যানোটেশন",
  "drafting_view.tab": "ড্রাফটিং · {name}",
+ "drafting_view.caption": "{name} · {scale}",
  "drafting_view.canvas_empty": "খালি ড্রাফটিং ভিউ",
  "drafting_view.canvas_hint": "অ্যানোটেট টুল ব্যবহার করুন: ডিটেইল লাইন, অঞ্চল, টেক্সট, ডিটেইল কম্পোনেন্ট",
  "drafting_view.created": "ড্রাফটিং ভিউ \"{name}\" তৈরি হয়েছে",
@@ -29,6 +30,5 @@
  "drafting_view.more": "আরও",
  "empty.drafting.title": "এখনো কোনো ড্রাফটিং ভিউ নেই",
  "empty.drafting.hint": "মডেল থেকে কাটা নয় এমন 2D ডিটেইলের জন্য একটি তৈরি করুন।",
- "empty.drafting.action": "নতুন ড্রাফটিং ভিউ",
- "drafting_view.caption": "{name} · {scale}"
+ "empty.drafting.action": "নতুন ড্রাফটিং ভিউ"
 }

@@ -1,4 +1,5 @@
 {
+ "lnp.why_at": "#{id}: {e}",
  "lnp.openings_refused": "{n} açıklık değiştirilmedi ({why})",
  "lnp.params_changed": "değişen değerler: {n}",
  "lnp.params_same": "Değişiklik yok: {u} eleman bu değeri zaten taşıyor",
@@ -9,6 +10,5 @@
  "lnp.keep_first_tip": "Düzenlemek için yalnızca ilk paneli seçin",
  "lnp.clip_from_wall": "Parametreler #{id} duvarından kopyalandı",
  "lnp.clip_from_opening": "Parametreler #{id} açıklığından kopyalandı",
- "lnp.match_from": "#{id} özellikleri {n} elemana uygulandı",
- "lnp.why_at": "#{id}: {e}"
+ "lnp.match_from": "#{id} özellikleri {n} elemana uygulandı"
 }

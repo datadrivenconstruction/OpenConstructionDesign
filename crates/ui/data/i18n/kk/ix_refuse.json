@@ -1,0 +1,5 @@
+{
+ "ix.refuse.opening_wider_than_wall": "{w} ойық {len} қабырғадан кеңірек",
+ "ix.fix.opening_width": "Ені {w} мм",
+ "ix.fix.wall_extend": "Қабырғаны {len} мм-ге дейін ұзарту"
+}

@@ -20,6 +20,7 @@
  "sched_import.why_ro": "лише для читання",
  "sched_import.why_locked": "заблоковане значення",
  "sched_import.why_bad": "некоректне значення",
+ "sched_import.refusal": "{at} {col} «{text}»: {why}",
  "sched_import.apply": "Застосувати змін: {n}",
  "sched_import.cancel": "Скасувати",
  "sched_import.applied": "Імпортовано клітинок: {n} (один крок відміни)",
@@ -34,10 +35,9 @@
  "sched_import.n_formula": "Результати формул, не застосовано: {n}",
  "sched_import.no_id_rows": "Рядки без Id, не прочитано: {n} (рядки {rows})",
  "sched_import.more": "… ще {n}",
+ "sched_import.change": "{at} · {el} · {col}: {before} → {after}",
  "sched_import.blank": "(порожньо)",
  "sched_import.reading": "Читання книги…",
  "sched_import.resaved": "Книгу знову збережено після першого перегляду: цей перегляд показує новий вміст",
- "sched_import.resaved_reading": "Книгу знову збережено: нічого не застосовано, читаю її заново для нового перегляду",
- "sched_import.refusal": "{at} {col} «{text}»: {why}",
- "sched_import.change": "{at} · {el} · {col}: {before} → {after}"
+ "sched_import.resaved_reading": "Книгу знову збережено: нічого не застосовано, читаю її заново для нового перегляду"
 }

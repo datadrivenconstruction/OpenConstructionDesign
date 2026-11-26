@@ -1,0 +1,16 @@
+{
+ "complib.fam.mast_lift": "آسانسور دکلی",
+ "fam.name.mast_lift": "آسانسور دکلی",
+ "gen.rule.steel.check.self_weight.desc": "وزن برج بالای یک برش، به ازای هر متر ارتفاع.",
+ "gen.rule.steel.check.self_weight.title": "وزن فولاد در هر متر",
+ "gen.rule.steel.check.strut_share.desc": "سهمی از نیروی بال که یک عضو افقی در گره خود نگه می‌دارد.",
+ "gen.rule.steel.check.strut_share.title": "سهم عضو افقی",
+ "gen.rule.steel.out.lift_box_d.desc": "عمق پلان که آسانسور دکلی با دکل خود لازم دارد؛ کف‌ها روی آن باز می‌شوند.",
+ "gen.rule.steel.out.lift_box_d.title": "عمق جعبه آسانسور",
+ "gen.rule.steel.out.lift_box_w.desc": "عرض پلان که آسانسور دکلی لازم دارد؛ کف‌ها روی آن باز می‌شوند.",
+ "gen.rule.steel.out.lift_box_w.title": "عرض جعبه آسانسور",
+ "gen.rule.steel.out.lift_offset.desc": "فاصله آسانسور از محور، دور از مهاربند پلان.",
+ "gen.rule.steel.out.lift_offset.title": "آفست آسانسور از محور",
+ "gen.rule.steel.out.lifts.desc": "آسانسورها در امتداد هسته: تا سکوی دوم، سپس تا بالا.",
+ "gen.rule.steel.out.lifts.title": "مسیرهای آسانسور"
+}

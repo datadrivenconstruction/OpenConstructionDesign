@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "bilang mesh",
  "dlg.imp.skipped": "nilaktawan",
  "dlg.imp.notes": "Mga tala: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "at {n} pang uri",
  "dlg.imp.no_levels": "Walang level ang file: gumawa ng default na level",
  "dlg.imp.reimport_row": "Na-update {updated}, hindi nabago {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} linya, {arcs} arko, {texts} teksto, {fills} fill, {layers} layer; yunit {unit} mm",
  "dlg.dw.summary_paper": "; {n} paper sheet (hindi nakalagay sa underlay)",
  "dlg.dw.summary_unknown": "; hindi dinala: {list}",
- "dlg.dw.summary_more": " at {n} pang uri",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " at {n} pang uri"
 }

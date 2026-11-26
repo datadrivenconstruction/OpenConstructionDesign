@@ -72,6 +72,7 @@
  "quick.cat.beam": "بیمز",
  "quick.cat.ceiling": "چھتیں",
  "quick.cat.structure": "ڈھانچہ",
+ "quick.hud.head": "{cat}: {n}",
  "quick.hud.head_more": "{cat}: {all} میں سے {n}",
  "quick.hud.type": "ٹائپ",
  "quick.hud.height": "اونچائی",
@@ -85,6 +86,7 @@
  "quick.hud.bad": "قدر “{v}” پڑھی نہیں جا سکتی",
  "quick.menu.repeat": "دہرائیں: {cmd}",
  "quick.menu.enter": "درج کریں",
+ "quick.menu.head": "{cat}: {n}",
  "quick.bar.recent": "حالیہ",
  "quick.bar.repeat_tip": "{cmd} · Enter اسے دہراتا ہے",
  "quick.repeat.none": "دہرانے کو ابھی کچھ نہیں",
@@ -142,7 +144,5 @@
  "quick.tips.prev": "پیچھے",
  "quick.tips.next": "آگے",
  "quick.tips.finish": "مکمل",
- "quick.tips.never": "دوبارہ نہ دکھائیں",
- "quick.hud.head": "{cat}: {n}",
- "quick.menu.head": "{cat}: {n}"
+ "quick.tips.never": "دوبارہ نہ دکھائیں"
 }

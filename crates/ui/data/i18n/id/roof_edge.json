@@ -73,14 +73,14 @@
  "roof_edge.pe.x": "x,",
  "roof_edge.pe.y": "y,",
  "roof_edge.pe.bulge": "Tonjolan",
+ "roof_edge.pe.ins": "+",
  "roof_edge.pe.ins_tip": "Sisipkan titik setelah ini (busur dibagi dua)",
+ "roof_edge.pe.del": "−",
+ "roof_edge.pe.up": "↑",
  "roof_edge.pe.save": "Simpan",
  "roof_edge.pe.saved": "Profil disimpan",
  "roof_edge.pe.valid": "Profil valid",
  "roof_edge.pe.invalid": "Profil berpotongan sendiri, terlalu kecil, atau kurang dari 3 titik",
  "roof_edge.pe.bad_number": "Koordinat atau bulge bukan angka",
- "roof_edge.pe.no_name": "Masukkan nama profil",
- "roof_edge.pe.ins": "+",
- "roof_edge.pe.del": "−",
- "roof_edge.pe.up": "↑"
+ "roof_edge.pe.no_name": "Masukkan nama profil"
 }

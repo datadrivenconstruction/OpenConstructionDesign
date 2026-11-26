@@ -1,0 +1,16 @@
+{
+ "fe.ai.repair": "{n} четке кагылган аракеттен кийин оңдолду, болжол менен {tokens} токен",
+ "ai.fam_offer": "Агент {name} үй-бүлөсүн сунуштады",
+ "ai.fam_offer.open": "Үй-бүлө редакторунда ачуу",
+ "ai.fam_offer.dismiss": "Жабуу",
+ "fe.ai.badge": "AI",
+ "fe.ai.checking": "Текшерилүүдө…",
+ "fe.ai.clean": "Текшерүү эч нерсе тапкан жок",
+ "fe.ai.check_values": "Маанилер менен текшерүү",
+ "fe.ai.lines": "саптар {n}",
+ "fe.ai.changes": "Мурунку версияга салыштырмалуу {n} өзгөртүү",
+ "fe.ai.added": "кошулду: {head} {name}",
+ "fe.ai.removed": "алынды: {head} {name}",
+ "fe.ai.changed": "өзгөрдү: {head} {name}",
+ "fe.ai.reject": "Четке кагуу"
+}

@@ -48,5 +48,13 @@
  "settings.lib_open": "คลังส่วนประกอบ",
  "settings.lib_open_desc": "เรียกดูแฟมิลีในตัว แฟมิลีในโปรเจกต์ และแฟมิลีของคุณเอง",
  "settings.lib_dir": "โฟลเดอร์คลังของฉัน",
- "settings.lib_dir_desc": "ไฟล์แฟมิลี (.ddcf) ที่วางไว้ที่นี่จะแสดงใต้คลังของฉัน DDC_COMPONENTS_DIR ใช้ย้ายโฟลเดอร์นี้"
+ "settings.lib_dir_desc": "ไฟล์แฟมิลี (.ddcf) ที่วางไว้ที่นี่จะแสดงใต้คลังของฉัน DDC_COMPONENTS_DIR ใช้ย้ายโฟลเดอร์นี้",
+ "complib.fam.sprinkler_head": "หัวสปริงเกลอร์",
+ "complib.fam.fire_pump": "ปั๊มดับเพลิง",
+ "complib.fam.pressurisation_fan": "พัดลมอัดอากาศ",
+ "complib.fam.lift_car": "ตัวลิฟต์",
+ "complib.fam.lift_landing_door": "ประตูหน้าลิฟต์",
+ "complib.fam.lift_pit": "หลุมลิฟต์",
+ "complib.fam.lift_overrun": "ช่องเหนือสุดของลิฟต์",
+ "complib.fam.lift_machine": "เครื่องลิฟต์"
 }

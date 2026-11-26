@@ -14,6 +14,7 @@
  "dlg.imp.mesh": "كشبكات",
  "dlg.imp.skipped": "تم التخطي",
  "dlg.imp.notes": "ملاحظات: {n}",
+ "dlg.imp.skipped_row": "{what} ×{n}",
  "dlg.imp.skipped_more": "و{n} أنواع أخرى",
  "dlg.imp.no_levels": "لا توجد مستويات في الملف: تم إنشاء مستوى افتراضي",
  "dlg.imp.reimport_row": "محدَّث {updated}، بدون تغيير {same}",
@@ -36,6 +37,5 @@
  "dlg.dw.summary": "{name}: {lines} خطوط، {arcs} أقواس، {texts} نصوص، {fills} تعبئات، {layers} طبقات؛ الوحدة {unit} ملم",
  "dlg.dw.summary_paper": "؛ أوراق ورقية {n} (غير موضوعة على الخلفية)",
  "dlg.dw.summary_unknown": "؛ لم يتم نقلها: {list}",
- "dlg.dw.summary_more": " و{n} أنواع أخرى",
- "dlg.imp.skipped_row": "{what} ×{n}"
+ "dlg.dw.summary_more": " و{n} أنواع أخرى"
 }

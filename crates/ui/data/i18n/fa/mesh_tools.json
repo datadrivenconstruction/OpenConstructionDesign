@@ -52,6 +52,7 @@
  "mesh_tools.done": "انجام شد",
  "mesh_tools.failed": "ناموفق",
  "mesh_tools.note.outline_approx": "خط محیط تقریبی است",
+ "mesh_tools.pending": "…",
  "mesh_tools.delete_faces": "حذف وجوه رو به",
  "mesh_tools.dir.up": "بالا",
  "mesh_tools.dir.down": "پایین",
@@ -59,6 +60,5 @@
  "mesh_tools.dir.nx": "−X",
  "mesh_tools.dir.py": "+Y",
  "mesh_tools.dir.ny": "−Y",
- "mesh_tools.warnings": "ساده‌شده: {n} (برای نمونه: {first})",
- "mesh_tools.pending": "…"
+ "mesh_tools.warnings": "ساده‌شده: {n} (برای نمونه: {first})"
 }

@@ -1,4 +1,5 @@
 {
+ "geom_props.head": "{kind} · {n}",
  "geom_props.varies": "<varia>",
  "geom_props.tip": "Enter aplica o valor a todos os {n} selecionados, em uma única etapa de desfazer",
  "geom_props.roof_slope": "Inclinação",
@@ -25,6 +26,5 @@
  "geom_props.kind.mesh": "Elementos importados",
  "geom_props.kind.mass": "Massas",
  "geom_props.kind.solid": "Sólidos",
- "geom_props.kind.toposolid": "Terreno",
- "geom_props.head": "{kind} · {n}"
+ "geom_props.kind.toposolid": "Terreno"
 }

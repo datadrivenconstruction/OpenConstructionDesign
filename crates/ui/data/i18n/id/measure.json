@@ -1,0 +1,19 @@
+{
+ "cmd.e3d.measure.distance": "Jarak",
+ "cmd.e3d.measure.gap": "Celah antar muka",
+ "cmd.e3d.measure.angle": "Sudut",
+ "cmd.e3d.measure.area": "Luas / keliling muka atau ruang",
+ "cmd.e3d.measure.volume": "Volume elemen",
+ "cmd.e3d.measure.slope": "Kemiringan",
+ "cmd.e3d.measure.chain": "Rantai titik",
+ "measure.orphan": "Referensi hilang",
+ "measure.not_planar": "Muka tidak sejajar",
+ "measure.unsupported": "Tidak dapat mengukur ini",
+ "cmd.ann.measure_distance": "Ukur jarak",
+ "cmd.ann.measure_gap": "Ukur celah antar muka",
+ "cmd.ann.measure_angle": "Ukur sudut",
+ "cmd.ann.measure_area": "Ukur luas",
+ "hint.measure.first": "Ukur: klik muka dinding (atau titik) · Esc — keluar",
+ "hint.measure.second": "Ukur: klik muka kedua · Esc — batalkan pilihan pertama",
+ "measure.no_face": "Tidak ada muka dinding di sini"
+}
