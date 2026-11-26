@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Haligi {b}×{h}",
+  "io.w.column_round": "Haligi Ø{d}",
+  "io.w.door": "Pinto",
+  "io.w.window": "Bintana",
+  "io.w.room": "Silid",
+  "io.w.xl_read_only": "Read-only: kinakalkula muli mula sa modelo sa pag-export; hindi ipinapatupad ang mga pag-edit dito."
+}

@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Poteau {b}×{h}",
+  "io.w.column_round": "Poteau Ø{d}",
+  "io.w.door": "Porte",
+  "io.w.window": "Fenêtre",
+  "io.w.room": "Pièce",
+  "io.w.xl_read_only": "Lecture seule : recalculé depuis le modèle à l'export ; les modifications ici ne sont pas appliquées."
+}

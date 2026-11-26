@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Stâlp {b}×{h}",
+  "io.w.column_round": "Stâlp Ø{d}",
+  "io.w.door": "Ușă",
+  "io.w.window": "Fereastră",
+  "io.w.room": "Încăpere",
+  "io.w.xl_read_only": "Doar citire: se recalculează din model la export; modificările de aici nu se aplică."
+}

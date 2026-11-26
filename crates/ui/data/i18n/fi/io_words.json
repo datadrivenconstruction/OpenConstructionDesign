@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Pilari {b}×{h}",
+  "io.w.column_round": "Pilari Ø{d}",
+  "io.w.door": "Ovi",
+  "io.w.window": "Ikkuna",
+  "io.w.room": "Huone",
+  "io.w.xl_read_only": "Vain luku: lasketaan uudelleen mallista viennin yhteydessä; tässä tehtyjä muutoksia ei oteta käyttöön."
+}

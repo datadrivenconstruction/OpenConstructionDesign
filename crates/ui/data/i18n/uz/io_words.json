@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Kolonna {b}×{h}",
+  "io.w.column_round": "Kolonna Ø{d}",
+  "io.w.door": "Eshik",
+  "io.w.window": "Deraza",
+  "io.w.room": "Xona",
+  "io.w.xl_read_only": "Faqat o'qish uchun: eksport paytida modeldan qayta hisoblanadi; bu yerdagi tahrirlar qo'llanilmaydi."
+}

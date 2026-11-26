@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Kolom {b}×{h}",
+  "io.w.column_round": "Kolom Ø{d}",
+  "io.w.door": "Deur",
+  "io.w.window": "Raam",
+  "io.w.room": "Ruimte",
+  "io.w.xl_read_only": "Alleen-lezen: wordt bij export opnieuw berekend uit het model; wijzigingen hier worden niet toegepast."
+}

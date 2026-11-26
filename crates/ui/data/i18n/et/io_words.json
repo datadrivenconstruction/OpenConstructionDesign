@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Post {b}×{h}",
+  "io.w.column_round": "Post Ø{d}",
+  "io.w.door": "Uks",
+  "io.w.window": "Aken",
+  "io.w.room": "Ruum",
+  "io.w.xl_read_only": "Ainult lugemiseks: ekspordil arvutatakse mudelist uuesti; siinsed muudatused ei rakendu."
+}

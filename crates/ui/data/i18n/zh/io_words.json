@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "柱 {b}×{h}",
+  "io.w.column_round": "柱 Ø{d}",
+  "io.w.door": "门",
+  "io.w.window": "窗",
+  "io.w.room": "房间",
+  "io.w.xl_read_only": "只读：导出时将根据模型重新计算，此处的修改不会生效。"
+}

@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Oszlop {b}×{h}",
+  "io.w.column_round": "Oszlop Ø{d}",
+  "io.w.door": "Ajtó",
+  "io.w.window": "Ablak",
+  "io.w.room": "Helyiség",
+  "io.w.xl_read_only": "Csak olvasható: exportáláskor újraszámolódik a modellből; az itt végzett módosítások nem érvényesülnek."
+}

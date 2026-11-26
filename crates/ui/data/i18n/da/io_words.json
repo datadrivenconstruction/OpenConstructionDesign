@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Søjle {b}×{h}",
+  "io.w.column_round": "Søjle Ø{d}",
+  "io.w.door": "Dør",
+  "io.w.window": "Vindue",
+  "io.w.room": "Rum",
+  "io.w.xl_read_only": "Skrivebeskyttet: genberegnes fra modellen ved eksport; ændringer her anvendes ikke."
+}

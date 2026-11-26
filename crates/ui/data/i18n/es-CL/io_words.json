@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Pilar {b}×{h}",
+  "io.w.column_round": "Pilar Ø{d}",
+  "io.w.door": "Puerta",
+  "io.w.window": "Ventana",
+  "io.w.room": "Habitación",
+  "io.w.xl_read_only": "Solo lectura: se recalcula desde el modelo al exportar; las ediciones aquí no se aplican."
+}

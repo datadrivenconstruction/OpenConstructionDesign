@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Pelare {b}×{h}",
+  "io.w.column_round": "Pelare Ø{d}",
+  "io.w.door": "Dörr",
+  "io.w.window": "Fönster",
+  "io.w.room": "Rum",
+  "io.w.xl_read_only": "Skrivskyddad: räknas om från modellen vid export; ändringar här tillämpas inte."
+}

@@ -1,0 +1,8 @@
+{
+  "io.w.column_rect": "Cột {b}×{h}",
+  "io.w.column_round": "Cột Ø{d}",
+  "io.w.door": "Cửa đi",
+  "io.w.window": "Cửa sổ",
+  "io.w.room": "Phòng",
+  "io.w.xl_read_only": "Chỉ đọc: được tính lại từ mô hình khi xuất; chỉnh sửa tại đây sẽ không được áp dụng."
+}
