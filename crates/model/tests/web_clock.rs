@@ -25,7 +25,8 @@ fn scan(dir: &Path, hits: &mut Vec<String>) {
             continue;
         }
         let name = p.file_name().unwrap().to_string_lossy().into_owned();
-        if !name.ends_with(".rs") || is_test_file(&name) {
+        // wtime.rs is the one bridge between the file system's std times and web_time; it never reads the clock
+        if !name.ends_with(".rs") || is_test_file(&name) || p.ends_with("model/src/wtime.rs") {
             continue;
         }
         let text = std::fs::read_to_string(&p).unwrap();
