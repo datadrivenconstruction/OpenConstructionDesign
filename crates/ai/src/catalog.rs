@@ -1943,7 +1943,8 @@ static CATALOG: &[ToolSpec] = &[
          or omit members for every free node of the type (auto: all types) at a level. \
          Connections are not checked by analysis.",
         connect_members,
-    ),
+    )
+    .at_version(2),
     // modify tools: the same model calls as the ribbon's Modify tab, one plan item each
     propose("move_elements", "Plan: move a target by an offset in metres; hosted doors and windows slide along their wall only.", move_elements).plan_item().with_effect(Effect::Overwrites),
     propose("copy_elements", "Plan: copy a target once per offset in metres. `created` lists the copies.", copy_elements).plan_item().at_version(2),

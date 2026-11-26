@@ -1655,7 +1655,7 @@
           }
         ]
       },
-      "summary": "Run deterministic model checks and company rules. Returns findings with references, and which rules ran. Passing means only that those rules found nothing: it is not proof of code compliance.",
+      "summary": "Run deterministic model checks and company rules. Returns findings with references, and which rules ran. Each finding carries cite (rule id, message, table#id elements), title and clause when the project rule has them; summary states what was checked. For does-this-comply or check-against-the-norms questions call this and cite the rule and the elements; never claim compliance without a check. Passing means only that those rules found nothing: it is not proof of code compliance.",
       "surface": "all",
       "text": "api.cmd.run_checks",
       "version": 2
@@ -6857,7 +6857,7 @@
         "additionalProperties": false,
         "properties": {
           "lang": {
-            "type": "string",
+            "description": "Locale of the names of new levels and rooms; default the person's interface language",
             "enum": [
               "ar",
               "bg",
@@ -6905,7 +6905,7 @@
               "vi",
               "zh"
             ],
-            "description": "Locale of the names of new levels and rooms; default the person's interface language"
+            "type": "string"
           },
           "origin": {
             "description": "[x, y] m of the inner corner of the box; default [0, 0]",
@@ -9809,7 +9809,7 @@
             "type": "string"
           },
           "type": {
-            "description": "Connection type; auto (with no members) picks the type of every free node",
+            "description": "Connection type; auto (default, with no members) picks the type of every free node",
             "enum": [
               "auto",
               "base_plate",
@@ -9832,8 +9832,7 @@
           }
         },
         "required": [
-          "title",
-          "type"
+          "title"
         ],
         "type": "object"
       },
@@ -9896,7 +9895,7 @@
       "summary": "Plan: steel connections as real plates, bolts and welds from the catalogue, sized to the sections and angles and rebuilt when a section changes. Name members with a type, or omit members for every free node of the type (auto: all types) at a level. Connections are not checked by analysis.",
       "surface": "all",
       "text": "api.cmd.connect_members",
-      "version": 1
+      "version": 2
     },
     {
       "destructive": true,
@@ -13753,7 +13752,7 @@
             "type": "boolean"
           },
           "language": {
-            "type": "string",
+            "description": "Locale of the words on the sheets; default the person's interface language",
             "enum": [
               "ar",
               "bg",
@@ -13801,7 +13800,7 @@
               "vi",
               "zh"
             ],
-            "description": "Locale of the words on the sheets; default the person's interface language"
+            "type": "string"
           },
           "paper": {
             "description": "Sheet size, landscape; default the smallest that fits",
@@ -13942,7 +13941,7 @@
                     "type": "boolean"
                   },
                   "language": {
-                    "type": "string",
+                    "description": "Locale of the words on the sheets; default the person's interface language",
                     "enum": [
                       "ar",
                       "bg",
@@ -13990,7 +13989,7 @@
                       "vi",
                       "zh"
                     ],
-                    "description": "Locale of the words on the sheets; default the person's interface language"
+                    "type": "string"
                   },
                   "paper": {
                     "description": "Sheet size, landscape; default the smallest that fits",
@@ -15405,7 +15404,7 @@
             "type": "boolean"
           },
           "lang": {
-            "type": "string",
+            "description": "Locale of the table words; default the person's interface language",
             "enum": [
               "ar",
               "bg",
@@ -15453,7 +15452,7 @@
               "vi",
               "zh"
             ],
-            "description": "Locale of the table words; default the person's interface language"
+            "type": "string"
           },
           "panel": {
             "description": "The distribution board, comp:5",

@@ -587,22 +587,13 @@ fn size_change_at_a_corner_gets_an_elbow_and_a_transition() {
 fn broken_network_does_not_block_new_work() {
     let (mut m, l) = model();
     let sa = m.add_mep_system("SA", SystemKind::SupplyAir).unwrap();
-    // each run is fine alone, the joint has no room for an elbow: as an import would leave it
+    // a run that turns back on itself, as an import may leave it: no fitting can be built
     let bad = m
-        .add_mep_run(&round_duct(
-            sa,
-            l,
-            0.4,
-            vec![(0.0, 0.0, 3.0), (0.05, 0.0, 3.0)],
-        ))
+        .add_mep_run(&round_duct(sa, l, 0.4, vec![(0.0, 0.0, 3.0), (2.0, 0.0, 3.0)]))
         .unwrap();
-    m.add_mep_run(&round_duct(
-        sa,
-        l,
-        0.4,
-        vec![(0.05, 0.0, 3.0), (0.05, 4.0, 3.0)],
-    ))
-    .unwrap();
+    let back = crate::mep::points_text(&[(0.0, 0.0, 3.0), (2.0, 0.0, 3.0), (1.0, 0.0, 3.0)]);
+    m.db.execute("UPDATE mep_run SET points=?2 WHERE id=?1", rusqlite::params![bad, back])
+        .unwrap();
     assert!(m.mep_network(Some(sa)).is_err());
     let run = m
         .mep_draw(
@@ -612,7 +603,7 @@ fn broken_network_does_not_block_new_work() {
         )
         .unwrap();
     assert_eq!(m.mep_run(run).unwrap().system, sa);
-    m.mep_cap_end(bad, 0, true).unwrap();
+    m.mep_cap_end(run, 0, true).unwrap();
 }
 
 #[test]
