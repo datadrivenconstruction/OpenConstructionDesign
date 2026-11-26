@@ -186,6 +186,22 @@ fn capsule(th: &ddc_ui::Theme) -> egui::Frame {
         .inner_margin(egui::Margin::same(k::INSET as i8))
 }
 
+/// Width of the update pill (`update::badge`), 0 while no newer version is pending.
+pub(super) fn badge_w(ui: &egui::Ui, th: &ddc_ui::Theme, cat: &ddc_ui::Catalog) -> f32 {
+    crate::update::pending_version().map_or(0.0, |v| {
+        let t = cat.tf("update_check.badge", &[("v", v.as_str())]);
+        let g = ui.painter().layout_no_wrap(t, th.font(Role::Label), egui::Color32::PLACEHOLDER);
+        crate::update::pill::width(g.size().x)
+    })
+}
+
+/// Draws the update pill vertically centred in `r` (the room a host kept for it).
+pub(super) fn badge_in(ui: &mut egui::Ui, th: &ddc_ui::Theme, cat: &ddc_ui::Catalog, r: Rect) {
+    let lay = egui::Layout::left_to_right(egui::Align::Center);
+    let mut c = ui.new_child(egui::UiBuilder::new().max_rect(r).layout(lay));
+    crate::update::badge(&mut c, th, cat);
+}
+
 impl EditorApp {
     pub fn ui_mode(&self) -> UiMode {
         UiMode::of(&self.prefs)
@@ -221,6 +237,31 @@ impl EditorApp {
             _ => self.dock(ctx, area, fire),
         }
         self.context_bar(ctx, area, fire);
+        self.mode_badge(ctx, area);
+    }
+
+    /// The update pill at the canvas' top end corner, opposite the rail.
+    fn mode_badge(&self, ctx: &egui::Context, area: Rect) {
+        if crate::update::pending_version().is_none() {
+            return;
+        }
+        let (th, cat) = (&self.sh.theme, &self.sh.cat);
+        let h = ddc_ui::theme::ribbon::TAB_H;
+        let rtl = ddc_ui::i18n::rtl();
+        let (x, pivot) = if rtl {
+            (area.left() + k::EDGE, Align2::LEFT_TOP)
+        } else {
+            (area.right() - k::EDGE, Align2::RIGHT_TOP)
+        };
+        egui::Area::new(egui::Id::new("ddc.mode.badge"))
+            .order(egui::Order::Middle)
+            .pivot(pivot)
+            .fixed_pos(snap(ctx, pos2(x, area.top() + k::EDGE)))
+            .show(ctx, |ui| {
+                let w = badge_w(ui, th, cat);
+                let (r, _) = ui.allocate_exact_size(vec2(w, h), Sense::hover());
+                badge_in(ui, th, cat, r);
+            });
     }
 
     fn rail(&mut self, ctx: &egui::Context, area: Rect, fire: &mut Vec<String>) {

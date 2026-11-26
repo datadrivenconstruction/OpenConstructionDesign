@@ -36,6 +36,11 @@ pub struct Ribbon {
     pub split: SplitState,
     /// Tabs put first on the strip, in this order (the user's focus); the rest keep theirs.
     pub tab_order: Vec<String>,
+    /// Width the host keeps at the end of the tab row, left of the collapse caret (an update
+    /// pill); 0 keeps none.
+    pub trailing_w: f32,
+    /// Where that room was laid out this frame, for the host to draw into.
+    pub trailing: Option<Rect>,
     tips: KeyTips,
 }
 
@@ -170,6 +175,8 @@ impl Default for Ribbon {
             prev_tab: None,
             split: SplitState::default(),
             tab_order: Vec::new(),
+            trailing_w: 0.0,
+            trailing: None,
             tips: KeyTips::default(),
         }
     }
@@ -580,8 +587,13 @@ impl Ribbon {
         let active_tab = tabs.iter().position(|(_, t)| *t == self.tab).unwrap_or(0);
         // the collapse toggle holds the right end of the strip
         let toggle_w = 36.0;
+        let end_w = if self.trailing_w > 0.0 { self.trailing_w + crate::theme::space::XS } else { 0.0 };
+        self.trailing = (end_w > 0.0).then(|| {
+            let x1 = strip.right() - toggle_w;
+            Rect::from_x_y_ranges((x1 - self.trailing_w)..=x1, strip.y_range())
+        });
         let more_w = 28.0;
-        let (shown, hidden) = fit_tabs(&widths, strip.width() - toggle_w, more_w, active_tab);
+        let (shown, hidden) = fit_tabs(&widths, strip.width() - toggle_w - end_w, more_w, active_tab);
         let hidden_tabs: Vec<(String, String)> = hidden.iter().map(|&i| tabs[i].clone()).collect();
         let tips_layer = ui.ctx().layer_painter(egui::LayerId::new(
             egui::Order::Foreground,
@@ -664,7 +676,7 @@ impl Ribbon {
                 }
             });
         }
-        let picked = self.strip_tools(ui, th, cat, reg, icons, x, strip, toggle_w);
+        let picked = self.strip_tools(ui, th, cat, reg, icons, x, strip, toggle_w + end_w);
         let cr = Rect::from_center_size(
             strip.right_center() - Vec2::new(16.0, 0.0),
             Vec2::splat(24.0),

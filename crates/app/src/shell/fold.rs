@@ -488,7 +488,12 @@ impl EditorApp {
                     .show(ui, |ui| {
                         ui.set_width(at.width() - 12.0);
                         ui.set_height(h);
-                        s.ribbon.show(ui, th, &s.cat, &s.reg, &mut s.icons, act)
+                        s.ribbon.trailing_w = super::ui_mode::badge_w(ui, th, &s.cat);
+                        let picked = s.ribbon.show(ui, th, &s.cat, &s.reg, &mut s.icons, act);
+                        if let Some(r) = s.ribbon.trailing {
+                            super::ui_mode::badge_in(ui, th, &s.cat, r);
+                        }
+                        picked
                     })
                     .inner
             });

@@ -1074,11 +1074,15 @@ impl EditorApp {
                 }
                 let act = self.active_command();
                 let s = &mut self.sh;
+                s.ribbon.trailing_w = super::ui_mode::badge_w(ui, &s.theme, &s.cat);
                 if let Some(id) = s
                     .ribbon
                     .show(ui, &s.theme, &s.cat, &s.reg, &mut s.icons, act)
                 {
                     fire.push(id);
+                }
+                if let Some(r) = s.ribbon.trailing {
+                    super::ui_mode::badge_in(ui, &s.theme, &s.cat, r);
                 }
             });
         if mode == fold::RibbonMode::Hidden && self.chrome.fold.reveal {
