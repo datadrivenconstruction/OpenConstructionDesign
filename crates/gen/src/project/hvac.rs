@@ -658,6 +658,9 @@ struct Shaft {
     /// A floor too big for one main splits at the riser: the second branch runs along the
     /// shaft to this x and feeds the mains beyond it.
     legs: [Option<f64>; 2],
+    /// The whole floor takes the run along the shaft to `legs`: a riser tee too long to sit
+    /// between the riser and the main turns along the shaft instead of deepening it.
+    along: [bool; 2],
     /// The larger flow of the two mains of a split floor, the floor's flow otherwise.
     lq: [f64; 2],
 }
@@ -880,12 +883,16 @@ impl Ctx<'_> {
 
     fn deepen(&self, side: f64, x: f64, anchor: f64, fixed: Option<Rect>) -> Result<(f64, Shaft), usize> {
         const MAIN: usize = 3;
-        for k in 0..self.k.deepen_steps {
-            match self.shaft_at(side, x, self.k.deepen_step * k as f64, anchor, fixed) {
-                Ok(s) => return Ok(s),
-                Err(MAIN) => continue,
-                // past the first step the mains were the reason it had to go deeper
-                Err(i) => return Err(if k > 0 { MAIN } else { i }),
+        // the riser tee across to the main first; turned along the shaft only where no depth fits it
+        for turn in [false, true] {
+            for k in 0..self.k.deepen_steps {
+                match self.shaft_at(side, x, self.k.deepen_step * k as f64, anchor, fixed, turn) {
+                    Ok(s) => return Ok(s),
+                    Err(MAIN) => continue,
+                    Err(i) if k == 0 => return Err(i),
+                    // past the first step the mains were the reason it had to go deeper
+                    Err(_) => break,
+                }
             }
         }
         Err(MAIN)
@@ -908,7 +915,7 @@ impl Ctx<'_> {
     }
 
     /// `fixed` is a core bay of the building: the risers stand in it, whatever the scan offers.
-    fn shaft_at(&self, side: f64, x: f64, extra: f64, anchor: f64, fixed: Option<Rect>) -> Result<(f64, Shaft), usize> {
+    fn shaft_at(&self, side: f64, x: f64, extra: f64, anchor: f64, fixed: Option<Rect>, may_turn: bool) -> Result<(f64, Shaft), usize> {
         let c = self.corridor().ok_or(0usize)?;
         let (ds, de) = (self.riser_d[0], self.riser_d[1]);
         let dn = &self.k;
@@ -1000,6 +1007,7 @@ impl Ctx<'_> {
         let lane = side * cw * dn.lane_frac;
         let mut ym = [mid - lane, mid];
         let mut legs = [None; 2];
+        let mut along = [false; 2];
         let mut lq = [0.0; 2];
         let h = self.h_max();
         for s in 0..2 {
@@ -1009,13 +1017,21 @@ impl Ctx<'_> {
             let riser = (self.riser_d[s], 0.0);
             let fmax = self.floors_max(s);
             lq[s] = fmax;
+            // a run along the shaft leaves the other riser behind it
+            let dir = if s == 0 { -1.0 } else { 1.0 };
+            let off_corr = |xa: f64| self.floors.iter().flatten().any(|f| xa < f.corr.0 + dn.corr_end || xa > f.corr.2 - dn.corr_end);
+            let mut turn = None;
             let need = if main_fits(dn, fmax, h) {
                 let conn = main_size(dn, fmax, h);
+                // or the riser tee and its reducer along the shaft, then an elbow across to the main
+                let xa = xr[s] + dir * (node_trim(dn, &[riser, conn]) + node_trim(dn, &[conn]) + dn.margin);
+                if may_turn && !off_corr(xa) {
+                    turn = Some((xa, node_trim(dn, &[conn]) + node_trim(dn, &[conn, conn]) + dn.margin));
+                }
                 node_trim(dn, &[riser, conn]) + node_trim(dn, &[conn, conn]) + dn.margin
             } else {
                 // two branches at the riser: the straight one feeds the mains towards the
                 // other riser, the far one runs along the shaft first, away from it
-                let dir = if s == 0 { -1.0 } else { 1.0 };
                 let cap = terms(s)[1].cap;
                 let (mut qn, mut qf) = (0.0f64, 0.0f64);
                 for f in self.floors.iter().flatten() {
@@ -1040,12 +1056,7 @@ impl Ctx<'_> {
                 let (cn, cf) = (main_size(dn, qn, h), main_size(dn, qf, h));
                 let tee = node_trim(dn, &[riser, cn, cf]);
                 let xa = xr[s] + dir * (tee + node_trim(dn, &[cf]) + dn.margin);
-                if self
-                    .floors
-                    .iter()
-                    .flatten()
-                    .any(|f| xa < f.corr.0 + dn.corr_end || xa > f.corr.2 - dn.corr_end)
-                {
+                if off_corr(xa) {
                     return Err(4);
                 }
                 legs[s] = Some(xa);
@@ -1060,15 +1071,25 @@ impl Ctx<'_> {
                 vec![mid + lane, mid, mid - lane]
             };
             // every storey's main, moved with its corridor, keeps room for the riser tee
-            let clear = |y: f64| {
+            let clear = |y: f64, need: f64| {
                 (0..self.floors.len())
                     .filter(|&k| self.floors[k].is_some())
                     .all(|k| (yr - y - self.shift(k)).abs() >= need)
             };
-            let Some(y) = cands.iter().find(|y| clear(**y)) else {
-                return Err(3);
+            ym[s] = match cands.iter().find(|y| clear(**y, need)) {
+                Some(y) => *y,
+                None => {
+                    let Some((xa, need)) = turn else {
+                        return Err(3);
+                    };
+                    let Some(y) = cands.iter().find(|y| clear(**y, need)) else {
+                        return Err(3);
+                    };
+                    legs[s] = Some(xa);
+                    along[s] = true;
+                    *y
+                }
             };
-            ym[s] = *y;
         }
         // the unit beside the shaft, towards the corridor: its supply port above the riser
         let rs = dn.bend * ds;
@@ -1132,6 +1153,7 @@ impl Ctx<'_> {
                 zlo: pl.zlo,
                 ym,
                 legs,
+                along,
                 lq,
             },
         ))
@@ -2802,7 +2824,7 @@ fn design(
             // main segments between tap positions, each carrying what lies beyond its feed:
             // the riser, or for a split floor the far branch's end for the taps past it
             let leg = sh.legs[s];
-            let far = |x: f64| leg.is_some_and(|xa| (x - xr) * (xa - xr) > 1e-9);
+            let far = |x: f64| leg.is_some_and(|xa| sh.along[s] || (x - xr) * (xa - xr) > 1e-9);
             for (group, feed) in [(false, xr), (true, leg.unwrap_or(xr))] {
                 if group && leg.is_none() {
                     continue;
