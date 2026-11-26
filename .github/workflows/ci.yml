@@ -122,6 +122,7 @@ jobs:
         run: |
           rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal --target wasm32-unknown-unknown
           rustup default "$RUST_TOOLCHAIN"
+          sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends clang llvm
       - uses: Swatinem/rust-cache@v2
         with:
           shared-key: wasm-check

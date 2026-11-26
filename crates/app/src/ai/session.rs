@@ -926,7 +926,7 @@ impl Core {
             return vec![];
         };
         let touched = self.ed.model.changes_since(self.copy_head);
-        let Ok(raw) = self.ed.model.diff_from(&self.copies.base, &touched, DIFF_LIMIT) else {
+        let Ok(raw) = self.ed.model.diff_from(self.copies.base(), &touched, DIFF_LIMIT) else {
             return vec![];
         };
         let diff = plan::split_reused(plan::group_diff(&raw), &plan::reused_ids(&self.plan));
