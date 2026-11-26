@@ -1047,6 +1047,7 @@ pub fn frame(app: &mut EditorApp, ctx: &egui::Context) {
                     ui.add_space(space::MD);
                     let text = c.tf("update_check.unfit", &[("v", cur), ("f", f.as_str())]);
                     kit::banner::banner(ui, th, Tone::Warning, |ui| {
+                        ui.set_width(ui.available_width());
                         ui.add(
                             egui::Label::new(
                                 RichText::new(text)
@@ -1426,7 +1427,7 @@ mod tests {
         let dir = std::path::Path::new("C:/tmp/update_shots");
         std::fs::create_dir_all(dir).unwrap();
         let rel = Release {
-            version: "0.12.0".into(),
+            version: "9.0.0".into(),
             date: "2026-11-20".into(),
             summary: "- **AI** in 45 languages\n- Drawings in your language\n- Faster section views on large models\n- Fixes in IFC export".into(),
             url: String::new(),
@@ -1436,10 +1437,10 @@ mod tests {
                 for scene in ["toast", "dialog", "news"] {
                     with(|st| {
                         st.started = true;
-                        st.settings = Some(Settings { seen: "0.12.0".into(), ..Settings::default() });
+                        st.settings = Some(Settings { seen: "9.0.0".into(), ..Settings::default() });
                         st.release = Some(rel.clone());
                         st.dialog = scene == "dialog";
-                        st.result = Some(Outcome { status: Status::Newer(rel.clone()), unfit_below: Some("0.11.0".into()) });
+                        st.result = Some(Outcome { status: Status::Newer(rel.clone()), unfit_below: Some("2.0.0".into()) });
                         st.news = (scene == "news").then(|| rel.clone());
                     });
                     let ed = crate::editor::Editor::new_in_memory().unwrap();
@@ -1447,7 +1448,7 @@ mod tests {
                     app.prefs.theme = theme.into();
                     if scene == "toast" {
                         let c = &app.sh.cat;
-                        let title = c.tf("update_check.toast.title", &[("v", "0.12.0")]);
+                        let title = c.tf("update_check.toast.title", &[("v", "9.0.0")]);
                         let acts = toast_actions(c);
                         app.sh.toasts.push_choice(Level::Info, title, Some(highlight(&rel.summary)), acts);
                     }
@@ -1457,7 +1458,7 @@ mod tests {
                         app.ui(c, Some(&rs));
                         // the shell owner places the pill at the tab row's end; shown here
                         egui::Area::new(egui::Id::new("shot.pill"))
-                            .fixed_pos(egui::pos2(1200.0 - 260.0, pill::INSET_Y))
+                            .fixed_pos(egui::pos2(720.0, 40.0 + pill::INSET_Y))
                             .order(egui::Order::Foreground)
                             .show(c, |ui| badge(ui, &app.sh.theme, &app.sh.cat));
                     });
