@@ -378,7 +378,7 @@ pub struct ProjectSpec {
     /// What the building is; the builder branches on these, not on `typology`.
     pub traits: Traits,
     pub name: String,
-    /// `lang == "ru"`, kept only for the hvac and services texts that still branch on it.
+    /// `lang == "ru"`; unused by the generator (texts follow `lang`), kept for older callers.
     pub ru: bool,
     /// UI locale of every generated name and note (one of [`names::locales`]), `en` by default.
     pub lang: &'static str,
@@ -1194,7 +1194,7 @@ fn services(spec: &ProjectSpec, p: &mut GProject) {
     // named before the opt-out: consumers index the names by `SvcSys::ALL` even with no service on
     p.services.names = ["power", "cold", "hot", "sanitary"]
         .iter()
-        .map(|k| svc::text(&["systems", k], spec.ru))
+        .map(|k| svc::text(&["systems", k], spec.lang))
         .collect();
     let sv = spec.services;
     if !spec.mep_auto || !(sv.electrical || sv.water || sv.appliances) {

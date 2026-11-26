@@ -307,7 +307,7 @@ fn pack(groups: &[Group], u: CircuitUse, max_pts: usize, max_w: f64) -> Vec<Vec<
     out
 }
 
-fn word(u: CircuitUse, ru: bool) -> String {
+fn word(u: CircuitUse, lang: &str) -> String {
     let key = match u {
         CircuitUse::Lighting => "lighting",
         CircuitUse::Sockets => "sockets",
@@ -318,7 +318,7 @@ fn word(u: CircuitUse, ru: bool) -> String {
         CircuitUse::Emergency => "emergency",
         CircuitUse::Essential => "essential",
     };
-    svc::text(&["circuits", key], ru)
+    svc::text(&["circuits", key], lang)
 }
 
 fn code(u: CircuitUse) -> usize {
@@ -344,7 +344,7 @@ fn room_names(p: &GProject, rooms: &[(usize, usize)]) -> String {
 
 /// Designs the circuits of the boards: floor boards per storey, unit boards per apartment.
 pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usize, usize)>], units: &HashMap<(usize, u32), (usize, usize)>, zones: &HashMap<(usize, usize), (usize, usize)>, served: &[Served]) {
-    let ru = spec.ru;
+    let lang = spec.lang;
     let routes = Routes::new(p);
     let rooms: Vec<Vec<Room>> = p.storeys.iter().map(svc::rooms).collect();
     let board_of = |k: usize, room_idx: usize| -> Option<(usize, usize)> {
@@ -361,21 +361,21 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
     let mut boards: Vec<GBoard> = vec![];
     for (k, f) in floor.iter().enumerate() {
         if let Some(b) = f {
-            let (label, parent) = if Some(*b) == main { (svc::text(&["boards", "main"], ru), None) } else { (format!("{}{k}", svc::text(&["boards", "floor"], ru)), main) };
+            let (label, parent) = if Some(*b) == main { (svc::text(&["boards", "main"], lang), None) } else { (format!("{}{k}", svc::text(&["boards", "floor"], lang)), main) };
             boards.push(GBoard { at: *b, label, parent, rcds: vec![] });
         }
     }
     let mut unit_list: Vec<((usize, u32), (usize, usize))> = units.iter().map(|(a, b)| (*a, *b)).collect();
     unit_list.sort();
     for ((k, a), b) in unit_list {
-        boards.push(GBoard { at: b, label: format!("{}{k}.{a}", svc::text(&["boards", "unit"], ru)), parent: floor[k], rcds: vec![] });
+        boards.push(GBoard { at: b, label: format!("{}{k}.{a}", svc::text(&["boards", "unit"], lang)), parent: floor[k], rcds: vec![] });
     }
     let mut zone_list: Vec<(usize, usize)> = zones.values().copied().collect();
     zone_list.sort();
     zone_list.dedup();
     for (n, b) in zone_list.iter().enumerate() {
         let nth = zone_list[..n].iter().filter(|z| z.0 == b.0).count() + 1;
-        boards.push(GBoard { at: *b, label: format!("{}{}.{nth}", svc::text(&["boards", "zone"], ru), b.0), parent: floor[b.0], rcds: vec![] });
+        boards.push(GBoard { at: *b, label: format!("{}{}.{nth}", svc::text(&["boards", "zone"], lang), b.0), parent: floor[b.0], rcds: vec![] });
     }
     // devices by board, use, and per room for a worktop, per fixture for an appliance
     let mut keys: Vec<((usize, usize), usize, (usize, usize))> = vec![];
@@ -408,7 +408,7 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
             *c += 1;
             let load: f64 = pk.iter().map(|x| x.2).sum();
             let length = pk.iter().filter_map(|x| routes.dist(key.0, (x.0, x.1))).fold(0.0, f64::max);
-            let what = if u == CircuitUse::Appliance { pk[0].3.to_string() } else { word(u, ru) };
+            let what = if u == CircuitUse::Appliance { pk[0].3.to_string() } else { word(u, lang) };
             let rooms_of: Vec<(usize, usize)> = pk.iter().map(|x| x.4).collect();
             let where_ = room_names(p, &rooms_of);
             let name = if where_.is_empty() { format!("{}{c} {what}", CODES[key.1]) } else { format!("{}{c} {what} {where_}", CODES[key.1]) };
@@ -453,7 +453,7 @@ pub(crate) fn design(spec: &ProjectSpec, p: &mut GProject, floor: &[Option<(usiz
         let demand: f64 = out.iter().filter(|c| behind.contains(&c.board)).map(|c| c.demand).sum::<f64>() * g_feed;
         out.push(GCircuit {
             board: *from,
-            name: format!("F{} {}", n + 1, word(CircuitUse::Feeder, ru)),
+            name: format!("F{} {}", n + 1, word(CircuitUse::Feeder, lang)),
             use_: CircuitUse::Feeder,
             devices: vec![(to.0, to.1, "Main")],
             load,

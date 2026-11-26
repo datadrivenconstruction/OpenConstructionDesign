@@ -275,10 +275,10 @@ pub(super) fn per_flat(spec: &ProjectSpec, p: &mut GProject) -> Result<bool, Gen
             return Err(GenError::Infeasible(format!("too many fixtures and air terminals on floor {}", k + 1)));
         }
     }
-    let no = |i: u8| if spec.ru { (format!("\u{41f}{i}"), format!("\u{412}{i}")) } else { (format!("S{i}"), format!("E{i}")) };
+    let no = |i: u8| super::net_names(spec.lang, i);
     hv.names = no(1);
     hv.nets = (2..=net).map(no).collect();
-    hv.nets.push(if spec.ru { ("\u{41d}\u{412}".into(), "\u{412}\u{412}".into()) } else { ("OA".into(), "EA".into()) });
+    hv.nets.push((svc::text(&["hvac", "outdoor"], spec.lang), svc::text(&["hvac", "exhaust"], spec.lang)));
     hv.flow = (placed[0], placed[1]);
     p.hvac = hv;
     p.metrics.extend([

@@ -127,6 +127,11 @@ struct Term {
     cap: f64,
 }
 
+/// The supply and extract names of air net `no` in `lang`: `S1`/`E1` in English.
+fn net_names(lang: &str, no: u8) -> (String, String) {
+    (format!("{}{no}", svc::text(&["hvac", "supply"], lang)), format!("{}{no}", svc::text(&["hvac", "extract"], lang)))
+}
+
 fn supply_terms() -> [Term; 2] {
     [
         Term {
@@ -2972,11 +2977,7 @@ fn design(
     let metres: f64 = ducts.iter().map(|d| len(&d.points)).sum();
     let fast = ducts.iter().filter(|d| velocity(d.flow, duct_area(d.size)) > cap_of(&dn, d, n) + 0.05).count();
     let no = pass.net + 1;
-    let names = if spec.ru {
-        (format!("\u{41f}{no}"), format!("\u{412}{no}"))
-    } else {
-        (format!("S{no}"), format!("E{no}"))
-    };
+    let names = net_names(spec.lang, no);
     let metrics = if pass.dedicated {
         vec![
             ("hvac_dedicated_supply_m3h", placed[0]),

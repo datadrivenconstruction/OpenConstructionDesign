@@ -67,19 +67,9 @@ pub(crate) fn norms() -> &'static Norms {
     })
 }
 
-/// A display string from `services_text.json` at `path`, in the project language.
-pub(crate) fn text(path: &[&str], ru: bool) -> String {
-    static T: OnceLock<J> = OnceLock::new();
-    let t = T.get_or_init(|| {
-        serde_json::from_str(include_str!("../../data/services_text.json"))
-            .expect("services_text.json is valid")
-    });
-    let mut v = t;
-    for p in path {
-        v = &v[*p];
-    }
-    v[if ru { "ru" } else { "en" }]
-        .as_str().unwrap_or_else(|| panic!("services_text.json: no text at {path:?}")).to_string()
+/// The services text `gen.svc.<path>` of the i18n bundles in `lang`, English fallback.
+pub(crate) fn text(path: &[&str], lang: &str) -> String {
+    super::names::text(lang, &format!("gen.svc.{}", path.join(".")), None)
 }
 
 pub(crate) fn kind_name(k: RoomKind) -> &'static str {
@@ -889,10 +879,15 @@ pub(crate) fn spread_nodes(runs: &mut [&mut GRun]) {
                     let (e, end) = a[k];
                     let own = net.edges[e].3[end] as usize == end;
                     let run = net.edges[e].0;
-                    if k == on || !own || ds[k].dot(t).abs() > 1e-6 || first(k) <= 2.0 * s || moved.contains(&(run, end)) {
+                    if k == on || !own || ds[k].dot(t).abs() > 1e-6 || first(k) <= s || moved.contains(&(run, end)) {
                         continue;
                     }
-                    let back = at + ds[k] * s;
+                    // a short first leg steps back half its length; the jog must still take its bends
+                    let back = at + ds[k] * s.min(first(k) / 2.0);
+                    let rest = net.edges[e].1[if end == 0 { 1 } else { net.edges[e].1.len() - 2 }];
+                    if mep::route(&[tap, back + t * s, back, rest], &|u| radius(refs[run], u), (0.0, 0.0)).is_err() {
+                        continue;
+                    }
                     edits.push((run, end, [back, back + t * s, tap]));
                     done.extend([n, other]);
                     break 'side;
