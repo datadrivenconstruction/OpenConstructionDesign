@@ -16,6 +16,8 @@ use crate::{Error, LevelTotals, MaterialQty, Model, Totals};
 
 /// Project price table: `ai_policy` key, JSON object `{material: price per m3}`.
 pub const UNIT_COST_KEY: &str = "unit_cost";
+/// Currency of that table: `ai_policy` key, ISO 4217 code (`EUR`, `JPY`).
+pub const CURRENCY_KEY: &str = "currency";
 
 /// Units of every number in a metrics row. Prices are per m3 of material volume.
 pub const UNITS: Units = Units {
@@ -213,6 +215,12 @@ impl Model {
             Some(s) => serde_json::from_str(&s)
                 .map_err(|e| Error::Invalid(format!("bad {UNIT_COST_KEY} table: {e}"))),
         }
+    }
+
+    /// Currency of the price table (ISO 4217, upper case); `None` when unset or not a code.
+    pub fn currency(&self) -> Result<Option<String>, Error> {
+        let c = self.ai_policy(CURRENCY_KEY)?.map(|s| s.trim().to_ascii_uppercase());
+        Ok(c.filter(|c| c.len() == 3 && c.bytes().all(|b| b.is_ascii_uppercase())))
     }
 
     /// Metrics of this model as the option `option` sees it (`None`: primary options, i.e. the

@@ -269,7 +269,7 @@ pub use ai_revert::{AiBatch, MadeBy, Refusal, RevertError};
 pub use refusal::RefusalCode;
 pub use opt_metrics::{
     option_copy_metrics, Cost, CostLine, FindingCounts, MetricCell, MetricsRow, OptionMetrics, RoomTypeArea, Units,
-    UNITS, UNIT_COST_KEY,
+    CURRENCY_KEY, UNITS, UNIT_COST_KEY,
 };
 pub use ai_option::{materialize_options, Lower, OptionCopy, OptionMode, OptionRec, OptionStatus, OptionStore, RecipeStore, Replay};
 pub use stage::{clean_stale_stages, stage_copy, stage_path, StageMarks};

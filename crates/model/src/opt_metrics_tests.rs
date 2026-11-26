@@ -207,6 +207,16 @@ fn cost_missing_prices_reported() {
 }
 
 #[test]
+fn currency_is_an_iso_code_or_none() {
+    let fx = fixture("cur");
+    assert_eq!(fx.m.currency().unwrap(), None, "unset: no currency is guessed");
+    for (raw, want) in [(" jpy ", Some("JPY")), ("EUR", Some("EUR")), ("€", None), ("euro", None)] {
+        fx.m.set_ai_policy(CURRENCY_KEY, raw).unwrap();
+        assert_eq!(fx.m.currency().unwrap().as_deref(), want, "{raw}");
+    }
+}
+
+#[test]
 fn main_metrics_unchanged_by_option_metrics() {
     let fx = fixture("main");
     let before = fx.m.option_metrics(None, &no_prices(), false).unwrap();
