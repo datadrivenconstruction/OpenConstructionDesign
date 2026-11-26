@@ -106,11 +106,13 @@ impl Preset {
                 Some(std::sync::Arc::new(md))
             }
         };
+        // a base typology's names are translated under its `base.<name>` bundle scope
+        let scope = if Typology::ALL.iter().any(|x| x.name() == name) { format!("base.{name}") } else { name.clone() };
         // a model's spaces above ground are the programme, unless the preset gives its own
         let program = match (&t["program"], &model) {
             (J::Null, Some(m)) => m.program(),
             (J::Null, None) => Program::default(),
-            (p, _) => Program::from_json(p).map(|p| p.in_scope(&name)).map_err(|e| format!("{name}.program: {}", e.join("; ")))?,
+            (p, _) => Program::from_json(p).map(|p| p.in_scope(&scope)).map_err(|e| format!("{name}.program: {}", e.join("; ")))?,
         };
         let mut programme = program.over(&default_programme(base));
         if let Some(sp) = model.as_ref().and_then(|m| m.spare.clone()) {
@@ -377,9 +379,11 @@ mod tests {
             assert_eq!(back.rules, p.rules);
         }
         let dir = std::env::temp_dir().join(format!("ddc_presets_{}", std::process::id()));
-        let mut mine = find("hotel").unwrap().clone();
-        mine.name = "my hotel".into();
-        mine.aliases.clear();
+        // a renamed copy translates its names under its own name, as when it is read back
+        let mut j = find("hotel").unwrap().to_json();
+        j["name"] = "my hotel".into();
+        j["aliases"] = json!([]);
+        let mine = Preset::from_json(&j).unwrap();
         let path = save_to(&dir, &mine).unwrap();
         assert!(path.ends_with("my_hotel.json"));
         let (got, bad) = load_dir(&dir);
