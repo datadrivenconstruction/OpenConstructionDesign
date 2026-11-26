@@ -66,7 +66,7 @@ python3 -m http.server 8080 -d tools/web
 
 Then open `http://localhost:8080/`. Options in the address: `?empty` starts without the sample
 house, `?webgpu` uses WebGPU, `?view` and `?edit` force view only or editing. The test page loads
-only English and Russian; other languages need the full entry module, as the ERP uses it.
+a limited set of languages; the others need the full entry module, as the ERP uses it.
 
 To check that the code still compiles for the browser without building a bundle:
 

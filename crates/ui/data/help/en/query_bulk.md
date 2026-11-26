@@ -22,5 +22,5 @@ The [[cmd:data.query]] window (`QY`) reads the query as you type: the count and 
 
 ## tips
 - Operators: `=`, `<>`, `<`, `>`, `<=`, `>=`, `~` (contains). A bare word matches type, name and tag.
-- Keywords also work in other supported UI languages, including Russian.
+- Keywords also work in every supported UI language.
 - Lengths without a unit are in project units; you can write `1.2m`.
