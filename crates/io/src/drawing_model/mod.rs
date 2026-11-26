@@ -72,6 +72,8 @@ pub struct ProposeOptions {
     pub type_tol: f64,
     /// Rules "block → opening/family".
     pub rules: BlockRules,
+    /// Locale (`de`, `pt-BR`) of the names given to unlabeled rooms; see [`crate::words`].
+    pub lang: String,
 }
 
 impl Default for ProposeOptions {
@@ -120,6 +122,7 @@ impl Default for ProposeOptions {
             window_height: 1.2,
             type_tol: 0.02,
             rules: BlockRules::default(),
+            lang: "en".into(),
         }
     }
 }

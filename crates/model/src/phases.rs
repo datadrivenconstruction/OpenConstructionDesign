@@ -49,12 +49,33 @@ pub const PHASED: [&str; 28] = [
     "rebar_set",
 ];
 
-/// Standard phases (key, default name); the UI translates the name until it is changed.
+/// Standard phases (key, English default name); the UI shows a standard phase whose name is
+/// unchanged in the display language.
 pub const DEFAULT_PHASES: [(&str, &str); 3] = [
+    ("existing", "Existing"),
+    ("demolition", "Demolition"),
+    ("new", "New construction"),
+];
+
+/// Default names earlier versions stored (key, name); read as the standard phase of that key.
+const LEGACY_PHASE_NAMES: [(&str, &str); 3] = [
     ("existing", "\u{421}\u{443}\u{449}\u{435}\u{441}\u{442}\u{432}\u{443}\u{44e}\u{449}\u{435}\u{435}"),
     ("demolition", "\u{414}\u{435}\u{43c}\u{43e}\u{43d}\u{442}\u{430}\u{436}"),
     ("new", "\u{41d}\u{43e}\u{432}\u{43e}\u{435}"),
 ];
+
+/// A stored row as the standard phase it is: an old default name (with or without its key)
+/// becomes the key and its English default, so existing files show their phases translated.
+fn normalize(p: &mut Phase) {
+    let Some((k, _)) = LEGACY_PHASE_NAMES
+        .iter()
+        .find(|(k, n)| *n == p.name && p.key.as_deref().map_or(true, |pk| pk == *k))
+    else {
+        return;
+    };
+    p.key = Some(k.to_string());
+    p.name = std_phase_en(k).to_string();
+}
 
 const CURRENT: &str = "phase_current";
 
@@ -81,7 +102,11 @@ pub fn find_phase(phases: &[Phase], text: &str) -> Option<i64> {
             phases.iter().find(|p| {
                 p.key
                     .as_deref()
-                    .is_some_and(|k| k == t || std_phase_en(k).to_lowercase() == t)
+                    .is_some_and(|k| {
+                        k == t
+                            || std_phase_en(k).to_lowercase() == t
+                            || LEGACY_PHASE_NAMES.iter().any(|(lk, n)| *lk == k && n.to_lowercase() == t)
+                    })
             })
         })
         .map(|p| p.id)
@@ -342,7 +367,9 @@ pub(crate) fn load_phases(db: &Connection) -> Result<Vec<Phase>, Error> {
             key: r.get(3)?,
         })
     })?;
-    Ok(r.collect::<Result<_, _>>()?)
+    let mut ps: Vec<Phase> = r.collect::<Result<_, _>>()?;
+    ps.iter_mut().for_each(normalize);
+    Ok(ps)
 }
 
 /// Standard phases into an empty table; the current one is the last ("New").
@@ -871,14 +898,7 @@ impl Model {
             return Err(bad("phase name is empty".into()));
         }
         self.op("phase_rename", |db| {
-            let dup: Option<i64> = db
-                .query_row(
-                    "SELECT id FROM phase WHERE name=?1 AND id<>?2",
-                    params![name, id],
-                    |r| r.get(0),
-                )
-                .optional()?;
-            if dup.is_some() {
+            if load_phases(db)?.iter().any(|p| p.name == name && p.id != id) {
                 return Err(bad(format!("phase '{name}' already exists")));
             }
             let inv = Inv::default().restore(db, "phase", "id", id)?;
@@ -1318,7 +1338,7 @@ mod tests {
     fn phase_lookup_ignores_case_and_accepts_keys() {
         let (m, _, _) = model();
         let ps = m.phases().unwrap();
-        assert_eq!(find_phase(&ps, crate::test_ru::ru("phase_new_padded")), Some(ps[2].id));
+        assert_eq!(find_phase(&ps, "  new construction "), Some(ps[2].id));
         assert_eq!(find_phase(&ps, "existing"), Some(ps[0].id));
         assert_eq!(find_phase(&ps, "New construction"), Some(ps[2].id));
         assert_eq!(find_phase(&ps, "no such one"), None);
@@ -1606,11 +1626,7 @@ mod tests {
         let (ex, demo, new) = ids(&m);
         let mid = m.add_phase("Stage 2", Some(demo)).unwrap();
         let names: Vec<String> = m.phases().unwrap().into_iter().map(|p| p.name).collect();
-        let (p_ex, p_demo, p_new) = (
-            crate::test_ru::ru("phase_existing"),
-            crate::test_ru::ru("phase_demolition"),
-            crate::test_ru::ru("phase_new"),
-        );
+        let [p_ex, p_demo, p_new] = DEFAULT_PHASES.map(|d| d.1);
         assert_eq!(names, [p_ex, p_demo, "Stage 2", p_new]);
         assert!(m.add_phase(p_new, None).is_err());
         m.undo().unwrap();
@@ -1637,11 +1653,7 @@ mod tests {
         let names: Vec<String> = m.phases().unwrap().into_iter().map(|p| p.name).collect();
         assert_eq!(
             names,
-            [
-                crate::test_ru::ru("phase_existing"),
-                crate::test_ru::ru("phase_new"),
-                crate::test_ru::ru("phase_demolition")
-            ]
+            [DEFAULT_PHASES[0].1, DEFAULT_PHASES[2].1, DEFAULT_PHASES[1].1]
         );
         m.assert_integrity();
         m.undo().unwrap();
@@ -1687,6 +1699,28 @@ mod tests {
         assert!(matches!(m.undo(), Err(Error::NothingToUndo)));
         drop(m);
         let _ = std::fs::remove_dir_all(d);
+    }
+
+    /// Default names stored by earlier versions (also without a key) read as the standard
+    /// phases; the file is not rewritten and a renamed phase keeps its name.
+    #[test]
+    fn stored_old_default_names_read_as_standard_phases() {
+        let (mut m, _, _) = model();
+        let (ex, demo, new) = ids(&m);
+        for (id, (_, old)) in [ex, demo, new].into_iter().zip(LEGACY_PHASE_NAMES) {
+            m.db.execute("UPDATE phase SET name=?2 WHERE id=?1", params![id, old]).unwrap();
+        }
+        m.db.execute("UPDATE phase SET key=NULL WHERE id=?1", [demo]).unwrap();
+        let ps = m.phases().unwrap();
+        let got: Vec<(&str, Option<&str>)> =
+            ps.iter().map(|p| (p.name.as_str(), p.key.as_deref())).collect();
+        let want: Vec<(&str, Option<&str>)> =
+            DEFAULT_PHASES.iter().map(|(k, n)| (*n, Some(*k))).collect();
+        assert_eq!(got, want);
+        assert_eq!(find_phase(&ps, LEGACY_PHASE_NAMES[2].1), Some(new));
+        assert!(m.rename_phase(ex, DEFAULT_PHASES[2].1).is_err(), "taken by the standard phase");
+        m.rename_phase(ex, "Survey").unwrap();
+        assert_eq!(m.phases().unwrap()[0].name, "Survey");
     }
 
     /// An older file without the phase table gets the default phases once, by the upgrade.

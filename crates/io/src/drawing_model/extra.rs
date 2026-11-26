@@ -92,7 +92,20 @@ pub struct BlockRule {
 pub struct BlockRules(pub Vec<BlockRule>);
 
 impl Default for BlockRules {
+    /// The default rules with English family names.
     fn default() -> Self {
+        BlockRules::for_lang("en")
+    }
+}
+
+impl BlockRules {
+    /// The default rules, family names in locale `lang`; the patterns read block names in
+    /// any language.
+    pub fn for_lang(lang: &str) -> Self {
+        let (door, window) = (
+            crate::words::text(lang, "io.w.door"),
+            crate::words::text(lang, "io.w.window"),
+        );
         let r = |p: &str, k, f: &str| BlockRule {
             pattern: p.into(),
             kind: k,
@@ -102,14 +115,14 @@ impl Default for BlockRules {
             sill: None,
         };
         BlockRules(vec![
-            r("*door*", RuleKind::Door, "\u{414}\u{432}\u{435}\u{440}\u{44c}"),
-            r("*\u{434}\u{432}\u{435}\u{440}*", RuleKind::Door, "\u{414}\u{432}\u{435}\u{440}\u{44c}"),
-            r("*window*", RuleKind::Window, "\u{41e}\u{43a}\u{43d}\u{43e}"),
+            r("*door*", RuleKind::Door, &door),
+            r("*\u{434}\u{432}\u{435}\u{440}*", RuleKind::Door, &door),
+            r("*window*", RuleKind::Window, &window),
             // short names like WIN_1500 / A-WIN-12 (prefix forms only: "*win*" hits "winder")
-            r("win*", RuleKind::Window, "\u{41e}\u{43a}\u{43d}\u{43e}"),
-            r("*_win*", RuleKind::Window, "\u{41e}\u{43a}\u{43d}\u{43e}"),
-            r("*-win*", RuleKind::Window, "\u{41e}\u{43a}\u{43d}\u{43e}"),
-            r("*\u{43e}\u{43a}\u{43d}*", RuleKind::Window, "\u{41e}\u{43a}\u{43d}\u{43e}"),
+            r("win*", RuleKind::Window, &window),
+            r("*_win*", RuleKind::Window, &window),
+            r("*-win*", RuleKind::Window, &window),
+            r("*\u{43e}\u{43a}\u{43d}*", RuleKind::Window, &window),
         ])
     }
 }
@@ -577,7 +590,8 @@ fn seg_cross(a: P, b: P, c: P, d: P) -> Option<P> {
 /// A room from regions between walls whose point is inside an outline gets that boundary.
 /// Outlines go from smaller to larger: a room gets the smallest enclosing outline, and an
 /// outline containing points of several rooms (an apartment, a floor) is skipped.
-pub fn rooms_from_outlines(u: &Underlay, rooms: &mut Vec<RoomCand>, mem: &Memory) {
+/// `lang` names a room without a label text.
+pub fn rooms_from_outlines(u: &Underlay, rooms: &mut Vec<RoomCand>, mem: &Memory, lang: &str) {
     let mark = drawing_mark(u);
     let mut polys: Vec<(&UPoly, f64)> = u
         .closed
@@ -623,7 +637,7 @@ pub fn rooms_from_outlines(u: &Underlay, rooms: &mut Vec<RoomCand>, mem: &Memory
         let name = texts
             .iter()
             .find(|t| !is_num(t) && !is_area(t))
-            .map_or("\u{41f}\u{43e}\u{43c}\u{435}\u{449}\u{435}\u{43d}\u{438}\u{435}".to_string(), |t| t.to_string());
+            .map_or_else(|| crate::words::text(lang, "io.w.room"), |t| t.to_string());
         let mut pt = centroid(&poly.pts);
         if !inside(pt, &poly.pts) {
             match u.texts.iter().find(|t| inside(t.pos, &poly.pts)) {

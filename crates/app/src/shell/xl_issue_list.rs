@@ -75,10 +75,10 @@ pub fn filtered_rows(diff: &DiffState, rep: &Report, lang: Lang) -> Vec<Row> {
     issue_rows(diff.view_items(rep), lang)
 }
 
-/// Field separator of the .csv file: spreadsheets with a Russian locale split on ';' (the comma
-/// is their decimal mark), others on ','.
+/// Field separator of the .csv file: spreadsheets of a decimal-comma locale split on ';',
+/// others on ','.
 pub fn csv_sep(lang: Lang) -> char {
-    csv::Style::for_lang(lang == Lang::Ru).sep
+    csv::Style::for_decimal_comma(crate::units::decimal_comma(lang)).sep
 }
 
 fn join(header: &Row, rows: &[Row], sep: char, eol: &str) -> String {
@@ -92,7 +92,7 @@ pub fn to_tsv(header: &Row, rows: &[Row]) -> String {
 
 /// Content of the .csv file: UTF-8 with a byte order mark, [`csv_sep`] separated, CRLF lines.
 pub fn to_csv(header: &Row, rows: &[Row], lang: Lang) -> String {
-    csv::file(std::iter::once(header).chain(rows.iter()), csv::Style::for_lang(lang == Lang::Ru))
+    csv::file(std::iter::once(header).chain(rows.iter()), csv::Style::for_decimal_comma(crate::units::decimal_comma(lang)))
 }
 
 /// `<book>-issues.csv`, `<book>-issues-2.csv`, ... beside the book.

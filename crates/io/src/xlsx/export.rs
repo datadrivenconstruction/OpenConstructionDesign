@@ -33,9 +33,16 @@ pub(crate) enum V {
 /// Free columns to the right of the table are unlocked: a new column = a new parameter.
 const SPARE_COLS: u16 = 30;
 
-const READ_ONLY_NOTE: &str =
-    "\u{422}\u{43e}\u{43b}\u{44c}\u{43a}\u{43e} \u{447}\u{442}\u{435}\u{43d}\u{438}\u{435}: \u{43b}\u{438}\u{441}\u{442} \u{43f}\u{435}\u{440}\u{435}\u{441}\u{447}\u{438}\u{442}\u{44b}\u{432}\u{430}\u{435}\u{442}\u{441}\u{44f} \u{438}\u{437} \u{43c}\u{43e}\u{434}\u{435}\u{43b}\u{438} \u{43f}\u{440}\u{438} \u{432}\u{44b}\u{433}\u{440}\u{443}\u{437}\u{43a}\u{435}, \u{43f}\u{440}\u{430}\u{432}\u{43a}\u{438} \u{437}\u{434}\u{435}\u{441}\u{44c} \u{43d}\u{435} \u{43f}\u{440}\u{438}\u{43c}\u{435}\u{43d}\u{44f}\u{44e}\u{442}\u{441}\u{44f}.
-Read-only: recomputed from the model on export; edits here are not applied.";
+thread_local! {
+    /// Read-only note of the book being written, in the model's document language.
+    static READ_ONLY_NOTE: std::cell::RefCell<String> = const { std::cell::RefCell::new(String::new()) };
+}
+
+fn read_only_note() -> Note {
+    let t = READ_ONLY_NOTE.with(|n| n.borrow().clone());
+    let t = if t.is_empty() { crate::words::text("en", "io.w.xl_read_only") } else { t };
+    Note::new(t).set_width(360)
+}
 
 pub(crate) type Rows = Vec<Vec<V>>;
 
@@ -203,7 +210,7 @@ fn sheet(
         let w = if styled { w.clamp(10.0, 40.0) } else { w.max(12.0) };
         ws.set_column_width(j as u16, w).map_err(err)?;
         if styled && !col.edit && name != QUANTITIES && name != SUMMARY {
-            ws.insert_note(top, j as u16, &Note::new(READ_ONLY_NOTE).set_width(360))
+            ws.insert_note(top, j as u16, &read_only_note())
                 .map_err(err)?;
         }
         if col.edit {
@@ -228,7 +235,7 @@ fn sheet(
     ws.set_column_range_format(last, last + SPARE_COLS - 1, &open)
         .map_err(err)?;
     if name == QUANTITIES || name == SUMMARY {
-        ws.insert_note(top, 0, &Note::new(READ_ONLY_NOTE).set_width(360))
+        ws.insert_note(top, 0, &read_only_note())
             .map_err(err)?;
         ws.set_tab_color(Color::RGB(0xA6A6A6));
     }
@@ -440,6 +447,7 @@ struct GateGuard;
 impl Drop for GateGuard {
     fn drop(&mut self) {
         GATE.with(|g| *g.borrow_mut() = None);
+        READ_ONLY_NOTE.with(|n| n.borrow_mut().clear());
         // other writers on this thread see the layer keys as they are
         super::layer_match::begin(Path::new(""), false);
     }
@@ -542,6 +550,8 @@ pub fn export_xlsx_hooked(
             done: 0.0,
         })
     });
+    let lang = crate::words::model_lang(model, &style.locale);
+    READ_ONLY_NOTE.with(|n| *n.borrow_mut() = crate::words::text(&lang, "io.w.xl_read_only"));
     book::begin(model, style);
     extra::begin_notes();
     super::cellsafe::begin();

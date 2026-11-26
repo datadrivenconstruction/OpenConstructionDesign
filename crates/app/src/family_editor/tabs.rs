@@ -454,7 +454,7 @@ fn types(
                 {
                     let r = ddc_io::fsutil::replace_durably_bytes(
                         &p,
-                        catalog::export_csv_file(f, &f.types, crate::ui_is_ru()).as_bytes(),
+                        catalog::export_csv_file(f, &f.types, crate::units::decimal_comma(crate::ui_lang())).as_bytes(),
                     );
                     s.msg = r.err().map(|e| (true, e));
                 }

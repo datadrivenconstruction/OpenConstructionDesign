@@ -591,6 +591,11 @@ pub fn unit_label_in(u: Units, lang: Lang) -> &'static str {
 
 pub use ddc_ui::numparse::{is_group_space, DecimalMark, NumError};
 
+/// The locale writes decimals with a comma (its .csv files then split on `;`).
+pub fn decimal_comma(l: ddc_ui::i18n::Lang) -> bool {
+    DecimalMark::for_lang(l) == DecimalMark::Comma
+}
+
 thread_local! {
     // Follows `crate::set_ui_lang` on the calling thread, like the project units: parallel tests
     // that switch the UI language never change how another thread reads numbers.

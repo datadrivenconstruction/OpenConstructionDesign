@@ -836,11 +836,13 @@ fn fixture_recognition_is_exact() {
             w.a.1 + (w.b.1 - w.a.1) * t / len,
         )
     };
+    let (door, window) = (crate::words::text("en", "io.w.door"), crate::words::text("en", "io.w.window"));
+    let (door, window) = (door.as_str(), window.as_str());
     let want = [
-        ("door", (2.45, 0.0), 0.9, ru("door_word")),
-        ("door", (6.0, 3.45), 0.9, ru("door_word")),
-        ("window", (2.75, 8.0), 1.5, ru("window_word")),
-        ("window", (8.75, 8.0), 1.5, ru("window_word")),
+        ("door", (2.45, 0.0), 0.9, door),
+        ("door", (6.0, 3.45), 0.9, door),
+        ("window", (2.75, 8.0), 1.5, window),
+        ("window", (8.75, 8.0), 1.5, window),
     ];
     assert_eq!(p.openings.len(), 4, "{:?}", p.openings);
     for (kind, c, w, fam) in want {
@@ -1101,7 +1103,7 @@ fn polylines_with_repeated_vertices_and_coincident_ends() {
     assert!(u.arcs.iter().all(|a| a.r.is_finite() && a.c.0.is_finite()));
     // an outline with coinciding ends yields a room
     let mut rooms = vec![];
-    rooms_from_outlines(&u, &mut rooms, &Memory::default());
+    rooms_from_outlines(&u, &mut rooms, &Memory::default(), "en");
     assert_eq!(rooms.len(), 2);
 }
 
@@ -1204,7 +1206,7 @@ fn outline_goes_to_smallest_and_aggregate_outline_is_skipped() {
         });
     }
     let mut rooms = vec![room_at(1, (2.0, 2.0)), room_at(2, (7.0, 7.0))];
-    rooms_from_outlines(&u, &mut rooms, &Memory::default());
+    rooms_from_outlines(&u, &mut rooms, &Memory::default(), "en");
     assert_eq!(rooms.len(), 2, "outline of the whole flat is not a room");
     assert_eq!(rooms[0].boundary, rect_pts(0.0, 0.0, 4.0, 4.0));
     assert!(rooms[1].boundary.is_empty());

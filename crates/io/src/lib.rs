@@ -17,6 +17,7 @@ pub mod fsutil;
 pub mod gltf;
 pub mod ifc;
 pub mod import_summary;
+pub mod words;
 pub mod job;
 pub mod logo;
 #[cfg(any(test, feature = "dxf-write"))]

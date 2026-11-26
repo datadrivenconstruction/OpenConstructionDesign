@@ -1087,8 +1087,16 @@ impl Drawings {
             return crate::tr("dlg.dw.st.no_drawing", &[]);
         };
         let types = dm::wall_types(&ed.model).unwrap_or_default();
+        let lang = crate::doc_lang::doc_lang(&ed.model).code().to_string();
+        // untouched default rules name their families in the document language
+        let rules = if self.rules == BlockRules::default() {
+            BlockRules::for_lang(&lang)
+        } else {
+            self.rules.clone()
+        };
         let opt = ProposeOptions {
-            rules: self.rules.clone(),
+            rules,
+            lang,
             ..Default::default()
         };
         let mut props = dm::propose(&d.visible_underlay(), &types, &opt, &Memory::default());
@@ -1146,6 +1154,7 @@ impl Drawings {
         levels.sort_by(|a, b| a.2.total_cmp(&b.2));
         let elev = levels.iter().find(|l| l.0 == level).map_or(0.0, |l| l.2);
         let mut opt = AcceptOptions::new(level);
+        opt.lang = crate::doc_lang::doc_lang(&ed.model).code().to_string();
         opt.room_height = ed.height;
         opt.column_height = ed.height;
         opt.top_level = levels.iter().find(|l| l.2 > elev + 1e-6).map(|l| l.0);

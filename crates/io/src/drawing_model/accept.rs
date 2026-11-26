@@ -18,6 +18,8 @@ pub struct AcceptOptions {
     /// Column top: a level (offset 0) or a height from the bottom.
     pub top_level: Option<i64>,
     pub column_height: f64,
+    /// Locale (`de`, `pt-BR`) of the names written for new types; see [`crate::words`].
+    pub lang: String,
 }
 
 impl AcceptOptions {
@@ -28,6 +30,7 @@ impl AcceptOptions {
             remember_rest: true,
             top_level: None,
             column_height: 3.0,
+            lang: "en".into(),
         }
     }
 }
@@ -285,7 +288,7 @@ pub fn accept_proposals(
                     }
                 }
                 for c in columns {
-                    let mtype = column_type(db, c)?;
+                    let mtype = column_type(db, c, &opt.lang)?;
                     db.execute(
                         "INSERT INTO col(level,top_level,mtype,structural,x,y,base_offset,top_offset,rotation,tx,ty)                          VALUES (?1,?2,?3,0,?4,?5,0,?6,?7,NULL,NULL)",
                         params![opt.level, top_level, mtype, c.at.0, c.at.1, top_offset, c.rotation],
@@ -341,21 +344,25 @@ fn free_name(db: &Connection, table: &str, base: &str) -> Result<String, Error> 
     })
 }
 
-/// Column type by section: an existing one with the same shape or a new one (type names are Russian: "Column B×H" / "Column ØD" in that language).
-fn column_type(db: &Connection, c: &super::ColumnCand) -> Result<i64, Error> {
+/// Column type by section: an existing one with the same shape or a new one named in `lang`.
+fn column_type(db: &Connection, c: &super::ColumnCand, lang: &str) -> Result<i64, Error> {
     use ddc_geom::member::Shape;
     let mm = |v: f64| (v * 1000.0).round();
     let (shape, name) = match c.diameter {
         Some(d) => (
             Shape::Circle { d: mm(d) / 1000.0 },
-            format!("\u{41a}\u{43e}\u{43b}\u{43e}\u{43d}\u{43d}\u{430} Ø{}", mm(d)),
+            crate::words::text_with(lang, "io.w.column_round", &[("d", &mm(d).to_string())]),
         ),
         None => (
             Shape::Rect {
                 b: mm(c.b) / 1000.0,
                 h: mm(c.h) / 1000.0,
             },
-            format!("\u{41a}\u{43e}\u{43b}\u{43e}\u{43d}\u{43d}\u{430} {}×{}", mm(c.b), mm(c.h)),
+            crate::words::text_with(
+                lang,
+                "io.w.column_rect",
+                &[("b", &mm(c.b).to_string()), ("h", &mm(c.h).to_string())],
+            ),
         ),
     };
     let text = shape.text();

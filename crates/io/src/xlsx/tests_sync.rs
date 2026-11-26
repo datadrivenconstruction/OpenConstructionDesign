@@ -449,7 +449,7 @@ fn quantities_sheet_is_read_only_and_edits_are_reported_not_applied() {
             if e.name().unwrap().starts_with("xl/comments") {
                 let mut t = String::new();
                 e.read_to_string(&mut t).unwrap();
-                found |= t.contains(ru("read_only"));
+                found |= t.contains(crate::words::text("en", "io.w.xl_read_only").split(':').next().unwrap());
             }
         }
         assert!(found, "read-only note on the sheet");

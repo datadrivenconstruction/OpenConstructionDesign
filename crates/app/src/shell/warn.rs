@@ -162,12 +162,12 @@ pub fn grouped(ws: &[ElementWarning]) -> Vec<(&'static str, Vec<&ElementWarning>
 
 /// .csv file of the warnings (type, table, id, text) through the shared writer, in the style of
 /// the interface language.
-pub fn warnings_csv(ws: &[ElementWarning], kind_name: impl Fn(&str) -> String, ru: bool) -> String {
+pub fn warnings_csv(ws: &[ElementWarning], kind_name: impl Fn(&str) -> String, decimal_comma: bool) -> String {
     let head = ["type", "table", "id", "message"].map(String::from);
     let rows = ws
         .iter()
         .map(|w| [kind_name(warning_kind(w)), w.table.to_string(), w.id.to_string(), warning_text(w)]);
-    ddc_geom::csv::file(std::iter::once(head).chain(rows), ddc_geom::csv::Style::for_lang(ru))
+    ddc_geom::csv::file(std::iter::once(head).chain(rows), ddc_geom::csv::Style::for_decimal_comma(decimal_comma))
 }
 
 /// Blocking model error: cannot be ignored.
@@ -358,7 +358,7 @@ impl EditorApp {
 
     fn export_warnings(&mut self) {
         let c = &self.sh.cat;
-        let csv = warnings_csv(&self.warnings.1, |k| c.t(&format!("warn.kind.{k}")), crate::ui_is_ru());
+        let csv = warnings_csv(&self.warnings.1, |k| c.t(&format!("warn.kind.{k}")), crate::units::decimal_comma(crate::ui_lang()));
         let Some(p) = crate::file_pick::Dlg::new()
             .set_file_name("warnings.csv")
             .add_filter("CSV", &["csv"])

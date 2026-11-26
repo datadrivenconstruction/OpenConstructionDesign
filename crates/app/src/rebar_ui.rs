@@ -670,7 +670,7 @@ fn export_csv_with<E: std::fmt::Display>(
         return;
     };
     let rows = a.ed.model.rebar_schedule(None).unwrap_or_default();
-    let s = schedule_csv(&rows, crate::ui_is_ru());
+    let s = schedule_csv(&rows, crate::ui_lang());
     match write(&p, s.as_bytes()) {
         Ok(()) => {
             // an issued schedule pins the marks: later edits will not shift them
@@ -686,10 +686,10 @@ fn export_csv_with<E: std::fmt::Display>(
     }
 }
 
-/// Bending schedule as a .csv file through the shared writer (separator and decimal mark of the
-/// interface language, byte order mark, CRLF).
-fn schedule_csv(rows: &[RebarRow], ru: bool) -> String {
-    let st = ddc_geom::csv::Style::for_lang(ru);
+/// Bending schedule as a .csv file through the shared writer (headers, separator and decimal
+/// mark of `lang`, byte order mark, CRLF).
+fn schedule_csv(rows: &[RebarRow], lang: ddc_ui::i18n::Lang) -> String {
+    let st = ddc_geom::csv::Style::for_decimal_comma(crate::units::decimal_comma(lang));
     let head = [
         "rebar.col.mark",
         "rebar.col.shape",
@@ -703,7 +703,7 @@ fn schedule_csv(rows: &[RebarRow], ru: bool) -> String {
         "rebar.col.unit_mass",
         "rebar.col.weight",
     ];
-    let head = head.map(|k| crate::tr_lang(ru, k, &[]));
+    let head = head.map(|k| crate::tr_in(lang, k, &[]));
     let body = rows.iter().map(|r| {
         [
             r.mark.clone(),
@@ -1661,8 +1661,8 @@ mod tests {
     }
 
     #[test]
-    fn russian_schedule_has_bom_semicolons_and_decimal_commas() {
-        let s = schedule_csv(&[bar("=1+2")], true);
+    fn decimal_comma_schedule_has_bom_semicolons_and_decimal_commas() {
+        let s = schedule_csv(&[bar("=1+2")], ddc_ui::i18n::Lang::De);
         assert_eq!(&s.as_bytes()[..3], &[0xEF, 0xBB, 0xBF]);
         let lines: Vec<&str> = s.trim_start_matches('\u{FEFF}').split("\r\n").collect();
         assert_eq!(lines.len(), 3, "header, one row, empty tail: {s:?}");
@@ -1675,10 +1675,10 @@ mod tests {
 
     #[test]
     fn english_schedule_has_commas_and_decimal_points() {
-        let s = schedule_csv(&[bar("K-1")], false);
+        let s = schedule_csv(&[bar("K-1")], ddc_ui::i18n::Lang::En);
         let row = s.trim_start_matches('\u{FEFF}').split("\r\n").nth(1).unwrap().to_string();
         assert_eq!(row, "K-1,11,12,\"A500; \"\"C\"\"\",A=1000 B=300,90/90,4,12.345,49.380,0.888,43.85");
-        let s = schedule_csv(&[bar("-5")], false);
+        let s = schedule_csv(&[bar("-5")], ddc_ui::i18n::Lang::En);
         assert!(s.contains("\r\n-5,11,"), "a negative number stays a number: {s:?}");
     }
 

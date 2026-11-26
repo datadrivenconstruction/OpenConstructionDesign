@@ -958,7 +958,7 @@ pub fn propose(
         mem,
     );
     let (mut rooms, sk_r, unlabeled, bad_numbers) = rooms_impl(u, &wp, opt, mem);
-    super::extra::rooms_from_outlines(u, &mut rooms, mem);
+    super::extra::rooms_from_outlines(u, &mut rooms, mem, &opt.lang);
     let grids = super::extra::propose_grids(u, mem);
     let columns = super::extra::propose_columns(u, &grids, &wp.walls, mem);
     let mut report = wp.report.clone();
