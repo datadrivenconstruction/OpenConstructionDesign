@@ -166,5 +166,5 @@ IFC export of every model you care about.
 - The AI assistant can make mistakes. Read the preview and the diff before you apply.
 - The structural solver is not yet available in the editor window.
 - Very large models can be slow.
-- Interface languages: English and Russian; other languages are not yet translated.
+- English is the source language; the interface ships in 45 languages.
 - Linux and macOS: only the libraries and the command-line tool are supported.

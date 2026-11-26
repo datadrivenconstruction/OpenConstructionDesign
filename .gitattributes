@@ -1,5 +1,7 @@
 *.rs text eol=lf
 # embedded icons are matched byte for byte; a CRLF checkout breaks the layer split
 *.svg text eol=lf
+# family texts are embedded and hashed: the same bytes on every platform
+*.ddcf text eol=lf
 
 crates/model/data/gltf/** -text
