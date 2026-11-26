@@ -79,10 +79,12 @@ fn set_tables(ed: &Editor) -> Vec<(String, io::Table)> {
 
 /// The plan for the model as it stands, words in the UI language of `ru`.
 pub fn plan_drawing_set(ed: &Editor, o: &DsetOptions, ru: bool) -> Result<io::Planned, String> {
-    with_ctx(ed, ru, None, None, |ctx| {
-        io::plan_drawing_set(&ed.model, o, ctx)
-    })
-    .map_err(|e| e.0)
+    plan_drawing_set_in(ed, o, if ru { Lang::Ru } else { Lang::En })
+}
+
+/// Same, words in any UI language.
+pub fn plan_drawing_set_in(ed: &Editor, o: &DsetOptions, lang: Lang) -> Result<io::Planned, String> {
+    with_ctx_in(ed, lang, None, None, None, |ctx| io::plan_drawing_set(&ed.model, o, ctx)).map_err(|e| e.0)
 }
 
 /// Doors and windows the set will mark by type: those without a mark on the levels it tags.
@@ -91,19 +93,21 @@ pub fn marks_to_assign(ed: &Editor) -> Result<usize, String> {
     ed.model.unmarked_openings(&lv).map_err(|e| e.to_string())
 }
 
-/// Door and window mark prefixes in the UI language of `ru`.
-pub fn mark_prefix(ru: bool) -> ddc_model::MarkPrefix {
-    io::mark_prefix(&|k: &str| msg(ru, k, &[]))
+/// Door and window mark prefixes in a UI language.
+pub fn mark_prefix(lang: Lang) -> ddc_model::MarkPrefix {
+    io::mark_prefix(&|k: &str| msg_in(lang, k, &[]))
 }
 
-/// Tags, plans and writes the set in one undo step; the sheet ids in order.
+/// Tags, plans and writes the set in one undo step; the sheet ids in order. Sheet words and
+/// tags in the project's document language; a refusal in the UI language `ru`.
 pub fn build_drawing_set(ed: &mut Editor, o: DsetOptions, ru: bool) -> Result<Vec<i64>, String> {
     let tables = set_tables(ed);
     let units = lu(ed.tool.units);
+    let lang = crate::doc_lang::doc_lang(&ed.model);
     op_in(ed, ru, move |m| {
         m.atomic("drawing_set", |m| {
             let lv = io::tag_levels(m).map_err(sheet_error)?;
-            let text = |k: &str| msg(ru, k, &[]);
+            let text = |k: &str| msg_in(lang, k, &[]);
             m.tag_for_drawings(&lv, &io::mark_prefix(&text))?;
             let sched = |k: &str| tables.iter().find(|t| t.0 == k).map(|t| t.1.clone());
             let ctx = Ctx {
@@ -130,7 +134,7 @@ fn preview(
     d: &DsetDialog,
     ru: bool,
 ) -> Result<(String, Vec<(String, String)>), String> {
-    let p = plan_drawing_set(ed, &d.options(), ru)?;
+    let p = plan_drawing_set_in(ed, &d.options(), crate::doc_lang::doc_lang(&ed.model))?;
     let rows: Vec<(String, String)> = p
         .plan
         .sheets

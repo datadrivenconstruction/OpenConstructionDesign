@@ -445,7 +445,7 @@ impl Core {
 /// their files.
 pub struct Core {
     pub ed: Editor,
-    /// Session language of refusal texts the chat model reads (`refusal::LANGS`, else English).
+    /// Session language of refusal texts the chat model reads (`refusal::langs`, else English).
     pub(crate) lang: &'static str,
     before: Option<Editor>,
     /// Files on desktop, memory in the browser build (`MemCopies`): the same calls.

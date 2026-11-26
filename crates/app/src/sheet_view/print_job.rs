@@ -596,7 +596,7 @@ impl PrintJob {
         }
     }
 
-    fn compose_next(&mut self, ed: &Editor, ru: bool) {
+    fn compose_next(&mut self, ed: &Editor) {
         let item = &self.items[self.next];
         self.next += 1;
         self.current.clone_from(&item.label);
@@ -608,7 +608,8 @@ impl PrintJob {
         let refs = self.refs.as_ref().map(|r| &r.1);
         let paper = self.paper.as_deref().map(|s| (s, self.landscape));
         let index = Some((item.pos, self.total));
-        let composed = with_ctx_refs(ed, ru, index, paper, refs, |ctx| {
+        let lang = crate::doc_lang::doc_lang(&ed.model);
+        let composed = with_ctx_in(ed, lang, index, paper, refs, |ctx| {
             io::print_composed(&ed.model, item.id, ctx)
         });
         match composed {
@@ -631,7 +632,7 @@ impl PrintJob {
 
     /// One step per frame: at least one sheet if the queue is free, then more until `budget` runs out.
     /// Returns true when the issue is finished.
-    pub(super) fn step(&mut self, ed: &Editor, ru: bool, budget: Duration) -> bool {
+    pub(super) fn step(&mut self, ed: &Editor, budget: Duration) -> bool {
         self.drain();
         if self.finished || self.is_cancelling() {
             return self.finished;
@@ -650,7 +651,7 @@ impl PrintJob {
             if composed && t0.elapsed() >= budget {
                 break;
             }
-            self.compose_next(ed, ru);
+            self.compose_next(ed);
             composed = true;
         }
         self.drain();
@@ -788,7 +789,7 @@ mod tests {
         let mut job = PrintJob::start(plan, None, true);
         job.cancel();
         assert!(job.is_cancelling());
-        while !job.step(&ed, true, Duration::ZERO) {
+        while !job.step(&ed, Duration::ZERO) {
             std::thread::sleep(Duration::from_millis(1));
         }
         let o = job.into_outcome();
@@ -817,7 +818,7 @@ mod tests {
             .unwrap();
         let plan = plan_outputs(&ed, &p, &[a, b], &dir);
         let mut job = PrintJob::start(plan, None, true);
-        while !job.step(&ed, true, Duration::ZERO) {
+        while !job.step(&ed, Duration::ZERO) {
             std::thread::sleep(Duration::from_millis(1));
         }
         let o = job.into_outcome();
@@ -880,9 +881,9 @@ mod tests {
         p.separate = true;
         let plan = plan_outputs(&ed, &p, &[a, b], &dir);
         let mut job = PrintJob::start(plan, None, true);
-        job.step(&ed, true, Duration::ZERO);
+        job.step(&ed, Duration::ZERO);
         job.cancel();
-        while !job.step(&ed, true, Duration::ZERO) {
+        while !job.step(&ed, Duration::ZERO) {
             std::thread::sleep(Duration::from_millis(1));
         }
         assert!(job.into_outcome().cancelled);
@@ -904,9 +905,9 @@ mod tests {
         let plan = plan_outputs(&ed, &p, &[a, b], &dir);
         let mut job = PrintJob::start(plan, None, true);
         // one step with a zero budget assembles one sheet, not the whole batch
-        job.step(&ed, true, Duration::ZERO);
+        job.step(&ed, Duration::ZERO);
         assert_eq!(job.next, 1);
-        while !job.step(&ed, true, Duration::ZERO) {
+        while !job.step(&ed, Duration::ZERO) {
             std::thread::sleep(Duration::from_millis(1));
         }
         assert_eq!(job.progress().0, job.progress().1);

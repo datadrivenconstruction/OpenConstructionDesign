@@ -220,7 +220,7 @@ pub fn shape_of(key: &str) -> Shape {
 
 /// A plain number with `d` decimals and the decimal mark / thousands group of the language.
 pub fn num_text(v: f64, d: usize, ru: bool) -> String {
-    crate::units::fmt_num_lang(v, d, ru)
+    crate::units::fmt_num_lang(v, d, crate::units::lang_of(ru))
 }
 
 /// One table cell: counts as integers, areas and volumes in the project units, the rest with
@@ -228,8 +228,8 @@ pub fn num_text(v: f64, d: usize, ru: bool) -> String {
 pub fn metric_text(key: &str, v: f64, u: crate::units::Units, ru: bool) -> String {
     match shape_of(key) {
         Shape::Count => num_text(v.round(), 0, ru),
-        Shape::Area => crate::units::fmt_area_lang(v, u, crate::units::AREA_DECIMALS, false, ru),
-        Shape::Volume => crate::units::fmt_volume_lang(v, u, crate::units::VOLUME_DECIMALS, ru),
+        Shape::Area => crate::units::fmt_area_lang(v, u, crate::units::AREA_DECIMALS, false, crate::units::lang_of(ru)),
+        Shape::Volume => crate::units::fmt_volume_lang(v, u, crate::units::VOLUME_DECIMALS, crate::units::lang_of(ru)),
         Shape::Plain => num_text(v, 2, ru),
     }
 }

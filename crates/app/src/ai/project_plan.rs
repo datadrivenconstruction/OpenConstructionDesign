@@ -1973,7 +1973,7 @@ fn sync_mech_pipes(
     let mut build = MepBuild::default();
     if let Some(c) = mech.filter(|c| !c.pipes.is_empty()) {
         let kinds = [SystemKind::ChilledWater, SystemKind::ChilledWater, SystemKind::Heating, SystemKind::Heating];
-        for (name, kind) in water_names(ru).into_iter().zip(kinds) {
+        for (name, kind) in water_names(if ru { "ru" } else { "en" }).into_iter().zip(kinds) {
             build.systems.push((name.to_string(), kind));
         }
         let base = elevation_of(cx, levels[0])?;
@@ -2737,7 +2737,7 @@ mod tests {
         let m = sloped_model(0.3);
         // a corridor wide enough for a platform lift beside the half-level flight
         let input = json!({"typology": "office", "floors": 3, "roof": {"kind": "flat"}, "corridor": 2.6,
-            "site": {"terrain": "model"}});
+            "site": {"terrain": "model"}, "mep_auto": false});
         let b = build_on(&m, &input).unwrap();
         let p = &b.project;
         let sp = p.site.split.as_ref().unwrap_or_else(|| panic!("one level: {}", p.site.split_why));

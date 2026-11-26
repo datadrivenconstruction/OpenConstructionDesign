@@ -495,7 +495,7 @@ fn settings_persist_across_restart() {
     a.prefs.mode_layouts.modes.insert(WorkMode::Data, lay.clone());
     let data: serde_json::Value =
         serde_json::from_str(include_str!("../data/layout_looks_tests.json")).unwrap();
-    let name = data["mode_layout_name_ru"].as_str().unwrap();
+    let name = data["mode_layout_name_non_latin"].as_str().unwrap();
     assert_eq!(a.mode_layout_save_as(name).as_deref(), Some(name));
     let before = a.prefs.clone();
     let back = Prefs::load_from(Some(path.clone()));

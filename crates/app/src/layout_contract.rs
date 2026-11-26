@@ -1981,7 +1981,7 @@ m.ensure_norm_params().unwrap();
     let cat = Catalog::new(lang);
     for (ran, missing) in [(false, false), (true, false), (false, true)] {
         let mut nm = if ran {
-            crate::ai::ui::norms::Norms::ran_on(&m)
+            crate::ai::ui::norms::Norms::ran_with(&m, "ru")
         } else {
             crate::ai::ui::norms::Norms::default()
         };

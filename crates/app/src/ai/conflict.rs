@@ -99,6 +99,16 @@ pub fn conflicts(
     if ch.is_empty() {
         return out;
     }
+    // per-table facts are the same for every item: worked out once, not per item
+    let touched: Vec<Touched<'_>> = ch
+        .rows
+        .iter()
+        .map(|(t, ids)| {
+            let mut sorted: Vec<i64> = ids.iter().copied().collect();
+            sorted.sort_unstable();
+            Touched { t: t.as_str(), ids, sorted, whole: ch.whole(t), model: model_table(t) }
+        })
+        .collect();
     let mut hit: HashSet<u32> = HashSet::new();
     for it in items.iter().filter(|i| i.checked) {
         let c = if ch.all {
@@ -110,7 +120,7 @@ pub fn conflicts(
                 all: true,
             })
         } else {
-            direct(&it.sets.reads, &it.sets.writes, ch, gone)
+            direct(&it.sets.reads, &it.sets.writes, ch, &touched, gone)
         };
         let c = c.or_else(|| {
             it.depends_on.iter().find(|d| hit.contains(d)).map(|d| Conflict {
@@ -129,49 +139,58 @@ pub fn conflicts(
     out
 }
 
+/// A changed table with what every item checks of it.
+struct Touched<'a> {
+    t: &'a str,
+    ids: &'a HashSet<i64>,
+    /// `ids` sorted: a binary search beats hashing for the few rows an item names
+    sorted: Vec<i64>,
+    whole: bool,
+    model: bool,
+}
+
 fn direct(
     reads: &ReadSet,
     writes: &ReadSet,
     ch: &Changes,
+    touched: &[Touched<'_>],
     gone: &dyn Fn(&str, i64) -> bool,
 ) -> Option<Conflict> {
-    let mut rows: BTreeSet<(String, i64)> = BTreeSet::new();
-    let mut tables: Vec<String> = vec![];
+    let mut rows: BTreeSet<(&str, i64)> = BTreeSet::new();
+    let mut tables: Vec<&str> = vec![];
     // a table written whole: its rows changed, whether or not any were added
     let mut whole = false;
-    for (t, ids) in &ch.rows {
-        let t = t.as_str();
+    for &Touched { t, ids, ref sorted, whole: all_rows, model: w } in touched {
         if reads.tables.contains(t) {
-            whole |= ch.whole(t);
-            tables.push(t.to_string());
+            whole |= all_rows;
+            tables.push(t);
             for id in ch.ids(t).filter(|id| gone(t, *id)) {
-                rows.insert((t.to_string(), id));
+                rows.insert((t, id));
             }
             continue;
         }
-        let w = model_table(t);
-        if ch.whole(t) {
+        if all_rows {
             let any = reads.rows.get(t).is_some_and(|r| !r.is_empty())
                 || (w && (writes.tables.contains(t) || writes.rows.contains_key(t)));
             if any {
                 whole = true;
-                tables.push(t.to_string());
+                tables.push(t);
             }
             continue;
         }
         // the smaller side is walked: a plan of 10 000 items against 1 000 changed rows
         for set in [Some(reads), w.then_some(writes)].into_iter().flatten() {
             if set.tables.contains(t) {
-                tables.push(t.to_string());
+                tables.push(t);
                 continue;
             }
             let Some(mine) = set.rows.get(t) else {
                 continue;
             };
             if mine.len() < ids.len() {
-                rows.extend(mine.iter().filter(|id| ids.contains(id)).map(|id| (t.to_string(), *id)));
+                rows.extend(mine.iter().filter(|id| sorted.binary_search(id).is_ok()).map(|id| (t, *id)));
             } else {
-                rows.extend(ids.iter().filter(|id| mine.contains(id)).map(|id| (t.to_string(), *id)));
+                rows.extend(ids.iter().filter(|id| mine.contains(id)).map(|id| (t, *id)));
             }
         }
     }
@@ -180,7 +199,8 @@ fn direct(
     }
     tables.sort();
     tables.dedup();
-    let rows: Vec<(String, i64)> = rows.into_iter().collect();
+    let rows: Vec<(String, i64)> = rows.into_iter().map(|(t, id)| (t.to_string(), id)).collect();
+    let tables: Vec<String> = tables.into_iter().map(str::to_string).collect();
     let kind = if rows.iter().any(|(t, id)| gone(t, *id)) {
         ConflictKind::Deleted
     } else if rows.is_empty() && !whole {

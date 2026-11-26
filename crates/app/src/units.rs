@@ -314,29 +314,36 @@ pub fn fmt_fixed(v: f64, decimals: usize) -> String {
     }
 }
 
-/// Display number in the UI language: ru `1 234,5` (no-break groups), en `1,234.5`.
+/// Display number in the UI language: `1,234.5` (en), `1.234,5` (de), `1 234,5` (ru, no-break).
 /// Display only; stored and exported values keep their plain numeric form.
 pub fn fmt_num(v: f64, decimals: usize) -> String {
-    fmt_num_lang(v, decimals, crate::ui_is_ru())
+    fmt_num_lang(v, decimals, crate::ui_lang())
 }
 
-/// Russian-style number whatever the UI language: no-break space groups, decimal comma.
-pub fn fmt_num_ru(v: f64, decimals: usize) -> String {
-    let s = fmt_fixed(v, decimals);
-    let (sign, s) = s.strip_prefix('-').map_or(("", s.as_str()), |r| ("-", r));
-    let (int, frac) = s.split_once('.').unwrap_or((s, ""));
-    let mut g = String::new();
-    for (i, c) in int.chars().enumerate() {
-        if i > 0 && (int.len() - i) % 3 == 0 {
-            g.push('\u{a0}');
-        }
-        g.push(c);
-    }
-    if frac.is_empty() {
-        format!("{sign}{g}")
+pub use ddc_ui::i18n::Lang;
+pub use ddc_ui::widgets::NumberFormat;
+
+/// Language of a caller that still threads the Russian flag instead of a `Lang`.
+pub fn lang_of(ru: bool) -> Lang {
+    if ru {
+        Lang::Ru
     } else {
-        format!("{sign}{g},{frac}")
+        Lang::En
     }
+}
+
+/// Field-safe number style of a decimal mark: comma with no-break space groups, or `1,234.5`.
+/// A point never groups a comma decimal here, so the text reads back with the same mark.
+pub fn mark_format(mark: DecimalMark) -> NumberFormat {
+    match mark {
+        DecimalMark::Comma => NumberFormat { decimal: ',', group: Some('\u{a0}') },
+        DecimalMark::Point => NumberFormat { decimal: '.', group: Some(',') },
+    }
+}
+
+/// Number with a decimal comma and no-break space groups: `1 234,5`.
+pub fn fmt_num_comma(v: f64, decimals: usize) -> String {
+    ddc_ui::widgets::field::format_number(v, decimals, mark_format(DecimalMark::Comma))
 }
 
 /// Decimal places for display: one rule per quantity across the whole application
@@ -379,7 +386,7 @@ pub fn shown_length(m: f64, u: Units, mark: DecimalMark, dec: usize, den: usize)
     match u {
         Units::Metric => {
             let (s, point) = match mark {
-                DecimalMark::Comma => (fmt_num_ru(m * 1000.0, dec), ','),
+                DecimalMark::Comma => (fmt_num_comma(m * 1000.0, dec), ','),
                 DecimalMark::Point => (fmt_num_en(m * 1000.0, dec), '.'),
             };
             if s.contains(point) {
@@ -440,23 +447,9 @@ const FT2: f64 = FOOT * FOOT;
 const IN2: f64 = INCH * INCH;
 const FT3: f64 = FT2 * FOOT;
 
-/// English-style number: «1,234.57».
+/// English-style number: «1,234.57» (imperial quantities keep it in every language).
 pub fn fmt_num_en(v: f64, decimals: usize) -> String {
-    let s = fmt_fixed(v, decimals);
-    let (sign, s) = s.strip_prefix('-').map_or(("", s.as_str()), |r| ("-", r));
-    let (int, frac) = s.split_once('.').unwrap_or((s, ""));
-    let mut g = String::new();
-    for (i, c) in int.chars().enumerate() {
-        if i > 0 && (int.len() - i) % 3 == 0 {
-            g.push(',');
-        }
-        g.push(c);
-    }
-    if frac.is_empty() {
-        format!("{sign}{g}")
-    } else {
-        format!("{sign}{g}.{frac}")
-    }
+    ddc_ui::widgets::field::format_number(v, decimals, mark_format(DecimalMark::Point))
 }
 
 /// Area in the display units of system `u` (m² or ft²) — for table columns and export.
@@ -482,21 +475,17 @@ pub fn fmt_area_in(m2: f64, u: Units) -> String {
 }
 
 pub fn fmt_area_with(m2: f64, u: Units, d: usize, small_in2: bool) -> String {
-    fmt_area_lang(m2, u, d, small_in2, crate::ui_is_ru())
+    fmt_area_lang(m2, u, d, small_in2, crate::ui_lang())
 }
 
 /// Area in the project units for an explicit language (global precision and small-area setting).
-pub fn fmt_area_in_lang(m2: f64, u: Units, ru: bool) -> String {
-    fmt_area_lang(m2, u, precision().0, SMALL_AREA_IN2.load(Relaxed), ru)
+pub fn fmt_area_in_lang(m2: f64, u: Units, lang: Lang) -> String {
+    fmt_area_lang(m2, u, precision().0, SMALL_AREA_IN2.load(Relaxed), lang)
 }
 
-/// Number in the style of the language: ru `1 234,5` (no-break groups), else `1,234.5`.
-pub fn fmt_num_lang(v: f64, d: usize, ru: bool) -> String {
-    if ru {
-        fmt_num_ru(v, d)
-    } else {
-        fmt_num_en(v, d)
-    }
+/// Number in the style of the language (`data/number_formats.json`): `1,234.5`, `1.234,5`, `1 234,5`.
+pub fn fmt_num_lang(v: f64, d: usize, lang: Lang) -> String {
+    ddc_ui::widgets::field::format_number(v, d, NumberFormat::for_lang(lang))
 }
 
 /// Plain fixed-point text (no grouping) with the decimal mark of `mark`, for editable fields.
@@ -509,9 +498,9 @@ pub fn fmt_fixed_mark(v: f64, d: usize, mark: DecimalMark) -> String {
 }
 
 /// As `fmt_area_with`, with the unit name and the number style in an explicit language.
-pub fn fmt_area_lang(m2: f64, u: Units, d: usize, small_in2: bool, ru: bool) -> String {
+pub fn fmt_area_lang(m2: f64, u: Units, d: usize, small_in2: bool, lang: Lang) -> String {
     match u {
-        Units::Metric => format!("{}\u{a0}{}", fmt_num_lang(m2, d, ru), crate::tr_str(ru, "unit_fmt.unit.m2")),
+        Units::Metric => format!("{}\u{a0}{}", fmt_num_lang(m2, d, lang), crate::tr_str_in(lang, "unit_fmt.unit.m2")),
         Units::Imperial if m2.abs() < FT2 && m2 != 0.0 => {
             if small_in2 {
                 format!("{}\u{a0}in²", fmt_num_en(m2 / IN2, d))
@@ -528,13 +517,13 @@ pub fn fmt_area_lang(m2: f64, u: Units, d: usize, small_in2: bool, ru: bool) -> 
 
 /// Volume in system `u`: "1,234 m³" (unit localized) / "43.570 ft³".
 pub fn fmt_volume_in(m3: f64, u: Units) -> String {
-    fmt_volume_lang(m3, u, precision().1, crate::ui_is_ru())
+    fmt_volume_lang(m3, u, precision().1, crate::ui_lang())
 }
 
 /// Volume with `d` decimals and the unit name in an explicit language.
-pub fn fmt_volume_lang(m3: f64, u: Units, d: usize, ru: bool) -> String {
+pub fn fmt_volume_lang(m3: f64, u: Units, d: usize, lang: Lang) -> String {
     match u {
-        Units::Metric => format!("{}\u{a0}{}", fmt_num_lang(m3, d, ru), crate::tr_str(ru, "unit_fmt.unit.m3")),
+        Units::Metric => format!("{}\u{a0}{}", fmt_num_lang(m3, d, lang), crate::tr_str_in(lang, "unit_fmt.unit.m3")),
         Units::Imperial => format!("{}\u{a0}ft³", fmt_num_en(m3 / FT3, d)),
     }
 }
@@ -570,7 +559,7 @@ pub fn edit_length_den_mark(m: f64, u: Units, den: usize, mark: DecimalMark) -> 
         // up to 3 decimals so a sub-mm value survives an untouched field
         Units::Metric => {
             let (s, dec) = match mark {
-                DecimalMark::Comma => (fmt_num_ru(m * 1000.0, 3), ','),
+                DecimalMark::Comma => (fmt_num_comma(m * 1000.0, 3), ','),
                 DecimalMark::Point => (fmt_num_en(m * 1000.0, 3), '.'),
             };
             if s.contains(dec) {
@@ -585,13 +574,13 @@ pub fn edit_length_den_mark(m: f64, u: Units, den: usize, mark: DecimalMark) -> 
 
 /// Unit of length fields goes in a separate column; imperial values carry ' and " themselves.
 pub fn unit_label(u: Units) -> &'static str {
-    unit_label_in(u, crate::ui_is_ru())
+    unit_label_in(u, crate::ui_lang())
 }
 
 /// As `unit_label`, in the language of the caller instead of the global one.
-pub fn unit_label_in(u: Units, ru: bool) -> &'static str {
+pub fn unit_label_in(u: Units, lang: Lang) -> &'static str {
     match u {
-        Units::Metric => crate::tr_str(ru, "unit_fmt.unit.mm"),
+        Units::Metric => crate::tr_str_in(lang, "unit_fmt.unit.mm"),
         Units::Imperial => "",
     }
 }
@@ -757,12 +746,12 @@ pub fn parse_edit_length_in(s: &str, u: Units, sc: &Scope) -> Option<f64> {
 
 /// Percent (slope): "2,0 %".
 pub fn fmt_percent(p: f64) -> String {
-    fmt_percent_lang(p, crate::ui_is_ru())
+    fmt_percent_lang(p, crate::ui_lang())
 }
 
 /// Percent in the number style of the language: «2,0 %» / «2.0 %».
-pub fn fmt_percent_lang(p: f64, ru: bool) -> String {
-    format!("{}\u{a0}%", fmt_num_lang(p, PERCENT_DECIMALS, ru))
+pub fn fmt_percent_lang(p: f64, lang: Lang) -> String {
+    format!("{}\u{a0}%", fmt_num_lang(p, PERCENT_DECIMALS, lang))
 }
 
 #[cfg(test)]
@@ -770,26 +759,71 @@ pub fn fmt_percent_lang(p: f64, ru: bool) -> String {
 fn one_rule_per_quantity_with_locale_separators() {
     // explicit language: other tests may switch the UI language at any time
     let m = Units::Metric;
-    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, true), "1\u{a0}234,57\u{a0}\u{43c}²");
-    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, false), "1,234.57\u{a0}m²");
-    assert_eq!(fmt_volume_lang(0.5, m, 3, true), "0,500\u{a0}\u{43c}³");
-    assert_eq!(fmt_volume_lang(0.5, m, 3, false), "0.500\u{a0}m³");
-    assert_eq!(fmt_percent_lang(2.0, true), "2,0\u{a0}%");
-    assert_eq!(fmt_percent_lang(2.0, false), "2.0\u{a0}%");
-    assert_eq!(fmt_volume_lang(-0.0001, m, 3, true), "0,000\u{a0}\u{43c}³");
+    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, Lang::Ru), "1\u{a0}234,57\u{a0}\u{43c}²");
+    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, Lang::En), "1,234.57\u{a0}m²");
+    assert_eq!(fmt_volume_lang(0.5, m, 3, Lang::Ru), "0,500\u{a0}\u{43c}³");
+    assert_eq!(fmt_volume_lang(0.5, m, 3, Lang::En), "0.500\u{a0}m³");
+    assert_eq!(fmt_percent_lang(2.0, Lang::Ru), "2,0\u{a0}%");
+    assert_eq!(fmt_percent_lang(2.0, Lang::En), "2.0\u{a0}%");
+    assert_eq!(fmt_volume_lang(-0.0001, m, 3, Lang::Ru), "0,000\u{a0}\u{43c}³");
+}
+
+#[cfg(test)]
+#[test]
+fn locale_table_numbers_keep_en_ru_and_follow_cldr_elsewhere() {
+    // the grouping the en/ru output had before the locale table
+    fn old(v: f64, d: usize, g: char, dec: char) -> String {
+        let s = fmt_fixed(v, d);
+        let (sign, s) = s.strip_prefix('-').map_or(("", s.as_str()), |r| ("-", r));
+        let (int, frac) = s.split_once('.').unwrap_or((s, ""));
+        let mut out = String::from(sign);
+        for (i, c) in int.chars().enumerate() {
+            if i > 0 && (int.len() - i) % 3 == 0 {
+                out.push(g);
+            }
+            out.push(c);
+        }
+        if !frac.is_empty() {
+            out.push(dec);
+            out.push_str(frac);
+        }
+        out
+    }
+    for v in [0.0, -0.0001, 0.5, -1.5, 999.999, 1234.5678, -1234567.891, 1e9, f64::NAN] {
+        for d in [0, 1, 2, 3, 6] {
+            assert_eq!(fmt_num_lang(v, d, Lang::En), old(v, d, ',', '.'), "{v} {d}");
+            assert_eq!(fmt_num_lang(v, d, Lang::Ru), old(v, d, '\u{a0}', ','), "{v} {d}");
+            assert_eq!(fmt_num_en(v, d), old(v, d, ',', '.'));
+            assert_eq!(fmt_num_comma(v, d), old(v, d, '\u{a0}', ','));
+        }
+    }
+    let de = Lang::from_code("de");
+    let fr = Lang::from_code("fr");
+    let ja = Lang::from_code("ja");
+    assert_eq!(fmt_num_lang(1234567.891, 2, de), "1.234.567,89");
+    assert_eq!(fmt_num_lang(-0.5, 1, de), "-0,5");
+    assert_eq!(fmt_num_lang(1234.5678, 2, fr), "1\u{202f}234,57");
+    assert_eq!(fmt_num_lang(1234.5678, 2, ja), "1,234.57");
+    let m = Units::Metric;
+    let m2 = crate::tr_str_in(de, "unit_fmt.unit.m2");
+    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, de), format!("1.234,57\u{a0}{m2}"));
+    assert_eq!(fmt_percent_lang(2.0, fr), "2,0\u{a0}%");
+    assert_eq!(display_length_lang(6.0, m, ja), format!("6,000\u{a0}{}", crate::tr_str_in(ja, "unit_fmt.unit.mm")));
+    // imperial quantities stay English-style in every language
+    assert_eq!(fmt_volume_lang(1.0, Units::Imperial, 2, de), fmt_volume_lang(1.0, Units::Imperial, 2, Lang::En));
 }
 
 /// Length with a unit for properties and status: "6 000 mm" (localized) / "19'-8 1/4"".
 pub fn display_length(m: f64, u: Units) -> String {
-    display_length_lang(m, u, crate::ui_is_ru())
+    display_length_lang(m, u, crate::ui_lang())
 }
 
 /// As `display_length`, with the unit name in an explicit language.
-pub fn display_length_lang(m: f64, u: Units, ru: bool) -> String {
+pub fn display_length_lang(m: f64, u: Units, lang: Lang) -> String {
     match u {
         Units::Metric => {
-            let n = fmt_num_lang(m * 1000.0, 0, ru);
-            format!("{n}\u{a0}{}", crate::tr_str(ru, "unit_fmt.unit.mm"))
+            let n = fmt_num_lang(m * 1000.0, 0, lang);
+            format!("{n}\u{a0}{}", crate::tr_str_in(lang, "unit_fmt.unit.mm"))
         }
         Units::Imperial => format_length(m, u),
     }
@@ -838,28 +872,28 @@ mod tests {
     #[test]
     fn display_numbers_grouped_with_units() {
         use super::*;
-        assert_eq!(fmt_num_ru(1234567.891, 2), "1\u{a0}234\u{a0}567,89");
-        assert_eq!(fmt_num_ru(-0.0001, 3), "0,000");
-        assert_eq!(fmt_num_ru(-1500.0, 0), "-1\u{a0}500");
-        assert_eq!(display_length_lang(6.0, Units::Metric, true), "6\u{a0}000\u{a0}\u{43c}\u{43c}");
-        assert_eq!(display_length_lang(0.25, Units::Metric, true), "250\u{a0}\u{43c}\u{43c}");
-        assert_eq!(display_length_lang(0.25, Units::Metric, false), "250\u{a0}mm");
+        assert_eq!(fmt_num_comma(1234567.891, 2), "1\u{a0}234\u{a0}567,89");
+        assert_eq!(fmt_num_comma(-0.0001, 3), "0,000");
+        assert_eq!(fmt_num_comma(-1500.0, 0), "-1\u{a0}500");
+        assert_eq!(display_length_lang(6.0, Units::Metric, Lang::Ru), "6\u{a0}000\u{a0}\u{43c}\u{43c}");
+        assert_eq!(display_length_lang(0.25, Units::Metric, Lang::Ru), "250\u{a0}\u{43c}\u{43c}");
+        assert_eq!(display_length_lang(0.25, Units::Metric, Lang::En), "250\u{a0}mm");
     }
 
     #[test]
     fn display_numbers_follow_the_ui_language() {
         use super::*;
         let (m, mm_ru) = (Units::Metric, "\u{43c}\u{43c}");
-        assert_eq!(display_length_lang(1.2, m, false), "1,200\u{a0}mm");
-        assert_eq!(display_length_lang(1.2, m, true), format!("1\u{a0}200\u{a0}{mm_ru}"));
-        assert_eq!(display_length_lang(-2.0, m, false), "-2,000\u{a0}mm");
-        assert_eq!(display_length_lang(-2.0, m, true), format!("-2\u{a0}000\u{a0}{mm_ru}"));
-        assert_eq!(display_length_lang(1234.5678, m, false), "1,234,568\u{a0}mm");
-        assert_eq!(display_length_lang(0.0004, m, false), "0\u{a0}mm");
-        assert_eq!(fmt_num_lang(1234567.891, 2, false), "1,234,567.89");
-        assert_eq!(fmt_num_lang(1234567.891, 2, true), "1\u{a0}234\u{a0}567,89");
-        assert_eq!(fmt_num_lang(-0.5, 1, false), "-0.5");
-        assert_eq!(fmt_num_lang(-0.5, 1, true), "-0,5");
+        assert_eq!(display_length_lang(1.2, m, Lang::En), "1,200\u{a0}mm");
+        assert_eq!(display_length_lang(1.2, m, Lang::Ru), format!("1\u{a0}200\u{a0}{mm_ru}"));
+        assert_eq!(display_length_lang(-2.0, m, Lang::En), "-2,000\u{a0}mm");
+        assert_eq!(display_length_lang(-2.0, m, Lang::Ru), format!("-2\u{a0}000\u{a0}{mm_ru}"));
+        assert_eq!(display_length_lang(1234.5678, m, Lang::En), "1,234,568\u{a0}mm");
+        assert_eq!(display_length_lang(0.0004, m, Lang::En), "0\u{a0}mm");
+        assert_eq!(fmt_num_lang(1234567.891, 2, Lang::En), "1,234,567.89");
+        assert_eq!(fmt_num_lang(1234567.891, 2, Lang::Ru), "1\u{a0}234\u{a0}567,89");
+        assert_eq!(fmt_num_lang(-0.5, 1, Lang::En), "-0.5");
+        assert_eq!(fmt_num_lang(-0.5, 1, Lang::Ru), "-0,5");
         // property fields and the scale bar now group the same way in each language
         assert_eq!(shown_length(1.2, m, DecimalMark::Point, 0, 8), "1,200");
         assert_eq!(shown_length(1.2, m, DecimalMark::Comma, 0, 8), "1\u{a0}200");
@@ -876,7 +910,7 @@ mod tests {
             assert_eq!(display_length(1.2, m), format!("1\u{a0}200\u{a0}{mm_ru}"));
         });
         // the explicit ru form ignores the UI language
-        crate::with_test_lang(false, || assert_eq!(fmt_num_ru(2500.5, 1), "2\u{a0}500,5"));
+        crate::with_test_lang(false, || assert_eq!(fmt_num_comma(2500.5, 1), "2\u{a0}500,5"));
     }
     #[test]
     fn no_negative_zero() {
@@ -1028,7 +1062,7 @@ mod tests {
 
     #[test]
     fn imperial_area_volume() {
-        assert_eq!(fmt_area_lang(10.0, Metric, 2, false, true), "10,00\u{a0}\u{43c}\u{b2}");
+        assert_eq!(fmt_area_lang(10.0, Metric, 2, false, Lang::Ru), "10,00\u{a0}\u{43c}\u{b2}");
         assert_eq!(fmt_area_in(FT2 * 1234.5, Imperial), "1,234.50\u{a0}ft²");
         assert_eq!(
             fmt_area_with(IN2 * 36.0, Imperial, 2, true),
@@ -1044,7 +1078,7 @@ mod tests {
         close(volume_in_units(FT3 * 7.0, Imperial), 7.0);
         close(area_in_units(7.0, Metric), 7.0);
         assert_eq!(fmt_volume_in(FT3 * 2.0, Imperial), "2.000\u{a0}ft³");
-        assert_eq!(fmt_volume_lang(1.0, Metric, precision().1, true), "1,000\u{a0}\u{43c}\u{b3}");
+        assert_eq!(fmt_volume_lang(1.0, Metric, precision().1, Lang::Ru), "1,000\u{a0}\u{43c}\u{b3}");
     }
 
     #[test]

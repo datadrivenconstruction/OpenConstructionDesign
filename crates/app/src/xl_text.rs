@@ -8,23 +8,11 @@ use std::sync::OnceLock;
 use ddc_io::xlsx::{fill_template, match_template, Proposal};
 use ddc_ui::i18n::Catalog;
 
-#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
-pub enum Lang {
-    #[default]
-    En,
-    Ru,
-}
+pub use ddc_ui::i18n::Lang;
 
 fn cat() -> &'static Catalog {
     static CAT: OnceLock<Catalog> = OnceLock::new();
     CAT.get_or_init(|| Catalog::new(ddc_ui::i18n::Lang::En))
-}
-
-fn ui_lang(l: Lang) -> ddc_ui::i18n::Lang {
-    match l {
-        Lang::En => ddc_ui::i18n::Lang::En,
-        Lang::Ru => ddc_ui::i18n::Lang::Ru,
-    }
 }
 
 /// English entries `(key, text)` whose key starts with `prefix`.
@@ -47,12 +35,12 @@ pub fn is_locked(text: &str) -> bool {
 /// Report text in the UI language; text not from a known template is returned as is.
 pub fn tr(text: &str, lang: Lang) -> String {
     if is_locked(text) {
-        return cat().t_in(ui_lang(lang), "xlw.book_locked");
+        return cat().t_in(lang, "xlw.book_locked");
     }
     if lang == Lang::En {
         return text.to_string();
     }
-    let (c, ul) = (cat(), ui_lang(lang));
+    let (c, ul) = (cat(), lang);
     if let Some(rest) = text.strip_prefix(ddc_io::xlsx::LOSS_PREFIX) {
         return format!("{}{}", c.t_in(ul, "xlloss.refused"), tr_losses(rest, lang));
     }
@@ -89,7 +77,7 @@ pub fn tr_losses(items: &str, lang: Lang) -> String {
 /// Sheet name in the report: the service sheet "(model)" is translated, book sheets stay as in the file.
 pub fn sheet_name(sheet: &str, lang: Lang) -> String {
     if sheet == "(model)" {
-        cat().t_in(ui_lang(lang), "xl.sheet.model")
+        cat().t_in(lang, "xl.sheet.model")
     } else {
         sheet.to_string()
     }
@@ -97,7 +85,7 @@ pub fn sheet_name(sheet: &str, lang: Lang) -> String {
 
 /// One-line description of the project parameter a new column would create.
 pub fn describe(p: &Proposal, lang: Lang) -> String {
-    let (c, ul) = (cat(), ui_lang(lang));
+    let (c, ul) = (cat(), lang);
     let cats: Vec<String> = p.category_keys().into_iter().map(|k| c.t_in(ul, k)).collect();
     let mut ty = c.t_in(ul, p.type_key());
     if !p.spec.unit.is_empty() {
@@ -211,7 +199,7 @@ mod tests {
         let denied = std::io::Error::from(std::io::ErrorKind::PermissionDenied).to_string();
         let c = cat();
         for lang in [Lang::En, Lang::Ru] {
-            let want = c.t_in(ui_lang(lang), "xlw.book_locked");
+            let want = c.t_in(lang, "xlw.book_locked");
             assert_eq!(tr(raw, lang), want);
             assert_eq!(tr(&denied, lang), want);
             assert_eq!(tr("Access is denied. (os error 5)", lang), want);

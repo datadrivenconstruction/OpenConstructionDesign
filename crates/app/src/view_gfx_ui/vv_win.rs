@@ -977,7 +977,7 @@ pub(super) fn styles_window(ctx: &egui::Context, ed: &mut Editor) {
                     answer = conflict_ui(ui, "vv_conflict.styles.conflict");
                 }
                 let row = ui.spacing().interact_size.y;
-                egui::ScrollArea::vertical()
+                let list = egui::ScrollArea::vertical()
                     .id_salt("f5.styles.list")
                     .max_height(row * TABLE_ROWS)
                     .show(ui, |ui| {
@@ -1000,6 +1000,7 @@ pub(super) fn styles_window(ctx: &egui::Context, ed: &mut Editor) {
                                 }
                             });
                     });
+                crate::ui_kit::mark_scroll_viewport(ui.ctx(), list.inner_rect);
                 let changes = style_changes(&st.styles_saved, &st.styles);
                 let nothing = t("view_gfx.vv.nothing_to_apply");
                 // a conflict is answered first: Apply would overwrite the changed styles

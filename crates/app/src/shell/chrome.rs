@@ -51,6 +51,8 @@ pub struct Chrome {
     pub layout_name: String,
     /// The setup wizard (first start, or on demand).
     pub onboard: super::onboard::Wizard,
+    /// The floating rail of the Rail interface mode.
+    pub rail: super::ui_mode::RailState,
 }
 
 #[derive(Debug, Clone, Copy, PartialEq)]

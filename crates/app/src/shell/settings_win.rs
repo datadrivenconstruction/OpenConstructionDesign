@@ -252,6 +252,7 @@ const THEME: K = K("settings.theme", "settings.theme_desc");
 const SCALE: K = K("settings.scale", "settings.scale_desc");
 const DENSITY: K = K("settings.density", "settings.density_desc");
 const RIBBON: K = K("theme.ribbon", "theme.ribbon_desc");
+const UI_MODE: K = K("ui_mode.title", "ui_mode.desc");
 const LOOK: K = K("theme.looks", "theme.looks_desc");
 const ACCENT: K = K("theme.accent", "theme.accent_desc");
 const FONT: K = K("theme.font", "theme.font_desc");
@@ -315,6 +316,7 @@ const ALL_ROWS: &[K] = &[
     THEME,
     SCALE,
     DENSITY,
+    UI_MODE,
     RIBBON,
     XLSX,
     AXES,
@@ -512,6 +514,14 @@ fn appearance(app: &mut EditorApp, ui: &mut egui::Ui, f: &mut Form, out: &mut Ve
         let mut sel = sets.iter().position(|s| s.id == p.icon_set).unwrap_or(0);
         if drop_down(ui, th, "theme.icons", &c.t(ICONS.0), &mut sel, &names) {
             p.icon_set = sets[sel].id.into();
+        }
+    });
+    row_k(ui, th, c, f, UI_MODE, |ui| {
+        use super::ui_mode::UiMode;
+        let names: Vec<String> = UiMode::ALL.iter().map(|m| c.t(&m.label_key())).collect();
+        let mut sel = UiMode::ALL.iter().position(|m| *m == UiMode::of(p)).unwrap_or(0);
+        if drop_down(ui, th, "ui_mode", &c.t(UI_MODE.0), &mut sel, &names) {
+            p.ui_mode = UiMode::ALL[sel].key().into();
         }
     });
     row_k(ui, th, c, f, RIBBON, |ui| {

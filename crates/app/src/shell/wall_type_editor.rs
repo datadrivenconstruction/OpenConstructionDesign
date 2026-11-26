@@ -393,7 +393,7 @@ fn table(
 ) {
     let lang = if ru { Lang::Ru } else { Lang::En };
     let n = d.rows.len();
-    let lu = unit_label_in(d.units, ru);
+    let lu = unit_label_in(d.units, crate::units::lang_of(ru));
     let problems: Vec<Option<&str>> = (0..n).map(|i| d.row_problem(i, ru)).collect();
     let mut ids: Vec<String> = MATERIALS.iter().map(|m| (*m).to_owned()).collect();
     for m in extra.iter().chain(d.rows.iter().map(|r| &r.material)) {
@@ -674,7 +674,7 @@ fn section(ui: &mut egui::Ui, th: &Theme, ru: bool, d: &WallTypeDraft) {
         "{} {} {}",
         crate::tr_str(ru, "wall_type.wt.total"),
         edit_length(tot, d.units),
-        unit_label_in(d.units, ru)
+        unit_label_in(d.units, crate::units::lang_of(ru))
     );
     p.text(
         egui::pos2(inner.center().x, r.bottom() - space::XXS),

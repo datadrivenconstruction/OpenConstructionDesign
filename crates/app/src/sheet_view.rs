@@ -4,6 +4,7 @@
 //! dragging with alignment guides, scale selection, the active viewport with cropping,
 //! the "Sheets" section of the browser, sheet sets, printing a set to PDF (single or per sheet) and DXF.
 
+use crate::doc_lang::doc_lang;
 use crate::ui_kit as kit;
 use std::cell::RefCell;
 use std::rc::Rc;
@@ -31,6 +32,8 @@ use crate::units::Units;
 mod dset;
 #[cfg(test)]
 mod dset_tests;
+#[cfg(test)]
+mod doc_lang_tests;
 mod issue;
 mod print;
 mod print_job;
@@ -40,7 +43,7 @@ mod props;
 mod ux56c_tests;
 
 pub use dset::{
-    build_drawing_set, mark_prefix, marks_to_assign, plan_drawing_set, DsetDialog,
+    build_drawing_set, mark_prefix, marks_to_assign, plan_drawing_set, plan_drawing_set_in, DsetDialog,
 };
 use print::print_window;
 pub use print::{print_to, Print, PrintDone, PrintRun};
@@ -88,10 +91,10 @@ pub struct Sheets {
     pub active: Option<i64>,
     opened: bool,
     cam: Option<(i64, [f64; 2], f32)>,
-    /// Key: (sheet, revision, units, language); labels are formatted in the UI units and language.
-    cache: Option<(i64, (u64, u64), Units, bool, Rc<Composed>)>,
+    /// Key: (sheet, revision, units, document language).
+    cache: Option<(i64, (u64, u64), Units, Lang, Rc<Composed>)>,
     /// Canvas picture built off the UI thread: (sheet, revision, units, language).
-    bg: crate::bg_latest::Latest<(i64, (u64, u64), Units, bool), Composed>,
+    bg: crate::bg_latest::Latest<(i64, (u64, u64), Units, Lang), Composed>,
     /// View bounds without cropping: (viewport, revision); recomputing a view is expensive for a large model.
     crop_cache: Option<(i64, (u64, u64), [f64; 4])>,
     pub sel: Vec<PlacedKind>,
@@ -285,10 +288,15 @@ fn tr(ru: bool, key: &'static str) -> &'static str {
 
 /// Catalog string (`i18n/<lang>/sheets.json`) in the UI language; catalogs are parsed once per thread.
 fn msg(ru: bool, key: &str, args: &[(&str, &str)]) -> String {
+    msg_in(if ru { Lang::Ru } else { Lang::En }, key, args)
+}
+
+/// Catalog string in `lang`, its base language, then English.
+fn msg_in(lang: Lang, key: &str, args: &[(&str, &str)]) -> String {
     thread_local! {
-        static CAT: [Catalog; 2] = [Catalog::new(Lang::En), Catalog::new(Lang::Ru)];
+        static CAT: Vec<Catalog> = Lang::ALL.iter().map(|l| Catalog::new(*l)).collect();
     }
-    CAT.with(|c| c[usize::from(ru)].tf(key, args))
+    CAT.with(|c| c[lang as usize].tf(key, args))
 }
 
 /// Plural catalog string for `n` (`#` is the number) on the UI language.
@@ -310,15 +318,15 @@ pub fn schedule_key(c: Cat) -> String {
     format!("{c:?}").to_lowercase()
 }
 
-/// Model schedule for a sheet: the same columns and format as the schedule window; rooms, doors
-/// and windows of the whole building ([`schedule::build_building`]).
+/// Model schedule for a sheet: the same columns and format as the schedule window, words in the
+/// document language; rooms, doors and windows of the whole building ([`schedule::build_building`]).
 pub fn schedule_table(ed: &Editor, key: &str) -> Option<io::Table> {
     let c = Cat::ALL.into_iter().find(|c| schedule_key(*c) == key)?;
-    let u = ed.tool.units;
-    let tb = schedule::build_building(ed, c);
+    let (u, lang) = (ed.tool.units, doc_lang(&ed.model));
+    let tb = schedule::build_building_in(ed, c, lang);
     Some(io::Table {
-        title: c.title().to_string(),
-        header: tb.cols.iter().map(|k| schedule::header(k, u)).collect(),
+        title: c.title_in(lang),
+        header: tb.cols.iter().map(|k| schedule::header_in(k, u, lang)).collect(),
         rows: tb
             .rows
             .iter()
@@ -353,8 +361,20 @@ fn with_ctx_refs<R>(
     refs: Option<&io::SheetRefs>,
     f: impl FnOnce(&Ctx) -> R,
 ) -> R {
+    with_ctx_in(ed, if ru { Lang::Ru } else { Lang::En }, index, paper, refs, f)
+}
+
+/// Same, the sheet words in any UI language.
+fn with_ctx_in<R>(
+    ed: &Editor,
+    lang: Lang,
+    index: Option<(usize, usize)>,
+    paper: Option<(&str, bool)>,
+    refs: Option<&io::SheetRefs>,
+    f: impl FnOnce(&Ctx) -> R,
+) -> R {
     let sched = |k: &str| schedule_table(ed, k);
-    let text = |k: &str| msg(ru, k, &[]);
+    let text = |k: &str| msg_in(lang, k, &[]);
     let ctx = Ctx {
         units: lu(ed.tool.units),
         schedules: &sched,
@@ -366,19 +386,20 @@ fn with_ctx_refs<R>(
     f(&ctx)
 }
 
-fn composed(st: &mut Sheets, ed: &Editor, ru: bool, id: i64) -> Result<Rc<Composed>, String> {
+fn composed(st: &mut Sheets, ed: &Editor, id: i64) -> Result<Rc<Composed>, String> {
     let key = ed.cache_key();
+    let lang = doc_lang(&ed.model);
     if let Some((s, r, u, l, c)) = &st.cache {
-        if *s == id && *r == key && *u == ed.tool.units && *l == ru {
+        if *s == id && *r == key && *u == ed.tool.units && *l == lang {
             return Ok(c.clone());
         }
     }
-    let c = with_ctx(ed, ru, None, None, |ctx| {
+    let c = with_ctx_in(ed, lang, None, None, None, |ctx| {
         io::compose_sheet(&ed.model, id, ctx)
     })
     .map_err(|e| e.0)?;
     let c = Rc::new(c);
-    st.cache = Some((id, key, ed.tool.units, ru, c.clone()));
+    st.cache = Some((id, key, ed.tool.units, lang, c.clone()));
     Ok(c)
 }
 
@@ -387,15 +408,15 @@ fn composed(st: &mut Sheets, ed: &Editor, ru: bool, id: i64) -> Result<Rc<Compos
 fn composed_live(
     st: &mut Sheets,
     ed: &Editor,
-    ru: bool,
     id: i64,
     repaint: &egui::Context,
 ) -> Result<Arc<Composed>, String> {
-    let key = (id, ed.cache_key(), ed.tool.units, ru);
+    let lang = doc_lang(&ed.model);
+    let key = (id, ed.cache_key(), ed.tool.units, lang);
     st.bg.poll();
-    let same_sheet = st.bg.shown().is_some_and(|s| s.key.0 == id && s.key.2 == key.2 && s.key.3 == ru);
+    let same_sheet = st.bg.shown().is_some_and(|s| s.key.0 == id && s.key.2 == key.2 && s.key.3 == lang);
     if !same_sheet {
-        let c = with_ctx(ed, ru, None, None, |ctx| io::compose_sheet(&ed.model, id, ctx))
+        let c = with_ctx_in(ed, lang, None, None, None, |ctx| io::compose_sheet(&ed.model, id, ctx))
             .map_err(|e| e.0)?;
         return Ok(st.bg.put(key, c));
     }
@@ -414,7 +435,7 @@ fn composed_live(
         let ctx = repaint.clone();
         st.bg.request(key, move |_stop| {
             let sched = |k: &str| tables.get(k).cloned().flatten();
-            let text = |k: &str| msg(ru, k, &[]);
+            let text = |k: &str| msg_in(lang, k, &[]);
             let c = Ctx {
                 units,
                 schedules: &sched,
@@ -664,7 +685,7 @@ fn canvas(ui: &mut egui::Ui, ed: &mut Editor, t: &Tokens, ru: bool, st: &mut She
         st.active = None;
         return;
     };
-    let c = match composed_live(st, ed, ru, id, ui.ctx()) {
+    let c = match composed_live(st, ed, id, ui.ctx()) {
         Ok(c) => c,
         Err(e) => {
             painter.text(
@@ -2543,7 +2564,7 @@ fn cmd_place_sheet_list(app: &mut EditorApp) {
     let ru = app.sh.cat.lang == Lang::Ru;
     let ed = &mut app.ed;
     let paper = paper_of(ed, sheet);
-    let placed: Vec<[f64; 4]> = with(|st| composed(st, ed, ru, sheet))
+    let placed: Vec<[f64; 4]> = with(|st| composed(st, ed, sheet))
         .map(|c| c.placed.iter().map(|p| p.rect).collect())
         .unwrap_or_default();
     let at = free_spot(paper.0, paper.1, &placed);

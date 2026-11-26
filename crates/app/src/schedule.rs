@@ -21,6 +21,8 @@ use crate::units::{
     parse_edit_length_lang, precision, ui_decimal_mark, volume_in_units, DecimalMark, InputError,
     NumError, Units,
 };
+use crate::doc_lang::AsLang;
+use ddc_ui::i18n::Lang;
 use std::cmp::Ordering;
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash)]
@@ -185,8 +187,8 @@ impl Cat {
         crate::tr(&format!("sched.cat.{}", self.key()), &[])
     }
     /// Tab title in the given language.
-    pub fn title_in(self, ru: bool) -> String {
-        tl(ru, &format!("sched.cat.{}", self.key()))
+    pub fn title_in(self, lang: impl AsLang) -> String {
+        tl(lang, &format!("sched.cat.{}", self.key()))
     }
     pub fn index(self) -> usize {
         Cat::ALL.iter().position(|c| *c == self).unwrap_or(0)
@@ -194,16 +196,16 @@ impl Cat {
 }
 
 /// Unit labels are a handful of fixed texts: each is built once per language and kept.
-fn unit_text(ru: bool, key: &'static str) -> &'static str {
+fn unit_text(lang: Lang, key: &'static str) -> &'static str {
     use std::collections::HashMap;
     use std::sync::{Mutex, OnceLock};
-    static CACHE: OnceLock<Mutex<HashMap<(&'static str, bool), &'static str>>> = OnceLock::new();
+    static CACHE: OnceLock<Mutex<HashMap<(&'static str, Lang), &'static str>>> = OnceLock::new();
     let mut m = CACHE
         .get_or_init(|| Mutex::new(HashMap::new()))
         .lock()
         .unwrap_or_else(|e| e.into_inner());
-    *m.entry((key, ru))
-        .or_insert_with(|| Box::leak(tl(ru, key).into_boxed_str()))
+    *m.entry((key, lang))
+        .or_insert_with(|| Box::leak(tl(lang, key).into_boxed_str()))
 }
 
 /// Column quantity: sets display, header unit, total and XLSX format.
@@ -235,15 +237,16 @@ impl Kind {
     }
     /// Unit label in the language of the interface.
     pub fn unit(self, u: Units) -> &'static str {
-        self.unit_in(u, crate::ui_lang_now())
+        self.unit_in(u, crate::ui_lang())
     }
-    pub fn unit_in(self, u: Units, ru: bool) -> &'static str {
+    pub fn unit_in(self, u: Units, lang: impl AsLang) -> &'static str {
+        let l = lang.lang();
         match (self, u) {
-            (Kind::Len, Units::Metric) => unit_text(ru, "sch.unit.mm"),
-            (Kind::Len, Units::Imperial) => unit_text(ru, "sch.unit.ft"),
-            (Kind::Area, Units::Metric) => unit_text(ru, "sch.unit.m2"),
+            (Kind::Len, Units::Metric) => unit_text(l, "sch.unit.mm"),
+            (Kind::Len, Units::Imperial) => unit_text(l, "sch.unit.ft"),
+            (Kind::Area, Units::Metric) => unit_text(l, "sch.unit.m2"),
             (Kind::Area, Units::Imperial) => "ft²",
-            (Kind::Vol, Units::Metric) => unit_text(ru, "sch.unit.m3"),
+            (Kind::Vol, Units::Metric) => unit_text(l, "sch.unit.m3"),
             (Kind::Vol, Units::Imperial) => "ft³",
             (Kind::Pct, _) => "%",
             _ => "",
@@ -271,11 +274,11 @@ pub struct Col {
 }
 
 /// Catalog string in an explicit language (the table builders get `ru` from the caller).
-pub fn tl(ru: bool, key: &str) -> String {
-    use ddc_ui::i18n::{Catalog, Lang};
+pub fn tl(lang: impl AsLang, key: &str) -> String {
+    use ddc_ui::i18n::Catalog;
     static CAT: std::sync::OnceLock<Catalog> = std::sync::OnceLock::new();
     let c = CAT.get_or_init(|| Catalog::new(Lang::En));
-    c.t_in(if ru { Lang::Ru } else { Lang::En }, key)
+    c.t_in(lang.lang(), key)
 }
 
 pub fn col(key: impl Into<String>, title: impl Into<String>, kind: Kind, edit: Edit) -> Col {
@@ -411,17 +414,22 @@ pub fn build(ed: &Editor, cat: Cat) -> Table {
 }
 
 /// Same, with shared columns (phases, parameters) in the UI language (`ru`).
-pub fn build_in(ed: &Editor, cat: Cat, ru: bool) -> Table {
-    build_scoped(ed, cat, ru, false)
+pub fn build_in(ed: &Editor, cat: Cat, ru: impl AsLang) -> Table {
+    build_scoped(ed, cat, ru.lang(), false)
 }
 
 /// The schedule a sheet carries: rooms, doors and windows of every level, lowest level first,
 /// as a building's drawing set lists them; the other categories as on the current level.
 pub fn build_building(ed: &Editor, cat: Cat) -> Table {
-    build_scoped(ed, cat, true, true)
+    build_building_in(ed, cat, crate::doc_lang::doc_lang(&ed.model))
 }
 
-fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
+/// Same, the titles and words in `lang`.
+pub fn build_building_in(ed: &Editor, cat: Cat, lang: Lang) -> Table {
+    build_scoped(ed, cat, lang, true)
+}
+
+fn build_scoped(ed: &Editor, cat: Cat, lang: Lang, building: bool) -> Table {
     use Edit as E;
     use Kind as K;
     let mut cols;
@@ -429,15 +437,15 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
     match cat {
         Cat::Walls => {
             cols = vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("type", tl(ru, "sched.col.type"), K::Text, E::Choice),
-                col("len", tl(ru, "sched.col.length"), K::Len, E::Num),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::Num),
-                col("th", tl(ru, "sched.col.thickness"), K::Len, E::No),
-                col("plan", tl(ru, "sched.col.plan_area"), K::Area, E::No),
-                col("side", tl(ru, "sched.col.side_area"), K::Area, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
-                col("ops", tl(ru, "sched.col.openings"), K::Int, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("type", tl(lang, "sched.col.type"), K::Text, E::Choice),
+                col("len", tl(lang, "sched.col.length"), K::Len, E::Num),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::Num),
+                col("th", tl(lang, "sched.col.thickness"), K::Len, E::No),
+                col("plan", tl(lang, "sched.col.plan_area"), K::Area, E::No),
+                col("side", tl(lang, "sched.col.side_area"), K::Area, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
+                col("ops", tl(lang, "sched.col.openings"), K::Int, E::No),
             ];
             cols[1].choices = ed.types.iter().map(|t| t.name.clone()).collect();
             for w in &ed.walls {
@@ -464,14 +472,14 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
         }
         Cat::Doors | Cat::Windows => {
             cols = vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("mark", tl(ru, "sched.col.mark"), K::Text, E::No),
-                col("wall", tl(ru, "sched.col.wall"), K::Int, E::No),
-                col("w", tl(ru, "sched.col.width"), K::Len, E::Num),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::Num),
-                col("sill", tl(ru, "sched.col.sill"), K::Len, E::Num),
-                col("area", tl(ru, "sched.col.opening_area"), K::Area, E::No),
-                col("along", tl(ru, "sched.col.along"), K::Len, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("mark", tl(lang, "sched.col.mark"), K::Text, E::No),
+                col("wall", tl(lang, "sched.col.wall"), K::Int, E::No),
+                col("w", tl(lang, "sched.col.width"), K::Len, E::Num),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::Num),
+                col("sill", tl(lang, "sched.col.sill"), K::Len, E::Num),
+                col("area", tl(lang, "sched.col.opening_area"), K::Area, E::No),
+                col("along", tl(lang, "sched.col.along"), K::Len, E::No),
             ];
             let door = cat == Cat::Doors;
             let every;
@@ -504,17 +512,17 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
         }
         Cat::Curtains => {
             cols = vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("name", tl(ru, "sched.col.name"), K::Text, E::Text),
-                col("len", tl(ru, "sched.col.length"), K::Len, E::No),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::Num),
-                col("cells", tl(ru, "sched.col.cells"), K::Int, E::No),
-                col("doors", tl(ru, "sched.col.doors"), K::Int, E::No),
-                col("windows", tl(ru, "sched.col.windows"), K::Int, E::No),
-                col("glass", tl(ru, "sched.col.glass_area"), K::Area, E::No),
-                col("panel", tl(ru, "sched.col.panel_area"), K::Area, E::No),
-                col("gross", tl(ru, "sched.col.gross_area"), K::Area, E::No),
-                col("mull", tl(ru, "sched.col.mullion_len"), K::Len, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("name", tl(lang, "sched.col.name"), K::Text, E::Text),
+                col("len", tl(lang, "sched.col.length"), K::Len, E::No),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::Num),
+                col("cells", tl(lang, "sched.col.cells"), K::Int, E::No),
+                col("doors", tl(lang, "sched.col.doors"), K::Int, E::No),
+                col("windows", tl(lang, "sched.col.windows"), K::Int, E::No),
+                col("glass", tl(lang, "sched.col.glass_area"), K::Area, E::No),
+                col("panel", tl(lang, "sched.col.panel_area"), K::Area, E::No),
+                col("gross", tl(lang, "sched.col.gross_area"), K::Area, E::No),
+                col("mull", tl(lang, "sched.col.mullion_len"), K::Len, E::No),
             ];
             for c in &ed.curtains {
                 let q = &c.qty;
@@ -540,15 +548,15 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
         }
         Cat::Panels => {
             cols = vec![
-                col("cw", tl(ru, "sched.col.curtain"), K::Int, E::No),
-                col("cell", tl(ru, "sched.col.cell"), K::Text, E::No),
-                col("kind", tl(ru, "sched.col.panel_kind"), K::Text, E::Choice),
-                col("name", tl(ru, "sched.col.panel_type"), K::Text, E::Text),
-                col("w", tl(ru, "sched.col.width"), K::Len, E::No),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::No),
-                col("area", tl(ru, "sched.col.area"), K::Area, E::No),
+                col("cw", tl(lang, "sched.col.curtain"), K::Int, E::No),
+                col("cell", tl(lang, "sched.col.cell"), K::Text, E::No),
+                col("kind", tl(lang, "sched.col.panel_kind"), K::Text, E::Choice),
+                col("name", tl(lang, "sched.col.panel_type"), K::Text, E::Text),
+                col("w", tl(lang, "sched.col.width"), K::Len, E::No),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::No),
+                col("area", tl(lang, "sched.col.area"), K::Area, E::No),
             ];
-            cols[2].choices = PANEL_KINDS.iter().map(|k| panel_label_in(*k, ru)).collect();
+            cols[2].choices = PANEL_KINDS.iter().map(|k| panel_label_in(*k, lang)).collect();
             for c in &ed.curtains {
                 for (k, cell) in c.layout.layout.cells.iter().enumerate() {
                     let p = c.layout.panels.get(k).cloned().unwrap_or_default();
@@ -559,7 +567,7 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
                         vals: vec![
                             n(c.id as f64),
                             t(format!("{}×{}", cell.i + 1, cell.j + 1)),
-                            t(panel_label_in(p.kind, ru)),
+                            t(panel_label_in(p.kind, lang)),
                             t(p.name),
                             n(cell.width),
                             n(cell.height),
@@ -571,13 +579,13 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
         }
         Cat::Slabs => {
             cols = vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("th", tl(ru, "sched.col.thickness"), K::Len, E::No),
-                col("top", tl(ru, "sched.col.top_offset"), K::Len, E::No),
-                col("slope", tl(ru, "sched.col.slope"), K::Pct, E::Num),
-                col("area", tl(ru, "sched.col.plan_area"), K::Area, E::No),
-                col("surf", tl(ru, "sched.col.surface"), K::Area, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("th", tl(lang, "sched.col.thickness"), K::Len, E::No),
+                col("top", tl(lang, "sched.col.top_offset"), K::Len, E::No),
+                col("slope", tl(lang, "sched.col.slope"), K::Pct, E::Num),
+                col("area", tl(lang, "sched.col.plan_area"), K::Area, E::No),
+                col("surf", tl(lang, "sched.col.surface"), K::Area, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
             ];
             for s in &ed.slabs {
                 rows.push(Row {
@@ -598,13 +606,13 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
         }
         Cat::Rooms => {
             cols = vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("number", tl(ru, "sched.col.number"), K::Text, E::Text),
-                col("name", tl(ru, "sched.col.name"), K::Text, E::Text),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::Num),
-                col("area", tl(ru, "sched.col.area"), K::Area, E::No),
-                col("per", tl(ru, "sched.col.perimeter"), K::Len, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("number", tl(lang, "sched.col.number"), K::Text, E::Text),
+                col("name", tl(lang, "sched.col.name"), K::Text, E::Text),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::Num),
+                col("area", tl(lang, "sched.col.area"), K::Area, E::No),
+                col("per", tl(lang, "sched.col.perimeter"), K::Len, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
             ];
             let db = ed.model.sql();
             let got = db
@@ -645,7 +653,7 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
                 });
             }
         }
-        c => (cols, rows) = cats::build(ed, c, ru),
+        c => (cols, rows) = cats::build(ed, c, lang),
     }
     let mut tb = Table {
         cat,
@@ -654,7 +662,7 @@ fn build_scoped(ed: &Editor, cat: Cat, ru: bool, building: bool) -> Table {
         row_phase: vec![],
         phases: vec![],
     };
-    extra::extend(ed, &mut tb, ru);
+    extra::extend(ed, &mut tb, lang);
     tb
 }
 
@@ -689,7 +697,12 @@ pub fn export_num(x: f64, k: Kind, u: Units) -> f64 {
 }
 
 pub fn header(c: &Col, u: Units) -> String {
-    match c.kind.unit(u) {
+    header_in(c, u, crate::ui_lang())
+}
+
+/// Same, the unit in `lang` (a schedule placed on a sheet: the document language).
+pub fn header_in(c: &Col, u: Units, lang: Lang) -> String {
+    match c.kind.unit_in(u, lang) {
         "" => c.title.to_string(),
         un => format!("{}, {un}", c.title),
     }
@@ -1200,7 +1213,7 @@ pub fn edit_text(v: &Val, k: Kind, u: Units) -> String {
     };
     // ungrouped in English: the field shows what is typed, `typed_num` reads both back
     match crate::units::ui_decimal_mark() {
-        crate::units::DecimalMark::Comma => crate::units::fmt_num_ru(n, d).replace('\u{a0}', " "),
+        crate::units::DecimalMark::Comma => crate::units::fmt_num_comma(n, d).replace('\u{a0}', " "),
         crate::units::DecimalMark::Point => fmt_fixed(n, d),
     }
 }

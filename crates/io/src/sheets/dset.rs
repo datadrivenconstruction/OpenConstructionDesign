@@ -278,6 +278,7 @@ pub(super) fn lone_view(
         units: ctx.units,
         area_unit: Some(area_unit(ctx)),
         logo: None,
+        words: Some(ctx.text),
     };
     let mut dr = compose_styled(&spec, &[])?;
     super::output::plan_view_marks(&mut dr, 0, standard, scale, views)?;

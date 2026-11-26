@@ -9,17 +9,17 @@ use crate::units::{display_length_lang, fmt_area_in_lang, fmt_volume_lang, Units
 /// Length with its unit: «6 000 mm in Russian form» / `6,000 mm` / feet-inches.
 // display_length_lang already writes the English style; a second pass made 6,000 into 6.000
 pub fn len(m: f64, ru: bool, u: Units) -> String {
-    display_length_lang(m, u, ru)
+    display_length_lang(m, u, crate::units::lang_of(ru))
 }
 
 /// Area with its unit: «12,35 m2 in Russian form» / `12.35 m²` / `ft²`.
 pub fn area(m2: f64, ru: bool, u: Units) -> String {
-    fmt_area_in_lang(m2, u, ru)
+    fmt_area_in_lang(m2, u, crate::units::lang_of(ru))
 }
 
 /// Volume with its unit: «1,234 m3 in Russian form» / `1.234 m³` / `ft³`.
 pub fn vol(m3: f64, ru: bool, u: Units) -> String {
-    fmt_volume_lang(m3, u, crate::units::precision().1, ru)
+    fmt_volume_lang(m3, u, crate::units::precision().1, crate::units::lang_of(ru))
 }
 
 /// Area in the active project units and the current UI language.
@@ -51,11 +51,11 @@ pub fn vol_ui_d(m3: f64, d: usize) -> String {
 
 // the formatters already follow `ru` (number style and symbols): no `loc` pass on top
 fn area_d(m2: f64, d: usize, ru: bool, u: Units) -> String {
-    crate::units::fmt_area_lang(m2, u, d, false, ru)
+    crate::units::fmt_area_lang(m2, u, d, false, crate::units::lang_of(ru))
 }
 
 fn vol_d(m3: f64, d: usize, ru: bool, u: Units) -> String {
-    fmt_volume_lang(m3, u, d, ru)
+    fmt_volume_lang(m3, u, d, crate::units::lang_of(ru))
 }
 
 #[cfg(test)]

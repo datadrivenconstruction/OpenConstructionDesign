@@ -14,21 +14,23 @@ pub struct AnnoFmt {
     pub east: String,
 }
 
-pub fn anno_fmt(standard: &str) -> AnnoFmt {
+/// `words` — the document language's catalog (None: the standard's own letters); the decimal
+/// mark stays the standard's drafting convention.
+pub fn anno_fmt(standard: &str, words: Option<&dyn Fn(&str) -> String>) -> AnnoFmt {
     let d = super::data();
     let st = &d["standards"][standard];
     let get = |k: &str, or: &str| st[k].as_str().unwrap_or(or).to_string();
     AnnoFmt {
         sep: get("decimal", "."),
-        north: get("spot_north", "N"),
-        east: get("spot_east", "E"),
+        north: super::std_word(words, standard, "north", &get("spot_north", "N")),
+        east: super::std_word(words, standard, "east", &get("spot_east", "E")),
     }
 }
 
 /// The view is not on a sheet yet — ISO, as for a new sheet.
-pub fn view_anno_fmt(m: &Model, view: AnnoView) -> AnnoFmt {
+pub fn view_anno_fmt(m: &Model, view: AnnoView, words: Option<&dyn Fn(&str) -> String>) -> AnnoFmt {
     let st = m.anno_view_standard(view).ok().flatten();
-    anno_fmt(st.as_deref().unwrap_or("iso"))
+    anno_fmt(st.as_deref().unwrap_or("iso"), words)
 }
 
 /// `tf` — from view coordinates to sheet mm, `scale` — viewport scale denominator.

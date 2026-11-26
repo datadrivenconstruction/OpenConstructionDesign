@@ -425,7 +425,7 @@ impl Run {
         };
         match active {
             Active::Print(mut p) => {
-                if !p.step(ed, ru) {
+                if !p.step(ed) {
                     self.active = Some(Active::Print(p));
                     return;
                 }

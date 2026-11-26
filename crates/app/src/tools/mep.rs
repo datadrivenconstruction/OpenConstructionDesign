@@ -557,8 +557,7 @@ const CONDUIT_DN: [u32; 7] = [16, 20, 25, 32, 40, 50, 63];
 
 /// Size text in the project units: "20 mm" or "0.79 in", the number in the catalog language.
 pub(crate) fn size_label(dn: u32, units: Units, cat: &Catalog) -> String {
-    let ru = cat.lang == Lang::Ru;
-    let num = |v: f64, d: usize| fmt_num_lang(v, d, ru);
+    let num = |v: f64, d: usize| fmt_num_lang(v, d, cat.lang);
     match units {
         Units::Metric => format!("{}\u{a0}{}", num(f64::from(dn), 0), cat.t("mep_units.unit.mm")),
         Units::Imperial => format!("{}\u{a0}{}", num(f64::from(dn) / 25.4, 2), cat.t("mep_units.unit.in")),

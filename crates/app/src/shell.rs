@@ -76,6 +76,7 @@ pub mod settings_win;
 pub mod start_win;
 pub mod status_bar;
 pub mod tasks_ui;
+pub mod ui_mode;
 pub mod load_win;
 mod tree_ux;
 mod browser_rows;
@@ -1203,7 +1204,7 @@ impl EditorApp {
             self.panel_title(ctx, &mut fire);
         }
         if ws.surface == Surface::Ribbon {
-            if let Some(mode) = shown.ribbon {
+            if let Some(mode) = shown.ribbon.filter(|_| self.ui_mode() == ui_mode::UiMode::Ribbon) {
                 self.panel_ribbon(ctx, wc, mode, &mut fire);
             }
         }
@@ -1230,6 +1231,7 @@ impl EditorApp {
         crate::ai::ui::overlay(self, ctx, area);
         crate::quick::frame(self, ctx, area, &mut fire);
         self.panel_overlays(ctx, &ws, area, &t, &mut fire);
+        self.mode_surfaces(ctx, area, &mut fire);
         self.clean_screen_exit(ctx, area);
         let ru = self.sh.cat.lang == ddc_ui::Lang::Ru;
         crate::phase_ui::window(ctx, &mut self.ed, ru);
@@ -1271,6 +1273,9 @@ impl EditorApp {
         match clicked.as_deref() {
             Some(ddc_ui::notify::HISTORY_CMD) => status_bar::open_messages(ctx),
             Some(crate::ai::pin_toast::CMD) => crate::ai::pin_toast::fire(self),
+            Some(c) if c.starts_with(crate::update::CMD_PREFIX) => {
+                crate::update::fire(self, c);
+            }
             Some(c) if ddc_ui::notify::STEP_CMDS.contains(&c) => {
                 // never a plain Ctrl+Z: that would take back whatever edit is on top now
                 if let Some(e) = entry {

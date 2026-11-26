@@ -208,7 +208,7 @@ fn an_l_hip_opened_at_a_valley_corner_reaches_the_model_piece_by_piece() {
     let parts = ddc_gen::project::fire::plane_pieces(&r, &head).expect("the roof opens");
     assert!(parts.iter().any(|q| q.eave.is_some()), "the valley corner hangs on its own eave line");
     let mut ed = editor();
-    super::tests::sql(&ed, "INSERT INTO slab_type(id, name) VALUES(901, 'Roof')");
+    super::tests::sql(&ed, "INSERT INTO slab_type(id, name) VALUES(901, 'Roof'); INSERT INTO slab_type_layer(stype, pos, material, thickness) VALUES(901, 0, 'Concrete', 0.2)");
     let items: Vec<NewElem> = parts
         .iter()
         .map(|q| NewElem::Roof {

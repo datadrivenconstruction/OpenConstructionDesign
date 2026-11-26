@@ -1357,7 +1357,7 @@ pub fn clash_html(
 ) -> String {
     use ddc_io::xlsx::TableCell as C;
     let num = |j: usize, x: f64| match decs.get(j).copied().flatten() {
-        Some(d) => units::fmt_num_lang(x, d, ru),
+        Some(d) => units::fmt_num_lang(x, d, crate::units::lang_of(ru)),
         None => format!("{x}"),
     };
     let mut s = format!(
@@ -2127,7 +2127,7 @@ mod tests {
             for n in 0..r.rows.len() {
                 for j in 4..8 {
                     let (x, d) = (num_at(&r, n, j), r.decs[j].unwrap());
-                    let shown = units::fmt_num_lang(x, d, ru);
+                    let shown = units::fmt_num_lang(x, d, crate::units::lang_of(ru));
                     assert!(h.contains(&format!("<td class=\"n\">{shown}</td>")), "{shown}");
                     let back = units::parse_locale_number(&shown, mark).unwrap();
                     let tol = 0.5 * 10f64.powi(-(d as i32)) + 1e-9;

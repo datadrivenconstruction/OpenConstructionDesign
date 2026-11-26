@@ -74,7 +74,7 @@ pub fn walk_text(speed_mps: f32, units: crate::units::Units, ru: bool) -> (Strin
             (f64::from(speed_mps) / crate::units::FOOT, "v3d.walk.unit.ft")
         }
     };
-    let n = crate::units::fmt_num_lang(v, 1, ru);
+    let n = crate::units::fmt_num_lang(v, 1, crate::units::lang_of(ru));
     (n, key)
 }
 

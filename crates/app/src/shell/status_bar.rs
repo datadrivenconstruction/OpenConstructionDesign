@@ -192,10 +192,9 @@ pub fn fit(width: f32, n: &Need) -> Fit {
 
 /// One coordinate in project units with group separators: «12,346» / «12 346» (mm), «1,250'-6"».
 pub fn fmt_coord(m: f64, u: Units, lang: Lang, den: usize) -> String {
-    let sep = if lang == Lang::Ru { '\u{a0}' } else { ',' };
+    let sep = units::NumberFormat::for_lang(lang).group.unwrap_or(',');
     match u {
-        Units::Metric if lang == Lang::Ru => units::fmt_num_ru(m * 1000.0, 0),
-        Units::Metric => units::fmt_num_en(m * 1000.0, 0),
+        Units::Metric => units::fmt_num_lang(m * 1000.0, 0, lang),
         Units::Imperial => {
             let s = units::format_length_den(m, u, den);
             let Some((ft, rest)) = s.split_once('\'') else {

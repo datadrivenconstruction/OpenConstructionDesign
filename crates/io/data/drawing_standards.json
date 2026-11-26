@@ -18,19 +18,19 @@
       "tag_finish_max_scale": 100, "area_unit": "m²", "decimal": ".", "spot_north": "N", "spot_east": "E",
       "stamp_label_h": 1.8, "stamp_value_h": 2.5, "stamp_min_h": 1.8,
       "stamp": {"w": 180, "h": 36, "cells": [
-        {"x": 0, "y": 27, "w": 45, "h": 9, "label": "Responsible dept.", "field": "department"},
-        {"x": 45, "y": 27, "w": 45, "h": 9, "label": "Technical reference", "field": "tech_ref"},
-        {"x": 90, "y": 27, "w": 45, "h": 9, "label": "Created by", "field": "creator"},
-        {"x": 135, "y": 27, "w": 45, "h": 9, "label": "Approved by", "field": "approver"},
-        {"x": 0, "y": 18, "w": 90, "h": 9, "label": "Document type", "field": "document_type"},
-        {"x": 90, "y": 18, "w": 45, "h": 9, "label": "Document status", "field": "status"},
-        {"x": 135, "y": 18, "w": 45, "h": 9, "label": "Scale", "field": "scale"},
-        {"x": 0, "y": 0, "w": 45, "h": 18, "label": "Legal owner", "field": "legal_owner"},
-        {"x": 45, "y": 0, "w": 90, "h": 18, "label": "Title", "field": "title", "value_h": 5},
-        {"x": 135, "y": 9, "w": 45, "h": 9, "label": "Identification number", "field": "identification"},
-        {"x": 135, "y": 0, "w": 15, "h": 9, "label": "Rev.", "field": "revision"},
-        {"x": 150, "y": 0, "w": 18, "h": 9, "label": "Date of issue", "field": "issue_date"},
-        {"x": 168, "y": 0, "w": 12, "h": 9, "label": "Sheet", "field": "sheet"}
+        {"x": 0, "y": 27, "w": 45, "h": 9, "label": "Responsible dept.", "field": "department", "key": "department"},
+        {"x": 45, "y": 27, "w": 45, "h": 9, "label": "Technical reference", "field": "tech_ref", "key": "tech_ref"},
+        {"x": 90, "y": 27, "w": 45, "h": 9, "label": "Created by", "field": "creator", "key": "creator"},
+        {"x": 135, "y": 27, "w": 45, "h": 9, "label": "Approved by", "field": "approver", "key": "approver"},
+        {"x": 0, "y": 18, "w": 90, "h": 9, "label": "Document type", "field": "document_type", "key": "document_type"},
+        {"x": 90, "y": 18, "w": 45, "h": 9, "label": "Document status", "field": "status", "key": "status"},
+        {"x": 135, "y": 18, "w": 45, "h": 9, "label": "Scale", "field": "scale", "key": "scale"},
+        {"x": 0, "y": 0, "w": 45, "h": 18, "label": "Legal owner", "field": "legal_owner", "key": "legal_owner"},
+        {"x": 45, "y": 0, "w": 90, "h": 18, "label": "Title", "field": "title", "key": "title", "value_h": 5},
+        {"x": 135, "y": 9, "w": 45, "h": 9, "label": "Identification number", "field": "identification", "key": "identification"},
+        {"x": 135, "y": 0, "w": 15, "h": 9, "label": "Rev.", "field": "revision", "key": "revision"},
+        {"x": 150, "y": 0, "w": 18, "h": 9, "label": "Date of issue", "field": "issue_date", "key": "issue_date"},
+        {"x": 168, "y": 0, "w": 12, "h": 9, "label": "Sheet", "field": "sheet", "key": "sheet"}
       ]}
     },
     "gost": {
@@ -48,16 +48,16 @@
       "stamp": {"w": 185, "h": 55, "cells": [
         {"x": 0, "y": 50, "w": 10, "h": 5}, {"x": 10, "y": 50, "w": 10, "h": 5}, {"x": 20, "y": 50, "w": 10, "h": 5}, {"x": 30, "y": 50, "w": 10, "h": 5}, {"x": 40, "y": 50, "w": 15, "h": 5},
         {"x": 55, "y": 50, "w": 10, "h": 5}, {"x": 0, "y": 45, "w": 10, "h": 5}, {"x": 10, "y": 45, "w": 10, "h": 5}, {"x": 20, "y": 45, "w": 10, "h": 5}, {"x": 30, "y": 45, "w": 10, "h": 5},
-        {"x": 40, "y": 45, "w": 15, "h": 5}, {"x": 55, "y": 45, "w": 10, "h": 5}, {"x": 0, "y": 40, "w": 10, "h": 5, "text": "Изм."}, {"x": 10, "y": 40, "w": 10, "h": 5, "text": "Кол.уч."}, {"x": 20, "y": 40, "w": 10, "h": 5, "text": "Лист"},
-        {"x": 30, "y": 40, "w": 10, "h": 5, "text": "№ док."}, {"x": 40, "y": 40, "w": 15, "h": 5, "text": "Подп."}, {"x": 55, "y": 40, "w": 10, "h": 5, "text": "Дата"}, {"x": 0, "y": 35, "w": 20, "h": 5, "text": "Разраб."}, {"x": 20, "y": 35, "w": 20, "h": 5, "field": "developer"},
-        {"x": 40, "y": 35, "w": 15, "h": 5}, {"x": 55, "y": 35, "w": 10, "h": 5, "field": "date"}, {"x": 0, "y": 30, "w": 20, "h": 5, "text": "Пров."}, {"x": 20, "y": 30, "w": 20, "h": 5, "field": "checker"}, {"x": 40, "y": 30, "w": 15, "h": 5},
-        {"x": 55, "y": 30, "w": 10, "h": 5}, {"x": 0, "y": 25, "w": 20, "h": 5, "text": "ГИП"}, {"x": 20, "y": 25, "w": 20, "h": 5, "field": "chief"}, {"x": 40, "y": 25, "w": 15, "h": 5}, {"x": 55, "y": 25, "w": 10, "h": 5},
+        {"x": 40, "y": 45, "w": 15, "h": 5}, {"x": 55, "y": 45, "w": 10, "h": 5}, {"x": 0, "y": 40, "w": 10, "h": 5, "text": "Изм.", "key": "rev"}, {"x": 10, "y": 40, "w": 10, "h": 5, "text": "Кол.уч.", "key": "qty"}, {"x": 20, "y": 40, "w": 10, "h": 5, "text": "Лист", "key": "sheet"},
+        {"x": 30, "y": 40, "w": 10, "h": 5, "text": "№ док.", "key": "doc_no"}, {"x": 40, "y": 40, "w": 15, "h": 5, "text": "Подп.", "key": "sign"}, {"x": 55, "y": 40, "w": 10, "h": 5, "text": "Дата", "key": "date"}, {"x": 0, "y": 35, "w": 20, "h": 5, "text": "Разраб.", "key": "developed"}, {"x": 20, "y": 35, "w": 20, "h": 5, "field": "developer"},
+        {"x": 40, "y": 35, "w": 15, "h": 5}, {"x": 55, "y": 35, "w": 10, "h": 5, "field": "date"}, {"x": 0, "y": 30, "w": 20, "h": 5, "text": "Пров.", "key": "checked"}, {"x": 20, "y": 30, "w": 20, "h": 5, "field": "checker"}, {"x": 40, "y": 30, "w": 15, "h": 5},
+        {"x": 55, "y": 30, "w": 10, "h": 5}, {"x": 0, "y": 25, "w": 20, "h": 5, "text": "ГИП", "key": "chief"}, {"x": 20, "y": 25, "w": 20, "h": 5, "field": "chief"}, {"x": 40, "y": 25, "w": 15, "h": 5}, {"x": 55, "y": 25, "w": 10, "h": 5},
         {"x": 0, "y": 20, "w": 20, "h": 5}, {"x": 20, "y": 20, "w": 20, "h": 5}, {"x": 40, "y": 20, "w": 15, "h": 5}, {"x": 55, "y": 20, "w": 10, "h": 5}, {"x": 0, "y": 15, "w": 20, "h": 5},
-        {"x": 20, "y": 15, "w": 20, "h": 5}, {"x": 40, "y": 15, "w": 15, "h": 5}, {"x": 55, "y": 15, "w": 10, "h": 5}, {"x": 0, "y": 10, "w": 20, "h": 5, "text": "Н.контр."}, {"x": 20, "y": 10, "w": 20, "h": 5, "field": "norm_control"},
-        {"x": 40, "y": 10, "w": 15, "h": 5}, {"x": 55, "y": 10, "w": 10, "h": 5}, {"x": 0, "y": 5, "w": 20, "h": 5, "text": "Утв."}, {"x": 20, "y": 5, "w": 20, "h": 5, "field": "approver"}, {"x": 40, "y": 5, "w": 15, "h": 5},
+        {"x": 20, "y": 15, "w": 20, "h": 5}, {"x": 40, "y": 15, "w": 15, "h": 5}, {"x": 55, "y": 15, "w": 10, "h": 5}, {"x": 0, "y": 10, "w": 20, "h": 5, "text": "Н.контр.", "key": "norm_control"}, {"x": 20, "y": 10, "w": 20, "h": 5, "field": "norm_control"},
+        {"x": 40, "y": 10, "w": 15, "h": 5}, {"x": 55, "y": 10, "w": 10, "h": 5}, {"x": 0, "y": 5, "w": 20, "h": 5, "text": "Утв.", "key": "approved"}, {"x": 20, "y": 5, "w": 20, "h": 5, "field": "approver"}, {"x": 40, "y": 5, "w": 15, "h": 5},
         {"x": 55, "y": 5, "w": 10, "h": 5}, {"x": 0, "y": 0, "w": 20, "h": 5}, {"x": 20, "y": 0, "w": 20, "h": 5}, {"x": 40, "y": 0, "w": 15, "h": 5}, {"x": 55, "y": 0, "w": 10, "h": 5},
-        {"x": 65, "y": 40, "w": 120, "h": 15, "field": "designation", "value_h": 5}, {"x": 65, "y": 30, "w": 120, "h": 10, "field": "object", "value_h": 3.5}, {"x": 65, "y": 15, "w": 70, "h": 15, "field": "building", "value_h": 3.5}, {"x": 135, "y": 25, "w": 15, "h": 5, "text": "Стадия"}, {"x": 150, "y": 25, "w": 15, "h": 5, "text": "Лист"},
-        {"x": 165, "y": 25, "w": 20, "h": 5, "text": "Листов"}, {"x": 135, "y": 15, "w": 15, "h": 10, "field": "stage"}, {"x": 150, "y": 15, "w": 15, "h": 10, "field": "sheet"}, {"x": 165, "y": 15, "w": 20, "h": 10, "field": "sheets"}, {"x": 65, "y": 0, "w": 70, "h": 15, "field": "title", "value_h": 3.5},
+        {"x": 65, "y": 40, "w": 120, "h": 15, "field": "designation", "value_h": 5}, {"x": 65, "y": 30, "w": 120, "h": 10, "field": "object", "value_h": 3.5}, {"x": 65, "y": 15, "w": 70, "h": 15, "field": "building", "value_h": 3.5}, {"x": 135, "y": 25, "w": 15, "h": 5, "text": "Стадия", "key": "stage"}, {"x": 150, "y": 25, "w": 15, "h": 5, "text": "Лист", "key": "sheet"},
+        {"x": 165, "y": 25, "w": 20, "h": 5, "text": "Листов", "key": "sheets"}, {"x": 135, "y": 15, "w": 15, "h": 10, "field": "stage"}, {"x": 150, "y": 15, "w": 15, "h": 10, "field": "sheet"}, {"x": 165, "y": 15, "w": 20, "h": 10, "field": "sheets"}, {"x": 65, "y": 0, "w": 70, "h": 15, "field": "title", "value_h": 3.5},
         {"x": 135, "y": 0, "w": 50, "h": 15, "field": "organization", "value_h": 3.5}
       ]}
     }

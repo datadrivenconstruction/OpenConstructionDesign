@@ -12,7 +12,7 @@ use crate::shell::EditorApp;
 use crate::units::{self, Units};
 use ddc_model::checks::norm_kinds::PackCtx;
 use ddc_model::checks::norms::{
-    findings_json_for, pack_norm_rules, run_norms, run_pack_norms, starter_pack, NormFinding, NormRule,
+    findings_json_for, pack_norm_rules, run_norms, run_pack_norms, text_key, STARTER_PACK_ID, NormFinding, NormRule,
 };
 use ddc_model::checks::{CheckScope, Severity};
 use ddc_model::checks::norm_pack::{country_for_locale, nearest_pack, NormPack, PackSet};
@@ -73,15 +73,11 @@ pub struct Norms {
 
 impl Default for Norms {
     fn default() -> Self {
-        let (rules, load_error) = match starter_pack() {
-            Ok(r) => (r, None),
-            Err(e) => (vec![], Some(e.to_string())),
-        };
-        Norms {
+        let mut n = Norms {
             ran: false,
             failed: false,
-            rules,
-            load_error,
+            rules: vec![],
+            load_error: None,
             missing: vec![],
             findings: vec![],
             hidden: [false; 3],
@@ -94,7 +90,10 @@ impl Default for Norms {
             locale: NormLocale::default(),
             auto_pack: String::new(),
             chosen: None,
-        }
+        };
+        // pack rows are judged by the pack checker, so the starter pack is the chosen one
+        n.refresh_chosen(STARTER_PACK_ID);
+        n
     }
 }
 
@@ -125,6 +124,15 @@ impl Norms {
     #[cfg(test)]
     pub(crate) fn ran_on(m: &Model) -> Self {
         let mut n = Norms::default();
+        n.run(m);
+        n
+    }
+
+    /// Runs `pack` on `m`, for fixtures that need a country pack's rules.
+    #[cfg(test)]
+    pub(crate) fn ran_with(m: &Model, pack: &str) -> Self {
+        let mut n = Norms::default();
+        n.refresh_chosen(pack);
         n.run(m);
         n
     }
@@ -440,7 +448,7 @@ fn row(
     hot: &mut Option<Vec<ElKey>>,
 ) {
     let (tone, key) = tone_of(f.severity);
-    let title = r.title(cat.lang == Lang::Ru).to_string();
+    let title = rule_title(cat, r);
     let values = values_text(cat, f, u);
     let target = Target {
         elements: &f.elements,
@@ -507,6 +515,37 @@ fn row(
     );
 }
 
+/// Rule title in the catalog language: the pack's inline text, then the locale bundle
+/// (`norm_rule.<id>`), each along the language chain; English from the pack otherwise.
+pub(crate) fn rule_title(cat: &Catalog, r: &NormRule) -> String {
+    let key = text_key(r.id());
+    cat.lang
+        .chain()
+        .take_while(|l| *l != Lang::En)
+        .find_map(|l| {
+            r.title_in(l.code())
+                .map(str::to_string)
+                .or_else(|| cat.table(l).get(&key).and_then(|v| v.as_str()).map(str::to_string))
+        })
+        .unwrap_or_else(|| r.title().to_string())
+}
+
+/// `rules` with the catalog-language title added inline, so an export carries it.
+fn localized(cat: &Catalog, rules: &[NormRule]) -> Vec<NormRule> {
+    let code = cat.lang.code();
+    rules
+        .iter()
+        .map(|r| {
+            let mut r = r.clone();
+            let t = rule_title(cat, &r);
+            if cat.lang != Lang::En && t != r.title() {
+                r.titles.insert(code.to_string(), t);
+            }
+            r
+        })
+        .collect()
+}
+
 fn severity_label(cat: &Catalog, s: Severity) -> String {
     cat.t(tone_of(s).1)
 }
@@ -532,7 +571,6 @@ pub fn sheet_rows(
     .iter()
     .map(|k| cat.t(k))
     .collect();
-    let ru = cat.lang == Lang::Ru;
     let rows = findings
         .iter()
         .filter_map(|f| {
@@ -540,7 +578,7 @@ pub fn sheet_rows(
             Some(vec![
                 Cell::Text(severity_label(cat, f.severity)),
                 Cell::Text(r.id().to_string()),
-                Cell::Text(r.title(ru).to_string()),
+                Cell::Text(rule_title(cat, r)),
                 Cell::Text(r.doc.clone()),
                 Cell::Text(f.clause_of(r).to_string()),
                 Cell::Text(cat.t(if r.example { "norms.yes" } else { "norms.no" })),
@@ -617,7 +655,7 @@ fn export(app: &mut EditorApp, nm: &Norms, d: Do) -> Result<bool, String> {
     };
     match d {
         Do::Xlsx => write_xlsx(&app.sh.cat, &nm.rules, &nm.findings, nm.chosen.as_ref(), &path)?,
-        Do::Json => write_json(&nm.rules, &nm.findings, nm.chosen.as_ref(), &path)?,
+        Do::Json => write_json(&localized(&app.sh.cat, &nm.rules), &nm.findings, nm.chosen.as_ref(), &path)?,
         _ => {}
     }
     Ok(true)
@@ -800,9 +838,30 @@ mod tests {
     }
 
     #[test]
+    fn rule_titles_come_from_the_locale_bundle_with_english_fallback() {
+        let (en, ru, fr) = (Catalog::new(Lang::En), Catalog::new(Lang::Ru), Catalog::new(Lang::Fr));
+        for id in shipped_packs().ids() {
+            let p = shipped_packs().resolve(id).unwrap();
+            for r in pack_norm_rules(&p) {
+                let key = text_key(r.id());
+                // the English bundle is the translation source: it must match the pack text
+                assert_eq!(en.table(Lang::En).get(&key).and_then(|v| v.as_str()), Some(r.title()), "{key}");
+                assert_eq!(rule_title(&en, &r), r.title());
+                assert_ne!(rule_title(&ru, &r), r.title(), "{key} has a translation");
+                let want = fr.table(Lang::Fr).get(&key).and_then(|v| v.as_str()).unwrap_or(r.title());
+                assert_eq!(rule_title(&fr, &r), want);
+            }
+        }
+        // an inline title of an older or user pack wins over the bundle
+        let mut r = pack_norm_rules(&shipped_packs().resolve("ru").unwrap()).remove(0);
+        r.titles.insert("ru".into(), "inline".into());
+        assert_eq!(rule_title(&ru, &r), "inline");
+    }
+
+    #[test]
     fn rows_follow_the_catalog_language_and_carry_the_clause() {
         let m = model_with_narrow_door();
-        let nm = Norms::ran_on(&m);
+        let nm = Norms::ran_with(&m, "ru");
         assert!(!nm.findings.is_empty());
         let en = Catalog::new(Lang::En);
         let ru = Catalog::new(Lang::Ru);
@@ -843,7 +902,7 @@ mod tests {
     #[test]
     fn exports_write_xlsx_and_json() {
         let m = model_with_narrow_door();
-        let nm = Norms::ran_on(&m);
+        let nm = Norms::ran_with(&m, "ru");
         let dir = std::env::temp_dir().join(format!("ddc_chk1_{}", std::process::id()));
         std::fs::create_dir_all(&dir).unwrap();
         let (x, j) = (dir.join("f.xlsx"), dir.join("f.json"));
@@ -929,7 +988,7 @@ mod tests {
     #[test]
     fn export_is_repeatable() {
         let m = model_with_narrow_door();
-        let (a, b) = (Norms::ran_on(&m), Norms::ran_on(&m));
+        let (a, b) = (Norms::ran_with(&m, "ru"), Norms::ran_with(&m, "ru"));
         assert_eq!(a.findings, b.findings);
     }
 
@@ -962,8 +1021,8 @@ mod tests {
                 ..Norms::default()
             };
             let mut clean = Norms::ran_on(&Model::open(":memory:").unwrap());
-            let mut found = Norms::ran_on(&m);
-            let mut filtered = Norms::ran_on(&m);
+            let mut found = Norms::ran_with(&m, "ru");
+            let mut filtered = Norms::ran_with(&m, "ru");
             filtered.hidden = [true, true, false];
             for nm in [
                 &mut never,
@@ -1000,7 +1059,7 @@ mod tests {
     #[test]
     fn severity_filter_hides_rows() {
         let m = model_with_narrow_door();
-        let mut nm = Norms::ran_on(&m);
+        let mut nm = Norms::ran_with(&m, "ru");
         let all = nm.shown().count();
         nm.hidden[sev_index(Severity::Error)] = true;
         assert!(nm.shown().count() < all);

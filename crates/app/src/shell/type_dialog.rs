@@ -552,7 +552,7 @@ impl TypeDraft {
             value: v,
             unit: unit.into(),
         };
-        let lu = crate::units::unit_label_in(u, ru);
+        let lu = crate::units::unit_label_in(u, crate::units::lang_of(ru));
         match self.fam {
             Fam::Wall | Fam::Slab => {
                 let tot = self.total(u).map_or("—".into(), |t| edit_length(t, u));
@@ -879,7 +879,7 @@ pub fn window(
             let types = types_of(&ed.model, d.fam);
             let type_items: Vec<&str> = types.iter().map(|t| t.1.as_str()).collect();
             let vw = layout::PROP_VALUE * 2.0;
-            let lu = crate::units::unit_label_in(u, ru);
+            let lu = crate::units::unit_label_in(u, crate::units::lang_of(ru));
             let rows = d.params(&ed.model, u, ru);
             let (l_fam, l_type, l_name) = (
                 crate::tr_str(ru, "type_dialog.typedial.family"),
@@ -1213,7 +1213,7 @@ fn structure(
         .iter()
         .map(|l| (l.material.clone(), parse_edit_length(&l.thickness, u).unwrap_or(0.0)))
         .collect();
-    let lu = crate::units::unit_label_in(u, ru);
+    let lu = crate::units::unit_label_in(u, crate::units::lang_of(ru));
     let avail = ui.available_width();
     egui::Frame::new()
         .fill(th.c("bg.sunken"))

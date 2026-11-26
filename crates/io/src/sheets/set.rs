@@ -797,6 +797,7 @@ pub fn compose_sheet(m: &Model, id: i64, ctx: &Ctx) -> Result<Composed, SheetErr
         units: ctx.units,
         area_unit: Some(area_unit(ctx)),
         logo: project_logo(m),
+        words: Some(ctx.text),
     };
     let styles: Vec<Option<ViewStyle>> = vps
         .iter()
@@ -982,7 +983,7 @@ pub fn compose_sheet(m: &Model, id: i64, ctx: &Ctx) -> Result<Composed, SheetErr
             &view,
             lp.pos,
             scale,
-            &super::anno::anno_fmt(&s.standard),
+            &super::anno::anno_fmt(&s.standard, Some(ctx.text)),
         );
         let (b, k) = (view.bbox, 1000.0 / scale);
         placed.push(Placed {
@@ -1735,7 +1736,7 @@ mod tests {
     #[test]
     fn annotation_format_and_legend_position_come_from_the_standard() {
         use super::super::{anno_fmt, legend_default_pos, paper_size};
-        let (iso, gost) = (anno_fmt("iso"), anno_fmt("gost"));
+        let (iso, gost) = (anno_fmt("iso", None), anno_fmt("gost", None));
         assert_eq!(
             (iso.sep.as_str(), iso.north.as_str(), iso.east.as_str()),
             (".", "N", "E")

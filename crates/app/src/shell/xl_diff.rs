@@ -925,7 +925,7 @@ pub(super) fn shown_in(sheet: &str, column: &str, v: &str, ru: bool, u: crate::u
     }
     // num-lint: raw book cell in metres, machine format (as xlsx_win::shown_value)
     match v.trim().parse::<f64>() {
-        Ok(m) => crate::units::display_length_lang(m, u, ru),
+        Ok(m) => crate::units::display_length_lang(m, u, crate::units::lang_of(ru)),
         Err(_) => v.to_string(),
     }
 }
@@ -1208,7 +1208,7 @@ mod tests {
         assert_eq!(crate::tr_str(false, "xlsx_delete.unit_ft_in"), "ft-in");
         assert_ne!(crate::tr_str(true, "xlsx_delete.unit_ft_in"), "xlsx_delete.unit_ft_in");
         // the header unit is the unit of the value beside it
-        let v = crate::units::display_length_lang(3.2, Units::Metric, false);
+        let v = crate::units::display_length_lang(3.2, Units::Metric, ddc_ui::i18n::Lang::En);
         let (_, unit) = super::super::xlsx_head::split_unit(&v);
         assert!(column_head("Walls", "height [m]", false, Units::Metric).ends_with(&format!("[{unit}]")));
         // the table cell carries the raw book header as its tooltip
@@ -1299,7 +1299,7 @@ mod tests {
             let head = s.cell_text(&cx, 0, 4).text;
             for (col, metres) in [(5, 3.0), (6, 3.2)] {
                 let c = s.cell_text(&cx, 0, col);
-                let want = crate::units::display_length_lang(metres, u, ru);
+                let want = crate::units::display_length_lang(metres, u, crate::units::lang_of(ru));
                 let (num, unit) = super::super::xlsx_head::split_unit(&want);
                 assert_eq!((c.text.as_str(), c.unit.as_str()), (num, unit), "{lang:?} col {col}");
                 if !unit.is_empty() {
@@ -1343,7 +1343,7 @@ mod tests {
             };
             let mut unit_left = vec![];
             for metres in [3.0, 3.2] {
-                let shown = crate::units::display_length_lang(metres, u, ru);
+                let shown = crate::units::display_length_lang(metres, u, crate::units::lang_of(ru));
                 let (num, unit) = super::super::xlsx_head::split_unit(&shown);
                 let n = span(num);
                 // the same unit is painted in both columns: take the one beside this number

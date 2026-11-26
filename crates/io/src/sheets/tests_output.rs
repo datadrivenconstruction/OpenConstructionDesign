@@ -65,6 +65,9 @@ fn long(rows: usize) -> impl Fn(&str) -> Option<Table> {
 /// Catalog strings seen by the assembly tests (file `i18n/ru/sheets_issue.json` lives in the UI crate).
 pub(super) fn ru_text(k: &str) -> String {
     // the strings live in tests/data/ru_fixtures.tsv under `cat.<key>`; a missing key panics
+    if k.starts_with("sheets.std.") {
+        return k.to_string(); // not in the catalog: the standard's own words
+    }
     let key = k.strip_prefix("sheets.paper.").unwrap_or(k);
     ru(&format!("cat.{key}")).to_string()
 }

@@ -47,9 +47,9 @@ fn sched() -> PanelSchedule {
 }
 
 #[test]
-fn schedule_table_in_both_languages_has_no_raw_keys() {
+fn schedule_table_in_every_language_has_no_raw_keys() {
     let s = sched();
-    for lang in [Lang::En, Lang::Ru] {
+    for lang in Lang::ALL.iter().copied() {
         let (head, rows) = schedule_table(&Catalog::new(lang), &s);
         assert_eq!(head.len(), 15);
         assert_eq!(rows.len(), 3, "two circuits and the total");

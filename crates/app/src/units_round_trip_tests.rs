@@ -107,7 +107,7 @@ fn plain_numbers_with_groups_read_back_in_their_mark() {
     for d in 0..=6usize {
         let tol = 0.5 * 10f64.powi(-(d as i32)) * 1.0001;
         for v in VALUES {
-            let ru = fmt_num_ru(v, d);
+            let ru = fmt_num_comma(v, d);
             let en = fmt_num_en(v, d);
             let a = parse_locale_number(&ru, DecimalMark::Comma).unwrap_or_else(|e| panic!("{ru:?}: {e:?}"));
             let b = parse_locale_number(&en, DecimalMark::Point).unwrap_or_else(|e| panic!("{en:?}: {e:?}"));
@@ -133,7 +133,7 @@ fn point_text_without_groups_reads_in_both_marks() {
 fn display_length_number_part_reads_back() {
     for ru in [true, false] {
         for v in VALUES {
-            let s = display_length_lang(v, Units::Metric, ru);
+            let s = display_length_lang(v, Units::Metric, crate::units::lang_of(ru));
             let (num, _unit) = s.rsplit_once('\u{a0}').unwrap();
             // the number part is whole millimetres in the language's own number style
             let mark = if ru { DecimalMark::Comma } else { DecimalMark::Point };
@@ -157,7 +157,7 @@ fn area_volume_percent_number_part_reads_back() {
             for small_in2 in [false, true] {
                 for d in [2usize, 3] {
                     for v in VALUES.into_iter().chain([0.05, -0.05]) {
-                        let a = fmt_area_lang(v, u, d, small_in2, ru);
+                        let a = fmt_area_lang(v, u, d, small_in2, crate::units::lang_of(ru));
                         let (num, unit) = a.rsplit_once('\u{a0}').unwrap();
                         // number style follows the language (imperial is English-style always)
                         let mark = if u == Units::Metric && ru { DecimalMark::Comma } else { DecimalMark::Point };
@@ -166,7 +166,7 @@ fn area_volume_percent_number_part_reads_back() {
                         let tol = 0.5 * 10f64.powi(-shown_decimals(num, mark)) * 1.0001;
                         assert!(near(got, want, tol), "{v} -> {a:?} -> {got} want {want}");
 
-                        let m = fmt_volume_lang(v, u, d, ru);
+                        let m = fmt_volume_lang(v, u, d, crate::units::lang_of(ru));
                         let (num, _) = m.rsplit_once('\u{a0}').unwrap();
                         let got = parse_locale_number(num, mark).unwrap_or_else(|e| panic!("{m:?}: {e:?}"));
                         let tol = 0.5 * 10f64.powi(-shown_decimals(num, mark)) * 1.0001;
@@ -178,7 +178,7 @@ fn area_volume_percent_number_part_reads_back() {
     }
     for p in [0.0, -0.5, 2.0, 12.34, 1234.5] {
         for (ru, mark) in [(true, DecimalMark::Comma), (false, DecimalMark::Point)] {
-            let s = fmt_percent_lang(p, ru);
+            let s = fmt_percent_lang(p, crate::units::lang_of(ru));
             let (num, _) = s.rsplit_once('\u{a0}').unwrap();
             let got = parse_locale_number(num, mark).unwrap();
             assert!(near(got, p, 0.05 * 1.0001), "{p} -> {s:?} -> {got}");
@@ -189,15 +189,15 @@ fn area_volume_percent_number_part_reads_back() {
 #[test]
 fn metric_area_volume_percent_follow_language() {
     let m = Units::Metric;
-    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, true), "1\u{a0}234,57\u{a0}\u{43c}\u{b2}");
-    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, false), "1,234.57\u{a0}m\u{b2}");
-    assert_eq!(fmt_volume_lang(1234.5678, m, 3, true), "1\u{a0}234,568\u{a0}\u{43c}\u{b3}");
-    assert_eq!(fmt_volume_lang(1234.5678, m, 3, false), "1,234.568\u{a0}m\u{b3}");
-    assert_eq!(fmt_percent_lang(1234.5, true), "1\u{a0}234,5\u{a0}%");
-    assert_eq!(fmt_percent_lang(1234.5, false), "1,234.5\u{a0}%");
+    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, ddc_ui::i18n::Lang::Ru), "1\u{a0}234,57\u{a0}\u{43c}\u{b2}");
+    assert_eq!(fmt_area_lang(1234.5678, m, 2, false, ddc_ui::i18n::Lang::En), "1,234.57\u{a0}m\u{b2}");
+    assert_eq!(fmt_volume_lang(1234.5678, m, 3, ddc_ui::i18n::Lang::Ru), "1\u{a0}234,568\u{a0}\u{43c}\u{b3}");
+    assert_eq!(fmt_volume_lang(1234.5678, m, 3, ddc_ui::i18n::Lang::En), "1,234.568\u{a0}m\u{b3}");
+    assert_eq!(fmt_percent_lang(1234.5, ddc_ui::i18n::Lang::Ru), "1\u{a0}234,5\u{a0}%");
+    assert_eq!(fmt_percent_lang(1234.5, ddc_ui::i18n::Lang::En), "1,234.5\u{a0}%");
     // imperial is unchanged by the language
     for ru in [true, false] {
-        assert_eq!(fmt_area_lang(10.0, Units::Imperial, 2, false, ru), "107.64\u{a0}ft\u{b2}");
+        assert_eq!(fmt_area_lang(10.0, Units::Imperial, 2, false, crate::units::lang_of(ru)), "107.64\u{a0}ft\u{b2}");
     }
 }
 

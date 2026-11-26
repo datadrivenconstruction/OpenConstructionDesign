@@ -5,6 +5,7 @@
 
 use super::{col, Cat, Edit as E, Kind as K, Row, Table, Val};
 use crate::editor::cw::panel_kind_parse;
+use crate::doc_lang::AsLang;
 use crate::editor::sched_ops::{CatBatch, CatEdit, Reason};
 use crate::editor::{Editor, OpFn};
 use crate::expr_field::Scope;
@@ -41,7 +42,7 @@ pub fn param_kind(t: ParamType) -> (K, E) {
     }
 }
 
-pub fn param_title(d: &ParamDef, ru: bool) -> String {
+pub fn param_title(d: &ParamDef, ru: impl AsLang) -> String {
     let mut s = d.spec.name.clone();
     if d.spec.ptype == ParamType::Number && !d.spec.unit.trim().is_empty() {
         s += &format!(", {}", d.spec.unit.trim());
@@ -52,11 +53,11 @@ pub fn param_title(d: &ParamDef, ru: bool) -> String {
     s
 }
 
-fn yes_no(ru: bool) -> [String; 2] {
+fn yes_no(ru: impl AsLang) -> [String; 2] {
     [super::tl(ru, "sch.val.yes"), super::tl(ru, "sch.val.no")]
 }
 
-pub fn pval(v: Option<PVal>, ru: bool) -> Val {
+pub fn pval(v: Option<PVal>, ru: impl AsLang) -> Val {
     match v {
         None => Val::T(String::new()),
         Some(PVal::Text(s)) => Val::T(s),
@@ -67,7 +68,7 @@ pub fn pval(v: Option<PVal>, ru: bool) -> Val {
 
 /// Appends phase and project-parameter columns (after the category columns);
 /// phase labels and values and yes/no are in the UI language.
-pub fn extend(ed: &Editor, tb: &mut Table, ru: bool) {
+pub fn extend(ed: &Editor, tb: &mut Table, ru: impl AsLang) {
     let m = &ed.model;
     if let Some(kind) = tb.cat.table() {
         let phases = m.phases().unwrap_or_default();

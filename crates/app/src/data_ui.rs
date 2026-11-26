@@ -41,12 +41,14 @@ struct PlanMemo {
 struct InfoBuf {
     info: ProjectInfo,
     site: SiteProps,
+    /// Locale of the drawings and schedules; None — the interface language.
+    doc_lang: Option<String>,
     /// The close question is open; the typed values stay until it is answered.
     asking: bool,
     /// The question was drawn before this frame (its opening Esc is not an answer).
     asked_before: bool,
     /// Stored values at a model revision: the per-frame draft check reads the model once.
-    seen: Option<((u64, u64), ProjectInfo, SiteProps)>,
+    seen: Option<((u64, u64), ProjectInfo, SiteProps, Option<String>)>,
     /// Size of the company logo at a model revision, for the line under the fields.
     logo: Option<((u64, u64), Option<(u32, u32)>)>,
 }
@@ -80,10 +82,11 @@ pub(crate) fn info_draft_at(m: &Model, key: (u64, u64)) -> bool {
         let Some(draft) = s.as_mut() else { return false };
         if draft.seen.as_ref().map(|x| x.0) != Some(key) {
             let info = m.project_info().unwrap_or_default().trimmed();
-            draft.seen = Some((key, info, m.site().unwrap_or_default()));
+            let lang = m.document_lang().unwrap_or_default();
+            draft.seen = Some((key, info, m.site().unwrap_or_default(), lang));
         }
-        let Some((_, info, site)) = draft.seen.as_ref() else { return false };
-        draft.info.trimmed() != *info || draft.site != *site
+        let Some((_, info, site, lang)) = draft.seen.as_ref() else { return false };
+        draft.info.trimmed() != *info || draft.site != *site || draft.doc_lang != *lang
     })
 }
 
@@ -128,6 +131,7 @@ pub(crate) fn seed_draft_for_test(ed: &Editor) {
     let draft = InfoBuf {
         info,
         site,
+        doc_lang: m.document_lang().unwrap_or_default(),
         asking: false,
         asked_before: false,
         seen: None,
@@ -165,6 +169,7 @@ fn site_len_unit(u: Units, ru: bool) -> &'static str {
 fn info_changed(m: &Model, b: &InfoBuf) -> bool {
     b.info.trimmed() != m.project_info().unwrap_or_default().trimmed()
         || b.site != m.site().unwrap_or_default()
+        || b.doc_lang != m.document_lang().unwrap_or_default()
 }
 
 pub fn register(a: &mut EditorApp) {
@@ -265,6 +270,7 @@ fn open_info(a: &mut EditorApp) {
     let buf = InfoBuf {
         info: m.project_info().unwrap_or_default(),
         site: m.site().unwrap_or_default(),
+        doc_lang: m.document_lang().unwrap_or_default(),
         asking: false,
         asked_before: false,
         seen: None,
@@ -378,6 +384,7 @@ fn info_window(a: &mut EditorApp, ctx: &egui::Context) {
             if widgets::Button::secondary(&cat.t("branding.info.open")).small().show(ui, th).clicked() {
                 open_logo = true;
             }
+            doc_lang_row(ui, th, cat, &mut buf.doc_lang);
             ui.separator();
             ui_kit::section_title(ui, cat.t("data_export.info.site"));
             let deg = cat.t("data_export.unit.deg");
@@ -473,16 +480,43 @@ fn save_info(a: &mut EditorApp, b: &InfoBuf) -> bool {
     }
 }
 
+/// Document language: "as the interface" plus every locale in its own name.
+fn doc_lang_row(ui: &mut egui::Ui, th: &ddc_ui::Theme, cat: &ddc_ui::Catalog, v: &mut Option<String>) {
+    let control = th.d().control;
+    let name = cat.t("data_export.info.doc_lang");
+    ui.horizontal(|ui| {
+        ui.allocate_ui(egui::vec2(control * LABEL_WIDTH, control), |ui| {
+            widgets::elided_label(ui, &name, th.font(Role::Label), th.sem().text_secondary)
+        });
+        let mut names = vec![cat.t("data_export.info.doc_lang_ui")];
+        names.extend(Lang::ALL.iter().map(|l| l.native_name().to_string()));
+        let items: Vec<&str> = names.iter().map(String::as_str).collect();
+        let mut sel = v
+            .as_deref()
+            .map_or(0, |c| Lang::ALL.iter().position(|l| *l == Lang::from_code(c)).map_or(0, |i| i + 1));
+        if widgets::dropdown(ui, th, "data_export.info.doc_lang", &mut sel, &items, Some(control * FIELD_WIDTH)).changed() {
+            *v = sel.checked_sub(1).map(|i| Lang::ALL[i].code().to_string());
+        }
+    });
+}
+
 /// Writes the typed values in one undo step; `Ok(false)` when nothing differs.
 fn apply_info(ed: &mut Editor, b: &InfoBuf) -> Result<bool, ddc_model::Error> {
     let info = b.info.trimmed();
     let site = b.site.clone();
+    let lang = b.doc_lang.clone();
     let m = &ed.model;
-    if info == m.project_info().unwrap_or_default() && site == m.site().unwrap_or_default() {
+    if info == m.project_info().unwrap_or_default()
+        && site == m.site().unwrap_or_default()
+        && lang == m.document_lang().unwrap_or_default()
+    {
         return Ok(false);
     }
     let f = OpFn(Arc::new(move |m: &mut Model| {
-        m.set_project_data(&info, &site).map(|_| ())
+        m.atomic("project_info", |m| {
+            m.set_project_data(&info, &site)?;
+            m.set_document_lang(lang.as_deref()).map(|_| ())
+        })
     }));
     ed.run_op(f).map(|()| true)
 }
@@ -753,6 +787,27 @@ mod tests {
     }
 
     #[test]
+    fn document_language_applies_with_the_fields_in_one_step() {
+        let mut a = app();
+        open_info(&mut a);
+        let steps = a.ed.undo_len();
+        let mut b = take_info().unwrap();
+        b.doc_lang = Some("de".into());
+        assert!(info_changed(&a.ed.model, &b));
+        assert!(save_info(&mut a, &b));
+        assert_eq!(a.ed.model.document_lang().unwrap().as_deref(), Some("de"));
+        open_info(&mut a);
+        let mut b = take_info().unwrap();
+        b.info.name = "Haus".into();
+        b.doc_lang = Some("ja".into());
+        assert!(save_info(&mut a, &b));
+        assert_eq!(a.ed.undo_len(), steps + 2);
+        a.ed.undo();
+        assert_eq!(a.ed.model.document_lang().unwrap().as_deref(), Some("de"));
+        assert_eq!(a.ed.model.project_info().unwrap().name, "");
+    }
+
+    #[test]
     fn a_refused_value_adds_no_step_and_keeps_the_text() {
         let mut a = app();
         open_info(&mut a);
@@ -970,6 +1025,7 @@ mod tests {
         let b = peek("open", |b| InfoBuf {
             info: b.info.clone(),
             site: b.site.clone(),
+            doc_lang: b.doc_lang.clone(),
             asking: false,
             asked_before: false,
             seen: None,

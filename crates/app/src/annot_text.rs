@@ -370,7 +370,9 @@ fn items(ed: &Editor, view: AnnoView) -> Rc<Items> {
         return c;
     }
     let scale = ed.model.anno_scale(view).unwrap_or(100.0);
-    let fmt = view_anno_fmt(&ed.model, view);
+    let lang = crate::doc_lang::doc_lang(&ed.model);
+    let words = |k: &str| crate::tr_in(lang, k, &[]);
+    let fmt = view_anno_fmt(&ed.model, view, Some(&words));
     let ctx = AnnoCtx {
         scale,
         sep: &fmt.sep,

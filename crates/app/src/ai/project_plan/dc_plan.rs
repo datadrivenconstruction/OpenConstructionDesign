@@ -129,7 +129,7 @@ pub(super) fn sync(
         runs.push((sys(r.net), rs));
     }
     let build = MepBuild {
-        systems: Net::ALL.iter().map(|n| (n.name(spec.ru), n.kind())).collect(),
+        systems: Net::ALL.iter().map(|n| (n.name(spec.lang), n.kind())).collect(),
         runs,
         links,
         ..MepBuild::default()

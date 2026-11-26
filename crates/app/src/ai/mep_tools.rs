@@ -451,16 +451,13 @@ pub fn schedule_table(cat: &Catalog, s: &PanelSchedule) -> (Vec<String>, Vec<Vec
     (head, rows)
 }
 
-fn panel_schedule(c: &mut Core, a: &J, _: &CallCx<'_>) -> Result<Done, String> {
+fn panel_schedule(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let panel = comp_of(a["panel"].as_str().ok_or("panel must be a ref such as comp:5")?)?;
     let s = c.ed.model.panel_schedule(panel).map_err(|e| e.to_string())?;
     if s.rows.is_empty() {
         return Err(format!("comp:{panel} feeds no circuits"));
     }
-    let lang = match a["lang"].as_str() {
-        Some("ru") => ddc_ui::Lang::Ru,
-        _ => ddc_ui::Lang::En,
-    };
+    let lang = ddc_ui::Lang::from_code(a["lang"].as_str().unwrap_or(cx.lang));
     let (head, rows) = schedule_table(&Catalog::new(lang), &s);
     let mut out = Out::new(c.max_chars);
     out.put("panel", &json!(format!("comp:{panel}")));

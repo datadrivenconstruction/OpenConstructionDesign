@@ -45,7 +45,7 @@ pub fn reading(prev: Option<V2>, a: V2, b: V2) -> Option<Reading> {
 
 fn deg(v: f64, ru: bool) -> String {
     let v = if v.abs() < 0.05 { 0.0 } else { v };
-    let n = fmt_num_lang(v, 1, ru);
+    let n = fmt_num_lang(v, 1, crate::units::lang_of(ru));
     format!("{n}°")
 }
 

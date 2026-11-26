@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Drawing set command: the dialog's options, Apply as one undo step, words in both languages.
-use super::dset::{build_drawing_set, marks_to_assign, plan_drawing_set, DsetDialog};
+use super::dset::{build_drawing_set, marks_to_assign, plan_drawing_set, plan_drawing_set_in, DsetDialog};
 use super::*;
 use crate::schedule::{self, Cat};
 use ddc_io::sheets::dset_fixture::{build_into, build_unmarked_into};
@@ -27,7 +27,7 @@ fn default_dialog_asks_for_everything_on_gost() {
 fn command_builds_the_set_in_one_undo_step() {
     let mut ed = editor(2);
     let before = ed.model.sheets().unwrap().len();
-    let ids = build_drawing_set(&mut ed, DsetDialog::default().options(), false).unwrap();
+    let ids = crate::with_test_lang(false, || build_drawing_set(&mut ed, DsetDialog::default().options(), false)).unwrap();
     assert!(ids.len() >= 5, "{ids:?}");
     let first = ed.model.sheet(ids[0]).unwrap();
     assert_eq!(first.number, "A-1");
@@ -47,6 +47,14 @@ fn sheet_words_follow_the_language_asked() {
     let cyr = |s: &str| s.chars().any(|c| ('\u{400}'..='\u{4ff}').contains(&c));
     assert!(en.plan.sheets.iter().all(|s| !cyr(&s.def.name)));
     assert!(ru.plan.sheets.iter().all(|s| cyr(&s.def.name)));
+    let words = |p: &io::Planned| p.plan.sheets.iter().map(|s| (s.def.number.clone(), s.def.name.clone())).collect::<Vec<_>>();
+    assert_eq!(words(&en), words(&plan_drawing_set_in(&ed, &o, Lang::En).unwrap()));
+    assert_eq!(words(&ru), words(&plan_drawing_set_in(&ed, &o, Lang::Ru).unwrap()));
+    for l in [Lang::Ja, Lang::Ar, Lang::De] {
+        let p = plan_drawing_set_in(&ed, &o, l).unwrap();
+        assert_eq!(p.plan.sheets.len(), en.plan.sheets.len(), "{l:?}");
+        assert_ne!(words(&p), words(&en), "{l:?} sheet words are English");
+    }
 }
 
 /// Doors and windows the set marks by type read the same in the door and window schedules
@@ -58,7 +66,7 @@ fn type_marks_reach_the_schedules_and_undo_with_the_set() {
     ed.reload().unwrap();
     let before = marks_to_assign(&ed).unwrap();
     assert!(before > 0);
-    build_drawing_set(&mut ed, DsetDialog::default().options(), false).unwrap();
+    crate::with_test_lang(false, || build_drawing_set(&mut ed, DsetDialog::default().options(), false)).unwrap();
     assert_eq!(marks_to_assign(&ed).unwrap(), 0);
     for (cat, want) in [(Cat::Doors, "D1"), (Cat::Windows, "W1")] {
         // the set's sheets carry the building-wide schedules; the editor stays on its seed level

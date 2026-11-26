@@ -13,7 +13,8 @@ use serde_json::{json, Value as J};
 /// Sheets listed in a reply; the count says how many there are in all.
 const LISTED: usize = 40;
 
-pub fn options_of(a: &J) -> Result<(DsetOptions, bool), String> {
+/// The options and the language of the sheet words: `language`, else the interface language `ui`.
+pub fn options_of(a: &J, ui: &str) -> Result<(DsetOptions, ddc_ui::Lang), String> {
     let on = |k: &str| a[k].as_bool().unwrap_or(true);
     let scale = match &a["scale"] {
         J::Null => None,
@@ -30,11 +31,10 @@ pub fn options_of(a: &J) -> Result<(DsetOptions, bool), String> {
     if !matches!(standard.as_str(), "gost" | "iso") {
         return Err("standard must be gost or iso".into());
     }
-    let ru = match a["language"].as_str() {
-        Some("ru") => true,
-        Some("en") => false,
-        None => standard == "gost",
-        Some(_) => return Err("language must be en or ru".into()),
+    let lang = match a["language"].as_str() {
+        None => ddc_ui::Lang::from_code(ui),
+        Some(l) if ddc_gen::project::names::locales().iter().any(|x| x.eq_ignore_ascii_case(l)) => ddc_ui::Lang::from_code(l),
+        Some(_) => return Err("language must be a locale code such as en, ru, de, ja, pt-BR".into()),
     };
     Ok((
         DsetOptions {
@@ -46,16 +46,16 @@ pub fn options_of(a: &J) -> Result<(DsetOptions, bool), String> {
             paper: a["paper"].as_str().map(str::to_string),
             standard,
         },
-        ru,
+        lang,
     ))
 }
 
 pub fn create_drawing_set(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
-    let (opt, ru) = options_of(a)?;
+    let (opt, lang) = options_of(a, cx.lang)?;
     let title = fmt::text(a["title"].as_str().unwrap_or_default());
     // doors and windows the set marks by type, counted before its item changes the model
     let marks = crate::sheet_view::marks_to_assign(&c.ed)?;
-    let added = c.add_item(title, why_of(a), PlanOp::DrawingSet(opt, ru), cx.actor)?;
+    let added = c.add_item(title, why_of(a), PlanOp::DrawingSet(opt, lang), cx.actor)?;
     let m = &c.ed.model;
     let mut sheets = vec![];
     for (id, _) in m.drawing_set_sheets().map_err(|e| e.to_string())? {

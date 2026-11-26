@@ -171,6 +171,7 @@ pub(super) fn show(
                     body(ui, &mut rec);
                 });
         });
+    crate::ui_kit::mark_scroll_viewport(ui.ctx(), out.inner_rect);
     let known = rec.rows > 0;
     let geo = Geo {
         names,

@@ -557,9 +557,9 @@ fn has_cyrillic(s: &str) -> bool {
     s.chars().any(|c| ('\u{400}'..='\u{4ff}').contains(&c))
 }
 
-/// Catalog text of `key` in both languages: present, non-empty, ru in Cyrillic.
+/// Catalog text of `key` in a representative locale set: present, non-empty, ru in Cyrillic.
 fn both_langs(a: &EditorApp, key: &str, tag: &str, bad: &mut Vec<String>) {
-    for lang in [Lang::En, Lang::Ru] {
+    for lang in [Lang::En, Lang::De, Lang::Ja, Lang::Ar, Lang::Ru] {
         let v = a.sh.cat.table(lang).get(key).and_then(|v| v.as_str()).unwrap_or("");
         if v.trim().is_empty() {
             bad.push(format!("{tag}: no {lang:?} text for {key}"));

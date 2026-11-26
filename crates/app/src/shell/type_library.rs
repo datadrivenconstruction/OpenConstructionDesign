@@ -260,7 +260,7 @@ enum Ask {
 fn type_row(ui: &mut egui::Ui, th: &Theme, ru: bool, t: &TypeUse, u: crate::units::Units) -> bool {
     let mut edit = false;
     ui.horizontal(|ui| {
-        let thick = format!("{} {}", edit_length(t.thickness, u), unit_label_in(u, ru));
+        let thick = format!("{} {}", edit_length(t.thickness, u), unit_label_in(u, crate::units::lang_of(ru)));
         let name_w = ui.available_width() - layout::PROP_VALUE * 2.5;
         ui.allocate_ui_with_layout(
             egui::vec2(name_w, ui.spacing().interact_size.y),

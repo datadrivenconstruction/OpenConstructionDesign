@@ -49,7 +49,7 @@ fn every_command_has_a_label_in_en_and_ru() {
     let mut bad = vec![];
     for c in Registry::builtin().all() {
         let key = c.label_key();
-        for lang in [Lang::En, Lang::Ru] {
+        for lang in [Lang::En, Lang::De, Lang::Ja, Lang::Ar, Lang::Ru] {
             let t = cat.t_in(lang, &key);
             if t == key || t.trim().is_empty() {
                 bad.push(format!("{} has no {lang:?} label", c.id));

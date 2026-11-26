@@ -270,7 +270,7 @@ fn a_lighthouse_with_a_spiral_stair_meets_its_oracles() {
     let (mut ed, _) = wall_tower(true);
     for k in 0..9 {
         let mut s = StairSpec::straight(6000 + k, 6001 + k, (0.0, 0.0), 0.0);
-        s.shape = StairShape::Spiral { radius: 1.2, core: 0.3, turn: 1.25 };
+        s.shape = StairShape::Spiral { radius: 1.2, core: 0.3, turn: 6.0 };
         s.max_riser = 0.2;
         let id = ed.model.add_stair(&s).unwrap();
         assert!(ed.model.stair_quantities(id).unwrap().risers >= 20);

@@ -162,8 +162,8 @@ fn mm(t: f64) -> String {
 fn plan_station(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let rs = rule_set(a)?;
     let s: GStation = station::plan(&rs).map_err(|e| e.to_string())?;
-    let ru = a["lang"].as_str() == Some("ru");
-    let pick = |n: (&'static str, &'static str)| if ru { n.1 } else { n.0 };
+    let lang = ddc_gen::project::names::locale(a["lang"].as_str().unwrap_or(cx.lang));
+    let pick = |en: &str| ddc_gen::project::names::tr(lang, "", en);
     let off = match &a["origin"] {
         J::Null => (0.0, 0.0),
         v => p2(v, "origin")?,
@@ -173,9 +173,9 @@ fn plan_station(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
 
     let mut lv: BTreeMap<u8, i64> = BTreeMap::new();
     let key = |l: Lvl| l as u8;
-    lv.insert(key(Lvl::Ground), ground(c, cx, &why, pick(Lvl::Ground.names()))?);
+    lv.insert(key(Lvl::Ground), ground(c, cx, &why, &pick(Lvl::Ground.names()))?);
     for (l, z) in &s.levels {
-        lv.insert(key(*l), level_at(c, cx, &why, pick(l.names()), *z)?);
+        lv.insert(key(*l), level_at(c, cx, &why, &pick(l.names()), *z)?);
     }
     let id = |l: Lvl| lv[&key(l)];
 
@@ -284,7 +284,7 @@ fn plan_station(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
         });
     }
     for (i, r) in s.rooms.iter().enumerate() {
-        items.push(NewElem::Room { level: id(r.level), name: pick(r.name).to_string(), number: format!("S{}", i + 1), point: at(r.point), height: r.height });
+        items.push(NewElem::Room { level: id(r.level), name: pick(r.name), number: format!("S{}", i + 1), point: at(r.point), height: r.height });
     }
 
     for (lvl, ctype, p, rotation) in comps {

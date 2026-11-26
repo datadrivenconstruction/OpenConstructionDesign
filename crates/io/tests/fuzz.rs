@@ -97,6 +97,7 @@ fn sheet() -> ddc_io::sheets::SheetDrawing {
         units: LengthUnits::Metric,
         area_unit: None,
         logo: None,
+        words: None,
     })
     .unwrap()
 }

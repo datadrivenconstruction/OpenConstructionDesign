@@ -61,7 +61,7 @@ pub(super) fn fmt_value(cat: &Catalog, v: f64, unit: &str, u: Units) -> String {
     let ru = cat.lang == Lang::Ru;
     let mark = DecimalMark::for_lang(cat.lang);
     let num = |x: f64, d: usize| match mark {
-        DecimalMark::Comma => units::fmt_num_ru(x, d),
+        DecimalMark::Comma => units::fmt_num_comma(x, d),
         DecimalMark::Point => units::fmt_num_en(x, d),
     };
     let (area_d, vol_d) = units::precision();
@@ -448,7 +448,7 @@ mod tests {
         assert!(
             s.contains(&format!(
                 "{}\u{a0}\u{43c}\u{b2}",
-                units::fmt_num_ru(12.5, ad)
+                units::fmt_num_comma(12.5, ad)
             )),
             "{s}"
         );

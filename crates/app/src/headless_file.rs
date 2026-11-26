@@ -564,7 +564,7 @@ fn export_one(
 /// A sheet print without a window, run to its end.
 pub(crate) fn print_run(ed: &Editor, p: &crate::sheet_view::Print, ids: &[i64], target: &Path) -> crate::sheet_view::PrintDone {
     let mut run = crate::sheet_view::PrintRun::start(ed, p, ids, target);
-    while !run.step(ed, false) {
+    while !run.step(ed) {
         std::thread::sleep(std::time::Duration::from_millis(1));
     }
     run.finish(false)

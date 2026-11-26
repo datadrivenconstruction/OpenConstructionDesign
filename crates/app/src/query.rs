@@ -2161,7 +2161,10 @@ pub fn palette_feed(app: &mut EditorApp, ctx: &egui::Context) {
     }
     let ru = app.sh.cat.lang == ddc_ui::Lang::Ru;
     let q = p.query.clone();
-    let (mut ex, mut first) = extras(&app.ed, &q, ru);
+    // `@wall` asks for elements: the query language reads the text after the prefix
+    let (sc, rest) = ddc_ui::widgets::palette::scope(&q);
+    let eq = if sc == ddc_ui::widgets::palette::Scope::Elements { rest } else { q.as_str() };
+    let (mut ex, mut first) = extras(&app.ed, eq, ru);
     let (catch_all, last) = crate::ai::ui::palette_ai(app, &q).merge(&mut ex, &mut first);
     // keys of the running step on top, while nothing is typed
     let now = if q.trim().is_empty() { crate::interact::hints::palette_rows(&app.ed) } else { vec![] };

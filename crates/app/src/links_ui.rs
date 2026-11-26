@@ -528,7 +528,7 @@ fn fields(xf: &Transform, units: Units, loc: Loc) -> [String; 4] {
     let len = |m: f64| kit::len_text(m, units, loc.mark);
     let deg = xf.rot.to_degrees();
     let rot = match loc.mark {
-        DecimalMark::Comma => crate::units::fmt_num_ru(deg, 2),
+        DecimalMark::Comma => crate::units::fmt_num_comma(deg, 2),
         DecimalMark::Point => crate::units::fmt_num_en(deg, 2),
     };
     [len(xf.dx), len(xf.dy), len(xf.dz), rot]

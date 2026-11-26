@@ -237,7 +237,7 @@ fn num_text(a: &Args, i: usize, ru: bool, metric: bool) -> String {
         return String::new();
     };
     let d = format!("{v}").split_once('.').map_or(0, |(_, f)| f.len().min(6));
-    let n = fmt_num_lang(*v, d, ru);
+    let n = fmt_num_lang(*v, d, crate::units::lang_of(ru));
     let name = |key: &'static str| format!("{n}\u{a0}{}", tr_str(ru, key));
     match u {
         None if metric => name("unit_fmt.unit.mm"),
@@ -290,7 +290,7 @@ pub fn preview_in(app: &EditorApp, id: &str, q: &str, mark: DecimalMark) -> Stri
     let mut bad = vec![];
     let labelled = |parts: &mut Vec<String>, key: &str, v: Option<f64>| {
         if let Some(v) = v {
-            parts.push(format!("{} {}", c.t(key), display_length_lang(v, u, ru)));
+            parts.push(format!("{} {}", c.t(key), display_length_lang(v, u, c.lang)));
         }
     };
     if is_wall_cmd(id) {
@@ -324,12 +324,12 @@ pub fn preview_in(app: &EditorApp, id: &str, q: &str, mark: DecimalMark) -> Stri
         for (i, (v, unit)) in a.nums.iter().enumerate() {
             parts.push(match unit {
                 Some(Unit::Deg | Unit::Pct) => num_text(&a, i, ru, metric),
-                _ if id == "mep.pipe" && i == 0 => format!("DN {}", fmt_num_lang(*v, 0, ru)),
+                _ if id == "mep.pipe" && i == 0 => format!("DN {}", fmt_num_lang(*v, 0, crate::units::lang_of(ru))),
                 _ => a
                     .length_or_zero(i, metric)
                     .map_or_else(
                         || num_text(&a, i, ru, metric),
-                        |m| display_length_lang(m, u, ru),
+                        |m| display_length_lang(m, u, crate::units::lang_of(ru)),
                     ),
             });
         }

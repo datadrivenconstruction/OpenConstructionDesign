@@ -214,7 +214,7 @@ pub(super) fn pick_row(
 
 /// Paper size in mm for the dropdown note, e.g. "420 × 297 mm".
 fn paper_note(paper: &str, landscape: bool, ru: bool) -> String {
-    let mm = crate::units::unit_label_in(crate::units::Units::Metric, ru);
+    let mm = crate::units::unit_label_in(crate::units::Units::Metric, crate::units::lang_of(ru));
     io::paper_size(paper, landscape)
         .map(|(w, h)| format!("{w:.0} \u{d7} {h:.0} {mm}"))
         .unwrap_or_default()

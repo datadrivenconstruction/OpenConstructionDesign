@@ -884,8 +884,8 @@ pub fn panel_key(k: PanelKind) -> &'static str {
 }
 
 /// Panel type label in an explicit language.
-pub fn panel_label_in(k: PanelKind, ru: bool) -> String {
-    crate::tr_lang(ru, &format!("curtain_props.cw.kind.{}", panel_key(k)), &[])
+pub fn panel_label_in(k: PanelKind, lang: impl crate::doc_lang::AsLang) -> String {
+    crate::tr_in(lang.lang(), &format!("curtain_props.cw.kind.{}", panel_key(k)), &[])
 }
 
 /// Panel type from typed text: the stable key or the label in either language.

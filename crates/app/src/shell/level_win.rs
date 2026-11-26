@@ -104,7 +104,7 @@ pub fn level_warning(levels: &[(i64, String, f64)], id: Option<i64>, z: f64) -> 
 pub fn warning_text(w: &LevelWarn, z: f64, u: Units, ru: bool) -> String {
     match w {
         LevelWarn::Far => {
-            let v = units::display_length_lang(z, u, ru);
+            let v = units::display_length_lang(z, u, crate::units::lang_of(ru));
             crate::tr_lang(ru, "dlg.level.warn_high", &[("v", v.as_str())])
         }
         LevelWarn::Past(n) => crate::tr_lang(ru, "dlg.level.warn_past", &[("name", n.as_str())]),

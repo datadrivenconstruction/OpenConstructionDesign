@@ -1385,8 +1385,7 @@ pub(super) fn usage_line(cat: &ddc_ui::Catalog, used: u64, cost: Option<f64>) ->
     let mut line = cat.tf("ai.usage.tokens", &[("n", &logic::fmt_tokens(used))]);
     if let Some(c) = cost {
         line.push_str(" · ");
-        let ru = cat.lang == ddc_ui::Lang::Ru;
-        let cost = crate::units::fmt_num_lang(c, 2, ru);
+        let cost = crate::units::fmt_num_lang(c, 2, cat.lang);
         line.push_str(&cat.tf("ai.usage.cost", &[("cost", &cost)]));
     }
     line
@@ -1528,7 +1527,7 @@ mod tests {
             }
             let bare = usage_line(&cat, 1200, None);
             let line = usage_line(&cat, 1200, Some(0.125));
-            let num = crate::units::fmt_num_lang(0.125, 2, lang == ddc_ui::Lang::Ru);
+            let num = crate::units::fmt_num_lang(0.125, 2, lang);
             assert!(line.starts_with(&bare), "{line}");
             let tail = &line[bare.len()..];
             assert!(tail.contains(&num), "{line}");

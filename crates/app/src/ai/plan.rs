@@ -483,7 +483,7 @@ pub enum PlanOp {
     Plant(super::plant_plan::PlantOp),
     /// Sheets of a drawing set: tags first, then the planned sheets on the tagged model.
     /// The flag: sheet words in Russian.
-    DrawingSet(ddc_io::sheets::DsetOptions, bool),
+    DrawingSet(ddc_io::sheets::DsetOptions, ddc_ui::Lang),
     /// A modify tool on a target: move, copy, rotate, mirror, scale, array, offset, split, pin.
     Modify {
         target: Targets,
@@ -999,11 +999,11 @@ fn compile(cx: &mut CompileCx<'_>, op: &PlanOp) -> Result<Vec<ModelStep>, PlanEr
         PlanOp::Mep(m) => super::mep_plan::compile(cx, m, &mut out)?,
         PlanOp::Project(p) => super::project_plan::compile(cx, p, &mut out)?,
         PlanOp::Plant(p) => super::plant_plan::compile(cx, p, &mut out)?,
-        PlanOp::DrawingSet(o, ru) => {
+        PlanOp::DrawingSet(o, lang) => {
             let lv = ddc_io::sheets::tag_levels(&cx.ed.model).map_err(|e| e.0)?;
-            let prefix = crate::sheet_view::mark_prefix(*ru);
+            let prefix = crate::sheet_view::mark_prefix(*lang);
             push(cx, &mut out, ModelStep::DrawingTags(lv, prefix))?;
-            let p = crate::sheet_view::plan_drawing_set(cx.ed, o, *ru)?;
+            let p = crate::sheet_view::plan_drawing_set_in(cx.ed, o, *lang)?;
             push(cx, &mut out, ModelStep::DrawingSet(Box::new(p.plan)))?;
         }
         PlanOp::Modify { target, act } => {

@@ -68,7 +68,7 @@ fn inside(p: V2, ring: &[V2]) -> bool {
 /// en `+3.000`, ru `+3,000`, imperial `+9'-10 1/8"`; zero is `±`, negatives use U+2212.
 pub fn elevation_mark(z: f64, units: Units, ru: bool) -> String {
     let body = match units {
-        Units::Metric => fmt_num_lang(z.abs(), 3, ru),
+        Units::Metric => fmt_num_lang(z.abs(), 3, crate::units::lang_of(ru)),
         Units::Imperial => format_length(z.abs(), units),
     };
     if z.abs() < 5e-4 {

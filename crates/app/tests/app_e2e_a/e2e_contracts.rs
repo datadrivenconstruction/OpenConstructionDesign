@@ -220,7 +220,7 @@ struct Keys {
 
 fn keys(a: &EditorApp) -> Keys {
     let mut all = BTreeSet::new();
-    for lang in [Lang::Ru, Lang::En] {
+    for lang in [Lang::En, Lang::De, Lang::Ja, Lang::Ar, Lang::Ru] {
         all.extend(a.sh.cat.table(lang).keys().cloned());
     }
     let spaces = all

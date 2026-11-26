@@ -41,6 +41,7 @@ mod qa37b_tests;
 #[cfg(test)]
 mod ux29e_tests;
 pub mod annot_text;
+pub mod doc_lang;
 pub mod safe_file;
 pub mod bigfile;
 pub mod boundary_link_ui;
@@ -272,6 +273,15 @@ pub fn ui_is_ru() -> bool {
     ui_lang_now()
 }
 
+/// UI language on this thread (a test may pin it, see `with_test_lang`).
+pub fn ui_lang() -> ddc_ui::i18n::Lang {
+    if ui_lang_now() {
+        ddc_ui::i18n::Lang::Ru
+    } else {
+        ddc_ui::i18n::current()
+    }
+}
+
 /// Plural message of the catalog (`one`/`few`/`many`/`other` forms) for `n`, in the UI language.
 pub fn tr_n(key: &str, n: u64) -> String {
     tr_n_lang(ui_lang_now(), key, n)
@@ -370,6 +380,12 @@ pub fn tr_str(ru: bool, key: &'static str) -> &'static str {
         .or_else(|| c.table(Lang::En).get(key))
         .and_then(|v| v.as_str())
         .unwrap_or(key)
+}
+
+/// As `tr_str`, for any language; a key missing there falls back to English, then to the key.
+pub fn tr_str_in(lang: ddc_ui::i18n::Lang, key: &'static str) -> &'static str {
+    let c = catalog();
+    c.table(lang).get(key).or_else(|| c.table(ddc_ui::i18n::Lang::En).get(key)).and_then(|v| v.as_str()).unwrap_or(key)
 }
 
 /// Same as `tr` for an explicit language; a key missing there falls back to English.

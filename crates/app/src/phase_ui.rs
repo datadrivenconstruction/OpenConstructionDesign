@@ -14,19 +14,15 @@ use std::collections::HashSet;
 use std::sync::Arc;
 
 /// Phase name for display: a standard phase with an unchanged name is translated.
-pub fn label(p: &Phase, ru: bool) -> String {
+pub fn label(p: &Phase, lang: impl crate::doc_lang::AsLang) -> String {
     let std_name = p
         .key
         .as_deref()
         .and_then(|k| DEFAULT_PHASES.iter().find(|d| d.0 == k))
         .filter(|d| d.1 == p.name);
-    match (std_name, ru) {
-        (Some(d), false) => match d.0 {
-            "existing" => "Existing".into(),
-            "demolition" => "Demolition".into(),
-            _ => "New construction".into(),
-        },
-        _ => p.name.clone(),
+    match std_name {
+        Some(d) => crate::tr_in(lang.lang(), &format!("phui.phase.{}", d.0), &[]),
+        None => p.name.clone(),
     }
 }
 
@@ -832,7 +828,7 @@ fn body(ui: &mut egui::Ui, st: &mut WinState, ed: &mut Editor, ru: bool) {
 
 /// Demolished volume as the table and the status line show it, in the window language.
 fn vol_text(v: f64, ru: bool) -> String {
-    crate::units::fmt_num_lang(v, 2, ru)
+    crate::units::fmt_num_lang(v, 2, crate::units::lang_of(ru))
 }
 
 fn demolition_table(ui: &mut egui::Ui, th: &ddc_ui::Theme, ed: &Editor, phases: &[Phase], ru: bool) {

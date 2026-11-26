@@ -21,7 +21,7 @@ fn plural(ru: bool, key: &str, n: u64) -> String {
 pub(super) fn detail(t: &WallType, u: Units, ru: bool) -> String {
     format!(
         "{} \u{b7} {}",
-        display_length_lang(t.thickness(), u, ru),
+        display_length_lang(t.thickness(), u, crate::units::lang_of(ru)),
         plural(ru, "type_pick.pick.layers", t.layers.len() as u64)
     )
 }

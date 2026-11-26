@@ -5,19 +5,20 @@
 
 use super::{col, tl, Cat, Col, Edit as E, Kind as K, Row, Val};
 use crate::editor::Editor;
+use ddc_ui::i18n::Lang;
 use rusqlite::types::Value;
 
 /// (columns, SQL with `?1` = level; the first selected column is the id).
-fn spec(cat: Cat, ru: bool) -> (Vec<Col>, &'static str) {
+fn spec(cat: Cat, lang: Lang) -> (Vec<Col>, &'static str) {
     match cat {
         Cat::Columns => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("type", tl(ru, "sched.col.type"), K::Text, E::No),
-                col("structural", tl(ru, "sched.col.structural"), K::Text, E::No),
-                col("len", tl(ru, "sched.col.length"), K::Len, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
-                col("surf", tl(ru, "sched.col.surface"), K::Area, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("type", tl(lang, "sched.col.type"), K::Text, E::No),
+                col("structural", tl(lang, "sched.col.structural"), K::Text, E::No),
+                col("len", tl(lang, "sched.col.length"), K::Len, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
+                col("surf", tl(lang, "sched.col.surface"), K::Area, E::No),
             ],
             "SELECT c.id, t.name, CASE WHEN c.structural THEN 'yes' ELSE 'no' END, \
              q.length, q.volume, q.surface FROM col c JOIN member_type t ON t.id=c.mtype \
@@ -25,12 +26,12 @@ fn spec(cat: Cat, ru: bool) -> (Vec<Col>, &'static str) {
         ),
         Cat::Beams => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("type", tl(ru, "sched.col.type"), K::Text, E::No),
-                col("len", tl(ru, "sched.col.length"), K::Len, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
-                col("surf", tl(ru, "sched.col.surface"), K::Area, E::No),
-                col("cut", tl(ru, "sched.col.deduction"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("type", tl(lang, "sched.col.type"), K::Text, E::No),
+                col("len", tl(lang, "sched.col.length"), K::Len, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
+                col("surf", tl(lang, "sched.col.surface"), K::Area, E::No),
+                col("cut", tl(lang, "sched.col.deduction"), K::Vol, E::No),
             ],
             "SELECT b.id, t.name, q.length, q.volume, q.surface, q.cut FROM beam b \
              JOIN member_type t ON t.id=b.mtype LEFT JOIN member_qty q ON q.kind='beam' AND q.ref=b.id \
@@ -38,11 +39,11 @@ fn spec(cat: Cat, ru: bool) -> (Vec<Col>, &'static str) {
         ),
         Cat::Roofs => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("type", tl(ru, "sched.col.type"), K::Text, E::No),
-                col("kind", tl(ru, "sched.col.shape"), K::Text, E::No),
-                col("area", tl(ru, "sched.col.area"), K::Area, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("type", tl(lang, "sched.col.type"), K::Text, E::No),
+                col("kind", tl(lang, "sched.col.shape"), K::Text, E::No),
+                col("area", tl(lang, "sched.col.area"), K::Area, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
             ],
             "SELECT r.id, t.name, CASE r.kind WHEN 'extrusion' THEN 'extrusion' ELSE 'footprint' END, \
              (SELECT MAX(area) FROM roof_qty WHERE roof=r.id), \
@@ -51,11 +52,11 @@ fn spec(cat: Cat, ru: bool) -> (Vec<Col>, &'static str) {
         ),
         Cat::Ceilings => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("type", tl(ru, "sched.col.type"), K::Text, E::No),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::No),
-                col("area", tl(ru, "sched.col.area"), K::Area, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("type", tl(lang, "sched.col.type"), K::Text, E::No),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::No),
+                col("area", tl(lang, "sched.col.area"), K::Area, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
             ],
             "SELECT c.id, t.name, c.height, (SELECT MAX(area) FROM ceiling_qty WHERE ceiling=c.id), \
              (SELECT SUM(volume) FROM ceiling_qty WHERE ceiling=c.id) \
@@ -63,14 +64,14 @@ fn spec(cat: Cat, ru: bool) -> (Vec<Col>, &'static str) {
         ),
         Cat::Stairs => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("kind", tl(ru, "sched.col.shape"), K::Text, E::No),
-                col("w", tl(ru, "sched.col.flight_width"), K::Len, E::No),
-                col("risers", tl(ru, "sched.col.risers"), K::Int, E::No),
-                col("treads", tl(ru, "sched.col.treads"), K::Int, E::No),
-                col("riser", tl(ru, "sched.col.riser_height"), K::Len, E::No),
-                col("tread", tl(ru, "sched.col.tread_depth"), K::Len, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("kind", tl(lang, "sched.col.shape"), K::Text, E::No),
+                col("w", tl(lang, "sched.col.flight_width"), K::Len, E::No),
+                col("risers", tl(lang, "sched.col.risers"), K::Int, E::No),
+                col("treads", tl(lang, "sched.col.treads"), K::Int, E::No),
+                col("riser", tl(lang, "sched.col.riser_height"), K::Len, E::No),
+                col("tread", tl(lang, "sched.col.tread_depth"), K::Len, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
             ],
             "SELECT s.id, CASE s.kind WHEN 'l' THEN 'stair_l' WHEN 'u' THEN 'stair_u' \
              ELSE 'stair_straight' END, s.width, q.risers, q.treads, q.riser, q.tread, \
@@ -79,122 +80,122 @@ fn spec(cat: Cat, ru: bool) -> (Vec<Col>, &'static str) {
         ),
         Cat::Railings => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::No),
-                col("len", tl(ru, "sched.col.length"), K::Len, E::No),
-                col("posts", tl(ru, "sched.col.posts"), K::Int, E::No),
-                col("balusters", tl(ru, "sched.col.balusters"), K::Int, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::No),
+                col("len", tl(lang, "sched.col.length"), K::Len, E::No),
+                col("posts", tl(lang, "sched.col.posts"), K::Int, E::No),
+                col("balusters", tl(lang, "sched.col.balusters"), K::Int, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
             ],
             "SELECT r.id, r.height, q.length, q.posts, q.balusters, q.volume \
              FROM railing r LEFT JOIN railing_qty q ON q.railing=r.id WHERE r.level=?1 ORDER BY r.id",
         ),
         Cat::MepRuns => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("system", tl(ru, "sched.col.system"), K::Text, E::No),
-                col("domain", tl(ru, "sched.col.kind"), K::Text, E::No),
-                col("shape", tl(ru, "sched.col.section"), K::Text, E::No),
-                col("w", tl(ru, "sched.col.width_dia"), K::Len, E::No),
-                col("h", tl(ru, "sched.col.height"), K::Len, E::No),
-                col("len", tl(ru, "sched.col.length"), K::Len, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("system", tl(lang, "sched.col.system"), K::Text, E::No),
+                col("domain", tl(lang, "sched.col.kind"), K::Text, E::No),
+                col("shape", tl(lang, "sched.col.section"), K::Text, E::No),
+                col("w", tl(lang, "sched.col.width_dia"), K::Len, E::No),
+                col("h", tl(lang, "sched.col.height"), K::Len, E::No),
+                col("len", tl(lang, "sched.col.length"), K::Len, E::No),
             ],
             "SELECT r.id, s.name, r.domain, r.shape, r.w, r.h, r.points \
              FROM mep_run r JOIN mep_system s ON s.id=r.system WHERE r.level=?1 ORDER BY r.id",
         ),
         Cat::Ramps => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("w", tl(ru, "sched.col.width"), K::Len, E::No),
-                col("slope", tl(ru, "sched.col.slope"), K::Pct, E::No),
-                col("th", tl(ru, "sched.col.thickness"), K::Len, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("w", tl(lang, "sched.col.width"), K::Len, E::No),
+                col("slope", tl(lang, "sched.col.slope"), K::Pct, E::No),
+                col("th", tl(lang, "sched.col.thickness"), K::Len, E::No),
             ],
             "SELECT r.id, r.width, r.slope*100.0, r.thickness FROM ramp r WHERE r.level=?1 ORDER BY r.id",
         ),
         Cat::Meshes => (
             vec![
                 col("id", "№", K::Int, E::No),
-                col("category", tl(ru, "sched_cats.sched.category"), K::Text, E::No),
-                col("name", tl(ru, "sched_cats.sched.name"), K::Text, E::No),
+                col("category", tl(lang, "sched_cats.sched.category"), K::Text, E::No),
+                col("name", tl(lang, "sched_cats.sched.name"), K::Text, E::No),
             ],
             "SELECT m.id, m.category, m.name FROM mesh m WHERE m.level=?1 ORDER BY m.id",
         ),
         Cat::Shafts => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("base", tl(ru, "sched.col.base_offset"), K::Len, E::No),
-                col("top", tl(ru, "sched.col.top_offset"), K::Len, E::No),
-                col("cuts", tl(ru, "sched.col.shaft_cuts"), K::Int, E::No),
-                col("vol", tl(ru, "sched.col.cut_volume"), K::Vol, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("base", tl(lang, "sched.col.base_offset"), K::Len, E::No),
+                col("top", tl(lang, "sched.col.top_offset"), K::Len, E::No),
+                col("cuts", tl(lang, "sched.col.shaft_cuts"), K::Int, E::No),
+                col("vol", tl(lang, "sched.col.cut_volume"), K::Vol, E::No),
             ],
             "SELECT s.id, s.base_offset, s.top_offset,              (SELECT count(*) FROM shaft_cut c WHERE c.shaft=s.id),              (SELECT total(c.volume) FROM shaft_cut c WHERE c.shaft=s.id)              FROM shaft s WHERE s.level=?1 ORDER BY s.id",
         ),
         Cat::Zones => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("name", tl(ru, "sched.col.name"), K::Text, E::No),
-                col("rooms", tl(ru, "sched.col.rooms"), K::Int, E::No),
-                col("area", tl(ru, "sched.col.area"), K::Area, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("name", tl(lang, "sched.col.name"), K::Text, E::No),
+                col("rooms", tl(lang, "sched.col.rooms"), K::Int, E::No),
+                col("area", tl(lang, "sched.col.area"), K::Area, E::No),
             ],
             "SELECT z.id, z.name, (SELECT count(*) FROM zone_room zr WHERE zr.zone=z.id),              (SELECT total(q.area) FROM zone_room zr JOIN room_qty q ON q.room=zr.room WHERE zr.zone=z.id)              FROM zone z WHERE EXISTS (SELECT 1 FROM zone_room zr JOIN room r ON r.id=zr.room              WHERE zr.zone=z.id AND r.level=?1) ORDER BY z.id",
         ),
         Cat::RoomSeps => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("len", tl(ru, "sched.col.length"), K::Len, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("len", tl(lang, "sched.col.length"), K::Len, E::No),
             ],
             // the two ends as a point list: the Len column measures its length
             "SELECT s.id, s.ax||' '||s.ay||';'||s.bx||' '||s.by FROM room_sep s WHERE s.level=?1 ORDER BY s.id",
         ),
         Cat::Components => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("family", tl(ru, "sched.col.family"), K::Text, E::No),
-                col("type", tl(ru, "sched.col.type"), K::Text, E::No),
-                col("category", tl(ru, "sched.col.category"), K::Text, E::No),
-                col(IFC_COL, tl(ru, "sched.col.ifc_class"), K::Text, E::No),
-                col("vol", tl(ru, "sched.col.volume"), K::Vol, E::No),
-                col("surf", tl(ru, "sched.col.surface"), K::Area, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("family", tl(lang, "sched.col.family"), K::Text, E::No),
+                col("type", tl(lang, "sched.col.type"), K::Text, E::No),
+                col("category", tl(lang, "sched.col.category"), K::Text, E::No),
+                col(IFC_COL, tl(lang, "sched.col.ifc_class"), K::Text, E::No),
+                col("vol", tl(lang, "sched.col.volume"), K::Vol, E::No),
+                col("surf", tl(lang, "sched.col.surface"), K::Area, E::No),
             ],
             // the family definition stands in for the IFC column until `ifc_classes` reads it
             "SELECT c.id, f.name, t.name, f.category, f.def, q.volume, q.surface FROM comp c \
              JOIN comp_type t ON t.id=c.ctype JOIN comp_family f ON f.id=t.family \
              LEFT JOIN comp_qty q ON q.comp=c.id WHERE c.level=?1 ORDER BY c.id",
         ),
-        Cat::Footings => structural(ru, SQL_FOOTING),
-        Cat::StripFootings => structural(ru, SQL_STRIP),
-        Cat::Rafts => structural(ru, SQL_RAFT),
-        Cat::Braces => structural(ru, SQL_BRACE),
-        Cat::Trusses => structural(ru, SQL_TRUSS),
-        Cat::BeamSystems => structural(ru, SQL_SYSTEM),
+        Cat::Footings => structural(lang, SQL_FOOTING),
+        Cat::StripFootings => structural(lang, SQL_STRIP),
+        Cat::Rafts => structural(lang, SQL_RAFT),
+        Cat::Braces => structural(lang, SQL_BRACE),
+        Cat::Trusses => structural(lang, SQL_TRUSS),
+        Cat::BeamSystems => structural(lang, SQL_SYSTEM),
         Cat::Solids => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("name", tl(ru, "sched_cats.col.name"), K::Text, E::No),
-                col("material", tl(ru, "sched_cats.col.material"), K::Text, E::No),
-                col("void", tl(ru, "sched_cats.col.void"), K::Text, E::No),
-                col("vol", tl(ru, "sched_cats.col.volume"), K::Vol, E::No),
-                col("area", tl(ru, "sched_cats.col.area"), K::Area, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("name", tl(lang, "sched_cats.col.name"), K::Text, E::No),
+                col("material", tl(lang, "sched_cats.col.material"), K::Text, E::No),
+                col("void", tl(lang, "sched_cats.col.void"), K::Text, E::No),
+                col("vol", tl(lang, "sched_cats.col.volume"), K::Vol, E::No),
+                col("area", tl(lang, "sched_cats.col.area"), K::Area, E::No),
             ],
             "SELECT s.id, s.name, s.material,              CASE s.void WHEN 1 THEN 'x' ELSE '' END, q.net_volume, q.area              FROM solid s LEFT JOIN solid_qty q ON q.solid=s.id WHERE s.level=?1 ORDER BY s.id",
         ),
         Cat::Masses => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("name", tl(ru, "sched_cats.col.name"), K::Text, E::No),
-                col("void", tl(ru, "sched_cats.col.void"), K::Text, E::No),
-                col("inplace", tl(ru, "sched_cats.col.inplace"), K::Text, E::No),
-                col("area", tl(ru, "sched_cats.col.floor_area"), K::Area, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("name", tl(lang, "sched_cats.col.name"), K::Text, E::No),
+                col("void", tl(lang, "sched_cats.col.void"), K::Text, E::No),
+                col("inplace", tl(lang, "sched_cats.col.inplace"), K::Text, E::No),
+                col("area", tl(lang, "sched_cats.col.floor_area"), K::Area, E::No),
             ],
             "SELECT m.id, m.name, CASE m.void WHEN 1 THEN 'x' ELSE '' END,              CASE m.inplace WHEN 1 THEN 'x' ELSE '' END,              (SELECT SUM(area) FROM mass_qty WHERE mass=m.id)              FROM mass m WHERE m.level=?1 ORDER BY m.id",
         ),
         Cat::Topography => (
             vec![
-                col("id", tl(ru, "sched.col.id"), K::Int, E::No),
-                col("name", tl(ru, "sched_cats.col.name"), K::Text, E::No),
-                col("material", tl(ru, "sched_cats.col.material"), K::Text, E::No),
-                col("th", tl(ru, "sched_cats.col.thickness"), K::Len, E::No),
-                col("points", tl(ru, "sched_cats.col.points"), K::Int, E::No),
+                col("id", tl(lang, "sched.col.id"), K::Int, E::No),
+                col("name", tl(lang, "sched_cats.col.name"), K::Text, E::No),
+                col("material", tl(lang, "sched_cats.col.material"), K::Text, E::No),
+                col("th", tl(lang, "sched_cats.col.thickness"), K::Len, E::No),
+                col("points", tl(lang, "sched_cats.col.points"), K::Int, E::No),
             ],
             "SELECT t.id, t.name, t.material, t.thickness,              (SELECT COUNT(*) FROM topo_point WHERE topo=t.id)              FROM toposolid t WHERE ?1 IS NOT NULL ORDER BY t.id",
         ),
@@ -229,8 +230,8 @@ const SQL_BRACE: &str = struct_sql!("brace", "brace");
 const SQL_TRUSS: &str = struct_sql!("truss", "truss");
 const SQL_SYSTEM: &str = struct_sql!("beam_system", "beam_system");
 
-fn structural(ru: bool, sql: &'static str) -> (Vec<Col>, &'static str) {
-    let t = |k: &str| tl(ru, k);
+fn structural(lang: Lang, sql: &'static str) -> (Vec<Col>, &'static str) {
+    let t = |k: &str| tl(lang, k);
     (
         vec![
             col("id", t("sched.col.id"), K::Int, E::No),
@@ -301,9 +302,9 @@ fn ifc_classes(cols: &[Col], rows: &mut [Row]) {
     }
 }
 
-fn code_text(code: &str, ru: bool) -> String {
+fn code_text(code: &str, lang: Lang) -> String {
     let key = format!("sch.val.{code}");
-    let t = tl(ru, &key);
+    let t = tl(lang, &key);
     if t.is_empty() || t == key {
         code.to_string()
     } else {
@@ -324,7 +325,7 @@ fn val(v: Value, k: K) -> Val {
 
 pub fn count(ed: &Editor, cat: Cat) -> usize {
     if matches!(cat, Cat::Grids | Cat::RefPlanes) {
-        return datums(ed, cat, false).1.len();
+        return datums(ed, cat, Lang::En).1.len();
     }
     if cat == Cat::Rebar {
         return ed
@@ -333,7 +334,7 @@ pub fn count(ed: &Editor, cat: Cat) -> usize {
             .map_or(0, |r| r.len());
     }
     if cat == Cat::Zones {
-        return build(ed, cat, false).1.len();
+        return build(ed, cat, Lang::En).1.len();
     }
     let Some(t) = cat.table() else { return 0 };
     if cat.basic() {
@@ -367,8 +368,8 @@ fn row_sel(cat: Cat, id: i64) -> Option<crate::editor::Sel> {
 }
 
 /// Grids and reference planes of the model: name, length and direction of the line.
-fn datums(ed: &Editor, cat: Cat, ru: bool) -> (Vec<Col>, Vec<Row>) {
-    let t = |k: &str| tl(ru, k);
+fn datums(ed: &Editor, cat: Cat, lang: Lang) -> (Vec<Col>, Vec<Row>) {
+    let t = |k: &str| tl(lang, k);
     let grids = cat == Cat::Grids;
     let mut cols = vec![col("id", t("sched.col.id"), K::Int, E::No)];
     cols.push(col("name", t("sched.col.name"), K::Text, E::No));
@@ -416,10 +417,10 @@ fn datums(ed: &Editor, cat: Cat, ru: bool) -> (Vec<Col>, Vec<Row>) {
 
 /// Rebar of the level, one row per set, sorted by host and set; the numbers add up in the
 /// group subtotals and the totals. The bending schedule by mark stays in the rebar dialog.
-fn rebar(ed: &Editor, ru: bool) -> (Vec<Col>, Vec<Row>) {
+fn rebar(ed: &Editor, lang: Lang) -> (Vec<Col>, Vec<Row>) {
     use crate::editor::Sel;
     use crate::scene_ids::EXT_REBAR;
-    let t = |k: &str| tl(ru, k);
+    let t = |k: &str| tl(lang, k);
     let cols = vec![
         col("id", t("sched_cats.sched.set"), K::Int, E::No),
         col("host", t("elem.rebar.host"), K::Text, E::No),
@@ -470,14 +471,14 @@ fn rebar(ed: &Editor, ru: bool) -> (Vec<Col>, Vec<Row>) {
     (cols, rows)
 }
 
-pub fn build(ed: &Editor, cat: Cat, ru: bool) -> (Vec<Col>, Vec<Row>) {
+pub fn build(ed: &Editor, cat: Cat, lang: Lang) -> (Vec<Col>, Vec<Row>) {
     if cat == Cat::Rebar {
-        return rebar(ed, ru);
+        return rebar(ed, lang);
     }
     if matches!(cat, Cat::Grids | Cat::RefPlanes) {
-        return datums(ed, cat, ru);
+        return datums(ed, cat, lang);
     }
-    let (cols, sql) = spec(cat, ru);
+    let (cols, sql) = spec(cat, lang);
     if sql.is_empty() {
         return (cols, vec![]);
     }
@@ -508,7 +509,7 @@ pub fn build(ed: &Editor, cat: Cat, ru: bool) -> (Vec<Col>, Vec<Row>) {
                     .into_iter()
                     .zip(kinds.iter().zip(&coded))
                     .map(|(v, (k, coded))| match val(v, *k) {
-                        Val::T(s) if *coded => Val::T(code_text(&s, ru)),
+                        Val::T(s) if *coded => Val::T(code_text(&s, lang)),
                         v => v,
                     })
                     .collect(),

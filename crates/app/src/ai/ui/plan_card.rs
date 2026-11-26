@@ -187,7 +187,8 @@ fn summary(
     }
 }
 
-/// `Area +12 m² · Cost +3 400 €`; the cost part needs a price table, the line a change.
+/// `Area +12 m² · Cost +3 400 EUR`; the cost part needs a price table, the line a change.
+/// The amount carries the project's currency code, or none: a symbol would guess the country.
 fn cost_line(cx: &Cx<'_>, plan: &PlanView, u: Units) -> Option<String> {
     let prices = cx.ed.model.unit_prices().unwrap_or_default();
     let (area, cost) = logic::area_cost_delta(&plan.qty, &prices);
@@ -196,15 +197,15 @@ fn cost_line(cx: &Cx<'_>, plan: &PlanView, u: Units) -> Option<String> {
     if area.is_none() && cost.is_none() {
         return None;
     }
-    let ru = cx.cat.lang == ddc_ui::Lang::Ru;
     let sign = |d: f64| if d < 0.0 { "−" } else { "+" };
     let mut parts = vec![];
     if let Some(a) = area {
-        let v = format!("{}{}", sign(a), fmt_area_in_lang(a.abs(), u, ru));
+        let v = format!("{}{}", sign(a), fmt_area_in_lang(a.abs(), u, cx.cat.lang));
         parts.push(cx.cat.tf("ai.plan.delta_area", &[("v", &v)]));
     }
     if let Some(c) = cost {
-        let v = format!("{}{} €", sign(c), fmt_num_lang(c.abs(), 0, ru));
+        let cur = cx.ed.model.currency().ok().flatten().map(|c| format!(" {c}")).unwrap_or_default();
+        let v = format!("{}{}{cur}", sign(c), fmt_num_lang(c.abs(), 0, cx.cat.lang));
         parts.push(cx.cat.tf("ai.plan.delta_cost", &[("v", &v)]));
     }
     Some(parts.join(" · "))
@@ -215,20 +216,19 @@ pub fn qty_line(cat: &Catalog, q: &QtyDelta, u: Units) -> String {
     let d = q.after - q.before;
     let sign = if d < 0.0 { "−" } else { "+" };
     let m = d.abs();
-    let ru = cat.lang == ddc_ui::Lang::Ru;
-    let vol = |m: f64| fmt_volume_lang(m, u, precision().1, ru);
+    let vol = |m: f64| fmt_volume_lang(m, u, precision().1, cat.lang);
     if let Some(name) = q.key.strip_prefix("volume:") {
         return format!("{name} {sign}{}", vol(m));
     }
     if let Some(name) = q.key.strip_prefix("area:") {
-        return format!("{name} {sign}{}", fmt_area_in_lang(m, u, ru));
+        return format!("{name} {sign}{}", fmt_area_in_lang(m, u, cat.lang));
     }
     let value = if q.key.ends_with("_volume") {
         vol(m)
     } else if q.key.ends_with("_area") {
-        fmt_area_in_lang(m, u, ru)
+        fmt_area_in_lang(m, u, cat.lang)
     } else {
-        fmt_num_lang(m, 0, ru)
+        fmt_num_lang(m, 0, cat.lang)
     };
     format!("{} {sign}{value}", cat.t(&format!("ai.qty.{}", q.key)))
 }
@@ -255,11 +255,10 @@ fn variants(ui: &mut Ui, cx: &Cx<'_>, plan: &PlanView, acts: &mut Vec<Action>) {
         }
     }
     if let Some(v) = plan.variants.get(sel) {
-        let ru = cx.cat.lang == ddc_ui::Lang::Ru;
         let line = v
             .metrics
             .iter()
-            .map(|(k, x)| format!("{k}: {}", fmt_num_lang(*x, 1, ru)))
+            .map(|(k, x)| format!("{k}: {}", fmt_num_lang(*x, 1, cx.cat.lang)))
             .collect::<Vec<_>>()
             .join(" · ");
         kit::caption(ui, th, &line);

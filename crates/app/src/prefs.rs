@@ -90,6 +90,8 @@ pub struct Prefs {
     pub text_size: f32,
     /// Icon set id (`data/icon_style.json`).
     pub icon_set: String,
+    /// Interface mode: «ribbon» (default), «rail» or «minimal» (`shell::ui_mode`).
+    pub ui_mode: String,
     /// Panel layout of each work mode, and layouts saved by name.
     pub mode_layouts: crate::shell::mode_layout::Store,
     /// Work focus chosen in the setup wizard, primary first («ai,data»); empty: none chosen.
@@ -207,6 +209,7 @@ impl Default for Prefs {
             font: "inter".into(),
             text_size: 1.0,
             icon_set: "duotone_all".into(),
+            ui_mode: "ribbon".into(),
             mode_layouts: Default::default(),
             focus: String::new(),
             onboarded: false,
@@ -313,6 +316,7 @@ impl Prefs {
                 "look.icons" if ddc_ui::icons::set(v).is_some() => p.icon_set = v.into(),
                 "focus" => p.focus = crate::shell::onboard::clean_focus(v),
                 "onboarded" => p.onboarded = v == "1",
+                "ui.mode" if crate::shell::ui_mode::UiMode::parse(v).is_some() => p.ui_mode = v.into(),
                 k if p.mode_layouts.read(k, v) => {}
                 "start_screen" => p.start_screen = v != "0",
                 "start.units" if ["metric", "imperial"].contains(&v) => p.start_units = v.into(),
@@ -449,6 +453,7 @@ look.icons={}
             self.look, self.accent, self.font, self.text_size, self.icon_set
         ) + &self.mode_layouts.text()
           + &format!("focus={}\nonboarded={}\n", self.focus, u8::from(self.onboarded))
+          + &format!("ui.mode={}\n", self.ui_mode)
           + &format!("start.units={}\n", self.start_units)
           + &format!(
             "first_card.done={}\nhelp.open={}\nhelp.float={}\n",
@@ -578,6 +583,7 @@ fn prefs_round_trip_and_clamp() {
         font: "plex".into(),
         text_size: 1.15,
         icon_set: "duotone_all".into(),
+        ui_mode: "rail".into(),
         mode_layouts: {
             use crate::shell::mode_layout::{Layout, Store, WorkMode};
             let mut s = Store::default();

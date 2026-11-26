@@ -95,7 +95,7 @@ pub fn selected(ed: &Editor) -> Vec<Item> {
 /// the shown text reads back with the same mark.
 fn num_text(x: f64, mark: DecimalMark) -> String {
     let (s, dec) = match mark {
-        DecimalMark::Comma => (units::fmt_num_ru(x, 6), ','),
+        DecimalMark::Comma => (units::fmt_num_comma(x, 6), ','),
         DecimalMark::Point => (units::fmt_num_en(x, 6), '.'),
     };
     if s.contains(dec) {

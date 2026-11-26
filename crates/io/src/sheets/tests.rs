@@ -95,6 +95,7 @@ fn a3_gost(view: &PlanView) -> SheetDrawing {
         units: LengthUnits::Metric,
         area_unit: None,
         logo: None,
+        words: None,
     })
     .unwrap()
 }
@@ -211,6 +212,7 @@ fn sheet_scale_and_frame_geometry() {
         units: LengthUnits::Metric,
         area_unit: None,
         logo: None,
+        words: None,
     })
     .unwrap();
     let pdf = iso.to_pdf().unwrap();
@@ -291,6 +293,7 @@ fn sheet(
         units,
         area_unit: None,
         logo: None,
+        words: None,
     })
     .unwrap()
 }
@@ -415,6 +418,7 @@ fn sheet_plan_section_elevation_pdf_dxf() {
             units: LengthUnits::Metric,
             area_unit: None,
             logo: None,
+            words: None,
         })
         .unwrap()
     };
@@ -501,6 +505,7 @@ fn sheet_model_dims_exact_and_no_label_overlap() {
             units: LengthUnits::Metric,
             area_unit: None,
             logo: None,
+            words: None,
         })
         .unwrap()
     };
@@ -591,6 +596,7 @@ fn with_logo(standard: &str, logo: Option<crate::logo::Logo>) -> SheetDrawing {
         units: LengthUnits::Metric,
         area_unit: None,
         logo,
+        words: None,
     })
     .unwrap()
 }

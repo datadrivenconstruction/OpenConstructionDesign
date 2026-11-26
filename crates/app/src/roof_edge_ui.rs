@@ -165,7 +165,7 @@ impl Num {
     pub fn reason_lang(&self, ru: bool, r: Reject, u: Units) -> String {
         let max = match (r, self.max) {
             (Reject::Max, Some(m)) if self.kind == NumKind::Pct => {
-                format!("{} %", crate::units::fmt_num_lang(m * 100.0, 1, ru))
+                format!("{} %", crate::units::fmt_num_lang(m * 100.0, 1, crate::units::lang_of(ru)))
             }
             (Reject::Max, Some(m)) => format!("{} {}", edit_length(m, u), unit_label(u)),
             _ => String::new(),

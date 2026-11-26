@@ -390,12 +390,12 @@ fn qty_rows(cat: &Catalog, q: &ddc_model::StructQty, u: Units) -> Vec<(&'static 
     let ru = cat.lang == ddc_ui::Lang::Ru;
     let mut rows = vec![("sp.parts", q.parts.to_string())];
     if q.length > 0.0 {
-        rows.push(("sp.length", display_length_lang(q.length, u, ru)));
+        rows.push(("sp.length", display_length_lang(q.length, u, cat.lang)));
     }
     rows.push(("sp.volume", vol(q.volume, ru, u)));
     rows.push(("sp.area", area(q.area, ru, u)));
     if let Some(w) = q.weight {
-        rows.push(("sp.weight", format!("{}\u{a0}{}", fmt_num_lang(w, 0, ru), cat.t("sp.kg"))));
+        rows.push(("sp.weight", format!("{}\u{a0}{}", fmt_num_lang(w, 0, cat.lang), cat.t("sp.kg"))));
     }
     rows
 }

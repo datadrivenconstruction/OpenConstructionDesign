@@ -169,7 +169,7 @@ pub fn print_to(
         return Err(msg(ru, "sheets.print.no_format", &[]));
     }
     let mut run = PrintRun::start(ed, p, ids, target);
-    while !run.step(ed, ru) {
+    while !run.step(ed) {
         std::thread::sleep(Duration::from_millis(1));
     }
     let o = run.finish(ru);
@@ -208,8 +208,8 @@ impl PrintRun {
     }
 
     /// One frame of work; true once the run has ended.
-    pub fn step(&mut self, ed: &Editor, ru: bool) -> bool {
-        self.job.step(ed, ru, STEP_BUDGET)
+    pub fn step(&mut self, ed: &Editor) -> bool {
+        self.job.step(ed, STEP_BUDGET)
     }
 
     /// Sheets done of all.
@@ -579,7 +579,7 @@ fn preview(ui: &mut egui::Ui, ed: &Editor, ru: bool, p: &mut Print, ids: &[i64])
         landscape: p.landscape,
         ru,
     };
-    p.preview.drive(&key, |_| start_build(ed, ru, &key));
+    p.preview.drive(&key, |_| start_build(ed, &key));
     if p.preview.is_running() {
         ui.ctx()
             .request_repaint_after(std::time::Duration::from_millis(50));
@@ -716,8 +716,8 @@ fn skeleton(ui: &egui::Ui, th: &Theme, area: Rect, busy: bool) {
 
 /// Starts the page build: only a read-only copy handle is taken here (schedule tables are small),
 /// composing and laying out the page happen on the worker.
-fn start_build(ed: &Editor, ru: bool, key: &PreviewKey) -> Worker<PreviewPage> {
-    let req = build_request(ed, ru, key);
+fn start_build(ed: &Editor, key: &PreviewKey) -> Worker<PreviewPage> {
+    let req = build_request(ed, key);
     match req.file.clone() {
         Some(file) => Worker::spawn(move |ctl| compose_page(&file, req, ctl)),
         None => {
@@ -737,11 +737,12 @@ struct BuildReq {
     pages: usize,
     paper: Option<(String, bool)>,
     units: LengthUnits,
-    ru: bool,
+    /// Document language of the sheet words.
+    lang: Lang,
     schedules: std::collections::HashMap<String, io::Table>,
 }
 
-fn build_request(ed: &Editor, ru: bool, key: &PreviewKey) -> BuildReq {
+fn build_request(ed: &Editor, key: &PreviewKey) -> BuildReq {
     let file = ed
         .model
         .sql()
@@ -761,7 +762,7 @@ fn build_request(ed: &Editor, ru: bool, key: &PreviewKey) -> BuildReq {
         pages: key.pages,
         paper: key.paper.clone().map(|s| (s, key.landscape)),
         units: lu(key.units),
-        ru,
+        lang: crate::doc_lang::doc_lang(&ed.model),
         schedules,
     }
 }
@@ -786,7 +787,7 @@ fn compose_page(
 
 fn compose_on(model: &ddc_model::Model, req: &BuildReq) -> Result<PreviewPage, String> {
     let sched = |k: &str| req.schedules.get(k).cloned();
-    let text = |k: &str| msg(req.ru, k, &[]);
+    let text = |k: &str| msg_in(req.lang, k, &[]);
     let paper = req.paper.as_ref().map(|(s, l)| (s.as_str(), *l));
     let ctx = Ctx {
         units: req.units,
@@ -932,7 +933,7 @@ pub(super) fn print_window(
     let mut open = true;
     let mut go = false;
     if let Some(job) = &mut p.job {
-        if job.step(&app.ed, ru, STEP_BUDGET) {
+        if job.step(&app.ed, STEP_BUDGET) {
             if let Some(job) = p.job.take() {
                 finished(app, ru, p, &job.into_outcome(), &mut keep);
             }
@@ -1025,9 +1026,9 @@ mod tests {
             landscape: true,
             ru: false,
         };
-        let req = build_request(&ed, false, &key);
+        let req = build_request(&ed, &key);
         assert!(req.file.is_none(), "nothing to open on a worker");
-        let mut w = start_build(&ed, false, &key);
+        let mut w = start_build(&ed, &key);
         let end = web_time::Instant::now() + std::time::Duration::from_secs(5);
         loop {
             match w.poll() {

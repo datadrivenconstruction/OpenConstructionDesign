@@ -128,6 +128,21 @@ fn text(v: &Value, k: &str) -> String {
     v.get(k).and_then(Value::as_str).unwrap_or("").to_string()
 }
 
+/// A word of the standard's data (title block label, north letter) in the document language:
+/// catalog key `sheets.std.<standard>.<name>`; without a catalog or a key, the data's own text.
+pub(crate) fn std_word(
+    words: Option<&dyn Fn(&str) -> String>,
+    standard: &str,
+    name: &str,
+    own: &str,
+) -> String {
+    let key = format!("sheets.std.{standard}.{name}");
+    match words.map(|w| w(&key)) {
+        Some(s) if !s.is_empty() && s != key => s,
+        _ => own.to_string(),
+    }
+}
+
 /// Sheet size in mm (width, height); `landscape` — long side horizontal.
 pub fn paper_size(name: &str, landscape: bool) -> Result<(f64, f64), SheetError> {
     let d = data();
@@ -280,6 +295,8 @@ pub struct SheetSpec<'a> {
     pub area_unit: Option<String>,
     /// Company logo for the title block cell of the owner (`legal_owner`, `organization`).
     pub logo: Option<crate::logo::Logo>,
+    /// Catalog of the document language for the standard's words; None: the data's own.
+    pub words: Option<&'a dyn Fn(&str) -> String>,
 }
 
 /// Logo placed on the sheet: `rect` is [x, y, w, h] in sheet mm.
@@ -657,8 +674,9 @@ pub fn compose_styled(
     for c in sp["cells"].as_array().into_iter().flatten() {
         let (cx, cy, cw, ch) = (sx + num(c, "x"), sy + num(c, "y"), num(c, "w"), num(c, "h"));
         pen.rect(cx, cy, cw, ch, num(fr, "weight"), STAMP);
-        let label = text(c, "label");
-        let fixed = text(c, "text");
+        let key = text(c, "key");
+        let label = std_word(spec.words, &spec.standard, &key, &text(c, "label"));
+        let fixed = std_word(spec.words, &spec.standard, &key, &text(c, "text"));
         let value = c
             .get("field")
             .and_then(Value::as_str)
@@ -708,7 +726,7 @@ pub fn compose_styled(
         .collect();
     let unit = spec.area_unit.clone().unwrap_or_else(|| text(&st, "area_unit"));
     let sep = text(&st, "decimal");
-    let fmt = anno::anno_fmt(&spec.standard);
+    let fmt = anno::anno_fmt(&spec.standard, spec.words);
     let hatch_rules = d["hatch"].as_array().cloned().unwrap_or_default();
     for (k, vp) in spec.viewports.iter().enumerate() {
         if !(vp.scale.is_finite() && vp.scale > 0.0) {

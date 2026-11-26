@@ -130,6 +130,7 @@ fn refusal_blocks_enter_with_field_reason() {
     crate::modify_tools::tests::walls(&mut ed, &[((0.0, 0.0), (4.0, 0.0))]);
     let mut t = ModTool::new(Op::Offset, &[]);
     t.opts.dist = 0.0;
+    t.trial.slack = 60.0;
     let at = v2(2.0, 0.05);
     t.hover(&ed, at);
     t.pulse(&mut ed, 0.0, 1);

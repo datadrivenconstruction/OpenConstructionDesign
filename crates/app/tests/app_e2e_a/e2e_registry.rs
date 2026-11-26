@@ -41,7 +41,7 @@ fn e2e_registry_fragment_commands_have_handler_i18n_icon() {
         if !handled(&a, &c.id) {
             bad.push(format!("{file}: {} has no handler", c.id));
         }
-        for lang in [Lang::Ru, Lang::En] {
+        for lang in [Lang::En, Lang::De, Lang::Ja, Lang::Ar, Lang::Ru] {
             if !a.sh.cat.table(lang).contains_key(&c.label_key()) {
                 bad.push(format!(
                     "{file}: {} no {lang:?} key {}",
@@ -70,7 +70,7 @@ fn e2e_registry_all_commands_have_ru_en_labels_unique_ids() {
     let mut bad = vec![];
     for c in a.sh.reg.all() {
         *seen.entry(c.id.clone()).or_insert(0) += 1;
-        for lang in [Lang::Ru, Lang::En] {
+        for lang in [Lang::En, Lang::De, Lang::Ja, Lang::Ar, Lang::Ru] {
             if !a.sh.cat.table(lang).contains_key(&c.label_key()) {
                 bad.push(format!("{} no {lang:?} label", c.id));
             }
@@ -175,7 +175,7 @@ fn e2e_registry_literal_i18n_keys_exist_ru_en() {
         let text = std::fs::read_to_string(&f).unwrap();
         for k in literal_keys(&text) {
             n += 1;
-            for lang in [Lang::Ru, Lang::En] {
+            for lang in [Lang::En, Lang::De, Lang::Ja, Lang::Ar, Lang::Ru] {
                 let t = a.sh.cat.table(lang);
                 // plural keys live as `<key>.one/.few/.many/.other`
                 let plural = t

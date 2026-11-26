@@ -135,6 +135,9 @@ pub struct Wizard {
     shown: Option<u8>,
     /// Never opens on its own (screenshots of other screens).
     pub quiet: bool,
+    /// Weekly update checks as answered here; applied only when the wizard is finished, so
+    /// nothing is sent before. None: untouched on a later visit (the setting stays as it is).
+    pub updates: Option<bool>,
 }
 
 impl EditorApp {
@@ -142,6 +145,8 @@ impl EditorApp {
         self.chrome.onboard.open = true;
         self.chrome.onboard.step = step.min(STEPS - 1);
         self.chrome.onboard.shown = None;
+        // first start: the chooser offers weekly checks, on
+        self.chrome.onboard.updates = (!self.prefs.onboarded).then_some(true);
         self.settings_open = false;
     }
 
@@ -236,6 +241,10 @@ impl EditorApp {
         self.chrome.onboard.open = false;
         self.prefs.onboarded = true;
         if finished {
+            if let Some(on) = self.chrome.onboard.updates.take() {
+                use crate::update::{set_freq, Freq};
+                set_freq(if on { Freq::Weekly } else { Freq::Never });
+            }
             let f = self.focus();
             if !f.is_empty() {
                 self.set_focus(ctx, &f);
@@ -295,6 +304,8 @@ impl EditorApp {
                 self.prefs.save();
             }
             Some(Act::Density(d)) => self.ob_set(|p| p.density = d.into()),
+            Some(Act::Mode(m)) => self.set_ui_mode(m),
+            Some(Act::Updates(on)) => self.chrome.onboard.updates = Some(on),
             Some(Act::Font(f)) => self.ob_set(|p| p.font = f.key().into()),
             Some(Act::Scale(s)) => self.ob_set(|p| p.ui_scale = s),
             None => {}
@@ -552,7 +563,55 @@ impl EditorApp {
         }
     }
 
+    /// Interface mode: three cards with a small picture each, then the weekly update check.
+    fn ob_mode(&mut self, ui: &mut egui::Ui, act: &mut Option<Act>) {
+        use super::ui_mode::{preview, UiMode};
+        let th = &self.sh.theme;
+        let c = &self.sh.cat;
+        ui.label(th.rich(Role::BodyStrong, &c.t("ui_mode.title")).color(th.c("text.primary")));
+        ui.add_space(space::XS);
+        let now = UiMode::of(&self.prefs);
+        let gap = space::MD;
+        let cw = ((ui.available_width() - 2.0 * gap) / 3.0).floor();
+        let inner = cw - 2.0 * space::MD;
+        let desc_h = UiMode::ALL
+            .iter()
+            .map(|m| text_wrap(ui, th, Role::Caption, &c.t(&m.desc_key()), inner, "text.secondary").size().y)
+            .fold(0.0, f32::max);
+        let (name_h, art_h) = (24.0, 64.0);
+        let ch = 2.0 * space::MD + name_h + art_h + space::SM + desc_h;
+        ui.horizontal(|ui| {
+            ui.spacing_mut().item_spacing.x = gap;
+            for m in UiMode::ALL {
+                let (r, resp) = ui.allocate_exact_size(Vec2::new(cw, ch), Sense::click());
+                let name = c.t(&m.label_key());
+                resp.widget_info(|| egui::WidgetInfo::selected(egui::WidgetType::RadioButton, true, m == now, &name));
+                focus_card(ui, th, r, m == now, resp.hovered(), resp.has_focus());
+                let x = r.min.x + space::MD;
+                let g = text_line(ui, th, Role::BodyStrong, &name, inner - 28.0, "text.primary");
+                ui.painter().galley(Pos2::new(x, r.min.y + space::MD), g, th.c("text.primary"));
+                let art = Rect::from_min_size(Pos2::new(x, r.min.y + space::MD + name_h), Vec2::new(inner, art_h));
+                preview(ui.painter(), th, art, m);
+                let d = text_wrap(ui, th, Role::Caption, &c.t(&m.desc_key()), inner, "text.secondary");
+                ui.painter().galley(Pos2::new(x, art.max.y + space::SM), d, th.c("text.secondary"));
+                if resp.clicked() {
+                    *act = Some(Act::Mode(m));
+                }
+            }
+        });
+        ui.add_space(space::LG);
+        let mut on = self.chrome.onboard.updates.unwrap_or(crate::update::freq() != crate::update::Freq::Never);
+        let was = on;
+        widgets::toggle(ui, th, &mut on, &c.t("onb.updates"));
+        if on != was {
+            *act = Some(Act::Updates(on));
+        }
+        ui.add(egui::Label::new(th.rich(Role::Caption, &c.t("update_check.desc")).color(th.c("text.secondary"))).wrap());
+        ui.add_space(space::LG);
+    }
+
     fn ob_menu(&mut self, ui: &mut egui::Ui, act: &mut Option<Act>) {
+        self.ob_mode(ui, act);
         let w = ui.available_width();
         let left = (w * 0.46).clamp(300.0, 440.0);
         ui.horizontal_top(|ui| {
@@ -710,8 +769,10 @@ impl EditorApp {
         } else {
             c.t("settings.density.auto")
         };
-        let rows: [(&str, &str, String); 6] = [
+        let mode = c.t(&super::ui_mode::UiMode::of(&self.prefs).label_key());
+        let rows: [(&str, &str, String); 7] = [
             ("spark", "onb.sum.focus", focus_text),
+            ("layout-focus", "onb.sum.mode", mode),
             ("shading", "onb.sum.look", c.t(&self.look().name_key())),
             ("layout-ribbon", "onb.sum.icons", c.t(&format!("theme.icons.{}", self.prefs.icon_set))),
             ("fold-ribbon", "onb.sum.ribbon", c.t(&format!("theme.ribbon.{}", looks_ui::ribbon_now(&self.prefs).key()))),
@@ -756,6 +817,8 @@ enum Act {
     Icons(&'static str),
     Ribbon(RibbonLook),
     Density(&'static str),
+    Mode(super::ui_mode::UiMode),
+    Updates(bool),
     Font(UiFont),
     Scale(f32),
 }

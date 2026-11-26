@@ -90,6 +90,7 @@ const BUILDS: &[(&str, Build)] = &[
     ("G36_grain_silos", Live(LIVE)),
     ("G37_arch_hangar", Live(LIVE)),
     ("G38_tensile_sail", Recipe("membrane_canopy", none)),
+    ("G39_parabolic_dish", Live(LIVE)),
     ("G39_radio_dish", Live(LIVE)),
     ("G40_stepped_pyramid", Steps(pyramid)),
 ];
