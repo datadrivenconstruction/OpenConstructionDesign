@@ -60,7 +60,7 @@ impl Direction {
 }
 
 /// Which direction each use draws, from `data/icon_style.json`: the one switch for the product
-/// (all three `duotone` = direction B everywhere).
+/// (the default `duotone_all`: direction B at rest, C for the active tool).
 #[derive(Clone, Copy, Debug, PartialEq, Eq, serde::Deserialize)]
 #[serde(deny_unknown_fields)]
 pub struct Style {
@@ -136,8 +136,20 @@ pub fn style() -> Style {
 pub const MASTERS: [u32; 3] = [16, 20, 24];
 /// From this logical size up an icon is an illustration and takes `Style::large`.
 pub const LARGE: u32 = 32;
-/// Accent of the duotone surface and spark in the files; the app tints it with the theme accent.
+/// Accent of the duotone surface and spark in the files: only the layer-split marker; the app
+/// paints that layer in `icon.tint` (`icon.tint.ai` for an AI glyph).
 const FILE_ACCENT: &str = "#2457D6";
+
+/// An AI glyph (`spark*`, `ai-*`): its accent layer takes `icon.tint.ai`, so violet always means AI.
+pub fn is_ai(name: &str) -> bool {
+    let n = name.strip_suffix(".fill").unwrap_or(name);
+    n.starts_with("spark") || n.starts_with("ai-")
+}
+
+/// Colour token of the accent layer of `name`.
+pub fn tint_token(name: &str) -> &'static str {
+    if is_ai(name) { "icon.tint.ai" } else { "icon.tint" }
+}
 
 /// The master drawn for `px` physical pixels: never a fractional shrink of a bigger master
 /// (20 px is the 20 master, not the 24 one at 5/6), larger sizes scale the 24 master.
@@ -389,7 +401,7 @@ pub const DISABLED_BELOW: u8 = 128;
 pub fn tint(th: &crate::Theme, t: Tint) -> Color32 {
     match t {
         Tint::Rest => th.c("text.primary"),
-        Tint::Active => th.c("accent"),
+        Tint::Active => th.c("icon.tint"),
         Tint::Disabled => th.c("text.primary").gamma_multiply(DISABLED_INK),
     }
 }
@@ -496,7 +508,7 @@ impl IconCache {
         }
         if let Some(t) = self.layer(&ctx, name, dir, bare, logical, Layer::Accent) {
             let fade = color.a() as f32 / 255.0;
-            let accent = crate::theme::of(&ctx).c("accent").gamma_multiply(fade);
+            let accent = crate::theme::of(&ctx).c(tint_token(bare)).gamma_multiply(fade);
             ui.painter().image(t.id(), rect, uv, accent);
         }
     }

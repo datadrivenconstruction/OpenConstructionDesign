@@ -345,23 +345,33 @@ pub fn migrate_ids<V>(m: &mut BTreeMap<String, V>) {
     }
 }
 
-/// Russian-layout letters by key position, from the language data file (same order as `EN`).
-fn ru_layout_keys() -> &'static str {
-    include_str!("../data/lang/ru/layout_keys.txt").trim()
+/// QWERTY keys in the order of every `data/lang/<code>/layout_keys.txt`.
+const QWERTY: &str = "qwertyuiop[]asdfghjkl;'zxcvbnm,.`";
+
+/// Letters of the non-Latin keyboard layout for the UI language, else of the first shipped one.
+fn layout_keys() -> &'static str {
+    let lang = crate::i18n::current();
+    let layouts = crate::fragments::KEY_LAYOUTS;
+    lang.chain()
+        .find_map(|l| layouts.iter().find(|(c, _)| *c == l.code()))
+        .or(layouts.first())
+        .map_or("", |(_, k)| k.trim())
 }
 
-/// Russian layout → QWERTY by key position, for text typed in the command line / palette.
+/// Letter of any shipped non-Latin layout → QWERTY by key position, for text typed in the
+/// command line / palette.
 pub fn cyr_to_latin(c: char) -> Option<char> {
-    const EN: &str = "qwertyuiop[]asdfghjkl;'zxcvbnm,.`";
     let lc = c.to_lowercase().next()?;
-    let i = ru_layout_keys().chars().position(|r| r == lc)?;
-    EN.chars().nth(i)
+    crate::fragments::KEY_LAYOUTS
+        .iter()
+        .find_map(|(_, k)| k.trim().chars().position(|r| r == lc))
+        .and_then(|i| QWERTY.chars().nth(i))
 }
+/// QWERTY → the same key in the layout of [`layout_keys`].
 pub fn latin_to_cyr(c: char) -> Option<char> {
-    const EN: &str = "qwertyuiop[]asdfghjkl;'zxcvbnm,.`";
     let lc = c.to_ascii_lowercase();
-    let i = EN.chars().position(|r| r == lc)?;
-    ru_layout_keys().chars().nth(i)
+    let i = QWERTY.chars().position(|r| r == lc)?;
+    layout_keys().chars().nth(i)
 }
 
 /// Letter of a physical key (A–Z), independent of the active keyboard layout.

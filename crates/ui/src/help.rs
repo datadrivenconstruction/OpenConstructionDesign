@@ -2,12 +2,17 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Built-in help: Markdown-lite topics `data/help/<lang>/<id>.md` (heading `# `, `@tags`,
 //! `@context`, `@commands`, `@see` lines, sections `## steps|keys|tips`), search, context-sensitive
-//! F1 topic, "What's new" (`data/help/whats_new.<lang>.md`).
-use crate::fragments::{HELP_EN_FRAGMENTS, HELP_RU_FRAGMENTS};
+//! F1 topic, "What's new" (`data/help/<lang>/whats_new.md`).
+use crate::fragments::HELP_ALL;
 use crate::Lang;
 
-pub const WHATS_NEW_RU: &str = include_str!("../data/help/whats_new.ru.md");
-pub const WHATS_NEW_EN: &str = include_str!("../data/help/whats_new.en.md");
+const WHATS_NEW_FILE: &str = "whats_new.md";
+
+/// Help files of one language; a locale without help falls back to English.
+fn lang_files(lang: Lang) -> &'static [(&'static str, &'static str)] {
+    let find = |code: &str| HELP_ALL.iter().find(|e| e.0 == code).map(|e| e.1);
+    find(lang.code()).or_else(|| find("en")).unwrap_or(&[])
+}
 
 /// Sections required in every topic (labels — `help.sec.<name>`).
 pub const REQUIRED: [&str; 3] = ["steps", "keys", "tips"];
@@ -275,10 +280,11 @@ impl Library {
     pub fn builtin(lang: Lang) -> Self {
         Self::from_files(
             lang,
-            match lang {
-                Lang::Ru => HELP_RU_FRAGMENTS,
-                _ => HELP_EN_FRAGMENTS,
-            },
+            &lang_files(lang)
+                .iter()
+                .filter(|f| f.0 != WHATS_NEW_FILE)
+                .copied()
+                .collect::<Vec<_>>(),
         )
     }
     pub fn get(&self, id: &str) -> Option<&Topic> {
@@ -341,10 +347,7 @@ impl Library {
 
 /// "What's new" parsed the same way (tags and sections are optional).
 pub fn whats_new(lang: Lang) -> Topic {
-    let src = match lang {
-        Lang::Ru => WHATS_NEW_RU,
-        _ => WHATS_NEW_EN,
-    };
+    let src = lang_files(lang).iter().find(|f| f.0 == WHATS_NEW_FILE).map_or("", |f| f.1);
     parse("whats_new", src).unwrap_or_default()
 }
 

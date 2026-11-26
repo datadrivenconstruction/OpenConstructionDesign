@@ -134,13 +134,63 @@ fn i18n_all(root: &str) -> String {
     s + "];\n"
 }
 
+/// `HELP_ALL`: `(locale code, topic files)` for every folder `data/help/<code>/`, sorted by code.
+fn help_all(root: &str) -> String {
+    println!("cargo:rerun-if-changed={root}");
+    let dir = Path::new(&manifest_dir()).join(root);
+    let mut codes: Vec<String> = fs::read_dir(dir)
+        .into_iter()
+        .flatten()
+        .flatten()
+        .filter(|e| e.path().is_dir())
+        .map(|e| e.file_name().to_string_lossy().into_owned())
+        .collect();
+    codes.sort();
+    let mut s = String::from("pub const HELP_ALL: &[(&str, &[(&str, &str)])] = &[
+");
+    for c in codes {
+        let items: String = list_ext(&format!("{root}/{c}"), "md")
+            .iter()
+            .map(|f| format!("({:?}, {}), ", f.rsplit('/').next().unwrap_or(f), include(f)))
+            .collect();
+        s += &format!("    ({c:?}, &[{items}]),
+");
+    }
+    s + "];
+"
+}
+
+/// `KEY_LAYOUTS`: `(locale code, letters by QWERTY key position)` for every
+/// `data/lang/<code>/layout_keys.txt`, sorted by code.
+fn key_layouts(root: &str) -> String {
+    println!("cargo:rerun-if-changed={root}");
+    let dir = Path::new(&manifest_dir()).join(root);
+    let mut codes: Vec<String> = fs::read_dir(dir)
+        .into_iter()
+        .flatten()
+        .flatten()
+        .filter(|e| e.path().join("layout_keys.txt").is_file())
+        .map(|e| e.file_name().to_string_lossy().into_owned())
+        .collect();
+    codes.sort();
+    let mut s = String::from("pub const KEY_LAYOUTS: &[(&str, &str)] = &[
+");
+    for c in codes {
+        let f = format!("{root}/{c}/layout_keys.txt");
+        println!("cargo:rerun-if-changed={f}");
+        s += &format!("    ({c:?}, {}),
+", include(&f));
+    }
+    s + "];
+"
+}
+
 fn main() {
     let mut s = arr("COMMAND_FRAGMENTS", &list("data/commands.d"));
     s += &arr("I18N_EN_FRAGMENTS", &list("data/i18n/en"));
-    s += &arr("I18N_RU_FRAGMENTS", &list("data/i18n/ru"));
     s += &i18n_all("data/i18n");
-    s += &arr("HELP_EN_FRAGMENTS",&list_ext("data/help/en", "md"));
-    s += &arr("HELP_RU_FRAGMENTS", &list_ext("data/help/ru", "md"));
+    s += &help_all("data/help");
+    s += &key_layouts("data/lang");
     s += &icons_v4("../../docs/design/icons_v4");
     s += &icons_ribbon("../../assets/icons3");
     s += &icons_pick("../../assets/icons_pick");

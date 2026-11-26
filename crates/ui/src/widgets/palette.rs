@@ -63,6 +63,39 @@ fn one_row_per_command(reg: &Registry, ids: impl IntoIterator<Item = String>) ->
         .collect()
 }
 
+/// Scope prefix of a query: `>` commands only, `@` model elements, `#` views and sheets (the
+/// host's rows only).
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum Scope {
+    All,
+    Commands,
+    Elements,
+    Views,
+}
+
+/// The scope of `q` and the text after its prefix.
+pub fn scope(q: &str) -> (Scope, &str) {
+    let t = q.trim_start();
+    match t.chars().next() {
+        Some('>') => (Scope::Commands, t[1..].trim_start()),
+        Some('@') => (Scope::Elements, t[1..].trim_start()),
+        Some('#') => (Scope::Views, t),
+        _ => (Scope::All, q),
+    }
+}
+
+/// Where a command lives on the ribbon («Architecture › Circulation»): learning the palette
+/// teaches the ribbon. Empty for a command without a tab.
+pub fn ribbon_path(cat: &Catalog, c: &crate::Command) -> String {
+    match c.tab.as_deref() {
+        Some(t) if c.on("R") => {
+            let g = super::ribbon::group_name(c);
+            format!("{} \u{203a} {}", cat.t(&format!("tab.{t}")), cat.t(&format!("rgroup.{g}")))
+        }
+        _ => String::new(),
+    }
+}
+
 /// One visible row: a command id or an index into `extras`.
 #[derive(Clone, Debug, PartialEq)]
 pub enum Item {
@@ -90,7 +123,11 @@ impl Palette {
     /// Rows shown for the current query (ids).
     pub fn rows(&self, reg: &Registry, cat: &Catalog) -> Vec<String> {
         let ok = |id: &str| self.runs(reg, id);
-        if self.query.trim().is_empty() {
+        let (sc, q) = scope(&self.query);
+        if matches!(sc, Scope::Elements | Scope::Views) {
+            return vec![];
+        }
+        if q.trim().is_empty() {
             let recent = self.recent.iter().filter(|i| ok(i)).cloned();
             let mut v: Vec<String> = one_row_per_command(reg, recent);
             // an alias of a listed command is that command: it never takes a second row
@@ -111,7 +148,7 @@ impl Palette {
             }
             return v;
         }
-        let v = fuzzy::ranked(reg, cat, &self.query)
+        let v = fuzzy::ranked(reg, cat, q)
             .into_iter()
             .filter(|c| ok(&c.id))
             .map(|c| c.id.clone());
@@ -127,7 +164,8 @@ impl Palette {
 
     /// Commands and extras (if built for this query); fewer commands beside extras.
     pub fn items(&self, reg: &Registry, cat: &Catalog) -> Vec<Item> {
-        let ex = self.extras_for.as_deref() == Some(self.query.as_str());
+        let ex = self.extras_for.as_deref() == Some(self.query.as_str())
+            && scope(&self.query).0 != Scope::Commands;
         let n = if ex { self.extras.len() } else { 0 };
         let tail = self.catch_all.filter(|i| self.catch_all_last && *i < n);
         let extras = (0..n).filter(move |i| Some(*i) != tail).map(Item::Extra);
@@ -197,6 +235,9 @@ impl Palette {
         };
         // taken before plain Enter, or the same press would pick the highlighted row too
         let ctrl_enter = ctx.input_mut(|i| i.consume_key(egui::Modifiers::COMMAND, Key::Enter));
+        // Tab hands the typed text to the assistant: the host's ask-AI row
+        let tab = !self.query.trim().is_empty()
+            && ctx.input_mut(|i| i.consume_key(egui::Modifiers::NONE, Key::Tab));
         let (up, down, enter, esc) = ctx.input_mut(|i| {
             (
                 i.consume_key(egui::Modifiers::NONE, Key::ArrowUp),
@@ -219,7 +260,7 @@ impl Palette {
             self.sel = self.sel.min(rows.len() - 1);
         }
         let catch_all = self.catch_all_row(reg, cat);
-        let mut picked = if ctrl_enter {
+        let mut picked = if ctrl_enter || tab {
             catch_all.map(|i| extras[i].key.clone())
         } else {
             enter.then(|| rows.get(self.sel).map(key_of)).flatten()
@@ -311,7 +352,7 @@ impl Palette {
                                             format!("{keys}  {s}")
                                         };
                                     }
-                                    (cmd.icon.clone(), cat.t(&cmd.label_key()), Some(keys))
+                                    (cmd.icon.clone(), cat.t(&cmd.label_key()), Some((keys, ribbon_path(cat, cmd))))
                                 }
                                 Item::Extra(k) => {
                                     let e = &extras[*k];
@@ -340,9 +381,26 @@ impl Palette {
                             let x = ic.right() + d.gap * 2.0;
                             let right = rect.right_center() - Vec2::new(d.pad_x, 0.0);
                             let rw = match (&keys, it) {
-                                (Some(k), _) => {
-                                    super::paint_keycaps(p, th, right, k);
-                                    k.chars().count() as f32 * 8.0
+                                (Some((k, path)), _) => {
+                                    let kw = if k.is_empty() {
+                                        0.0
+                                    } else {
+                                        super::paint_keycaps(p, th, right, k);
+                                        k.chars().count() as f32 * 8.0
+                                    };
+                                    let pw = if path.is_empty() {
+                                        0.0
+                                    } else {
+                                        p.text(
+                                            right - Vec2::new(kw + d.gap * 2.0, 0.0),
+                                            Align2::RIGHT_CENTER,
+                                            path,
+                                            th.font(crate::theme::Role::Caption),
+                                            th.c("text.secondary"),
+                                        )
+                                        .width()
+                                    };
+                                    kw + if pw > 0.0 { pw + d.gap * 2.0 } else { 0.0 }
                                 }
                                 (None, Item::Extra(k)) => p
                                     .text(
@@ -508,5 +566,41 @@ mod tests {
         let (a, t) = alias.expect("catalog has aliases");
         p.live = Some([t].into_iter().collect());
         assert!(p.runs(&r, &a));
+    }
+}
+
+#[cfg(test)]
+mod scope_tests {
+    use super::*;
+
+    #[test]
+    fn prefixes_scope_the_rows() {
+        assert_eq!(scope("> wall"), (Scope::Commands, "wall"));
+        assert_eq!(scope("@door"), (Scope::Elements, "door"));
+        assert_eq!(scope("#Level 2"), (Scope::Views, "#Level 2"));
+        assert_eq!(scope("wall"), (Scope::All, "wall"));
+        let (r, c) = (Registry::builtin(), Catalog::new(crate::Lang::En));
+        let mut p = Palette::default();
+        p.query = "> wall".into();
+        assert_eq!(p.rows(&r, &c).first().map(String::as_str), Some("arch.wall"));
+        p.extras = vec![Extra { key: "@q:x".into(), ..Default::default() }];
+        p.extras_for = Some(p.query.clone());
+        assert!(p.items(&r, &c).iter().all(|i| matches!(i, Item::Cmd(_))), "> lists commands only");
+        p.query = "@wall".into();
+        assert!(p.rows(&r, &c).is_empty(), "@ lists model elements only");
+    }
+
+    #[test]
+    fn rows_name_their_ribbon_place_in_english_too() {
+        let r = Registry::builtin();
+        let wall = r.get("arch.wall").unwrap();
+        let en = Catalog::new(crate::Lang::En);
+        let path = ribbon_path(&en, wall);
+        assert!(path.contains('\u{203a}') && !path.contains("tab.") && !path.contains("rgroup."), "{path}");
+        assert!(ribbon_path(&en, r.get("app.palette").unwrap()).is_empty());
+        // an English word finds the command in another interface language
+        let mut p = Palette::default();
+        p.query = "wall".into();
+        assert!(p.rows(&r, &Catalog::new(crate::Lang::Ru)).contains(&"arch.wall".to_string()));
     }
 }

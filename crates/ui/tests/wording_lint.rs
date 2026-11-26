@@ -41,8 +41,11 @@ struct Entry {
 /// All entries of a language, later files overriding earlier ones like the app's loader.
 fn catalog(lang: &str) -> Vec<Entry> {
     let dir = crate_dir().join("data").join("i18n");
-    let mut files =
-        vec![dir.join(format!("ui.{lang}.json")), dir.join(format!("commands.{lang}.json"))];
+    let mut files: Vec<PathBuf> = [format!("ui.{lang}.json"), format!("commands.{lang}.json")]
+        .iter()
+        .map(|n| dir.join(n))
+        .filter(|p| p.exists())
+        .collect();
     files.extend(json_files(&dir.join(lang)));
     let mut map: BTreeMap<String, Value> = BTreeMap::new();
     for f in files {

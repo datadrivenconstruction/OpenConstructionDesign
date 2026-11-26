@@ -46,7 +46,7 @@ fn locales() -> Vec<String> {
     v
 }
 
-/// Keys of one locale: its base files (en, ru) plus its fragments.
+/// Keys of one locale: its root base files (en only) plus its fragments.
 fn keys(lang: &str) -> BTreeSet<String> {
     let i18n = data().join("i18n");
     let mut out = BTreeSet::new();

@@ -161,10 +161,6 @@ const EN: [&str; 2] = [
     include_str!("../data/i18n/ui.en.json"),
     include_str!("../data/i18n/commands.en.json"),
 ];
-const RU: [&str; 2] = [
-    include_str!("../data/i18n/ui.ru.json"),
-    include_str!("../data/i18n/commands.ru.json"),
-];
 
 /// CLDR plural category for a non-negative integer.
 pub fn plural_category(lang: Lang, n: u64) -> &'static str {
@@ -252,15 +248,14 @@ pub struct Catalog {
 
 #[cfg(any(test, not(feature = "external-assets")))]
 use crate::fragments::I18N_ALL;
-use crate::fragments::{I18N_EN_FRAGMENTS, I18N_RU_FRAGMENTS};
+use crate::fragments::I18N_EN_FRAGMENTS;
 use std::sync::OnceLock;
 
-/// Base files plus fragments of one language; only `en` and `ru` have base files.
-/// Other locales hold fragments `<code>/<same name as en>.json` and fall back per key.
+/// English has base files plus fragments; every other locale holds `<code>/<same name as en>.json`
+/// and falls back per key.
 fn load_lang(lang: Lang) -> BTreeMap<String, Value> {
     let (base, frags): (&[&str], &[(&str, &str)]) = match lang {
         Lang::En => (&EN[..], I18N_EN_FRAGMENTS),
-        Lang::Ru => (&RU[..], I18N_RU_FRAGMENTS),
         // browser build: one merged catalog per locale from the bundle (`table` waits for it)
         #[cfg(feature = "external-assets")]
         _ => {
@@ -278,7 +273,15 @@ fn load_lang(lang: Lang) -> BTreeMap<String, Value> {
 
 fn load(base: &[&str], frags: &[(&str, &str)]) -> BTreeMap<String, Value> {
     let mut m = BTreeMap::new();
-    for s in base.iter().copied().chain(frags.iter().map(|f| f.1)) {
+    // `ui.json`, `commands.json` are base files: loaded first (in that order) so fragments override them.
+    let rank = |n: &str| match n {
+        "ui.json" => 0,
+        "commands.json" => 1,
+        _ => 2,
+    };
+    let mut ordered: Vec<&(&str, &str)> = frags.iter().collect();
+    ordered.sort_by_key(|f| rank(f.0));
+    for s in base.iter().copied().chain(ordered.iter().map(|f| f.1)) {
         match serde_json::from_str::<BTreeMap<String, Value>>(s) {
             Ok(v) => m.extend(v),
             Err(e) => {
@@ -491,11 +494,11 @@ mod tests {
             assert!(ru.contains_key(&cmd.label_key()), "{}", cmd.id);
         }
         assert_eq!(c.t("no.such.key"), "no.such.key");
-        for (i, src) in EN.iter().chain(RU.iter()).enumerate() {
+        for (i, src) in EN.iter().enumerate() {
             serde_json::from_str::<BTreeMap<String, Value>>(src)
                 .unwrap_or_else(|e| panic!("i18n base file #{i}: {e}"));
         }
-        for (name, src) in I18N_EN_FRAGMENTS.iter().chain(I18N_RU_FRAGMENTS) {
+        for (name, src) in I18N_ALL.iter().flat_map(|e| e.1.iter()).chain(I18N_EN_FRAGMENTS) {
             serde_json::from_str::<BTreeMap<String, Value>>(src)
                 .unwrap_or_else(|e| panic!("i18n fragment {name}: {e}"));
         }

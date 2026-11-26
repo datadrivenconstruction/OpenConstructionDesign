@@ -37,6 +37,26 @@ pub struct Toast {
     pub details: Option<String>,
     /// History entry an Undo or Redo action steps, exactly that one (see `STEP_CMDS`).
     pub entry: Option<u64>,
+    /// A choice row (`push_choice`): the text is a title, a click runs the command and closes.
+    pub actions: Vec<ToastAction>,
+}
+
+/// One button of a choice toast; at most one is `primary`.
+#[derive(Debug, Clone, PartialEq)]
+pub struct ToastAction {
+    pub label: String,
+    pub command: String,
+    pub primary: bool,
+}
+
+impl ToastAction {
+    pub fn new(label: impl Into<String>, command: impl Into<String>, primary: bool) -> Self {
+        Self {
+            label: label.into(),
+            command: command.into(),
+            primary,
+        }
+    }
 }
 
 /// Commands that step the history. A toast offers them only tied to the entry it reports,
@@ -78,6 +98,8 @@ pub const HISTORY_CMD: &str = "notify.history";
 pub const LIFE: f64 = 4.0;
 pub const HISTORY_CAP: usize = 200;
 pub const LIFE_ACTION: f64 = 6.0;
+/// A choice toast waits longer: reading a title, a line and three buttons takes time.
+pub const LIFE_CHOICE: f64 = 12.0;
 /// Errors stay until dismissed (the person must be able to read and copy them).
 pub const LIFE_ERROR: f64 = f64::INFINITY;
 
@@ -158,6 +180,37 @@ impl Toasts {
         {
             t.details = Some(details.into());
         }
+    }
+    /// Toast with a bold title, a muted line and a row of buttons; the command of the clicked
+    /// one is what `widgets::toasts::show` returns, and the card closes. Replaces a live toast
+    /// with the same title.
+    pub fn push_choice(
+        &mut self,
+        level: Level,
+        title: impl Into<String>,
+        details: Option<String>,
+        actions: Vec<ToastAction>,
+    ) {
+        let title = sentence_case(title.into());
+        self.history.push((level, title.clone()));
+        self.times.push(web_time::SystemTime::now());
+        self.trim_history();
+        self.live.retain(|t| !(t.text == title && !t.actions.is_empty()));
+        self.live.push(Toast {
+            text: title,
+            level,
+            action: None,
+            command: None,
+            count: 1,
+            left: if level == Level::Error { LIFE_ERROR } else { LIFE_CHOICE },
+            details: details.filter(|d| !d.is_empty()),
+            entry: None,
+            actions,
+        });
+    }
+    /// Closes every live toast that offers `command` among its choices.
+    pub fn dismiss_command(&mut self, command: &str) {
+        self.live.retain(|t| !t.actions.iter().any(|a| a.command == command));
     }
     /// Removes a live toast (close button); it stays in the notification center.
     pub fn dismiss(&mut self, i: usize) {
@@ -242,6 +295,7 @@ impl Toasts {
                 && t.action == action
                 && t.command == command
                 && t.entry == entry
+                && t.actions.is_empty()
         }) {
             t.count += 1;
             t.left = life;
@@ -260,6 +314,7 @@ impl Toasts {
             left: life,
             details: None,
             entry,
+            actions: Vec::new(),
         });
     }
     /// Age visible toasts by `dt` unless `hovered` (index into visible) is paused.

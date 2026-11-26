@@ -65,6 +65,15 @@ fn note_rect(ctx: &egui::Context, id: &str, r: Rect) {
 
 /// Contextual tab id.
 pub const CTX_TAB: &str = "ctx";
+/// Tab row extras (UI proposal section 05): search field width, icon button, glyph.
+pub const SEARCH_W: f32 = 232.0;
+pub const STRIP_BTN: f32 = 28.0;
+const STRIP_ICON: f32 = 16.0;
+/// Tools kept in the one-line ribbon.
+pub const PINNED_MAX: usize = 7;
+/// Opens the command palette (the search field) and the assistant (Ask AI).
+pub const PALETTE_CMD: &str = "app.palette";
+pub const ASK_AI_CMD: &str = "ai.home";
 /// Tab shown when a requested id is unknown.
 pub const DEFAULT_TAB: &str = "arch";
 
@@ -655,6 +664,7 @@ impl Ribbon {
                 }
             });
         }
+        let picked = self.strip_tools(ui, th, cat, reg, icons, x, strip, toggle_w);
         let cr = Rect::from_center_size(
             strip.right_center() - Vec2::new(16.0, 0.0),
             Vec2::splat(24.0),
@@ -687,11 +697,129 @@ impl Ribbon {
         }
         if self.collapsed {
             if !self.peek {
-                return None;
+                return picked;
             }
-            return self.peek_band(ui, strip, th, (cat, reg), icons, active, typed, wc);
+            return self.peek_band(ui, strip, th, (cat, reg), icons, active, typed, wc).or(picked);
         }
-        self.band(ui, th, (cat, reg), icons, active, typed, wc)
+        self.band(ui, th, (cat, reg), icons, active, typed, wc).or(picked)
+    }
+
+    /// What the tab row holds right of the tabs in the room they leave: the pinned tools while
+    /// collapsed to one line, Ask AI, and the search field that opens the command palette.
+    /// Tabs keep priority: these shrink to icons, then go, before any tab moves to «More».
+    #[allow(clippy::too_many_arguments)]
+    fn strip_tools(
+        &mut self,
+        ui: &mut Ui,
+        th: &Theme,
+        cat: &Catalog,
+        reg: &Registry,
+        icons: &mut IconCache,
+        tabs_end: f32,
+        strip: Rect,
+        toggle_w: f32,
+    ) -> Option<String> {
+        let gap = crate::theme::space::SM;
+        let right = strip.right() - toggle_w;
+        let room = right - tabs_end - gap;
+        let ai_label = cat.t("cmd.ai.home");
+        let font = th.font(Role::Tab);
+        let ai_full = text_w(ui, &ai_label, &font) + STRIP_ICON + 3.0 * crate::theme::space::SM;
+        let can = |id: &str| reg.get(id).is_some() && self.enabled(reg, id);
+        let (search_on, ai_on) = (can(PALETTE_CMD), can(ASK_AI_CMD));
+        let full = room >= SEARCH_W + ai_full + gap;
+        let icon_only = !full && room >= 2.0 * STRIP_BTN + gap;
+        if !(full || icon_only) {
+            return None;
+        }
+        let mut out = None;
+        let h = STRIP_BTN;
+        let mut xr = right;
+        if search_on {
+            let w = if full { SEARCH_W } else { STRIP_BTN };
+            let r = Rect::from_min_size(pos2(xr - w, strip.center().y - h / 2.0), vec2(w, h));
+            xr = r.left() - crate::theme::space::XS;
+            let label = cat.t("ribbon.search");
+            let resp = ui.interact(r, ui.id().with("ribbon.search"), Sense::click());
+            resp.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, true, label.as_str()));
+            let p = ui.painter();
+            let keys = reg.get(PALETTE_CMD).and_then(|c| c.shortcuts.first().cloned()).unwrap_or_default();
+            let ic;
+            if full {
+                p.rect(r, th.radius("sm"), th.c("bg.input"), Stroke::new(1.0_f32, th.c("border.subtle")), StrokeKind::Inside);
+                if resp.hovered() {
+                    p.rect_filled(r, th.radius("sm"), th.hover_fill());
+                }
+                ic = Rect::from_center_size(pos2(r.left() + crate::theme::space::SM + STRIP_ICON / 2.0, r.center().y), Vec2::splat(STRIP_ICON));
+                let kw = if keys.is_empty() { 0.0 } else { super::paint_keycaps(p, th, r.right_center() - vec2(crate::theme::space::XS, 0.0), &keys) };
+                let clip = Rect::from_min_max(pos2(ic.right() + crate::theme::space::SM, r.top()), pos2(r.right() - kw - crate::theme::space::SM, r.bottom()));
+                p.with_clip_rect(clip).text(
+                    pos2(clip.left(), r.center().y),
+                    Align2::LEFT_CENTER,
+                    &label,
+                    th.font(Role::Body),
+                    th.c("text.placeholder"),
+                );
+            } else {
+                super::paint_state(ui, th, r, &resp, false);
+                ic = Rect::from_center_size(r.center(), Vec2::splat(STRIP_ICON));
+            }
+            icons.paint(ui, "find", STRIP_ICON as u32, ic, th.c("text.secondary"));
+            if super::rich_tooltip(resp, th, &label, "", &keys).clicked() {
+                out = Some(PALETTE_CMD.to_string());
+            }
+        }
+        if ai_on {
+            let w = if full { ai_full } else { STRIP_BTN };
+            let r = Rect::from_min_size(pos2(xr - w, strip.center().y - h / 2.0), vec2(w, h));
+            xr = r.left() - crate::theme::space::XS;
+            let resp = ui.interact(r, ui.id().with("ribbon.ask_ai"), Sense::click());
+            resp.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, true, ai_label.as_str()));
+            let fg = super::paint_state(ui, th, r, &resp, false);
+            let ic = if full {
+                Rect::from_center_size(pos2(r.left() + crate::theme::space::SM + STRIP_ICON / 2.0, r.center().y), Vec2::splat(STRIP_ICON))
+            } else {
+                Rect::from_center_size(r.center(), Vec2::splat(STRIP_ICON))
+            };
+            // violet only for AI: the glyph carries it, the label stays in the text ink
+            icons.paint(ui, crate::icons::ctl::AI, STRIP_ICON as u32, ic, th.c("ai.accent"));
+            if full {
+                ui.painter().text(pos2(ic.right() + crate::theme::space::SM, r.center().y), Align2::LEFT_CENTER, &ai_label, font.clone(), fg);
+            }
+            if super::rich_tooltip(resp, th, &ai_label, "", "").clicked() {
+                out = Some(ASK_AI_CMD.to_string());
+            }
+        }
+        if self.collapsed {
+            // one line: the pinned tools of the open tab (priority 1 first) in what is left
+            let fit = (((xr - gap) - (tabs_end + gap)) / STRIP_BTN).floor().max(0.0) as usize;
+            let mut x = tabs_end + gap;
+            for id in self.pinned(reg).into_iter().take(fit.min(PINNED_MAX)) {
+                let Some(cmd) = reg.get(&id) else { continue };
+                let r = Rect::from_min_size(pos2(x, strip.center().y - h / 2.0), vec2(STRIP_BTN, h));
+                x = r.right();
+                let label = cat.t(&cmd.label_key());
+                let on = self.enabled(reg, &id);
+                let resp = ui.interact(r, ui.id().with(("ribbon.pin", id.as_str())), Sense::click());
+                resp.widget_info(|| egui::WidgetInfo::labeled(egui::WidgetType::Button, on, label.as_str()));
+                let fg = super::paint_state(ui, th, r, &resp, false);
+                let fg = if on { fg } else { crate::icons::tint(th, crate::icons::Tint::Disabled) };
+                icons.paint(ui, &cmd.icon, STRIP_ICON as u32, Rect::from_center_size(r.center(), Vec2::splat(STRIP_ICON)), fg);
+                let keys = cmd.mnemonic.clone().unwrap_or_default();
+                if super::rich_tooltip(resp, th, &label, "", &keys).clicked() && on {
+                    out = Some(self.split.current(&cmd.id, &cmd.variants).to_string());
+                }
+            }
+        }
+        out
+    }
+
+    /// Tools of the open tab that stay in the one-line ribbon: priority 1 first, registry order.
+    pub fn pinned(&self, reg: &Registry) -> Vec<String> {
+        let mut v: Vec<&Command> =
+            self.tab_commands(reg).into_iter().filter(|c| !c.launcher && !c.icon.is_empty()).collect();
+        v.sort_by_key(|c| c.priority.unwrap_or(5));
+        v.into_iter().map(|c| c.id.clone()).take(PINNED_MAX).collect()
     }
 
     /// The band over the canvas while only the tabs are docked. It goes away after a command,
@@ -861,9 +989,10 @@ impl Ribbon {
                     pos2(gx, band_bottom),
                     vec2(go.w, k::TITLE_H),
                 );
+                // start-aligned at the group's edge: read faster than a centred caption
                 ui.painter().text(
-                    pos2(row.center().x.round(), row.center().y),
-                    Align2::CENTER_CENTER,
+                    pos2((row.left() + k::TITLE_PAD_X).round(), row.center().y),
+                    Align2::LEFT_CENTER,
                     &gd.title,
                     title_font.clone(),
                     th.c("text.secondary"),
@@ -1863,7 +1992,8 @@ mod tests {
 
         let keys = |frags: &[(&str, &str)]| -> std::collections::BTreeSet<String> {
             let mut out = std::collections::BTreeSet::new();
-            for (name, body) in frags {
+            // en keeps ui/commands at the root (not in its fragments): skip them for a like-for-like pair.
+            for (name, body) in frags.iter().filter(|f| !matches!(f.0, "ui.json" | "commands.json")) {
                 let m: HashMap<String, serde_json::Value> =
                     serde_json::from_str(body).unwrap_or_else(|e| panic!("{name}: {e}"));
                 out.extend(m.into_keys().filter(|k| k.ends_with(".short")));
@@ -1872,7 +2002,12 @@ mod tests {
         };
         let (en, ru) = (
             keys(crate::fragments::I18N_EN_FRAGMENTS),
-            keys(crate::fragments::I18N_RU_FRAGMENTS),
+            keys(
+                crate::fragments::I18N_ALL
+                    .iter()
+                    .find(|e| e.0 == "ru")
+                    .map_or(&[][..], |e| e.1),
+            ),
         );
         assert_eq!(en, ru, "en and ru .short keys differ");
     }

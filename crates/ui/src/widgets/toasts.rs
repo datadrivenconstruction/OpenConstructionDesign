@@ -121,6 +121,7 @@ pub fn show(
     let mut action = None;
     let mut fired: Option<Option<u64>> = None;
     let mut close = None;
+    let mut chose = None;
     let mut open_history = false;
     let shown = q.visible_idx();
     // a new card slides in 8 px from the right over 200 ms; reduced motion shows it at once
@@ -181,10 +182,12 @@ pub fn show(
                             ui.scope(|ui| {
                                 ui.set_width(CARD_W - ICON_W - CLOSE_W - space::LG);
                                 ui.vertical(|ui| {
+                                    // a choice toast leads with a title, its line explains it
+                                    let role = if t.actions.is_empty() { Role::Body } else { Role::BodyStrong };
                                     ui.add(
                                         egui::Label::new(
                                             RichText::new(text)
-                                                .font(th.font(Role::Body))
+                                                .font(th.font(role))
                                                 .color(th.c("text.primary")),
                                         )
                                         .wrap(),
@@ -241,6 +244,23 @@ pub fn show(
                                 }
                             });
                         }
+                        if !t.actions.is_empty() {
+                            ui.add_space(space::XS);
+                            ui.horizontal_wrapped(|ui| {
+                                ui.add_space(ICON_W + space::SM);
+                                for a in &t.actions {
+                                    let v = if a.primary { Variant::Primary } else { Variant::Quiet };
+                                    let b = Button::new(&a.label, v).small().show(ui, th);
+                                    ui.ctx().data_mut(|d| {
+                                        d.insert_temp(button_rect_id(i, &a.command), b.rect)
+                                    });
+                                    if b.clicked() {
+                                        action = Some(a.command.clone());
+                                        chose = Some(li);
+                                    }
+                                }
+                            });
+                        }
                     });
                 if r.response.contains_pointer() {
                     hovered = Some(i);
@@ -256,7 +276,8 @@ pub fn show(
             close = shown.get(k).copied();
         }
     }
-    if let Some(li) = close {
+    // a choice is made once: the card goes with the click
+    if let Some(li) = close.or(chose) {
         q.dismiss(li);
         hovered = None;
     }
@@ -513,6 +534,51 @@ mod tests {
         let (act, copied) = click(&ctx, &mut q, a.center());
         assert_eq!(act.as_deref(), Some("file.save"));
         assert_eq!(copied, None);
+    }
+
+    #[test]
+    fn choice_toast_runs_the_clicked_command_and_closes() {
+        use crate::notify::ToastAction;
+        let acts = || {
+            vec![
+                ToastAction::new("What's new", "x.news", true),
+                ToastAction::new("Later", "x.later", false),
+                ToastAction::new("Skip this version", "x.skip", false),
+            ]
+        };
+        for (k, want) in ["x.news", "x.later", "x.skip"].into_iter().enumerate() {
+            let ctx = crate::theme::headless_ctx();
+            let mut q = Toasts::default();
+            q.push_choice(Level::Info, "Version 2 is available", Some("Faster".into()), acts());
+            frames(&ctx, &mut q);
+            let rects: Vec<_> = ["x.news", "x.later", "x.skip"]
+                .iter()
+                .map(|c| rect_of(&ctx, 0, c).expect("choice drawn"))
+                .collect();
+            assert!(rects[0].max.x <= rects[1].min.x || rects[0].max.y <= rects[1].min.y);
+            let (act, _) = click(&ctx, &mut q, rects[k].center());
+            assert_eq!(act.as_deref(), Some(want));
+            assert!(q.live.is_empty(), "the card closes on a choice");
+        }
+        let mut q = Toasts::default();
+        q.push_choice(Level::Info, "Version 2 is available", None, acts());
+        q.push_choice(Level::Info, "Version 2 is available", None, acts());
+        assert_eq!(q.live.len(), 1, "one choice toast per title");
+        assert!(q.live[0].left > crate::notify::LIFE_ACTION);
+        q.dismiss_command("x.skip");
+        assert!(q.live.is_empty());
+    }
+
+    #[test]
+    fn choice_row_is_concentric_with_the_card() {
+        // small buttons (radius sm) sit one card padding (SM) inside the card corner (lg)
+        for mode in [crate::Mode::Light, crate::Mode::Dark] {
+            let th = Theme::new(mode, crate::Density::Compact);
+            assert_eq!(th.radius("lg"), th.radius("sm") + space::SM, "{mode:?}");
+        }
+        for v in [ICON_W, space::SM, space::XS, space::MD, CLOSE_W] {
+            assert_eq!(v % space::XS, 0.0, "{v} off the 4-pt grid");
+        }
     }
 
     #[test]

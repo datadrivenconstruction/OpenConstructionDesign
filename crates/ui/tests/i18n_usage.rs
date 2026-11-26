@@ -56,6 +56,7 @@ const UNUSED_OK: &[(&str, &str)] = &[
     ("annot_text.tstyle", SLUG),
     ("fe.close", OPEN),
     ("fe.new", OPEN),
+    ("gen.why", "rule reasons moved out of crates/gen/data/rules.json, kept for translation"),
     ("gfx.note", SLUG),
     ("hist.curtain_delete", OPEN),
     ("hist.slab_delete", OPEN),
@@ -104,6 +105,7 @@ const UNUSED_OK: &[(&str, &str)] = &[
     ("view_range.cut", OPEN),
     ("view_range.depth", OPEN),
     ("warn.elem", OPEN),
+    ("norm_dim", "translations of not-applicable dim texts in norm packs, kept for the dims panel"),
 ];
 
 fn crate_dir() -> PathBuf {
@@ -154,7 +156,12 @@ fn command_fragments() -> Vec<String> {
 /// UTF-8 or not a JSON object panics here.
 fn catalog_keys(lang: &str) -> BTreeSet<String> {
     let dir = crate_dir().join("data").join("i18n");
-    let mut files = vec![dir.join(format!("ui.{lang}.json")), dir.join(format!("commands.{lang}.json"))];
+    // English keeps its base files at the root; other locales hold them in their folder.
+    let mut files: Vec<PathBuf> = [format!("ui.{lang}.json"), format!("commands.{lang}.json")]
+        .iter()
+        .map(|n| dir.join(n))
+        .filter(|p| p.exists())
+        .collect();
     let mut frag: Vec<PathBuf> = std::fs::read_dir(dir.join(lang))
         .unwrap_or_else(|e| panic!("i18n/{lang}: {e}"))
         .map(|e| e.expect("dir entry").path())

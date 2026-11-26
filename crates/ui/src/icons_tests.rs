@@ -264,8 +264,9 @@ fn all_masks(d: Direction, px: u32) -> Vec<(&'static str, Vec<f32>)> {
     names().iter().map(|n| (*n, mask(d, n, px))).collect()
 }
 
-/// Glyphs drawn the same on purpose (one AI glyph); mirrors `TWINS` in tools/icons/check.py.
-const TWINS: &[(&str, &str)] = &[("spark", "ai-chat")];
+/// Glyphs drawn the same on purpose; mirrors `TWINS` in tools/icons/check.py (none: `spark` is
+/// the AI mark, `ai-chat` its speech bubble).
+const TWINS: &[(&str, &str)] = &[];
 
 fn alike(m: &[(&str, Vec<f32>)], bar: f32) -> Vec<String> {
     let twin = |a: &str, b: &str| TWINS.iter().any(|t| *t == (a, b) || *t == (b, a));
@@ -550,13 +551,13 @@ fn style_is_one_data_switch() {
         st,
         Style {
             base: Direction::Duotone,
-            active: Direction::Duotone,
+            active: Direction::Filled,
             large: Direction::Duotone
         },
-        "icon style: the two-tone set (A3) is the default everywhere"
+        "icon style: two-tone (A3) by default, the active state filled"
     );
     assert_eq!(resolve("wall", 20), (Direction::Duotone, "wall"));
-    assert_eq!(resolve("wall.fill", 20), (Direction::Duotone, "wall"));
+    assert_eq!(resolve("wall.fill", 20), (Direction::Filled, "wall"));
     assert_eq!(resolve("wall", 48), (Direction::Duotone, "wall"));
     let studio = set("studio").unwrap().style();
     assert_eq!(resolve_with(studio, "wall", 20), (Direction::Outline, "wall"));
@@ -602,6 +603,8 @@ fn tint_roles_follow_the_theme() {
         let ink = tint(&th, Tint::Rest);
         assert_eq!(ink, th.c("text.primary"));
         assert_eq!(tint(&th, Tint::Active), th.c("accent"));
+        assert_eq!(th.c("icon.tint"), th.c("accent"), "{mode:?}");
+        assert_eq!(th.c("icon.tint.ai"), th.c("ai.accent"), "{mode:?}");
         let off = tint(&th, Tint::Disabled);
         let want = (ink.a() as f32 * DISABLED_INK).round() as i32;
         assert!((off.a() as i32 - want).abs() <= 1, "{mode:?}: {off:?}");
@@ -622,4 +625,21 @@ fn embedded_icons_are_lf_on_every_checkout() {
     let cr: Vec<&str> =
         sets.iter().flat_map(|s| s.iter()).filter(|(_, svg)| svg.contains('\r')).map(|(n, _)| *n).collect();
     assert!(cr.is_empty(), "{} embedded svg with CR, first: {:?}", cr.len(), cr.first());
+}
+
+/// One AI mark of its own: `spark` is no longer the chat bubble, and AI glyphs take the AI tint.
+#[test]
+fn ai_glyph_is_its_own_and_tinted_ai() {
+    for d in Direction::ALL {
+        for m in MASTERS {
+            assert_ne!(svg(d, m, "spark"), svg(d, m, "ai-chat"), "{}/{m}", d.dir());
+        }
+    }
+    for n in ["spark", "spark.fill", "spark-why", "ai-chat", "ai-review"] {
+        assert_eq!(tint_token(n), "icon.tint.ai", "{n}");
+    }
+    for n in ["wall", "door.fill", "stair"] {
+        assert_eq!(tint_token(n), "icon.tint", "{n}");
+    }
+    assert_eq!(style().active, Direction::Filled, "the active tool draws filled");
 }

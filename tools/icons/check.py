@@ -23,8 +23,8 @@ ROOT = os.path.abspath(os.path.join(HERE, "..", ".."))
 TOP60_RS = os.path.join(ROOT, "crates", "ui", "src", "icon_top.rs")
 
 
-# One AI glyph: ai-chat is the same drawing as spark on purpose.
-TWINS = {("spark", "ai-chat")}
+# Glyphs drawn the same on purpose (none: spark is the AI mark, ai-chat its bubble).
+TWINS = set()
 
 
 def master(px):

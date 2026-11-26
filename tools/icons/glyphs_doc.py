@@ -713,7 +713,7 @@ def issues(g):
     return clipboard(g)
 
 
-core.alias_glyph("ai-chat", "Ai chat", B.spark)
+icon("ai-chat", "Ai chat")(B.spark_bubble)
 
 
 icon("ai-review", "Ai review")(badged(lambda g: core.magnifier(g), "spark"))

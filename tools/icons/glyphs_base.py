@@ -193,6 +193,12 @@ def native_build(g):
 
 @icon("spark", "Spark")
 def spark(g):
+    """The AI mark: one large and one small four-point spark, no frame."""
+    return [("A", g.spark(10.5, 13.5, 7.25)), ("A", g.spark(18, 6, 3.25))]
+
+
+def spark_bubble(g):
+    """Speech bubble with a spark: AI chat."""
     b = g.p(("M", 5.25, 3.75), ("H", 18.75), ("A", 2.5, 0, 1, 21.25, 6.25), ("V", 14.75),
             ("A", 2.5, 0, 1, 18.75, 17.25), ("H", 10.25), ("L", 6.75, 20.75), ("V", 17.25),
             ("H", 5.25), ("A", 2.5, 0, 1, 2.75, 14.75), ("V", 6.25), ("A", 2.5, 0, 1, 5.25, 3.75),
