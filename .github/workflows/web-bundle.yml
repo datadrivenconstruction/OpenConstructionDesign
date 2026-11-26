@@ -1,0 +1,42 @@
+name: web-bundle
+# Builds the browser editor bundle (docs/BROWSER.md) and keeps it as a run artifact for 14 days.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['crates/web-editor/**', 'crates/app/src/web.rs', 'tools/web/**', 'Cargo.lock', '.github/workflows/web-bundle.yml']
+permissions:
+  contents: read
+concurrency:
+  group: web-bundle-${{ github.ref }}
+  cancel-in-progress: true
+env:
+  CARGO_TERM_COLOR: never
+  CARGO_INCREMENTAL: "0"
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - name: toolchain
+        run: |
+          rustup toolchain install 1.95.0 --profile minimal --target wasm32-unknown-unknown
+          rustup default 1.95.0
+          sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends clang llvm binaryen
+          want=$(awk '/^name = "wasm-bindgen"$/ {getline; gsub(/version = |"/, ""); print; exit}' Cargo.lock)
+          curl -sSL "https://github.com/wasm-bindgen/wasm-bindgen/releases/download/$want/wasm-bindgen-$want-x86_64-unknown-linux-musl.tar.gz" | tar -xz -C "$RUNNER_TEMP"
+          echo "WASM_BINDGEN=$RUNNER_TEMP/wasm-bindgen-$want-x86_64-unknown-linux-musl/wasm-bindgen" >> "$GITHUB_ENV"
+      - name: build bundle
+        env:
+          CC_wasm32_unknown_unknown: clang
+          AR_wasm32_unknown_unknown: llvm-ar
+          CARGO_TARGET_DIR: ${{ runner.temp }}/tgt
+          BUNDLE_JOBS: "4"
+          PYTHON: python3
+        run: bash tools/web/build_bundle.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-editor
+          path: dist/web-editor
+          retention-days: 14

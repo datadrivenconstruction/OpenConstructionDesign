@@ -112,6 +112,34 @@ jobs:
         shell: bash
         run: python tools/ci_shard.py run ${{ matrix.unit.crate }} ${{ matrix.unit.shard }}
 
+  wasm:
+    name: browser build check (wasm32)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: toolchain
+        run: |
+          rustup toolchain install "$RUST_TOOLCHAIN" --profile minimal --target wasm32-unknown-unknown
+          rustup default "$RUST_TOOLCHAIN"
+      - uses: Swatinem/rust-cache@v2
+        with:
+          shared-key: wasm-check
+          save-if: ${{ github.ref == 'refs/heads/main' }}
+      # the C parts of SQLite and zstd are compiled for wasm32 by the runner's clang
+      - name: cargo check
+        env:
+          CC_wasm32_unknown_unknown: clang
+          AR_wasm32_unknown_unknown: llvm-ar
+        run: cargo check --locked -p ddc-web-editor --target wasm32-unknown-unknown
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: bundle tools
+        run: |
+          python tools/test_bundle_manifest.py
+          python tools/test_web_entry.py
+
   fmt:
     name: fmt (advisory)
     runs-on: ubuntu-latest

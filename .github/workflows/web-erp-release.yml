@@ -1,0 +1,93 @@
+name: web-erp-release
+# Builds the browser editor, packs ddc-web-editor/1 + ddc-web-release/1 for a GitHub release,
+# signs the zip and checks it with the ERP's own installer code. The maintainer then attaches the
+# artifact to the release and commits latest-web.json to erp-link/release/ (docs/BROWSER.md).
+# Manual only: the signing key is a repository secret and never reaches pull request runs.
+on:
+  workflow_dispatch:
+    inputs:
+      version: {description: 'browser release version, for example 1.2.0-web.1', required: true}
+permissions:
+  contents: read
+env:
+  CARGO_TERM_COLOR: never
+  CARGO_INCREMENTAL: "0"
+  WEB_VERSION: ${{ inputs.version }}
+  ERP_COMMIT: 8667ba4d1db439798611c2e8515b0c3b2af616cc
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - name: version format
+        run: echo "$WEB_VERSION" | grep -Eqx '[0-9]+\.[0-9]+\.[0-9]+-web\.[0-9]+'
+      - name: toolchain
+        run: |
+          rustup toolchain install 1.95.0 --profile minimal --target wasm32-unknown-unknown
+          rustup default 1.95.0
+          sudo apt-get update -q && sudo apt-get install -y -q --no-install-recommends clang llvm binaryen minisign
+          pip install brotli cryptography httpx
+          want=$(awk '/^name = "wasm-bindgen"$/ {getline; gsub(/version = |"/, ""); print; exit}' Cargo.lock)
+          curl -sSL "https://github.com/wasm-bindgen/wasm-bindgen/releases/download/$want/wasm-bindgen-$want-x86_64-unknown-linux-musl.tar.gz" | tar -xz -C "$RUNNER_TEMP"
+          echo "WASM_BINDGEN=$RUNNER_TEMP/wasm-bindgen-$want-x86_64-unknown-linux-musl/wasm-bindgen" >> "$GITHUB_ENV"
+      - name: release version (this checkout only)
+        run: |
+          awk -v v="$WEB_VERSION" '/^\[workspace.package\]/ {s=1} s && /^version = / && !d {print "version = \"" v "\""; d=1; next} {print}' Cargo.toml > Cargo.toml.new
+          mv Cargo.toml.new Cargo.toml
+          grep -n "^version" Cargo.toml | head -2
+      - name: build bundle
+        env:
+          CC_wasm32_unknown_unknown: clang
+          AR_wasm32_unknown_unknown: llvm-ar
+          CARGO_TARGET_DIR: ${{ runner.temp }}/tgt
+          BUNDLE_JOBS: "4"
+          PYTHON: python3
+        run: bash tools/web/build_bundle.sh
+      - name: zip and feed
+        run: python3 tools/web/bundle_manifest.py release dist/web-editor --tag "v$WEB_VERSION" --out dist/web-release
+      - name: sign
+        env:
+          KEY: ${{ secrets.WEB_RELEASE_MINISIGN_KEY }}
+        run: |
+          umask 077
+          printf '%s\n' "$KEY" > "$RUNNER_TEMP/web.key"
+          z="dist/web-release/OpenConstructionDesign-v$WEB_VERSION-web.zip"
+          minisign -S -s "$RUNNER_TEMP/web.key" -m "$z" -t "OpenConstructionDesign v$WEB_VERSION web" < /dev/null
+          rm -f "$RUNNER_TEMP/web.key"
+          printf 'untrusted comment: minisign public key BF094D8BDEC11250\nRWRQEsHei00Jv06/bIbP+9IlcrI3E27xptCjoSaZ294rMpY+bhmkGiP/\n' > "$RUNNER_TEMP/web.pub"
+          minisign -V -p "$RUNNER_TEMP/web.pub" -m "$z"
+      - name: verify with the ERP installer code
+        run: |
+          mkdir -p "$RUNNER_TEMP/erp/app/core" "$RUNNER_TEMP/erp/app/modules/design"
+          cd "$RUNNER_TEMP/erp"
+          base="https://raw.githubusercontent.com/datadrivenconstruction/OpenConstructionERP/$ERP_COMMIT/backend/app/modules/design"
+          curl -fsSL "$base/web_release.py" -o app/modules/design/web_release.py
+          curl -fsSL "$base/data/web-release.pub" -o web-release.pub
+          touch app/__init__.py app/core/__init__.py app/modules/__init__.py app/modules/design/__init__.py
+          printf 'class UnsafeUrlError(Exception):\n    pass\nasync def resolve_and_validate_external_url(url):\n    return url\n' > app/core/url_safety.py
+          printf 'class DesignSettings: pass\ndef get_design_settings(): return DesignSettings()\n' > app/modules/design/settings.py
+          cat > check.py <<'PY'
+          import hashlib, json, sys, tempfile
+          from pathlib import Path
+          from app.modules.design import web_release as w
+          out = Path(sys.argv[1])
+          feed = w.parse_feed(json.loads((out / "latest-web.json").read_text()), 200 * 1024**2)
+          z = out / feed.zip_url.rsplit("/", 1)[1]
+          data = z.read_bytes()
+          assert len(data) == feed.zip_bytes and hashlib.sha256(data).hexdigest() == feed.zip_sha256
+          key = w.parse_public_key(Path("web-release.pub").read_text())
+          sig = w.parse_signature((out / (z.name + ".minisig")).read_text())
+          tc = w.verify_signature(key, sig, hashlib.blake2b(data, digest_size=64).digest())
+          inst = w.unpack(z, Path(tempfile.mkdtemp()), 800 * 1024**2)
+          print("feed", feed.version, feed.tag, "bridge", feed.bridge, "ok:", w.bridge_ok(feed.bridge))
+          print("signature ok:", tc)
+          print("unpacked", inst.version, inst.entry, len(inst.files), "files", inst.bytes, "bytes")
+          PY
+          python3 check.py "$GITHUB_WORKSPACE/dist/web-release"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: web-release
+          path: dist/web-release
+          retention-days: 14
+          compression-level: 0

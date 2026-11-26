@@ -1,7 +1,8 @@
 name: release
 on:
   push:
-    tags: ['v*']
+    # browser releases (v*-web.N) are built by web-erp-release.yml, not here
+    tags: ['v*', '!v*-web*']
   # Rebuild assets of an existing release, e.g. targets: '["ubuntu-22.04"]'.
   workflow_dispatch:
     inputs:
