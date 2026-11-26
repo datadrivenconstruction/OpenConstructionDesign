@@ -723,6 +723,9 @@ struct Ctx<'a> {
     win: Option<(f64, f64)>,
     /// The zone's own stretch, uncut: the shaft beside the corridor may reach up to its ends.
     zone: Option<(f64, f64)>,
+    /// No room of the zone hosts the shaft: it may stand in a niche off the corridor, cut
+    /// into whatever rooms lie behind the corridor wall.
+    niche: bool,
 }
 
 /// Reasons a shaft position is refused, as the metrics name them.
@@ -809,6 +812,40 @@ impl Ctx<'_> {
         }
         (spans.len() > 1 && reach >= ring.2 - 1e-6).then_some(())?;
         spans.into_iter().map(|s| s.2).max_by_key(|&i| SHAFT_ROOMS.iter().position(|k| *k == st.rooms[i].kind))
+    }
+
+    /// The rooms a corridor niche cuts into on one storey: none of them circulation, together
+    /// covering the ring across their partitions. Their worst rank in [`SHAFT_ROOMS`], unlisted last.
+    fn niche_host(&self, st: &super::PStorey, ring: Rect) -> Option<usize> {
+        let wall = rule("services.hvac.straddle_wall");
+        let mut boxes = vec![];
+        // the partition slack never carries the ring past the outer rooms
+        let ext = st.layout.rooms.iter().map(|g| bbox(&g.polygon)).fold((f64::MAX, f64::MAX, f64::MIN, f64::MIN), |a, b| {
+            (a.0.min(b.0), a.1.min(b.1), a.2.max(b.2), a.3.max(b.3))
+        });
+        if ring.0 < ext.0 - 1e-6 || ring.1 < ext.1 - 1e-6 || ring.2 > ext.2 + 1e-6 || ring.3 > ext.3 + 1e-6 {
+            return None;
+        }
+        for (pr, gr) in st.rooms.iter().zip(&st.layout.rooms) {
+            let b = bbox(&gr.polygon);
+            if b.0 >= ring.2 - 1e-6 || b.2 <= ring.0 + 1e-6 || b.1 >= ring.3 - 1e-6 || b.3 <= ring.1 + 1e-6 {
+                continue;
+            }
+            if matches!(pr.kind, RoomKind::Corridor | RoomKind::Stair | RoomKind::Lift | RoomKind::Parking) {
+                return None;
+            }
+            boxes.push((b, SHAFT_ROOMS.iter().position(|k| *k == pr.kind).unwrap_or(SHAFT_ROOMS.len())));
+        }
+        // a grid over the ring: every point in a room or within a partition of one
+        let n = 8;
+        let covered = (0..=n).all(|i| {
+            (0..=n).all(|j| {
+                let x = ring.0 + (ring.2 - ring.0) * i as f64 / n as f64;
+                let y = ring.1 + (ring.3 - ring.1) * j as f64 / n as f64;
+                boxes.iter().any(|(b, _)| x >= b.0 - wall && x <= b.2 + wall && y >= b.1 - wall && y <= b.3 + wall)
+            })
+        });
+        covered.then(|| boxes.iter().map(|b| b.1).max()).flatten()
     }
 
     fn try_shaft(&self, side: f64, x: f64, fixed: Option<Rect>) -> Option<(f64, Shaft)> {
@@ -909,6 +946,7 @@ impl Ctx<'_> {
         let yr = (y0 + y1) / 2.0;
         let mut pref = 0usize;
         let mut straddles = 0usize;
+        let mut niches = 0usize;
         let mut clear = vec![];
         for (k, st) in self.p.storeys.iter().enumerate() {
             let l = &st.layout;
@@ -917,17 +955,22 @@ impl Ctx<'_> {
                     SHAFT_ROOMS.contains(&pr.kind) && inside(ring, bbox(&gr.polygon))
                 });
                 // or across a partition between two hosts: the shaft wall takes that stretch of it
-                let host = match host {
-                    Some(h) => h,
-                    None => {
-                        let Some(h) = self.straddle(st, ring) else {
-                            return Err(0);
-                        };
-                        straddles += 1;
-                        h
-                    }
+                let rank = |h: usize| SHAFT_ROOMS.iter().position(|k| *k == st.rooms[h].kind).ok_or(0usize);
+                let rank = match host {
+                    Some(h) => rank(h)?,
+                    None => match self.straddle(st, ring) {
+                        Some(h) => {
+                            straddles += 1;
+                            rank(h)?
+                        }
+                        None if self.niche => {
+                            niches += 1;
+                            self.niche_host(st, ring).ok_or(0usize)?
+                        }
+                        None => return Err(0),
+                    },
                 };
-                pref = pref.max(SHAFT_ROOMS.iter().position(|k| *k == st.rooms[host].kind).ok_or(0usize)?);
+                pref = pref.max(rank);
             }
             let keep = dn.fixture_keep;
             for (i, f) in l.fixtures.iter().enumerate() {
@@ -1072,7 +1115,7 @@ impl Ctx<'_> {
             })
             .map(|r| r.q.iter().filter(|q| **q > 0.0).count())
             .sum();
-        let score = pref as f64 * dn.pref_weight + centre + clear.len() as f64 + straddles as f64 * dn.pref_weight
+        let score = pref as f64 * dn.pref_weight + centre + clear.len() as f64 + (straddles + 2 * niches) as f64 * dn.pref_weight
             + shut as f64 * rule("services.hvac.shut_weight");
         Ok((
             score,
@@ -1742,6 +1785,8 @@ fn zoned(
     along.sort_by(|a, b| a.0.total_cmp(&b.0));
     let rects: Vec<Rect> = floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| r.r)).collect();
     let (x0, x1) = floors.iter().flatten().flat_map(|f| f.rooms.iter().map(|r| (r.r.0, r.r.2))).fold((f64::MAX, f64::MIN), |a, c| (a.0.min(c.0), a.1.max(c.1)));
+    let mut centres: Vec<f64> = along.iter().map(|a| a.0).collect();
+    centres.dedup_by(|a, b| (*a - *b).abs() < 1e-6);
     let mut best: Option<(f64, GProject, f64)> = None;
     for n in n_min..=n_max {
         // cuts at equal lengths of the corridor, moved to the nearby wall line that splits
@@ -1761,13 +1806,18 @@ fn zoned(
                     .sum();
                 (c - ideal).abs() + rule("services.hvac.zone_split_weight") * split
             };
-            let pick = rects
+            // every zone still to cut keeps a room centre of its own
+            let cands: Vec<f64> = rects
                 .iter()
                 .flat_map(|r| [r.0, r.2])
                 .chain(along.windows(2).map(|w| (w[0].0 + w[1].0) / 2.0))
-                .filter(|&c| (c - ideal).abs() <= (x1 - x0) / n as f64 / 3.0)
-                .filter(|&c| along.iter().any(|a| a.0 > prev && a.0 < c) && along.iter().any(|a| a.0 > c))
-                .min_by(|a, b| cost(*a).total_cmp(&cost(*b)));
+                .filter(|&c| centres.iter().any(|&a| a > prev && a < c) && centres.iter().filter(|&&a| a > c).count() >= n - i)
+                .collect();
+            // one dense room can draw several air-share cuts onto itself: then the nearest
+            // feasible wall line, however far
+            let best_of = |it: &mut dyn Iterator<Item = &f64>| it.copied().min_by(|a, b| cost(*a).total_cmp(&cost(*b)));
+            let tol = (x1 - x0) / n as f64 / 3.0;
+            let pick = best_of(&mut cands.iter().filter(|c| (**c - ideal).abs() <= tol)).or_else(|| best_of(&mut cands.iter()));
             if let Some(c) = pick {
                 cuts.push(c);
             }
@@ -2131,6 +2181,7 @@ fn design_prep<'a>(
         rings: vec![],
         win: pass.win.map(|w| (w.0 + rule("services.hvac.zone_gap"), w.1 - rule("services.hvac.zone_gap"))),
         zone: pass.win,
+        niche: false,
     };
     let tap_extra = rule("services.hvac.tap_extra");
     let h_max = cx.h_max();
@@ -2285,16 +2336,24 @@ fn design_prep<'a>(
             let side = if (r.1 + r.3) / 2.0 > (c.1 + c.3) / 2.0 { 1.0 } else { -1.0 };
             found.extend(cx.try_shaft(side, r.0, Some(*r)));
         }
-        if found.is_empty() {
-            if !bays.is_empty() {
-                notes.push(("hvac_core_bay_unfit", bays.len() as f64));
+        if found.is_empty() && !bays.is_empty() {
+            notes.push(("hvac_core_bay_unfit", bays.len() as f64));
+        }
+        // the service rooms first; a niche off the corridor only for a zone none of them hosts
+        for niche in [false, true] {
+            if !found.is_empty() {
+                break;
             }
+            cx.niche = niche;
             for side in [1.0, -1.0] {
                 let mut x = c.0.max(wl) + 0.5;
                 while x <= c.2.min(wh) - 0.5 {
                     found.extend(cx.try_shaft(side, x, None));
                     x += scan;
                 }
+            }
+            if niche && !found.is_empty() {
+                notes.push(("hvac_shaft_niche", 1.0));
             }
         }
     }
