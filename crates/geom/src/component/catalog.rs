@@ -274,10 +274,10 @@ pub fn export_csv(f: &Family, types: &[FamilyType]) -> String {
     csv::join(table(f, types, Style::EN), ',', "\n")
 }
 
-/// Catalog as a .csv file in the language's style (byte order mark, CRLF; `;` and decimal comma
-/// for Russian); [`import_csv`] reads it back.
-pub fn export_csv_file(f: &Family, types: &[FamilyType], ru: bool) -> String {
-    let st = Style::for_lang(ru);
+/// Catalog as a .csv file in the locale's style (byte order mark, CRLF; `;` and decimal comma
+/// where the locale's decimal mark is a comma); [`import_csv`] reads it back.
+pub fn export_csv_file(f: &Family, types: &[FamilyType], decimal_comma: bool) -> String {
+    let st = Style::for_decimal_comma(decimal_comma);
     csv::file(table(f, types, st), st)
 }
 

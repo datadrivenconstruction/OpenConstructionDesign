@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! One CSV writer for every export: UTF-8 with a byte order mark, CRLF lines, RFC 4180 quoting,
-//! separator and decimal mark by language (`;` and `,` for Russian, `,` and `.` otherwise), and
+//! separator by the locale's decimal mark (`;` with a decimal comma, `,` with a point), and
 //! text a spreadsheet would run as a formula (`=`, `+`, `-`, `@` first) prefixed with `'`.
 use std::borrow::Cow;
 
@@ -18,15 +18,21 @@ pub struct Style {
 impl Style {
     /// `,` with `.` decimals.
     pub const EN: Style = Style { sep: ',', decimal_comma: false };
-    /// `;` with `,` decimals: a Russian-locale spreadsheet splits on `;`, the comma is its decimal mark.
+    /// `;` with `,` decimals: a decimal-comma locale's spreadsheet (de, fr, ru, ...) splits on `;`.
     pub const RU: Style = Style { sep: ';', decimal_comma: true };
 
-    pub fn for_lang(ru: bool) -> Style {
-        if ru {
+    /// The style of a locale whose decimal mark is a comma (`true`) or a point.
+    pub fn for_decimal_comma(decimal_comma: bool) -> Style {
+        if decimal_comma {
             Style::RU
         } else {
             Style::EN
         }
+    }
+
+    /// Same as [`Style::for_decimal_comma`]; pass the locale's decimal mark, not "is Russian".
+    pub fn for_lang(decimal_comma: bool) -> Style {
+        Style::for_decimal_comma(decimal_comma)
     }
 
     /// `x` with `decimals` places and this style's decimal mark; `-0` is written as `0`.
