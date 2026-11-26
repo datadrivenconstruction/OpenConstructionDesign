@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Greutate oțel per metru",
  "gen.rule.steel.check.strut_share.desc": "Fracțiunea din efortul talpii preluată de o orizontală în nodul ei.",
  "gen.rule.steel.check.strut_share.title": "Ponderea orizontalelor",
- "gen.rule.steel.out.lift_box_d.desc": "Adâncimea în plan de care are nevoie un lift de catarg cu catargul său; planșeele sunt deschise deasupra lui.",
- "gen.rule.steel.out.lift_box_d.title": "Adâncime cabină lift",
- "gen.rule.steel.out.lift_box_w.desc": "Lățimea în plan de care are nevoie un lift de catarg; planșeele sunt deschise deasupra lui.",
- "gen.rule.steel.out.lift_box_w.title": "Lățime cabină lift",
- "gen.rule.steel.out.lift_offset.desc": "Distanța unui lift față de ax, liber față de contravântuirea din plan.",
- "gen.rule.steel.out.lift_offset.title": "Decalaj lift față de ax",
+ "gen.rule.steel.out.lift_box_d.desc": "Adâncimea în plan necesară unui lift cu catarg, inclusiv catargul; planșeele sunt deschise deasupra lui.",
+ "gen.rule.steel.out.lift_box_d.title": "Adâncimea cabinei liftului",
+ "gen.rule.steel.out.lift_box_w.desc": "Lățimea în plan necesară unui lift cu catarg; planșeele sunt deschise deasupra lui.",
+ "gen.rule.steel.out.lift_box_w.title": "Lățimea cabinei liftului",
+ "gen.rule.steel.out.lift_offset.desc": "Distanța liftului față de ax, liberă față de contravântuirea în plan.",
+ "gen.rule.steel.out.lift_offset.title": "Decalajul liftului față de ax",
  "gen.rule.steel.out.lifts.desc": "Lifturi pe nucleu: până la a doua platformă, apoi până sus.",
- "gen.rule.steel.out.lifts.title": "Curse lift"
+ "gen.rule.steel.out.lifts.title": "Trasee de lift"
 }

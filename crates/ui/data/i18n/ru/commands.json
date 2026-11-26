@@ -77,7 +77,7 @@
  "cmd.mep.pipe": "Труба",
  "cmd.mep.route": "Автотрассировка",
  "cmd.mep.system": "Создать систему",
- "cmd.mep.terminal": "Воздухораспределитель",
+ "cmd.mep.terminal": "Воздухораспределитель (диффузор)",
  "cmd.mep.tray": "Кабельный лоток",
  "cmd.mgr.coords": "Координаты и геопривязка",
  "cmd.mgr.grid": "Ось",

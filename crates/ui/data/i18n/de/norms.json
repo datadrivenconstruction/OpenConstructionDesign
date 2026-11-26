@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Regel {1}: die Norm regelt diesen Fall nicht; mit dem Planer entscheiden",
  "norms.pack": "Normpaket (Land)",
  "norms.pack_auto": "Auto: {pack}",
- "norms.pack_tip": "Regeln, Raumprogramme und Maße stammen aus diesem Paket. Auto folgt der Oberflächensprache."
+ "norms.pack_tip": "Regeln, Raumprogramme und Maße stammen aus diesem Paket. Auto folgt der Oberflächensprache.",
+ "norms.pack_partial": "Teilpaket: {pack} nennt noch nicht jede Norm, eine saubere Prüfung ist daher keine vollständige Abdeckung.",
+ "norms.sheet_pack": "Paket"
 }

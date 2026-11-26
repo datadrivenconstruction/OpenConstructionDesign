@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "وزن الفولاذ لكل متر",
  "gen.rule.steel.check.strut_share.desc": "نسبة قوة الحزام التي يحملها العنصر الأفقي عند عقدته.",
  "gen.rule.steel.check.strut_share.title": "النسبة الأفقية",
- "gen.rule.steel.out.lift_box_d.desc": "العمق في المسقط الذي يحتاجه مصعد الصاري مع صاريه؛ تُفتح الأرضيات فوقه.",
+ "gen.rule.steel.out.lift_box_d.desc": "العمق في المسقط الذي يحتاجه مصعد ذو صاري مع صاريه؛ تبقى الطوابق مفتوحة فوقه.",
  "gen.rule.steel.out.lift_box_d.title": "عمق صندوق المصعد",
- "gen.rule.steel.out.lift_box_w.desc": "العرض في المسقط الذي يحتاجه مصعد الصاري؛ تُفتح الأرضيات فوقه.",
+ "gen.rule.steel.out.lift_box_w.desc": "العرض في المسقط الذي يحتاجه مصعد ذو صاري؛ تبقى الطوابق مفتوحة فوقه.",
  "gen.rule.steel.out.lift_box_w.title": "عرض صندوق المصعد",
- "gen.rule.steel.out.lift_offset.desc": "مسافة المصعد عن المحور، بعيدًا عن الشداد في المسقط.",
+ "gen.rule.steel.out.lift_offset.desc": "بُعد المصعد عن المحور، بعيدًا عن الدعامة المائلة في المسقط.",
  "gen.rule.steel.out.lift_offset.title": "إزاحة المصعد عن المحور",
- "gen.rule.steel.out.lifts.desc": "المصاعد في النواة: إلى المنصة الثانية، ثم إلى القمة.",
+ "gen.rule.steel.out.lifts.desc": "مصاعد القلب: إلى المنصة الثانية ثم إلى القمة.",
  "gen.rule.steel.out.lifts.title": "مسارات المصاعد"
 }

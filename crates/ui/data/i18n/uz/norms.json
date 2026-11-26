@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Qoida {1}: me'yor bu holatni belgilamaydi; uni loyihachi bilan hal qiling",
  "norms.pack": "Me'yorlar to'plami (mamlakat)",
  "norms.pack_auto": "Avto: {pack}",
- "norms.pack_tip": "Qoidalar, xona dasturlari va o'lchamlar shu to'plamdan olinadi. Avto interfeys tilini kuzatadi."
+ "norms.pack_tip": "Qoidalar, xona dasturlari va o'lchamlar shu to'plamdan olinadi. Avto interfeys tilini kuzatadi.",
+ "norms.pack_partial": "Qisman to'plam: {pack} hali barcha me'yorlarni qamrab olmagan, shuning uchun toza tekshiruv to'liq qamrov emas.",
+ "norms.sheet_pack": "To'plam"
 }

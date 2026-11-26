@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Ваш текст, сведения о сборке и системе",
  "update_check.rep.file.crash": "Запись о сбое прошлого запуска",
  "update_check.rep.file.shot": "Снимок окна",
- "update_check.rep.file.model": "Копия проекта без журнала ИИ"
+ "update_check.rep.file.model": "Копия проекта без журнала ИИ",
+ "update_check.toast.title": "Доступна версия {v}",
+ "update_check.toast.news": "Что нового",
+ "update_check.later": "Позже",
+ "update_check.skip": "Пропустить эту версию",
+ "update_check.badge": "Обновление {v}",
+ "update_check.badge.tip": "Доступна версия {v}. Откройте, чтобы узнать, что нового.",
+ "update_check.up.download": "Скачать {v}",
+ "update_check.news.title": "Что нового в {v}",
+ "update_check.news.body": "Теперь у вас версия {v}. Вот что изменилось.",
+ "update_check.news.done": "Понятно"
 }

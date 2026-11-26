@@ -29,5 +29,15 @@
  "update_check.rep.file.report": "Your text, build and system facts",
  "update_check.rep.file.crash": "Crash record of the previous run",
  "update_check.rep.file.shot": "Window picture",
- "update_check.rep.file.model": "Project copy without the AI journal"
+ "update_check.rep.file.model": "Project copy without the AI journal",
+ "update_check.toast.title": "Version {v} is available",
+ "update_check.toast.news": "What's new",
+ "update_check.later": "Later",
+ "update_check.skip": "Skip this version",
+ "update_check.badge": "Update {v}",
+ "update_check.badge.tip": "Version {v} is available. Open to see what's new.",
+ "update_check.up.download": "Download {v}",
+ "update_check.news.title": "What's new in {v}",
+ "update_check.news.body": "You are now on version {v}. Here is what changed.",
+ "update_check.news.done": "Got it"
 }

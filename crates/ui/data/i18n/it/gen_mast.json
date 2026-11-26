@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Peso dell'acciaio per metro",
  "gen.rule.steel.check.strut_share.desc": "Quota della forza del corrente che un elemento orizzontale assorbe nel suo nodo.",
  "gen.rule.steel.check.strut_share.title": "Quota dell'orizzontale",
- "gen.rule.steel.out.lift_box_d.desc": "Profondità in pianta di cui un elevatore a traliccio ha bisogno con il suo traliccio; i solai si aprono sopra di esso.",
+ "gen.rule.steel.out.lift_box_d.desc": "Profondità in pianta necessaria a un ascensore a colonna, colonna compresa; i solai sono aperti al di sopra.",
  "gen.rule.steel.out.lift_box_d.title": "Profondità del vano elevatore",
- "gen.rule.steel.out.lift_box_w.desc": "Larghezza in pianta di cui un elevatore a traliccio ha bisogno; i solai si aprono sopra di esso.",
+ "gen.rule.steel.out.lift_box_w.desc": "Larghezza in pianta necessaria a un ascensore a colonna; i solai sono aperti al di sopra.",
  "gen.rule.steel.out.lift_box_w.title": "Larghezza del vano elevatore",
  "gen.rule.steel.out.lift_offset.desc": "Distanza di un elevatore dall'asse, libera dal controvento in pianta.",
  "gen.rule.steel.out.lift_offset.title": "Scostamento dell'elevatore dall'asse",
  "gen.rule.steel.out.lifts.desc": "Elevatori lungo il nucleo: fino alla seconda piattaforma, poi fino alla sommità.",
- "gen.rule.steel.out.lifts.title": "Tratte dell'elevatore"
+ "gen.rule.steel.out.lifts.title": "Tratte degli ascensori"
 }

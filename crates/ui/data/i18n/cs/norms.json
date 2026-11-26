@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Pravidlo {1}: norma tento případ nedefinuje; rozhodněte jej s projektantem",
  "norms.pack": "Balík norem (země)",
  "norms.pack_auto": "Automaticky: {pack}",
- "norms.pack_tip": "Pravidla, programy místností a rozměry pocházejí z tohoto balíku. Automatický výběr sleduje jazyk rozhraní."
+ "norms.pack_tip": "Pravidla, programy místností a rozměry pocházejí z tohoto balíku. Automatický výběr sleduje jazyk rozhraní.",
+ "norms.pack_partial": "Částečný balíček: {pack} zatím neuvádí všechny normy, takže čistá kontrola neznamená úplné pokrytí.",
+ "norms.sheet_pack": "Balíček"
 }

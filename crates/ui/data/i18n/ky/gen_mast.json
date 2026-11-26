@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Болоттун метрине салмагы",
  "gen.rule.steel.check.strut_share.desc": "Горизонталь өз түйүнүндө кармаган пояс күчүнүн үлүшү.",
  "gen.rule.steel.check.strut_share.title": "Горизонталдын үлүшү",
- "gen.rule.steel.out.lift_box_d.desc": "Мачталуу көтөргүчкө мачтасы менен керек план тереңдиги; кабаттар анын үстүндө ачык.",
- "gen.rule.steel.out.lift_box_d.title": "Көтөргүч кутусунун тереңдиги",
- "gen.rule.steel.out.lift_box_w.desc": "Мачталуу көтөргүчкө керек план туурасы; кабаттар анын үстүндө ачык.",
- "gen.rule.steel.out.lift_box_w.title": "Көтөргүч кутусунун туурасы",
- "gen.rule.steel.out.lift_offset.desc": "Көтөргүчтүн огунан, план байланышынан бош аралыгы.",
- "gen.rule.steel.out.lift_offset.title": "Көтөргүчтүн огунан четтөөсү",
- "gen.rule.steel.out.lifts.desc": "Өзөк боюнча көтөргүчтөр: экинчи аянтчага, анан үстүнө чейин.",
- "gen.rule.steel.out.lifts.title": "Көтөргүч рейстери"
+ "gen.rule.steel.out.lift_box_d.desc": "Мачталуу лифттин мачтасы менен керек болгон пландагы тереңдик; анын үстүндө кабаттар ачык.",
+ "gen.rule.steel.out.lift_box_d.title": "Лифт шахтасынын тереңдиги",
+ "gen.rule.steel.out.lift_box_w.desc": "Мачталуу лифтке керек болгон пландагы туурасы; анын үстүндө кабаттар ачык.",
+ "gen.rule.steel.out.lift_box_w.title": "Лифт шахтасынын туурасы",
+ "gen.rule.steel.out.lift_offset.desc": "Лифттин огунан аралыгы, пландагы байланыштан тышкары.",
+ "gen.rule.steel.out.lift_offset.title": "Лифттин огунан жылышы",
+ "gen.rule.steel.out.lifts.desc": "Өзөк боюнча көтөрүлгөн лифттер: экинчи аянтчага чейин, андан чокуга чейин.",
+ "gen.rule.steel.out.lifts.title": "Лифт маршруттары"
 }

@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Search commands",
+ "ui_mode.title": "Interface",
+ "ui_mode.desc": "How tools are offered: the ribbon, a floating rail, or a minimal dock. Ctrl+K finds every command in each of them.",
+ "ui_mode.ribbon": "Ribbon",
+ "ui_mode.ribbon.desc": "Tabs with labelled buttons, as in other BIM editors.",
+ "ui_mode.rail": "Rail",
+ "ui_mode.rail.desc": "A slim rail over the drawing. Sections open as panels; Ctrl+\\ shows labels.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "A dock of drawing tools, a bar over the selection, and Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Systems",
+ "rail.document": "Document",
+ "rail.analyse": "Analyze",
+ "rail.pin": "Keep open",
+ "onb.updates": "Check for updates weekly?",
+ "onb.sum.mode": "Interface"
+}

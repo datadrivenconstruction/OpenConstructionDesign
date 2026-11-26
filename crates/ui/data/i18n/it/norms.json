@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Regola {1}: la norma non definisce questo caso; decidilo con il progettista",
  "norms.pack": "Pacchetto norme (paese)",
  "norms.pack_auto": "Automatico: {pack}",
- "norms.pack_tip": "Regole, programmi dei locali e dimensioni provengono da questo pacchetto. Automatico segue la lingua dell'interfaccia."
+ "norms.pack_tip": "Regole, programmi dei locali e dimensioni provengono da questo pacchetto. Automatico segue la lingua dell'interfaccia.",
+ "norms.pack_partial": "Pacchetto parziale: {pack} non riporta ancora tutte le norme, quindi una verifica senza rilievi non equivale a una copertura completa.",
+ "norms.sheet_pack": "Pacchetto"
 }

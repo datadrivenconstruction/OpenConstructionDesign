@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Sääntö {1}: normi ei määrittele tätä tapausta; ratkaise se suunnittelijan kanssa",
  "norms.pack": "Normipaketti (maa)",
  "norms.pack_auto": "Automaattinen: {pack}",
- "norms.pack_tip": "Säännöt, tilaohjelmat ja mitat tulevat tästä paketista. Automaattinen seuraa käyttöliittymän kieltä."
+ "norms.pack_tip": "Säännöt, tilaohjelmat ja mitat tulevat tästä paketista. Automaattinen seuraa käyttöliittymän kieltä.",
+ "norms.pack_partial": "Osittainen paketti: {pack} ei vielä kata kaikkia normeja, joten puhdas tarkistus ei ole täysi kattavuus.",
+ "norms.sheet_pack": "Paketti"
 }

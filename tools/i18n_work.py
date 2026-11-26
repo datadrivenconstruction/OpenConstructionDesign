@@ -55,8 +55,6 @@ def sources():
 
 
 def target(loc, name):
-    if loc == "ru":  # Russian predates this layout: base files sit at the root
-        return DATA / (f"{name}.ru.json" if name in ("ui", "commands") else f"ru/{name}.json")
     return DATA / loc / f"{name}.json"
 
 

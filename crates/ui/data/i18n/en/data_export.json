@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "No drawing primitives in the box",
  "data_export.dwgpick.box": "Primitives selected: {n}",
  "data_export.dwgpick.box_rings": "Primitives selected: {n}, closed contours: {rings}",
- "data_export.dwgpick.layer": "Layer {layer}: primitives selected {n}"
+ "data_export.dwgpick.layer": "Layer {layer}: primitives selected {n}",
+ "data_export.info.doc_lang_ui": "As the interface",
+ "data_export.info.doc_lang": "Drawing language"
 }

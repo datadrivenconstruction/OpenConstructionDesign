@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "{1}. szabály: a norma nem határozza meg ezt az esetet; döntsön a tervezővel",
  "norms.pack": "Normacsomag (ország)",
  "norms.pack_auto": "Automatikus: {pack}",
- "norms.pack_tip": "A szabályok, a helyiség-programok és a méretek ebből a csomagból származnak. Az automatikus a felület nyelvét követi."
+ "norms.pack_tip": "A szabályok, a helyiség-programok és a méretek ebből a csomagból származnak. Az automatikus a felület nyelvét követi.",
+ "norms.pack_partial": "Részleges csomag: a(z) {pack} még nem tartalmaz minden normát, ezért a hibátlan ellenőrzés nem jelent teljes lefedettséget.",
+ "norms.sheet_pack": "Csomag"
 }

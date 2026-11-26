@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Aturan {1}: norma tidak mengatur kasus ini; putuskan bersama perancang",
  "norms.pack": "Paket norma (negara)",
  "norms.pack_auto": "Otomatis: {pack}",
- "norms.pack_tip": "Aturan, program ruang, dan dimensi berasal dari paket ini. Otomatis mengikuti bahasa antarmuka."
+ "norms.pack_tip": "Aturan, program ruang, dan dimensi berasal dari paket ini. Otomatis mengikuti bahasa antarmuka.",
+ "norms.pack_partial": "Paket parsial: {pack} belum mencantumkan semua norma, sehingga pemeriksaan tanpa temuan belum berarti cakupan penuh.",
+ "norms.sheet_pack": "Paket"
 }

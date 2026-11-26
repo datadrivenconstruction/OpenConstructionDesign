@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "规则 {1}：规范未定义此情形；请与设计人员共同确定",
  "norms.pack": "规范包（国家）",
  "norms.pack_auto": "自动：{pack}",
- "norms.pack_tip": "规则、房间任务书和尺寸均来自此规范包。“自动”跟随界面语言。"
+ "norms.pack_tip": "规则、房间任务书和尺寸均来自此规范包。“自动”跟随界面语言。",
+ "norms.pack_partial": "部分规范包：{pack} 尚未涵盖所有规范，因此检查通过并不代表完全覆盖。",
+ "norms.sheet_pack": "规范包"
 }

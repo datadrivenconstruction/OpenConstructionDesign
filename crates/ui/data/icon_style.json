@@ -1,7 +1,7 @@
 {
  "default": "duotone_all",
  "sets": [
-  {"id": "duotone_all", "base": "duotone", "active": "duotone", "large": "duotone"},
+  {"id": "duotone_all", "base": "duotone", "active": "filled", "large": "duotone"},
   {"id": "outline", "base": "outline", "active": "outline", "large": "outline"},
   {"id": "color", "base": "color", "active": "color", "large": "color"},
   {"id": "hierarchical", "base": "hierarchical", "active": "hierarchical", "large": "hierarchical"},

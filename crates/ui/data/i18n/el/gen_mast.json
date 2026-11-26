@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Βάρος χάλυβα ανά μέτρο",
  "gen.rule.steel.check.strut_share.desc": "Ποσοστό της δύναμης του πέλματος που κρατά μια οριζόντια στον κόμβο της.",
  "gen.rule.steel.check.strut_share.title": "Ποσοστό οριζόντιων",
- "gen.rule.steel.out.lift_box_d.desc": "Βάθος κάτοψης που χρειάζεται ένας ανελκυστήρας ιστού με τον ιστό του· τα δάπεδα ανοίγουν πάνω από αυτό.",
- "gen.rule.steel.out.lift_box_d.title": "Βάθος κιβωτίου ανελκυστήρα",
- "gen.rule.steel.out.lift_box_w.desc": "Πλάτος κάτοψης που χρειάζεται ένας ανελκυστήρας ιστού· τα δάπεδα ανοίγουν πάνω από αυτό.",
- "gen.rule.steel.out.lift_box_w.title": "Πλάτος κιβωτίου ανελκυστήρα",
- "gen.rule.steel.out.lift_offset.desc": "Απόσταση ανελκυστήρα από τον άξονα, μακριά από τον διαγώνιο σύνδεσμο κάτοψης.",
+ "gen.rule.steel.out.lift_box_d.desc": "Βάθος κάτοψης που απαιτεί ανελκυστήρας ιστού με τον ιστό του· οι όροφοι είναι ανοιχτοί πάνω από αυτόν.",
+ "gen.rule.steel.out.lift_box_d.title": "Βάθος φρεατίου ανελκυστήρα",
+ "gen.rule.steel.out.lift_box_w.desc": "Πλάτος κάτοψης που απαιτεί ανελκυστήρας ιστού· οι όροφοι είναι ανοιχτοί πάνω από αυτόν.",
+ "gen.rule.steel.out.lift_box_w.title": "Πλάτος φρεατίου ανελκυστήρα",
+ "gen.rule.steel.out.lift_offset.desc": "Απόσταση ανελκυστήρα από τον άξονα, μακριά από τον διαγώνιο σύνδεσμο της κάτοψης.",
  "gen.rule.steel.out.lift_offset.title": "Μετατόπιση ανελκυστήρα από τον άξονα",
- "gen.rule.steel.out.lifts.desc": "Ανελκυστήρες στον πυρήνα: έως τη δεύτερη πλατφόρμα και μετά έως την κορυφή.",
- "gen.rule.steel.out.lifts.title": "Διαδρομές ανελκυστήρα"
+ "gen.rule.steel.out.lifts.desc": "Ανελκυστήρες στον πυρήνα: μέχρι τη δεύτερη πλατφόρμα και μετά μέχρι την κορυφή.",
+ "gen.rule.steel.out.lifts.title": "Διαδρομές ανελκυστήρων"
 }

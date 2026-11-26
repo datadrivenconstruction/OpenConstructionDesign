@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "משקל פלדה למטר",
  "gen.rule.steel.check.strut_share.desc": "חלק מכוח האוגן שאלמנט אופקי מחזיק בצומת שלו.",
  "gen.rule.steel.check.strut_share.title": "חלק אופקי",
- "gen.rule.steel.out.lift_box_d.desc": "עומק בתוכנית שמעלית תורן זקוקה לו עם התורן שלה; הרצפות נפתחות מעליו.",
- "gen.rule.steel.out.lift_box_d.title": "עומק תא מעלית",
- "gen.rule.steel.out.lift_box_w.desc": "רוחב בתוכנית שמעלית תורן זקוקה לו; הרצפות נפתחות מעליו.",
- "gen.rule.steel.out.lift_box_w.title": "רוחב תא מעלית",
- "gen.rule.steel.out.lift_offset.desc": "מרחק המעלית מהציר, ללא פגיעה בחיזוק התוכנית.",
- "gen.rule.steel.out.lift_offset.title": "היסט מעלית מהציר",
- "gen.rule.steel.out.lifts.desc": "מעליות לאורך הליבה: עד הפלטפורמה השנייה, ואז עד הראש.",
- "gen.rule.steel.out.lifts.title": "מקטעי מעלית"
+ "gen.rule.steel.out.lift_box_d.desc": "עומק בתכנית שמעלית תורן צריכה יחד עם התורן; הרצפות נפתחות מעליה.",
+ "gen.rule.steel.out.lift_box_d.title": "עומק תא המעלית",
+ "gen.rule.steel.out.lift_box_w.desc": "רוחב בתכנית שמעלית תורן צריכה; הרצפות נפתחות מעליה.",
+ "gen.rule.steel.out.lift_box_w.title": "רוחב תא המעלית",
+ "gen.rule.steel.out.lift_offset.desc": "מרחק המעלית מהציר, הרחק מהקשר האלכסוני בתכנית.",
+ "gen.rule.steel.out.lift_offset.title": "היסט המעלית מהציר",
+ "gen.rule.steel.out.lifts.desc": "מעליות לאורך הליבה: עד הפלטפורמה השנייה, ואז עד הפסגה.",
+ "gen.rule.steel.out.lifts.title": "קטעי מעלית"
 }

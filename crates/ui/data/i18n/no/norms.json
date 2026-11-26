@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Regel {1}: normen definerer ikke dette tilfellet; avgjør det med prosjekterende",
  "norms.pack": "Normpakke (land)",
  "norms.pack_auto": "Automatisk: {pack}",
- "norms.pack_tip": "Regler, romprogrammer og dimensjoner kommer fra denne pakken. Auto følger grensesnittspråket."
+ "norms.pack_tip": "Regler, romprogrammer og dimensjoner kommer fra denne pakken. Auto følger grensesnittspråket.",
+ "norms.pack_partial": "Delvis pakke: {pack} angir ikke alle normer ennå, så en kontroll uten avvik betyr ikke full dekning.",
+ "norms.sheet_pack": "Pakke"
 }

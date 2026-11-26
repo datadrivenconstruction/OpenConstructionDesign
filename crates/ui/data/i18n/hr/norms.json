@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Pravilo {1}: norma ne definira ovaj slučaj; odluči s projektantom",
  "norms.pack": "Paket normi (država)",
  "norms.pack_auto": "Automatski: {pack}",
- "norms.pack_tip": "Pravila, programi prostorija i dimenzije dolaze iz ovog paketa. Automatski prati jezik sučelja."
+ "norms.pack_tip": "Pravila, programi prostorija i dimenzije dolaze iz ovog paketa. Automatski prati jezik sučelja.",
+ "norms.pack_partial": "Djelomičan paket: {pack} još ne navodi sve norme, pa provjera bez nalaza ne znači potpunu pokrivenost.",
+ "norms.sheet_pack": "Paket"
 }

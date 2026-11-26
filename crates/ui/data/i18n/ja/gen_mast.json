@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "メートルあたり鋼材重量",
  "gen.rule.steel.check.strut_share.desc": "弦材の力のうち、接合部で水平材が受け持つ割合。",
  "gen.rule.steel.check.strut_share.title": "水平材負担率",
- "gen.rule.steel.out.lift_box_d.desc": "マストを含めてマストリフトに必要な平面奥行き。この上の床は開口になります。",
+ "gen.rule.steel.out.lift_box_d.desc": "マストリフトがマストを含めて必要とする平面の奥行き。その上部の床は開口とする。",
  "gen.rule.steel.out.lift_box_d.title": "リフトボックス奥行き",
- "gen.rule.steel.out.lift_box_w.desc": "マストリフトに必要な平面幅。この上の床は開口になります。",
+ "gen.rule.steel.out.lift_box_w.desc": "マストリフトが必要とする平面の幅。その上部の床は開口とする。",
  "gen.rule.steel.out.lift_box_w.title": "リフトボックス幅",
- "gen.rule.steel.out.lift_offset.desc": "平面ブレースを避けた、軸からリフトまでの距離。",
- "gen.rule.steel.out.lift_offset.title": "軸からのリフトオフセット",
- "gen.rule.steel.out.lifts.desc": "コア沿いのリフト: 第2プラットフォームまで、次に最上部まで。",
+ "gen.rule.steel.out.lift_offset.desc": "平面ブレースを避けた、軸からのリフトの距離。",
+ "gen.rule.steel.out.lift_offset.title": "軸からのリフトのオフセット",
+ "gen.rule.steel.out.lifts.desc": "コア沿いのリフト:第2プラットフォームまで、さらに最上部まで。",
  "gen.rule.steel.out.lifts.title": "リフト区間"
 }

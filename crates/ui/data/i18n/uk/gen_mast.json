@@ -9,8 +9,8 @@
  "gen.rule.steel.out.lift_box_d.title": "Глибина шахти ліфта",
  "gen.rule.steel.out.lift_box_w.desc": "Ширина в плані, потрібна щогловому ліфту; перекриття над ним відкриті.",
  "gen.rule.steel.out.lift_box_w.title": "Ширина шахти ліфта",
- "gen.rule.steel.out.lift_offset.desc": "Відстань ліфта від осі, поза плановим в’язевим розкосом.",
- "gen.rule.steel.out.lift_offset.title": "Зсув ліфта від осі",
- "gen.rule.steel.out.lifts.desc": "Ліфти вздовж ядра: до другого майданчика, потім до верху.",
- "gen.rule.steel.out.lifts.title": "Ділянки ліфтів"
+ "gen.rule.steel.out.lift_offset.desc": "Відстань ліфта від осі, поза в'язями в плані.",
+ "gen.rule.steel.out.lift_offset.title": "Зміщення ліфта від осі",
+ "gen.rule.steel.out.lifts.desc": "Ліфти вздовж ядра: до другої платформи, потім до верху.",
+ "gen.rule.steel.out.lifts.title": "Ходи ліфтів"
 }

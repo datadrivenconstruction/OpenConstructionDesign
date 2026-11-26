@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "每米钢材重量",
  "gen.rule.steel.check.strut_share.desc": "水平杆在其节点处承担的弦杆力比例。",
  "gen.rule.steel.check.strut_share.title": "水平杆分担比例",
- "gen.rule.steel.out.lift_box_d.desc": "桅杆电梯连同桅杆所需的平面进深；其上方楼层开洞。",
- "gen.rule.steel.out.lift_box_d.title": "电梯井进深",
- "gen.rule.steel.out.lift_box_w.desc": "桅杆电梯所需的平面宽度；其上方楼层开洞。",
- "gen.rule.steel.out.lift_box_w.title": "电梯井宽度",
+ "gen.rule.steel.out.lift_box_d.desc": "桅杆式电梯连同桅杆所需的平面进深；其上各层楼板开洞。",
+ "gen.rule.steel.out.lift_box_d.title": "电梯井道进深",
+ "gen.rule.steel.out.lift_box_w.desc": "桅杆式电梯所需的平面宽度；其上各层楼板开洞。",
+ "gen.rule.steel.out.lift_box_w.title": "电梯井道宽度",
  "gen.rule.steel.out.lift_offset.desc": "电梯距轴线的距离，避开平面支撑。",
- "gen.rule.steel.out.lift_offset.title": "电梯距轴线偏移",
- "gen.rule.steel.out.lifts.desc": "沿核心筒的电梯：至第二平台，再至顶部。",
- "gen.rule.steel.out.lifts.title": "电梯行程"
+ "gen.rule.steel.out.lift_offset.title": "电梯偏离轴线距离",
+ "gen.rule.steel.out.lifts.desc": "沿核心筒的电梯：先至第二平台，再至顶部。",
+ "gen.rule.steel.out.lifts.title": "电梯行程段"
 }

@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Peso de acero por metro",
  "gen.rule.steel.check.strut_share.desc": "Proporción de la fuerza del cordón que soporta un horizontal en su nudo.",
  "gen.rule.steel.check.strut_share.title": "Proporción horizontal",
- "gen.rule.steel.out.lift_box_d.desc": "Profundidad en planta que necesita un ascensor de mástil con su mástil; los forjados se abren sobre él.",
- "gen.rule.steel.out.lift_box_d.title": "Profundidad de la caja del ascensor",
- "gen.rule.steel.out.lift_box_w.desc": "Ancho en planta que necesita un ascensor de mástil; los forjados se abren sobre él.",
- "gen.rule.steel.out.lift_box_w.title": "Ancho de la caja del ascensor",
- "gen.rule.steel.out.lift_offset.desc": "Distancia de un ascensor al eje, libre del arriostramiento en planta.",
- "gen.rule.steel.out.lift_offset.title": "Desfase del ascensor respecto al eje",
- "gen.rule.steel.out.lifts.desc": "Ascensores por el núcleo: hasta la segunda plataforma y luego hasta la cima.",
- "gen.rule.steel.out.lifts.title": "Tramos de ascensor"
+ "gen.rule.steel.out.lift_box_d.desc": "Profundidad en planta que necesita un ascensor de mástil con su mástil; los forjados quedan abiertos sobre él.",
+ "gen.rule.steel.out.lift_box_d.title": "Profundidad del hueco del ascensor",
+ "gen.rule.steel.out.lift_box_w.desc": "Anchura en planta que necesita un ascensor de mástil; los forjados quedan abiertos sobre él.",
+ "gen.rule.steel.out.lift_box_w.title": "Anchura del hueco del ascensor",
+ "gen.rule.steel.out.lift_offset.desc": "Distancia del ascensor al eje, libre del arriostramiento en planta.",
+ "gen.rule.steel.out.lift_offset.title": "Desplazamiento del ascensor respecto al eje",
+ "gen.rule.steel.out.lifts.desc": "Ascensores a lo largo del núcleo: hasta la segunda plataforma y luego hasta la cima.",
+ "gen.rule.steel.out.lifts.title": "Recorridos de ascensor"
 }

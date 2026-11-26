@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Regula {1}: norma nu definește acest caz; decide-l împreună cu proiectantul",
  "norms.pack": "Pachet de norme (țară)",
  "norms.pack_auto": "Automat: {pack}",
- "norms.pack_tip": "Regulile, programele de încăperi și dimensiunile vin din acest pachet. Automat urmează limba interfeței."
+ "norms.pack_tip": "Regulile, programele de încăperi și dimensiunile vin din acest pachet. Automat urmează limba interfeței.",
+ "norms.pack_partial": "Pachet parțial: {pack} nu indică încă toate normele, deci o verificare fără probleme nu înseamnă acoperire completă.",
+ "norms.sheet_pack": "Pachet"
 }

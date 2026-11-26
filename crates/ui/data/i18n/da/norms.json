@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Regel {1}: normen definerer ikke dette tilfælde; afgør det med projekteringslederen",
  "norms.pack": "Normpakke (land)",
  "norms.pack_auto": "Auto: {pack}",
- "norms.pack_tip": "Regler, rumprogrammer og dimensioner kommer fra denne pakke. Auto følger grænsefladesproget."
+ "norms.pack_tip": "Regler, rumprogrammer og dimensioner kommer fra denne pakke. Auto følger grænsefladesproget.",
+ "norms.pack_partial": "Delvis pakke: {pack} angiver endnu ikke alle normer, så en ren kontrol er ikke fuld dækning.",
+ "norms.sheet_pack": "Pakke"
 }

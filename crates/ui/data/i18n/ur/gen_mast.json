@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "فی میٹر فولاد کا وزن",
  "gen.rule.steel.check.strut_share.desc": "کورڈ کی قوت کا وہ حصہ جو افقی رکن اپنے نوڈ پر اٹھاتا ہے۔",
  "gen.rule.steel.check.strut_share.title": "افقی کا حصہ",
- "gen.rule.steel.out.lift_box_d.desc": "ماسٹ لفٹ کو اپنے ماسٹ سمیت درکار پلان گہرائی؛ فلور اس کے اوپر کھلے رہتے ہیں۔",
+ "gen.rule.steel.out.lift_box_d.desc": "ماسٹ لفٹ کو اپنے ماسٹ سمیت درکار پلان گہرائی؛ اس کے اوپر منزلیں کھلی رہتی ہیں۔",
  "gen.rule.steel.out.lift_box_d.title": "لفٹ باکس کی گہرائی",
- "gen.rule.steel.out.lift_box_w.desc": "ماسٹ لفٹ کو درکار پلان چوڑائی؛ فلور اس کے اوپر کھلے رہتے ہیں۔",
+ "gen.rule.steel.out.lift_box_w.desc": "ماسٹ لفٹ کے لیے درکار پلان چوڑائی؛ اس کے اوپر منزلیں کھلی رہتی ہیں۔",
  "gen.rule.steel.out.lift_box_w.title": "لفٹ باکس کی چوڑائی",
- "gen.rule.steel.out.lift_offset.desc": "محور سے لفٹ کا فاصلہ، پلان بریس سے دور۔",
- "gen.rule.steel.out.lift_offset.title": "محور سے لفٹ کا آفسیٹ",
- "gen.rule.steel.out.lifts.desc": "کور کے ساتھ لفٹیں: دوسرے پلیٹ فارم تک، پھر اوپر تک۔",
- "gen.rule.steel.out.lifts.title": "لفٹ کے رن"
+ "gen.rule.steel.out.lift_offset.desc": "لفٹ کا محور سے فاصلہ، پلان کے بریس سے دور۔",
+ "gen.rule.steel.out.lift_offset.title": "لفٹ کا محور سے آفسیٹ",
+ "gen.rule.steel.out.lifts.desc": "کور کے ساتھ اوپر جانے والی لفٹیں: دوسرے پلیٹ فارم تک، پھر اوپر تک۔",
+ "gen.rule.steel.out.lifts.title": "لفٹ رنز"
 }

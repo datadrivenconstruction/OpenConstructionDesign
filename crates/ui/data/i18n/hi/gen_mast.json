@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "प्रति मीटर स्टील का भार",
  "gen.rule.steel.check.strut_share.desc": "कॉर्ड बल का वह अनुपात जो क्षैतिज सदस्य अपने नोड पर थामता है।",
  "gen.rule.steel.check.strut_share.title": "क्षैतिज सदस्य का हिस्सा",
- "gen.rule.steel.out.lift_box_d.desc": "मास्ट सहित मास्ट लिफ़्ट को चाहिए प्लान गहराई; इसके ऊपर फ़र्श खुले रहते हैं।",
- "gen.rule.steel.out.lift_box_d.title": "लिफ़्ट बॉक्स की गहराई",
- "gen.rule.steel.out.lift_box_w.desc": "मास्ट लिफ़्ट को चाहिए प्लान चौड़ाई; इसके ऊपर फ़र्श खुले रहते हैं।",
- "gen.rule.steel.out.lift_box_w.title": "लिफ़्ट बॉक्स की चौड़ाई",
- "gen.rule.steel.out.lift_offset.desc": "प्लान ब्रेस से दूर, अक्ष से लिफ़्ट की दूरी।",
- "gen.rule.steel.out.lift_offset.title": "अक्ष से लिफ़्ट ऑफ़सेट",
- "gen.rule.steel.out.lifts.desc": "कोर में ऊपर तक लिफ़्ट: दूसरे प्लेटफ़ॉर्म तक, फिर शीर्ष तक।",
- "gen.rule.steel.out.lifts.title": "लिफ़्ट रन"
+ "gen.rule.steel.out.lift_box_d.desc": "मास्ट लिफ्ट को मास्ट सहित जितनी योजना-गहराई चाहिए; उसके ऊपर फ़र्श खुले रहते हैं।",
+ "gen.rule.steel.out.lift_box_d.title": "लिफ्ट बॉक्स की गहराई",
+ "gen.rule.steel.out.lift_box_w.desc": "मास्ट लिफ्ट को जितनी योजना-चौड़ाई चाहिए; उसके ऊपर फ़र्श खुले रहते हैं।",
+ "gen.rule.steel.out.lift_box_w.title": "लिफ्ट बॉक्स की चौड़ाई",
+ "gen.rule.steel.out.lift_offset.desc": "लिफ्ट की धुरी से दूरी, योजना ब्रेस से दूर।",
+ "gen.rule.steel.out.lift_offset.title": "धुरी से लिफ्ट का ऑफ़सेट",
+ "gen.rule.steel.out.lifts.desc": "कोर के साथ लिफ्टें: दूसरे प्लेटफ़ॉर्म तक, फिर शीर्ष तक।",
+ "gen.rule.steel.out.lifts.title": "लिफ्ट के खंड"
 }

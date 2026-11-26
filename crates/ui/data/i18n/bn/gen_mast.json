@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "প্রতি মিটারে স্টিলের ওজন",
  "gen.rule.steel.check.strut_share.desc": "একটি অনুভূমিক সদস্য তার নোডে কর্ড বলের যে অংশ ধারণ করে।",
  "gen.rule.steel.check.strut_share.title": "অনুভূমিক অংশ",
- "gen.rule.steel.out.lift_box_d.desc": "মাস্টসহ মাস্ট লিফটের জন্য প্রয়োজনীয় প্ল্যান গভীরতা; এর উপর দিয়ে মেঝে খোলা থাকে।",
- "gen.rule.steel.out.lift_box_d.title": "লিফট বক্সের গভীরতা",
- "gen.rule.steel.out.lift_box_w.desc": "মাস্ট লিফটের জন্য প্রয়োজনীয় প্ল্যান প্রস্থ; এর উপর দিয়ে মেঝে খোলা থাকে।",
- "gen.rule.steel.out.lift_box_w.title": "লিফট বক্সের প্রস্থ",
- "gen.rule.steel.out.lift_offset.desc": "প্ল্যান ব্রেস এড়িয়ে অক্ষ থেকে লিফটের দূরত্ব।",
+ "gen.rule.steel.out.lift_box_d.desc": "মাস্ট লিফটের মাস্টসহ প্ল্যানে প্রয়োজনীয় গভীরতা; এর উপরে তলাগুলো খোলা থাকে।",
+ "gen.rule.steel.out.lift_box_d.title": "লিফট বাক্সের গভীরতা",
+ "gen.rule.steel.out.lift_box_w.desc": "মাস্ট লিফটের প্ল্যানে প্রয়োজনীয় প্রস্থ; এর উপরে তলাগুলো খোলা থাকে।",
+ "gen.rule.steel.out.lift_box_w.title": "লিফট বাক্সের প্রস্থ",
+ "gen.rule.steel.out.lift_offset.desc": "অক্ষ থেকে লিফটের দূরত্ব, প্ল্যানের ব্রেস থেকে মুক্ত।",
  "gen.rule.steel.out.lift_offset.title": "অক্ষ থেকে লিফটের অফসেট",
  "gen.rule.steel.out.lifts.desc": "কোর বরাবর লিফট: দ্বিতীয় প্ল্যাটফর্ম পর্যন্ত, তারপর শীর্ষ পর্যন্ত।",
- "gen.rule.steel.out.lifts.title": "লিফটের যাত্রা"
+ "gen.rule.steel.out.lifts.title": "লিফটের পথ"
 }

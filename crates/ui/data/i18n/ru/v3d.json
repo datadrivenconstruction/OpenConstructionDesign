@@ -15,7 +15,7 @@
  "cmd.view.level_3d": "3D-вид уровня",
  "cmd.view.save_3d": "Сохранить 3D-вид",
  "cmd.view.hide_cat_3d": "Временно скрыть категорию в 3D",
- "cmd.view.isolate_cat_3d": "Временно изолировать категорию в 3D",
+ "cmd.view.isolate_cat_3d": "Временная изоляция категории в 3D",
  "cmd.view.reveal_3d": "Вернуть категории в 3D",
  "v3d.cube.top": "Верх",
  "v3d.cube.bottom": "Низ",

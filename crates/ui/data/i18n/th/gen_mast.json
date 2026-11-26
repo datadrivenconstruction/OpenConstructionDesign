@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "น้ำหนักเหล็กต่อเมตร",
  "gen.rule.steel.check.strut_share.desc": "สัดส่วนของแรงในเสาหลักที่ชิ้นส่วนแนวนอนรับไว้ที่จุดต่อ",
  "gen.rule.steel.check.strut_share.title": "สัดส่วนแนวนอน",
- "gen.rule.steel.out.lift_box_d.desc": "ความลึกในผังที่ลิฟต์เสาต้องการพร้อมเสา พื้นจะเปิดช่องเหนือส่วนนี้",
+ "gen.rule.steel.out.lift_box_d.desc": "ความลึกในแปลนที่ลิฟต์เสาต้องใช้รวมเสา ชั้นต่าง ๆ เปิดโล่งเหนือลิฟต์",
  "gen.rule.steel.out.lift_box_d.title": "ความลึกช่องลิฟต์",
- "gen.rule.steel.out.lift_box_w.desc": "ความกว้างในผังที่ลิฟต์เสาต้องการ พื้นจะเปิดช่องเหนือส่วนนี้",
+ "gen.rule.steel.out.lift_box_w.desc": "ความกว้างในแปลนที่ลิฟต์เสาต้องใช้ ชั้นต่าง ๆ เปิดโล่งเหนือลิฟต์",
  "gen.rule.steel.out.lift_box_w.title": "ความกว้างช่องลิฟต์",
- "gen.rule.steel.out.lift_offset.desc": "ระยะของลิฟต์จากแกน โดยไม่ชนค้ำยันในผัง",
- "gen.rule.steel.out.lift_offset.title": "ระยะลิฟต์จากแกน",
- "gen.rule.steel.out.lifts.desc": "ลิฟต์ขึ้นตามแกนอาคาร: ไปยังแท่นที่สอง แล้วไปถึงยอด",
- "gen.rule.steel.out.lifts.title": "ช่วงลิฟต์"
+ "gen.rule.steel.out.lift_offset.desc": "ระยะของลิฟต์จากแกน โดยไม่ชนค้ำยันในแปลน",
+ "gen.rule.steel.out.lift_offset.title": "ระยะเยื้องของลิฟต์จากแกน",
+ "gen.rule.steel.out.lifts.desc": "ลิฟต์ขึ้นตามแกนกลาง: ไปยังแท่นที่สอง แล้วขึ้นถึงด้านบน",
+ "gen.rule.steel.out.lifts.title": "เส้นทางลิฟต์"
 }

@@ -47,5 +47,8 @@
  "phui.kind.ramp": "Пандусы",
  "phui.kind.member": "Элементы",
  "phui.dates": "Даты (начало, конец)",
- "phui.show_calendar": "Показать по календарю"
+ "phui.show_calendar": "Показать по календарю",
+ "phui.phase.new": "Новое",
+ "phui.phase.existing": "Существующее",
+ "phui.phase.demolition": "Демонтаж"
 }

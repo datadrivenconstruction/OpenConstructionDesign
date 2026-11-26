@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Метр тутмын ган жин",
  "gen.rule.steel.check.strut_share.desc": "Хөндлөнгийн зангилаан дахь хүрээний хүчнээс авах хувь.",
  "gen.rule.steel.check.strut_share.title": "Хөндлөнгийн хувь",
- "gen.rule.steel.out.lift_box_d.desc": "Тулгуурт лифтэд тулгуураараа хамт хэрэгтэй төлөвлөгөөний гүн; шал түүний дээр нээгдэнэ.",
- "gen.rule.steel.out.lift_box_d.title": "Лифтийн хайрцгийн гүн",
- "gen.rule.steel.out.lift_box_w.desc": "Тулгуурт лифтэд хэрэгтэй төлөвлөгөөний өргөн; шал түүний дээр нээгдэнэ.",
- "gen.rule.steel.out.lift_box_w.title": "Лифтийн хайрцгийн өргөн",
- "gen.rule.steel.out.lift_offset.desc": "Төлөвлөгөөний диагональ холбооноос чөлөөтэй лифтийн тэнхлэгээс зай.",
- "gen.rule.steel.out.lift_offset.title": "Лифтийн тэнхлэгээс офсет",
- "gen.rule.steel.out.lifts.desc": "Цөмийн дагуух лифтүүд: хоёр дахь тавцан хүртэл, дараа нь орой хүртэл.",
- "gen.rule.steel.out.lifts.title": "Лифтийн хэсгүүд"
+ "gen.rule.steel.out.lift_box_d.desc": "Мачттай лифтэд мачттайгаа хамт шаардагдах план дээрх гүн; дээр нь давхрын шал нээлттэй үлдэнэ.",
+ "gen.rule.steel.out.lift_box_d.title": "Лифтийн шахтын гүн",
+ "gen.rule.steel.out.lift_box_w.desc": "Мачттай лифтэд шаардагдах план дээрх өргөн; дээр нь давхрын шал нээлттэй үлдэнэ.",
+ "gen.rule.steel.out.lift_box_w.title": "Лифтийн шахтын өргөн",
+ "gen.rule.steel.out.lift_offset.desc": "Лифтийн тэнхлэгээс авах зай, план дахь бэхэлгээнд саадгүй.",
+ "gen.rule.steel.out.lift_offset.title": "Лифтийн тэнхлэгээс хазайлт",
+ "gen.rule.steel.out.lifts.desc": "Цөмийн дагуух лифт: хоёр дахь тавцан хүртэл, дараа нь орой хүртэл.",
+ "gen.rule.steel.out.lifts.title": "Лифтийн маршрут"
 }

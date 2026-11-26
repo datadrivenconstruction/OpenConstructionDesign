@@ -6,7 +6,8 @@
   "shortcuts": [],
   "tab": "arch",
   "surfaces": [
-   "R"
+   "R",
+   "T"
   ],
   "stage": "M2",
   "group": "ai",
@@ -2589,7 +2590,8 @@
   ],
   "tab": null,
   "surfaces": [
-   "A"
+   "A",
+   "T"
   ],
   "stage": "M1"
  },
@@ -2844,7 +2846,8 @@
   "shortcuts": [],
   "tab": null,
   "surfaces": [
-   "A"
+   "A",
+   "T"
   ],
   "stage": "M1",
   "alias": "ui.panel.browser"
@@ -2858,7 +2861,8 @@
   ],
   "tab": null,
   "surfaces": [
-   "A"
+   "A",
+   "T"
   ],
   "stage": "M1",
   "alias": "ui.panel.props"
@@ -2872,7 +2876,8 @@
   ],
   "tab": null,
   "surfaces": [
-   "A"
+   "A",
+   "T"
   ],
   "stage": "M1"
  },

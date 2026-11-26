@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Règle {1} : la norme ne définit pas ce cas ; à trancher avec le concepteur",
  "norms.pack": "Jeu de normes (pays)",
  "norms.pack_auto": "Auto : {pack}",
- "norms.pack_tip": "Les règles, les programmes de pièces et les dimensions proviennent de ce jeu. Auto suit la langue de l'interface."
+ "norms.pack_tip": "Les règles, les programmes de pièces et les dimensions proviennent de ce jeu. Auto suit la langue de l'interface.",
+ "norms.pack_partial": "Pack partiel : {pack} ne couvre pas encore toutes les normes, un contrôle sans écart n’est donc pas une couverture complète.",
+ "norms.sheet_pack": "Pack"
 }

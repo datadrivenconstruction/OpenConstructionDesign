@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "규칙 {1}: 규범이 이 경우를 정의하지 않음; 설계자와 함께 결정",
  "norms.pack": "규정 팩 (국가)",
  "norms.pack_auto": "자동: {pack}",
- "norms.pack_tip": "규칙, 실 프로그램, 치수는 이 팩에서 가져옵니다. 자동은 인터페이스 언어를 따릅니다."
+ "norms.pack_tip": "규칙, 실 프로그램, 치수는 이 팩에서 가져옵니다. 자동은 인터페이스 언어를 따릅니다.",
+ "norms.pack_partial": "부분 팩: {pack}에는 아직 모든 기준이 명시되어 있지 않으므로 검사에서 문제가 없어도 전체를 다룬 것은 아닙니다.",
+ "norms.sheet_pack": "팩"
 }

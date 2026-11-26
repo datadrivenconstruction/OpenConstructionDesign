@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Quy tắc {1}: tiêu chuẩn không quy định trường hợp này; hãy quyết định cùng với người thiết kế",
  "norms.pack": "Bộ tiêu chuẩn (quốc gia)",
  "norms.pack_auto": "Tự động: {pack}",
- "norms.pack_tip": "Quy tắc, chương trình phòng và kích thước lấy từ bộ này. Tự động theo ngôn ngữ giao diện."
+ "norms.pack_tip": "Quy tắc, chương trình phòng và kích thước lấy từ bộ này. Tự động theo ngôn ngữ giao diện.",
+ "norms.pack_partial": "Gói chưa đầy đủ: {pack} chưa nêu mọi tiêu chuẩn, nên kết quả kiểm tra sạch chưa phải là phủ toàn bộ.",
+ "norms.sheet_pack": "Gói"
 }

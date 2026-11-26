@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Regel {1}: de norm definieert dit geval niet; beslis dit samen met de ontwerper",
  "norms.pack": "Normpakket (land)",
  "norms.pack_auto": "Automatisch: {pack}",
- "norms.pack_tip": "Regels, ruimteprogramma's en afmetingen komen uit dit pakket. Automatisch volgt de interfacetaal."
+ "norms.pack_tip": "Regels, ruimteprogramma's en afmetingen komen uit dit pakket. Automatisch volgt de interfacetaal.",
+ "norms.pack_partial": "Gedeeltelijk pakket: {pack} vermeldt nog niet elke norm, dus een controle zonder bevindingen is geen volledige dekking.",
+ "norms.sheet_pack": "Pakket"
 }

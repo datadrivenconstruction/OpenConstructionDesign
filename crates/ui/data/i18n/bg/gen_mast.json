@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Тегло на стоманата на метър",
  "gen.rule.steel.check.strut_share.desc": "Дял от силата в пояса, който хоризонталният елемент поема във възела си.",
  "gen.rule.steel.check.strut_share.title": "Хоризонтален дял",
- "gen.rule.steel.out.lift_box_d.desc": "Дълбочина в план, нужна на мачтов асансьор с мачтата му; подовете са отворени над него.",
+ "gen.rule.steel.out.lift_box_d.desc": "Дълбочина в плана, нужна на мачтов асансьор с мачтата му; етажите отгоре остават отворени.",
  "gen.rule.steel.out.lift_box_d.title": "Дълбочина на асансьорната шахта",
- "gen.rule.steel.out.lift_box_w.desc": "Ширина в план, нужна на мачтов асансьор; подовете са отворени над него.",
+ "gen.rule.steel.out.lift_box_w.desc": "Ширина в плана, нужна на мачтов асансьор; етажите отгоре остават отворени.",
  "gen.rule.steel.out.lift_box_w.title": "Ширина на асансьорната шахта",
- "gen.rule.steel.out.lift_offset.desc": "Разстояние на асансьор от оста, встрани от плановата диагонална връзка.",
+ "gen.rule.steel.out.lift_offset.desc": "Разстояние на асансьора от оста, извън планово укрепване.",
  "gen.rule.steel.out.lift_offset.title": "Отместване на асансьора от оста",
- "gen.rule.steel.out.lifts.desc": "Асансьори по ядрото: до втората платформа, после до върха.",
+ "gen.rule.steel.out.lifts.desc": "Асансьори по ядрото: до втората платформа, след това до върха.",
  "gen.rule.steel.out.lifts.title": "Асансьорни трасета"
 }

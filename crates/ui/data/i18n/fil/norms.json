@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Rule {1}: hindi tinutukoy ng pamantayan ang kasong ito; pagpasyahan ito kasama ng designer",
  "norms.pack": "Norm pack (bansa)",
  "norms.pack_auto": "Awtomatiko: {pack}",
- "norms.pack_tip": "Mula sa pack na ito ang mga rule, programa ng kuwarto at sukat. Sinusunod ng Awtomatiko ang wika ng interface."
+ "norms.pack_tip": "Mula sa pack na ito ang mga rule, programa ng kuwarto at sukat. Sinusunod ng Awtomatiko ang wika ng interface.",
+ "norms.pack_partial": "Bahagyang pack: hindi pa nakasaad ng {pack} ang bawat norm, kaya ang malinis na pagsusuri ay hindi buong coverage.",
+ "norms.sheet_pack": "Pack"
 }

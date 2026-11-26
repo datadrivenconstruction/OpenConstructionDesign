@@ -5,12 +5,12 @@
  "gen.rule.steel.check.self_weight.title": "Staalgewicht per meter",
  "gen.rule.steel.check.strut_share.desc": "Aandeel van de kracht in de gording dat een horizontale ligger in zijn knooppunt opneemt.",
  "gen.rule.steel.check.strut_share.title": "Aandeel horizontalen",
- "gen.rule.steel.out.lift_box_d.desc": "Diepte in plattegrond die een mastlift met zijn mast nodig heeft; vloeren hebben hier een opening.",
+ "gen.rule.steel.out.lift_box_d.desc": "Plattegronddiepte die een mastlift met zijn mast nodig heeft; vloeren zijn erboven open.",
  "gen.rule.steel.out.lift_box_d.title": "Diepte liftschacht",
- "gen.rule.steel.out.lift_box_w.desc": "Breedte in plattegrond die een mastlift nodig heeft; vloeren hebben hier een opening.",
+ "gen.rule.steel.out.lift_box_w.desc": "Plattegrondbreedte die een mastlift nodig heeft; vloeren zijn erboven open.",
  "gen.rule.steel.out.lift_box_w.title": "Breedte liftschacht",
- "gen.rule.steel.out.lift_offset.desc": "Afstand van een lift tot de as, vrij van de windverband in plattegrond.",
+ "gen.rule.steel.out.lift_offset.desc": "Afstand van een lift tot de as, vrij van het horizontale windverband.",
  "gen.rule.steel.out.lift_offset.title": "Liftafstand tot de as",
- "gen.rule.steel.out.lifts.desc": "Liften in de kern: tot het tweede platform, daarna tot de top.",
- "gen.rule.steel.out.lifts.title": "Liftbanen"
+ "gen.rule.steel.out.lifts.desc": "Liften langs de kern: naar het tweede platform, daarna naar de top.",
+ "gen.rule.steel.out.lifts.title": "Lifttrajecten"
 }

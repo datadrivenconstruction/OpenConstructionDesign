@@ -10,7 +10,7 @@
  "gen.rule.steel.out.lift_box_w.desc": "Largura em planta de que um elevador de mastro precisa; os pisos abrem sobre ele.",
  "gen.rule.steel.out.lift_box_w.title": "Largura da caixa do elevador",
  "gen.rule.steel.out.lift_offset.desc": "Distância de um elevador ao eixo, livre do contraventamento em planta.",
- "gen.rule.steel.out.lift_offset.title": "Desvio do elevador ao eixo",
+ "gen.rule.steel.out.lift_offset.title": "Afastamento do elevador ao eixo",
  "gen.rule.steel.out.lifts.desc": "Elevadores ao longo do núcleo: até à segunda plataforma e depois até ao topo.",
  "gen.rule.steel.out.lifts.title": "Lanços de elevador"
 }

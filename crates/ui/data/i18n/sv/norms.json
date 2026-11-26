@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Regel {1}: normen definierar inte detta fall; avgör det med projektören",
  "norms.pack": "Normpaket (land)",
  "norms.pack_auto": "Automatisk: {pack}",
- "norms.pack_tip": "Regler, rumsprogram och mått kommer från detta paket. Auto följer gränssnittets språk."
+ "norms.pack_tip": "Regler, rumsprogram och mått kommer från detta paket. Auto följer gränssnittets språk.",
+ "norms.pack_partial": "Delvis paket: {pack} anger ännu inte alla normer, så en ren kontroll är inte full täckning.",
+ "norms.sheet_pack": "Paket"
 }

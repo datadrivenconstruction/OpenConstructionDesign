@@ -9,8 +9,8 @@
  "gen.rule.steel.out.lift_box_d.title": "Lalim ng lift box",
  "gen.rule.steel.out.lift_box_w.desc": "Lapad sa plano na kailangan ng mast lift; bukas ang mga sahig sa ibabaw nito.",
  "gen.rule.steel.out.lift_box_w.title": "Lapad ng lift box",
- "gen.rule.steel.out.lift_offset.desc": "Layo ng lift mula sa axis, malayo sa plan brace.",
- "gen.rule.steel.out.lift_offset.title": "Offset ng lift mula sa axis",
- "gen.rule.steel.out.lifts.desc": "Mga lift paakyat sa core: hanggang sa ikalawang platform, saka hanggang sa tuktok.",
+ "gen.rule.steel.out.lift_offset.desc": "Layo ng lift mula sa aksis, malayo sa plan brace.",
+ "gen.rule.steel.out.lift_offset.title": "Offset ng lift mula sa aksis",
+ "gen.rule.steel.out.lifts.desc": "Mga lift sa core: papunta sa ikalawang platform, pagkatapos sa itaas.",
  "gen.rule.steel.out.lifts.title": "Mga takbo ng lift"
 }

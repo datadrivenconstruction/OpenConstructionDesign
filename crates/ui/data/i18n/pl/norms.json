@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Reguła {1}: norma nie określa tego przypadku; rozstrzygnij go z projektantem",
  "norms.pack": "Pakiet norm (kraj)",
  "norms.pack_auto": "Auto: {pack}",
- "norms.pack_tip": "Reguły, programy pomieszczeń i wymiary pochodzą z tego pakietu. Auto podąża za językiem interfejsu."
+ "norms.pack_tip": "Reguły, programy pomieszczeń i wymiary pochodzą z tego pakietu. Auto podąża za językiem interfejsu.",
+ "norms.pack_partial": "Pakiet częściowy: {pack} nie określa jeszcze wszystkich norm, więc pozytywny wynik kontroli nie oznacza pełnego pokrycia.",
+ "norms.sheet_pack": "Pakiet"
 }

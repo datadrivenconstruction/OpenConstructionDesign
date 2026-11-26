@@ -47,5 +47,7 @@
  "ai.check.rule.undefined": "Reegel {1}: norm ei määra seda juhtu; otsusta koos projekteerijaga",
  "norms.pack": "Normipakett (riik)",
  "norms.pack_auto": "Automaatne: {pack}",
- "norms.pack_tip": "Reeglid, ruumiprogrammid ja mõõtmed tulevad sellest paketist. Automaatne järgib liidese keelt."
+ "norms.pack_tip": "Reeglid, ruumiprogrammid ja mõõtmed tulevad sellest paketist. Automaatne järgib liidese keelt.",
+ "norms.pack_partial": "Osaline pakett: {pack} ei sisalda veel kõiki norme, seega puhas kontroll ei tähenda täielikku katvust.",
+ "norms.sheet_pack": "Pakett"
 }
