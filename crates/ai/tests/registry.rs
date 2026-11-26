@@ -177,7 +177,10 @@ fn catalog_of(lang: &str) -> BTreeMap<String, String> {
         .map(|e| e.unwrap().path())
         .filter(|p| p.extension().is_some_and(|x| x == "json"))
         .collect();
-    files.push(manifest().join(format!("../ui/data/i18n/commands.{lang}.json")));
+    let root_cmds = manifest().join(format!("../ui/data/i18n/commands.{lang}.json"));
+    if root_cmds.exists() {
+        files.push(root_cmds);
+    }
     for f in files {
         let text = std::fs::read_to_string(Path::new(&f)).unwrap();
         let v: BTreeMap<String, J> = serde_json::from_str(&text).unwrap();

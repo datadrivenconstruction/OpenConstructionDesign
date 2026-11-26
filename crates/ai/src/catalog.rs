@@ -512,9 +512,14 @@ fn dset_fields() -> Vec<(&'static str, Schema)> {
         ),
         (
             "language",
-            opt(desc("Words on the sheets; default ru for gost, en for iso", enum_(&["en", "ru"]))),
+            words_lang("Locale of the words on the sheets"),
         ),
     ]
+}
+
+/// A UI locale for the words a tool writes; left out, the person's interface language.
+fn words_lang(what: &str) -> Schema {
+    opt(desc(format!("{what}; default the person's interface language"), enum_(project::names::locales())))
 }
 
 /// Connection type keys of the steel catalogue, plus `auto`.
@@ -1357,7 +1362,7 @@ fn plan_station() -> Schema {
         ("why", why()),
         ("rules", opt(desc("{station.* rule id: value}: depth, platform, flows, escalators, walls; see list_rules group station", map()))),
         ("origin", opt(desc("[x, y] m of the inner corner of the box; default [0, 0]", arr(num())))),
-        ("lang", opt(desc("Names of new levels and rooms", enum_(&["en", "ru"])))),
+        ("lang", words_lang("Locale of the names of new levels and rooms")),
     ])
 }
 
@@ -1778,7 +1783,7 @@ fn power_devices() -> Schema {
 fn panel_schedule() -> Schema {
     obj(vec![
         ("panel", desc("The distribution board, comp:5", str_())),
-        ("lang", opt(enum_(&["en", "ru"]))),
+        ("lang", words_lang("Locale of the table words")),
         ("diagram", opt(bool_())),
     ])
 }
@@ -1903,7 +1908,7 @@ static CATALOG: &[ToolSpec] = &[
     propose("generate_project", GENERATE_PROJECT_HELP, generate_project).at_version(3),
     propose("revise_project", "Plan: change a project by a merge patch on its spec (e.g. {\"floors\": 12}). A drafted project is rebuilt in place; an applied one (its spec is stored in the model) gets a new item that changes, adds and deletes only what differs, keeping element ids. To add a room to one floor and keep the others, send changes.storey_rooms {\"<floor from 0>\": [rooms]}: only that floor is re-planned, the other floors keep their elements. Elements edited by hand are kept and listed as skipped.", revise_project).with_effect(Effect::Overwrites),
     propose("generate_block", GENERATE_BLOCK_HELP, generate_block),
-    propose("plan_station", "Plan: an underground station from the station.* rules: the levels below ground it lacks, diaphragm wall, slab and column types, and one item with the box walls, slabs, escalator, stair, lift, entrance and ventilation shafts, stairs, columns and rooms. The reply has metrics, the reasons per rule, failed checks and the escalator axes. It draws nothing above ground: follow it with create_terrain for the street over the box and entrance pavilions over the entrance wells (walls and a roof with vault per pavilion via create_elements) when the brief asks for the surface.", plan_station),
+    propose("plan_station", "Plan: an underground station from the station.* rules: the levels below ground it lacks, diaphragm wall, slab and column types, and one item with the box walls, slabs, escalator, stair, lift, entrance and ventilation shafts, stairs, columns and rooms. The reply has metrics, the reasons per rule, failed checks and the escalator axes. It draws nothing above ground: follow it with create_terrain for the street over the box and entrance pavilions over the entrance wells (walls and a roof with vault per pavilion via create_elements) when the brief asks for the surface.", plan_station).at_version(2),
     read("list_rules", "Generation rules of a project: value, range, source layer, goal tier and weight, lock, cost now. No filter: the groups and the rules that limit, changed or locked.", list_rules),
     read("get_rule", "One generation rule: range, default, goal cost and the decisions it drives.", get_rule),
     propose("set_rule", "Plan: change generation rules, range-checked, all or none; the project is rebuilt around its locks. A brief that cannot build is refused with its conflict.", set_rule).with_effect(Effect::Overwrites),
@@ -1971,7 +1976,8 @@ static CATALOG: &[ToolSpec] = &[
          over sheets; title blocks filled from the project information; the sheet list on the \
          first sheet. Running it again updates the same sheets.",
         create_drawing_set,
-    ),
+    )
+    .at_version(2),
     propose(
         "deliver_project",
         "Plan: a building from a brief through to files, in one call. Drafts the project as \
@@ -1981,12 +1987,12 @@ static CATALOG: &[ToolSpec] = &[
          drawings or files of a new building.",
         deliver_project,
     )
-    .at_version(4),
+    .at_version(5),
     propose("place_fixtures", "Plan: place fixtures and devices from the library (WC, Washbasin, Bathtub, Sink, Radiator, Supply Diffuser, Exhaust Grille, Ceiling Light, Socket Outlet, Light Switch, Distribution Board, Air Handling Unit) with their connectors. Replies with the new comp refs.", place_fixtures),
     propose("route_mep", "Plan: route a whole network from a source to target connectors. The router keeps clear of structure and other runs, cuts sleeves and slab holes, gives drains their fall, sizes every piece by flow and adds the fittings. Replies with the metrics of three variants. State the intent: never hand-place points. Air ducts: friction_pa_m sizes by equal friction and the metrics carry the critical path loss.", route_mep).at_version(3),
     propose("supply_fixtures", "Plan: cold water, hot water and waste from a riser group to every plumbing fixture of a level or room, as one item.", supply_fixtures),
     propose("power_devices", "Plan: feed devices (sockets, lights, switches) from a panel: conduits routed, devices grouped into circuits within the breaker, voltage drop checked. Replies with the circuits.", power_devices),
-    read("panel_schedule", "Circuits of a panel: devices, load, current, breaker, cable, length, voltage drop and findings, with totals and a table in English or Russian.", panel_schedule),
+    read("panel_schedule", "Circuits of a panel: devices, load, current, breaker, cable, length, voltage drop and findings, with totals and a table in the person's language.", panel_schedule).at_version(2),
     read("family_read", "Definition text of a project family, to edit it as a draft.", family_name_only),
     read("family_reference", "The family definition text reference: statements, units, the findings codes. Read it once before the first family_draft.", no_args),
     read("family_validate", "Check a family definition text without keeping it: returns the report with stable codes and line numbers.", family_text_only),

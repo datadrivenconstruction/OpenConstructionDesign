@@ -19,6 +19,11 @@ use std::sync::Arc;
 use web_time::{Duration, Instant};
 
 const SYSTEM_PROMPT: &str = include_str!("../data/system.md");
+
+/// The system prompt with the person's interface locale it falls back to and names things in.
+fn system_prompt(locale: &str) -> String {
+    format!("{}\n\nThe person's interface language: `{locale}`.\n", SYSTEM_PROMPT.trim_end())
+}
 pub const ACTOR_CHAT: &str = "chat";
 const MAX_RETRIES: u32 = crate::limits::RETRIES.u32v();
 const MAX_RETRY_WAIT_S: u64 = crate::limits::RETRY_WAIT.n();
@@ -140,7 +145,7 @@ pub struct CallCx<'a> {
     pub mode: Mode,
     pub cancel: &'a CancelToken,
     pub actor: &'a str,
-    /// Session language of refusal texts (`refusal::LANGS`, else English); the code is never translated.
+    /// Session language of refusal texts (`refusal::langs`, else English); the code is never translated.
     pub lang: &'a str,
 }
 
@@ -229,7 +234,7 @@ pub struct Conversation {
     /// Off by default: the tools offered never depend on the words or language of a request;
     /// the model loads groups itself. On, English/Russian subject words preload a group.
     intent_hint: bool,
-    /// Session language of refusal texts the model reads (`refusal::LANGS`).
+    /// Session language of refusal texts the model reads (`refusal::langs`).
     lang: &'static str,
     /// Role of the step in flight: the planner takes a turn's first step, the executor the rest.
     role: StepRole,
@@ -639,7 +644,7 @@ impl Conversation {
         limits: Limits,
         cancel: CancelToken,
     ) -> Self {
-        let messages = vec![Message::text(Role::System, SYSTEM_PROMPT)];
+        let messages = vec![Message::text(Role::System, system_prompt("en"))];
         Conversation {
             provider,
             profile,
@@ -671,9 +676,13 @@ impl Conversation {
         with_delta(cost_of(&self.profile, self.session), self.exec_delta)
     }
 
-    /// The language refusal texts are sent in for this chat.
+    /// The person's interface language: refusal texts, the fallback language of answers and
+    /// the words of tool-created names in this chat.
     pub fn set_lang(&mut self, tag: &str) {
         self.lang = crate::refusal::lang(tag);
+        if let Some(m) = self.messages.first_mut().filter(|m| m.role == Role::System) {
+            *m = Message::text(Role::System, system_prompt(ddc_gen::project::names::locale(tag)));
+        }
     }
 
     /// Lets subject words of a request preload their tool group (`toolset::intent_groups`).
@@ -1484,6 +1493,20 @@ mod tests {
             })
         );
         assert_eq!(p.requests()[0].messages[0].role, Role::System);
+    }
+
+    /// The model learns the interface locale it answers unclear messages in and names things in.
+    #[test]
+    fn the_system_prompt_names_the_interface_language() {
+        let p = ScriptedProvider::new(vec![vec![text("x")]]);
+        let mut c = conv(&p, Limits::default());
+        for (tag, want) in [("ja", "ja"), ("pt_BR", "pt-BR"), ("ar-EG", "ar"), ("en-GB", "en-GB"), ("xx", "en")] {
+            c.set_lang(tag);
+            let Part::Text(s) = &c.messages[0].parts[0] else { panic!("no system text") };
+            assert!(s.starts_with(SYSTEM_PROMPT.trim_end()), "{tag}");
+            assert!(s.ends_with(&format!("The person's interface language: `{want}`.\n")), "{tag}: {s}");
+        }
+        assert!(SYSTEM_PROMPT.contains("answer in the person's interface language"));
     }
 
     #[test]

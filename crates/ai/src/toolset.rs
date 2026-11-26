@@ -2,8 +2,8 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! What the chat sends: the core tools always, a catalog group after `load_tools` or after a
 //! call of one of its tools by name, in compact wire form (`data/tool_groups.json`). Requests
-//! come in any language, so the model chooses groups; `intent_groups` (English/Russian subject
-//! words) is an opt-in hint that only adds. MCP and the contracts keep the full catalog
+//! come in any language, so the model chooses groups; `intent_groups` (subject words in any
+//! script, `data/tool_groups.json`) is an opt-in hint that only adds. MCP and the contracts keep the full catalog
 //! (`catalog::schemas`); only the chat request is trimmed. Any catalog tool may still be called
 //! by name: groups change what is shown, not what is allowed.
 
@@ -102,9 +102,14 @@ pub fn group_of(tool: &str) -> Option<&'static str> {
         .map(|g| g.name.as_str())
 }
 
+/// Scripts written without spaces between words: CJK, Thai, Lao, Khmer, Myanmar.
+fn unspaced(c: char) -> bool {
+    matches!(c as u32, 0x2E80.. | 0x0E00..=0x0EFF | 0x1000..=0x109F | 0x1780..=0x17FF)
+}
+
 fn at_word_start(text: &str, word: &str) -> bool {
-    // CJK text has no spaces: a Chinese or Japanese subject word counts anywhere
-    if word.chars().next().is_some_and(|c| c as u32 >= 0x2E80) {
+    // a subject word of an unspaced script counts anywhere
+    if word.chars().next().is_some_and(unspaced) {
         return text.contains(word);
     }
     text.match_indices(word)
@@ -812,6 +817,34 @@ mod tests {
         assert!(g.contains("mep"), "{g:?}");
         assert!(intent_groups("Remove the old note").is_empty());
         assert!(intent_groups(&ru("ducts")).contains("mep"));
+        // the words are data in any script; an unspaced script matches inside a word
+        assert!(intent_groups("\u{5730}\u{4E0B}\u{9244}\u{306E}\u{99C5}\u{3092}\u{8A2D}\u{8A08}").contains("station"), "ja");
+        assert!(intent_groups("\u{0645}\u{062D}\u{0637}\u{0629} \u{0645}\u{062A}\u{0631}\u{0648}").contains("station"), "ar");
+        // one prompt per language family: common trade words load their group
+        for (lang, text, group) in [
+            ("de", "Verlege den Luftkanal und die Heizung im Keller", "mep"),
+            ("fr", "Trace la gaine de ventilation et la plomberie", "mep"),
+            ("es", "Dibuja la tubería de la calefacción y las tomas de corriente", "mep"),
+            ("pt", "Passe o duto de ar condicionado e a tubulação", "mep"),
+            ("tr", "Havalandırma kanalı ve ısıtma borusu ekle", "mep"),
+            ("ja", "ダクトと配管をルーティングして", "mep"),
+            ("zh", "布置风管和给排水管道", "mep"),
+            ("ko", "덕트와 배관을 연결해줘", "mep"),
+            ("ar", "أضف مجاري الهواء وأنابيب التدفئة", "mep"),
+            ("hi", "डक्ट और पाइप जोड़ो", "mep"),
+            ("de", "Erstelle den Bahnsteig der U-Bahnhof", "station"),
+            ("es", "Diseña un andén de estación subterránea", "station"),
+            ("ko", "지하철 승강장을 설계해줘", "station"),
+            ("fr", "Dessine la chaufferie et la station de pompage", "plant"),
+            ("tr", "Kazan dairesi ve pompa istasyonu tasarla", "plant"),
+            ("pt", "Gere as pranchas do projeto executivo", "drawings"),
+            ("zh", "导出施工图纸", "drawings"),
+            ("hi", "सब दीवारों का रंग बदलो और हाइलाइट करो", "view"),
+            ("ja", "壁を移動して回転", "modify"),
+            ("de", "Stahlbau mit Schweißnähten", "steel"),
+        ] {
+            assert!(intent_groups(text).contains(group), "{lang}: {text}");
+        }
         assert!(intent_groups("A 5-storey apartment section with a lift").is_empty());
         let s = intent_groups("Steel lattice tower with bolted connections");
         assert!(s.contains("steel") && s.contains("scripts"), "{s:?}");

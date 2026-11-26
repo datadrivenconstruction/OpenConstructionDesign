@@ -115,7 +115,7 @@ pub struct McpCall {
     pub args: J,
     pub reply: mpsc::Sender<ToolOutcome>,
     pub gate: CallGate,
-    /// The calling agent's language for refusal texts (`refusal::LANGS`), not the editor's.
+    /// The calling agent's language for refusal texts (`refusal::langs`), not the editor's.
     pub lang: &'static str,
 }
 
