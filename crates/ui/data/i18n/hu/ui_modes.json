@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Parancsok keresése",
+ "ui_mode.title": "Felület",
+ "ui_mode.desc": "Az eszközök megjelenése: szalag, lebegő sáv vagy minimális dokk. A Ctrl+K mindegyikben megtalál minden parancsot.",
+ "ui_mode.ribbon": "Szalag",
+ "ui_mode.ribbon.desc": "Feliratos gombokat tartalmazó fülek, mint más BIM-szerkesztőkben.",
+ "ui_mode.rail": "Sáv",
+ "ui_mode.rail.desc": "Keskeny sáv a rajz felett. A szakaszok panelként nyílnak; a Ctrl+\\ megjeleníti a feliratokat.",
+ "ui_mode.minimal": "Minimális",
+ "ui_mode.minimal.desc": "Rajzeszközök dokkja, sáv a kijelölés felett és Ctrl+K.",
+ "rail.model": "Modell",
+ "rail.systems": "Rendszerek",
+ "rail.document": "Dokumentálás",
+ "rail.analyse": "Elemzés",
+ "rail.pin": "Nyitva tartás",
+ "onb.updates": "Hetente keressen frissítést?",
+ "onb.sum.mode": "Felület"
+}

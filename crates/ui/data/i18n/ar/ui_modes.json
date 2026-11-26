@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "بحث في الأوامر",
+ "ui_mode.title": "الواجهة",
+ "ui_mode.desc": "كيفية عرض الأدوات: الشريط، أو شريط عائم، أو رصيف مصغّر. يعثر Ctrl+K على كل أمر في كل منها.",
+ "ui_mode.ribbon": "الشريط",
+ "ui_mode.ribbon.desc": "علامات تبويب بأزرار مسمّاة، كما في محررات BIM الأخرى.",
+ "ui_mode.rail": "شريط جانبي",
+ "ui_mode.rail.desc": "شريط نحيف فوق الرسم. تُفتح الأقسام كلوحات؛ Ctrl+\\ يعرض التسميات.",
+ "ui_mode.minimal": "مصغّر",
+ "ui_mode.minimal.desc": "رصيف لأدوات الرسم، وشريط فوق التحديد، وCtrl+K.",
+ "rail.model": "نمذجة",
+ "rail.systems": "الأنظمة",
+ "rail.document": "توثيق",
+ "rail.analyse": "تحليل",
+ "rail.pin": "إبقاء مفتوحاً",
+ "onb.updates": "التحقق من التحديثات أسبوعياً؟",
+ "onb.sum.mode": "الواجهة"
+}

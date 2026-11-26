@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "کمانڈز تلاش کریں",
+ "ui_mode.title": "انٹرفیس",
+ "ui_mode.desc": "ٹولز کیسے پیش کیے جائیں: ربن، تیرتا ریل، یا کم سے کم ڈاک۔ Ctrl+K ہر موڈ میں تمام کمانڈز تلاش کرتا ہے۔",
+ "ui_mode.ribbon": "ربن",
+ "ui_mode.ribbon.desc": "لیبل والے بٹنوں کے ساتھ ٹیبز، دوسرے BIM ایڈیٹرز کی طرح۔",
+ "ui_mode.rail": "ریل",
+ "ui_mode.rail.desc": "ڈرائنگ کے اوپر پتلی ریل۔ حصے پینل کی صورت میں کھلتے ہیں؛ Ctrl+\\ لیبل دکھاتا ہے۔",
+ "ui_mode.minimal": "کم سے کم",
+ "ui_mode.minimal.desc": "ڈرائنگ ٹولز کا ڈاک، انتخاب کے اوپر بار، اور Ctrl+K۔",
+ "rail.model": "ماڈل",
+ "rail.systems": "سسٹمز",
+ "rail.document": "دستاویزات",
+ "rail.analyse": "تجزیہ",
+ "rail.pin": "کھلا رکھیں",
+ "onb.updates": "کیا ہفتہ وار اپ ڈیٹس چیک کریں؟",
+ "onb.sum.mode": "انٹرفیس"
+}

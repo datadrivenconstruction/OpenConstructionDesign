@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "搜索命令",
+ "ui_mode.title": "界面",
+ "ui_mode.desc": "工具的呈现方式:功能区、浮动工具栏或精简工具坞。Ctrl+K 在每种方式下都能找到所有命令。",
+ "ui_mode.ribbon": "功能区",
+ "ui_mode.ribbon.desc": "带文字按钮的选项卡,与其他 BIM 编辑器相同。",
+ "ui_mode.rail": "工具栏",
+ "ui_mode.rail.desc": "绘图上方的纤细工具栏。各部分以面板打开;Ctrl+\\ 显示标签。",
+ "ui_mode.minimal": "精简",
+ "ui_mode.minimal.desc": "绘图工具坞、选区上方的工具条和 Ctrl+K。",
+ "rail.model": "模型",
+ "rail.systems": "系统",
+ "rail.document": "文档",
+ "rail.analyse": "分析",
+ "rail.pin": "保持展开",
+ "onb.updates": "每周检查更新?",
+ "onb.sum.mode": "界面"
+}

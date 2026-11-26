@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Søg i kommandoer",
+ "ui_mode.title": "Grænseflade",
+ "ui_mode.desc": "Hvordan værktøjer vises: båndet, en flydende bjælke eller et minimalt dok. Ctrl+K finder alle kommandoer i dem alle.",
+ "ui_mode.ribbon": "Bånd",
+ "ui_mode.ribbon.desc": "Faner med mærkede knapper, som i andre BIM-editorer.",
+ "ui_mode.rail": "Bjælke",
+ "ui_mode.rail.desc": "En smal bjælke over tegningen. Sektioner åbner som paneler; Ctrl+\\ viser etiketter.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "Et dok med tegneværktøjer, en bjælke over markeringen og Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Systemer",
+ "rail.document": "Dokumentér",
+ "rail.analyse": "Analysér",
+ "rail.pin": "Hold åben",
+ "onb.updates": "Søg efter opdateringer hver uge?",
+ "onb.sum.mode": "Grænseflade"
+}

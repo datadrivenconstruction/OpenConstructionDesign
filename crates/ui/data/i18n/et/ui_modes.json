@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Otsi käske",
+ "ui_mode.title": "Liides",
+ "ui_mode.desc": "Kuidas tööriistu pakutakse: lint, hõljuv riba või minimaalne dokk. Ctrl+K leiab igast neist iga käsu.",
+ "ui_mode.ribbon": "Lint",
+ "ui_mode.ribbon.desc": "Kaardid siltidega nuppudega, nagu teistes BIM-redaktorites.",
+ "ui_mode.rail": "Riba",
+ "ui_mode.rail.desc": "Kitsas riba joonise kohal. Jaotised avanevad paneelidena; Ctrl+\\ näitab silte.",
+ "ui_mode.minimal": "Minimaalne",
+ "ui_mode.minimal.desc": "Joonestustööriistade dokk, riba valiku kohal ja Ctrl+K.",
+ "rail.model": "Mudel",
+ "rail.systems": "Süsteemid",
+ "rail.document": "Dokumenteerimine",
+ "rail.analyse": "Analüüs",
+ "rail.pin": "Hoia avatuna",
+ "onb.updates": "Kontrolli uuendusi iga nädal?",
+ "onb.sum.mode": "Liides"
+}

@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Søk i kommandoer",
+ "ui_mode.title": "Grensesnitt",
+ "ui_mode.desc": "Hvordan verktøyene vises: båndet, en flytende rail eller en minimal dokk. Ctrl+K finner alle kommandoer i hver av dem.",
+ "ui_mode.ribbon": "Bånd",
+ "ui_mode.ribbon.desc": "Faner med merkede knapper, som i andre BIM-editorer.",
+ "ui_mode.rail": "Rail",
+ "ui_mode.rail.desc": "En smal rail over tegningen. Seksjoner åpnes som paneler; Ctrl+\\ viser etiketter.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "En dokk med tegneverktøy, en linje over utvalget og Ctrl+K.",
+ "rail.model": "Modell",
+ "rail.systems": "Systemer",
+ "rail.document": "Dokumenter",
+ "rail.analyse": "Analyser",
+ "rail.pin": "Hold åpen",
+ "onb.updates": "Se etter oppdateringer hver uke?",
+ "onb.sum.mode": "Grensesnitt"
+}

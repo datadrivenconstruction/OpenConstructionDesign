@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Traži naredbe",
+ "ui_mode.title": "Sučelje",
+ "ui_mode.desc": "Kako se nude alati: vrpca, plutajuća traka ili minimalni dok. Ctrl+K pronalazi svaku naredbu u svakom od njih.",
+ "ui_mode.ribbon": "Vrpca",
+ "ui_mode.ribbon.desc": "Kartice s označenim gumbima, kao u drugim BIM uređivačima.",
+ "ui_mode.rail": "Traka",
+ "ui_mode.rail.desc": "Uska traka iznad crteža. Odjeljci se otvaraju kao ploče; Ctrl+\\ prikazuje oznake.",
+ "ui_mode.minimal": "Minimalno",
+ "ui_mode.minimal.desc": "Dok s alatima za crtanje, traka iznad odabira i Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Sustavi",
+ "rail.document": "Dokumentacija",
+ "rail.analyse": "Analiza",
+ "rail.pin": "Drži otvoreno",
+ "onb.updates": "Provjeravati ažuriranja svaki tjedan?",
+ "onb.sum.mode": "Sučelje"
+}

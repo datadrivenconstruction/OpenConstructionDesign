@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Hae komentoja",
+ "ui_mode.title": "Käyttöliittymä",
+ "ui_mode.desc": "Miten työkalut tarjotaan: nauha, kelluva palkki tai minimaalinen telakka. Ctrl+K löytää jokaisen komennon kaikissa niissä.",
+ "ui_mode.ribbon": "Nauha",
+ "ui_mode.ribbon.desc": "Välilehdet nimillä varustetuin painikkein, kuten muissa BIM-editoreissa.",
+ "ui_mode.rail": "Palkki",
+ "ui_mode.rail.desc": "Kapea palkki piirustuksen päällä. Osiot avautuvat paneeleina; Ctrl+\\ näyttää nimikkeet.",
+ "ui_mode.minimal": "Minimaalinen",
+ "ui_mode.minimal.desc": "Piirustustyökalujen telakka, palkki valinnan päällä ja Ctrl+K.",
+ "rail.model": "Mallinna",
+ "rail.systems": "Järjestelmät",
+ "rail.document": "Dokumentoi",
+ "rail.analyse": "Analysoi",
+ "rail.pin": "Pidä auki",
+ "onb.updates": "Tarkistetaanko päivitykset viikoittain?",
+ "onb.sum.mode": "Käyttöliittymä"
+}

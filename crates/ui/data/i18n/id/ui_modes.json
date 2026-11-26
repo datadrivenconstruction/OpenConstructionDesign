@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Cari perintah",
+ "ui_mode.title": "Antarmuka",
+ "ui_mode.desc": "Cara alat ditampilkan: ribbon, rail mengambang, atau dok minimal. Ctrl+K menemukan setiap perintah di semuanya.",
+ "ui_mode.ribbon": "Ribbon",
+ "ui_mode.ribbon.desc": "Tab dengan tombol berlabel, seperti di editor BIM lain.",
+ "ui_mode.rail": "Rail",
+ "ui_mode.rail.desc": "Rail ramping di atas gambar. Bagian terbuka sebagai panel; Ctrl+\\ menampilkan label.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "Dok alat gambar, bilah di atas seleksi, dan Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Sistem",
+ "rail.document": "Dokumentasi",
+ "rail.analyse": "Analisis",
+ "rail.pin": "Biarkan terbuka",
+ "onb.updates": "Periksa pembaruan setiap minggu?",
+ "onb.sum.mode": "Antarmuka"
+}

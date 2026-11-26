@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Buyruqlarni qidirish",
+ "ui_mode.title": "Interfeys",
+ "ui_mode.desc": "Asboblar qanday taklif etiladi: lenta, suzuvchi panel yoki minimal dok. Ctrl+K har birida barcha buyruqlarni topadi.",
+ "ui_mode.ribbon": "Lenta",
+ "ui_mode.ribbon.desc": "Yorliqli tugmalar bilan varaqlar, boshqa BIM muharrirlaridagi kabi.",
+ "ui_mode.rail": "Panel",
+ "ui_mode.rail.desc": "Chizma ustidagi ingichka panel. Bo'limlar panel sifatida ochiladi; Ctrl+\\ yorliqlarni ko'rsatadi.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "Chizish asboblari doki, tanlov ustidagi panel va Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Tizimlar",
+ "rail.document": "Hujjatlash",
+ "rail.analyse": "Tahlil",
+ "rail.pin": "Ochiq tutish",
+ "onb.updates": "Yangilanishlar har hafta tekshirilsinmi?",
+ "onb.sum.mode": "Interfeys"
+}

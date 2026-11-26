@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "कमांड खोजें",
+ "ui_mode.title": "इंटरफ़ेस",
+ "ui_mode.desc": "टूल कैसे दिखें: रिबन, फ़्लोटिंग रेल या न्यूनतम डॉक। Ctrl+K इनमें से हर एक में सभी कमांड खोज लेता है।",
+ "ui_mode.ribbon": "रिबन",
+ "ui_mode.ribbon.desc": "लेबल वाले बटनों के टैब, अन्य BIM एडिटर की तरह।",
+ "ui_mode.rail": "रेल",
+ "ui_mode.rail.desc": "ड्रॉइंग के ऊपर पतली रेल। अनुभाग पैनल के रूप में खुलते हैं; Ctrl+\\ लेबल दिखाता है।",
+ "ui_mode.minimal": "न्यूनतम",
+ "ui_mode.minimal.desc": "ड्रॉइंग टूल का डॉक, चयन के ऊपर एक बार और Ctrl+K।",
+ "rail.model": "मॉडल",
+ "rail.systems": "सिस्टम",
+ "rail.document": "दस्तावेज़ीकरण",
+ "rail.analyse": "विश्लेषण",
+ "rail.pin": "खुला रखें",
+ "onb.updates": "क्या हर सप्ताह अपडेट जाँचें?",
+ "onb.sum.mode": "इंटरफ़ेस"
+}

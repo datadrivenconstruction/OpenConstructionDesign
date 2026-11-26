@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Caută comenzi",
+ "ui_mode.title": "Interfață",
+ "ui_mode.desc": "Cum sunt oferite instrumentele: panglica, o bară flotantă sau un dock minimal. Ctrl+K găsește orice comandă în fiecare dintre ele.",
+ "ui_mode.ribbon": "Panglică",
+ "ui_mode.ribbon.desc": "File cu butoane etichetate, ca în alte editoare BIM.",
+ "ui_mode.rail": "Bară",
+ "ui_mode.rail.desc": "O bară subțire peste desen. Secțiunile se deschid ca panouri; Ctrl+\\ afișează etichetele.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "Un dock cu instrumente de desen, o bară peste selecție și Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Sisteme",
+ "rail.document": "Documentare",
+ "rail.analyse": "Analiză",
+ "rail.pin": "Menține deschis",
+ "onb.updates": "Verifici actualizările săptămânal?",
+ "onb.sum.mode": "Interfață"
+}

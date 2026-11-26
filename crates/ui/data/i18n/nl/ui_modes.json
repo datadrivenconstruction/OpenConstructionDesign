@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Opdrachten zoeken",
+ "ui_mode.title": "Interface",
+ "ui_mode.desc": "Hoe gereedschappen worden aangeboden: het lint, een zwevende balk of een minimale dock. Met Ctrl+K vind je elke opdracht in elk van de drie.",
+ "ui_mode.ribbon": "Lint",
+ "ui_mode.ribbon.desc": "Tabbladen met benoemde knoppen, zoals in andere BIM-editors.",
+ "ui_mode.rail": "Balk",
+ "ui_mode.rail.desc": "Een smalle balk boven de tekening. Secties openen als panelen; Ctrl+\\ toont labels.",
+ "ui_mode.minimal": "Minimaal",
+ "ui_mode.minimal.desc": "Een dock met tekengereedschap, een balk boven de selectie en Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Installaties",
+ "rail.document": "Documenteren",
+ "rail.analyse": "Analyseren",
+ "rail.pin": "Open houden",
+ "onb.updates": "Wekelijks controleren op updates?",
+ "onb.sum.mode": "Interface"
+}

@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Pesquisar comandos",
+ "ui_mode.title": "Interface",
+ "ui_mode.desc": "Como as ferramentas são apresentadas: faixa, barra flutuante ou dock mínimo. Ctrl+K encontra todos os comandos em qualquer um deles.",
+ "ui_mode.ribbon": "Faixa",
+ "ui_mode.ribbon.desc": "Separadores com botões rotulados, como em outros editores BIM.",
+ "ui_mode.rail": "Barra",
+ "ui_mode.rail.desc": "Uma barra fina sobre o desenho. As seções abrem como painéis; Ctrl+\\ mostra os rótulos.",
+ "ui_mode.minimal": "Mínimo",
+ "ui_mode.minimal.desc": "Um dock de ferramentas de desenho, uma barra sobre a seleção e Ctrl+K.",
+ "rail.model": "Modelar",
+ "rail.systems": "Sistemas",
+ "rail.document": "Documentar",
+ "rail.analyse": "Analisar",
+ "rail.pin": "Manter aberto",
+ "onb.updates": "Verificar atualizações semanalmente?",
+ "onb.sum.mode": "Interface"
+}

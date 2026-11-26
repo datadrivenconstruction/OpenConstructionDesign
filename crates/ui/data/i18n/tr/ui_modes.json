@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Komut ara",
+ "ui_mode.title": "Arayüz",
+ "ui_mode.desc": "Araçların sunulma biçimi: şerit, yüzen çubuk veya minimal dok. Ctrl+K her birinde tüm komutları bulur.",
+ "ui_mode.ribbon": "Şerit",
+ "ui_mode.ribbon.desc": "Etiketli düğmeler içeren sekmeler, diğer BIM editörlerindeki gibi.",
+ "ui_mode.rail": "Çubuk",
+ "ui_mode.rail.desc": "Çizimin üzerinde ince bir çubuk. Bölümler panel olarak açılır; Ctrl+\\ etiketleri gösterir.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "Çizim araçları doku, seçimin üzerinde bir çubuk ve Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Sistemler",
+ "rail.document": "Dokümantasyon",
+ "rail.analyse": "Analiz",
+ "rail.pin": "Açık tut",
+ "onb.updates": "Güncellemeler haftalık denetlensin mi?",
+ "onb.sum.mode": "Arayüz"
+}

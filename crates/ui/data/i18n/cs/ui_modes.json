@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Hledat příkazy",
+ "ui_mode.title": "Rozhraní",
+ "ui_mode.desc": "Způsob nabídky nástrojů: pás karet, plovoucí lišta nebo minimální dok. Ctrl+K najde každý příkaz v každém z nich.",
+ "ui_mode.ribbon": "Pás karet",
+ "ui_mode.ribbon.desc": "Karty s popsanými tlačítky, jako v jiných BIM editorech.",
+ "ui_mode.rail": "Lišta",
+ "ui_mode.rail.desc": "Úzká lišta nad výkresem. Sekce se otevírají jako panely; Ctrl+\\ zobrazí popisky.",
+ "ui_mode.minimal": "Minimální",
+ "ui_mode.minimal.desc": "Dok kreslicích nástrojů, panel nad výběrem a Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Systémy",
+ "rail.document": "Dokumentace",
+ "rail.analyse": "Analýza",
+ "rail.pin": "Ponechat otevřené",
+ "onb.updates": "Kontrolovat aktualizace každý týden?",
+ "onb.sum.mode": "Rozhraní"
+}

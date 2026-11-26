@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "コマンドを検索",
+ "ui_mode.title": "インターフェース",
+ "ui_mode.desc": "ツールの表示方法: リボン、フローティングレール、最小ドックから選べます。Ctrl+K ならどの方式でもすべてのコマンドを検索できます。",
+ "ui_mode.ribbon": "リボン",
+ "ui_mode.ribbon.desc": "ラベル付きボタンのタブ。他の BIM エディターと同様です。",
+ "ui_mode.rail": "レール",
+ "ui_mode.rail.desc": "図面上の細いレール。セクションはパネルとして開き、Ctrl+\\ でラベルを表示します。",
+ "ui_mode.minimal": "最小",
+ "ui_mode.minimal.desc": "作図ツールのドック、選択範囲上のバー、Ctrl+K。",
+ "rail.model": "モデル",
+ "rail.systems": "設備",
+ "rail.document": "文書化",
+ "rail.analyse": "解析",
+ "rail.pin": "開いたままにする",
+ "onb.updates": "毎週アップデートを確認しますか?",
+ "onb.sum.mode": "インターフェース"
+}

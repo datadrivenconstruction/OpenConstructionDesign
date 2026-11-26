@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Tìm lệnh",
+ "ui_mode.title": "Giao diện",
+ "ui_mode.desc": "Cách cung cấp công cụ: dải lệnh, thanh nổi hoặc dock tối giản. Ctrl+K tìm mọi lệnh ở cả ba chế độ.",
+ "ui_mode.ribbon": "Dải lệnh",
+ "ui_mode.ribbon.desc": "Các tab có nút kèm nhãn, như các trình BIM khác.",
+ "ui_mode.rail": "Thanh nổi",
+ "ui_mode.rail.desc": "Thanh mỏng phía trên bản vẽ. Các mục mở thành bảng; Ctrl+\\ hiện nhãn.",
+ "ui_mode.minimal": "Tối giản",
+ "ui_mode.minimal.desc": "Dock công cụ vẽ, thanh phía trên vùng chọn và Ctrl+K.",
+ "rail.model": "Mô hình",
+ "rail.systems": "Hệ thống",
+ "rail.document": "Hồ sơ",
+ "rail.analyse": "Phân tích",
+ "rail.pin": "Giữ mở",
+ "onb.updates": "Kiểm tra cập nhật hằng tuần?",
+ "onb.sum.mode": "Giao diện"
+}

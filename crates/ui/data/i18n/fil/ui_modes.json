@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Maghanap ng command",
+ "ui_mode.title": "Interface",
+ "ui_mode.desc": "Paano inaalok ang mga tool: ang ribbon, isang lumulutang na rail, o minimal na dock. Hinahanap ng Ctrl+K ang bawat command sa lahat ng ito.",
+ "ui_mode.ribbon": "Ribbon",
+ "ui_mode.ribbon.desc": "Mga tab na may may-label na button, tulad ng sa ibang BIM editor.",
+ "ui_mode.rail": "Rail",
+ "ui_mode.rail.desc": "Manipis na rail sa ibabaw ng drawing. Bumubukas bilang mga panel ang mga seksyon; ipinapakita ng Ctrl+\\ ang mga label.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "Isang dock ng mga drawing tool, isang bar sa ibabaw ng pinili, at Ctrl+K.",
+ "rail.model": "Modelo",
+ "rail.systems": "Mga sistema",
+ "rail.document": "Idokumento",
+ "rail.analyse": "Suriin",
+ "rail.pin": "Panatilihing bukas",
+ "onb.updates": "Tingnan ang mga update kada linggo?",
+ "onb.sum.mode": "Interface"
+}

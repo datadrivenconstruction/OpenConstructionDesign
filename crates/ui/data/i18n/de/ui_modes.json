@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Befehle suchen",
+ "ui_mode.title": "Oberfläche",
+ "ui_mode.desc": "Wie Werkzeuge angeboten werden: als Ribbon, als schwebende Leiste oder als minimales Dock. Mit Ctrl+K findet man in jeder Variante jeden Befehl.",
+ "ui_mode.ribbon": "Ribbon",
+ "ui_mode.ribbon.desc": "Reiter mit beschrifteten Schaltflächen, wie in anderen BIM-Editoren.",
+ "ui_mode.rail": "Leiste",
+ "ui_mode.rail.desc": "Eine schmale Leiste über der Zeichnung. Bereiche öffnen sich als Panels; Ctrl+\\ blendet Beschriftungen ein.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "Ein Dock mit Zeichenwerkzeugen, eine Leiste über der Auswahl und Ctrl+K.",
+ "rail.model": "Modellieren",
+ "rail.systems": "Systeme",
+ "rail.document": "Dokumentieren",
+ "rail.analyse": "Analysieren",
+ "rail.pin": "Geöffnet lassen",
+ "onb.updates": "Wöchentlich nach Updates suchen?",
+ "onb.sum.mode": "Oberfläche"
+}

@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Sök kommandon",
+ "ui_mode.title": "Gränssnitt",
+ "ui_mode.desc": "Hur verktygen visas: bandet, ett flytande fält eller en minimal dock. Ctrl+K hittar alla kommandon i varje läge.",
+ "ui_mode.ribbon": "Band",
+ "ui_mode.ribbon.desc": "Flikar med märkta knappar, som i andra BIM-program.",
+ "ui_mode.rail": "Fält",
+ "ui_mode.rail.desc": "Ett smalt fält över ritningen. Avsnitt öppnas som paneler; Ctrl+\\ visar etiketter.",
+ "ui_mode.minimal": "Minimal",
+ "ui_mode.minimal.desc": "En dock med ritverktyg, ett fält över markeringen och Ctrl+K.",
+ "rail.model": "Modell",
+ "rail.systems": "System",
+ "rail.document": "Dokumentera",
+ "rail.analyse": "Analysera",
+ "rail.pin": "Håll öppen",
+ "onb.updates": "Söka efter uppdateringar varje vecka?",
+ "onb.sum.mode": "Gränssnitt"
+}

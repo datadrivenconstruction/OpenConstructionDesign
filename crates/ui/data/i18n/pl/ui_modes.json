@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "Szukaj poleceń",
+ "ui_mode.title": "Interfejs",
+ "ui_mode.desc": "Sposób udostępniania narzędzi: wstążka, pływający pasek lub minimalny dok. Ctrl+K znajduje każde polecenie w każdym z nich.",
+ "ui_mode.ribbon": "Wstążka",
+ "ui_mode.ribbon.desc": "Karty z opisanymi przyciskami, jak w innych edytorach BIM.",
+ "ui_mode.rail": "Pasek",
+ "ui_mode.rail.desc": "Wąski pasek nad rysunkiem. Sekcje otwierają się jako panele; Ctrl+\\ pokazuje etykiety.",
+ "ui_mode.minimal": "Minimalny",
+ "ui_mode.minimal.desc": "Dok z narzędziami rysunkowymi, pasek nad zaznaczeniem i Ctrl+K.",
+ "rail.model": "Model",
+ "rail.systems": "Instalacje",
+ "rail.document": "Dokumentacja",
+ "rail.analyse": "Analiza",
+ "rail.pin": "Pozostaw otwarte",
+ "onb.updates": "Sprawdzać aktualizacje co tydzień?",
+ "onb.sum.mode": "Interfejs"
+}

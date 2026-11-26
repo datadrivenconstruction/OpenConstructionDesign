@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "חיפוש פקודות",
+ "ui_mode.title": "ממשק",
+ "ui_mode.desc": "אופן הצגת הכלים: סרט, סרגל צף או עגינה מינימלית. Ctrl+K מוצא כל פקודה בכל אחד מהם.",
+ "ui_mode.ribbon": "סרט",
+ "ui_mode.ribbon.desc": "לשוניות עם כפתורים מתויגים, כמו בעורכי BIM אחרים.",
+ "ui_mode.rail": "סרגל",
+ "ui_mode.rail.desc": "סרגל צר מעל השרטוט. הסעיפים נפתחים כחלוניות; Ctrl+\\ מציג תוויות.",
+ "ui_mode.minimal": "מינימלי",
+ "ui_mode.minimal.desc": "עגינה של כלי שרטוט, סרגל מעל הבחירה ו-Ctrl+K.",
+ "rail.model": "מודל",
+ "rail.systems": "מערכות",
+ "rail.document": "תיעוד",
+ "rail.analyse": "ניתוח",
+ "rail.pin": "השאר פתוח",
+ "onb.updates": "לבדוק עדכונים מדי שבוע?",
+ "onb.sum.mode": "ממשק"
+}

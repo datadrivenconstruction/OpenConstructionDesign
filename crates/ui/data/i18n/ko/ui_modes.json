@@ -1,0 +1,18 @@
+{
+ "ribbon.search": "명령 검색",
+ "ui_mode.title": "인터페이스",
+ "ui_mode.desc": "도구 표시 방식: 리본, 플로팅 레일 또는 최소 독. Ctrl+K로 어느 방식에서든 모든 명령을 찾을 수 있습니다.",
+ "ui_mode.ribbon": "리본",
+ "ui_mode.ribbon.desc": "라벨이 있는 버튼 탭, 다른 BIM 편집기와 같은 방식입니다.",
+ "ui_mode.rail": "레일",
+ "ui_mode.rail.desc": "도면 위의 얇은 레일. 섹션이 패널로 열리며 Ctrl+\\로 레이블을 표시합니다.",
+ "ui_mode.minimal": "최소",
+ "ui_mode.minimal.desc": "그리기 도구 독, 선택 영역 위의 바, Ctrl+K.",
+ "rail.model": "모델",
+ "rail.systems": "설비",
+ "rail.document": "문서화",
+ "rail.analyse": "분석",
+ "rail.pin": "열어 두기",
+ "onb.updates": "매주 업데이트를 확인할까요?",
+ "onb.sum.mode": "인터페이스"
+}
