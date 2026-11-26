@@ -1,0 +1,15 @@
+{
+  "schema": "ddc-web-release/1",
+  "version": "1.2.0-web.1",
+  "tag": "v1.2.0-web.1",
+  "bridge": [
+    1
+  ],
+  "zip": {
+    "url": "https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/download/v1.2.0-web.1/OpenConstructionDesign-v1.2.0-web.1-web.zip",
+    "bytes": 101323351,
+    "sha256": "a4ef74962203c7be97b1773e041e5429a57f22de14323acf16ddd4203faf8c2d"
+  },
+  "signature_url": "https://github.com/datadrivenconstruction/OpenConstructionDesign/releases/download/v1.2.0-web.1/OpenConstructionDesign-v1.2.0-web.1-web.zip.minisig",
+  "published_at": "2026-11-26T12:29:29Z"
+}
