@@ -350,8 +350,13 @@ fn ribbon_groups_keep_captions_and_collapse_alike_in_en_and_ru() {
                     let g = cat.t(&format!("rgroup.{}", group_name(c)));
                     *groups.entry(g).or_default() |= drawn;
                 }
+                // a collapsed group sets its caption over two lines inside its drop-down
+                let shown = |g: &str| {
+                    text.iter().any(|t| t == g)
+                        || text.windows(2).any(|w| format!("{} {}", w[0], w[1]) == g)
+                };
                 for g in groups.iter().filter(|(_, d)| **d).map(|(g, _)| g) {
-                    assert!(text.iter().any(|t| t == g), "{tag}: group {g:?} has no caption");
+                    assert!(shown(g), "{tag}: group {g:?} has no caption");
                 }
                 checked += band.len();
                 counts.push(band.into_iter().map(|b| b.0).collect::<Vec<_>>());

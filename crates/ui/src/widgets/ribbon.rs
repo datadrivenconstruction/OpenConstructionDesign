@@ -796,7 +796,7 @@ impl Ribbon {
             // violet only for AI: the glyph carries it, the label stays in the text ink
             icons.paint(ui, crate::icons::ctl::AI, STRIP_ICON as u32, ic, th.c("ai.accent"));
             if full {
-                ui.painter().text(pos2(ic.right() + crate::theme::space::SM, r.center().y), Align2::LEFT_CENTER, &ai_label, font.clone(), fg);
+                ui.painter().text(pos2(ic.right() + crate::theme::space::SM, r.center().y), Align2::LEFT_CENTER, crate::rtl::display(&ai_label), font.clone(), fg);
             }
             if super::rich_tooltip(resp, th, &ai_label, "", "").clicked() {
                 out = Some(ASK_AI_CMD.to_string());
@@ -1005,7 +1005,7 @@ impl Ribbon {
                 ui.painter().text(
                     pos2((row.left() + k::TITLE_PAD_X).round(), row.center().y),
                     Align2::LEFT_CENTER,
-                    &gd.title,
+                    crate::rtl::display(&gd.title),
                     title_font.clone(),
                     th.c("text.secondary"),
                 );
@@ -1035,7 +1035,7 @@ impl Ribbon {
             ui.painter().text(
                 pos2(r.left() + 8.0, r.center().y),
                 Align2::LEFT_CENTER,
-                label,
+                crate::rtl::display(&label),
                 caption.clone(),
                 fg,
             );
@@ -1389,10 +1389,10 @@ impl Ribbon {
         let l1 = g.title_words[..w.split].join(" ");
         let l2 = g.title_words[w.split..].join(" ");
         let text_c = th.c("text.primary");
-        p.text(pos2(cx, y0), Align2::CENTER_CENTER, l1, caption.clone(), text_c);
+        p.text(pos2(cx, y0), Align2::CENTER_CENTER, crate::rtl::display(&l1), caption.clone(), text_c);
         let lx = (cx - (w.line2 + k::CARET_W) / 2.0).round();
         if !l2.is_empty() {
-            p.text(pos2(lx, y1), Align2::LEFT_CENTER, l2, caption, text_c);
+            p.text(pos2(lx, y1), Align2::LEFT_CENTER, crate::rtl::display(&l2), caption, text_c);
             chevron(p, pos2(lx + w.line2 + k::CARET_W / 2.0, y1), ink);
         } else {
             chevron(p, pos2(cx, y1), ink);
@@ -1520,7 +1520,8 @@ fn fit_text(
     max_w: f32,
 ) {
     let fmt = egui::TextFormat::simple(font.clone(), color);
-    let mut job = egui::text::LayoutJob::single_section(s.to_owned(), fmt);
+    let shown = crate::rtl::display(s).into_owned();
+    let mut job = egui::text::LayoutJob::single_section(shown, fmt);
     job.wrap = egui::text::TextWrapping::truncate_at_width(max_w.max(1.0));
     let g = p.layout_job(job);
     p.galley(align.anchor_size(at, g.size()).min, g, color);
@@ -1554,7 +1555,7 @@ fn tip_text(
 
 fn text_w(ui: &Ui, s: &str, font: &FontId) -> f32 {
     ui.painter()
-        .layout_no_wrap(s.to_owned(), font.clone(), Color32::PLACEHOLDER)
+        .layout_no_wrap(crate::rtl::display(s).into_owned(), font.clone(), Color32::PLACEHOLDER)
         .size()
         .x
 }
@@ -1661,7 +1662,7 @@ fn menu_row(
     p.text(
         pos2(ir.right() + 8.0, rect.center().y),
         Align2::LEFT_CENTER,
-        &r.label,
+        crate::rtl::display(&r.label),
         th.font(Role::Body),
         text_c,
     );
