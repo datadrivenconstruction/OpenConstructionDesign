@@ -28,5 +28,15 @@
  "query.why.curtain": "پردے کی دیواریں ان کی اپنی خصوصیات میں بدلی جاتی ہیں",
  "query.why.opening_type": "بازش کی ٹائپ اس کے سائز کے مطابق ہوتی ہے: “-> width=… height=…”",
  "query.why.slab_thickness": "فرش کی موٹائی ٹائپ سے طے ہوتی ہے: “-> type=…”",
- "query.why.wall_thickness": "دیوار کی موٹائی ٹائپ سے طے ہوتی ہے: “-> type=…”"
+ "query.why.wall_thickness": "دیوار کی موٹائی ٹائپ سے طے ہوتی ہے: “-> type=…”",
+ "query.pal.filter": "فلٹر",
+ "query.pal.change": "تبدیل",
+ "query.pal.one_undo": "ایک کالعدم مرحلہ",
+ "query.pal.select": "منتخب کریں",
+ "query.pal.levels_short": "منزل",
+ "query.pal.query": "استفسار",
+ "query.pal.plan": "پلان",
+ "query.pal.level": "منزل",
+ "query.pal.view": "منظر",
+ "query.pal.save_filter": "استفسار کو پروجیکٹ فلٹر کے طور پر محفوظ کریں"
 }

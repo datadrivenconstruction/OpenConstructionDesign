@@ -28,5 +28,15 @@
  "query.why.curtain": "幕墙需在其自身属性中更改",
  "query.why.opening_type": "洞口的类型随其尺寸而定：“-> width=… height=…”",
  "query.why.slab_thickness": "楼板厚度由类型决定：“-> type=…”",
- "query.why.wall_thickness": "墙厚度由类型决定：“-> type=…”"
+ "query.why.wall_thickness": "墙厚度由类型决定：“-> type=…”",
+ "query.pal.filter": "筛选",
+ "query.pal.change": "修改",
+ "query.pal.one_undo": "一步撤销",
+ "query.pal.select": "选择",
+ "query.pal.levels_short": "层",
+ "query.pal.query": "查询",
+ "query.pal.plan": "平面图",
+ "query.pal.level": "标高",
+ "query.pal.view": "视图",
+ "query.pal.save_filter": "将查询保存为项目筛选器"
 }

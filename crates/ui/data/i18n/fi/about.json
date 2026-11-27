@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Avoimen lähdekoodin lisenssit",
  "cmd.help.licenses.desc": "Luettelee tämän koontiversion käyttämät avoimen lähdekoodin kirjastot lisensseineen.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versio",
  "about.build": "Koontiversio",
  "about.schema": "Mallin skeema",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Tässä koontiversiossa käytetyt kirjastot ja niiden lisenssit",
  "about.licenses.open": "Näytä",
  "about.licenses.title": "Avoimen lähdekoodin lisenssit",
- "about.licenses.note": "DDC Editor sisältää alla luetut kirjastot. Jokainen pysyy oman lisenssinsä ja tekijänoikeusilmoituksensa alaisena. Koko lisenssitekstit: THIRD_PARTY_LICENSES.txt sovelluksen vieressä.",
+ "about.licenses.note": "OpenConstructionDesign sisältää alla luetut kirjastot. Jokainen pysyy oman lisenssinsä ja tekijänoikeusilmoituksensa alaisena. Koko lisenssitekstit: THIRD_PARTY_LICENSES.txt sovelluksen vieressä.",
  "about.licenses.full": "Koko lisenssitekstit",
  "about.licenses.list": "Komponenttiluettelo",
  "about.licenses.close": "Sulje",

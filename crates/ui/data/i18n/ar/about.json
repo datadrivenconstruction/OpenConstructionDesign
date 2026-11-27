@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "تراخيص المصدر المفتوح",
  "cmd.help.licenses.desc": "يعرض المكتبات مفتوحة المصدر المستخدمة في هذا الإصدار مع تراخيصها.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "الإصدار",
  "about.build": "البناء",
  "about.schema": "مخطط النموذج",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "المكتبات المستخدمة في هذا الإصدار وتراخيصها",
  "about.licenses.open": "عرض",
  "about.licenses.title": "تراخيص المصدر المفتوح",
- "about.licenses.note": "يتضمن DDC Editor المكتبات أدناه. تبقى كل مكتبة خاضعة لترخيصها وإشعار حقوق النشر الخاص بها. نصوص التراخيص الكاملة: ملف THIRD_PARTY_LICENSES.txt بجوار التطبيق.",
+ "about.licenses.note": "يتضمن OpenConstructionDesign المكتبات أدناه. تبقى كل مكتبة خاضعة لترخيصها وإشعار حقوق النشر الخاص بها. نصوص التراخيص الكاملة: ملف THIRD_PARTY_LICENSES.txt بجوار التطبيق.",
  "about.licenses.full": "نصوص التراخيص الكاملة",
  "about.licenses.list": "قائمة المكوّنات",
  "about.licenses.close": "إغلاق",

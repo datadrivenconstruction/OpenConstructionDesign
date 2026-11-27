@@ -63,5 +63,7 @@
  "browser.plan": "План",
  "browser.open": "Нээх",
  "browser.flip": "Харах чиглэлийг эсрэгээр болгох",
- "browser.delete": "Устгах"
+ "browser.delete": "Устгах",
+ "empty.families.title": "Ашиглагдаж буй бүлэг хараахан алга",
+ "empty.families.hint": "Хана, шал, элемент, бүрэлдэхүүн хэсэг байрлуулах тусам бүлгүүд энд гарч ирнэ."
 }

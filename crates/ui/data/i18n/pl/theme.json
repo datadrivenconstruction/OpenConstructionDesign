@@ -211,7 +211,7 @@
  "onb.back": "Wstecz",
  "onb.back_keys": "Alt+←",
  "onb.start": "Start",
- "onb.keys": "Enter — dalej, Alt+← — wstecz, Esc — pomiń",
+ "onb.keys": "Alt+→ dalej · Alt+← wstecz · Esc pomiń",
  "onb.later": "Wszystko można zmienić później w Ustawienia → Wygląd.",
  "onb.primary": "Główne",
  "onb.make_primary": "Ustaw jako główne",

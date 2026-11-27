@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "บันทึกตัวกรองแล้ว: {arg}",
  "unit_fmt.q.not_changed": "ไม่ได้เปลี่ยน: {e}",
  "unit_fmt.q.name.curtain": "ผนังม่าน",
- "unit_fmt.q.name.room": "ห้อง"
+ "unit_fmt.q.name.room": "ห้อง",
+ "unit_fmt.unit.m": "ม.",
+ "unit_fmt.unit.kg": "กก.",
+ "unit_fmt.unit.t": "ตัน"
 }

@@ -211,7 +211,7 @@
  "onb.back": "Vissza",
  "onb.back_keys": "Alt+←",
  "onb.start": "Indítás",
- "onb.keys": "Enter — tovább, Alt+← — vissza, Esc — kihagyás",
+ "onb.keys": "Alt+→ következő · Alt+← vissza · Esc kihagyás",
  "onb.later": "Minden később módosítható a Beállítások → Megjelenés menüpontban.",
  "onb.primary": "Fő",
  "onb.make_primary": "Fő legyen",

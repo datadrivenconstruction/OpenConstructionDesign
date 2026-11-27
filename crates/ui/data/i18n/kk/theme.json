@@ -211,7 +211,7 @@
  "onb.back": "Артқа",
  "onb.back_keys": "Alt+←",
  "onb.start": "Бастау",
- "onb.keys": "Enter — келесі, Alt+← — артқа, Esc — өткізу",
+ "onb.keys": "Alt+→ келесі · Alt+← артқа · Esc өткізу",
  "onb.later": "Барлығын кейін Параметрлер → Көрініс бөлімінде өзгертуге болады.",
  "onb.primary": "Негізгі",
  "onb.make_primary": "Негізгі ету",

@@ -63,5 +63,7 @@
  "browser.plan": "Grundriss",
  "browser.open": "Öffnen",
  "browser.flip": "Blickrichtung umkehren",
- "browser.delete": "Löschen"
+ "browser.delete": "Löschen",
+ "empty.families.title": "Noch keine Familien in Verwendung",
+ "empty.families.hint": "Familien erscheinen hier, sobald Sie Wände, Decken, Stäbe und Bauteile platzieren."
 }

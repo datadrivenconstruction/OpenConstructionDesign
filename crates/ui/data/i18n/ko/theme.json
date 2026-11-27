@@ -211,7 +211,7 @@
  "onb.back": "뒤로",
  "onb.back_keys": "Alt+←",
  "onb.start": "시작",
- "onb.keys": "Enter — 다음, Alt+← — 뒤로, Esc — 건너뛰기",
+ "onb.keys": "Alt+→ 다음 · Alt+← 뒤로 · Esc 건너뛰기",
  "onb.later": "모든 항목은 나중에 설정 → 외관에서 변경할 수 있습니다.",
  "onb.primary": "주",
  "onb.make_primary": "주로 설정",

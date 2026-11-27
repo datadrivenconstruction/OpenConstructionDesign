@@ -63,5 +63,7 @@
  "browser.plan": "แผนผัง",
  "browser.open": "เปิด",
  "browser.flip": "กลับทิศทางมุมมอง",
- "browser.delete": "ลบ"
+ "browser.delete": "ลบ",
+ "empty.families.title": "ยังไม่มีแฟมิลีที่ใช้งาน",
+ "empty.families.hint": "แฟมิลีจะปรากฏที่นี่เมื่อคุณวางผนัง พื้น ชิ้นส่วนโครงสร้าง และองค์ประกอบ"
 }

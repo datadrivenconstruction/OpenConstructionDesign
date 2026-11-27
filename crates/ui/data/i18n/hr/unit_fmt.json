@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filtar spremljen: {arg}",
  "unit_fmt.q.not_changed": "nije promijenjeno: {e}",
  "unit_fmt.q.name.curtain": "Zavjesni zid",
- "unit_fmt.q.name.room": "Prostorija"
+ "unit_fmt.q.name.room": "Prostorija",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

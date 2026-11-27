@@ -211,7 +211,7 @@
  "onb.back": "Terug",
  "onb.back_keys": "Alt+←",
  "onb.start": "Starten",
- "onb.keys": "Enter — volgende, Alt+← — terug, Esc — overslaan",
+ "onb.keys": "Alt+→ volgende · Alt+← terug · Esc overslaan",
  "onb.later": "Alles kan later worden gewijzigd in Instellingen → Weergave.",
  "onb.primary": "Hoofd",
  "onb.make_primary": "Hoofd maken",

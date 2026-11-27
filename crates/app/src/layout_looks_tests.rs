@@ -406,8 +406,39 @@ fn key(k: egui::Key, modifiers: egui::Modifiers) -> Vec<egui::Event> {
     vec![ev(true), ev(false)]
 }
 
+/// A stray Enter never walks the wizard: the steps before the last take a click or Alt+→, and
+/// the last step confirms with Enter only after it has been drawn once.
+#[test]
+fn wizard_enter_confirms_only_on_the_last_step() {
+    let mut sh = Shell::new(Lang::En, SIZES[0]);
+    sh.on_modal = true;
+    sh.settle();
+    sh.app.chrome.onboard.step = onboard::STEP_MENU;
+    sh.app.open_onboarding(onboard::STEP_FOCUS);
+    assert_eq!(sh.app.chrome.onboard.step, onboard::STEP_FOCUS, "a visit starts on step 1");
+    for step in 0..STEPS - 1 {
+        sh.app.chrome.onboard.step = step;
+        sh.settle();
+        for _ in 0..3 {
+            sh.pass(key(egui::Key::Enter, egui::Modifiers::NONE));
+            sh.settle();
+        }
+        assert!(sh.app.chrome.onboard.open, "Enter on step {step} closed the wizard");
+        assert_eq!(sh.app.chrome.onboard.step, step, "Enter walked past step {step}");
+    }
+    // Enter in the frame the last step first shows is still stray
+    sh.app.chrome.onboard.step = onboard::STEP_SUMMARY;
+    sh.pass(key(egui::Key::Enter, egui::Modifiers::NONE));
+    sh.settle();
+    assert!(sh.app.chrome.onboard.open, "Enter on the frame the last step appears");
+    sh.pass(key(egui::Key::Enter, egui::Modifiers::NONE));
+    sh.settle();
+    assert!(!sh.app.chrome.onboard.open, "Enter on the last step confirms");
+    crate::ai::ui::modes::leave();
+}
+
 /// First start opens the wizard; Esc skips it and it stays away after a restart; the command
-/// opens it again; Enter walks to the end and «Start» finishes with every choice saved.
+/// opens it again; Enter on the last step («Start») finishes with every choice saved.
 #[test]
 fn wizard_first_start_skip_rerun_and_finish() {
     let path = temp_prefs("onb");

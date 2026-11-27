@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Nyílt forráskódú licencek",
  "cmd.help.licenses.desc": "Felsorolja az ebben a buildben használt nyílt forráskódú könyvtárakat a licenceikkel.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Verzió",
  "about.build": "Build",
  "about.schema": "Modellséma",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Az ebben a buildben használt könyvtárak és licenceik",
  "about.licenses.open": "Megtekintés",
  "about.licenses.title": "Nyílt forráskódú licencek",
- "about.licenses.note": "A DDC Editor az alábbi könyvtárakat tartalmazza. Mindegyik saját licence és szerzői jogi közleménye alatt marad. A teljes licencszövegek: THIRD_PARTY_LICENSES.txt az alkalmazás mellett.",
+ "about.licenses.note": "A OpenConstructionDesign az alábbi könyvtárakat tartalmazza. Mindegyik saját licence és szerzői jogi közleménye alatt marad. A teljes licencszövegek: THIRD_PARTY_LICENSES.txt az alkalmazás mellett.",
  "about.licenses.full": "Teljes licencszövegek",
  "about.licenses.list": "Összetevők listája",
  "about.licenses.close": "Bezárás",

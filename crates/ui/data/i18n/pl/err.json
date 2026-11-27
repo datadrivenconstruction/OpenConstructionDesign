@@ -63,5 +63,7 @@
  "browser.plan": "Rzut",
  "browser.open": "Otwórz",
  "browser.flip": "Odwróć kierunek widoku",
- "browser.delete": "Usuń"
+ "browser.delete": "Usuń",
+ "empty.families.title": "Brak używanych rodzin",
+ "empty.families.hint": "Rodziny pojawią się tutaj po umieszczeniu ścian, stropów, elementów i komponentów."
 }

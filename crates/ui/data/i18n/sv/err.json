@@ -63,5 +63,7 @@
  "browser.plan": "Planvy",
  "browser.open": "Öppna",
  "browser.flip": "Vänd visningsriktning",
- "browser.delete": "Ta bort"
+ "browser.delete": "Ta bort",
+ "empty.families.title": "Inga familjer används ännu",
+ "empty.families.hint": "Familjer visas här när du placerar väggar, golv, element och komponenter."
 }

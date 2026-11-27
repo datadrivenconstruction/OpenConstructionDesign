@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filtre kaydedildi: {arg}",
  "unit_fmt.q.not_changed": "değiştirilmedi: {e}",
  "unit_fmt.q.name.curtain": "Perde duvar",
- "unit_fmt.q.name.room": "Oda"
+ "unit_fmt.q.name.room": "Oda",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

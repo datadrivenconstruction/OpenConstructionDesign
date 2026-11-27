@@ -28,5 +28,15 @@
  "query.why.curtain": "a függönyfalakat a saját tulajdonságaikban kell módosítani",
  "query.why.opening_type": "a nyílás típusa a méretét követi: „-> width=… height=…”",
  "query.why.slab_thickness": "a födém vastagságát a típus határozza meg: „-> type=…”",
- "query.why.wall_thickness": "a fal vastagságát a típus határozza meg: „-> type=…”"
+ "query.why.wall_thickness": "a fal vastagságát a típus határozza meg: „-> type=…”",
+ "query.pal.filter": "Szűrés",
+ "query.pal.change": "Módosítás",
+ "query.pal.one_undo": "egy visszavonási lépés",
+ "query.pal.select": "Kijelölés",
+ "query.pal.levels_short": "szint",
+ "query.pal.query": "Lekérdezés",
+ "query.pal.plan": "Alaprajz",
+ "query.pal.level": "szint",
+ "query.pal.view": "nézet",
+ "query.pal.save_filter": "Lekérdezés mentése projektszűrőként"
 }

@@ -196,6 +196,55 @@ fn apply_label(cat: &Catalog) -> String {
     cat.plural("ai.items.apply", 1)
 }
 
+/// Each AI tab wears its own icon from the set (chat, generate, check), drawn left of its
+/// name; the three never share one mark (a hand-drawn spark on each read as "+").
+#[test]
+fn every_ai_tab_has_its_own_icon_from_the_set() {
+    let names: Vec<&str> = AiMode::ALL.iter().map(|m| m.icon()).collect();
+    for n in &names {
+        assert!(ddc_ui::icons::names().contains(n), "{n}: not in the icon set");
+    }
+    let px: Vec<Vec<egui::Color32>> = names
+        .iter()
+        .chain(["spark"].iter())
+        .map(|n| ddc_ui::icons::rasterize(n, 16).expect("icon").pixels)
+        .collect();
+    for i in 0..px.len() {
+        for j in i + 1..px.len() {
+            assert_ne!(px[i], px[j], "icons {i} and {j} draw the same at 16 px");
+        }
+    }
+    for lang in [Lang::En, Lang::De, Lang::Ar] {
+        let mut sh = Shell::new(lang, SIZES[1]);
+        let cat = Catalog::new(lang);
+        let p = sh.settle();
+        let mut seen = vec![];
+        for m in AiMode::ALL {
+            let name = cat.t(m.label_key());
+            let r = p
+                .spans
+                .iter()
+                .filter(|(t, r)| *t == name && r.top() < SIZES[1].1 / 3.0)
+                .max_by(|a, b| a.1.top().total_cmp(&b.1.top()))
+                .map(|(_, r)| *r)
+                .unwrap_or_else(|| panic!("{lang:?} {m:?}: no tab"));
+            let icon = p.shapes.iter().find_map(|s| match s {
+                egui::Shape::Mesh(mesh) if mesh.texture_id != egui::TextureId::default() => {
+                    let b = mesh.calc_bounds();
+                    let beside = (b.center().y - r.center().y).abs() < 2.0
+                        && (b.max.x <= r.min.x + 0.5 || b.min.x >= r.max.x - 0.5)
+                        && (b.center().x - r.center().x).abs() < r.width() / 2.0 + 24.0;
+                    beside.then_some(mesh.texture_id)
+                }
+                _ => None,
+            });
+            let icon = icon.unwrap_or_else(|| panic!("{lang:?} {m:?}: no icon beside the tab name"));
+            assert!(!seen.contains(&icon), "{lang:?} {m:?}: shares an icon");
+            seen.push(icon);
+        }
+    }
+}
+
 #[test]
 fn tabs_open_from_the_bar_commands_and_leave_for_a_view() {
     let mut sh = Shell::new(Lang::En, SIZES[1]);

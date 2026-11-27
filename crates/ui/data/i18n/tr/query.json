@@ -28,5 +28,15 @@
  "query.why.curtain": "giydirme cepheler kendi özelliklerinde değiştirilir",
  "query.why.opening_type": "boşluğun tipi boyutuna bağlıdır: “-> genişlik=… yükseklik=…”",
  "query.why.slab_thickness": "döşeme kalınlığı tip tarafından belirlenir: “-> tip=…”",
- "query.why.wall_thickness": "duvar kalınlığı tip tarafından belirlenir: “-> tip=…”"
+ "query.why.wall_thickness": "duvar kalınlığı tip tarafından belirlenir: “-> tip=…”",
+ "query.pal.filter": "Filtrele",
+ "query.pal.change": "Değiştir",
+ "query.pal.one_undo": "tek bir geri alma adımı",
+ "query.pal.select": "Seç",
+ "query.pal.levels_short": "kat",
+ "query.pal.query": "Sorgu",
+ "query.pal.plan": "Plan",
+ "query.pal.level": "kat",
+ "query.pal.view": "görünüm",
+ "query.pal.save_filter": "Sorguyu proje filtresi olarak kaydet"
 }

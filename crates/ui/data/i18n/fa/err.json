@@ -63,5 +63,7 @@
  "browser.plan": "پلان",
  "browser.open": "باز کردن",
  "browser.flip": "وارونه‌کردن جهت نما",
- "browser.delete": "حذف"
+ "browser.delete": "حذف",
+ "empty.families.title": "هنوز هیچ خانواده‌ای در حال استفاده نیست",
+ "empty.families.hint": "با قرار دادن دیوار، کف، عضو و جزء، خانواده‌ها اینجا نمایش داده می‌شوند."
 }

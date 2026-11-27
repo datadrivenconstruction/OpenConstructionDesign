@@ -211,7 +211,7 @@
  "onb.back": "Назад",
  "onb.back_keys": "Alt+←",
  "onb.start": "Почати",
- "onb.keys": "Enter — далі, Alt+← — назад, Esc — пропустити",
+ "onb.keys": "Alt+→ далі · Alt+← назад · Esc пропустити",
  "onb.later": "Усе можна змінити пізніше в Налаштуваннях → Зовнішній вигляд.",
  "onb.primary": "Головний",
  "onb.make_primary": "Зробити головним",

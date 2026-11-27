@@ -28,5 +28,15 @@
  "query.why.curtain": "ผนังม่านถูกเปลี่ยนในคุณสมบัติของตัวเอง",
  "query.why.opening_type": "ชนิดของช่องเปิดขึ้นกับขนาด: \"-> width=… height=…\"",
  "query.why.slab_thickness": "ความหนาของพื้นถูกกำหนดโดยชนิด: \"-> type=…\"",
- "query.why.wall_thickness": "ความหนาของผนังถูกกำหนดโดยชนิด: \"-> type=…\""
+ "query.why.wall_thickness": "ความหนาของผนังถูกกำหนดโดยชนิด: \"-> type=…\"",
+ "query.pal.filter": "กรอง",
+ "query.pal.change": "เปลี่ยน",
+ "query.pal.one_undo": "ยกเลิกหนึ่งขั้นตอน",
+ "query.pal.select": "เลือก",
+ "query.pal.levels_short": "ชั้น",
+ "query.pal.query": "คิวรี",
+ "query.pal.plan": "ผัง",
+ "query.pal.level": "ชั้น",
+ "query.pal.view": "มุมมอง",
+ "query.pal.save_filter": "บันทึกคิวรีเป็นตัวกรองโครงการ"
 }

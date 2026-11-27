@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Açık kaynak lisansları",
  "cmd.help.licenses.desc": "Bu derlemede kullanılan açık kaynak kütüphaneleri ve lisanslarını listeler.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Sürüm",
  "about.build": "Derleme",
  "about.schema": "Model şeması",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Bu derlemede kullanılan kütüphaneler ve lisansları",
  "about.licenses.open": "Görüntüle",
  "about.licenses.title": "Açık kaynak lisansları",
- "about.licenses.note": "DDC Editor aşağıdaki kütüphaneleri içerir. Her biri kendi lisansı ve telif hakkı bildirimi altında kalır. Tam lisans metinleri: uygulamanın yanındaki THIRD_PARTY_LICENSES.txt dosyasında.",
+ "about.licenses.note": "OpenConstructionDesign aşağıdaki kütüphaneleri içerir. Her biri kendi lisansı ve telif hakkı bildirimi altında kalır. Tam lisans metinleri: uygulamanın yanındaki THIRD_PARTY_LICENSES.txt dosyasında.",
  "about.licenses.full": "Tam lisans metinleri",
  "about.licenses.list": "Bileşen listesi",
  "about.licenses.close": "Kapat",

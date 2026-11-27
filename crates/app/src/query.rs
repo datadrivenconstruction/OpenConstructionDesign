@@ -1961,14 +1961,14 @@ fn el_extra(r: &Row, env: &Env, ru: bool) -> Extra {
 /// The second value says whether to show them above commands.
 pub fn extras(ed: &Editor, q: &str, ru: bool) -> (Vec<Extra>, bool) {
     let t = q.trim();
-    let tr = |a: &str, b: &str| if ru { a.to_string() } else { b.to_string() };
+    let tr = |k: &str| crate::tr_lang(ru, k, &[]);
     let mut v: Vec<Extra> = vec![];
     let filters = saved(ed);
     if t.is_empty() {
         for f in filters.iter().take(4) {
             v.push(Extra {
                 key: format!("@sq:{f}"),
-                label: format!("{}: {f}", tr("\u{424}\u{438}\u{43b}\u{44c}\u{442}\u{440}", "Filter")),
+                label: format!("{}: {f}", tr("query.pal.filter")),
                 detail: String::new(),
                 icon: "filter".into(),
             });
@@ -1997,11 +1997,11 @@ pub fn extras(ed: &Editor, q: &str, ru: bool) -> (Vec<Extra>, bool) {
                         key: format!("@set:{t}"),
                         label: format!(
                             "{} {}: {}",
-                            tr("\u{418}\u{437}\u{43c}\u{435}\u{43d}\u{438}\u{442}\u{44c}", "Change"),
+                            tr("query.pal.change"),
                             summary(&hits, ru),
                             what.last().copied().unwrap_or_default()
                         ),
-                        detail: tr("\u{43e}\u{434}\u{438}\u{43d} \u{448}\u{430}\u{433} \u{43e}\u{442}\u{43c}\u{435}\u{43d}\u{44b}", "one undo step"),
+                        detail: tr("query.pal.one_undo"),
                         icon: "params".into(),
                     });
                 }
@@ -2009,18 +2009,15 @@ pub fn extras(ed: &Editor, q: &str, ru: bool) -> (Vec<Extra>, bool) {
                 let lv: BTreeSet<i64> = hits.iter().map(|r| r.level).collect();
                 v.push(Extra {
                     key: format!("@q:{t}"),
-                    label: format!("{}: {}", tr("\u{412}\u{44b}\u{431}\u{440}\u{430}\u{442}\u{44c}", "Select"), summary(&hits, ru)),
-                    detail: format!("{} {}", lv.len(), tr("\u{443}\u{440}.", "lvl")),
+                    label: format!("{}: {}", tr("query.pal.select"), summary(&hits, ru)),
+                    detail: format!("{} {}", lv.len(), tr("query.pal.levels_short")),
                     icon: "select-similar".into(),
                 });
                 let as_saved = canon_query(t, ui_decimal_mark()).ok();
                 if st && as_saved.is_some() && !filters.iter().any(|f| Some(f) == as_saved.as_ref()) {
                     v.push(Extra {
                         key: format!("@save:{t}"),
-                        label: tr(
-                            "\u{421}\u{43e}\u{445}\u{440}\u{430}\u{43d}\u{438}\u{442}\u{44c} \u{437}\u{430}\u{43f}\u{440}\u{43e}\u{441} \u{43a}\u{430}\u{43a} \u{444}\u{438}\u{43b}\u{44c}\u{442}\u{440} \u{43f}\u{440}\u{43e}\u{435}\u{43a}\u{442}\u{430}",
-                            "Save query as project filter",
-                        ),
+                        label: tr("query.pal.save_filter"),
                         detail: String::new(),
                         icon: "filter".into(),
                     });
@@ -2061,7 +2058,7 @@ pub fn extras(ed: &Editor, q: &str, ru: bool) -> (Vec<Extra>, bool) {
         }
         Err(e) => v.push(Extra {
             key: "@none".into(),
-            label: format!("{}: {e}", tr("\u{417}\u{430}\u{43f}\u{440}\u{43e}\u{441}", "Query")),
+            label: format!("{}: {e}", tr("query.pal.query")),
             detail: String::new(),
             icon: "warning".into(),
         }),
@@ -2074,8 +2071,8 @@ pub fn extras(ed: &Editor, q: &str, ru: bool) -> (Vec<Extra>, bool) {
                 n.clone(),
                 Extra {
                     key: format!("@lv:{id}"),
-                    label: format!("{}: {n}", tr("\u{41f}\u{43b}\u{430}\u{43d}", "Plan")),
-                    detail: tr("\u{443}\u{440}\u{43e}\u{432}\u{435}\u{43d}\u{44c}", "level"),
+                    label: format!("{}: {n}", tr("query.pal.plan")),
+                    detail: tr("query.pal.level"),
                     icon: "plan-view".into(),
                 },
             )
@@ -2087,7 +2084,7 @@ pub fn extras(ed: &Editor, q: &str, ru: bool) -> (Vec<Extra>, bool) {
             Extra {
                 key: format!("@vw:{id}"),
                 label: s.name.clone(),
-                detail: tr("\u{432}\u{438}\u{434}", "view"),
+                detail: tr("query.pal.view"),
                 icon: "section".into(),
             },
         )
@@ -2097,7 +2094,7 @@ pub fn extras(ed: &Editor, q: &str, ru: bool) -> (Vec<Extra>, bool) {
             f.clone(),
             Extra {
                 key: format!("@sq:{f}"),
-                label: format!("{}: {f}", tr("\u{424}\u{438}\u{43b}\u{44c}\u{442}\u{440}", "Filter")),
+                label: format!("{}: {f}", tr("query.pal.filter")),
                 detail: String::new(),
                 icon: "filter".into(),
             },

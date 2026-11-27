@@ -28,5 +28,15 @@
  "query.why.curtain": "айнек дубалдар өзүнүн касиеттеринде өзгөрөт",
  "query.why.opening_type": "ачылыштын түрү анын өлчөмүнө ылайык: \"-> width=… height=…\"",
  "query.why.slab_thickness": "полдун калыңдыгы түр менен коюлат: \"-> type=…\"",
- "query.why.wall_thickness": "дубалдын калыңдыгы түр менен коюлат: \"-> type=…\""
+ "query.why.wall_thickness": "дубалдын калыңдыгы түр менен коюлат: \"-> type=…\"",
+ "query.pal.filter": "Чыпка",
+ "query.pal.change": "Өзгөртүү",
+ "query.pal.one_undo": "бир жокко чыгаруу кадамы",
+ "query.pal.select": "Тандоо",
+ "query.pal.levels_short": "дең.",
+ "query.pal.query": "Суроо",
+ "query.pal.plan": "План",
+ "query.pal.level": "деңгээл",
+ "query.pal.view": "көрүнүш",
+ "query.pal.save_filter": "Суроону долбоор чыпкасы катары сактоо"
 }

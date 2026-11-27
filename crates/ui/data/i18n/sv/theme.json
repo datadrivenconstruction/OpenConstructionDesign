@@ -211,7 +211,7 @@
  "onb.back": "Tillbaka",
  "onb.back_keys": "Alt+←",
  "onb.start": "Starta",
- "onb.keys": "Enter — nästa, Alt+← — tillbaka, Esc — hoppa över",
+ "onb.keys": "Alt+→ nästa · Alt+← tillbaka · Esc hoppa över",
  "onb.later": "Allt kan ändras senare under Inställningar → Utseende.",
  "onb.primary": "Huvud",
  "onb.make_primary": "Gör till huvud",

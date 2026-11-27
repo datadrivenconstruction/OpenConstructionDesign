@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "Filter gespeichert: {arg}",
  "unit_fmt.q.not_changed": "nicht geändert: {e}",
  "unit_fmt.q.name.curtain": "Vorhangfassade",
- "unit_fmt.q.name.room": "Raum"
+ "unit_fmt.q.name.room": "Raum",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

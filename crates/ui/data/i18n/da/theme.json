@@ -211,7 +211,7 @@
  "onb.back": "Tilbage",
  "onb.back_keys": "Alt+←",
  "onb.start": "Start",
- "onb.keys": "Enter — næste, Alt+← — tilbage, Esc — spring over",
+ "onb.keys": "Alt+→ næste · Alt+← tilbage · Esc spring over",
  "onb.later": "Alt kan ændres senere under Indstillinger → Udseende.",
  "onb.primary": "Hoved",
  "onb.make_primary": "Gør til hoved",

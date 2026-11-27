@@ -28,5 +28,15 @@
  "query.why.curtain": "dinding tirai diubah di properti miliknya sendiri",
  "query.why.opening_type": "tipe bukaan mengikuti ukurannya: \"-> width=… height=…\"",
  "query.why.slab_thickness": "ketebalan pelat ditetapkan oleh tipe: \"-> type=…\"",
- "query.why.wall_thickness": "ketebalan dinding ditetapkan oleh tipe: \"-> type=…\""
+ "query.why.wall_thickness": "ketebalan dinding ditetapkan oleh tipe: \"-> type=…\"",
+ "query.pal.filter": "Filter",
+ "query.pal.change": "Ubah",
+ "query.pal.one_undo": "satu langkah urungkan",
+ "query.pal.select": "Pilih",
+ "query.pal.levels_short": "lt.",
+ "query.pal.query": "Kueri",
+ "query.pal.plan": "Denah",
+ "query.pal.level": "level",
+ "query.pal.view": "tampilan",
+ "query.pal.save_filter": "Simpan kueri sebagai filter proyek"
 }

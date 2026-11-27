@@ -28,5 +28,15 @@
  "query.why.curtain": "binabago ang curtain wall sa sarili nitong properties",
  "query.why.opening_type": "ang type ng opening ay sumusunod sa laki nito: \"-> width=… height=…\"",
  "query.why.slab_thickness": "itinatakda ng type ang kapal ng slab: \"-> type=…\"",
- "query.why.wall_thickness": "itinatakda ng type ang kapal ng wall: \"-> type=…\""
+ "query.why.wall_thickness": "itinatakda ng type ang kapal ng wall: \"-> type=…\"",
+ "query.pal.filter": "I-filter",
+ "query.pal.change": "Baguhin",
+ "query.pal.one_undo": "isang undo step",
+ "query.pal.select": "Piliin",
+ "query.pal.levels_short": "lvl",
+ "query.pal.query": "Query",
+ "query.pal.plan": "Plano",
+ "query.pal.level": "level",
+ "query.pal.view": "view",
+ "query.pal.save_filter": "I-save ang query bilang project filter"
 }

@@ -28,5 +28,15 @@
  "query.why.curtain": "gordijngevels worden in hun eigen eigenschappen gewijzigd",
  "query.why.opening_type": "het type van een opening volgt zijn maat: \"-> width=… height=…\"",
  "query.why.slab_thickness": "vloerdikte wordt door het type bepaald: \"-> type=…\"",
- "query.why.wall_thickness": "wanddikte wordt door het type bepaald: \"-> type=…\""
+ "query.why.wall_thickness": "wanddikte wordt door het type bepaald: \"-> type=…\"",
+ "query.pal.filter": "Filteren",
+ "query.pal.change": "Wijzigen",
+ "query.pal.one_undo": "één stap ongedaan maken",
+ "query.pal.select": "Selecteren",
+ "query.pal.levels_short": "nivo",
+ "query.pal.query": "Query",
+ "query.pal.plan": "Plattegrond",
+ "query.pal.level": "niveau",
+ "query.pal.view": "weergave",
+ "query.pal.save_filter": "Query opslaan als projectfilter"
 }

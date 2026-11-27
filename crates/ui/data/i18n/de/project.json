@@ -30,7 +30,7 @@
  "project.damaged.close": "Schließen",
  "project.prefs_not_saved": "Einstellungen werden nicht gespeichert: {why}. Sie bleiben bis zum Schließen des Programms erhalten.",
  "project.not_project.title": "Keine Projektdatei",
- "project.not_project.body": "Diese Datei ist kein DDC-Editor-Projekt. Zeichnungen und Modelle anderer Formate werden über Importieren geöffnet.",
+ "project.not_project.body": "Diese Datei ist kein OpenConstructionDesign-Projekt. Zeichnungen und Modelle anderer Formate werden über Importieren geöffnet.",
  "project.open_failed.title": "Projekt nicht geöffnet",
  "project.open_failed.body": "Das Projekt konnte nicht geöffnet werden: {detail}. Das aktuelle Modell wurde nicht verändert.",
  "project.save_failed.title": "Projekt nicht gespeichert",

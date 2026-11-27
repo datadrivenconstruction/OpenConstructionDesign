@@ -43,6 +43,15 @@ impl AiMode {
         }
     }
 
+    /// Icon of the tab: what the mode does, not the AI mark (the three would read alike).
+    pub fn icon(self) -> &'static str {
+        match self {
+            AiMode::Chat => "ai-chat",
+            AiMode::Build => "ai-build",
+            AiMode::Review => "ai-review",
+        }
+    }
+
     /// Title of the work column.
     pub fn title_key(self) -> &'static str {
         match self {
@@ -354,7 +363,7 @@ pub fn leave() {
 /// Width of the AI tabs for `paint_tabs`, separator included.
 pub fn tabs_width(ui: &Ui, cat: &Catalog) -> f32 {
     let font = ddc_ui::typo::font(Role::Tab);
-    let mark = ddc_ui::sem::icon_size::XS + space::XS;
+    let mark = ddc_ui::sem::icon_size::SM + space::XS;
     let gap = space::XXS;
     let sum: f32 = AiMode::ALL
         .iter()
@@ -368,22 +377,12 @@ pub fn tabs_width(ui: &Ui, cat: &Catalog) -> f32 {
     sum + space::SM
 }
 
-/// The four-point spark that marks AI in the bar, as four convex kites.
-fn spark(p: &egui::Painter, c: egui::Pos2, r: f32, color: egui::Color32) {
-    let k = r * 0.3;
-    for (dx, dy) in [(0.0, -1.0), (1.0, 0.0), (0.0, 1.0), (-1.0, 0.0)] {
-        let tip = c + egui::vec2(dx, dy) * r;
-        let a = c + egui::vec2(dx - dy, dy + dx) * k;
-        let b = c + egui::vec2(dx + dy, dy - dx) * k;
-        p.add(egui::Shape::convex_polygon(vec![c, a, tip, b], color, egui::Stroke::NONE));
-    }
-}
-
 /// Paints the AI tabs in `strip` (tab height `h`) from `start`, after a separator, as the end
 /// of the view tabs; `tabs_width` is their room. Returns the tab clicked this frame.
 pub fn paint_tabs(
     ui: &mut Ui,
     cat: &Catalog,
+    icons: &mut ddc_ui::icons::IconCache,
     strip: egui::Rect,
     h: f32,
     start: f32,
@@ -392,7 +391,7 @@ pub fn paint_tabs(
     use ddc_ui::sem::radius;
     let th = ddc_ui::theme::of(ui.ctx());
     let font = ddc_ui::typo::font(Role::Tab);
-    let mark = ddc_ui::sem::icon_size::XS;
+    let mark = ddc_ui::sem::icon_size::SM;
     let gap = space::XXS;
     let p = ui.painter_at(strip);
     let left = start + space::SM;
@@ -439,7 +438,8 @@ pub fn paint_tabs(
         }
         let c = egui::pos2(r.left() + space::MD + mark / 2.0, r.center().y);
         let color = if on { th.c("accent") } else { th.c("text.secondary") };
-        spark(&p, c, mark / 2.0, color);
+        let ir = egui::Rect::from_center_size(c, egui::vec2(mark, mark));
+        icons.paint(ui, m.icon(), mark as u32, ir, color);
         let g = p.layout_no_wrap(name.clone(), font.clone(), color);
         let gy = r.center().y - g.size().y / 2.0;
         p.galley(egui::pos2(c.x + mark / 2.0 + space::XS, gy), g, color);

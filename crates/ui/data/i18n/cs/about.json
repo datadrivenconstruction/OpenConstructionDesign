@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Licence open-source",
  "cmd.help.licenses.desc": "Vypíše knihovny open-source použité v tomto sestavení a jejich licence.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Verze",
  "about.build": "Sestavení",
  "about.schema": "Schéma modelu",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Knihovny použité v tomto sestavení a jejich licence",
  "about.licenses.open": "Zobrazit",
  "about.licenses.title": "Licence open-source",
- "about.licenses.note": "DDC Editor obsahuje níže uvedené knihovny. Každá zůstává pod svou vlastní licencí a oznámením o autorských právech. Úplné znění licencí: THIRD_PARTY_LICENSES.txt vedle aplikace.",
+ "about.licenses.note": "OpenConstructionDesign obsahuje níže uvedené knihovny. Každá zůstává pod svou vlastní licencí a oznámením o autorských právech. Úplné znění licencí: THIRD_PARTY_LICENSES.txt vedle aplikace.",
  "about.licenses.full": "Úplné znění licencí",
  "about.licenses.list": "Seznam komponent",
  "about.licenses.close": "Zavřít",

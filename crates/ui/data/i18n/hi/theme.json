@@ -211,7 +211,7 @@
  "onb.back": "पीछे",
  "onb.back_keys": "Alt+←",
  "onb.start": "शुरू करें",
- "onb.keys": "Enter — आगे, Alt+← — पीछे, Esc — छोड़ें",
+ "onb.keys": "Alt+→ आगे · Alt+← पीछे · Esc छोड़ें",
  "onb.later": "सब कुछ बाद में सेटिंग्स → दिखावट में बदला जा सकता है।",
  "onb.primary": "मुख्य",
  "onb.make_primary": "मुख्य बनाएँ",

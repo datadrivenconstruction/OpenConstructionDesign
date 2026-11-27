@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "オープンソースライセンス",
  "cmd.help.licenses.desc": "このビルドで使用しているオープンソースライブラリとそのライセンスを一覧表示します。",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "バージョン",
  "about.build": "ビルド",
  "about.schema": "モデルスキーマ",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "このビルドで使用しているライブラリとそのライセンス",
  "about.licenses.open": "表示",
  "about.licenses.title": "オープンソースライセンス",
- "about.licenses.note": "DDC Editor には以下のライブラリが含まれます。各ライブラリはそれぞれのライセンスと著作権表示に従います。ライセンス全文はアプリケーションと同じフォルダの THIRD_PARTY_LICENSES.txt にあります。",
+ "about.licenses.note": "OpenConstructionDesign には以下のライブラリが含まれます。各ライブラリはそれぞれのライセンスと著作権表示に従います。ライセンス全文はアプリケーションと同じフォルダの THIRD_PARTY_LICENSES.txt にあります。",
  "about.licenses.full": "ライセンス全文",
  "about.licenses.list": "コンポーネント一覧",
  "about.licenses.close": "閉じる",

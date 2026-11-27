@@ -513,7 +513,10 @@ pub use solids::{
 pub use panel_system::{PanelLayout, PanelQty, PanelSystemGeom, PanelSystemSpec};
 pub use shell_elem::{LayerQty, ShellElemSpec, ShellKind, ShellLayer, ShellMesh, ShellQty};
 pub use stairs::{put_railing, put_stair, RailingHost, RailingSpec, StairSpec};
-pub use stats::{category_counts, LevelTotals, Totals, COUNTED_CATEGORIES};
+pub use stats::{
+    category_counts, CategoryTotal, LevelTotals, Totals, COUNTED_CATEGORIES, SOLID_CATEGORIES,
+    SUMMARY_CATEGORIES,
+};
 pub use struct_ext::{density, StructBody, StructQty, TakeoffRow, STRUCT_KINDS};
 pub use struct_views::{StructClass, StructPrim};
 pub use steel_conn::{steel_conn_rebuilds, ConnSkip, SteelConnReport, SteelConnSpec, STEEL_MEMBER_KINDS};

@@ -28,5 +28,15 @@
  "query.why.curtain": "kardinaseinu muudetakse nende enda omadustes",
  "query.why.opening_type": "ava tüüp järgib selle suurust: „-> width=… height=…“",
  "query.why.slab_thickness": "põranda paksuse määrab tüüp: „-> type=…“",
- "query.why.wall_thickness": "seina paksuse määrab tüüp: „-> type=…“"
+ "query.why.wall_thickness": "seina paksuse määrab tüüp: „-> type=…“",
+ "query.pal.filter": "Filtreeri",
+ "query.pal.change": "Muuda",
+ "query.pal.one_undo": "üks tagasivõtmise samm",
+ "query.pal.select": "Vali",
+ "query.pal.levels_short": "korrus",
+ "query.pal.query": "Päring",
+ "query.pal.plan": "Plaan",
+ "query.pal.level": "korrus",
+ "query.pal.view": "vaade",
+ "query.pal.save_filter": "Salvesta päring projekti filtrina"
 }

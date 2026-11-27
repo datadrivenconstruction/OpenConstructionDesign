@@ -58,6 +58,26 @@ fn vol_d(m3: f64, d: usize, ru: bool, u: Units) -> String {
     fmt_volume_lang(m3, u, d, crate::units::lang_of(ru))
 }
 
+/// A summed length (members, runs) with `d` decimals: metres, or feet in an imperial project.
+pub fn len_sum_ui_d(m: f64, d: usize) -> String {
+    let lang = crate::units::lang_of(crate::ui_is_ru());
+    match crate::units::active_units() {
+        Units::Metric => format!("{}\u{a0}{}", crate::units::fmt_num_lang(m, d, lang), crate::tr_str_in(lang, "unit_fmt.unit.m")),
+        Units::Imperial => format!("{}\u{a0}ft", crate::units::fmt_num_en(m / crate::units::FOOT, d)),
+    }
+}
+
+/// A mass with `d` decimals: kg below a tonne, t above; lb in an imperial project.
+pub fn mass_ui_d(kg: f64, d: usize) -> String {
+    let lang = crate::units::lang_of(crate::ui_is_ru());
+    let n = |v: f64| crate::units::fmt_num_lang(v, d, lang);
+    match crate::units::active_units() {
+        Units::Metric if kg >= 1000.0 => format!("{}\u{a0}{}", n(kg / 1000.0), crate::tr_str_in(lang, "unit_fmt.unit.t")),
+        Units::Metric => format!("{}\u{a0}{}", n(kg), crate::tr_str_in(lang, "unit_fmt.unit.kg")),
+        Units::Imperial => format!("{}\u{a0}lb", crate::units::fmt_num_en(kg / 0.453_592_37, d)),
+    }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

@@ -28,5 +28,15 @@
  "query.why.curtain": "le facciate continue si modificano nelle loro proprietà",
  "query.why.opening_type": "il tipo di un'apertura segue le sue dimensioni: \"-> larghezza=… altezza=…\"",
  "query.why.slab_thickness": "lo spessore del solaio è impostato dal tipo: \"-> tipo=…\"",
- "query.why.wall_thickness": "lo spessore del muro è impostato dal tipo: \"-> tipo=…\""
+ "query.why.wall_thickness": "lo spessore del muro è impostato dal tipo: \"-> tipo=…\"",
+ "query.pal.filter": "Filtra",
+ "query.pal.change": "Modifica",
+ "query.pal.one_undo": "un solo passaggio di annullamento",
+ "query.pal.select": "Seleziona",
+ "query.pal.levels_short": "liv.",
+ "query.pal.query": "Interrogazione",
+ "query.pal.plan": "Pianta",
+ "query.pal.level": "livello",
+ "query.pal.view": "vista",
+ "query.pal.save_filter": "Salva interrogazione come filtro del progetto"
 }

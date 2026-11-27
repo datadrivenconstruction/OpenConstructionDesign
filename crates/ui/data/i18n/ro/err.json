@@ -63,5 +63,7 @@
  "browser.plan": "Plan",
  "browser.open": "Deschide",
  "browser.flip": "Inversează direcția vederii",
- "browser.delete": "Șterge"
+ "browser.delete": "Șterge",
+ "empty.families.title": "Nicio familie în uz încă",
+ "empty.families.hint": "Familiile apar aici pe măsură ce plasați pereți, planșee, elemente și componente."
 }

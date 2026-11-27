@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filter sparat: {arg}",
  "unit_fmt.q.not_changed": "inte ändrat: {e}",
  "unit_fmt.q.name.curtain": "Glasvägg",
- "unit_fmt.q.name.room": "Rum"
+ "unit_fmt.q.name.room": "Rum",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

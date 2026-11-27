@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "шүүлтүүр хадгалагдлаа: {arg}",
  "unit_fmt.q.not_changed": "өөрчлөгдөөгүй: {e}",
  "unit_fmt.q.name.curtain": "Хөшигт хана",
- "unit_fmt.q.name.room": "Өрөө"
+ "unit_fmt.q.name.room": "Өрөө",
+ "unit_fmt.unit.m": "м",
+ "unit_fmt.unit.kg": "кг",
+ "unit_fmt.unit.t": "т"
 }

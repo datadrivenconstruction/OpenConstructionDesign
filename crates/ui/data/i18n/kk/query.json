@@ -28,5 +28,15 @@
  "query.why.curtain": "шынылы қабырғалар өз қасиеттерінде өзгертіледі",
  "query.why.opening_type": "ойық түрі өлшеміне сәйкес болады: «-> width=… height=…»",
  "query.why.slab_thickness": "еден қалыңдығы түрмен орнатылады: «-> type=…»",
- "query.why.wall_thickness": "қабырға қалыңдығы түрмен орнатылады: «-> type=…»"
+ "query.why.wall_thickness": "қабырға қалыңдығы түрмен орнатылады: «-> type=…»",
+ "query.pal.filter": "Сүзгі",
+ "query.pal.change": "Өзгерту",
+ "query.pal.one_undo": "бір болдырмау қадамы",
+ "query.pal.select": "Таңдау",
+ "query.pal.levels_short": "деңг.",
+ "query.pal.query": "Сұраным",
+ "query.pal.plan": "Жоспар",
+ "query.pal.level": "деңгей",
+ "query.pal.view": "көрініс",
+ "query.pal.save_filter": "Сұранымды жоба сүзгісі ретінде сақтау"
 }

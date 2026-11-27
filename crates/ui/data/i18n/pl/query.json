@@ -28,5 +28,15 @@
  "query.why.curtain": "ściany osłonowe zmienia się we właściwościach samej ściany",
  "query.why.opening_type": "typ otworu zależy od jego rozmiaru: „-> width=… height=…”",
  "query.why.slab_thickness": "grubość płyty ustawia typ: „-> type=…”",
- "query.why.wall_thickness": "grubość ściany ustawia typ: „-> type=…”"
+ "query.why.wall_thickness": "grubość ściany ustawia typ: „-> type=…”",
+ "query.pal.filter": "Filtruj",
+ "query.pal.change": "Zmień",
+ "query.pal.one_undo": "jeden krok cofania",
+ "query.pal.select": "Zaznacz",
+ "query.pal.levels_short": "poz.",
+ "query.pal.query": "Zapytanie",
+ "query.pal.plan": "Rzut",
+ "query.pal.level": "poziom",
+ "query.pal.view": "widok",
+ "query.pal.save_filter": "Zapisz zapytanie jako filtr projektu"
 }

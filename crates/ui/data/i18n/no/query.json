@@ -28,5 +28,15 @@
  "query.why.curtain": "glassfasader endres i sine egne egenskaper",
  "query.why.opening_type": "typen til en åpning følger størrelsen: \"-> bredde=… høyde=…\"",
  "query.why.slab_thickness": "platetykkelsen settes av typen: \"-> type=…\"",
- "query.why.wall_thickness": "veggtykkelsen settes av typen: \"-> type=…\""
+ "query.why.wall_thickness": "veggtykkelsen settes av typen: \"-> type=…\"",
+ "query.pal.filter": "Filtrer",
+ "query.pal.change": "Endre",
+ "query.pal.one_undo": "ett angre-trinn",
+ "query.pal.select": "Velg",
+ "query.pal.levels_short": "nivå",
+ "query.pal.query": "Spørring",
+ "query.pal.plan": "Plan",
+ "query.pal.level": "nivå",
+ "query.pal.view": "visning",
+ "query.pal.save_filter": "Lagre spørring som prosjektfilter"
 }

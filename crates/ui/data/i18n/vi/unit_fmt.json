@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "đã lưu bộ lọc: {arg}",
  "unit_fmt.q.not_changed": "chưa thay đổi: {e}",
  "unit_fmt.q.name.curtain": "Tường rèm",
- "unit_fmt.q.name.room": "Phòng"
+ "unit_fmt.q.name.room": "Phòng",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

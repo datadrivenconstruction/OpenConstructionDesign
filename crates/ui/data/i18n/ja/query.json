@@ -28,5 +28,15 @@
  "query.why.curtain": "カーテンウォールは、それぞれのプロパティで変更します",
  "query.why.opening_type": "開口のタイプはそのサイズに従います: \"-> width=… height=…\"",
  "query.why.slab_thickness": "床の厚さはタイプで設定されます: \"-> type=…\"",
- "query.why.wall_thickness": "壁の厚さはタイプで設定されます: \"-> type=…\""
+ "query.why.wall_thickness": "壁の厚さはタイプで設定されます: \"-> type=…\"",
+ "query.pal.filter": "フィルター",
+ "query.pal.change": "変更",
+ "query.pal.one_undo": "取り消し1回分",
+ "query.pal.select": "選択",
+ "query.pal.levels_short": "階",
+ "query.pal.query": "クエリ",
+ "query.pal.plan": "平面図",
+ "query.pal.level": "レベル",
+ "query.pal.view": "ビュー",
+ "query.pal.save_filter": "クエリをプロジェクトフィルターとして保存"
 }

@@ -211,7 +211,7 @@
  "onb.back": "חזור",
  "onb.back_keys": "Alt+←",
  "onb.start": "התחל",
- "onb.keys": "Enter — הבא, Alt+← — חזור, Esc — דלג",
+ "onb.keys": "Alt+→ הבא · Alt+← חזור · Esc דלג",
  "onb.later": "הכול ניתן לשינוי מאוחר יותר בהגדרות ← מראה.",
  "onb.primary": "ראשי",
  "onb.make_primary": "הפוך לראשי",

@@ -63,5 +63,7 @@
  "browser.plan": "Plan",
  "browser.open": "Åpne",
  "browser.flip": "Snu visningsretning",
- "browser.delete": "Slett"
+ "browser.delete": "Slett",
+ "empty.families.title": "Ingen familier i bruk ennå",
+ "empty.families.hint": "Familier vises her når du plasserer vegger, gulv, elementer og komponenter."
 }

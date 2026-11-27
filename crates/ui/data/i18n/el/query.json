@@ -28,5 +28,15 @@
  "query.why.curtain": "οι κουρτινοτοίχοι αλλάζουν στις δικές τους ιδιότητες",
  "query.why.opening_type": "ο τύπος ενός ανοίγματος ακολουθεί το μέγεθός του: “-> width=… height=…”",
  "query.why.slab_thickness": "το πάχος πλάκας ορίζεται από τον τύπο: “-> type=…”",
- "query.why.wall_thickness": "το πάχος τοίχου ορίζεται από τον τύπο: “-> type=…”"
+ "query.why.wall_thickness": "το πάχος τοίχου ορίζεται από τον τύπο: “-> type=…”",
+ "query.pal.filter": "Φίλτρο",
+ "query.pal.change": "Αλλαγή",
+ "query.pal.one_undo": "ένα βήμα αναίρεσης",
+ "query.pal.select": "Επιλογή",
+ "query.pal.levels_short": "επίπ.",
+ "query.pal.query": "Ερώτημα",
+ "query.pal.plan": "Κάτοψη",
+ "query.pal.level": "επίπεδο",
+ "query.pal.view": "προβολή",
+ "query.pal.save_filter": "Αποθήκευση ερωτήματος ως φίλτρου έργου"
 }

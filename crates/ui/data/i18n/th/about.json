@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "ใบอนุญาตโอเพนซอร์ส",
  "cmd.help.licenses.desc": "แสดงรายการไลบรารีโอเพนซอร์สที่บิลด์นี้ใช้พร้อมใบอนุญาตของแต่ละรายการ",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "เวอร์ชัน",
  "about.build": "บิลด์",
  "about.schema": "สคีมาโมเดล",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "ไลบรารีที่ใช้ในบิลด์นี้และใบอนุญาตของแต่ละรายการ",
  "about.licenses.open": "ดู",
  "about.licenses.title": "ใบอนุญาตโอเพนซอร์ส",
- "about.licenses.note": "DDC Editor รวมไลบรารีด้านล่างไว้ แต่ละรายการยังคงอยู่ภายใต้ใบอนุญาตและประกาศลิขสิทธิ์ของตนเอง ข้อความใบอนุญาตฉบับเต็ม: THIRD_PARTY_LICENSES.txt อยู่ข้างแอปพลิเคชัน",
+ "about.licenses.note": "OpenConstructionDesign รวมไลบรารีด้านล่างไว้ แต่ละรายการยังคงอยู่ภายใต้ใบอนุญาตและประกาศลิขสิทธิ์ของตนเอง ข้อความใบอนุญาตฉบับเต็ม: THIRD_PARTY_LICENSES.txt อยู่ข้างแอปพลิเคชัน",
  "about.licenses.full": "ข้อความใบอนุญาตฉบับเต็ม",
  "about.licenses.list": "รายการส่วนประกอบ",
  "about.licenses.close": "ปิด",

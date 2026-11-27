@@ -211,7 +211,7 @@
  "onb.back": "Indietro",
  "onb.back_keys": "Alt+←",
  "onb.start": "Avvia",
- "onb.keys": "Invio — avanti, Alt+← — indietro, Esc — salta",
+ "onb.keys": "Alt+→ avanti · Alt+← indietro · Esc salta",
  "onb.later": "Tutto si può cambiare più tardi in Impostazioni → Aspetto.",
  "onb.primary": "Principale",
  "onb.make_primary": "Rendi principale",

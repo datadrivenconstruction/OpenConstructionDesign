@@ -63,5 +63,7 @@
  "browser.plan": "Alaprajz",
  "browser.open": "Megnyitás",
  "browser.flip": "Nézet irányának megfordítása",
- "browser.delete": "Törlés"
+ "browser.delete": "Törlés",
+ "empty.families.title": "Még nincs használatban lévő család",
+ "empty.families.hint": "A családok itt jelennek meg, ahogy falakat, padlókat, rudakat és komponenseket helyez el."
 }

@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Nada foi salvo: o modelo está vazio, e o arquivo já contém conteúdo. O arquivo não foi alterado. Use Salvar como para gravar com outro nome.",
  "save_guard.refuse.body": "Nada foi salvo: o modelo está vazio, e {name} já contém conteúdo. O arquivo não foi alterado.",
- "save_guard.refuse.foreign": "Este não é um arquivo do DDC Editor, por isso não pode ser substituído. Use Salvar como para gravar com outro nome.",
+ "save_guard.refuse.foreign": "Este não é um arquivo do OpenConstructionDesign, por isso não pode ser substituído. Use Salvar como para gravar com outro nome.",
  "save_guard.refuse.ask": "Substituir {name}? Ele contém {what}. Antes, ele é movido para a pasta _archive ao lado; depois, o modelo vazio é gravado.",
  "save_guard.refuse.holds_db": "{n} elementos e linhas de conteúdo",
  "save_guard.refuse.holds_ifc": "IFC com produtos",

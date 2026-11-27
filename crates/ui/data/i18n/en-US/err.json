@@ -63,5 +63,7 @@
  "browser.plan": "Plan",
  "browser.open": "Open",
  "browser.flip": "Flip view direction",
- "browser.delete": "Delete"
+ "browser.delete": "Delete",
+ "empty.families.title": "No families in use yet",
+ "empty.families.hint": "Families appear here as you place walls, floors, members and components."
 }

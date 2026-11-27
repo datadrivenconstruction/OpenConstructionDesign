@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Лицензи с отворен код",
  "cmd.help.licenses.desc": "Показва библиотеките с отворен код, използвани в тази компилация, с техните лицензи.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Версия",
  "about.build": "Компилация",
  "about.schema": "Схема на модела",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Библиотеки, използвани в тази компилация, и техните лицензи",
  "about.licenses.open": "Преглед",
  "about.licenses.title": "Лицензи с отворен код",
- "about.licenses.note": "DDC Editor включва библиотеките по-долу. Всяка остава под собствения си лиценз и уведомление за авторски права. Пълните текстове на лицензите: THIRD_PARTY_LICENSES.txt до приложението.",
+ "about.licenses.note": "OpenConstructionDesign включва библиотеките по-долу. Всяка остава под собствения си лиценз и уведомление за авторски права. Пълните текстове на лицензите: THIRD_PARTY_LICENSES.txt до приложението.",
  "about.licenses.full": "Пълни текстове на лицензите",
  "about.licenses.list": "Списък на компонентите",
  "about.licenses.close": "Затваряне",

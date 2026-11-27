@@ -235,7 +235,7 @@ pub fn write(items: &[Item]) -> Result<Built, String> {
 
     let mesh_count = meshes.len();
     let mut root = json!({
-        "asset": {"version": "2.0", "generator": "DDC Editor"},
+        "asset": {"version": "2.0", "generator": crate::brand::PRODUCT},
         "scene": 0,
         "scenes": [{"nodes": (0..nodes.len()).collect::<Vec<_>>()}],
         "nodes": nodes,

@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "ओपन-सोर्स लाइसेंस",
  "cmd.help.licenses.desc": "इस बिल्ड में उपयोग की गई ओपन-सोर्स लाइब्रेरी और उनके लाइसेंस दिखाता है।",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "संस्करण",
  "about.build": "बिल्ड",
  "about.schema": "मॉडल स्कीमा",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "इस बिल्ड में उपयोग की गई लाइब्रेरी और उनके लाइसेंस",
  "about.licenses.open": "देखें",
  "about.licenses.title": "ओपन-सोर्स लाइसेंस",
- "about.licenses.note": "DDC Editor में नीचे दी गई लाइब्रेरी शामिल हैं। हर एक अपने लाइसेंस और कॉपीराइट सूचना के अधीन है। पूरे लाइसेंस पाठ: एप्लिकेशन के बगल में THIRD_PARTY_LICENSES.txt।",
+ "about.licenses.note": "OpenConstructionDesign में नीचे दी गई लाइब्रेरी शामिल हैं। हर एक अपने लाइसेंस और कॉपीराइट सूचना के अधीन है। पूरे लाइसेंस पाठ: एप्लिकेशन के बगल में THIRD_PARTY_LICENSES.txt।",
  "about.licenses.full": "पूरे लाइसेंस पाठ",
  "about.licenses.list": "घटक सूची",
  "about.licenses.close": "बंद करें",

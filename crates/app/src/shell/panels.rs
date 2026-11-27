@@ -1526,7 +1526,8 @@ impl EditorApp {
         };
         let ru = self.sh.cat.lang == Lang::Ru;
         let line = self.sh.theme.c("border.strong");
-        let plan_title = format!("{} · {}", crate::tr_str(ru, "type_dialog.panels.plan"), self.ed.level_name());
+        // the same words as the view header: prefix, separator and order from the catalog
+        let plan_title = self.sh.cat.tf("view_cube.src.plan", &[("level", &self.ed.level_name())]);
         let (plan, view, scene, ed, sview, panes) = (
             &mut self.plan,
             &mut self.view,
@@ -1535,7 +1536,7 @@ impl EditorApp {
             &mut self.sview,
             &mut self.panes,
         );
-        let cat = &self.sh.cat;
+        let (cat, icons) = (&self.sh.cat, &mut self.sh.icons);
         let ai_fold = self.prefs.fold.ai;
         let mut act = None;
         let mut plan_rect = egui::Rect::NOTHING;
@@ -1544,7 +1545,7 @@ impl EditorApp {
         let mut ai_lay = None;
         let area = ui_kit::viewport_panel(ctx, t, |ui| {
             // the bar is always there: it carries the AI tabs
-            let (r, a) = view_tabs(ui, t, cat, &plan_title, &titles, cur, ai.map(|a| a.0));
+            let (r, a) = view_tabs(ui, t, cat, icons, &plan_title, &titles, cur, ai.map(|a| a.0));
             act = a;
             if let Some((_, preview, ratio)) = ai {
                 let lay = ai_modes::layout(r, ratio, ai_fold);
@@ -1875,10 +1876,12 @@ pub(super) fn view_tabs_h() -> f32 {
     ddc_ui::sem::control::TAB_H + ddc_ui::sem::space::XS
 }
 
+#[allow(clippy::too_many_arguments)]
 fn view_tabs(
     ui: &mut egui::Ui,
     t: &Tokens,
     cat: &ddc_ui::Catalog,
+    icons: &mut ddc_ui::icons::IconCache,
     plan: &str,
     views: &[(i64, String)],
     cur: Tab,
@@ -2035,7 +2038,7 @@ fn view_tabs(
         });
     }
     let start = if fit.hidden.is_empty() { x - gap } else { right };
-    if let Some(m) = ai_modes::paint_tabs(ui, cat, strip, h, start, ai) {
+    if let Some(m) = ai_modes::paint_tabs(ui, cat, icons, strip, h, start, ai) {
         out = Some(Tab::Ai(m));
     }
     let rest = egui::Rect::from_min_max(egui::pos2(full.left(), strip.bottom()), full.max);

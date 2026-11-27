@@ -9,7 +9,7 @@ use crate::ui_kit as kit;
 use crate::ui_kit::{self, Tokens};
 use crate::wall_tool::Mode;
 
-use ddc_model::{ElementWarning, LevelTotals, Totals};
+use ddc_model::{CategoryTotal, ElementWarning, LevelTotals};
 use ddc_ui::notify::Level;
 use egui::{self, RichText};
 use std::collections::{HashMap, HashSet};
@@ -177,20 +177,27 @@ pub struct Blocking {
     pub elements: Vec<Sel>,
 }
 
-fn add(s: &mut Totals, o: &Totals) {
-    s.walls += o.walls;
-    s.doors += o.doors;
-    s.windows += o.windows;
-    s.wall_plan_area += o.wall_plan_area;
-    s.wall_volume += o.wall_volume;
-    s.slabs += o.slabs;
-    s.slab_area += o.slab_area;
-    s.slab_volume += o.slab_volume;
-    s.rooms += o.rooms;
-    s.room_area += o.room_area;
-    s.room_volume += o.room_volume;
-    s.curtains += o.curtains;
-    s.curtain_panel_area += o.curtain_panel_area;
+/// Categories of level `level` (None: the whole model, summed over levels) that hold elements,
+/// in the registry order.
+pub(crate) fn summary_rows(levels: &[LevelTotals], level: Option<i64>) -> Vec<CategoryTotal> {
+    let mut out: Vec<CategoryTotal> = vec![];
+    for l in levels.iter().filter(|l| level.is_none_or(|v| v == l.level)) {
+        for c in &l.categories {
+            match out.iter_mut().find(|o| o.key == c.key) {
+                Some(o) => {
+                    o.count += c.count;
+                    o.length += c.length;
+                    o.area += c.area;
+                    o.volume += c.volume;
+                    o.mass += c.mass;
+                }
+                None => out.push(c.clone()),
+            }
+        }
+    }
+    let at = |k: &str| ddc_model::SUMMARY_CATEGORIES.iter().position(|c| c.0 == k);
+    out.sort_by_key(|c| at(c.key));
+    out
 }
 
 /// "⚠" icon and warning texts of the selected element.
@@ -480,49 +487,40 @@ impl EditorApp {
                 self.totals_all = i == 0;
             }
         });
-        let cur = self.ed.level;
-        let tot: Option<Totals> = if self.totals_all {
-            let mut s = Totals::default();
-            for l in &self.level_totals {
-                add(&mut s, &l.totals);
-            }
-            (!self.level_totals.is_empty()).then_some(s)
-        } else {
-            self.level_totals
-                .iter()
-                .find(|l| l.level == cur)
-                .map(|l: &LevelTotals| l.totals.clone())
-        };
-        let Some(s) = tot else {
+        let cats = summary_rows(&self.level_totals, (!self.totals_all).then_some(self.ed.level));
+        if cats.is_empty() {
             if ui_kit::empty_state(ui, "totals") {
                 self.ed.set_mode(Mode::Polyline);
             }
             return;
-        };
+        }
         let n = self.warnings.1.len();
         let d = crate::unit_text::summary_decimals();
-        ui_kit::props(ui, "tot", |ui| {
-            if self.totals_all {
+        let kw = ui_kit::shared_key_w(ui);
+        if self.totals_all && self.level_totals.len() > 1 {
+            ui_kit::props_at(ui, "tot.levels", kw, |ui| {
                 ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.levels", &[]), self.level_totals.len().to_string());
-            }
-            ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.walls", &[]), s.walls.to_string());
-            ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.wall_area", &[]), crate::unit_text::area_ui_d(s.wall_plan_area, d));
-            ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.wall_vol", &[]), crate::unit_text::vol_ui_d(s.wall_volume, d));
-            ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.doors_windows", &[]), format!("{} / {}", s.doors, s.windows));
-            if s.slabs > 0 {
-                ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.slabs", &[]), s.slabs.to_string());
-                ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.slab_area", &[]), crate::unit_text::area_ui_d(s.slab_area, d));
-                ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.slab_vol", &[]), crate::unit_text::vol_ui_d(s.slab_volume, d));
-            }
-            if s.rooms > 0 {
-                ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.rooms", &[]), s.rooms.to_string());
-                ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.room_area", &[]), crate::unit_text::area_ui_d(s.room_area, d));
-            }
-            if s.curtains > 0 {
-                ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.curtains", &[]), s.curtains.to_string());
-                ui_kit::kv_num(ui, &crate::tr("type_dialog.warn.panel_area", &[]), crate::unit_text::area_ui_d(s.curtain_panel_area, d));
-            }
-        });
+            });
+        }
+        // one group per category the model holds: its count, then the sums it has
+        for c in &cats {
+            ui_kit::props_at(ui, &format!("tot.{}", c.key), kw, |ui| {
+                ui_kit::kv_num(ui, &crate::tr(&format!("type_dialog.warn.cat.{}", c.key), &[]), c.count.to_string());
+                let m = |k: &str| crate::tr(&format!("type_dialog.warn.m.{k}"), &[]);
+                if c.length > 0.0 {
+                    ui_kit::kv_num(ui, &m("length"), crate::unit_text::len_sum_ui_d(c.length, d));
+                }
+                if c.area > 0.0 {
+                    ui_kit::kv_num(ui, &m("area"), crate::unit_text::area_ui_d(c.area, d));
+                }
+                if c.volume > 0.0 {
+                    ui_kit::kv_num(ui, &m("volume"), crate::unit_text::vol_ui_d(c.volume, d));
+                }
+                if c.mass > 0.0 {
+                    ui_kit::kv_num(ui, &m("mass"), crate::unit_text::mass_ui_d(c.mass, d));
+                }
+            });
+        }
         if n > 0 && ui.link(crate::tr("type_dialog.warn.warnings_n", &[("n", n.to_string().as_str())])).clicked() {
             self.warnings_open = true;
         }
@@ -603,6 +601,38 @@ mod tests {
         a.ed.model.add_level("Behind", 9.0).unwrap();
         a.refresh_warnings();
         assert_ne!(a.warnings.0, first, "a model swap or undo to an equal revision refreshes");
+    }
+
+    /// A new project has nothing to sum: the panel shows its empty state, not rows of zeros. A
+    /// model of script members lists members with their length and mass and no walls.
+    #[test]
+    fn model_summary_lists_only_what_the_model_holds() {
+        use ddc_model::{SolidForm, SolidFrame, SolidIfc, SolidSection, SolidSpec};
+        let ed = crate::editor::Editor::new_in_memory().unwrap();
+        let mut a = EditorApp::new(ed, None, "t".into());
+        a.refresh_warnings();
+        assert!(!a.level_totals.is_empty());
+        assert_eq!(summary_rows(&a.level_totals, None), vec![]);
+        let r = vec![ddc_geom::v2(0.0, 0.0), ddc_geom::v2(0.2, 0.0), ddc_geom::v2(0.2, 0.2), ddc_geom::v2(0.0, 0.2)];
+        let s = SolidSpec {
+            level: a.ed.level,
+            name: "leg".into(),
+            void: false,
+            material: "S355".into(),
+            ifc: Some(SolidIfc { class: "IfcMember".into(), predefined: "MEMBER".into() }),
+            frame: SolidFrame::default(),
+            form: SolidForm::Extrusion { profile: SolidSection::polygon(r), start: 0.0, end: 6.0 },
+        };
+        a.ed.model.add_solid(&s).unwrap();
+        a.warnings.0 = (u64::MAX, 0);
+        a.refresh_warnings();
+        let rows = summary_rows(&a.level_totals, Some(a.ed.level));
+        assert_eq!(rows.iter().map(|c| c.key).collect::<Vec<_>>(), ["member"]);
+        assert!((rows[0].length - 6.0).abs() < 1e-9 && rows[0].mass > 0.0, "{rows:?}");
+        for c in ddc_model::SUMMARY_CATEGORIES {
+            let k = format!("type_dialog.warn.cat.{}", c.0);
+            assert_ne!(crate::tr(&k, &[]), k, "no label for {}", c.0);
+        }
     }
 
     #[test]

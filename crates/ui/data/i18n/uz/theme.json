@@ -211,7 +211,7 @@
  "onb.back": "Orqaga",
  "onb.back_keys": "Alt+←",
  "onb.start": "Boshlash",
- "onb.keys": "Enter — keyingi, Alt+← — orqaga, Esc — o'tkazib yuborish",
+ "onb.keys": "Alt+→ keyingi · Alt+← orqaga · Esc o'tkazib yuborish",
  "onb.later": "Hammasini keyinroq Sozlamalar → Ko'rinish bo'limida o'zgartirish mumkin.",
  "onb.primary": "Asosiy",
  "onb.make_primary": "Asosiy qilish",

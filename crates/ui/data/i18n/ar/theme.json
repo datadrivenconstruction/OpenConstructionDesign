@@ -211,7 +211,7 @@
  "onb.back": "رجوع",
  "onb.back_keys": "Alt+←",
  "onb.start": "ابدأ",
- "onb.keys": "Enter — التالي، Alt+← — رجوع، Esc — تخطي",
+ "onb.keys": "Alt+→ التالي · Alt+← رجوع · Esc تخطي",
  "onb.later": "يمكن تغيير كل شيء لاحقًا من الإعدادات ← المظهر.",
  "onb.primary": "رئيسي",
  "onb.make_primary": "اجعله الرئيسي",

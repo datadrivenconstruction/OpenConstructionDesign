@@ -28,5 +28,15 @@
  "query.why.curtain": "glasfasader ändras i sina egna egenskaper",
  "query.why.opening_type": "typen för en öppning följer dess storlek: \"-> bredd=… höjd=…\"",
  "query.why.slab_thickness": "golvets tjocklek anges av typen: \"-> type=…\"",
- "query.why.wall_thickness": "väggens tjocklek anges av typen: \"-> type=…\""
+ "query.why.wall_thickness": "väggens tjocklek anges av typen: \"-> type=…\"",
+ "query.pal.filter": "Filtrera",
+ "query.pal.change": "Ändra",
+ "query.pal.one_undo": "ett ångra-steg",
+ "query.pal.select": "Markera",
+ "query.pal.levels_short": "nivå",
+ "query.pal.query": "Fråga",
+ "query.pal.plan": "Plan",
+ "query.pal.level": "nivå",
+ "query.pal.view": "vy",
+ "query.pal.save_filter": "Spara fråga som projektfilter"
 }

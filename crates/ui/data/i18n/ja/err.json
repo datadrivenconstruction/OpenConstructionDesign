@@ -63,5 +63,7 @@
  "browser.plan": "平面図",
  "browser.open": "開く",
  "browser.flip": "表示方向を反転",
- "browser.delete": "削除"
+ "browser.delete": "削除",
+ "empty.families.title": "使用中のファミリはまだありません",
+ "empty.families.hint": "壁、床、部材、コンポーネントを配置すると、ここにファミリが表示されます。"
 }

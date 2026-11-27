@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filtro salvato: {arg}",
  "unit_fmt.q.not_changed": "non modificato: {e}",
  "unit_fmt.q.name.curtain": "Facciata continua",
- "unit_fmt.q.name.room": "Stanza"
+ "unit_fmt.q.name.room": "Stanza",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

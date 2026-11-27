@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "اوپن سورس لائسنسز",
  "cmd.help.licenses.desc": "اس بلڈ میں استعمال ہونے والی اوپن سورس لائبریریاں اور ان کے لائسنس دکھاتا ہے۔",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "ورژن",
  "about.build": "بلڈ",
  "about.schema": "ماڈل اسکیما",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "اس بلڈ میں استعمال ہونے والی لائبریریاں اور ان کے لائسنس",
  "about.licenses.open": "دیکھیں",
  "about.licenses.title": "اوپن سورس لائسنسز",
- "about.licenses.note": "DDC Editor درج ذیل لائبریریاں شامل کرتا ہے۔ ہر ایک اپنے لائسنس اور کاپی رائٹ نوٹس کے تحت رہتی ہے۔ مکمل لائسنس متن: ایپلیکیشن کے ساتھ THIRD_PARTY_LICENSES.txt۔",
+ "about.licenses.note": "OpenConstructionDesign درج ذیل لائبریریاں شامل کرتا ہے۔ ہر ایک اپنے لائسنس اور کاپی رائٹ نوٹس کے تحت رہتی ہے۔ مکمل لائسنس متن: ایپلیکیشن کے ساتھ THIRD_PARTY_LICENSES.txt۔",
  "about.licenses.full": "مکمل لائسنس متن",
  "about.licenses.list": "اجزا کی فہرست",
  "about.licenses.close": "بند کریں",

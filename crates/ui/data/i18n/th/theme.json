@@ -211,7 +211,7 @@
  "onb.back": "ย้อนกลับ",
  "onb.back_keys": "Alt+←",
  "onb.start": "เริ่ม",
- "onb.keys": "Enter — ถัดไป, Alt+← — ย้อนกลับ, Esc — ข้าม",
+ "onb.keys": "Alt+→ ถัดไป · Alt+← ย้อนกลับ · Esc ข้าม",
  "onb.later": "เปลี่ยนแปลงทั้งหมดได้ภายหลังในการตั้งค่า → ลักษณะ",
  "onb.primary": "หลัก",
  "onb.make_primary": "ตั้งเป็นหลัก",

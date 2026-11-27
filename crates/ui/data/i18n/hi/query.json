@@ -28,5 +28,15 @@
  "query.why.curtain": "कर्टेन वॉल उनकी अपनी प्रॉपर्टी में बदली जाती हैं",
  "query.why.opening_type": "ओपनिंग का प्रकार उसके आकार का अनुसरण करता है: \"-> width=… height=…\"",
  "query.why.slab_thickness": "फ़्लोर की मोटाई प्रकार से तय होती है: \"-> type=…\"",
- "query.why.wall_thickness": "दीवार की मोटाई प्रकार से तय होती है: \"-> type=…\""
+ "query.why.wall_thickness": "दीवार की मोटाई प्रकार से तय होती है: \"-> type=…\"",
+ "query.pal.filter": "फ़िल्टर",
+ "query.pal.change": "बदलें",
+ "query.pal.one_undo": "एक पूर्ववत चरण",
+ "query.pal.select": "चुनें",
+ "query.pal.levels_short": "मंज़िल",
+ "query.pal.query": "क्वेरी",
+ "query.pal.plan": "प्लान",
+ "query.pal.level": "मंज़िल",
+ "query.pal.view": "दृश्य",
+ "query.pal.save_filter": "क्वेरी को प्रोजेक्ट फ़िल्टर के रूप में सहेजें"
 }

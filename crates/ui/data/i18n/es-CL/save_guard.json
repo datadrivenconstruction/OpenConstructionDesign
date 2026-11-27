@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "No se guardó nada: el modelo está vacío y el archivo ya contiene datos. El archivo no se ha modificado. Use Guardar como para escribir con otro nombre.",
  "save_guard.refuse.body": "No se guardó nada: el modelo está vacío y {name} ya contiene datos. El archivo no se ha modificado.",
- "save_guard.refuse.foreign": "Este no es un archivo de DDC Editor, por lo que no se puede reemplazar. Use Guardar como para escribir con otro nombre.",
+ "save_guard.refuse.foreign": "Este no es un archivo de OpenConstructionDesign, por lo que no se puede reemplazar. Use Guardar como para escribir con otro nombre.",
  "save_guard.refuse.ask": "¿Reemplazar {name}? Contiene {what}. Antes se mueve a la carpeta _archive junto a él y después se escribe el modelo vacío.",
  "save_guard.refuse.holds_db": "{n} elementos y filas de datos",
  "save_guard.refuse.holds_ifc": "IFC con productos",

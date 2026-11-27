@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Nic nebylo uloženo: model je prázdný a soubor již obsahuje data. Soubor zůstal nedotčen. Pro uložení pod jiným názvem použijte Uložit jako.",
  "save_guard.refuse.body": "Nic nebylo uloženo: model je prázdný a {name} již obsahuje data. Soubor zůstal nedotčen.",
- "save_guard.refuse.foreign": "Toto není soubor DDC Editor, takže jej nelze nahradit. Pro uložení pod jiným názvem použijte Uložit jako.",
+ "save_guard.refuse.foreign": "Toto není soubor OpenConstructionDesign, takže jej nelze nahradit. Pro uložení pod jiným názvem použijte Uložit jako.",
  "save_guard.refuse.ask": "Nahradit {name}? Obsahuje {what}. Nejprve bude přesunut do složky _archive vedle něj, pak se zapíše prázdný model.",
  "save_guard.refuse.holds_db": "{n} prvků a řádků obsahu",
  "save_guard.refuse.holds_ifc": "IFC s produkty",

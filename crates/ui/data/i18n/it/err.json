@@ -63,5 +63,7 @@
  "browser.plan": "Pianta",
  "browser.open": "Apri",
  "browser.flip": "Inverti direzione di vista",
- "browser.delete": "Elimina"
+ "browser.delete": "Elimina",
+ "empty.families.title": "Nessuna famiglia in uso per ora",
+ "empty.families.hint": "Le famiglie compaiono qui man mano che inserisci muri, solai, elementi e componenti."
 }

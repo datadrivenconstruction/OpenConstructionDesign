@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filtr zapisany: {arg}",
  "unit_fmt.q.not_changed": "nie zmieniono: {e}",
  "unit_fmt.q.name.curtain": "Ściana osłonowa",
- "unit_fmt.q.name.room": "Pomieszczenie"
+ "unit_fmt.q.name.room": "Pomieszczenie",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

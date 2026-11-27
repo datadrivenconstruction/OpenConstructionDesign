@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Intet blev gemt: modellen er tom, og filen indeholder allerede indhold. Filen er urørt. Brug Gem som for at skrive til et andet navn.",
  "save_guard.refuse.body": "Intet blev gemt: modellen er tom, og {name} indeholder allerede indhold. Filen er urørt.",
- "save_guard.refuse.foreign": "Dette er ikke en DDC Editor-fil, så den kan ikke erstattes. Brug Gem som for at skrive til et andet navn.",
+ "save_guard.refuse.foreign": "Dette er ikke en OpenConstructionDesign-fil, så den kan ikke erstattes. Brug Gem som for at skrive til et andet navn.",
  "save_guard.refuse.ask": "Erstat {name}? Den indeholder {what}. Den flyttes først til mappen _archive ved siden af, og derefter skrives den tomme model.",
  "save_guard.refuse.holds_db": "{n} elementer og indholdsrækker",
  "save_guard.refuse.holds_ifc": "IFC med produkter",

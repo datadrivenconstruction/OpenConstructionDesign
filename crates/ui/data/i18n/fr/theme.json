@@ -211,7 +211,7 @@
  "onb.back": "Retour",
  "onb.back_keys": "Alt+←",
  "onb.start": "Démarrer",
- "onb.keys": "Entrée — suivant, Alt+← — retour, Échap — passer",
+ "onb.keys": "Alt+→ suivant · Alt+← retour · Esc passer",
  "onb.later": "Tout peut être modifié plus tard dans Paramètres → Apparence.",
  "onb.primary": "Principal",
  "onb.make_primary": "Rendre principal",

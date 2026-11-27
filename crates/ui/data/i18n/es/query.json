@@ -28,5 +28,15 @@
  "query.why.curtain": "los muros cortina se modifican en sus propias propiedades",
  "query.why.opening_type": "el tipo de un hueco depende de su tamaño: “-> width=… height=…”",
  "query.why.slab_thickness": "el espesor del forjado lo define el tipo: “-> type=…”",
- "query.why.wall_thickness": "el espesor del muro lo define el tipo: “-> type=…”"
+ "query.why.wall_thickness": "el espesor del muro lo define el tipo: “-> type=…”",
+ "query.pal.filter": "Filtrar",
+ "query.pal.change": "Cambiar",
+ "query.pal.one_undo": "un solo paso de deshacer",
+ "query.pal.select": "Seleccionar",
+ "query.pal.levels_short": "niv.",
+ "query.pal.query": "Consulta",
+ "query.pal.plan": "Planta",
+ "query.pal.level": "nivel",
+ "query.pal.view": "vista",
+ "query.pal.save_filter": "Guardar consulta como filtro del proyecto"
 }

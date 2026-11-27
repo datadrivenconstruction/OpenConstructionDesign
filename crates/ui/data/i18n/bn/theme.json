@@ -211,7 +211,7 @@
  "onb.back": "পেছনে",
  "onb.back_keys": "Alt+←",
  "onb.start": "শুরু করুন",
- "onb.keys": "Enter — পরবর্তী, Alt+← — পেছনে, Esc — এড়িয়ে যান",
+ "onb.keys": "Alt+→ পরবর্তী · Alt+← পেছনে · Esc এড়িয়ে যান",
  "onb.later": "পরে সেটিংস → চেহারা থেকে সবকিছু বদলানো যাবে।",
  "onb.primary": "মূল",
  "onb.make_primary": "মূল করুন",

@@ -63,5 +63,7 @@
  "browser.plan": "Mặt bằng",
  "browser.open": "Mở",
  "browser.flip": "Đảo chiều nhìn",
- "browser.delete": "Xóa"
+ "browser.delete": "Xóa",
+ "empty.families.title": "Chưa có họ nào được dùng",
+ "empty.families.hint": "Các họ sẽ xuất hiện tại đây khi bạn đặt tường, sàn, cấu kiện và thành phần."
 }

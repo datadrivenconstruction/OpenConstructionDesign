@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Nu s-a salvat nimic: modelul este gol, iar fișierul conține deja conținut. Fișierul nu a fost atins. Folosiți Salvează ca pentru a scrie sub alt nume.",
  "save_guard.refuse.body": "Nu s-a salvat nimic: modelul este gol, iar {name} conține deja conținut. Fișierul nu a fost atins.",
- "save_guard.refuse.foreign": "Acesta nu este un fișier DDC Editor, deci nu poate fi înlocuit. Folosiți Salvează ca pentru a scrie sub alt nume.",
+ "save_guard.refuse.foreign": "Acesta nu este un fișier OpenConstructionDesign, deci nu poate fi înlocuit. Folosiți Salvează ca pentru a scrie sub alt nume.",
  "save_guard.refuse.ask": "Înlocuiți {name}? Conține {what}. Mai întâi este mutat în dosarul _archive de alături, apoi se scrie modelul gol.",
  "save_guard.refuse.holds_db": "{n} elemente și rânduri de conținut",
  "save_guard.refuse.holds_ifc": "IFC cu produse",

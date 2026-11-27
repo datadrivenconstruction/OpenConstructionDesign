@@ -211,7 +211,7 @@
  "onb.back": "Natrag",
  "onb.back_keys": "Alt+←",
  "onb.start": "Pokreni",
- "onb.keys": "Enter — dalje, Alt+← — natrag, Esc — preskoči",
+ "onb.keys": "Alt+→ dalje · Alt+← natrag · Esc preskoči",
  "onb.later": "Sve se može promijeniti kasnije u Postavke → Izgled.",
  "onb.primary": "Glavni",
  "onb.make_primary": "Postavi kao glavni",

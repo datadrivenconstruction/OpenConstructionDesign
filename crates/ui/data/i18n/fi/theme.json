@@ -211,7 +211,7 @@
  "onb.back": "Takaisin",
  "onb.back_keys": "Alt+←",
  "onb.start": "Aloita",
- "onb.keys": "Enter — seuraava, Alt+← — takaisin, Esc — ohita",
+ "onb.keys": "Alt+→ seuraava · Alt+← takaisin · Esc ohita",
  "onb.later": "Kaiken voi muuttaa myöhemmin kohdasta Asetukset → Ulkoasu.",
  "onb.primary": "Pää",
  "onb.make_primary": "Tee pääasiaksi",

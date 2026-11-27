@@ -63,5 +63,7 @@
  "browser.plan": "תכנית",
  "browser.open": "פתח",
  "browser.flip": "הפוך כיוון מבט",
- "browser.delete": "מחק"
+ "browser.delete": "מחק",
+ "empty.families.title": "עדיין אין משפחות בשימוש",
+ "empty.families.hint": "משפחות יופיעו כאן כשתמקמו קירות, רצפות, אלמנטים ורכיבים."
 }

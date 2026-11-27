@@ -65,7 +65,7 @@ pub fn register_plan(exe: &str, default_models: bool) -> Vec<Vec<String>> {
         "/f",
     ]));
     if cfg!(feature = "link") {
-        v.extend(prog_id(LINK_ID, "DDC Editor ERP link", exe));
+        v.extend(prog_id(LINK_ID, "OpenConstructionDesign ERP link", exe));
         v.push(args(&["add", &format!(r"{CLASSES}\.ddclink"), "/ve", "/d", LINK_ID, "/f"]));
     }
     for e in OPEN_WITH {

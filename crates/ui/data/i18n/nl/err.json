@@ -63,5 +63,7 @@
  "browser.plan": "Plattegrond",
  "browser.open": "Openen",
  "browser.flip": "Kijkrichting omkeren",
- "browser.delete": "Verwijderen"
+ "browser.delete": "Verwijderen",
+ "empty.families.title": "Nog geen families in gebruik",
+ "empty.families.hint": "Families verschijnen hier zodra u wanden, vloeren, elementen en componenten plaatst."
 }

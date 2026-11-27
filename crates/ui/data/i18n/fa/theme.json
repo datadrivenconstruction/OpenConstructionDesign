@@ -211,7 +211,7 @@
  "onb.back": "بازگشت",
  "onb.back_keys": "Alt+←",
  "onb.start": "شروع",
- "onb.keys": "Enter — بعدی، Alt+← — بازگشت، Esc — رد کردن",
+ "onb.keys": "Alt+→ بعدی · Alt+← بازگشت · Esc رد کردن",
  "onb.later": "همه‌چیز بعداً در تنظیمات → ظاهر قابل تغییر است.",
  "onb.primary": "اصلی",
  "onb.make_primary": "اصلی کردن",

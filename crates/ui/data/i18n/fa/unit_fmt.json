@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "فیلتر ذخیره شد: {arg}",
  "unit_fmt.q.not_changed": "تغییر نکرد: {e}",
  "unit_fmt.q.name.curtain": "دیوار پرده‌ای",
- "unit_fmt.q.name.room": "اتاق"
+ "unit_fmt.q.name.room": "اتاق",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

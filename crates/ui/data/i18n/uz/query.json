@@ -28,5 +28,15 @@
  "query.why.curtain": "pardali devorlar o'z xususiyatlarida o'zgartiriladi",
  "query.why.opening_type": "teshik turi o'lchamiga bog'liq: “-> width=… height=…”",
  "query.why.slab_thickness": "pol qalinligi tur bilan belgilanadi: “-> type=…”",
- "query.why.wall_thickness": "devor qalinligi tur bilan belgilanadi: “-> type=…”"
+ "query.why.wall_thickness": "devor qalinligi tur bilan belgilanadi: “-> type=…”",
+ "query.pal.filter": "Filtr",
+ "query.pal.change": "O'zgartirish",
+ "query.pal.one_undo": "bitta bekor qilish qadami",
+ "query.pal.select": "Tanlash",
+ "query.pal.levels_short": "qavat",
+ "query.pal.query": "So'rov",
+ "query.pal.plan": "Reja",
+ "query.pal.level": "daraja",
+ "query.pal.view": "ko'rinish",
+ "query.pal.save_filter": "So'rovni loyiha filtri sifatida saqlash"
 }

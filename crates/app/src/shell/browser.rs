@@ -438,32 +438,62 @@ fn or_empty(c: &Catalog, kids: Vec<Node>) -> Vec<Node> {
     }
 }
 
-/// "Families": system families (walls, floors, columns/beams) and loaded components.
+/// "Families": the families the project uses (system types with instances, members of every
+/// structural kind, trusses, script parts by IFC class) and the loaded components. A new project
+/// lists none.
 pub fn families(m: &Model, c: &Catalog) -> Vec<Node> {
     let ru = c.lang == Lang::Ru;
-    let sys = |fam: Fam, q: &str| -> Node {
+    let used = |k: i64| (k > 0).then(|| k.to_string());
+    let sys = |fam: Fam, q: &str| -> Option<Node> {
         let kids: Vec<Node> = type_dialog::types_of(m, fam)
             .into_iter()
-            .map(|(id, n)| {
-                let k = count(m, q, id);
-                node(
-                    n,
-                    if k > 0 { k.to_string() } else { String::new() },
-                    Act::Type(fam, id),
-                    vec![],
-                )
-            })
+            .filter_map(|(id, n)| used(count(m, q, id)).map(|k| node(n, k, Act::Type(fam, id), vec![])))
             .collect();
-        node(fam.label(ru), "", Act::None, or_empty(c, kids))
+        (!kids.is_empty()).then(|| node(fam.label(ru), "", Act::None, kids))
     };
-    let mut out = vec![
+    // a member type is used by columns, beams, braces, joists and truss chords and webs
+    let member_use = "SELECT (SELECT count(*) FROM col WHERE mtype=?1) + (SELECT count(*) FROM beam WHERE mtype=?1)          + (SELECT count(*) FROM brace WHERE mtype=?1) + (SELECT count(*) FROM beam_system WHERE mtype=?1)          + (SELECT count(*) FROM truss WHERE chord_type=?1 OR web_type=?1)";
+    let mut out: Vec<Node> = [
         sys(Fam::Wall, "SELECT count(*) FROM wall WHERE wtype=?1"),
         sys(Fam::Slab, "SELECT count(*) FROM slab WHERE stype=?1"),
-        sys(
-            Fam::Member,
-            "SELECT (SELECT count(*) FROM col WHERE mtype=?1) + (SELECT count(*) FROM beam WHERE mtype=?1)",
-        ),
-    ];
+        sys(Fam::Member, member_use),
+    ]
+    .into_iter()
+    .flatten()
+    .collect();
+    let grouped = |q: &str| -> Vec<Node> {
+        rows2(m, q)
+            .into_iter()
+            .map(|(n, name)| node(name, n.to_string(), Act::None, vec![]))
+            .collect()
+    };
+    let trusses: Vec<Node> = grouped("SELECT count(*), web FROM truss GROUP BY web ORDER BY web")
+        .into_iter()
+        .map(|mut n| {
+            let k = format!("opt.web.{}", n.label);
+            if c.table(Lang::En).contains_key(&k) {
+                n.label = c.t(&k);
+            }
+            n
+        })
+        .collect();
+    if !trusses.is_empty() {
+        out.push(node(c.t("type_dialog.warn.cat.truss"), "", Act::None, trusses));
+    }
+    // parametric parts (script members, plates) by their IFC class, then by name
+    for &(class, key) in ddc_model::SOLID_CATEGORIES {
+        let kids = grouped(&format!(
+            "SELECT count(*), CASE WHEN name='' THEN coalesce(ifc_type,'') ELSE name END AS n FROM solid              WHERE void=0 AND ifc_class='{class}' GROUP BY n ORDER BY n"
+        ));
+        if kids.is_empty() {
+            continue;
+        }
+        let label = c.t(&format!("type_dialog.warn.cat.{key}"));
+        match out.iter_mut().find(|n| n.label == label) {
+            Some(n) => n.kids.extend(kids),
+            None => out.push(node(label, "", Act::None, kids)),
+        }
+    }
     let mut cats: Vec<Node> = vec![];
     let fams: Vec<(i64, String, String)> = {
         let Ok(mut st) = m
@@ -1266,6 +1296,10 @@ pub fn lane_c(
     ui.vertical(|ui| {
         for g in &mut tree.groups {
             if g.rows.is_empty() {
+                // the families of a new project: say so instead of hiding the section
+                if g.icon == "types" && !force && super::browser_sec::section(ui, th, &g.title, &g.title, Some(0), None).open {
+                    crate::ui_kit::empty_state_compact_lang(ui, c.lang == Lang::Ru, "families");
+                }
                 continue;
             }
             any = true;
@@ -1951,6 +1985,50 @@ mod tests {
         assert!(filter(&t, "no such node").is_empty());
     }
 
+    fn put_wall(ed: &mut Editor, wt: i64) {
+        let level = ed.level;
+        ed.model
+            .add_wall(&ddc_model::WallSpec { a: (0.0, 0.0), b: (4.0, 0.0), level, base_offset: 0.0, height: 3.0, wall_type: wt, offset0: None })
+            .unwrap();
+    }
+
+    /// A project with content: a wall, a loaded component family and script members.
+    fn used_project() -> Editor {
+        use ddc_model::{SolidForm, SolidFrame, SolidIfc, SolidSection, SolidSpec};
+        let mut ed = Editor::new_in_memory().unwrap();
+        let wt = type_dialog::types_of(&ed.model, Fam::Wall)[0].0;
+        put_wall(&mut ed, wt);
+        ed.model.load_library_family("Table").unwrap();
+        let r = vec![ddc_geom::v2(0.0, 0.0), ddc_geom::v2(0.1, 0.0), ddc_geom::v2(0.1, 0.1), ddc_geom::v2(0.0, 0.1)];
+        for name in ["chord", "chord", "post"] {
+            ed.model
+                .add_solid(&SolidSpec {
+                    level: ed.level,
+                    name: name.into(),
+                    void: false,
+                    material: "S355".into(),
+                    ifc: Some(SolidIfc { class: "IfcMember".into(), predefined: "MEMBER".into() }),
+                    frame: SolidFrame::default(),
+                    form: SolidForm::Extrusion { profile: SolidSection::polygon(r.clone()), start: 0.0, end: 3.0 },
+                })
+                .unwrap();
+        }
+        ed
+    }
+
+    /// A new project lists no families (its seeded types are not in use); script members show
+    /// as a family of their class with a row per part name.
+    #[test]
+    fn families_list_only_what_the_project_uses() {
+        let c = Catalog::new(Lang::En);
+        let bare = Editor::new_in_memory().unwrap();
+        assert_eq!(families(&bare.model, &c), vec![]);
+        let f = families(&used_project().model, &c);
+        let mem = f.iter().find(|n| n.label == c.t("type_dialog.warn.cat.member")).expect("members family");
+        let kids: Vec<(&str, &str)> = mem.kids.iter().map(|n| (n.label.as_str(), n.right.as_str())).collect();
+        assert_eq!(kids, [("chord", "2"), ("post", "1")]);
+    }
+
     #[test]
     fn families_and_systems_from_model() {
         let mut ed = crate::editor::Editor::new_in_memory().unwrap();
@@ -1973,8 +2051,13 @@ mod tests {
             .unwrap();
         let c = Catalog::new(Lang::Ru);
         let f = families(&ed.model, &c);
+        assert!(!f.iter().any(|n| n.label == crate::app2_fx::fx("br_walls")), "no wall is placed: no wall family");
+        let wt = type_dialog::types_of(&ed.model, Fam::Wall)[0].0;
+        put_wall(&mut ed, wt);
+        let f = families(&ed.model, &c);
         assert_eq!(f[0].label, crate::app2_fx::fx("br_walls"));
-        assert_eq!(f[0].kids.len(), 3);
+        assert_eq!(f[0].kids.len(), 1, "only the type in use");
+        assert_eq!(f[0].kids[0].right, "1");
         let furn = f.iter().find(|n| n.label == crate::app2_fx::fx("br_furniture")).unwrap();
         assert_eq!(furn.kids[0].label, "Table");
         assert_eq!(furn.kids[0].kids.len(), 4, "Table: three metric sizes and one imperial");
@@ -2271,7 +2354,7 @@ mod tests {
     #[test]
     fn every_family_group_is_a_branch_with_the_same_slots() {
         for lang in [Lang::En, Lang::Ru] {
-            let ed = crate::editor::Editor::new_in_memory().unwrap();
+            let ed = used_project();
             let c = Catalog::new(lang);
             let nodes = families(&ed.model, &c);
             assert!(nodes.len() >= 3);
@@ -2287,9 +2370,8 @@ mod tests {
                 assert!(g.span > 1, "{lang:?} {}: leaf-shaped group", g.label);
                 assert_eq!(slots(10.0, g.depth), first);
             }
-            let ph = rows.iter().filter(|f| f.act == Act::Empty).collect::<Vec<_>>();
-            assert!(!ph.is_empty(), "an empty family shows the placeholder");
-            for p in ph {
+            // a loaded family without types still shows the placeholder
+            for p in rows.iter().filter(|f| f.act == Act::Empty) {
                 assert_eq!(p.depth, 1);
                 assert!(p.right.is_empty() && p.span == 1);
                 assert_eq!(p.label, c.t("browser.fam.empty"));
@@ -2301,7 +2383,7 @@ mod tests {
 
     #[test]
     fn family_group_expand_state_survives_a_rebuild() {
-        let ed = crate::editor::Editor::new_in_memory().unwrap();
+        let ed = used_project();
         let c = Catalog::new(Lang::En);
         let build = || {
             let mut rows = vec![];
@@ -2309,7 +2391,7 @@ mod tests {
             rows
         };
         let a = build();
-        let member = a.iter().position(|f| f.act == Act::Empty).unwrap() - 1;
+        let member = a.iter().position(|f| f.depth == 0 && f.span > 1).expect("a family with types");
         let key = a[member].key;
         let mut open = HashSet::new();
         assert!(!visible(&a, &open, false).contains(&(member as u32 + 1)));

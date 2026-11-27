@@ -211,7 +211,7 @@
  "onb.back": "Tagasi",
  "onb.back_keys": "Alt+←",
  "onb.start": "Alusta",
- "onb.keys": "Enter — järgmine, Alt+← — tagasi, Esc — jäta vahele",
+ "onb.keys": "Alt+→ järgmine · Alt+← tagasi · Esc jäta vahele",
  "onb.later": "Kõike saab hiljem muuta: Seaded → Välimus.",
  "onb.primary": "Peamine",
  "onb.make_primary": "Muuda peamiseks",

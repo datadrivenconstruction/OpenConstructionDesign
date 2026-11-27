@@ -63,5 +63,7 @@
  "browser.plan": "Plan",
  "browser.open": "Ouvrir",
  "browser.flip": "Inverser le sens de la vue",
- "browser.delete": "Supprimer"
+ "browser.delete": "Supprimer",
+ "empty.families.title": "Aucune famille utilisée pour le moment",
+ "empty.families.hint": "Les familles apparaissent ici au fur et à mesure que vous placez des murs, planchers, éléments et composants."
 }

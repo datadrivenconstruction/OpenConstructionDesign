@@ -28,5 +28,15 @@
  "query.why.curtain": "الواجهات الزجاجية تُعدَّل في خصائصها",
  "query.why.opening_type": "نوع الفتحة يتبع مقاسها: “-> width=… height=…”",
  "query.why.slab_thickness": "سماكة البلاطة يحددها النوع: “-> type=…”",
- "query.why.wall_thickness": "سماكة الجدار يحددها النوع: “-> type=…”"
+ "query.why.wall_thickness": "سماكة الجدار يحددها النوع: “-> type=…”",
+ "query.pal.filter": "تصفية",
+ "query.pal.change": "تغيير",
+ "query.pal.one_undo": "خطوة تراجع واحدة",
+ "query.pal.select": "تحديد",
+ "query.pal.levels_short": "مس.",
+ "query.pal.query": "استعلام",
+ "query.pal.plan": "مخطط",
+ "query.pal.level": "مستوى",
+ "query.pal.view": "عرض",
+ "query.pal.save_filter": "حفظ الاستعلام كمرشح للمشروع"
 }

@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "لم يُحفظ شيء: النموذج فارغ، والملف يحتوي محتوى بالفعل. الملف لم يُمسّ. استخدم «حفظ باسم» للكتابة باسم آخر.",
  "save_guard.refuse.body": "لم يُحفظ شيء: النموذج فارغ، و{name} يحتوي محتوى بالفعل. الملف لم يُمسّ.",
- "save_guard.refuse.foreign": "هذا ليس ملف DDC Editor، لذا لا يمكن استبداله. استخدم «حفظ باسم» للكتابة باسم آخر.",
+ "save_guard.refuse.foreign": "هذا ليس ملف OpenConstructionDesign، لذا لا يمكن استبداله. استخدم «حفظ باسم» للكتابة باسم آخر.",
  "save_guard.refuse.ask": "استبدال {name}؟ يحتوي على {what}. سيُنقل أولًا إلى مجلد _archive المجاور له، ثم يُكتب النموذج الفارغ.",
  "save_guard.refuse.holds_db": "{n} عنصرًا وصفوف محتوى",
  "save_guard.refuse.holds_ifc": "ملف IFC يحتوي منتجات",

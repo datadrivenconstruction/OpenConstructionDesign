@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Mga open-source na lisensya",
  "cmd.help.licenses.desc": "Inililista ang mga open-source na library ng build na ito at ang kanilang lisensya.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Bersyon",
  "about.build": "Pagbuo",
  "about.schema": "Schema ng modelo",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Mga library na ginamit sa build na ito at ang kanilang lisensya",
  "about.licenses.open": "Tingnan",
  "about.licenses.title": "Mga open-source na lisensya",
- "about.licenses.note": "Kasama sa DDC Editor ang mga library sa ibaba. Nananatili ang bawat isa sa sarili nitong lisensya at copyright notice. Buong teksto ng lisensya: THIRD_PARTY_LICENSES.txt sa tabi ng application.",
+ "about.licenses.note": "Kasama sa OpenConstructionDesign ang mga library sa ibaba. Nananatili ang bawat isa sa sarili nitong lisensya at copyright notice. Buong teksto ng lisensya: THIRD_PARTY_LICENSES.txt sa tabi ng application.",
  "about.licenses.full": "Buong teksto ng lisensya",
  "about.licenses.list": "Listahan ng component",
  "about.licenses.close": "Isara",

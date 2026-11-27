@@ -28,5 +28,15 @@
  "query.why.curtain": "tường rèm được thay đổi trong thuộc tính riêng của nó",
  "query.why.opening_type": "loại của lỗ mở theo kích thước của nó: \"-> width=… height=…\"",
  "query.why.slab_thickness": "độ dày sàn do loại quyết định: \"-> type=…\"",
- "query.why.wall_thickness": "độ dày tường do loại quyết định: \"-> type=…\""
+ "query.why.wall_thickness": "độ dày tường do loại quyết định: \"-> type=…\"",
+ "query.pal.filter": "Lọc",
+ "query.pal.change": "Thay đổi",
+ "query.pal.one_undo": "một bước hoàn tác",
+ "query.pal.select": "Chọn",
+ "query.pal.levels_short": "tầng",
+ "query.pal.query": "Truy vấn",
+ "query.pal.plan": "Mặt bằng",
+ "query.pal.level": "tầng",
+ "query.pal.view": "khung nhìn",
+ "query.pal.save_filter": "Lưu truy vấn làm bộ lọc dự án"
 }

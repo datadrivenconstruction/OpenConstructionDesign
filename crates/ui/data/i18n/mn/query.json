@@ -28,5 +28,15 @@
  "query.why.curtain": "шилэн ханыг өөрийн шинж чанараар өөрчилнө",
  "query.why.opening_type": "нүхний төрөл нь хэмжээгээ дагана: \"-> width=… height=…\"",
  "query.why.slab_thickness": "шалны зузаан төрлөөр тогтоогддог: \"-> type=…\"",
- "query.why.wall_thickness": "ханын зузаан төрлөөр тогтоогддог: \"-> type=…\""
+ "query.why.wall_thickness": "ханын зузаан төрлөөр тогтоогддог: \"-> type=…\"",
+ "query.pal.filter": "Шүүлтүүр",
+ "query.pal.change": "Өөрчлөх",
+ "query.pal.one_undo": "нэг буцаах алхам",
+ "query.pal.select": "Сонгох",
+ "query.pal.levels_short": "давх.",
+ "query.pal.query": "Асуулга",
+ "query.pal.plan": "Төлөвлөгөө",
+ "query.pal.level": "давхар",
+ "query.pal.view": "харагдац",
+ "query.pal.save_filter": "Асуулгыг төслийн шүүлтүүр болгон хадгалах"
 }

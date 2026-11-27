@@ -58,6 +58,22 @@ pub fn new_project(app: &mut EditorApp, units: Option<Units>) -> bool {
     done
 }
 
+/// An untitled project nobody has edited follows a change of the interface language from
+/// `was`: it starts again, so its default names (level, wall types) are in the new language.
+/// A saved, opened or edited project keeps its names: they are document data.
+pub fn follow_lang(app: &mut EditorApp, was: ddc_ui::i18n::Lang) -> bool {
+    let now = app.sh.cat.lang;
+    let ed = &app.ed;
+    let seeded = |l| crate::tr_in(l, "project_seed.seed_level", &[]);
+    let untouched = ed.project.path().is_none()
+        && !ed.is_dirty()
+        && ed.model.level_list().is_ok_and(|ls| ls.len() == 1 && ls[0].1 == seeded(was));
+    if now == was || !untouched || seeded(now) == seeded(was) {
+        return false;
+    }
+    new_project(app, None)
+}
+
 pub fn open_project(app: &mut EditorApp, path: PathBuf) {
     crate::project_ui::request_open(app, path);
 }
@@ -149,5 +165,31 @@ mod tests {
             !Path::new(project_ui).exists() || !include_str!("project_seam.rs").contains(&marker),
             "project_ui is in the tree: wire the stand-ins as the module header says"
         );
+    }
+
+    fn level_names(app: &EditorApp) -> Vec<String> {
+        app.ed.model.level_list().unwrap().into_iter().map(|l| l.1).collect()
+    }
+
+    /// The first start makes the project before the language is chosen in Settings: an
+    /// untouched one takes the new language's names, an edited one keeps its own.
+    #[test]
+    fn an_untouched_new_project_follows_a_language_change() {
+        use ddc_ui::i18n::Lang;
+        let mut app = EditorApp::new(crate::editor::Editor::new_in_memory().unwrap(), None, "test".into());
+        app.set_lang(Lang::En);
+        assert!(new_project(&mut app, None));
+        assert_eq!(level_names(&app), ["Level 1"]);
+        app.set_lang(Lang::Ru);
+        assert!(follow_lang(&mut app, Lang::En));
+        let ru = crate::tr_in(Lang::Ru, "project_seed.seed_level", &[]);
+        assert_eq!(level_names(&app), [ru.clone()]);
+        assert!(!app.ed.is_dirty());
+        // an edit makes the names the user's: the next change of language leaves them
+        let l = app.ed.level;
+        app.ed.model.update_level(l, "Ground", 0.0).unwrap();
+        app.set_lang(Lang::En);
+        assert!(!follow_lang(&mut app, Lang::Ru));
+        assert_eq!(level_names(&app), ["Ground"]);
     }
 }

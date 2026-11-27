@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "רישיונות קוד פתוח",
  "cmd.help.licenses.desc": "מציג את ספריות הקוד הפתוח בשימוש בגרסה הזו יחד עם הרישיונות שלהן.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "גרסה",
  "about.build": "בנייה",
  "about.schema": "סכמת המודל",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "ספריות בשימוש בגרסה הזו ורישיונותיהן",
  "about.licenses.open": "הצג",
  "about.licenses.title": "רישיונות קוד פתוח",
- "about.licenses.note": "DDC Editor כולל את הספריות שלהלן. לכל אחת נשאר הרישיון וההודעה על זכויות היוצרים שלה. נוסחי הרישיון המלאים: THIRD_PARTY_LICENSES.txt לצד היישום.",
+ "about.licenses.note": "OpenConstructionDesign כולל את הספריות שלהלן. לכל אחת נשאר הרישיון וההודעה על זכויות היוצרים שלה. נוסחי הרישיון המלאים: THIRD_PARTY_LICENSES.txt לצד היישום.",
  "about.licenses.full": "נוסחי הרישיון המלאים",
  "about.licenses.list": "רשימת רכיבים",
  "about.licenses.close": "סגור",

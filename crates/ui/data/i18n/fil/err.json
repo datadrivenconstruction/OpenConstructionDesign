@@ -63,5 +63,7 @@
  "browser.plan": "Plano",
  "browser.open": "Buksan",
  "browser.flip": "Baligtarin ang direksyon ng view",
- "browser.delete": "Burahin"
+ "browser.delete": "Burahin",
+ "empty.families.title": "Wala pang family na ginagamit",
+ "empty.families.hint": "Lalabas dito ang mga family habang naglalagay ka ng mga wall, sahig, miyembro, at component."
 }

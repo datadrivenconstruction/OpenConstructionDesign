@@ -28,5 +28,15 @@
  "query.why.curtain": "les murs-rideaux se modifient dans leurs propres propriétés",
  "query.why.opening_type": "le type d'une ouverture suit ses dimensions : « -> largeur=… hauteur=… »",
  "query.why.slab_thickness": "l'épaisseur du plancher est définie par le type : « -> type=… »",
- "query.why.wall_thickness": "l'épaisseur du mur est définie par le type : « -> type=… »"
+ "query.why.wall_thickness": "l'épaisseur du mur est définie par le type : « -> type=… »",
+ "query.pal.filter": "Filtrer",
+ "query.pal.change": "Modifier",
+ "query.pal.one_undo": "une seule étape d'annulation",
+ "query.pal.select": "Sélectionner",
+ "query.pal.levels_short": "niv.",
+ "query.pal.query": "Requête",
+ "query.pal.plan": "Plan",
+ "query.pal.level": "niveau",
+ "query.pal.view": "vue",
+ "query.pal.save_filter": "Enregistrer la requête comme filtre du projet"
 }

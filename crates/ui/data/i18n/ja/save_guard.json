@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "何も保存されていません: モデルは空で、ファイルには既に内容があります。ファイルは変更されていません。別の名前で書き込むには名前を付けて保存を使ってください。",
  "save_guard.refuse.body": "何も保存されていません: モデルは空で、{name} には既に内容があります。ファイルは変更されていません。",
- "save_guard.refuse.foreign": "これは DDC Editor のファイルではないため、置き換えられません。別の名前で書き込むには名前を付けて保存を使ってください。",
+ "save_guard.refuse.foreign": "これは OpenConstructionDesign のファイルではないため、置き換えられません。別の名前で書き込むには名前を付けて保存を使ってください。",
  "save_guard.refuse.ask": "{name} を置き換えますか? 中身は {what} です。先に隣の _archive フォルダへ移動してから、空のモデルを書き込みます。",
  "save_guard.refuse.holds_db": "{n} 個の要素と内容の行",
  "save_guard.refuse.holds_ifc": "製品を含む IFC",

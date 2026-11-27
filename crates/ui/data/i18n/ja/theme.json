@@ -211,7 +211,7 @@
  "onb.back": "戻る",
  "onb.back_keys": "Alt+←",
  "onb.start": "開始",
- "onb.keys": "Enter — 次へ、Alt+← — 戻る、Esc — スキップ",
+ "onb.keys": "Alt+→ 次へ · Alt+← 戻る · Esc スキップ",
  "onb.later": "すべては後から 設定 → 外観 で変更できます。",
  "onb.primary": "メイン",
  "onb.make_primary": "メインに設定",

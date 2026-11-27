@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Rien n'a été enregistré : le modèle est vide, et le fichier contient déjà du contenu. Le fichier est intact. Utilisez Enregistrer sous pour écrire sous un autre nom.",
  "save_guard.refuse.body": "Rien n'a été enregistré : le modèle est vide, et {name} contient déjà du contenu. Le fichier est intact.",
- "save_guard.refuse.foreign": "Ce n'est pas un fichier DDC Editor, il ne peut donc pas être remplacé. Utilisez Enregistrer sous pour écrire sous un autre nom.",
+ "save_guard.refuse.foreign": "Ce n'est pas un fichier OpenConstructionDesign, il ne peut donc pas être remplacé. Utilisez Enregistrer sous pour écrire sous un autre nom.",
  "save_guard.refuse.ask": "Remplacer {name} ? Il contient {what}. Il est d'abord déplacé dans le dossier _archive à côté, puis le modèle vide est écrit.",
  "save_guard.refuse.holds_db": "{n} éléments et lignes de contenu",
  "save_guard.refuse.holds_ifc": "IFC avec des produits",

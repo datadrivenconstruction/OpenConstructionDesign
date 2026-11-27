@@ -63,5 +63,7 @@
  "browser.plan": "План",
  "browser.open": "Отвори",
  "browser.flip": "Обърни посоката на изгледа",
- "browser.delete": "Изтрий"
+ "browser.delete": "Изтрий",
+ "empty.families.title": "Все още няма използвани семейства",
+ "empty.families.hint": "Семействата се появяват тук, когато поставите стени, подове, елементи и компоненти."
 }

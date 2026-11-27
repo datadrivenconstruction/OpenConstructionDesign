@@ -211,7 +211,7 @@
  "onb.back": "Πίσω",
  "onb.back_keys": "Alt+←",
  "onb.start": "Έναρξη",
- "onb.keys": "Enter — επόμενο, Alt+← — πίσω, Esc — παράλειψη",
+ "onb.keys": "Alt+→ επόμενο · Alt+← πίσω · Esc παράλειψη",
  "onb.later": "Όλα μπορούν να αλλάξουν αργότερα στις Ρυθμίσεις → Εμφάνιση.",
  "onb.primary": "Κύριο",
  "onb.make_primary": "Ορισμός ως κύριο",

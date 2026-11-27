@@ -28,5 +28,15 @@
  "query.why.curtain": "fachadas-cortina são alteradas em suas próprias propriedades",
  "query.why.opening_type": "o tipo de uma abertura segue o seu tamanho: “-> largura=… altura=…”",
  "query.why.slab_thickness": "a espessura da laje é definida pelo tipo: “-> tipo=…”",
- "query.why.wall_thickness": "a espessura da parede é definida pelo tipo: “-> tipo=…”"
+ "query.why.wall_thickness": "a espessura da parede é definida pelo tipo: “-> tipo=…”",
+ "query.pal.filter": "Filtrar",
+ "query.pal.change": "Alterar",
+ "query.pal.one_undo": "um único passo de anulação",
+ "query.pal.select": "Selecionar",
+ "query.pal.levels_short": "nív.",
+ "query.pal.query": "Consulta",
+ "query.pal.plan": "Planta",
+ "query.pal.level": "nível",
+ "query.pal.view": "vista",
+ "query.pal.save_filter": "Guardar consulta como filtro do projeto"
 }

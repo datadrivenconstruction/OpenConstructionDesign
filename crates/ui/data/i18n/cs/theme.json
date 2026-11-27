@@ -211,7 +211,7 @@
  "onb.back": "Zpět",
  "onb.back_keys": "Alt+←",
  "onb.start": "Začít",
- "onb.keys": "Enter — další, Alt+← — zpět, Esc — přeskočit",
+ "onb.keys": "Alt+→ další · Alt+← zpět · Esc přeskočit",
  "onb.later": "Vše lze později změnit v Nastavení → Vzhled.",
  "onb.primary": "Hlavní",
  "onb.make_primary": "Nastavit jako hlavní",

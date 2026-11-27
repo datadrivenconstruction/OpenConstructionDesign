@@ -63,5 +63,7 @@
  "browser.plan": "Tlocrt",
  "browser.open": "Otvori",
  "browser.flip": "Preokreni smjer pogleda",
- "browser.delete": "Obriši"
+ "browser.delete": "Obriši",
+ "empty.families.title": "Još nema korištenih obitelji",
+ "empty.families.hint": "Obitelji se ovdje pojavljuju kako postavljate zidove, podove, elemente i komponente."
 }

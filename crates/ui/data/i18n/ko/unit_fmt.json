@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "필터 저장됨: {arg}",
  "unit_fmt.q.not_changed": "변경되지 않음: {e}",
  "unit_fmt.q.name.curtain": "커튼월",
- "unit_fmt.q.name.room": "룸"
+ "unit_fmt.q.name.room": "룸",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

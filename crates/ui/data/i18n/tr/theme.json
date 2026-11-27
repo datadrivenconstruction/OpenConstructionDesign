@@ -211,7 +211,7 @@
  "onb.back": "Geri",
  "onb.back_keys": "Alt+←",
  "onb.start": "Başla",
- "onb.keys": "Enter — ileri, Alt+← — geri, Esc — atla",
+ "onb.keys": "Alt+→ sonraki · Alt+← geri · Esc atla",
  "onb.later": "Her şey daha sonra Ayarlar → Görünüm bölümünden değiştirilebilir.",
  "onb.primary": "Ana",
  "onb.make_primary": "Ana yap",

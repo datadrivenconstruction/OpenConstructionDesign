@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Åpen kildekode-lisenser",
  "cmd.help.licenses.desc": "Viser åpen kildekode-bibliotekene som brukes i dette bygget, med lisensene deres.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versjon",
  "about.build": "Bygg",
  "about.schema": "Modellskjema",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Biblioteker brukt i dette bygget og deres lisenser",
  "about.licenses.open": "Vis",
  "about.licenses.title": "Åpen kildekode-lisenser",
- "about.licenses.note": "DDC Editor inneholder bibliotekene nedenfor. Hvert av dem er fortsatt underlagt sin egen lisens og copyright-merknad. Fullstendige lisenstekster: THIRD_PARTY_LICENSES.txt ved siden av programmet.",
+ "about.licenses.note": "OpenConstructionDesign inneholder bibliotekene nedenfor. Hvert av dem er fortsatt underlagt sin egen lisens og copyright-merknad. Fullstendige lisenstekster: THIRD_PARTY_LICENSES.txt ved siden av programmet.",
  "about.licenses.full": "Fullstendige lisenstekster",
  "about.licenses.list": "Komponentliste",
  "about.licenses.close": "Lukk",

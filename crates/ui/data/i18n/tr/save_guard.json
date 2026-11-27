@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Hiçbir şey kaydedilmedi: model boş ve dosya zaten içerik barındırıyor. Dosya değiştirilmedi. Başka bir adla yazmak için Farklı kaydet kullanın.",
  "save_guard.refuse.body": "Hiçbir şey kaydedilmedi: model boş ve {name} zaten içerik barındırıyor. Dosya değiştirilmedi.",
- "save_guard.refuse.foreign": "Bu bir DDC Editor dosyası değil, bu yüzden değiştirilemez. Başka bir adla yazmak için Farklı kaydet kullanın.",
+ "save_guard.refuse.foreign": "Bu bir OpenConstructionDesign dosyası değil, bu yüzden değiştirilemez. Başka bir adla yazmak için Farklı kaydet kullanın.",
  "save_guard.refuse.ask": "{name} değiştirilsin mi? İçinde {what} var. Önce yanındaki _archive klasörüne taşınır, ardından boş model yazılır.",
  "save_guard.refuse.holds_db": "{n} eleman ve içerik satırı",
  "save_guard.refuse.holds_ifc": "Ürünlü IFC",

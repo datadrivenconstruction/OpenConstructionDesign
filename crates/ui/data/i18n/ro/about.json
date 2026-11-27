@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Licențe open-source",
  "cmd.help.licenses.desc": "Listează bibliotecile open-source folosite de această versiune, cu licențele lor.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versiune",
  "about.build": "Compilare",
  "about.schema": "Schema modelului",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Biblioteci folosite în această versiune și licențele lor",
  "about.licenses.open": "Vezi",
  "about.licenses.title": "Licențe open-source",
- "about.licenses.note": "DDC Editor include bibliotecile de mai jos. Fiecare rămâne sub propria licență și notă de drepturi de autor. Textele complete ale licențelor: THIRD_PARTY_LICENSES.txt lângă aplicație.",
+ "about.licenses.note": "OpenConstructionDesign include bibliotecile de mai jos. Fiecare rămâne sub propria licență și notă de drepturi de autor. Textele complete ale licențelor: THIRD_PARTY_LICENSES.txt lângă aplicație.",
  "about.licenses.full": "Textele complete ale licențelor",
  "about.licenses.list": "Lista componentelor",
  "about.licenses.close": "Închide",

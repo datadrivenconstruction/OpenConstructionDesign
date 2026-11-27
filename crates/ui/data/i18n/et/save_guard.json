@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Midagi ei salvestatud: mudel on tühi ja fail sisaldab juba sisu. Fail on puutumata. Kasuta Salvesta kui, et kirjutada teise nime alla.",
  "save_guard.refuse.body": "Midagi ei salvestatud: mudel on tühi ja {name} sisaldab juba sisu. Fail on puutumata.",
- "save_guard.refuse.foreign": "See pole DDC Editori fail, seega seda ei saa asendada. Kasuta Salvesta kui, et kirjutada teise nime alla.",
+ "save_guard.refuse.foreign": "See pole OpenConstructionDesigni fail, seega seda ei saa asendada. Kasuta Salvesta kui, et kirjutada teise nime alla.",
  "save_guard.refuse.ask": "Asendada {name}? See sisaldab {what}. See viiakse enne kaustale _archive kõrvale ja seejärel kirjutatakse tühi mudel.",
  "save_guard.refuse.holds_db": "{n} elementi ja sisurida",
  "save_guard.refuse.holds_ifc": "IFC toodetega",

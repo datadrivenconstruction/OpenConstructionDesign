@@ -63,5 +63,7 @@
  "browser.plan": "योजना",
  "browser.open": "खोलें",
  "browser.flip": "देखने की दिशा पलटें",
- "browser.delete": "हटाएँ"
+ "browser.delete": "हटाएँ",
+ "empty.families.title": "अभी कोई फ़ैमिली उपयोग में नहीं है",
+ "empty.families.hint": "दीवारें, फ़र्श, सदस्य और घटक रखते ही फ़ैमिलियाँ यहाँ दिखेंगी।"
 }

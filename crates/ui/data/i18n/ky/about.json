@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Ачык булактуу лицензиялар",
  "cmd.help.licenses.desc": "Бул курам колдонгон ачык булактуу китепканаларды жана алардын лицензияларын көрсөтөт.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Версия",
  "about.build": "Курама",
  "about.schema": "Модель схемасы",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Бул курамда колдонулган китепканалар жана алардын лицензиялары",
  "about.licenses.open": "Көрүү",
  "about.licenses.title": "Ачык булактуу лицензиялар",
- "about.licenses.note": "DDC Editor төмөндөгү китепканаларды камтыйт. Ар бири өзүнүн лицензиясы жана автордук укук эскертмеси менен калат. Лицензиялардын толук тексттери: тиркеменин жанындагы THIRD_PARTY_LICENSES.txt.",
+ "about.licenses.note": "OpenConstructionDesign төмөндөгү китепканаларды камтыйт. Ар бири өзүнүн лицензиясы жана автордук укук эскертмеси менен калат. Лицензиялардын толук тексттери: тиркеменин жанындагы THIRD_PARTY_LICENSES.txt.",
  "about.licenses.full": "Лицензиялардын толук тексттери",
  "about.licenses.list": "Компоненттердин тизмеси",
  "about.licenses.close": "Жабуу",

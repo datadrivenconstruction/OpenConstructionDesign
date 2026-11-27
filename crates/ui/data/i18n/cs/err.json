@@ -63,5 +63,7 @@
  "browser.plan": "Půdorys",
  "browser.open": "Otevřít",
  "browser.flip": "Otočit směr pohledu",
- "browser.delete": "Smazat"
+ "browser.delete": "Smazat",
+ "empty.families.title": "Zatím nejsou používány žádné rodiny",
+ "empty.families.hint": "Rodiny se zde objeví, jakmile umístíte stěny, podlahy, prvky a komponenty."
 }

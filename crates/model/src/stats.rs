@@ -61,6 +61,82 @@ pub struct LevelTotals {
     pub name: String,
     pub elevation: f64,
     pub totals: Totals,
+    /// What the level holds, by category of [`SUMMARY_CATEGORIES`]; only categories with elements.
+    pub categories: Vec<CategoryTotal>,
+}
+
+/// Elements of one category and their sums. Lengths in m, areas in m², volumes in m³, mass in kg
+/// (volume × the density of a known material; 0 where none is known).
+#[derive(Clone, Debug, Default, PartialEq)]
+pub struct CategoryTotal {
+    pub key: &'static str,
+    pub count: usize,
+    pub length: f64,
+    pub area: f64,
+    pub volume: f64,
+    pub mass: f64,
+}
+
+/// Categories of the model summary in display order: key and the element table counted for it.
+/// Parametric solids join the category of their IFC class ([`SOLID_CATEGORIES`]).
+pub const SUMMARY_CATEGORIES: &[(&str, &str)] = &[
+    ("wall", "wall"),
+    ("curtain_wall", "curtain_wall"),
+    ("door", "opening"),
+    ("window", "opening"),
+    ("opening", "opening"),
+    ("slab", "slab"),
+    ("roof", "roof"),
+    ("ceiling", "ceiling"),
+    ("room", "room"),
+    ("column", "col"),
+    ("beam", "beam"),
+    ("brace", "brace"),
+    ("truss", "truss"),
+    ("beam_system", "beam_system"),
+    ("gridshell", "gridshell"),
+    ("member", "solid"),
+    ("plate", "solid"),
+    ("footing", "iso_footing"),
+    ("strip_footing", "strip_footing"),
+    ("raft", "raft"),
+    ("stair", "stair"),
+    ("ramp", "ramp"),
+    ("railing", "railing"),
+    ("component", "comp"),
+    ("mep_run", "mep_run"),
+    ("mass", "mass"),
+    ("mesh", "mesh"),
+    ("solid", "solid"),
+];
+
+/// IFC class of a parametric solid -> summary category; any other class counts as "solid".
+pub const SOLID_CATEGORIES: &[(&str, &str)] = &[
+    ("IfcWall", "wall"),
+    ("IfcSlab", "slab"),
+    ("IfcRoof", "roof"),
+    ("IfcColumn", "column"),
+    ("IfcBeam", "beam"),
+    ("IfcMember", "member"),
+    ("IfcPlate", "plate"),
+    ("IfcFooting", "footing"),
+    ("IfcStair", "stair"),
+    ("IfcRamp", "ramp"),
+    ("IfcRailing", "railing"),
+];
+
+fn solid_category(class: Option<&str>) -> &'static str {
+    class.and_then(|c| SOLID_CATEGORIES.iter().find(|r| r.0 == c)).map_or("solid", |r| r.1)
+}
+
+/// Length of a solid along its own axis: an extrusion's depth, 0 for other forms.
+fn solid_length(def: &str) -> f64 {
+    let v: serde_json::Value = serde_json::from_str(def).unwrap_or_default();
+    let n = |k: &str| v.get(k).and_then(serde_json::Value::as_f64);
+    match (v.get("kind").and_then(|k| k.as_str()), n("start"), n("end")) {
+        (Some("extrusion"), Some(a), Some(b)) => (b - a).abs(),
+        _ => 0.0,
+    }
 }
 
 impl Model {
@@ -140,14 +216,105 @@ impl Model {
             for id in cws {
                 t.curtain_panel_area += self.curtain_layout(id)?.quantities().panel_area;
             }
+            let categories = self.category_totals(level, option, &t)?;
             out.push(LevelTotals {
                 level,
                 name,
                 elevation,
                 totals: t,
+                categories,
             });
         }
         Ok(out)
+    }
+
+    /// Categories of level `level` that have elements, in [`SUMMARY_CATEGORIES`] order. Walls,
+    /// slabs, rooms, openings and curtain walls take the counts and sums of `t`.
+    fn category_totals(
+        &self,
+        level: i64,
+        option: Option<i64>,
+        t: &Totals,
+    ) -> Result<Vec<CategoryTotal>, Error> {
+        let db = &self.db;
+        let mut by: Vec<CategoryTotal> = SUMMARY_CATEGORIES
+            .iter()
+            .map(|(k, _)| CategoryTotal { key: k, ..Default::default() })
+            .collect();
+        let mut add = |key: &str, n: usize, len: f64, area: f64, vol: f64, material: &str| {
+            if let Some(c) = by.iter_mut().find(|c| c.key == key) {
+                c.count += n;
+                c.length += len;
+                c.area += area;
+                c.volume += vol;
+                c.mass += vol * crate::struct_ext::density(material).unwrap_or(0.0);
+            }
+        };
+        let openings: i64 = db.query_row(
+            &format!(
+                "SELECT count(*) FROM opening o JOIN wall w ON w.id=o.wall WHERE w.level=?1 \
+                 AND NOT {} AND NOT {}",
+                hidden_sql("'wall'", "w.id"),
+                hidden_sql("'opening'", "o.id")
+            ),
+            params![level, option],
+            |r| r.get(0),
+        )?;
+        add("wall", t.walls, 0.0, t.wall_plan_area, t.wall_volume, "");
+        add("curtain_wall", t.curtains, 0.0, t.curtain_panel_area, 0.0, "");
+        add("door", t.doors, 0.0, 0.0, 0.0, "");
+        add("window", t.windows, 0.0, 0.0, 0.0, "");
+        add("opening", (openings as usize).saturating_sub(t.doors + t.windows), 0.0, 0.0, 0.0, "");
+        add("slab", t.slabs, 0.0, t.slab_area, t.slab_volume, "");
+        add("room", t.rooms, 0.0, t.room_area, t.room_volume, "");
+        // columns and beams: quantities from the structural rebuild
+        for (key, table, kind) in [("column", "col", "column"), ("beam", "beam", "beam")] {
+            let mut st = db.prepare(&format!(
+                "SELECT coalesce(q.length,0), coalesce(q.volume,0), coalesce(t.material,'') \
+                 FROM \"{table}\" e LEFT JOIN member_type t ON t.id=e.mtype \
+                 LEFT JOIN member_qty q ON q.kind='{kind}' AND q.ref=e.id WHERE e.level=?1"
+            ))?;
+            let rows = st.query_map([level], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)))?;
+            for r in rows {
+                let (l, v, m): (f64, f64, String) = r?;
+                add(key, 1, l, 0.0, v, &m);
+            }
+        }
+        // assemblies (braces, trusses, joists, footings) and the rest: elements from their
+        // table, sums from their structural parts where the rebuild made any
+        for &(key, table) in SUMMARY_CATEGORIES {
+            if matches!(table, "wall" | "curtain_wall" | "opening" | "slab" | "room" | "col" | "beam" | "solid") {
+                continue;
+            }
+            let n: i64 = db
+                .query_row(&format!("SELECT count(*) FROM \"{table}\" WHERE level=?1"), [level], |r| r.get(0))
+                .unwrap_or(0);
+            if n == 0 {
+                continue;
+            }
+            add(key, n as usize, 0.0, 0.0, 0.0, "");
+            let mut st = db.prepare(&format!(
+                "SELECT q.length, q.volume, q.material FROM struct_qty q JOIN \"{table}\" e \
+                 ON e.id=q.ref WHERE q.kind=?1 AND e.level=?2"
+            ))?;
+            let rows = st.query_map(params![table, level], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?)))?;
+            for r in rows {
+                let (l, v, m): (f64, f64, String) = r?;
+                add(key, 0, l, 0.0, v, &m);
+            }
+        }
+        // parametric solids (script members, plates, free forms) by their IFC class
+        let mut st = db.prepare(
+            "SELECT s.ifc_class, s.def, s.material, coalesce(q.volume,0) FROM solid s \
+             LEFT JOIN solid_qty q ON q.solid=s.id WHERE s.void=0 AND s.level=?1",
+        )?;
+        let rows = st.query_map([level], |r| Ok((r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?)))?;
+        for r in rows {
+            let (class, def, m, v): (Option<String>, String, String, f64) = r?;
+            add(solid_category(class.as_deref()), 1, solid_length(&def), 0.0, v, &m);
+        }
+        by.retain(|c| c.count > 0);
+        Ok(by)
     }
 
     /// Totals for the whole model: the sum over levels.
@@ -236,6 +403,42 @@ mod tests {
         assert!((all.slab_volume - (a.slab_volume + b.slab_volume)).abs() < 1e-12);
         assert!((all.wall_volume - (a.wall_volume + b.wall_volume)).abs() < 1e-12);
         assert!(all.curtain_panel_area > 0.0);
+    }
+
+    /// The summary lists what the model holds: an empty level lists nothing, a model of script
+    /// members lists members with their length and mass and no walls.
+    #[test]
+    fn categories_list_only_what_the_level_holds() {
+        use crate::{Model, SolidForm, SolidFrame, SolidIfc, SolidSection, SolidSpec};
+        let mut m = Model::open(":memory:").unwrap();
+        let lv = m.add_level("L1", 0.0).unwrap();
+        assert_eq!(m.level_totals().unwrap()[0].categories, vec![]);
+        let sq = vec![
+            ddc_geom::v2(0.0, 0.0),
+            ddc_geom::v2(0.1, 0.0),
+            ddc_geom::v2(0.1, 0.1),
+            ddc_geom::v2(0.0, 0.1),
+        ];
+        for (class, len) in [(Some("IfcMember"), 4.0), (Some("IfcMember"), 2.0), (None, 1.0)] {
+            m.add_solid(&SolidSpec {
+                level: lv,
+                name: "bar".into(),
+                void: false,
+                material: "Steel S355".into(),
+                ifc: class.map(|c| SolidIfc { class: c.into(), predefined: "MEMBER".into() }),
+                frame: SolidFrame::default(),
+                form: SolidForm::Extrusion { profile: SolidSection::polygon(sq.clone()), start: 0.0, end: len },
+            })
+            .unwrap();
+        }
+        let c = &m.level_totals().unwrap()[0].categories;
+        let keys: Vec<&str> = c.iter().map(|c| c.key).collect();
+        assert_eq!(keys, ["member", "solid"]);
+        let mem = &c[0];
+        assert_eq!(mem.count, 2);
+        assert!((mem.length - 6.0).abs() < 1e-9, "{}", mem.length);
+        assert!((mem.volume - 0.06).abs() < 1e-6, "{}", mem.volume);
+        assert!((mem.mass - 0.06 * 7850.0).abs() < 1e-2, "{}", mem.mass);
     }
 
     #[test]

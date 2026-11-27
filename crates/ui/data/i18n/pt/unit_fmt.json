@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filtro salvo: {arg}",
  "unit_fmt.q.not_changed": "não alterado: {e}",
  "unit_fmt.q.name.curtain": "Parede-cortina",
- "unit_fmt.q.name.room": "Ambiente"
+ "unit_fmt.q.name.room": "Ambiente",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

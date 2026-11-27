@@ -63,5 +63,7 @@
  "browser.plan": "Pohjapiirros",
  "browser.open": "Avaa",
  "browser.flip": "Käännä katselusuunta",
- "browser.delete": "Poista"
+ "browser.delete": "Poista",
+ "empty.families.title": "Ei vielä käytössä olevia perheitä",
+ "empty.families.hint": "Perheet näkyvät tässä, kun sijoitat seiniä, lattioita, sauvoja ja komponentteja."
 }

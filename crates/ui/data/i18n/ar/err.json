@@ -63,5 +63,7 @@
  "browser.plan": "مسقط",
  "browser.open": "فتح",
  "browser.flip": "عكس اتجاه العرض",
- "browser.delete": "حذف"
+ "browser.delete": "حذف",
+ "empty.families.title": "لا توجد عائلات قيد الاستخدام بعد",
+ "empty.families.hint": "تظهر العائلات هنا عند وضع الجدران والأرضيات والعناصر والمكونات."
 }

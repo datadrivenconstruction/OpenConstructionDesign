@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "ফিল্টার সংরক্ষিত: {arg}",
  "unit_fmt.q.not_changed": "পরিবর্তন হয়নি: {e}",
  "unit_fmt.q.name.curtain": "পর্দা-দেয়াল",
- "unit_fmt.q.name.room": "কক্ষ"
+ "unit_fmt.q.name.room": "কক্ষ",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

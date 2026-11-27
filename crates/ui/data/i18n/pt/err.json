@@ -63,5 +63,7 @@
  "browser.plan": "Planta",
  "browser.open": "Abrir",
  "browser.flip": "Inverter sentido da vista",
- "browser.delete": "Excluir"
+ "browser.delete": "Excluir",
+ "empty.families.title": "Ainda não há famílias em uso",
+ "empty.families.hint": "As famílias aparecem aqui à medida que coloca paredes, pavimentos, elementos e componentes."
 }

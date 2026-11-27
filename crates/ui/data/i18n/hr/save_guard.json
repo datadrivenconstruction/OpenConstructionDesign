@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Ništa nije spremljeno: model je prazan, a datoteka već sadrži sadržaj. Datoteka je netaknuta. Upotrijebite Spremi kao za pisanje pod drugim nazivom.",
  "save_guard.refuse.body": "Ništa nije spremljeno: model je prazan, a {name} već sadrži sadržaj. Datoteka je netaknuta.",
- "save_guard.refuse.foreign": "Ovo nije datoteka DDC Editora, pa se ne može zamijeniti. Upotrijebite Spremi kao za pisanje pod drugim nazivom.",
+ "save_guard.refuse.foreign": "Ovo nije datoteka OpenConstructionDesigna, pa se ne može zamijeniti. Upotrijebite Spremi kao za pisanje pod drugim nazivom.",
  "save_guard.refuse.ask": "Zamijeniti {name}? Sadrži {what}. Najprije se premješta u mapu _archive pored nje, zatim se zapisuje prazan model.",
  "save_guard.refuse.holds_db": "{n} elemenata i redaka sadržaja",
  "save_guard.refuse.holds_ifc": "IFC s proizvodima",

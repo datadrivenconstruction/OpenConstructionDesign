@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Inget sparades: modellen är tom, och filen innehåller redan innehåll. Filen är orörd. Använd Spara som för att skriva till ett annat namn.",
  "save_guard.refuse.body": "Inget sparades: modellen är tom, och {name} innehåller redan innehåll. Filen är orörd.",
- "save_guard.refuse.foreign": "Det här är ingen DDC Editor-fil, så den kan inte ersättas. Använd Spara som för att skriva till ett annat namn.",
+ "save_guard.refuse.foreign": "Det här är ingen OpenConstructionDesign-fil, så den kan inte ersättas. Använd Spara som för att skriva till ett annat namn.",
  "save_guard.refuse.ask": "Ersätta {name}? Den innehåller {what}. Den flyttas först till mappen _archive bredvid, och sedan skrivs den tomma modellen.",
  "save_guard.refuse.holds_db": "{n} element och innehållsrader",
  "save_guard.refuse.holds_ifc": "IFC med produkter",

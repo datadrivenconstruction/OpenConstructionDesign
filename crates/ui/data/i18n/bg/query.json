@@ -28,5 +28,15 @@
  "query.why.curtain": "фасадните стени се променят в собствените си свойства",
  "query.why.opening_type": "типът на отвора следва размера му: „-> width=… height=…“",
  "query.why.slab_thickness": "дебелината на плочата се задава от типа: „-> type=…“",
- "query.why.wall_thickness": "дебелината на стената се задава от типа: „-> type=…“"
+ "query.why.wall_thickness": "дебелината на стената се задава от типа: „-> type=…“",
+ "query.pal.filter": "Филтър",
+ "query.pal.change": "Промяна",
+ "query.pal.one_undo": "една стъпка за отмяна",
+ "query.pal.select": "Избор",
+ "query.pal.levels_short": "ет.",
+ "query.pal.query": "Заявка",
+ "query.pal.plan": "План",
+ "query.pal.level": "етаж",
+ "query.pal.view": "изглед",
+ "query.pal.save_filter": "Запази заявката като филтър на проекта"
 }

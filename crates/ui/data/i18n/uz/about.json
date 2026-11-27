@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Ochiq kodli litsenziyalar",
  "cmd.help.licenses.desc": "Ushbu yig'mada ishlatilgan ochiq kodli kutubxonalar va ularning litsenziyalarini ko'rsatadi.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versiya",
  "about.build": "Yig'ma",
  "about.schema": "Model sxemasi",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Ushbu yig'madagi kutubxonalar va ularning litsenziyalari",
  "about.licenses.open": "Ko'rish",
  "about.licenses.title": "Ochiq kodli litsenziyalar",
- "about.licenses.note": "DDC Editor quyidagi kutubxonalarni o'z ichiga oladi. Har biri o'z litsenziyasi va mualliflik huquqi bildirishnomasi bilan qoladi. To'liq litsenziya matnlari: ilova yonidagi THIRD_PARTY_LICENSES.txt faylida.",
+ "about.licenses.note": "OpenConstructionDesign quyidagi kutubxonalarni o'z ichiga oladi. Har biri o'z litsenziyasi va mualliflik huquqi bildirishnomasi bilan qoladi. To'liq litsenziya matnlari: ilova yonidagi THIRD_PARTY_LICENSES.txt faylida.",
  "about.licenses.full": "To'liq litsenziya matnlari",
  "about.licenses.list": "Komponentlar ro'yxati",
  "about.licenses.close": "Yopish",

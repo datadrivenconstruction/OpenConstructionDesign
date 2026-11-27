@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "филтърът е запазен: {arg}",
  "unit_fmt.q.not_changed": "не е променено: {e}",
  "unit_fmt.q.name.curtain": "Фасадна стена",
- "unit_fmt.q.name.room": "Помещение"
+ "unit_fmt.q.name.room": "Помещение",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

@@ -211,7 +211,7 @@
  "onb.back": "Zurück",
  "onb.back_keys": "Alt+←",
  "onb.start": "Starten",
- "onb.keys": "Enter — weiter, Alt+← — zurück, Esc — überspringen",
+ "onb.keys": "Alt+→ weiter · Alt+← zurück · Esc überspringen",
  "onb.later": "Alles lässt sich später unter Einstellungen → Darstellung ändern.",
  "onb.primary": "Hauptfokus",
  "onb.make_primary": "Als Hauptfokus festlegen",

@@ -63,5 +63,7 @@
  "browser.plan": "平面",
  "browser.open": "打开",
  "browser.flip": "翻转视图方向",
- "browser.delete": "删除"
+ "browser.delete": "删除",
+ "empty.families.title": "尚未使用任何族",
+ "empty.families.hint": "放置墙、楼板、构件和组件后，族会显示在这里。"
 }

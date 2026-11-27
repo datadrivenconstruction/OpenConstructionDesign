@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "чыпка сакталды: {arg}",
  "unit_fmt.q.not_changed": "өзгөргөн жок: {e}",
  "unit_fmt.q.name.curtain": "Шаар дубалы",
- "unit_fmt.q.name.room": "Бөлмө"
+ "unit_fmt.q.name.room": "Бөлмө",
+ "unit_fmt.unit.m": "м",
+ "unit_fmt.unit.kg": "кг",
+ "unit_fmt.unit.t": "т"
 }

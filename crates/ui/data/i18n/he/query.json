@@ -28,5 +28,15 @@
  "query.why.curtain": "קירות מסך משתנים במאפיינים שלהם",
  "query.why.opening_type": "הטיפוס של פתח נגזר מגודלו: “-> width=… height=…”",
  "query.why.slab_thickness": "עובי הרצפה נקבע על ידי הטיפוס: “-> type=…”",
- "query.why.wall_thickness": "עובי הקיר נקבע על ידי הטיפוס: “-> type=…”"
+ "query.why.wall_thickness": "עובי הקיר נקבע על ידי הטיפוס: “-> type=…”",
+ "query.pal.filter": "סינון",
+ "query.pal.change": "שינוי",
+ "query.pal.one_undo": "שלב ביטול אחד",
+ "query.pal.select": "בחירה",
+ "query.pal.levels_short": "מפלס",
+ "query.pal.query": "שאילתה",
+ "query.pal.plan": "תוכנית",
+ "query.pal.level": "מפלס",
+ "query.pal.view": "תצוגה",
+ "query.pal.save_filter": "שמירת השאילתה כמסנן פרויקט"
 }

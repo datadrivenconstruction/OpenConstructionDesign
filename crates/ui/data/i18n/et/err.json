@@ -63,5 +63,7 @@
  "browser.plan": "Plaan",
  "browser.open": "Ava",
  "browser.flip": "Pööra vaatesuunda",
- "browser.delete": "Kustuta"
+ "browser.delete": "Kustuta",
+ "empty.families.title": "Kasutuses pole veel ühtegi perekonda",
+ "empty.families.hint": "Perekonnad ilmuvad siia, kui paigutad seinu, põrandaid, elemente ja komponente."
 }

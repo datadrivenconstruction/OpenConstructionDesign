@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "오픈 소스 라이선스",
  "cmd.help.licenses.desc": "이 빌드가 사용하는 오픈 소스 라이브러리와 라이선스 목록을 표시합니다.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "버전",
  "about.build": "빌드",
  "about.schema": "모델 스키마",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "이 빌드에서 사용하는 라이브러리와 해당 라이선스",
  "about.licenses.open": "보기",
  "about.licenses.title": "오픈 소스 라이선스",
- "about.licenses.note": "DDC Editor에는 아래 라이브러리가 포함되어 있습니다. 각 라이브러리는 자체 라이선스와 저작권 고지를 따릅니다. 전체 라이선스 본문: 애플리케이션 옆의 THIRD_PARTY_LICENSES.txt",
+ "about.licenses.note": "OpenConstructionDesign에는 아래 라이브러리가 포함되어 있습니다. 각 라이브러리는 자체 라이선스와 저작권 고지를 따릅니다. 전체 라이선스 본문: 애플리케이션 옆의 THIRD_PARTY_LICENSES.txt",
  "about.licenses.full": "전체 라이선스 본문",
  "about.licenses.list": "구성 요소 목록",
  "about.licenses.close": "닫기",

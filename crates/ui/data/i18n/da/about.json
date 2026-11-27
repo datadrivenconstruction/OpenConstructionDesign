@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Open source-licenser",
  "cmd.help.licenses.desc": "Viser de open source-biblioteker, denne build bruger, med deres licenser.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Version",
  "about.build": "Build",
  "about.schema": "Modelskema",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Biblioteker brugt i denne build og deres licenser",
  "about.licenses.open": "Vis",
  "about.licenses.title": "Open source-licenser",
- "about.licenses.note": "DDC Editor indeholder bibliotekerne nedenfor. Hver forbliver under sin egen licens og copyrightmeddelelse. Fulde licenstekster: THIRD_PARTY_LICENSES.txt ved siden af programmet.",
+ "about.licenses.note": "OpenConstructionDesign indeholder bibliotekerne nedenfor. Hver forbliver under sin egen licens og copyrightmeddelelse. Fulde licenstekster: THIRD_PARTY_LICENSES.txt ved siden af programmet.",
  "about.licenses.full": "Fulde licenstekster",
  "about.licenses.list": "Komponentliste",
  "about.licenses.close": "Luk",

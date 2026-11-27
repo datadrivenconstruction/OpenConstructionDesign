@@ -63,5 +63,7 @@
  "browser.plan": "Plan",
  "browser.open": "Aç",
  "browser.flip": "Görünüm yönünü çevir",
- "browser.delete": "Sil"
+ "browser.delete": "Sil",
+ "empty.families.title": "Henüz kullanılan aile yok",
+ "empty.families.hint": "Duvar, döşeme, eleman ve bileşen yerleştirdikçe aileler burada görünür."
 }

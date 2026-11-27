@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Нээлттэй эхийн лиценз",
  "cmd.help.licenses.desc": "Энэ хувилбарт ашигласан нээлттэй эхийн сангууд ба тэдгээрийн лиценз.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Хувилбар",
  "about.build": "Угсралт",
  "about.schema": "Загварын схем",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Энэ хувилбарт ашигласан сангууд ба тэдгээрийн лиценз",
  "about.licenses.open": "Харах",
  "about.licenses.title": "Нээлттэй эхийн лиценз",
- "about.licenses.note": "DDC Editor доорх сангуудыг агуулна. Тус бүр өөрийн лиценз ба зохиогчийн мэдэгдэлтэй хэвээр байна. Лицензийн бүтэн текст: программын хажуугийн THIRD_PARTY_LICENSES.txt.",
+ "about.licenses.note": "OpenConstructionDesign доорх сангуудыг агуулна. Тус бүр өөрийн лиценз ба зохиогчийн мэдэгдэлтэй хэвээр байна. Лицензийн бүтэн текст: программын хажуугийн THIRD_PARTY_LICENSES.txt.",
  "about.licenses.full": "Лицензийн бүтэн текст",
  "about.licenses.list": "Бүрэлдэхүүний жагсаалт",
  "about.licenses.close": "Хаах",

@@ -211,7 +211,7 @@
  "onb.back": "Kembali",
  "onb.back_keys": "Alt+←",
  "onb.start": "Mulai",
- "onb.keys": "Enter — berikutnya, Alt+← — kembali, Esc — lewati",
+ "onb.keys": "Alt+→ berikutnya · Alt+← kembali · Esc lewati",
  "onb.later": "Semua dapat diubah nanti di Pengaturan → Tampilan.",
  "onb.primary": "Utama",
  "onb.make_primary": "Jadikan utama",

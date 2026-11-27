@@ -211,7 +211,7 @@
  "onb.back": "返回",
  "onb.back_keys": "Alt+←",
  "onb.start": "开始",
- "onb.keys": "Enter — 下一步，Alt+← — 返回，Esc — 跳过",
+ "onb.keys": "Alt+→ 下一步 · Alt+← 返回 · Esc 跳过",
  "onb.later": "之后可在“设置 → 外观”中更改全部内容。",
  "onb.primary": "主要",
  "onb.make_primary": "设为主要",

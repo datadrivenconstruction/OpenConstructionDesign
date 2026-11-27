@@ -211,7 +211,7 @@
  "onb.back": "Bumalik",
  "onb.back_keys": "Alt+←",
  "onb.start": "Simulan",
- "onb.keys": "Enter — susunod, Alt+← — bumalik, Esc — laktawan",
+ "onb.keys": "Alt+→ susunod · Alt+← bumalik · Esc laktawan",
  "onb.later": "Maaaring baguhin ang lahat sa Settings → Appearance.",
  "onb.primary": "Pangunahin",
  "onb.make_primary": "Gawing pangunahin",

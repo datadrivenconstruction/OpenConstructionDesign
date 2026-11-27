@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "דבר לא נשמר: המודל ריק, והקובץ כבר מכיל תוכן. הקובץ לא נגע. השתמש ב-שמור בשם כדי לכתוב לשם אחר.",
  "save_guard.refuse.body": "דבר לא נשמר: המודל ריק, ו-{name} כבר מכיל תוכן. הקובץ לא נגע.",
- "save_guard.refuse.foreign": "זה לא קובץ DDC Editor, ולכן אי אפשר להחליף אותו. השתמש ב-שמור בשם כדי לכתוב לשם אחר.",
+ "save_guard.refuse.foreign": "זה לא קובץ OpenConstructionDesign, ולכן אי אפשר להחליף אותו. השתמש ב-שמור בשם כדי לכתוב לשם אחר.",
  "save_guard.refuse.ask": "להחליף את {name}? הוא מכיל {what}. הוא יועבר קודם לתיקיית _archive שלידו, ואז ייכתב המודל הריק.",
  "save_guard.refuse.holds_db": "{n} אלמנטים ושורות תוכן",
  "save_guard.refuse.holds_ifc": "IFC עם מוצרים",

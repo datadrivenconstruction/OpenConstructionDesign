@@ -142,7 +142,7 @@ const API: [&str; 19] = [
 ];
 const API_NEW: [&str; 3] = ["RichText::new", "Button::new", "Window::new"];
 /// Brand and key names that are the same in every language.
-const ALLOWED_LITERALS: [&str; 3] = ["DDC Editor", "OpenConstructionDesign", "Esc"];
+const ALLOWED_LITERALS: [&str; 2] = ["OpenConstructionDesign", "Esc"];
 
 /// Text literals given straight to egui widgets: (line, literal).
 fn widget_literals(src: &str) -> Vec<(usize, String)> {

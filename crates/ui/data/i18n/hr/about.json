@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Licencije otvorenog koda",
  "cmd.help.licenses.desc": "Prikazuje biblioteke otvorenog koda korištene u ovom buildu s njihovim licencijama.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Verzija",
  "about.build": "Build",
  "about.schema": "Shema modela",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Biblioteke korištene u ovom buildu i njihove licencije",
  "about.licenses.open": "Prikaži",
  "about.licenses.title": "Licencije otvorenog koda",
- "about.licenses.note": "DDC Editor uključuje biblioteke u nastavku. Svaka ostaje pod vlastitom licencijom i napomenom o autorskim pravima. Cijeli tekstovi licencija: THIRD_PARTY_LICENSES.txt uz aplikaciju.",
+ "about.licenses.note": "OpenConstructionDesign uključuje biblioteke u nastavku. Svaka ostaje pod vlastitom licencijom i napomenom o autorskim pravima. Cijeli tekstovi licencija: THIRD_PARTY_LICENSES.txt uz aplikaciju.",
  "about.licenses.full": "Cijeli tekstovi licencija",
  "about.licenses.list": "Popis komponenti",
  "about.licenses.close": "Zatvori",

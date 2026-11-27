@@ -63,5 +63,7 @@
  "browser.plan": "پلان",
  "browser.open": "کھولیں",
  "browser.flip": "ویو کی سمت پلٹیں",
- "browser.delete": "حذف کریں"
+ "browser.delete": "حذف کریں",
+ "empty.families.title": "ابھی تک کوئی فیملی استعمال میں نہیں",
+ "empty.families.hint": "دیواریں، فرش، ارکان اور اجزاء رکھنے پر فیملیاں یہاں ظاہر ہوں گی۔"
 }

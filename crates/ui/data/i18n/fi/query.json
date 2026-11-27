@@ -28,5 +28,15 @@
  "query.why.curtain": "verhoseinät muutetaan niiden omista ominaisuuksista",
  "query.why.opening_type": "aukon tyyppi seuraa sen kokoa: \"-> width=… height=…\"",
  "query.why.slab_thickness": "laatan paksuus asetetaan tyypin mukaan: \"-> type=…\"",
- "query.why.wall_thickness": "seinän paksuus asetetaan tyypin mukaan: \"-> type=…\""
+ "query.why.wall_thickness": "seinän paksuus asetetaan tyypin mukaan: \"-> type=…\"",
+ "query.pal.filter": "Suodata",
+ "query.pal.change": "Muuta",
+ "query.pal.one_undo": "yksi kumoamisvaihe",
+ "query.pal.select": "Valitse",
+ "query.pal.levels_short": "tas.",
+ "query.pal.query": "Kysely",
+ "query.pal.plan": "Pohjakuva",
+ "query.pal.level": "taso",
+ "query.pal.view": "näkymä",
+ "query.pal.save_filter": "Tallenna kysely projektisuodattimeksi"
 }

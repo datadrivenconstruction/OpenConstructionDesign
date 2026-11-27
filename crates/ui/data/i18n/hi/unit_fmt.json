@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "फ़िल्टर सहेजा गया: {arg}",
  "unit_fmt.q.not_changed": "नहीं बदला: {e}",
  "unit_fmt.q.name.curtain": "कर्टेन वॉल",
- "unit_fmt.q.name.room": "कमरा"
+ "unit_fmt.q.name.room": "कमरा",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

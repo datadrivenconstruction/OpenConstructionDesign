@@ -150,6 +150,46 @@ fn every_locale_holds_only_english_keys() {
     assert!(extra.is_empty(), "keys English does not have: {extra:?}");
 }
 
+/// Values of one locale, as `keys` reads them.
+fn values(lang: &str) -> BTreeMap<String, serde_json::Value> {
+    let i18n = data().join("i18n");
+    let mut files: Vec<PathBuf> = [format!("ui.{lang}.json"), format!("commands.{lang}.json")]
+        .into_iter()
+        .map(|b| i18n.join(b))
+        .filter(|p| p.exists())
+        .collect();
+    files.extend(fragment_stems(lang).into_iter().map(|s| i18n.join(lang).join(format!("{s}.json"))));
+    let mut out = BTreeMap::new();
+    for p in files {
+        let m: BTreeMap<String, serde_json::Value> =
+            serde_json::from_str(&read(&p)).unwrap_or_else(|e| panic!("{}: {e}", p.display()));
+        out.extend(m);
+    }
+    out
+}
+
+/// One product name in every language: a string that names the product in English names it
+/// the same way in each locale (a stale translation keeps an old name for years).
+#[test]
+fn every_locale_names_the_product_as_english_does() {
+    const PRODUCT: &str = "OpenConstructionDesign";
+    let en = values("en");
+    let named: Vec<&String> = en.iter().filter(|(_, v)| v.to_string().contains(PRODUCT)).map(|(k, _)| k).collect();
+    assert!(!named.is_empty(), "no English string names {PRODUCT}");
+    let mut bad = Vec::new();
+    for loc in locales().iter().filter(|l| *l != "en") {
+        let have = values(loc);
+        for k in &named {
+            if let Some(v) = have.get(*k) {
+                if !v.to_string().contains(PRODUCT) {
+                    bad.push(format!("{loc}/{k}: {v}"));
+                }
+            }
+        }
+    }
+    assert!(bad.is_empty(), "{} strings name the product otherwise: {:?}", bad.len(), &bad[..bad.len().min(20)]);
+}
+
 #[test]
 fn every_locale_file_has_an_english_twin() {
     // A locale's `ui.json` and `commands.json` are its copies of the base files `ui.en.json`, `commands.en.json`.

@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Nic nie zapisano: model jest pusty, a plik już zawiera treść. Plik nie został zmieniony. Użyj Zapisz jako, aby zapisać pod inną nazwą.",
  "save_guard.refuse.body": "Nic nie zapisano: model jest pusty, a {name} już zawiera treść. Plik nie został zmieniony.",
- "save_guard.refuse.foreign": "To nie jest plik DDC Editor, więc nie można go zastąpić. Użyj Zapisz jako, aby zapisać pod inną nazwą.",
+ "save_guard.refuse.foreign": "To nie jest plik OpenConstructionDesign, więc nie można go zastąpić. Użyj Zapisz jako, aby zapisać pod inną nazwą.",
  "save_guard.refuse.ask": "Zastąpić {name}? Plik zawiera {what}. Najpierw zostanie przeniesiony do folderu _archive obok, a potem zapisany zostanie pusty model.",
  "save_guard.refuse.holds_db": "{n} elementów i wierszy treści",
  "save_guard.refuse.holds_ifc": "IFC z produktami",

@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "フィルターを保存しました: {arg}",
  "unit_fmt.q.not_changed": "変更されていません: {e}",
  "unit_fmt.q.name.curtain": "カーテンウォール",
- "unit_fmt.q.name.room": "部屋"
+ "unit_fmt.q.name.room": "部屋",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filtr saqlandi: {arg}",
  "unit_fmt.q.not_changed": "o'zgartirilmadi: {e}",
  "unit_fmt.q.name.curtain": "Parda devor",
- "unit_fmt.q.name.room": "Xona"
+ "unit_fmt.q.name.room": "Xona",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

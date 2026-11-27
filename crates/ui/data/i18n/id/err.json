@@ -63,5 +63,7 @@
  "browser.plan": "Denah",
  "browser.open": "Buka",
  "browser.flip": "Balik arah pandang",
- "browser.delete": "Hapus"
+ "browser.delete": "Hapus",
+ "empty.families.title": "Belum ada famili yang digunakan",
+ "empty.families.hint": "Famili muncul di sini saat Anda menempatkan dinding, lantai, elemen, dan komponen."
 }

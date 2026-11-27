@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Hech narsa saqlanmadi: model bo'sh, fayl esa allaqachon mazmunga ega. Fayl o'zgarmadi. Boshqa nom bilan yozish uchun Boshqacha saqlash dan foydalaning.",
  "save_guard.refuse.body": "Hech narsa saqlanmadi: model bo'sh, {name} esa allaqachon mazmunga ega. Fayl o'zgarmadi.",
- "save_guard.refuse.foreign": "Bu DDC Editor fayli emas, shuning uchun uni almashtirib bo'lmaydi. Boshqa nom bilan yozish uchun Boshqacha saqlash dan foydalaning.",
+ "save_guard.refuse.foreign": "Bu OpenConstructionDesign fayli emas, shuning uchun uni almashtirib bo'lmaydi. Boshqa nom bilan yozish uchun Boshqacha saqlash dan foydalaning.",
  "save_guard.refuse.ask": "{name} ni almashtiraymi? U {what} ni o'z ichiga oladi. Avval u yonidagi _archive papkasiga ko'chiriladi, so'ng bo'sh model yoziladi.",
  "save_guard.refuse.holds_db": "{n} ta element va mazmun qatorlari",
  "save_guard.refuse.holds_ifc": "mahsulotli IFC",

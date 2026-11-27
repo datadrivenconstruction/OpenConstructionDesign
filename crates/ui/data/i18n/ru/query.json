@@ -28,5 +28,15 @@
  "query.why.curtain": "навесные стены меняются в своих свойствах",
  "query.why.opening_type": "тип проёма задаётся размерами: «-> ширина=… высота=…»",
  "query.why.slab_thickness": "толщина перекрытия задаётся типом: «-> тип=…»",
- "query.why.wall_thickness": "толщина стены задаётся типом: «-> тип=…»"
+ "query.why.wall_thickness": "толщина стены задаётся типом: «-> тип=…»",
+ "query.pal.filter": "Фильтр",
+ "query.pal.change": "Изменить",
+ "query.pal.one_undo": "один шаг отмены",
+ "query.pal.select": "Выбрать",
+ "query.pal.levels_short": "эт.",
+ "query.pal.query": "Запрос",
+ "query.pal.plan": "План",
+ "query.pal.level": "этаж",
+ "query.pal.view": "вид",
+ "query.pal.save_filter": "Сохранить запрос как фильтр проекта"
 }

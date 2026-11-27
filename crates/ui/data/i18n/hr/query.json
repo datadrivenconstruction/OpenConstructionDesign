@@ -28,5 +28,15 @@
  "query.why.curtain": "zavjesni zidovi mijenjaju se u vlastitim svojstvima",
  "query.why.opening_type": "tip otvora slijedi njegovu veličinu: „-> width=… height=…”",
  "query.why.slab_thickness": "debljinu ploče određuje tip: „-> type=…”",
- "query.why.wall_thickness": "debljinu zida određuje tip: „-> type=…”"
+ "query.why.wall_thickness": "debljinu zida određuje tip: „-> type=…”",
+ "query.pal.filter": "Filtriraj",
+ "query.pal.change": "Promijeni",
+ "query.pal.one_undo": "jedan korak poništavanja",
+ "query.pal.select": "Odaberi",
+ "query.pal.levels_short": "kat",
+ "query.pal.query": "Upit",
+ "query.pal.plan": "Tlocrt",
+ "query.pal.level": "kat",
+ "query.pal.view": "pogled",
+ "query.pal.save_filter": "Spremi upit kao filtar projekta"
 }

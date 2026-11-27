@@ -283,7 +283,7 @@ impl EditorApp {
                     });
             });
             ui.add_space(space::MD);
-            self.ob_footer(ui, step, &mut act);
+            self.ob_footer(ui, step, fresh, &mut act);
         });
         if modal.should_close() && !self.sh.palette.open {
             act = Some(Act::Skip);
@@ -363,7 +363,7 @@ impl EditorApp {
         ui.label(th.rich(Role::Body, &sub).color(th.c("text.secondary")));
     }
 
-    fn ob_footer(&mut self, ui: &mut egui::Ui, step: u8, act: &mut Option<Act>) {
+    fn ob_footer(&mut self, ui: &mut egui::Ui, step: u8, fresh: bool, act: &mut Option<Act>) {
         let c = &self.sh.cat;
         let th = &self.sh.theme;
         ui.separator();
@@ -372,8 +372,16 @@ impl EditorApp {
             let note = if step + 1 == STEPS { c.t("onb.later") } else { c.t("onb.keys") };
             ui.label(th.rich(Role::Caption, &note).color(th.c("text.secondary")));
             ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
-                let next = if step + 1 == STEPS { c.t("onb.start") } else { c.t("onb.next") };
-                if crate::ui_kit::primary_action(ui, next, None) {
+                let last = step + 1 == STEPS;
+                let next = if last { c.t("onb.start") } else { c.t("onb.next") };
+                // only the last step confirms with Enter, never on the frame it appears: a
+                // stray or held Enter cannot walk past the choices
+                let go = if last && !fresh {
+                    crate::ui_kit::primary_action(ui, next, None)
+                } else {
+                    crate::ui_kit::primary_click(ui, next, None)
+                };
+                if go {
                     *act = Some(Act::Next);
                 }
                 if step > 0 {

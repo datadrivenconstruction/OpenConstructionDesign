@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Lisensi sumber terbuka",
  "cmd.help.licenses.desc": "Menampilkan daftar pustaka sumber terbuka yang dipakai build ini beserta lisensinya.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versi",
  "about.build": "Build",
  "about.schema": "Skema model",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Pustaka yang dipakai di build ini dan lisensinya",
  "about.licenses.open": "Lihat",
  "about.licenses.title": "Lisensi sumber terbuka",
- "about.licenses.note": "DDC Editor menyertakan pustaka berikut. Setiap pustaka tetap berada di bawah lisensi dan pemberitahuan hak cipta masing-masing. Teks lisensi lengkap: THIRD_PARTY_LICENSES.txt di samping aplikasi.",
+ "about.licenses.note": "OpenConstructionDesign menyertakan pustaka berikut. Setiap pustaka tetap berada di bawah lisensi dan pemberitahuan hak cipta masing-masing. Teks lisensi lengkap: THIRD_PARTY_LICENSES.txt di samping aplikasi.",
  "about.licenses.full": "Teks lisensi lengkap",
  "about.licenses.list": "Daftar komponen",
  "about.licenses.close": "Tutup",

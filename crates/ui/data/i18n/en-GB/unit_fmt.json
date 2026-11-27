@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filter saved: {arg}",
  "unit_fmt.q.not_changed": "not changed: {e}",
  "unit_fmt.q.name.curtain": "Curtain wall",
- "unit_fmt.q.name.room": "Room"
+ "unit_fmt.q.name.room": "Room",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

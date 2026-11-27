@@ -63,5 +63,7 @@
  "browser.plan": "প্ল্যান",
  "browser.open": "খুলুন",
  "browser.flip": "দৃষ্টির দিক উল্টান",
- "browser.delete": "মুছুন"
+ "browser.delete": "মুছুন",
+ "empty.families.title": "এখনও কোনো ফ্যামিলি ব্যবহৃত হয়নি",
+ "empty.families.hint": "দেয়াল, মেঝে, সদস্য ও উপাদান বসালে ফ্যামিলিগুলো এখানে দেখা যাবে।"
 }

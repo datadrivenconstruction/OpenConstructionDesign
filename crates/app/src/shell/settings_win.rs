@@ -1325,7 +1325,9 @@ impl EditorApp {
                 Out::UseLayout(n) => self.chrome.settings.use_layout = Some(n),
                 Out::Units(u) => self.ed.set_units(u),
                 Out::Lang => {
+                    let was = self.sh.cat.lang;
                     self.apply_lang();
+                    super::project_seam::follow_lang(self, was);
                     self.chrome.start.drop_news();
                 }
                 Out::Scale => self.sh.theme.set_scale(self.prefs.ui_scale),

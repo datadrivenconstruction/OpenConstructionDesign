@@ -208,7 +208,7 @@
  "onb.back": "Back",
  "onb.back_keys": "Alt+←",
  "onb.start": "Start",
- "onb.keys": "Enter — next, Alt+← — back, Esc — skip",
+ "onb.keys": "Alt+→ next · Alt+← back · Esc skip",
  "onb.later": "Everything can be changed later in Settings → Appearance.",
  "onb.primary": "Main",
  "onb.make_primary": "Make main",

@@ -28,5 +28,15 @@
  "query.why.curtain": "커튼월은 자체 속성에서 변경합니다",
  "query.why.opening_type": "개구부의 유형은 크기를 따릅니다: \"-> width=… height=…\"",
  "query.why.slab_thickness": "바닥 두께는 유형으로 설정됩니다: \"-> type=…\"",
- "query.why.wall_thickness": "벽 두께는 유형으로 설정됩니다: \"-> type=…\""
+ "query.why.wall_thickness": "벽 두께는 유형으로 설정됩니다: \"-> type=…\"",
+ "query.pal.filter": "필터",
+ "query.pal.change": "변경",
+ "query.pal.one_undo": "실행 취소 1단계",
+ "query.pal.select": "선택",
+ "query.pal.levels_short": "층",
+ "query.pal.query": "쿼리",
+ "query.pal.plan": "평면도",
+ "query.pal.level": "레벨",
+ "query.pal.view": "뷰",
+ "query.pal.save_filter": "쿼리를 프로젝트 필터로 저장"
 }

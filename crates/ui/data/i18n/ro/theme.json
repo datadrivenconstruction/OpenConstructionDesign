@@ -211,7 +211,7 @@
  "onb.back": "Înapoi",
  "onb.back_keys": "Alt+←",
  "onb.start": "Pornire",
- "onb.keys": "Enter — înainte, Alt+← — înapoi, Esc — omite",
+ "onb.keys": "Alt+→ înainte · Alt+← înapoi · Esc omite",
  "onb.later": "Totul poate fi schimbat mai târziu în Setări → Aspect.",
  "onb.primary": "Principal",
  "onb.make_primary": "Fă principal",

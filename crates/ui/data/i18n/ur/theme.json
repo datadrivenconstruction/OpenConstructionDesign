@@ -211,7 +211,7 @@
  "onb.back": "واپس",
  "onb.back_keys": "Alt+←",
  "onb.start": "شروع",
- "onb.keys": "Enter — آگے، Alt+← — پیچھے، Esc — چھوڑیں",
+ "onb.keys": "Alt+→ آگے · Alt+← پیچھے · Esc چھوڑیں",
  "onb.later": "سب کچھ بعد میں ترتیبات → ظاہری شکل میں بدلا جا سکتا ہے۔",
  "onb.primary": "اصل",
  "onb.make_primary": "اصل بنائیں",

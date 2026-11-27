@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Licenser för öppen källkod",
  "cmd.help.licenses.desc": "Listar de bibliotek med öppen källkod som används i den här versionen, med deras licenser.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versionsnr",
  "about.build": "Bygge",
  "about.schema": "Modellschema",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Bibliotek som används i den här versionen och deras licenser",
  "about.licenses.open": "Visa",
  "about.licenses.title": "Licenser för öppen källkod",
- "about.licenses.note": "DDC Editor innehåller biblioteken nedan. Varje bibliotek omfattas fortfarande av sin egen licens och upphovsrättsnotis. Fullständiga licenstexter: THIRD_PARTY_LICENSES.txt bredvid programmet.",
+ "about.licenses.note": "OpenConstructionDesign innehåller biblioteken nedan. Varje bibliotek omfattas fortfarande av sin egen licens och upphovsrättsnotis. Fullständiga licenstexter: THIRD_PARTY_LICENSES.txt bredvid programmet.",
  "about.licenses.full": "Fullständiga licenstexter",
  "about.licenses.list": "Komponentlista",
  "about.licenses.close": "Stäng",

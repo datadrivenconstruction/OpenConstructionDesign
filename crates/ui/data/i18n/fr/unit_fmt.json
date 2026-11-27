@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "filtre enregistré : {arg}",
  "unit_fmt.q.not_changed": "non modifié : {e}",
  "unit_fmt.q.name.curtain": "Mur-rideau",
- "unit_fmt.q.name.room": "Pièce"
+ "unit_fmt.q.name.room": "Pièce",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

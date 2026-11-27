@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Άδειες λογισμικού ανοιχτού κώδικα",
  "cmd.help.licenses.desc": "Εμφανίζει τις βιβλιοθήκες ανοιχτού κώδικα που χρησιμοποιεί αυτό το build, με τις άδειές τους.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Έκδοση",
  "about.build": "Build",
  "about.schema": "Σχήμα μοντέλου",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Βιβλιοθήκες που χρησιμοποιούνται σε αυτό το build και οι άδειές τους",
  "about.licenses.open": "Προβολή",
  "about.licenses.title": "Άδειες λογισμικού ανοιχτού κώδικα",
- "about.licenses.note": "Το DDC Editor περιλαμβάνει τις παρακάτω βιβλιοθήκες. Καθεμία παραμένει με τη δική της άδεια και ειδοποίηση πνευματικών δικαιωμάτων. Πλήρη κείμενα αδειών: THIRD_PARTY_LICENSES.txt δίπλα στην εφαρμογή.",
+ "about.licenses.note": "Το OpenConstructionDesign περιλαμβάνει τις παρακάτω βιβλιοθήκες. Καθεμία παραμένει με τη δική της άδεια και ειδοποίηση πνευματικών δικαιωμάτων. Πλήρη κείμενα αδειών: THIRD_PARTY_LICENSES.txt δίπλα στην εφαρμογή.",
  "about.licenses.full": "Πλήρη κείμενα αδειών",
  "about.licenses.list": "Λίστα στοιχείων",
  "about.licenses.close": "Κλείσιμο",

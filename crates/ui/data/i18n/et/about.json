@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Avatud lähtekoodi litsentsid",
  "cmd.help.licenses.desc": "Loetleb selle koostes kasutatud avatud lähtekoodiga teegid koos litsentsidega.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versioon",
  "about.build": "Koostenumber",
  "about.schema": "Mudeli skeem",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Selles koostes kasutatud teegid ja nende litsentsid",
  "about.licenses.open": "Vaata",
  "about.licenses.title": "Avatud lähtekoodi litsentsid",
- "about.licenses.note": "DDC Editor sisaldab allpool loetletud teeke. Igaüks neist jääb oma litsentsi ja autoriõiguse märke alla. Täielikud litsentsitekstid: THIRD_PARTY_LICENSES.txt rakenduse kõrval.",
+ "about.licenses.note": "OpenConstructionDesign sisaldab allpool loetletud teeke. Igaüks neist jääb oma litsentsi ja autoriõiguse märke alla. Täielikud litsentsitekstid: THIRD_PARTY_LICENSES.txt rakenduse kõrval.",
  "about.licenses.full": "Täielikud litsentsitekstid",
  "about.licenses.list": "Komponentide loend",
  "about.licenses.close": "Sulge",

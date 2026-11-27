@@ -865,7 +865,8 @@ mod tests {
     #[test]
     fn reveal_out_with_file_is_refused_not_ignored() {
         let argv: Vec<String> = ["ddc-app", "--file", "a.ddc", "--reveal-out", "show.mp4"].map(String::from).to_vec();
-        assert!(parse(&argv).unwrap_err().contains("--open-project"));
+        let e = parse(&argv).err().expect("refused");
+        assert!(e.contains("--open-project"), "{e}");
     }
 
     #[test]

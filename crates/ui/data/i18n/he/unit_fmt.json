@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "הסינון נשמר: {arg}",
  "unit_fmt.q.not_changed": "לא שונה: {e}",
  "unit_fmt.q.name.curtain": "קיר מסך",
- "unit_fmt.q.name.room": "חדר"
+ "unit_fmt.q.name.room": "חדר",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

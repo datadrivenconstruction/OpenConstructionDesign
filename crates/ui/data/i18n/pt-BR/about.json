@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "Licenças de código aberto",
  "cmd.help.licenses.desc": "Lista as bibliotecas de código aberto usadas por esta compilação, com suas licenças.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "Versão",
  "about.build": "Compilação",
  "about.schema": "Esquema do modelo",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "Bibliotecas usadas nesta compilação e suas licenças",
  "about.licenses.open": "Ver",
  "about.licenses.title": "Licenças de código aberto",
- "about.licenses.note": "O DDC Editor inclui as bibliotecas abaixo. Cada uma mantém a sua licença e o seu aviso de direitos autorais. Textos completos das licenças: THIRD_PARTY_LICENSES.txt ao lado do aplicativo.",
+ "about.licenses.note": "O OpenConstructionDesign inclui as bibliotecas abaixo. Cada uma mantém a sua licença e o seu aviso de direitos autorais. Textos completos das licenças: THIRD_PARTY_LICENSES.txt ao lado do aplicativo.",
  "about.licenses.full": "Textos completos das licenças",
  "about.licenses.list": "Lista de componentes",
  "about.licenses.close": "Fechar",

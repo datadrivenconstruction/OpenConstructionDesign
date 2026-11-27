@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "фильтр сохранён: {arg}",
  "unit_fmt.q.not_changed": "не изменено: {e}",
  "unit_fmt.q.name.curtain": "Навесная стена",
- "unit_fmt.q.name.room": "Помещение"
+ "unit_fmt.q.name.room": "Помещение",
+ "unit_fmt.unit.m": "м",
+ "unit_fmt.unit.kg": "кг",
+ "unit_fmt.unit.t": "т"
 }

@@ -569,7 +569,7 @@ pub fn install_crash_handler(folder: Option<PathBuf>) {
                 .duration_since(UNIX_EPOCH)
                 .map_or(0, |d| d.as_millis());
             let note = format!(
-                "DDC Editor crash\ntime: {}\npanic: {info}\n\n{}\n",
+                "OpenConstructionDesign crash\ntime: {}\npanic: {info}\n\n{}\n",
                 fmt_time(SystemTime::now()),
                 std::backtrace::Backtrace::force_capture()
             );

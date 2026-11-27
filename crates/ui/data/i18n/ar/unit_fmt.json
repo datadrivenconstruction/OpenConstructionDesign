@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "حُفظ الفلتر: {arg}",
  "unit_fmt.q.not_changed": "لم يتغير: {e}",
  "unit_fmt.q.name.curtain": "جدار ستائري",
- "unit_fmt.q.name.room": "غرفة"
+ "unit_fmt.q.name.room": "غرفة",
+ "unit_fmt.unit.m": "م",
+ "unit_fmt.unit.kg": "كغ",
+ "unit_fmt.unit.t": "طن"
 }

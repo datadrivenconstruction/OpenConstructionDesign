@@ -28,5 +28,15 @@
  "query.why.curtain": "fațadele cortină se modifică în proprietățile lor",
  "query.why.opening_type": "tipul unui gol urmează dimensiunea sa: \"-> width=… height=…\"",
  "query.why.slab_thickness": "grosimea planșeului este dată de tip: \"-> type=…\"",
- "query.why.wall_thickness": "grosimea peretelui este dată de tip: \"-> type=…\""
+ "query.why.wall_thickness": "grosimea peretelui este dată de tip: \"-> type=…\"",
+ "query.pal.filter": "Filtrează",
+ "query.pal.change": "Modifică",
+ "query.pal.one_undo": "un singur pas de anulare",
+ "query.pal.select": "Selectează",
+ "query.pal.levels_short": "niv.",
+ "query.pal.query": "Interogare",
+ "query.pal.plan": "Plan",
+ "query.pal.level": "nivel",
+ "query.pal.view": "vizualizare",
+ "query.pal.save_filter": "Salvează interogarea ca filtru de proiect"
 }

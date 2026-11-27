@@ -63,5 +63,7 @@
  "browser.plan": "Reja",
  "browser.open": "Ochish",
  "browser.flip": "Ko'rish yo'nalishini almashtirish",
- "browser.delete": "O'chirish"
+ "browser.delete": "O'chirish",
+ "empty.families.title": "Hali foydalanilayotgan oilalar yo'q",
+ "empty.families.hint": "Devor, pol, element va komponent joylashtirganingizda oilalar shu yerda paydo bo'ladi."
 }

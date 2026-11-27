@@ -28,5 +28,15 @@
  "query.why.curtain": "fasádní stěny se mění v jejich vlastních vlastnostech",
  "query.why.opening_type": "typ otvoru se řídí jeho velikostí: „-> width=… height=…“",
  "query.why.slab_thickness": "tloušťka desky je dána typem: „-> type=…“",
- "query.why.wall_thickness": "tloušťka stěny je dána typem: „-> type=…“"
+ "query.why.wall_thickness": "tloušťka stěny je dána typem: „-> type=…“",
+ "query.pal.filter": "Filtrovat",
+ "query.pal.change": "Změnit",
+ "query.pal.one_undo": "jeden krok zpět",
+ "query.pal.select": "Vybrat",
+ "query.pal.levels_short": "podl.",
+ "query.pal.query": "Dotaz",
+ "query.pal.plan": "Půdorys",
+ "query.pal.level": "podlaží",
+ "query.pal.view": "pohled",
+ "query.pal.save_filter": "Uložit dotaz jako filtr projektu"
 }

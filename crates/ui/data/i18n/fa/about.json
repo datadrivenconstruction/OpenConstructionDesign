@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "مجوزهای متن‌باز",
  "cmd.help.licenses.desc": "فهرست کتابخانه‌های متن‌باز استفاده‌شده در این ساخت را با مجوزهایشان نشان می‌دهد.",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "نسخه",
  "about.build": "ساخت",
  "about.schema": "طرح‌واره مدل",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "کتابخانه‌های استفاده‌شده در این ساخت و مجوزهایشان",
  "about.licenses.open": "نمایش",
  "about.licenses.title": "مجوزهای متن‌باز",
- "about.licenses.note": "DDC Editor کتابخانه‌های زیر را دربردارد. هر کدام تحت مجوز و اعلان حق نشر خود باقی می‌مانند. متن کامل مجوزها: فایل THIRD_PARTY_LICENSES.txt کنار برنامه.",
+ "about.licenses.note": "OpenConstructionDesign کتابخانه‌های زیر را دربردارد. هر کدام تحت مجوز و اعلان حق نشر خود باقی می‌مانند. متن کامل مجوزها: فایل THIRD_PARTY_LICENSES.txt کنار برنامه.",
  "about.licenses.full": "متن کامل مجوزها",
  "about.licenses.list": "فهرست اجزا",
  "about.licenses.close": "بستن",

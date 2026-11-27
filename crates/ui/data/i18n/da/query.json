@@ -28,5 +28,15 @@
  "query.why.curtain": "gardinvægge ændres i deres egne egenskaber",
  "query.why.opening_type": "typen på en åbning følger dens størrelse: „-> width=… height=…”",
  "query.why.slab_thickness": "gulvtykkelsen angives af typen: „-> type=…”",
- "query.why.wall_thickness": "vægtykkelsen angives af typen: „-> type=…”"
+ "query.why.wall_thickness": "vægtykkelsen angives af typen: „-> type=…”",
+ "query.pal.filter": "Filtrer",
+ "query.pal.change": "Ændr",
+ "query.pal.one_undo": "ét fortryd-trin",
+ "query.pal.select": "Vælg",
+ "query.pal.levels_short": "niv.",
+ "query.pal.query": "Forespørgsel",
+ "query.pal.plan": "Plan",
+ "query.pal.level": "niveau",
+ "query.pal.view": "visning",
+ "query.pal.save_filter": "Gem forespørgsel som projektfilter"
 }

@@ -211,7 +211,7 @@
  "onb.back": "Voltar",
  "onb.back_keys": "Alt+←",
  "onb.start": "Começar",
- "onb.keys": "Enter — próximo, Alt+← — voltar, Esc — pular",
+ "onb.keys": "Alt+→ seguinte · Alt+← voltar · Esc saltar",
  "onb.later": "Tudo pode ser alterado depois em Configurações → Aparência.",
  "onb.primary": "Principal",
  "onb.make_primary": "Tornar principal",

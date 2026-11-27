@@ -28,5 +28,15 @@
  "query.why.curtain": "কার্টেন ওয়াল তাদের নিজস্ব প্রপার্টিতে বদলানো হয়",
  "query.why.opening_type": "ওপেনিংয়ের টাইপ তার আকার অনুসরণ করে: “-> width=… height=…”",
  "query.why.slab_thickness": "ফ্লোরের পুরুত্ব টাইপ দিয়ে ঠিক হয়: “-> type=…”",
- "query.why.wall_thickness": "দেয়ালের পুরুত্ব টাইপ দিয়ে ঠিক হয়: “-> type=…”"
+ "query.why.wall_thickness": "দেয়ালের পুরুত্ব টাইপ দিয়ে ঠিক হয়: “-> type=…”",
+ "query.pal.filter": "ফিল্টার",
+ "query.pal.change": "পরিবর্তন",
+ "query.pal.one_undo": "একটি আনডু ধাপ",
+ "query.pal.select": "নির্বাচন",
+ "query.pal.levels_short": "তলা",
+ "query.pal.query": "কোয়েরি",
+ "query.pal.plan": "প্ল্যান",
+ "query.pal.level": "তলা",
+ "query.pal.view": "ভিউ",
+ "query.pal.save_filter": "কোয়েরি প্রকল্পের ফিল্টার হিসেবে সংরক্ষণ করুন"
 }

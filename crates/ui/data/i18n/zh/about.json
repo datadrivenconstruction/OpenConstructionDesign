@@ -1,7 +1,7 @@
 {
  "cmd.help.licenses": "开源许可证",
  "cmd.help.licenses.desc": "列出此版本使用的开源库及其许可证。",
- "about.product": "DDC Editor",
+ "about.product": "OpenConstructionDesign",
  "about.version": "版本",
  "about.build": "构建",
  "about.schema": "模型架构",
@@ -15,7 +15,7 @@
  "about.licenses_desc": "此版本使用的库及其许可证",
  "about.licenses.open": "查看",
  "about.licenses.title": "开源许可证",
- "about.licenses.note": "DDC Editor 包含下列库。每个库仍受其各自的许可证和版权声明约束。完整许可证文本：应用程序旁的 THIRD_PARTY_LICENSES.txt。",
+ "about.licenses.note": "OpenConstructionDesign 包含下列库。每个库仍受其各自的许可证和版权声明约束。完整许可证文本：应用程序旁的 THIRD_PARTY_LICENSES.txt。",
  "about.licenses.full": "完整许可证文本",
  "about.licenses.list": "组件列表",
  "about.licenses.close": "关闭",

@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "Chưa lưu gì: mô hình trống, còn tệp đã có nội dung. Tệp không bị thay đổi. Hãy dùng Lưu thành để ghi sang tên khác.",
  "save_guard.refuse.body": "Chưa lưu gì: mô hình trống, còn {name} đã có nội dung. Tệp không bị thay đổi.",
- "save_guard.refuse.foreign": "Đây không phải tệp DDC Editor nên không thể thay thế. Hãy dùng Lưu thành để ghi sang tên khác.",
+ "save_guard.refuse.foreign": "Đây không phải tệp OpenConstructionDesign nên không thể thay thế. Hãy dùng Lưu thành để ghi sang tên khác.",
  "save_guard.refuse.ask": "Thay thế {name}? Tệp này chứa {what}. Trước tiên tệp sẽ được chuyển vào thư mục _archive cạnh đó, sau đó mô hình trống được ghi.",
  "save_guard.refuse.holds_db": "{n} cấu kiện và các dòng nội dung",
  "save_guard.refuse.holds_ifc": "IFC có cấu kiện",

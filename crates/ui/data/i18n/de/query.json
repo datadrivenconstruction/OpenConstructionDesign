@@ -28,5 +28,15 @@
  "query.why.curtain": "Vorhangfassaden werden in ihren eigenen Eigenschaften geändert",
  "query.why.opening_type": "der Typ einer Öffnung folgt ihrer Größe: „-> width=… height=…“",
  "query.why.slab_thickness": "die Deckendicke wird durch den Typ festgelegt: „-> type=…“",
- "query.why.wall_thickness": "die Wanddicke wird durch den Typ festgelegt: „-> type=…“"
+ "query.why.wall_thickness": "die Wanddicke wird durch den Typ festgelegt: „-> type=…“",
+ "query.pal.filter": "Filtern",
+ "query.pal.change": "Ändern",
+ "query.pal.one_undo": "ein Rückgängig-Schritt",
+ "query.pal.select": "Auswählen",
+ "query.pal.levels_short": "Ebn.",
+ "query.pal.query": "Abfrage",
+ "query.pal.plan": "Grundriss",
+ "query.pal.level": "Ebene",
+ "query.pal.view": "Ansicht",
+ "query.pal.save_filter": "Abfrage als Projektfilter speichern"
 }

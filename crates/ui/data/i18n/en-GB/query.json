@@ -28,5 +28,15 @@
  "query.why.curtain": "curtain walls are changed in their own properties",
  "query.why.opening_type": "the type of an opening follows its size: \"-> width=… height=…\"",
  "query.why.slab_thickness": "slab thickness is set by the type: \"-> type=…\"",
- "query.why.wall_thickness": "wall thickness is set by the type: \"-> type=…\""
+ "query.why.wall_thickness": "wall thickness is set by the type: \"-> type=…\"",
+ "query.pal.filter": "Filter",
+ "query.pal.change": "Change",
+ "query.pal.one_undo": "one undo step",
+ "query.pal.select": "Select",
+ "query.pal.levels_short": "lvl",
+ "query.pal.query": "Query",
+ "query.pal.plan": "Plan",
+ "query.pal.level": "level",
+ "query.pal.view": "view",
+ "query.pal.save_filter": "Save query as project filter"
 }

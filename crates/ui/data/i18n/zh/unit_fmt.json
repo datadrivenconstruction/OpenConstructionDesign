@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "筛选已保存：{arg}",
  "unit_fmt.q.not_changed": "未更改：{e}",
  "unit_fmt.q.name.curtain": "幕墙",
- "unit_fmt.q.name.room": "房间"
+ "unit_fmt.q.name.room": "房间",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

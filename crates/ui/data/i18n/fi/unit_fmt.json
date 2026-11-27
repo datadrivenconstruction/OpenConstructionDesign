@@ -32,5 +32,8 @@
  "unit_fmt.q.filter_saved": "suodatin tallennettu: {arg}",
  "unit_fmt.q.not_changed": "ei muutettu: {e}",
  "unit_fmt.q.name.curtain": "Verhoseinä",
- "unit_fmt.q.name.room": "Huone"
+ "unit_fmt.q.name.room": "Huone",
+ "unit_fmt.unit.m": "m",
+ "unit_fmt.unit.kg": "kg",
+ "unit_fmt.unit.t": "t"
 }

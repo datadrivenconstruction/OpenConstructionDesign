@@ -63,5 +63,7 @@
  "browser.plan": "평면",
  "browser.open": "열기",
  "browser.flip": "뷰 방향 뒤집기",
- "browser.delete": "삭제"
+ "browser.delete": "삭제",
+ "empty.families.title": "사용 중인 패밀리가 아직 없습니다",
+ "empty.families.hint": "벽, 바닥, 부재, 컴포넌트를 배치하면 여기에 패밀리가 표시됩니다."
 }

@@ -28,5 +28,15 @@
  "query.why.curtain": "навісні стіни змінюються у їхніх власних властивостях",
  "query.why.opening_type": "тип отвору залежить від його розміру: \"-> width=… height=…\"",
  "query.why.slab_thickness": "товщину перекриття задає тип: \"-> type=…\"",
- "query.why.wall_thickness": "товщину стіни задає тип: \"-> type=…\""
+ "query.why.wall_thickness": "товщину стіни задає тип: \"-> type=…\"",
+ "query.pal.filter": "Фільтр",
+ "query.pal.change": "Змінити",
+ "query.pal.one_undo": "один крок скасування",
+ "query.pal.select": "Вибрати",
+ "query.pal.levels_short": "рів.",
+ "query.pal.query": "Запит",
+ "query.pal.plan": "План",
+ "query.pal.level": "рівень",
+ "query.pal.view": "вигляд",
+ "query.pal.save_filter": "Зберегти запит як фільтр проєкту"
 }

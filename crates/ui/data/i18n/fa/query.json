@@ -28,5 +28,15 @@
  "query.why.curtain": "دیوارهای پرده‌ای در ویژگی‌های خودشان تغییر می‌کنند",
  "query.why.opening_type": "نوع بازشو تابع اندازه‌اش است: «-> width=… height=…»",
  "query.why.slab_thickness": "ضخامت دال توسط نوع تعیین می‌شود: «-> type=…»",
- "query.why.wall_thickness": "ضخامت دیوار توسط نوع تعیین می‌شود: «-> type=…»"
+ "query.why.wall_thickness": "ضخامت دیوار توسط نوع تعیین می‌شود: «-> type=…»",
+ "query.pal.filter": "فیلتر",
+ "query.pal.change": "تغییر",
+ "query.pal.one_undo": "یک مرحله واگرد",
+ "query.pal.select": "انتخاب",
+ "query.pal.levels_short": "تراز",
+ "query.pal.query": "پرس‌وجو",
+ "query.pal.plan": "پلان",
+ "query.pal.level": "تراز",
+ "query.pal.view": "نما",
+ "query.pal.save_filter": "ذخیره پرس‌وجو به‌عنوان فیلتر پروژه"
 }

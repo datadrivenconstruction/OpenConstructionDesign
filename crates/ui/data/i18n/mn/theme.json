@@ -211,7 +211,7 @@
  "onb.back": "Буцах",
  "onb.back_keys": "Alt+←",
  "onb.start": "Эхлэх",
- "onb.keys": "Enter — дараах, Alt+← — буцах, Esc — алгасах",
+ "onb.keys": "Alt+→ дараах · Alt+← буцах · Esc алгасах",
  "onb.later": "Бүгдийг дараа нь Тохиргоо → Харагдац хэсгээс өөрчилж болно.",
  "onb.primary": "Үндсэн",
  "onb.make_primary": "Үндсэн болгох",

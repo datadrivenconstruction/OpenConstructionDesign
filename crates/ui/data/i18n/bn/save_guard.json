@@ -1,7 +1,7 @@
 {
  "save_guard.save.empty_over_full": "কিছু সংরক্ষিত হয়নি: মডেল খালি, আর ফাইলে ইতিমধ্যে কন্টেন্ট আছে। ফাইলটি অপরিবর্তিত। অন্য নামে লিখতে “Save as” ব্যবহার করুন।",
  "save_guard.refuse.body": "কিছু সংরক্ষিত হয়নি: মডেল খালি, আর {name}-এ ইতিমধ্যে কন্টেন্ট আছে। ফাইলটি অপরিবর্তিত।",
- "save_guard.refuse.foreign": "এটি DDC Editor ফাইল নয়, তাই প্রতিস্থাপন করা যাবে না। অন্য নামে লিখতে “Save as” ব্যবহার করুন।",
+ "save_guard.refuse.foreign": "এটি OpenConstructionDesign ফাইল নয়, তাই প্রতিস্থাপন করা যাবে না। অন্য নামে লিখতে “Save as” ব্যবহার করুন।",
  "save_guard.refuse.ask": "{name} প্রতিস্থাপন করবেন? এতে {what} আছে। আগে এটি পাশের _archive ফোল্ডারে সরানো হবে, তারপর খালি মডেল লেখা হবে।",
  "save_guard.refuse.holds_db": "{n}টি উপাদান ও কন্টেন্ট সারি",
  "save_guard.refuse.holds_ifc": "উপাদানসহ IFC",
