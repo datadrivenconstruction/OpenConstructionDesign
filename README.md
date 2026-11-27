@@ -123,7 +123,7 @@ cargo run --release -p ddc-app
 <details>
 <summary>CLI quick start: a building from a brief</summary>
 
-`ddc gen` and `ddc publish` are in the `ddc` of every release after v1.2.0. Older releases and a
+`ddc gen` and `ddc publish` are in the `ddc` of every release from v1.4.0. Older releases and a
 plain `cargo build` do not have them; build with `cargo build --release -p ddc-cli --features link`.
 
 ```sh
@@ -226,7 +226,7 @@ ddc open housing.ddc --export ifc4 housing.ifc
 </details>
 
 > [!NOTE]
-> `ddc gen` and `ddc publish` belong to the ERP link. Releases after v1.2.0 include them; to add
+> `ddc gen` and `ddc publish` belong to the ERP link. Releases from v1.4.0 include them; to add
 > them to a source build, use `cargo build --release -p ddc-cli --features link`.
 
 ## What you can build

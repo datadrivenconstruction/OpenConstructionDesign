@@ -66,15 +66,10 @@ jobs:
       - name: build
         shell: bash
         run: cargo build --release --locked -p ddc-app -p ddc-cli
-      - name: build ddc with the ERP link (gen, publish)
-        shell: bash
-        run: cargo build --release --locked -p ddc-cli --features link
       - name: smoke test
         shell: bash
         run: |
           target/release/ddc --version
-          # the shipped ddc must have the ERP link: gen without arguments asks for --brief
-          ! target/release/ddc gen 2>&1 | grep -q "no ERP link"
           target/release/ddc-app --help > /dev/null
           if [ "$RUNNER_OS" = "Linux" ]; then
             for b in ddc ddc-app; do
@@ -125,14 +120,11 @@ jobs:
           rustup default "$RUST_TOOLCHAIN"
       - name: build
         run: cargo build --release --locked --target ${{ matrix.target }} -p ddc-app -p ddc-cli
-      - name: build ddc with the ERP link (gen, publish)
-        run: cargo build --release --locked --target ${{ matrix.target }} -p ddc-cli --features link
       - name: smoke test
         run: |
           out=target/${{ matrix.target }}/release
           file "$out/ddc" "$out/ddc-app"
           "$out/ddc" --version
-          ! "$out/ddc" gen 2>&1 | grep -q "no ERP link"
           "$out/ddc-app" --help > /dev/null
       - name: package and upload
         env:

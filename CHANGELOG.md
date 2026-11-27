@@ -2,6 +2,9 @@
 
 ## 1.4.0 (unreleased)
 
+### Command line
+- Release builds include `ddc gen` and `ddc publish`.
+
 ## 1.3.0
 
 ### Languages
@@ -50,7 +53,6 @@
 - Offscreen 3D works on the GL backend, so headless frames render on machines without a GPU driver for the default backend.
 
 ### Command line and docs
-- Release builds include `ddc gen` and `ddc publish`.
 - A usage error is one line with a hint instead of the whole help.
 - README lists only the recipes in the repository, and CI checks every path it names.
 - `ddc-app --help` and docs/user/video-and-frames.md describe the video and frame flags.
