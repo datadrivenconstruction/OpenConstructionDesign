@@ -757,6 +757,43 @@ impl Model {
         self.adopt_struct();
         Ok(())
     }
+
+    /// Undoes every entry newer than `seq` in one transaction with one recompute at the end:
+    /// a rollback of n entries costs one regeneration, not n.
+    pub(crate) fn undo_to(&mut self, seq: i64) -> Result<usize, Error> {
+        let _s = crate::perf::span("model.undo_to");
+        let tx = scope(&mut self.db)?;
+        let mut n = 0;
+        loop {
+            let top = tx.query_row(
+                "SELECT seq, inv FROM op WHERE seq>?1 ORDER BY seq DESC LIMIT 1",
+                [seq],
+                |r| Ok((r.get::<_, i64>(0)?, r.get::<_, String>(1)?)),
+            );
+            let (s, inv) = match top {
+                Ok(t) => t,
+                Err(rusqlite::Error::QueryReturnedNoRows) => break,
+                Err(e) => return Err(e.into()),
+            };
+            take_kept();
+            run_inv(&tx, &inv, Some(&*self.tracker))?;
+            tx.execute("DELETE FROM op WHERE seq=?1", [s])?;
+            crate::ai_audit::note_undo(&tx, s)?;
+            n += 1;
+        }
+        if n == 0 {
+            return Ok(0);
+        }
+        crate::struct_ext::clear_stash();
+        crate::walls::LENIENT.with(|l| l.set(true));
+        let regen = crate::regen::logged(&tx, &self.tracker, &mut self.regen);
+        crate::walls::LENIENT.with(|l| l.set(false));
+        regen?;
+        tx.commit()?;
+        self.regen.promote(self.change_head());
+        self.adopt_struct();
+        Ok(n)
+    }
 }
 
 /// Executes the inverse commands of one journal entry.

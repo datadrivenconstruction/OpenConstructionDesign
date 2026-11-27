@@ -622,12 +622,7 @@ impl Model {
 
     /// Undoes while the top entry is newer than `seq`; returns the number of undone entries.
     pub fn rollback_to(&mut self, seq: i64) -> Result<usize, Error> {
-        let mut n = 0;
-        while self.op_top()? > seq {
-            self.undo()?;
-            n += 1;
-        }
-        Ok(n)
+        self.undo_to(seq)
     }
 
     /// The plan is stale: the live model changed after `base_head` (caches do not count), the `meta`

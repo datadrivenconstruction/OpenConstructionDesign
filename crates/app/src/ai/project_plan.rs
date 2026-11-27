@@ -744,11 +744,17 @@ fn update(
         }],
         // stairs, shafts, grids and the roof: resolved as for a new one, updated in place
         _ => {
-            let ModelStep::Add { elem, .. } = resolve_group(cx, std::slice::from_ref(&w.elem))?
-            else {
-                return Err(format!("a {} is not updated in place", w.table).into());
+            let step = match resolve_group(cx, std::slice::from_ref(&w.elem))? {
+                ModelStep::Add { elem, .. } => ModelStep::Update { id, elem },
+                ModelStep::Columns { mut specs, .. } if specs.len() == 1 => {
+                    ModelStep::Edits(vec![Edit::Column { id, spec: specs.remove(0) }])
+                }
+                ModelStep::Comps { mut specs, .. } if specs.len() == 1 => {
+                    ModelStep::Comp { id, spec: specs.remove(0) }
+                }
+                _ => return Err(format!("a {} is not updated in place", w.table).into()),
             };
-            push(cx, out, ModelStep::Update { id, elem })?;
+            push(cx, out, step)?;
             cx.declared.insert((w.table.to_string(), id));
             return Ok(id);
         }
@@ -2217,11 +2223,6 @@ fn write_values(
     head: &J,
     keys: &BTreeMap<u32, String>,
 ) -> Result<(), PlanError> {
-    for rel in sy.fresh.clone() {
-        if let Some(r) = sy.recs.get_mut(&rel) {
-            r.row = row_hash(&cx.ed.model, &r.table, r.id)?.unwrap_or(0);
-        }
-    }
     let hand_kept: BTreeSet<(&str, i64)> =
         cx.skips.iter().map(|s| (s.cat.as_str(), s.id)).collect();
     let valued: Vec<(u32, &Rec)> = sy
@@ -2241,7 +2242,6 @@ fn write_values(
     let mut sets = structure_props(sy, &spec.fire_rating, project::fire::slab_rating(spec), &valued);
     sets.extend(opening_props(sy, &valued));
     sets.extend(key_props(&cx.ed.model, sy, keys));
-    sets.extend(recipe_props(sy, pid, head));
     write_finishes(cx, out, spec, &rooms)?;
     let swings: Vec<Edit> = valued
         .iter()
@@ -2258,6 +2258,13 @@ fn write_values(
     if !swings.is_empty() {
         push(cx, out, ModelStep::Edits(swings))?;
     }
+    // rows as this item leaves them, after swings and finishes: neither reads as a hand edit
+    for rel in sy.fresh.clone() {
+        if let Some(r) = sy.recs.get_mut(&rel) {
+            r.row = row_hash(&cx.ed.model, &r.table, r.id)?.unwrap_or(0);
+        }
+    }
+    sets.extend(recipe_props(sy, pid, head));
     push(cx, out, ModelStep::Props(sets))?;
     Ok(())
 }

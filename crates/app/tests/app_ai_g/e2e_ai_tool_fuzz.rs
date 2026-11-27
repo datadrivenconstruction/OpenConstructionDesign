@@ -286,6 +286,11 @@ fn fuzz_over_mcp(n: usize, stored_auto: bool) -> usize {
             check_outcome(name, i, &out.text, out.is_error, 4_000);
             assert_eq!(count(&ed.model, "op"), ops0, "{name} #{i}: a journal row");
             assert!(!ed.can_undo(), "{name} #{i}: an undo step appeared");
+            // each case on an empty draft: 40 accepted stations in one draft only measure its size
+            if !out.is_error {
+                s.discard_agent_draft(FUZZ_ACTOR);
+                assert!(s.wait_idle(&mut ed, WAIT), "{name} #{i}: the discard stayed busy");
+            }
             total += 1;
         }
         assert!(s.wait_idle(&mut ed, WAIT), "{name}: the worker stayed busy");
