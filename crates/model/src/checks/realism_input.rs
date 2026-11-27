@@ -13,6 +13,8 @@ use super::realism::{
     near_pairs, BendMethod, Bolt, Input, Member, Part, Plate, Rebar, Shape, Stair, AXIS_TOL,
     MIN_WALL,
 };
+use std::collections::HashMap;
+
 use crate::{Error, Model};
 
 /// Sag of sampled arcs, m: the axis stays within 0.1 mm of the true curve.
@@ -347,59 +349,175 @@ fn joints(built: &[(Built, Tags)], inp: &mut Input) {
     let boxes: Vec<[f64; 6]> = built.iter().map(|b| b.0.part.bbox).collect();
     let thick = |b: &Built| b.info.map_or(b.part.min_dim, |i| i.thin.max(1e-6));
     let plate_ix: Vec<usize> = (0..built.len()).filter(|&i| built[i].1.plate).collect();
-    let bolt_ix: Vec<usize> = (0..built.len()).filter(|&i| built[i].1.bolt.is_some()).collect();
+    let bolt_ix: Vec<usize> = (0..built.len())
+        .filter(|&i| built[i].1.bolt.is_some())
+        .collect();
     if plate_ix.is_empty() && bolt_ix.is_empty() {
         return;
     }
-    let pairs = near_pairs(&boxes, AXIS_TOL);
+    let mut near: Vec<Vec<usize>> = vec![vec![]; built.len()];
+    for (a, b) in near_pairs(&boxes, AXIS_TOL) {
+        near[a].push(b);
+        near[b].push(a);
+    }
     for &p in &plate_ix {
         let t = built[p].0.part.min_dim;
-        let joined: Vec<_> = pairs
+        let joined: Vec<_> = near[p]
             .iter()
-            .filter_map(|&(a, b)| match (a == p, b == p) {
-                (true, _) => Some(b),
-                (_, true) => Some(a),
-                _ => None,
-            })
+            .copied()
             .filter(|&o| !built[o].1.plate && built[o].1.bolt.is_none())
             .map(|o| (built[o].0.part.key.clone(), thick(&built[o].0)))
             .collect();
-        inp.plates.push(Plate { key: built[p].0.part.key.clone(), thick: t, joined });
+        inp.plates.push(Plate {
+            key: built[p].0.part.key.clone(),
+            thick: t,
+            joined,
+        });
     }
     let centre = |i: usize| {
         let b = &boxes[i];
-        [(b[0] + b[3]) / 2.0, (b[1] + b[4]) / 2.0, (b[2] + b[5]) / 2.0]
+        [
+            (b[0] + b[3]) / 2.0,
+            (b[1] + b[4]) / 2.0,
+            (b[2] + b[5]) / 2.0,
+        ]
     };
+    // a connected tower has tens of thousands of plates and bolts: scans of all of them per bolt take hours
+    let mut dims: Vec<f64> = plate_ix
+        .iter()
+        .map(|&p| bbox_dims(&boxes[p]).into_iter().fold(0.0, f64::max))
+        .collect();
+    dims.sort_by(f64::total_cmp);
+    let cell = dims.get(dims.len() / 2).copied().unwrap_or(1.0).max(1e-3);
+    let plates = Grid::new(plate_ix.iter().map(|&p| (p, boxes[p])), cell);
+    let bolts = Grid::new(
+        bolt_ix.iter().map(|&o| {
+            (o, {
+                let c = centre(o);
+                [c[0], c[1], c[2], c[0], c[1], c[2]]
+            })
+        }),
+        cell,
+    );
+    let mut on_plate: HashMap<usize, Vec<usize>> = HashMap::new();
     for &i in &bolt_ix {
         let (b, t) = (&built[i].0, &built[i].1);
         let d = t.bolt.flatten().or(b.info.map(|s| s.depth)).unwrap_or(0.0);
         let c = centre(i);
-        let host = plate_ix.iter().copied().find(|&p| {
-            (0..3).all(|k| c[k] >= boxes[p][k] - 1e-9 && c[k] <= boxes[p][k + 3] + 1e-9)
-        });
+        let host = plates.at(c).filter(|&p| boxes_touch(&boxes[p], &c)).min();
         let (mut edge, mut pitch) = (None, None);
         if let Some(p) = host {
             let dims = bbox_dims(&boxes[p]);
-            let thin_k = (0..3).min_by(|&a, &b| dims[a].total_cmp(&dims[b])).unwrap_or(2);
+            let thin_k = (0..3)
+                .min_by(|&a, &b| dims[a].total_cmp(&dims[b]))
+                .unwrap_or(2);
             edge = (0..3)
                 .filter(|&k| k != thin_k)
                 .map(|k| (c[k] - boxes[p][k]).min(boxes[p][k + 3] - c[k]))
                 .reduce(f64::min);
-            pitch = bolt_ix
+            let others = on_plate.entry(p).or_insert_with(|| {
+                let mut v: Vec<usize> = bolts
+                    .within(&boxes[p])
+                    .filter(|&o| boxes_touch(&boxes[p], &centre(o)))
+                    .collect();
+                v.sort_unstable();
+                v.dedup();
+                v
+            });
+            pitch = others
                 .iter()
-                .filter(|&&o| o != i && boxes_touch(&boxes[p], &centre(o)))
+                .filter(|&&o| o != i)
                 .map(|&o| {
                     let q = centre(o);
                     ((c[0] - q[0]).powi(2) + (c[1] - q[1]).powi(2) + (c[2] - q[2]).powi(2)).sqrt()
                 })
                 .reduce(f64::min);
         }
-        inp.bolts.push(Bolt { key: b.part.key.clone(), d, hole: t.hole, edge, pitch });
+        inp.bolts.push(Bolt {
+            key: b.part.key.clone(),
+            d,
+            hole: t.hole,
+            edge,
+            pitch,
+        });
     }
 }
 
 fn boxes_touch(b: &[f64; 6], p: &[f64; 3]) -> bool {
     (0..3).all(|k| p[k] >= b[k] - 1e-9 && p[k] <= b[k + 3] + 1e-9)
+}
+
+/// Boxes on a uniform grid; one covering too many cells is checked by every query instead.
+struct Grid {
+    cell: f64,
+    map: HashMap<[i64; 3], Vec<usize>>,
+    big: Vec<usize>,
+    all: Vec<usize>,
+}
+
+const GRID_SPAN: i64 = 4096;
+
+impl Grid {
+    fn new(items: impl Iterator<Item = (usize, [f64; 6])>, cell: f64) -> Self {
+        let mut g = Grid {
+            cell,
+            map: HashMap::new(),
+            big: vec![],
+            all: vec![],
+        };
+        for (i, b) in items {
+            g.all.push(i);
+            let (lo, hi) = g.range(&b);
+            if (0..3).map(|k| hi[k] - lo[k] + 1).product::<i64>() > GRID_SPAN {
+                g.big.push(i);
+                continue;
+            }
+            for x in lo[0]..=hi[0] {
+                for y in lo[1]..=hi[1] {
+                    for z in lo[2]..=hi[2] {
+                        g.map.entry([x, y, z]).or_default().push(i);
+                    }
+                }
+            }
+        }
+        g
+    }
+
+    fn range(&self, b: &[f64; 6]) -> ([i64; 3], [i64; 3]) {
+        let c = |v: f64| (v / self.cell).floor() as i64;
+        (
+            [c(b[0] - 1e-9), c(b[1] - 1e-9), c(b[2] - 1e-9)],
+            [c(b[3] + 1e-9), c(b[4] + 1e-9), c(b[5] + 1e-9)],
+        )
+    }
+
+    /// Every box that may hold `p`.
+    fn at(&self, p: [f64; 3]) -> impl Iterator<Item = usize> + '_ {
+        let c = |v: f64| (v / self.cell).floor() as i64;
+        let k = [c(p[0]), c(p[1]), c(p[2])];
+        self.map
+            .get(&k)
+            .into_iter()
+            .flatten()
+            .copied()
+            .chain(self.big.iter().copied())
+    }
+
+    /// Every item that may lie in `b`, with repeats when an item covers several cells.
+    fn within(&self, b: &[f64; 6]) -> Box<dyn Iterator<Item = usize> + '_> {
+        let (lo, hi) = self.range(b);
+        if (0..3).map(|k| hi[k] - lo[k] + 1).product::<i64>() > GRID_SPAN {
+            return Box::new(self.all.iter().copied());
+        }
+        let cells = (lo[0]..=hi[0]).flat_map(move |x| {
+            (lo[1]..=hi[1]).flat_map(move |y| (lo[2]..=hi[2]).map(move |z| [x, y, z]))
+        });
+        Box::new(
+            cells
+                .flat_map(|k| self.map.get(&k).into_iter().flatten().copied())
+                .chain(self.big.iter().copied()),
+        )
+    }
 }
 
 fn rebar(m: &Model, inp: &mut Input) {
@@ -441,6 +559,42 @@ fn stairs(m: &Model, inp: &mut Input) {
         if let Ok(s) = m.stair_layout(id) {
             let key = ("stair".to_string(), id);
             inp.stairs.push(Stair { key, riser: s.riser, tread: s.tread });
+        }
+    }
+}
+
+#[cfg(test)]
+mod grid_tests {
+    use super::{boxes_touch, Grid};
+
+    #[test]
+    fn grid_finds_every_box_a_scan_finds() {
+        let mut s = 7u64;
+        let mut r = || {
+            s = s.wrapping_mul(6364136223846793005).wrapping_add(1442695040888963407);
+            (s >> 11) as f64 / (1u64 << 53) as f64
+        };
+        let boxes: Vec<[f64; 6]> = (0..300)
+            .map(|i| {
+                let (x, y, z) = (r() * 20.0 - 10.0, r() * 20.0 - 10.0, r() * 5.0);
+                let w = if i % 50 == 0 { 400.0 } else { r() * 0.8 };
+                [x, y, z, x + w, y + r() * 0.5, z + r() * 0.02]
+            })
+            .collect();
+        let g = Grid::new(boxes.iter().copied().enumerate(), 0.4);
+        let pts: Vec<[f64; 3]> = (0..400).map(|_| [r() * 20.0 - 10.0, r() * 20.0 - 10.0, r() * 5.0]).collect();
+        let pg = Grid::new(pts.iter().map(|p| [p[0], p[1], p[2], p[0], p[1], p[2]]).enumerate(), 0.4);
+        for p in &pts {
+            let scan = (0..boxes.len()).find(|&b| boxes_touch(&boxes[b], p));
+            assert_eq!(g.at(*p).filter(|&b| boxes_touch(&boxes[b], p)).min(), scan);
+        }
+        for b in &boxes {
+            let mut scan: Vec<usize> = (0..pts.len()).filter(|&i| boxes_touch(b, &pts[i])).collect();
+            let mut got: Vec<usize> = pg.within(b).filter(|&i| boxes_touch(b, &pts[i])).collect();
+            got.sort_unstable();
+            got.dedup();
+            scan.sort_unstable();
+            assert_eq!(got, scan);
         }
     }
 }
