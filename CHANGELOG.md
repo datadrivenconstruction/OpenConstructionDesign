@@ -24,6 +24,7 @@
 - UI shot scripts can open another project between steps and keep the view, and set the 3D camera with `zoom`, `eye` and `target`.
 
 ### AI assistant
+- Cost uses the amount the service reports for each reply, and cached input is counted at its own price; long chats reuse the cached start of the conversation.
 - Model gateway preset: models, prices and context size come from the gateway.
 - A spent key limit and an empty balance are their own errors with a next step; the balance is shown.
 - Mode switch, onboarding, recovery and warning texts explain what each choice does.
