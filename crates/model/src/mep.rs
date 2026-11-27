@@ -381,7 +381,7 @@ fn route_fitted(
     let mut p = pts.to_vec();
     mep::fit_bends(&mut p, radius, trim);
     match mep::route(&p, radius, trim) {
-        Err(mep::RouteError::TooShort { .. }) if p.len() == 2 => {}
+        Err(mep::RouteError::TooShort { .. }) if p.len() == 2 && trim.0 > 0.0 && trim.1 > 0.0 => {}
         r => return r,
     }
     let len = (p[1] - p[0]).len();
