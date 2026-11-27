@@ -1456,6 +1456,7 @@ pub(super) fn compile_create(
                 | NewElem::Comp { .. }
                 | NewElem::Opening { .. }
                 | NewElem::Room { .. }
+                | NewElem::SteelConn { .. }
         ) {
             while i < items.len() && same(&items[start], &items[i]) {
                 i += 1;
@@ -1493,6 +1494,7 @@ pub(super) fn resolve_group(
     let mut comps = vec![];
     let mut opens = vec![];
     let mut rooms = vec![];
+    let mut conns = vec![];
     for e in group {
         match e {
             NewElem::Wall {
@@ -1788,12 +1790,12 @@ pub(super) fn resolve_group(
                     .map(|r| Ok((r.cat.clone(), id_of(cx.slots, r)?)))
                     .collect::<Result<Vec<_>, PlanError>>()?;
                 let params = ddc_geom::steel::Params::parse(params).map_err(PlanError)?;
-                return add(NewResolved::SteelConn(ddc_model::SteelConnSpec {
+                conns.push(ddc_model::SteelConnSpec {
                     level: *level,
                     kind,
                     members,
                     params,
-                }));
+                });
             }
             NewElem::Pipe {
                 system,
@@ -1895,6 +1897,11 @@ pub(super) fn resolve_group(
     } else if !rooms.is_empty() {
         ModelStep::Rooms {
             specs: rooms,
+            expect: vec![],
+        }
+    } else if !conns.is_empty() {
+        ModelStep::SteelConns {
+            specs: conns,
             expect: vec![],
         }
     } else {

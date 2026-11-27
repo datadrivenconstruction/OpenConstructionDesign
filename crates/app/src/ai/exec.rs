@@ -98,6 +98,11 @@ pub enum ModelStep {
         specs: Vec<(Vec<i64>, ddc_model::SplineWallSpec)>,
         expect: Vec<i64>,
     },
+    /// A run of steel connections: one model call, the members indexed once for all of them.
+    SteelConns {
+        specs: Vec<ddc_model::SteelConnSpec>,
+        expect: Vec<i64>,
+    },
     Add {
         elem: Box<NewResolved>,
         expect: i64,
@@ -338,6 +343,15 @@ fn run(m: &mut Model, s: &ModelStep) -> Result<Vec<i64>, Error> {
         ModelStep::Columns { specs, .. } => m.add_columns(specs)?,
         ModelStep::Beams { specs, .. } => m.add_beams(specs)?,
         ModelStep::Comps { specs, .. } => m.add_components(specs)?,
+        ModelStep::SteelConns { specs, .. } => match m.add_steel_conns(specs) {
+            Ok(ids) => ids,
+            // one by one only to name the node that cannot be built; the plan rolls back
+            Err(Error::Invalid(_)) => specs
+                .iter()
+                .map(|s| add_one(m, &NewResolved::SteelConn(s.clone())))
+                .collect::<Result<_, _>>()?,
+            Err(e) => return Err(e),
+        },
         ModelStep::Add { elem, .. } => vec![add_one(m, elem)?],
         ModelStep::Delete { table, id } => {
             delete(m, table, *id)?;
@@ -513,6 +527,7 @@ pub fn created_keys(s: &ModelStep) -> Vec<ElKey> {
         ModelStep::Columns { .. } => "col",
         ModelStep::Beams { .. } => "beam",
         ModelStep::Comps { .. } => "comp",
+        ModelStep::SteelConns { .. } => "steel_conn",
         ModelStep::Openings { .. } => "opening",
         ModelStep::Rooms { .. } => "room",
         ModelStep::Splines { .. } => "wall_spline",
@@ -553,6 +568,7 @@ fn expected(s: &ModelStep) -> Vec<i64> {
         | ModelStep::Devices { expect, .. }
         | ModelStep::Openings { expect, .. }
         | ModelStep::Rooms { expect, .. }
+        | ModelStep::SteelConns { expect, .. }
         | ModelStep::Splines { expect, .. } => expect.clone(),
         ModelStep::Add { expect, .. } => vec![*expect],
         ModelStep::Geometry { made, .. } | ModelStep::Script { made, .. } => {
@@ -595,6 +611,7 @@ pub fn fill(m: &mut Model, s: &mut ModelStep) -> Result<Vec<i64>, Error> {
         | ModelStep::Devices { expect, .. }
         | ModelStep::Openings { expect, .. }
         | ModelStep::Rooms { expect, .. }
+        | ModelStep::SteelConns { expect, .. }
         | ModelStep::Splines { expect, .. } => expect.clone_from(&ids),
         ModelStep::Add { expect, .. } => *expect = ids.first().copied().unwrap_or(0),
         ModelStep::Script { env, made, .. } => {
