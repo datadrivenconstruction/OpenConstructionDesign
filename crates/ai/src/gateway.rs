@@ -136,6 +136,13 @@ pub fn funds_error(status: u16, body: &str) -> Option<ProviderError> {
     no_credit.then(|| ProviderError::NoCredit(detail()))
 }
 
+/// Whether the server behind a model id keeps a prompt cache that asks for cache points in the
+/// request (the Claude family, by id or through a gateway's vendor prefix).
+pub fn caches_prompt(model: &str) -> bool {
+    let m = model.to_ascii_lowercase();
+    m.starts_with("anthropic/") || m.contains("claude")
+}
+
 /// Cost of a run from token counts and per-million prices; `None` without both prices.
 pub fn cost_of(
     tokens_in: u64,

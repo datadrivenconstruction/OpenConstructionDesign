@@ -124,6 +124,9 @@ pub struct Usage {
     pub cache_read_tokens: u64,
     /// The part of `input_tokens` written to that cache (billed at a premium).
     pub cache_write_tokens: u64,
+    /// What the server says it charged for the request, in millionths of its billing unit;
+    /// `None` where the server reports no price.
+    pub charged_micros: Option<u64>,
 }
 
 /// Lifetime of a cache entry the wire asks for. The write price below belongs to this value:
@@ -143,6 +146,15 @@ impl Usage {
         self.output_tokens = self.output_tokens.saturating_add(other.output_tokens);
         self.cache_read_tokens = self.cache_read_tokens.saturating_add(other.cache_read_tokens);
         self.cache_write_tokens = self.cache_write_tokens.saturating_add(other.cache_write_tokens);
+        self.charged_micros = match (self.charged_micros, other.charged_micros) {
+            (None, None) => None,
+            (a, b) => Some(a.unwrap_or(0).saturating_add(b.unwrap_or(0))),
+        };
+    }
+
+    /// The server's own price of what was added up here, in its billing unit.
+    pub fn charged(&self) -> Option<f64> {
+        self.charged_micros.map(|m| m as f64 / 1e6)
     }
 
     /// Input tokens counted at the plain price: cache reads at 0.1, writes at 1.25 of it.
@@ -323,6 +335,7 @@ mod tests {
             output_tokens: 0,
             cache_read_tokens: 800,
             cache_write_tokens: 100,
+            charged_micros: None,
         };
         // 100 fresh + 800 * 0.1 + 100 * 1.25
         assert!((u.input_price_units() - 305.0).abs() < 1e-9);

@@ -259,6 +259,7 @@ impl Recording {
                 output_tokens: at(1),
                 cache_read_tokens: at(2),
                 cache_write_tokens: at(3),
+                charged_micros: None,
             };
             let mut script = vec![];
             for x in s["script"].as_array().ok_or(format!("step {i}: no script"))? {

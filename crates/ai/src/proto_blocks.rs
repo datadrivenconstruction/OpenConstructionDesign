@@ -606,6 +606,7 @@ mod tests {
             output_tokens: 4,
             cache_read_tokens: 100,
             cache_write_tokens: 20,
+            charged_micros: None,
         })));
     }
 

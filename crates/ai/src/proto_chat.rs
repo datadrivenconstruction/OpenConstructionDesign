@@ -20,7 +20,7 @@ impl Wire for ChatWire {
     fn encode(&self, req: &ChatRequest<'_>) -> J {
         let mut body = json!({
             "model": req.model,
-            "messages": encode_messages(req.messages),
+            "messages": messages_for(req.model, req.messages),
             "stream": true,
             "stream_options": { "include_usage": true },
             "max_tokens": req.max_output_tokens,
@@ -36,6 +36,44 @@ impl Wire for ChatWire {
 
     fn decoder(&self) -> Box<dyn StreamDecoder> {
         Box::new(ChatDecoder::default())
+    }
+}
+
+/// Messages as sent; for a model whose server keeps a prompt cache, the system prompt and the
+/// newest content carry a cache point, so the tools, the prompt and the old turns are read at
+/// the cache price on the next step.
+fn messages_for(model: &str, msgs: &[Message]) -> Vec<J> {
+    let mut out = encode_messages(msgs);
+    if crate::gateway::caches_prompt(model) {
+        mark_cache_points(&mut out);
+    }
+    out
+}
+
+fn mark_cache_points(out: &mut [J]) {
+    let point = json!({ "type": "ephemeral", "ttl": crate::provider::CACHE_TTL });
+    let mark = |m: &mut J| -> bool {
+        let content = m.get("content").cloned();
+        let blocks = match content {
+            Some(J::String(t)) if !t.is_empty() => vec![json!({ "type": "text", "text": t })],
+            Some(J::Array(a)) if !a.is_empty() => a,
+            _ => return false,
+        };
+        let mut blocks = blocks;
+        if let Some(last) = blocks.last_mut().filter(|b| b.get("type").and_then(J::as_str) == Some("text")) {
+            last["cache_control"] = point.clone();
+            m["content"] = J::Array(blocks);
+            return true;
+        }
+        false
+    };
+    if let Some(first) = out.first_mut().filter(|m| m["role"] == "system") {
+        mark(first);
+    }
+    for m in out.iter_mut().rev() {
+        if m["role"] != "system" && mark(m) {
+            break;
+        }
     }
 }
 
@@ -277,12 +315,22 @@ impl StreamDecoder for ChatDecoder {
             return Err(stream_error(err));
         }
         if let Some(u) = v.get("usage").filter(|u| u.is_object()) {
+            let detail = |k: &str| {
+                u.get("prompt_tokens_details")
+                    .and_then(|d| d.get(k))
+                    .and_then(J::as_u64)
+                    .unwrap_or(0)
+            };
             self.usage = Some(Usage {
                 input_tokens: u.get("prompt_tokens").and_then(J::as_u64).unwrap_or(0),
                 output_tokens: u.get("completion_tokens").and_then(J::as_u64).unwrap_or(0),
-                // This format reports no cache split and has no one cache price, so all input
-                // counts at the plain price: the cost shown is an upper bound.
-                ..Usage::default()
+                cache_read_tokens: detail("cached_tokens"),
+                cache_write_tokens: detail("cache_write_tokens"),
+                charged_micros: u
+                    .get("cost")
+                    .and_then(J::as_f64)
+                    .filter(|c| c.is_finite() && *c >= 0.0)
+                    .map(|c| (c * 1e6).round() as u64),
             });
         }
         let Some(choice) = v.get("choices").and_then(|c| c.get(0)) else {
@@ -375,6 +423,44 @@ mod tests {
 
     fn end(id: &str) -> StreamEvent {
         StreamEvent::ToolEnd { id: id.to_string() }
+    }
+
+    #[test]
+    fn usage_reads_cache_split_and_the_charged_price() {
+        let s = concat!(
+            "data: {\"choices\":[{\"delta\":{\"content\":\"a\"},\"finish_reason\":\"stop\"}]}
+
+",
+            "data: {\"choices\":[],\"usage\":{\"prompt_tokens\":1000,\"completion_tokens\":20,",
+            "\"prompt_tokens_details\":{\"cached_tokens\":800,\"cache_write_tokens\":50},\"cost\":0.0123}}
+
+data: [DONE]
+
+",
+        );
+        let ev = decode(s.as_bytes(), 0).unwrap();
+        assert!(ev.contains(&StreamEvent::Usage(Usage {
+            input_tokens: 1000,
+            output_tokens: 20,
+            cache_read_tokens: 800,
+            cache_write_tokens: 50,
+            charged_micros: Some(12_300),
+        })));
+    }
+
+    #[test]
+    fn a_caching_model_gets_cache_points_and_others_do_not() {
+        let msgs = [
+            Message::text(Role::System, "sys"),
+            Message::text(Role::User, "hi"),
+            Message::text(Role::User, "again"),
+        ];
+        let on = messages_for("anthropic/claude-x", &msgs);
+        assert_eq!(on[0]["content"][0]["cache_control"]["type"], "ephemeral");
+        assert!(on[1]["content"].is_string(), "only the newest content moves");
+        assert_eq!(on[2]["content"][0]["cache_control"]["ttl"], crate::provider::CACHE_TTL);
+        let off = messages_for("vendor/plain", &msgs);
+        assert_eq!(off, encode_messages(&msgs));
     }
 
     #[test]

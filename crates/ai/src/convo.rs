@@ -2143,6 +2143,7 @@ mod tests {
             output_tokens: 100_000,
             cache_read_tokens: 800_000,
             cache_write_tokens: 100_000,
+            charged_micros: None,
         };
         // (100k + 80k + 125k) * 3 + 100k * 15 per million = 0.915 + 1.5
         let c = cost_of(&pf, u).unwrap();
@@ -2162,6 +2163,7 @@ mod tests {
             output_tokens: 0,
             cache_read_tokens: 1_000_000,
             cache_write_tokens: 0,
+            charged_micros: None,
         };
         let mut pf = profile();
         pf.price_in_per_mtok = Some(1.0);

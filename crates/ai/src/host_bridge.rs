@@ -158,6 +158,7 @@ pub fn decode_chat(reply: &J) -> Result<Vec<StreamEvent>, ProviderError> {
             output_tokens: n("output_tokens"),
             cache_read_tokens: n("cache_read_tokens"),
             cache_write_tokens: n("cache_write_tokens"),
+            charged_micros: None,
         }));
     }
     let finish = match reply["finish"].as_str() {
