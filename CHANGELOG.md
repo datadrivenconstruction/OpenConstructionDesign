@@ -9,6 +9,8 @@
 - `ddc ai` runs the AI assistant without a window, with a cost estimate and `--budget-usd`.
 - `ddc ai-profile add|list|remove` manages the same AI profiles as the app; keys stay in the OS keychain.
 - Usage errors are one line with a hint instead of the whole help.
+- An option never takes the next `--flag` as its value; `ddc --json` without a command returns a JSON error.
+- `ddc run` reports level read errors instead of hiding them.
 
 ### Scripting
 - Lua `member{}` and `slab{}` blocks.
@@ -31,6 +33,9 @@
 - The model summary counts members, plates and other solids.
 - Realism checks of steel joints scale to large models.
 - Every locale has all interface texts.
+- Materials set by scripts render in 3D; script-made parts are listed in the project browser.
+- Geometry and export errors name the element and the next step; the SVG export explains what it includes.
+- Disabled buttons say why; empty parameter, size and import-rule tables say how to start.
 
 ## 1.3.0
 
