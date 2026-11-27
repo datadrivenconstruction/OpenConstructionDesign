@@ -159,6 +159,8 @@ fn offscreen_3d_frames_pass_api_validation() {
     let (pick, desc) = ddc_app::gfx::choose(&cands, &mut |_| {}).expect("graphics adapter");
     let rs = ddc_app::shot::render_state_with(pick, wgpu::InstanceFlags::VALIDATION).unwrap();
     eprintln!("adapter: {desc}");
+    // probing EGL platforms logs drivers that are not there; only the frames are checked
+    ERRORS.lock().unwrap().clear();
     let size = (960, 640);
     // speed: 1x frame, only the screenshot's own resolve; quality: the 3D frame resolves too
     for (level, want) in [("speed", 1), ("quality", if supports_4x(&rs) { 4 } else { 1 })] {
