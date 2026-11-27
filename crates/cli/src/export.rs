@@ -255,7 +255,7 @@ fn svg_sheets(m: &Model, out: &Path, first: &Path) -> Result<Vec<String>, String
     use ddc_io::sheets::{file_name, print_composed, Ctx, LengthUnits, SheetRefs};
     let sheets = m.sheets().map_err(|e| e.to_string())?;
     if sheets.is_empty() {
-        return Err("the model has no sheet".into());
+        return Err("the model has no sheet to write as svg: svg exports sheets, not views. Add a sheet in the editor (Sheets, New sheet), save, and run again, or use ddc-app --file <in> --screenshot <png> for a view".into());
     }
     let refs = SheetRefs::load(m).map_err(|e| e.to_string())?;
     let none = |_: &str| -> Option<ddc_io::sheets::Table> { None };

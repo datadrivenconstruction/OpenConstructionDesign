@@ -605,6 +605,7 @@ fn material_table(t: Target) -> Option<&'static str> {
         Cat::Ext(c) if c == crate::scene_ids::EXT_FREEFORM => Some("freeform"),
         Cat::Ext(c) if c == crate::scene_ids::EXT_PANEL_SYSTEM => Some("panel_system"),
         Cat::Mesh => Some("mesh"),
+        Cat::Ext(c) if c == crate::scene_ids::EXT_SOLID => Some("solid"),
         _ => None,
     };
     own.or_else(|| t.grip_kind().and_then(crate::view_gfx_ui::kind_table))

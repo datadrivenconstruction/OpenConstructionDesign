@@ -37,6 +37,18 @@ pub enum CutError {
     BadOpening { strip: usize, opening: usize },
 }
 
+impl std::fmt::Display for CutError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::BadPiece => f.write_str("a wall piece has a non-finite coordinate or no height"),
+            Self::NotConvex => f.write_str("a wall piece footprint is not convex"),
+            Self::BadCutter { cutter } => write!(f, "cutter {cutter} is degenerate"),
+            Self::NonManifold => f.write_str("the body is non-manifold"),
+            Self::BadOpening { strip, opening } => write!(f, "opening {opening} of wall {strip} has an invalid size"),
+        }
+    }
+}
+
 /// Body after cuts: mesh and exact volume (Σ cell area × band height).
 #[derive(Debug)]
 pub struct CutBody {

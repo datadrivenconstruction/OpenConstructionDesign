@@ -481,9 +481,14 @@ pub fn families(m: &Model, c: &Catalog) -> Vec<Node> {
         out.push(node(c.t("type_dialog.warn.cat.truss"), "", Act::None, trusses));
     }
     // parametric parts (script members, plates) by their IFC class, then by name
-    for &(class, key) in ddc_model::SOLID_CATEGORIES {
+    let known = ddc_model::SOLID_CATEGORIES.iter().map(|r| format!("'{}'", r.0)).collect::<Vec<_>>().join(",");
+    let by_class = ddc_model::SOLID_CATEGORIES
+        .iter()
+        .map(|&(class, key)| (format!("ifc_class='{class}'"), key))
+        .chain([(format!("coalesce(ifc_class,'') NOT IN ({known})"), "solid")]);
+    for (cond, key) in by_class {
         let kids = grouped(&format!(
-            "SELECT count(*), CASE WHEN name='' THEN coalesce(ifc_type,'') ELSE name END AS n FROM solid              WHERE void=0 AND ifc_class='{class}' GROUP BY n ORDER BY n"
+            "SELECT count(*), CASE WHEN name='' THEN coalesce(ifc_type,'') ELSE name END AS n FROM solid              WHERE void=0 AND {cond} GROUP BY n ORDER BY n"
         ));
         if kids.is_empty() {
             continue;
@@ -2027,6 +2032,29 @@ mod tests {
         let mem = f.iter().find(|n| n.label == c.t("type_dialog.warn.cat.member")).expect("members family");
         let kids: Vec<(&str, &str)> = mem.kids.iter().map(|n| (n.label.as_str(), n.right.as_str())).collect();
         assert_eq!(kids, [("chord", "2"), ("post", "1")]);
+    }
+
+    /// Parts without an IFC class still show, as "Other solids".
+    #[test]
+    fn classless_parts_list_as_other_solids() {
+        use ddc_model::{SolidForm, SolidFrame, SolidSection, SolidSpec};
+        let mut ed = Editor::new_in_memory().unwrap();
+        let r = vec![ddc_geom::v2(0.0, 0.0), ddc_geom::v2(0.1, 0.0), ddc_geom::v2(0.1, 0.1), ddc_geom::v2(0.0, 0.1)];
+        ed.model
+            .add_solid(&SolidSpec {
+                level: ed.level,
+                name: "rivet".into(),
+                void: false,
+                material: "steel".into(),
+                ifc: None,
+                frame: SolidFrame::default(),
+                form: SolidForm::Extrusion { profile: SolidSection::polygon(r), start: 0.0, end: 1.0 },
+            })
+            .unwrap();
+        let c = Catalog::new(Lang::En);
+        let f = families(&ed.model, &c);
+        let g = f.iter().find(|n| n.label == c.t("type_dialog.warn.cat.solid")).expect("other solids");
+        assert_eq!(g.kids.iter().map(|n| n.label.as_str()).collect::<Vec<_>>(), ["rivet"]);
     }
 
     #[test]

@@ -81,3 +81,36 @@ fn the_scene_tag_carries_the_look_layer_and_keeps_the_category() {
     assert!(texture::layer_of(m.tag).is_some(), "{:#x}", m.tag);
     assert_eq!(ddc_render::style::base_tag(m.tag), scene3d::TAG_MEMBER);
 }
+
+#[test]
+fn a_part_takes_the_look_of_its_material() {
+    use ddc_geom::{arc::BulgeRing, v2};
+    use ddc_model::{SolidForm, SolidFrame, SolidSpec};
+    let mut ed = Editor::new_in_memory().unwrap();
+    let ring = |r: f64| BulgeRing {
+        pts: (0..8).map(|i| (std::f64::consts::TAU * i as f64 / 8.0, r)).map(|(a, r)| v2(r * a.cos(), r * a.sin())).collect(),
+        bulges: vec![0.0; 8],
+    };
+    let mut add = |material: &str, top: f64| {
+        ed.model
+            .add_solid(&SolidSpec {
+                level: ed.level,
+                name: "p".into(),
+                void: false,
+                material: material.into(),
+                frame: SolidFrame::default(),
+                form: SolidForm::Blend { bottom: ring(1.0), top: ring(top), height: 1.0 },
+                ifc: None,
+            })
+            .unwrap()
+    };
+    let (steel, grass) = (add("steel", 0.8), add("grass", 0.5));
+    ed.reload().unwrap();
+    let (sc, ts) = scene3d::compose(&mut ed);
+    let tag_of = |id: i64| {
+        let k = ts.iter().position(|t| *t == crate::edit3d::pick::Target::new(crate::edit3d::pick::Cat::Ext(crate::scene_ids::EXT_SOLID), id)).unwrap();
+        sc.meshes.iter().find(|m| m.element == crate::scene_ids::EXT_BASE + k as u32).unwrap().tag
+    };
+    assert!(texture::layer_of(tag_of(steel)).is_some(), "{:#x}", tag_of(steel));
+    assert_eq!(tag_of(grass) & ddc_render::scene::TAG_RGB, ddc_render::scene::TAG_RGB);
+}

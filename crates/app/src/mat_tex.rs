@@ -24,6 +24,8 @@ const MAX_SIDE: u32 = 8192;
 #[derive(Default, Debug)]
 pub struct Layers {
     elem: HashMap<(&'static str, i64), u8>,
+    /// Typed parts (solids) whose material is a finish: the look colour in every style.
+    elem_rgb: HashMap<(&'static str, i64), [u8; 3]>,
     wall: HashMap<(i64, usize), u8>,
     /// Wall type layers drawn with their library look (finishes keep their shaded colour).
     wall_look: HashMap<(i64, usize), u8>,
@@ -35,7 +37,7 @@ pub struct Layers {
 
 impl Layers {
     pub fn is_empty(&self) -> bool {
-        self.elem.is_empty() && self.wall.is_empty() && self.wall_look.is_empty() && self.stack.is_empty()
+        self.elem.is_empty() && self.elem_rgb.is_empty() && self.wall.is_empty() && self.wall_look.is_empty() && self.stack.is_empty()
     }
 
     /// Tag of a wall type layer drawn with its library look; the plain layer number without one.
@@ -77,6 +79,9 @@ impl Layers {
 
     /// `tag` of an element's faces with its material texture, unchanged without one.
     pub fn elem(&self, table: &'static str, id: i64, tag: u32) -> u32 {
+        if let Some(c) = self.elem_rgb.get(&(table, id)) {
+            return ddc_render::tag_rgb(*c, false);
+        }
         match self.elem.get(&(table, id)) {
             Some(&l) => texture::with_layer(tag, l),
             None => tag,
@@ -434,10 +439,17 @@ pub fn layers(ed: &Editor) -> Rc<Layers> {
     };
     let mut uses: HashMap<String, (LookTex, usize)> = HashMap::new();
     let mut elem_look: Vec<((&'static str, i64), String)> = vec![];
+    let mut elem_rgb: HashMap<(&'static str, i64), [u8; 3]> = HashMap::new();
+    let mut finish: HashMap<&str, Option<[u8; 3]>> = HashMap::new();
     for (table, id, material) in &elems {
         let Some(table) = static_table(table) else { continue };
         if let Some(&l) = by_name.get(material.as_str()) {
             elem_look.push(((table, *id), format!("#{l}")));
+        } else if let Some(c) = (table == "solid").then(|| finish.entry(material.as_str()).or_insert_with(|| {
+            let r = ed.model.material_look(material).ok().flatten().filter(|r| r.look.finish)?;
+            Some([(r.rgb >> 16) as u8, (r.rgb >> 8) as u8, r.rgb as u8])
+        })).and_then(|c| *c) {
+            elem_rgb.insert((table, *id), c);
         } else if let Some(t) = look(material) {
             let k = t.key();
             uses.entry(k.clone()).or_insert((t, 0)).1 += 1;
@@ -471,7 +483,7 @@ pub fn layers(ed: &Editor) -> Rc<Layers> {
         srcs.push(Src::Look(t));
         all.push(k);
     }
-    let mut out = Layers::default();
+    let mut out = Layers { elem_rgb, ..Layers::default() };
     for (at, k) in elem_look {
         if let Some(&l) = index.get(&k) {
             out.elem.insert(at, l);

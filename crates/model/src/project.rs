@@ -26,7 +26,7 @@ pub const RENAME_WAIT: Duration = Duration::from_secs(30);
 /// Why a project file did not open or save; the UI turns each into a plain message.
 #[derive(Debug, thiserror::Error)]
 pub enum ProjectError {
-    #[error("file is in use by another instance: {}", .0.display())]
+    #[error("{} is open in another window or program. Close it there or choose another file name, then try again.", .0.display())]
     Locked(PathBuf),
     #[error("file schema version {found} is newer than supported {supported}")]
     Newer { found: i64, supported: i64 },

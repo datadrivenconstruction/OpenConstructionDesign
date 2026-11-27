@@ -834,7 +834,7 @@ fn compute_raw(m: &Model, g: &Grip, to: V2) -> Result<Change, Error> {
                         Ok(ax) => ax.bulge,
                         // a point on the chord makes the wall straight again
                         Err(ArcError::NoCircle | ArcError::Straight) => 0.0,
-                        Err(e) => return Err(degenerate(&format!("arc wall: {e:?}"))),
+                        Err(e) => return Err(degenerate(&format!("arc wall: {e}"))),
                     };
                     Change::WallBulge(id, a, b, bu)
                 }
@@ -1078,7 +1078,7 @@ fn compute_raw(m: &Model, g: &Grip, to: V2) -> Result<Change, Error> {
                         Ok(ax) => ax.bulge,
                         // a point on the chord: the wall is straight again
                         Err(ArcError::NoCircle | ArcError::Straight) => 0.0,
-                        Err(e) => return Err(degenerate(&format!("curtain wall arc: {e:?}"))),
+                        Err(e) => return Err(degenerate(&format!("curtain wall arc: {e}"))),
                     };
                 }
                 _ => return Err(bad()),

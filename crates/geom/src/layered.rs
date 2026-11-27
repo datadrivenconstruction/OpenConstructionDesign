@@ -121,6 +121,25 @@ pub enum JoinError {
     },
 }
 
+impl std::fmt::Display for JoinError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        use JoinError as E;
+        match self {
+            E::NonFinite { strip } => write!(f, "wall {strip}: a coordinate or size is not a finite number"),
+            E::ZeroLength { strip } => write!(f, "wall {strip} has zero length"),
+            E::NoLayers { strip } => write!(f, "wall {strip} has no layers"),
+            E::Overlapping { a, b } => write!(f, "walls {a} and {b} overlap"),
+            E::Degenerate { strip, layer, .. } => write!(f, "layer {layer} of wall {strip} has no valid outline"),
+            E::OpeningOutside { strip, opening } => write!(f, "opening {opening} lies outside wall {strip}"),
+            E::NearlyParallel { a, b } => write!(f, "walls {a} and {b} are nearly parallel, no join is built"),
+            E::SplitOutside => f.write_str("the split point is not inside the wall axis"),
+            E::OpeningStraddlesSplit { opening } => write!(f, "opening {opening} straddles the split point"),
+            E::CutOverlap { strip, layer, a, b } => write!(f, "cuts of walls {a} and {b} overlap in layer {layer} of wall {strip}"),
+            E::Arc { strip, cause } => write!(f, "arc wall {strip}: {cause}"),
+        }
+    }
+}
+
 /// End of a layer piece: the trim line. `None` is a square end along the normal at the wall end.
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct Cap {

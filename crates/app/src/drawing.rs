@@ -727,15 +727,15 @@ pub fn read_underlay_with(
     if ext_of(path) == "pdf" {
         use ddc_io::pdf::import::{ImportOptions, PdfFile, Scale};
         let bytes = std::fs::read(path).map_err(|e| e.to_string())?;
-        let f = PdfFile::parse(&bytes).map_err(|e| format!("{e:?}"))?;
+        let f = PdfFile::parse(&bytes).map_err(|e| e.to_string())?;
         let pg = f
             .page(page.min(f.page_count().saturating_sub(1)))
-            .map_err(|e| format!("{e:?}"))?;
+            .map_err(|e| e.to_string())?;
         let opt = ImportOptions {
             scale: Scale::Ratio(pdf_ratio.max(1e-6)),
             ..Default::default()
         };
-        let u = Underlay::from_pdf(&pg, &opt).map_err(|e| format!("{e:?}"))?;
+        let u = Underlay::from_pdf(&pg, &opt).map_err(|e| e.to_string())?;
         return Ok((u, 0.001 * pdf_ratio));
     }
     let doc = read_drawing_with(path, stop)?;

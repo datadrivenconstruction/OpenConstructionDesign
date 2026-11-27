@@ -1085,8 +1085,7 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
         .nth(1);
     if let Some(f) = &open_project {
         ed = Editor::start_project().map_err(|e| e.to_string())?;
-        ed.open_project(std::path::Path::new(f))
-            .map_err(|e| format!("{e:?}"))?;
+        ed.open_project(std::path::Path::new(f)).map_err(|e| e.to_string())?;
     }
     if a.scene == "room" {
         draw_room(&mut ed);

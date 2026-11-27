@@ -2186,7 +2186,7 @@ impl Editor {
             None
         };
         for e in &cut.skipped {
-            issues.push(crate::tr("edit_status.diag.cutter", &[("e", format!("{e:?}").as_str())]));
+            issues.push(crate::tr("edit_status.diag.cutter", &[("e", e.to_string().as_str())]));
         }
         let mesh = |element: u32, tag: u32, m: &ddc_geom::mesh::Mesh| SceneMesh {
             element,
@@ -2239,7 +2239,7 @@ impl Editor {
                 (Some(w), true) => match arc_bodies(s, bulges[i], &w.rings[i], &ops[i], tol) {
                     Ok(b) => Some(b),
                     Err(e) => {
-                        issues.push(crate::tr("edit_status.diag.arc", &[("id", self.walls[i].id.to_string().as_str()), ("e", format!("{e:?}").as_str())]));
+                        issues.push(crate::tr("edit_status.diag.arc", &[("id", self.walls[i].id.to_string().as_str()), ("e", e.to_string().as_str())]));
                         None
                     }
                 },
@@ -2347,7 +2347,7 @@ impl Editor {
                                     ("id", self.walls[i].id.to_string().as_str()),
                                     ("l", l.to_string().as_str()),
                                     ("k", k.to_string().as_str()),
-                                    ("e", format!("{e:?}").as_str()),
+                                    ("e", e.to_string().as_str()),
                                 ],
                             ));
                             let so = plain.get_or_insert_with(|| layer_solids(s, &fps[i], tol));
@@ -2365,7 +2365,7 @@ impl Editor {
             match b {
                 Ok(b) => meshes.push(mesh(crate::scene_ids::EDITOR_MISC, 3, &b.mesh)),
                 Err(e) => {
-                    issues.push(crate::tr("edit_status.diag.filler", &[("e", format!("{e:?}").as_str())]));
+                    issues.push(crate::tr("edit_status.diag.filler", &[("e", e.to_string().as_str())]));
                     if let Ok(p) = ddc_geom::Profile::new(f.ring.clone(), vec![], tol) {
                         if let Ok(m) = ddc_geom::Solid::extrude(&p, f.zt - f.zb, tol).triangulate()
                         {

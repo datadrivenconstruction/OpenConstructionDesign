@@ -2483,7 +2483,7 @@ fn props_multi(
 /// panel then leads with the workbook round trip instead of drawing.
 fn props_empty_has_model(ed: &Editor) -> bool {
     !ed.bodies.is_empty()
-        || ["wall", "opening", "slab", "room", "curtain_wall"].iter().any(|t| {
+        || ddc_model::SUMMARY_CATEGORIES.iter().map(|c| c.1).any(|t| {
             ed.model
                 .sql()
                 .query_row(&format!("SELECT EXISTS(SELECT 1 FROM {t})"), [], |r| r.get::<_, bool>(0))

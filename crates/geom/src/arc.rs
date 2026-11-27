@@ -39,6 +39,19 @@ pub enum ArcError {
     NoCircle,
 }
 
+impl std::fmt::Display for ArcError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::NonFinite => f.write_str("a coordinate is not a finite number"),
+            Self::ZeroChord => f.write_str("the arc ends coincide"),
+            Self::Straight => f.write_str("the arc is a straight line"),
+            Self::TooLarge => f.write_str("the arc is nearly a full circle"),
+            Self::CrossesCenter { layer } => write!(f, "layer {layer} reaches the arc centre"),
+            Self::NoCircle => f.write_str("no circle fits: the points are collinear or the radius is below half the chord"),
+        }
+    }
+}
+
 /// Arc axis: from `a` to `b`, bulge = tan(angle/4).
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub struct ArcAxis {

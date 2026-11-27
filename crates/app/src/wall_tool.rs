@@ -542,7 +542,7 @@ impl WallTool {
             }
             None => ArcAxis::through(a, pts[1], end, tol),
         };
-        r.map_err(|e| crate::tr("edit_panels.wt.arc_fail", &[("e", format!("{e:?}").as_str())]))
+        r.map_err(|e| crate::tr("edit_panels.wt.arc_fail", &[("e", e.to_string().as_str())]))
     }
 
     fn arc_click_in(&mut self, dr: &mut WallDraft, p: V2) -> Outcome {

@@ -372,7 +372,7 @@ pub fn underlay_trace(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, Stri
             Underlay::from_dxf_auto(&doc).0
         }
         Kind::Dwg => {
-            let doc = ddc_io::dwg::read_bytes(&bytes).map_err(|e| format!("{e:?}"))?;
+            let doc = ddc_io::dwg::read_bytes(&bytes).map_err(|e| e.to_string())?;
             Underlay::from_dxf_auto(&doc).0
         }
         _ => {
@@ -383,13 +383,13 @@ pub fn underlay_trace(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, Stri
                 (_, Some(s)) => s.ratio,
                 _ => return Err("the sheet scale is unknown: pass scale as N of 1:N".into()),
             };
-            let doc = PdfFile::parse(&bytes).map_err(|e| format!("{e:?}"))?;
-            let pg = doc.page(page).map_err(|e| format!("{e:?}"))?;
+            let doc = PdfFile::parse(&bytes).map_err(|e| e.to_string())?;
+            let pg = doc.page(page).map_err(|e| e.to_string())?;
             let opt = ImportOptions {
                 scale: Scale::Ratio(ratio),
                 ..Default::default()
             };
-            Underlay::from_pdf(&pg, &opt).map_err(|e| format!("{e:?}"))?
+            Underlay::from_pdf(&pg, &opt).map_err(|e| e.to_string())?
         }
     };
     let types = wall_types(&c.ed.model).map_err(|e| e.to_string())?;
