@@ -16,6 +16,5 @@
  "update_check.unfit": "Deze versie ({v}) is ouder dan de minimaal aanbevolen versie {f}. Bijwerken wordt aanbevolen.",
  "update_check.close": "Sluiten",
  "update_check.open_failed": "De releasepagina kon niet worden geopend.",
- "update_check.toast.newer": "Versie {v} is beschikbaar. Help > Controleren op updates.",
  "update_check.toast.unfit": "Deze versie ({v}) is ouder dan de minimaal aanbevolen versie {f}."
 }

@@ -16,6 +16,5 @@
  "update_check.unfit": "هذا الإصدار ({v}) أقدم من الحد الأدنى الموصى به {f}. يُنصح بالتحديث.",
  "update_check.close": "إغلاق",
  "update_check.open_failed": "تعذّر فتح صفحة الإصدار.",
- "update_check.toast.newer": "الإصدار {v} متاح. المساعدة > التحقق من التحديثات.",
  "update_check.toast.unfit": "هذا الإصدار ({v}) أقدم من الحد الأدنى الموصى به {f}."
 }

@@ -689,7 +689,16 @@ fn locale_diff(
 #[test]
 fn every_locale_file_has_the_same_keys_in_en_and_ru() {
     let dir = crate_dir().join("data/i18n");
-    let (en, ru) = (locale_keys(&dir.join("en")), locale_keys(&dir.join("ru")));
+    let mut en = locale_keys(&dir.join("en"));
+    // English keeps its base files at the i18n root; a locale folder holds its copies as ui.json / commands.json.
+    for base in ["ui", "commands"] {
+        let text = std::fs::read_to_string(dir.join(format!("{base}.en.json"))).expect("English base file");
+        let value: serde_json::Value = serde_json::from_str(&text).expect("English base file is JSON");
+        let mut keys: Vec<String> = value.as_object().expect("JSON object").keys().cloned().collect();
+        keys.sort();
+        en.insert(format!("{base}.json"), keys);
+    }
+    let ru = locale_keys(&dir.join("ru"));
     assert!(!en.is_empty(), "no English locale files found");
     let diff = locale_diff(&en, &ru);
     assert!(diff.is_empty(), "en and ru differ:\n{}", diff.join("\n"));

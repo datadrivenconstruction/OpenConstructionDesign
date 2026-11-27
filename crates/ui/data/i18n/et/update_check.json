@@ -16,6 +16,5 @@
  "update_check.unfit": "See versioon ({v}) on vanem kui soovitatud miinimumversioon {f}. Uuendamine on soovitatav.",
  "update_check.close": "Sulge",
  "update_check.open_failed": "Väljalaske lehte ei õnnestunud avada.",
- "update_check.toast.newer": "Versioon {v} on saadaval. Abi > Otsi uuendusi.",
  "update_check.toast.unfit": "See versioon ({v}) on vanem kui soovitatud miinimumversioon {f}."
 }

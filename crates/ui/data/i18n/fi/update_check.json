@@ -16,6 +16,5 @@
  "update_check.unfit": "Tämä versio ({v}) on vanhempi kuin suositeltu vähimmäisversio {f}. Päivitys on suositeltava.",
  "update_check.close": "Sulje",
  "update_check.open_failed": "Julkaisusivua ei voitu avata.",
- "update_check.toast.newer": "Versio {v} on saatavilla. Ohje > Tarkista päivitykset.",
  "update_check.toast.unfit": "Tämä versio ({v}) on vanhempi kuin suositeltu vähimmäisversio {f}."
 }

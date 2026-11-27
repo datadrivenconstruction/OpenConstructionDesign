@@ -16,6 +16,5 @@
  "update_check.unfit": "Ova verzija ({v}) starija je od najniže preporučene verzije {f}. Preporučuje se ažuriranje.",
  "update_check.close": "Zatvori",
  "update_check.open_failed": "Stranicu s izdanjem nije bilo moguće otvoriti.",
- "update_check.toast.newer": "Dostupna je verzija {v}. Pomoć > Provjeri ažuriranja.",
  "update_check.toast.unfit": "Ova verzija ({v}) starija je od najniže preporučene verzije {f}."
 }

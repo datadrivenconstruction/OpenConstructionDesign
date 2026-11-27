@@ -16,6 +16,5 @@
  "update_check.unfit": "Tato verze ({v}) je starší než doporučená minimální verze {f}. Doporučujeme aktualizovat.",
  "update_check.close": "Zavřít",
  "update_check.open_failed": "Stránku s vydáním nelze otevřít.",
- "update_check.toast.newer": "Je k dispozici verze {v}. Nápověda > Zkontrolovat aktualizace.",
  "update_check.toast.unfit": "Tato verze ({v}) je starší než doporučená minimální verze {f}."
 }

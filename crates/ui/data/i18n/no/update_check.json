@@ -16,6 +16,5 @@
  "update_check.unfit": "Denne versjonen ({v}) er eldre enn anbefalt minimumsversjon {f}. Oppdatering anbefales.",
  "update_check.close": "Lukk",
  "update_check.open_failed": "Kunne ikke åpne utgivelsessiden.",
- "update_check.toast.newer": "Versjon {v} er tilgjengelig. Hjelp > Se etter oppdateringer.",
  "update_check.toast.unfit": "Denne versjonen ({v}) er eldre enn anbefalt minimumsversjon {f}."
 }

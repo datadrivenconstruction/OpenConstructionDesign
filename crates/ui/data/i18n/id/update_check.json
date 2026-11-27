@@ -16,6 +16,5 @@
  "update_check.unfit": "Versi ini ({v}) lebih lama dari versi minimum yang disarankan {f}. Pembaruan sangat disarankan.",
  "update_check.close": "Tutup",
  "update_check.open_failed": "Halaman rilis tidak dapat dibuka.",
- "update_check.toast.newer": "Versi {v} tersedia. Bantuan > Periksa pembaruan.",
  "update_check.toast.unfit": "Versi ini ({v}) lebih lama dari versi minimum yang disarankan {f}."
 }

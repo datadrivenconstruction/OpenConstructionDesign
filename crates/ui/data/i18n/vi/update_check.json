@@ -16,6 +16,5 @@
  "update_check.unfit": "Phiên bản này ({v}) cũ hơn phiên bản tối thiểu được khuyến nghị {f}. Nên cập nhật.",
  "update_check.close": "Đóng",
  "update_check.open_failed": "Không thể mở trang phát hành.",
- "update_check.toast.newer": "Có phiên bản {v}. Trợ giúp > Kiểm tra cập nhật.",
  "update_check.toast.unfit": "Phiên bản này ({v}) cũ hơn phiên bản tối thiểu được khuyến nghị {f}."
 }

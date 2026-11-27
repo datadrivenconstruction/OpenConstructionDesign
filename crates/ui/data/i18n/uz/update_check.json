@@ -16,6 +16,5 @@
  "update_check.unfit": "Bu versiya ({v}) tavsiya etilgan minimal versiya {f} dan eski. Yangilash tavsiya etiladi.",
  "update_check.close": "Yopish",
  "update_check.open_failed": "Reliz sahifasini ochib bo'lmadi.",
- "update_check.toast.newer": "{v} versiya mavjud. Yordam > Yangilanishlarni tekshirish.",
  "update_check.toast.unfit": "Bu versiya ({v}) tavsiya etilgan minimal versiya {f} dan eski."
 }

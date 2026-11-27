@@ -16,6 +16,5 @@
  "update_check.unfit": "このバージョン（{v}）は、推奨される最低バージョン {f} より古いです。更新をおすすめします。",
  "update_check.close": "閉じる",
  "update_check.open_failed": "リリースページを開けませんでした。",
- "update_check.toast.newer": "バージョン {v} が利用可能です。ヘルプ > 更新を確認 を選んでください。",
  "update_check.toast.unfit": "このバージョン（{v}）は、推奨される最低バージョン {f} より古いです。"
 }

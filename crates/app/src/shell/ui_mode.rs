@@ -325,10 +325,10 @@ impl EditorApp {
             .fixed_pos(snap(ctx, pos2(x, area.top() + k::EDGE)))
             .show(ctx, |ui| {
                 ui.set_opacity(t);
-                ui.spacing_mut().item_spacing = vec2(0.0, k::GAP);
+                ui.spacing_mut().item_spacing = Vec2::Y * k::GAP;
                 let row = |ui: &mut egui::Ui| ui.allocate_exact_size(vec2(w, k::BUTTON), Sense::hover()).0;
                 capsule(&th).show(ui, |ui| {
-                    ui.spacing_mut().item_spacing.y = 0.0;
+                    ui.spacing_mut().item_spacing = Vec2::ZERO;
                     for id in &own {
                         let r = row(ui);
                         let (icon, label, keys) = self.cmd_text(id);
@@ -342,7 +342,7 @@ impl EditorApp {
                     }
                 });
                 capsule(&th).show(ui, |ui| {
-                    ui.spacing_mut().item_spacing.y = 0.0;
+                    ui.spacing_mut().item_spacing = Vec2::ZERO;
                     for (i, s) in SECTIONS.iter().enumerate() {
                         let r = row(ui);
                         let label = self.sh.cat.t(&format!("rail.{}", s.key));

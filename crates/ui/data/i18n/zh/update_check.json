@@ -16,6 +16,5 @@
  "update_check.unfit": "此版本（{v}）低于建议的最低版本 {f}。建议更新。",
  "update_check.close": "关闭",
  "update_check.open_failed": "无法打开发布页面。",
- "update_check.toast.newer": "版本 {v} 可用。请前往“帮助 > 检查更新”。",
  "update_check.toast.unfit": "此版本（{v}）低于建议的最低版本 {f}。"
 }

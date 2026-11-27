@@ -144,6 +144,9 @@ mod tests {
             let mut seen = std::collections::HashMap::new();
             for f in std::fs::read_dir(dir.join(lang)).unwrap() {
                 let path = f.unwrap().path();
+                if path.extension().is_none_or(|x| x != "json") {
+                    continue;
+                }
                 let txt = std::fs::read_to_string(&path).unwrap();
                 let map: std::collections::BTreeMap<String, serde_json::Value> =
                     serde_json::from_str(&txt).unwrap();

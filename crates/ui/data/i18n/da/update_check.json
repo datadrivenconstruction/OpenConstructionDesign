@@ -16,6 +16,5 @@
  "update_check.unfit": "Denne version ({v}) er ældre end den anbefalede minimumsversion {f}. Opdatering anbefales.",
  "update_check.close": "Luk",
  "update_check.open_failed": "Udgivelsessiden kunne ikke åbnes.",
- "update_check.toast.newer": "Version {v} er tilgængelig. Hjælp > Søg efter opdateringer.",
  "update_check.toast.unfit": "Denne version ({v}) er ældre end den anbefalede minimumsversion {f}."
 }

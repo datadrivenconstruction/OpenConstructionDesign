@@ -16,6 +16,5 @@
  "update_check.unfit": "Ez a verzió ({v}) régebbi, mint az ajánlott minimális verzió: {f}. A frissítés javasolt.",
  "update_check.close": "Bezárás",
  "update_check.open_failed": "A kiadási oldal nem nyitható meg.",
- "update_check.toast.newer": "A(z) {v} verzió elérhető. Súgó > Frissítések keresése.",
  "update_check.toast.unfit": "Ez a verzió ({v}) régebbi, mint az ajánlott minimális verzió: {f}."
 }

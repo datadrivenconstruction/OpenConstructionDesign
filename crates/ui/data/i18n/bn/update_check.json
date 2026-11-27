@@ -16,6 +16,5 @@
  "update_check.unfit": "এই সংস্করণ ({v}) সর্বনিম্ন সুপারিশকৃত সংস্করণ {f}-এর চেয়ে পুরনো। আপডেট করার পরামর্শ দেওয়া হচ্ছে।",
  "update_check.close": "বন্ধ করুন",
  "update_check.open_failed": "রিলিজ পাতা খোলা যায়নি।",
- "update_check.toast.newer": "সংস্করণ {v} পাওয়া যাচ্ছে। Help > Check for updates।",
  "update_check.toast.unfit": "এই সংস্করণ ({v}) সর্বনিম্ন সুপারিশকৃত সংস্করণ {f}-এর চেয়ে পুরনো।"
 }

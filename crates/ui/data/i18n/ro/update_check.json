@@ -16,6 +16,5 @@
  "update_check.unfit": "Această versiune ({v}) este mai veche decât versiunea minimă recomandată {f}. Se recomandă actualizarea.",
  "update_check.close": "Închide",
  "update_check.open_failed": "Pagina de lansare nu a putut fi deschisă.",
- "update_check.toast.newer": "Versiunea {v} este disponibilă. Ajutor > Verifică actualizările.",
  "update_check.toast.unfit": "Această versiune ({v}) este mai veche decât versiunea minimă recomandată {f}."
 }

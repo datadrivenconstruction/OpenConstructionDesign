@@ -16,6 +16,5 @@
  "update_check.unfit": "Esta versión ({v}) es anterior a la versión mínima recomendada, {f}. Se recomienda actualizar.",
  "update_check.close": "Cerrar",
  "update_check.open_failed": "No se pudo abrir la página de la versión.",
- "update_check.toast.newer": "La versión {v} está disponible. Ayuda > Buscar actualizaciones.",
  "update_check.toast.unfit": "Esta versión ({v}) es anterior a la versión mínima recomendada, {f}."
 }

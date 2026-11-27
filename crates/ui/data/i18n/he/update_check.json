@@ -16,6 +16,5 @@
  "update_check.unfit": "גרסה זו ({v}) ישנה יותר מהגרסה המינימלית המומלצת {f}. מומלץ לעדכן.",
  "update_check.close": "סגור",
  "update_check.open_failed": "לא ניתן היה לפתוח את דף הגרסה.",
- "update_check.toast.newer": "גרסה {v} זמינה. עזרה > בדוק עדכונים.",
  "update_check.toast.unfit": "גרסה זו ({v}) ישנה יותר מהגרסה המינימלית המומלצת {f}."
 }

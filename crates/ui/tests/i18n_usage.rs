@@ -75,7 +75,6 @@ const UNUSED_OK: &[(&str, &str)] = &[
     ("recover.original", OPEN),
     ("report.opt", OPEN),
     ("update_check.current", OPEN),
-    ("update_check.date", OPEN),
     ("update_check.newer", OPEN),
     ("update_check.unknown", OPEN),
     ("sch.cat", SLUG),

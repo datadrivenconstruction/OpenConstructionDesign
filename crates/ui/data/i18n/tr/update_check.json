@@ -16,6 +16,5 @@
  "update_check.unfit": "Bu sürüm ({v}), önerilen en düşük sürüm {f} değerinden eski. Güncellemeniz önerilir.",
  "update_check.close": "Kapat",
  "update_check.open_failed": "Sürüm sayfası açılamadı.",
- "update_check.toast.newer": "Sürüm {v} mevcut. Yardım > Güncellemeleri denetle.",
  "update_check.toast.unfit": "Bu sürüm ({v}), önerilen en düşük sürüm {f} değerinden eski."
 }
