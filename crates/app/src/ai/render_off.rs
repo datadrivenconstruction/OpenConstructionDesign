@@ -170,10 +170,10 @@ pub fn capturing() -> bool {
     CAPTURING.with(std::cell::Cell::get)
 }
 
-struct CaptureGuard;
+pub(crate) struct CaptureGuard;
 
 impl CaptureGuard {
-    fn on() -> CaptureGuard {
+    pub(crate) fn on() -> CaptureGuard {
         CAPTURING.with(|c| c.set(true));
         CaptureGuard
     }
@@ -215,6 +215,19 @@ fn capture_now(
     mut step: impl FnMut(&mut EditorApp, &egui::Context, usize, egui::Rect),
 ) -> Result<(Vec<u8>, (u32, u32)), String> {
     let _quiet = CaptureGuard::on();
+    // a picture of the model is the canvas alone: without chrome it fills the window at any size
+    let clean = std::mem::replace(&mut app.chrome.fold.clean, true);
+    let r = capture_clean(rs, app, want, &mut step);
+    app.chrome.fold.clean = clean;
+    r
+}
+
+fn capture_clean(
+    rs: &RenderState,
+    app: &mut EditorApp,
+    want: (u32, u32),
+    mut step: &mut impl FnMut(&mut EditorApp, &egui::Context, usize, egui::Rect),
+) -> Result<(Vec<u8>, (u32, u32)), String> {
     // a picture of the model carries no question marks
     let _marks = super::ui::point_marks::hide();
     let canvas = |app: &mut EditorApp, dim: (u32, u32), frames: usize, step: &mut dyn FnMut(&mut EditorApp, &egui::Context, usize, egui::Rect)| {

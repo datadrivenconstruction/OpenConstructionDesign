@@ -225,6 +225,15 @@ fn paint(
 /// Paints the app until the canvas is `want`, sets the view each frame through `step` (with
 /// the canvas rectangle), and returns the canvas of the last steady frame.
 pub(crate) fn capture(rs: &RenderState, app: &mut EditorApp, want: (u32, u32), step: Step<'_>) -> Result<Timed, String> {
+    let _quiet = crate::ai::render_off::CaptureGuard::on();
+    // the canvas alone, as the agent's pictures: without chrome it fills the window at any size
+    let clean = std::mem::replace(&mut app.chrome.fold.clean, true);
+    let r = capture_clean(rs, app, want, step);
+    app.chrome.fold.clean = clean;
+    r
+}
+
+fn capture_clean(rs: &RenderState, app: &mut EditorApp, want: (u32, u32), step: Step<'_>) -> Result<Timed, String> {
     let big = (want.0 + PAD.0, want.1 + PAD.1);
     let (_, probe) = paint(rs, app, &egui::Context::default(), big, 3, &mut *step);
     let probe = probe.ok_or("the view has no canvas")?;

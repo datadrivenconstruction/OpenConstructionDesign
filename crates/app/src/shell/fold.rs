@@ -540,7 +540,8 @@ impl EditorApp {
     /// On the clean screen: one quiet button at the canvas' top right that brings the chrome
     /// back, so a mouse alone can leave it.
     pub(super) fn clean_screen_exit(&mut self, ctx: &egui::Context, area: Rect) {
-        if !self.chrome.fold.clean {
+        // a picture of the model carries no way out of a mode it does not show
+        if !self.chrome.fold.clean || crate::ai::render_off::capturing() {
             return;
         }
         let title = self.sh.cat.t("layout_fold.clean.exit");
