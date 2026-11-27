@@ -1312,7 +1312,7 @@ impl Core {
                 let mut text = reply.text;
                 if critic_hook::is_draft_tool(name) {
                     if let Some(note) = critic_hook::critic_note(self) {
-                        text = format!("{text}\n{note}");
+                        text = critic_hook::with_note(&text, &note);
                     }
                     if can_see {
                         images.extend(critic_hook::snapshots(self));

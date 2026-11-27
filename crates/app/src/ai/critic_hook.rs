@@ -109,6 +109,20 @@ pub fn critic_note(c: &mut Core) -> Option<String> {
     note(c, v)
 }
 
+/// The reply with the critic's note: a JSON object reply stays one valid object, the note in its
+/// `critic` field (fields keep their order); any other reply gets the note on a line of its own.
+pub fn with_note(reply: &str, note: &str) -> String {
+    let body = reply.trim_end();
+    let is_object = serde_json::from_str::<serde_json::Value>(body).is_ok_and(|v| v.is_object());
+    match body.strip_suffix('}') {
+        Some(head) if is_object => {
+            let sep = if head.trim_end().ends_with('{') { "" } else { "," };
+            format!("{head}{sep}\"critic\":{}}}", serde_json::Value::from(note))
+        }
+        _ => format!("{reply}\n{note}"),
+    }
+}
+
 /// Keeps the card's self-check line in step with the verdict and words the reply.
 fn note(c: &mut Core, v: Verdict) -> Option<String> {
     match v {
@@ -186,6 +200,19 @@ fn flag(c: &Core, key: &str) -> bool {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn a_json_reply_stays_one_object_with_the_note() {
+        let note = "critic cycle 1/3: fix these\n- [check] \"a\"";
+        let r = with_note("{\"untrusted\":\"data\",\"item\":1}\n", note);
+        let v: serde_json::Value = serde_json::from_str(&r).unwrap();
+        assert_eq!(v["critic"], note);
+        assert!(r.starts_with("{\"untrusted\":\"data\",\"item\":1,"), "{r}");
+        let v: serde_json::Value = serde_json::from_str(&with_note("{}", note)).unwrap();
+        assert_eq!(v["critic"], note);
+        assert_eq!(with_note("done", note), format!("done\n{note}"));
+        assert_eq!(with_note("[1]", note), format!("[1]\n{note}"));
+    }
 
     #[test]
     fn refinement_stops_after_three_cycles() {

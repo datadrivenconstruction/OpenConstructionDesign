@@ -1285,7 +1285,7 @@ fn read_params(rd: &mut Rd, v: &J, fire: &str) -> [String; 4] {
 fn pick<T: Copy>(rd: &mut Rd, path: &str, v: &J, names: &[&str], all: &[T], def: T) -> T {
     match v {
         J::Null => def,
-        J::String(s) => match names.iter().position(|n| n == s) {
+        J::String(s) => match names.iter().position(|n| n.eq_ignore_ascii_case(s)) {
             Some(i) => all[i],
             None => {
                 rd.bad(path, format!("unknown '{s}'{}", suggest(s, names)));
