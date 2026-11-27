@@ -359,7 +359,37 @@ fn surfaces_take_functions_and_audit_catches_clashes() {
     );
     assert!(e.contains("audit:") && e.contains("crosses"), "{e}");
     let e = fail("local p = profile.chs(0.2, 0.01)\npart('a', extrude(p, vec3(0, 0, 3), vec3(4, 0, 3)))\naudit{strict = true}");
-    assert!(e.contains("do not reach the ground"), "{e}");
+    assert!(e.contains("do not reach the ground") && e.contains("lowest at (2.000, 0.000, 2.900) m"), "{e}");
+}
+
+#[test]
+fn members_passing_through_a_node_are_joined_and_problems_say_where() {
+    // continuous diagonals cross where the two struts end: a node, not a clash
+    let frame = "local p = profile.chs(0.2, 0.01)
+                 local function m(n, a, b) part(n, extrude(p, a, b)) end
+                 m('c1', vec3(0, 0, 0), vec3(0, 0, 4))
+                 m('c2', vec3(4, 0, 0), vec3(4, 0, 4))
+                 m('top', vec3(0, 0, 4), vec3(4, 0, 4))
+                 m('d1', vec3(0, 0, 0), vec3(4, 0, 4))
+                 m('d2', vec3(4, 0, 0), vec3(0, 0, 4))
+                 m('s1', vec3(0, 0, 2), vec3(2, 0, 2))
+                 m('s2', vec3(2, 0, 2), vec3(4, 0, 2))
+";
+    let r = ok(&format!("{frame}audit{{strict = true}}"));
+    let line = r.log.iter().find(|l| l.starts_with("audit:")).unwrap();
+    assert!(line.contains("0 free ends, 0 near misses, 0 duplicates, 0 clashes, 0 floating groups"), "{line}");
+    // duplicates and floating groups name the part and where it is
+    let e = fail(&format!(
+        "{frame}m('top2', vec3(4, 0, 4), vec3(0, 0, 4))
+m('loose', vec3(10, 0, 3), vec3(14, 0, 3))
+audit{{strict = true}}"
+    ));
+    assert!(e.contains("duplicates") && e.contains("(0.000, 0.000, 4.000) m"), "{e}");
+    assert!(e.contains("loose") && e.contains("lowest at (12.000, 0.000, 2.900) m"), "{e}");
+    let r = ok(&format!("{frame}m('top2', vec3(4, 0, 4), vec3(0, 0, 4))
+local a = audit()
+assert(#a.problems == 1)"));
+    assert!(r.log.iter().any(|l| l.starts_with("audit: top duplicates top2 from")), "{:?}", r.log);
 }
 
 #[test]

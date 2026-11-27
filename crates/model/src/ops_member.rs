@@ -404,4 +404,64 @@ mod tests {
         assert!(m.apply_envelope(&env(vec![plate(up, vec![out])])).is_err());
         assert_eq!((count(&m, "slab"), count(&m, "wall"), count(&m, "opening")), (1, 0, 0));
     }
+
+    /// A bays x bays lattice tower of `levels` storeys: columns, beams both ways, face diagonals.
+    fn lattice(levels: usize) -> Vec<Op> {
+        let (bays, span, h) = (4usize, 4.0, 3.0);
+        let n = |i: usize, j: usize, k: usize| P3::m(i as f64 * span, j as f64 * span, k as f64 * h);
+        let mut ops = vec![];
+        let mut add = |a: P3, b: P3, role: MemberRole| {
+            let slot = ops.len() as u32;
+            ops.push(member(slot, a, b, role));
+        };
+        for k in 0..levels {
+            for i in 0..=bays {
+                for j in 0..=bays {
+                    add(n(i, j, k), n(i, j, k + 1), MemberRole::Brace);
+                    if i < bays {
+                        add(n(i, j, k + 1), n(i + 1, j, k + 1), MemberRole::Beam);
+                    }
+                    if j < bays {
+                        add(n(i, j, k + 1), n(i, j + 1, k + 1), MemberRole::Beam);
+                    }
+                }
+            }
+            for b in 0..bays {
+                add(n(b, 0, k), n(b + 1, 0, k + 1), MemberRole::Brace);
+                add(n(0, b, k), n(0, b + 1, k + 1), MemberRole::Brace);
+            }
+        }
+        ops
+    }
+
+    #[test]
+    fn a_long_member_envelope_applies_in_linear_time() {
+        // twice the members must cost about twice the time: derived tables recompute once
+        let mut ms = vec![];
+        for levels in [4usize, 8] {
+            let mut m = Model::open(":memory:").unwrap();
+            m.add_level("L1", 0.0).unwrap();
+            let ops = lattice(levels);
+            let n = ops.len();
+            let mut ticks = vec![];
+            crate::perf::enable(true);
+            crate::perf::take();
+            let t = std::time::Instant::now();
+            let r = m.apply_envelope_with(&env(ops), &mut |d, t| ticks.push((d, t))).unwrap();
+            ms.push(t.elapsed().as_secs_f64());
+            let regens: u64 = crate::perf::take()
+                .iter()
+                .filter(|p| p.name == "regen.full" || p.name == "regen.partial")
+                .map(|p| p.calls)
+                .sum();
+            assert_eq!(r.created.len(), n);
+            assert!(regens < (n / 10) as u64, "{regens} recomputes for {n} members");
+            assert_eq!(ticks.last(), Some(&(n, n)));
+            assert!(ticks.len() >= 10 && ticks.windows(2).all(|w| w[0].0 < w[1].0), "{ticks:?}");
+            assert_eq!(count(&m, "brace") + count(&m, "beam"), n as i64);
+            m.undo().unwrap();
+            assert_eq!(count(&m, "brace") + count(&m, "beam"), 0, "one undo step");
+        }
+        assert!(ms[1] <= 2.5 * ms[0], "2x members took {:.2} s vs {:.2} s", ms[1], ms[0]);
+    }
 }

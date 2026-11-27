@@ -250,6 +250,17 @@ fn seg_seg(p1: V3, q1: V3, p2: V3, q2: V3) -> (f64, f64, f64) {
     (c1.sub(c2).len(), s, t)
 }
 
+/// A point in metres, for the audit's messages.
+fn at(p: V3) -> String {
+    format!("({:.3}, {:.3}, {:.3}) m", p.x, p.y, p.z)
+}
+
+/// The middle of the bottom of a part's bounds.
+fn low(g: &Geo) -> V3 {
+    let b = g.bbox;
+    V3::new((b[0] + b[3]) / 2.0, (b[1] + b[4]) / 2.0, b[2])
+}
+
 fn cell(v: f64) -> i64 {
     (v / CELL).floor() as i64
 }
@@ -328,8 +339,8 @@ pub(crate) struct Report {
     /// (part, part, gap): an end near another member's axis that misses it.
     pub near_miss: Vec<(usize, usize, f64)>,
     pub duplicates: Vec<(usize, usize)>,
-    /// Members crossing each other away from any node.
-    pub clashes: Vec<(usize, usize)>,
+    /// Members crossing each other away from any node, with the crossing point.
+    pub clashes: Vec<(usize, usize, V3)>,
     /// Groups of parts touching nothing that reaches the ground: (lowest part, count).
     pub floating: Vec<(usize, usize)>,
 }
@@ -346,6 +357,15 @@ pub(crate) fn check(geo: &[Geo], ground: f64) -> Report {
     let mut pairs = HashSet::new();
     let all_boxes: Vec<[f64; 6]> = geo.iter().map(|g| g.bbox).collect();
     let pgrid = Grid::new(&all_boxes, TOL);
+    // a node is where some member ends: members passing through one are joined there
+    let mut probe_near = vec![];
+    let mut at_node = |p: V3| {
+        grid.near(&[p.x, p.y, p.z, p.x, p.y, p.z], &mut probe_near);
+        probe_near.iter().any(|&k| {
+            let (s, e, _) = ax(mem[k]);
+            s.sub(p).len() <= TOL || e.sub(p).len() <= TOL
+        })
+    };
     for (mi, &i) in mem.iter().enumerate() {
         let (a, b, ri) = ax(i);
         for e in [a, b] {
@@ -408,7 +428,7 @@ pub(crate) fn check(geo: &[Geo], ground: f64) -> Report {
                 r.duplicates.push((i, j));
                 continue;
             }
-            let (dist, _, _) = seg_seg(a, b, c, d);
+            let (dist, s, _) = seg_seg(a, b, c, d);
             if dist >= 0.5 * (ri + rj) {
                 continue;
             }
@@ -422,8 +442,9 @@ pub(crate) fn check(geo: &[Geo], ground: f64) -> Report {
                 let (t0, t1) = (c.sub(a).dot(p), d.sub(a).dot(p));
                 t0.max(t1).min(ul) - t0.min(t1).max(0.0) > ri.max(rj)
             };
-            if !joint || overlap {
-                r.clashes.push((i, j));
+            let hit = a.add(b.sub(a).scale(s));
+            if (!joint && !(dist <= TOL && at_node(hit))) || overlap {
+                r.clashes.push((i, j, hit));
             }
         }
     }
@@ -483,9 +504,9 @@ pub(crate) fn audit(lua: &Lua, opts: Option<Table>) -> LResult<Table> {
             }
         }
     }
-    let (rep, keys) = {
+    let (rep, keys, geo) = {
         let b = builder(lua)?;
-        (check(&b.geo, ground), b.keys())
+        (check(&b.geo, ground), b.keys(), b.geo.clone())
     };
     let key = |i: usize| keys.get(i).map_or("?".to_string(), |k| k.key.clone());
     let out = lua.create_table()?;
@@ -501,13 +522,14 @@ pub(crate) fn audit(lua: &Lua, opts: Option<Table>) -> LResult<Table> {
         problems.push(format!("{} misses {} by {} mm", key(*i), key(*j), mm(*g)));
     }
     for (i, j) in &rep.duplicates {
-        problems.push(format!("{} duplicates {}", key(*i), key(*j)));
+        let (a, b) = geo[*i].axis.map_or((low(&geo[*i]), low(&geo[*i])), |x| (x.0, x.1));
+        problems.push(format!("{} duplicates {} from {} to {}", key(*i), key(*j), at(a), at(b)));
     }
-    for (i, j) in &rep.clashes {
-        problems.push(format!("{} crosses {} away from a node", key(*i), key(*j)));
+    for (i, j, p) in &rep.clashes {
+        problems.push(format!("{} crosses {} away from a node at {}", key(*i), key(*j), at(*p)));
     }
     for (i, c) in &rep.floating {
-        problems.push(format!("{c} parts around {} do not reach the ground", key(*i)));
+        problems.push(format!("{c} parts around {} (lowest at {}) do not reach the ground", key(*i), at(low(&geo[*i]))));
     }
     let line = format!(
         "audit: {} parts, {} members, {} free ends, {} near misses, {} duplicates, {} clashes, {} floating groups",
@@ -519,7 +541,17 @@ pub(crate) fn audit(lua: &Lua, opts: Option<Table>) -> LResult<Table> {
         rep.clashes.len(),
         rep.floating.len()
     );
-    builder(lua)?.print(line);
+    {
+        let mut b = builder(lua)?;
+        b.print(line);
+        for p in problems.iter().take(SHOWN) {
+            b.print(format!("audit: {p}"));
+        }
+        if problems.len() > SHOWN {
+            b.print(format!("audit: and {} more", problems.len() - SHOWN));
+        }
+    }
+    out.set("problems", lua.create_sequence_from(problems.iter().cloned())?)?;
     if strict && !problems.is_empty() {
         let more = problems.len().saturating_sub(SHOWN);
         let mut msg = problems.into_iter().take(SHOWN).collect::<Vec<_>>().join("; ");

@@ -141,7 +141,8 @@ fn execute(a: &RunArgs, quiet: bool) -> Outcome {
 
     let t = Instant::now();
     progress(quiet, "applying");
-    match guarded(|| Ok(loaded.model.apply_envelope(&run.env))) {
+    let mut tick = |done: usize, total: usize| progress(quiet, &format!("applying {done}/{total}"));
+    match guarded(|| Ok(loaded.model.apply_envelope_with(&run.env, &mut tick))) {
         Ok(Ok(r)) => {
             o.created = r.created.len();
             o.steps.push(Step::pass("apply", t, None, r.loss));

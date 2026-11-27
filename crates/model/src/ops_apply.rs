@@ -131,6 +131,17 @@ impl Run {
 impl Model {
     /// Applies the envelope all-or-nothing as one journal entry (one undo step).
     pub fn apply_envelope(&mut self, env: &Envelope) -> Result<Receipt, Rejection> {
+        self.apply_envelope_with(env, &mut |_, _| {})
+    }
+
+    /// [`Model::apply_envelope`] calling `progress(done, total)` as ops are lowered (every
+    /// 1/50 of them and at the end). Derived tables are recomputed once for the whole envelope,
+    /// not after every op, so a long envelope costs linear time.
+    pub fn apply_envelope_with(
+        &mut self,
+        env: &Envelope,
+        progress: &mut dyn FnMut(usize, usize),
+    ) -> Result<Receipt, Rejection> {
         let issues = env.check();
         if let Some(first) = issues.first() {
             return Err(Rejection::from_issue(env, first));
@@ -138,17 +149,27 @@ impl Model {
         let mut failed: Option<Rejection> = None;
         // actor, title, why and the forward envelope go into the same journal entry
         let prov = crate::journal::Provenance::of(env);
+        let total: usize = env.groups.iter().map(|g| g.ops.len()).sum();
+        let every = (total / 50).max(1);
         let res = self.atomic_with(ENVELOPE_KIND, &prov, |m| {
-            let mut run = Run::default();
-            for (gi, g) in env.groups.iter().enumerate() {
-                for (oi, op) in g.ops.iter().enumerate() {
-                    if let Err(f) = lower(m, &mut run, op) {
-                        failed = Some(f.rejection().in_op(env, gi, oi));
-                        return Err(Error::Invalid("envelope rejected".into()));
+            m.with_derived_held(|m| {
+                let mut run = Run::default();
+                let mut done = 0;
+                for (gi, g) in env.groups.iter().enumerate() {
+                    for (oi, op) in g.ops.iter().enumerate() {
+                        if let Err(f) = lower(m, &mut run, op) {
+                            failed = Some(f.rejection().in_op(env, gi, oi));
+                            return Err(Error::Invalid("envelope rejected".into()));
+                        }
+                        done += 1;
+                        if done % every == 0 && done < total {
+                            progress(done, total);
+                        }
                     }
                 }
-            }
-            Ok(run.receipt)
+                progress(total, total);
+                Ok(run.receipt)
+            })
         });
         match res {
             Ok((mut r, seq)) => {
