@@ -15,6 +15,7 @@ pub mod export;
 pub mod gen;
 pub mod info;
 pub mod load;
+pub mod new;
 #[cfg(feature = "link")]
 pub mod publish;
 pub mod run;
@@ -49,10 +50,15 @@ ddc <command> [options]     batch work on model files, no window, no GPU
       jobs.json: {\"jobs\": [{\"id\": \"a\", \"file\": \"in.ifc\", \"info\": true,
                   \"export\": [{\"format\": \"xlsx\", \"out\": \"out.xlsx\"}]}]}
       (a bare array of jobs works too)
+  ddc new <out.ddc|.ifc> [--levels N] [--force]
+      Write an empty project: N levels (default 1) 3 m apart and the standard wall types.
+      An existing file is kept unless --force. Exit 0 written, 2 nothing written.
   ddc run <project> <script.lua> --out <new.ddc|.ifc|.xlsx|.csv>
          [--param name=value]... [--level <name>] [--allow-many]
-      Run a geometry script on a private copy of the project and save the result to a NEW
-      file (never the input). Script errors show line and column. Exit 0 saved, 2 failed.
+  ddc run --new <script.lua> --out <new.ddc|.ifc|.xlsx|.csv> [--levels N] [...]
+      Run a geometry script on a private copy of the project (or, with --new, on a fresh
+      empty project) and save the result to a NEW file (never the input). Script errors
+      show line and column. Exit 0 saved, 2 failed.
 
   ddc gen --brief <brief.json> --out <model.ddc> [--metrics <file.json>] [--force]
       (build with --features link) Generate a building from a ddc-brief/1 document and save it

@@ -1211,8 +1211,8 @@ fn region_click(ed: &mut Editor, el: Option<u32>) {
 }
 
 /// Outline being drawn on a face: corners, edges and the rubber band to the pointer.
-pub fn overlay_3d(ui: &eframe::egui::Ui, ed: &Editor, view: &crate::viewport::Viewport) {
-    use eframe::egui;
+pub fn overlay_3d(ui: &egui::Ui, ed: &Editor, view: &crate::viewport::Viewport) {
+    use egui;
     let Some(t) = ed.mass.as_ref().filter(|t| !t.pts3.is_empty()) else {
         return;
     };

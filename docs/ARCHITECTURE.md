@@ -116,7 +116,7 @@ Two script forms produce the same thing, an ops envelope:
   on CPU time, memory, executed lines and created elements. The same script and parameters
   give the same envelope and hash. The standard library covers vectors and transforms,
   units (`mm`, `cm`, `m`, `deg`, `len`, `angle`), declared parameters (`param`), catalog
-  profiles, forms (`extrude`, sweeps, `loft`, revolves), patterns, `part`, `member`,
+  profiles, forms (`extrude`, sweeps, `loft`, revolves), patterns, `part`, `member`, `slab`,
   `group`, `define_component`, `place`, booleans, `constrain`, `measure` and `audit`, plus
   parametric building blocks for frames, lattices and surfaces. Every created element has a
   stable key, so a rerun with new parameters becomes reshape/create/delete ops on that

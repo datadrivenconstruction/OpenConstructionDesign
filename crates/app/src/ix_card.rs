@@ -6,7 +6,7 @@
 use crate::interact::Scope;
 use crate::refusals::{fix_label, run_fix};
 use crate::shell::EditorApp;
-use eframe::egui;
+use egui;
 
 /// Draw the card while a tool runs and the preference is on. The card takes no pointer
 /// input; only the fix buttons do, and only while a refusal offers them.

@@ -773,6 +773,11 @@ impl Model {
             .collect())
     }
 
+    /// The model has a solid that is not a void (scripted members, plates, free forms).
+    pub fn has_solids(&self) -> Result<bool, Error> {
+        Ok(self.db.query_row("SELECT EXISTS(SELECT 1 FROM solid WHERE void = 0)", [], |r| r.get(0))?)
+    }
+
     /// Void solids of all levels, as [`Self::solids`] reads them (cutters need no other rows).
     pub fn void_solids(&self) -> Result<Vec<(i64, SolidSpec)>, Error> {
         let mut st = self.db.prepare("SELECT id FROM solid WHERE void<>0 ORDER BY id")?;

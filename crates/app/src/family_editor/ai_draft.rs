@@ -9,7 +9,7 @@ use web_time::{Duration, Instant};
 use ddc_geom::component::doc::{op_diff, FamDoc, OpChange};
 use ddc_geom::component::validate::{validate, Limits, Report, Severity};
 use ddc_ui::{Catalog, Theme};
-use eframe::egui::{self, RichText};
+use egui::{self, RichText};
 
 use super::{Session, State, Tab};
 

@@ -16,7 +16,7 @@ use ddc_geom::feature::{standard, FeatureOp, Kind as FKind, Kind0, NodeId, Statu
 use ddc_model::feature_tl::{feature_args, modifier_kinds};
 use ddc_model::{Error, Model};
 use ddc_ui::widgets::formula::{formula, Check};
-use eframe::egui;
+use egui;
 use std::sync::Arc;
 
 const CELL_W: f32 = 150.0;

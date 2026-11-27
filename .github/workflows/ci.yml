@@ -101,6 +101,10 @@ jobs:
       - name: build
         if: ${{ !matrix.unit.shard }}
         run: cargo build -p ${{ matrix.unit.crate }} --all-targets --locked ${{ matrix.unit.features && format('--features {0}', matrix.unit.features) || '' }}
+      # the released ddc ships ai (default), gen and publish: all must build without the window
+      - name: check ddc with the ERP link
+        if: matrix.unit.crate == 'ddc-cli'
+        run: cargo check -p ddc-cli --features link --locked
       - name: test
         if: ${{ !matrix.unit.shard }}
         run: cargo test -p ${{ matrix.unit.crate }} --locked --no-fail-fast ${{ matrix.unit.features && format('--features {0}', matrix.unit.features) || '' }}

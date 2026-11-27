@@ -10,7 +10,7 @@ use crate::expr_field::{eval, Dom, Scope};
 use crate::shell::EditorApp;
 use crate::units::{DecimalMark, InputError, Units, INCH, PAIR_SEP};
 use crate::wall_tool::{Event, Key, Mode};
-use eframe::egui;
+use egui;
 use std::cell::RefCell;
 
 /// Short names a person types, the habits common to CAD command lines. Ids are checked against the

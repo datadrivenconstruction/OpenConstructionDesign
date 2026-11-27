@@ -16,13 +16,15 @@ use crate::{EXIT_FAILED, EXIT_OK, LOG_SCHEMA};
 
 #[derive(Clone, Debug)]
 pub struct RunArgs {
-    pub project: PathBuf,
+    /// `None` with `--new`: the script runs on a fresh project of `levels` levels.
+    pub project: Option<PathBuf>,
     pub script: PathBuf,
     pub out: PathBuf,
     /// `name=value`; the value is JSON when it parses, text otherwise.
     pub params: Vec<(String, String)>,
     pub level: Option<String>,
     pub allow_many: bool,
+    pub levels: u32,
 }
 
 fn kind_name(k: ErrorKind) -> &'static str {
@@ -57,7 +59,7 @@ fn params_json(p: &[(String, String)]) -> Value {
     Value::Object(m)
 }
 
-fn save(model: &mut ddc_model::Model, out: &Path) -> Result<Vec<String>, String> {
+pub(crate) fn save(model: &mut ddc_model::Model, out: &Path) -> Result<Vec<String>, String> {
     let ext = load::ext_of(out);
     if ext == "ddc" {
         let tmp = out.with_extension("ddc.part");
@@ -85,7 +87,9 @@ fn execute(a: &RunArgs, quiet: bool) -> Outcome {
         log: vec![],
     };
     let t = Instant::now();
-    if let Err(e) = export::check_out(&a.out, &[&a.project, &a.script]) {
+    let mut inputs: Vec<&Path> = vec![&a.script];
+    inputs.extend(a.project.as_deref());
+    if let Err(e) = export::check_out(&a.out, &inputs) {
         o.steps.push(Step::fail("check", t, e));
         return o;
     }
@@ -97,8 +101,14 @@ fn execute(a: &RunArgs, quiet: bool) -> Outcome {
             return o;
         }
     };
-    progress(quiet, &format!("opening {}", a.project.display()));
-    let mut loaded = match guarded(|| load::load(&a.project)) {
+    let loaded = match &a.project {
+        Some(p) => {
+            progress(quiet, &format!("opening {}", p.display()));
+            guarded(|| load::load(p))
+        }
+        None => guarded(|| crate::new::fresh(a.levels).map(load::Loaded::of)),
+    };
+    let mut loaded = match loaded {
         Ok(l) => l,
         Err(e) => {
             o.steps.push(Step::fail("open", t, e));
@@ -175,7 +185,7 @@ pub fn run(a: &RunArgs, json_out: bool, quiet: bool) -> (String, i32) {
     if json_out {
         let j = json!({
             "schema": LOG_SCHEMA, "command": "run", "exit": code,
-            "project": a.project.to_string_lossy(), "script": a.script.to_string_lossy(),
+            "project": a.project.as_ref().map(|p| p.to_string_lossy()), "script": a.script.to_string_lossy(),
             "out": a.out.to_string_lossy(), "created": o.created, "hash": o.hash,
             "log": o.log, "script_error": o.script_error.as_ref().map(script_json),
             "steps": o.steps.iter().map(Step::to_json).collect::<Vec<_>>(),

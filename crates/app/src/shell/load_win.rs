@@ -11,7 +11,7 @@ use crate::ui_kit::{self as kit, fmt_size};
 use ddc_ui::theme::{layout, Role};
 use ddc_ui::widgets::{self, shell_kit, Button};
 use ddc_ui::{Catalog, Lang, Theme};
-use eframe::egui::{self, Sense, Vec2};
+use egui::{self, Sense, Vec2};
 use web_time::{Duration, Instant};
 
 /// Window key (geometry file and egui id).

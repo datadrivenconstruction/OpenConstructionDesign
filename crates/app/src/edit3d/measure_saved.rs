@@ -276,12 +276,12 @@ impl Default for State {
 
 /// Saved measurements of the 3D view and of the current level's plan, over the scene.
 pub fn draw3d(
-    painter: &eframe::egui::Painter,
+    painter: &egui::Painter,
     cam: &super::math::Cam,
     ed: &crate::editor::Editor,
-    fg: eframe::egui::Color32,
-    bg: eframe::egui::Color32,
-    warn: eframe::egui::Color32,
+    fg: egui::Color32,
+    bg: egui::Color32,
+    warn: egui::Color32,
 ) {
     for view in [ViewKey::ThreeD, ViewKey::Plan(ed.level)] {
         let Ok(list) = ed.model.measures_in_view(view) else {

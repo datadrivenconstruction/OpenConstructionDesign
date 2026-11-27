@@ -8,7 +8,7 @@
 
 use std::collections::BTreeMap;
 
-use eframe::egui;
+use egui;
 
 use ddc_model::merge::{MergeCase, MergePlan};
 use ddc_model::{
@@ -510,8 +510,214 @@ pub fn camera_path(
     (path, stuck)
 }
 
+/// How the exported reveal moves the camera: one pose framing the whole model (`fixed`, the
+/// default), a full turn around it over the show (`orbit`), or framing each batch (`follow`).
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub enum CamMode {
+    Fixed,
+    Orbit,
+    Follow,
+}
+
+/// `--reveal-camera fixed|orbit|follow`: absent is `fixed`; a missing or unknown value is an error.
+pub fn camera_arg(argv: &[String]) -> Result<CamMode, String> {
+    let Some(i) = argv.iter().position(|s| s == "--reveal-camera") else { return Ok(CamMode::Fixed) };
+    match argv.get(i + 1).map_or("<missing>", String::as_str) {
+        "fixed" => Ok(CamMode::Fixed),
+        "orbit" => Ok(CamMode::Orbit),
+        "follow" => Ok(CamMode::Follow),
+        other => Err(format!("--reveal-camera {other}: expected fixed, orbit or follow")),
+    }
+}
+
+/// Per-frame cameras of `mode`; `cam` already frames the whole model. Fixed and orbit keep its
+/// target and distance, so nothing jumps between batches.
+pub fn camera_path_of(
+    mode: CamMode,
+    scene: &ddc_render::Scene,
+    tl: &Timeline,
+    cam: &ddc_render::OrbitCamera,
+    aspect: f32,
+    section: Option<&ddc_render::Aabb>,
+) -> (Vec<ddc_render::OrbitCamera>, usize) {
+    let n = tl.len.max(1);
+    match mode {
+        CamMode::Follow => camera_path(scene, tl, cam, aspect, section),
+        CamMode::Fixed => (vec![cam.clone(); n as usize], 0),
+        CamMode::Orbit => {
+            let turn = std::f32::consts::TAU / n as f32;
+            let path = (0..n)
+                .map(|f| {
+                    let mut c = cam.clone();
+                    c.yaw += turn * f as f32;
+                    c
+                })
+                .collect();
+            (path, 0)
+        }
+    }
+}
+
+/// `--reveal-out` in the arguments: the run is windowless. A missing value is an error.
+pub fn wants_headless(argv: &[String]) -> Result<bool, String> {
+    let Some(i) = argv.iter().position(|s| s == "--reveal-out") else { return Ok(false) };
+    match argv.get(i + 1) {
+        Some(v) if !v.starts_with("--") => Ok(true),
+        _ => Err("--reveal-out needs a folder for the frames or a video file such as show.mp4".into()),
+    }
+}
+
+/// Video file extensions `--reveal-out` encodes to; any other path is a folder of PNG frames.
+pub const VIDEO_EXTS: [&str; 4] = ["mp4", "webm", "mov", "gif"];
+
+pub fn is_video(p: &std::path::Path) -> bool {
+    p.extension()
+        .and_then(|e| e.to_str())
+        .is_some_and(|e| VIDEO_EXTS.contains(&e.to_ascii_lowercase().as_str()))
+}
+
+/// Arguments of the video encoder for the frames in `frames` (`frame_0000.png`...).
+pub fn video_args(frames: &std::path::Path, fps: u32, out: &std::path::Path) -> Vec<String> {
+    let input = frames.join("frame_%04d.png").display().to_string();
+    let mut a: Vec<String> = ["-y", "-loglevel", "error", "-framerate"].map(String::from).to_vec();
+    a.push(fps.to_string());
+    a.extend(["-i".to_string(), input]);
+    if !out.extension().is_some_and(|e| e.eq_ignore_ascii_case("gif")) {
+        // the widest player support: 8-bit 4:2:0, which needs even frame sides (`even`)
+        a.extend(["-pix_fmt", "yuv420p"].map(String::from));
+    }
+    a.push(out.display().to_string());
+    a
+}
+
+/// Frame size a video takes: 4:2:0 needs even sides.
+pub fn even(size: (u32, u32)) -> (u32, u32) {
+    ((size.0 & !1).max(2), (size.1 & !1).max(2))
+}
+
+/// The encoder command line as text, for the error when no encoder is installed.
+pub fn video_recipe(frames: &std::path::Path, fps: u32, out: &std::path::Path) -> String {
+    let q = |s: &String| if s.contains(' ') { format!("\"{s}\"") } else { s.clone() };
+    let args: Vec<String> = video_args(frames, fps, out).iter().map(q).collect();
+    format!("ffmpeg {}", args.join(" "))
+}
+
+/// Encodes the frames into `out` with an installed ffmpeg; without one the frames stay and the
+/// error gives the command to run.
+fn encode(frames: &std::path::Path, fps: u32, out: &std::path::Path) -> Result<(), String> {
+    match std::process::Command::new("ffmpeg").args(video_args(frames, fps, out)).status() {
+        Ok(st) if st.success() => {
+            let _ = std::fs::remove_dir_all(frames);
+            Ok(())
+        }
+        Ok(st) => Err(format!("the video encoder failed ({st}); the frames are in {}", frames.display())),
+        Err(_) => Err(format!(
+            "no video encoder found; the frames are in {}. Install ffmpeg and run: {}",
+            frames.display(),
+            video_recipe(frames, fps, out)
+        )),
+    }
+}
+
+/// Scene elements in order of their number: model key (a `scene` key for a mesh the editor
+/// cannot name), element range and lowest point.
+pub fn scene_elements(
+    scene: &ddc_render::Scene,
+    key_of: &dyn Fn(u32) -> Option<ElKey>,
+) -> Vec<(ElKey, (u32, u32), f32)> {
+    let mut by: BTreeMap<ElKey, ((u32, u32), f32)> = BTreeMap::new();
+    for (m, b) in scene.meshes.iter().zip(scene.boxes()) {
+        if m.element >= crate::scene_ids::SERVICE_BASE || m.positions.is_empty() {
+            continue;
+        }
+        let k = key_of(m.element).unwrap_or_else(|| ("scene".to_string(), i64::from(m.element)));
+        let e = by.entry(k).or_insert(((m.element, m.element + 1), f32::INFINITY));
+        e.0 = (e.0 .0.min(m.element), e.0 .1.max(m.element + 1));
+        e.1 = e.1.min(b.min.z);
+    }
+    let mut v: Vec<_> = by.into_iter().map(|(k, (r, z))| (k, r, z)).collect();
+    v.sort_by_key(|x| x.1);
+    v
+}
+
+/// The scene with its element numbers packed from 1 in their order, and the map from the old
+/// numbers. The renderer animates an element by its number, up to `MAX_ELEMS`; solids and other
+/// high ranges would fall outside and never move.
+pub fn packed(scene: &ddc_render::Scene) -> (ddc_render::Scene, BTreeMap<u32, u32>) {
+    let mut ids: Vec<u32> = scene
+        .meshes
+        .iter()
+        .map(|m| m.element)
+        .filter(|e| *e < crate::scene_ids::SERVICE_BASE)
+        .collect();
+    ids.sort_unstable();
+    ids.dedup();
+    let map: BTreeMap<u32, u32> = ids.iter().enumerate().map(|(i, e)| (*e, i as u32 + 1)).collect();
+    let meshes = scene
+        .meshes
+        .iter()
+        .map(|m| {
+            let mut m2 = (**m).clone();
+            if let Some(n) = map.get(&m.element) {
+                m2.element = *n;
+            }
+            m2
+        })
+        .collect();
+    let mut s = ddc_render::Scene::new(meshes);
+    s.cats = scene.cats.clone();
+    s.focus = scene.focus;
+    (s, map)
+}
+
+/// An old [start, end) element range in packed numbers; `None` when no element of it is drawn.
+pub fn packed_range(map: &BTreeMap<u32, u32>, (a, b): (u32, u32)) -> Option<(u32, u32)> {
+    let first = *map.range(a..b).next()?.1;
+    let last = *map.range(a..b).next_back()?.1;
+    Some((first, last + 1))
+}
+
+/// Model key of an element of the editor's own scene (`Editor::scene`): solids by their
+/// number range, the rest through the selection they stand for.
+fn editor_key(ed: &crate::editor::Editor, e: u32) -> Option<ElKey> {
+    use crate::solid_tools::{SOLID_BASE, SOLID_SPAN};
+    if (SOLID_BASE..SOLID_BASE + SOLID_SPAN).contains(&e) {
+        return Some(("solid".to_string(), i64::from(e - SOLID_BASE)));
+    }
+    let s = ed.sel_of_element(e)?;
+    crate::phase_ui::sel_ref(s).map(|(t, i)| (t.to_string(), i))
+}
+
+/// A batch spread over less height than this appears at once, metres.
+const BAND_MIN: f32 = 1.0;
+/// Bands one batch is split into at most.
+const MAX_BANDS: usize = 24;
+
+/// Height bands of a reveal: a batch whose elements' lowest points spread over more than
+/// `BAND_MIN` is split, bottom to top, into at most `MAX_BANDS` bands of equal height.
+pub fn bands(batches: Vec<Vec<Step>>, low: &dyn Fn(&ElKey) -> Option<f32>) -> Vec<Vec<Step>> {
+    let mut out = vec![];
+    for b in batches {
+        let z: Vec<f32> = b.iter().map(|s| low(&s.key).unwrap_or(0.0)).collect();
+        let (lo, hi) = z.iter().fold((f32::INFINITY, f32::NEG_INFINITY), |(a, c), v| (a.min(*v), c.max(*v)));
+        if !(hi - lo > BAND_MIN) {
+            out.push(b);
+            continue;
+        }
+        let n = MAX_BANDS.min(((hi - lo) / BAND_MIN).ceil() as usize).max(2);
+        let mut split: Vec<Vec<Step>> = vec![vec![]; n];
+        for (s, z) in b.into_iter().zip(z) {
+            let k = ((z - lo) / (hi - lo) * n as f32).floor() as usize;
+            split[k.min(n - 1)].push(s);
+        }
+        out.extend(split.into_iter().filter(|v| !v.is_empty()));
+    }
+    out
+}
+
 /// Export frames `frame_0000.png...` without a window; returns the frame count.
 #[cfg(feature = "gui")]
+#[allow(clippy::too_many_arguments)]
 pub fn export_frames(
     scene: &ddc_render::Scene,
     tl: &Timeline,
@@ -520,9 +726,10 @@ pub fn export_frames(
     dir: &std::path::Path,
     only: Option<u32>,
     section: Option<&ddc_render::Aabb>,
+    mode: CamMode,
 ) -> Result<Exported, String> {
     std::fs::create_dir_all(dir).map_err(|e| e.to_string())?;
-    let (path, stuck) = camera_path(scene, tl, cam, size.0 as f32 / size.1.max(1) as f32, section);
+    let (path, stuck) = camera_path_of(mode, scene, tl, cam, size.0 as f32 / size.1.max(1) as f32, section);
     let cams = |f: u32| path[(f as usize).min(path.len() - 1)].clone();
     let mut r = ddc_render::reveal_export::render_timeline(scene, tl, &cams, size)?;
     let save = |i: u32, img: ddc_render::reveal_export::Rgba8Image| -> Result<(), String> {
@@ -556,17 +763,29 @@ pub fn frame_file(i: u32) -> String {
     format!("frame_{i:04}.png")
 }
 
-/// `--reveal all|calendar --reveal-out DIR`: windowless reveal of the open model. `all` builds the whole
-/// scene in build order, `calendar` goes by stages. The AI plan needs a session and is unavailable without a window.
+/// `--reveal all|calendar --reveal-out DIR|FILE.mp4`: windowless reveal of the open model. `all`
+/// builds every element of the scene, scripted parts included, bottom to top in build order;
+/// `calendar` goes by stages. A video path encodes the frames (`encode`). The AI plan needs a
+/// session and is unavailable without a window.
 #[cfg(feature = "gui")]
+#[allow(clippy::too_many_arguments)]
 pub fn export_cli(
     a: &mut crate::shell::EditorApp,
     mode: &str,
-    dir: &std::path::Path,
+    out: &std::path::Path,
     fps: u32,
     size: (u32, u32),
     only: Option<u32>,
+    cam_mode: CamMode,
 ) -> Result<Exported, String> {
+    let (scene, map) = packed(&a.ed.scene());
+    let old: Vec<u32> = map.keys().copied().collect();
+    let els = {
+        let ed = &a.ed;
+        scene_elements(&scene, &|e| old.get((e as usize).checked_sub(1)?).and_then(|o| editor_key(ed, *o)))
+    };
+    let range: std::collections::HashMap<ElKey, (u32, u32)> = els.iter().map(|(k, r, _)| (k.clone(), *r)).collect();
+    let low: std::collections::HashMap<ElKey, f32> = els.iter().map(|(k, _, z)| (k.clone(), *z)).collect();
     let refs = scene_refs(a);
     let b: Vec<Vec<Step>> = match mode {
         "calendar" => {
@@ -575,8 +794,8 @@ pub fn export_cli(
             phase_batches(&from_phases(&idx, &|p| m.phase_dates(p).ok().flatten())).0
         }
         "all" | "" => {
-            let steps: Vec<Step> = refs.keys().map(|k| Step::new(k.clone(), Change::Added)).collect();
-            batches(&steps, &a.ed.model)
+            let steps: Vec<Step> = els.iter().map(|(k, ..)| Step::new(k.clone(), Change::Added)).collect();
+            bands(batches(&steps, &a.ed.model), &|k| low.get(k).copied())
         }
         other => {
             return Err(format!(
@@ -584,19 +803,31 @@ pub fn export_cli(
             ))
         }
     };
-    let mut tl = timeline(&b, &|k| refs.get(k).and_then(|s| a.ed.element_range(*s)));
+    let resolve = |k: &ElKey| {
+        range.get(k).copied().or_else(|| refs.get(k).and_then(|s| a.ed.element_range(*s)).and_then(|r| packed_range(&map, r)))
+    };
+    let mut tl = timeline(&b, &resolve);
     tl = apply_motion(tl, a, a.reveal_motion);
     let tl = retime(&tl, fps);
     if tl.tracks.is_empty() {
         return Err("nothing to show: no element of the scene is in the timeline".into());
     }
-    let scene = a.ed.scene();
+    let video = is_video(out);
+    let size = if video { even(size) } else { size };
     let mut cam = ddc_render::OrbitCamera::default();
     if let Some(bd) = scene.bounds {
         cam.fit(&bd, size.0 as f32 / size.1.max(1) as f32);
     }
     let section = a.view.section_box;
-    export_frames(&scene, &tl, &cam, size, dir, only, section.as_ref())
+    if !video {
+        return export_frames(&scene, &tl, &cam, size, out, only, section.as_ref(), cam_mode);
+    }
+    let stem = out.file_name().map(|n| n.to_string_lossy().into_owned()).unwrap_or_default();
+    let frames = out.with_file_name(format!("{stem}.frames"));
+    let _ = std::fs::remove_dir_all(&frames);
+    let n = export_frames(&scene, &tl, &cam, size, &frames, only, section.as_ref(), cam_mode)?;
+    encode(&frames, fps, out)?;
+    Ok(n)
 }
 
 /// Player window: back, pause/forward, frame slider, close (the scene is left as it was).
@@ -1065,6 +1296,93 @@ mod tests {
         assert_eq!(motion_arg(&v(&["ddc", "--reveal-motion", "off"])), Ok(Some(Motion::Off)));
         assert!(motion_arg(&v(&["ddc", "--reveal-motion", "x"])).unwrap_err().contains("full, reduced or off"));
         assert!(motion_arg(&v(&["ddc", "--reveal-motion"])).is_err(), "a missing value is an error");
+    }
+
+    #[test]
+    fn camera_reveal_out_and_video_arguments() {
+        use std::path::Path;
+        let v = |a: &[&str]| a.iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        assert_eq!(camera_arg(&v(&["ddc"])), Ok(CamMode::Fixed));
+        assert_eq!(camera_arg(&v(&["ddc", "--reveal-camera", "orbit"])), Ok(CamMode::Orbit));
+        assert!(camera_arg(&v(&["ddc", "--reveal-camera"])).is_err());
+        assert_eq!(wants_headless(&v(&["ddc", "--open-project", "a.ddc"])), Ok(false));
+        assert_eq!(wants_headless(&v(&["ddc", "--reveal-out", "show.mp4"])), Ok(true));
+        assert!(wants_headless(&v(&["ddc", "--reveal-out", "--reveal", "all"])).is_err());
+        assert!(is_video(Path::new("a/show.MP4")) && !is_video(Path::new("a/frames")));
+        let a = video_args(Path::new("f"), 24, Path::new("o.mp4"));
+        assert!(a.windows(2).any(|w| w == ["-framerate", "24"]) && a.contains(&"yuv420p".to_string()));
+        assert!(!video_args(Path::new("f"), 24, Path::new("o.gif")).contains(&"yuv420p".to_string()));
+        assert_eq!(even((1281, 721)), (1280, 720));
+        assert!(video_recipe(Path::new("my frames"), 30, Path::new("o.mp4")).starts_with("ffmpeg "));
+    }
+
+    fn two_levels_scene() -> ddc_render::Scene {
+        let m = |e: u32, z: f32| ddc_render::SceneMesh {
+            element: e,
+            tag: 0,
+            positions: vec![[0.0, 0.0, z], [1.0, 0.0, z], [0.0, 1.0, z + 3.0]],
+            triangles: vec![[0, 1, 2]],
+        };
+        ddc_render::Scene::new(vec![m(7, 40.0), m(5, 0.0), m(6, 20.0), m(crate::scene_ids::SERVICE_BASE, 0.0)])
+    }
+
+    /// Script-made solids (no model selection) still reveal, bottom to top in bands.
+    #[test]
+    fn every_scene_element_reveals_bottom_up() {
+        let sc = two_levels_scene();
+        let els = scene_elements(&sc, &|e| (e == 6).then(|| ("solid".to_string(), 1)));
+        assert_eq!(els.len(), 3, "service meshes are not part of the show");
+        assert_eq!(els[1].0, ("solid".to_string(), 1));
+        assert_eq!(els[0].0, ("scene".to_string(), 5));
+        let low: std::collections::HashMap<_, _> = els.iter().map(|(k, _, z)| (k.clone(), *z)).collect();
+        // one batch as given, top first: the bands put it in height order
+        let batch = vec![els[2].0.clone(), els[1].0.clone(), els[0].0.clone()]
+            .into_iter()
+            .map(|k| Step::new(k, Change::Added))
+            .collect::<Vec<_>>();
+        let b = bands(vec![batch], &|k| low.get(k).copied());
+        assert_eq!(b.len(), 3, "{b:?}");
+        let z: Vec<f32> = b.iter().map(|x| low[&x[0].key]).collect();
+        assert!(z.windows(2).all(|w| w[0] < w[1]), "{z:?}");
+        // a flat batch stays one
+        let flat = vec![Step::new(els[0].0.clone(), Change::Added)];
+        assert_eq!(bands(vec![flat], &|_| Some(0.0)).len(), 1);
+    }
+
+    /// Solid numbers start at 0x2000_0000, past the renderer's animation table: packed, they move.
+    #[test]
+    fn packed_numbers_fit_the_animation_table() {
+        let m = |e: u32| ddc_render::SceneMesh {
+            element: e,
+            tag: 0,
+            positions: vec![[0.0, 0.0, 0.0], [1.0, 0.0, 0.0], [0.0, 1.0, 0.0]],
+            triangles: vec![[0, 1, 2]],
+        };
+        let base = crate::solid_tools::SOLID_BASE;
+        let sc = ddc_render::Scene::new(vec![m(base + 7), m(5), m(base + 3), m(crate::scene_ids::SERVICE_BASE)]);
+        let (p, map) = packed(&sc);
+        let mut got: Vec<u32> = p.meshes.iter().map(|m| m.element).collect();
+        got.truncate(3);
+        assert_eq!(got, vec![3, 1, 2]);
+        assert!(got.iter().all(|e| (*e as usize) < ddc_render::reveal::MAX_ELEMS));
+        assert_eq!(p.meshes[3].element, crate::scene_ids::SERVICE_BASE, "service meshes keep theirs");
+        assert_eq!(packed_range(&map, (base, base + 8)), Some((2, 4)));
+        assert_eq!(packed_range(&map, (100, 200)), None);
+    }
+
+    #[test]
+    fn fixed_and_orbit_cameras_keep_framing_the_whole_model() {
+        let sc = two_levels_scene();
+        let mut cam = ddc_render::OrbitCamera::default();
+        cam.fit(&sc.bounds.unwrap(), 1.6);
+        let tl = Timeline { fps: 30, tracks: vec![], len: 40 };
+        let (fixed, _) = camera_path_of(CamMode::Fixed, &sc, &tl, &cam, 1.6, None);
+        assert_eq!(fixed.len(), 40);
+        assert!(fixed.iter().all(|c| c.target == cam.target && c.distance == cam.distance));
+        let (orbit, _) = camera_path_of(CamMode::Orbit, &sc, &tl, &cam, 1.6, None);
+        assert!(orbit.iter().all(|c| c.target == cam.target && c.distance == cam.distance));
+        let turn = orbit[39].yaw - orbit[0].yaw;
+        assert!((turn - std::f32::consts::TAU * 39.0 / 40.0).abs() < 1e-4, "{turn}");
     }
 
     #[test]

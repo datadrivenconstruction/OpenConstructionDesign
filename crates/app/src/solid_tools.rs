@@ -829,6 +829,28 @@ fn with_items<R>(ed: &Editor, f: impl FnOnce(&[Item]) -> R) -> R {
     ST.with(|s| f(s.borrow().plan.as_ref().map_or(&[][..], |c| &c.1[..])))
 }
 
+/// Solids the level's plan draws (cut or seen below the cut).
+pub fn plan_count(ed: &Editor) -> usize {
+    with_items(ed, |items| items.iter().filter(|it| !it.cuts.is_empty() || !it.edges.is_empty()).count())
+}
+
+/// Plan points of the level's solids (cuts and lines, the mid-height outline of a solid with
+/// neither), for fitting the plan to what it shows.
+pub fn plan_points(ed: &Editor) -> Vec<V2> {
+    with_items(ed, |items| {
+        let mut v = vec![];
+        for it in items {
+            let n = v.len();
+            v.extend(it.cuts.iter().flat_map(|(o, _)| o.iter().copied()));
+            v.extend(it.edges.iter().flat_map(|e| [e.0, e.1]));
+            if v.len() == n {
+                v.extend(it.outline.iter().flat_map(|(o, _)| o.iter().copied()));
+            }
+        }
+        v
+    })
+}
+
 /// Solids under a plan point, nearest first; the second is a point inside the solid's section (not a void).
 fn ranked(ed: &Editor, p: V2) -> (Vec<i64>, bool) {
     let r = ed.tool.radius.max(1e-3);

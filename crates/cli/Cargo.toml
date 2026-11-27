@@ -14,6 +14,8 @@ name = "ddc"
 path = "src/main.rs"
 
 [features]
+# `ddc ai` ships in every build: it compiles without the window
+default = ["ai"]
 # DXF export: off in the public build
 dxf-export = ["ddc-io/dxf-write"]
 # ERP link commands (`ddc gen`, `ddc publish`); pulls in the editor crate, off by default

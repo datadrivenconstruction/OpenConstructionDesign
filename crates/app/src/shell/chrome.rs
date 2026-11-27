@@ -508,6 +508,12 @@ impl EditorApp {
         self.set_lang(lang);
     }
 
+    /// The language a start shows, with or without a window: `--lang`, then the saved choice,
+    /// then the system language.
+    pub fn apply_start_lang(&mut self, argv: &[String], saved: &crate::prefs::Prefs, system: ddc_ui::i18n::Lang) {
+        self.set_lang(saved.startup_lang(argv, system));
+    }
+
     /// One place that changes the UI language: catalog lookups and `crate::tr` always agree.
     pub fn set_lang(&mut self, lang: ddc_ui::i18n::Lang) {
         self.sh.cat.lang = lang;
@@ -517,7 +523,10 @@ impl EditorApp {
     /// Saved preferences that live outside `Prefs::apply`: language, scale, ribbon state.
     /// Called on a real start only, so tests and screenshots keep their defaults.
     pub fn apply_startup_prefs(&mut self) {
-        self.apply_lang();
+        let argv: Vec<String> = std::env::args().collect();
+        let saved = std::mem::take(&mut self.prefs);
+        self.apply_start_lang(&argv, &saved, super::settings_win::system_lang());
+        self.prefs = saved;
         self.sh.theme.set_scale(self.prefs.ui_scale);
         self.sh.ribbon.collapsed = self.prefs.ribbon_collapsed;
     }
@@ -529,6 +538,21 @@ mod tests {
 
     fn app() -> EditorApp {
         EditorApp::new(crate::editor::Editor::new_in_memory().unwrap(), None, "test".into())
+    }
+
+    /// The start language comes from one rule everywhere: `--lang`, the saved choice, the system.
+    #[test]
+    fn start_language_follows_argument_then_setting_then_system() {
+        use ddc_ui::i18n::Lang;
+        let mut a = app();
+        let saved = crate::prefs::Prefs { lang: "de".into(), ..Default::default() };
+        a.apply_start_lang(&[], &saved, Lang::Fr);
+        assert_eq!(a.sh.cat.lang, Lang::De);
+        a.apply_start_lang(&["x".into(), "--lang".into(), "es".into()], &saved, Lang::Fr);
+        assert_eq!(a.sh.cat.lang, Lang::Es);
+        let auto = crate::prefs::Prefs { lang: "auto".into(), ..Default::default() };
+        a.apply_start_lang(&[], &auto, Lang::Fr);
+        assert_eq!(a.sh.cat.lang, Lang::Fr);
     }
 
     #[test]

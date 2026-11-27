@@ -1872,7 +1872,7 @@ enum Tab {
 /// to an overflow menu, long names are elided with a tooltip, a context menu closes tabs.
 /// Returns the remaining rectangle and the requested action.
 /// Height of the view tab strip at the top of the viewport panel.
-pub(super) fn view_tabs_h() -> f32 {
+pub(crate) fn view_tabs_h() -> f32 {
     ddc_ui::sem::control::TAB_H + ddc_ui::sem::space::XS
 }
 

@@ -135,6 +135,21 @@ Apply.
 
   The result is written to a new file; the input project is never changed. See
   [ARCHITECTURE.md](ARCHITECTURE.md#scripting) for the script API.
+- Two primitives cover most hand-written structures. `member` is one straight member of any
+  section between two points; its role gives the IFC class (column, beam, brace, chord,
+  diagonal, post and others). `slab` is a flat slab: an outline in plan, the top at `z`:
+
+  ```lua
+  member{from = vec3(0, 0, 0), to = vec3(0, 0, 3), profile = "HEA 200", role = "column"}
+  member{from = vec3(0, 0, 3), to = vec3(6, 0, 3), profile = "IPE 300", role = "beam"}
+  slab{outline = {{0, 0}, {6, 0}, {6, 4}, {0, 4}}, z = 3, thickness = "200 mm"}
+  ```
+
+  `member` also takes `material`, `name` and `roll`; `slab` takes `holes` (a list of
+  outlines), `role`, `material` and `name`. Lengths are metres or text with a unit.
+- `ddc new project.ddc --levels 3` writes an empty project (levels 3 m apart, standard wall
+  types); `ddc run --new script.lua --out result.ddc` runs a script on a fresh project
+  without one. [examples/](../examples) holds a small house and a lattice tower.
 
 ## Command line
 

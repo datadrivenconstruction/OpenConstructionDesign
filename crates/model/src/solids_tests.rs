@@ -689,3 +689,17 @@ fn slab_mesh_cut_has_through_holes_and_reports_partial() {
     assert_eq!(skipped, vec![recess]);
     assert!(!skipped.contains(&through));
 }
+
+#[test]
+fn plan_extent_counts_solids_so_a_member_only_model_has_a_section() {
+    let mut m = Model::open(":memory:").unwrap();
+    let l = m.add_level("L1", 0.0).unwrap();
+    assert_eq!(m.plan_bbox().unwrap(), None);
+    m.add_solid(&boxy(l, rect(1.0, 2.0, 1.2, 2.2), 0.0, 9.0, false)).unwrap();
+    m.add_solid(&boxy(l, rect(8.0, 2.0, 8.2, 2.2), 0.0, 9.0, false)).unwrap();
+    // a void alone has no extent of its own
+    m.add_solid(&boxy(l, rect(-50.0, -50.0, -49.0, -49.0), 0.0, 1.0, true)).unwrap();
+    let bb = m.plan_bbox().unwrap().unwrap();
+    assert!(close(bb[0], 1.0, 1e-9) && close(bb[2], 8.2, 1e-9), "{bb:?}");
+    assert!(close(bb[1], 2.0, 1e-9) && close(bb[3], 2.2, 1e-9), "{bb:?}");
+}

@@ -7,7 +7,7 @@ use crate::ai::point::{ChangeToken, PoseResolved, ViewKind, ViewRef};
 use ddc_ai::ImageData;
 use crate::editor::Editor;
 use ddc_model::{Model, RefusalCode};
-use eframe::egui::{self, Color32, Pos2, Rect};
+use egui::{self, Color32, Pos2, Rect};
 use std::path::PathBuf;
 
 /// Most marks one session keeps; the oldest go first.

@@ -325,6 +325,19 @@ impl Model {
                 bb[3].max(p.y),
             ];
         }
+        // solids (scripted members, plates, free forms) by their stored extent
+        let mut st = self.db.prepare(
+            "SELECT MIN(q.x0), MIN(q.y0), MAX(q.x1), MAX(q.y1) FROM solid_qty q JOIN solid s ON s.id = q.solid WHERE s.void = 0",
+        )?;
+        let ext: Option<[f64; 4]> = st.query_row([], |r| {
+            Ok(match (r.get(0)?, r.get(1)?, r.get(2)?, r.get(3)?) {
+                (Some(a), Some(b), Some(c), Some(d)) => Some([a, b, c, d]),
+                _ => None,
+            })
+        })?;
+        if let Some(e) = ext {
+            bb = [bb[0].min(e[0]), bb[1].min(e[1]), bb[2].max(e[2]), bb[3].max(e[3])];
+        }
         Ok(bb[0].is_finite().then_some(bb))
     }
 

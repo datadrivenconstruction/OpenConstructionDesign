@@ -273,7 +273,9 @@ pub fn frame(app: &mut EditorApp, ctx: &egui::Context, area: egui::Rect, fire: &
         app.quick.menu_fresh = true;
     }
     // `bar_off` is checked inside: hovering the status bar's button still shows the strip
-    overlay::recent_bar(app, ctx, area, fire);
+    if !crate::ai::render_off::capturing() {
+        overlay::recent_bar(app, ctx, area, fire);
+    }
     hud::ui(app, ctx, area);
     menu::ui(app, ctx, fire);
     if app.quick.hist_open {

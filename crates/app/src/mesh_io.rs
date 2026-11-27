@@ -10,7 +10,7 @@ use std::sync::Arc;
 
 use ddc_io::meshx::{MeshSet, Units};
 use ddc_ui::widgets;
-use eframe::egui;
+use egui;
 
 use crate::editor::Editor;
 use crate::jobs::Progress;

@@ -329,7 +329,7 @@ impl PlanView {
         !(inner.contains(a) && inner.contains(b))
     }
 
-    /// Corners of the box around the walls, curtain lines, slabs, bodies and the underlay.
+    /// Corners of the box around the walls, curtain lines, slabs, bodies, solids and the underlay.
     fn content_bounds(&self, ed: &Editor) -> Option<(V2, V2)> {
         let it = ed
             .walls
@@ -348,7 +348,8 @@ impl PlanView {
                     .flat_map(|b| b.hull.iter().copied()),
             );
         let under = self.drawings.fit_bbox(ed.level).map(|(a, b)| [a, b]);
-        let mut it = it.chain(under.into_iter().flatten());
+        let solids = crate::solid_tools::plan_points(ed);
+        let mut it = it.chain(under.into_iter().flatten()).chain(solids);
         let first = it.next()?;
         let (mut lo, mut hi) = (first, first);
         for p in it {

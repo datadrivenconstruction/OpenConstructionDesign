@@ -542,3 +542,48 @@ member("b", vec3(0, 0, 0), vec3(4, 0, 3), "CHS 88.9x5")
     assert!(fail(r#"member("a", vec3(0,0,0), vec3(4,0,0), "CHS 88.9x5", "column")"#).contains("beam or brace"));
     assert!(fail(r#"member("a", vec3(0,0,0), vec3(0.001,0,0), "CHS 88.9x5")"#).contains("5 mm"));
 }
+
+#[test]
+fn member_table_form_takes_any_section_and_role() {
+    let r = ok(r#"
+member{from = vec3(0, 0, 0), to = vec3(0, 0, 4), profile = "HEA 200", role = "column"}
+member{from = {0, 0, 4}, to = {6, 0, 4}, profile = profile.rhs(0.3, 0.2, 0.01), role = "beam", material = "S275"}
+local d = member{from = vec3(0, 0, 0), to = vec3(6, 0, 4), role = "diagonal"}
+assert(math.abs(d.length - math.sqrt(52)) < 1e-9, "length")
+member{from = vec3(9, 0, 0), to = vec3(9, 0, 3)}
+"#);
+    assert_eq!(r.parts.len(), 4);
+    assert_eq!(class(&r, "column"), Some(("IfcColumn".into(), Some("COLUMN".into()))));
+    assert_eq!(class(&r, "beam"), Some(("IfcBeam".into(), Some("BEAM".into()))));
+    assert_eq!(class(&r, "diagonal"), Some(("IfcMember".into(), Some("STRUT".into()))));
+    assert_eq!(class(&r, "member"), Some(("IfcMember".into(), Some("MEMBER".into()))));
+    let keys: Vec<&str> = r.parts.iter().map(|p| p.key.as_str()).collect();
+    assert_eq!(keys, ["column", "beam", "diagonal", "member"]);
+    assert!(fail("member{from = vec3(0,0,0), to = vec3(0,0,3), lenght = 2}").contains("unknown option `lenght`"));
+    assert!(fail("member{from = vec3(0,0,0)}").contains("needs from and to"));
+    assert!(fail("member{from = vec3(0,0,0), to = vec3(0,0,0.001)}").contains("5 mm"));
+    assert!(fail(r#"member{from = vec3(0,0,0), to = vec3(0,0,3), profile = "XYZ 1"}"#).contains("member: profile"));
+}
+
+#[test]
+fn slab_makes_a_flat_slab_with_holes_at_its_top_level() {
+    let r = ok(r#"
+slab{outline = {{0, 0}, {8, 0}, {8, 6}, {0, 6}}, z = 3, thickness = "250 mm",
+     holes = {{{2, 2}, {3, 2}, {3, 3}, {2, 3}}}}
+slab{outline = {vec3(0, 0, 0), vec3(4, 0, 0), vec3(4, 4, 0)}, role = "deck"}
+"#);
+    assert_eq!(r.parts.len(), 2);
+    assert_eq!(class(&r, "slab"), Some(("IfcSlab".into(), Some("FLOOR".into()))));
+    assert_eq!(class(&r, "deck"), Some(("IfcSlab".into(), Some("FLOOR".into()))));
+    let first = r.env.groups[0].ops.iter().find_map(|op| match op {
+        Op::Geometry(GeoOp::Solid { form, .. }) => Some(serde_json::to_value(form).unwrap()),
+        _ => None,
+    });
+    let f = first.unwrap().to_string();
+    // top at z = 3, 250 mm thick: the extrusion starts at 2.75
+    assert!(f.contains("2.75"), "{f}");
+    assert!(f.contains("holes") || f.contains("rings") || f.contains("Rings"), "{f}");
+    assert!(fail("slab{z = 3}").contains("needs an outline"));
+    assert!(fail("slab{outline = {{0, 0}, {1, 0}}}").contains("3 or more points"));
+    assert!(fail("slab{outline = {{0, 0}, {1, 0}, {1, 1}}, thick = 1}").contains("unknown option `thick`"));
+}

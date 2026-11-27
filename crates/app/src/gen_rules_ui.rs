@@ -15,7 +15,7 @@ use ddc_gen::project::why::{RuleFix, Why};
 use ddc_ui::theme::space;
 use ddc_ui::widgets::{self, NumberFormat, TextField, Tone};
 use ddc_ui::Catalog;
-use eframe::egui;
+use egui;
 use serde_json::{json, Map, Value as J};
 use std::cell::RefCell;
 use std::collections::BTreeMap;

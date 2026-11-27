@@ -11,8 +11,8 @@ use crate::shot;
 use ddc_geom::v2;
 use ddc_model::SectionSpec;
 use ddc_render::{Aabb, OrbitCamera};
-use eframe::egui::{self, Color32};
-use eframe::egui_wgpu::RenderState;
+use egui::{self, Color32};
+use crate::RenderState;
 use serde_json::{json, Value};
 use std::cell::Cell;
 use std::path::{Path, PathBuf};
@@ -217,7 +217,8 @@ fn paint(
         // a report image shows the model, not the notes of loading it
         app.sh.toasts.live.clear();
         app.ui(c, Some(rs));
-        seen = crate::ai::session::view_rect();
+        // below the strip of view and assistant tabs: the picture is the view alone
+        seen = crate::ai::session::view_rect().map(below_tabs);
     });
     (px, seen)
 }
@@ -269,8 +270,19 @@ fn capture_clean(rs: &RenderState, app: &mut EditorApp, want: (u32, u32), step: 
     Ok(Timed {
         rgba: fit_into(&c, cdim, want),
         first_ms,
-        steady_ms: ms(crate::perf_bench::percentile(&mut steady, 50)),
+        steady_ms: ms(median(&mut steady)),
     })
+}
+
+/// The view panel without its strip of view and assistant tabs.
+fn below_tabs(mut r: egui::Rect) -> egui::Rect {
+    r.min.y = (r.min.y + crate::shell::panels::view_tabs_h()).min(r.max.y);
+    r
+}
+
+fn median(v: &mut [f64]) -> f64 {
+    v.sort_by(f64::total_cmp);
+    v.get(v.len() / 2).copied().unwrap_or(0.0)
 }
 
 fn ms(v: f64) -> f64 {
@@ -316,7 +328,7 @@ fn paint_one(
                 .model
                 .plan_bbox()
                 .map_err(|e| e.to_string())?
-                .ok_or("nothing to cut: the project has no bodies")?;
+                .ok_or("nothing to cut: the project has no elements")?;
             let spec = long_section(bb).ok_or("the building has no extent to cut")?;
             let id = app.ed.add_view(&spec).ok_or("the section view was not added")?;
             app.ed.status = None;
@@ -332,19 +344,40 @@ fn paint_one(
     }
 }
 
+/// The note for a section shot of a model with nothing to cut (no element has a plan extent):
+/// the shot is skipped, the run goes on.
+pub fn section_skip(plan_bbox: Option<[f64; 4]>) -> Option<Value> {
+    match plan_bbox {
+        Some(_) => None,
+        None => Some(json!({"step": "--view section", "why": "nothing to cut: the project has no elements"})),
+    }
+}
+
 /// The images `fa.view` asks for, written next to `--screenshot`; returns the report's
 /// `render` object (without the device timings the caller adds).
 pub fn render(l: Loaded, fa: &FileArgs, rs: &RenderState, backend: String) -> Result<Value, String> {
     let out = fa.screenshot.clone().ok_or("no --screenshot path")?;
     let level = plan_level(&l.ed, fa.level.as_deref())?;
     let mut app = EditorApp::new(l.ed, Some(rs), backend);
+    // the window's language rule: `--lang`, the saved choice, the system language
+    let argv: Vec<String> = std::env::args().collect();
+    app.apply_start_lang(&argv, &crate::prefs::Prefs::load(), crate::shell::settings_win::system_lang());
     app.plan.drawings = l.drawings;
     app.prefs.theme = "light".into();
     app.ed.status = None;
     let mut info = serde_json::Map::new();
     let mut pngs = vec![];
     let mut timing = serde_json::Map::new();
+    let mut skipped = vec![];
     for &s in shots(&fa.view) {
+        if s == Shot::Section {
+            let bb = app.ed.model.plan_bbox().map_err(|e| e.to_string())?;
+            if let Some(note) = section_skip(bb) {
+                eprintln!("note: {} skipped: {}", note["step"].as_str().unwrap_or(""), note["why"].as_str().unwrap_or(""));
+                skipped.push(note);
+                continue;
+            }
+        }
         let path = out_path(&out, &fa.view, s);
         let t = paint_one(rs, &mut app, s, fa.size, level, &mut info)?;
         shot::save_png(&path, fa.size, &t.rgba)?;
@@ -361,6 +394,7 @@ pub fn render(l: Loaded, fa: &FileArgs, rs: &RenderState, backend: String) -> Re
         "size": [fa.size.0, fa.size.1], "png": pngs,
         "plan_frame_ms": null, "view3d_frame_ms": null, "section_frame_ms": null,
         "plan_first_ms": null, "view3d_first_ms": null, "section_first_ms": null,
+        "skipped": skipped,
     });
     if let Some(m) = v.as_object_mut() {
         m.extend(timing);
@@ -395,6 +429,24 @@ mod tests {
         let deep = long_section([0.0, 0.0, 10.0, 30.0]).unwrap();
         assert_eq!((deep.a.0, deep.b.0), (5.0, 5.0));
         assert!(sec::look(&deep).x > 0.99 && deep.depth > 5.0);
+    }
+
+    #[test]
+    fn a_shot_is_the_view_without_the_tab_strip() {
+        let r = below_tabs(egui::Rect::from_min_max(egui::pos2(0.0, 10.0), egui::pos2(100.0, 400.0)));
+        assert_eq!(r.min.y, 10.0 + crate::shell::panels::view_tabs_h());
+        assert_eq!(r.max.y, 400.0);
+    }
+
+    #[test]
+    fn a_section_with_nothing_to_cut_is_a_skip_note() {
+        assert!(section_skip(Some([0.0, 0.0, 1.0, 1.0])).is_none());
+        let n = section_skip(None).unwrap();
+        assert_eq!(n["step"], json!("--view section"));
+        let mut rep = serde_json::Map::new();
+        rep.insert("skipped".into(), json!([{"step": "--export-sheets"}]));
+        crate::headless_file::merge_skipped(&mut rep, &json!({"skipped": [n]}));
+        assert_eq!(rep["skipped"].as_array().unwrap().len(), 2);
     }
 
     #[test]

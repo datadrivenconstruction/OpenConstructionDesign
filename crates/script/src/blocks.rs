@@ -259,7 +259,7 @@ impl Opts {
     }
 }
 
-fn point(f: &str, k: &str, v: Value) -> LResult<V3> {
+pub(crate) fn point(f: &str, k: &str, v: Value) -> LResult<V3> {
     let p = match &v {
         Value::UserData(u) if u.is::<V3>() => *u.borrow::<V3>()?,
         Value::Table(t) => {
@@ -733,35 +733,7 @@ impl<'l> Em<'l> {
         t: f64,
         mat: &str,
     ) -> LResult<()> {
-        let pl = |r: &[V3]| -> Vec<P2> {
-            let mut out: Vec<P2> = vec![];
-            for p in r {
-                let q = P2::m(p.x, p.y);
-                if out.last().is_none_or(|l| {
-                    let [a, b] = l.to_m();
-                    (a - p.x).hypot(b - p.y) > 0.001
-                }) {
-                    out.push(q);
-                }
-            }
-            out
-        };
-        let o = pl(outer);
-        if o.len() < 3 {
-            return err(format!("{}: a slab outline needs 3 or more points", self.f));
-        }
-        let prof = if holes.is_empty() {
-            Profile::Polygon { pts: o }
-        } else {
-            Profile::Rings { outer: o, holes: holes.iter().map(|h| pl(h)).collect() }
-        };
-        let f = FormV(Shape::Extrude {
-            prof,
-            o: v(0.0, 0.0, top - t),
-            x: v(1.0, 0.0, 0.0),
-            z: UP,
-            len: t,
-        });
+        let f = slab_form(self.f, outer, holes, top, t)?;
         self.put(PartKind::Slab, role, &f, mat)
     }
 
@@ -788,6 +760,39 @@ impl<'l> Em<'l> {
         info.set("parts", self.parts.len())?;
         Ok((GroupH { name: name.to_string(), parts: self.parts }, info))
     }
+}
+
+/// A horizontal slab form: outline (and holes) in plan, top at `top`, `t` thick.
+pub(crate) fn slab_form(f: &str, outer: &[V3], holes: &[Vec<V3>], top: f64, t: f64) -> LResult<FormV> {
+    let pl = |r: &[V3]| -> Vec<P2> {
+        let mut out: Vec<P2> = vec![];
+        for p in r {
+            let q = P2::m(p.x, p.y);
+            if out.last().is_none_or(|l| {
+                let [a, b] = l.to_m();
+                (a - p.x).hypot(b - p.y) > 0.001
+            }) {
+                out.push(q);
+            }
+        }
+        out
+    };
+    let o = pl(outer);
+    if o.len() < 3 {
+        return err(format!("{f}: a slab outline needs 3 or more points"));
+    }
+    let prof = if holes.is_empty() {
+        Profile::Polygon { pts: o }
+    } else {
+        Profile::Rings { outer: o, holes: holes.iter().map(|h| pl(h)).collect() }
+    };
+    Ok(FormV(Shape::Extrude {
+        prof,
+        o: v(0.0, 0.0, top - t),
+        x: v(1.0, 0.0, 0.0),
+        z: UP,
+        len: t,
+    }))
 }
 
 /// Regular polygon of `n` points, radius `r`, around `c`, starting at angle `a0`.

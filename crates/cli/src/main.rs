@@ -27,6 +27,10 @@ fn main() {
         Cmd::Info { file } => cmd::info(&file, p.json, p.quiet),
         Cmd::Batch { jobs } => cmd::batch(&jobs, p.json, p.quiet),
         Cmd::Run(a) => run::run(&a, p.json, p.quiet),
+        Cmd::New(a) => ddc_cli::new::run(&a, p.json, p.quiet),
+        Cmd::AiProfile(a) => ddc_cli::ai_profile::run(&a, p.json, p.quiet),
+        #[cfg(feature = "ai")]
+        Cmd::Ai(a) => ddc_cli::ai::run(&a, p.json, p.quiet),
         #[cfg(feature = "link")]
         Cmd::Gen(a) => ddc_cli::gen::run(&a, p.json, p.quiet),
         #[cfg(feature = "link")]

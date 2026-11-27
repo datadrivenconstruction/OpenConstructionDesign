@@ -22,7 +22,7 @@ use ddc_render::VisualStyle;
 use ddc_ui::theme::space;
 use ddc_ui::widgets::{self, MenuTone};
 use ddc_ui::Catalog;
-use eframe::egui::{self, pos2, Rect};
+use egui::{self, pos2, Rect};
 use std::sync::Arc;
 
 /// Width of the line between panes, points.

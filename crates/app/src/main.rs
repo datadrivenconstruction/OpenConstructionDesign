@@ -35,7 +35,7 @@ struct Args {
     demo: bool,
     safe: bool,
     screenshot: Option<String>,
-    /// `--reveal all|calendar --reveal-out DIR [--reveal-fps N]`: reveal frames without a window.
+    /// `--reveal all|calendar --reveal-out DIR|FILE.mp4 [--reveal-fps N]`: reveal without a window.
     reveal: String,
     reveal_out: Option<String>,
     reveal_fps: u32,
@@ -450,8 +450,13 @@ fn main() -> Result<(), String> {
         }
         return Ok(());
     }
-    if let Some(out) = &a.screenshot {
-        return screenshot(&a, out, &mut log);
+    // `--reveal-out` renders without a window, like `--screenshot`
+    let reveal_headless = ddc_app::reveal::wants_headless(&argv).unwrap_or_else(|e| {
+        eprintln!("error: {e}");
+        std::process::exit(2);
+    });
+    if a.screenshot.is_some() || reveal_headless {
+        return screenshot(&a, a.screenshot.as_deref().unwrap_or_default(), &mut log);
     }
     if !a.demo {
         // an explicit choice of back end is not second-guessed
@@ -514,7 +519,7 @@ fn main() -> Result<(), String> {
         let ed = Editor::start_project().map_err(|e| e.to_string())?;
         let d2 = desc.clone();
         let r = eframe::run_native(
-            "DDC Editor",
+            ddc_app::brand::PRODUCT,
             native_options(pick),
             Box::new(move |cc| {
                 let rs = cc
@@ -584,7 +589,7 @@ fn main() -> Result<(), String> {
     }
     let (pick, ..) = pick_backend(a.safe, &mut log)?;
     eframe::run_native(
-        "DDC Editor",
+        ddc_app::brand::PRODUCT,
         native_options(pick),
         Box::new(move |cc| Ok(Box::new(App::new(cc, demo, a.continuous)?))),
     )
@@ -1069,12 +1074,10 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
     ddc_app::shot_press::set_screenshot_mode(true);
     let (pick, desc, ..) = pick_backend(a.safe, log)?;
     let rs = ddc_app::shot::render_state(pick)?;
-    // default names are seeded below, before the window applies `--lang`
+    // default names are seeded below in the language the shot shows, the same rule as the window
     let argv: Vec<String> = std::env::args().collect();
-    if let Some(i) = argv.iter().position(|s| s == "--lang") {
-        let code = argv.get(i + 1).map_or("en", String::as_str);
-        ddc_app::set_ui_lang(ddc_ui::i18n::Lang::from_code(code));
-    }
+    let saved = ddc_app::prefs::Prefs::load();
+    ddc_app::set_ui_lang(saved.startup_lang(&argv, ddc_app::shell::settings_win::system_lang()));
     let mut ed = Editor::new_in_memory().map_err(|e| e.to_string())?;
     // qa: `--open-project file` renders a saved project instead of a built-in scene
     let open_project = std::env::args()
@@ -1179,7 +1182,13 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
     }
     open_shot_view(&mut app, &a.view);
     if let Some(dir) = &a.reveal_out {
-        let n = ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame)?;
+        // a show that cannot be written is a usage outcome (exit 2), like a bad argument
+        let n = ddc_app::reveal::camera_arg(&argv)
+            .and_then(|cam| ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame, cam))
+            .unwrap_or_else(|e| {
+                eprintln!("error: {e}");
+                std::process::exit(2);
+            });
         println!("reveal: {} frames -> {dir}", n.frames);
         if n.stuck_frames > 0 {
             eprintln!("reveal: the camera could not leave the section box in {} frames", n.stuck_frames);
@@ -1286,14 +1295,7 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
         std::process::exit(2);
     }
     let flag = |f: &str| argv.iter().any(|s| s == f);
-    if let Some(l) = argv
-        .iter()
-        .position(|s| s == "--lang")
-        .and_then(|i| argv.get(i + 1))
-    {
-        let lang = ddc_ui::i18n::Lang::from_code(l);
-        app.set_lang(lang);
-    }
+    app.apply_start_lang(&argv, &saved, ddc_app::shell::settings_win::system_lang());
     if flag("--start-screen") {
         app.open_start();
     }
@@ -1518,7 +1520,7 @@ fn bench_window(
     opts.vsync = false;
     opts.wgpu_options.present_mode = ddc_render::wgpu::PresentMode::AutoNoVsync;
     eframe::run_native(
-        "DDC Editor bench",
+        &format!("{} bench", ddc_app::brand::PRODUCT),
         opts,
         Box::new(move |cc| {
             let mut app = App::new(cc, demo, true)?;

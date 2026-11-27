@@ -14,9 +14,12 @@ use crate::editor::{Editor, Sel};
 use crate::units::Units;
 use ddc_ai::ImageData;
 use ddc_render::glam::Vec3;
+#[cfg(feature = "gui")]
 use ddc_render::headless::{self, Look};
-use ddc_render::{OrbitCamera, Quality, Ray, Scene};
-use eframe::egui_wgpu::RenderState;
+#[cfg(feature = "gui")]
+use ddc_render::Quality;
+use ddc_render::{OrbitCamera, Ray, Scene};
+use crate::RenderState;
 use serde_json::{json, Value as J};
 use std::cell::Cell;
 use std::collections::HashMap;
@@ -254,6 +257,13 @@ pub fn label_hidden(scene: &Scene, p: &PoseResolved, at: [f64; 3], own: Option<(
     false
 }
 
+/// Without the window build there is no device, so no `RenderState` value exists.
+#[cfg(not(feature = "gui"))]
+fn view3d(_: &Req<'_>, _: &PoseResolved, rs: &RenderState) -> Result<Rendered, Refusal> {
+    match *rs {}
+}
+
+#[cfg(feature = "gui")]
 fn view3d(r: &Req<'_>, p: &PoseResolved, rs: &RenderState) -> Result<Rendered, Refusal> {
     if !p.level_dz.is_empty() {
         return Err(Refusal::new(

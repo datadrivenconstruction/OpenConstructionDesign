@@ -59,6 +59,7 @@ pub fn drawn(ed: &crate::editor::Editor) -> usize {
         + l.comps.len()
         + l.stairs.len()
         + l.seps.len()
+        + crate::solid_tools::plan_count(ed)
 }
 
 /// `total` plan elements on the level before hiding, `visible` after it; `other_level` is a

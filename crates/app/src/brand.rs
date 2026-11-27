@@ -6,7 +6,7 @@
 use ddc_ui::theme::{space, Mode};
 use ddc_ui::typo::Role;
 use ddc_ui::{Catalog, Theme};
-use eframe::egui::{self, RichText, TextureHandle, TextureOptions, Vec2};
+use egui::{self, RichText, TextureHandle, TextureOptions, Vec2};
 
 pub const PRODUCT: &str = "OpenConstructionDesign";
 // Config constants for the family links. No source in the repo or docs names these sites:

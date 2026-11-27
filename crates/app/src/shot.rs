@@ -88,8 +88,25 @@ pub fn frame_ev(
     frame_ev_at(rs, ctx, size, scale, frames, 0.0, events, ui)
 }
 
+/// Headless build: no render state exists, so this is never reached.
+#[cfg(not(feature = "gui"))]
+#[allow(clippy::too_many_arguments)]
+pub fn frame_ev_at(
+    rs: &RenderState,
+    _: &egui::Context,
+    _: (u32, u32),
+    _: f32,
+    _: usize,
+    _: f64,
+    _: impl FnMut(&egui::Context, usize) -> Vec<egui::Event>,
+    _: impl FnMut(&egui::Context, usize),
+) -> Vec<u8> {
+    match *rs {}
+}
+
 /// [`frame_ev`] with the input clock starting at `t0` seconds: passes of one context keep
 /// time moving forward, so separate clicks are not read as a double click.
+#[cfg(feature = "gui")]
 #[allow(clippy::too_many_arguments)]
 pub fn frame_ev_at(
     rs: &RenderState,

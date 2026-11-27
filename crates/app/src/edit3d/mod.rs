@@ -1213,7 +1213,7 @@ impl Edit3d {
             Tool::Measure => {
                 let chain = self.ms.mode == measure_saved::Mode::Chain;
                 // saved measurements of features; hold Q for the quick lens (writes nothing)
-                let lens_on = ui.input(|i| i.key_down(eframe::egui::Key::Q));
+                let lens_on = ui.input(|i| i.key_down(egui::Key::Q));
                 if !chain || lens_on {
                     let feat = hit
                         .as_ref()

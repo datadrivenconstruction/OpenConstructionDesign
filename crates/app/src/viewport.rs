@@ -364,12 +364,14 @@ impl Viewport {
         if let Some(b) = self.section_box {
             self.paint_box(ui, rect, aspect, &b);
         }
-        let cube = self.view_cube(ui, rect, scene, aspect);
+        // a captured picture of the model is the canvas alone: no cube, no view toolbar
+        let bare = crate::ai::render_off::capturing();
+        let cube = !bare && self.view_cube(ui, rect, scene, aspect);
         if cube {
             clicked = None;
         }
         let elevation = self.nav.elevation.unwrap_or(0.0);
-        let over = crate::view3d::overlay::show(self, ui, rect, scene, aspect, elevation);
+        let over = !bare && crate::view3d::overlay::show(self, ui, rect, scene, aspect, elevation);
         if over {
             clicked = None;
         }

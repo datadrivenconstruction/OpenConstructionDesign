@@ -10,7 +10,7 @@ use crate::{tr, ui_kit};
 use ddc_geom::joint::JFrame;
 use ddc_model::joints::{Coord, JointKind};
 use ddc_model::{AsmDof, Error, JointRow, JointSpec, Model};
-use eframe::egui;
+use egui;
 use std::sync::Arc;
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]

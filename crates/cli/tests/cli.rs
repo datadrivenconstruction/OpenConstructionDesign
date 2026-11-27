@@ -646,3 +646,72 @@ fn open_refuses_two_exports_to_one_file_even_with_other_case() {
     assert_eq!(o.status.code(), Some(2));
     assert!(!a.exists());
 }
+
+#[test]
+fn new_writes_an_empty_project_and_keeps_an_existing_file() {
+    let d = tmp("new");
+    let out = d.join("empty.ddc");
+    let o = ddc(&["new", s(&out), "--levels", "3", "--json"]);
+    assert_eq!(o.status.code(), Some(0), "{}", String::from_utf8_lossy(&o.stdout));
+    let v = json(&ddc(&["info", s(&out), "--json"]));
+    let lv = v["levels"].as_array().unwrap();
+    assert_eq!(lv.len(), 3, "{v}");
+    assert_eq!(lv[0]["name"], "Level 1");
+    assert_eq!(lv[2]["elevation"], 6.0);
+    assert_eq!(v["counts"]["wall_type"], 3, "{v}");
+    // an existing file is kept unless --force
+    let before = std::fs::read(&out).unwrap();
+    assert_eq!(ddc(&["new", s(&out)]).status.code(), Some(2));
+    assert_eq!(std::fs::read(&out).unwrap(), before);
+    assert_eq!(ddc(&["new", s(&out), "--force"]).status.code(), Some(0));
+    assert_eq!(json(&ddc(&["info", s(&out), "--json"]))["levels"].as_array().unwrap().len(), 1);
+    // an empty IFC to start from in other tools
+    let ifc = d.join("empty.ifc");
+    assert_eq!(ddc(&["new", s(&ifc), "--levels", "2"]).status.code(), Some(0));
+    assert_eq!(json(&ddc(&["info", s(&ifc), "--json"]))["levels"].as_array().unwrap().len(), 2);
+    for bad in [&["new"][..], &["new", "a.ddc", "--levels", "0"], &["new", "a.ddc", "b.ddc"]] {
+        assert_eq!(ddc(bad).status.code(), Some(2), "{bad:?}");
+    }
+}
+
+#[test]
+fn run_new_needs_no_project() {
+    let d = tmp("run_new");
+    let sc = script(&d, GOOD);
+    let out = d.join("fresh.ddc");
+    let o = ddc(&["run", "--new", s(&sc), "--out", s(&out), "--levels", "2", "--json"]);
+    assert_eq!(o.status.code(), Some(0), "{}", String::from_utf8_lossy(&o.stdout));
+    assert_eq!(json(&o)["created"], 2);
+    let v = json(&ddc(&["info", s(&out), "--json"]));
+    assert_eq!(v["levels"].as_array().unwrap().len(), 2, "{v}");
+    let (proj, _) = fixture(&d);
+    // a project and --new together, or --levels on an existing project, are usage errors
+    assert_eq!(ddc(&["run", "--new", s(&proj), s(&sc), "--out", s(&out)]).status.code(), Some(2));
+    assert_eq!(ddc(&["run", s(&proj), s(&sc), "--out", s(&out), "--levels", "2"]).status.code(), Some(2));
+}
+
+#[test]
+fn every_example_script_runs_on_a_new_project() {
+    let dir = Path::new(env!("CARGO_MANIFEST_DIR")).join("../../examples");
+    let mut n = 0;
+    for e in std::fs::read_dir(&dir).unwrap().flatten() {
+        let p = e.path();
+        if p.extension().and_then(|x| x.to_str()) != Some("lua") {
+            continue;
+        }
+        let d = tmp(&format!("example_{n}"));
+        let out = d.join("out.ddc");
+        let o = ddc(&["run", "--new", s(&p), "--out", s(&out), "--json"]);
+        assert_eq!(o.status.code(), Some(0), "{}: {}", p.display(), String::from_utf8_lossy(&o.stdout));
+        let v = json(&o);
+        assert!(v["created"].as_u64().unwrap() >= 20, "{}: {v}", p.display());
+        let audit = v["log"].as_array().unwrap().iter().filter_map(Value::as_str).find(|l| l.starts_with("audit:"));
+        assert!(
+            audit.is_some_and(|a| a.contains(" 0 duplicates, 0 clashes, 0 floating groups")),
+            "{}: {audit:?}",
+            p.display()
+        );
+        n += 1;
+    }
+    assert!(n >= 2, "examples/ holds {n} scripts");
+}

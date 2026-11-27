@@ -5,7 +5,7 @@
 
 use ddc_geom::V2;
 use ddc_model::{MeasureInfo, MeasureKind, MeasureReason, MeasureState, MeasureValue, ViewKey};
-use eframe::egui::{self, Pos2, Stroke};
+use egui::{self, Pos2, Stroke};
 
 use crate::edit3d::measure_saved::{self, Anchor, Lens, Mode, Picks};
 use crate::editor::Editor;

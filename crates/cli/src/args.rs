@@ -22,10 +22,14 @@ pub enum Cmd {
         jobs: PathBuf,
     },
     Run(crate::run::RunArgs),
+    New(crate::new::NewArgs),
     #[cfg(feature = "link")]
     Gen(crate::gen::GenArgs),
     #[cfg(feature = "link")]
     Publish(crate::publish::Args),
+    AiProfile(crate::ai_profile::Args),
+    #[cfg(feature = "ai")]
+    Ai(crate::ai::AiArgs),
 }
 
 #[derive(Debug)]
@@ -36,6 +40,21 @@ pub struct Parsed {
 }
 
 pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
+    // commands with their own options parse the rest themselves
+    match argv.first().and_then(|a| a.to_str()) {
+        Some("ai-profile") => {
+            let (a, json, quiet) = crate::ai_profile::parse(&argv[1..])?;
+            return Ok(Parsed { cmd: Cmd::AiProfile(a), json, quiet });
+        }
+        #[cfg(feature = "ai")]
+        Some("ai") => {
+            let (a, json, quiet) = crate::ai::parse(&argv[1..])?;
+            return Ok(Parsed { cmd: Cmd::Ai(a), json, quiet });
+        }
+        #[cfg(not(feature = "ai"))]
+        Some("ai") => return Err("ai: this build has no assistant (build with --features ai)".into()),
+        _ => {}
+    }
     let (mut json, mut quiet) = (false, false);
     let mut pos: Vec<OsString> = vec![];
     let mut exports = vec![];
@@ -45,6 +64,7 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
     let (mut sheets, mut ifc) = (false, false);
     let mut kv: Vec<(String, String)> = vec![];
     let mut params = vec![];
+    let (mut levels, mut fresh) = (None, false);
     let mut it = argv.iter();
     while let Some(a) = it.next() {
         match a.to_str().unwrap_or_default() {
@@ -73,6 +93,12 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
             "--out" | "-o" => out = Some(PathBuf::from(it.next().ok_or("--out needs a file")?)),
             "--level" => level = Some(it.next().ok_or("--level needs a name")?.to_string_lossy().into_owned()),
             "--allow-many" => allow_many = true,
+            "--new" => fresh = true,
+            "--levels" => {
+                let v = it.next().ok_or("--levels needs a number")?.to_string_lossy().into_owned();
+                let n = v.parse::<u32>().ok().filter(|n| (1..=crate::new::MAX_LEVELS).contains(n));
+                levels = Some(n.ok_or(format!("--levels {v}: expected 1 to {}", crate::new::MAX_LEVELS))?);
+            }
             "--brief" => brief = Some(PathBuf::from(it.next().ok_or("--brief needs a file")?)),
             "--metrics" => metrics = Some(PathBuf::from(it.next().ok_or("--metrics needs a file")?)),
             "--force" => force = true,
@@ -132,17 +158,30 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
                 jobs: one("jobs file")?,
             }
         }
-        "run" => match &pos[1..] {
-            [project, script] => Cmd::Run(crate::run::RunArgs {
-                project: PathBuf::from(project),
-                script: PathBuf::from(script),
+        "new" => {
+            no_export()?;
+            Cmd::New(crate::new::NewArgs { out: one("output file")?, levels: levels.unwrap_or(1), force })
+        }
+        "run" => {
+            let (project, script) = match (&pos[1..], fresh) {
+                ([project, script], false) => (Some(PathBuf::from(project)), PathBuf::from(script)),
+                ([script], true) => (None, PathBuf::from(script)),
+                ([_, _], true) => return Err("run --new: give only the script, the project is made fresh".into()),
+                _ => return Err("run: expected <project> <script.lua>, or --new <script.lua>".into()),
+            };
+            if levels.is_some() && project.is_some() {
+                return Err("run: --levels is only for --new".into());
+            }
+            Cmd::Run(crate::run::RunArgs {
+                project,
+                script,
                 out: (out.ok_or("run: --out <new file> is required")?),
                 params,
                 level,
                 allow_many,
-            }),
-            _ => return Err("run: expected <project> <script.lua>".into()),
-        },
+                levels: levels.unwrap_or(1),
+            })
+        }
         "gen" => {
             if pos.len() > 1 {
                 return Err("gen: unexpected argument, use --brief <file> --out <model.ddc>".into());

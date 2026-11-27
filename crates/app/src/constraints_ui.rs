@@ -699,13 +699,13 @@ mod tests {
 
 /// Pin chip of the drawing tool: its icon is the rule the current snap would write; filled when armed.
 pub fn paint_pin(
-    painter: &eframe::egui::Painter,
+    painter: &egui::Painter,
     ed: &Editor,
-    to_s: &dyn Fn(V2) -> eframe::egui::Pos2,
+    to_s: &dyn Fn(V2) -> egui::Pos2,
     t: &crate::ui_kit::Tokens,
 ) {
     use ddc_ui::theme::{icon_size, radius, space, stroke};
-    use eframe::egui::{pos2, vec2, Rect, Stroke, StrokeKind};
+    use egui::{pos2, vec2, Rect, Stroke, StrokeKind};
     let (Some(at), Some(sn)) = (ed.tool.pin_chip(), ed.tool.snap()) else { return };
     let Some(kind) = crate::snap_pin::pin_kind(sn.kind) else { return };
     let r = Rect::from_center_size(to_s(at), vec2(icon_size::SM + 2.0 * space::XS, icon_size::SM + 2.0 * space::XS));

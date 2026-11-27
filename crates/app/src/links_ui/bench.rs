@@ -91,6 +91,12 @@ fn ms(t: Instant) -> f64 {
     t.elapsed().as_secs_f64() * 1000.0
 }
 
+#[cfg(not(feature = "gui"))]
+pub fn run(_: usize, _: usize, _: (u32, u32)) -> Result<(), String> {
+    Err("the link benchmark renders frames: it needs the window build".into())
+}
+
+#[cfg(feature = "gui")]
 pub fn run(n: usize, e: usize, size: (u32, u32)) -> Result<(), String> {
     let root = std::env::temp_dir().join(format!("ddc-links-bench-n{n}-e{e}"));
     let srcs = corpus(&root, n, e)?;

@@ -1316,11 +1316,8 @@ impl EditorApp {
         let show = !(self.welcome_closed
             || self.chooser_visible()
             || self.view3d
-            || !ed.walls.is_empty()
-            || !ed.curtains.is_empty()
-            || !ed.slabs.is_empty()
-            || !ed.bodies.is_empty()
-            || !ed.rooms.is_empty()
+            || self.chrome.fold.clean
+            || has_content(ed)
             || ed.opening_mode
             || ed.sketch.is_some()
             || ed.shape.is_some()
@@ -1743,6 +1740,17 @@ fn mnemonic_keys(m: &str) -> String {
 
 /// One recent row of the welcome card: the file name, then its folder cut in the middle so
 /// the whole row stays inside `r`; no folder when there is no room for a useful part.
+/// An open project file or any model content: the welcome card has nothing to offer.
+pub(crate) fn has_content(ed: &crate::editor::Editor) -> bool {
+    ed.project.path().is_some()
+        || !ed.walls.is_empty()
+        || !ed.curtains.is_empty()
+        || !ed.slabs.is_empty()
+        || !ed.bodies.is_empty()
+        || !ed.rooms.is_empty()
+        || ed.model.has_solids().unwrap_or(false)
+}
+
 fn welcome_recent_row(ui: &egui::Ui, th: &Theme, r: egui::Rect, path: &str) {
     let pad = 8.0;
     let name = std::path::Path::new(path)
@@ -1787,6 +1795,28 @@ mod tests {
 
     fn app() -> EditorApp {
         EditorApp::new(Editor::new_in_memory().unwrap(), None, "test".into())
+    }
+
+    /// A model of scripted solids only (members, plates) is content: no welcome card over it.
+    #[test]
+    fn solids_alone_count_as_content_for_the_welcome_card() {
+        use ddc_model::{SolidForm, SolidFrame, SolidSection, SolidSpec};
+        let mut a = app();
+        assert!(!has_content(&a.ed));
+        let r = vec![ddc_geom::v2(0.0, 0.0), ddc_geom::v2(0.2, 0.0), ddc_geom::v2(0.2, 0.2), ddc_geom::v2(0.0, 0.2)];
+        let s = SolidSpec {
+            level: a.ed.level,
+            name: "leg".into(),
+            void: false,
+            material: "S355".into(),
+            ifc: None,
+            frame: SolidFrame::default(),
+            form: SolidForm::Extrusion { profile: SolidSection::polygon(r), start: 0.0, end: 6.0 },
+        };
+        a.ed.model.add_solid(&s).unwrap();
+        assert!(has_content(&a.ed));
+        // the plan counts the cut leg as drawn, so no start hint covers it either
+        assert_eq!(crate::plan_empty::drawn(&a.ed), 1);
     }
 
     /// Every command the editor wires is in the registry and has a rasterizable icon.

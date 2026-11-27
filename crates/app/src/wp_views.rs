@@ -10,7 +10,7 @@ use crate::shell::EditorApp;
 use crate::ui_kit::Tokens;
 use ddc_geom::{v2, V2};
 use ddc_model::SectionSpec;
-use eframe::egui::{self, Pos2, Rect, Stroke};
+use egui::{self, Pos2, Rect, Stroke};
 
 /// Dash and gap of the trace, points.
 const DASH: (f32, f32) = (10.0, 5.0);

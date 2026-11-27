@@ -271,6 +271,7 @@ pub const STD_NAMES: &[&str] = &[
     "pattern_radial",
     "part",
     "member",
+    "slab",
     "parts",
     "group",
     "define_component",

@@ -183,7 +183,17 @@ pub(crate) fn install(lua: &Lua) -> LResult<()> {
     )?;
 
     f("part", lua.create_function(part)?)?;
-    f("member", lua.create_function(member)?)?;
+    f(
+        "member",
+        lua.create_function(|lua, args: mlua::MultiValue| match args.front() {
+            Some(Value::Table(_)) if args.len() == 1 => {
+                let Some(Value::Table(t)) = args.into_iter().next() else { unreachable!() };
+                member_of(lua, t)
+            }
+            _ => member(lua, mlua::FromLuaMulti::from_lua_multi(args, lua)?),
+        })?,
+    )?;
+    f("slab", lua.create_function(slab)?)?;
     f(
         "parts",
         lua.create_function(
@@ -718,6 +728,62 @@ fn member(
         .member(&name, a, b, &section, role, 0.1)
         .map_err(|e| format!("member: {e}")))?;
     Ok(PartH { idx, a, b, len: b.sub(a).len() })
+}
+
+/// `member{from, to, profile, role, material, name, roll}`: one straight member of any
+/// section from `from` to `to`; the role gives its IFC class (column, beam, brace, chord...).
+fn member_of(lua: &Lua, t: Table) -> LResult<PartH> {
+    let o = crate::blocks::Opts::new("member", Some(t), lua)?;
+    let (Some(a), Some(b)) = (o.opt_point("from")?, o.opt_point("to")?) else {
+        return err("member: needs from and to, e.g. member{from = vec3(0, 0, 0), to = vec3(0, 0, 4), profile = \"HEA 200\", role = \"column\"}");
+    };
+    let prof = o.prof("profile", "CHS 168.3x8")?;
+    let role = o.text("role", "member")?;
+    let mat = o.mat("material", "S355")?;
+    let name = o.text("name", &role)?;
+    let roll = o.ang("roll", 0.0)?;
+    o.done()?;
+    let Some(form) = crate::blocks::member_form(&prof, a, b, roll) else {
+        return err("member: from and to are the same point");
+    };
+    let ifc = crate::blocks::ifc_of(crate::blocks::PartKind::Member, &role);
+    let idx = ok(builder(lua)?
+        .part(&name, &form, Some(mat), ifc)
+        .map_err(|e| format!("member: {e}")))?;
+    Ok(PartH { idx, a, b, len: b.sub(a).len() })
+}
+
+/// `slab{outline, z, thickness, holes, role, material, name}`: a flat slab, outline in plan,
+/// top at `z`.
+fn slab(lua: &Lua, t: Option<Table>) -> LResult<PartH> {
+    let o = crate::blocks::Opts::new("slab", t, lua)?;
+    let Some(outline) = o.points("outline")? else {
+        return err("slab: needs an outline, e.g. slab{outline = {{0, 0}, {6, 0}, {6, 4}, {0, 4}}, z = 3, thickness = \"200 mm\"}");
+    };
+    let z = o.len("z", 0.0)?;
+    let th = o.len_in("thickness", 0.2, 0.01, 5.0)?;
+    let mut holes = vec![];
+    if let Some(ht) = o.table("holes")? {
+        for h in ht.sequence_values::<Table>() {
+            let ring = h?
+                .sequence_values::<Value>()
+                .map(|p| crate::blocks::point("slab", "holes", p?))
+                .collect::<LResult<Vec<V3>>>()?;
+            holes.push(ring);
+        }
+    }
+    let role = o.text("role", "slab")?;
+    let mat = o.mat("material", "concrete")?;
+    let name = o.text("name", &role)?;
+    o.done()?;
+    let form = crate::blocks::slab_form("slab", &outline, &holes, z, th)?;
+    let ifc = crate::blocks::ifc_of(crate::blocks::PartKind::Slab, &role);
+    let idx = ok(builder(lua)?
+        .part(&name, &form, Some(mat), ifc)
+        .map_err(|e| format!("slab: {e}")))?;
+    let c = outline.iter().fold(V3::new(0.0, 0.0, 0.0), |s, p| s.add(*p)).scale(1.0 / outline.len() as f64);
+    let (a, b) = (V3::new(c.x, c.y, z - th), V3::new(c.x, c.y, z));
+    Ok(PartH { idx, a, b, len: th })
 }
 
 /// Deepest list of lists `group` follows; a list that holds itself would never end.

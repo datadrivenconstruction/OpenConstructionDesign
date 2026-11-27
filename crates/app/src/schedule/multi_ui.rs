@@ -12,7 +12,7 @@ use crate::ui_kit as kit;
 use crate::units::Units;
 use ddc_ui::theme::space;
 use ddc_ui::widgets::{self, Button, Cell, Column, RowState, Table, TextField};
-use eframe::egui;
+use egui;
 use std::cell::RefCell;
 use std::rc::Rc;
 

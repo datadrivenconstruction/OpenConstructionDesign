@@ -15,6 +15,13 @@ pub struct Loaded {
     _work: Option<Work>,
 }
 
+impl Loaded {
+    /// A model made in memory (`ddc run --new`).
+    pub fn of(model: Model) -> Loaded {
+        Loaded { model, kind: "ddc", warnings: vec![], _work: None }
+    }
+}
+
 /// Private working copy of a project: the user's file is only read.
 struct Work(PathBuf);
 
