@@ -245,11 +245,20 @@ fn wall_ok(room: &Room, j: usize, s: f64, z: f64, top: f64, fps: &[svc::R], igno
     !fps.iter().any(|f| svc::hit(f, &b, 0.0))
 }
 
+/// Least stretch between two tees on a carrier (tray on a spine, conduit on a ring): a tee leg
+/// at one end, the elbow with its reducer into what hangs on the last tee at the other.
+fn tee_gap(spine: bool) -> f64 {
+    let c = svc::conduit_run(0, rule("services.elec.conduit_l"), vec![]);
+    let carrier = if spine { svc::tray_run(0, tray().0, tray().1, vec![]) } else { c.clone() };
+    let end = svc::bend_max(&carrier).max(svc::bend_max(&c) + ddc_geom::mep::transition_length(&c.section, &carrier.section));
+    ddc_geom::mep::junction_leg(&carrier.section) + end + EPS
+}
+
 /// Whether a tee at `s` on side `j` comes nearer than the spacing to a taken one: on the same
 /// side, or in a spine room across it, where the drops to the far side span the room.
 fn crowded(room: &Room, spine: Option<usize>, taken: &[(usize, f64)], j: usize, s: f64) -> bool {
     let along = |jj: usize, ss: f64| room.sides[j].s_of(room.sides[jj].at(ss, 0.0));
-    let least = spacing() + rule("services.elec.spacing_slack");
+    let least = (spacing() + rule("services.elec.spacing_slack")).max(tee_gap(spine.is_some()));
     taken.iter().any(|&(jj, ss)| {
         let parallel = jj == j || (spine.is_some() && jj == (j + 2) % 4);
         parallel && (along(jj, ss) - s).abs() < least
