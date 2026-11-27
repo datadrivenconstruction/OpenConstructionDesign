@@ -26,6 +26,9 @@
 - Model gateway preset: models, prices and context size come from the gateway.
 - A spent key limit and an empty balance are their own errors with a next step; the balance is shown.
 - Mode switch, onboarding, recovery and warning texts explain what each choice does.
+- A reply cut at the output limit continues on its own; the output cap follows the model's maximum.
+- The status tells local work apart from a silent model service.
+- Time and token limits are shown and adjustable; `ddc ai --max-tokens`, `--max-time-s`; a stop names the limit and how to raise it.
 
 ### Editor
 - The window is named OpenConstructionDesign.
