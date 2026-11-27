@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Okna",
  "dlg.dw.class.rooms": "Místnosti",
  "dlg.dw.class.grids": "Osy sítě",
- "dlg.dw.class.columns": "Sloupy",
- "dlg.dw.rules_empty": "Zatím žádná pravidla bloků. Stiskněte „{add}“ pro vytvoření prvního: maska názvu bloku, co představuje a rodina."
+ "dlg.dw.class.columns": "Sloupy"
 }

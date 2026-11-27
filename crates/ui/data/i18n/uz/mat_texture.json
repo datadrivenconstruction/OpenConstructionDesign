@@ -21,6 +21,5 @@
  "mat_texture.tex.use_image": "Rasmni ishlatish",
  "mat_texture.tex.hint": "Realistik uslubda Muvozanatli va Maksimal sifatda ko'rsatiladi. O'lcham metrda, har bir elementda bir xil.",
  "mat_texture.tex.bad_image": "Bu o'qib bo'ladigan PNG yoki JPEG rasm emas (har bir tomoni 8192 px gacha)",
- "mat_texture.tex.too_big": "Rasm 4 MB dan katta: fayl yo'lidan yoki kichikroq rasmdan foydalaning",
- "mat_texture.tex.use_image_off": "Avval rasm fayli yo'lini kiriting"
+ "mat_texture.tex.too_big": "Rasm 4 MB dan katta: fayl yo'lidan yoki kichikroq rasmdan foydalaning"
 }

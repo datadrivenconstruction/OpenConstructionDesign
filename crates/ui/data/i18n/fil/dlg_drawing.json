@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Mga bintana",
  "dlg.dw.class.rooms": "Mga kuwarto",
  "dlg.dw.class.grids": "Mga grid",
- "dlg.dw.class.columns": "Mga column",
- "dlg.dw.rules_empty": "Wala pang block rule. Pindutin ang \"{add}\" para gawin ang una: mask ng pangalan ng block, kung ano ito, at ang family."
+ "dlg.dw.class.columns": "Mga column"
 }

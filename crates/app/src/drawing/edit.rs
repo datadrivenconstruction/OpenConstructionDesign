@@ -595,20 +595,16 @@ impl Drawings {
             let th = ddc_ui::theme::of(ui.ctx());
             ui.horizontal(|ui| {
                 ui.label(crate::tr("dwg_edit.draw_points", &[("n", &n.to_string())]));
-                let fin = ui
-                    .add_enabled_ui(n >= 2, |ui| ddc_ui::widgets::Button::primary(&tr("dwg_edit.finish")).show(ui, &th))
-                    .inner
-                    .on_disabled_hover_text(tr("dwg_edit.finish_off"));
-                if fin.clicked() {
-                    status = Some(self.draw_finish(false).unwrap_or_else(|e| e));
-                }
-                let close = ui
-                    .add_enabled_ui(n >= 3, |ui| ddc_ui::widgets::Button::secondary(&tr("dwg_edit.close")).show(ui, &th))
-                    .inner
-                    .on_disabled_hover_text(tr("dwg_edit.close_off"));
-                if close.clicked() {
-                    status = Some(self.draw_finish(true).unwrap_or_else(|e| e));
-                }
+                ui.add_enabled_ui(n >= 2, |ui| {
+                    if ddc_ui::widgets::Button::primary(&tr("dwg_edit.finish")).show(ui, &th).clicked() {
+                        status = Some(self.draw_finish(false).unwrap_or_else(|e| e));
+                    }
+                });
+                ui.add_enabled_ui(n >= 3, |ui| {
+                    if ddc_ui::widgets::Button::secondary(&tr("dwg_edit.close")).show(ui, &th).clicked() {
+                        status = Some(self.draw_finish(true).unwrap_or_else(|e| e));
+                    }
+                });
                 if ddc_ui::widgets::Button::quiet(&tr("dwg_edit.cancel")).show(ui, &th).clicked() {
                     if let Some(v) = self.edit.draw.as_mut() {
                         v.clear();

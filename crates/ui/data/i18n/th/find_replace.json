@@ -43,6 +43,5 @@
  "find_replace.replace": "แทนที่",
  "find_replace.replace_all": "แทนที่ทั้งหมด ({n})",
  "find_replace.close": "ปิด",
- "find_replace.err": "แทนที่ไม่สำเร็จ: {e}",
- "find_replace.replace_one_off": "เลือกผลลัพธ์ที่มีสิ่งให้แทนที่"
+ "find_replace.err": "แทนที่ไม่สำเร็จ: {e}"
 }

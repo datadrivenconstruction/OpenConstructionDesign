@@ -43,6 +43,5 @@
  "find_replace.replace": "Nahradit",
  "find_replace.replace_all": "Nahradit vše ({n})",
  "find_replace.close": "Zavřít",
- "find_replace.err": "Nahrazení selhalo: {e}",
- "find_replace.replace_one_off": "Vyberte výsledek, který lze nahradit"
+ "find_replace.err": "Nahrazení selhalo: {e}"
 }

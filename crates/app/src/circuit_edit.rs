@@ -380,11 +380,8 @@ fn form(
             let (id, spec) = (d.id, d.to_spec());
             acts.push(op(move |m| m.update_circuit(id, &spec)));
         }
-        let rev = ui
-            .add_enabled_ui(dirty, |ui| Button::secondary(&cat.t("ce.revert")).show(ui, th))
-            .inner
-            .on_disabled_hover_text(cat.t("ce.revert_off"));
-        if rev.clicked() {
+        let rev = ui.add_enabled_ui(dirty, |ui| Button::secondary(&cat.t("ce.revert")).show(ui, th));
+        if rev.inner.clicked() {
             *d = Draft::new(row);
             *msg = None;
         }

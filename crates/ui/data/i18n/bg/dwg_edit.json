@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Край",
  "dwg_edit.close": "Затваряне и край",
  "dwg_edit.cancel": "Изчистване на точките",
- "dwg_edit.layer_pick": "Изберете слой",
- "dwg_edit.finish_off": "Добавете поне 2 точки, за да завършите полилинията",
- "dwg_edit.close_off": "Добавете поне 3 точки, за да затворите полилинията"
+ "dwg_edit.layer_pick": "Изберете слой"
 }

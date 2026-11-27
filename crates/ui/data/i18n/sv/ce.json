@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "I rör, i vägg",
  "ce.laying.clipped": "Clipsad, öppen",
  "ce.laying.tray": "Kabelstege, i luft",
- "ce.laying.ground": "I marken",
- "ce.revert_off": "Inget att återställa: inga osparade ändringar"
+ "ce.laying.ground": "I marken"
 }

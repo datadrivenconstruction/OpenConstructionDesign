@@ -25,7 +25,5 @@
  "pe.kind_text": "tekst",
  "pe.kind_family_type": "tip obitelji",
  "pe.yes": "da",
- "pe.no": "ne",
- "pe.empty_params": "Još nema parametara. Pritisnite \"{add}\" ispod za dodavanje prvog.",
- "pe.empty_sizes": "Nema parametara tipa za dimenzioniranje. Dodajte parametar bez formule koji nije označen kao instanca i pojavit će se ovdje."
+ "pe.no": "ne"
 }

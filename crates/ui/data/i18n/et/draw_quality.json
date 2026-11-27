@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Lisa vähemalt üks joonestiili perekond",
  "draw_quality.lib.err.dashes": "Kriipsud peavad olema tühikutega eraldatud arvud",
  "draw_quality.lib.err.family": "Samm peab olema suurem kui null ja kriipsud ei tohi olla negatiivsed",
- "draw_quality.lib.hatch_of": "{name} (raamatukogu)",
- "draw_quality.revert_off": "Pole midagi tagasi võtta: väärtused vastavad salvestatuile"
+ "draw_quality.lib.hatch_of": "{name} (raamatukogu)"
 }

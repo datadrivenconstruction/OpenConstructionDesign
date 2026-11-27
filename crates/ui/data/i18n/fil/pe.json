@@ -25,7 +25,5 @@
  "pe.kind_text": "teksto",
  "pe.kind_family_type": "uri ng pamilya",
  "pe.yes": "oo",
- "pe.no": "hindi",
- "pe.empty_params": "Wala pang parameter. Pindutin ang \"{add}\" sa ibaba para idagdag ang una.",
- "pe.empty_sizes": "Walang type parameter na susukatin. Magdagdag ng parameter na walang formula at hindi minarkahang instance, at lalabas ito rito."
+ "pe.no": "hindi"
 }

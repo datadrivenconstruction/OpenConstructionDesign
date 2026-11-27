@@ -25,7 +25,5 @@
  "pe.kind_text": "texte",
  "pe.kind_family_type": "type de famille",
  "pe.yes": "oui",
- "pe.no": "non",
- "pe.empty_params": "Aucun paramètre pour l'instant. Appuyez sur \"{add}\" ci-dessous pour ajouter le premier.",
- "pe.empty_sizes": "Aucun paramètre de type à dimensionner. Ajoutez un paramètre sans formule et non marqué comme instance : il apparaîtra ici."
+ "pe.no": "non"
 }

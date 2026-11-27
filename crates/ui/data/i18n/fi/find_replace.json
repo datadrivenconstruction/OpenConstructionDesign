@@ -43,6 +43,5 @@
  "find_replace.replace": "Korvaa",
  "find_replace.replace_all": "Korvaa kaikki ({n})",
  "find_replace.close": "Sulje",
- "find_replace.err": "Korvaus epäonnistui: {e}",
- "find_replace.replace_one_off": "Valitse tulos, jossa on jotain korvattavaa"
+ "find_replace.err": "Korvaus epäonnistui: {e}"
 }

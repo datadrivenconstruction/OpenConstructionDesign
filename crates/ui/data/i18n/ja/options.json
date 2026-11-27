@@ -11,6 +11,5 @@
  "options.primary_tip": "このセットのメインのオプションにします",
  "options.select_first": "先にモデルで要素を選択してください",
  "options.show_3d": "3D で表示: {name}",
- "options.show_plan": "平面で表示: {name}",
- "options.type_name_first": "先に名前を入力してください"
+ "options.show_plan": "平面で表示: {name}"
 }

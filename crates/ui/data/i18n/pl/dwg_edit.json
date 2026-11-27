@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Zakończ",
  "dwg_edit.close": "Zamknij i zakończ",
  "dwg_edit.cancel": "Wyczyść punkty",
- "dwg_edit.layer_pick": "Wybierz warstwę",
- "dwg_edit.finish_off": "Dodaj co najmniej 2 punkty, aby zakończyć polilinię",
- "dwg_edit.close_off": "Dodaj co najmniej 3 punkty, aby zamknąć polilinię"
+ "dwg_edit.layer_pick": "Wybierz warstwę"
 }

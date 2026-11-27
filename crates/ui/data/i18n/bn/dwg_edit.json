@@ -26,7 +26,5 @@
  "dwg_edit.finish": "শেষ",
  "dwg_edit.close": "বন্ধ করে শেষ করুন",
  "dwg_edit.cancel": "বিন্দু মুছুন",
- "dwg_edit.layer_pick": "লেয়ার বেছে নিন",
- "dwg_edit.finish_off": "পলিলাইন শেষ করতে অন্তত ২টি বিন্দু যোগ করুন",
- "dwg_edit.close_off": "পলিলাইন বন্ধ করতে অন্তত ৩টি বিন্দু যোগ করুন"
+ "dwg_edit.layer_pick": "লেয়ার বেছে নিন"
 }

@@ -25,7 +25,5 @@
  "pe.kind_text": "szöveg",
  "pe.kind_family_type": "családtípus",
  "pe.yes": "igen",
- "pe.no": "nem",
- "pe.empty_params": "Még nincsenek paraméterek. Az első hozzáadásához nyomja meg lent a(z) \"{add}\" gombot.",
- "pe.empty_sizes": "Nincs méretezendő típusparaméter. Adjon hozzá képlet nélküli, nem példányként megjelölt paramétert, és itt megjelenik."
+ "pe.no": "nem"
 }

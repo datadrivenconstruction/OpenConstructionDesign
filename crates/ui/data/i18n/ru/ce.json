@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "В трубе, в стене",
  "ce.laying.clipped": "Открыто, на скобах",
  "ce.laying.tray": "Лоток, в воздухе",
- "ce.laying.ground": "В земле",
- "ce.revert_off": "Нечего отменять: нет несохранённых изменений"
+ "ce.laying.ground": "В земле"
 }

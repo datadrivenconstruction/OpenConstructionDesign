@@ -11,6 +11,5 @@
  "options.primary_tip": "Diese zur Hauptoption des Satzes machen",
  "options.select_first": "Wählen Sie zuerst Elemente im Modell",
  "options.show_3d": "In 3D anzeigen: {name}",
- "options.show_plan": "Im Plan anzeigen: {name}",
- "options.type_name_first": "Zuerst einen Namen eingeben"
+ "options.show_plan": "Im Plan anzeigen: {name}"
 }

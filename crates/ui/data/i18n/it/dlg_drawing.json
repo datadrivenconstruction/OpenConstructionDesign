@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Finestre",
  "dlg.dw.class.rooms": "Locali",
  "dlg.dw.class.grids": "Griglie",
- "dlg.dw.class.columns": "Pilastri",
- "dlg.dw.rules_empty": "Ancora nessuna regola di blocco. Premi \"{add}\" per creare la prima: una maschera del nome del blocco, cos'è e la famiglia."
+ "dlg.dw.class.columns": "Pilastri"
 }

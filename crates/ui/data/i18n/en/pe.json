@@ -25,7 +25,5 @@
  "pe.kind_text": "text",
  "pe.kind_family_type": "family type",
  "pe.yes": "yes",
- "pe.no": "no",
- "pe.empty_params": "No parameters yet. Press \"{add}\" below to add the first one.",
- "pe.empty_sizes": "No type parameters to size yet. Add a parameter without a formula and not marked as instance, and it appears here."
+ "pe.no": "no"
 }

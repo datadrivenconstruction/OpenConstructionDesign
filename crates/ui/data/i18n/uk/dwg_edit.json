@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Готово",
  "dwg_edit.close": "Замкнути й завершити",
  "dwg_edit.cancel": "Очистити точки",
- "dwg_edit.layer_pick": "Виберіть шар",
- "dwg_edit.finish_off": "Додайте щонайменше 2 точки, щоб завершити полілінію",
- "dwg_edit.close_off": "Додайте щонайменше 3 точки, щоб замкнути полілінію"
+ "dwg_edit.layer_pick": "Виберіть шар"
 }

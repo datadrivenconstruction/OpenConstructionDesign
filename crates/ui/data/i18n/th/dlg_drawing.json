@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "หน้าต่าง",
  "dlg.dw.class.rooms": "ห้อง",
  "dlg.dw.class.grids": "กริด",
- "dlg.dw.class.columns": "เสา",
- "dlg.dw.rules_empty": "ยังไม่มีกฎบล็อก กด \"{add}\" เพื่อสร้างกฎแรก: มาสก์ชื่อบล็อก ประเภทของบล็อก และแฟมิลี"
+ "dlg.dw.class.columns": "เสา"
 }

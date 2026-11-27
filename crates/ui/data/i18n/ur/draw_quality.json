@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "کم از کم ایک لائن فیملی شامل کریں",
  "draw_quality.lib.err.dashes": "ڈیشز خالی جگہ سے الگ کیے گئے عدد ہونے چاہئیں",
  "draw_quality.lib.err.family": "فاصلہ صفر سے زیادہ ہو اور ڈیشز منفی نہ ہوں",
- "draw_quality.lib.hatch_of": "{name} (لائبریری)",
- "draw_quality.revert_off": "واپس کرنے کے لیے کچھ نہیں: قدریں محفوظ شدہ قدروں کے برابر ہیں"
+ "draw_quality.lib.hatch_of": "{name} (لائبریری)"
 }

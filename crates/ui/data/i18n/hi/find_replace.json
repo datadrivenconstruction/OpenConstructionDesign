@@ -43,6 +43,5 @@
  "find_replace.replace": "बदलें",
  "find_replace.replace_all": "सभी बदलें ({n})",
  "find_replace.close": "बंद करें",
- "find_replace.err": "बदलना विफल: {e}",
- "find_replace.replace_one_off": "ऐसा परिणाम चुनें जिसमें बदलने के लिए कुछ हो"
+ "find_replace.err": "बदलना विफल: {e}"
 }

@@ -11,6 +11,5 @@
  "options.primary_tip": "이 세트의 기본 옵션으로 설정",
  "options.select_first": "먼저 모델에서 요소를 선택하세요",
  "options.show_3d": "3D에 표시: {name}",
- "options.show_plan": "평면에 표시: {name}",
- "options.type_name_first": "먼저 이름을 입력하세요"
+ "options.show_plan": "평면에 표시: {name}"
 }

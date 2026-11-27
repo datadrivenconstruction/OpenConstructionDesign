@@ -21,6 +21,7 @@
 - Camera choice for reveals: `fixed`, `orbit`, `follow`.
 - Sections and plans work for models made only of members; screenshots show only the canvas.
 - One language rule everywhere: `--lang`, then the setting, then the system language.
+- UI shot scripts can open another project between steps and keep the view, and set the 3D camera with `zoom`, `eye` and `target`.
 
 ### AI assistant
 - Model gateway preset: models, prices and context size come from the gateway.

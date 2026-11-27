@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Терезелер",
  "dlg.dw.class.rooms": "Бөлмөлөр",
  "dlg.dw.class.grids": "Торлор",
- "dlg.dw.class.columns": "Колонналар",
- "dlg.dw.rules_empty": "Блок эрежелери азырынча жок. Биринчисин түзүү үчүн \"{add}\" баскычын басыңыз: блок атынын маскасы, ал эмне экени жана үй-бүлө."
+ "dlg.dw.class.columns": "Колонналар"
 }

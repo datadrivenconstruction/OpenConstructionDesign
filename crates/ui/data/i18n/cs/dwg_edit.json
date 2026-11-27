@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Dokončit",
  "dwg_edit.close": "Uzavřít a dokončit",
  "dwg_edit.cancel": "Vymazat body",
- "dwg_edit.layer_pick": "Vyberte vrstvu",
- "dwg_edit.finish_off": "Pro dokončení polylinie přidejte alespoň 2 body",
- "dwg_edit.close_off": "Pro uzavření polylinie přidejte alespoň 3 body"
+ "dwg_edit.layer_pick": "Vyberte vrstvu"
 }

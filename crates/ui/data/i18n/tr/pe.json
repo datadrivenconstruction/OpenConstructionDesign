@@ -25,7 +25,5 @@
  "pe.kind_text": "metin",
  "pe.kind_family_type": "aile tipi",
  "pe.yes": "evet",
- "pe.no": "hayır",
- "pe.empty_params": "Henüz parametre yok. İlkini eklemek için aşağıdaki \"{add}\" düğmesine basın.",
- "pe.empty_sizes": "Boyutlandırılacak tür parametresi yok. Formülsüz ve örnek olarak işaretlenmemiş bir parametre ekleyin, burada görünür."
+ "pe.no": "hayır"
 }

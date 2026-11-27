@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "पाइप में, दीवार में",
  "ce.laying.clipped": "क्लिप से, खुला",
  "ce.laying.tray": "केबल ट्रे, हवा में",
- "ce.laying.ground": "ज़मीन के अंदर",
- "ce.revert_off": "वापस लाने के लिए कुछ नहीं: कोई असहेजा बदलाव नहीं"
+ "ce.laying.ground": "ज़मीन के अंदर"
 }

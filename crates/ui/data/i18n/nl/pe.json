@@ -25,7 +25,5 @@
  "pe.kind_text": "tekst",
  "pe.kind_family_type": "familietype",
  "pe.yes": "ja",
- "pe.no": "nee",
- "pe.empty_params": "Nog geen parameters. Druk hieronder op \"{add}\" om de eerste toe te voegen.",
- "pe.empty_sizes": "Geen typeparameters om te dimensioneren. Voeg een parameter zonder formule toe die niet als instantie is gemarkeerd, dan verschijnt die hier."
+ "pe.no": "nee"
 }

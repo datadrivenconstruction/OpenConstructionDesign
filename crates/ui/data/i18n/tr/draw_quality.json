@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "En az bir çizgi ailesi ekleyin",
  "draw_quality.lib.err.dashes": "Kesikler boşlukla ayrılmış sayılar olmalı",
  "draw_quality.lib.err.family": "Aralık sıfırdan büyük olmalı ve kesikler negatif olamaz",
- "draw_quality.lib.hatch_of": "{name} (kitaplık)",
- "draw_quality.revert_off": "Geri alınacak bir şey yok: değerler kaydedilenlerle aynı"
+ "draw_quality.lib.hatch_of": "{name} (kitaplık)"
 }

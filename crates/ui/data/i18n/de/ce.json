@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "Im Rohr, in der Wand",
  "ce.laying.clipped": "Aufgeschellt, offen",
  "ce.laying.tray": "Kabelrinne, frei in Luft",
- "ce.laying.ground": "Im Erdreich",
- "ce.revert_off": "Nichts rückgängig zu machen: keine ungespeicherten Änderungen"
+ "ce.laying.ground": "Im Erdreich"
 }

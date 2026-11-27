@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "কমপক্ষে একটি লাইন ফ্যামিলি যোগ করুন",
  "draw_quality.lib.err.dashes": "ড্যাশ অবশ্যই স্পেস দিয়ে আলাদা সংখ্যা হতে হবে",
  "draw_quality.lib.err.family": "ব্যবধান শূন্যের বেশি হতে হবে এবং ড্যাশ ঋণাত্মক হতে পারবে না",
- "draw_quality.lib.hatch_of": "{name} (লাইব্রেরি)",
- "draw_quality.revert_off": "পূর্বাবস্থায় ফেরানোর কিছু নেই: মানগুলো সংরক্ষিত মানের সমান"
+ "draw_quality.lib.hatch_of": "{name} (লাইব্রেরি)"
 }

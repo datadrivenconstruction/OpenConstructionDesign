@@ -21,6 +21,5 @@
  "mat_texture.tex.use_image": "Kép használata",
  "mat_texture.tex.hint": "A valósághű stíluson, kiegyensúlyozott és maximális minőségnél látszik. A méret méterben van, minden elemen azonos.",
  "mat_texture.tex.bad_image": "Ez nem olvasható PNG vagy JPEG kép (legfeljebb 8192 px oldalanként)",
- "mat_texture.tex.too_big": "A kép nagyobb 4 MB-nál: használjon fájlelérési utat vagy kisebb képet",
- "mat_texture.tex.use_image_off": "Először adja meg egy képfájl útvonalát"
+ "mat_texture.tex.too_big": "A kép nagyobb 4 MB-nál: használjon fájlelérési utat vagy kisebb képet"
 }

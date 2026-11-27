@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Готово",
  "dwg_edit.close": "Замкнуть",
  "dwg_edit.cancel": "Сбросить точки",
- "dwg_edit.layer_pick": "Выбрать слой",
- "dwg_edit.finish_off": "Добавьте минимум 2 точки, чтобы завершить полилинию",
- "dwg_edit.close_off": "Добавьте минимум 3 точки, чтобы замкнуть полилинию"
+ "dwg_edit.layer_pick": "Выбрать слой"
 }

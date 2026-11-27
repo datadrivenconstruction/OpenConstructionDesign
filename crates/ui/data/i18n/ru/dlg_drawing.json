@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Окна",
  "dlg.dw.class.rooms": "Помещения",
  "dlg.dw.class.grids": "Оси",
- "dlg.dw.class.columns": "Колонны",
- "dlg.dw.rules_empty": "Правил блоков пока нет. Нажмите «{add}», чтобы создать первое: маску имени блока, что это и семейство."
+ "dlg.dw.class.columns": "Колонны"
 }

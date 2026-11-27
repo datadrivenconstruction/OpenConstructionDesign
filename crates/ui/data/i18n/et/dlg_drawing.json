@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Aknad",
  "dlg.dw.class.rooms": "Ruumid",
  "dlg.dw.class.grids": "Telgvõrgud",
- "dlg.dw.class.columns": "Postid",
- "dlg.dw.rules_empty": "Ploki reegleid pole veel. Esimese loomiseks vajutage „{add}“: ploki nime mask, mis see on ja perekond."
+ "dlg.dw.class.columns": "Postid"
 }

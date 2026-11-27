@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Tambahkan minimal satu family garis",
  "draw_quality.lib.err.dashes": "Putus-putus harus berupa angka yang dipisahkan spasi",
  "draw_quality.lib.err.family": "Jarak harus lebih besar dari nol dan putus-putus tidak boleh negatif",
- "draw_quality.lib.hatch_of": "{name} (pustaka)",
- "draw_quality.revert_off": "Tidak ada yang dikembalikan: nilai sama dengan yang tersimpan"
+ "draw_quality.lib.hatch_of": "{name} (pustaka)"
 }

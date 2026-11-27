@@ -25,7 +25,5 @@
  "pe.kind_text": "text",
  "pe.kind_family_type": "typ rodiny",
  "pe.yes": "ano",
- "pe.no": "ne",
- "pe.empty_params": "Zatím žádné parametry. Stiskněte „{add}“ níže pro přidání prvního.",
- "pe.empty_sizes": "Žádné parametry typu k dimenzování. Přidejte parametr bez vzorce a neoznačený jako instance, objeví se zde."
+ "pe.no": "ne"
 }

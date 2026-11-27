@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Tilføj mindst én linjefamilie",
  "draw_quality.lib.err.dashes": "Streger skal være tal adskilt af mellemrum",
  "draw_quality.lib.err.family": "Afstanden skal være over nul, og streger må ikke være negative",
- "draw_quality.lib.hatch_of": "{name} (bibliotek)",
- "draw_quality.revert_off": "Intet at fortryde: værdierne svarer til de gemte"
+ "draw_quality.lib.hatch_of": "{name} (bibliotek)"
 }

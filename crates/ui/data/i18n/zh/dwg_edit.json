@@ -26,7 +26,5 @@
  "dwg_edit.finish": "完成",
  "dwg_edit.close": "闭合并完成",
  "dwg_edit.cancel": "清除点",
- "dwg_edit.layer_pick": "选择图层",
- "dwg_edit.finish_off": "至少添加 2 个点才能完成多段线",
- "dwg_edit.close_off": "至少添加 3 个点才能闭合多段线"
+ "dwg_edit.layer_pick": "选择图层"
 }

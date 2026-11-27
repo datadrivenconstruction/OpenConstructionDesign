@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "Boruda, duvarda",
  "ce.laying.clipped": "Klipsli, açık",
  "ce.laying.tray": "Kablo tepsisinde, havada",
- "ce.laying.ground": "Toprak altında",
- "ce.revert_off": "Geri alınacak bir şey yok: kaydedilmemiş değişiklik yok"
+ "ce.laying.ground": "Toprak altında"
 }

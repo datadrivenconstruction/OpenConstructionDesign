@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Završi",
  "dwg_edit.close": "Zatvori i završi",
  "dwg_edit.cancel": "Obriši točke",
- "dwg_edit.layer_pick": "Odaberite sloj",
- "dwg_edit.finish_off": "Dodajte barem 2 točke za dovršetak polilinije",
- "dwg_edit.close_off": "Dodajte barem 3 točke za zatvaranje polilinije"
+ "dwg_edit.layer_pick": "Odaberite sloj"
 }

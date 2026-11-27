@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "線ファミリを 1 つ以上追加してください",
  "draw_quality.lib.err.dashes": "破線は空白で区切った数値である必要があります",
  "draw_quality.lib.err.family": "間隔はゼロより大きく、破線は負の値にできません",
- "draw_quality.lib.hatch_of": "{name}（ライブラリ）",
- "draw_quality.revert_off": "元に戻す対象がありません: 値は保存済みの値と一致しています"
+ "draw_quality.lib.hatch_of": "{name}（ライブラリ）"
 }

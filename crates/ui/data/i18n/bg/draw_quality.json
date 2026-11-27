@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Добавете поне едно семейство линии",
  "draw_quality.lib.err.dashes": "Пунктирът трябва да е от числа, разделени с интервали",
  "draw_quality.lib.err.family": "Разстоянието трябва да е по-голямо от нула, а пунктирът не може да е отрицателен",
- "draw_quality.lib.hatch_of": "{name} (библиотечна)",
- "draw_quality.revert_off": "Няма какво да се отмени: стойностите съвпадат със записаните"
+ "draw_quality.lib.hatch_of": "{name} (библиотечна)"
 }

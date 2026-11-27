@@ -39,15 +39,6 @@ pub struct Parsed {
     pub quiet: bool,
 }
 
-/// The value of option `flag`; an option name is not a value (`--out --force`).
-fn val<'a>(it: &mut std::slice::Iter<'a, OsString>, flag: &str, what: &str) -> Result<&'a OsString, String> {
-    let v = it.next().ok_or(format!("{flag} needs {what}"))?;
-    if v.to_string_lossy().starts_with("--") {
-        return Err(format!("{flag} needs {what}, got the option {}", v.to_string_lossy()));
-    }
-    Ok(v)
-}
-
 pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
     // commands with their own options parse the rest themselves
     match argv.first().and_then(|a| a.to_str()) {
@@ -94,32 +85,33 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
                 })
             }
             "--export" => {
-                let f = val(&mut it, "--export", "a format and an output path")?.to_string_lossy();
-                let o = val(&mut it, "--export", "a format and an output path")?;
+                let need = "--export needs a format and an output path";
+                let f = it.next().ok_or(need)?.to_string_lossy();
+                let o = it.next().ok_or(need)?;
                 exports.push((Format::parse(&f)?, PathBuf::from(o)));
             }
-            "--out" | "-o" => out = Some(PathBuf::from(val(&mut it, "--out", "a file")?)),
-            "--level" => level = Some(val(&mut it, "--level", "a name")?.to_string_lossy().into_owned()),
+            "--out" | "-o" => out = Some(PathBuf::from(it.next().ok_or("--out needs a file")?)),
+            "--level" => level = Some(it.next().ok_or("--level needs a name")?.to_string_lossy().into_owned()),
             "--allow-many" => allow_many = true,
             "--new" => fresh = true,
             "--levels" => {
-                let v = val(&mut it, "--levels", "a number")?.to_string_lossy().into_owned();
+                let v = it.next().ok_or("--levels needs a number")?.to_string_lossy().into_owned();
                 let n = v.parse::<u32>().ok().filter(|n| (1..=crate::new::MAX_LEVELS).contains(n));
                 levels = Some(n.ok_or(format!("--levels {v}: expected 1 to {}", crate::new::MAX_LEVELS))?);
             }
-            "--brief" => brief = Some(PathBuf::from(val(&mut it, "--brief", "a file")?)),
-            "--metrics" => metrics = Some(PathBuf::from(val(&mut it, "--metrics", "a file")?)),
+            "--brief" => brief = Some(PathBuf::from(it.next().ok_or("--brief needs a file")?)),
+            "--metrics" => metrics = Some(PathBuf::from(it.next().ok_or("--metrics needs a file")?)),
             "--force" => force = true,
             "--allow-unreviewed" => allow_unreviewed = true,
             "--sheets" => sheets = true,
             "--ifc" => ifc = true,
             o @ ("--parent" | "--depth" | "--name" | "--author" | "--message" | "--project-id" | "--erp-url" | "--revision-id"
             | "--created-at" | "--imported-from") => {
-                let v = val(&mut it, o, "a value")?.to_string_lossy().into_owned();
+                let v = it.next().ok_or(format!("{o} needs a value"))?.to_string_lossy().into_owned();
                 kv.push((o[2..].to_string(), v));
             }
             "--param" => {
-                let v = val(&mut it, "--param", "name=value")?.to_string_lossy();
+                let v = it.next().ok_or("--param needs name=value")?.to_string_lossy();
                 let (k, v) = v.split_once('=').ok_or("--param needs name=value")?;
                 params.push((k.to_string(), v.to_string()));
             }
@@ -128,9 +120,6 @@ pub fn parse(argv: &[OsString]) -> Result<Parsed, String> {
         }
     }
     let Some(name) = pos.first().map(|p| p.to_string_lossy().into_owned()) else {
-        if json {
-            return Err("no command given".into());
-        }
         return Ok(Parsed {
             cmd: Cmd::Help,
             json,

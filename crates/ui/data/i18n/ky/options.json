@@ -11,6 +11,5 @@
  "options.primary_tip": "Муну топтомдун негизги варианты кылуу",
  "options.select_first": "Адегенде модельдеги элементтерди тандаңыз",
  "options.show_3d": "3Dде көрсөтүү: {name}",
- "options.show_plan": "Планда көрсөтүү: {name}",
- "options.type_name_first": "Адегенде атын териңиз"
+ "options.show_plan": "Планда көрсөтүү: {name}"
 }

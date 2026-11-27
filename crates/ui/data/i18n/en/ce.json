@@ -78,6 +78,5 @@
   "ce.laying.conduit_wall": "In a pipe, in a wall",
   "ce.laying.clipped": "Clipped, open",
   "ce.laying.tray": "Cable tray, in air",
-  "ce.laying.ground": "In the ground",
-  "ce.revert_off": "Nothing to revert: no unsaved changes"
+  "ce.laying.ground": "In the ground"
 }

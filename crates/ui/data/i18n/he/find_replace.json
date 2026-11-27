@@ -43,6 +43,5 @@
  "find_replace.replace": "החלפה",
  "find_replace.replace_all": "החלפת הכול ({n})",
  "find_replace.close": "סגירה",
- "find_replace.err": "ההחלפה נכשלה: {e}",
- "find_replace.replace_one_off": "בחרו תוצאה שיש בה מה להחליף"
+ "find_replace.err": "ההחלפה נכשלה: {e}"
 }

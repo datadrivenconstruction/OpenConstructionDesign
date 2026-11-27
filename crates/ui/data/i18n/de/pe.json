@@ -25,7 +25,5 @@
  "pe.kind_text": "Text",
  "pe.kind_family_type": "Familientyp",
  "pe.yes": "ja",
- "pe.no": "nein",
- "pe.empty_params": "Noch keine Parameter. Unten „{add}“ drücken, um den ersten hinzuzufügen.",
- "pe.empty_sizes": "Keine Typparameter zur Dimensionierung. Einen Parameter ohne Formel hinzufügen, der nicht als Instanz markiert ist, dann erscheint er hier."
+ "pe.no": "nein"
 }

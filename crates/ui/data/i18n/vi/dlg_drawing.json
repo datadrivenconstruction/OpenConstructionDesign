@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Cửa sổ",
  "dlg.dw.class.rooms": "Phòng",
  "dlg.dw.class.grids": "Lưới",
- "dlg.dw.class.columns": "Cột",
- "dlg.dw.rules_empty": "Chưa có quy tắc khối. Nhấn \"{add}\" để tạo quy tắc đầu tiên: mặt nạ tên khối, loại của nó và họ."
+ "dlg.dw.class.columns": "Cột"
 }

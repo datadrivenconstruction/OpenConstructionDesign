@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Terminer",
  "dwg_edit.close": "Fermer et terminer",
  "dwg_edit.cancel": "Effacer les points",
- "dwg_edit.layer_pick": "Choisir un calque",
- "dwg_edit.finish_off": "Ajoutez au moins 2 points pour terminer la polyligne",
- "dwg_edit.close_off": "Ajoutez au moins 3 points pour fermer la polyligne"
+ "dwg_edit.layer_pick": "Choisir un calque"
 }

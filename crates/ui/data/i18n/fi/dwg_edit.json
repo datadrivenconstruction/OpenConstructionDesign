@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Lopeta",
  "dwg_edit.close": "Sulje ja lopeta",
  "dwg_edit.cancel": "Tyhjennä pisteet",
- "dwg_edit.layer_pick": "Valitse taso",
- "dwg_edit.finish_off": "Lisää vähintään 2 pistettä viimeistelläksesi murtoviivan",
- "dwg_edit.close_off": "Lisää vähintään 3 pistettä sulkeaksesi murtoviivan"
+ "dwg_edit.layer_pick": "Valitse taso"
 }

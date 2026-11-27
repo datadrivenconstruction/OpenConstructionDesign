@@ -26,7 +26,5 @@
  "dwg_edit.finish": "پایان",
  "dwg_edit.close": "بستن و پایان",
  "dwg_edit.cancel": "پاک کردن نقاط",
- "dwg_edit.layer_pick": "یک لایه انتخاب کنید",
- "dwg_edit.finish_off": "برای پایان چندخطی دست‌کم ۲ نقطه اضافه کنید",
- "dwg_edit.close_off": "برای بستن چندخطی دست‌کم ۳ نقطه اضافه کنید"
+ "dwg_edit.layer_pick": "یک لایه انتخاب کنید"
 }

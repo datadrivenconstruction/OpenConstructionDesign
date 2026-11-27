@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "Védőcsőben, falban",
  "ce.laying.clipped": "Bilincselve, szabadon",
  "ce.laying.tray": "Kábeltálcán, szabadon",
- "ce.laying.ground": "Talajban",
- "ce.revert_off": "Nincs mit visszaállítani: nincs mentetlen módosítás"
+ "ce.laying.ground": "Talajban"
 }

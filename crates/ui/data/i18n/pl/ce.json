@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "W rurze, w ścianie",
  "ce.laying.clipped": "Przypinane, na wierzchu",
  "ce.laying.tray": "Na korycie kablowym, w powietrzu",
- "ce.laying.ground": "W ziemi",
- "ce.revert_off": "Brak zmian do cofnięcia: nie ma niezapisanych zmian"
+ "ce.laying.ground": "W ziemi"
 }

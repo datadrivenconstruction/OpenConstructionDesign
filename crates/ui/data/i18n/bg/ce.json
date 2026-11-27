@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "В тръба, в стена",
  "ce.laying.clipped": "С кламери, открито",
  "ce.laying.tray": "На кабелна скара, на въздух",
- "ce.laying.ground": "В земята",
- "ce.revert_off": "Няма какво да се отмени: няма незаписани промени"
+ "ce.laying.ground": "В земята"
 }

@@ -11,6 +11,5 @@
  "options.primary_tip": "Tornar esta a opção principal do conjunto",
  "options.select_first": "Selecione primeiro os elementos no modelo",
  "options.show_3d": "Mostrar em 3D: {name}",
- "options.show_plan": "Mostrar em planta: {name}",
- "options.type_name_first": "Escreva primeiro um nome"
+ "options.show_plan": "Mostrar em planta: {name}"
 }

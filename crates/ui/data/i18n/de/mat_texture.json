@@ -21,6 +21,5 @@
  "mat_texture.tex.use_image": "Bild verwenden",
  "mat_texture.tex.hint": "Wird im Stil „Realistisch“ bei Qualität Ausgewogen und Maximal angezeigt. Die Größe ist in Metern und bei jedem Element gleich.",
  "mat_texture.tex.bad_image": "Das ist kein lesbares PNG- oder JPEG-Bild (höchstens 8192 px pro Seite)",
- "mat_texture.tex.too_big": "Das Bild ist größer als 4 MB: Verwenden Sie einen Dateipfad oder ein kleineres Bild",
- "mat_texture.tex.use_image_off": "Zuerst den Pfad einer Bilddatei eingeben"
+ "mat_texture.tex.too_big": "Das Bild ist größer als 4 MB: Verwenden Sie einen Dateipfad oder ein kleineres Bild"
 }

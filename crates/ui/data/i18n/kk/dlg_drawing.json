@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Терезелер",
  "dlg.dw.class.rooms": "Бөлмелер",
  "dlg.dw.class.grids": "Торлар",
- "dlg.dw.class.columns": "Бағаналар",
- "dlg.dw.rules_empty": "Блок ережелері әлі жоқ. Біріншісін жасау үшін \"{add}\" түймесін басыңыз: блок атауының маскасы, ол не екені және отбасы."
+ "dlg.dw.class.columns": "Бағаналар"
 }

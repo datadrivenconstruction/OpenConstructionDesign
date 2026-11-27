@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Pencereler",
  "dlg.dw.class.rooms": "Odalar",
  "dlg.dw.class.grids": "Gridler",
- "dlg.dw.class.columns": "Kolonlar",
- "dlg.dw.rules_empty": "Henüz blok kuralı yok. İlkini oluşturmak için \"{add}\" düğmesine basın: blok adı maskesi, ne olduğu ve aile."
+ "dlg.dw.class.columns": "Kolonlar"
 }

@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Tugatish",
  "dwg_edit.close": "Yopish va tugatish",
  "dwg_edit.cancel": "Nuqtalarni tozalash",
- "dwg_edit.layer_pick": "Qatlamni tanlang",
- "dwg_edit.finish_off": "Polilineyani tugatish uchun kamida 2 ta nuqta qo'shing",
- "dwg_edit.close_off": "Polilineyani yopish uchun kamida 3 ta nuqta qo'shing"
+ "dwg_edit.layer_pick": "Qatlamni tanlang"
 }

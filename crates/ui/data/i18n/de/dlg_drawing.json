@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Fenster",
  "dlg.dw.class.rooms": "Räume",
  "dlg.dw.class.grids": "Achsen",
- "dlg.dw.class.columns": "Stützen",
- "dlg.dw.rules_empty": "Noch keine Blockregeln. Mit „{add}“ die erste anlegen: eine Maske für den Blocknamen, was er ist und die Familie."
+ "dlg.dw.class.columns": "Stützen"
 }

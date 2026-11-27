@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Кем дегенде бір сызық отбасын қосыңыз",
  "draw_quality.lib.err.dashes": "Сызықшалар бос орынмен бөлінген сандар болуы керек",
  "draw_quality.lib.err.family": "Қадам нөлден үлкен болуы және сызықшалар теріс болмауы керек",
- "draw_quality.lib.hatch_of": "{name} (кітапхана)",
- "draw_quality.revert_off": "Қайтаратын ештеңе жоқ: мәндер сақталғандарға сәйкес"
+ "draw_quality.lib.hatch_of": "{name} (кітапхана)"
 }

@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Fertig",
  "dwg_edit.close": "Schließen und beenden",
  "dwg_edit.cancel": "Punkte löschen",
- "dwg_edit.layer_pick": "Ebene wählen",
- "dwg_edit.finish_off": "Mindestens 2 Punkte hinzufügen, um die Polylinie abzuschließen",
- "dwg_edit.close_off": "Mindestens 3 Punkte hinzufügen, um die Polylinie zu schließen"
+ "dwg_edit.layer_pick": "Ebene wählen"
 }

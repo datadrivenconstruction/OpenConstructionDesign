@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Hoàn tất",
  "dwg_edit.close": "Đóng và hoàn tất",
  "dwg_edit.cancel": "Xóa điểm",
- "dwg_edit.layer_pick": "Chọn lớp",
- "dwg_edit.finish_off": "Thêm ít nhất 2 điểm để hoàn tất đa tuyến",
- "dwg_edit.close_off": "Thêm ít nhất 3 điểm để đóng đa tuyến"
+ "dwg_edit.layer_pick": "Chọn lớp"
 }

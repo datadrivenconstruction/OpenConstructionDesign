@@ -25,7 +25,5 @@
  "pe.kind_text": "text",
  "pe.kind_family_type": "tip de familie",
  "pe.yes": "da",
- "pe.no": "nu",
- "pe.empty_params": "Încă nu există parametri. Apăsați „{add}” mai jos pentru a adăuga primul.",
- "pe.empty_sizes": "Încă nu există parametri de tip de dimensionat. Adăugați un parametru fără formulă și nemarcat ca instanță, iar el apare aici."
+ "pe.no": "nu"
 }

@@ -21,6 +21,5 @@
  "mat_texture.tex.use_image": "Use image",
  "mat_texture.tex.hint": "Shown in the Realistic style on Balanced and Maximum quality. Size is in metres, the same on every element.",
  "mat_texture.tex.bad_image": "This is not a readable PNG or JPEG image (at most 8192 px a side)",
- "mat_texture.tex.too_big": "The image is larger than 4 MB: use a file path or a smaller image",
- "mat_texture.tex.use_image_off": "Enter the path of an image file first"
+ "mat_texture.tex.too_big": "The image is larger than 4 MB: use a file path or a smaller image"
 }

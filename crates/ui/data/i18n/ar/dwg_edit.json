@@ -26,7 +26,5 @@
  "dwg_edit.finish": "إنهاء",
  "dwg_edit.close": "إغلاق وإنهاء",
  "dwg_edit.cancel": "مسح النقاط",
- "dwg_edit.layer_pick": "اختر طبقة",
- "dwg_edit.finish_off": "أضف نقطتين على الأقل لإنهاء الخط المتعدد",
- "dwg_edit.close_off": "أضف 3 نقاط على الأقل لإغلاق الخط المتعدد"
+ "dwg_edit.layer_pick": "اختر طبقة"
 }

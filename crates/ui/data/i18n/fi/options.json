@@ -11,6 +11,5 @@
  "options.primary_tip": "Tee tästä sarjan pääasiallinen vaihtoehto",
  "options.select_first": "Valitse ensin elementit mallista",
  "options.show_3d": "Näytä 3D-näkymässä: {name}",
- "options.show_plan": "Näytä pohjassa: {name}",
- "options.type_name_first": "Kirjoita ensin nimi"
+ "options.show_plan": "Näytä pohjassa: {name}"
 }

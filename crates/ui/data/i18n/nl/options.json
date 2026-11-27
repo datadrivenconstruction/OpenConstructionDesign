@@ -11,6 +11,5 @@
  "options.primary_tip": "Maak dit de hoofdoptie van de set",
  "options.select_first": "Selecteer eerst elementen in het model",
  "options.show_3d": "Tonen in 3D: {name}",
- "options.show_plan": "Tonen in plattegrond: {name}",
- "options.type_name_first": "Typ eerst een naam"
+ "options.show_plan": "Tonen in plattegrond: {name}"
 }

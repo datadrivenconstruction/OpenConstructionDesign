@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Klar",
  "dwg_edit.close": "Stäng och avsluta",
  "dwg_edit.cancel": "Rensa punkter",
- "dwg_edit.layer_pick": "Välj ett lager",
- "dwg_edit.finish_off": "Lägg till minst 2 punkter för att slutföra polylinjen",
- "dwg_edit.close_off": "Lägg till minst 3 punkter för att stänga polylinjen"
+ "dwg_edit.layer_pick": "Välj ett lager"
 }

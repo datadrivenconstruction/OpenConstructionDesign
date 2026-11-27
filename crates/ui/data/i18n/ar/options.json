@@ -11,6 +11,5 @@
  "options.primary_tip": "اجعل هذا الخيار الأساسي في المجموعة",
  "options.select_first": "حدّد عناصر في النموذج أولًا",
  "options.show_3d": "عرض في ثلاثي الأبعاد: {name}",
- "options.show_plan": "عرض في المسقط: {name}",
- "options.type_name_first": "اكتب اسماً أولاً"
+ "options.show_plan": "عرض في المسقط: {name}"
 }

@@ -21,6 +21,5 @@
  "mat_texture.tex.use_image": "Folosește imaginea",
  "mat_texture.tex.hint": "Afișată în stilul Realist la calitate Echilibrată și Maximă. Dimensiunea este în metri, aceeași pe fiecare element.",
  "mat_texture.tex.bad_image": "Aceasta nu este o imagine PNG sau JPEG citibilă (cel mult 8192 px pe latură)",
- "mat_texture.tex.too_big": "Imaginea depășește 4 MB: folosiți o cale de fișier sau o imagine mai mică",
- "mat_texture.tex.use_image_off": "Introduceți mai întâi calea unui fișier imagine"
+ "mat_texture.tex.too_big": "Imaginea depășește 4 MB: folosiți o cale de fișier sau o imagine mai mică"
 }

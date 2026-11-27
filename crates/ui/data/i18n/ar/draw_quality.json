@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "أضف عائلة خطوط واحدة على الأقل",
  "draw_quality.lib.err.dashes": "يجب أن تكون الشرطات أرقامًا مفصولة بمسافات",
  "draw_quality.lib.err.family": "يجب أن تكون المسافة أكبر من صفر، ولا يمكن أن تكون الشرطات سالبة",
- "draw_quality.lib.hatch_of": "{name} (من المكتبة)",
- "draw_quality.revert_off": "لا شيء للتراجع عنه: القيم مطابقة للمحفوظة"
+ "draw_quality.lib.hatch_of": "{name} (من المكتبة)"
 }

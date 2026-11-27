@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Kamida bitta chiziq oilasini qo'shing",
  "draw_quality.lib.err.dashes": "Chiziqchalar bo'shliq bilan ajratilgan sonlar bo'lishi kerak",
  "draw_quality.lib.err.family": "Qadam noldan katta bo'lishi, chiziqchalar manfiy bo'lmasligi kerak",
- "draw_quality.lib.hatch_of": "{name} (kutubxona)",
- "draw_quality.revert_off": "Qaytarish uchun hech narsa yo'q: qiymatlar saqlanganlarga mos"
+ "draw_quality.lib.hatch_of": "{name} (kutubxona)"
 }

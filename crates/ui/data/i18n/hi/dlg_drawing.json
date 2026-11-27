@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "खिड़कियाँ",
  "dlg.dw.class.rooms": "कमरे",
  "dlg.dw.class.grids": "ग्रिड",
- "dlg.dw.class.columns": "कॉलम",
- "dlg.dw.rules_empty": "अभी कोई ब्लॉक नियम नहीं है। पहला नियम बनाने के लिए \"{add}\" दबाएँ: ब्लॉक नाम का मास्क, वह क्या है, और फ़ैमिली।"
+ "dlg.dw.class.columns": "कॉलम"
 }

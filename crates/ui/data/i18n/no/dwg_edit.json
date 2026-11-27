@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Fullfør",
  "dwg_edit.close": "Lukk og fullfør",
  "dwg_edit.cancel": "Fjern punkter",
- "dwg_edit.layer_pick": "Velg et lag",
- "dwg_edit.finish_off": "Legg til minst 2 punkter for å fullføre polylinjen",
- "dwg_edit.close_off": "Legg til minst 3 punkter for å lukke polylinjen"
+ "dwg_edit.layer_pick": "Velg et lag"
 }

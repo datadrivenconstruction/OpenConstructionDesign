@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "कम से कम एक लाइन फ़ैमिली जोड़ें",
  "draw_quality.lib.err.dashes": "डैश स्पेस से अलग की गई संख्याएँ होनी चाहिए",
  "draw_quality.lib.err.family": "अंतराल शून्य से अधिक हो और डैश ऋणात्मक न हों",
- "draw_quality.lib.hatch_of": "{name} (लाइब्रेरी)",
- "draw_quality.revert_off": "वापस लाने के लिए कुछ नहीं: मान सहेजे गए मानों के समान हैं"
+ "draw_quality.lib.hatch_of": "{name} (लाइब्रेरी)"
 }

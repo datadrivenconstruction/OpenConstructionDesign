@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "ในท่อ ฝังในผนัง",
  "ce.laying.clipped": "ยึดด้วยคลิป เปิดโล่ง",
  "ce.laying.tray": "รางเคเบิล วางในอากาศ",
- "ce.laying.ground": "ฝังในดิน",
- "ce.revert_off": "ไม่มีอะไรให้ย้อนกลับ: ไม่มีการเปลี่ยนแปลงที่ยังไม่บันทึก"
+ "ce.laying.ground": "ฝังในดิน"
 }

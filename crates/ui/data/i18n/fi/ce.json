@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "Suojaputkessa, seinässä",
  "ce.laying.clipped": "Kiinnitetty, avoin",
  "ce.laying.tray": "Kaapelikourussa, ilmassa",
- "ce.laying.ground": "Maassa",
- "ce.revert_off": "Ei peruttavaa: ei tallentamattomia muutoksia"
+ "ce.laying.ground": "Maassa"
 }

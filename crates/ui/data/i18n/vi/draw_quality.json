@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Thêm ít nhất một họ đường",
  "draw_quality.lib.err.dashes": "Các nét phải là số, cách nhau bằng dấu cách",
  "draw_quality.lib.err.family": "Khoảng cách phải lớn hơn không và nét không được âm",
- "draw_quality.lib.hatch_of": "{name} (thư viện)",
- "draw_quality.revert_off": "Không có gì để hoàn tác: các giá trị khớp với giá trị đã lưu"
+ "draw_quality.lib.hatch_of": "{name} (thư viện)"
 }

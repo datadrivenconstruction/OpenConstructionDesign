@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "穿管，墙内暗敷",
  "ce.laying.clipped": "卡设，明敷",
  "ce.laying.tray": "电缆桥架，空气中",
- "ce.laying.ground": "直埋",
- "ce.revert_off": "没有可还原的内容：没有未保存的更改"
+ "ce.laying.ground": "直埋"
 }

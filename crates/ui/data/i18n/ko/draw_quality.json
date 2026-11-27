@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "선 패밀리를 하나 이상 추가하십시오",
  "draw_quality.lib.err.dashes": "대시는 공백으로 구분된 숫자여야 합니다",
  "draw_quality.lib.err.family": "간격은 0보다 커야 하며 대시는 음수일 수 없습니다",
- "draw_quality.lib.hatch_of": "{name} (라이브러리)",
- "draw_quality.revert_off": "되돌릴 항목 없음: 값이 저장된 값과 같습니다"
+ "draw_quality.lib.hatch_of": "{name} (라이브러리)"
 }

@@ -11,6 +11,5 @@
  "options.primary_tip": "将其设为该集的主要选项",
  "options.select_first": "请先在模型中选择图元",
  "options.show_3d": "在三维中显示：{name}",
- "options.show_plan": "在平面中显示：{name}",
- "options.type_name_first": "请先输入名称"
+ "options.show_plan": "在平面中显示：{name}"
 }

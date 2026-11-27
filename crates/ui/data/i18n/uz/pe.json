@@ -25,7 +25,5 @@
  "pe.kind_text": "matn",
  "pe.kind_family_type": "oila turi",
  "pe.yes": "ha",
- "pe.no": "yo'q",
- "pe.empty_params": "Hozircha parametrlar yo'q. Birinchisini qo'shish uchun pastdagi \"{add}\" tugmasini bosing.",
- "pe.empty_sizes": "O'lcham beriladigan tur parametrlari yo'q. Formulasiz va nusxa deb belgilanmagan parametr qo'shing, u shu yerda paydo bo'ladi."
+ "pe.no": "yo'q"
 }

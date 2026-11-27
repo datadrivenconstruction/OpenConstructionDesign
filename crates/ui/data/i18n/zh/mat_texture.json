@@ -21,6 +21,5 @@
  "mat_texture.tex.use_image": "使用图像",
  "mat_texture.tex.hint": "在“真实感”样式的均衡和最高质量下显示。尺寸单位为米，对所有图元相同。",
  "mat_texture.tex.bad_image": "不是可读取的 PNG 或 JPEG 图像（边长最大 8192 px）",
- "mat_texture.tex.too_big": "图像超过 4 MB：请使用文件路径或更小的图像",
- "mat_texture.tex.use_image_off": "请先输入图像文件的路径"
+ "mat_texture.tex.too_big": "图像超过 4 MB：请使用文件路径或更小的图像"
 }

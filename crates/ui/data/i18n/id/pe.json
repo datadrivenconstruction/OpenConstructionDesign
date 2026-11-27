@@ -25,7 +25,5 @@
  "pe.kind_text": "teks",
  "pe.kind_family_type": "tipe family",
  "pe.yes": "ya",
- "pe.no": "tidak",
- "pe.empty_params": "Belum ada parameter. Tekan \"{add}\" di bawah untuk menambahkan yang pertama.",
- "pe.empty_sizes": "Tidak ada parameter tipe untuk diukur. Tambahkan parameter tanpa rumus dan tidak ditandai sebagai instans, maka akan muncul di sini."
+ "pe.no": "tidak"
 }

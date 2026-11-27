@@ -587,7 +587,7 @@ fn body(
                     c.t("find_replace.nothing"),
                     String::new(),
                 ),
-                Btn::ReplaceOne => (c.t("find_replace.replace"), c.t("find_replace.replace_one_off"), String::new()),
+                Btn::ReplaceOne => (c.t("find_replace.replace"), String::new(), String::new()),
             };
             let clicked = if f.primary {
                 primary_click_tip(ui, label, (!f.enabled).then_some(why.as_str()), &tip)
@@ -598,7 +598,6 @@ fn body(
                     })
                     .inner;
                 let r = if tip.is_empty() { r } else { r.on_hover_text(tip) };
-                let r = if why.is_empty() { r } else { r.on_disabled_hover_text(why.as_str()) };
                 r.clicked()
             };
             if !clicked {

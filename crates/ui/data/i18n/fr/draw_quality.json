@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Ajoutez au moins une famille de traits",
  "draw_quality.lib.err.dashes": "Les tirets doivent être des nombres séparés par des espaces",
  "draw_quality.lib.err.family": "L'espacement doit être supérieur à zéro et les tirets ne peuvent pas être négatifs",
- "draw_quality.lib.hatch_of": "{name} (bibliothèque)",
- "draw_quality.revert_off": "Rien à rétablir : les valeurs correspondent à celles enregistrées"
+ "draw_quality.lib.hatch_of": "{name} (bibliothèque)"
 }

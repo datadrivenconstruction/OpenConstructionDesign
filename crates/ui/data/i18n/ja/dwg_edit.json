@@ -26,7 +26,5 @@
  "dwg_edit.finish": "完了",
  "dwg_edit.close": "閉じて完了",
  "dwg_edit.cancel": "点をクリア",
- "dwg_edit.layer_pick": "レイヤーを選択",
- "dwg_edit.finish_off": "ポリラインを完了するには2点以上追加してください",
- "dwg_edit.close_off": "ポリラインを閉じるには3点以上追加してください"
+ "dwg_edit.layer_pick": "レイヤーを選択"
 }

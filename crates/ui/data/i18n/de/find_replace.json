@@ -43,6 +43,5 @@
  "find_replace.replace": "Ersetzen",
  "find_replace.replace_all": "Alle ersetzen ({n})",
  "find_replace.close": "Schließen",
- "find_replace.err": "Ersetzen fehlgeschlagen: {e}",
- "find_replace.replace_one_off": "Ein Ergebnis wählen, in dem es etwas zu ersetzen gibt"
+ "find_replace.err": "Ersetzen fehlgeschlagen: {e}"
 }

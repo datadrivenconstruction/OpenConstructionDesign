@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "حداقل یک خانواده‌ی خط اضافه کنید",
  "draw_quality.lib.err.dashes": "خط‌چین‌ها باید عدد باشند که با فاصله جدا شده‌اند",
  "draw_quality.lib.err.family": "فاصله باید بزرگ‌تر از صفر باشد و خط‌چین‌ها نمی‌توانند منفی باشند",
- "draw_quality.lib.hatch_of": "{name} (کتابخانه)",
- "draw_quality.revert_off": "چیزی برای بازگردانی نیست: مقادیر با مقادیر ذخیره‌شده یکسان‌اند"
+ "draw_quality.lib.hatch_of": "{name} (کتابخانه)"
 }

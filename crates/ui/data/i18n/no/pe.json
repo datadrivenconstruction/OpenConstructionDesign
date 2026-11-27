@@ -25,7 +25,5 @@
  "pe.kind_text": "tekst",
  "pe.kind_family_type": "familietype",
  "pe.yes": "ja",
- "pe.no": "nei",
- "pe.empty_params": "Ingen parametere ennå. Trykk «{add}» nedenfor for å legge til den første.",
- "pe.empty_sizes": "Ingen typeparametere å dimensjonere ennå. Legg til en parameter uten formel som ikke er merket som instans, så vises den her."
+ "pe.no": "nei"
 }

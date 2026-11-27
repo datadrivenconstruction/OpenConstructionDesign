@@ -43,6 +43,5 @@
  "find_replace.replace": "Almashtirish",
  "find_replace.replace_all": "Hammasini almashtirish ({n})",
  "find_replace.close": "Yopish",
- "find_replace.err": "Almashtirib bo'lmadi: {e}",
- "find_replace.replace_one_off": "Almashtiriladigan narsasi bor natijani tanlang"
+ "find_replace.err": "Almashtirib bo'lmadi: {e}"
 }

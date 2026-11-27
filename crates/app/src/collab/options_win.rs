@@ -249,7 +249,6 @@ fn set_group(
             let clicked = ui
                 .add_enabled_ui(ready, |ui| Button::secondary(&label).show(ui, th))
                 .inner
-                .on_disabled_hover_text(c.t("options.type_name_first"))
                 .clicked();
             if submit(ready, clicked, enter) {
                 acts.push(Act::NewOption(set.id, typed.trim().to_string()));
@@ -484,7 +483,6 @@ pub fn frame(w: &mut OptionsWin, a: &mut EditorApp, ctx: &egui::Context) {
                 let clicked = ui
                     .add_enabled_ui(ready, |ui| Button::primary(&label).show(ui, th))
                     .inner
-                    .on_disabled_hover_text(c.t("options.type_name_first"))
                     .clicked();
                 if submit(ready, clicked, enter) {
                     acts.push(Act::NewSet(

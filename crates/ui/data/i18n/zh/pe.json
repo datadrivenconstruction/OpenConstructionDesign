@@ -25,7 +25,5 @@
  "pe.kind_text": "文本",
  "pe.kind_family_type": "族类型",
  "pe.yes": "是",
- "pe.no": "否",
- "pe.empty_params": "尚无参数。点击下方“{add}”添加第一个。",
- "pe.empty_sizes": "尚无需要确定尺寸的类型参数。添加一个没有公式且未标记为实例的参数，它就会显示在这里。"
+ "pe.no": "否"
 }

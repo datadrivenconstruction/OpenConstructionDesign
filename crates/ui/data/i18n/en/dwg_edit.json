@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Finish",
  "dwg_edit.close": "Close and finish",
  "dwg_edit.cancel": "Clear points",
- "dwg_edit.layer_pick": "Pick a layer",
- "dwg_edit.finish_off": "Add at least 2 points to finish the polyline",
- "dwg_edit.close_off": "Add at least 3 points to close the polyline"
+ "dwg_edit.layer_pick": "Pick a layer"
 }

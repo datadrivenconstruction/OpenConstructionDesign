@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "پنجره‌ها",
  "dlg.dw.class.rooms": "اتاق‌ها",
  "dlg.dw.class.grids": "شبکه‌ها",
- "dlg.dw.class.columns": "ستون‌ها",
- "dlg.dw.rules_empty": "هنوز قانون بلوکی وجود ندارد. برای ایجاد اولین مورد «{add}» را بزنید: الگوی نام بلوک، ماهیت آن و خانواده."
+ "dlg.dw.class.columns": "ستون‌ها"
 }

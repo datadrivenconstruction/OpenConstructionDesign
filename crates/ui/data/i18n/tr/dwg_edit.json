@@ -26,7 +26,5 @@
  "dwg_edit.finish": "Bitir",
  "dwg_edit.close": "Kapat ve bitir",
  "dwg_edit.cancel": "Noktaları temizle",
- "dwg_edit.layer_pick": "Bir katman seçin",
- "dwg_edit.finish_off": "Çoklu çizgiyi bitirmek için en az 2 nokta ekleyin",
- "dwg_edit.close_off": "Çoklu çizgiyi kapatmak için en az 3 nokta ekleyin"
+ "dwg_edit.layer_pick": "Bir katman seçin"
 }

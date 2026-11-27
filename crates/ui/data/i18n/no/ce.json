@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "I rør, i vegg",
  "ce.laying.clipped": "Festet, åpen",
  "ce.laying.tray": "Kabelbru, i luft",
- "ce.laying.ground": "I grunnen",
- "ce.revert_off": "Ingenting å tilbakestille: ingen ulagrede endringer"
+ "ce.laying.ground": "I grunnen"
 }

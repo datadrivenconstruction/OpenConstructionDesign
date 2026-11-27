@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Voeg minstens één lijnfamilie toe",
  "draw_quality.lib.err.dashes": "Streepjes moeten getallen zijn, gescheiden door spaties",
  "draw_quality.lib.err.family": "Afstand moet groter zijn dan nul en streepjes mogen niet negatief zijn",
- "draw_quality.lib.hatch_of": "{name} (bibliotheek)",
- "draw_quality.revert_off": "Niets om terug te zetten: de waarden komen overeen met de opgeslagen waarden"
+ "draw_quality.lib.hatch_of": "{name} (bibliotheek)"
 }

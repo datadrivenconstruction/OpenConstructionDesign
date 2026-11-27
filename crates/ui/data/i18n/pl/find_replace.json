@@ -43,6 +43,5 @@
  "find_replace.replace": "Zamień",
  "find_replace.replace_all": "Zamień wszystko ({n})",
  "find_replace.close": "Zamknij",
- "find_replace.err": "Zamiana nie powiodła się: {e}",
- "find_replace.replace_one_off": "Wybierz wynik, w którym jest co zamienić"
+ "find_replace.err": "Zamiana nie powiodła się: {e}"
 }

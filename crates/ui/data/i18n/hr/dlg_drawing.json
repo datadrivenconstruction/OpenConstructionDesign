@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Prozori",
  "dlg.dw.class.rooms": "Prostorije",
  "dlg.dw.class.grids": "Mreže",
- "dlg.dw.class.columns": "Stupovi",
- "dlg.dw.rules_empty": "Još nema pravila blokova. Pritisnite \"{add}\" za izradu prvog: maska naziva bloka, što je i obitelj."
+ "dlg.dw.class.columns": "Stupovi"
 }

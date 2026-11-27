@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "配管内、壁内",
  "ce.laying.clipped": "クリップ留め、露出",
  "ce.laying.tray": "ケーブルトレイ、気中",
- "ce.laying.ground": "地中",
- "ce.revert_off": "元に戻す対象がありません: 未保存の変更はありません"
+ "ce.laying.ground": "地中"
 }

@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "Дор хаяж нэг шугамын бүлэг нэмнэ үү",
  "draw_quality.lib.err.dashes": "Зураас нь зайгаар тусгаарлагдсан тоонууд байх ёстой",
  "draw_quality.lib.err.family": "Зай 0-ээс их байх ёстой, зураас сөрөг байж болохгүй",
- "draw_quality.lib.hatch_of": "{name} (сан)",
- "draw_quality.revert_off": "Буцаах зүйл алга: утгууд хадгалсантай таарч байна"
+ "draw_quality.lib.hatch_of": "{name} (сан)"
 }

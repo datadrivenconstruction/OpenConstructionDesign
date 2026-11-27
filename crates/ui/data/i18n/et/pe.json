@@ -25,7 +25,5 @@
  "pe.kind_text": "tekst",
  "pe.kind_family_type": "perekonna tüüp",
  "pe.yes": "jah",
- "pe.no": "ei",
- "pe.empty_params": "Parameetreid pole veel. Esimese lisamiseks vajutage allpool „{add}“.",
- "pe.empty_sizes": "Mõõtmestamiseks pole tüübiparameetreid. Lisage parameeter ilma valemita ja ilma eksemplarimärketa, siis ilmub see siia."
+ "pe.no": "ei"
 }

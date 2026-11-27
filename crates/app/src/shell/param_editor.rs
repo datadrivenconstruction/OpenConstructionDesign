@@ -650,13 +650,6 @@ fn params_table(ui: &mut egui::Ui, th: &Theme, d: &mut Draft, ev: &Eval) {
                     t("pe.formula"),
                 ],
             );
-            if d.rows.is_empty() {
-                ui.label(
-                    RichText::new(crate::tr("pe.empty_params", &[("add", t("pe.parameter"))]))
-                        .color(th.c("text.secondary")),
-                );
-                ui.end_row();
-            }
             for (i, r) in d.rows.iter_mut().enumerate() {
                 // kit fields: one control high, text on the row's centre line
                 widgets::TextField::new(&mut r.name).id_salt(("c.name", i))
@@ -731,12 +724,6 @@ fn sizes_table(ui: &mut egui::Ui, th: &Theme, d: &mut Draft) {
                 ui.label(RichText::new(name).font(th.font(Role::BodyStrong)));
             }
             ui.end_row();
-            if type_rows.is_empty() {
-                ui.label(
-                    RichText::new(t("pe.empty_sizes")).color(th.c("text.secondary")),
-                );
-                ui.end_row();
-            }
             for &i in &type_rows {
                 let (name, kind, def) = (
                     d.rows[i].name.clone(),

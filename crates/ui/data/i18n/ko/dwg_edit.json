@@ -26,7 +26,5 @@
  "dwg_edit.finish": "완료",
  "dwg_edit.close": "닫고 완료",
  "dwg_edit.cancel": "점 지우기",
- "dwg_edit.layer_pick": "레이어를 선택하세요",
- "dwg_edit.finish_off": "폴리라인을 마치려면 점을 2개 이상 추가하세요",
- "dwg_edit.close_off": "폴리라인을 닫으려면 점을 3개 이상 추가하세요"
+ "dwg_edit.layer_pick": "레이어를 선택하세요"
 }

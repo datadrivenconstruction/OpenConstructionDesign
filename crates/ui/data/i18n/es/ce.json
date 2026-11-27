@@ -78,6 +78,5 @@
  "ce.laying.conduit_wall": "En tubo, en muro",
  "ce.laying.clipped": "Grapado, al aire",
  "ce.laying.tray": "Bandeja portacables, al aire",
- "ce.laying.ground": "Enterrado",
- "ce.revert_off": "Nada que revertir: no hay cambios sin guardar"
+ "ce.laying.ground": "Enterrado"
 }

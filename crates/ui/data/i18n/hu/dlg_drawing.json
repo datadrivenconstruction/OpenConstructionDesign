@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Ablakok",
  "dlg.dw.class.rooms": "Helyiségek",
  "dlg.dw.class.grids": "Rácsok",
- "dlg.dw.class.columns": "Pillérek",
- "dlg.dw.rules_empty": "Még nincsenek blokkszabályok. Nyomja meg a(z) \"{add}\" gombot az első létrehozásához: blokknévminta, hogy mi az, és a család."
+ "dlg.dw.class.columns": "Pillérek"
 }

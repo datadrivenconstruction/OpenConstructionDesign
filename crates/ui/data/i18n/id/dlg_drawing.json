@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Jendela",
  "dlg.dw.class.rooms": "Ruang",
  "dlg.dw.class.grids": "Grid",
- "dlg.dw.class.columns": "Kolom",
- "dlg.dw.rules_empty": "Belum ada aturan blok. Tekan \"{add}\" untuk membuat yang pertama: mask nama blok, jenisnya, dan famili."
+ "dlg.dw.class.columns": "Kolom"
 }

@@ -114,6 +114,5 @@
  "draw_quality.lib.err.no_fams": "请至少添加一个线型族",
  "draw_quality.lib.err.dashes": "线段必须是以空格分隔的数字",
  "draw_quality.lib.err.family": "间距必须大于零，线段不能为负数",
- "draw_quality.lib.hatch_of": "{name}（库）",
- "draw_quality.revert_off": "没有可还原的内容：值与已保存的一致"
+ "draw_quality.lib.hatch_of": "{name}（库）"
 }

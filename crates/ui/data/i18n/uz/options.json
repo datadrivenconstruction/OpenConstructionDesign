@@ -11,6 +11,5 @@
  "options.primary_tip": "Buni to'plamning asosiy varianti qilish",
  "options.select_first": "Avval modelda elementlarni tanlang",
  "options.show_3d": "3D da ko'rsatish: {name}",
- "options.show_plan": "Rejada ko'rsatish: {name}",
- "options.type_name_first": "Avval nom kiriting"
+ "options.show_plan": "Rejada ko'rsatish: {name}"
 }

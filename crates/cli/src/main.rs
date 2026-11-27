@@ -8,9 +8,6 @@ fn main() {
     let p = match parse(&argv) {
         Ok(p) => p,
         Err(e) => {
-            if argv.iter().any(|a| a == "--json") {
-                println!("{}", serde_json::json!({ "ok": false, "error": e }));
-            }
             eprintln!("error: {e}\nrun `ddc --help` for the commands and options");
             std::process::exit(EXIT_FAILED);
         }

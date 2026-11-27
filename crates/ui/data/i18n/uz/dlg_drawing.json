@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Derazalar",
  "dlg.dw.class.rooms": "Xonalar",
  "dlg.dw.class.grids": "To'rlar",
- "dlg.dw.class.columns": "Ustunlar",
- "dlg.dw.rules_empty": "Hozircha blok qoidalari yo'q. Birinchisini yaratish uchun \"{add}\" tugmasini bosing: blok nomi maskasi, u nima ekani va oila."
+ "dlg.dw.class.columns": "Ustunlar"
 }

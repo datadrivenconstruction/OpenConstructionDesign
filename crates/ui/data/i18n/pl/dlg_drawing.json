@@ -154,6 +154,5 @@
  "dlg.dw.class.windows": "Okna",
  "dlg.dw.class.rooms": "Pomieszczenia",
  "dlg.dw.class.grids": "Siatki",
- "dlg.dw.class.columns": "Słupy",
- "dlg.dw.rules_empty": "Brak reguł bloków. Naciśnij „{add}”, aby utworzyć pierwszą: maskę nazwy bloku, jego rodzaj i rodzinę."
+ "dlg.dw.class.columns": "Słupy"
 }
