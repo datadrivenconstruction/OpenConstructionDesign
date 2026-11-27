@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Цонхнууд",
  "dlg.dw.class.rooms": "Өрөөнүүд",
  "dlg.dw.class.grids": "Торууд",
- "dlg.dw.class.columns": "Баганууд"
+ "dlg.dw.class.columns": "Баганууд",
+ "dlg.dw.rules_empty": "Блокийн дүрэм одоогоор алга. Эхнийхийг үүсгэхийн тулд \"{add}\" товчийг дарна уу: блокийн нэрийн маск, юу болох, ба гэр бүл."
 }

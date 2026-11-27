@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Befejezés",
  "dwg_edit.close": "Lezárás és befejezés",
  "dwg_edit.cancel": "Pontok törlése",
- "dwg_edit.layer_pick": "Válasszon réteget"
+ "dwg_edit.layer_pick": "Válasszon réteget",
+ "dwg_edit.finish_off": "Adjon hozzá legalább 2 pontot a polyline befejezéséhez",
+ "dwg_edit.close_off": "Adjon hozzá legalább 3 pontot a polyline lezárásához"
 }

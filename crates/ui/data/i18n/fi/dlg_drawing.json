@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Ikkunat",
  "dlg.dw.class.rooms": "Huoneet",
  "dlg.dw.class.grids": "Akselit",
- "dlg.dw.class.columns": "Pilarit"
+ "dlg.dw.class.columns": "Pilarit",
+ "dlg.dw.rules_empty": "Lohkosääntöjä ei vielä ole. Luo ensimmäinen painamalla ”{add}”: lohkon nimen maski, mikä se on ja perhe."
 }

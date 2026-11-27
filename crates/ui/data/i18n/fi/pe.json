@@ -25,5 +25,7 @@
  "pe.kind_text": "teksti",
  "pe.kind_family_type": "perhetyyppi",
  "pe.yes": "kyllä",
- "pe.no": "ei"
+ "pe.no": "ei",
+ "pe.empty_params": "Parametreja ei vielä ole. Lisää ensimmäinen painamalla alla ”{add}”.",
+ "pe.empty_sizes": "Ei mitoitettavia tyyppiparametreja. Lisää parametri ilman kaavaa ja ilman esiintymämerkintää, niin se näkyy tässä."
 }

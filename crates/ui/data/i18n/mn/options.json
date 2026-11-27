@@ -11,5 +11,6 @@
  "options.primary_tip": "Үүнийг багцын үндсэн сонголт болгох",
  "options.select_first": "Эхлээд загварт элементүүдийг сонгоно уу",
  "options.show_3d": "3D-д харуулах: {name}",
- "options.show_plan": "Төлөвлөгөөнд харуулах: {name}"
+ "options.show_plan": "Төлөвлөгөөнд харуулах: {name}",
+ "options.type_name_first": "Эхлээд нэр бичнэ үү"
 }

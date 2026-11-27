@@ -11,5 +11,6 @@
  "options.primary_tip": "Đặt đây làm tùy chọn chính của bộ",
  "options.select_first": "Hãy chọn phần tử trong mô hình trước",
  "options.show_3d": "Hiển thị trong 3D: {name}",
- "options.show_plan": "Hiển thị trên mặt bằng: {name}"
+ "options.show_plan": "Hiển thị trên mặt bằng: {name}",
+ "options.type_name_first": "Hãy nhập tên trước"
 }

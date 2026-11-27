@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Dodaj co najmniej jedną rodzinę linii",
  "draw_quality.lib.err.dashes": "Kreski muszą być liczbami oddzielonymi spacjami",
  "draw_quality.lib.err.family": "Rozstaw musi być większy od zera, a kreski nie mogą być ujemne",
- "draw_quality.lib.hatch_of": "{name} (biblioteka)"
+ "draw_quality.lib.hatch_of": "{name} (biblioteka)",
+ "draw_quality.revert_off": "Nic do cofnięcia: wartości są zgodne z zapisanymi"
 }

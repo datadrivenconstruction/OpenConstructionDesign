@@ -25,5 +25,7 @@
  "pe.kind_text": "textobjekt",
  "pe.kind_family_type": "familjetyp",
  "pe.yes": "ja",
- "pe.no": "nej"
+ "pe.no": "nej",
+ "pe.empty_params": "Inga parametrar ännu. Tryck på ”{add}” nedan för att lägga till den första.",
+ "pe.empty_sizes": "Inga typparametrar att dimensionera ännu. Lägg till en parameter utan formel som inte är markerad som instans, så visas den här."
 }

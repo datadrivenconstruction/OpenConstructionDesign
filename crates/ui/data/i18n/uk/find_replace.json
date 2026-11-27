@@ -43,5 +43,6 @@
  "find_replace.replace": "Замінити",
  "find_replace.replace_all": "Замінити всі ({n})",
  "find_replace.close": "Закрити",
- "find_replace.err": "Заміна не вдалася: {e}"
+ "find_replace.err": "Заміна не вдалася: {e}",
+ "find_replace.replace_one_off": "Виберіть результат, у якому є що замінити"
 }

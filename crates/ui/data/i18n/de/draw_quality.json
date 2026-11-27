@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Fügen Sie mindestens eine Linienfamilie hinzu",
  "draw_quality.lib.err.dashes": "Die Strichelung muss aus Zahlen bestehen, durch Leerzeichen getrennt",
  "draw_quality.lib.err.family": "Der Abstand muss größer als null sein, und die Strichelung darf nicht negativ sein",
- "draw_quality.lib.hatch_of": "{name} (Bibliothek)"
+ "draw_quality.lib.hatch_of": "{name} (Bibliothek)",
+ "draw_quality.revert_off": "Nichts rückgängig zu machen: Die Werte entsprechen den gespeicherten"
 }

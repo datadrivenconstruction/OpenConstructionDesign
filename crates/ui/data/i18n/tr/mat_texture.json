@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Görüntüyü kullan",
  "mat_texture.tex.hint": "Gerçekçi stilde Dengeli ve En yüksek kalitede gösterilir. Boyut metre cinsindendir ve tüm öğelerde aynıdır.",
  "mat_texture.tex.bad_image": "Bu okunabilir bir PNG veya JPEG görüntüsü değil (kenarı en fazla 8192 px)",
- "mat_texture.tex.too_big": "Görüntü 4 MB'den büyük: dosya yolu kullanın veya daha küçük bir görüntü seçin"
+ "mat_texture.tex.too_big": "Görüntü 4 MB'den büyük: dosya yolu kullanın veya daha küçük bir görüntü seçin",
+ "mat_texture.tex.use_image_off": "Önce bir görsel dosyasının yolunu girin"
 }

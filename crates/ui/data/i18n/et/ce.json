@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "Torus, seina sees",
  "ce.laying.clipped": "Klambritega, avatult",
  "ce.laying.tray": "Kaabelredelil, õhus",
- "ce.laying.ground": "Maa sees"
+ "ce.laying.ground": "Maa sees",
+ "ce.revert_off": "Pole midagi tagasi võtta: salvestamata muudatusi pole"
 }

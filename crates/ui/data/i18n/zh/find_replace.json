@@ -43,5 +43,6 @@
  "find_replace.replace": "替换",
  "find_replace.replace_all": "全部替换({n})",
  "find_replace.close": "关闭",
- "find_replace.err": "替换失败:{e}"
+ "find_replace.err": "替换失败:{e}",
+ "find_replace.replace_one_off": "请选择有可替换内容的结果"
 }

@@ -11,5 +11,6 @@
  "options.primary_tip": "Ustaw tę opcję jako główną w zestawie",
  "options.select_first": "Najpierw zaznacz elementy w modelu",
  "options.show_3d": "Pokaż w 3D: {name}",
- "options.show_plan": "Pokaż w planie: {name}"
+ "options.show_plan": "Pokaż w planie: {name}",
+ "options.type_name_first": "Najpierw wpisz nazwę"
 }

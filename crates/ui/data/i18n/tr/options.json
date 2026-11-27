@@ -11,5 +11,6 @@
  "options.primary_tip": "Bunu kümenin birincil seçeneği yapın",
  "options.select_first": "Önce modelde öğeleri seçin",
  "options.show_3d": "3D'de göster: {name}",
- "options.show_plan": "Planda göster: {name}"
+ "options.show_plan": "Planda göster: {name}",
+ "options.type_name_first": "Önce bir ad yazın"
 }

@@ -11,5 +11,6 @@
  "options.primary_tip": "این را گزینهٔ اصلی مجموعه کنید",
  "options.select_first": "ابتدا عناصر را در مدل انتخاب کنید",
  "options.show_3d": "نمایش در سه‌بعدی: {name}",
- "options.show_plan": "نمایش در پلان: {name}"
+ "options.show_plan": "نمایش در پلان: {name}",
+ "options.type_name_first": "ابتدا یک نام وارد کنید"
 }

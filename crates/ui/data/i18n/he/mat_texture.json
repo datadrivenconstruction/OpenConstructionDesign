@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "השתמש בתמונה",
  "mat_texture.tex.hint": "מוצג בסגנון הריאליסטי באיכות מאוזנת ומקסימלית. הגודל במטרים, זהה לכל אלמנט.",
  "mat_texture.tex.bad_image": "זו אינה תמונת PNG או JPEG קריאה (עד 8192 px לצד)",
- "mat_texture.tex.too_big": "התמונה גדולה מ-4 MB: השתמש בנתיב קובץ או בתמונה קטנה יותר"
+ "mat_texture.tex.too_big": "התמונה גדולה מ-4 MB: השתמש בנתיב קובץ או בתמונה קטנה יותר",
+ "mat_texture.tex.use_image_off": "הזינו תחילה נתיב של קובץ תמונה"
 }

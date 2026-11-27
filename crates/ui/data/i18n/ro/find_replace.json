@@ -43,5 +43,6 @@
  "find_replace.replace": "Înlocuiește",
  "find_replace.replace_all": "Înlocuiește tot ({n})",
  "find_replace.close": "Închide",
- "find_replace.err": "Înlocuirea a eșuat: {e}"
+ "find_replace.err": "Înlocuirea a eșuat: {e}",
+ "find_replace.replace_one_off": "Selectați un rezultat care are ceva de înlocuit"
 }

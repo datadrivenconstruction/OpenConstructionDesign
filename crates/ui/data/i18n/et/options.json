@@ -11,5 +11,6 @@
  "options.primary_tip": "Määra see komplekti peamiseks valikuks",
  "options.select_first": "Vali kõigepealt mudelis elemendid",
  "options.show_3d": "Näita 3D-s: {name}",
- "options.show_plan": "Näita plaanil: {name}"
+ "options.show_plan": "Näita plaanil: {name}",
+ "options.type_name_first": "Sisestage esmalt nimi"
 }

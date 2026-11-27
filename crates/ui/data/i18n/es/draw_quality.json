@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Añada al menos una familia de línea",
  "draw_quality.lib.err.dashes": "Los trazos deben ser números separados por espacios",
  "draw_quality.lib.err.family": "La separación debe ser mayor que cero y los trazos no pueden ser negativos",
- "draw_quality.lib.hatch_of": "{name} (biblioteca)"
+ "draw_quality.lib.hatch_of": "{name} (biblioteca)",
+ "draw_quality.revert_off": "Nada que revertir: los valores coinciden con los guardados"
 }

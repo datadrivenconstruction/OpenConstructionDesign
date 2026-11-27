@@ -43,5 +43,6 @@
  "find_replace.replace": "Değiştir",
  "find_replace.replace_all": "Tümünü değiştir ({n})",
  "find_replace.close": "Kapat",
- "find_replace.err": "Değiştirme başarısız: {e}"
+ "find_replace.err": "Değiştirme başarısız: {e}",
+ "find_replace.replace_one_off": "Değiştirilecek bir şey içeren bir sonuç seçin"
 }

@@ -43,5 +43,6 @@
  "find_replace.replace": "Sustituir",
  "find_replace.replace_all": "Sustituir todo ({n})",
  "find_replace.close": "Cerrar",
- "find_replace.err": "Error al sustituir: {e}"
+ "find_replace.err": "Error al sustituir: {e}",
+ "find_replace.replace_one_off": "Seleccione un resultado que tenga algo que reemplazar"
 }

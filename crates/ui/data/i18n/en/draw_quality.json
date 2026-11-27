@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Add at least one line family",
  "draw_quality.lib.err.dashes": "Dashes must be numbers separated by spaces",
  "draw_quality.lib.err.family": "Spacing must be above zero and dashes cannot be negative",
- "draw_quality.lib.hatch_of": "{name} (library)"
+ "draw_quality.lib.hatch_of": "{name} (library)",
+ "draw_quality.revert_off": "Nothing to revert: the values match the saved ones"
 }

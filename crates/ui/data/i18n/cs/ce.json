@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "V chráničce, ve stěně",
  "ce.laying.clipped": "Upevněný, volně",
  "ce.laying.tray": "Na kabelovém žlabu, volně na vzduchu",
- "ce.laying.ground": "V zemi"
+ "ce.laying.ground": "V zemi",
+ "ce.revert_off": "Není co vrátit: žádné neuložené změny"
 }

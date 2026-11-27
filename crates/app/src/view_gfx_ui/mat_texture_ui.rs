@@ -295,6 +295,7 @@ fn body(ui: &mut egui::Ui, st: &mut St) -> Option<Act> {
         if ui
             .add_enabled_ui(can, |ui| kit::secondary_button(ui, use_l))
             .inner
+            .on_disabled_hover_text(t("mat_texture.tex.use_image_off"))
             .clicked()
         {
             match file_act(&st.path, st.embed, st.scale.max(TEXTURE_SCALE_MIN), st.rot) {

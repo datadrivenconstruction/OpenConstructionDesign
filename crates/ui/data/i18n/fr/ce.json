@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "En fourreau, encastré dans le mur",
  "ce.laying.clipped": "Fixé par collier, apparent",
  "ce.laying.tray": "Sur chemin de câbles, à l'air libre",
- "ce.laying.ground": "Enterré"
+ "ce.laying.ground": "Enterré",
+ "ce.revert_off": "Rien à rétablir : aucune modification non enregistrée"
 }

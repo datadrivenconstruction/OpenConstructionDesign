@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "Түтүктө, дубалда",
  "ce.laying.clipped": "Кыстырылган, ачык",
  "ce.laying.tray": "Кабель жолу, абада",
- "ce.laying.ground": "Жерде"
+ "ce.laying.ground": "Жерде",
+ "ce.revert_off": "Кайтарууга эч нерсе жок: сакталбаган өзгөртүүлөр жок"
 }

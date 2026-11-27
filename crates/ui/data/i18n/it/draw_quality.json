@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Aggiungi almeno una famiglia di linee",
  "draw_quality.lib.err.dashes": "I tratti devono essere numeri separati da spazi",
  "draw_quality.lib.err.family": "Il passo deve essere maggiore di zero e i tratti non possono essere negativi",
- "draw_quality.lib.hatch_of": "{name} (libreria)"
+ "draw_quality.lib.hatch_of": "{name} (libreria)",
+ "draw_quality.revert_off": "Niente da ripristinare: i valori corrispondono a quelli salvati"
 }

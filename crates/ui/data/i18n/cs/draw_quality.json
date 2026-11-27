@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Přidejte alespoň jednu rodinu čar",
  "draw_quality.lib.err.dashes": "Čárky musí být čísla oddělená mezerami",
  "draw_quality.lib.err.family": "Rozteč musí být větší než nula a čárky nesmí být záporné",
- "draw_quality.lib.hatch_of": "{name} (knihovna)"
+ "draw_quality.lib.hatch_of": "{name} (knihovna)",
+ "draw_quality.revert_off": "Není co vrátit: hodnoty odpovídají uloženým"
 }

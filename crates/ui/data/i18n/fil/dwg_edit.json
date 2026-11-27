@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Tapusin",
  "dwg_edit.close": "Isara at tapusin",
  "dwg_edit.cancel": "Burahin ang mga punto",
- "dwg_edit.layer_pick": "Pumili ng layer"
+ "dwg_edit.layer_pick": "Pumili ng layer",
+ "dwg_edit.finish_off": "Magdagdag ng hindi bababa sa 2 punto para tapusin ang polyline",
+ "dwg_edit.close_off": "Magdagdag ng hindi bababa sa 3 punto para isara ang polyline"
 }

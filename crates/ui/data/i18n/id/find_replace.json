@@ -43,5 +43,6 @@
  "find_replace.replace": "Ganti",
  "find_replace.replace_all": "Ganti semua ({n})",
  "find_replace.close": "Tutup",
- "find_replace.err": "Penggantian gagal: {e}"
+ "find_replace.err": "Penggantian gagal: {e}",
+ "find_replace.replace_one_off": "Pilih hasil yang memiliki sesuatu untuk diganti"
 }

@@ -43,5 +43,6 @@
  "find_replace.replace": "Zamijeni",
  "find_replace.replace_all": "Zamijeni sve ({n})",
  "find_replace.close": "Zatvori",
- "find_replace.err": "Zamjena nije uspjela: {e}"
+ "find_replace.err": "Zamjena nije uspjela: {e}",
+ "find_replace.replace_one_off": "Odaberite rezultat koji ima što zamijeniti"
 }

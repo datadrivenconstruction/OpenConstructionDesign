@@ -715,3 +715,23 @@ fn every_example_script_runs_on_a_new_project() {
     }
     assert!(n >= 2, "examples/ holds {n} scripts");
 }
+
+#[test]
+fn option_value_is_not_the_next_option() {
+    let d = tmp("opt_value");
+    let o = ddc(&["new", s(&d.join("a.ddc")), "--name", "--force"]);
+    assert_eq!(o.status.code(), Some(2));
+    assert!(String::from_utf8_lossy(&o.stderr).contains("needs a value"));
+    let o = ddc(&["new", s(&d.join("a.ddc")), "--out", "--force"]);
+    assert_eq!(o.status.code(), Some(2));
+    assert!(!d.join("--force").exists());
+}
+
+#[test]
+fn json_without_a_command_is_a_usage_error() {
+    let o = ddc(&["--json"]);
+    assert_eq!(o.status.code(), Some(2));
+    let v = json(&o);
+    assert_eq!(v["ok"], false);
+    assert!(v["error"].is_string());
+}

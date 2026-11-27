@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Παράθυρα",
  "dlg.dw.class.rooms": "Χώροι",
  "dlg.dw.class.grids": "Κάνναβοι",
- "dlg.dw.class.columns": "Κολώνες"
+ "dlg.dw.class.columns": "Κολώνες",
+ "dlg.dw.rules_empty": "Δεν υπάρχουν ακόμη κανόνες μπλοκ. Πατήστε «{add}» για να δημιουργήσετε τον πρώτο: μάσκα ονόματος μπλοκ, τι είναι και η οικογένεια."
 }

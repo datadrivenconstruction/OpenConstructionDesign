@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Ramen",
  "dlg.dw.class.rooms": "Ruimten",
  "dlg.dw.class.grids": "Rasters",
- "dlg.dw.class.columns": "Kolommen"
+ "dlg.dw.class.columns": "Kolommen",
+ "dlg.dw.rules_empty": "Nog geen blokregels. Druk op \"{add}\" om de eerste te maken: een masker voor de bloknaam, wat het is en de familie."
 }

@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Додайте принаймні одне сімейство ліній",
  "draw_quality.lib.err.dashes": "Штрихи мають бути числами, розділеними пробілами",
  "draw_quality.lib.err.family": "Крок має бути більшим за нуль, а штрихи не можуть бути від'ємними",
- "draw_quality.lib.hatch_of": "{name} (бібліотека)"
+ "draw_quality.lib.hatch_of": "{name} (бібліотека)",
+ "draw_quality.revert_off": "Нічого скасовувати: значення збігаються зі збереженими"
 }

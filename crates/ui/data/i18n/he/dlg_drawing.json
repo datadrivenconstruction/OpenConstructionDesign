@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "חלונות",
  "dlg.dw.class.rooms": "חדרים",
  "dlg.dw.class.grids": "רשתות",
- "dlg.dw.class.columns": "עמודים"
+ "dlg.dw.class.columns": "עמודים",
+ "dlg.dw.rules_empty": "עדיין אין כללי בלוקים. לחצו על \"{add}\" כדי ליצור את הראשון: מסכת שם בלוק, מהו, והמשפחה."
 }

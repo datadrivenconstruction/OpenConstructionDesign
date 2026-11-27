@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "הוסף לפחות משפחת קווים אחת",
  "draw_quality.lib.err.dashes": "הקווקווים חייבים להיות מספרים מופרדים ברווח",
  "draw_quality.lib.err.family": "המרווח חייב להיות גדול מאפס והקווקווים לא יכולים להיות שליליים",
- "draw_quality.lib.hatch_of": "{name} (ספרייה)"
+ "draw_quality.lib.hatch_of": "{name} (ספרייה)",
+ "draw_quality.revert_off": "אין מה לשחזר: הערכים זהים לשמורים"
 }

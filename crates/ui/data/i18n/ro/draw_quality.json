@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Adăugați cel puțin o familie de linii",
  "draw_quality.lib.err.dashes": "Liniuțele trebuie să fie numere separate prin spații",
  "draw_quality.lib.err.family": "Distanța trebuie să fie peste zero, iar liniuțele nu pot fi negative",
- "draw_quality.lib.hatch_of": "{name} (bibliotecă)"
+ "draw_quality.lib.hatch_of": "{name} (bibliotecă)",
+ "draw_quality.revert_off": "Nimic de anulat: valorile coincid cu cele salvate"
 }

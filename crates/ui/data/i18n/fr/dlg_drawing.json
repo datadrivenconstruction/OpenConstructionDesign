@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Fenêtres",
  "dlg.dw.class.rooms": "Pièces",
  "dlg.dw.class.grids": "Trames",
- "dlg.dw.class.columns": "Poteaux"
+ "dlg.dw.class.columns": "Poteaux",
+ "dlg.dw.rules_empty": "Aucune règle de bloc pour l'instant. Appuyez sur \"{add}\" pour créer la première : un masque de nom de bloc, sa nature et la famille."
 }

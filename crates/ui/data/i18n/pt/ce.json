@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "Em eletroduto, embutido em parede",
  "ce.laying.clipped": "Fixado, aparente",
  "ce.laying.tray": "Em eletrocalha, ao ar livre",
- "ce.laying.ground": "Enterrado"
+ "ce.laying.ground": "Enterrado",
+ "ce.revert_off": "Nada a reverter: não há alterações não guardadas"
 }

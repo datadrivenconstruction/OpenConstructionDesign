@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Afronden",
  "dwg_edit.close": "Sluiten en afronden",
  "dwg_edit.cancel": "Punten wissen",
- "dwg_edit.layer_pick": "Kies een laag"
+ "dwg_edit.layer_pick": "Kies een laag",
+ "dwg_edit.finish_off": "Voeg minstens 2 punten toe om de polylijn af te maken",
+ "dwg_edit.close_off": "Voeg minstens 3 punten toe om de polylijn te sluiten"
 }

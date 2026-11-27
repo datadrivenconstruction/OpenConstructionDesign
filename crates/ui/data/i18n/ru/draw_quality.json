@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Добавьте хотя бы одно семейство линий",
  "draw_quality.lib.err.dashes": "Штрихи должны быть числами через пробел",
  "draw_quality.lib.err.family": "Шаг должен быть больше нуля, штрихи не могут быть отрицательными",
- "draw_quality.lib.hatch_of": "{name} (библиотека)"
+ "draw_quality.lib.hatch_of": "{name} (библиотека)",
+ "draw_quality.revert_off": "Нечего отменять: значения совпадают с сохранёнными"
 }

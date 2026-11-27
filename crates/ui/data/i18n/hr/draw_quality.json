@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Dodajte barem jednu obitelj linija",
  "draw_quality.lib.err.dashes": "Crtice moraju biti brojevi odvojeni razmakom",
  "draw_quality.lib.err.family": "Razmak mora biti veći od nule, a crtice ne mogu biti negativne",
- "draw_quality.lib.hatch_of": "{name} (biblioteka)"
+ "draw_quality.lib.hatch_of": "{name} (biblioteka)",
+ "draw_quality.revert_off": "Nema što poništiti: vrijednosti odgovaraju spremljenima"
 }

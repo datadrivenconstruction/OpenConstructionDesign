@@ -43,5 +43,6 @@
  "find_replace.replace": "Солих",
  "find_replace.replace_all": "Бүгдийг солих ({n})",
  "find_replace.close": "Хаах",
- "find_replace.err": "Солих амжилтгүй: {e}"
+ "find_replace.err": "Солих амжилтгүй: {e}",
+ "find_replace.replace_one_off": "Солих зүйлтэй үр дүнг сонгоно уу"
 }

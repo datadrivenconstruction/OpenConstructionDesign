@@ -11,5 +11,6 @@
  "options.primary_tip": "इसे सेट का प्राथमिक विकल्प बनाएँ",
  "options.select_first": "पहले मॉडल में तत्व चुनें",
  "options.show_3d": "3D में दिखाएँ: {name}",
- "options.show_plan": "प्लान में दिखाएँ: {name}"
+ "options.show_plan": "प्लान में दिखाएँ: {name}",
+ "options.type_name_first": "पहले नाम लिखें"
 }

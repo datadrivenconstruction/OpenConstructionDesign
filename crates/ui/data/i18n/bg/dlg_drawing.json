@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Прозорци",
  "dlg.dw.class.rooms": "Помещения",
  "dlg.dw.class.grids": "Оси",
- "dlg.dw.class.columns": "Колони"
+ "dlg.dw.class.columns": "Колони",
+ "dlg.dw.rules_empty": "Още няма правила за блокове. Натиснете „{add}“, за да създадете първото: маска за име на блок, какво представлява и семейството."
 }

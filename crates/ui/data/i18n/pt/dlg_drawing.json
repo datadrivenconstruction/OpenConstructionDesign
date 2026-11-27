@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Janelas",
  "dlg.dw.class.rooms": "Espaços",
  "dlg.dw.class.grids": "Malhas",
- "dlg.dw.class.columns": "Pilares"
+ "dlg.dw.class.columns": "Pilares",
+ "dlg.dw.rules_empty": "Ainda não há regras de bloco. Prima «{add}» para criar a primeira: uma máscara do nome do bloco, o que é e a família."
 }

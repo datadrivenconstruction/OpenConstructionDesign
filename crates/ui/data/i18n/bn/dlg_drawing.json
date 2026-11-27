@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "জানালা",
  "dlg.dw.class.rooms": "রুম",
  "dlg.dw.class.grids": "গ্রিড",
- "dlg.dw.class.columns": "কলাম"
+ "dlg.dw.class.columns": "কলাম",
+ "dlg.dw.rules_empty": "এখনও কোনো ব্লক নিয়ম নেই। প্রথমটি তৈরি করতে \"{add}\" চাপুন: ব্লকের নামের মাস্ক, এটি কী এবং ফ্যামিলি।"
 }

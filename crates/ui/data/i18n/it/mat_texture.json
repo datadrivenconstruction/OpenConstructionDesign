@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Usa immagine",
  "mat_texture.tex.hint": "Mostrata nello stile Realistico con qualità Bilanciata e Massima. La dimensione è in metri, uguale per ogni elemento.",
  "mat_texture.tex.bad_image": "Non è un'immagine PNG o JPEG leggibile (massimo 8192 px per lato)",
- "mat_texture.tex.too_big": "L'immagine supera 4 MB: usa un percorso di file o un'immagine più piccola"
+ "mat_texture.tex.too_big": "L'immagine supera 4 MB: usa un percorso di file o un'immagine più piccola",
+ "mat_texture.tex.use_image_off": "Inserisci prima il percorso di un file immagine"
 }

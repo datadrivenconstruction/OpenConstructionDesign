@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Käytä kuvaa",
  "mat_texture.tex.hint": "Näkyy Realistinen-tyylissä tasapainoisella ja enimmäislaadulla. Koko on metreinä, sama jokaisessa elementissä.",
  "mat_texture.tex.bad_image": "Tämä ei ole luettava PNG- tai JPEG-kuva (enintään 8192 px sivulta)",
- "mat_texture.tex.too_big": "Kuva on suurempi kuin 4 MB: käytä tiedostopolkua tai pienempää kuvaa"
+ "mat_texture.tex.too_big": "Kuva on suurempi kuin 4 MB: käytä tiedostopolkua tai pienempää kuvaa",
+ "mat_texture.tex.use_image_off": "Anna ensin kuvatiedoston polku"
 }

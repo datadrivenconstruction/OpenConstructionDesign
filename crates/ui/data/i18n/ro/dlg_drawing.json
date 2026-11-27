@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Ferestre",
  "dlg.dw.class.rooms": "Încăperi",
  "dlg.dw.class.grids": "Grile",
- "dlg.dw.class.columns": "Stâlpi"
+ "dlg.dw.class.columns": "Stâlpi",
+ "dlg.dw.rules_empty": "Încă nu există reguli de bloc. Apăsați „{add}” pentru a crea prima: o mască de nume de bloc, ce este și familia."
 }

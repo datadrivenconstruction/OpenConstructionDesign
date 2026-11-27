@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Magdagdag ng hindi bababa sa isang line family",
  "draw_quality.lib.err.dashes": "Dapat numero ang mga dash na pinaghihiwalay ng espasyo",
  "draw_quality.lib.err.family": "Dapat mas malaki sa zero ang spacing at hindi maaaring negatibo ang mga dash",
- "draw_quality.lib.hatch_of": "{name} (aklatan)"
+ "draw_quality.lib.hatch_of": "{name} (aklatan)",
+ "draw_quality.revert_off": "Walang ibabalik: pareho ang mga value sa na-save"
 }

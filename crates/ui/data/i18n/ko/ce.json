@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "배관 내, 벽 속",
  "ce.laying.clipped": "클립 고정, 노출",
  "ce.laying.tray": "케이블 트레이, 공중",
- "ce.laying.ground": "지중"
+ "ce.laying.ground": "지중",
+ "ce.revert_off": "되돌릴 항목 없음: 저장되지 않은 변경 사항이 없습니다"
 }

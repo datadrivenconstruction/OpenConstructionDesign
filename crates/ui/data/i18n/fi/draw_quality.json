@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Lisää vähintään yksi viivaperhe",
  "draw_quality.lib.err.dashes": "Viivojen on oltava lukuja, jotka on erotettu välilyönnein",
  "draw_quality.lib.err.family": "Välin on oltava suurempi kuin nolla, eivätkä viivat voi olla negatiivisia",
- "draw_quality.lib.hatch_of": "{name} (kirjasto)"
+ "draw_quality.lib.hatch_of": "{name} (kirjasto)",
+ "draw_quality.revert_off": "Ei peruttavaa: arvot vastaavat tallennettuja"
 }

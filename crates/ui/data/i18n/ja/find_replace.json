@@ -43,5 +43,6 @@
  "find_replace.replace": "置換",
  "find_replace.replace_all": "すべて置換 ({n})",
  "find_replace.close": "閉じる",
- "find_replace.err": "置換に失敗しました: {e}"
+ "find_replace.err": "置換に失敗しました: {e}",
+ "find_replace.replace_one_off": "置換対象のある結果を選択してください"
 }

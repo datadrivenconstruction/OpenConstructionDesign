@@ -11,5 +11,6 @@
  "options.primary_tip": "Мұны жиынның негізгі опциясы ету",
  "options.select_first": "Алдымен модельдегі элементтерді таңдаңыз",
  "options.show_3d": "3D-да көрсету: {name}",
- "options.show_plan": "Жоспарда көрсету: {name}"
+ "options.show_plan": "Жоспарда көрсету: {name}",
+ "options.type_name_first": "Алдымен атауын теріңіз"
 }

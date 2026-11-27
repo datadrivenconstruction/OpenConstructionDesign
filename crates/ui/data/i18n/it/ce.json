@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "In tubo, in parete",
  "ce.laying.clipped": "Fissato, a vista",
  "ce.laying.tray": "Passerella, in aria",
- "ce.laying.ground": "Interrato"
+ "ce.laying.ground": "Interrato",
+ "ce.revert_off": "Niente da ripristinare: nessuna modifica non salvata"
 }

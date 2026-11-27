@@ -119,8 +119,15 @@ fn execute(a: &RunArgs, quiet: bool) -> Outcome {
 
     let t = Instant::now();
     let level = match &a.level {
-        Some(n) => loaded.model.level_list().unwrap_or_default().into_iter().find(|l| &l.1 == n),
-        None => loaded.model.lowest_level().unwrap_or_default(),
+        Some(n) => loaded.model.level_list().map(|v| v.into_iter().find(|l| &l.1 == n)),
+        None => loaded.model.lowest_level(),
+    };
+    let level = match level {
+        Ok(l) => l,
+        Err(e) => {
+            o.steps.push(Step::fail("script", t, format!("cannot read the levels: {e}")));
+            return o;
+        }
     };
     let Some(level) = level else {
         let why = match &a.level {

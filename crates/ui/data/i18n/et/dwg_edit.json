@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Lõpeta",
  "dwg_edit.close": "Sulge ja lõpeta",
  "dwg_edit.cancel": "Tühjenda punktid",
- "dwg_edit.layer_pick": "Vali kiht"
+ "dwg_edit.layer_pick": "Vali kiht",
+ "dwg_edit.finish_off": "Joone lõpetamiseks lisage vähemalt 2 punkti",
+ "dwg_edit.close_off": "Joone sulgemiseks lisage vähemalt 3 punkti"
 }

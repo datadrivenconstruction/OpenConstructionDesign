@@ -26,5 +26,7 @@
  "dwg_edit.finish": "סיום",
  "dwg_edit.close": "סגירה וסיום",
  "dwg_edit.cancel": "ניקוי נקודות",
- "dwg_edit.layer_pick": "בחר שכבה"
+ "dwg_edit.layer_pick": "בחר שכבה",
+ "dwg_edit.finish_off": "הוסיפו לפחות 2 נקודות כדי לסיים את הפוליליין",
+ "dwg_edit.close_off": "הוסיפו לפחות 3 נקודות כדי לסגור את הפוליליין"
 }

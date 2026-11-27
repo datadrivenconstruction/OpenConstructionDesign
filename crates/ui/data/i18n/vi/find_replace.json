@@ -43,5 +43,6 @@
  "find_replace.replace": "Thay thế",
  "find_replace.replace_all": "Thay tất cả ({n})",
  "find_replace.close": "Đóng",
- "find_replace.err": "Thay thế thất bại: {e}"
+ "find_replace.err": "Thay thế thất bại: {e}",
+ "find_replace.replace_one_off": "Chọn một kết quả có nội dung cần thay thế"
 }

@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "Trong ống, âm tường",
  "ce.laying.clipped": "Kẹp, hở",
  "ce.laying.tray": "Máng cáp, treo không khí",
- "ce.laying.ground": "Chôn trong đất"
+ "ce.laying.ground": "Chôn trong đất",
+ "ce.revert_off": "Không có gì để hoàn tác: không có thay đổi chưa lưu"
 }

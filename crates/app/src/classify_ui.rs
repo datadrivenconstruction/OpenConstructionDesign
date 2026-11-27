@@ -280,9 +280,11 @@ pub fn body(ui: &mut egui::Ui, w: &mut Win, ed: &mut Editor, cat: &Catalog) -> b
     let (mut go, mut clear, mut close) = (false, false, false);
     kit::dialog_footer(ui, |ui| {
         go = kit::primary_action(ui, cat.t("cls.assign"), block.as_deref());
+        let clear_why = refusal(&w.system, None, &ts).map(|k| cat.t(k));
         clear = ui
             .add_enabled_ui(!clear_block, |ui| kit::secondary_button(ui, cat.t("cls.clear")))
             .inner
+            .on_disabled_hover_text(clear_why.unwrap_or_default())
             .clicked();
         close = kit::cancel_button(ui, cat.t("dlg.close")).clicked();
     });

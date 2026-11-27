@@ -43,5 +43,6 @@
  "find_replace.replace": "Αντικατάσταση",
  "find_replace.replace_all": "Αντικατάσταση όλων ({n})",
  "find_replace.close": "Κλείσιμο",
- "find_replace.err": "Η αντικατάσταση απέτυχε: {e}"
+ "find_replace.err": "Η αντικατάσταση απέτυχε: {e}",
+ "find_replace.replace_one_off": "Επιλέξτε ένα αποτέλεσμα που έχει κάτι προς αντικατάσταση"
 }

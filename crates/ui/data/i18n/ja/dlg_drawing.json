@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "窓",
  "dlg.dw.class.rooms": "部屋",
  "dlg.dw.class.grids": "通り芯",
- "dlg.dw.class.columns": "柱"
+ "dlg.dw.class.columns": "柱",
+ "dlg.dw.rules_empty": "ブロックルールはまだありません。「{add}」を押して最初のルールを作成します: ブロック名のマスク、その種類、ファミリ。"
 }

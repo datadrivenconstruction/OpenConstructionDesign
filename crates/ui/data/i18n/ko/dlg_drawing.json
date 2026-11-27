@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "창",
  "dlg.dw.class.rooms": "실",
  "dlg.dw.class.grids": "그리드",
- "dlg.dw.class.columns": "기둥"
+ "dlg.dw.class.columns": "기둥",
+ "dlg.dw.rules_empty": "블록 규칙이 아직 없습니다. \"{add}\"을(를) 눌러 첫 규칙을 만드세요: 블록 이름 마스크, 종류, 패밀리."
 }

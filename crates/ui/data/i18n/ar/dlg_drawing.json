@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "نوافذ",
  "dlg.dw.class.rooms": "غرف",
  "dlg.dw.class.grids": "شبكات",
- "dlg.dw.class.columns": "أعمدة"
+ "dlg.dw.class.columns": "أعمدة",
+ "dlg.dw.rules_empty": "لا توجد قواعد للكتل بعد. اضغط «{add}» لإنشاء الأولى: قناع اسم الكتلة، وما تمثله، والعائلة."
 }

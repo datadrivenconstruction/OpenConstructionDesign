@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "I rør, i væg",
  "ce.laying.clipped": "Clips, åben",
  "ce.laying.tray": "Kabelbakke, i luften",
- "ce.laying.ground": "I jorden"
+ "ce.laying.ground": "I jorden",
+ "ce.revert_off": "Intet at fortryde: ingen ugemte ændringer"
 }

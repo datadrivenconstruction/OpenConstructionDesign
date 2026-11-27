@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Lägg till minst en linjefamilj",
  "draw_quality.lib.err.dashes": "Streck måste vara tal åtskilda av mellanslag",
  "draw_quality.lib.err.family": "Avståndet måste vara större än noll och streck får inte vara negativa",
- "draw_quality.lib.hatch_of": "{name} (bibliotek)"
+ "draw_quality.lib.hatch_of": "{name} (bibliotek)",
+ "draw_quality.revert_off": "Inget att återställa: värdena stämmer med de sparade"
 }

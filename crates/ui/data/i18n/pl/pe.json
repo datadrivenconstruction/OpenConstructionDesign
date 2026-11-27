@@ -25,5 +25,7 @@
  "pe.kind_text": "tekst",
  "pe.kind_family_type": "typ rodziny",
  "pe.yes": "tak",
- "pe.no": "nie"
+ "pe.no": "nie",
+ "pe.empty_params": "Brak parametrów. Naciśnij „{add}” poniżej, aby dodać pierwszy.",
+ "pe.empty_sizes": "Brak parametrów typu do zwymiarowania. Dodaj parametr bez formuły i nieoznaczony jako egzemplarz, a pojawi się tutaj."
 }

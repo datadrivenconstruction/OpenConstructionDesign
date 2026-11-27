@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "Sa tubo, sa loob ng pader",
  "ce.laying.clipped": "Nakakabit sa ibabaw, nakalantad",
  "ce.laying.tray": "Cable tray, nakalantad sa hangin",
- "ce.laying.ground": "Sa ilalim ng lupa"
+ "ce.laying.ground": "Sa ilalim ng lupa",
+ "ce.revert_off": "Walang ibabalik: walang hindi na-save na pagbabago"
 }

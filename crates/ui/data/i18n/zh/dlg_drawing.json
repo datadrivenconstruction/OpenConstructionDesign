@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "窗",
  "dlg.dw.class.rooms": "房间",
  "dlg.dw.class.grids": "轴网",
- "dlg.dw.class.columns": "柱"
+ "dlg.dw.class.columns": "柱",
+ "dlg.dw.rules_empty": "尚无块规则。点击“{add}”创建第一条：块名掩码、其类别和族。"
 }

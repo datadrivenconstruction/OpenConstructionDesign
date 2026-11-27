@@ -26,5 +26,7 @@
  "dwg_edit.finish": "ختم",
  "dwg_edit.close": "بند کریں اور ختم",
  "dwg_edit.cancel": "پوائنٹس صاف کریں",
- "dwg_edit.layer_pick": "لیئر منتخب کریں"
+ "dwg_edit.layer_pick": "لیئر منتخب کریں",
+ "dwg_edit.finish_off": "پولی لائن مکمل کرنے کے لیے کم از کم 2 پوائنٹ شامل کریں",
+ "dwg_edit.close_off": "پولی لائن بند کرنے کے لیے کم از کم 3 پوائنٹ شامل کریں"
 }

@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "בצינור, בקיר",
  "ce.laying.clipped": "קלוע, גלוי",
  "ce.laying.tray": "מגש כבלים, באוויר",
- "ce.laying.ground": "באדמה"
+ "ce.laying.ground": "באדמה",
+ "ce.revert_off": "אין מה לשחזר: אין שינויים שלא נשמרו"
 }

@@ -43,5 +43,6 @@
  "find_replace.replace": "바꾸기",
  "find_replace.replace_all": "모두 바꾸기 ({n})",
  "find_replace.close": "닫기",
- "find_replace.err": "바꾸기 실패: {e}"
+ "find_replace.err": "바꾸기 실패: {e}",
+ "find_replace.replace_one_off": "바꿀 내용이 있는 결과를 선택하세요"
 }

@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "În tub, în perete",
  "ce.laying.clipped": "Fixat, aerian",
  "ce.laying.tray": "Pe jgheab pentru cabluri, în aer",
- "ce.laying.ground": "În pământ"
+ "ce.laying.ground": "În pământ",
+ "ce.revert_off": "Nimic de anulat: nu există modificări nesalvate"
 }

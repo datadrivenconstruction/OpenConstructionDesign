@@ -25,5 +25,7 @@
  "pe.kind_text": "văn bản",
  "pe.kind_family_type": "loại họ",
  "pe.yes": "có",
- "pe.no": "không"
+ "pe.no": "không",
+ "pe.empty_params": "Chưa có tham số. Nhấn \"{add}\" bên dưới để thêm tham số đầu tiên.",
+ "pe.empty_sizes": "Chưa có tham số loại cần định cỡ. Thêm một tham số không có công thức và không đánh dấu là thể hiện, nó sẽ xuất hiện ở đây."
 }

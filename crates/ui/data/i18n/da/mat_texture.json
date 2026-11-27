@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Brug billede",
  "mat_texture.tex.hint": "Vises i den realistiske stil ved Balanceret og Maksimal kvalitet. Størrelsen er i meter, ens for alle elementer.",
  "mat_texture.tex.bad_image": "Dette er ikke et læsbart PNG- eller JPEG-billede (højst 8192 px pr. side)",
- "mat_texture.tex.too_big": "Billedet er større end 4 MB: brug en filsti eller et mindre billede"
+ "mat_texture.tex.too_big": "Billedet er større end 4 MB: brug en filsti eller et mindre billede",
+ "mat_texture.tex.use_image_off": "Angiv først stien til en billedfil"
 }

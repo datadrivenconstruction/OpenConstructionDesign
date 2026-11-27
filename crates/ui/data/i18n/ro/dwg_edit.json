@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Terminare",
  "dwg_edit.close": "Închide și termină",
  "dwg_edit.cancel": "Șterge punctele",
- "dwg_edit.layer_pick": "Alegeți un strat"
+ "dwg_edit.layer_pick": "Alegeți un strat",
+ "dwg_edit.finish_off": "Adăugați cel puțin 2 puncte pentru a termina polilinia",
+ "dwg_edit.close_off": "Adăugați cel puțin 3 puncte pentru a închide polilinia"
 }

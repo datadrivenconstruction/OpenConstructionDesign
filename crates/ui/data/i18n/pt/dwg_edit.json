@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Concluir",
  "dwg_edit.close": "Fechar e concluir",
  "dwg_edit.cancel": "Limpar pontos",
- "dwg_edit.layer_pick": "Escolher uma camada"
+ "dwg_edit.layer_pick": "Escolher uma camada",
+ "dwg_edit.finish_off": "Adicione pelo menos 2 pontos para concluir a polilinha",
+ "dwg_edit.close_off": "Adicione pelo menos 3 pontos para fechar a polilinha"
 }

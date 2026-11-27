@@ -666,7 +666,8 @@ fn range_buttons(ui: &mut egui::Ui, ed: &mut Editor, st: &mut Win, level: i64, r
         }
         let revert = ui
             .add_enabled_ui(!same, |ui| kit::secondary_button(ui, t(ru, "draw_quality.revert")))
-            .inner;
+            .inner
+            .on_disabled_hover_text(t(ru, "draw_quality.revert_off"));
         if revert.clicked() {
             st.draft = st.saved;
         }

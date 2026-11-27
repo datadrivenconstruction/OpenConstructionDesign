@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Gamitin ang imahe",
  "mat_texture.tex.hint": "Ipinapakita sa Realistic style sa Balanse at Pinakamataas na kalidad. Nasa metro ang laki, pareho sa bawat elemento.",
  "mat_texture.tex.bad_image": "Hindi ito mabasang PNG o JPEG na imahe (hanggang 8192 px bawat gilid)",
- "mat_texture.tex.too_big": "Mas malaki sa 4 MB ang imahe: gumamit ng path ng file o mas maliit na imahe"
+ "mat_texture.tex.too_big": "Mas malaki sa 4 MB ang imahe: gumamit ng path ng file o mas maliit na imahe",
+ "mat_texture.tex.use_image_off": "Ilagay muna ang path ng image file"
 }

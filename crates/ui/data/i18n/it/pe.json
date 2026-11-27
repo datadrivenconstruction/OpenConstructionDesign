@@ -25,5 +25,7 @@
  "pe.kind_text": "testo",
  "pe.kind_family_type": "tipo di famiglia",
  "pe.yes": "sì",
- "pe.no": "no"
+ "pe.no": "no",
+ "pe.empty_params": "Ancora nessun parametro. Premi \"{add}\" sotto per aggiungere il primo.",
+ "pe.empty_sizes": "Nessun parametro di tipo da dimensionare. Aggiungi un parametro senza formula e non contrassegnato come istanza, e comparirà qui."
 }

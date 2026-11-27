@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Кеминде бир сызык үй-бүлөсүн кошуңуз",
  "draw_quality.lib.err.dashes": "Сызыктар боштук менен бөлүнгөн сандар болушу керек",
  "draw_quality.lib.err.family": "Аралык нөлдөн чоң болушу жана сызыктар терс болбошу керек",
- "draw_quality.lib.hatch_of": "{name} (китепкана)"
+ "draw_quality.lib.hatch_of": "{name} (китепкана)",
+ "draw_quality.revert_off": "Кайтарууга эч нерсе жок: маанилер сакталгандарга дал келет"
 }

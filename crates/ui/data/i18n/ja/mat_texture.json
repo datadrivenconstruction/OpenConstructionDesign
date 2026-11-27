@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "画像を使用",
  "mat_texture.tex.hint": "リアルスタイルのバランスおよび最高品質で表示されます。サイズはメートル単位で、すべての要素で同じです。",
  "mat_texture.tex.bad_image": "読み取り可能な PNG または JPEG 画像ではありません (一辺最大 8192 px)",
- "mat_texture.tex.too_big": "画像が 4 MB を超えています。ファイルパスを使うか、小さい画像を使用してください"
+ "mat_texture.tex.too_big": "画像が 4 MB を超えています。ファイルパスを使うか、小さい画像を使用してください",
+ "mat_texture.tex.use_image_off": "先に画像ファイルのパスを入力してください"
 }

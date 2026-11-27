@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "পাইপে, দেয়ালে",
  "ce.laying.clipped": "ক্লিপে, খোলা",
  "ce.laying.tray": "কেবল ট্রেতে, বাতাসে",
- "ce.laying.ground": "মাটির নিচে"
+ "ce.laying.ground": "মাটির নিচে",
+ "ce.revert_off": "পূর্বাবস্থায় ফেরানোর কিছু নেই: অসংরক্ষিত পরিবর্তন নেই"
 }

@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "في ماسورة، داخل جدار",
  "ce.laying.clipped": "مثبَّت بمشابك، في الهواء",
  "ce.laying.tray": "في حامل كابلات، في الهواء",
- "ce.laying.ground": "في التربة"
+ "ce.laying.ground": "في التربة",
+ "ce.revert_off": "لا شيء للتراجع عنه: لا توجد تغييرات غير محفوظة"
 }

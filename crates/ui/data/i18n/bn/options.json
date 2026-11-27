@@ -11,5 +11,6 @@
  "options.primary_tip": "এটিকে সেটের মূল অপশন করুন",
  "options.select_first": "আগে মডেলে উপাদান নির্বাচন করুন",
  "options.show_3d": "৩D-তে দেখান: {name}",
- "options.show_plan": "প্ল্যানে দেখান: {name}"
+ "options.show_plan": "প্ল্যানে দেখান: {name}",
+ "options.type_name_first": "আগে একটি নাম লিখুন"
 }

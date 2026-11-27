@@ -43,5 +43,6 @@
  "find_replace.replace": "Ауыстыру",
  "find_replace.replace_all": "Барлығын ауыстыру ({n})",
  "find_replace.close": "Жабу",
- "find_replace.err": "Ауыстыру сәтсіз: {e}"
+ "find_replace.err": "Ауыстыру сәтсіз: {e}",
+ "find_replace.replace_one_off": "Ауыстыратын нәрсесі бар нәтижені таңдаңыз"
 }

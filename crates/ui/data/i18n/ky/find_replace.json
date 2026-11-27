@@ -43,5 +43,6 @@
  "find_replace.replace": "Алмаштыруу",
  "find_replace.replace_all": "Бардыгын алмаштыруу ({n})",
  "find_replace.close": "Жабуу",
- "find_replace.err": "Алмаштыруу ишке ашкан жок: {e}"
+ "find_replace.err": "Алмаштыруу ишке ашкан жок: {e}",
+ "find_replace.replace_one_off": "Алмаштыра турган нерсеси бар жыйынтыкты тандаңыз"
 }

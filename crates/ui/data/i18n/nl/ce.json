@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "In buis, in wand",
  "ce.laying.clipped": "Geklemd, open",
  "ce.laying.tray": "Kabelgoot, in de lucht",
- "ce.laying.ground": "In de grond"
+ "ce.laying.ground": "In de grond",
+ "ce.revert_off": "Niets om terug te zetten: geen niet-opgeslagen wijzigingen"
 }

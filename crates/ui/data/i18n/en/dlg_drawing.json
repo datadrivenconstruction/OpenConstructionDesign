@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Windows",
  "dlg.dw.class.rooms": "Rooms",
  "dlg.dw.class.grids": "Grids",
- "dlg.dw.class.columns": "Columns"
+ "dlg.dw.class.columns": "Columns",
+ "dlg.dw.rules_empty": "No block rules yet. Press \"{add}\" to create the first one: a block name mask, what it is, and the family."
 }

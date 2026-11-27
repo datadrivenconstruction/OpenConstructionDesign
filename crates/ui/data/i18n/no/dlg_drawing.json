@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Vinduer",
  "dlg.dw.class.rooms": "Rom",
  "dlg.dw.class.grids": "Akser",
- "dlg.dw.class.columns": "Søyler"
+ "dlg.dw.class.columns": "Søyler",
+ "dlg.dw.rules_empty": "Ingen blokkregler ennå. Trykk «{add}» for å opprette den første: en blokknavnmaske, hva den er og familien."
 }

@@ -11,5 +11,6 @@
  "options.primary_tip": "Rendi questa l'opzione principale del set",
  "options.select_first": "Seleziona prima gli elementi nel modello",
  "options.show_3d": "Mostra in 3D: {name}",
- "options.show_plan": "Mostra in pianta: {name}"
+ "options.show_plan": "Mostra in pianta: {name}",
+ "options.type_name_first": "Digita prima un nome"
 }

@@ -942,6 +942,10 @@ impl EditorApp {
                     let width_hdr = crate::tr("dlg.dw.rule.width", &[]);
                     let width_id = ui.weak(width_hdr.as_str()).id;
                     ui.end_row();
+                    if ds.rules.0.is_empty() {
+                        ui.weak(crate::tr("dlg.dw.rules_empty", &[("add", &crate::tr("dlg.dw.add", &[]))]));
+                        ui.end_row();
+                    }
                     for (k, r) in ds.rules.0.iter_mut().enumerate() {
                         TextField::new(&mut r.pattern)
                             .id_salt(("ux58b.rule.pattern", k))

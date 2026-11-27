@@ -26,5 +26,7 @@
  "dwg_edit.finish": "समाप्त",
  "dwg_edit.close": "बंद करें और पूरा करें",
  "dwg_edit.cancel": "बिंदु साफ़ करें",
- "dwg_edit.layer_pick": "परत चुनें"
+ "dwg_edit.layer_pick": "परत चुनें",
+ "dwg_edit.finish_off": "पॉलीलाइन पूरी करने के लिए कम से कम 2 बिंदु जोड़ें",
+ "dwg_edit.close_off": "पॉलीलाइन बंद करने के लिए कम से कम 3 बिंदु जोड़ें"
 }

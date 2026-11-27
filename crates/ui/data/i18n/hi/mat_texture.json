@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "छवि उपयोग करें",
  "mat_texture.tex.hint": "Realistic शैली में Balanced और Maximum गुणवत्ता पर दिखता है। आकार मीटर में है, हर तत्व पर एक जैसा।",
  "mat_texture.tex.bad_image": "यह पढ़ने योग्य PNG या JPEG छवि नहीं है (अधिकतम 8192 px प्रति भुजा)",
- "mat_texture.tex.too_big": "छवि 4 MB से बड़ी है: फ़ाइल पथ या छोटी छवि का उपयोग करें"
+ "mat_texture.tex.too_big": "छवि 4 MB से बड़ी है: फ़ाइल पथ या छोटी छवि का उपयोग करें",
+ "mat_texture.tex.use_image_off": "पहले इमेज फ़ाइल का पथ दर्ज करें"
 }

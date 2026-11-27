@@ -154,5 +154,6 @@
  "dlg.dw.class.windows": "Fönster",
  "dlg.dw.class.rooms": "Rum",
  "dlg.dw.class.grids": "Axelnät",
- "dlg.dw.class.columns": "Pelare"
+ "dlg.dw.class.columns": "Pelare",
+ "dlg.dw.rules_empty": "Inga blockregler ännu. Tryck på ”{add}” för att skapa den första: en blocknamnsmask, vad det är och familjen."
 }

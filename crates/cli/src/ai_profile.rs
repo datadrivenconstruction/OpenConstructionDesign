@@ -52,7 +52,11 @@ pub const USAGE: &str = "\
 ";
 
 pub(crate) fn value(it: &mut dyn Iterator<Item = String>, flag: &str) -> Result<String, String> {
-    it.next().ok_or(format!("{flag} needs a value"))
+    let v = it.next().ok_or(format!("{flag} needs a value"))?;
+    if v.starts_with("--") {
+        return Err(format!("{flag} needs a value, got the option {v}"));
+    }
+    Ok(v)
 }
 
 pub(crate) fn number(it: &mut dyn Iterator<Item = String>, flag: &str) -> Result<f64, String> {

@@ -47,5 +47,7 @@
  "data_export.dwgpick.none": "No hay primitivas de dibujo en el recuadro",
  "data_export.dwgpick.box": "Primitivas seleccionadas: {n}",
  "data_export.dwgpick.box_rings": "Primitivas seleccionadas: {n}, contornos cerrados: {rings}",
- "data_export.dwgpick.layer": "Capa {layer}: primitivas seleccionadas {n}"
+ "data_export.dwgpick.layer": "Capa {layer}: primitivas seleccionadas {n}",
+ "data_export.info.doc_lang_ui": "Como la interfaz",
+ "data_export.info.doc_lang": "Idioma del dibujo"
 }

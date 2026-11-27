@@ -11,5 +11,6 @@
  "options.primary_tip": "Зробити це основним варіантом набору",
  "options.select_first": "Спочатку виберіть елементи в моделі",
  "options.show_3d": "Показати в 3D: {name}",
- "options.show_plan": "Показати в плані: {name}"
+ "options.show_plan": "Показати в плані: {name}",
+ "options.type_name_first": "Спершу введіть назву"
 }

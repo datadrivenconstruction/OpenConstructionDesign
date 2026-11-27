@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Afbeelding gebruiken",
  "mat_texture.tex.hint": "Getoond in de Realistische stijl bij Gebalanceerde en Maximale kwaliteit. Maat in meters, hetzelfde op elk element.",
  "mat_texture.tex.bad_image": "Dit is geen leesbare PNG- of JPEG-afbeelding (maximaal 8192 px per zijde)",
- "mat_texture.tex.too_big": "De afbeelding is groter dan 4 MB: gebruik een bestandspad of een kleinere afbeelding"
+ "mat_texture.tex.too_big": "De afbeelding is groter dan 4 MB: gebruik een bestandspad of een kleinere afbeelding",
+ "mat_texture.tex.use_image_off": "Voer eerst het pad van een afbeeldingsbestand in"
 }

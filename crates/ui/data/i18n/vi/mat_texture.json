@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Dùng ảnh",
  "mat_texture.tex.hint": "Hiển thị ở kiểu Thực tế với chất lượng Cân bằng và Tối đa. Kích thước tính bằng mét, giống nhau trên mọi phần tử.",
  "mat_texture.tex.bad_image": "Đây không phải ảnh PNG hoặc JPEG đọc được (tối đa 8192 px mỗi cạnh)",
- "mat_texture.tex.too_big": "Ảnh lớn hơn 4 MB: hãy dùng đường dẫn tệp hoặc ảnh nhỏ hơn"
+ "mat_texture.tex.too_big": "Ảnh lớn hơn 4 MB: hãy dùng đường dẫn tệp hoặc ảnh nhỏ hơn",
+ "mat_texture.tex.use_image_off": "Hãy nhập đường dẫn tệp ảnh trước"
 }

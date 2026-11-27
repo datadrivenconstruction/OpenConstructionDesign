@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Аяқтау",
  "dwg_edit.close": "Жабу және аяқтау",
  "dwg_edit.cancel": "Нүктелерді тазалау",
- "dwg_edit.layer_pick": "Қабатты таңдаңыз"
+ "dwg_edit.layer_pick": "Қабатты таңдаңыз",
+ "dwg_edit.finish_off": "Полилинияны аяқтау үшін кемінде 2 нүкте қосыңыз",
+ "dwg_edit.close_off": "Полилинияны жабу үшін кемінде 3 нүкте қосыңыз"
 }

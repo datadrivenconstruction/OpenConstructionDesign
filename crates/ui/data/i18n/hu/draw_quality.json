@@ -114,5 +114,6 @@
  "draw_quality.lib.err.no_fams": "Adj hozzá legalább egy vonalcsaládot",
  "draw_quality.lib.err.dashes": "A szaggatásnak szóközzel elválasztott számoknak kell lennie",
  "draw_quality.lib.err.family": "A távolságnak nullánál nagyobbnak kell lennie, a szaggatás nem lehet negatív",
- "draw_quality.lib.hatch_of": "{name} (könyvtár)"
+ "draw_quality.lib.hatch_of": "{name} (könyvtár)",
+ "draw_quality.revert_off": "Nincs mit visszaállítani: az értékek megegyeznek a mentettekkel"
 }

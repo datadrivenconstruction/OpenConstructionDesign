@@ -11,5 +11,6 @@
  "options.primary_tip": "Ορίστε αυτή ως κύρια επιλογή του συνόλου",
  "options.select_first": "Επιλέξτε πρώτα στοιχεία στο μοντέλο",
  "options.show_3d": "Εμφάνιση σε 3D: {name}",
- "options.show_plan": "Εμφάνιση σε κάτοψη: {name}"
+ "options.show_plan": "Εμφάνιση σε κάτοψη: {name}",
+ "options.type_name_first": "Πληκτρολογήστε πρώτα ένα όνομα"
 }

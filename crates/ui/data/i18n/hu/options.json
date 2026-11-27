@@ -11,5 +11,6 @@
  "options.primary_tip": "A készlet főopciójává tétel",
  "options.select_first": "Előbb jelöljön ki elemeket a modellben",
  "options.show_3d": "Megjelenítés 3D-ben: {name}",
- "options.show_plan": "Megjelenítés alaprajzon: {name}"
+ "options.show_plan": "Megjelenítés alaprajzon: {name}",
+ "options.type_name_first": "Először adjon meg egy nevet"
 }

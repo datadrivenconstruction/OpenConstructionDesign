@@ -11,5 +11,6 @@
  "options.primary_tip": "Postavi ovo kao glavnu opciju skupa",
  "options.select_first": "Prvo odaberite elemente u modelu",
  "options.show_3d": "Prikaži u 3D: {name}",
- "options.show_plan": "Prikaži u tlocrtu: {name}"
+ "options.show_plan": "Prikaži u tlocrtu: {name}",
+ "options.type_name_first": "Prvo upišite naziv"
 }

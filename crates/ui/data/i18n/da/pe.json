@@ -25,5 +25,7 @@
  "pe.kind_text": "tekst",
  "pe.kind_family_type": "familietype",
  "pe.yes": "ja",
- "pe.no": "nej"
+ "pe.no": "nej",
+ "pe.empty_params": "Ingen parametre endnu. Tryk på \"{add}\" nedenfor for at tilføje den første.",
+ "pe.empty_sizes": "Ingen typeparametre at dimensionere. Tilføj en parameter uden formel, som ikke er markeret som instans, så vises den her."
 }

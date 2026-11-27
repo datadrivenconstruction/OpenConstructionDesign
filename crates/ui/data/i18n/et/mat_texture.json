@@ -21,5 +21,6 @@
  "mat_texture.tex.use_image": "Kasuta pilti",
  "mat_texture.tex.hint": "Näidatakse realistlikus stiilis tasakaalustatud ja maksimaalse kvaliteedi korral. Suurus on meetrites, kõigil elementidel ühesugune.",
  "mat_texture.tex.bad_image": "See ei ole loetav PNG- ega JPEG-pilt (kuni 8192 px küljelt)",
- "mat_texture.tex.too_big": "Pilt on suurem kui 4 MB: kasuta failiteed või väiksemat pilti"
+ "mat_texture.tex.too_big": "Pilt on suurem kui 4 MB: kasuta failiteed või väiksemat pilti",
+ "mat_texture.tex.use_image_off": "Sisestage esmalt pildifaili tee"
 }

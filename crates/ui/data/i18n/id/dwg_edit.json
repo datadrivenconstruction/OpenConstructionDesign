@@ -26,5 +26,7 @@
  "dwg_edit.finish": "Selesai",
  "dwg_edit.close": "Tutup dan selesai",
  "dwg_edit.cancel": "Hapus titik",
- "dwg_edit.layer_pick": "Pilih layer"
+ "dwg_edit.layer_pick": "Pilih layer",
+ "dwg_edit.finish_off": "Tambahkan minimal 2 titik untuk menyelesaikan polyline",
+ "dwg_edit.close_off": "Tambahkan minimal 3 titik untuk menutup polyline"
 }

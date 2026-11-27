@@ -78,5 +78,6 @@
  "ce.laying.conduit_wall": "У трубі, в стіні",
  "ce.laying.clipped": "Скобами, відкрито",
  "ce.laying.tray": "Кабельний лоток, на повітрі",
- "ce.laying.ground": "У землі"
+ "ce.laying.ground": "У землі",
+ "ce.revert_off": "Нічого скасовувати: немає незбережених змін"
 }

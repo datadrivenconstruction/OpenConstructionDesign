@@ -26,5 +26,7 @@
  "dwg_edit.finish": "เสร็จสิ้น",
  "dwg_edit.close": "ปิดและเสร็จสิ้น",
  "dwg_edit.cancel": "ล้างจุด",
- "dwg_edit.layer_pick": "เลือกเลเยอร์"
+ "dwg_edit.layer_pick": "เลือกเลเยอร์",
+ "dwg_edit.finish_off": "เพิ่มอย่างน้อย 2 จุดเพื่อจบโพลีไลน์",
+ "dwg_edit.close_off": "เพิ่มอย่างน้อย 3 จุดเพื่อปิดโพลีไลน์"
 }

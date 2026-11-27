@@ -43,5 +43,6 @@
  "find_replace.replace": "Ersätt",
  "find_replace.replace_all": "Ersätt alla ({n})",
  "find_replace.close": "Stäng",
- "find_replace.err": "Ersättningen misslyckades: {e}"
+ "find_replace.err": "Ersättningen misslyckades: {e}",
+ "find_replace.replace_one_off": "Välj ett resultat som har något att ersätta"
 }
