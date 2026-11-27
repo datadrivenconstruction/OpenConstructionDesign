@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} araç",
  "ai.stream.secs": "{n} sn",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Hâlâ model servisi bekleniyor",
+ "ai.stream.stalled": "Model hizmeti {n} sn'dir yanıt vermiyor",
+ "ai.stream.local": "Bu bilgisayarda çalışıyor, model hizmetini beklemiyor",
  "ai.stream.stop": "Durdur",
  "ai.stream.cancelled": "Durduruldu",
  "ai.stream.incomplete": "Taslak eksik. Modele hiçbir şey uygulanmadı."

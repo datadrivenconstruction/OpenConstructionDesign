@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} tools",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Still waiting for the model service",
+ "ai.stream.stalled": "The model service has not replied for {n} s",
+ "ai.stream.local": "Working on this computer, not waiting for the model service",
  "ai.stream.stop": "Stop",
  "ai.stream.cancelled": "Stopped",
  "ai.stream.incomplete": "The draft is incomplete. Nothing was applied to the model."

@@ -16,6 +16,8 @@ pub const GATEWAY_URL: &str = "https://openrouter.ai/api/v1";
 pub struct ModelInfo {
     pub id: String,
     pub context_tokens: Option<u32>,
+    /// The most the model may write in one reply (`top_provider.max_completion_tokens`).
+    pub max_output_tokens: Option<u32>,
     pub price_in_per_mtok: Option<f64>,
     pub price_out_per_mtok: Option<f64>,
 }
@@ -73,6 +75,12 @@ pub fn parse_model_infos(doc: &J) -> Vec<ModelInfo> {
                 id: id.to_string(),
                 context_tokens: m
                     .get("context_length")
+                    .and_then(J::as_u64)
+                    .and_then(|n| u32::try_from(n).ok())
+                    .filter(|&n| n > 0),
+                max_output_tokens: m
+                    .get("top_provider")
+                    .and_then(|t| t.get("max_completion_tokens"))
                     .and_then(J::as_u64)
                     .and_then(|n| u32::try_from(n).ok())
                     .filter(|&n| n > 0),
@@ -146,7 +154,7 @@ mod tests {
     #[test]
     fn model_list_prices_are_per_token_and_become_per_million() {
         let doc = json!({"data": [
-            {"id": "b/model", "context_length": 200000,
+            {"id": "b/model", "context_length": 200000, "top_provider": {"max_completion_tokens": 32000},
              "pricing": {"prompt": "0.000003", "completion": "0.000015"}},
             {"id": "a/free", "pricing": {"prompt": "0", "completion": 0}},
             {"id": "c/varies", "pricing": {"prompt": "-1", "completion": "x"}},
@@ -158,6 +166,7 @@ mod tests {
         assert_eq!(m[1].price_in_per_mtok, Some(3.0));
         assert_eq!(m[1].price_out_per_mtok, Some(15.0));
         assert_eq!(m[1].context_tokens, Some(200_000));
+        assert_eq!((m[1].max_output_tokens, m[0].max_output_tokens), (Some(32_000), None));
         assert_eq!(m[0].price_in_per_mtok, Some(0.0));
         assert_eq!(
             (m[2].price_in_per_mtok, m[2].price_out_per_mtok),

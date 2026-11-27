@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Stütze {b}×{h}",
-  "io.w.column_round": "Stütze Ø{d}",
-  "io.w.door": "Tür",
-  "io.w.window": "Fenster",
-  "io.w.room": "Raum",
-  "io.w.xl_read_only": "Schreibgeschützt: Wird beim Export aus dem Modell neu berechnet; Änderungen hier werden nicht übernommen."
+ "io.w.column_rect": "Stütze {b}×{h}",
+ "io.w.column_round": "Stütze Ø{d}",
+ "io.w.door": "Tür",
+ "io.w.window": "Fenster",
+ "io.w.room": "Raum",
+ "io.w.xl_read_only": "Schreibgeschützt: Wird beim Export aus dem Modell neu berechnet; Änderungen hier werden nicht übernommen."
 }

@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "숫자는 음수일 수 없습니다.",
  "ai.settings.unit_money": "통화",
  "ai.settings.unit_tokens": "토큰",
+ "ai.settings.unit_secs": "초",
+ "ai.settings.limits_defaults": "기본 한도: 턴당 {tokens}토큰과 {secs}초, 비용 한도 없음. 명령줄에서는 ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "100만 토큰당",
  "ai.settings.limits_hint": "0은 한도 없음을 뜻합니다. 거부된 값은 이전 한도를 그대로 둡니다."
 }

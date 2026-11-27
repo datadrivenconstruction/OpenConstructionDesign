@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} alat",
  "ai.stream.secs": "{n} dtk",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Masih menunggu layanan model",
+ "ai.stream.stalled": "Layanan model tidak membalas selama {n} d",
+ "ai.stream.local": "Bekerja di komputer ini, tidak menunggu layanan model",
  "ai.stream.stop": "Hentikan",
  "ai.stream.cancelled": "Dihentikan",
  "ai.stream.incomplete": "Draf belum lengkap. Tidak ada yang diterapkan ke model."

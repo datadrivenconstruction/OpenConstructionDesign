@@ -703,7 +703,12 @@ fn errors(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
             }
             (k, hint)
         }
-        (None, Some(what)) => (ErrKind::TurnLimit, cat.t(logic::turn_limit_key(what))),
+        (None, Some(what)) => {
+            let lim = connect::limits_of(&cx.ed.model);
+            let out = st.profiles.get(st.profile).map_or(0, |p| p.max_output_tokens);
+            let n = logic::turn_limit_value(what, &lim, out);
+            (ErrKind::TurnLimit, cat.tf(logic::turn_limit_key(what), &[("n", &n)]))
+        }
         (None, None) => return,
     };
     if st.retry.exhausted() {
@@ -1276,7 +1281,7 @@ fn status_line(
             if let Some(name) = &row.tool {
                 r.on_hover_text(cat.t(&logic::tool_key(name)));
             }
-            if row.stalled
+            if (row.stalled || row.local_busy)
                 && Button::quiet(&cat.t("ai.stream.stop"))
                     .small()
                     .tooltip(&cat.t("cmd.ai.cancel"), logic::STOP_KEYS)

@@ -319,13 +319,16 @@ pub fn snapshots_on(m: &Model) -> bool {
     snapshots_choice(m).unwrap_or(false)
 }
 
-fn limits_of(m: &Model) -> Limits {
+pub(crate) fn limits_of(m: &Model) -> Limits {
     let mut l = Limits::default();
     if let Some(v) = policy(m, "limits.max_cost").and_then(|v| v.parse().ok()) {
         l.max_cost = Some(v);
     }
     if let Some(v) = policy(m, "limits.max_turn_tokens").and_then(|v| v.parse().ok()) {
-        l.max_turn_tokens = v;
+        l.max_turn_tokens = if v == 0 { u64::MAX } else { v };
+    }
+    if let Some(v) = policy(m, "limits.max_wall_s").and_then(|v| v.parse::<f64>().ok()) {
+        l.max_wall_s = if v <= 0.0 { u32::MAX / 2 } else { v.clamp(10.0, 86_400.0) as u32 };
     }
     l
 }

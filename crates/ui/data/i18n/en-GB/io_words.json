@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Column {b}×{h}",
-  "io.w.column_round": "Column Ø{d}",
-  "io.w.door": "Door",
-  "io.w.window": "Window",
-  "io.w.room": "Room",
-  "io.w.xl_read_only": "Read-only: recomputed from the model on export; edits here are not applied."
+ "io.w.column_rect": "Column {b}×{h}",
+ "io.w.column_round": "Column Ø{d}",
+ "io.w.door": "Door",
+ "io.w.window": "Window",
+ "io.w.room": "Room",
+ "io.w.xl_read_only": "Read-only: recomputed from the model on export; edits here are not applied."
 }

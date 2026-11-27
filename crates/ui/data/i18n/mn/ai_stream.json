@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} хэрэгсэл",
  "ai.stream.secs": "{n} сек",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Загварын үйлчилгээг хүлээсээр байна",
+ "ai.stream.stalled": "Загварын үйлчилгээ {n} с хариу өгөөгүй байна",
+ "ai.stream.local": "Энэ компьютер дээр ажиллаж байна, загварын үйлчилгээг хүлээхгүй",
  "ai.stream.stop": "Зогсоох",
  "ai.stream.cancelled": "Зогссон",
  "ai.stream.incomplete": "Ноорог бүрэн биш байна. Загварт юу ч хэрэгжээгүй."

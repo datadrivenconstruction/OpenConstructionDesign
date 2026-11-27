@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Kolon {b}×{h}",
-  "io.w.column_round": "Kolon Ø{d}",
-  "io.w.door": "Kapı",
-  "io.w.window": "Pencere",
-  "io.w.room": "Oda",
-  "io.w.xl_read_only": "Salt okunur: dışa aktarırken modelden yeniden hesaplanır; buradaki düzenlemeler uygulanmaz."
+ "io.w.column_rect": "Kolon {b}×{h}",
+ "io.w.column_round": "Kolon Ø{d}",
+ "io.w.door": "Kapı",
+ "io.w.window": "Pencere",
+ "io.w.room": "Oda",
+ "io.w.xl_read_only": "Salt okunur: dışa aktarırken modelden yeniden hesaplanır; buradaki düzenlemeler uygulanmaz."
 }

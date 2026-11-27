@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Son manfiy bo'lishi mumkin emas.",
  "ai.settings.unit_money": "valyuta",
  "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_secs": "soniya",
+ "ai.settings.limits_defaults": "Standart cheklovlar: har navbatga {tokens} token va {secs} s, xarajat chegarasiz. Buyruq qatorida: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "1M token uchun",
  "ai.settings.limits_hint": "0 — chegarasiz. Rad etilgan qiymat oldingi chegarani saqlab qoladi."
 }

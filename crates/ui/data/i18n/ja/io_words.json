@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "柱 {b}×{h}",
-  "io.w.column_round": "柱 Ø{d}",
-  "io.w.door": "ドア",
-  "io.w.window": "窓",
-  "io.w.room": "部屋",
-  "io.w.xl_read_only": "読み取り専用：エクスポート時にモデルから再計算されます。ここでの編集は反映されません。"
+ "io.w.column_rect": "柱 {b}×{h}",
+ "io.w.column_round": "柱 Ø{d}",
+ "io.w.door": "ドア",
+ "io.w.window": "窓",
+ "io.w.room": "部屋",
+ "io.w.xl_read_only": "読み取り専用：エクスポート時にモデルから再計算されます。ここでの編集は反映されません。"
 }

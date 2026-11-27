@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Числото не може да бъде отрицателно.",
  "ai.settings.unit_money": "валута",
  "ai.settings.unit_tokens": "токена",
+ "ai.settings.unit_secs": "секунди",
+ "ai.settings.limits_defaults": "Стандартни лимити: {tokens} токена и {secs} с на ход, без лимит на разходите. В командния ред: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "за 1M токена",
  "ai.settings.limits_hint": "0 означава без лимит. Отхвърлена стойност оставя предишния лимит."
 }

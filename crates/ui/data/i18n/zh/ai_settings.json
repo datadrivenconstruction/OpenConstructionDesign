@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "数值不能为负数。",
  "ai.settings.unit_money": "货币",
  "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_secs": "秒",
+ "ai.settings.limits_defaults": "默认限制:每轮 {tokens} 个词元和 {secs} 秒,无费用上限。命令行中:ddc ai --max-tokens、--max-time-s、--budget-usd。",
  "ai.settings.unit_price": "每 100 万个 token",
  "ai.settings.limits_hint": "0 表示不限制。被拒绝的值将保留之前的限制。"
 }

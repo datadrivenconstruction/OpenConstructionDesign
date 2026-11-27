@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} курал",
  "ai.stream.secs": "{n} с",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Дагы эле модель кызматын күтүү",
+ "ai.stream.stalled": "Модель кызматы {n} с бою жооп бербей жатат",
+ "ai.stream.local": "Ушул компьютерде иштеп жатат, модель кызматын күтпөйт",
  "ai.stream.stop": "Токтотуу",
  "ai.stream.cancelled": "Токтотулду",
  "ai.stream.incomplete": "Черновик толук эмес. Моделге эч нерсе колдонулган жок."

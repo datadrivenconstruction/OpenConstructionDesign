@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Słup {b}×{h}",
-  "io.w.column_round": "Słup Ø{d}",
-  "io.w.door": "Drzwi",
-  "io.w.window": "Okno",
-  "io.w.room": "Pomieszczenie",
-  "io.w.xl_read_only": "Tylko do odczytu: przeliczane z modelu przy eksporcie; zmiany tutaj nie są stosowane."
+ "io.w.column_rect": "Słup {b}×{h}",
+ "io.w.column_round": "Słup Ø{d}",
+ "io.w.door": "Drzwi",
+ "io.w.window": "Okno",
+ "io.w.room": "Pomieszczenie",
+ "io.w.xl_read_only": "Tylko do odczytu: przeliczane z modelu przy eksporcie; zmiany tutaj nie są stosowane."
 }

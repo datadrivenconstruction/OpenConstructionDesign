@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "ตัวเลขต้องไม่ติดลบ",
  "ai.settings.unit_money": "สกุลเงิน",
  "ai.settings.unit_tokens": "โทเคน",
+ "ai.settings.unit_secs": "วินาที",
+ "ai.settings.limits_defaults": "ขีดจำกัดเริ่มต้น: {tokens} โทเคนและ {secs} วินาทีต่อรอบ ไม่จำกัดค่าใช้จ่าย ในบรรทัดคำสั่ง: ddc ai --max-tokens, --max-time-s, --budget-usd",
  "ai.settings.unit_price": "ต่อ 1M โทเคน",
  "ai.settings.limits_hint": "0 หมายถึงไม่มีขีดจำกัด ค่าที่ถูกปฏิเสธจะคงขีดจำกัดเดิมไว้"
 }

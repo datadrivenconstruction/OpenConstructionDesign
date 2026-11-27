@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} công cụ",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Vẫn đang chờ dịch vụ mô hình",
+ "ai.stream.stalled": "Dịch vụ mô hình không phản hồi trong {n} giây",
+ "ai.stream.local": "Đang chạy trên máy tính này, không chờ dịch vụ mô hình",
  "ai.stream.stop": "Dừng",
  "ai.stream.cancelled": "Đã dừng",
  "ai.stream.incomplete": "Bản nháp chưa hoàn chỉnh. Không có gì được áp dụng vào mô hình."

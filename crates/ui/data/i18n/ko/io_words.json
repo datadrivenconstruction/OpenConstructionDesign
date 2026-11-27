@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "기둥 {b}×{h}",
-  "io.w.column_round": "기둥 Ø{d}",
-  "io.w.door": "문",
-  "io.w.window": "창",
-  "io.w.room": "실",
-  "io.w.xl_read_only": "읽기 전용: 내보낼 때 모델에서 다시 계산되며, 여기서 수정한 내용은 적용되지 않습니다."
+ "io.w.column_rect": "기둥 {b}×{h}",
+ "io.w.column_round": "기둥 Ø{d}",
+ "io.w.door": "문",
+ "io.w.window": "창",
+ "io.w.room": "실",
+ "io.w.xl_read_only": "읽기 전용: 내보낼 때 모델에서 다시 계산되며, 여기서 수정한 내용은 적용되지 않습니다."
 }

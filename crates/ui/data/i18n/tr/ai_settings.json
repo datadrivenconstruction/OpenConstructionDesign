@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Sayı negatif olamaz.",
  "ai.settings.unit_money": "para birimi",
  "ai.settings.unit_tokens": "belirteç",
+ "ai.settings.unit_secs": "saniye",
+ "ai.settings.limits_defaults": "Varsayılan sınırlar: tur başına {tokens} jeton ve {secs} sn, maliyet sınırı yok. Komut satırında: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "1 milyon belirteç başına",
  "ai.settings.limits_hint": "0 sınır yok demektir. Reddedilen bir değer önceki sınırı korur."
 }

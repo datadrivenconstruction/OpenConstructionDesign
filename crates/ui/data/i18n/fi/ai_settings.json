@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Luku ei voi olla negatiivinen.",
  "ai.settings.unit_money": "valuutta",
  "ai.settings.unit_tokens": "tokenia",
+ "ai.settings.unit_secs": "sekuntia",
+ "ai.settings.limits_defaults": "Oletusrajat: {tokens} tokenia ja {secs} s vuoroa kohden, ei kustannusrajaa. Komentorivillä: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "per 1 M tokenia",
  "ai.settings.limits_hint": "0 tarkoittaa ei rajaa. Hylätty arvo jättää edellisen rajan voimaan."
 }

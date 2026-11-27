@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Pilastro {b}×{h}",
-  "io.w.column_round": "Pilastro Ø{d}",
-  "io.w.door": "Porta",
-  "io.w.window": "Finestra",
-  "io.w.room": "Locale",
-  "io.w.xl_read_only": "Sola lettura: ricalcolato dal modello all'esportazione; le modifiche qui non vengono applicate."
+ "io.w.column_rect": "Pilastro {b}×{h}",
+ "io.w.column_round": "Pilastro Ø{d}",
+ "io.w.door": "Porta",
+ "io.w.window": "Finestra",
+ "io.w.room": "Locale",
+ "io.w.xl_read_only": "Sola lettura: ricalcolato dal modello all'esportazione; le modifiche qui non vengono applicate."
 }

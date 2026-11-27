@@ -104,6 +104,9 @@ pub struct Request {
     /// Lets a large change through, as the card's switch does.
     pub allow_large: bool,
     pub turn_timeout: Duration,
+    /// Per-turn limits other than the cost; `None` keeps the stock one.
+    pub max_tokens: Option<u64>,
+    pub max_time_s: Option<u32>,
 }
 
 /// The money side before the first step: what one step may cost at most (a full context in, the
@@ -139,6 +142,8 @@ pub struct Report {
     pub tokens_out: u64,
     pub cost: Option<f64>,
     pub over_budget: bool,
+    /// The limit that ended the turn (`TurnEnd::LimitHit`): tokens, wall, cost, steps, output...
+    pub limit: Option<&'static str>,
     /// The undo step of the applied plan.
     pub applied: Option<i64>,
     pub failed: Option<String>,
@@ -213,6 +218,8 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
         profile: req.profile.clone(),
         limits: Limits {
             max_cost: req.budget,
+            max_turn_tokens: req.max_tokens.unwrap_or(Limits::default().max_turn_tokens),
+            max_wall_s: req.max_time_s.unwrap_or(Limits::default().max_wall_s),
             ..Limits::default()
         },
         session: format!("cli-{}", std::process::id()),
@@ -250,6 +257,7 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
                 }
             }
             UiEvent::Failed(e) => failed = Some(e.to_string()),
+            UiEvent::TurnDone(ddc_ai::TurnEnd::LimitHit(l)) => r.limit = Some(l),
             _ => {}
         }
         true
@@ -345,6 +353,8 @@ mod tests {
             apply,
             allow_large: false,
             turn_timeout: Duration::from_secs(120),
+            max_tokens: None,
+            max_time_s: None,
         }
     }
 

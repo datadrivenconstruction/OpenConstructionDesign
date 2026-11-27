@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Numărul nu poate fi negativ.",
  "ai.settings.unit_money": "monedă",
  "ai.settings.unit_tokens": "tokeni",
+ "ai.settings.unit_secs": "secunde",
+ "ai.settings.limits_defaults": "Limite implicite: {tokens} tokeni și {secs} s pe tură, fără limită de cost. În linia de comandă: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "la 1M tokeni",
  "ai.settings.limits_hint": "0 înseamnă fără limită. O valoare refuzată lasă în vigoare limita anterioară."
 }

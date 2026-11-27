@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} værktøjer",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Venter stadig på modeltjenesten",
+ "ai.stream.stalled": "Modeltjenesten har ikke svaret i {n} s",
+ "ai.stream.local": "Arbejder på denne computer uden at vente på modeltjenesten",
  "ai.stream.stop": "Afbryd",
  "ai.stream.cancelled": "Stoppet",
  "ai.stream.incomplete": "Udkastet er ufuldstændigt. Intet er anvendt på modellen."

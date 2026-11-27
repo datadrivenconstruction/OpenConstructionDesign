@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "عدد نمی‌تواند منفی باشد.",
  "ai.settings.unit_money": "واحد پول",
  "ai.settings.unit_tokens": "توکن",
+ "ai.settings.unit_secs": "ثانیه",
+ "ai.settings.limits_defaults": "محدودیت‌های پیش‌فرض: {tokens} توکن و {secs} ثانیه برای هر نوبت، بدون سقف هزینه. در خط فرمان: ddc ai --max-tokens، --max-time-s، --budget-usd.",
  "ai.settings.unit_price": "برای هر ۱ میلیون توکن",
  "ai.settings.limits_hint": "۰ یعنی بدون محدودیت. مقداری که پذیرفته نشود، محدودیت قبلی را نگه می‌دارد."
 }

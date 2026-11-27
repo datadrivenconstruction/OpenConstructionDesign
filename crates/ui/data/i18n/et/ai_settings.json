@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Arv ei saa olla negatiivne.",
  "ai.settings.unit_money": "valuuta",
  "ai.settings.unit_tokens": "žetooni",
+ "ai.settings.unit_secs": "sekundit",
+ "ai.settings.limits_defaults": "Vaikepiirangud: {tokens} tokenit ja {secs} s sammu kohta, kulupiirangut pole. Käsurealt: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "1M žetooni kohta",
  "ai.settings.limits_hint": "0 tähendab piiranguta. Tagasilükatud väärtus jätab eelmise piirangu alles."
 }

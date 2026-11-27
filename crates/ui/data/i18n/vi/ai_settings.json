@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Số không thể âm.",
  "ai.settings.unit_money": "đơn vị tiền tệ",
  "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_secs": "giây",
+ "ai.settings.limits_defaults": "Giới hạn mặc định: {tokens} token và {secs} giây mỗi lượt, không giới hạn chi phí. Trên dòng lệnh: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "trên 1 triệu token",
  "ai.settings.limits_hint": "0 nghĩa là không giới hạn. Giá trị bị từ chối sẽ giữ giới hạn trước đó."
 }

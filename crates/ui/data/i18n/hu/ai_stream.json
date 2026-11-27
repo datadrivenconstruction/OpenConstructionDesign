@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} eszköz",
  "ai.stream.secs": "{n} mp",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Még mindig várakozás az MI-modell szolgáltatására",
+ "ai.stream.stalled": "A modellszolgáltatás {n} mp óta nem válaszol",
+ "ai.stream.local": "Ezen a számítógépen dolgozik, nem vár a modellszolgáltatásra",
  "ai.stream.stop": "Leállítás",
  "ai.stream.cancelled": "Leállítva",
  "ai.stream.incomplete": "A vázlat hiányos. Semmi nem lett alkalmazva a modellre."

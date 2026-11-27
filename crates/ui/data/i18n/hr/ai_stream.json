@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} alata",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Još čekam servis modela",
+ "ai.stream.stalled": "Usluga modela ne odgovara već {n} s",
+ "ai.stream.local": "Radi na ovom računalu, ne čeka uslugu modela",
  "ai.stream.stop": "Zaustavi",
  "ai.stream.cancelled": "Zaustavljeno",
  "ai.stream.incomplete": "Nacrt je nepotpun. Ništa nije primijenjeno na model."

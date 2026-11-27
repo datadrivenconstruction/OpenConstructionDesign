@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Тоо сөрөг байж болохгүй.",
  "ai.settings.unit_money": "валют",
  "ai.settings.unit_tokens": "токен",
+ "ai.settings.unit_secs": "секунд",
+ "ai.settings.limits_defaults": "Үндсэн хязгаар: нэг эргэлтэд {tokens} токен, {secs} с, зардлын хязгааргүй. Тушаалын мөрөнд: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "1М токенд",
  "ai.settings.limits_hint": "0 нь хязгааргүй гэсэн үг. Татгалзсан утга өмнөх хязгаарыг хэвээр үлдээнэ."
 }

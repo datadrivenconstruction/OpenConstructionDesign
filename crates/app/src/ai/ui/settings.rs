@@ -103,8 +103,9 @@ pub struct Settings {
     keep_text: bool,
     max_cost: String,
     max_tokens: String,
+    max_wall: String,
     /// Refusal of the last typed cost / token limit (catalog key); the typed text stays.
-    limit_err: [Option<&'static str>; 2],
+    limit_err: [Option<&'static str>; 3],
     consents: Vec<String>,
     /// Set by the hosted preset: the address field takes focus on the next frame.
     focus_url: bool,
@@ -155,7 +156,14 @@ fn adopt_listed(
     if let Some(n) = m.context_tokens {
         p.context_tokens = n;
     }
+    // a long script or draft needs more than the stock 4096; the person's own value stays
+    if let Some(n) = m.max_output_tokens.filter(|_| p.max_output_tokens <= 4096) {
+        p.max_output_tokens = n.min(MAX_OUTPUT_DEFAULT);
+    }
 }
+
+/// The cap on a default taken from the model list: the model may allow more than a reply needs.
+const MAX_OUTPUT_DEFAULT: u32 = ddc_ai::limits::OUTPUT_DEFAULT_CAP.u32v();
 
 fn price_text(v: Option<f64>, mark: DecimalMark) -> String {
     v.map(|x| amount_text(x, mark)).unwrap_or_default()
@@ -244,7 +252,8 @@ impl Settings {
         let mark = units::ui_decimal_mark();
         self.max_cost = stored_text(m.ai_policy("limits.max_cost").ok().flatten(), mark);
         self.max_tokens = stored_text(m.ai_policy("limits.max_turn_tokens").ok().flatten(), mark);
-        self.limit_err = [None; 2];
+        self.max_wall = stored_text(m.ai_policy("limits.max_wall_s").ok().flatten(), mark);
+        self.limit_err = [None; 3];
         self.consents = consents_of(m);
         self.load_form();
     }
@@ -1239,8 +1248,27 @@ fn project(ui: &mut Ui, s: &mut Settings, cx: &Cx<'_>, acts: &mut Vec<Action>) {
                 &mut s.limit_err[1],
                 acts,
             );
+            limit_field(
+                ui,
+                cx,
+                &cat.t("ai.settings.max_wall"),
+                "limits.max_wall_s",
+                "ai.settings.unit_secs",
+                &mut s.max_wall,
+                &mut s.limit_err[2],
+                acts,
+            );
         });
     kit::caption(ui, th, &cat.t("ai.settings.limits_hint"));
+    let d = ddc_ai::Limits::default();
+    kit::caption(
+        ui,
+        th,
+        &cat.tf(
+            "ai.settings.limits_defaults",
+            &[("tokens", &d.max_turn_tokens.to_string()), ("secs", &d.max_wall_s.to_string())],
+        ),
+    );
     kit::section_title(ui, th, &cat.t("ai.settings.consents"));
     if s.consents.is_empty() {
         kit::caption(ui, th, &cat.t("ai.settings.consents_none"));
@@ -1396,11 +1424,13 @@ mod tests {
             price_in_per_mtok: i,
             price_out_per_mtok: o,
             context_tokens: c,
+            max_output_tokens: c.map(|_| 32_000),
         };
         s.take_models(vec![listed("a", Some(3.0), Some(15.0), Some(200_000)), listed("b", Some(1.0), None, None)]);
         assert_eq!(s.price_in, price_text(Some(3.0), mark), "the chosen model's prices fill an empty form");
         assert_eq!(s.price_out, price_text(Some(15.0), mark));
         assert_eq!(s.draft[0].context_tokens, 200_000);
+        assert_eq!(s.draft[0].max_output_tokens, 16_384, "a listed output cap becomes the default, capped");
         s.price_in = price_text(Some(9.0), mark);
         s.take_models(vec![listed("a", Some(3.0), Some(15.0), None)]);
         assert_eq!(s.price_in, price_text(Some(9.0), mark), "a typed price stays on a new list");

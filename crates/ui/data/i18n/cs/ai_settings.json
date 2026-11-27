@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Číslo nemůže být záporné.",
  "ai.settings.unit_money": "měna",
  "ai.settings.unit_tokens": "tokenů",
+ "ai.settings.unit_secs": "sekundy",
+ "ai.settings.limits_defaults": "Výchozí limity: {tokens} tokenů a {secs} s na tah, bez limitu nákladů. V příkazové řádce: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "za 1 M tokenů",
  "ai.settings.limits_hint": "0 znamená bez limitu. Odmítnutá hodnota ponechá předchozí limit."
 }

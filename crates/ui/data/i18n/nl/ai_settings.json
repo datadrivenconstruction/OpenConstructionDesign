@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Het getal kan niet negatief zijn.",
  "ai.settings.unit_money": "valuta",
  "ai.settings.unit_tokens": "tokens",
+ "ai.settings.unit_secs": "seconden",
+ "ai.settings.limits_defaults": "Standaardlimieten: {tokens} tokens en {secs} s per beurt, geen kostenlimiet. Op de opdrachtregel: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "per 1 miljoen tokens",
  "ai.settings.limits_hint": "0 betekent geen limiet. Een geweigerde waarde laat de vorige limiet staan."
 }

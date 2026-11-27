@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Hindi maaaring negatibo ang numero.",
  "ai.settings.unit_money": "pera",
  "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_secs": "segundo",
+ "ai.settings.limits_defaults": "Default na limitasyon: {tokens} token at {secs} s kada turn, walang limitasyon sa gastos. Sa command line: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "bawat 1M tokens",
  "ai.settings.limits_hint": "0 ay walang limitasyon. Kapag tinanggihan ang halaga, mananatili ang nakaraang limitasyon."
 }

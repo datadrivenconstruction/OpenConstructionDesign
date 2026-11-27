@@ -359,6 +359,17 @@ pub fn turn_limit_key(what: &str) -> &'static str {
     }
 }
 
+/// The value of the limit that stopped a turn, as the message shows it.
+pub fn turn_limit_value(what: &str, l: &ddc_ai::Limits, max_output: u32) -> String {
+    match what {
+        "tokens" => l.max_turn_tokens.to_string(),
+        "wall" => l.max_wall_s.to_string(),
+        "cost" => l.max_cost.map(|c| format!("{c:.2}")).unwrap_or_default(),
+        "output" => max_output.to_string(),
+        _ => l.max_steps.to_string(),
+    }
+}
+
 /// `{0}`, `{1}`: the positional arguments of issue texts.
 /// The card's self-check line: rounds the critic ran and the findings still open.
 pub fn self_check_text(cat: &Catalog, sc: crate::ai::critic_hook::SelfCheck) -> String {

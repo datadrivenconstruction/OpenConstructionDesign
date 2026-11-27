@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} เครื่องมือ",
  "ai.stream.secs": "{n} วินาที",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "ยังรอบริการโมเดลอยู่",
+ "ai.stream.stalled": "บริการโมเดลไม่ตอบกลับมา {n} วินาทีแล้ว",
+ "ai.stream.local": "ทำงานบนคอมพิวเตอร์เครื่องนี้ ไม่รอบริการโมเดล",
  "ai.stream.stop": "หยุด",
  "ai.stream.cancelled": "หยุดแล้ว",
  "ai.stream.incomplete": "ฉบับร่างไม่สมบูรณ์ ยังไม่มีอะไรถูกนำไปใช้กับโมเดล"

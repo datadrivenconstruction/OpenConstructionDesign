@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Ο αριθμός δεν μπορεί να είναι αρνητικός.",
  "ai.settings.unit_money": "νόμισμα",
  "ai.settings.unit_tokens": "διακριτικά",
+ "ai.settings.unit_secs": "δευτερόλεπτα",
+ "ai.settings.limits_defaults": "Προεπιλεγμένα όρια: {tokens} tokens και {secs} δ ανά γύρο, χωρίς όριο κόστους. Στη γραμμή εντολών: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "ανά 1M tokens",
  "ai.settings.limits_hint": "0 σημαίνει χωρίς όριο. Μια τιμή που απορρίπτεται αφήνει σε ισχύ το προηγούμενο όριο."
 }

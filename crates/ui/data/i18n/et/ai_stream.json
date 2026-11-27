@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} tööriista",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Ootan veel mudeliteenust",
+ "ai.stream.stalled": "Mudeliteenus pole vastanud {n} s",
+ "ai.stream.local": "Töötab sellel arvutil, ootamata mudeliteenust",
  "ai.stream.stop": "Peata",
  "ai.stream.cancelled": "Peatatud",
  "ai.stream.incomplete": "Mustand on poolik. Midagi ei rakendatud mudelile."

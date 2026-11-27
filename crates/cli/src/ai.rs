@@ -24,6 +24,9 @@ pub struct AiArgs {
     /// A profile file (the JSON of one connection), or the id or name of a stored one.
     pub profile: String,
     pub budget_usd: Option<f64>,
+    /// Per-turn token and time limits; unset keeps the stock ones.
+    pub max_tokens: Option<u64>,
+    pub max_time_s: Option<u32>,
     pub apply: bool,
     pub allow_large: bool,
     pub timeout_s: u64,
@@ -31,12 +34,15 @@ pub struct AiArgs {
 
 pub const USAGE: &str = "\
   ddc ai \"<request>\" --profile <file|id|name> [--project <in.ddc>] [--out <out.ddc>]
-      [--budget-usd <N>] [--apply] [--allow-large] [--timeout-s <N>]
+      [--budget-usd <N>] [--max-tokens <N>] [--max-time-s <N>] [--apply] [--allow-large]
+      [--timeout-s <N>]
       The editor's assistant without the window. The plan is printed; with --apply it is applied
       as one undo step and the project saved to --out (the input is never overwritten).
       --profile: a connection file (as in ai_profiles.json) or a stored connection
       (ddc ai-profile list). The key: DDC_AI_KEY, else the system key store.
       --budget-usd stops the run when its cost at the connection prices reaches N.
+      --max-tokens (stock 200000) and --max-time-s (stock 600) bound one turn; a turn that hits
+      a limit says which and how to raise it.
       Before the run the cost of one step at most and the balance (when the server reports it)
       are printed.
 ";
@@ -59,6 +65,8 @@ pub fn parse(rest: &[OsString]) -> Result<(AiArgs, bool, bool), String> {
             "--out" | "-o" => a.out = Some(value(it, "--out")?.into()),
             "--profile" => a.profile = value(it, "--profile")?,
             "--budget-usd" => a.budget_usd = Some(number(it, "--budget-usd")?),
+            "--max-tokens" => a.max_tokens = Some(number(it, "--max-tokens")? as u64),
+            "--max-time-s" => a.max_time_s = Some(number(it, "--max-time-s")? as u32),
             "--apply" => a.apply = true,
             "--allow-large" => a.allow_large = true,
             "--timeout-s" => a.timeout_s = number(it, "--timeout-s")? as u64,
@@ -78,6 +86,9 @@ pub fn parse(rest: &[OsString]) -> Result<(AiArgs, bool, bool), String> {
     }
     if a.budget_usd.is_some_and(|b| b.is_nan() || b <= 0.0) {
         return Err("--budget-usd needs a positive number".into());
+    }
+    if a.max_tokens == Some(0) || a.max_time_s == Some(0) {
+        return Err("--max-tokens and --max-time-s need a positive number".into());
     }
     if a.project.is_some() && a.project == a.out {
         return Err("--out must differ from --project".into());
@@ -132,6 +143,8 @@ pub fn request(
         apply: a.apply,
         allow_large: a.allow_large,
         turn_timeout: Duration::from_secs(a.timeout_s.max(10)),
+        max_tokens: a.max_tokens,
+        max_time_s: a.max_time_s,
     }
 }
 
@@ -171,10 +184,28 @@ pub fn estimate_lines(r: &Report, budget: Option<f64>) -> Vec<String> {
 pub fn exit_of(r: &Report, apply: bool) -> i32 {
     if r.failed.is_some() {
         EXIT_FAILED
-    } else if (apply && r.applied.is_none()) || r.over_budget {
+    } else if (apply && r.applied.is_none()) || r.over_budget || r.limit.is_some() {
         EXIT_PARTIAL
     } else {
         EXIT_OK
+    }
+}
+
+/// Which limit ended the turn, its value, and the flag that raises it.
+pub fn limit_line(a: &AiArgs, what: &str) -> String {
+    let d = ddc_ai::Limits::default();
+    match what {
+        "tokens" => format!(
+            "stopped: the token limit per turn ({}) was reached; the work so far is in the plan above; raise it with --max-tokens N",
+            a.max_tokens.unwrap_or(d.max_turn_tokens)
+        ),
+        "wall" => format!(
+            "stopped: the time limit per turn ({} s) was reached; the work so far is in the plan above; raise it with --max-time-s N",
+            a.max_time_s.unwrap_or(d.max_wall_s)
+        ),
+        "cost" => "stopped: the cost limit was reached; raise it with --budget-usd N".to_string(),
+        "output" => "stopped: the model's answer kept hitting its output limit; raise it with --max-output N (ddc ai-profile)".to_string(),
+        other => format!("stopped: limit '{other}' was reached; narrow the request or ask again to continue"),
     }
 }
 
@@ -208,6 +239,10 @@ pub fn render(a: &AiArgs, r: &Report, lang: &str) -> String {
     if r.over_budget {
         t.push_str("stopped: the budget was reached\n");
     }
+    if let Some(l) = r.limit {
+        t.push_str(&limit_line(a, l));
+        t.push('\n');
+    }
     match (&r.failed, r.applied, &a.out) {
         (Some(e), _, _) => t.push_str(&format!("error: {}\n", ddc_ai::secret::scrub_known(e))),
         (None, Some(_), Some(out)) => {
@@ -229,7 +264,7 @@ pub fn report_json(a: &AiArgs, r: &Report, code: i32) -> serde_json::Value {
         "answer": r.answer, "items": r.items,
         "blocked": headless::issue_lines(r, "en"),
         "tokens_in": r.tokens_in, "tokens_out": r.tokens_out, "cost": r.cost,
-        "over_budget": r.over_budget, "applied": r.applied.is_some(),
+        "over_budget": r.over_budget, "limit": r.limit, "applied": r.applied.is_some(),
         "out": a.out.as_ref().filter(|_| r.applied.is_some()).map(|p| p.to_string_lossy().into_owned()),
         "error": r.failed.as_deref().map(ddc_ai::secret::scrub_known),
     })
@@ -359,6 +394,21 @@ mod tests {
             key_for(&p, Some("env".into()), &store).unwrap(),
             Some(Secret::new("env"))
         );
+    }
+
+    #[test]
+    fn turn_limits_parse_and_a_stop_names_the_limit() {
+        let os = |v: &[&str]| v.iter().map(OsString::from).collect::<Vec<_>>();
+        let (a, _, _) = parse(&os(&["x", "--profile", "p", "--max-tokens", "900000", "--max-time-s", "1800"])).unwrap();
+        assert_eq!((a.max_tokens, a.max_time_s), (Some(900_000), Some(1800)));
+        assert!(parse(&os(&["x", "--profile", "p", "--max-tokens", "0"])).is_err());
+        let mut r = Report::default();
+        r.limit = Some("tokens");
+        let t = render(&a, &r, "en");
+        assert!(t.contains("900000") && t.contains("--max-tokens"), "{t}");
+        assert_eq!(exit_of(&r, false), EXIT_PARTIAL);
+        r.limit = Some("wall");
+        assert!(render(&AiArgs::default(), &r, "en").contains("600 s"));
     }
 
     #[test]

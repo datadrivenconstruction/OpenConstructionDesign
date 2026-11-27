@@ -61,6 +61,10 @@ pub struct StatusRow {
     pub secs: u64,
     pub caret: bool,
     pub stalled: bool,
+    /// Whole seconds since the last sign of life.
+    pub quiet_secs: u64,
+    /// A tool runs here, not at the model service, and has been silent for a while.
+    pub local_busy: bool,
     /// The turn was stopped before it finished: any draft is partial and nothing was applied.
     pub incomplete: bool,
 }
@@ -74,6 +78,8 @@ impl StatusRow {
             secs: 0,
             caret: false,
             stalled: false,
+            quiet_secs: 0,
+            local_busy: false,
             incomplete: false,
         }
     }
@@ -131,7 +137,12 @@ pub fn stream_status(events: &[Ev], now: Instant) -> StatusRow {
     let upto = end.unwrap_or(now);
     row.secs = upto.saturating_duration_since(began).as_secs();
     if row.live() {
-        row.stalled = now.saturating_duration_since(last) >= STALL_AFTER;
+        let quiet = now.saturating_duration_since(last);
+        row.quiet_secs = quiet.as_secs();
+        // a running tool is this computer's work: the service is not the one that is slow
+        let long = quiet >= STALL_AFTER;
+        row.local_busy = long && row.phase == Phase::Reading;
+        row.stalled = long && !row.local_busy;
         row.caret = row.phase == Phase::Answering && !row.stalled;
     }
     row
@@ -162,7 +173,9 @@ pub fn push(events: &mut Vec<Ev>, e: Ev) {
 /// The row as one line: "Reading the model - 3 tools - 12 s".
 pub fn row_text(row: &StatusRow, tr: &dyn Fn(&str, &[(&str, &str)]) -> String) -> String {
     if row.stalled {
-        return tr("ai.stream.stalled", &[]);
+        let n = row.quiet_secs.to_string();
+        let total = tr("ai.stream.secs", &[("n", &row.secs.to_string())]);
+        return [tr("ai.stream.stalled", &[("n", &n)]), total].join(&tr("ai.stream.sep", &[]));
     }
     let phase = match row.phase {
         Phase::Idle => return String::new(),
@@ -172,7 +185,7 @@ pub fn row_text(row: &StatusRow, tr: &dyn Fn(&str, &[(&str, &str)]) -> String) -
         Phase::Working => "ai.stream.working",
         Phase::Answering => "ai.stream.answering",
     };
-    let mut parts = vec![tr(phase, &[])];
+    let mut parts = vec![tr(if row.local_busy { "ai.stream.local" } else { phase }, &[])];
     match row.tools {
         0 => {}
         1 => parts.push(tr("ai.stream.tools_one", &[])),
@@ -243,7 +256,7 @@ mod tests {
     #[test]
     fn stalls_after_twenty_seconds_without_data() {
         let b = Instant::now();
-        let v = log(b, &[(0, "start"), (2, "tool")]);
+        let v = log(b, &[(0, "start"), (2, "text")]);
         assert!(!stream_status(&v, at(b, 21)).stalled);
         assert!(stream_status(&v, at(b, 22)).stalled);
     }
@@ -303,7 +316,13 @@ mod tests {
         assert!(ru.contains("12") && ru.contains('3') && ru != line(Lang::En, &r));
         let v = log(b, &[(0, "start")]);
         let st = stream_status(&v, at(b, 30));
-        assert_eq!(line(Lang::En, &st), "Still waiting for the model service");
+        assert_eq!(line(Lang::En, &st), "The model service has not replied for 30 s \u{b7} 30 s");
+        // a tool that runs for long is work on this computer, not a slow service
+        let v = log(b, &[(0, "start"), (1, "tool")]);
+        let st = stream_status(&v, at(b, 61));
+        assert!(!st.stalled && st.local_busy);
+        assert!(line(Lang::En, &st).starts_with("Working on this computer"));
+        assert!(line(Lang::En, &st).ends_with("61 s"));
         assert_ne!(line(Lang::Ru, &st), line(Lang::En, &st));
     }
 
@@ -319,6 +338,7 @@ mod tests {
             "ai.stream.secs",
             "ai.stream.sep",
             "ai.stream.stalled",
+            "ai.stream.local",
             "ai.stream.stop",
             "ai.stream.cancelled",
             "ai.stream.incomplete",

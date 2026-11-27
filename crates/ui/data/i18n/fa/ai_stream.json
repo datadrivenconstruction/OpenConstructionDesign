@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} ابزار",
  "ai.stream.secs": "{n} ثانیه",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "هنوز منتظر سرویس مدل هوش مصنوعی",
+ "ai.stream.stalled": "سرویس مدل {n} ثانیه است پاسخ نداده",
+ "ai.stream.local": "روی این رایانه کار می‌کند و منتظر سرویس مدل نمی‌ماند",
  "ai.stream.stop": "توقف",
  "ai.stream.cancelled": "متوقف شد",
  "ai.stream.incomplete": "پیش‌نویس ناقص است. چیزی به مدل اعمال نشد."

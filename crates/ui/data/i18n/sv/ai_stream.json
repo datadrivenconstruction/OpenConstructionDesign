@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} verktyg",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Väntar fortfarande på modelltjänsten",
+ "ai.stream.stalled": "Modelltjänsten har inte svarat på {n} s",
+ "ai.stream.local": "Arbetar på den här datorn utan att vänta på modelltjänsten",
  "ai.stream.stop": "Stoppa",
  "ai.stream.cancelled": "Stoppad",
  "ai.stream.incomplete": "Utkastet är ofullständigt. Inget tillämpades på modellen."

@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Число не може бути від'ємним.",
  "ai.settings.unit_money": "валюта",
  "ai.settings.unit_tokens": "токенів",
+ "ai.settings.unit_secs": "секунди",
+ "ai.settings.limits_defaults": "Ліміти за замовчуванням: {tokens} токенів і {secs} с за хід, без ліміту вартості. У командному рядку: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "за 1 млн токенів",
  "ai.settings.limits_hint": "0 означає без ліміту. Відхилене значення залишає попередній ліміт."
 }

@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "সংখ্যাটি ঋণাত্মক হতে পারে না।",
  "ai.settings.unit_money": "মুদ্রা",
  "ai.settings.unit_tokens": "টোকেন",
+ "ai.settings.unit_secs": "সেকেন্ড",
+ "ai.settings.limits_defaults": "ডিফল্ট সীমা: প্রতি পালায় {tokens} টোকেন ও {secs} সে, খরচের সীমা নেই। কমান্ড লাইনে: ddc ai --max-tokens, --max-time-s, --budget-usd।",
  "ai.settings.unit_price": "প্রতি ১০ লাখ টোকেন",
  "ai.settings.limits_hint": "0 মানে কোনো সীমা নেই। প্রত্যাখ্যাত মান হলে আগের সীমা বজায় থাকে।"
 }

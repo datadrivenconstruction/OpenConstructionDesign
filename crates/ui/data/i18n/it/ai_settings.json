@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Il numero non può essere negativo.",
  "ai.settings.unit_money": "valuta",
  "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_secs": "secondi",
+ "ai.settings.limits_defaults": "Limiti predefiniti: {tokens} token e {secs} s per turno, nessun limite di costo. Da riga di comando: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "per 1M token",
  "ai.settings.limits_hint": "0 significa nessun limite. Un valore rifiutato lascia in vigore il limite precedente."
 }

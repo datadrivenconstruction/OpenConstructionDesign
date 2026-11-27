@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} na tool",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Naghihintay pa rin sa serbisyo ng model",
+ "ai.stream.stalled": "Hindi sumasagot ang serbisyo ng modelo sa loob ng {n} s",
+ "ai.stream.local": "Gumagana sa computer na ito, hindi naghihintay sa serbisyo ng modelo",
  "ai.stream.stop": "Itigil",
  "ai.stream.cancelled": "Itinigil",
  "ai.stream.incomplete": "Hindi kumpleto ang draft. Walang na-apply sa model."

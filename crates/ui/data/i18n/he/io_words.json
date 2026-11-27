@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "עמוד {b}×{h}",
-  "io.w.column_round": "עמוד Ø{d}",
-  "io.w.door": "דלת",
-  "io.w.window": "חלון",
-  "io.w.room": "חדר",
-  "io.w.xl_read_only": "לקריאה בלבד: מחושב מחדש מהמודל בעת הייצוא; עריכות כאן אינן מוחלות."
+ "io.w.column_rect": "עמוד {b}×{h}",
+ "io.w.column_round": "עמוד Ø{d}",
+ "io.w.door": "דלת",
+ "io.w.window": "חלון",
+ "io.w.room": "חדר",
+ "io.w.xl_read_only": "לקריאה בלבד: מחושב מחדש מהמודל בעת הייצוא; עריכות כאן אינן מוחלות."
 }

@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "Инструментов: {n}",
  "ai.stream.secs": "{n} с",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Сервис модели всё ещё не отвечает",
+ "ai.stream.stalled": "Сервис модели не отвечает уже {n} с",
+ "ai.stream.local": "Работает на этом компьютере, не ожидая сервис модели",
  "ai.stream.stop": "Остановить",
  "ai.stream.cancelled": "Остановлено",
  "ai.stream.incomplete": "Черновик неполный. В модель ничего не применено."

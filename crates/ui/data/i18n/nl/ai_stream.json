@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} hulpmiddelen",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Nog steeds wachten op de modelservice",
+ "ai.stream.stalled": "De modelservice reageert al {n} s niet",
+ "ai.stream.local": "Werkt op deze computer, wacht niet op de modelservice",
  "ai.stream.stop": "Stoppen",
  "ai.stream.cancelled": "Gestopt",
  "ai.stream.incomplete": "Het concept is onvolledig. Er is niets op het model toegepast."

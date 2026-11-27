@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "لا يمكن أن يكون الرقم سالباً.",
  "ai.settings.unit_money": "العملة",
  "ai.settings.unit_tokens": "رموز",
+ "ai.settings.unit_secs": "ثوانٍ",
+ "ai.settings.limits_defaults": "الحدود الافتراضية: {tokens} رمز و{secs} ث لكل دورة، دون حد للتكلفة. في سطر الأوامر: ddc ai --max-tokens، --max-time-s، --budget-usd.",
  "ai.settings.unit_price": "لكل مليون رمز",
  "ai.settings.limits_hint": "0 تعني بلا حد. القيمة المرفوضة تُبقي الحد السابق كما هو."
 }

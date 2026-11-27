@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Angka tidak boleh negatif.",
  "ai.settings.unit_money": "mata uang",
  "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_secs": "detik",
+ "ai.settings.limits_defaults": "Batas bawaan: {tokens} token dan {secs} d per giliran, tanpa batas biaya. Di baris perintah: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "per 1 juta token",
  "ai.settings.limits_hint": "0 berarti tanpa batas. Nilai yang ditolak membiarkan batas sebelumnya."
 }

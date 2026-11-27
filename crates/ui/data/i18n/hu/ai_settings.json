@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "A szám nem lehet negatív.",
  "ai.settings.unit_money": "pénznem",
  "ai.settings.unit_tokens": "token",
+ "ai.settings.unit_secs": "másodperc",
+ "ai.settings.limits_defaults": "Alapértelmezett korlátok: {tokens} token és {secs} mp körönként, költséghatár nélkül. Parancssorban: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "1M tokenenként",
  "ai.settings.limits_hint": "A 0 korlátlant jelent. Az elutasított érték a korábbi korlátot hagyja érvényben."
 }

@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} nástrojů",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Stále čekám na službu modelu",
+ "ai.stream.stalled": "Služba modelu neodpovídá již {n} s",
+ "ai.stream.local": "Pracuje v tomto počítači, nečeká na službu modelu",
  "ai.stream.stop": "Zastavit",
  "ai.stream.cancelled": "Zastaveno",
  "ai.stream.incomplete": "Návrh je neúplný. Do modelu nebylo nic použito."

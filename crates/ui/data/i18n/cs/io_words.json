@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Sloup {b}×{h}",
-  "io.w.column_round": "Sloup Ø{d}",
-  "io.w.door": "Dveře",
-  "io.w.window": "Okno",
-  "io.w.room": "Místnost",
-  "io.w.xl_read_only": "Pouze pro čtení: při exportu se přepočítá z modelu; zde provedené úpravy se neuplatní."
+ "io.w.column_rect": "Sloup {b}×{h}",
+ "io.w.column_round": "Sloup Ø{d}",
+ "io.w.door": "Dveře",
+ "io.w.window": "Okno",
+ "io.w.room": "Místnost",
+ "io.w.xl_read_only": "Pouze pro čtení: při exportu se přepočítá z modelu; zde provedené úpravy se neuplatní."
 }

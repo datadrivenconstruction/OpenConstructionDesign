@@ -239,6 +239,10 @@ limits! {
         tools: [], doc: "", src: ["ai/src/registry.rs::MAX_SHOWN_ID", "ai/src/convo.rs::MAX_NAME_IN_ERROR_CHARS"];
     SHRINKS = "shrinks", 3, Count, G, "context shrinking stops after this many tries",
         tools: [], doc: "", src: ["ai/src/convo.rs::MAX_SHRINKS"];
+    CONTINUES = "continues", 2, Count, G, "a reply cut off by the output limit is continued this many times",
+        tools: [], doc: "", src: ["ai/src/convo.rs::MAX_CONTINUES"];
+    OUTPUT_DEFAULT_CAP = "output_default_cap", 16_384, Count, G, "a default taken from a model list is capped",
+        tools: [], doc: "", src: ["app/src/ai/ui/settings.rs::MAX_OUTPUT_DEFAULT"];
     TYPES_PER_CALL = "types_per_call", 24, Count, G, "one plan item per type stays reviewable",
         tools: [], doc: "", src: ["app/src/ai/create_more.rs::MAX_TYPES_PER_CALL"];
     CRITIC_LISTED = "critic_listed", 12, Count, G, "findings listed per review cycle; the rest are counted",

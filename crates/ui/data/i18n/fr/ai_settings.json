@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Le nombre ne peut pas être négatif.",
  "ai.settings.unit_money": "devise",
  "ai.settings.unit_tokens": "jetons",
+ "ai.settings.unit_secs": "secondes",
+ "ai.settings.limits_defaults": "Limites par défaut : {tokens} jetons et {secs} s par tour, sans limite de coût. En ligne de commande : ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "par 1 M de jetons",
  "ai.settings.limits_hint": "0 signifie sans limite. Une valeur refusée conserve la limite précédente."
 }

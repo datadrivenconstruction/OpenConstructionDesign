@@ -70,6 +70,9 @@ fn with_note(text: String, note: &str, cap: usize) -> String {
 const REPEAT_NOTE: u32 = 2;
 /// ...and this many stops that tool for the rest of the turn (seen live: one refusal 27 times).
 const REPEAT_STOP: u32 = 4;
+/// How many times one turn asks a reply that the output limit cut off to go on.
+const MAX_CONTINUES: u32 = crate::limits::CONTINUES.u32v();
+const CONTINUE_NUDGE: &str = "Your last reply was cut off by the output limit. Continue exactly where it stopped, without repeating what you already wrote. If a script or call was cut, send it again in smaller parts.";
 const EMPTY_NUDGE: &str = "Your last reply was empty. Continue the task with the tools it needs, or give a final answer that says what was done, what is not done, and why.";
 
 /// Everything one step may bring in. Crossing it ends the turn as `LimitHit("output")`.
@@ -260,6 +263,7 @@ struct OpenTurn {
     steps: u32,
     tool_calls: u32,
     empty_replies: u32,
+    cut_replies: u32,
     /// per tool: the last refusal's signature and how many times in a row it came back
     repeats: std::collections::HashMap<String, (String, u32)>,
 }
@@ -813,6 +817,7 @@ impl Conversation {
             steps: 0,
             tool_calls: 0,
             empty_replies: 0,
+            cut_replies: 0,
             repeats: Default::default(),
         };
         self.drive(st, host, ev)
@@ -836,6 +841,7 @@ impl Conversation {
             mut steps,
             mut tool_calls,
             mut empty_replies,
+            mut cut_replies,
             mut repeats,
         } = st;
         loop {
@@ -884,6 +890,7 @@ impl Conversation {
                         steps: steps - 1,
                         tool_calls,
                         empty_replies,
+                        cut_replies,
                         repeats,
                     });
                     return Err(e);
@@ -946,6 +953,12 @@ impl Conversation {
                         role: Role::Assistant,
                         parts,
                     });
+                }
+                // cut by the output limit: ask for the rest instead of ending on half an answer
+                if matches!(finish, Some(FinishReason::Length)) && !self.messages.last().is_some_and(|m| m.role == Role::User) && cut_replies < MAX_CONTINUES {
+                    cut_replies += 1;
+                    self.messages.push(Message::text(Role::User, CONTINUE_NUDGE));
+                    continue;
                 }
                 return Ok(match finish {
                     Some(FinishReason::Length) => TurnEnd::LimitHit("output"),
@@ -2181,6 +2194,36 @@ mod tests {
             Ok(TurnEnd::LimitHit("wall"))
         );
         assert!(p.requests().is_empty());
+    }
+
+    #[test]
+    fn a_reply_cut_by_the_output_limit_is_continued() {
+        struct CutOnce(std::sync::atomic::AtomicU32);
+        impl Provider for CutOnce {
+            fn stream(
+                &self,
+                _r: &ChatRequest<'_>,
+                sink: &mut dyn FnMut(StreamEvent) -> Flow,
+            ) -> Result<(), ProviderError> {
+                let n = self.0.fetch_add(1, Ordering::SeqCst);
+                sink(StreamEvent::TextDelta(if n == 0 { "half " } else { "rest" }.to_string()));
+                sink(StreamEvent::Finish(if n == 0 { FinishReason::Length } else { FinishReason::Stop }));
+                Ok(())
+            }
+            fn list_models(&self) -> Result<Vec<String>, ProviderError> {
+                Ok(Vec::new())
+            }
+        }
+        let mut c = Conversation::new(
+            Arc::new(CutOnce(Default::default())),
+            profile(),
+            Limits::default(),
+            CancelToken::new(),
+        );
+        assert_eq!(turn(&mut c, Mode::ReadOnly, &mut Host::default()).0, Ok(TurnEnd::Answered));
+        let m = c.messages();
+        assert_eq!(m[m.len() - 1].parts[0], Part::Text("rest".to_string()));
+        assert_eq!(m[m.len() - 2].parts[0], Part::Text(CONTINUE_NUDGE.to_string()));
     }
 
     #[test]

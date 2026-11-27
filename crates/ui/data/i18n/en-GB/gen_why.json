@@ -51,6 +51,6 @@
  "gen.why.e.fix_canopy": "the entrance is not legible without a canopy",
  "gen.why.e.fix_bare_site": "the building stands on a bare site",
  "gen.why.e.fix_critic": "proposed by the design critic",
-  "gen.why.e.width_asked": "footprint {w} x {d} m: the width asked",
-  "gen.why.e.width_fit": "footprint {w} x {d} m: the width the rooms and the core need along the facade"
+ "gen.why.e.width_asked": "footprint {w} x {d} m: the width asked",
+ "gen.why.e.width_fit": "footprint {w} x {d} m: the width the rooms and the core need along the facade"
 }

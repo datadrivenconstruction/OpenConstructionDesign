@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "The number cannot be negative.",
  "ai.settings.unit_money": "currency",
  "ai.settings.unit_tokens": "tokens",
+ "ai.settings.unit_secs": "seconds",
+ "ai.settings.limits_defaults": "Stock limits: {tokens} tokens and {secs} s per turn, no cost limit. In the command line: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "per 1M tokens",
  "ai.settings.limits_hint": "0 means no limit. A value that is refused leaves the previous limit in place."
 }

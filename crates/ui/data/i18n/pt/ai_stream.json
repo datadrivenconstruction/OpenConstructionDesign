@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} ferramentas",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Ainda aguardando o serviço do modelo",
+ "ai.stream.stalled": "O serviço do modelo não responde há {n} s",
+ "ai.stream.local": "A trabalhar neste computador, sem esperar pelo serviço do modelo",
  "ai.stream.stop": "Parar",
  "ai.stream.cancelled": "Interrompido",
  "ai.stream.incomplete": "O rascunho está incompleto. Nada foi aplicado ao modelo."

@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} ٹولز",
  "ai.stream.secs": "{n} سیکنڈ",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "ابھی تک ماڈل سروس کا انتظار",
+ "ai.stream.stalled": "ماڈل سروس {n} سیکنڈ سے جواب نہیں دے رہی",
+ "ai.stream.local": "اس کمپیوٹر پر چل رہا ہے، ماڈل سروس کا انتظار نہیں کر رہا",
  "ai.stream.stop": "روکیں",
  "ai.stream.cancelled": "رک گیا",
  "ai.stream.incomplete": "مسودہ نامکمل ہے۔ ماڈل میں کچھ لاگو نہیں ہوا۔"

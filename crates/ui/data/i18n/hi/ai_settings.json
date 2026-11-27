@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "संख्या ऋणात्मक नहीं हो सकती।",
  "ai.settings.unit_money": "मुद्रा",
  "ai.settings.unit_tokens": "टोकन",
+ "ai.settings.unit_secs": "सेकंड",
+ "ai.settings.limits_defaults": "डिफ़ॉल्ट सीमाएँ: प्रति टर्न {tokens} टोकन और {secs} से, लागत की कोई सीमा नहीं। कमांड लाइन में: ddc ai --max-tokens, --max-time-s, --budget-usd।",
  "ai.settings.unit_price": "प्रति 10 लाख टोकन",
  "ai.settings.limits_hint": "0 का अर्थ है कोई सीमा नहीं। अस्वीकृत मान पिछली सीमा ही रखता है।"
 }

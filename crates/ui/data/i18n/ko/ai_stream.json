@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "도구 {n}개",
  "ai.stream.secs": "{n}초",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "모델 서비스를 계속 기다리는 중",
+ "ai.stream.stalled": "모델 서비스가 {n}초 동안 응답하지 않습니다",
+ "ai.stream.local": "이 컴퓨터에서 작업 중이며 모델 서비스를 기다리지 않습니다",
  "ai.stream.stop": "중지",
  "ai.stream.cancelled": "중지됨",
  "ai.stream.incomplete": "초안이 불완전합니다. 모델에는 아무것도 적용되지 않았습니다."

@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} strumenti",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "In attesa ancora del servizio del modello",
+ "ai.stream.stalled": "Il servizio del modello non risponde da {n} s",
+ "ai.stream.local": "In esecuzione su questo computer, senza attendere il servizio del modello",
  "ai.stream.stop": "Ferma",
  "ai.stream.cancelled": "Fermato",
  "ai.stream.incomplete": "La bozza è incompleta. Nulla è stato applicato al modello."

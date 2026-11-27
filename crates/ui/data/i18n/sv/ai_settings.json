@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Talet kan inte vara negativt.",
  "ai.settings.unit_money": "valuta",
  "ai.settings.unit_tokens": "tokenenheter",
+ "ai.settings.unit_secs": "sekunder",
+ "ai.settings.limits_defaults": "Standardgränser: {tokens} tokens och {secs} s per tur, ingen kostnadsgräns. På kommandoraden: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "per 1 miljon tokens",
  "ai.settings.limits_hint": "0 betyder ingen gräns. Ett värde som nekas lämnar den tidigare gränsen kvar."
 }

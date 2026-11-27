@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Сан терс болушу мүмкүн эмес.",
  "ai.settings.unit_money": "валюта",
  "ai.settings.unit_tokens": "токен",
+ "ai.settings.unit_secs": "секунд",
+ "ai.settings.limits_defaults": "Демейки чектөөлөр: бир айлампага {tokens} токен жана {secs} с, чыгымга чек жок. Буйрук сабында: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "1M токенге",
  "ai.settings.limits_hint": "0 — чек жок. Четке кагылган маани мурунку чекти калтырат."
 }

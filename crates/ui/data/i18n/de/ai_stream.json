@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} Werkzeuge",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Wartet immer noch auf den Modelldienst",
+ "ai.stream.stalled": "Der Modelldienst antwortet seit {n} s nicht",
+ "ai.stream.local": "Arbeitet auf diesem Computer, ohne auf den Modelldienst zu warten",
  "ai.stream.stop": "Stopp",
  "ai.stream.cancelled": "Gestoppt",
  "ai.stream.incomplete": "Der Entwurf ist unvollständig. Am Modell wurde nichts angewendet."

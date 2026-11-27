@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} 個のツール",
  "ai.stream.secs": "{n} 秒",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "モデルサービスの応答をまだ待っています",
+ "ai.stream.stalled": "モデルサービスから{n}秒間応答がありません",
+ "ai.stream.local": "このコンピューターで処理中(モデルサービスを待機していません)",
  "ai.stream.stop": "停止",
  "ai.stream.cancelled": "停止しました",
  "ai.stream.incomplete": "ドラフトは不完全です。モデルには何も適用されていません。"

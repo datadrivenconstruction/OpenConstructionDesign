@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "عدد منفی نہیں ہو سکتا۔",
  "ai.settings.unit_money": "کرنسی",
  "ai.settings.unit_tokens": "ٹوکن",
+ "ai.settings.unit_secs": "سیکنڈ",
+ "ai.settings.limits_defaults": "طے شدہ حدود: فی ٹرن {tokens} ٹوکن اور {secs} سیکنڈ، لاگت کی کوئی حد نہیں۔ کمانڈ لائن میں: ddc ai --max-tokens, --max-time-s, --budget-usd۔",
  "ai.settings.unit_price": "فی 1M ٹوکن",
  "ai.settings.limits_hint": "0 کا مطلب کوئی حد نہیں۔ جو قدر رد ہو وہ پچھلی حد برقرار رکھتی ہے۔"
 }

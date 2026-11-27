@@ -4,6 +4,8 @@
  "ai.settings.num_negative": "Сан теріс бола алмайды.",
  "ai.settings.unit_money": "валюта",
  "ai.settings.unit_tokens": "токен",
+ "ai.settings.unit_secs": "секунд",
+ "ai.settings.limits_defaults": "Әдепкі шектеулер: бір айналымға {tokens} токен және {secs} с, шығын шегі жоқ. Пәрмен жолында: ddc ai --max-tokens, --max-time-s, --budget-usd.",
  "ai.settings.unit_price": "1 млн токенге",
  "ai.settings.limits_hint": "0 — шек жоқ дегенді білдіреді. Қабылданбаған мән алдыңғы шекті қалдырады."
 }

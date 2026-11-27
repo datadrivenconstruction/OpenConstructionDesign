@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} כלים",
  "ai.stream.secs": "{n} שנ׳",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "עדיין ממתין לשירות המודל",
+ "ai.stream.stalled": "שירות המודל לא הגיב כבר {n} שנ׳",
+ "ai.stream.local": "פועל במחשב זה, ללא המתנה לשירות המודל",
  "ai.stream.stop": "עצור",
  "ai.stream.cancelled": "נעצר",
  "ai.stream.incomplete": "הטיוטה לא שלמה. שום דבר לא הוחל על המודל."

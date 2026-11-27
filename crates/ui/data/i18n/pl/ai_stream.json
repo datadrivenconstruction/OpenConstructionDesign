@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} narzędzi",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Wciąż czekam na usługę modelu AI",
+ "ai.stream.stalled": "Usługa modelu nie odpowiada od {n} s",
+ "ai.stream.local": "Praca na tym komputerze, bez czekania na usługę modelu",
  "ai.stream.stop": "Zatrzymaj",
  "ai.stream.cancelled": "Zatrzymano",
  "ai.stream.incomplete": "Szkic jest niekompletny. Nic nie zastosowano do modelu."

@@ -7,7 +7,8 @@
  "ai.stream.tools_many": "{n} ta vosita",
  "ai.stream.secs": "{n} s",
  "ai.stream.sep": " · ",
- "ai.stream.stalled": "Hali ham model xizmati javobi kutilmoqda",
+ "ai.stream.stalled": "Model xizmati {n} s davomida javob bermayapti",
+ "ai.stream.local": "Shu kompyuterda ishlamoqda, model xizmatini kutmaydi",
  "ai.stream.stop": "To'xtatish",
  "ai.stream.cancelled": "To'xtatildi",
  "ai.stream.incomplete": "Qoralama to'liq emas. Modelga hech narsa qo'llanmadi."

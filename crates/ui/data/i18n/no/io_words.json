@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Søyle {b}×{h}",
-  "io.w.column_round": "Søyle Ø{d}",
-  "io.w.door": "Dør",
-  "io.w.window": "Vindu",
-  "io.w.room": "Rom",
-  "io.w.xl_read_only": "Skrivebeskyttet: beregnes på nytt fra modellen ved eksport; endringer her brukes ikke."
+ "io.w.column_rect": "Søyle {b}×{h}",
+ "io.w.column_round": "Søyle Ø{d}",
+ "io.w.door": "Dør",
+ "io.w.window": "Vindu",
+ "io.w.room": "Rom",
+ "io.w.xl_read_only": "Skrivebeskyttet: beregnes på nytt fra modellen ved eksport; endringer her brukes ikke."
 }

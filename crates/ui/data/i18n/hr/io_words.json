@@ -1,8 +1,8 @@
 {
-  "io.w.column_rect": "Stup {b}×{h}",
-  "io.w.column_round": "Stup Ø{d}",
-  "io.w.door": "Vrata",
-  "io.w.window": "Prozor",
-  "io.w.room": "Prostorija",
-  "io.w.xl_read_only": "Samo za čitanje: pri izvozu ponovno se izračunava iz modela; izmjene ovdje se ne primjenjuju."
+ "io.w.column_rect": "Stup {b}×{h}",
+ "io.w.column_round": "Stup Ø{d}",
+ "io.w.door": "Vrata",
+ "io.w.window": "Prozor",
+ "io.w.room": "Prostorija",
+ "io.w.xl_read_only": "Samo za čitanje: pri izvozu ponovno se izračunava iz modela; izmjene ovdje se ne primjenjuju."
 }
