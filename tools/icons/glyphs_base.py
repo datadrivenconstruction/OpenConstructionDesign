@@ -15,9 +15,13 @@ def select(g):
 
 @icon("undo", "Undo")
 def undo(g):
-    """A rising hook into a solid head pointing back (left)."""
-    return [("L", g.p(("M", 20.25, 19.25), ("Q", 20.25, 8.75, 10.75, 8.75))),
-            ("K", g.poly([(3.25, 8.75), (10.75, 3.75), (10.75, 13.75)], True))]
+    """An open head pointing back (left) on a path that turns down and returns: a U-turn.
+    Per-size values keep the head symmetric and the arc tangent on every master."""
+    t, m, b = V(4.75, 3.75, 3.5), V(9.25, 7.75, 6.5), V(13.75, 11.75, 9.5)
+    hx, ax, r = V(9.25, 7.75, 6.5), V(14.25, 12.0, 9.5), V(5, 4.25, 3)
+    ex, bot, l = V(11.25, 9.25, 7.5), V(19.25, 16.25, 12.5), V(4.75, 3.75, 3.5)
+    return [("L", g.poly([(hx, t), (l, m), (hx, b)])),
+            ("L", g.p(("M", l, m), ("H", ax), ("A", r, 0, 1, ax, bot), ("H", ex)))]
 
 
 @icon("wall", "Wall")

@@ -646,9 +646,12 @@ reg("measure-3d", "Measure 3d", _badged(measure, "cube", (2, 7, 19, 24)))
 
 @icon("redo", "Redo")
 def redo(g):
-    """The undo hook mirrored: a solid head pointing forward (right)."""
-    return [("L", g.p(("M", 3.75, 19.25), ("Q", 3.75, 8.75, 13.25, 8.75))),
-            ("K", g.poly([(20.75, 8.75), (13.25, 3.75), (13.25, 13.75)], True))]
+    """The undo U-turn mirrored: an open head pointing forward (right)."""
+    t, m, b = V(4.75, 3.75, 3.5), V(9.25, 7.75, 6.5), V(13.75, 11.75, 9.5)
+    hx, ax, r = V(14.75, 12.25, 9.5), V(9.75, 8.0, 6.5), V(5, 4.25, 3)
+    ex, bot, rr = V(12.75, 10.75, 8.5), V(19.25, 16.25, 12.5), V(19.25, 16.25, 12.5)
+    return [("L", g.poly([(hx, t), (rr, m), (hx, b)])),
+            ("L", g.p(("M", rr, m), ("H", ax), ("A", r, 0, 0, ax, bot), ("H", ex)))]
 
 
 @icon("repeat", "Repeat")
