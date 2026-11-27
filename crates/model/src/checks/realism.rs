@@ -649,15 +649,42 @@ fn rule_floating(inp: &Input, out: &mut Vec<Issue>) {
 /// All pure rules, in the order the person reads them.
 pub fn analyze(inp: &Input) -> Vec<Issue> {
     let mut v = vec![];
-    rule_bent(inp, &mut v);
-    rule_axis(inp, &mut v);
-    rule_tiny(inp, &mut v);
-    rule_sliver(inp, &mut v);
-    rule_plate(inp, &mut v);
-    rule_bolt(inp, &mut v);
-    rule_rebar(inp, &mut v);
-    rule_stair(inp, &mut v);
-    rule_floating(inp, &mut v);
+    {
+        let _s = crate::perf::span("realism.bent");
+        rule_bent(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.axis");
+        rule_axis(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.tiny");
+        rule_tiny(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.sliver");
+        rule_sliver(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.plate");
+        rule_plate(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.bolt");
+        rule_bolt(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.rebar");
+        rule_rebar(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.stair");
+        rule_stair(inp, &mut v);
+    }
+    {
+        let _s = crate::perf::span("realism.floating");
+        rule_floating(inp, &mut v);
+    }
     v
 }
 
@@ -689,7 +716,9 @@ impl CheckRule for Realism {
         "realism"
     }
     fn run(&self, m: &Model, scope: &CheckScope, out: &mut Vec<Finding>) -> Result<(), Error> {
+        let collect = crate::perf::span("realism.collect");
         let inp = super::realism_input::collect(m)?;
+        drop(collect);
         into_findings(analyze(&inp), &Within::new(scope), self.id(), out);
         Ok(())
     }

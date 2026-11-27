@@ -164,6 +164,44 @@ fn build_on(
         .map_err(|e| e.0)
 }
 
+thread_local! {
+    /// Connections the add check built, taken by the recompute of the same operation so
+    /// a node is built once; keyed by everything [`build`] reads.
+    static CHECKED: std::cell::RefCell<HashMap<u64, (Conn, Vec<Member>)>> = Default::default();
+}
+
+fn checked_key(s: &SteelConnSpec, ms: &[Member]) -> u64 {
+    let mut h = DefaultHasher::new();
+    (s.kind.key(), members_text(&s.members), s.params.text(), format!("{ms:?}")).hash(&mut h);
+    h.finish()
+}
+
+/// [`build_on`], or the connection the add check built for these very inputs.
+fn build_once(
+    idx: &HashMap<(&'static str, i64), &Member>,
+    s: &SteelConnSpec,
+) -> Result<(Conn, Vec<Member>), String> {
+    let hit = CHECKED.with(|c| {
+        let mut c = c.borrow_mut();
+        if c.is_empty() {
+            return None;
+        }
+        let ms: Option<Vec<Member>> = s
+            .members
+            .iter()
+            .map(|(k, id)| {
+                let k = STEEL_MEMBER_KINDS.iter().find(|x| **x == k.as_str())?;
+                idx.get(&(*k, *id)).map(|m| (*m).clone())
+            })
+            .collect();
+        c.remove(&checked_key(s, &ms?))
+    });
+    match hit {
+        Some(b) => Ok(b),
+        None => build_on(idx, s),
+    }
+}
+
 /// Existing connections by their sorted member sets: one read of the table for a whole batch.
 type Have = HashMap<Vec<(String, i64)>, (i64, ConnKind)>;
 
@@ -213,9 +251,10 @@ fn spec_check_on(
     if lv == 0 {
         return Err(Error::Invalid(format!("steel_conn: no level {}", s.level)));
     }
-    build_on(idx, s)
-        .map(drop)
-        .map_err(|e| Error::Invalid(format!("steel_conn: {e}")))
+    let (c, ms) = build_on(idx, s).map_err(|e| Error::Invalid(format!("steel_conn: {e}")))?;
+    let key = checked_key(s, &ms);
+    CHECKED.with(|k| k.borrow_mut().insert(key, (c, ms)));
+    Ok(())
 }
 
 fn insert(db: &Connection, s: &SteelConnSpec) -> Result<i64, Error> {
@@ -383,7 +422,7 @@ fn sync_in(
         }
         REBUILT.with(|c| c.set(c.get() + 1));
         let mut said: Vec<String> = vec![];
-        let specs: Vec<SolidSpec> = match build_on(&idx, &s) {
+        let specs: Vec<SolidSpec> = match build_once(&idx, &s) {
             Ok((c, ms)) => {
                 for f in check(&c, &ms).iter().filter(|f| f.rule.is_error()) {
                     said.push(f.text.clone());
@@ -452,6 +491,7 @@ fn sync_in(
             }
         }
     }
+    CHECKED.with(|c| c.borrow_mut().clear());
     Ok(inv)
 }
 
@@ -897,12 +937,15 @@ impl Model {
         if ss.is_empty() {
             return Ok(vec![]);
         }
+        let prep = crate::perf::span("steel_conn.index");
         let built = conn_members(&self.db)?;
         let idx = index(&built);
         let have = have(&self.db, None)?;
+        drop(prep);
         // the members of each spec by their sorted refs: one hash lookup, not a scan of the
         // specs before it (thousands of gussets on a tower)
         let mut seen: HashMap<Vec<(String, i64)>, ConnKind> = HashMap::new();
+        let check = crate::perf::span("steel_conn.check");
         for s in ss {
             spec_check_on(&self.db, &idx, &have, s)?;
             if let Some(o) = seen.insert(sorted(&s.members), s.kind) {
@@ -913,6 +956,8 @@ impl Model {
                 )));
             }
         }
+        drop(check);
+        let _s = crate::perf::span("steel_conn.insert");
         self.insert_conns(ss)
     }
 

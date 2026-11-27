@@ -102,8 +102,15 @@ pub fn critic_note(c: &mut Core) -> Option<String> {
     if !flag(c, POLICY_CRITIC) {
         return None;
     }
-    let realism = realism::critique(&c.ed.model, &CheckScope::All).unwrap_or_default();
-    let checks = c.check_issues();
+    let _s = ddc_model::perf::span("ai.critic");
+    let realism = {
+        let _s = ddc_model::perf::span("ai.critic.realism");
+        realism::critique(&c.ed.model, &CheckScope::All).unwrap_or_default()
+    };
+    let checks = {
+        let _s = ddc_model::perf::span("ai.critic.checks");
+        c.check_issues()
+    };
     let cat = Catalog::new(Lang::En);
     let v = review(&realism, &checks, c.critic_cycles, max_cycles(), &cat);
     note(c, v)
@@ -180,6 +187,7 @@ pub fn snapshots(c: &mut Core) -> Vec<ImageData> {
     if !flag(c, POLICY_SNAP) || !c.allow_snapshots.load(Ordering::Relaxed) {
         return vec![];
     }
+    let _s = ddc_model::perf::span("ai.critic.snapshots");
     let mut out = vec![];
     for (yaw, pitch) in [(35.0, 30.0), (215.0, 30.0)] {
         if let Ok(r) = render_off::view3d(&c.ed, c.view.units, &view(yaw, pitch, false)) {
