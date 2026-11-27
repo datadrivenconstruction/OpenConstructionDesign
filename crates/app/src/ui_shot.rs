@@ -11,6 +11,7 @@
 //!   run CMD           a command id (arch.wall)    mode select|wall|rect
 //!   at X,Y            click the plan at model metres, through the canvas
 //!   hover X,Y         move the pointer there      tap X,Y         click at screen points
+//!   point X,Y         move the pointer to screen points (no click; hover in any view)
 //!   type TEXT         text into the focused field key enter|escape|tab|backspace
 //!   fold SPEC         as `--fold`                 settings PAGE   as `--settings-page`
 //!   ai-mode chat|build|review                     select-room NUMBER
@@ -35,7 +36,7 @@ pub struct Step {
 }
 
 const SETUP: [&str; 5] = ["size", "scale", "lang", "theme", "open"];
-const ACTIONS: [&str; 24] = [
+const ACTIONS: [&str; 25] = [
     "open-sheet",
     "onboard",
     "sheet-demo",
@@ -50,6 +51,7 @@ const ACTIONS: [&str; 24] = [
     "at",
     "hover",
     "tap",
+    "point",
     "type",
     "key",
     "fold",
@@ -312,6 +314,11 @@ pub fn run(
                     evs.push(vec![btn(p, false)]);
                 }
                 r.pass(&mut app, evs, 2);
+            }
+            "point" => {
+                let (x, y) = pair(s)?;
+                let p = egui::pos2(x as f32, y as f32);
+                r.pass(&mut app, vec![vec![egui::Event::PointerMoved(p)]], 2);
             }
             "tap" => {
                 let (x, y) = pair(s)?;

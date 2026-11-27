@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Smart defaults: the last type and sizes per category (kept between launches) are filled in when
-//! a tool starts; a tool started in 3D or a section switches the view to the current level's plan.
+//! a tool starts; a tool started in a section switches the view to the current level's plan (in 3D
+//! it stays: `edit3d::plan_route` routes it there).
 use crate::editor::Editor;
 use crate::shell::EditorApp;
 use crate::wall_tool::Mode;
@@ -22,12 +23,12 @@ pub fn tool_key(ed: &Editor) -> Option<String> {
     matches!(ed.wall_mode(), Mode::Polyline | Mode::Rect).then(|| "wall".into())
 }
 
-/// Once per frame: on tool start apply defaults and switch to plan; while active, remember values.
+/// Once per frame: on tool start apply defaults (a section gives way to plan); while active,
+/// remember values.
 pub fn track(app: &mut EditorApp) {
     let k = tool_key(&app.ed);
     if k != app.quick.tool_was && k.is_some() {
-        if app.view3d || app.section.is_some() {
-            app.view3d = false;
+        if app.section.is_some() {
             app.section = None;
         }
         restore(&mut app.ed, &app.quick.ux);
@@ -162,7 +163,7 @@ mod tests {
         a.ed.opening_mode = false;
         track(&mut a);
         assert_eq!(a.quick.tool_was, None);
-        // new session: the same defaults; starting from 3D switches to plan
+        // new session: the same defaults; a tool started in 3D stays there
         let ux = a.quick.ux.clone();
         let mut b = EditorApp::new(Editor::new_in_memory().unwrap(), None, "test".into());
         b.quick.ux = ux;
@@ -170,7 +171,7 @@ mod tests {
         b.run("arch.door");
         track(&mut b);
         assert!((b.ed.otool.ty.width - 1.25).abs() < 1e-9);
-        assert!(!b.view3d);
+        assert!(b.view3d);
         // walls: height
         b.ed.set_mode(Mode::Select);
         b.ed.opening_mode = false;

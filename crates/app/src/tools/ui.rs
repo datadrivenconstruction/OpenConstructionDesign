@@ -432,7 +432,10 @@ fn preview(p: &egui::Painter, ed: &Editor, a: &Active, c: &Pal, to_s: &dyn Fn(V2
         }
         Kind::Component => {
             let r = rect_pts(cur, 0.4, 0.3, a.rotation());
-            poly(p, s(&r), fill, st);
+            // the family's own footprint comes as the session's ghost (`component::ghost`)
+            if super::component::ghost(ed, a).is_none() {
+                poly(p, s(&r), fill, st);
+            }
             let (sn, co) = a.rotation().sin_cos();
             p.arrow(to_s(cur), to_s(cur + v2(-sn, co) * 0.5) - to_s(cur), st);
             let name = a.type_name().split(" : ").last().unwrap_or("").to_string();

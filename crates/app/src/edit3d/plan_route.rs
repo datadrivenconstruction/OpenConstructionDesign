@@ -10,7 +10,8 @@ use super::create::Kind;
 use super::plane::WorkPlane;
 use super::Key3;
 use crate::editor::Editor;
-use crate::interact::{Btn, Input, Interaction, Key, Mods, Pointer, Scope, ScopeKind};
+use crate::interact::{Btn, Feat, HostHit, Input, Interaction, Key, Mods, Pointer, Scope, ScopeKind, Target};
+use ddc_geom::V3;
 
 /// Plan tool of a 3D creation kind (hotkey of the ribbon).
 pub fn hotkey(k: Kind) -> &'static str {
@@ -49,6 +50,19 @@ pub fn plane_for(ed: &Editor, own: WorkPlane) -> WorkPlane {
     } else {
         own
     }
+}
+
+/// A placing tool points at the face under the ray (model point, normal facing the ray, the
+/// element when it has grips), not at the level plane behind it: its plan point is the hit (a
+/// light on the ceiling seen from below, a lamp on a table) and the element is its host.
+pub fn on_face(mut p: Pointer, hit: Option<(V3, V3, Option<Target>)>) -> Pointer {
+    let Some((at, n, host)) = hit else { return p };
+    if !p.plane.is_horizontal() {
+        return p;
+    }
+    p.plane.origin = at;
+    p.host = host.map(|target| HostHit { target, feat: Feat::Face, p: at, n, axis: at });
+    p
 }
 
 /// Pointer of this frame: a move when it changed, then the click.

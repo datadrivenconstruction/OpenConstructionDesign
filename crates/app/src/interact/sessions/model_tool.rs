@@ -29,6 +29,9 @@ impl ToolSession for ModelToolSession {
         let Some(e) = i.event() else {
             return Step::Continue;
         };
+        if let Some(p) = i.pointer() {
+            self.a.face = p.host;
+        }
         // the select-mode hooks (section box, text, solids) came before the tools in the old order
         if super::select::pre_tools(ed, e) {
             return Step::Continue;
@@ -56,7 +59,9 @@ impl ToolSession for ModelToolSession {
         // never called: `on_input_ed` takes every input
         Step::Continue
     }
-    fn preview(&self, _cx: &Cx, _out: &mut Preview) {}
+    fn preview(&self, cx: &Cx, out: &mut Preview) {
+        out.0.extend(crate::tools::component::ghost(cx.ed, &self.a));
+    }
     fn commit(&mut self, _cx: &Cx) -> Result<Rec, Refusal> {
         // the tool commits through the editor at its own step
         Err(Refusal::new(RefusalCode::Blocked, "ix.refuse.bridge"))

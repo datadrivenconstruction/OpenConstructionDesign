@@ -512,6 +512,25 @@ pub fn adapter(
     )
 }
 
+/// The canvas below the overlays along its top edge (the view bar): where a routed tool's
+/// option bar and the tool note go.
+fn under_bar(ctx: &egui::Context, rect: Rect) -> Rect {
+    use ddc_ui::theme::space;
+    let edge = Rect::from_min_size(rect.min, Vec2::new(rect.width(), 2.0 * space::SM));
+    let top = crate::quick::hud::corner_rects(ctx)
+        .iter()
+        .filter(|r| r.intersects(edge))
+        .fold(rect.top(), |t, r| t.max(r.bottom() + space::XS));
+    Rect::from_min_max(egui::pos2(rect.left(), top), rect.max)
+}
+
+/// A ray hit as `plan_route::on_face` takes it: model point (scene z + `z0`), normal, element.
+fn face_of(h: &pick::Hit3, z0: f64) -> (ddc_geom::V3, ddc_geom::V3, Option<crate::interact::Target>) {
+    let v = |v: Vec3, dz: f64| ddc_geom::v3(v.x as f64, v.y as f64, v.z as f64 + dz);
+    let t = h.target.grip_kind().map(|k| crate::interact::Target::Elem(k, h.target.id));
+    (v(h.point, z0), v(h.normal, 0.0), t)
+}
+
 /// A plan tool picking outline walls (roof, floor) takes the wall face under the ray, not the
 /// plane point behind it: the pointer gets that wall as its host (`Pointer::plan` → its axis).
 pub(crate) fn wall_pick_pointer(ed: &Editor, mut p: crate::interact::Pointer) -> crate::interact::Pointer {
@@ -620,8 +639,9 @@ impl Edit3d {
 
     /// A library card released over the view: the instance at the point under the pointer, on
     /// the wall, floor or ceiling hit there (else by the family's hosting in plan).
-    fn drop_component(&mut self, ui: &egui::Ui, ed: &mut Editor, pointer: Option<Pos2>, on: Option<Target>) {
-        use crate::tools::component::{place, HostHint, Pick};
+    fn drop_component(&mut self, ui: &egui::Ui, ed: &mut Editor, pointer: Option<Pos2>, hit: Option<&pick::Hit3>, z0: f64) {
+        use crate::tools::component::{place_at, HostHint, Pick};
+        let on = hit.map(|h| h.target);
         let ctx = ui.ctx();
         if pointer.is_none() || !egui::DragAndDrop::has_payload_of_type::<Pick>(ctx) {
             return;
@@ -640,7 +660,11 @@ impl Edit3d {
             _ => HostHint::Auto,
         };
         let q = ddc_geom::v2(at.x as f64, at.y as f64);
-        if let Err(e) = place(ed, &p, q, hint) {
+        let face = hit.and_then(|h| match face_of(h, z0) {
+            (p, n, Some(target)) => Some(crate::interact::HostHit { target, feat: crate::interact::Feat::Face, p, n, axis: p }),
+            _ => None,
+        });
+        if let Err(e) = place_at(ed, &p, q, hint, face) {
             ed.status = Some(e);
         }
     }
@@ -755,7 +779,7 @@ impl Edit3d {
         self.cursor_pt = hit
             .map(|h| h.point)
             .or_else(|| ray.as_ref().and_then(|r| self.plane.hit(r)));
-        self.drop_component(ui, ed, pointer, hit.as_ref().map(|h| h.target));
+        self.drop_component(ui, ed, pointer, hit.as_ref(), z0);
         view.hovered = hit.as_ref().and_then(|h| match &bodies.list[h.body].src {
             Src::Scene(ms) => ms.first().map(|&i| scene.meshes[i].element),
             Src::Inst { g, k } => scene
@@ -1309,15 +1333,22 @@ impl Edit3d {
             }
             Tool::Select if routed => {
                 if let Some(p) = self.pointer {
+                    let placing = matches!(ed.ix.scope().kind(), crate::interact::ScopeKind::Placing);
+                    let face = ray.as_ref().filter(|_| placing).and_then(|r| {
+                        let hits = bodies.hits_in(scene, r, if pending { &exact } else { &q });
+                        hits.into_iter().filter(|h| h.target.cat != Cat::Room).min_by(|a, b| a.t.total_cmp(&b.t))
+                    });
+                    let p = plan_route::on_face(p, face.map(|h| face_of(&h, z0)));
                     plan_route::pointer(ed, p, &mut self.plan_last, click);
                 }
+                crate::tools::options_3d(ui, under_bar(ui.ctx(), rect), ed, view.dark);
             }
             Tool::Create(_) if self.plan_tool.is_some() => {
                 if let Some(p) = self.pointer {
                     let p = wall_pick_pointer(ed, p);
                     plan_route::pointer(ed, p, &mut self.plan_last, click);
                 }
-                crate::tools::options_3d(ui, rect, ed, view.dark);
+                crate::tools::options_3d(ui, under_bar(ui.ctx(), rect), ed, view.dark);
             }
             Tool::Create(_) => {
                 let wp = self.plane;
@@ -1498,8 +1529,9 @@ impl Edit3d {
         if self.tool != Tool::Select || self.gizmo {
             paint::note(
                 &painter,
-                // under the routed plan tool's option bar
-                rect.left_top() + Vec2::new(12.0, if self.plan_tool.is_some() { 12.0 + crate::tools::BAR_H } else { 12.0 }),
+                // under the view bar and the routed plan tool's option bar
+                under_bar(ui.ctx(), rect).left_top()
+                    + Vec2::new(12.0, if self.plan_tool.is_some() { 12.0 + crate::tools::BAR_H } else { 12.0 }),
                 &hint,
                 fg,
                 bg,

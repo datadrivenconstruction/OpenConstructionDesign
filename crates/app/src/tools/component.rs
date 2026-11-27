@@ -10,8 +10,10 @@ use std::sync::Arc;
 
 use super::{Active, Rec};
 use crate::editor::Editor;
+use crate::grips::Kind as GKind;
+use crate::interact::{HostHit, Prim, Target};
 use ddc_geom::component::Hosting;
-use ddc_geom::{v2, V2};
+use ddc_geom::{v2, V2, V3};
 use ddc_model::{CompHost, CompSpec};
 
 /// A family type picked in the component library: dragged onto a view or armed in the tool.
@@ -122,12 +124,16 @@ pub fn spec_for_def(
 ) -> Result<CompSpec, &'static str> {
     let mut s = CompSpec::at(level, 0, q.x, q.y);
     s.rotation = rotation;
+    // on the wall face the point is on, its back to the wall (family +y points off the face)
     let on_wall = |s: &mut CompSpec, id: i64| -> Result<(), &'static str> {
         let w = ed.walls.iter().find(|w| w.id == id).ok_or("tool.err.no_host")?;
         let (f, _) = crate::snap::closest_on_segment(q, w.a, w.b);
+        let d = w.b - w.a;
+        let right = d.x * (q.y - w.a.y) - d.y * (q.x - w.a.x) < 0.0;
+        let half = ed.type_by_id(w.wall_type).map_or(0.0, |t| t.thickness()) / 2.0;
         s.host = CompHost::Wall(id);
-        s.at = ((f - w.a).len(), 0.0, 0.0);
-        s.rotation = 0.0;
+        s.at = ((f - w.a).len(), if right { -half } else { half }, 0.0);
+        s.rotation = if right { std::f64::consts::PI } else { 0.0 };
         Ok(())
     };
     let h = match crate::complib::family_of(&ed.model, fam) {
@@ -171,9 +177,120 @@ pub fn spec_for_def(
     Ok(s)
 }
 
-/// Instance placement at a plan point, given the family and host.
+/// Instance placement at a plan point, given the family and host; in 3D the face under the
+/// pointer (`Active::face`) names the host and the height.
 pub fn spec_at(ed: &Editor, a: &Active, q: V2, fam: &str) -> Result<CompSpec, String> {
-    spec_for(ed, a.level, a.rotation(), q, fam, HostHint::Auto).map_err(|k| a.t(k))
+    let mut s = spec_for(ed, a.level, a.rotation(), q, fam, face_hint(a.face)).map_err(|k| a.t(k))?;
+    let ty = a.type_name().split_once(" : ").map(|t| t.1);
+    lift(ed, &mut s, a.face, a.elevation, ty.and_then(|ty| body_box(ed, fam, ty)));
+    Ok(s)
+}
+
+/// What the tool would place at `q`: [`spec_at`], at the tool's elevation for MEP devices.
+pub fn tool_spec(ed: &Editor, a: &Active, q: V2, fam: &str) -> Result<CompSpec, String> {
+    let mut s = spec_at(ed, a, q, fam)?;
+    if a.kind.is_mep_point() {
+        s.at.2 = a.opts.z;
+    }
+    Ok(s)
+}
+
+/// Host named by a face under a 3D pointer: a wall by its side, a floor by its top, a ceiling
+/// by its underside; anything else leaves the host to the family's hosting.
+pub fn face_hint(f: Option<HostHit>) -> HostHint {
+    match f.map(|h| (h.target, h.n.z)) {
+        Some((Target::Elem(GKind::Wall, id), nz)) if nz.abs() < 0.5 => HostHint::Wall(id),
+        Some((Target::Elem(GKind::Slab, id), nz)) if nz > 0.5 => HostHint::Slab(id),
+        Some((Target::Elem(GKind::Ceiling, id), nz)) if nz < -0.5 => HostHint::Ceiling(id),
+        _ => HostHint::Auto,
+    }
+}
+
+/// Clicked this close (m) above a wall's base, a wall-hosted instance sits on the base.
+const ON_BASE: f64 = 0.15;
+
+/// Side and height from a face under a 3D pointer: on the wall side clicked (a snap onto the
+/// axis keeps it), the height above its base; a free instance on a face looking up (a table, a
+/// step, a floor above the level) stands on it; one not hosted by the wall clicked stands
+/// against it, its back (the +y side of its body `bx`) to the face, its front facing out.
+fn lift(ed: &Editor, s: &mut CompSpec, f: Option<HostHit>, level_z: f64, bx: Option<[V3; 2]>) {
+    let Some(f) = f else { return };
+    let mm = |v: f64| (v * 1000.0).round() / 1000.0;
+    match (s.host, f.target) {
+        (CompHost::Wall(id), Target::Elem(GKind::Wall, w)) if w == id => {
+            let Some(w) = ed.walls.iter().find(|w| w.id == id) else { return };
+            let d = w.b - w.a;
+            if f.n.z.abs() < 0.5 && (d.x * f.n.y - d.y * f.n.x < 0.0) != (s.at.1 < 0.0) {
+                s.at.1 = -s.at.1;
+                s.rotation = if s.at.1 < 0.0 { std::f64::consts::PI } else { 0.0 };
+            }
+            let h = f.p.z - (ed.elevation + w.base_offset);
+            s.at.2 = if h < ON_BASE { 0.0 } else { mm(h.min(w.height)) };
+        }
+        (CompHost::None, _) if f.n.z > 0.7 => s.at.2 = mm(f.p.z - level_z),
+        (CompHost::None | CompHost::Floor(_), Target::Elem(GKind::Wall, _)) if f.n.z.abs() < 0.5 => {
+            let n = v2(f.n.x, f.n.y) * (1.0 / v2(f.n.x, f.n.y).len().max(1e-12));
+            let back = bx.map_or(0.0, |b| b[1].y);
+            let o = v2(f.p.x, f.p.y) + n * back;
+            s.at.0 = mm(o.x);
+            s.at.1 = mm(o.y);
+            s.rotation += n.x.atan2(-n.y);
+        }
+        _ => {}
+    }
+}
+
+/// Body box of a family type in its own frame (cached per type; rebuilt when the model changes).
+fn body_box(ed: &Editor, fam: &str, ty: &str) -> Option<[V3; 2]> {
+    type Cache = (u64, std::collections::HashMap<(String, String), Option<[V3; 2]>>);
+    thread_local!(static BOXES: std::cell::RefCell<Cache> = Default::default());
+    BOXES.with(|c| {
+        let mut c = c.borrow_mut();
+        if c.0 != ed.revision {
+            *c = (ed.revision, Default::default());
+        }
+        *c.1.entry((fam.to_string(), ty.to_string())).or_insert_with(|| {
+                let f = crate::complib::family_of(&ed.model, fam)?;
+                let r = f.resolve(f.type_values(ty)?, &[]).ok()?;
+                Some(f.build(&r, ddc_geom::component::Lod::Medium).ok()?.bbox)
+            })
+    })
+}
+
+/// Ghost of the instance the component or device tool would place at its cursor: the type's
+/// body box at the placement (side and height on a wall, the face it stands on in 3D), drawn
+/// by every view. `None` before the pointer came in or when the type is no family.
+pub fn ghost(ed: &Editor, a: &Active) -> Option<Prim> {
+    if !a.seen {
+        return None;
+    }
+    let (fam, ty) = a.type_name().split_once(" : ")?;
+    let s = tool_spec(ed, a, a.cur, fam).ok()?;
+    let [lo, hi] = body_box(ed, fam, ty)?;
+    let (o, z, rot) = match s.host {
+        CompHost::Wall(id) => {
+            let w = ed.walls.iter().find(|w| w.id == id)?;
+            let d = w.b - w.a;
+            let u = d * (1.0 / d.len().max(1e-12));
+            let n = v2(-u.y, u.x);
+            (w.a + u * s.at.0 + n * s.at.1, ed.elevation + w.base_offset + s.at.2, u.y.atan2(u.x) + s.rotation)
+        }
+        // a floor or ceiling clicked in 3D: the face itself; else the level
+        _ => {
+            let face = a.face.filter(|f| match (s.host, face_hint(Some(*f))) {
+                (CompHost::Floor(h), HostHint::Slab(id)) | (CompHost::Ceiling(h), HostHint::Ceiling(id)) => h == id,
+                _ => false,
+            });
+            let base = face.map_or(a.elevation, |f| f.p.z);
+            (v2(s.at.0, s.at.1), base + s.at.2, s.rotation)
+        }
+    };
+    let (sn, cs) = rot.sin_cos();
+    let ring = [(lo.x, lo.y), (hi.x, lo.y), (hi.x, hi.y), (lo.x, hi.y)]
+        .iter()
+        .map(|&(x, y)| o + v2(x * cs - y * sn, x * sn + y * cs))
+        .collect();
+    Some(Prim::Prism { ring, z0: z + lo.z, z1: z + hi.z })
 }
 
 /// The family is loaded when the project does not have it (from `def`, else the built-in
@@ -224,7 +341,13 @@ pub fn rec(ed: &Editor, a: &Active, q: V2) -> Result<Rec, String> {
 /// Places `pick` at plan point `q` of the active level (a drop from the library), one undo step.
 /// Err: the reason in the UI language.
 pub fn place(ed: &mut Editor, pick: &Pick, q: V2, hint: HostHint) -> Result<(), String> {
-    let s = spec_for_def(ed, ed.level, 0.0, q, &pick.family, hint, pick.def.as_deref()).map_err(|k| crate::tr(k, &[]))?;
+    place_at(ed, pick, q, hint, None)
+}
+
+/// [`place`] onto the face under a 3D pointer (height on a wall, standing on a face).
+pub fn place_at(ed: &mut Editor, pick: &Pick, q: V2, hint: HostHint, face: Option<HostHit>) -> Result<(), String> {
+    let mut s = spec_for_def(ed, ed.level, 0.0, q, &pick.family, hint, pick.def.as_deref()).map_err(|k| crate::tr(k, &[]))?;
+    lift(ed, &mut s, face, ed.elevation, body_box(ed, &pick.family, &pick.ty));
     let p = pick.clone();
     let op = crate::editor::OpFn(Arc::new(move |m: &mut ddc_model::Model| {
         add_to(m, &p.family, &p.ty, p.def.as_deref(), &s).map(|_| ())

@@ -508,6 +508,8 @@ pub struct Active {
     /// Collected elements: floor outline walls, zone rooms.
     pub picked: Vec<i64>,
     pub mep: mep::MepTool,
+    /// Face under a 3D pointer (element, point, normal) at `cur`; `None` in plan.
+    pub face: Option<crate::interact::HostHit>,
 }
 
 impl Active {
@@ -543,6 +545,7 @@ impl Active {
             region: vec![],
             picked: vec![],
             mep: Default::default(),
+            face: None,
         }
     }
 

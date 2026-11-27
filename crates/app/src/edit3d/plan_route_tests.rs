@@ -151,3 +151,77 @@ fn own_3d_tools_and_idle_are_not_routed() {
     let raised = WorkPlane::level(r.ed.level, 2.0);
     assert_eq!(super::plane_for(&r.ed, raised).z(), 0.0);
 }
+
+/// The scene of the editor's model, so 3D picks meet its bodies.
+fn with_scene(r: &mut Rig) {
+    let (scene, t) = super::super::scene3d::compose(&mut r.ed);
+    r.scene = scene;
+    r.view.e3.set_ext(t);
+    r.frame(vec![]);
+}
+
+/// A wall-hosted family armed from the ribbon goes onto the wall face clicked in 3D: on that
+/// side (back to the wall), at the height clicked; the plan click keeps the base.
+#[test]
+fn ribbon_component_sits_on_the_wall_face_clicked_in_3d() {
+    let mut r = Rig::new();
+    r.ed.commit_walls(vec![(v2(0.0, 0.0), v2(6.0, 0.0))]);
+    with_scene(&mut r);
+    let pick = crate::tools::component::Pick { family: "Socket Outlet".into(), ty: "Single".into(), def: None };
+    crate::tools::component::arm_with(&mut r.ed, &pick, ddc_ui::i18n::Lang::En);
+    crate::interact::Interaction::refresh(&mut r.ed);
+    assert!(super::live(&r.ed));
+    let half = r.ed.current_type().unwrap().thickness() / 2.0;
+    let rect = r.view.e3.rect.unwrap();
+    let eye = adapter(&r.view.camera, rect, 0.0, &WorkPlane::level(r.ed.level, 0.0)).eye;
+    let side = if eye.y < 0.0 { -1.0 } else { 1.0 };
+    let at = r.screen(2.3, side * half, 1.2);
+    r.click(at);
+    assert_eq!(r.count("comp"), 1, "the socket is placed");
+    let (wall, x, y, z, rot): (Option<i64>, f64, f64, f64, f64) = r
+        .ed
+        .model
+        .sql()
+        .query_row("SELECT host_wall, x, y, z, rotation FROM comp", [], |q| {
+            Ok((q.get(0)?, q.get(1)?, q.get(2)?, q.get(3)?, q.get(4)?))
+        })
+        .unwrap();
+    assert_eq!(wall, Some(r.ed.walls[0].id));
+    assert!((x - 2.3).abs() < 0.05, "along {x}");
+    assert!((y - side * half).abs() < 1e-9, "on the face clicked: {y}");
+    assert!((z - 1.2).abs() < 0.05, "at the height clicked: {z}");
+    let want = if side < 0.0 { std::f64::consts::PI } else { 0.0 };
+    assert!((rot - want).abs() < 1e-9, "back to the wall: {rot}");
+}
+
+/// A free family clicked onto a face looking up stands on it: the top of a raised floor.
+#[test]
+fn ribbon_component_stands_on_the_face_clicked_in_3d() {
+    let mut r = Rig::new();
+    let layer = [ddc_model::LayerSpec { material: "c".into(), thickness: 0.2 }];
+    let st = r.ed.model.add_slab_type("S raised", &layer).unwrap();
+    let s = ddc_model::SlabSpec {
+        level: r.ed.level,
+        slab_type: st,
+        offset: 0.9,
+        outer: vec![(0.0, 0.0), (6.0, 0.0), (6.0, 4.0), (0.0, 4.0)],
+        holes: vec![],
+    };
+    r.ed.model.add_slab(&s).unwrap();
+    r.ed.reload().unwrap();
+    with_scene(&mut r);
+    let pick = crate::tools::component::Pick { family: "Generic Box".into(), ty: crate::complib::type_labels(&r.ed.model).iter().find_map(|l| l.strip_prefix("Generic Box : ").map(str::to_string)).unwrap(), def: None };
+    crate::tools::component::arm_with(&mut r.ed, &pick, ddc_ui::i18n::Lang::En);
+    crate::interact::Interaction::refresh(&mut r.ed);
+    let top = 0.9;
+    let at = r.screen(2.0, 2.0, top);
+    r.click(at);
+    let (x, y, slab): (f64, f64, Option<i64>) = r
+        .ed
+        .model
+        .sql()
+        .query_row("SELECT x, y, host_slab FROM comp", [], |q| Ok((q.get(0)?, q.get(1)?, q.get(2)?)))
+        .unwrap();
+    assert!((x - 2.0).abs() < 0.05 && (y - 2.0).abs() < 0.05, "the point on the face, not the level plane behind it: {x}, {y}");
+    assert!(slab.is_some(), "hosted by the floor clicked");
+}

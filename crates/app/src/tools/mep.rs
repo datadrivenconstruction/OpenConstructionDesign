@@ -352,14 +352,13 @@ fn place(ed: &mut Editor, a: &mut Active, q: V2) {
         ed.status = Some(a.t("tool.err.no_library"));
         return;
     };
-    let mut at = match component::spec_at(ed, a, q, family) {
+    let at = match component::tool_spec(ed, a, q, family) {
         Ok(s) => s,
         Err(m) => {
             ed.status = Some(m);
             return;
         }
     };
-    at.at.2 = a.opts.z;
     let d = DeviceSpec {
         family: family.to_string(),
         ty: ty.to_string(),
