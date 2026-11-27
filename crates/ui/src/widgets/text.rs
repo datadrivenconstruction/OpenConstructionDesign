@@ -7,7 +7,8 @@ use std::sync::Arc;
 
 /// One line no wider than `max_w`; `Galley::elided` tells whether it was cut.
 pub fn elide(ui: &Ui, text: &str, font: FontId, color: Color32, max_w: f32) -> Arc<Galley> {
-    let mut job = LayoutJob::single_section(text.to_owned(), TextFormat::simple(font, color));
+    let shown = crate::rtl::display(text).into_owned();
+    let mut job = LayoutJob::single_section(shown, TextFormat::simple(font, color));
     job.wrap = TextWrapping::truncate_at_width(max_w.max(1.0));
     ui.painter().layout_job(job)
 }

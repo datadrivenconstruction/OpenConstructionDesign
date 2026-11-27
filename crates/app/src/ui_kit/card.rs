@@ -139,7 +139,7 @@ pub fn shorten(text: &str, max: usize) -> String {
 pub fn count_tiles(ui: &mut egui::Ui, items: &[(usize, String, bool)]) {
     let th = theme::of(ui.ctx());
     let ru = crate::ui_lang_now();
-    let nf = NumberFormat::for_lang(if ru { Lang::Ru } else { Lang::En });
+    let nf = NumberFormat::for_lang(crate::flag_lang(ru));
     let warn = ui.visuals().warn_fg_color;
     ui.columns(items.len().max(1), |cols| {
         for (col, (n, label, is_warn)) in cols.iter_mut().zip(items) {

@@ -102,6 +102,7 @@ pub fn frame_ev_at(
     mut ui: impl FnMut(&egui::Context, usize),
 ) -> Vec<u8> {
     let mut last = None;
+    let mut free = Vec::new();
     let scale = if scale.is_finite() && scale > 0.0 {
         scale
     } else {
@@ -138,9 +139,10 @@ pub fn frame_ev_at(
             size_in_pixels: [w, h],
             pixels_per_point: out.pixels_per_point,
         };
-        last = Some((jobs, sd, out.textures_delta.free));
+        free.extend(out.textures_delta.free);
+        last = Some((jobs, sd));
     }
-    let (jobs, sd, free) = last.expect("one frame");
+    let (jobs, sd) = last.expect("one frame");
     let pixels = paint(rs, (w, h), &jobs, &sd);
     let mut r = rs.renderer.write();
     for id in &free {

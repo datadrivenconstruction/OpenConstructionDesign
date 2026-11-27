@@ -16,6 +16,12 @@
 //!   ai-mode chat|build|review                     select-room NUMBER
 //!   ai-demo chat|build|empty  a scripted conversation in the AI panel (no network)
 //!   frames N          passes before each shot     shot out.png    write the frame
+//!   onboard STEP      the first-start wizard on that step (0-based)
+//!   sheet-demo canvas|active|print|props|sets     demo sheets with a title block
+//!   update-demo toast|dialog|news                 a newer release announced
+//!   open-sheet N      the project's N-th sheet (1-based) in the view area
+//!   reset             a fresh editor on the same setup (scenes of one script stay apart)
+//!   key ctrl+K        a key with modifiers (ctrl, shift, alt), e.g. ctrl+k for the palette
 use crate::shell::EditorApp;
 use crate::RenderState;
 use eframe::egui;
@@ -29,7 +35,12 @@ pub struct Step {
 }
 
 const SETUP: [&str; 5] = ["size", "scale", "lang", "theme", "open"];
-const ACTIONS: [&str; 19] = [
+const ACTIONS: [&str; 24] = [
+    "open-sheet",
+    "onboard",
+    "sheet-demo",
+    "update-demo",
+    "reset",
     "level",
     "fit",
     "view",
@@ -102,15 +113,38 @@ fn btn(at: egui::Pos2, pressed: bool) -> egui::Event {
     }
 }
 
-fn key(k: egui::Key) -> Vec<egui::Event> {
+fn key(k: egui::Key, modifiers: egui::Modifiers) -> Vec<egui::Event> {
     let e = |pressed| egui::Event::Key {
         key: k,
         physical_key: Some(k),
         pressed,
         repeat: false,
-        modifiers: egui::Modifiers::NONE,
+        modifiers,
     };
     vec![e(true), e(false)]
+}
+
+/// `ctrl+shift+k`, `enter`, `escape`: the key and its modifiers.
+fn chord(spec: &str) -> Option<(egui::Key, egui::Modifiers)> {
+    let mut m = egui::Modifiers::NONE;
+    let mut parts: Vec<&str> = spec.split('+').map(str::trim).collect();
+    let name = parts.pop()?;
+    for p in parts {
+        match p.to_ascii_lowercase().as_str() {
+            "ctrl" => (m.ctrl, m.command) = (true, true),
+            "shift" => m.shift = true,
+            "alt" => m.alt = true,
+            _ => return None,
+        }
+    }
+    let k = match name.to_ascii_lowercase().as_str() {
+        "enter" => egui::Key::Enter,
+        "escape" => egui::Key::Escape,
+        "tab" => egui::Key::Tab,
+        "backspace" => egui::Key::Backspace,
+        n => egui::Key::from_name(&n.to_ascii_uppercase())?,
+    };
+    Some((k, m))
 }
 
 struct Run<'a> {
@@ -200,23 +234,27 @@ pub fn run(
     if let Some(l) = lang {
         crate::set_ui_lang(l);
     }
-    let ed = match &open {
-        Some(p) => {
-            let mut ed = crate::editor::Editor::start_project().map_err(|e| e.to_string())?;
-            ed.open_project(p)
-                .map_err(|e| format!("{}: {e:?}", p.display()))?;
-            ed
+    let fresh = || -> Result<EditorApp, String> {
+        let ed = match &open {
+            Some(p) => {
+                let mut ed = crate::editor::Editor::start_project().map_err(|e| e.to_string())?;
+                ed.open_project(p)
+                    .map_err(|e| format!("{}: {e:?}", p.display()))?;
+                ed
+            }
+            None => crate::editor::Editor::new_in_memory().map_err(|e| e.to_string())?,
+        };
+        let mut app = EditorApp::new(ed, Some(rs), backend.clone());
+        app.ed.status = None;
+        app.prefs.theme = theme.clone();
+        app.chrome.onboard.quiet = true;
+        if let Some(l) = lang {
+            app.set_lang(l);
         }
-        None => crate::editor::Editor::new_in_memory().map_err(|e| e.to_string())?,
+        app.plan.fit(&app.ed);
+        Ok(app)
     };
-    let mut app = EditorApp::new(ed, Some(rs), backend);
-    app.ed.status = None;
-    app.prefs.theme = theme;
-    app.chrome.onboard.quiet = true;
-    if let Some(l) = lang {
-        app.set_lang(l);
-    }
-    app.plan.fit(&app.ed);
+    let mut app = fresh()?;
     r.pass(&mut app, vec![], 2);
     let mut out = vec![];
     for s in &steps[i..] {
@@ -292,14 +330,29 @@ pub fn run(
                 r.pass(&mut app, vec![vec![egui::Event::Text(s.arg.clone())]], 2);
             }
             "key" => {
-                let k = match s.arg.as_str() {
-                    "enter" => egui::Key::Enter,
-                    "escape" => egui::Key::Escape,
-                    "tab" => egui::Key::Tab,
-                    "backspace" => egui::Key::Backspace,
-                    _ => return Err(err("key enter|escape|tab|backspace")),
-                };
-                r.pass(&mut app, vec![key(k)], 2);
+                let (k, m) = chord(&s.arg).ok_or_else(|| err("key [ctrl+|shift+|alt+]NAME"))?;
+                r.pass(&mut app, vec![key(k, m)], 2);
+            }
+            "onboard" => {
+                let n = s.arg.parse().map_err(|_| err("onboard STEP"))?;
+                app.open_onboarding(n);
+            }
+            "sheet-demo" => crate::sheet_view::demo(&mut app, &s.arg)?,
+            "open-sheet" => {
+                let n: usize = s.arg.parse().map_err(|_| err("open-sheet N"))?;
+                let all = app.ed.model.sheets().map_err(|e| err(&e.to_string()))?;
+                let id = all.get(n.max(1) - 1).ok_or_else(|| err("no such sheet"))?.0;
+                crate::sheet_view::open(id);
+            }
+            "update-demo" => crate::update::demo(&mut app, &s.arg).map_err(|e| err(&e))?,
+            "reset" => {
+                crate::update::demo_reset();
+                crate::sheet_view::with(|st| *st = Default::default());
+                // the old editor lets go of the project before it is opened again
+                let blank = crate::editor::Editor::new_in_memory().map_err(|e| e.to_string())?;
+                drop(std::mem::replace(&mut app, EditorApp::new(blank, Some(rs), backend.clone())));
+                app = fresh()?;
+                r.pass(&mut app, vec![], 2);
             }
             "fold" => crate::shot::apply_fold(&mut app, &["--fold".to_string(), s.arg.clone()])
                 .map_err(|e| err(&e))?,

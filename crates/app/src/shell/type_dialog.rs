@@ -1407,7 +1407,7 @@ pub(crate) fn layout_probe(ru: bool, case: Case) -> (crate::layout_contract::Pro
     };
     let mut d = TypeDraft::load(&ed.model, fam, id, u);
     let th = Theme::new(ddc_ui::Mode::Dark, ddc_ui::Density::Compact);
-    let cat = ddc_ui::Catalog::new(if ru { ddc_ui::Lang::Ru } else { ddc_ui::Lang::En });
+    let cat = ddc_ui::Catalog::new(crate::flag_lang(ru));
     let mut cells = Vec::new();
     let p = crate::layout_contract::probe("type_properties", |ctx| {
         ctx.data_mut(|m| m.remove::<Vec<CellRow>>(cell_log_id()));

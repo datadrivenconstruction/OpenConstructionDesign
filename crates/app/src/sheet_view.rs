@@ -288,7 +288,7 @@ fn tr(ru: bool, key: &'static str) -> &'static str {
 
 /// Catalog string (`i18n/<lang>/sheets.json`) in the UI language; catalogs are parsed once per thread.
 fn msg(ru: bool, key: &str, args: &[(&str, &str)]) -> String {
-    msg_in(if ru { Lang::Ru } else { Lang::En }, key, args)
+    msg_in(crate::flag_lang(ru), key, args)
 }
 
 /// Catalog string in `lang`, its base language, then English.
@@ -361,7 +361,7 @@ fn with_ctx_refs<R>(
     refs: Option<&io::SheetRefs>,
     f: impl FnOnce(&Ctx) -> R,
 ) -> R {
-    with_ctx_in(ed, if ru { Lang::Ru } else { Lang::En }, index, paper, refs, f)
+    with_ctx_in(ed, crate::doc_lang::doc_lang_in(&ed.model, crate::flag_lang(ru)), index, paper, refs, f)
 }
 
 /// Same, the sheet words in any UI language.
@@ -1849,7 +1849,7 @@ fn schedule_bar(ui: &mut egui::Ui, th: &Theme, ed: &mut Editor, ru: bool, st: &m
     };
     let mm = msg(ru, "sheets.split.mm", &[]);
     let mm = mm.trim();
-    let nf = NumberFormat::for_lang(if ru { Lang::Ru } else { Lang::En });
+    let nf = NumberFormat::for_lang(crate::flag_lang(ru));
     let width = control::FIELD_MIN_W + space::XL;
     let hl_text = msg(ru, "sheets.split.height", &[]);
     let hl = ui.label(&hl_text);

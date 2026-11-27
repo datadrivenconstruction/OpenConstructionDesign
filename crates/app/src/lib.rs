@@ -269,6 +269,17 @@ pub fn set_ui_lang(l: ddc_ui::i18n::Lang) {
     units::set_ui_decimal_mark(units::DecimalMark::for_lang(l));
 }
 
+/// Interface (chrome) language an older `ru` flag stands for: Russian when set, else the UI
+/// language. Text that lands on sheets, schedules or exports takes `doc_lang::doc_lang` instead.
+pub fn flag_lang(ru: bool) -> ddc_ui::i18n::Lang {
+    use ddc_ui::i18n::Lang;
+    match (ru, ui_lang()) {
+        (true, _) => Lang::Ru,
+        (false, Lang::Ru) => Lang::En,
+        (false, l) => l,
+    }
+}
+
 pub fn ui_is_ru() -> bool {
     ui_lang_now()
 }
@@ -290,13 +301,18 @@ pub fn tr_n(key: &str, n: u64) -> String {
 /// As `tr_n`, in an explicit language.
 pub fn tr_n_lang(ru: bool, key: &str, n: u64) -> String {
     use ddc_ui::i18n::{Catalog, Lang};
-    static RU: std::sync::OnceLock<Catalog> = std::sync::OnceLock::new();
-    static EN: std::sync::OnceLock<Catalog> = std::sync::OnceLock::new();
-    let c = if ru {
-        RU.get_or_init(|| Catalog::new(Lang::Ru))
-    } else {
-        EN.get_or_init(|| Catalog::new(Lang::En))
+    static CATS: std::sync::Mutex<Vec<(Lang, &'static Catalog)>> = std::sync::Mutex::new(Vec::new());
+    let lang = flag_lang(ru);
+    let mut g = CATS.lock().unwrap_or_else(|e| e.into_inner());
+    let c = match g.iter().find(|(l, _)| *l == lang) {
+        Some((_, c)) => *c,
+        None => {
+            let c: &'static Catalog = Box::leak(Box::new(Catalog::new(lang)));
+            g.push((lang, c));
+            c
+        }
     };
+    drop(g);
     c.plural(key, n)
 }
 
@@ -351,9 +367,7 @@ pub fn tr(key: &str, args: &[(&str, &str)]) -> String {
 
 /// As `tr`, in an explicit language.
 pub fn tr_lang(ru: bool, key: &str, args: &[(&str, &str)]) -> String {
-    use ddc_ui::i18n::Lang;
-    let lang = if ru { Lang::Ru } else { Lang::En };
-    let mut s = catalog().t_in(lang, key);
+    let mut s = catalog().t_in(flag_lang(ru), key);
     for (k, v) in args {
         s = s.replace(&format!("{{{k}}}"), v);
     }
@@ -374,7 +388,7 @@ pub fn tr_locale(code: &str, key: &str, args: &[(&str, &str)]) -> String {
 pub fn tr_str(ru: bool, key: &'static str) -> &'static str {
     use ddc_ui::i18n::Lang;
     let c = catalog();
-    let own = if ru { Lang::Ru } else { Lang::En };
+    let own = flag_lang(ru);
     c.table(own)
         .get(key)
         .or_else(|| c.table(Lang::En).get(key))

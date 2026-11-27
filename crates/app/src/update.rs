@@ -1177,6 +1177,41 @@ fn news_dialog(app: &mut EditorApp, ctx: &egui::Context, r: &Release) {
     }
 }
 
+/// Screenshot scene of a newer release: `toast`, `dialog` or `news` (ui-shot `update-demo`).
+pub fn demo(app: &mut EditorApp, scene: &str) -> Result<(), String> {
+    if !["toast", "dialog", "news"].contains(&scene) {
+        return Err("update-demo toast|dialog|news".into());
+    }
+    let rel = Release {
+        version: "9.0.0".into(),
+        date: "2026-11-20".into(),
+        summary: "- **AI** in 45 languages\n- Drawings in your language\n- Faster section views on large models\n- Fixes in IFC export".into(),
+        url: String::new(),
+    };
+    with(|st| {
+        st.started = true;
+        st.settings = Some(Settings { seen: "9.0.0".into(), ..Settings::default() });
+        st.release = Some(rel.clone());
+        st.dialog = scene == "dialog";
+        st.result = Some(Outcome { status: Status::Newer(rel.clone()), unfit_below: Some("2.0.0".into()) });
+        st.news = (scene == "news").then(|| rel.clone());
+    });
+    if scene == "toast" {
+        let c = &app.sh.cat;
+        let title = c.tf("update_check.toast.title", &[("v", "9.0.0")]);
+        let acts = toast_actions(c);
+        app.sh.toasts.push_choice(Level::Info, title, Some(highlight(&rel.summary)), acts);
+    }
+    Ok(())
+}
+
+/// Clears what [`demo`] seeded.
+pub fn demo_reset() {
+    with(|st| {
+        (st.dialog, st.result, st.news, st.release) = (false, None, None, None);
+    });
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;

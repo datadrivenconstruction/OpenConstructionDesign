@@ -806,7 +806,7 @@ pub(crate) struct Shot {
 #[cfg(test)]
 pub(crate) fn layout_probe(key: &str, ru: bool, case: Case) -> Shot {
     use ddc_ui::{Density, Lang, Mode};
-    let cat = Catalog::new(if ru { Lang::Ru } else { Lang::En });
+    let cat = Catalog::new(crate::flag_lang(ru));
     let m = ddc_model::Model::open(":memory:").expect("model");
     let (mut entries, _) = crate::complib::gather(&m, None);
     let long_name: String = "Very long family name "
@@ -849,7 +849,7 @@ mod tests {
     }
 
     fn catalog(ru: bool) -> Catalog {
-        Catalog::new(if ru { Lang::Ru } else { Lang::En })
+        Catalog::new(crate::flag_lang(ru))
     }
 
     fn button(p: &crate::layout_contract::Probe, label: &str) -> egui::Rect {

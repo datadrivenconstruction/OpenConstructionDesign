@@ -53,7 +53,7 @@ fn paint_icon(ui: &Ui, name: &str, rect: egui::Rect, color: egui::Color32) {
 /// standard gap between them.
 fn row_need(ui: &Ui, th: &Theme, slot: bool, label: &str, keys: &str, tail: Tail) -> f32 {
     let p = ui.painter();
-    let text = p.layout_no_wrap(label.to_owned(), th.font(Role::Body), th.c("text.primary"));
+    let text = p.layout_no_wrap(crate::rtl::display(label).into_owned(), th.font(Role::Body), th.c("text.primary"));
     label_x(0.0, slot) + text.size().x + tail_w(ui, th, keys, tail)
 }
 
@@ -134,7 +134,7 @@ pub fn enter_scale(t: f32, reduced_motion: bool) -> f32 {
 pub fn menu_section(ui: &mut Ui, th: &Theme, title: &str) {
     let w = ui.available_width().clamp(control::MENU_W, control::MENU_MAX_W);
     let (rect, _) = ui.allocate_exact_size(Vec2::new(w, row_h(th)), Sense::hover());
-    let g = ui.painter().layout_no_wrap(title.to_uppercase(), th.font(Role::Section), th.c("text.secondary"));
+    let g = ui.painter().layout_no_wrap(crate::rtl::display(&title.to_uppercase()).into_owned(), th.font(Role::Section), th.c("text.secondary"));
     ui.painter().galley(
         pos2(rect.left() + space::SM + HOVER_INSET, rect.center().y - g.size().y / 2.0),
         g,

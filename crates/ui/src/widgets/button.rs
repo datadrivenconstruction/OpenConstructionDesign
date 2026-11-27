@@ -268,7 +268,7 @@ impl<'a> Button<'a> {
     fn text_w(&self, ui: &Ui, th: &Theme) -> (f32, f32) {
         let font = th.font(Role::Label);
         let ink = th.sem().text_primary;
-        let galley = ui.painter().layout_no_wrap(self.label.to_owned(), font, ink);
+        let galley = ui.painter().layout_no_wrap(crate::rtl::display(self.label).into_owned(), font, ink);
         // whole pixels: no fractional edges, no width jump from rounding at paint time
         (galley.size().x.ceil(), pad_x(self.size))
     }

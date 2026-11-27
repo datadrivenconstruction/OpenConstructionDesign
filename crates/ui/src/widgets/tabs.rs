@@ -86,7 +86,7 @@ pub fn tab_strip(ui: &mut Ui, th: &Theme, tabs: &[TabItem<'_>], sel: usize) -> T
     let pad = 2.0 * space::MD;
     let text_w: Vec<f32> = tabs
         .iter()
-        .map(|t| ui.painter().layout_no_wrap(t.label.to_owned(), font.clone(), s.text_primary).size().x)
+        .map(|t| ui.painter().layout_no_wrap(crate::rtl::display(&t.label).into_owned(), font.clone(), s.text_primary).size().x)
         .collect();
     let natural: Vec<f32> = tabs
         .iter()
@@ -214,7 +214,7 @@ pub fn tab_bar_gated(
         .iter()
         .map(|t| {
             ui.painter()
-                .layout_no_wrap((*t).to_owned(), font.clone(), s.text_primary)
+                .layout_no_wrap(crate::rtl::display(t).into_owned(), font.clone(), s.text_primary)
                 .size()
                 .x
                 + pad

@@ -62,7 +62,7 @@ static CATALOG: OnceLock<Catalog> = OnceLock::new();
 
 /// Label by key in the UI language.
 pub fn tr(ru: bool, key: &str) -> String {
-    let lang = if ru { Lang::Ru } else { Lang::En };
+    let lang = crate::flag_lang(ru);
     CATALOG
         .get_or_init(|| Catalog::new(Lang::En))
         .t_in(lang, key)

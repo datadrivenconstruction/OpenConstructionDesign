@@ -1072,8 +1072,8 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
     // default names are seeded below, before the window applies `--lang`
     let argv: Vec<String> = std::env::args().collect();
     if let Some(i) = argv.iter().position(|s| s == "--lang") {
-        let ru = argv.get(i + 1).is_some_and(|l| l == "ru");
-        ddc_app::set_ui_lang(if ru { ddc_ui::i18n::Lang::Ru } else { ddc_ui::i18n::Lang::En });
+        let code = argv.get(i + 1).map_or("en", String::as_str);
+        ddc_app::set_ui_lang(ddc_ui::i18n::Lang::from_code(code));
     }
     let mut ed = Editor::new_in_memory().map_err(|e| e.to_string())?;
     // qa: `--open-project file` renders a saved project instead of a built-in scene

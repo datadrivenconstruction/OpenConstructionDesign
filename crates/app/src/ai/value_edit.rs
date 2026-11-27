@@ -321,7 +321,7 @@ pub fn refusal(field: &Field, value: &Value, u: Units, ru: bool) -> String {
         Field::Assign(k) => k.clone(),
         Field::Create { num, .. } => crate::tr_lang(ru, label_key(*num), &[]),
     };
-    let lang = if ru { ddc_ui::Lang::Ru } else { ddc_ui::Lang::En };
+    let lang = crate::flag_lang(ru);
     let text = match value {
         Value::Metres(m) => crate::ui_kit::len_text(*m, u, DecimalMark::for_lang(lang)),
         Value::Text(t) => t.clone(),
@@ -504,7 +504,7 @@ mod tests {
         assert!(!write(&mut op, &len, &Value::Metres(0.0)), "a wall of no length");
         assert_eq!(format!("{op:?}"), format!("{:?}", wall_item().op), "the draft keeps its wall");
         for ru in [false, true] {
-            let lang = if ru { Lang::Ru } else { Lang::En };
+            let lang = crate::flag_lang(ru);
             let cat = Catalog::new(lang);
             let why = refusal(&len, &Value::Metres(0.0), u, ru);
             let zero = crate::ui_kit::len_text(0.0, u, DecimalMark::for_lang(lang));

@@ -1,7 +1,7 @@
 {
  "cmd.help.check_update": "Check for updates",
  "update_check.title": "Update check",
- "update_check.desc": "Off by default. Sends only the version, the OS and architecture, and the install kind to our server. Never downloads or installs anything.",
+ "update_check.desc": "Sends only the version, the OS and architecture, and the install kind to our server. Never downloads or installs anything.",
  "update_check.freq.startup": "At startup",
  "update_check.freq.daily": "Daily",
  "update_check.freq.weekly": "Weekly",

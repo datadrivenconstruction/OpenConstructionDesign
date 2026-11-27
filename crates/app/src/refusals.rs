@@ -289,7 +289,7 @@ mod tests {
     #[test]
     fn codes_translated_ru_en() {
         for ru in [true, false] {
-            let cat = Catalog::new(if ru { ddc_ui::Lang::Ru } else { ddc_ui::Lang::En });
+            let cat = Catalog::new(crate::flag_lang(ru));
             for &code in RefusalCode::CODES {
                 let r = sample(code);
                 assert_eq!(r.code, code);

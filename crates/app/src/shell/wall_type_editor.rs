@@ -10,7 +10,7 @@ use crate::units::{edit_length, parse_edit_length, unit_label_in, Units};
 use ddc_model::wall_types::{self as wt, Align, LayerFn, TypeLayer};
 use ddc_model::Model;
 use ddc_ui::theme::{control, layout, space, stroke, Role};
-use ddc_ui::{widgets, Catalog, Lang, Theme};
+use ddc_ui::{widgets, Catalog, Theme};
 use egui::{self, RichText};
 use std::cell::RefCell;
 use std::sync::Arc;
@@ -391,7 +391,7 @@ fn table(
     d: &mut WallTypeDraft,
     extra: &[String],
 ) {
-    let lang = if ru { Lang::Ru } else { Lang::En };
+    let lang = crate::flag_lang(ru);
     let n = d.rows.len();
     let lu = unit_label_in(d.units, crate::units::lang_of(ru));
     let problems: Vec<Option<&str>> = (0..n).map(|i| d.row_problem(i, ru)).collect();
@@ -836,7 +836,7 @@ pub(crate) fn layout_probe(ru: bool, case: Case) -> crate::layout_contract::Prob
         d.rows[0].function = LayerFn::Membrane;
     }
     let th = Theme::new(ddc_ui::Mode::Dark, ddc_ui::Density::Compact);
-    let cat = Catalog::new(if ru { Lang::Ru } else { Lang::En });
+    let cat = Catalog::new(crate::flag_lang(ru));
     crate::layout_contract::probe("wall_type_editor", |ctx| {
         window(ctx, &th, &cat, ru, &mut ed, &mut d);
     })

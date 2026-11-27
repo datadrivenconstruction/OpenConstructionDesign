@@ -635,7 +635,8 @@ impl EditorApp {
                     *act = Some(Act::Ribbon(rl[i]));
                 }
                 let names: Vec<String> = looks::DENSITIES.iter().map(|d| c.t(&format!("settings.density.{d}"))).collect();
-                let sel = looks::DENSITIES.iter().position(|d| *d == p.density).unwrap_or(1);
+                // "auto" (the layout decides) lights no pill, as the summary names it
+                let sel = looks::DENSITIES.iter().position(|d| *d == p.density).unwrap_or(usize::MAX);
                 if let Some(i) = row(ui, &c.t("settings.density"), &names, sel) {
                     *act = Some(Act::Density(looks::DENSITIES[i]));
                 }

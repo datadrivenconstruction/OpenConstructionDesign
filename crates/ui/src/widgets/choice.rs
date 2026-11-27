@@ -30,7 +30,7 @@ fn full_width(ui: &Ui, th: &Theme, mark_w: f32, label: &str) -> f32 {
     if label.is_empty() {
         return mark_w;
     }
-    let g = ui.painter().layout_no_wrap(label.to_owned(), th.font(Role::Body), th.sem().text_primary);
+    let g = ui.painter().layout_no_wrap(crate::rtl::display(label).into_owned(), th.font(Role::Body), th.sem().text_primary);
     mark_w + space::SM + g.size().x
 }
 
