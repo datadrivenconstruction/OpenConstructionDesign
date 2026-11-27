@@ -1,5 +1,65 @@
 # Changelog
 
+## 1.3.0
+
+### Languages
+- The interface comes in 45 languages. English is the source text; every other language is proofread and kept in its own folder, and regional variants keep only their differences.
+- The AI assistant answers, names things, writes sheet words and gives refusals in the language of the interface, and creates project data (names, notes, schedules) in the user's language.
+- Each project has a document language: drawings, schedules and exports use it, independent of the interface language.
+- Generated service, circuit and air-system names come from the language bundles.
+- Defaults are locale-neutral: phases, import words and CSV decimals follow the locale; ISO sheet words stay fixed in every document language.
+- Right-to-left text is shaped in widgets and ribbon labels.
+
+### Interface
+- Interface modes: ribbon, rail and minimal. The mode is chosen at onboarding and can be changed later; the ribbon can be folded.
+- Ctrl+K opens the command palette.
+- A new update notice: a badge in the tab row and a warning banner that spans the dialog width.
+- Icons take their tint from the theme; ribbon polish.
+- In 3D, an armed tool owns the clicks of the view, and the empty-view card and navigation hint stay out of the way while a tool is live.
+- Scrollbars keep their own gutter, so fields and values never sit under the bar; tables keep their columns clear of it.
+- Undo and redo have new icons.
+- Library cards show two-line names, ribbon captions are taller, and Settings scrolls.
+- The rail and the context bar clear the view tabs; the bar follows the selection.
+
+### Norms and units
+- The starter norm pack is country-neutral; regional packs are chosen by the user.
+- The project currency is an ISO 4217 code.
+- CSV decimal style is named by the decimal mark.
+
+### AI assistant
+- The plan card shows the area and cost change of a plan, and the plan check joins the critic loop with a self-check on the card.
+- Receipts roll back to the state before any apply.
+- Compliance answers cite the rule, clause and elements.
+- Answer mode chip and starter cards in the composer; follow-up chips sit one per row, sized to their words.
+- Large plans are gated by the number of changed elements.
+- `connect_members` picks the type automatically; `section_plane` has a command contract.
+- Rolling a plan back is one step with one regeneration, and runs of steel connections apply in one batch: large AI plans finish much faster.
+- Critic notes stay inside a JSON tool reply.
+- AI snapshots and report shots render the canvas only, without the interface around it.
+
+### Generator
+- A built-in preset keeps its base names through JSON.
+- HVAC: zone cuts and corridor niche shafts for dense zones; a compact shaft turns its riser tee and feeds the main by a long branch; a dedicated system with an over-velocity run is not taken.
+- Hospital supply velocity checks run again.
+- `plan_dump --metrics` prints service counts and generator metrics.
+- Electrical boards sit low enough for their drop under any ceiling; branch tees keep the spacing their fittings need.
+
+### Rendering
+- Offscreen 3D works on the GL backend, so headless frames render on machines without a GPU driver for the default backend.
+
+### Command line and docs
+- Release builds include `ddc gen` and `ddc publish`.
+- A usage error is one line with a hint instead of the whole help.
+- README lists only the recipes in the repository, and CI checks every path it names.
+- `ddc-app --help` and docs/user/video-and-frames.md describe the video and frame flags.
+
+### Browser version
+- The full editor builds for the browser (wasm32) and installs into the ERP from a signed release feed.
+- Session diff reads the base copy through the store.
+
+### Project server link
+- Every page of the revision list is read; a lost lock is recognised by its code.
+
 ## 1.2.0
 
 ### Editor
