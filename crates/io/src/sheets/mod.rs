@@ -136,6 +136,10 @@ pub(crate) fn std_word(
     name: &str,
     own: &str,
 ) -> String {
+    // a norm whose words are part of it (ISO 7200 labels, N/E) keeps them in every language
+    if data()["standards"][standard]["fixed_words"].as_bool() == Some(true) {
+        return own.to_string();
+    }
     let key = format!("sheets.std.{standard}.{name}");
     match words.map(|w| w(&key)) {
         Some(s) if !s.is_empty() && s != key => s,

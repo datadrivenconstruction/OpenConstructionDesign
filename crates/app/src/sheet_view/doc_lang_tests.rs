@@ -131,7 +131,9 @@ fn north_and_east_letters_follow_the_document_language() {
     assert_eq!(fmt(Lang::Ru, "gost"), pair("С", "В"));
     assert_eq!(fmt(Lang::En, "gost"), pair("N", "E"));
     assert_eq!(fmt(Lang::Ru, "iso"), pair("N", "E"));
-    // no translation yet: English, never the key
-    assert_eq!(fmt(Lang::Ja, "gost"), pair("N", "E"));
+    assert_eq!(fmt(Lang::Ja, "gost"), pair("北", "東"));
+    // a catalog without the word: the norm's own letter, never the key
+    let echo = |k: &str| k.to_string();
+    assert_eq!(io::anno_fmt("gost", Some(&echo)).north, "С");
     assert_eq!(io::anno_fmt("gost", None).north, "С");
 }
