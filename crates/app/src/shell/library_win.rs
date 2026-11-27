@@ -26,7 +26,7 @@ const SIDE_W: f32 = 176.0;
 const DETAILS_W: f32 = 300.0;
 /// Card of the grid and its thumbnail.
 const CARD_W: f32 = 132.0;
-const CARD_H: f32 = 168.0;
+const CARD_H: f32 = 176.0;
 const THUMB: u32 = thumb::SIZE;
 /// Thumbnail of the picked type in the details pane.
 const BIG_THUMB: u32 = 128;
@@ -555,7 +555,8 @@ fn card(
     // A child ui, not a scope: a scope would advance the wrapped row's cursor and stagger the cards.
     let mut tui = ui.new_child(egui::UiBuilder::new().max_rect(text));
     tui.spacing_mut().item_spacing.y = space::XXS;
-    widgets::elided_label(&mut tui, &family_label(cat, &e.fam.name), th.font(Role::Small), s.text_primary);
+    // two lines before the cut: a long family name stays readable in the grid
+    widgets::wrapped_label(&mut tui, &family_label(cat, &e.fam.name), th.font(Role::Small), s.text_primary, 2);
     kit::elided_weak(&mut tui, &category_label(cat, e.fam.category.name()));
     if let Some(pk) = pick_of(e, None) {
         resp.dnd_set_drag_payload(pk);

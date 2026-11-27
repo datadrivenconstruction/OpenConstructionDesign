@@ -26,6 +26,46 @@ pub fn elided_label(ui: &mut Ui, text: &str, font: FontId, color: Color32) -> Re
     }
 }
 
+/// Up to `rows` lines no wider than `max_w`, wrapped at words, the last one elided with «…».
+pub fn elide_rows(ui: &Ui, text: &str, font: FontId, color: Color32, max_w: f32, rows: usize) -> Arc<Galley> {
+    let max_w = max_w.max(1.0);
+    if rows <= 1 {
+        return elide(ui, text, font, color, max_w);
+    }
+    // a word wider than the box breaks inside itself, as file names do, rather than lose its end
+    let long_word = text.split_whitespace().any(|w| ui.painter().layout_no_wrap(w.to_owned(), font.clone(), color).size().x > max_w);
+    let wrap = TextWrapping { max_width: max_w, max_rows: rows, break_anywhere: long_word, overflow_character: Some('…') };
+    let shown = if crate::rtl::contains_rtl(text) {
+        // wrap the logical text, then order each line: wrapping reordered text cuts the wrong words
+        let measure = |s: &str| ui.painter().layout_no_wrap(s.to_owned(), font.clone(), color).size().x;
+        let all = crate::rtl::display_wrapped(text, crate::i18n::rtl(), max_w, measure);
+        let lines: Vec<&str> = all.split('\n').collect();
+        if lines.len() <= rows {
+            all
+        } else {
+            format!("{}…", lines[..rows].join("\n"))
+        }
+    } else {
+        text.to_owned()
+    };
+    let mut job = LayoutJob::single_section(shown, TextFormat::simple(font, color));
+    job.wrap = wrap;
+    ui.painter().layout_job(job)
+}
+
+/// As [`elided_label`], over up to `rows` lines: a long name wraps before it is cut.
+pub fn wrapped_label(ui: &mut Ui, text: &str, font: FontId, color: Color32, rows: usize) -> Response {
+    let g = elide_rows(ui, text, font, color, ui.available_width(), rows);
+    let cut = g.elided || g.text().ends_with('…') && !text.ends_with('…');
+    let (r, resp) = ui.allocate_exact_size(g.size(), Sense::hover());
+    ui.painter().galley(r.min, g, color);
+    if cut {
+        resp.on_hover_text(text)
+    } else {
+        resp
+    }
+}
+
 /// Paints one line inside `rect`, vertically centred. Returns true if the text was elided.
 pub fn paint_in(
     ui: &Ui,

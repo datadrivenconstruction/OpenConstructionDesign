@@ -64,7 +64,7 @@ pub mod ribbon {
     pub const ROW_H: f32 = 24.0;
     pub const ROWS: usize = 3;
     /// Group title row under the band (title and optional launcher).
-    pub const TITLE_H: f32 = 16.0;
+    pub const TITLE_H: f32 = 20.0;
     pub const LARGE_ICON: f32 = 24.0;
     pub const MEDIUM_ICON: f32 = 16.0;
     /// Large button: icon top inset, label top, label line height.

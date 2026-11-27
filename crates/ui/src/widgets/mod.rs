@@ -43,7 +43,7 @@ pub use surface::{
 };
 pub use table::{Cell, Column, RowState, Sort, Table, TableOutput};
 pub use tabs::tab_bar;
-pub use text::{elide, elided_label};
+pub use text::{elide, elide_rows, elided_label, wrapped_label};
 
 use crate::theme::{control, icon_size, layout, space, stroke, Role};
 use crate::{icons::IconCache, Theme};

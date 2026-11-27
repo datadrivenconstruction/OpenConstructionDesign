@@ -1270,6 +1270,7 @@ impl EditorApp {
                                 BODIES[i](self, ui, &mut form, &mut out);
                             }
                         });
+                    crate::ui_kit::mark_scroll_viewport(ui.ctx(), shown.inner_rect);
                     // a cut edge shows there is more above or below
                     widgets::scroll_hint::scroll_fade(ui, &th, &shown);
                 });

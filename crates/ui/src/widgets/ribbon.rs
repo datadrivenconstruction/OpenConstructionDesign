@@ -1815,6 +1815,45 @@ mod tests {
     }
 
     #[test]
+    fn caption_ink_stays_in_its_row_in_every_locale() {
+        let mut bad = vec![];
+        for &l in Lang::ALL {
+            let ctx = egui::Context::default();
+            ctx.set_fonts(crate::theme::font_definitions_for_lang(crate::theme::UiFont::Sans, l));
+            let _ = ctx.run(Default::default(), |_| {});
+            let cat = Catalog::new(l);
+            let _ = ctx.run(Default::default(), |ctx| {
+                // the caption row is the last of the body: ink past it is cut by the panel edge
+                for (role, h) in [(Role::GroupTitle, k::TITLE_H)] {
+                    let f = crate::typo::font(role);
+                    for (key, v) in cat.table(l) {
+                        let Some(t) = v.as_str().filter(|_| key.starts_with("rgroup.")) else { continue };
+                        let s = crate::rtl::display_for(t, l.is_rtl()).into_owned();
+                        let g = ctx.fonts(|fo| fo.layout_no_wrap(s, f.clone(), Color32::WHITE));
+                        // painted centred on the row, as `band` and `button` do
+                        let top = -g.size().y / 2.0;
+                        let (mut lo, mut hi) = (f32::MAX, f32::MIN);
+                        for r in &g.rows {
+                            for gl in &r.row.glyphs {
+                                if gl.uv_rect.size.y <= 0.0 {
+                                    continue;
+                                }
+                                let y = top + r.pos.y + gl.pos.y + gl.uv_rect.offset.y;
+                                lo = lo.min(y);
+                                hi = hi.max(y + gl.uv_rect.size.y);
+                            }
+                        }
+                        if lo < -h / 2.0 - 0.5 || hi > h / 2.0 + 0.5 {
+                            bad.push(format!("{} {role:?} {key}: ink {lo:.1}..{hi:.1} in ±{}", l.code(), h / 2.0));
+                        }
+                    }
+                }
+            });
+        }
+        assert!(bad.is_empty(), "{} captions leave their row:\n{}", bad.len(), bad.join("\n"));
+    }
+
+    #[test]
     fn ribbon_labels_short() {
         let (cat, reg) = (Catalog::new(Lang::En), Registry::builtin());
         let get = |id: &str| short_label(&cat, reg.get(id).unwrap());
