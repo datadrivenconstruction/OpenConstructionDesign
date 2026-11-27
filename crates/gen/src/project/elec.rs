@@ -1052,6 +1052,13 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
         }
         // board drop: top of the board above its bottom, conduit diameter; fix attempts per room
         let (board_top, board_drop) = (rule("services.elec.board_top"), rule("services.elec.board_drop"));
+        // under a low ceiling the board comes down: its top below the ceiling face and the drop
+        // to it long enough for the tee off the carrier and the bend
+        let bz = {
+            let (t, d) = (svc::tray_run(0, tray().0, tray().1, vec![]), svc::conduit_run(0, board_drop, vec![]));
+            let need = ddc_geom::mep::junction_leg(&t.section) + svc::bend_max(&t).max(svc::bend_max(&d) + ddc_geom::mep::transition_length(&d.section, &t.section)) + EPS;
+            ((board_z() + board_top).min(z - e - need).min(f_rel) - board_top).max(0.0)
+        };
         let attempts = rule("services.elec.attempts") as usize;
         // unit boards in the apartment halls, on the spine side beside the entrance feed
         let mut unit_at: Vec<Option<f64>> = vec![None; rs.len()];
@@ -1219,14 +1226,14 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 if v == board_room {
                     let sd = &rs[v].sides[fb.j];
                     let w = sd.at(fb.s, d_spine());
-                    let pz = e + board_z() + board_top;
+                    let pz = e + bz + board_top;
                     let r = if k == 0 { svc::tray_run(k, tray().0, tray().1, vec![v3(w.0, w.1, z), v3(w.0, w.1, pz)]) } else { svc::conduit_run(k, board_drop, vec![v3(w.0, w.1, z), v3(w.0, w.1, pz)]) };
                     b.runs.push(r);
                 }
                 if let (Some(s), Some(j)) = (unit_at[v], spine[v]) {
                     // a spine stepped off its wall reaches back to the board on the wall
                     let (a, w) = (rs[v].sides[j].at(s, co[v]), rs[v].sides[j].at(s, d_spine()));
-                    let mut pts = vec![v3(a.0, a.1, z), v3(w.0, w.1, z), v3(w.0, w.1, e + board_z() + board_top)];
+                    let mut pts = vec![v3(a.0, a.1, z), v3(w.0, w.1, z), v3(w.0, w.1, e + bz + board_top)];
                     if co[v] <= d_spine() + EPS {
                         pts.remove(1);
                     }
@@ -1258,7 +1265,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 }
                 if v == board_room {
                     let w = rs[v].sides[fb.j].at(fb.s, d_spine());
-                    pseudo.push(v3(w.0, w.1, e + board_z() + board_top));
+                    pseudo.push(v3(w.0, w.1, e + bz + board_top));
                     if n_st > 1 {
                         let q = core_xy.unwrap_or_else(|| rs[v].sides[fb.j].at(fb.s + riser_off, d_spine()));
                         if k > 0 {
@@ -1271,7 +1278,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                 }
                 if let (Some(s), Some(j)) = (unit_at[v], spine[v]) {
                     let w = rs[v].sides[j].at(s, d_spine());
-                    pseudo.push(v3(w.0, w.1, e + board_z() + board_top));
+                    pseudo.push(v3(w.0, w.1, e + bz + board_top));
                 }
                 let mut check: Vec<&GRun> = b.runs.iter().collect();
                 // the riser pieces meeting this spine
@@ -1363,7 +1370,6 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         dropped.truncate(told);
                         continue;
                     }
-                    eprintln!("ZZDBG k{k} room{} {:?} board={} faults {:?}", rs[v].idx, rs[v].kind, v == board_room, faults.iter().take(4).collect::<Vec<_>>());
                     break None;
                 }
                 // clashes: drop what does not fit, else give the room up
@@ -1403,7 +1409,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
                         (pl, attempt) = (pl0.clone(), 0);
                         dropped.truncate(told);
                     }
-                    None => { eprintln!("ZZDBG k{k} room{} {:?} board={} clash {:?} item {:?}", rs[v].idx, rs[v].kind, v == board_room, culprit.map(|ri| space.zzwhy(&b.runs[ri], svc::gap())), item.is_some()); break None }
+                    None => break None,
                 }
             };
             let Some(b) = built else {
@@ -1440,7 +1446,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
             if let (Some(s), Some(j), Some(a)) = (unit_at[v], spine[v], owner_key) {
                 let sd = &room.sides[j];
                 let idx = n_fx[k] + add[k].len();
-                add[k].push(wall_fixture(&p.storeys[k].layout, sd, s, "Distribution Board", "Sub 400x600", board_z()));
+                add[k].push(wall_fixture(&p.storeys[k].layout, sd, s, "Distribution Board", "Sub 400x600", bz));
                 links.push(GSvcLink { storey: k, fixture: idx, connector: "Main", sys: SvcSys::Power });
                 unit_boards.insert((k, a), (k, idx));
                 board_fx.push((k, idx));
@@ -1448,7 +1454,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
             if v == board_room {
                 let sd = &room.sides[fb.j];
                 let idx = n_fx[k] + add[k].len();
-                add[k].push(wall_fixture(&p.storeys[k].layout, sd, fb.s, "Distribution Board", if k == 0 { "400x600" } else { "Sub 400x600" }, board_z()));
+                add[k].push(wall_fixture(&p.storeys[k].layout, sd, fb.s, "Distribution Board", if k == 0 { "400x600" } else { "Sub 400x600" }, bz));
                 links.push(GSvcLink { storey: k, fixture: idx, connector: "Main", sys: SvcSys::Power });
                 board_fx.push((k, idx));
             }
@@ -1456,7 +1462,7 @@ pub(crate) fn wire(spec: &ProjectSpec, p: &mut GProject) -> usize {
             if let (Some(s), Some(j), Some(z)) = (unit_at[v], spine[v], zone_host[v].then_some(v)) {
                 let sd = &room.sides[j];
                 let idx = n_fx[k] + add[k].len();
-                add[k].push(wall_fixture(&p.storeys[k].layout, sd, s, "Distribution Board", "Sub 400x600", board_z()));
+                add[k].push(wall_fixture(&p.storeys[k].layout, sd, s, "Distribution Board", "Sub 400x600", bz));
                 links.push(GSvcLink { storey: k, fixture: idx, connector: "Main", sys: SvcSys::Power });
                 hosted.insert(z, (k, idx));
                 board_fx.push((k, idx));

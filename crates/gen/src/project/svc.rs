@@ -1692,25 +1692,6 @@ impl<'a> Space<'a> {
             .collect()
     }
 
-    pub fn zzwhy(&self, r: &GRun, gap: f64) -> String {
-        let q = pts(r);
-        for w in q.windows(2) {
-            let b = seg_box(&r.section, w[0], w[1]);
-            let sys = format!("{:?}", r.sys);
-            if let Some(o) = self.obst.iter().find(|o| overlap(&o.0, &b, gap) && !shaft_takes(o.1, &sys)) {
-                return format!("obst {} {:?} seg {:?}->{:?}", o.1, o.0, w[0], w[1]);
-            }
-            for s in &self.segs {
-                let g = if s.0 == r.sys { 0.0 } else { gap };
-                if overlap(&s.3, &b, g) {
-                    let joined = s.0 == r.sys && (on_seg(s.1, w[0], w[1]) || on_seg(s.2, w[0], w[1]) || on_seg(w[0], s.1, s.2) || on_seg(w[1], s.1, s.2));
-                    if !joined { return format!("seg {:?} {:?}->{:?} vs {:?}->{:?}", s.0, s.1, s.2, w[0], w[1]); }
-                }
-            }
-        }
-        "slab?".into()
-    }
-
     /// Whether the run fits: clear of obstacles by `gap`, of other systems' runs by `gap`,
     /// of its own system's runs unless joined to them, and crossing slabs only upright.
     pub fn fits(&self, r: &GRun, gap: f64) -> bool {
