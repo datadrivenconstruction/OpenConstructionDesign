@@ -3,7 +3,34 @@
 ## 1.4.0 (unreleased)
 
 ### Command line
-- Release builds include `ddc gen` and `ddc publish`.
+- Release builds include `ddc gen` and `ddc publish`; the ERP link builds without the GUI.
+- `ddc new` creates an empty project; `ddc run --new` runs a script without an input file.
+- `ddc run` applies large scripts in linear time and prints `applying N/total`.
+- `ddc ai` runs the AI assistant without a window, with a cost estimate and `--budget-usd`.
+- `ddc ai-profile add|list|remove` manages the same AI profiles as the app; keys stay in the OS keychain.
+- Usage errors are one line with a hint instead of the whole help.
+
+### Scripting
+- Lua `member{}` and `slab{}` blocks.
+- The lattice audit joins members crossing at a node instead of reporting clashes, and names ids and points.
+
+### Video and frames
+- `--reveal-out` always runs headless; `--reveal all` includes script-made elements, built bottom-up.
+- Camera choice for reveals: `fixed`, `orbit`, `follow`.
+- Sections and plans work for models made only of members; screenshots show only the canvas.
+- One language rule everywhere: `--lang`, then the setting, then the system language.
+
+### AI assistant
+- Model gateway preset: models, prices and context size come from the gateway.
+- A spent key limit and an empty balance are their own errors with a next step; the balance is shown.
+- Mode switch, onboarding, recovery and warning texts explain what each choice does.
+
+### Editor
+- The window is named OpenConstructionDesign.
+- Scrollbars never cover content.
+- The model summary counts members, plates and other solids.
+- Realism checks of steel joints scale to large models.
+- Every locale has all interface texts.
 
 ## 1.3.0
 
