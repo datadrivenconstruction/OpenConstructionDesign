@@ -32,7 +32,7 @@ pub fn zone<R>(ui: &mut egui::Ui, salt: &str, h: f32, add: impl FnOnce(&mut egui
         .auto_shrink([false, false])
         .max_height(h)
         .show(&mut child, add);
-    super::mark_scroll_viewport(ui.ctx(), out.inner_rect);
+    super::mark_scroll(&child, &out);
     out.inner
 }
 
@@ -43,7 +43,7 @@ pub fn rows_height(ui: &egui::Ui, rows: usize, row_h: f32) -> f32 {
 }
 
 /// List that shows at most `max_rows` rows of `row_h` and then scrolls inside itself, ending on
-/// a row boundary. The bar is solid and always visible, so a list that goes on is never
+/// a row boundary. The bar always shows, so a list that goes on is never
 /// mistaken for a list that ends. `add` draws the rows and gets the width left of the bar.
 pub fn scroll_list<R>(
     ui: &mut egui::Ui,
@@ -54,14 +54,16 @@ pub fn scroll_list<R>(
 ) -> R {
     let h = rows_height(ui, max_rows, row_h);
     ui.scope(|ui| {
-        ui.spacing_mut().scroll = egui::style::ScrollStyle::solid();
+        let sc = &mut ui.spacing_mut().scroll;
+        sc.dormant_handle_opacity = sc.active_handle_opacity;
+        sc.dormant_background_opacity = sc.active_background_opacity;
         let out = egui::ScrollArea::vertical()
             .id_salt(salt)
             .auto_shrink([false, true])
             .max_height(h)
             .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::AlwaysVisible)
             .show(ui, add);
-        super::mark_scroll_viewport(ui.ctx(), out.inner_rect);
+        super::mark_scroll(ui, &out);
         out.inner
     })
     .inner

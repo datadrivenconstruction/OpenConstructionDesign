@@ -151,7 +151,8 @@ pub fn side_panel(
         .frame(
             egui::Frame::new()
                 .fill(t.panel)
-                .inner_margin(egui::Margin::symmetric(12, 10)),
+                // the window margin: a panel's rows inset as a dialog's do
+                .inner_margin(egui::Margin::same(ddc_ui::theme::space::MD as i8)),
         )
         .show(ctx, add)
         .response
@@ -453,6 +454,59 @@ pub(crate) fn scroll_viewport_id() -> egui::Id {
     egui::Id::new("ddc.kit.scroll_viewport")
 }
 
+/// Shows a scroll area and records it for the layout contract (`mark_scroll`).
+pub trait KitScroll {
+    fn kit_show<R>(
+        self,
+        ui: &mut egui::Ui,
+        add: impl FnOnce(&mut egui::Ui) -> R,
+    ) -> egui::scroll_area::ScrollAreaOutput<R>;
+}
+
+impl KitScroll for egui::ScrollArea {
+    fn kit_show<R>(
+        self,
+        ui: &mut egui::Ui,
+        add: impl FnOnce(&mut egui::Ui) -> R,
+    ) -> egui::scroll_area::ScrollAreaOutput<R> {
+        let out = self.show(ui, add);
+        mark_scroll(ui, &out);
+        out
+    }
+}
+
+/// `mark_scroll_viewport` for a shown area, plus its vertical bar while it can scroll: the
+/// layout contract checks that nothing is drawn under the bar.
+pub fn mark_scroll<R>(ui: &egui::Ui, out: &egui::scroll_area::ScrollAreaOutput<R>) {
+    mark_scroll_viewport(ui.ctx(), out.inner_rect);
+    #[cfg(test)]
+    if let Some(bar) = vbar_rect(&ui.spacing().scroll, out.inner_rect, out.content_size) {
+        ui.ctx().data_mut(|d| d.get_temp_mut_or_default::<Vec<egui::Rect>>(scroll_bar_id()).push(bar));
+    }
+}
+
+/// The rect the vertical bar of a viewport takes at full (hovered) width, as egui places it;
+/// `None` while the content fits.
+#[cfg(test)]
+pub(crate) fn vbar_rect(
+    sc: &egui::style::ScrollStyle,
+    viewport: egui::Rect,
+    content: egui::Vec2,
+) -> Option<egui::Rect> {
+    if content.y <= viewport.height() + 0.5 {
+        return None;
+    }
+    let right = viewport.right() + sc.allocated_width() - sc.bar_outer_margin;
+    let left = if sc.floating { right - sc.bar_width } else { viewport.right() + sc.bar_inner_margin };
+    Some(egui::Rect::from_x_y_ranges(left..=right, viewport.y_range()))
+}
+
+/// Where the vertical bars of the pass are kept for the layout contract.
+#[cfg(test)]
+pub(crate) fn scroll_bar_id() -> egui::Id {
+    egui::Id::new("ddc.kit.scroll_bar")
+}
+
 /// The viewport of a sideways scrolling area this pass (a wide table): the layout contract lets
 /// text run past its left and right edges, since scrolling brings it into view.
 pub fn mark_hscroll_viewport(ctx: &egui::Context, viewport: egui::Rect) {
@@ -467,16 +521,24 @@ pub fn mark_hscroll_viewport(ctx: &egui::Context, viewport: egui::Rect) {
 /// One row of controls in `ui` (a bar over a view), on the row's centre line: what does not
 /// fit scrolls sideways, as on the tool option bar, instead of running past the view.
 pub fn bar_row<R>(ui: &mut egui::Ui, salt: &str, add: impl FnOnce(&mut egui::Ui) -> R) -> R {
-    let out = egui::ScrollArea::horizontal()
-        .id_salt(salt)
-        // the full bar height, so the row stays on the bar's centre line
-        .auto_shrink([true, false])
-        .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::VisibleWhenNeeded)
-        .show(ui, |ui| {
-            ui.with_layout(egui::Layout::left_to_right(egui::Align::Center), add).inner
-        });
-    mark_hscroll_viewport(ui.ctx(), out.inner_rect);
-    out.inner
+    ui.scope(|ui| {
+        // a thin bar along the bar's own bottom padding: a gutter would push the row off centre
+        let sc = &mut ui.spacing_mut().scroll;
+        sc.bar_width = sc.floating_width;
+        sc.bar_outer_margin = 0.0;
+        sc.floating_allocated_width = 0.0;
+        let out = egui::ScrollArea::horizontal()
+            .id_salt(salt)
+            // the full bar height, so the row stays on the bar's centre line
+            .auto_shrink([true, false])
+            .scroll_bar_visibility(egui::scroll_area::ScrollBarVisibility::VisibleWhenNeeded)
+            .show(ui, |ui| {
+                ui.with_layout(egui::Layout::left_to_right(egui::Align::Center), add).inner
+            });
+        mark_hscroll_viewport(ui.ctx(), out.inner_rect);
+        out.inner
+    })
+    .inner
 }
 
 /// Where the sideways scroll viewports of the pass are kept for the layout contract.

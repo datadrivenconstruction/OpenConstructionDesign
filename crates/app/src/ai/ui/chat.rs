@@ -15,6 +15,7 @@ use ddc_ui::icons::IconCache;
 use ddc_ui::theme::{icon_size, Role};
 use ddc_ui::widgets;
 use egui::{self, Frame, Key, KeyboardShortcut, Margin, Modifiers, RichText, TextEdit, Ui};
+use crate::ui_kit::KitScroll;
 
 const COMPOSER_ROWS: f32 = 6.0;
 const BUBBLE_SHARE: f32 = 0.85;
@@ -271,7 +272,7 @@ pub(super) fn dialog(
             egui::ScrollArea::vertical()
                 .auto_shrink([false, false])
                 .stick_to_bottom(pending.is_none())
-                .show(ui, |ui| {
+                .kit_show(ui, |ui| {
                     ui.set_width(ui.available_width());
                     body(ui, st, cx, icons, state, f, acts, hot);
                 });
@@ -1106,7 +1107,7 @@ fn composer(
         .id_salt("ddc.ai.composer_scroll")
         .max_height(input_max_height(th))
         .min_scrolled_height(input_min_height(th))
-        .show(ui, |ui| {
+        .kit_show(ui, |ui| {
             ui.add(
                 TextEdit::multiline(&mut st.input)
                     .id(id)

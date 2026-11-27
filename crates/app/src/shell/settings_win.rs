@@ -1244,7 +1244,8 @@ impl EditorApp {
                         .min_scrolled_height(h)
                         .auto_shrink([false, true])
                         .show(ui, |ui| {
-                            ui.set_max_width(body_w);
+                            // what the bar's gutter leaves, never under the bar
+                            ui.set_max_width(ui.available_width().min(body_w));
                             if form.searching() {
                                 for (i, body) in BODIES.iter().enumerate() {
                                     form.enter(self.sh.cat.t(PAGES[i].0));
@@ -1270,7 +1271,7 @@ impl EditorApp {
                                 BODIES[i](self, ui, &mut form, &mut out);
                             }
                         });
-                    crate::ui_kit::mark_scroll_viewport(ui.ctx(), shown.inner_rect);
+                    crate::ui_kit::mark_scroll(ui, &shown);
                     // a cut edge shows there is more above or below
                     widgets::scroll_hint::scroll_fade(ui, &th, &shown);
                 });

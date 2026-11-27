@@ -103,6 +103,18 @@ pub mod ribbon {
     pub const MOTION_S: f32 = 0.12;
 }
 
+/// Thin overlay bars, but in a gutter of their own: while an area can scroll it gives up
+/// `gap + bar + gap` of its width, so no row runs under the bar.
+pub fn scroll_style() -> egui::style::ScrollStyle {
+    let mut sc = egui::style::ScrollStyle::floating();
+    sc.bar_width = control::SCROLLBAR_W;
+    sc.floating_width = control::SCROLLBAR_THIN_W;
+    sc.bar_inner_margin = control::SCROLLBAR_GAP;
+    sc.bar_outer_margin = control::SCROLLBAR_GAP;
+    sc.floating_allocated_width = sc.bar_inner_margin + sc.bar_width + sc.bar_outer_margin;
+    sc
+}
+
 pub fn family(name: &str) -> FontFamily {
     if name == W_REGULAR {
         FontFamily::Proportional
@@ -654,10 +666,7 @@ impl Theme {
         s.menu_margin = Margin::same(6);
         s.indent = space::LG;
         s.tooltip_width = layout::TOOLTIP_W;
-        let mut sc = egui::style::ScrollStyle::floating();
-        sc.bar_width = 8.0;
-        sc.floating_width = 3.0;
-        s.scroll = sc;
+        s.scroll = scroll_style();
         st.text_styles = [
             (TextStyle::Small, self.font(Role::Caption)),
             (TextStyle::Body, self.font(Role::Body)),

@@ -15,6 +15,7 @@ use ddc_ui::{Catalog, Theme};
 use egui::{self, RichText};
 
 use super::{parse_num, Action, Project, Session, Tab};
+use crate::ui_kit::KitScroll;
 
 pub const KINDS: [Kind; 10] = [
     Kind::Length,
@@ -539,7 +540,7 @@ fn csv_preview(
             let out = egui::ScrollArea::vertical()
                 .id_salt("fe_csv_preview")
                 .max_height(CSV_PREVIEW_H)
-                .show(ui, |ui| {
+                .kit_show(ui, |ui| {
                     for l in rest {
                         ui.label(l);
                     }

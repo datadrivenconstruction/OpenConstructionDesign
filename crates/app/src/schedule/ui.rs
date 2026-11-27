@@ -755,6 +755,7 @@ impl View {
                         }
                     }
                 });
+                crate::ui_kit::mark_scroll(ui, &grid);
                 cursor::register(ui, grid.inner_rect);
                 // totals
                 let (fr, _) = ui.allocate_exact_size(Vec2::new(total_w, foot), Sense::hover());

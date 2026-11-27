@@ -17,6 +17,7 @@ use ddc_ui::Theme;
 use egui::{self, RichText};
 use std::cell::RefCell;
 use std::sync::{Arc, Mutex};
+use crate::ui_kit::KitScroll;
 
 /// A file read for import, its preview and the choices made.
 #[derive(Clone, Debug)]
@@ -312,7 +313,7 @@ fn list_view(
     egui::ScrollArea::vertical()
         .id_salt("ag3.lib.types")
         .max_height(layout::DIALOG_TOOL_H / 2.0)
-        .show(ui, |ui| {
+        .kit_show(ui, |ui| {
             for t in used {
                 if type_row(ui, th, ru, t, ed.tool.units) {
                     ask = Some(Ask::Edit(t.id));
@@ -362,7 +363,7 @@ fn import_view(ui: &mut egui::Ui, th: &Theme, ru: bool, im: &mut Import) -> (boo
     egui::ScrollArea::vertical()
         .id_salt("wall_type.lib.import")
         .max_height(layout::DIALOG_TOOL_H / 2.0)
-        .show(ui, |ui| {
+        .kit_show(ui, |ui| {
             for (r, p) in im.rows.iter().zip(im.pick.iter_mut()) {
                 ui.horizontal(|ui| {
                     widgets::checkbox(ui, th, p, &r.name);
@@ -422,7 +423,7 @@ fn purge_view(
     egui::ScrollArea::vertical()
         .id_salt("wall_type.lib.purge")
         .max_height(layout::DIALOG_TOOL_H / 2.0)
-        .show(ui, |ui| {
+        .kit_show(ui, |ui| {
             for (_, name, on) in list.iter_mut() {
                 widgets::checkbox(ui, th, on, name);
             }

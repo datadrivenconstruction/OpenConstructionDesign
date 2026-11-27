@@ -207,6 +207,11 @@ pub mod control {
     pub const MENU_ROW_H: f32 = 28.0;
     pub const MENU_W: f32 = 220.0;
     pub const MENU_MAX_W: f32 = 320.0;
+    /// Scroll bar: full width (hovered), resting width, and the gap on each side of it in the
+    /// gutter a scroll area reserves while it can scroll.
+    pub const SCROLLBAR_W: f32 = 8.0;
+    pub const SCROLLBAR_THIN_W: f32 = 4.0;
+    pub const SCROLLBAR_GAP: f32 = 4.0;
 }
 
 /// Panel and dialog widths (`layout`).
@@ -661,6 +666,9 @@ mod tests {
             ("control.menu_row_h", control::MENU_ROW_H),
             ("control.menu_w", control::MENU_W),
             ("control.menu_max_w", control::MENU_MAX_W),
+            ("control.scrollbar_w", control::SCROLLBAR_W),
+            ("control.scrollbar_thin_w", control::SCROLLBAR_THIN_W),
+            ("control.scrollbar_gap", control::SCROLLBAR_GAP),
             ("layout.prop_value", layout::PROP_VALUE),
             ("layout.prop_unit", layout::PROP_UNIT),
             ("layout.prop_gap", layout::PROP_GAP),

@@ -12,6 +12,7 @@ use ddc_ui::widgets::{self, formula::Check};
 use ddc_ui::Theme;
 use egui::{self, RichText};
 use std::collections::HashMap;
+use crate::ui_kit::KitScroll;
 
 #[derive(Clone, Debug, PartialEq)]
 pub struct Row {
@@ -563,7 +564,7 @@ pub fn window(
             ui.add_space(6.0);
             egui::ScrollArea::vertical()
                 .max_height(ui.available_height() - 64.0)
-                .show(ui, |ui| {
+                .kit_show(ui, |ui| {
                     if d.tab == 0 {
                         params_table(ui, th, d, &ev);
                     } else {

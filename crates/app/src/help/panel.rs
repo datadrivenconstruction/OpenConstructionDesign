@@ -9,6 +9,7 @@ use ddc_ui::widgets::table::{row_colors, RowState};
 use ddc_ui::widgets::{self, Button, TextField};
 use ddc_ui::{Catalog, Registry, Theme};
 use egui::{self, Align, RichText, Sense, Vec2};
+use crate::ui_kit::KitScroll;
 
 /// Shortcut shown in the back button tooltip; the key itself is handled in `show`.
 const BACK_KEYS: &str = "Alt+Left";
@@ -244,7 +245,7 @@ pub fn show(
                         .id_salt("ddc.help.list")
                         .max_height(h)
                         .auto_shrink([false, false])
-                        .show(ui, |ui| {
+                        .kit_show(ui, |ui| {
                             let found = lib.search(&p.query);
                             if found.is_empty() {
                                 let msg = th.rich(Role::Body, &cat.t("help.empty"));
@@ -266,7 +267,7 @@ pub fn show(
                         .id_salt("ddc.help.body")
                         .max_height(h)
                         .auto_shrink([false, false])
-                        .show(ui, |ui| {
+                        .kit_show(ui, |ui| {
                             let topic = p
                                 .topic
                                 .as_deref()

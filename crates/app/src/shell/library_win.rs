@@ -17,6 +17,7 @@ use ddc_ui::theme::{icon_size, space, stroke, Role};
 use ddc_ui::widgets::{self, Cell, Column, RowState, Table, TextField, Tone};
 use ddc_ui::{Catalog, Theme};
 use egui::{self, Align, Layout};
+use crate::ui_kit::KitScroll;
 
 /// Width of the count column of the source and category lists.
 const COUNT_W: f32 = 40.0;
@@ -407,7 +408,7 @@ fn sources(ui: &mut egui::Ui, th: &Theme, cat: &Catalog, entries: &[Entry], lib:
     egui::ScrollArea::vertical()
         .id_salt("c.lib.side")
         .auto_shrink([false, false])
-        .show(ui, |ui| {
+        .kit_show(ui, |ui| {
             let rows: Vec<(String, usize)> = Source::ALL
                 .iter()
                 .map(|s| (cat.t(s.key()), entries.iter().filter(|e| e.source == *s).count()))
@@ -449,7 +450,7 @@ fn grid(ui: &mut egui::Ui, th: &Theme, cat: &Catalog, entries: &[Entry], lib: &m
     egui::ScrollArea::vertical()
         .id_salt("c.lib.list")
         .auto_shrink([false, false])
-        .show(ui, |ui| {
+        .kit_show(ui, |ui| {
             let idx = filtered(entries, lib);
             if idx.is_empty() {
                 let none_here = !entries.iter().any(|e| e.source == lib.source);
@@ -701,7 +702,7 @@ fn details(ui: &mut egui::Ui, th: &Theme, cat: &Catalog, picked: Option<&Entry>,
     egui::ScrollArea::vertical()
         .id_salt("c.lib.details")
         .auto_shrink([false, false])
-        .show(ui, |ui| {
+        .kit_show(ui, |ui| {
             let s = th.sem();
             let ty = lib.ty.clone().or_else(|| f.types.first().map(|t| t.name.clone()));
             let side = BIG_THUMB as f32;

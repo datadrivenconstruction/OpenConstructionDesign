@@ -314,8 +314,12 @@ impl<'a> Table<'a> {
                 })
                 .collect();
             let cols = &eff[..];
-            let widths = column_widths(cols, w);
             let head_h = header_h(row_h);
+            // a body that scrolls gives its bar a gutter: the columns end where the rows do
+            let fits_h = self.max_height.min((ui.available_height() - head_h).max(row_h));
+            let scrolls = rows as f32 * row_h > fits_h + 0.5;
+            let gutter = if scrolls { ui.spacing().scroll.allocated_width() } else { 0.0 };
+            let widths = column_widths(cols, (w - gutter).max(0.0));
             let (head, _) = ui.allocate_exact_size(Vec2::new(w, head_h), Sense::hover());
             ui.painter().rect_filled(head, 0.0, s.bg_panel);
             let mut x = head.left();

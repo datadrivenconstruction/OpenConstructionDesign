@@ -32,6 +32,7 @@ use egui::{self, RichText};
 
 use crate::editor::Editor;
 use crate::shell::EditorApp;
+use crate::ui_kit::KitScroll;
 
 pub const HOSTS: [Hosting; 5] = [
     Hosting::None,
@@ -988,7 +989,7 @@ fn body(
         }
         let out = egui::ScrollArea::vertical()
             .id_salt("g11.fe.tab")
-            .show(ui, |ui| tabs::show(ui, th, cat, s, project, acts));
+            .kit_show(ui, |ui| tabs::show(ui, th, cat, s, project, acts));
         widgets::scroll_hint::scroll_fade(ui, th, &out);
     });
 }

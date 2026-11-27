@@ -300,7 +300,7 @@ impl<'o> Dialog<'o> {
                         .auto_shrink([false, !scroll])
                         .max_height(avail.max(0.0))
                         .show(ui, add);
-                    super::mark_scroll_viewport(ui.ctx(), out.inner_rect);
+                    super::mark_scroll(ui, &out);
                     ui.ctx().data_mut(|d| d.remove_temp::<f32>(above_id()));
                     fits_again = overflowed && out.content_size.y + 0.5 < avail;
                     if header_shadow_visible(out.state.offset.y) {
@@ -933,7 +933,7 @@ pub fn pinned_footer(ui: &mut egui::Ui, mut add: impl FnMut(&mut egui::Ui, bool)
             let out = egui::ScrollArea::vertical()
                 .auto_shrink([false, false])
                 .show(ui, |ui| add(ui, false));
-            super::mark_scroll_viewport(ui.ctx(), out.inner_rect);
+            super::mark_scroll(ui, &out);
         });
     });
 }
