@@ -19,6 +19,7 @@ pub mod gen_arcs;
 pub mod gen_map;
 pub mod gen_rules;
 pub mod gen_tools;
+pub mod headless;
 pub mod conflict;
 pub mod replan;
 pub mod create_more;

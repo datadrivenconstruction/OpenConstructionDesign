@@ -419,6 +419,9 @@ pub struct PanelUi {
     unreadable: Option<connect::Unreadable>,
     pub limit: Option<&'static str>,
     pub usage: UsageTotals,
+    /// Cost of one step at most and the money left (when the server reports it); once per session.
+    pub estimate: crate::ai::headless::Estimate,
+    balance_rx: Option<std::sync::mpsc::Receiver<crate::ai::headless::Estimate>>,
     pub tool_running: bool,
     /// Timestamps of the running turn; `stream_status` makes the status row of them.
     pub stream: Vec<stream_status::Ev>,
@@ -620,6 +623,10 @@ impl PanelUi {
     }
 
     fn drain(&mut self) {
+        if let Some(b) = self.balance_rx.as_ref().and_then(|rx| rx.try_recv().ok()) {
+            self.estimate = b;
+            self.balance_rx = None;
+        }
         let events = with_session(|s| s.as_mut().map_or_else(Vec::new, |u| u.drain_events()));
         let mut stopped = false;
         let now = web_time::Instant::now();
@@ -897,6 +904,8 @@ impl PanelUi {
             match connect::open_session(app, &p, host.clone(), self.snapshots.clone(), view) {
                 Ok(u) => {
                     with_session(|s| *s = Some(u));
+                    self.estimate = Default::default();
+                    self.balance_rx = connect::balance_job(app, &p, host.clone());
                     self.session_host = host;
                     self.session_profile = p.id.clone();
                     self.starting = true;

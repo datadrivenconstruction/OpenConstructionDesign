@@ -18,6 +18,8 @@ path = "src/main.rs"
 dxf-export = ["ddc-io/dxf-write"]
 # ERP link commands (`ddc gen`, `ddc publish`); pulls in the editor crate, off by default
 link = ["dep:ddc-app", "ddc-app/link"]
+# `ddc ai`: the editor's assistant without the window; pulls in the editor crate
+ai = ["dep:ddc-app"]
 
 [dependencies]
 web-time.workspace = true
@@ -26,6 +28,7 @@ ddc-model = { path = "../model" }
 ddc-io = { path = "../io" }
 ddc-ops = { path = "../ops" }
 ddc-script = { path = "../script" }
+ddc-ai = { path = "../ai" }
 serde_json.workspace = true
 ddc-app = { path = "../app", default-features = false, optional = true }
 

@@ -6,6 +6,7 @@
 use super::kit::{self, space, Button, Dialog, DialogSize};
 use super::{connect, keys, logic, Action, Cx, PanelUi};
 use crate::ai::AiError;
+use ddc_ai::gateway::ModelInfo;
 use ddc_ai::{
     build_provider, consent_key, AuthKind, ChatRequest, EgressGuard, Executor, Flow, Message, Profile,
     Protocol, Role, Secret, SecretStore, StreamEvent, ToolCalling, ToolSchema,
@@ -22,7 +23,7 @@ const PING_OUTPUT_TOKENS: u32 = 64;
 
 enum JobMsg {
     Tested { tool: bool },
-    Models(Vec<String>),
+    Models(Vec<ModelInfo>),
     Failed {
         key: &'static str,
         detail: Option<String>,
@@ -41,9 +42,9 @@ enum Outcome {
 }
 
 /// The end of a job as the form sees it.
-#[derive(Debug, PartialEq, Eq)]
+#[derive(Debug, PartialEq)]
 enum Settled {
-    Models(Vec<String>, Outcome),
+    Models(Vec<ModelInfo>, Outcome),
     Done(Outcome),
 }
 
@@ -89,7 +90,7 @@ pub struct Settings {
     exec_model: String,
     exec_price_in: String,
     exec_price_out: String,
-    models: Vec<String>,
+    models: Vec<ModelInfo>,
     job: Option<Receiver<JobMsg>>,
     outcome: Option<Outcome>,
     save_error: Option<String>,
@@ -132,6 +133,27 @@ fn amount_text(v: f64, mark: DecimalMark) -> String {
     match mark {
         DecimalMark::Comma => s.replace('.', ","),
         DecimalMark::Point => s,
+    }
+}
+
+/// A model picked from the list: its reported prices and context replace the form's, since the
+/// old ones belonged to the old model; what the list does not report stays.
+fn adopt_listed(
+    p: &mut Profile,
+    m: &ModelInfo,
+    price_in: &mut String,
+    price_out: &mut String,
+    mark: DecimalMark,
+) {
+    p.model = m.id.clone();
+    if let Some(v) = m.price_in_per_mtok {
+        *price_in = price_text(Some(v), mark);
+    }
+    if let Some(v) = m.price_out_per_mtok {
+        *price_out = price_text(Some(v), mark);
+    }
+    if let Some(n) = m.context_tokens {
+        p.context_tokens = n;
     }
 }
 
@@ -269,7 +291,7 @@ impl Settings {
         if preset == connect::Preset::Custom {
             self.advanced_open.push(p.id.clone());
         }
-        self.focus_url = preset != connect::Preset::Local;
+        self.focus_url = matches!(preset, connect::Preset::Hosted | connect::Preset::Custom);
         self.draft.push(p);
         self.sel = self.draft.len() - 1;
         self.load_form();
@@ -409,7 +431,7 @@ impl Settings {
         match settle(rx.try_recv()) {
             None => {}
             Some(Settled::Models(list, o)) => {
-                self.models = list;
+                self.take_models(list);
                 self.outcome = Some(o);
                 self.job = None;
             }
@@ -418,6 +440,20 @@ impl Settings {
                 self.job = None;
             }
         }
+    }
+
+    /// A fresh list fills the prices and the context of the model already chosen when the form
+    /// has no prices yet; a typed price is never overwritten here.
+    fn take_models(&mut self, list: Vec<ModelInfo>) {
+        let mark = units::ui_decimal_mark();
+        if let Some(p) = self.draft.get_mut(self.sel) {
+            if let Some(m) = list.iter().find(|m| m.id == p.model) {
+                if self.price_in.trim().is_empty() && self.price_out.trim().is_empty() {
+                    adopt_listed(p, m, &mut self.price_in, &mut self.price_out, mark);
+                }
+            }
+        }
+        self.models = list;
     }
 
     /// Off the UI thread: a slow address must not freeze the editor. A test sends only its own
@@ -587,7 +623,7 @@ fn provider_for(
 }
 
 fn fetch_models(p: &Profile, typed: Option<Secret>, local_only: bool) -> JobMsg {
-    match provider_for(p, typed, local_only).and_then(|x| x.list_models()) {
+    match provider_for(p, typed, local_only).and_then(|x| x.list_model_infos()) {
         Ok(list) => JobMsg::Models(list),
         Err(e) => failed(&e),
     }
@@ -726,10 +762,10 @@ fn form(ui: &mut Ui, s: &mut Settings, cx: &Cx<'_>, ctx: &egui::Context) {
                             .hint_text(cat.t("ai.settings.model_hint")),
                     );
                 } else {
-                    let names: Vec<&str> = s.models.iter().map(String::as_str).collect();
+                    let names: Vec<&str> = s.models.iter().map(|m| m.id.as_str()).collect();
                     let mut i = names.iter().position(|m| *m == p.model).unwrap_or(0);
                     if pick(ui, cx, "ddc.ai.model", &mut i, &names, 1.0) {
-                        p.model = names[i].to_string();
+                        adopt_listed(p, &s.models[i], &mut s.price_in, &mut s.price_out, mark);
                     }
                 }
             });
@@ -1349,6 +1385,34 @@ mod tests {
     }
 
     #[test]
+    fn a_listed_model_brings_its_prices_and_context() {
+        let mark = units::ui_decimal_mark();
+        let mut s = Settings::default();
+        let mut p = connect::preset_profile(connect::Preset::Gateway, "p1".into(), "P".into());
+        p.model = "a".into();
+        s.draft = vec![p];
+        let listed = |id: &str, i, o, c| ModelInfo {
+            id: id.into(),
+            price_in_per_mtok: i,
+            price_out_per_mtok: o,
+            context_tokens: c,
+        };
+        s.take_models(vec![listed("a", Some(3.0), Some(15.0), Some(200_000)), listed("b", Some(1.0), None, None)]);
+        assert_eq!(s.price_in, price_text(Some(3.0), mark), "the chosen model's prices fill an empty form");
+        assert_eq!(s.price_out, price_text(Some(15.0), mark));
+        assert_eq!(s.draft[0].context_tokens, 200_000);
+        s.price_in = price_text(Some(9.0), mark);
+        s.take_models(vec![listed("a", Some(3.0), Some(15.0), None)]);
+        assert_eq!(s.price_in, price_text(Some(9.0), mark), "a typed price stays on a new list");
+        let m = listed("b", Some(1.0), None, None);
+        let (mut pi, mut po) = (s.price_in.clone(), s.price_out.clone());
+        adopt_listed(&mut s.draft[0], &m, &mut pi, &mut po, mark);
+        assert_eq!(s.draft[0].model, "b");
+        assert_eq!(pi, price_text(Some(1.0), mark), "picking a model brings its price");
+        assert_eq!(po, price_text(Some(15.0), mark), "an unreported price stays");
+    }
+
+    #[test]
     fn bad_price_blocks_save_and_keeps_the_old_price() {
         let mut s = Settings::default();
         s.price_in = amount_text(0.5, units::ui_decimal_mark());
@@ -1479,9 +1543,9 @@ mod tests {
             Some(Settled::Done(Outcome::Ok("ai.settings.test_no_tool")))
         );
         assert_eq!(
-            settle(Ok(JobMsg::Models(vec!["m".into()]))),
+            settle(Ok(JobMsg::Models(vec![ModelInfo::named("m")]))),
             Some(Settled::Models(
-                vec!["m".into()],
+                vec![ModelInfo::named("m")],
                 Outcome::Ok("ai.settings.models_ok")
             ))
         );

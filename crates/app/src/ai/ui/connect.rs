@@ -170,22 +170,7 @@ pub fn save_profiles_in(dir: Option<std::path::PathBuf>, list: &[Profile]) -> Re
 }
 
 pub fn blank_profile(id: String, name: String) -> Profile {
-    Profile {
-        id,
-        name,
-        protocol: Protocol::ChatCompletions,
-        base_url: String::new(),
-        model: String::new(),
-        auth: AuthKind::Bearer,
-        extra_headers: vec![],
-        tool_calling: ToolCalling::Native,
-        images: true,
-        context_tokens: 128_000,
-        max_output_tokens: 4096,
-        price_in_per_mtok: None,
-        price_out_per_mtok: None,
-        executor: None,
-    }
+    ddc_ai::profile::blank(id, name)
 }
 
 /// Where a new connection starts, so a first-time user never faces an empty form.
@@ -195,18 +180,22 @@ pub enum Preset {
     Local,
     /// A hosted service: needs its address and a key.
     Hosted,
+    /// A model gateway speaking chat completions: one key, many models; address filled, models and prices
+    /// come from its model list.
+    Gateway,
     /// Every field by hand, the advanced section open.
     Custom,
 }
 
 impl Preset {
-    pub const ALL: [Preset; 3] = [Preset::Local, Preset::Hosted, Preset::Custom];
+    pub const ALL: [Preset; 4] = [Preset::Local, Preset::Gateway, Preset::Hosted, Preset::Custom];
 
     /// Menu title key; the subtitle key is this plus `_sub`.
     pub const fn key(self) -> &'static str {
         match self {
             Preset::Local => "ai.settings.preset.local",
             Preset::Hosted => "ai.settings.preset.cloud",
+            Preset::Gateway => "ai.settings.preset.gateway",
             Preset::Custom => "ai.settings.preset.custom",
         }
     }
@@ -224,6 +213,12 @@ pub fn preset_profile(preset: Preset, id: String, name: String) -> Profile {
             p.protocol = Protocol::ChatCompletions;
         }
         Preset::Hosted => p.auth = AuthKind::Bearer,
+        Preset::Gateway => {
+            p.base_url = ddc_ai::gateway::GATEWAY_URL.to_string();
+            p.auth = AuthKind::Bearer;
+            p.protocol = Protocol::ChatCompletions;
+            p.tool_calling = ToolCalling::Native;
+        }
         Preset::Custom => {}
     }
     p
@@ -418,6 +413,36 @@ pub fn open_session(
         auto_replan: true,
     };
     UiSession::start(&app.ed, cfg, view)
+}
+
+/// What one step may cost and the money left on the connection, asked off the UI thread once
+/// per session (the same estimate `ddc ai` prints). Never asked of the host page.
+pub fn balance_job(
+    app: &EditorApp,
+    p: &Profile,
+    host: Option<String>,
+) -> Option<std::sync::mpsc::Receiver<crate::ai::headless::Estimate>> {
+    if uses_page(p, ON_WEB) || is_local(p) {
+        return None;
+    }
+    let provider = direct_provider(&app.ed.model, p, host).ok()?;
+    Some(spawn_estimate(p.clone(), provider))
+}
+
+pub fn spawn_estimate(
+    p: Profile,
+    provider: Arc<dyn ddc_ai::Provider>,
+) -> std::sync::mpsc::Receiver<crate::ai::headless::Estimate> {
+    let (tx, rx) = std::sync::mpsc::channel();
+    let started = crate::jobs::spawn_guarded(
+        "ai-balance",
+        move || {
+            let _ = tx.send(crate::ai::headless::estimate(&p, &*provider));
+        },
+        |_| {},
+    );
+    drop(started);
+    rx
 }
 
 fn direct_provider(
@@ -621,6 +646,16 @@ mod tests {
         p.base_url = "https://models.example.test/v1".into();
         assert_eq!(missing(&p, false), vec!["ai.settings.need_key"]);
         assert!(missing(&p, true).is_empty());
+    }
+
+    #[test]
+    fn gateway_preset_fills_the_address_and_asks_only_for_model_and_key() {
+        let p = preset_profile(Preset::Gateway, "a".into(), "n".into());
+        assert_eq!(p.base_url, ddc_ai::gateway::GATEWAY_URL);
+        assert_eq!((p.auth.clone(), p.protocol), (AuthKind::Bearer, Protocol::ChatCompletions));
+        assert!(!is_local(&p));
+        assert_eq!(missing(&p, false), vec!["ai.settings.need_model", "ai.settings.need_key"]);
+        assert!(Preset::ALL.contains(&Preset::Gateway));
     }
 
     #[test]

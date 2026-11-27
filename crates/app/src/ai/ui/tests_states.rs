@@ -1002,6 +1002,8 @@ fn not_connected_errors_stay_seen(lang: ddc_ui::Lang) {
         AiError::Stale,
         AiError::Blocked,
         AiError::Provider("authentication failed".to_string()),
+        AiError::Provider("key spending limit reached: Key limit exceeded".to_string()),
+        AiError::Provider("account balance used up: Insufficient credits".to_string()),
         AiError::Internal(LONG_WORD.to_string()),
     ] {
         let k = logic::classify(&e);

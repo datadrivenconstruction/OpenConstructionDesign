@@ -1311,8 +1311,15 @@ fn status_line(
                 }
             }
             let used = st.usage.session.total();
-            if used > 0 {
-                let line = usage_line(cat, used, st.usage.cost);
+            let left = st.estimate.balance.and_then(|b| b.spendable());
+            let step = st.estimate.step_max;
+            if used > 0 || left.is_some() || step.is_some() {
+                let mut line = if used > 0 {
+                    usage_line(cat, used, st.usage.cost)
+                } else {
+                    String::new()
+                };
+                line = with_balance(cat, line, step, left);
                 let r = kit::caption(ui, th, &line);
                 if st.usage.cost.is_some() {
                     r.on_hover_text(cat.t("ai.usage.cost_tip"));
@@ -1392,9 +1399,37 @@ pub(super) fn usage_line(cat: &ddc_ui::Catalog, used: u64, cost: Option<f64>) ->
     line
 }
 
+/// The cost of one step at most and the money left after the usage line, so a long plan is
+/// weighed against them before it runs.
+pub(super) fn with_balance(cat: &ddc_ui::Catalog, line: String, step: Option<f64>, left: Option<f64>) -> String {
+    let num = |v: f64| crate::units::fmt_num_lang(v, 2, cat.lang);
+    let parts = [
+        step.map(|s| cat.tf("ai.usage.step_max", &[("cost", &num(s))])),
+        left.map(|l| cat.tf("ai.usage.balance", &[("left", &num(l))])),
+    ];
+    std::iter::once(line)
+        .chain(parts.into_iter().flatten())
+        .filter(|p| !p.is_empty())
+        .collect::<Vec<_>>()
+        .join(" · ")
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn balance_follows_the_usage_line() {
+        let cat = ddc_ui::Catalog::new(ddc_ui::Lang::En);
+        for k in ["ai.usage.balance", "ai.usage.step_max"] {
+            assert_ne!(cat.t(k), k);
+        }
+        let line = with_balance(&cat, usage_line(&cat, 1200, Some(0.5)), Some(0.75), Some(3.25));
+        assert!(line.contains("3.25") && line.contains("0.50") && line.contains("0.75"), "{line}");
+        let before = with_balance(&cat, String::new(), Some(0.75), Some(1.0));
+        assert!(before.contains("1.00") && before.contains("0.75") && !before.starts_with(" ·"), "{before}");
+        assert_eq!(with_balance(&cat, String::new(), None, None), "");
+    }
 
     #[test]
     fn composer_placeholder_fits_320_px_panel() {

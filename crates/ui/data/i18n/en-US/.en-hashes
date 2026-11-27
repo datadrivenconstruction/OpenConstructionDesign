@@ -1,4 +1,12 @@
 {
+"ai.err.key_limit": "ed043dcb",
+"ai.err.key_limit.hint": "eadd20cb",
+"ai.err.no_credit": "59498190",
+"ai.err.no_credit.hint": "b6256ab7",
+"ai.settings.preset.gateway": "59e29db0",
+"ai.settings.preset.gateway_sub": "80f173c3",
+"ai.usage.balance": "e1bd124b",
+"ai.usage.step_max": "635aab33",
 "empty.families.hint": "bef5aef0",
 "empty.families.title": "2eecbfed",
 "onb.keys": "4a632c3f",

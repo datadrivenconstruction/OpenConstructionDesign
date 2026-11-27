@@ -9,6 +9,7 @@ use crate::profile::{header_is_secret, AuthKind, Profile};
 use crate::provider::{
     image_base64, image_note, images_of, ChatRequest, Flow, Provider, ProviderError, StreamEvent,
 };
+use crate::gateway::{parse_model_infos, Balance, ModelInfo};
 use crate::secret::Secret;
 use crate::sse::{SseEvent, SseParser};
 use serde_json::Value as J;
@@ -43,6 +44,9 @@ pub(crate) trait StreamDecoder: Send {
 
 /// Errors reported inside an otherwise successful stream or a 4xx body carry only text.
 pub(crate) fn classify_error_text(text: &str) -> Option<ProviderError> {
+    if let Some(e) = crate::gateway::funds_error(0, text) {
+        return Some(e);
+    }
     let t = text.to_ascii_lowercase();
     if t.contains("rate_limit") || t.contains("rate limit") || t.contains("overloaded") {
         return Some(ProviderError::RateLimited {
@@ -128,6 +132,8 @@ impl HttpCfg {
             ProviderError::Network(s) => ProviderError::Network(tidy(s)),
             ProviderError::Protocol(s) => ProviderError::Protocol(tidy(s)),
             ProviderError::Blocked(s) => ProviderError::Blocked(tidy(s)),
+            ProviderError::KeyLimit(s) => ProviderError::KeyLimit(tidy(s)),
+            ProviderError::NoCredit(s) => ProviderError::NoCredit(tidy(s)),
             ProviderError::Http { status, body } => ProviderError::Http {
                 status,
                 body: tidy(body),
@@ -146,6 +152,10 @@ impl HttpCfg {
             .take(MAX_ERROR_BODY)
             .read_to_end(&mut raw);
         let body = self.scrub(&String::from_utf8_lossy(&raw));
+        // money first: a spent key comes as 403 and an empty account as 402 or 429
+        if let Some(e) = crate::gateway::funds_error(code, &body) {
+            return e;
+        }
         match code {
             401 | 403 => ProviderError::Auth,
             // Busy servers, like `overloaded` inside a stream: worth waiting and repeating.
@@ -296,8 +306,22 @@ impl HttpProvider {
         }
     }
 
-    fn list_models_inner(&self) -> Result<Vec<String>, ProviderError> {
-        let url = format!("{}/models", self.cfg.base);
+    fn list_models_inner(&self) -> Result<Vec<ModelInfo>, ProviderError> {
+        self.get_json("models").map(|doc| parse_model_infos(&doc))
+    }
+
+    /// Each part on its own: a server without one of the two paths still reports the other.
+    fn balance_inner(&self) -> Option<Balance> {
+        let ask = |path: &str, read: fn(&J) -> Option<f64>| self.get_json(path).ok().and_then(|d| read(&d));
+        let b = Balance {
+            account: ask(crate::gateway::CREDITS_PATH, crate::gateway::parse_credits),
+            key: ask(crate::gateway::KEY_PATH, crate::gateway::parse_key_left),
+        };
+        (!b.is_empty()).then_some(b)
+    }
+
+    fn get_json(&self, path: &str) -> Result<J, ProviderError> {
+        let url = format!("{}/{path}", self.cfg.base);
         self.cfg.guard.check_send(&url, self.cfg.sends_secret)?;
         // No cancel path here, so the whole call gets one short deadline.
         let req = self
@@ -315,8 +339,8 @@ impl HttpProvider {
             .read_to_end(&mut raw)
             .map_err(|e| ProviderError::Network(e.to_string()))?;
         let doc: J = serde_json::from_slice(&raw)
-            .map_err(|e| ProviderError::Protocol(format!("model list: {e}")))?;
-        Ok(parse_models(&doc))
+            .map_err(|e| ProviderError::Protocol(format!("{path}: {e}")))?;
+        Ok(doc)
     }
 }
 
@@ -499,25 +523,26 @@ impl Provider for HttpProvider {
     }
 
     fn list_models(&self) -> Result<Vec<String>, ProviderError> {
+        self.list_model_infos()
+            .map(|l| l.into_iter().map(|m| m.id).collect())
+    }
+
+    fn list_model_infos(&self) -> Result<Vec<ModelInfo>, ProviderError> {
         self.list_models_inner().map_err(|e| self.cfg.clean(e))
+    }
+
+    /// Informational only: a refused or unknown path is "not reported", never a failure.
+    fn balance(&self) -> Result<Option<Balance>, ProviderError> {
+        let base = format!("{}/", self.cfg.base);
+        self.cfg.guard.check_send(&base, self.cfg.sends_secret)?;
+        Ok(self.balance_inner())
     }
 }
 
 /// Servers list models as `data[].id` or `models[].{name,id}`.
+#[cfg(test)]
 fn parse_models(doc: &J) -> Vec<String> {
-    let list = doc
-        .get("data")
-        .or_else(|| doc.get("models"))
-        .and_then(J::as_array);
-    let mut names: Vec<String> = list
-        .into_iter()
-        .flatten()
-        .filter_map(|m| m.get("id").or_else(|| m.get("name")).and_then(J::as_str))
-        .map(str::to_string)
-        .collect();
-    names.sort();
-    names.dedup();
-    names
+    parse_model_infos(doc).into_iter().map(|m| m.id).collect()
 }
 
 #[cfg(test)]
@@ -1215,5 +1240,83 @@ mod tests {
         let doc = serde_json::json!({ "models": [{ "name": "local:1" }] });
         assert_eq!(parse_models(&doc), vec!["local:1".to_string()]);
         assert!(parse_models(&serde_json::json!({})).is_empty());
+    }
+    /// Answers by request path: the first route whose prefix the request line starts with.
+    fn serve_routes(routes: Vec<(&'static str, Vec<u8>)>) -> Server {
+        let listener = TcpListener::bind("127.0.0.1:0").unwrap();
+        let port = listener.local_addr().unwrap().port();
+        let hits = Arc::new(AtomicUsize::new(0));
+        let seen = Arc::new(Mutex::new(Vec::new()));
+        let (h, sn) = (hits.clone(), seen.clone());
+        thread::spawn(move || {
+            for conn in listener.incoming() {
+                let Ok(mut s) = conn else { return };
+                h.fetch_add(1, Ordering::SeqCst);
+                let req = read_request(&mut s);
+                let body = routes
+                    .iter()
+                    .find(|(p, _)| req.starts_with(p))
+                    .map(|(_, r)| r.clone())
+                    .unwrap_or_else(|| response("404 Not Found", "", b"{}"));
+                sn.lock().unwrap().push(req);
+                let _ = s.write_all(&body);
+                let _ = s.flush();
+            }
+        });
+        Server {
+            base: format!("http://127.0.0.1:{port}/v1"),
+            hits,
+            seen,
+        }
+    }
+
+    #[test]
+    fn a_spent_key_is_not_reported_as_a_rejected_key() {
+        let body = br#"{"error":{"code":403,"message":"Key limit exceeded"}}"#;
+        let srv = serve(response("403 Forbidden", "", body), 0);
+        let (r, _) = run(provider(&srv.base, Protocol::ChatCompletions).as_ref());
+        assert!(matches!(r, Err(ProviderError::KeyLimit(_))), "{r:?}");
+        let srv = serve(response("403 Forbidden", "", br#"{"error":"forbidden"}"#), 0);
+        let (r, _) = run(provider(&srv.base, Protocol::ChatCompletions).as_ref());
+        assert_eq!(r, Err(ProviderError::Auth));
+    }
+
+    #[test]
+    fn an_empty_account_is_its_own_error_and_not_retried_as_busy() {
+        let body = br#"{"error":{"code":402,"message":"Insufficient credits"}}"#;
+        let srv = serve(response("402 Payment Required", "", body), 0);
+        let (r, _) = run(provider(&srv.base, Protocol::ChatCompletions).as_ref());
+        assert!(matches!(r, Err(ProviderError::NoCredit(_))), "{r:?}");
+        let body = br#"{"error":{"type":"insufficient_quota","message":"quota"}}"#;
+        let srv = serve(response("429 Too Many Requests", "", body), 0);
+        let (r, _) = run(provider(&srv.base, Protocol::ChatCompletions).as_ref());
+        assert!(matches!(r, Err(ProviderError::NoCredit(_))), "{r:?}");
+    }
+
+    #[test]
+    fn model_list_carries_prices_when_the_server_reports_them() {
+        let body = br#"{"data":[{"id":"m1","context_length":32000,"pricing":{"prompt":"0.000001","completion":"0.000002"}}]}"#;
+        let srv = serve(response("200 OK", "", body), 0);
+        let p = provider(&srv.base, Protocol::ChatCompletions);
+        let l = p.list_model_infos().unwrap();
+        assert_eq!(l.len(), 1);
+        assert_eq!((l[0].price_in_per_mtok, l[0].price_out_per_mtok), (Some(1.0), Some(2.0)));
+        assert_eq!(l[0].context_tokens, Some(32_000));
+        assert_eq!(p.list_models().unwrap(), vec!["m1".to_string()]);
+    }
+
+    #[test]
+    fn balance_from_account_and_key_paths_and_none_when_not_reported() {
+        let srv = serve_routes(vec![
+            ("GET /v1/credits ", response("200 OK", "", br#"{"data":{"total_credits":5,"total_usage":1.5}}"#)),
+            ("GET /v1/key ", response("200 OK", "", br#"{"data":{"limit_remaining":2}}"#)),
+        ]);
+        let b = provider(&srv.base, Protocol::ChatCompletions).balance().unwrap().unwrap();
+        assert_eq!(b, Balance { account: Some(3.5), key: Some(2.0) });
+        let seen = srv.seen.lock().unwrap();
+        assert!(seen.iter().all(|r| r.contains("authorization: bearer") || r.contains("Authorization: Bearer")));
+        drop(seen);
+        let srv = serve_routes(vec![]);
+        assert_eq!(provider(&srv.base, Protocol::ChatCompletions).balance().unwrap(), None);
     }
 }

@@ -5,6 +5,9 @@
 //! This layer only calls the io and model crates (open, count, export). When the typed command
 //! registry lands, the `run` step can switch to it without touching the argument handling.
 
+#[cfg(feature = "ai")]
+pub mod ai;
+pub mod ai_profile;
 pub mod args;
 pub mod cmd;
 pub mod export;
@@ -65,6 +68,21 @@ ddc <command> [options]     batch work on model files, no window, no GPU
       per file. Element keys that were missing are minted and saved into the .ddc. The package is
       checked against the contract schemas and re-read before it replaces the output.
       Exit 0 written, 2 nothing written.
+
+  ddc ai \"<request>\" --profile <file|id|name> [--project <in.ddc>] [--out <out.ddc>]
+         [--budget-usd N] [--apply] [--allow-large] [--timeout-s N]
+      (build with --features ai) The editor's assistant without the window, the same session
+      as the panel. Prints the cost of one step at most and the balance (when the server reports
+      it), then the plan; with --apply the plan is applied as one undo step and saved to --out
+      (never the input). Key: DDC_AI_KEY, else the system key store. --budget-usd stops the run
+      at that cost. Exit 0 done, 1 plan not applied or budget reached, 2 failed.
+
+  ddc ai-profile list | add --name <name> [--preset gateway|local] [--url <address>] [--model <id>]
+         [--protocol chat|blocks] [--auth bearer|none|header:<name>|query:<name>]
+         [--price-in N] [--price-out N] [--context N] [--max-output N] [--key-env VAR]
+         | remove <id|name>
+      The assistant's connections, the same list as the editor's settings. The key is read from
+      DDC_AI_KEY (or --key-env) and kept in the system key store, never in the list file.
 
 Input: .ddc project, .ifc, .ifczip, .rvt (through an installed, trusted module), and the
        mesh formats .glb, .gltf, .step, .stp, .stl, .obj (STL/OBJ without units: see the

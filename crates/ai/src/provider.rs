@@ -2,6 +2,7 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Neutral chat types and the provider trait; wire formats live in `proto_*`.
 
+pub use crate::gateway::{Balance, ModelInfo};
 use serde_json::{json, Value as J};
 use std::collections::hash_map::RandomState;
 use std::fmt;
@@ -176,6 +177,12 @@ pub enum ProviderError {
     NoTools,
     #[error("request blocked: {0}")]
     Blocked(String),
+    /// The key's own spending limit is used up; the account may still have money.
+    #[error("key spending limit reached: {0}")]
+    KeyLimit(String),
+    /// The account has no money left for this request.
+    #[error("account balance used up: {0}")]
+    NoCredit(String),
     #[error("network error: {0}")]
     Network(String),
     #[error("http status {status}: {body}")]
@@ -194,6 +201,14 @@ pub trait Provider: Send + Sync {
         sink: &mut dyn FnMut(StreamEvent) -> Flow,
     ) -> Result<(), ProviderError>;
     fn list_models(&self) -> Result<Vec<String>, ProviderError>;
+    /// The model list with prices and context sizes where the server reports them.
+    fn list_model_infos(&self) -> Result<Vec<ModelInfo>, ProviderError> {
+        Ok(self.list_models()?.into_iter().map(ModelInfo::named).collect())
+    }
+    /// Money left on the account and the key; `None` when the server does not say.
+    fn balance(&self) -> Result<Option<Balance>, ProviderError> {
+        Ok(None)
+    }
 }
 
 /// Readable form of a request for the "what was sent" window: images become a size note.

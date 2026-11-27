@@ -136,6 +136,43 @@ struct ProfilesFile {
     profiles: Vec<Profile>,
 }
 
+/// A new connection's defaults, the same in the settings window and the CLI.
+pub fn blank(id: String, name: String) -> Profile {
+    Profile {
+        id,
+        name,
+        protocol: Protocol::ChatCompletions,
+        base_url: String::new(),
+        model: String::new(),
+        auth: AuthKind::Bearer,
+        extra_headers: vec![],
+        tool_calling: ToolCalling::Native,
+        images: true,
+        context_tokens: 128_000,
+        max_output_tokens: 4096,
+        price_in_per_mtok: None,
+        price_out_per_mtok: None,
+        executor: None,
+    }
+}
+
+/// The first free id of the form `p<n>`.
+pub fn free_id(existing: &[String]) -> String {
+    (1..)
+        .map(|i| format!("p{i}"))
+        .find(|c| !existing.contains(c))
+        .unwrap_or_default()
+}
+
+/// The editor's settings folder (`<config>/ddc-editor`), shared by the window and the CLI.
+pub fn default_data_dir() -> Option<PathBuf> {
+    let base = std::env::var_os("APPDATA")
+        .map(PathBuf::from)
+        .or_else(|| std::env::var_os("XDG_CONFIG_HOME").map(PathBuf::from))
+        .or_else(|| std::env::var_os("HOME").map(|h| PathBuf::from(h).join(".config")))?;
+    Some(base.join("ddc-editor"))
+}
+
 pub fn profiles_path(data_dir: &Path) -> PathBuf {
     data_dir.join("ai_profiles.json")
 }

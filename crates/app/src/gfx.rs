@@ -373,11 +373,7 @@ pub fn wgpu_options(pick: Pick) -> egui_wgpu::WgpuConfiguration {
 
 /// `%APPDATA%\ddc-editor` (same root as bridges), else `~/.config/ddc-editor`.
 pub fn data_dir() -> Option<PathBuf> {
-    let base = std::env::var_os("APPDATA")
-        .map(PathBuf::from)
-        .or_else(|| std::env::var_os("XDG_CONFIG_HOME").map(PathBuf::from))
-        .or_else(|| std::env::var_os("HOME").map(|h| PathBuf::from(h).join(".config")))?;
-    Some(base.join("ddc-editor"))
+    ddc_ai::profile::default_data_dir()
 }
 
 /// Startup log, rewritten on each launch; failures to write are ignored.

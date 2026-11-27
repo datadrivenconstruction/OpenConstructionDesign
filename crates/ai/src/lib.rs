@@ -7,6 +7,7 @@ pub mod catalog;
 pub mod convo;
 pub mod egress;
 pub mod fake;
+pub mod gateway;
 pub mod family_draft;
 pub mod family_repair;
 pub mod host_bridge;

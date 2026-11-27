@@ -11,10 +11,10 @@ use super::replay;
 use crate::ai::receipt::WriteReceipt;
 use crate::ai::session::{UiEvent, CONFIRM_TTL};
 use crate::ai::validate::{IssueLevel, PlanIssue};
-use crate::ai::{SessionCfg, UiSession, ViewCtx};
+use crate::ai::{headless, SessionCfg, UiSession, ViewCtx};
 use crate::editor::Editor;
 use ddc_ai::fake::{RecordingProvider, ReplayProvider};
-use ddc_ai::{build_provider, AuthKind, EgressGuard, Limits, Mode, Profile, Protocol, Provider, Secret, ToolCalling};
+use ddc_ai::{build_provider, AuthKind, EgressGuard, Limits, Profile, Protocol, Provider, Secret, ToolCalling};
 use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicBool, AtomicU64, AtomicUsize, Ordering};
 use std::sync::{Arc, Mutex};
@@ -213,52 +213,40 @@ pub fn run_case(case: &Case, made: &Made, o: &Opts, cap_usd: Option<f64>) -> Cas
     let mut receipts: Vec<WriteReceipt> = vec![];
     let mut failed: Option<String> = None;
     let mut over_budget = false;
-    'turns: for turn in &case.turns {
+    for turn in &case.turns {
         if !answer.is_empty() {
             answer.push_str("\n\n");
         }
         let view = view_of(&ed);
-        if let Err(e) = s.send_turn(&mut ed, turn.say.clone(), view, Mode::Propose) {
-            failed = Some(format!("send: {e}"));
-            break;
-        }
-        let deadline = Instant::now() + o.turn_timeout;
-        loop {
-            let idle = s.wait_idle(&mut ed, Duration::from_secs(1));
-            for e in s.drain_events() {
-                match e {
-                    UiEvent::Text(x) => answer.push_str(&x),
-                    UiEvent::Tool { ok: Some(true), .. } => m.steps += 1,
-                    UiEvent::Tool { name, ok: Some(false), code, .. } => {
-                        m.steps += 1;
-                        // the tool name stays as the key older baselines have; typed refusals also
-                        // count under `code:<code>`
-                        if let Some(c) = code {
-                            *m.refusals.entry(format!("code:{c}")).or_default() += 1;
-                        }
-                        *m.refusals.entry(name).or_default() += 1;
+        let mut on = |e: UiEvent| {
+            match e {
+                UiEvent::Text(x) => answer.push_str(&x),
+                UiEvent::Tool { ok: Some(true), .. } => m.steps += 1,
+                UiEvent::Tool { name, ok: Some(false), code, .. } => {
+                    m.steps += 1;
+                    // the tool name stays as the key older baselines have; typed refusals also
+                    // count under `code:<code>`
+                    if let Some(c) = code {
+                        *m.refusals.entry(format!("code:{c}")).or_default() += 1;
                     }
-                    UiEvent::Usage(u) => {
-                        m.tokens_in = u.session.input_tokens;
-                        m.tokens_out = u.session.output_tokens;
-                        m.usd = cost(o, m.tokens_in, m.tokens_out);
-                        if !over_budget && cap_usd.is_some_and(|c| m.usd >= c) {
-                            over_budget = true;
-                            s.cancel();
-                        }
-                    }
-                    UiEvent::Failed(e) => failed = Some(format!("{e}")),
-                    _ => {}
+                    *m.refusals.entry(name).or_default() += 1;
                 }
+                UiEvent::Usage(u) => {
+                    m.tokens_in = u.session.input_tokens;
+                    m.tokens_out = u.session.output_tokens;
+                    m.usd = cost(o, m.tokens_in, m.tokens_out);
+                    if cap_usd.is_some_and(|c| m.usd >= c) {
+                        over_budget = true;
+                        return false;
+                    }
+                }
+                UiEvent::Failed(e) => failed = Some(format!("{e}")),
+                _ => {}
             }
-            if idle {
-                break;
-            }
-            if Instant::now() > deadline {
-                failed = Some("the turn did not finish in time".into());
-                s.cancel();
-                break 'turns;
-            }
+            true
+        };
+        if let Err(e) = headless::drive_turn(&mut s, &mut ed, turn.say.clone(), view, o.turn_timeout, &mut on) {
+            failed = Some(e.to_string());
         }
         if failed.is_some() || over_budget {
             break;
@@ -274,15 +262,7 @@ pub fn run_case(case: &Case, made: &Made, o: &Opts, cap_usd: Option<f64>) -> Cas
     }
     if let Some(p) = s.plan() {
         if !p.items.is_empty() && failed.is_none() && !over_budget {
-            if !p.unreviewed.is_empty() || s.redraft().is_some() {
-                let rev = s.plan_rev();
-                s.review(Some(rev));
-                s.wait_idle(&mut ed, o.turn_timeout);
-            }
-            if !s.can_apply() {
-                s.allow_large(true);
-                s.wait_idle(&mut ed, o.turn_timeout);
-            }
+            headless::ready_to_apply(&mut s, &mut ed, o.turn_timeout, true);
             let pv = s.plan().cloned();
             match s.apply(&mut ed) {
                 Ok(op) => {

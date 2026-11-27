@@ -91,6 +91,14 @@ impl Provider for TextToolsProvider {
     fn list_models(&self) -> Result<Vec<String>, ProviderError> {
         self.inner.list_models()
     }
+
+    fn list_model_infos(&self) -> Result<Vec<crate::gateway::ModelInfo>, ProviderError> {
+        self.inner.list_model_infos()
+    }
+
+    fn balance(&self) -> Result<Option<crate::gateway::Balance>, ProviderError> {
+        self.inner.balance()
+    }
 }
 
 fn tools_prompt(tools: &[ToolSchema], nonce: &str) -> String {

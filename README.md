@@ -345,6 +345,7 @@ directly, or nothing with a local model.
 |---|---|
 | **Local** | Ollama on `localhost:11434` is found automatically. No key; data stays on the machine. |
 | **Cloud** | An address and a key (Anthropic, OpenAI, Google Gemini, Mistral, DeepSeek and others). The key is kept in the OS secure store, never in the project file. |
+| **Model gateway** | One key for many models: the address of a chat-completions compatible gateway is filled in; the model list brings prices and context sizes, and the money left is shown next to the session cost. A spent key limit and an empty account are told apart. |
 | **Custom** | Protocol, address and headers for your own server. An allow-list says which hosts the editor may call. |
 | **MCP** | Off by default, local only, same Apply rule. |
 

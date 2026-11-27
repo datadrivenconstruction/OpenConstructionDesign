@@ -1144,6 +1144,7 @@ dependencies = [
 name = "ddc-cli"
 version = "1.3.0"
 dependencies = [
+ "ddc-ai",
  "ddc-app",
  "ddc-geom",
  "ddc-io",

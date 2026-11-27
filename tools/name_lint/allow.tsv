@@ -9,3 +9,4 @@ README.md	920510199770f4d65cb8aaa2cd12bdb2b8c37f5b3907c50a734a0e3409da2823	Owner
 README.md	6f7ac1823da81d2e52d1a1549ee69c85bbf8bb56d06682849e7c09da2785ce3b	Owner-authored README names the AI clients and model providers the editor works with
 README.md	c857d09db23e6822e3600bc06ad8d58f92ed62bc8efd81c753f77048662cb97d	Owner-authored README names the AI clients and model providers the editor works with
 crates/ui/data/i18n/*.json	a62ee5ab3e8914010c0f75ff149f9415c839c64ccf4d8ed91d13b456dbc1d813	Common word for the spring season in locale bundles, not the product
+crates/ai/src/gateway.rs	7f871cbf905f6e0cd598b11609f33f609e60a61892ac6b37e80cf1de282ee367	Default address of the model gateway preset: the user needs the real address to connect

@@ -99,6 +99,10 @@ pub const fn state_key(s: PanelState) -> &'static str {
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum ErrKind {
     Auth,
+    /// The key's own spending limit is used up.
+    KeyLimit,
+    /// The account has no money left.
+    NoCredit,
     RateLimit,
     Context,
     NoTools,
@@ -147,6 +151,10 @@ pub fn classify(e: &AiError) -> ErrKind {
             let p = |s: &str| t.starts_with(s);
             if p("authentication failed") {
                 ErrKind::Auth
+            } else if p("key spending limit reached") {
+                ErrKind::KeyLimit
+            } else if p("account balance used up") {
+                ErrKind::NoCredit
             } else if p("rate limited") {
                 ErrKind::RateLimit
             } else if p("request exceeds the model context") {
@@ -244,6 +252,8 @@ pub fn mask_secrets(s: &str) -> String {
 pub const fn err_key(k: ErrKind) -> &'static str {
     match k {
         ErrKind::Auth => "ai.err.auth",
+        ErrKind::KeyLimit => "ai.err.key_limit",
+        ErrKind::NoCredit => "ai.err.no_credit",
         ErrKind::RateLimit => "ai.err.rate_limit",
         ErrKind::Context => "ai.err.context",
         ErrKind::NoTools => "ai.err.no_tools",
@@ -783,10 +793,7 @@ pub fn signed(v: f64, decimals: usize) -> String {
 
 /// A short readable name for a new session or profile: never a timestamp of the wall clock.
 pub fn profile_id(existing: &[String]) -> String {
-    (1..)
-        .map(|i| format!("p{i}"))
-        .find(|c| !existing.contains(c))
-        .unwrap_or_default()
+    ddc_ai::profile::free_id(existing)
 }
 
 pub fn policy_on(v: Option<&str>, default: bool) -> bool {
@@ -1099,6 +1106,15 @@ mod tests {
             classify(&AiError::Provider("authentication failed".into())),
             ErrKind::Auth
         );
+        assert_eq!(of(P::KeyLimit("Key limit exceeded".into())), ErrKind::KeyLimit);
+        assert_eq!(of(P::NoCredit("Insufficient credits".into())), ErrKind::NoCredit);
+        for k in [ErrKind::KeyLimit, ErrKind::NoCredit] {
+            assert!(!can_retry(k) && !goes_to_settings(k), "{k:?}: more tries cannot pay");
+            let cat = ddc_ui::Catalog::new(ddc_ui::Lang::En);
+            for key in [err_key(k).to_string(), format!("{}.hint", err_key(k))] {
+                assert_ne!(cat.t(&key), key, "{key}");
+            }
+        }
         assert_eq!(
             classify(&AiError::Provider("network error: reset".into())),
             ErrKind::Network

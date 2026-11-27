@@ -233,6 +233,8 @@ mod tests {
             ("http status 503: overloaded", ErrKind::Server, true),
             ("network error: refused", ErrKind::Network, true),
             ("authentication failed", ErrKind::Auth, false),
+            ("key spending limit reached: x", ErrKind::KeyLimit, false),
+            ("account balance used up: x", ErrKind::NoCredit, false),
             ("request blocked: bad host", ErrKind::Blocked, false),
             ("request exceeds the model context", ErrKind::Context, false),
             ("model does not support tool calling", ErrKind::NoTools, false),
