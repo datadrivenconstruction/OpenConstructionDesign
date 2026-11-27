@@ -3,8 +3,10 @@
 //! `ddc-app --ui-shot script.txt`: the whole editor UI rendered offscreen, driven by a script of
 //! app commands and egui input fed straight into the context. No window, no OS input, no focus.
 //!
-//! One step per line, `#` starts a comment. Setup lines come before the first action:
+//! One step per line, `#` starts a comment. Steps run strictly in order, each in its own passes
+//! (a `tap` is finished before the next `type` is fed). Setup lines come before the first action:
 //!   size 1600x1000 · scale 1 · lang en|ru · theme light|dark · open project.ddc
+//! `open` may also come between actions: it loads another project and keeps the plan and 3D view.
 //! Actions:
 //!   level NAME        plan of that level          fit             fit the plan to the model
 //!   view X,Y,PX       plan centre (m) and px/m    quiet           dismiss the toasts on screen
@@ -23,6 +25,9 @@
 //!   open-sheet N      the project's N-th sheet (1-based) in the view area
 //!   reset             a fresh editor on the same setup (scenes of one script stay apart)
 //!   key ctrl+K        a key with modifiers (ctrl, shift, alt), e.g. ctrl+k for the palette
+//!   zoom F            the 3D view F times closer (F < 1: farther)
+//!   eye X,Y,Z         the 3D eye at model metres, looking at the current target
+//!   target X,Y,Z      the 3D target at model metres, the eye stays
 use crate::shell::EditorApp;
 use crate::RenderState;
 use eframe::egui;
@@ -36,7 +41,10 @@ pub struct Step {
 }
 
 const SETUP: [&str; 5] = ["size", "scale", "lang", "theme", "open"];
-const ACTIONS: [&str; 25] = [
+const ACTIONS: [&str; 28] = [
+    "zoom",
+    "eye",
+    "target",
     "open-sheet",
     "onboard",
     "sheet-demo",
@@ -79,7 +87,7 @@ pub fn parse(text: &str) -> Result<Vec<Step>, String> {
             arg: arg.trim().to_string(),
         };
         if SETUP.contains(&verb) {
-            if out.iter().any(|p| ACTIONS.contains(&p.verb.as_str())) {
+            if verb != "open" && out.iter().any(|p| ACTIONS.contains(&p.verb.as_str())) {
                 return Err(format!(
                     "line {}: {verb} must come before the first action",
                     s.line
@@ -94,6 +102,25 @@ pub fn parse(text: &str) -> Result<Vec<Step>, String> {
         return Err("the script writes no shot".into());
     }
     Ok(out)
+}
+
+/// The orbit camera looking from `eye` at `target` (scene metres).
+fn look(cam: &mut ddc_render::OrbitCamera, eye: ddc_render::glam::Vec3, target: ddc_render::glam::Vec3) {
+    let d = eye - target;
+    let len = d.length().max(0.05);
+    cam.target = target;
+    cam.distance = len;
+    cam.yaw = d.y.atan2(d.x);
+    cam.pitch = (d.z / len).clamp(-1.0, 1.0).asin();
+}
+
+/// `X,Y,Z` in model metres as a scene point (the scene sits `elevation` below the model's z).
+fn point3(s: &Step, elevation: f64) -> Result<ddc_render::glam::Vec3, String> {
+    let v: Vec<f64> = s.arg.split(',').filter_map(|t| t.trim().parse().ok()).collect();
+    match v[..] {
+        [x, y, z] => Ok(ddc_render::glam::Vec3::new(x as f32, y as f32, (z - elevation) as f32)),
+        _ => Err(format!("line {}: {} X,Y,Z", s.line, s.verb)),
+    }
 }
 
 fn pair(s: &Step) -> Result<(f64, f64), String> {
@@ -274,6 +301,34 @@ pub fn run(
                 app.plan.fit(&app.ed);
             }
             "fit" => app.plan.fit(&app.ed),
+            "open" => {
+                let (c, sc, cam, fitted) = (
+                    app.plan.center,
+                    app.plan.scale,
+                    app.view.camera.clone(),
+                    !app.view.needs_fit(),
+                );
+                let p = path(&s.arg);
+                app.ed.open_project(&p).map_err(|e| err(&format!("{}: {e:?}", p.display())))?;
+                (app.plan.center, app.plan.scale, app.view.camera) = (c, sc, cam);
+                if fitted {
+                    app.view.keep_camera();
+                }
+            }
+            "zoom" | "eye" | "target" => {
+                if app.view.needs_fit() {
+                    return Err(err("the 3D view is not shown yet (run view.3d, wait 2)"));
+                }
+                let cam = &mut app.view.camera;
+                if s.verb == "zoom" {
+                    let f: f32 = s.arg.parse().ok().filter(|f: &f32| *f > 0.0).ok_or_else(|| err("zoom F"))?;
+                    cam.distance = (cam.distance / f).clamp(0.05, 1.0e6);
+                } else {
+                    let p = point3(s, app.ed.elevation).map_err(|e| e.to_string())?;
+                    let (eye, tgt) = if s.verb == "eye" { (p, cam.target) } else { (cam.eye(), p) };
+                    look(cam, eye, tgt);
+                }
+            }
             "view" => {
                 let v: Vec<f64> = s
                     .arg
@@ -421,6 +476,35 @@ mod tests {
             .unwrap_err()
             .contains("unknown step jump"));
         assert!(parse("size 800x500").is_err());
+    }
+
+    #[test]
+    fn open_may_come_between_actions_other_setup_may_not() {
+        let s = parse("open a.ddc
+shot a.png
+open b.ddc
+zoom 2
+shot b.png
+").unwrap();
+        assert_eq!(s.iter().filter(|x| x.verb == "open").count(), 2);
+        assert!(parse("shot a.png
+lang en
+shot b.png").unwrap_err().contains("line 2"));
+    }
+
+    #[test]
+    fn look_places_the_eye_where_asked() {
+        use ddc_render::glam::Vec3;
+        let mut cam = ddc_render::OrbitCamera::default();
+        let (eye, tgt) = (Vec3::new(8.0, -3.0, 5.0), Vec3::new(1.0, 2.0, 0.5));
+        look(&mut cam, eye, tgt);
+        assert!((cam.eye() - eye).length() < 1e-3 && (cam.target - tgt).length() < 1e-6);
+        let (old, t2) = (cam.eye(), Vec3::new(0.0, 0.0, 1.0));
+        look(&mut cam, old, t2);
+        assert!((cam.eye() - old).length() < 1e-3 && (cam.target - t2).length() < 1e-6);
+        let s = Step { line: 4, verb: "eye".into(), arg: "1, 2, 13".into() };
+        assert_eq!(point3(&s, 3.0).unwrap(), Vec3::new(1.0, 2.0, 10.0));
+        assert!(point3(&Step { arg: "1,2".into(), ..s }, 0.0).unwrap_err().contains("line 4"));
     }
 
     #[test]
