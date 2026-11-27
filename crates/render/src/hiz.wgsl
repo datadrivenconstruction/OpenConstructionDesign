@@ -3,7 +3,8 @@
 // Depth tiles for occlusion culling: per 8x8 tile, the farthest value
 // (reverse depth: farther is smaller); holes in occluders stay holes.
 
-@group(0) @binding(0) var depth_tex: texture_depth_2d;
+// depth read as a plain float texture: GL has no texel load from depth textures
+@group(0) @binding(0) var depth_tex: texture_2d<f32>;
 
 @vertex
 fn vs(@builtin(vertex_index) i: u32) -> @builtin(position) vec4<f32> {
@@ -21,7 +22,7 @@ fn fs(@builtin(position) p: vec4<f32>) -> @location(0) vec4<f32> {
         for (var x = 0; x < 8; x += 1) {
             let q = o + vec2<i32>(x, y);
             if (q.x < s.x && q.y < s.y) {
-                d = min(d, textureLoad(depth_tex, q, 0));
+                d = min(d, textureLoad(depth_tex, q, 0).x);
             }
         }
     }

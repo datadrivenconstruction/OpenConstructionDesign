@@ -129,6 +129,8 @@ impl TextureBank {
         layers: u32,
         anchors: AnchorGpu,
     ) -> Self {
+        // GL takes a one-layer texture for a plain 2D one, whatever the view says
+        let layers = layers.max(2);
         let texture = device.create_texture(&wgpu::TextureDescriptor {
             label: Some("ddc-tex"),
             size: wgpu::Extent3d {

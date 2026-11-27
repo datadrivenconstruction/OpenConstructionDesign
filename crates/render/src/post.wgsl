@@ -2,7 +2,8 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 // Fullscreen passes: depth-based ambient-light shading and frame output to the window.
 
-@group(1) @binding(0) var depth_tex: texture_depth_2d;
+// depth read as a plain float texture: GL has no texel load from depth textures
+@group(1) @binding(0) var depth_tex: texture_2d<f32>;
 @group(1) @binding(1) var frame_tex: texture_2d<f32>;
 @group(1) @binding(2) var frame_smp: sampler;
 
@@ -22,7 +23,7 @@ fn vs_full(@builtin(vertex_index) i: u32) -> FOut {
 
 fn depth_px(p: vec2<i32>) -> f32 {
     let s = vec2<i32>(textureDimensions(depth_tex)) - vec2<i32>(1);
-    return textureLoad(depth_tex, clamp(p, vec2<i32>(0), s), 0);
+    return textureLoad(depth_tex, clamp(p, vec2<i32>(0), s), 0).x;
 }
 
 // Hemisphere sampling in world coordinates: normal from neighbouring depth points (the side

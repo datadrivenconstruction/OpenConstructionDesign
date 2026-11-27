@@ -398,8 +398,8 @@ fn build_pipeline(device: &wgpu::Device, p: P) -> wgpu::RenderPipeline {
 /// one core. Error scopes belong to the device, not the thread, so one scope covers the batch;
 /// `None` if anything in it was rejected (the caller then builds one by one to see what).
 fn build_parallel(device: &wgpu::Device, ps: &[P]) -> Option<Vec<wgpu::RenderPipeline>> {
-    // no threads in the browser: the caller builds one by one
-    if cfg!(target_arch = "wasm32") {
+    // no threads in the browser, and GL has one context per device: the caller builds one by one
+    if cfg!(target_arch = "wasm32") || is_gl(device) {
         return None;
     }
     device.push_error_scope(wgpu::ErrorFilter::Validation);
@@ -415,6 +415,18 @@ fn build_parallel(device: &wgpu::Device, ps: &[P]) -> Option<Vec<wgpu::RenderPip
     pollster::block_on(device.pop_error_scope())
         .is_none()
         .then_some(out)
+}
+
+#[cfg(feature = "gpu")]
+fn is_gl(device: &wgpu::Device) -> bool {
+    #[cfg(any(windows, target_os = "linux"))]
+    // SAFETY: only asks which backend the device is; the raw device is not used
+    return unsafe { device.as_hal::<wgpu::hal::api::Gles, _, _>(|d| d.is_some()) };
+    #[cfg(not(any(windows, target_os = "linux")))]
+    {
+        let _ = device;
+        false
+    }
 }
 
 #[cfg(feature = "gpu")]
@@ -654,6 +666,8 @@ impl Renderer {
             multisampled: false,
         };
         let depth_tex = tex(wgpu::TextureSampleType::Depth);
+        // the fullscreen passes load depth texels, which GL allows only from a float binding
+        let depth_load = tex(wgpu::TextureSampleType::Float { filterable: false });
         let color_tex = tex(wgpu::TextureSampleType::Float { filterable: true });
         let filt = wgpu::BindingType::Sampler(wgpu::SamplerBindingType::Filtering);
         let bgl = |label, entries: &[wgpu::BindGroupLayoutEntry]| {
@@ -708,10 +722,10 @@ impl Renderer {
                 ),
             ],
         );
-        let ssao_bgl = bgl("ddc-ssao", &[entry(0, depth_tex)]);
+        let ssao_bgl = bgl("ddc-ssao", &[entry(0, depth_load)]);
         let comp_bgl = bgl(
             "ddc-comp",
-            &[entry(0, depth_tex), entry(1, color_tex), entry(2, filt)],
+            &[entry(0, depth_load), entry(1, color_tex), entry(2, filt)],
         );
         let sampler = |filter, compare| {
             device.create_sampler(&wgpu::SamplerDescriptor {
