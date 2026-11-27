@@ -29,6 +29,7 @@ jobs:
           python-version: "3.12"
       - run: python tools/name_lint.py
       - run: python tools/spdx_headers.py
+      - run: python tools/readme_paths.py
 
   test:
     name: test ${{ matrix.unit.crate }}${{ matrix.unit.shard && format(' {0}', matrix.unit.shard) || '' }} (${{ matrix.os }})

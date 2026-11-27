@@ -54,6 +54,29 @@ ddc-app --file <path> [options]     run on a real file without a window
   --report-json <out>   write the report there; '-' or absent: stdout
   --help                this text
 
+Video and frames (rendered offscreen with --screenshot; --ui-shot needs no other flag):
+  --open-project <f.ddc> load a saved project into the shot (3D, plan, section, reveal)
+  --view plan|3d|section:N|elevation:S   with --screenshot: the plan, the 3D view, the N-th
+                        section (from 1) or an elevation (N, S, E, W or a number)
+  --size WxH            frame size; --scale F interface scale; --lang CODE and --theme
+                        light|dark pick language and theme of the interface in the frame
+  --reveal all|calendar build-up of the open project: all adds every element, scripted
+                        parts included, in build order from the bottom up; calendar
+                        follows the phase dates; needs --reveal-out
+  --reveal-out <dir|show.mp4>  write the build-up as frame_0000.png, frame_0001.png ... in
+                        a folder, or encode a .mp4, .webm, .mov or .gif (needs ffmpeg on
+                        the PATH; without it the frames stay and the command is printed).
+                        Renders without a window
+  --reveal-fps N        frames per second of the build-up, 1..=120 (default 30)
+  --reveal-frame N      only that frame, a still of the build-up at one moment
+  --reveal-motion full|reduced|off   how much the elements move while they appear
+  --reveal-camera fixed|orbit|follow  fixed frames the whole model (default), orbit turns
+                        once around it, follow frames each step
+  --ui-shot <script.txt> the whole editor interface offscreen, driven by a script of taps,
+                        keys and commands; every shot line writes a PNG
+  Put the frames in a video with any encoder, for example
+  ffmpeg -framerate 30 -i dir/frame_%04d.png -pix_fmt yuv420p out.mp4. Guide: docs/user/video-and-frames.md
+
 Steps run in this order: import, underlay, --import-xlsx, --save, --xlsx, --export,
 --export-sheets, --screenshot. Outputs never overwrite an input.
 
@@ -83,7 +106,8 @@ Report (JSON object, schema \"ddc-headless-report/1\"; null where a step did not
                nodes, meshes (glb/gltf), sheets (pdf)}]
   sheets      {dir, ms, files:[names], report}
   skipped     [{step, why}]  outputs not written and why (a .pdf export or --export-sheets
-              of a project without sheets); the other steps still run
+              of a project without sheets, a section of a project with nothing
+              to cut); the other steps still run
 ";
 
 pub struct FileArgs {
@@ -138,6 +162,9 @@ pub fn parse(argv: &[String]) -> Result<Option<FileArgs>, String> {
     };
     if argv.iter().any(|s| s == "--press") {
         return Err("--press is for the windowed --screenshot start; with --file use --export".into());
+    }
+    if argv.iter().any(|s| s == "--reveal-out") {
+        return Err("--reveal-out plays a project opened with --open-project, not --file".into());
     }
     let mut exports = vec![];
     for (i, s) in argv.iter().enumerate() {
@@ -595,6 +622,15 @@ fn export_sheets(ed: &Editor, dir: &Path) -> Result<Value, String> {
     Ok(json!({"dir": dir.display().to_string(), "ms": ms(t), "files": files, "report": done.report}))
 }
 
+/// Shots the render step skipped (`render.skipped`) join the report's `skipped`.
+pub fn merge_skipped(rep: &mut serde_json::Map<String, Value>, render: &Value) {
+    let Some(more) = render.get("skipped").and_then(Value::as_array) else { return };
+    let e = rep.entry("skipped").or_insert_with(|| Value::Array(vec![]));
+    if let Some(v) = e.as_array_mut() {
+        v.extend(more.iter().cloned());
+    }
+}
+
 /// Everything except rendering. `render` gets the loaded state and returns the `render`
 /// object of the report (called only with `--screenshot`). Each step's result goes into `rep`
 /// as it ends, so a failure report still shows what ran.
@@ -736,6 +772,7 @@ fn execute(
     rep.insert("skipped".into(), Value::Array(skipped));
     if a.screenshot.is_some() {
         let v = render(Loaded { ed, drawings: dr }, a)?;
+        merge_skipped(rep, &v);
         rep.insert("render".into(), v);
     }
     rep.insert("total_ms".into(), json!(ms(t0)));
@@ -824,6 +861,12 @@ pub fn run(
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn reveal_out_with_file_is_refused_not_ignored() {
+        let argv: Vec<String> = ["ddc-app", "--file", "a.ddc", "--reveal-out", "show.mp4"].map(String::from).to_vec();
+        assert!(parse(&argv).unwrap_err().contains("--open-project"));
+    }
 
     #[test]
     fn sheet_outputs_of_a_project_without_sheets_are_skipped_not_fatal() {

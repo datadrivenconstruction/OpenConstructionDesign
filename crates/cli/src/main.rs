@@ -8,7 +8,7 @@ fn main() {
     let p = match parse(&argv) {
         Ok(p) => p,
         Err(e) => {
-            eprintln!("error: {e}\n\n{HELP}");
+            eprintln!("error: {e}\nrun `ddc --help` for the commands and options");
             std::process::exit(EXIT_FAILED);
         }
     };

@@ -141,6 +141,16 @@ mod tests {
     }
 
     #[test]
+    fn help_documents_video_and_frames() {
+        let h = crate::headless_file::HELP;
+        assert!(h.contains("Video and frames"));
+        for f in ["--open-project", "--reveal", "--reveal-out", "--reveal-fps", "--reveal-frame", "--ui-shot", "--view"] {
+            assert!(h.contains(f), "{f}");
+        }
+        assert!(!h.contains('\u{2014}'));
+    }
+
+    #[test]
     fn help_documents_press() {
         assert!(crate::headless_file::HELP.contains("--press"));
         assert!(crate::headless_file::HELP.contains("--press-frames"));

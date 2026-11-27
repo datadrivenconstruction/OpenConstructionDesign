@@ -417,6 +417,18 @@ fn usage_errors_exit_2() {
 }
 
 #[test]
+fn usage_error_is_one_line_with_a_hint() {
+    for a in [vec!["bogus"], vec!["gen"], vec!["info"]] {
+        let o = ddc(&a);
+        assert_eq!(o.status.code(), Some(2), "{a:?}");
+        let err = String::from_utf8_lossy(&o.stderr);
+        assert!(err.lines().count() <= 2, "{a:?}: {err}");
+        assert!(err.starts_with("error: "), "{a:?}: {err}");
+        assert!(err.contains("--help"), "{a:?}: {err}");
+    }
+}
+
+#[test]
 fn batch_continues_after_failures() {
     let d = tmp("batch");
     let (ddc_file, ifc) = fixture(&d);
