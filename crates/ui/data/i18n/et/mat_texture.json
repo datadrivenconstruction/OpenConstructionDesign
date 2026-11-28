@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Metall",
  "mat_texture.tex.glass": "Klaas",
  "mat_texture.tex.grass": "Muru",
+ "mat_texture.tex.stone": "Kivi",
+ "mat_texture.tex.gravel": "Kruus",
+ "mat_texture.tex.soil": "Pinnas",
+ "mat_texture.tex.asphalt": "Asfalt",
+ "mat_texture.tex.plaster": "Krohv",
+ "mat_texture.tex.roof_tile": "Katusekivi",
+ "mat_texture.tex.insulation": "Soojustus",
+ "mat_texture.tex.water": "Vesi",
+ "mat_texture.tex.steel_plate": "Terasplaat",
+ "mat_texture.tex.rubber": "Kummi",
  "mat_texture.tex.scale": "Plaadi suurus",
  "mat_texture.tex.rotation": "Pööre",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Kasuta pilti",
  "mat_texture.tex.hint": "Näidatakse realistlikus stiilis tasakaalustatud ja maksimaalse kvaliteedi korral. Suurus on meetrites, kõigil elementidel ühesugune.",
  "mat_texture.tex.bad_image": "See ei ole loetav PNG- ega JPEG-pilt (kuni 8192 px küljelt)",
- "mat_texture.tex.too_big": "Pilt on suurem kui 4 MB: kasuta failiteed või väiksemat pilti"
+ "mat_texture.tex.too_big": "Pilt on suurem kui 4 MB: kasuta failiteed või väiksemat pilti",
+ "mat_texture.tex.use_image_off": "Sisestage esmalt pildifaili tee"
 }

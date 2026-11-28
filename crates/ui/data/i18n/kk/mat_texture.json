@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Металл",
  "mat_texture.tex.glass": "Шыны",
  "mat_texture.tex.grass": "Шөп",
+ "mat_texture.tex.stone": "Тас",
+ "mat_texture.tex.gravel": "Қиыршық тас",
+ "mat_texture.tex.soil": "Топырақ",
+ "mat_texture.tex.asphalt": "Асфальт",
+ "mat_texture.tex.plaster": "Сылақ",
+ "mat_texture.tex.roof_tile": "Шатыр плиткасы",
+ "mat_texture.tex.insulation": "Жылу оқшаулағыш",
+ "mat_texture.tex.water": "Су",
+ "mat_texture.tex.steel_plate": "Болат табақ",
+ "mat_texture.tex.rubber": "Резеңке",
  "mat_texture.tex.scale": "Плитка өлшемі",
  "mat_texture.tex.rotation": "Айналу",
  "mat_texture.tex.unit_m": " м",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Суретті қолдану",
  "mat_texture.tex.hint": "Шынайы стильде Теңгерімді және Максимум сапада көрсетіледі. Өлшемі метрмен, барлық элементте бірдей.",
  "mat_texture.tex.bad_image": "Бұл оқылатын PNG немесе JPEG суреті емес (бір жағы 8192 px-ге дейін)",
- "mat_texture.tex.too_big": "Сурет 4 МБ-тан үлкен: файл жолын немесе кішірек суретті пайдаланыңыз"
+ "mat_texture.tex.too_big": "Сурет 4 МБ-тан үлкен: файл жолын немесе кішірек суретті пайдаланыңыз",
+ "mat_texture.tex.use_image_off": "Алдымен сурет файлының жолын енгізіңіз"
 }

@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "دھات",
  "mat_texture.tex.glass": "شیشہ",
  "mat_texture.tex.grass": "گھاس",
+ "mat_texture.tex.stone": "پتھر",
+ "mat_texture.tex.gravel": "بجری",
+ "mat_texture.tex.soil": "مٹی",
+ "mat_texture.tex.asphalt": "تارکول",
+ "mat_texture.tex.plaster": "پلاسٹر",
+ "mat_texture.tex.roof_tile": "چھت کی ٹائل",
+ "mat_texture.tex.insulation": "انسولیشن",
+ "mat_texture.tex.water": "پانی",
+ "mat_texture.tex.steel_plate": "فولادی پلیٹ",
+ "mat_texture.tex.rubber": "ربڑ",
  "mat_texture.tex.scale": "ٹائل کا سائز",
  "mat_texture.tex.rotation": "گردش",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "تصویر استعمال کریں",
  "mat_texture.tex.hint": "حقیقی انداز میں، متوازن اور زیادہ معیار پر دکھائی جاتی ہے۔ سائز میٹر میں ہے، ہر عنصر پر یکساں۔",
  "mat_texture.tex.bad_image": "یہ پڑھنے کے قابل PNG یا JPEG نہیں (ہر طرف زیادہ سے زیادہ 8192 px)",
- "mat_texture.tex.too_big": "تصویر 4 MB سے بڑی ہے: فائل کا راستہ یا چھوٹی تصویر استعمال کریں"
+ "mat_texture.tex.too_big": "تصویر 4 MB سے بڑی ہے: فائل کا راستہ یا چھوٹی تصویر استعمال کریں",
+ "mat_texture.tex.use_image_off": "پہلے تصویری فائل کا راستہ درج کریں"
 }

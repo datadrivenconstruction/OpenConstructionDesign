@@ -1139,11 +1139,11 @@ impl PlanView {
             };
             let gfx = &self.b.vis.gfx;
             let fill = ov.state_fill(sel, gfx.fill(Sel::Wall(w.id), base));
-            // layer material hatch; without a project entry, by material class
+            // layer material hatch: the row's, or its class default when the material has no row
             let pattern = match gfx.wall_hatch(w.wall_type) {
                 Some(k) => crate::view_gfx_ui::hatch_of_key(k),
                 None if gfx.coarse() => overlay::Hatch::None,
-                None => overlay::hatch_of_class(class),
+                None => overlay::Hatch::None,
             };
             for o in outlines {
                 let pts: Vec<Pos2> = o.iter().map(|&p| to_s(p)).collect();

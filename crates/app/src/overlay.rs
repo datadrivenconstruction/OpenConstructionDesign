@@ -760,17 +760,18 @@ pub enum Hatch {
     Cross,
     /// Concrete: dots in a staggered pattern.
     Dots,
-}
-
-/// Pattern for a material class (order of `ui_kit::MAT_CLASSES`).
-pub const fn hatch_of_class(class: usize) -> Hatch {
-    match class {
-        0 => Hatch::Dots,
-        1 => Hatch::Diagonal,
-        2 => Hatch::Cross,
-        4 => Hatch::BackDiagonal,
-        _ => Hatch::None,
-    }
+    /// Metal: dense 45 degree lines.
+    Steel,
+    /// Soil: diagonal lines with dots between.
+    Earth,
+    /// Water: horizontal lines.
+    Water,
+    /// Stone and tile: a square grid.
+    Stone,
+    /// Render and plaster: sparse stipple.
+    Stipple,
+    /// Glass: widely spaced thin diagonals.
+    Glass,
 }
 
 /// Hatch an outline (convex or concave: intersections taken in pairs) within `clip`.
@@ -799,6 +800,18 @@ pub fn hatch(p: &Painter, poly: &[Pos2], kind: Hatch, st: Stroke, clip: Rect, bu
             family(p, poly, 6.0, -1.0, st, bb, budget);
             family(p, poly, 6.0, 1.0, st, bb, budget);
         }
+        Hatch::Steel => family(p, poly, 2.6, -1.0, st, bb, budget),
+        Hatch::Glass => family(p, poly, 11.0, -1.0, st, bb, budget),
+        Hatch::Water => family_ab(p, poly, 5.0, 0.0, 1.0, st, bb, budget),
+        Hatch::Stone => {
+            family_ab(p, poly, 7.0, 0.0, 1.0, st, bb, budget);
+            family_ab(p, poly, 10.0, 1.0, 0.0, st, bb, budget);
+        }
+        Hatch::Earth => {
+            family(p, poly, 6.0, -1.0, st, bb, budget);
+            stipple(p, poly, 9.0, st, bb, budget);
+        }
+        Hatch::Stipple => stipple(p, poly, 8.0, st, bb, budget),
         Hatch::Dots => {
             let limit = (*budget).min(HATCH_MAX);
             let drawn = for_each_dot(poly, 6.0, bb, limit, |q| {
@@ -825,6 +838,14 @@ fn contour_width(poly: &[Pos2]) -> f32 {
     }
 }
 
+fn stipple(p: &Painter, poly: &[Pos2], step: f32, st: Stroke, bb: Rect, budget: &mut u32) {
+    let limit = (*budget).min(HATCH_MAX);
+    let drawn = for_each_dot(poly, step, bb, limit, |q| {
+        p.circle_filled(q, 0.6, st.color);
+    });
+    *budget -= drawn;
+}
+
 /// Family of lines x + sign·y = k with spacing `step`.
 fn family(
     p: &Painter,
@@ -835,7 +856,22 @@ fn family(
     bb: Rect,
     budget: &mut u32,
 ) {
-    let f = |q: Pos2| q.x + sign * q.y;
+    family_ab(p, poly, step, 1.0, sign, st, bb, budget);
+}
+
+/// Family of lines a·x + b·y = k with spacing `step` in k (horizontal: a = 0, b = 1).
+#[allow(clippy::too_many_arguments)]
+fn family_ab(
+    p: &Painter,
+    poly: &[Pos2],
+    step: f32,
+    a: f32,
+    b: f32,
+    st: Stroke,
+    bb: Rect,
+    budget: &mut u32,
+) {
+    let f = |q: Pos2| a * q.x + b * q.y;
     let (mut k0, mut k1) = (f32::MAX, f32::MIN);
     for q in poly {
         k0 = k0.min(f(*q));
@@ -864,7 +900,7 @@ fn family(
                 let q = a + (b - a) * (fa / (fa - fb));
                 // insertion by x: pairs run along the line
                 let mut j = c;
-                while j > 0 && hits[j - 1].x > q.x {
+                while j > 0 && (hits[j - 1].x > q.x || (hits[j - 1].x == q.x && hits[j - 1].y > q.y)) {
                     hits[j] = hits[j - 1];
                     j -= 1;
                 }
@@ -1015,6 +1051,31 @@ pub fn sky_ground(rect: Rect, horizon: Option<f32>, top: Color32, bottom: Color3
 mod tests {
     use super::*;
     use ddc_ui::theme::contrast;
+
+    #[test]
+    fn every_hatch_pattern_marks_a_square_and_none_marks_nothing() {
+        let ctx = egui::Context::default();
+        let p = ctx.layer_painter(egui::LayerId::background());
+        let sq = [Pos2::new(0.0, 0.0), Pos2::new(120.0, 0.0), Pos2::new(120.0, 120.0), Pos2::new(0.0, 120.0)];
+        let clip = Rect::from_min_max(Pos2::new(-10.0, -10.0), Pos2::new(130.0, 130.0));
+        let st = Stroke::new(1.0, Color32::BLACK);
+        let used = |k: Hatch| {
+            let mut budget = 100_000u32;
+            hatch(&p, &sq, k, st, clip, &mut budget);
+            100_000 - budget
+        };
+        assert_eq!(used(Hatch::None), 0);
+        for k in [
+            Hatch::Diagonal, Hatch::BackDiagonal, Hatch::Cross, Hatch::Dots, Hatch::Steel,
+            Hatch::Earth, Hatch::Water, Hatch::Stone, Hatch::Stipple, Hatch::Glass,
+        ] {
+            assert!(used(k) > 0, "{k:?} draws nothing");
+        }
+        // dense metal lines out-number masonry lines; a grid is both families
+        assert!(used(Hatch::Steel) > used(Hatch::Diagonal));
+        assert!(used(Hatch::Stone) > used(Hatch::Water));
+        assert!(used(Hatch::Glass) < used(Hatch::Diagonal));
+    }
 
     #[test]
     fn palette_has_every_token_in_both_themes() {
@@ -1212,15 +1273,6 @@ mod tests {
         assert_eq!(o.state(false, true, Stroke::new(2.25, o.ink)).width, 2.25);
         assert_eq!(o.state_fill(false, o.paper), o.paper);
         assert_ne!(o.state_fill(true, o.paper), o.paper);
-    }
-
-    #[test]
-    fn material_classes_have_distinct_patterns() {
-        assert_eq!(hatch_of_class(1), Hatch::Diagonal);
-        assert_eq!(hatch_of_class(2), Hatch::Cross);
-        assert_eq!(hatch_of_class(3), Hatch::None);
-        assert_eq!(hatch_of_class(5), Hatch::None);
-        assert_ne!(hatch_of_class(0), hatch_of_class(4));
     }
 
     #[test]

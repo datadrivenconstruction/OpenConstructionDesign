@@ -54,6 +54,9 @@ pub const SLOW_REGEN: f64 = 0.15;
 
 /// Material class for fill (index into `Tokens::mat`).
 pub fn mat_class(m: &str) -> usize {
+    if let Some(l) = ddc_model::material_look::look_of(m) {
+        return ddc_model::material_hatch::poche_class(l.key);
+    }
     let m = m.to_lowercase();
     let has = |k: &[&str]| k.iter().any(|k| m.contains(k));
     if has(&["concrete", "\u{431}\u{435}\u{442}\u{43e}\u{43d}"]) {

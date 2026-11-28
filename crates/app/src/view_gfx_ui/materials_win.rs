@@ -28,6 +28,17 @@ pub(super) fn label(name: &str) -> String {
     }
 }
 
+/// List label: the localised name, with the stored name added when two rows would read alike.
+fn list_label(name: &str, all: &[&Material]) -> String {
+    let l = label(name);
+    let same = |m: &&Material| m.spec.name != name && label(&m.spec.name).to_lowercase() == l.to_lowercase();
+    if l != name && all.iter().any(same) {
+        format!("{l} ({name})")
+    } else {
+        l
+    }
+}
+
 #[derive(Default)]
 struct Draft {
     orig: String,
@@ -179,6 +190,7 @@ fn apply_draft(ed: &mut Editor, d: &mut Draft) -> bool {
 fn hatch_options(current: &str, lib: &[String]) -> Vec<(String, String)> {
     let mut out: Vec<(String, String)> = MATERIAL_HATCHES
         .iter()
+        .chain(ddc_model::material_hatch::EXTRA_HATCHES.iter())
         .map(|h| (h.to_string(), t(&format!("view_gfx.hatch.{h}"))))
         .collect();
     for n in lib {
@@ -340,19 +352,36 @@ fn reload_card(st: &mut Win, ed: &Editor) {
     }
 }
 
-/// Swatch: material colour with its hatch; without a colour — the class colour from the theme.
-fn paint_swatch(ui: &egui::Ui, rect: egui::Rect, color: Option<u32>, hatch: &str) {
+/// Swatch: the material as the realistic style shows it (class texture at real scale, tinted to
+/// its colour) with the plan hatch on a small badge in the corner. A name that names no class and
+/// has no colour shows the theme grey.
+fn paint_swatch(ui: &egui::Ui, rect: egui::Rect, name: &str, color: Option<u32>, hatch: &str) {
     let v = ui.visuals();
-    let fill = color.map_or(v.widgets.inactive.bg_fill, color_of);
     let line = Stroke::new(1.0, v.text_color());
-    ui.painter().rect_filled(rect, 0.0, fill);
-    let ring = vec![
-        rect.left_top(),
-        rect.right_top(),
-        rect.right_bottom(),
-        rect.left_bottom(),
-    ];
-    paint_hatch(ui.painter(), &[ring], hatch, SWATCH_HATCH, line);
+    match super::mat_swatch::look_swatch(ui.ctx(), name, color) {
+        Some(id) => {
+            let uv = egui::Rect::from_min_max(egui::pos2(0.0, 0.0), egui::pos2(1.0, 1.0));
+            ui.painter().image(id, rect, uv, egui::Color32::WHITE);
+        }
+        None => {
+            let fill = color.map_or(v.widgets.inactive.bg_fill, color_of);
+            ui.painter().rect_filled(rect, 0.0, fill);
+        }
+    }
+    if hatch != "none" {
+        let side = (rect.height() * 0.5).floor();
+        let badge = egui::Rect::from_min_size(rect.right_bottom() - egui::vec2(side, side), egui::vec2(side, side));
+        ui.painter().rect_filled(badge, 0.0, v.extreme_bg_color);
+        let ring = vec![
+            badge.left_top(),
+            badge.right_top(),
+            badge.right_bottom(),
+            badge.left_bottom(),
+        ];
+        paint_hatch(ui.painter(), &[ring], hatch, SWATCH_HATCH, Stroke::new(1.0, v.text_color()));
+        ui.painter()
+            .rect_stroke(badge, 0.0, Stroke::new(1.0, v.weak_text_color()), egui::StrokeKind::Inside);
+    }
     ui.painter()
         .rect_stroke(rect, 0.0, line, egui::StrokeKind::Inside);
 }
@@ -363,6 +392,7 @@ fn list_row(
     th: &ddc_ui::Theme,
     selected: bool,
     name: &str,
+    raw: &str,
     color: Option<u32>,
     hatch: &str,
 ) -> egui::Response {
@@ -388,7 +418,7 @@ fn list_row(
         egui::pos2(rect.left() + space::SM, rect.top() + space::XS),
         egui::vec2(sh * 1.5, sh),
     );
-    paint_swatch(ui, sw, color, hatch);
+    paint_swatch(ui, sw, raw, color, hatch);
     let text_rect = egui::Rect::from_min_max(
         egui::pos2(sw.right() + space::SM, rect.top()),
         egui::pos2(rect.right() - space::SM, rect.bottom()),
@@ -478,7 +508,7 @@ fn list_ui(ui: &mut egui::Ui, ed: &mut Editor, st: &mut Win) {
             }
             for m in &visible {
                 let on = cur.as_deref() == Some(m.spec.name.as_str());
-                let r = list_row(ui, &th, on, &label(&m.spec.name), m.spec.color, &m.spec.hatch);
+                let r = list_row(ui, &th, on, &list_label(&m.spec.name, &visible), &m.spec.name, m.spec.color, &m.spec.hatch);
                 row_focus |= r.has_focus();
                 if reveal.as_deref() == Some(m.spec.name.as_str()) {
                     r.scroll_to_me(None);
@@ -570,7 +600,7 @@ fn details_ui(ui: &mut egui::Ui, ed: &mut Editor, st: &mut Win) -> Option<Answer
     ui.horizontal(|ui| {
         let sh = th.d().control_lg;
         let (rect, _) = ui.allocate_exact_size(egui::vec2(sh * 1.5, sh), egui::Sense::hover());
-        paint_swatch(ui, rect, d.color, &d.hatch);
+        paint_swatch(ui, rect, &d.name, d.color, &d.hatch);
         ui.vertical(|ui| {
             ui_kit::elided(ui, &label(&d.orig));
             if total == 0 {
@@ -759,6 +789,12 @@ pub(super) fn window(ctx: &egui::Context, ed: &mut Editor) {
         crate::ui_kit::Dialog::new("view.materials", t("view_gfx.mat.title"), crate::ui_kit::DialogSize::Wide)
             .open(&mut open)
             .show(ctx, |ui| {
+                let th = ddc_ui::theme::of(ui.ctx());
+                let mut by_mat = super::mat_color_mode::on();
+                if widgets::toggle(ui, &th, &mut by_mat, &t("view_gfx.mat.color_mode")).changed() {
+                    super::mat_color_mode::request(by_mat);
+                }
+                ui.add_space(space::XS);
                 ui.horizontal_top(|ui| {
                     let w = ui.available_width() * 0.42;
                     ui.vertical(|ui| {
@@ -850,6 +886,18 @@ pub(crate) fn seed_draft_for_test(ed: &Editor) {
 
 #[cfg(test)]
 mod tests {
+    #[test]
+    fn rows_that_read_alike_show_the_stored_name() {
+        let row = |n: &str| Material { id: 0, spec: ddc_model::material_defaults(n) };
+        let (a, b, c) = (row("concrete"), row("Concrete"), row("brick"));
+        let all = [&a, &b, &c];
+        crate::with_test_lang(false, || {
+            assert_eq!(super::list_label("concrete", &all), "Concrete (concrete)");
+            assert_eq!(super::list_label("Concrete", &all), "Concrete");
+            assert_eq!(super::list_label("brick", &all), "Brick");
+        });
+    }
+
     use super::*;
 
     #[test]
@@ -1294,7 +1342,7 @@ mod tests {
     fn hatch_options_keep_library_and_unknown_values() {
         let lib = vec!["Zz Lib".to_string()];
         let o = hatch_options(MATERIAL_HATCHES[0], &lib);
-        assert_eq!(o.len(), MATERIAL_HATCHES.len() + 1);
+        assert_eq!(o.len(), MATERIAL_HATCHES.len() + ddc_model::material_hatch::EXTRA_HATCHES.len() + 1);
         assert!(o.iter().any(|x| x.0 == format!("{LIB_HATCH_PREFIX}Zz Lib")));
         let o = hatch_options("lib:gone", &lib);
         assert_eq!(o.last().unwrap().0, "lib:gone");

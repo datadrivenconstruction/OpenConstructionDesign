@@ -21,6 +21,8 @@ use crate::phase_ui::sel_ref;
 use crate::shell::EditorApp;
 
 mod mat_mesh_ui;
+pub(crate) mod mat_swatch;
+mod mat_color_mode;
 mod mat_texture_ui;
 pub(crate) mod materials_win;
 mod rule_value;
@@ -460,6 +462,12 @@ pub fn hatch_of_key(k: &str) -> crate::overlay::Hatch {
         "back_diagonal" => Hatch::BackDiagonal,
         "cross" => Hatch::Cross,
         "dots" => Hatch::Dots,
+        "steel" => Hatch::Steel,
+        "earth" => Hatch::Earth,
+        "water" => Hatch::Water,
+        "stone" => Hatch::Stone,
+        "stipple" => Hatch::Stipple,
+        "glass" => Hatch::Glass,
         _ => Hatch::None,
     }
 }
@@ -472,6 +480,15 @@ pub fn paint_hatch(p: &egui::Painter, rings: &[Vec<Pos2>], kind: &str, step: f32
             p.line_segment([a, b], st);
         }
     };
+    let dots = |step: f32| {
+        for (a, b) in scan(rings, step, 0.0) {
+            let mut x = a.x.min(b.x) + step / 2.0;
+            while x < a.x.max(b.x) {
+                p.circle_filled(Pos2::new(x, a.y), st.width, st.color);
+                x += step;
+            }
+        }
+    };
     match kind {
         "diagonal" => lines(FRAC_PI_4, step),
         "back_diagonal" => lines(-FRAC_PI_4, step * BACK_STEP),
@@ -479,15 +496,19 @@ pub fn paint_hatch(p: &egui::Painter, rings: &[Vec<Pos2>], kind: &str, step: f32
             lines(-FRAC_PI_4, step);
             lines(FRAC_PI_4, step);
         }
-        "dots" => {
-            for (a, b) in scan(rings, step, 0.0) {
-                let mut x = a.x.min(b.x) + step / 2.0;
-                while x < a.x.max(b.x) {
-                    p.circle_filled(Pos2::new(x, a.y), st.width, st.color);
-                    x += step;
-                }
-            }
+        "steel" => lines(FRAC_PI_4, step * 0.45),
+        "glass" => lines(FRAC_PI_4, step * 2.0),
+        "water" => lines(0.0, step),
+        "stone" => {
+            lines(0.0, step * 1.3);
+            lines(std::f32::consts::FRAC_PI_2, step * 1.6);
         }
+        "earth" => {
+            lines(FRAC_PI_4, step);
+            dots(step * 1.5);
+        }
+        "stipple" => dots(step * 1.4),
+        "dots" => dots(step),
         k if k.starts_with("lib:") => {
             crate::range_layer::paint_lib_hatch(p, rings, &k["lib:".len()..], st);
         }
@@ -788,6 +809,7 @@ pub fn frame(a: &mut EditorApp, ctx: &egui::Context) {
     vv_win::styles_window(ctx, &mut a.ed);
     template_win::window(ctx, &mut a.ed, v, a.sh.cat.lang == ddc_ui::Lang::Ru);
     materials_win::window(ctx, &mut a.ed);
+    mat_color_mode::frame(a);
 }
 
 /// Opens the visibility and graphics window for the layout contract.

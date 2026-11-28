@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "فلز",
  "mat_texture.tex.glass": "شیشه",
  "mat_texture.tex.grass": "چمن",
+ "mat_texture.tex.stone": "سنگ",
+ "mat_texture.tex.gravel": "شن",
+ "mat_texture.tex.soil": "خاک",
+ "mat_texture.tex.asphalt": "آسفالت",
+ "mat_texture.tex.plaster": "گچ‌کاری",
+ "mat_texture.tex.roof_tile": "سفال",
+ "mat_texture.tex.insulation": "عایق",
+ "mat_texture.tex.water": "آب",
+ "mat_texture.tex.steel_plate": "ورق فولادی",
+ "mat_texture.tex.rubber": "لاستیک",
  "mat_texture.tex.scale": "اندازهٔ کاشی",
  "mat_texture.tex.rotation": "چرخش",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "استفاده از تصویر",
  "mat_texture.tex.hint": "در سبک واقع‌گرایانه، در کیفیت متعادل و حداکثر نمایش داده می‌شود. اندازه بر حسب متر و برای همه‌ی عناصر یکسان است.",
  "mat_texture.tex.bad_image": "این فایل PNG یا JPEG خوانا نیست (حداکثر 8192 px در هر ضلع)",
- "mat_texture.tex.too_big": "تصویر بزرگ‌تر از 4 MB است: از مسیر فایل یا تصویر کوچک‌تر استفاده کنید"
+ "mat_texture.tex.too_big": "تصویر بزرگ‌تر از 4 MB است: از مسیر فایل یا تصویر کوچک‌تر استفاده کنید",
+ "mat_texture.tex.use_image_off": "ابتدا مسیر یک فایل تصویر را وارد کنید"
 }

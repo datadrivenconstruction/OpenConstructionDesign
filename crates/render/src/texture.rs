@@ -17,7 +17,7 @@ pub const SCALE_MIN: f32 = 0.01;
 pub const SCALE_MAX: f32 = 100.0;
 
 /// Own procedural textures: key, metres per repeat, roughness.
-pub const BUILTIN: [(&str, f32, f32); 7] = [
+pub const BUILTIN: [(&str, f32, f32); 17] = [
     ("brick", 0.6, 0.85),
     ("concrete", 1.0, 0.9),
     ("wood", 0.8, 0.6),
@@ -25,6 +25,16 @@ pub const BUILTIN: [(&str, f32, f32); 7] = [
     ("metal", 0.5, 0.3),
     ("glass", 1.0, 0.08),
     ("grass", 1.0, 1.0),
+    ("stone", 1.5, 0.75),
+    ("gravel", 0.3, 1.0),
+    ("soil", 0.6, 1.0),
+    ("asphalt", 0.5, 0.95),
+    ("plaster", 2.0, 0.85),
+    ("roof_tile", 0.35, 0.7),
+    ("insulation", 0.4, 1.0),
+    ("water", 2.0, 0.03),
+    ("steel_plate", 1.0, 0.35),
+    ("rubber", 0.5, 0.8),
 ];
 
 /// Default tile size (metres) and roughness of a built-in texture.
@@ -495,6 +505,158 @@ fn grass(u: f32, v: f32) -> [f32; 3] {
     scale3(c, 0.78 + 0.4 * blade)
 }
 
+/// Cellular noise on a wrapping lattice of `n` x `n` cells: distance to the nearest and second
+/// nearest feature point, and the id of the nearest cell.
+fn cells(u: f32, v: f32, n: i32, seed: u32) -> (f32, f32, i32) {
+    let (x, y) = (u * n as f32, v * n as f32);
+    let (xi, yi) = (x.floor() as i32, y.floor() as i32);
+    let (mut d1, mut d2, mut id) = (9.0f32, 9.0f32, 0);
+    for dy in -1..=1 {
+        for dx in -1..=1 {
+            let (cx, cy) = (xi + dx, yi + dy);
+            let (wx, wy) = (cx.rem_euclid(n), cy.rem_euclid(n));
+            let px = cx as f32 + hash(wx, wy, seed);
+            let py = cy as f32 + hash(wx, wy, seed + 7);
+            let d = ((px - x).powi(2) + (py - y).powi(2)).sqrt();
+            if d < d1 {
+                d2 = d1;
+                d1 = d;
+                id = wy * n + wx;
+            } else if d < d2 {
+                d2 = d;
+            }
+        }
+    }
+    (d1, d2, id)
+}
+
+fn smoothstep(a: f32, b: f32, x: f32) -> f32 {
+    let t = ((x - a) / (b - a)).clamp(0.0, 1.0);
+    t * t * (3.0 - 2.0 * t)
+}
+
+fn stone(u: f32, v: f32) -> [f32; 3] {
+    // ashlar: 5 courses of 3 blocks, every course shifted by its own amount
+    let rows = 5i32;
+    let ry = v * rows as f32;
+    let row = ry.floor() as i32;
+    let off = hash(row.rem_euclid(rows), 0, 81);
+    let bx = u * 3.0 + off;
+    let col = (bx.floor() as i32).rem_euclid(3);
+    let (fx, fy) = (bx - bx.floor(), ry - ry.floor());
+    let edge = (fx.min(1.0 - fx) / 3.0).min(fy.min(1.0 - fy) / rows as f32);
+    if edge < 0.005 {
+        let k = 0.36 + 0.06 * noise(u, v, 64, 64, 82);
+        return [k, k, k * 0.97];
+    }
+    let tone = hash(col, row.rem_euclid(rows), 83);
+    let vein = fbm(u, v, 6, 4, 84);
+    let speck = noise(u, v, 160, 160, 85);
+    let k = 0.60 + 0.16 * tone + 0.18 * (vein - 0.5) + 0.07 * (speck - 0.5);
+    mix3([k * 1.02, k, k * 0.95], [k * 0.96, k * 0.97, k], vein)
+}
+
+fn gravel(u: f32, v: f32) -> [f32; 3] {
+    let (d1, d2, id) = cells(u, v, 14, 91);
+    let tone = hash(id, 3, 92);
+    let rim = ((d2 - d1) * 5.0).clamp(0.0, 1.0);
+    let base = mix3([0.42, 0.40, 0.37], [0.74, 0.70, 0.64], tone);
+    let grain = noise(u, v, 96, 96, 93);
+    scale3(base, (0.35 + 0.65 * rim) * (0.85 + 0.25 * grain))
+}
+
+fn soil(u: f32, v: f32) -> [f32; 3] {
+    let clod = fbm(u, v, 5, 4, 101);
+    let fine = noise(u, v, 192, 192, 102);
+    let mut k = 0.45 + 0.35 * clod + 0.14 * fine;
+    if noise(u, v, 48, 48, 103) > 0.88 {
+        k *= 1.35;
+    }
+    [k * 1.04, k * 0.92, k * 0.80]
+}
+
+fn asphalt(u: f32, v: f32) -> [f32; 3] {
+    let fine = noise(u, v, 200, 200, 111);
+    let mid = fbm(u, v, 8, 3, 112);
+    let mut k = 0.40 + 0.16 * fine + 0.12 * mid;
+    // pale aggregate chips
+    if noise(u, v, 70, 70, 113) > 0.9 {
+        k += 0.25;
+    }
+    [k, k, k * 1.02]
+}
+
+fn plaster(u: f32, v: f32) -> [f32; 3] {
+    let mottle = fbm(u, v, 3, 3, 121);
+    let fine = noise(u, v, 220, 220, 122);
+    let k = 0.86 + 0.07 * (mottle - 0.5) + 0.05 * (fine - 0.5);
+    [k, k * 0.99, k * 0.96]
+}
+
+fn roof_tile(u: f32, v: f32) -> [f32; 3] {
+    // 6 courses of 4 tiles; each course overlaps the one below: shadow under the lap, bright lip
+    let rows = 6i32;
+    let ry = v * rows as f32;
+    let row = ry.floor() as i32;
+    let bx = u * 4.0 + if row.rem_euclid(2) == 1 { 0.5 } else { 0.0 };
+    let col = (bx.floor() as i32).rem_euclid(4);
+    let (fx, fy) = (bx - bx.floor(), ry - ry.floor());
+    if fx.min(1.0 - fx) < 0.035 {
+        return [0.18, 0.17, 0.17];
+    }
+    let tone = hash(col, row.rem_euclid(rows), 131);
+    let shade = 0.55 + 0.45 * smoothstep(0.0, 0.35, fy);
+    let lip = if fy > 0.9 { 1.12 } else { 1.0 };
+    let k = (0.62 + 0.25 * tone) * shade * lip * (0.92 + 0.16 * noise(u, v, 64, 64, 132));
+    [k, k * 0.98, k * 0.96]
+}
+
+fn insulation(u: f32, v: f32) -> [f32; 3] {
+    // mineral wool: crossing fibres at two angles plus a soft density variation
+    let a = noise(u, v, 24, 128, 141);
+    let b = noise(u, v, 128, 24, 142);
+    let c = noise(u, v, 96, 96, 143);
+    let k = 0.62 + 0.20 * (a - 0.5) + 0.20 * (b - 0.5) + 0.12 * (c - 0.5) + 0.1 * (fbm(u, v, 3, 3, 144) - 0.5);
+    [k * 1.02, k, k * 0.9]
+}
+
+fn water(u: f32, v: f32) -> [f32; 3] {
+    use std::f32::consts::TAU;
+    // ripples as waves with whole cycles per tile, so the image wraps (the warp is periodic too)
+    let w = (TAU * (3.0 * u + 2.0 * v + 0.15 * noise(u, v, 4, 4, 151))).sin()
+        + (TAU * (-2.0 * u + 5.0 * v + 0.15 * noise(u, v, 4, 4, 152))).sin()
+        + 0.7 * (TAU * (6.0 * u - 4.0 * v)).sin();
+    let t = (0.5 + w / 5.4).clamp(0.0, 1.0);
+    mix3([0.30, 0.50, 0.62], [0.62, 0.80, 0.88], t * t)
+}
+
+fn steel_plate(u: f32, v: f32) -> [f32; 3] {
+    // 2 x 2 plates with seams and rivets, fine brushing along u
+    let (gx, gy) = (u * 2.0, v * 2.0);
+    let (fx, fy) = (gx - gx.floor(), gy - gy.floor());
+    let brush = noise(u, v, 4, 220, 161);
+    let mut k = 0.60 + 0.10 * brush + 0.04 * noise(u, v, 40, 40, 162);
+    if fx.min(1.0 - fx).min(fy.min(1.0 - fy)) < 0.012 {
+        k *= 0.55;
+    }
+    for (rx, ry) in [(0.08f32, 0.08f32), (0.92, 0.08), (0.08, 0.92), (0.92, 0.92)] {
+        let d = ((fx - rx).powi(2) + (fy - ry).powi(2)).sqrt();
+        if d < 0.025 {
+            k *= if fx < 0.5 { 1.25 } else { 0.75 };
+        }
+    }
+    [k * 0.97, k, k * 1.04]
+}
+
+fn rubber(u: f32, v: f32) -> [f32; 3] {
+    // fine grain with a regular field of small studs
+    let (gx, gy) = (u * 16.0, v * 16.0);
+    let (fx, fy) = (gx - gx.floor() - 0.5, gy - gy.floor() - 0.5);
+    let stud = (1.0 - (fx * fx + fy * fy).sqrt() * 3.2).max(0.0);
+    let k = 0.30 + 0.05 * noise(u, v, 128, 128, 171) + 0.12 * stud;
+    [k, k, k * 1.03]
+}
+
 /// RGBA8 sRGB image of a built-in texture, `LAYER_PX` square and tileable.
 pub fn generate(key: &str) -> Option<Vec<u8>> {
     let f: fn(f32, f32) -> [f32; 3] = match key {
@@ -505,6 +667,16 @@ pub fn generate(key: &str) -> Option<Vec<u8>> {
         "metal" => metal,
         "glass" => glass,
         "grass" => grass,
+        "stone" => stone,
+        "gravel" => gravel,
+        "soil" => soil,
+        "asphalt" => asphalt,
+        "plaster" => plaster,
+        "roof_tile" => roof_tile,
+        "insulation" => insulation,
+        "water" => water,
+        "steel_plate" => steel_plate,
+        "rubber" => rubber,
         _ => return None,
     };
     let n = LAYER_PX as usize;
@@ -650,6 +822,22 @@ mod tests {
         }
         assert!(generate("nope").is_none());
         assert!(builtin_info("brick").is_some());
+    }
+
+    #[test]
+    fn built_ins_differ_from_each_other() {
+        // every class must look like itself: no two textures share a pattern
+        let imgs: Vec<(&str, Vec<u8>)> = BUILTIN.iter().map(|b| (b.0, generate(b.0).unwrap())).collect();
+        for (i, (ka, a)) in imgs.iter().enumerate() {
+            for (kb, b) in &imgs[i + 1..] {
+                let d: u64 = a.iter().zip(b).map(|(x, y)| x.abs_diff(*y) as u64).sum();
+                let per = d as f64 / a.len() as f64;
+                assert!(per > 6.0, "{ka} vs {kb}: mean difference {per}");
+            }
+        }
+        for k in ["stone", "gravel", "soil", "asphalt", "plaster", "roof_tile", "insulation", "water", "steel_plate", "rubber"] {
+            assert!(builtin_info(k).is_some(), "{k}");
+        }
     }
 
     #[test]

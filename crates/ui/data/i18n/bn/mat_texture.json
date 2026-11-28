@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "ধাতু",
  "mat_texture.tex.glass": "কাচ",
  "mat_texture.tex.grass": "ঘাস",
+ "mat_texture.tex.stone": "পাথর",
+ "mat_texture.tex.gravel": "নুড়ি",
+ "mat_texture.tex.soil": "মাটি",
+ "mat_texture.tex.asphalt": "অ্যাসফল্ট",
+ "mat_texture.tex.plaster": "প্লাস্টার",
+ "mat_texture.tex.roof_tile": "ছাদের টাইল",
+ "mat_texture.tex.insulation": "ইনসুলেশন",
+ "mat_texture.tex.water": "পানি",
+ "mat_texture.tex.steel_plate": "ইস্পাত পাত",
+ "mat_texture.tex.rubber": "রাবার",
  "mat_texture.tex.scale": "টাইলের আকার",
  "mat_texture.tex.rotation": "ঘূর্ণন",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "ছবি ব্যবহার করুন",
  "mat_texture.tex.hint": "সমতুল্য ও সর্বোচ্চ মানে বাস্তবসম্মত স্টাইলে দেখানো হয়। আকার মিটারে, সব উপাদানে একই।",
  "mat_texture.tex.bad_image": "এটি পড়ার যোগ্য PNG বা JPEG ছবি নয় (প্রতি বাজুতে সর্বোচ্চ 8192 px)",
- "mat_texture.tex.too_big": "ছবিটি 4 MB-এর বেশি: ফাইলের পথ ব্যবহার করুন বা ছোট ছবি"
+ "mat_texture.tex.too_big": "ছবিটি 4 MB-এর বেশি: ফাইলের পথ ব্যবহার করুন বা ছোট ছবি",
+ "mat_texture.tex.use_image_off": "আগে একটি ছবির ফাইলের পাথ লিখুন"
 }

@@ -125,6 +125,7 @@ mod mass;
 pub mod mat_mech;
 mod material_texture;
 pub mod material_look;
+pub mod material_hatch;
 #[cfg(test)]
 mod material_look_tests;
 mod field_err;

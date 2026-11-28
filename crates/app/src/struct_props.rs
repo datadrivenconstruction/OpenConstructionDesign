@@ -430,7 +430,7 @@ pub fn show(ui: &mut egui::Ui, cat: &Catalog, ed: &mut Editor) -> bool {
                 ui_kit::kv_num(ui, &cat.t(k), v.clone());
             }
             if !q.material.is_empty() {
-                ui_kit::kv(ui, &cat.t("sp.material"), q.material.clone());
+                crate::view_gfx_ui::mat_swatch::material_row(ui, &cat.t("sp.material"), &q.material);
             }
             for (k, v) in weight {
                 ui_kit::kv_num(ui, &cat.t(k), v.clone());

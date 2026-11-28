@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "معدن",
  "mat_texture.tex.glass": "زجاج",
  "mat_texture.tex.grass": "عشب",
+ "mat_texture.tex.stone": "حجر",
+ "mat_texture.tex.gravel": "حصى",
+ "mat_texture.tex.soil": "تربة",
+ "mat_texture.tex.asphalt": "أسفلت",
+ "mat_texture.tex.plaster": "بلاستر",
+ "mat_texture.tex.roof_tile": "قرميد",
+ "mat_texture.tex.insulation": "عزل",
+ "mat_texture.tex.water": "ماء",
+ "mat_texture.tex.steel_plate": "صفيحة فولاذية",
+ "mat_texture.tex.rubber": "مطاط",
  "mat_texture.tex.scale": "حجم البلاطة",
  "mat_texture.tex.rotation": "الدوران",
  "mat_texture.tex.unit_m": " م",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "استخدام الصورة",
  "mat_texture.tex.hint": "تظهر في النمط الواقعي بجودة متوسطة وقصوى. الحجم بالأمتار، وهو نفسه لكل عنصر.",
  "mat_texture.tex.bad_image": "هذا ليس ملف PNG أو JPEG قابلًا للقراءة (بحد أقصى 8192 بكسل للضلع)",
- "mat_texture.tex.too_big": "الصورة أكبر من 4 ميغابايت: استخدم مسار ملف أو صورة أصغر"
+ "mat_texture.tex.too_big": "الصورة أكبر من 4 ميغابايت: استخدم مسار ملف أو صورة أصغر",
+ "mat_texture.tex.use_image_off": "أدخل مسار ملف الصورة أولاً"
 }

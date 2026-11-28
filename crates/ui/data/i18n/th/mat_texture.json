@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "โลหะ",
  "mat_texture.tex.glass": "กระจก",
  "mat_texture.tex.grass": "หญ้า",
+ "mat_texture.tex.stone": "หิน",
+ "mat_texture.tex.gravel": "กรวด",
+ "mat_texture.tex.soil": "ดิน",
+ "mat_texture.tex.asphalt": "แอสฟัลต์",
+ "mat_texture.tex.plaster": "ปูนฉาบ",
+ "mat_texture.tex.roof_tile": "กระเบื้องหลังคา",
+ "mat_texture.tex.insulation": "ฉนวน",
+ "mat_texture.tex.water": "น้ำ",
+ "mat_texture.tex.steel_plate": "แผ่นเหล็ก",
+ "mat_texture.tex.rubber": "ยาง",
  "mat_texture.tex.scale": "ขนาดกระเบื้อง",
  "mat_texture.tex.rotation": "การหมุน",
  "mat_texture.tex.unit_m": " ม.",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "ใช้ภาพ",
  "mat_texture.tex.hint": "แสดงในสไตล์สมจริงที่คุณภาพสมดุลและสูงสุด ขนาดเป็นเมตร เท่ากันทุกองค์ประกอบ",
  "mat_texture.tex.bad_image": "นี่ไม่ใช่ไฟล์ PNG หรือ JPEG ที่อ่านได้ (ไม่เกิน 8192 พิกเซลต่อด้าน)",
- "mat_texture.tex.too_big": "ภาพใหญ่กว่า 4 MB: ใช้พาธไฟล์หรือภาพที่เล็กกว่า"
+ "mat_texture.tex.too_big": "ภาพใหญ่กว่า 4 MB: ใช้พาธไฟล์หรือภาพที่เล็กกว่า",
+ "mat_texture.tex.use_image_off": "ป้อนพาธของไฟล์รูปภาพก่อน"
 }

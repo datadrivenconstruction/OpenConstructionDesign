@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Металл",
  "mat_texture.tex.glass": "Шил",
  "mat_texture.tex.grass": "Ногоо",
+ "mat_texture.tex.stone": "Чулуу",
+ "mat_texture.tex.gravel": "Хайрга",
+ "mat_texture.tex.soil": "Хөрс",
+ "mat_texture.tex.asphalt": "Асфальт",
+ "mat_texture.tex.plaster": "Шавар",
+ "mat_texture.tex.roof_tile": "Дээврийн хавтан",
+ "mat_texture.tex.insulation": "Дулаалга",
+ "mat_texture.tex.water": "Ус",
+ "mat_texture.tex.steel_plate": "Ган хавтан",
+ "mat_texture.tex.rubber": "Резин",
  "mat_texture.tex.scale": "Хавтангийн хэмжээ",
  "mat_texture.tex.rotation": "Эргэлт",
  "mat_texture.tex.unit_m": " м",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Зураг ашиглах",
  "mat_texture.tex.hint": "Бодит (Realistic) харагдацад Тэнцвэртэй ба Хамгийн чанар горимд харагдана. Хэмжээ метрээр, бүх элементэд адил.",
  "mat_texture.tex.bad_image": "Энэ нь уншигдах PNG эсвэл JPEG зураг биш (талдаа дээд тал нь 8192 px)",
- "mat_texture.tex.too_big": "Зураг 4 MB-аас том байна: файлын зам эсвэл жижиг зураг ашиглана уу"
+ "mat_texture.tex.too_big": "Зураг 4 MB-аас том байна: файлын зам эсвэл жижиг зураг ашиглана уу",
+ "mat_texture.tex.use_image_off": "Эхлээд зургийн файлын замыг оруулна уу"
 }

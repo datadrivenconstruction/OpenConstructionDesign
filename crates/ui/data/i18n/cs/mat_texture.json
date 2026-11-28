@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Kov",
  "mat_texture.tex.glass": "Sklo",
  "mat_texture.tex.grass": "Tráva",
+ "mat_texture.tex.stone": "Kámen",
+ "mat_texture.tex.gravel": "Štěrk",
+ "mat_texture.tex.soil": "Zemina",
+ "mat_texture.tex.asphalt": "Asfalt",
+ "mat_texture.tex.plaster": "Omítka",
+ "mat_texture.tex.roof_tile": "Střešní taška",
+ "mat_texture.tex.insulation": "Izolace",
+ "mat_texture.tex.water": "Voda",
+ "mat_texture.tex.steel_plate": "Ocelový plech",
+ "mat_texture.tex.rubber": "Pryž",
  "mat_texture.tex.scale": "Velikost dlaždice",
  "mat_texture.tex.rotation": "Otočení",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Použít obrázek",
  "mat_texture.tex.hint": "Zobrazuje se ve stylu Realistický při kvalitě Vyvážená a Maximální. Velikost je v metrech, stejná pro každý prvek.",
  "mat_texture.tex.bad_image": "Toto není čitelný obrázek PNG nebo JPEG (nejvýše 8192 px na stranu)",
- "mat_texture.tex.too_big": "Obrázek je větší než 4 MB: použijte cestu k souboru nebo menší obrázek"
+ "mat_texture.tex.too_big": "Obrázek je větší než 4 MB: použijte cestu k souboru nebo menší obrázek",
+ "mat_texture.tex.use_image_off": "Nejdříve zadejte cestu k souboru obrázku"
 }

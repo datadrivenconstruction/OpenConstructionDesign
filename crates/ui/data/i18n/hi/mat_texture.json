@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "धातु",
  "mat_texture.tex.glass": "काँच",
  "mat_texture.tex.grass": "घास",
+ "mat_texture.tex.stone": "पत्थर",
+ "mat_texture.tex.gravel": "बजरी",
+ "mat_texture.tex.soil": "मिट्टी",
+ "mat_texture.tex.asphalt": "डामर",
+ "mat_texture.tex.plaster": "प्लास्टर",
+ "mat_texture.tex.roof_tile": "छत की टाइल",
+ "mat_texture.tex.insulation": "इन्सुलेशन",
+ "mat_texture.tex.water": "पानी",
+ "mat_texture.tex.steel_plate": "इस्पात प्लेट",
+ "mat_texture.tex.rubber": "रबर",
  "mat_texture.tex.scale": "टाइल का आकार",
  "mat_texture.tex.rotation": "घुमाव",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "छवि उपयोग करें",
  "mat_texture.tex.hint": "Realistic शैली में Balanced और Maximum गुणवत्ता पर दिखता है। आकार मीटर में है, हर तत्व पर एक जैसा।",
  "mat_texture.tex.bad_image": "यह पढ़ने योग्य PNG या JPEG छवि नहीं है (अधिकतम 8192 px प्रति भुजा)",
- "mat_texture.tex.too_big": "छवि 4 MB से बड़ी है: फ़ाइल पथ या छोटी छवि का उपयोग करें"
+ "mat_texture.tex.too_big": "छवि 4 MB से बड़ी है: फ़ाइल पथ या छोटी छवि का उपयोग करें",
+ "mat_texture.tex.use_image_off": "पहले इमेज फ़ाइल का पथ दर्ज करें"
 }

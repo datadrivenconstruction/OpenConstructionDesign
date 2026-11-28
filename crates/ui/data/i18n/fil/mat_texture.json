@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Metaliko",
  "mat_texture.tex.glass": "Salamin",
  "mat_texture.tex.grass": "Damo",
+ "mat_texture.tex.stone": "Bato",
+ "mat_texture.tex.gravel": "Graba",
+ "mat_texture.tex.soil": "Lupa",
+ "mat_texture.tex.asphalt": "Aspalto",
+ "mat_texture.tex.plaster": "Plaster",
+ "mat_texture.tex.roof_tile": "Tisa sa bubong",
+ "mat_texture.tex.insulation": "Insulasyon",
+ "mat_texture.tex.water": "Tubig",
+ "mat_texture.tex.steel_plate": "Platong bakal",
+ "mat_texture.tex.rubber": "Goma",
  "mat_texture.tex.scale": "Laki ng tile",
  "mat_texture.tex.rotation": "Pag-ikot",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Gamitin ang imahe",
  "mat_texture.tex.hint": "Ipinapakita sa Realistic style sa Balanse at Pinakamataas na kalidad. Nasa metro ang laki, pareho sa bawat elemento.",
  "mat_texture.tex.bad_image": "Hindi ito mabasang PNG o JPEG na imahe (hanggang 8192 px bawat gilid)",
- "mat_texture.tex.too_big": "Mas malaki sa 4 MB ang imahe: gumamit ng path ng file o mas maliit na imahe"
+ "mat_texture.tex.too_big": "Mas malaki sa 4 MB ang imahe: gumamit ng path ng file o mas maliit na imahe",
+ "mat_texture.tex.use_image_off": "Ilagay muna ang path ng image file"
 }

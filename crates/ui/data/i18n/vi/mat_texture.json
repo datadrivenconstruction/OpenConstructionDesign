@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Kim loại",
  "mat_texture.tex.glass": "Kính",
  "mat_texture.tex.grass": "Cỏ",
+ "mat_texture.tex.stone": "Đá",
+ "mat_texture.tex.gravel": "Sỏi",
+ "mat_texture.tex.soil": "Đất",
+ "mat_texture.tex.asphalt": "Nhựa đường",
+ "mat_texture.tex.plaster": "Vữa trát",
+ "mat_texture.tex.roof_tile": "Ngói",
+ "mat_texture.tex.insulation": "Cách nhiệt",
+ "mat_texture.tex.water": "Nước",
+ "mat_texture.tex.steel_plate": "Tấm thép",
+ "mat_texture.tex.rubber": "Cao su",
  "mat_texture.tex.scale": "Kích thước viên",
  "mat_texture.tex.rotation": "Xoay",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Dùng ảnh",
  "mat_texture.tex.hint": "Hiển thị ở kiểu Thực tế với chất lượng Cân bằng và Tối đa. Kích thước tính bằng mét, giống nhau trên mọi phần tử.",
  "mat_texture.tex.bad_image": "Đây không phải ảnh PNG hoặc JPEG đọc được (tối đa 8192 px mỗi cạnh)",
- "mat_texture.tex.too_big": "Ảnh lớn hơn 4 MB: hãy dùng đường dẫn tệp hoặc ảnh nhỏ hơn"
+ "mat_texture.tex.too_big": "Ảnh lớn hơn 4 MB: hãy dùng đường dẫn tệp hoặc ảnh nhỏ hơn",
+ "mat_texture.tex.use_image_off": "Hãy nhập đường dẫn tệp ảnh trước"
 }

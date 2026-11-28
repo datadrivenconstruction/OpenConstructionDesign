@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Fém",
  "mat_texture.tex.glass": "Üveg",
  "mat_texture.tex.grass": "Fű",
+ "mat_texture.tex.stone": "Kő",
+ "mat_texture.tex.gravel": "Kavics",
+ "mat_texture.tex.soil": "Talaj",
+ "mat_texture.tex.asphalt": "Aszfalt",
+ "mat_texture.tex.plaster": "Vakolat",
+ "mat_texture.tex.roof_tile": "Tetőcserép",
+ "mat_texture.tex.insulation": "Hőszigetelés",
+ "mat_texture.tex.water": "Víz",
+ "mat_texture.tex.steel_plate": "Acéllemez",
+ "mat_texture.tex.rubber": "Gumi",
  "mat_texture.tex.scale": "Csempeméret",
  "mat_texture.tex.rotation": "Forgatás",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Kép használata",
  "mat_texture.tex.hint": "A valósághű stíluson, kiegyensúlyozott és maximális minőségnél látszik. A méret méterben van, minden elemen azonos.",
  "mat_texture.tex.bad_image": "Ez nem olvasható PNG vagy JPEG kép (legfeljebb 8192 px oldalanként)",
- "mat_texture.tex.too_big": "A kép nagyobb 4 MB-nál: használjon fájlelérési utat vagy kisebb képet"
+ "mat_texture.tex.too_big": "A kép nagyobb 4 MB-nál: használjon fájlelérési utat vagy kisebb képet",
+ "mat_texture.tex.use_image_off": "Először adja meg egy képfájl útvonalát"
 }

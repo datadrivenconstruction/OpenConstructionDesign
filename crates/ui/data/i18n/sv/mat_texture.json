@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Metall",
  "mat_texture.tex.glass": "Glas",
  "mat_texture.tex.grass": "Gräs",
+ "mat_texture.tex.stone": "Sten",
+ "mat_texture.tex.gravel": "Grus",
+ "mat_texture.tex.soil": "Jord",
+ "mat_texture.tex.asphalt": "Asfalt",
+ "mat_texture.tex.plaster": "Puts",
+ "mat_texture.tex.roof_tile": "Takpannor",
+ "mat_texture.tex.insulation": "Isolering",
+ "mat_texture.tex.water": "Vatten",
+ "mat_texture.tex.steel_plate": "Stålplåt",
+ "mat_texture.tex.rubber": "Gummi",
  "mat_texture.tex.scale": "Plattstorlek",
  "mat_texture.tex.rotation": "Vridning",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Använd bild",
  "mat_texture.tex.hint": "Visas i realistisk stil vid balanserad och maximal kvalitet. Storleken anges i meter, lika för alla element.",
  "mat_texture.tex.bad_image": "Det här är inte en läsbar PNG- eller JPEG-bild (högst 8192 px per sida)",
- "mat_texture.tex.too_big": "Bilden är större än 4 MB: använd en sökväg till en fil eller en mindre bild"
+ "mat_texture.tex.too_big": "Bilden är större än 4 MB: använd en sökväg till en fil eller en mindre bild",
+ "mat_texture.tex.use_image_off": "Ange först sökvägen till en bildfil"
 }

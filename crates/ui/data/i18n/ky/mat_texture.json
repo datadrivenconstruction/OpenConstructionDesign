@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Металл",
  "mat_texture.tex.glass": "Айнек",
  "mat_texture.tex.grass": "Чөп",
+ "mat_texture.tex.stone": "Таш",
+ "mat_texture.tex.gravel": "Шагыл",
+ "mat_texture.tex.soil": "Топурак",
+ "mat_texture.tex.asphalt": "Асфальт",
+ "mat_texture.tex.plaster": "Шыбак",
+ "mat_texture.tex.roof_tile": "Чатыр плиткасы",
+ "mat_texture.tex.insulation": "Жылуулоо",
+ "mat_texture.tex.water": "Суу",
+ "mat_texture.tex.steel_plate": "Болот табак",
+ "mat_texture.tex.rubber": "Резина",
  "mat_texture.tex.scale": "Плитканын өлчөмү",
  "mat_texture.tex.rotation": "Айлануу",
  "mat_texture.tex.unit_m": " м",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Сүрөттү колдонуу",
  "mat_texture.tex.hint": "Реалистик стилинде Теңдештирилген жана Максималдуу сапатта көрсөтүлөт. Өлчөм метр менен, бардык элементтерде бирдей.",
  "mat_texture.tex.bad_image": "Бул окула турган PNG же JPEG сүрөтү эмес (каптал тарабы 8192 px чейин)",
- "mat_texture.tex.too_big": "Сүрөт 4 МБдан чоңураак: файлдын жолун же кичирээк сүрөттү колдонуңуз"
+ "mat_texture.tex.too_big": "Сүрөт 4 МБдан чоңураак: файлдын жолун же кичирээк сүрөттү колдонуңуз",
+ "mat_texture.tex.use_image_off": "Адегенде сүрөт файлынын жолун киргизиңиз"
 }

@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Μέταλλο",
  "mat_texture.tex.glass": "Γυαλί",
  "mat_texture.tex.grass": "Γρασίδι",
+ "mat_texture.tex.stone": "Πέτρα",
+ "mat_texture.tex.gravel": "Χαλίκι",
+ "mat_texture.tex.soil": "Έδαφος",
+ "mat_texture.tex.asphalt": "Ασφαλτος",
+ "mat_texture.tex.plaster": "Σοβάς",
+ "mat_texture.tex.roof_tile": "Κεραμίδι",
+ "mat_texture.tex.insulation": "Μόνωση",
+ "mat_texture.tex.water": "Νερό",
+ "mat_texture.tex.steel_plate": "Χαλύβδινο έλασμα",
+ "mat_texture.tex.rubber": "Καουτσούκ",
  "mat_texture.tex.scale": "Μέγεθος πλακιδίου",
  "mat_texture.tex.rotation": "Περιστροφή",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Χρήση εικόνας",
  "mat_texture.tex.hint": "Εμφανίζεται στο ρεαλιστικό στυλ με ισορροπημένη και μέγιστη ποιότητα. Το μέγεθος είναι σε μέτρα, το ίδιο για κάθε στοιχείο.",
  "mat_texture.tex.bad_image": "Δεν είναι αναγνώσιμη εικόνα PNG ή JPEG (το πολύ 8192 px σε πλευρά)",
- "mat_texture.tex.too_big": "Η εικόνα είναι μεγαλύτερη από 4 MB: χρησιμοποιήστε διαδρομή αρχείου ή μικρότερη εικόνα"
+ "mat_texture.tex.too_big": "Η εικόνα είναι μεγαλύτερη από 4 MB: χρησιμοποιήστε διαδρομή αρχείου ή μικρότερη εικόνα",
+ "mat_texture.tex.use_image_off": "Εισαγάγετε πρώτα τη διαδρομή ενός αρχείου εικόνας"
 }

@@ -9,6 +9,16 @@
  "mat_texture.tex.metal": "Metall",
  "mat_texture.tex.glass": "Shisha",
  "mat_texture.tex.grass": "O't",
+ "mat_texture.tex.stone": "Tosh",
+ "mat_texture.tex.gravel": "Shag'al",
+ "mat_texture.tex.soil": "Tuproq",
+ "mat_texture.tex.asphalt": "Asfalt",
+ "mat_texture.tex.plaster": "Suvoq",
+ "mat_texture.tex.roof_tile": "Tom plitkasi",
+ "mat_texture.tex.insulation": "Izolyatsiya",
+ "mat_texture.tex.water": "Suv",
+ "mat_texture.tex.steel_plate": "Po'lat list",
+ "mat_texture.tex.rubber": "Rezina",
  "mat_texture.tex.scale": "Plitka o'lchami",
  "mat_texture.tex.rotation": "Aylantirish",
  "mat_texture.tex.unit_m": " m",
@@ -21,5 +31,6 @@
  "mat_texture.tex.use_image": "Rasmni ishlatish",
  "mat_texture.tex.hint": "Realistik uslubda Muvozanatli va Maksimal sifatda ko'rsatiladi. O'lcham metrda, har bir elementda bir xil.",
  "mat_texture.tex.bad_image": "Bu o'qib bo'ladigan PNG yoki JPEG rasm emas (har bir tomoni 8192 px gacha)",
- "mat_texture.tex.too_big": "Rasm 4 MB dan katta: fayl yo'lidan yoki kichikroq rasmdan foydalaning"
+ "mat_texture.tex.too_big": "Rasm 4 MB dan katta: fayl yo'lidan yoki kichikroq rasmdan foydalaning",
+ "mat_texture.tex.use_image_off": "Avval rasm fayli yo'lini kiriting"
 }
