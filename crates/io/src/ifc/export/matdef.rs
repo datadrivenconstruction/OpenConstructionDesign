@@ -26,6 +26,19 @@ fn transparency(name: &str) -> f64 {
     }
 }
 
+/// Shading model that matches the metallic-roughness values.
+fn reflectance(transparency: f64, metallic: f32, roughness: f32) -> &'static str {
+    if transparency > 0.0 {
+        ".GLASS."
+    } else if metallic >= 0.5 {
+        ".METAL."
+    } else if roughness < 0.5 {
+        ".PLASTIC."
+    } else {
+        ".MATT."
+    }
+}
+
 /// A physical material value is written only when finite and not negative.
 fn valid(v: f64) -> bool {
     v.is_finite() && v >= 0.0
@@ -51,18 +64,26 @@ impl Ctx {
             "IFCCOLOURRGB",
             &[s(NONE), real(ch(16)), real(ch(8)), real(ch(0))],
         );
+        let transp = transparency(name);
+        let (highlight, method) = match ddc_model::material_look::resolve(name, Some(rgb)) {
+            Some(l) => (
+                format!("IFCSPECULARROUGHNESS({})", real(f64::from(l.roughness.clamp(0.0, 1.0)))),
+                reflectance(transp, l.metallic, l.roughness),
+            ),
+            None => (s(NONE), ".NOTDEFINED."),
+        };
         let render = self.s.add(
             "IFCSURFACESTYLERENDERING",
             &[
                 r(col),
-                real(transparency(name)),
+                real(transp),
                 s(NONE),
                 s(NONE),
                 s(NONE),
                 s(NONE),
                 s(NONE),
-                s(NONE),
-                ".NOTDEFINED.".into(),
+                highlight,
+                method.into(),
             ],
         );
         let style = self.s.add(
@@ -249,6 +270,21 @@ mod tests {
         let mut dst = Model::open(":memory:").unwrap();
         crate::ifc::import_ifc(&mut dst, t.as_bytes()).unwrap();
         assert_eq!(dst.material(name).unwrap().spec.color, row, "the look colour does not become a row colour");
+    }
+
+    #[test]
+    fn style_carries_roughness_and_reflectance_method() {
+        let name = "steel S355";
+        let mut m = Model::open(":memory:").unwrap();
+        let lv = m.add_level("L1", 0.0).unwrap();
+        let layer = LayerSpec { material: name.into(), thickness: 0.2 };
+        let wt = m.add_wall_type("zz", &[layer]).unwrap();
+        m.add_wall(&WallSpec { a: (0.0, 0.0), b: (4.0, 0.0), level: lv, base_offset: 0.0, height: 3.0, wall_type: wt, offset0: None })
+            .unwrap();
+        let t = export_ifc(&m).unwrap();
+        let line = t.lines().find(|l| l.contains("=IFCSURFACESTYLERENDERING(")).unwrap();
+        assert!(line.contains("IFCSPECULARROUGHNESS("), "{line}");
+        assert!(line.contains(".METAL."), "{line}");
     }
 
     #[test]

@@ -33,6 +33,11 @@ pub struct Material {
     pub name: String,
     /// Linear RGBA; alpha below 1 becomes `BLEND`.
     pub color: [f32; 4],
+    /// 0 is a dielectric, 1 a bare metal.
+    pub metallic: f32,
+    pub roughness: f32,
+    /// Index of refraction when it is not the default 1.5 (written as `KHR_materials_ior`).
+    pub ior: Option<f32>,
     pub extras: Value,
 }
 
@@ -73,12 +78,29 @@ impl Scene {
 
     /// Material by name (a repeated name returns the first one).
     pub fn material(&mut self, name: &str, color: [f32; 4], extras: Value) -> usize {
+        self.material_pbr(name, color, 0.0, 0.85, None, extras)
+    }
+
+    /// As [`Scene::material`] with the metallic-roughness values and an optional refraction index.
+    pub fn material_pbr(
+        &mut self,
+        name: &str,
+        color: [f32; 4],
+        metallic: f32,
+        roughness: f32,
+        ior: Option<f32>,
+        extras: Value,
+    ) -> usize {
         if let Some(i) = self.materials.iter().position(|m| m.name == name) {
             return i;
         }
+        let unit = |v: f32, d: f32| if v.is_finite() { v.clamp(0.0, 1.0) } else { d };
         self.materials.push(Material {
             name: name.into(),
             color,
+            metallic: unit(metallic, 0.0),
+            roughness: unit(roughness, 0.85),
+            ior: ior.filter(|v| v.is_finite() && (1.0..=3.0).contains(v)),
             extras,
         });
         self.materials.len() - 1
@@ -283,9 +305,12 @@ pub fn write_glb(scene: &Scene) -> Result<Vec<u8>, String> {
             let mode = if m.color[3] < 1.0 { "BLEND" } else { "OPAQUE" };
             let mut o = json!({"name": m.name,
                 "pbrMetallicRoughness": {"baseColorFactor": m.color.map(num),
-                    "metallicFactor": 0.0, "roughnessFactor": 0.85},
+                    "metallicFactor": num(m.metallic), "roughnessFactor": num(m.roughness)},
                 "alphaMode": mode,
                 "doubleSided": true});
+            if let Some(ior) = m.ior {
+                o["extensions"] = json!({"KHR_materials_ior": {"ior": num(ior)}});
+            }
             if !m.extras.is_null() {
                 o["extras"] = m.extras.clone();
             }
@@ -325,6 +350,9 @@ pub fn write_glb(scene: &Scene) -> Result<Vec<u8>, String> {
         "scenes": [{"name": scene.name, "nodes": [0], "extras": {"units": "m", "up": "Z"}}],
         "nodes": nodes,
     });
+    if scene.materials.iter().any(|m| m.ior.is_some()) {
+        root["extensionsUsed"] = json!(["KHR_materials_ior"]);
+    }
     if !materials.is_empty() {
         root["materials"] = Value::Array(materials);
     }

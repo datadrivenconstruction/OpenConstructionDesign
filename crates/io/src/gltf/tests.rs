@@ -361,3 +361,19 @@ fn file_is_written() {
     validate(&g).unwrap();
     std::fs::remove_dir_all(&dir).ok();
 }
+
+#[test]
+fn material_surface_values_are_written() {
+    let mut s = Scene::new("m");
+    let a = s.material_pbr("steel", [0.6, 0.6, 0.6, 1.0], 1.0, 0.3, None, Value::Null);
+    let b = s.material_pbr("glass", [0.8, 0.9, 0.9, 0.4], 0.0, 0.05, Some(1.5), Value::Null);
+    assert_ne!(a, b);
+    let (p, t) = cube([0.0; 3], 1.0);
+    s.add_part("a", a, &p, &t, Value::Null).unwrap();
+    let g = parse(&write_glb(&s).unwrap()).unwrap();
+    let m = &g.json["materials"];
+    assert_eq!(m[0]["pbrMetallicRoughness"]["metallicFactor"], 1.0);
+    assert!((m[0]["pbrMetallicRoughness"]["roughnessFactor"].as_f64().unwrap() - 0.3).abs() < 1e-6);
+    assert_eq!(m[1]["extensions"]["KHR_materials_ior"]["ior"], 1.5);
+    assert_eq!(g.json["extensionsUsed"][0], "KHR_materials_ior");
+}

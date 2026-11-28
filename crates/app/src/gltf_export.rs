@@ -67,7 +67,8 @@ fn material(g: &mut Gltf, cat: &str, tag: u32) -> usize {
                 ""
             }
         );
-        return g.material(&name, [c(16), c(8), c(0), alpha], json!({"category": cat}));
+        let (m, r, ior) = surface(glass);
+        return g.material_pbr(&name, [c(16), c(8), c(0), alpha], m, r, ior, json!({"category": cat}));
     }
     let [r, gr, b] = category_color(cat);
     let name = if glass {
@@ -75,7 +76,17 @@ fn material(g: &mut Gltf, cat: &str, tag: u32) -> usize {
     } else {
         cat.to_string()
     };
-    g.material(&name, [r, gr, b, alpha], json!({"category": cat}))
+    let (m, ro, ior) = surface(glass);
+    g.material_pbr(&name, [r, gr, b, alpha], m, ro, ior, json!({"category": cat}))
+}
+
+/// Metallic, roughness and refraction index: glass is smooth and refractive, the rest matt.
+fn surface(glass: bool) -> (f32, f32, Option<f32>) {
+    if glass {
+        (0.0, 0.05, Some(1.5))
+    } else {
+        (0.0, 0.85, None)
+    }
 }
 
 fn sql_json(v: &Sql) -> Option<Value> {
@@ -615,5 +626,16 @@ mod tests {
         assert!((c[0] - 0.2158).abs() < 1e-3 && c[3] == 1.0, "{c:?}");
         let shell = material(&mut g, "mep", tag_rgb([128, 128, 128], true));
         assert_eq!(g.materials[shell].color[3], GLASS_ALPHA);
+    }
+
+    #[test]
+    fn glass_is_smooth_and_refractive_and_the_rest_matt() {
+        let mut g = Gltf::new("t");
+        let glass = material(&mut g, "window", TAG_GLASS);
+        let wall = material(&mut g, "wall", 0);
+        assert_eq!(g.materials[glass].ior, Some(1.5));
+        assert!(g.materials[glass].roughness < 0.2);
+        assert_eq!(g.materials[wall].ior, None);
+        assert!(g.materials[wall].roughness > 0.5);
     }
 }
