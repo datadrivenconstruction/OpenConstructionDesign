@@ -31,6 +31,8 @@
 - Mode switch, onboarding, recovery and warning texts explain what each choice does.
 - A reply cut at the output limit continues on its own; the output cap follows the model's maximum.
 - The status tells local work apart from a silent model service.
+- Plan limits with an unlimited mode, chosen from a chip above the input; `ddc ai --apply` needs `--apply-partial` to apply a plan cut by a limit.
+- The chat shows the running cost and the cost of each step.
 - Time and token limits are shown and adjustable; `ddc ai --max-tokens`, `--max-time-s`; a stop names the limit and how to raise it.
 
 ### 3D view
