@@ -33,6 +33,10 @@
 - The status tells local work apart from a silent model service.
 - Time and token limits are shown and adjustable; `ddc ai --max-tokens`, `--max-time-s`; a stop names the limit and how to raise it.
 
+### Export
+- glTF exports carry metal, roughness and refraction per material; glass is smooth and refractive.
+- IFC exports carry surface roughness and a reflectance method for each material.
+
 ### Editor
 - Realism checks flag solid glass, filled blocks, parts of unlikely size and parts outside the outline.
 - Solids appear in the spreadsheet and CSV exports with volume, area and net volume, and in OBJ and mesh exports with unique part names.
