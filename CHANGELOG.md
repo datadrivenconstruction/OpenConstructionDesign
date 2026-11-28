@@ -37,6 +37,10 @@
 - Shaded and realistic styles share one lighting curve; saturated colours keep their hue, the sky follows the backdrop and outlines scale with the frame.
 - Solids and freeform bodies show their material colour; glass is see-through, while steel and concrete keep their texture.
 - Stone, water and grass finishes; naming a new material on a solid adds it to the material list.
+- Reveal shows solids and masses and starts in 3D; --reveal-from, --reveal-to and --reveal-step pick the frames.
+- Orbit around the model centre, or let the view orbit on its own.
+- A large AI plan replays in the journal element by element.
+- Corner shading follows depth, without halos around edges.
 
 ### Materials
 - Ten new textures: stone, gravel, soil, asphalt, plaster, roof tile, insulation, water, steel plate and rubber.
