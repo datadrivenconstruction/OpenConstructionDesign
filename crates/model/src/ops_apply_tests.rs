@@ -873,3 +873,32 @@ fn applying_many_solids_is_linear_into_a_full_project() {
     assert!(big < small * 9.0 + 0.5, "250 solids {small:.2} s, 1000 solids {big:.2} s");
     assert!(big < 60.0, "1000 solids took {big:.1} s");
 }
+
+fn many_walls(n: u32) -> Envelope {
+    let mut ops = vec![Op::Level(LevelOp::Create { slot: 1, name: "ops-L1".into(), elevation: Len::m(3.0) })];
+    ops.extend((0..n).map(|i| wall(2 + i, Ref::slot(1), 0.0, 5.0, f64::from(i) * 0.5)));
+    envelope(vec![group(1, &[], ops)])
+}
+
+#[test]
+fn a_stop_ends_a_long_envelope_at_once_and_leaves_no_trace() {
+    use std::sync::atomic::{AtomicUsize, Ordering};
+    use std::sync::Arc;
+    let env = many_walls(400);
+    for after in [0usize, 3] {
+        let mut m = model();
+        let (h0, n0) = (hash(&m), m.journal_len().unwrap());
+        let asked = Arc::new(AtomicUsize::new(0));
+        let a = asked.clone();
+        m.set_stop(Some(Arc::new(move || a.fetch_add(1, Ordering::SeqCst) >= after)));
+        let t = std::time::Instant::now();
+        let r = m.apply_envelope(&env);
+        assert!(r.is_err(), "a stopped apply is refused");
+        assert!(t.elapsed() < std::time::Duration::from_secs(5), "{:?}", t.elapsed());
+        // 400 ops, a look every few of them: it stopped at the look, not at the end
+        assert!(asked.load(Ordering::SeqCst) == after + 1, "asked {}", asked.load(Ordering::SeqCst));
+        assert_eq!((hash(&m), m.journal_len().unwrap()), (h0, n0), "rolled back with its transaction");
+        m.set_stop(None);
+        assert!(m.apply_envelope(&env).is_ok(), "the same model works without the stop");
+    }
+}

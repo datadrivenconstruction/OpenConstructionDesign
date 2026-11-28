@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} мин {s} с",
  "ai.cost.plan_elements": "{n} элемент",
  "ai.cost.plan_each": "әр элементке {cost}",
- "ai.cost.costliest": "Осы сұраудың ең қымбат қадамы"
+ "ai.cost.costliest": "Осы сұраудың ең қымбат қадамы",
+ "ai.cost.range": "{a} бастап {b} дейін",
+ "ai.cost.estimate": "әдетте {what} (алдыңғы {n} сұраудан)",
+ "ai.cost.key_left": "кілттің қалған лимиті: {v}",
+ "ai.cost.account_left": "аккаунт: {v}"
 }

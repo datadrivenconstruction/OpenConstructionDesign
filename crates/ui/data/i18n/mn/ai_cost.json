@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} мин {s} с",
  "ai.cost.plan_elements": "{n} элемент",
  "ai.cost.plan_each": "элемент бүрт {cost}",
- "ai.cost.costliest": "Энэ хүсэлтийн хамгийн үнэтэй алхам"
+ "ai.cost.costliest": "Энэ хүсэлтийн хамгийн үнэтэй алхам",
+ "ai.cost.range": "{a}-аас {b}",
+ "ai.cost.estimate": "ихэвчлэн {what} (өмнөх {n} хүсэлтээс)",
+ "ai.cost.key_left": "түлхүүрийн үлдсэн хязгаар: {v}",
+ "ai.cost.account_left": "акаунт: {v}"
 }

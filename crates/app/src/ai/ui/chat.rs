@@ -1286,7 +1286,7 @@ fn status_line(
     // The usage text and the status share one row only when both fit; otherwise the usage
     // text takes a row of its own, and every text is cut with an ellipsis to its room.
     let detail = super::cost_view::detail_of(&cx.ed.model);
-    let left = st.estimate.balance.and_then(|b| b.spendable());
+    let left = st.estimate.balance;
     let step = st.estimate.step_max;
     let live_now = f.busy && row.live();
     let live = super::cost_view::Live {
@@ -1298,7 +1298,8 @@ fn status_line(
     let diverges = used.as_ref().is_some_and(|u| u.diverges);
     let usage_text = (detail != super::cost_view::Detail::Off).then(|| {
         let line = used.map(|u| u.text).unwrap_or_default();
-        with_balance(cat, line, step, left)
+        let est = (!f.busy).then(|| usual_turn(ui.ctx(), &cx.ed.model, cat)).flatten();
+        with_balance(cat, line, step, left, est)
     }).filter(|t| !t.is_empty());
     let status_text = if f.busy && row.live() {
         stream_status::row_text(&row, &|k, a| cat.tf(k, a))
@@ -1529,13 +1530,37 @@ pub(super) fn usage_line(cat: &ddc_ui::Catalog, used: u64, cost: Option<f64>) ->
     line
 }
 
-/// The cost of one step at most and the money left after the usage line, so a long plan is
-/// weighed against them before it runs.
-pub(super) fn with_balance(cat: &ddc_ui::Catalog, line: String, step: Option<f64>, left: Option<f64>) -> String {
+/// What the project's earlier turns usually took, read from the log at most every few seconds.
+fn usual_turn(ctx: &egui::Context, m: &ddc_model::Model, cat: &ddc_ui::Catalog) -> Option<String> {
+    type Slot = (f64, Option<super::cost_view::PlanEstimate>);
+    let id = egui::Id::new("ai_usual_turn");
+    let now = ctx.input(|i| i.time);
+    let (at, est): Slot = ctx.data(|d| d.get_temp(id)).unwrap_or((f64::NEG_INFINITY, None));
+    let est = if now - at < 5.0 {
+        est
+    } else {
+        let e = super::cost_view::plan_estimate(&super::cost_view::turn_rows(m));
+        ctx.data_mut(|d| d.insert_temp::<Slot>(id, (now, e)));
+        e
+    };
+    est.map(|e| super::cost_view::estimate_text(cat, &e))
+}
+
+/// The cost of one step at most, the key's limit and the account's money apart (they are
+/// different pools), and what a turn usually takes: weighed before a long plan runs.
+pub(super) fn with_balance(
+    cat: &ddc_ui::Catalog,
+    line: String,
+    step: Option<f64>,
+    left: Option<ddc_ai::gateway::Balance>,
+    usual: Option<String>,
+) -> String {
     let num = |v: f64| crate::units::fmt_num_lang(v, 2, cat.lang);
     let parts = [
         step.map(|s| cat.tf("ai.usage.step_max", &[("cost", &num(s))])),
-        left.map(|l| cat.tf("ai.usage.balance", &[("left", &num(l))])),
+        left.and_then(|b| b.key).map(|v| cat.tf("ai.cost.key_left", &[("v", &num(v))])),
+        left.and_then(|b| b.account).map(|v| cat.tf("ai.cost.account_left", &[("v", &num(v))])),
+        usual,
     ];
     std::iter::once(line)
         .chain(parts.into_iter().flatten())
@@ -1566,14 +1591,18 @@ mod tests {
     #[test]
     fn balance_follows_the_usage_line() {
         let cat = ddc_ui::Catalog::new(ddc_ui::Lang::En);
-        for k in ["ai.usage.balance", "ai.usage.step_max"] {
+        for k in ["ai.cost.key_left", "ai.cost.account_left", "ai.usage.step_max"] {
             assert_ne!(cat.t(k), k);
         }
-        let line = with_balance(&cat, usage_line(&cat, 1200, Some(0.5)), Some(0.75), Some(3.25));
-        assert!(line.contains("3.25") && line.contains("0.50") && line.contains("0.75"), "{line}");
-        let before = with_balance(&cat, String::new(), Some(0.75), Some(1.0));
-        assert!(before.contains("1.00") && before.contains("0.75") && !before.starts_with(" ·"), "{before}");
-        assert_eq!(with_balance(&cat, String::new(), None, None), "");
+        let both = ddc_ai::gateway::Balance { account: Some(3.25), key: Some(1.5) };
+        let line = with_balance(&cat, usage_line(&cat, 1200, Some(0.5)), Some(0.75), Some(both), None);
+        assert!(line.contains("3.25") && line.contains("1.50") && line.contains("0.50") && line.contains("0.75"), "{line}");
+        let (k, a) = (line.find("1.50").unwrap(), line.find("3.25").unwrap());
+        assert!(k < a, "key and account are two figures: {line}");
+        let only = ddc_ai::gateway::Balance { account: Some(1.0), key: None };
+        let before = with_balance(&cat, String::new(), Some(0.75), Some(only), Some("usual".into()));
+        assert!(before.contains("1.00") && !before.contains("1.50") && before.ends_with("usual") && !before.starts_with(" ·"), "{before}");
+        assert_eq!(with_balance(&cat, String::new(), None, None, None), "");
     }
 
     #[test]

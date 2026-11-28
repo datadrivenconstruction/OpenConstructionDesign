@@ -329,6 +329,7 @@ fn live_family_tasks() {
         price_in_per_mtok: Some(prices.input),
         price_out_per_mtok: Some(prices.output),
         executor: None,
+        reach: None,
     };
     let guard = EgressGuard { local_only: false, consented_host: Some(host) };
     let provider = build_provider(&profile, Some(Secret::new(key)), guard).expect("provider");

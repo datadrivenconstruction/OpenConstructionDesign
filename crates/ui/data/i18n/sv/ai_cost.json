@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "{n} element",
  "ai.cost.plan_each": "{cost} per element",
- "ai.cost.costliest": "Det dyraste steget i denna begäran"
+ "ai.cost.costliest": "Det dyraste steget i denna begäran",
+ "ai.cost.range": "{a} till {b}",
+ "ai.cost.estimate": "vanligtvis {what} (från {n} tidigare förfrågningar)",
+ "ai.cost.key_left": "återstående nyckelgräns: {v}",
+ "ai.cost.account_left": "konto: {v}"
 }

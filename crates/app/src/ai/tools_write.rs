@@ -1001,6 +1001,10 @@ fn run_generator(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
     let mut last_err = None;
     let mut built: Vec<GenOut> = vec![];
     for seed in 1..=n {
+        // a build cannot be interrupted, so the next one is not started for nothing
+        if cx.cancel.is_cancelled() || c.stop.is_cancelled() {
+            return Err(CmdError::wire(ErrorCode::Cancelled, "cancelled"));
+        }
         match g.build(&params, seed) {
             Ok(result) => {
                 // the same result under another criterion is no choice at all

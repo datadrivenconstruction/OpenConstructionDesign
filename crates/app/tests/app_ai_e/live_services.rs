@@ -59,6 +59,7 @@ impl Live {
             price_in_per_mtok: Some(2.0),
             price_out_per_mtok: Some(10.0),
             executor: None,
+            reach: None,
         };
         let guard = EgressGuard { local_only: false, consented_host: Some(host) };
         let provider = build_provider(&profile, Some(Secret::new(key)), guard).expect("provider");

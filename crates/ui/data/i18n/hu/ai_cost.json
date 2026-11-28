@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} perc {s} mp",
  "ai.cost.plan_elements": "{n} elem",
  "ai.cost.plan_each": "{cost} elemenként",
- "ai.cost.costliest": "A kérés legdrágább lépése"
+ "ai.cost.costliest": "A kérés legdrágább lépése",
+ "ai.cost.range": "{a} és {b} között",
+ "ai.cost.estimate": "általában {what} ({n} korábbi kérés alapján)",
+ "ai.cost.key_left": "a kulcs hátralévő limitje: {v}",
+ "ai.cost.account_left": "fiók: {v}"
 }

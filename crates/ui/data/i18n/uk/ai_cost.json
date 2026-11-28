@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} хв {s} с",
  "ai.cost.plan_elements": "елементів: {n}",
  "ai.cost.plan_each": "{cost} за елемент",
- "ai.cost.costliest": "Найдорожчий крок цього запиту"
+ "ai.cost.costliest": "Найдорожчий крок цього запиту",
+ "ai.cost.range": "від {a} до {b}",
+ "ai.cost.estimate": "зазвичай {what} (за {n} попередніми запитами)",
+ "ai.cost.key_left": "залишок ліміту ключа: {v}",
+ "ai.cost.account_left": "рахунок: {v}"
 }

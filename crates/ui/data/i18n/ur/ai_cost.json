@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} منٹ {s} سیکنڈ",
  "ai.cost.plan_elements": "{n} عناصر",
  "ai.cost.plan_each": "{cost} فی عنصر",
- "ai.cost.costliest": "اس درخواست کا سب سے مہنگا مرحلہ"
+ "ai.cost.costliest": "اس درخواست کا سب سے مہنگا مرحلہ",
+ "ai.cost.range": "{a} سے {b}",
+ "ai.cost.estimate": "عموماً {what} ({n} پچھلی درخواستوں کے مطابق)",
+ "ai.cost.key_left": "کلید کی باقی حد: {v}",
+ "ai.cost.account_left": "اکاؤنٹ: {v}"
 }

@@ -354,6 +354,35 @@ mod tests {
     }
 
     #[test]
+    fn the_end_of_a_session_reaches_the_scratch_model() {
+        let mut ed = Editor::new_in_memory().unwrap();
+        let file = std::env::temp_dir().join(format!("ddc-life-stop-{}-{}.ddc", std::process::id(), next()));
+        ed.save_project_as(&file).unwrap();
+        let (to, rx) = mpsc::channel();
+        let (tx, _from) = mpsc::channel();
+        let stop = super::super::CancelToken::new();
+        let init = super::super::WorkerInit {
+            cfg: cfg(ScriptedProvider::new(vec![])),
+            source: SourceCopy::File(file.clone()),
+            head: 0,
+            view: view(&ed),
+            rx,
+            tx,
+            cancel: super::super::CancelToken::new(),
+            stop: stop.clone(),
+            live: Default::default(),
+            wake: Arc::new(std::sync::OnceLock::new()),
+            memory: false,
+        };
+        let (core, _conv) = super::super::open_core(init).unwrap();
+        assert!(!core.ed.model.stopped(), "a running session does not stop its model");
+        stop.cancel();
+        assert!(core.ed.model.stopped(), "the end of the session ends a long call in the model");
+        drop((to, core));
+        let _ = fs::remove_file(file);
+    }
+
+    #[test]
     fn drop_session_cancels_and_joins_worker() {
         let mut ed = Editor::new_in_memory().unwrap();
         let (p, probe) = hold(true);

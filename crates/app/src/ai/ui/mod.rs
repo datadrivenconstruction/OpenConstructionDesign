@@ -584,6 +584,16 @@ impl PanelUi {
         self.profiles.get(self.profile)
     }
 
+    /// The mode is kept with the connection too: a new project on it starts from this mode.
+    fn remember_reach(&mut self, r: ddc_ai::limits::Reach) {
+        let Some(p) = self.profiles.get_mut(self.profile) else {
+            return;
+        };
+        p.reach = Some(r);
+        ddc_ai::limits::set_profile_reach(Some(r));
+        let _ = connect::save_profiles(&self.profiles);
+    }
+
     /// A profile counts once it names an address and a model.
     pub fn active_ready(&self) -> bool {
         self.active()
@@ -1245,6 +1255,7 @@ impl PanelUi {
                     ddc_ai::limits::set_default_reach(r);
                     app.prefs.ai_reach = r.key().to_string();
                     app.prefs.save();
+                    self.remember_reach(r);
                     let (l, r) = (connect::turn_limits(&app.ed.model), connect::reach_of(&app.ed.model));
                     with_session(|s| {
                         if let Some(u) = s.as_mut() {

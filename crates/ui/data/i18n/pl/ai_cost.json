@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "elementów: {n}",
  "ai.cost.plan_each": "{cost} za element",
- "ai.cost.costliest": "Najdroższy krok tego zapytania"
+ "ai.cost.costliest": "Najdroższy krok tego zapytania",
+ "ai.cost.range": "{a} do {b}",
+ "ai.cost.estimate": "zwykle {what} (z {n} wcześniejszych żądań)",
+ "ai.cost.key_left": "pozostały limit klucza: {v}",
+ "ai.cost.account_left": "konto: {v}"
 }

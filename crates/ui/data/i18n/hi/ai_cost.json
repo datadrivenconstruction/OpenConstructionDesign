@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} मिनट {s} सेकंड",
  "ai.cost.plan_elements": "{n} तत्व",
  "ai.cost.plan_each": "प्रति तत्व {cost}",
- "ai.cost.costliest": "इस अनुरोध का सबसे महंगा चरण"
+ "ai.cost.costliest": "इस अनुरोध का सबसे महंगा चरण",
+ "ai.cost.range": "{a} से {b}",
+ "ai.cost.estimate": "आमतौर पर {what} ({n} पिछले अनुरोधों के आधार पर)",
+ "ai.cost.key_left": "कुंजी की शेष सीमा: {v}",
+ "ai.cost.account_left": "खाता: {v}"
 }

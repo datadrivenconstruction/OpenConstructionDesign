@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} د {s} ث",
  "ai.cost.plan_elements": "{n} عنصر",
  "ai.cost.plan_each": "{cost} لكل عنصر",
- "ai.cost.costliest": "أغلى خطوة في هذا الطلب"
+ "ai.cost.costliest": "أغلى خطوة في هذا الطلب",
+ "ai.cost.range": "{a} إلى {b}",
+ "ai.cost.estimate": "عادةً {what} (من {n} طلبات سابقة)",
+ "ai.cost.key_left": "الحد المتبقي للمفتاح: {v}",
+ "ai.cost.account_left": "الحساب: {v}"
 }

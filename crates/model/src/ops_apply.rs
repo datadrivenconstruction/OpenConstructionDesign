@@ -46,6 +46,9 @@ pub struct Receipt {
 pub use ddc_ops::Rejection;
 use ddc_ops::Code;
 
+/// Ops lowered between two looks at the stop probe: a stop is seen within a few milliseconds.
+const STOP_EVERY: usize = 16;
+
 fn model_rejection(e: &Error) -> Rejection {
     e.rejection()
 }
@@ -162,6 +165,9 @@ impl Model {
                             return Err(Error::Invalid("envelope rejected".into()));
                         }
                         done += 1;
+                        if done % STOP_EVERY == 0 && m.stopped() {
+                            return Err(Error::Cancelled);
+                        }
                         if done % every == 0 && done < total {
                             progress(done, total);
                         }

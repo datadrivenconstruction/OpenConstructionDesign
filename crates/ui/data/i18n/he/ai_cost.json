@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} דק׳ {s} שנ׳",
  "ai.cost.plan_elements": "{n} רכיבים",
  "ai.cost.plan_each": "{cost} לרכיב",
- "ai.cost.costliest": "השלב היקר ביותר בבקשה זו"
+ "ai.cost.costliest": "השלב היקר ביותר בבקשה זו",
+ "ai.cost.range": "{a} עד {b}",
+ "ai.cost.estimate": "בדרך כלל {what} (מתוך {n} בקשות קודמות)",
+ "ai.cost.key_left": "מגבלת המפתח שנותרה: {v}",
+ "ai.cost.account_left": "חשבון: {v}"
 }

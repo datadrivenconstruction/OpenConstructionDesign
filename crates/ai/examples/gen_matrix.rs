@@ -329,6 +329,7 @@ fn main() {
         price_in_per_mtok: Some(prices.input),
         price_out_per_mtok: Some(prices.output),
         executor: None,
+        reach: None,
     };
     let guard = EgressGuard { local_only: false, consented_host: Some(host_name) };
     let provider = build_provider(&profile, Some(Secret::new(key)), guard).expect("provider");

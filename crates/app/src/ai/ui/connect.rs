@@ -472,6 +472,7 @@ pub fn open_session(
     view: ViewCtx,
 ) -> Result<UiSession, AiError> {
     let m = &app.ed.model;
+    ddc_ai::limits::set_profile_reach(p.reach);
     let provider = if uses_page(p, ON_WEB) {
         page_provider()?
     } else {

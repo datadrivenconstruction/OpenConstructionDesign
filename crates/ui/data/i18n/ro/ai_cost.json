@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "{n} elemente",
  "ai.cost.plan_each": "{cost} per element",
- "ai.cost.costliest": "Cel mai costisitor pas al acestei cereri"
+ "ai.cost.costliest": "Cel mai costisitor pas al acestei cereri",
+ "ai.cost.range": "{a} până la {b}",
+ "ai.cost.estimate": "de obicei {what} (din {n} cereri anterioare)",
+ "ai.cost.key_left": "limita rămasă a cheii: {v}",
+ "ai.cost.account_left": "cont: {v}"
 }

@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} dk {s} sn",
  "ai.cost.plan_elements": "{n} öğe",
  "ai.cost.plan_each": "öğe başına {cost}",
- "ai.cost.costliest": "Bu isteğin en pahalı adımı"
+ "ai.cost.costliest": "Bu isteğin en pahalı adımı",
+ "ai.cost.range": "{a} ile {b} arası",
+ "ai.cost.estimate": "genellikle {what} (önceki {n} istekten)",
+ "ai.cost.key_left": "anahtarın kalan limiti: {v}",
+ "ai.cost.account_left": "hesap: {v}"
 }

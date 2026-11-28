@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "{n} elemento",
  "ai.cost.plan_each": "{cost} bawat elemento",
- "ai.cost.costliest": "Ang pinakamahal na hakbang ng kahilingang ito"
+ "ai.cost.costliest": "Ang pinakamahal na hakbang ng kahilingang ito",
+ "ai.cost.range": "{a} hanggang {b}",
+ "ai.cost.estimate": "karaniwan {what} (mula sa {n} naunang kahilingan)",
+ "ai.cost.key_left": "natitirang limit ng key: {v}",
+ "ai.cost.account_left": "account: {v}"
 }

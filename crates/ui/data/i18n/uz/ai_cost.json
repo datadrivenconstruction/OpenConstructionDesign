@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} daq {s} s",
  "ai.cost.plan_elements": "{n} element",
  "ai.cost.plan_each": "har bir element uchun {cost}",
- "ai.cost.costliest": "Ushbu so'rovning eng qimmat qadami"
+ "ai.cost.costliest": "Ushbu so'rovning eng qimmat qadami",
+ "ai.cost.range": "{a} dan {b} gacha",
+ "ai.cost.estimate": "odatda {what} (oldingi {n} ta so‘rov asosida)",
+ "ai.cost.key_left": "kalitning qolgan limiti: {v}",
+ "ai.cost.account_left": "hisob: {v}"
 }

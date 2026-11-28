@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} دقیقه {s} ثانیه",
  "ai.cost.plan_elements": "{n} عنصر",
  "ai.cost.plan_each": "{cost} برای هر عنصر",
- "ai.cost.costliest": "پرهزینه‌ترین گام این درخواست"
+ "ai.cost.costliest": "پرهزینه‌ترین گام این درخواست",
+ "ai.cost.range": "{a} تا {b}",
+ "ai.cost.estimate": "معمولاً {what} (از {n} درخواست قبلی)",
+ "ai.cost.key_left": "حد باقی‌مانده کلید: {v}",
+ "ai.cost.account_left": "حساب: {v}"
 }

@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m}분 {s}초",
  "ai.cost.plan_elements": "요소 {n}개",
  "ai.cost.plan_each": "요소당 {cost}",
- "ai.cost.costliest": "이 요청에서 가장 비싼 단계"
+ "ai.cost.costliest": "이 요청에서 가장 비싼 단계",
+ "ai.cost.range": "{a}에서 {b}",
+ "ai.cost.estimate": "보통 {what} (이전 요청 {n}건 기준)",
+ "ai.cost.key_left": "키 남은 한도: {v}",
+ "ai.cost.account_left": "계정: {v}"
 }

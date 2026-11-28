@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} মিনিট {s} সেকেন্ড",
  "ai.cost.plan_elements": "{n}টি উপাদান",
  "ai.cost.plan_each": "প্রতি উপাদান {cost}",
- "ai.cost.costliest": "এই অনুরোধের সবচেয়ে ব্যয়বহুল ধাপ"
+ "ai.cost.costliest": "এই অনুরোধের সবচেয়ে ব্যয়বহুল ধাপ",
+ "ai.cost.range": "{a} থেকে {b}",
+ "ai.cost.estimate": "সাধারণত {what} ({n}টি আগের অনুরোধ থেকে)",
+ "ai.cost.key_left": "কী-এর অবশিষ্ট সীমা: {v}",
+ "ai.cost.account_left": "অ্যাকাউন্ট: {v}"
 }

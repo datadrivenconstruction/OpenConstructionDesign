@@ -166,11 +166,20 @@ fn adopt_listed(
     if let Some(n) = m.context_tokens {
         p.context_tokens = n;
     }
-    // a long script or draft needs more than the stock 4096; the person's own value stays
-    if let Some(n) = m.max_output_tokens.filter(|_| p.max_output_tokens <= 4096) {
+    adopt_output(p, m);
+}
+
+/// The reply size of a listed model replaces the stock one: a long script or draft needs more
+/// than 4096. A value the person set stays.
+fn adopt_output(p: &mut Profile, m: &ModelInfo) {
+    if let Some(n) = m.max_output_tokens.filter(|_| p.max_output_tokens <= STOCK_OUTPUT) {
         p.max_output_tokens = n.min(MAX_OUTPUT_DEFAULT);
     }
 }
+
+/// What a new connection starts with: sizes that came from no list and no person.
+const STOCK_OUTPUT: u32 = 4096;
+const STOCK_CONTEXT: u32 = 128_000;
 
 /// The cap on a default taken from the model list: the model may allow more than a reply needs.
 const MAX_OUTPUT_DEFAULT: u32 = ddc_ai::limits::OUTPUT_DEFAULT_CAP.u32v();
@@ -484,6 +493,12 @@ impl Settings {
                 }
                 if self.price_in.trim().is_empty() && self.price_out.trim().is_empty() {
                     adopt_listed(p, m, &mut self.price_in, &mut self.price_out, mark);
+                } else {
+                    // typed prices stay; the sizes still come from the list while they are stock
+                    if let Some(n) = m.context_tokens.filter(|_| p.context_tokens == STOCK_CONTEXT) {
+                        p.context_tokens = n;
+                    }
+                    adopt_output(p, m);
                 }
             }
         }
@@ -1528,7 +1543,7 @@ mod tests {
         assert_eq!(s.price_in, price_text(Some(3.0), mark), "the chosen model's prices fill an empty form");
         assert_eq!(s.price_out, price_text(Some(15.0), mark));
         assert_eq!(s.draft[0].context_tokens, 200_000);
-        assert_eq!(s.draft[0].max_output_tokens, 16_384, "a listed output cap becomes the default, capped");
+        assert_eq!(s.draft[0].max_output_tokens, 32_000, "a listed output cap becomes the default");
         s.price_in = price_text(Some(9.0), mark);
         s.take_models(vec![listed("a", Some(3.0), Some(15.0), None)]);
         assert_eq!(s.price_in, price_text(Some(9.0), mark), "a typed price stays on a new list");
@@ -1538,6 +1553,29 @@ mod tests {
         assert_eq!(s.draft[0].model, "b");
         assert_eq!(pi, price_text(Some(1.0), mark), "picking a model brings its price");
         assert_eq!(po, price_text(Some(15.0), mark), "an unreported price stays");
+    }
+
+    #[test]
+    fn typed_prices_do_not_keep_the_stock_sizes_from_the_list() {
+        let mut s = Settings::default();
+        let mut p = connect::preset_profile(connect::Preset::Gateway, "p1".into(), "P".into());
+        p.model = "a".into();
+        s.draft = vec![p];
+        s.price_in = "1".into();
+        let big = ModelInfo {
+            id: "a".into(),
+            price_in_per_mtok: Some(3.0),
+            price_out_per_mtok: None,
+            context_tokens: Some(1_000_000),
+            max_output_tokens: Some(200_000),
+        };
+        s.take_models(vec![big.clone()]);
+        assert_eq!(s.price_in, "1", "the typed price stays");
+        assert_eq!(s.draft[0].context_tokens, 1_000_000);
+        assert_eq!(s.draft[0].max_output_tokens, MAX_OUTPUT_DEFAULT, "capped, not left at 4096");
+        s.draft[0].max_output_tokens = 9_000;
+        s.take_models(vec![big]);
+        assert_eq!(s.draft[0].max_output_tokens, 9_000, "a value of the person stays");
     }
 
     #[test]

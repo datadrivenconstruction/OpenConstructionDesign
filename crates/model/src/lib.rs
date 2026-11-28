@@ -651,6 +651,9 @@ fn fmt_refs(by: &[(&str, i64)]) -> String {
     v.join(", ")
 }
 
+/// A flag a loop can poll to learn that its result is no longer wanted.
+pub type StopProbe = std::sync::Arc<dyn Fn() -> bool + Send + Sync>;
+
 /// The model file. Every change writes an operation with inverse SQL commands, so it is undoable.
 pub struct Model {
     pub(crate) db: Connection,
@@ -667,6 +670,8 @@ pub struct Model {
     pub(crate) paint_cache: view_gfx::PaintCache,
     /// Crowd level of plants last used (`components::plant_level`), the memory of its hysteresis.
     pub(crate) plant_rank: [std::sync::atomic::AtomicU8; 2],
+    /// Asked by long loops (`apply_envelope_with`): `true` ends the work early with `Error::Cancelled`.
+    stop: Option<StopProbe>,
     /// Process-wide identity of this open document (`trial::next_serial`).
     pub(crate) serial: u64,
 }
@@ -781,8 +786,20 @@ impl Model {
             rebar_cache: Default::default(),
             paint_cache: Default::default(),
             plant_rank: Default::default(),
+            stop: None,
             serial: trial::next_serial(),
         })
+    }
+
+    /// Lets the owner of this model end its long loops early (a session that was closed or a turn
+    /// that was cancelled); the work already done is rolled back with its transaction.
+    pub fn set_stop(&mut self, probe: Option<StopProbe>) {
+        self.stop = probe;
+    }
+
+    /// Whether the owner asked to stop; cheap enough for a loop to ask every few steps.
+    pub fn stopped(&self) -> bool {
+        self.stop.as_ref().is_some_and(|f| f())
     }
 
     /// File format version (`meta.schema_version`).

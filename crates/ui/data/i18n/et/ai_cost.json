@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "{n} elementi",
  "ai.cost.plan_each": "{cost} elemendi kohta",
- "ai.cost.costliest": "Selle päringu kallim samm"
+ "ai.cost.costliest": "Selle päringu kallim samm",
+ "ai.cost.range": "{a} kuni {b}",
+ "ai.cost.estimate": "tavaliselt {what} ({n} varasema päringu põhjal)",
+ "ai.cost.key_left": "võtme allesjäänud limiit: {v}",
+ "ai.cost.account_left": "konto: {v}"
 }

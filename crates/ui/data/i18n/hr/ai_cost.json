@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "elemenata: {n}",
  "ai.cost.plan_each": "{cost} po elementu",
- "ai.cost.costliest": "Najskuplji korak ovog zahtjeva"
+ "ai.cost.costliest": "Najskuplji korak ovog zahtjeva",
+ "ai.cost.range": "{a} do {b}",
+ "ai.cost.estimate": "obično {what} (iz {n} prethodnih zahtjeva)",
+ "ai.cost.key_left": "preostalo ograničenje ključa: {v}",
+ "ai.cost.account_left": "račun: {v}"
 }

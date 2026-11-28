@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "{n} elementtiä",
  "ai.cost.plan_each": "{cost} elementtiä kohti",
- "ai.cost.costliest": "Tämän pyynnön kallein vaihe"
+ "ai.cost.costliest": "Tämän pyynnön kallein vaihe",
+ "ai.cost.range": "{a} asti {b}",
+ "ai.cost.estimate": "yleensä {what} ({n} aiemman pyynnön perusteella)",
+ "ai.cost.key_left": "avaimen jäljellä oleva raja: {v}",
+ "ai.cost.account_left": "tili: {v}"
 }

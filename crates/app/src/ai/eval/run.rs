@@ -108,6 +108,7 @@ pub fn live_provider(profile_file: &Path) -> Result<(Profile, Arc<dyn Provider>)
         price_in_per_mtok: pf["prices"]["input"].as_f64(),
         price_out_per_mtok: pf["prices"]["output"].as_f64(),
         executor: None,
+        reach: None,
     };
     let guard = EgressGuard { local_only: false, consented_host: Some(host) };
     let provider = build_provider(&profile, Some(Secret::new(key)), guard).map_err(|e| format!("provider: {e:?}"))?;

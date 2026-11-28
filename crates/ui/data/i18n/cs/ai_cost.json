@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "prvků: {n}",
  "ai.cost.plan_each": "{cost} za prvek",
- "ai.cost.costliest": "Nejdražší krok tohoto požadavku"
+ "ai.cost.costliest": "Nejdražší krok tohoto požadavku",
+ "ai.cost.range": "{a} až {b}",
+ "ai.cost.estimate": "obvykle {what} (z {n} dřívějších požadavků)",
+ "ai.cost.key_left": "zbývající limit klíče: {v}",
+ "ai.cost.account_left": "účet: {v}"
 }

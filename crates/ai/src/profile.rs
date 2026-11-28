@@ -58,6 +58,9 @@ pub struct Profile {
     /// The executor role on another model of the same connection; None: every step on `model`.
     #[serde(default)]
     pub executor: Option<Executor>,
+    /// How far a turn may go on this connection, when the person chose a mode for it.
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub reach: Option<crate::limits::Reach>,
 }
 
 /// Roles of a turn: the planner (the chosen `model`) reads the request and plans in the first
@@ -153,6 +156,7 @@ pub fn blank(id: String, name: String) -> Profile {
         price_in_per_mtok: None,
         price_out_per_mtok: None,
         executor: None,
+        reach: None,
     }
 }
 

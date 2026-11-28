@@ -267,7 +267,7 @@ limits! {
         tools: [], doc: "", src: ["ai/src/convo.rs::MAX_SHRINKS"];
     CONTINUES = "continues", 2, Count, G, "a reply cut off by the output limit is continued this many times",
         tools: [], doc: "", src: ["ai/src/convo.rs::MAX_CONTINUES"];
-    OUTPUT_DEFAULT_CAP = "output_default_cap", 16_384, Count, G, "a default taken from a model list is capped",
+    OUTPUT_DEFAULT_CAP = "output_default_cap", 64_000, Count, G, "a default taken from a model list is capped",
         tools: [], doc: "", src: ["app/src/ai/ui/settings.rs::MAX_OUTPUT_DEFAULT"];
     TYPES_PER_CALL = "types_per_call", 24, Count, G, "one plan item per type stays reviewable",
         tools: [], doc: "", src: ["app/src/ai/create_more.rs::MAX_TYPES_PER_CALL"];
@@ -424,7 +424,8 @@ limits! {
 /// How far one turn may go. `Normal` is the registry's values; `Large` raises them for a big
 /// model; `Unlimited` lifts steps, calls, tokens, time and plan size. A money cap and the
 /// mass-delete confirmation stay in every mode.
-#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
+#[serde(rename_all = "lowercase")]
 pub enum Reach {
     #[default]
     Normal,
@@ -467,9 +468,21 @@ impl Reach {
 
 static DEFAULT_REACH: std::sync::atomic::AtomicU8 = std::sync::atomic::AtomicU8::new(0);
 
-/// The mode of a project that made no choice: the person's own last pick (their settings).
+static PROFILE_REACH: std::sync::atomic::AtomicU8 = std::sync::atomic::AtomicU8::new(0);
+
+/// The mode of a project that made no choice: the active connection's own mode when it has
+/// one, else the person's own last pick (their settings).
 pub fn default_reach() -> Reach {
-    Reach::ALL[usize::from(DEFAULT_REACH.load(std::sync::atomic::Ordering::Relaxed)).min(2)]
+    match PROFILE_REACH.load(std::sync::atomic::Ordering::Relaxed) {
+        0 => Reach::ALL[usize::from(DEFAULT_REACH.load(std::sync::atomic::Ordering::Relaxed)).min(2)],
+        n => Reach::ALL[usize::from(n - 1).min(2)],
+    }
+}
+
+/// The mode saved with the connection in use; `None` leaves the person's settings to decide.
+pub fn set_profile_reach(r: Option<Reach>) {
+    let v = r.and_then(|r| Reach::ALL.iter().position(|x| *x == r)).map_or(0, |i| i as u8 + 1);
+    PROFILE_REACH.store(v, std::sync::atomic::Ordering::Relaxed);
 }
 
 pub fn set_default_reach(r: Reach) {
@@ -669,6 +682,22 @@ mod tests {
         set_overrides([]);
         assert_eq!(COPIES.get(), 200);
         assert!(COPIES.refusal("300 copies").contains("Settings > AI"));
+    }
+
+    #[test]
+    fn a_connections_mode_outranks_the_settings_and_a_profile_file_keeps_it() {
+        set_default_reach(Reach::Large);
+        assert_eq!(default_reach(), Reach::Large);
+        set_profile_reach(Some(Reach::Unlimited));
+        assert_eq!(default_reach(), Reach::Unlimited);
+        set_profile_reach(None);
+        assert_eq!(default_reach(), Reach::Large);
+        set_default_reach(Reach::Normal);
+        let mut p = crate::profile::blank("p".into(), "p".into());
+        assert!(!serde_json::to_string(&p).unwrap().contains("reach"));
+        p.reach = Some(Reach::Large);
+        let back: crate::profile::Profile = serde_json::from_str(&serde_json::to_string(&p).unwrap()).unwrap();
+        assert_eq!(back.reach, Some(Reach::Large));
     }
 
     #[test]

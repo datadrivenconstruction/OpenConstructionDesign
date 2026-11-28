@@ -66,6 +66,7 @@ fn profile() -> Profile {
         price_in_per_mtok: None,
         price_out_per_mtok: None,
         executor: None,
+        reach: None,
     }
 }
 

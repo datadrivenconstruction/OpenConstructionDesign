@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} นาที {s} วินาที",
  "ai.cost.plan_elements": "{n} องค์ประกอบ",
  "ai.cost.plan_each": "{cost} ต่อองค์ประกอบ",
- "ai.cost.costliest": "ขั้นตอนที่แพงที่สุดของคำขอนี้"
+ "ai.cost.costliest": "ขั้นตอนที่แพงที่สุดของคำขอนี้",
+ "ai.cost.range": "{a} ถึง {b}",
+ "ai.cost.estimate": "โดยปกติ {what} (จากคำขอก่อนหน้า {n} รายการ)",
+ "ai.cost.key_left": "วงเงินคีย์ที่เหลือ: {v}",
+ "ai.cost.account_left": "บัญชี: {v}"
 }

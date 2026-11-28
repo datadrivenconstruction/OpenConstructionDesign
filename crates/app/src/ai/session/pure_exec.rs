@@ -34,6 +34,7 @@ impl PureRun {
             tx,
             cancel: CancelToken::new(),
             stop: CancelToken::new(),
+            live: Default::default(),
             wake: Arc::new(OnceLock::new()),
             memory: false,
         };

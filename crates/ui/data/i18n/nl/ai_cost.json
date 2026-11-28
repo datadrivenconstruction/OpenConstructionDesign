@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} min {s} s",
  "ai.cost.plan_elements": "{n} elementen",
  "ai.cost.plan_each": "{cost} per element",
- "ai.cost.costliest": "De duurste stap van dit verzoek"
+ "ai.cost.costliest": "De duurste stap van dit verzoek",
+ "ai.cost.range": "{a} tot {b}",
+ "ai.cost.estimate": "meestal {what} (uit {n} eerdere verzoeken)",
+ "ai.cost.key_left": "resterende sleutellimiet: {v}",
+ "ai.cost.account_left": "account: {v}"
 }

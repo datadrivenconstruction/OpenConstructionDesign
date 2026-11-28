@@ -199,6 +199,8 @@ pub struct TurnRow {
     pub tok_out: u64,
     pub cost: Option<f64>,
     pub status: String,
+    /// How long the turn ran, when the log kept it.
+    pub ms: Option<u64>,
 }
 
 /// Every turn the project's log still holds, oldest first.
@@ -216,10 +218,72 @@ pub fn turn_rows(m: &Model) -> Vec<TurnRow> {
             tok_in: e.tok_in,
             tok_out: e.tok_out,
             cost: e.cost,
+            ms: e.plan.as_deref().and_then(|p| p.strip_prefix("ms=")).and_then(|n| n.parse().ok()),
             status: e.status,
         }));
     }
     out
+}
+
+/// What a turn of this project usually takes: the middle half of the finished ones (all of
+/// them when there are few), so one odd turn does not set the range.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct PlanEstimate {
+    pub cost: Option<(f64, f64)>,
+    pub secs: Option<(u64, u64)>,
+    pub turns: usize,
+}
+
+fn middle<T: Copy + PartialOrd>(mut v: Vec<T>) -> Option<(T, T)> {
+    if v.is_empty() {
+        return None;
+    }
+    v.sort_by(|a, b| a.partial_cmp(b).unwrap_or(std::cmp::Ordering::Equal));
+    let n = v.len();
+    Some(if n >= 4 { (v[n / 4], v[(3 * n) / 4]) } else { (v[0], v[n - 1]) })
+}
+
+/// From at least two earlier turns that ended normally or at a limit; nothing to say otherwise.
+pub fn plan_estimate(rows: &[TurnRow]) -> Option<PlanEstimate> {
+    let done: Vec<&TurnRow> = rows
+        .iter()
+        .filter(|r| (r.status == "ok" || r.status == "limit") && r.tok_in + r.tok_out > 0)
+        .collect();
+    if done.len() < 2 {
+        return None;
+    }
+    let cost = middle(done.iter().filter_map(|r| r.cost).filter(|c| *c > 0.0).collect());
+    let secs = middle(done.iter().filter_map(|r| r.ms).map(|m| m / 1000).collect());
+    (cost.is_some() || secs.is_some()).then_some(PlanEstimate { cost, secs, turns: done.len() })
+}
+
+fn duration(cat: &Catalog, secs: u64) -> String {
+    if secs >= 60 {
+        cat.tf("ai.cost.plan_time", &[("m", &(secs / 60).to_string()), ("s", &(secs % 60).to_string())])
+    } else {
+        cat.tf("ai.stream.secs", &[("n", &secs.to_string())])
+    }
+}
+
+fn range(cat: &Catalog, a: String, b: String) -> String {
+    if a == b {
+        a
+    } else {
+        cat.tf("ai.cost.range", &[("a", &a), ("b", &b)])
+    }
+}
+
+/// The line shown before a long request: money and time of the project's usual turn.
+pub fn estimate_text(cat: &Catalog, e: &PlanEstimate) -> String {
+    let mut parts = Vec::new();
+    if let Some((a, b)) = e.cost {
+        let r = range(cat, money(cat, a), money(cat, b));
+        parts.push(cat.tf("ai.cost.plan_cost", &[("cost", &r)]));
+    }
+    if let Some((a, b)) = e.secs {
+        parts.push(range(cat, duration(cat, a), duration(cat, b)));
+    }
+    cat.tf("ai.cost.estimate", &[("what", &parts.join(" \u{b7} ")), ("n", &e.turns.to_string())])
 }
 
 /// Tokens and money over `rows`; the money is `None` when no row has a price.
@@ -239,17 +303,18 @@ fn csv_cell(s: &str) -> String {
 
 /// Header and one line per turn; a price that is unknown is an empty cell, not zero.
 pub fn rows_csv(rows: &[TurnRow]) -> String {
-    let mut out = String::from("time_unix,model,tokens_in,tokens_out,cost,status\n");
+    let mut out = String::from("time_unix,model,tokens_in,tokens_out,cost,status,seconds\n");
     for r in rows {
         let cost = r.cost.map(|c| format!("{c:.6}")).unwrap_or_default();
         out.push_str(&format!(
-            "{},{},{},{},{},{}\n",
+            "{},{},{},{},{},{},{}\n",
             r.ts,
             csv_cell(&r.model),
             r.tok_in,
             r.tok_out,
             cost,
-            csv_cell(&r.status)
+            csv_cell(&r.status),
+            r.ms.map(|m| (m / 1000).to_string()).unwrap_or_default()
         ));
     }
     out
@@ -262,6 +327,7 @@ pub fn rows_json(rows: &[TurnRow]) -> String {
             serde_json::json!({
                 "time_unix": r.ts, "model": r.model, "tokens_in": r.tok_in,
                 "tokens_out": r.tok_out, "cost": r.cost, "status": r.status,
+                "seconds": r.ms.map(|m| m / 1000),
             })
         })
         .collect();
@@ -383,17 +449,45 @@ mod tests {
     #[test]
     fn the_project_journal_exports_csv_and_json() {
         let rows = vec![
-            TurnRow { ts: 10, model: "a, b".into(), tok_in: 100, tok_out: 5, cost: Some(0.25), status: "ok".into() },
-            TurnRow { ts: 20, model: "m".into(), tok_in: 1, tok_out: 1, cost: None, status: "limit".into() },
+            TurnRow { ts: 10, model: "a, b".into(), tok_in: 100, tok_out: 5, cost: Some(0.25), status: "ok".into(), ms: Some(61_500) },
+            TurnRow { ts: 20, model: "m".into(), tok_in: 1, tok_out: 1, cost: None, status: "limit".into(), ms: None },
         ];
         let csv = rows_csv(&rows);
         let lines: Vec<&str> = csv.lines().collect();
-        assert_eq!(lines[1], "10,\"a, b\",100,5,0.250000,ok");
-        assert_eq!(lines[2], "20,m,1,1,,limit");
+        assert_eq!(lines[1], "10,\"a, b\",100,5,0.250000,ok,61");
+        assert_eq!(lines[2], "20,m,1,1,,limit,");
         let v: serde_json::Value = serde_json::from_str(&rows_json(&rows)).unwrap();
         assert_eq!(v["totals"]["tokens"], 107);
         assert_eq!(v["totals"]["cost"], 0.25);
         assert!(v["turns"][1]["cost"].is_null());
+    }
+
+    #[test]
+    fn the_estimate_is_the_middle_of_earlier_turns() {
+        let cat = Catalog::new(Lang::En);
+        let row = |cost: f64, ms: u64, status: &str| TurnRow {
+            ts: 0,
+            model: String::new(),
+            tok_in: 10,
+            tok_out: 5,
+            cost: Some(cost),
+            status: status.into(),
+            ms: Some(ms),
+        };
+        assert_eq!(plan_estimate(&[row(1.0, 1000, "ok")]), None, "one turn is no basis");
+        let rows: Vec<TurnRow> = [(0.1, 10_000), (1.0, 60_000), (2.0, 120_000), (3.0, 130_000), (90.0, 900_000)]
+            .iter()
+            .map(|(c, m)| row(*c, *m, "ok"))
+            .chain([row(50.0, 1, "failed")])
+            .collect();
+        let e = plan_estimate(&rows).unwrap();
+        assert_eq!((e.turns, e.cost, e.secs), (5, Some((1.0, 3.0)), Some((60, 130))));
+        let t = estimate_text(&cat, &e);
+        for want in ["1.00 to 3.00", "1 min 0 s to 2 min 10 s", "5"] {
+            assert!(t.contains(want), "{want} in {t}");
+        }
+        let few = plan_estimate(&[row(2.0, 5000, "ok"), row(2.0, 5000, "limit")]).unwrap();
+        assert!(!estimate_text(&cat, &few).contains(" to "), "equal ends read as one value");
     }
 
     #[test]
@@ -407,6 +501,7 @@ mod tests {
             tok_out: 2,
             cost,
             status: "ok".into(),
+            plan: (tin == 50).then(|| "ms=1500".to_string()),
             ..ddc_model::AuditEntry::default()
         };
         m.audit_append(&mk("turn", 50, Some(0.5))).unwrap();
@@ -416,6 +511,7 @@ mod tests {
         assert_eq!(rows.len(), 2);
         assert_eq!((rows[0].tok_in, rows[0].cost, rows[1].tok_in), (50, Some(0.5), 70));
         assert_eq!(totals(&rows), (124, Some(0.5)));
+        assert_eq!((rows[0].ms, rows[1].ms), (Some(1500), None), "the length rides with the turn");
     }
 
     #[test]
@@ -437,6 +533,8 @@ mod tests {
             "ai.cost.plan_time",
             "ai.cost.plan_elements",
             "ai.cost.plan_each",
+            "ai.cost.range",
+            "ai.cost.estimate",
         ] {
             for l in [Lang::En, Lang::Ru] {
                 assert_ne!(crate::tr_in(l, k, &[]), k, "{k}");

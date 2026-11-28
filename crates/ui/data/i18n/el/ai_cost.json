@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} λ {s} δ",
  "ai.cost.plan_elements": "{n} στοιχεία",
  "ai.cost.plan_each": "{cost} ανά στοιχείο",
- "ai.cost.costliest": "Το ακριβότερο βήμα αυτού του αιτήματος"
+ "ai.cost.costliest": "Το ακριβότερο βήμα αυτού του αιτήματος",
+ "ai.cost.range": "{a} έως {b}",
+ "ai.cost.estimate": "συνήθως {what} (από {n} προηγούμενα αιτήματα)",
+ "ai.cost.key_left": "υπολειπόμενο όριο κλειδιού: {v}",
+ "ai.cost.account_left": "λογαριασμός: {v}"
 }

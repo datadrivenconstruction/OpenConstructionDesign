@@ -37,6 +37,7 @@ impl Model {
             rebar_cache: Default::default(),
             paint_cache: Default::default(),
             plant_rank: Default::default(),
+            stop: None,
             serial: crate::trial::next_serial(),
         })
     }

@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} mnt {s} dtk",
  "ai.cost.plan_elements": "{n} elemen",
  "ai.cost.plan_each": "{cost} per elemen",
- "ai.cost.costliest": "Langkah termahal dari permintaan ini"
+ "ai.cost.costliest": "Langkah termahal dari permintaan ini",
+ "ai.cost.range": "{a} sampai {b}",
+ "ai.cost.estimate": "biasanya {what} (dari {n} permintaan sebelumnya)",
+ "ai.cost.key_left": "sisa batas kunci: {v}",
+ "ai.cost.account_left": "akun: {v}"
 }

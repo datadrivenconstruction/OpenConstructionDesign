@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} мин {s} с",
  "ai.cost.plan_elements": "{n} елемента",
  "ai.cost.plan_each": "{cost} на елемент",
- "ai.cost.costliest": "Най-скъпата стъпка на тази заявка"
+ "ai.cost.costliest": "Най-скъпата стъпка на тази заявка",
+ "ai.cost.range": "{a} до {b}",
+ "ai.cost.estimate": "обикновено {what} (от {n} предишни заявки)",
+ "ai.cost.key_left": "оставащ лимит на ключа: {v}",
+ "ai.cost.account_left": "акаунт: {v}"
 }

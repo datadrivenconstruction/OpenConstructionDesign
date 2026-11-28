@@ -225,7 +225,8 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
     let reach = if req.unlimited || ddc_ai::limits::env_unlimited() {
         ddc_ai::limits::Reach::Unlimited
     } else {
-        ddc_ai::limits::Reach::Normal
+        ddc_ai::limits::set_profile_reach(req.profile.reach);
+        crate::ai::ui::connect::reach_of(&ed.model)
     };
     let base = Limits::reach(reach);
     let limits = Limits {
@@ -236,7 +237,8 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
     };
     let cfg = SessionCfg {
         provider: req.provider.clone(),
-        profile: req.profile.clone(),
+        // no snapshots are allowed here: the model is not offered a picture tool the gate refuses
+        profile: Profile { images: false, ..req.profile.clone() },
         limits: limits.clone(),
         session: format!("cli-{}", std::process::id()),
         allow_snapshots: Arc::new(AtomicBool::new(false)),
@@ -416,6 +418,18 @@ mod tests {
             .collect();
         v.push(vec![Script::Text("done".into())]);
         v
+    }
+
+    #[test]
+    fn a_run_without_snapshots_is_not_offered_the_picture_tool() {
+        let mut ed = editor();
+        let p = ScriptedProvider::new(vec![vec![Script::Text("ok".into())]]);
+        let mut q = req(p.clone(), false);
+        q.profile.images = true;
+        let _ = run(&mut ed, &q);
+        let asked = p.requests();
+        assert!(!asked.is_empty());
+        assert!(asked.iter().all(|r| r.tools.iter().all(|t| t.name != "view_snapshot")));
     }
 
     #[test]

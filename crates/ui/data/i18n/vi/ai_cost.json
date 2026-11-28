@@ -14,5 +14,9 @@
  "ai.cost.plan_time": "{m} phút {s} giây",
  "ai.cost.plan_elements": "{n} phần tử",
  "ai.cost.plan_each": "{cost} mỗi phần tử",
- "ai.cost.costliest": "Bước tốn kém nhất của yêu cầu này"
+ "ai.cost.costliest": "Bước tốn kém nhất của yêu cầu này",
+ "ai.cost.range": "{a} đến {b}",
+ "ai.cost.estimate": "thường là {what} (từ {n} yêu cầu trước)",
+ "ai.cost.key_left": "hạn mức khóa còn lại: {v}",
+ "ai.cost.account_left": "tài khoản: {v}"
 }

@@ -488,7 +488,7 @@ pub struct Core {
     ack: u64,
     /// Agent items the person has not looked at since they joined the card.
     unreviewed: BTreeSet<u32>,
-    stop: CancelToken,
+    pub(crate) stop: CancelToken,
     /// An idle UI paints no frames: the worker wakes it after every message.
     wake: Arc<OnceLock<egui::Context>>,
     /// The card shows a plan: emptying it has to reach the UI too.
@@ -537,6 +537,8 @@ pub struct Core {
     target: catalog::Target,
     /// A turn waiting for the host page's answer (browser build): what its end still needs.
     turn_wait: Option<TurnWait>,
+    /// When the running turn began; its length goes to the log with the turn.
+    turn_t0: Option<Instant>,
 }
 
 struct TurnWait {
@@ -894,12 +896,15 @@ impl Core {
     }
 
     fn open_scratch(&mut self) -> Result<(), AiError> {
-        let work = Model::open_copy(&self.copies.work().to_string_lossy())?;
+        let mut work = Model::open_copy(&self.copies.work().to_string_lossy())?;
         // a throwaway copy, made again from the live model after a crash: its commits (one
         // per drafted operation) need not wait for the disk
         work.sql()
             .execute_batch("PRAGMA synchronous=OFF")
             .map_err(ddc_model::Error::from)?;
+        // only the end of the session: a cancelled turn must not break the copy's next sync
+        let stop = self.stop.clone();
+        work.set_stop(Some(Arc::new(move || stop.is_cancelled())));
         self.ed.replace_model(work)?;
         self.ed.set_units(self.view.units);
         self.ed.set_level(self.view.level);
@@ -1396,6 +1401,7 @@ impl Core {
             Some(b) => format!("{b}{text}"),
             None => text,
         };
+        self.turn_t0 = Some(Instant::now());
         let res = {
             let mut on_event = turn_events(self.tx.clone(), self.stop.clone(), &mut last);
             conv.run_turn(text, note, mode, &mut *self, &mut on_event)
@@ -1465,7 +1471,8 @@ impl Core {
             Ok(TurnEnd::Cancelled) => "cancelled",
             Err(_) => "failed",
         };
-        let mut entry = self.entry("user", "turn", None, kept, status);
+        let took = self.turn_t0.take().map(|t| format!("ms={}", t.elapsed().as_millis()));
+        let mut entry = self.entry("user", "turn", took, kept, status);
         if let Some(u) = last {
             entry.tok_in = u.turn.input_tokens;
             entry.tok_out = u.turn.output_tokens;
@@ -1737,6 +1744,7 @@ struct WorkerInit {
     tx: mpsc::Sender<FromWorker>,
     cancel: CancelToken,
     stop: CancelToken,
+    live: ddc_ai::convo::LiveLimits,
     wake: Arc<OnceLock<egui::Context>>,
     /// The copies in memory (stepped session, browser build), not in a temp folder.
     memory: bool,
@@ -1752,6 +1760,7 @@ fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
         tx,
         cancel,
         stop,
+        live,
         wake,
         memory,
     } = init;
@@ -1770,6 +1779,7 @@ fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
     );
     let lang = if crate::ui_lang_now() { "ru" } else { ddc_ai::refusal::lang(ddc_ui::i18n::current().code()) };
     conv.set_lang(lang);
+    conv.share_live(live);
     let mut core = Core {
         ed: Editor::new_in_memory()?,
         lang,
@@ -1829,6 +1839,7 @@ fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
         requirements: Vec::new(),
         checkpoints: Default::default(),
         turn_wait: None,
+        turn_t0: None,
     };
     core.take_copy(source)?;
     core.open_scratch()?;
@@ -1948,6 +1959,8 @@ pub struct UiSession {
     rx: mpsc::Receiver<FromWorker>,
     cancel: CancelToken,
     stop: CancelToken,
+    /// Limits raised while a turn runs reach the turn through here.
+    live: ddc_ai::convo::LiveLimits,
     session: String,
     endpoint: String,
     model_name: String,
@@ -2047,6 +2060,7 @@ impl UiSession {
         let (from_tx, from_rx) = mpsc::channel();
         let cancel = CancelToken::new();
         let stop = CancelToken::new();
+        let live = ddc_ai::convo::LiveLimits::default();
         let session = cfg.session.clone();
         let endpoint = ddc_ai::profile::url_origin(&cfg.profile.base_url);
         let model_name = cfg.profile.model.clone();
@@ -2061,6 +2075,7 @@ impl UiSession {
             tx: from_tx,
             cancel: cancel.clone(),
             stop: stop.clone(),
+            live: live.clone(),
             wake: wake.clone(),
             memory: stepped,
         };
@@ -2089,6 +2104,7 @@ impl UiSession {
             rx: from_rx,
             cancel,
             stop,
+            live,
             session,
             endpoint,
             model_name,
@@ -2265,6 +2281,7 @@ impl UiSession {
 
     /// The limits and mode of the turns to come; the caps of the shown plan follow at once.
     pub fn set_limits(&mut self, l: Limits, reach: ddc_ai::limits::Reach) {
+        self.live.set(l.clone());
         self.send(ToWorker::SetLimits(l, reach));
     }
 

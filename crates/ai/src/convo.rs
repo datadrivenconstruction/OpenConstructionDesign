@@ -235,10 +235,27 @@ pub struct UsageTotals {
     pub cost: Option<f64>,
 }
 
+/// Limits raised while a turn runs: the UI writes, the turn picks them up before its next check.
+#[derive(Clone, Default)]
+pub struct LiveLimits(Arc<std::sync::Mutex<Option<Limits>>>);
+
+impl LiveLimits {
+    pub fn set(&self, l: Limits) {
+        if let Ok(mut g) = self.0.lock() {
+            *g = Some(l);
+        }
+    }
+
+    fn take(&self) -> Option<Limits> {
+        self.0.lock().ok().and_then(|mut g| g.take())
+    }
+}
+
 pub struct Conversation {
     provider: Arc<dyn Provider>,
     profile: Profile,
     limits: Limits,
+    live: LiveLimits,
     cancel: CancelToken,
     messages: Vec<Message>,
     session: Usage,
@@ -666,6 +683,7 @@ impl Conversation {
             provider,
             profile,
             limits,
+            live: LiveLimits::default(),
             cancel,
             messages,
             session: Usage::default(),
@@ -845,7 +863,7 @@ impl Conversation {
     ) -> Result<TurnEnd, ProviderError> {
         let OpenTurn {
             mode,
-            deadline,
+            mut deadline,
             mut tools,
             mut tools_tokens,
             mut sent_groups,
@@ -858,6 +876,7 @@ impl Conversation {
             mut repeats,
         } = st;
         loop {
+            deadline = self.refresh_limits(deadline);
             if let Some(end) = self.budget_end(steps, turn, deadline) {
                 return Ok(end);
             }
@@ -1008,6 +1027,7 @@ impl Conversation {
                 .unwrap_or(deadline);
             let mut started = false;
             for ((c, args), id) in calls.iter().zip(parsed).zip(ids) {
+                deadline = self.refresh_limits(deadline);
                 if end.is_none() {
                     end = if started {
                         if self.cancel.is_cancelled() {
@@ -1116,6 +1136,25 @@ impl Conversation {
     /// The limits of the turns to come; the chat and its history stay.
     pub fn set_limits(&mut self, l: Limits) {
         self.limits = l;
+    }
+
+    /// Where limits raised during a turn arrive; the turn that runs picks them up.
+    pub fn share_live(&mut self, live: LiveLimits) {
+        self.live = live;
+    }
+
+    /// Takes limits raised while the turn runs; the deadline moves with the time limit.
+    fn refresh_limits(&mut self, deadline: Instant) -> Instant {
+        let Some(l) = self.live.take() else {
+            return deadline;
+        };
+        let (old, new) = (u64::from(self.limits.max_wall_s), u64::from(l.max_wall_s));
+        self.limits = l;
+        if new >= old {
+            deadline.checked_add(Duration::from_secs(new - old)).unwrap_or(deadline)
+        } else {
+            deadline.checked_sub(Duration::from_secs(old - new)).unwrap_or(deadline)
+        }
     }
 
     fn turn_cost_over(&self, turn: Usage) -> bool {
@@ -1268,7 +1307,28 @@ impl Conversation {
             actor: ACTOR_CHAT,
             lang: self.lang,
         };
+        if catalog::find(name).is_none() {
+            return self.unknown_tool(name, mode);
+        }
         registry::call(host, name, &args, &cx, self.profile.images)
+    }
+
+    /// An unknown name is answered with the tools this turn really offers.
+    fn unknown_tool(&self, name: &str, mode: Mode) -> ToolOutcome {
+        let shown: String = name
+            .chars()
+            .filter(|c| !c.is_control())
+            .take(registry::MAX_SHOWN_ID)
+            .collect();
+        let offered: Vec<String> = toolset::chat_schemas(mode, self.profile.images, &self.loaded)
+            .into_iter()
+            .map(|t| t.name)
+            .collect();
+        CmdError::new(
+            ErrorCode::UnknownCommand,
+            format!("unknown tool: {shown}; the tools are: {}", offered.join(", ")),
+        )
+        .outcome()
     }
 
     /// Above 70 % of the context, old tool results give way, oldest first. The newest
@@ -1425,6 +1485,7 @@ mod tests {
         reply: String,
         images: Vec<ImageData>,
         cancel_on_call: Option<CancelToken>,
+        raise_on_call: Option<(LiveLimits, Limits)>,
     }
 
     impl ToolHost for Host {
@@ -1434,6 +1495,9 @@ mod tests {
             self.actors.push(cx.actor.to_string());
             if let Some(c) = &self.cancel_on_call {
                 c.cancel();
+            }
+            if let Some((live, l)) = &self.raise_on_call {
+                live.set(l.clone());
             }
             ToolOutcome {
                 text: self.reply.clone(),
@@ -1690,7 +1754,9 @@ mod tests {
             Ok(TurnEnd::Answered)
         );
         assert!(host.calls.is_empty());
-        assert_eq!(err_msg(&results(c.messages())[0].1), "unknown tool: execute_sql");
+        let why = err_msg(&results(c.messages())[0].1);
+        assert!(why.starts_with("unknown tool: execute_sql; the tools are: "), "{why}");
+        assert!(why.contains("get_context") && why.contains("load_tools"), "{why}");
     }
 
     #[test]
@@ -1723,10 +1789,8 @@ mod tests {
         assert_eq!(names, vec![UNKNOWN_TOOL]);
         let why = err_msg(&results(c.messages())[0].1);
         assert!(why.starts_with("unknown tool: \u{041f}\u{0440}\u{0438}\u{043c}\u{0435}\u{043d}\u{0435}\u{043d}\u{043e} \u{2713}x"), "{why}");
-        assert_eq!(
-            why.chars().count(),
-            "unknown tool: ".chars().count() + MAX_NAME_IN_ERROR_CHARS
-        );
+        let shown = why.split("; the tools are: ").next().unwrap();
+        assert_eq!(shown.chars().count(), "unknown tool: ".chars().count() + MAX_NAME_IN_ERROR_CHARS);
         assert_every_call_answered(c.messages());
     }
 
@@ -2034,6 +2098,25 @@ mod tests {
         assert!(r.iter().all(|x| !x.1.contains("not run")));
         assert_eq!(p.requests().len(), 1, "no further step starts");
         assert_every_call_answered(c.messages());
+    }
+
+    #[test]
+    fn a_limit_raised_during_the_turn_applies_to_that_turn() {
+        let mut script = calls_forever(4);
+        script.push(vec![text("done")]);
+        let tight = Limits { max_steps: 2, ..Limits::default() };
+        let p = ScriptedProvider::new(script.clone());
+        let mut c = conv(&p, tight.clone());
+        assert_eq!(
+            turn(&mut c, Mode::ReadOnly, &mut Host::default()).0,
+            Ok(TurnEnd::LimitHit("steps"))
+        );
+        let p = ScriptedProvider::new(script);
+        let mut c = conv(&p, tight);
+        let live = LiveLimits::default();
+        c.share_live(live.clone());
+        let mut host = Host { raise_on_call: Some((live, Limits::default())), ..Host::default() };
+        assert_eq!(turn(&mut c, Mode::ReadOnly, &mut host).0, Ok(TurnEnd::Answered));
     }
 
     #[test]
