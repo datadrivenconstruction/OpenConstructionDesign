@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Salvestab praeguse 3D-vaate koos kaamera, lõikekasti ja stiiliga. Sisesta vaate nimi.",
  "cmd.view.hide_cat_3d.desc": "Peidab ajutiselt valitud elemendi kategooria 3D-s. Vaadet ei muudeta.",
  "cmd.view.isolate_cat_3d.desc": "Näitab ajutiselt 3D-s ainult valitud elemendi kategooriat.",
- "cmd.view.reveal_3d.desc": "Toob 3D-s tagasi kõik ajutiselt peidetud kategooriad."
+ "cmd.view.reveal_3d.desc": "Toob 3D-s tagasi kõik ajutiselt peidetud kategooriad.",
+ "cmd.view.orbit_center.desc": "Orbiidi lohistamine pöörab mudeli keskpunkti ümber kursori all oleva punkti asemel, nii jääb mudel vaatesse.",
+ "cmd.view.orbit_auto.desc": "Kaamera tiirleb mudeli ümber ise, esitluste jaoks. Käivita uuesti, et peatada."
 }

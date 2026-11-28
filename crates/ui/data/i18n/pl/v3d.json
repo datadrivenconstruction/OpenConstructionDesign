@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "Usunięto widok 3D",
  "v3d.msg.restored": "Otwarto widok 3D",
  "v3d.msg.empty": "Brak czego pokazać w 3D",
- "v3d.view_name": "Widok 3D"
+ "v3d.view_name": "Widok 3D",
+ "cmd.view.orbit_center": "Orbita wokół środka modelu",
+ "cmd.view.orbit_auto": "Automatyczna orbita modelu"
 }

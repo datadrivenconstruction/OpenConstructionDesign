@@ -199,6 +199,7 @@ impl Viewport {
                 1.0 - (p.y - rect.min.y) / rect.height() * 2.0,
             )
         };
+        self.nav.centre = scene.focus.or(scene.bounds).map(|b| (b.min + b.max) * 0.5);
         self.nav.begin(ui, &resp, &mut self.camera, aspect);
         if let Some((tl, f)) = self.follow.take() {
             let b = tl.active_box(scene, f);
@@ -233,7 +234,11 @@ impl Viewport {
         {
             self.camera.pan(d.x, d.y, rect.height());
         } else if resp.dragged_by(PointerButton::Primary) && !self.capture {
-            let sel = self.highlight.and_then(|r| scene.bounds_of(r));
+            let sel = if self.nav.center_orbit {
+                scene.focus.or(scene.bounds)
+            } else {
+                self.highlight.and_then(|r| scene.bounds_of(r))
+            };
             let hit = self.nav.hover_hit;
             self.nav.orbit_drag(&mut self.camera, d, hit, sel);
         }
@@ -286,7 +291,7 @@ impl Viewport {
             }
         }
         let mut clicked = None;
-        if resp.clicked() && !self.capture {
+        if resp.clicked() && !self.capture && self.reveal.is_none() {
             if let Some(pos) = resp.interact_pointer_pos() {
                 let (x, y) = ndc(pos);
                 let ray = self.camera.ray(x, y, aspect);

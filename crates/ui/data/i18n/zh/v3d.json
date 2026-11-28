@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "三维视图已删除",
  "v3d.msg.restored": "三维视图已打开",
  "v3d.msg.empty": "三维中没有可显示的内容",
- "v3d.view_name": "三维视图"
+ "v3d.view_name": "三维视图",
+ "cmd.view.orbit_center": "绕模型中心旋转",
+ "cmd.view.orbit_auto": "自动环绕模型"
 }

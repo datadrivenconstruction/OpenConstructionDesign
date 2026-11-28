@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D 뷰 삭제됨",
  "v3d.msg.restored": "3D 뷰 열림",
  "v3d.msg.empty": "3D로 표시할 내용이 없습니다",
- "v3d.view_name": "3D 뷰"
+ "v3d.view_name": "3D 뷰",
+ "cmd.view.orbit_center": "모델 중심 기준 궤도 회전",
+ "cmd.view.orbit_auto": "모델 자동 궤도 회전"
 }

@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Tallentaa nykyisen 3D-näkymän kameran, leikkauslaatikon ja tyylin kanssa. Anna näkymälle nimi.",
  "cmd.view.hide_cat_3d.desc": "Piilottaa väliaikaisesti valitun elementin luokan 3D-näkymässä. Näkymää ei muuteta.",
  "cmd.view.isolate_cat_3d.desc": "Näyttää väliaikaisesti 3D-näkymässä vain valitun elementin luokan.",
- "cmd.view.reveal_3d.desc": "Palauttaa kaikki väliaikaisesti piilotetut luokat 3D-näkymässä."
+ "cmd.view.reveal_3d.desc": "Palauttaa kaikki väliaikaisesti piilotetut luokat 3D-näkymässä.",
+ "cmd.view.orbit_center.desc": "Kiertovedon keskus on mallin keskipiste kohdistimen alla olevan pisteen sijaan, joten malli pysyy kuvassa.",
+ "cmd.view.orbit_auto.desc": "Kamera kiertää mallia itsekseen esityksiä varten. Suorita uudelleen pysäyttääksesi."
 }

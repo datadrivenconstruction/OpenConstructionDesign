@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "Η προβολή 3D διαγράφηκε",
  "v3d.msg.restored": "Η προβολή 3D άνοιξε",
  "v3d.msg.empty": "Τίποτα για προβολή σε 3D",
- "v3d.view_name": "Προβολή 3D"
+ "v3d.view_name": "Προβολή 3D",
+ "cmd.view.orbit_center": "Τροχιά γύρω από το κέντρο του μοντέλου",
+ "cmd.view.orbit_auto": "Αυτόματη τροχιά του μοντέλου"
 }

@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Menyimpan tampilan 3D saat ini dengan kamera, kotak potongan, dan gaya. Masukkan nama tampilan.",
  "cmd.view.hide_cat_3d.desc": "Menyembunyikan sementara kategori elemen yang dipilih di 3D. Tampilan tidak berubah.",
  "cmd.view.isolate_cat_3d.desc": "Hanya menampilkan sementara kategori elemen yang dipilih di 3D.",
- "cmd.view.reveal_3d.desc": "Memulihkan setiap kategori yang disembunyikan sementara di 3D."
+ "cmd.view.reveal_3d.desc": "Memulihkan setiap kategori yang disembunyikan sementara di 3D.",
+ "cmd.view.orbit_center.desc": "Seret orbit berputar mengelilingi pusat model, bukan titik di bawah kursor, sehingga model tetap terlihat.",
+ "cmd.view.orbit_auto.desc": "Kamera mengelilingi model sendiri, untuk presentasi. Jalankan lagi untuk berhenti."
 }

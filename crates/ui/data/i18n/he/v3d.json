@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "המבט התלת-ממדי נמחק",
  "v3d.msg.restored": "המבט התלת-ממדי נפתח",
  "v3d.msg.empty": "אין מה להציג בתלת-ממד",
- "v3d.view_name": "מבט תלת-ממדי"
+ "v3d.view_name": "מבט תלת-ממדי",
+ "cmd.view.orbit_center": "הקפה סביב מרכז המודל",
+ "cmd.view.orbit_auto": "הקפה אוטומטית של המודל"
 }

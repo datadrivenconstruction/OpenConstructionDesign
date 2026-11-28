@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Lưu góc nhìn 3D hiện tại với camera, hộp cắt và kiểu hiển thị. Nhập tên góc nhìn.",
  "cmd.view.hide_cat_3d.desc": "Ẩn tạm thời danh mục của cấu kiện đã chọn trong 3D. Góc nhìn không thay đổi.",
  "cmd.view.isolate_cat_3d.desc": "Chỉ hiện tạm thời danh mục của cấu kiện đã chọn trong 3D.",
- "cmd.view.reveal_3d.desc": "Khôi phục mọi danh mục đang bị ẩn tạm thời trong 3D."
+ "cmd.view.reveal_3d.desc": "Khôi phục mọi danh mục đang bị ẩn tạm thời trong 3D.",
+ "cmd.view.orbit_center.desc": "Kéo xoay quỹ đạo quanh tâm mô hình thay vì điểm dưới con trỏ, nên mô hình luôn nằm trong khung nhìn.",
+ "cmd.view.orbit_auto.desc": "Camera tự quay quanh mô hình, dùng cho thuyết trình. Chạy lại để dừng."
 }

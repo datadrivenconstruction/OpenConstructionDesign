@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "ลบมุมมอง 3 มิติแล้ว",
  "v3d.msg.restored": "เปิดมุมมอง 3 มิติแล้ว",
  "v3d.msg.empty": "ไม่มีอะไรให้แสดงใน 3 มิติ",
- "v3d.view_name": "มุมมอง 3 มิติ"
+ "v3d.view_name": "มุมมอง 3 มิติ",
+ "cmd.view.orbit_center": "โคจรรอบจุดศูนย์กลางโมเดล",
+ "cmd.view.orbit_auto": "โคจรรอบโมเดลอัตโนมัติ"
 }

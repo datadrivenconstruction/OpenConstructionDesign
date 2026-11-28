@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D-vy borttagen",
  "v3d.msg.restored": "3D-vy öppnad",
  "v3d.msg.empty": "Inget att visa i 3D",
- "v3d.view_name": "3D-vy"
+ "v3d.view_name": "3D-vy",
+ "cmd.view.orbit_center": "Kretsa runt modellens mitt",
+ "cmd.view.orbit_auto": "Automatisk kretsning av modellen"
 }

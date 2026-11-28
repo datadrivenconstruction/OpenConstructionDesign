@@ -1183,7 +1183,8 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
     if let Some(dir) = &a.reveal_out {
         // a show that cannot be written is a usage outcome (exit 2), like a bad argument
         let n = ddc_app::reveal::camera_arg(&argv)
-            .and_then(|cam| ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame, cam))
+            .and_then(|cam| ddc_app::reveal::Span::from_argv(&argv).map(|sp| (cam, sp)))
+            .and_then(|(cam, span)| ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame, span, cam))
             .unwrap_or_else(|e| {
                 eprintln!("error: {e}");
                 std::process::exit(2);

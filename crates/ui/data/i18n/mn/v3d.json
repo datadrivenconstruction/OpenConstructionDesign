@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D харагдац устгагдлаа",
  "v3d.msg.restored": "3D харагдац нээгдлээ",
  "v3d.msg.empty": "3D-д харуулах зүйл байхгүй",
- "v3d.view_name": "3D харагдац"
+ "v3d.view_name": "3D харагдац",
+ "cmd.view.orbit_center": "Загварын төвийг тойрон эргэх",
+ "cmd.view.orbit_auto": "Загварыг автоматаар тойрон эргэх"
 }

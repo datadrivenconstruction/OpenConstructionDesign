@@ -534,6 +534,34 @@ pub fn show(
     if home_resp.clicked() {
         v.nav.go_home(&mut v.camera, extents, aspect);
     }
+    // orbit around the model centre, and the automatic orbit for presentations
+    let mut orbit_hot = false;
+    for (k, (icon, key)) in [("layout-focus", "cmd.view.orbit_center"), ("rotate", "cmd.view.orbit_auto")].into_iter().enumerate() {
+        let on = if k == 0 { v.nav.center_orbit } else { v.nav.auto_orbit };
+        let r = egui::Rect::from_center_size(
+            home.center() - egui::Vec2::new((th.d().control + 6.0) * (k as f32 + 1.0), 0.0),
+            home.size(),
+        );
+        let tip = v.nav.t(key).to_owned();
+        let resp = ui
+            .scope_builder(egui::UiBuilder::new().max_rect(r), |ui| {
+                if on {
+                    let bg = ui.visuals().selection.bg_fill;
+                    ui.painter().rect_filled(r, 4.0, bg);
+                }
+                ddc_ui::widgets::glyph_button(ui, icon, true, &tip)
+            })
+            .inner;
+        orbit_hot |= resp.hovered();
+        if resp.clicked() {
+            if k == 0 {
+                v.nav.center_orbit = !v.nav.center_orbit;
+            } else {
+                v.nav.auto_orbit = !v.nav.auto_orbit;
+                v.nav.walk = None;
+            }
+        }
+    }
 
     // step arrows: shown while the pointer is near the cube, never during a drag
     let near = ui
@@ -636,7 +664,7 @@ pub fn show(
             v.nav.view_from(&mut v.camera, dir, extents, aspect);
         }
     }
-    grab.is_some() || resp.dragged() || home_resp.hovered() || arrow_hot
+    grab.is_some() || resp.dragged() || home_resp.hovered() || orbit_hot || arrow_hot
 }
 
 #[cfg(test)]

@@ -45,7 +45,8 @@ The elements appear in build order from the bottom up, one PNG per frame:
 `frames/frame_0000.png`, `frames/frame_0001.png` and so on. Every element of the 3D view takes
 part, parts made by a script included. `--reveal calendar` follows the phase dates instead.
 `--reveal-frame N` writes only that frame, `--reveal-motion full|reduced|off` sets how much the
-elements move while they appear. `--reveal-out` renders without a window.
+elements move while they appear. `--reveal-from N --reveal-to M --reveal-step K` writes frames N to M,
+every K-th one, numbered from 0 (frame-step mode for video tools). `--reveal-out` renders without a window.
 
 The camera frames the whole model and stays still (`--reveal-camera fixed`, the default).
 `--reveal-camera orbit` turns once around the model over the show, and `--reveal-camera follow`

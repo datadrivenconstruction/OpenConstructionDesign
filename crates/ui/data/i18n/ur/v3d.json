@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D ویو حذف ہو گیا",
  "v3d.msg.restored": "3D ویو کھل گیا",
  "v3d.msg.empty": "3D میں دکھانے کو کچھ نہیں",
- "v3d.view_name": "3D ویو"
+ "v3d.view_name": "3D ویو",
+ "cmd.view.orbit_center": "ماڈل کے مرکز کے گرد مدار",
+ "cmd.view.orbit_auto": "ماڈل کا خودکار مدار"
 }

@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Geçerli 3D görünümü kamera, kesit kutusu ve stille kaydeder. Bir görünüm adı girin.",
  "cmd.view.hide_cat_3d.desc": "Seçili öğenin kategorisini 3D'de geçici olarak gizler. Görünüm değişmez.",
  "cmd.view.isolate_cat_3d.desc": "3D'de yalnızca seçili öğenin kategorisini geçici olarak gösterir.",
- "cmd.view.reveal_3d.desc": "3D'de geçici olarak gizlenmiş tüm kategorileri geri getirir."
+ "cmd.view.reveal_3d.desc": "3D'de geçici olarak gizlenmiş tüm kategorileri geri getirir.",
+ "cmd.view.orbit_center.desc": "Yörünge sürüklemesi imlecin altındaki nokta yerine modelin merkezi etrafında döner, böylece model görünümde kalır.",
+ "cmd.view.orbit_auto.desc": "Kamera sunumlar için modelin etrafında kendiliğinden döner. Durdurmak için tekrar çalıştırın."
 }

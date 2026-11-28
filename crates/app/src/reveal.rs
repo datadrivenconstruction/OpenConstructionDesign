@@ -107,11 +107,12 @@ fn start_requested(a: &mut crate::shell::EditorApp, steps: Vec<Step>, preview: b
     let prev = crate::scene_ids::AI_PREVIEW;
     let in_scene = |k: &ElKey| refs.get(k).and_then(|s| a.ed.element_range(*s));
     let b = batches(&steps, &a.ed.model);
+    let map = pack_map(&a.scene);
     let mut tl = timeline(&b, &|k| {
         let s = steps.iter().find(|s| &s.key == k);
         match s {
             Some(s) if preview && s.change == Change::Added => Some((prev, prev + 1)),
-            _ => in_scene(k),
+            _ => in_scene(k).and_then(|r| packed_range(&map, r)),
         }
     });
     tl = apply_motion(tl, a, a.reveal_motion);
@@ -119,8 +120,24 @@ fn start_requested(a: &mut crate::shell::EditorApp, steps: Vec<Step>, preview: b
     if p.is_empty() {
         return false;
     }
+    set_pack(a, Some(map));
     a.reveal = Some(p);
+    enter_3d(a);
     true
+}
+
+/// Switches the numbering of the shown scene (packed while a show plays) and rebuilds it.
+fn set_pack(a: &mut crate::shell::EditorApp, map: Option<BTreeMap<u32, u32>>) {
+    a.reveal_pack = map;
+    a.scene_rev = a.ed.revision.wrapping_add(1);
+}
+
+/// A show plays in the full 3D view: no plan, section or sheet beside it.
+fn enter_3d(a: &mut crate::shell::EditorApp) {
+    crate::sheet_view::deactivate();
+    crate::drafting_view::deactivate();
+    a.view3d = true;
+    a.section = None;
 }
 
 /// Version comparison steps: only here means added, only there means removed, a difference means
@@ -368,13 +385,16 @@ fn scene_refs(a: &crate::shell::EditorApp) -> std::collections::HashMap<ElKey, c
 
 fn start(a: &mut crate::shell::EditorApp, b: &[Vec<Step>], labels: Vec<String>) -> bool {
     let refs = scene_refs(a);
-    let mut tl = timeline(b, &|k| refs.get(k).and_then(|s| a.ed.element_range(*s)));
+    let map = pack_map(&a.scene);
+    let mut tl = timeline(b, &|k| refs.get(k).and_then(|s| a.ed.element_range(*s)).and_then(|r| packed_range(&map, r)));
     tl = apply_motion(tl, a, a.reveal_motion);
     let p = Player::new(tl).with_labels(labels);
     if p.is_empty() {
         return false;
     }
+    set_pack(a, Some(map));
     a.reveal = Some(p);
+    enter_3d(a);
     true
 }
 
@@ -644,6 +664,22 @@ pub fn scene_elements(
 /// numbers. The renderer animates an element by its number, up to `MAX_ELEMS`; solids and other
 /// high ranges would fall outside and never move.
 pub fn packed(scene: &ddc_render::Scene) -> (ddc_render::Scene, BTreeMap<u32, u32>) {
+    let map = pack_map(scene);
+    let mut meshes: Vec<ddc_render::SceneMesh> = scene.meshes.iter().map(|m| (**m).clone()).collect();
+    for m in &mut meshes {
+        if let Some(n) = map.get(&m.element) {
+            m.element = *n;
+        }
+    }
+    let mut s = ddc_render::Scene::new(meshes);
+    s.cats = scene.cats.clone();
+    s.focus = scene.focus;
+    (s, map)
+}
+
+/// The map from element numbers of the scene to numbers packed from 1 in their order; numbers
+/// from `SERVICE_BASE` up (site, preview, other levels) keep theirs.
+pub fn pack_map(scene: &ddc_render::Scene) -> BTreeMap<u32, u32> {
     let mut ids: Vec<u32> = scene
         .meshes
         .iter()
@@ -652,22 +688,18 @@ pub fn packed(scene: &ddc_render::Scene) -> (ddc_render::Scene, BTreeMap<u32, u3
         .collect();
     ids.sort_unstable();
     ids.dedup();
-    let map: BTreeMap<u32, u32> = ids.iter().enumerate().map(|(i, e)| (*e, i as u32 + 1)).collect();
-    let meshes = scene
-        .meshes
-        .iter()
-        .map(|m| {
-            let mut m2 = (**m).clone();
-            if let Some(n) = map.get(&m.element) {
-                m2.element = *n;
-            }
-            m2
-        })
-        .collect();
-    let mut s = ddc_render::Scene::new(meshes);
-    s.cats = scene.cats.clone();
-    s.focus = scene.focus;
-    (s, map)
+    ids.iter().enumerate().map(|(i, e)| (*e, i as u32 + 1)).collect()
+}
+
+/// Meshes with their element numbers through `map` (numbers it does not know keep theirs).
+pub fn repack(meshes: &mut [std::sync::Arc<ddc_render::SceneMesh>], map: &BTreeMap<u32, u32>) {
+    for m in meshes {
+        if let Some(n) = map.get(&m.element) {
+            let mut own = (**m).clone();
+            own.element = *n;
+            *m = std::sync::Arc::new(own);
+        }
+    }
 }
 
 /// An old [start, end) element range in packed numbers; `None` when no element of it is drawn.
@@ -715,6 +747,61 @@ pub fn bands(batches: Vec<Vec<Step>>, low: &dyn Fn(&ElKey) -> Option<f32>) -> Ve
     out
 }
 
+/// Which frames of the show an export writes (`--reveal-from N --reveal-to M --reveal-step K`): the
+/// frame-step mode of video tools. Frames are numbered from 0 in the output whatever the step.
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+pub struct Span {
+    pub from: u32,
+    pub to: Option<u32>,
+    pub step: u32,
+}
+
+impl Default for Span {
+    fn default() -> Self {
+        Self { from: 0, to: None, step: 1 }
+    }
+}
+
+impl Span {
+    /// Frames of a timeline `len` frames long (the last frame included), in render order.
+    pub fn frames(&self, len: u32) -> Vec<u32> {
+        let last = len.saturating_sub(1);
+        let to = self.to.map_or(last, |t| t.min(last));
+        if self.from > to {
+            return vec![];
+        }
+        (self.from..=to).step_by(self.step.max(1) as usize).collect()
+    }
+
+    pub fn is_default(&self) -> bool {
+        *self == Span::default()
+    }
+
+    /// The span named in the arguments; a bad number or an empty range is an error.
+    pub fn from_argv(argv: &[String]) -> Result<Span, String> {
+        let num = |flag: &str| -> Result<Option<u32>, String> {
+            match argv.iter().position(|s| s == flag) {
+                None => Ok(None),
+                Some(i) => argv
+                    .get(i + 1)
+                    .and_then(|v| v.parse::<u32>().ok())
+                    .map(Some)
+                    .ok_or_else(|| format!("{flag}: expected a whole number of frames")),
+            }
+        };
+        let (from, to, step) = (num("--reveal-from")?, num("--reveal-to")?, num("--reveal-step")?);
+        if step == Some(0) {
+            return Err("--reveal-step: expected 1 or more".into());
+        }
+        if let (Some(f), Some(t)) = (from, to) {
+            if f > t {
+                return Err(format!("--reveal-from {f} is after --reveal-to {t}"));
+            }
+        }
+        Ok(Span { from: from.unwrap_or(0), to, step: step.unwrap_or(1) })
+    }
+}
+
 /// Export frames `frame_0000.png...` without a window; returns the frame count.
 #[cfg(feature = "gui")]
 #[allow(clippy::too_many_arguments)]
@@ -725,6 +812,7 @@ pub fn export_frames(
     size: (u32, u32),
     dir: &std::path::Path,
     only: Option<u32>,
+    span: Span,
     section: Option<&ddc_render::Aabb>,
     mode: CamMode,
 ) -> Result<Exported, String> {
@@ -741,6 +829,19 @@ pub fn export_frames(
         let f = f.min(tl.len.saturating_sub(1));
         save(f, r.render_frame(f)?)?;
         return Ok(Exported { frames: 1, stuck_frames: usize::from(stuck > 0 && path.get(f as usize).is_some()) });
+    }
+    if !span.is_default() {
+        let picked = span.frames(tl.len);
+        if picked.is_empty() {
+            return Err(format!("no frame to write: the show has {} frames", tl.len));
+        }
+        let mut n = 0;
+        for (i, f) in picked.iter().enumerate() {
+            save(i as u32, r.render_frame(*f)?)?;
+            n += 1;
+        }
+        let stuck_frames = picked.iter().filter(|f| path.get(**f as usize).is_some()).count().min(stuck);
+        return Ok(Exported { frames: n, stuck_frames });
     }
     let mut n = 0;
     for (i, img) in r.enumerate() {
@@ -776,6 +877,7 @@ pub fn export_cli(
     fps: u32,
     size: (u32, u32),
     only: Option<u32>,
+    span: Span,
     cam_mode: CamMode,
 ) -> Result<Exported, String> {
     let (scene, map) = packed(&a.ed.scene());
@@ -820,12 +922,12 @@ pub fn export_cli(
     }
     let section = a.view.section_box;
     if !video {
-        return export_frames(&scene, &tl, &cam, size, out, only, section.as_ref(), cam_mode);
+        return export_frames(&scene, &tl, &cam, size, out, only, span, section.as_ref(), cam_mode);
     }
     let stem = out.file_name().map(|n| n.to_string_lossy().into_owned()).unwrap_or_default();
     let frames = out.with_file_name(format!("{stem}.frames"));
     let _ = std::fs::remove_dir_all(&frames);
-    let n = export_frames(&scene, &tl, &cam, size, &frames, only, section.as_ref(), cam_mode)?;
+    let n = export_frames(&scene, &tl, &cam, size, &frames, only, span, section.as_ref(), cam_mode)?;
     encode(&frames, fps, out)?;
     Ok(n)
 }
@@ -899,6 +1001,7 @@ pub fn controls(a: &mut crate::shell::EditorApp, ctx: &egui::Context) {
         });
     if close {
         a.reveal = None;
+        set_pack(a, None);
     }
 }
 
@@ -941,11 +1044,29 @@ pub fn phase_batches(v: &[(Date, Vec<Step>)]) -> (Vec<Vec<Step>>, Vec<String>) {
 /// Journal batches from the first entry to the last: walk steps go from newest to oldest. Operations without
 /// reveal elements are skipped; the label is the operation number and kind.
 pub fn from_journal(walk: &[WalkStep]) -> (Vec<Vec<Step>>, Vec<String>) {
-    walk.iter()
-        .rev()
-        .filter(|w| !w.steps.is_empty())
-        .map(|w| (w.steps.clone(), format!("#{} {}", w.seq, w.kind)))
-        .unzip()
+    let mut batches = vec![];
+    let mut labels = vec![];
+    for w in walk.iter().rev().filter(|w| !w.steps.is_empty()) {
+        let label = format!("#{} {}", w.seq, w.kind);
+        for b in split_big(w.steps.clone()) {
+            batches.push(b);
+            labels.push(label.clone());
+        }
+    }
+    (batches, labels)
+}
+
+/// One journal entry with hundreds of elements (an applied plan) is shown in creation order, in
+/// at most `MAX_CHUNKS` batches, not all at once.
+fn split_big(mut steps: Vec<Step>) -> Vec<Vec<Step>> {
+    const SMALL: usize = 24;
+    const MAX_CHUNKS: usize = 60;
+    if steps.len() <= SMALL {
+        return vec![steps];
+    }
+    steps.sort_by(|a, b| a.key.1.cmp(&b.key.1).then_with(|| a.key.0.cmp(&b.key.0)));
+    let per = steps.len().div_ceil(MAX_CHUNKS).max(SMALL / 4);
+    steps.chunks(per).map(<[Step]>::to_vec).collect()
 }
 
 #[cfg(test)]
@@ -1397,5 +1518,33 @@ mod tests {
         assert_eq!(parse_motion("full"), Ok(Some(Motion::Full)));
         let e = parse_motion("fast").unwrap_err();
         assert!(e.contains("fast") && e.contains("full") && e.contains("reduced") && e.contains("off"), "{e}");
+    }
+
+    #[test]
+    fn frame_span_steps_and_rejects_bad_ranges() {
+        let a = |v: &[&str]| Span::from_argv(&v.iter().map(|s| s.to_string()).collect::<Vec<_>>());
+        assert!(a(&[]).unwrap().is_default());
+        let sp = a(&["--reveal-from", "10", "--reveal-to", "25", "--reveal-step", "5"]).unwrap();
+        assert_eq!(sp.frames(100), vec![10, 15, 20, 25]);
+        assert_eq!(sp.frames(18), vec![10, 15], "clipped to the last frame");
+        assert!(sp.frames(5).is_empty());
+        assert!(a(&["--reveal-step", "0"]).is_err());
+        assert!(a(&["--reveal-from", "9", "--reveal-to", "3"]).is_err());
+        assert!(a(&["--reveal-from", "x"]).is_err());
+    }
+
+    #[test]
+    fn a_big_journal_entry_plays_in_creation_order_in_many_batches() {
+        let steps: Vec<Step> = (1..=500).rev().map(|i| Step::new(key("solid", i), Change::Added)).collect();
+        let w = WalkStep {
+            seq: 6,
+            kind: "wall_ai_plan".into(),
+            changes: Default::default(),
+            steps,
+        };
+        let (b, labels) = from_journal(&[w]);
+        assert!(b.len() > 10 && b.len() <= 60 && labels.len() == b.len());
+        let ids: Vec<i64> = b.iter().flatten().map(|s| s.key.1).collect();
+        assert_eq!(ids, (1..=500).collect::<Vec<_>>());
     }
 }

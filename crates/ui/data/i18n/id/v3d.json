@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "Tampilan 3D dihapus",
  "v3d.msg.restored": "Tampilan 3D dibuka",
  "v3d.msg.empty": "Tidak ada yang bisa ditampilkan di 3D",
- "v3d.view_name": "Tampilan 3D"
+ "v3d.view_name": "Tampilan 3D",
+ "cmd.view.orbit_center": "Orbit di sekitar pusat model",
+ "cmd.view.orbit_auto": "Orbit otomatis model"
 }

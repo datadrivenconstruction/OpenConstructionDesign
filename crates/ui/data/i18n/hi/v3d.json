@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D दृश्य हटाया गया",
  "v3d.msg.restored": "3D दृश्य खोला गया",
  "v3d.msg.empty": "3D में दिखाने को कुछ नहीं",
- "v3d.view_name": "3D दृश्य"
+ "v3d.view_name": "3D दृश्य",
+ "cmd.view.orbit_center": "मॉडल के केंद्र के चारों ओर घुमाएँ",
+ "cmd.view.orbit_auto": "मॉडल को स्वतः घुमाएँ"
 }

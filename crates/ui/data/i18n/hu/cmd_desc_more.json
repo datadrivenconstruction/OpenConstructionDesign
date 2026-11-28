@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Elmenti az aktuális 3D nézetet kamerával, metszetdobozzal és stílussal. Adj meg nézetnevet.",
  "cmd.view.hide_cat_3d.desc": "Ideiglenesen elrejti a kijelölt elem kategóriáját 3D-ben. A nézet nem változik.",
  "cmd.view.isolate_cat_3d.desc": "Ideiglenesen csak a kijelölt elem kategóriáját mutatja 3D-ben.",
- "cmd.view.reveal_3d.desc": "Visszahoz minden ideiglenesen elrejtett kategóriát 3D-ben."
+ "cmd.view.reveal_3d.desc": "Visszahoz minden ideiglenesen elrejtett kategóriát 3D-ben.",
+ "cmd.view.orbit_center.desc": "A pörgető húzás a modell középpontja körül forog a kurzor alatti pont helyett, így a modell látható marad.",
+ "cmd.view.orbit_auto.desc": "A kamera magától körbejárja a modellt, bemutatókhoz. Futtassa újra a leállításhoz."
 }

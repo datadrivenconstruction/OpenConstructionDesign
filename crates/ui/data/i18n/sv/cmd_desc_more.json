@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Sparar aktuell 3D-vy med kamera, sektionslåda och stil. Ange ett vynamn.",
  "cmd.view.hide_cat_3d.desc": "Döljer tillfälligt det markerade elementets kategori i 3D. Vyn ändras inte.",
  "cmd.view.isolate_cat_3d.desc": "Visar tillfälligt endast det markerade elementets kategori i 3D.",
- "cmd.view.reveal_3d.desc": "Visar igen alla tillfälligt dolda kategorier i 3D."
+ "cmd.view.reveal_3d.desc": "Visar igen alla tillfälligt dolda kategorier i 3D.",
+ "cmd.view.orbit_center.desc": "Kretsdragning roterar kring modellens mitt i stället för punkten under markören, så modellen stannar i bild.",
+ "cmd.view.orbit_auto.desc": "Kameran kretsar kring modellen av sig själv, för presentationer. Kör igen för att stoppa."
 }

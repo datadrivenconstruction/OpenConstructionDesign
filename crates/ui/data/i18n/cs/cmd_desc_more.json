@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Uloží aktuální 3D pohled s kamerou, řezovým boxem a stylem. Zadejte název pohledu.",
  "cmd.view.hide_cat_3d.desc": "Dočasně skryje kategorii vybraného prvku ve 3D. Pohled se nemění.",
  "cmd.view.isolate_cat_3d.desc": "Dočasně zobrazí ve 3D jen kategorii vybraného prvku.",
- "cmd.view.reveal_3d.desc": "Vrátí všechny dočasně skryté kategorie ve 3D."
+ "cmd.view.reveal_3d.desc": "Vrátí všechny dočasně skryté kategorie ve 3D.",
+ "cmd.view.orbit_center.desc": "Tažení při orbitu se otáčí kolem středu modelu místo bodu pod kurzorem, takže model zůstává v záběru.",
+ "cmd.view.orbit_auto.desc": "Kamera obíhá model sama, pro prezentace. Dalším spuštěním se zastaví."
 }

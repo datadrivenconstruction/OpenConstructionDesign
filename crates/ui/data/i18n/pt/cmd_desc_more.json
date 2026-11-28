@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Salva a vista 3D atual com câmera, caixa de corte e estilo. Digite um nome para a vista.",
  "cmd.view.hide_cat_3d.desc": "Oculta temporariamente em 3D a categoria do elemento selecionado. A vista não é alterada.",
  "cmd.view.isolate_cat_3d.desc": "Mostra temporariamente em 3D somente a categoria do elemento selecionado.",
- "cmd.view.reveal_3d.desc": "Restaura todas as categorias ocultas temporariamente em 3D."
+ "cmd.view.reveal_3d.desc": "Restaura todas as categorias ocultas temporariamente em 3D.",
+ "cmd.view.orbit_center.desc": "O arrastamento de órbita roda em torno do centro do modelo em vez do ponto sob o cursor, mantendo o modelo à vista.",
+ "cmd.view.orbit_auto.desc": "A câmara roda sozinha em torno do modelo, para apresentações. Execute de novo para parar."
 }

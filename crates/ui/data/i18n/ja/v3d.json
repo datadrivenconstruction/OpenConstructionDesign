@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D ビューを削除しました",
  "v3d.msg.restored": "3D ビューを開きました",
  "v3d.msg.empty": "3D で表示するものがありません",
- "v3d.view_name": "3D ビュー"
+ "v3d.view_name": "3D ビュー",
+ "cmd.view.orbit_center": "モデルの中心を軸に周回",
+ "cmd.view.orbit_auto": "モデルを自動周回"
 }

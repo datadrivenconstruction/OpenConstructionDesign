@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D ko'rinish o'chirildi",
  "v3d.msg.restored": "3D ko'rinish ochildi",
  "v3d.msg.empty": "3D da ko'rsatish uchun hech narsa yo'q",
- "v3d.view_name": "3D ko'rinish"
+ "v3d.view_name": "3D ko'rinish",
+ "cmd.view.orbit_center": "Model markazi atrofida aylanish",
+ "cmd.view.orbit_auto": "Modelni avtomatik aylantirish"
 }

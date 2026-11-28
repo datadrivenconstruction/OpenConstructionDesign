@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D pohled smazán",
  "v3d.msg.restored": "3D pohled otevřen",
  "v3d.msg.empty": "Ve 3D není co zobrazit",
- "v3d.view_name": "3D pohled"
+ "v3d.view_name": "3D pohled",
+ "cmd.view.orbit_center": "Orbit kolem středu modelu",
+ "cmd.view.orbit_auto": "Automatický orbit modelu"
 }

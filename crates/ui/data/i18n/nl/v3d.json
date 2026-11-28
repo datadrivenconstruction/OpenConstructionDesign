@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D-weergave verwijderd",
  "v3d.msg.restored": "3D-weergave geopend",
  "v3d.msg.empty": "Niets om in 3D te tonen",
- "v3d.view_name": "3D-weergave"
+ "v3d.view_name": "3D-weergave",
+ "cmd.view.orbit_center": "Rond het modelmidden draaien",
+ "cmd.view.orbit_auto": "Model automatisch ronddraaien"
 }

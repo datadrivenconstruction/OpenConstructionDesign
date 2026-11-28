@@ -245,5 +245,29 @@
   "context": [
    "*"
   ]
+ },
+ {
+  "id": "view.orbit_center",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M1",
+  "group": "nav"
+ },
+ {
+  "id": "view.orbit_auto",
+  "icon": "",
+  "mnemonic": null,
+  "shortcuts": [],
+  "tab": "view",
+  "surfaces": [
+   "P"
+  ],
+  "stage": "M1",
+  "group": "nav"
  }
 ]

@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D көрүнүш өчүрүлдү",
  "v3d.msg.restored": "3D көрүнүш ачылды",
  "v3d.msg.empty": "3Dде көрсөтүүгө эч нерсе жок",
- "v3d.view_name": "3D көрүнүш"
+ "v3d.view_name": "3D көрүнүш",
+ "cmd.view.orbit_center": "Модель борбору айланасында айлануу",
+ "cmd.view.orbit_auto": "Модельди автоматтык айландыруу"
 }

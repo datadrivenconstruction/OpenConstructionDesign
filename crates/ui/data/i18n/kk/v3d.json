@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D көрініс жойылды",
  "v3d.msg.restored": "3D көрініс ашылды",
  "v3d.msg.empty": "3D-де көрсетуге ештеңе жоқ",
- "v3d.view_name": "3D көрініс"
+ "v3d.view_name": "3D көрініс",
+ "cmd.view.orbit_center": "Модель орталығын айнала айналдыру",
+ "cmd.view.orbit_auto": "Модельді автоматты айналдыру"
 }

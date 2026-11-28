@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D-näkymä poistettu",
  "v3d.msg.restored": "3D-näkymä avattu",
  "v3d.msg.empty": "Ei näytettävää 3D:ssä",
- "v3d.view_name": "3D-näkymä"
+ "v3d.view_name": "3D-näkymä",
+ "cmd.view.orbit_center": "Kierrä mallin keskipisteen ympäri",
+ "cmd.view.orbit_auto": "Mallin automaattinen kierto"
 }

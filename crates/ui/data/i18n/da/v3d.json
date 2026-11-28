@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D-visning slettet",
  "v3d.msg.restored": "3D-visning åbnet",
  "v3d.msg.empty": "Intet at vise i 3D",
- "v3d.view_name": "3D-visning"
+ "v3d.view_name": "3D-visning",
+ "cmd.view.orbit_center": "Kredse om modellens centrum",
+ "cmd.view.orbit_auto": "Automatisk kredsning om modellen"
 }

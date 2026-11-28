@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Saves the current 3D view with camera, section box and style. Enter a view name.",
  "cmd.view.hide_cat_3d.desc": "Temporarily hides the category of the selected element in 3D. The view is not changed.",
  "cmd.view.isolate_cat_3d.desc": "Temporarily shows only the category of the selected element in 3D.",
- "cmd.view.reveal_3d.desc": "Brings back every temporarily hidden category in 3D."
+ "cmd.view.reveal_3d.desc": "Brings back every temporarily hidden category in 3D.",
+ "cmd.view.orbit_center.desc": "Turns the orbit drag around the centre of the model instead of the point under the cursor, so the model stays in view.",
+ "cmd.view.orbit_auto.desc": "The camera circles the model by itself, for presentations. Run it again to stop."
 }

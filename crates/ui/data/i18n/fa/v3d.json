@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "نمای سه‌بعدی حذف شد",
  "v3d.msg.restored": "نمای سه‌بعدی باز شد",
  "v3d.msg.empty": "چیزی برای نمایش در سه‌بعدی نیست",
- "v3d.view_name": "نمای سه‌بعدی"
+ "v3d.view_name": "نمای سه‌بعدی",
+ "cmd.view.orbit_center": "چرخش به دور مرکز مدل",
+ "cmd.view.orbit_auto": "چرخش خودکار مدل"
 }

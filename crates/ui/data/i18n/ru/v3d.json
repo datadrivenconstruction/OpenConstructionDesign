@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D-вид удалён",
  "v3d.msg.restored": "3D-вид открыт",
  "v3d.msg.empty": "В 3D нечего показать",
- "v3d.view_name": "3D-вид"
+ "v3d.view_name": "3D-вид",
+ "cmd.view.orbit_center": "Орбита вокруг центра модели",
+ "cmd.view.orbit_auto": "Автоматическая орбита модели"
 }

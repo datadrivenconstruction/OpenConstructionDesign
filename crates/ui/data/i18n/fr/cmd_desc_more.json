@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Enregistre la vue 3D courante avec la caméra, la boîte de coupe et le style. Saisissez un nom de vue.",
  "cmd.view.hide_cat_3d.desc": "Masque temporairement la catégorie de l'élément sélectionné en 3D. La vue n'est pas modifiée.",
  "cmd.view.isolate_cat_3d.desc": "Affiche temporairement uniquement la catégorie de l'élément sélectionné en 3D.",
- "cmd.view.reveal_3d.desc": "Rétablit toutes les catégories masquées temporairement en 3D."
+ "cmd.view.reveal_3d.desc": "Rétablit toutes les catégories masquées temporairement en 3D.",
+ "cmd.view.orbit_center.desc": "Le glisser d’orbite tourne autour du centre du modèle plutôt qu’autour du point sous le curseur, le modèle reste donc visible.",
+ "cmd.view.orbit_auto.desc": "La caméra tourne seule autour du modèle, pour les présentations. Relancez pour arrêter."
 }

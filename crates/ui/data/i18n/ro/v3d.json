@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "Vedere 3D ștearsă",
  "v3d.msg.restored": "Vedere 3D deschisă",
  "v3d.msg.empty": "Nimic de afișat în 3D",
- "v3d.view_name": "Vedere 3D"
+ "v3d.view_name": "Vedere 3D",
+ "cmd.view.orbit_center": "Orbitare în jurul centrului modelului",
+ "cmd.view.orbit_auto": "Orbitare automată a modelului"
 }

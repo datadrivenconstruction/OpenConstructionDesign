@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Sprema trenutni 3D pogled s kamerom, okvirom presjeka i stilom. Upišite naziv pogleda.",
  "cmd.view.hide_cat_3d.desc": "Privremeno skriva kategoriju odabranog elementa u 3D. Pogled se ne mijenja.",
  "cmd.view.isolate_cat_3d.desc": "Privremeno prikazuje samo kategoriju odabranog elementa u 3D.",
- "cmd.view.reveal_3d.desc": "Vraća svaku privremeno skrivenu kategoriju u 3D."
+ "cmd.view.reveal_3d.desc": "Vraća svaku privremeno skrivenu kategoriju u 3D.",
+ "cmd.view.orbit_center.desc": "Povlačenje orbite okreće se oko središta modela umjesto oko točke ispod kursora, pa model ostaje u prikazu.",
+ "cmd.view.orbit_auto.desc": "Kamera sama kruži oko modela, za prezentacije. Pokrenite ponovno za zaustavljanje."
 }

@@ -1389,6 +1389,9 @@ impl EditorApp {
             };
             crate::mass_tools::apply_preview(&self.ed, &mut meshes, &mut self.scene_shown);
             crate::ai::preview::apply(&self.ed, &mut meshes);
+            if let Some(map) = &self.reveal_pack {
+                crate::reveal::repack(&mut meshes, map);
+            }
             // the GPU and the selection index are updated by `view3d::sync` from the final scene
             self.scene = ddc_render::Scene::shared(meshes).with_instanced(inst);
             self.scene_rev = self.ed.revision;
@@ -1408,10 +1411,12 @@ impl EditorApp {
         self.ed.axes_pref = self.prefs.full_axes;
         let (view, ed) = (&mut self.view, &self.ed);
         // a clash or a picked face comes first; otherwise the whole selection, cached
+        // while a show plays the scene has packed numbers: no selection highlight
         match self
             .clash
             .highlight()
             .or_else(|| crate::mass_tools::picked_range(ed))
+            .filter(|_| self.reveal_pack.is_none())
         {
             Some(r) => view.highlight_one(Some(r)),
             None => {
@@ -1419,7 +1424,8 @@ impl EditorApp {
                 view.highlight_set(ed.highlight(), set);
             }
         }
-        view.hover_range = view.hovered.and_then(|e| {
+        let packed = self.reveal_pack.is_some();
+        view.hover_range = view.hovered.filter(|_| !packed).and_then(|e| {
             crate::mass_tools::hover_range(e)
                 .or_else(|| ed.sel_of_element(e).and_then(|s| ed.element_range(s)))
         });

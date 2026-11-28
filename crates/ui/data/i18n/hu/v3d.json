@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D-nézet törölve",
  "v3d.msg.restored": "3D-nézet megnyitva",
  "v3d.msg.empty": "Nincs megjeleníthető 3D-ben",
- "v3d.view_name": "3D-nézet"
+ "v3d.view_name": "3D-nézet",
+ "cmd.view.orbit_center": "Pörgetés a modell középpontja körül",
+ "cmd.view.orbit_auto": "A modell automatikus körbejárása"
 }

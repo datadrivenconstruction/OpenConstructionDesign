@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Salva la vista 3D corrente con camera, box di sezione e stile. Inserisci un nome per la vista.",
  "cmd.view.hide_cat_3d.desc": "Nasconde temporaneamente in 3D la categoria dell'elemento selezionato. La vista non cambia.",
  "cmd.view.isolate_cat_3d.desc": "Mostra temporaneamente in 3D solo la categoria dell'elemento selezionato.",
- "cmd.view.reveal_3d.desc": "Riporta visibili tutte le categorie nascoste temporaneamente in 3D."
+ "cmd.view.reveal_3d.desc": "Riporta visibili tutte le categorie nascoste temporaneamente in 3D.",
+ "cmd.view.orbit_center.desc": "Il trascinamento orbita ruota attorno al centro del modello invece che al punto sotto il cursore, così il modello resta in vista.",
+ "cmd.view.orbit_auto.desc": "La camera gira da sola attorno al modello, per le presentazioni. Eseguilo di nuovo per fermarla."
 }

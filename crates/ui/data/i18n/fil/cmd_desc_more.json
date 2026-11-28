@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Sine-save ang kasalukuyang 3D view kasama ang camera, section box at style. Maglagay ng pangalan ng view.",
  "cmd.view.hide_cat_3d.desc": "Pansamantalang itinatago ang kategorya ng napiling elemento sa 3D. Hindi nagbabago ang view.",
  "cmd.view.isolate_cat_3d.desc": "Pansamantalang ipinapakita lang ang kategorya ng napiling elemento sa 3D.",
- "cmd.view.reveal_3d.desc": "Ibinabalik ang lahat ng kategoryang pansamantalang itinago sa 3D."
+ "cmd.view.reveal_3d.desc": "Ibinabalik ang lahat ng kategoryang pansamantalang itinago sa 3D.",
+ "cmd.view.orbit_center.desc": "Iikot ang orbit drag sa sentro ng modelo sa halip na sa punto sa ilalim ng cursor, kaya nananatili ang modelo sa view.",
+ "cmd.view.orbit_auto.desc": "Kusang umiikot ang camera sa modelo, para sa mga presentasyon. Patakbuhin muli para huminto."
 }

@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "Nabura ang 3D view",
  "v3d.msg.restored": "Binuksan ang 3D view",
  "v3d.msg.empty": "Walang maipapakita sa 3D",
- "v3d.view_name": "3D na tanaw"
+ "v3d.view_name": "3D na tanaw",
+ "cmd.view.orbit_center": "Umikot sa sentro ng modelo",
+ "cmd.view.orbit_auto": "Awtomatikong pag-ikot sa modelo"
 }

@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Zapisuje bieżący widok 3D wraz z kamerą, pudłem przekroju i stylem. Wpisz nazwę widoku.",
  "cmd.view.hide_cat_3d.desc": "Tymczasowo ukrywa kategorię zaznaczonego elementu w 3D. Widok nie zmienia się.",
  "cmd.view.isolate_cat_3d.desc": "Tymczasowo pokazuje w 3D tylko kategorię zaznaczonego elementu.",
- "cmd.view.reveal_3d.desc": "Przywraca wszystkie tymczasowo ukryte kategorie w 3D."
+ "cmd.view.reveal_3d.desc": "Przywraca wszystkie tymczasowo ukryte kategorie w 3D.",
+ "cmd.view.orbit_center.desc": "Przeciąganie orbity obraca widok wokół środka modelu zamiast punktu pod kursorem, dzięki czemu model pozostaje w kadrze.",
+ "cmd.view.orbit_auto.desc": "Kamera sama krąży wokół modelu, na potrzeby prezentacji. Uruchom ponownie, aby zatrzymać."
 }

@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Joriy 3D ko'rinishni kamera, kesim qutisi va uslub bilan saqlaydi. Ko'rinish nomini kiriting.",
  "cmd.view.hide_cat_3d.desc": "Tanlangan elementning kategoriyasini 3D da vaqtincha yashiradi. Ko'rinish o'zgarmaydi.",
  "cmd.view.isolate_cat_3d.desc": "Tanlangan elementning kategoriyasini 3D da vaqtincha faqat ko'rsatadi.",
- "cmd.view.reveal_3d.desc": "3D da vaqtincha yashirilgan barcha kategoriyalarni qaytaradi."
+ "cmd.view.reveal_3d.desc": "3D da vaqtincha yashirilgan barcha kategoriyalarni qaytaradi.",
+ "cmd.view.orbit_center.desc": "Orbita sudrash kursor ostidagi nuqta o‘rniga model markazi atrofida aylanadi, shuning uchun model ko‘rinishda qoladi.",
+ "cmd.view.orbit_auto.desc": "Kamera taqdimotlar uchun modelni o‘zi aylanib chiqadi. To‘xtatish uchun qayta ishga tushiring."
 }

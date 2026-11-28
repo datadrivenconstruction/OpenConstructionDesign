@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Slaat de huidige 3D-weergave op met camera, doorsnedekader en stijl. Voer een weergavenaam in.",
  "cmd.view.hide_cat_3d.desc": "Verbergt tijdelijk de categorie van het geselecteerde element in 3D. De weergave verandert niet.",
  "cmd.view.isolate_cat_3d.desc": "Toont tijdelijk alleen de categorie van het geselecteerde element in 3D.",
- "cmd.view.reveal_3d.desc": "Brengt elke tijdelijk verborgen categorie in 3D weer terug."
+ "cmd.view.reveal_3d.desc": "Brengt elke tijdelijk verborgen categorie in 3D weer terug.",
+ "cmd.view.orbit_center.desc": "Het slepen draait rond het midden van het model in plaats van het punt onder de cursor, zodat het model in beeld blijft.",
+ "cmd.view.orbit_auto.desc": "De camera draait zelf rond het model, voor presentaties. Voer opnieuw uit om te stoppen."
 }

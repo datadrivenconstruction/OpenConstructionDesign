@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "Đã xóa góc nhìn 3D",
  "v3d.msg.restored": "Đã mở góc nhìn 3D",
  "v3d.msg.empty": "Không có gì để hiển thị trong 3D",
- "v3d.view_name": "Góc nhìn 3D"
+ "v3d.view_name": "Góc nhìn 3D",
+ "cmd.view.orbit_center": "Xoay quanh tâm mô hình",
+ "cmd.view.orbit_auto": "Tự động xoay quanh mô hình"
 }

@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D-vaade kustutatud",
  "v3d.msg.restored": "3D-vaade avatud",
  "v3d.msg.empty": "3D-s pole midagi näidata",
- "v3d.view_name": "3D-vaade"
+ "v3d.view_name": "3D-vaade",
+ "cmd.view.orbit_center": "Orbiit mudeli keskpunkti ümber",
+ "cmd.view.orbit_auto": "Mudeli automaatne orbiit"
 }

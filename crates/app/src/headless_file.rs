@@ -69,6 +69,8 @@ Video and frames (rendered offscreen with --screenshot; --ui-shot needs no other
                         Renders without a window
   --reveal-fps N        frames per second of the build-up, 1..=120 (default 30)
   --reveal-frame N      only that frame, a still of the build-up at one moment
+  --reveal-from N --reveal-to M --reveal-step K   write only frames N..M, every K-th (frame-step
+                        for video tools; frames are numbered from 0 in the output)
   --reveal-motion full|reduced|off   how much the elements move while they appear
   --reveal-camera fixed|orbit|follow  fixed frames the whole model (default), orbit turns
                         once around it, follow frames each step

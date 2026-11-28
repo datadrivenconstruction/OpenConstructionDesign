@@ -245,6 +245,8 @@ pub struct EditorApp {
     pub view: Viewport,
     /// Show-as-built player over the 3D view (`reveal`); none: the scene as it is.
     pub reveal: Option<crate::reveal::Player>,
+    /// Element numbers of the scene packed from 1 while a show plays (the renderer animates by number).
+    pub reveal_pack: Option<std::collections::BTreeMap<u32, u32>>,
     /// Background journal walk used for the reveal playback (`reveal::start_journal`).
     pub reveal_job: Option<crate::reveal::JournalJob>,
     /// `--reveal-motion`: beats the interface motion setting for every show.
@@ -254,7 +256,7 @@ pub struct EditorApp {
     /// Adapter/backend line for the status bar.
     pub backend: String,
     pub scene: ddc_render::Scene,
-    scene_rev: u64,
+    pub(crate) scene_rev: u64,
     /// Shape preview in the scene: change number and the shape replaced by the preview.
     scene_prev: u64,
     /// Link set (`links_ui::State::rev3d`) the scene was built with.
@@ -492,6 +494,7 @@ impl EditorApp {
             wedit: None,
             cwedit: None,
             reveal: None,
+            reveal_pack: None,
             reveal_job: None,
             reveal_motion: None,
             bridges: crate::import::Bridges::load(),

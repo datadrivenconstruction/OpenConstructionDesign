@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Salvează vederea 3D curentă cu cameră, cutie de secțiune și stil. Introduceți un nume pentru vedere.",
  "cmd.view.hide_cat_3d.desc": "Ascunde temporar categoria elementului selectat în 3D. Vederea nu se modifică.",
  "cmd.view.isolate_cat_3d.desc": "Afișează temporar doar categoria elementului selectat în 3D.",
- "cmd.view.reveal_3d.desc": "Readuce în 3D toate categoriile ascunse temporar."
+ "cmd.view.reveal_3d.desc": "Readuce în 3D toate categoriile ascunse temporar.",
+ "cmd.view.orbit_center.desc": "Tragerea pentru orbitare se rotește în jurul centrului modelului, nu al punctului de sub cursor, astfel încât modelul rămâne în vedere.",
+ "cmd.view.orbit_auto.desc": "Camera înconjoară singură modelul, pentru prezentări. Rulați din nou pentru a opri."
 }

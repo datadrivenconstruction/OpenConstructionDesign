@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D ভিউ মোছা হয়েছে",
  "v3d.msg.restored": "3D ভিউ খোলা হয়েছে",
  "v3d.msg.empty": "3D-তে দেখানোর কিছু নেই",
- "v3d.view_name": "3D ভিউ"
+ "v3d.view_name": "3D ভিউ",
+ "cmd.view.orbit_center": "মডেলের কেন্দ্রের চারপাশে অরবিট",
+ "cmd.view.orbit_auto": "মডেলের স্বয়ংক্রিয় অরবিট"
 }

@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3D pogled obrisan",
  "v3d.msg.restored": "3D pogled otvoren",
  "v3d.msg.empty": "Nema što prikazati u 3D",
- "v3d.view_name": "3D pogled"
+ "v3d.view_name": "3D pogled",
+ "cmd.view.orbit_center": "Orbita oko središta modela",
+ "cmd.view.orbit_auto": "Automatska orbita modela"
 }

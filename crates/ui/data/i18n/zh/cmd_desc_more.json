@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "保存当前三维视图，包括相机、剖切框和样式。输入视图名称。",
  "cmd.view.hide_cat_3d.desc": "在三维中临时隐藏所选图元的类别。视图本身不变。",
  "cmd.view.isolate_cat_3d.desc": "在三维中仅临时显示所选图元的类别。",
- "cmd.view.reveal_3d.desc": "恢复三维中所有被临时隐藏的类别。"
+ "cmd.view.reveal_3d.desc": "恢复三维中所有被临时隐藏的类别。",
+ "cmd.view.orbit_center.desc": "轨道拖动绕模型中心旋转，而不是光标下的点，使模型始终保持在视野内。",
+ "cmd.view.orbit_auto.desc": "相机自动环绕模型，适用于演示。再次运行即可停止。"
 }

@@ -33,6 +33,8 @@ pub const CATS: [&str; 7] = ["wall", "door", "window", "curtain", "floor", "mep"
 
 /// Orbit pivot at the point under the cursor — no farther than this many camera distances.
 pub const PIVOT_MAX: f32 = 4.0;
+/// Turn speed of the automatic orbit, degrees per second.
+pub const AUTO_ORBIT_DEG_S: f32 = 12.0;
 /// Coverage below which a category is not picked by the ray (it is see-through).
 pub const PICK_COVERAGE: f32 = 0.5;
 
@@ -107,6 +109,8 @@ pub const LABEL_KEYS: &[&str] = &[
     "v3d.home.set",
     "v3d.home.reset",
     "v3d.home.tip",
+    "cmd.view.orbit_center",
+    "cmd.view.orbit_auto",
     "view_cube.cube.up",
     "view_cube.cube.down",
     "view_cube.cube.left",
@@ -231,6 +235,12 @@ pub struct Nav {
     /// A model job or the 3D build runs: `Some(percent)`, `Some(None)` when no amount is known.
     pub loading: Option<Option<u8>>,
     pub walk: Option<Walk>,
+    /// Orbit drags turn around the model centre, not the point under the cursor.
+    pub center_orbit: bool,
+    /// The camera turns around the model centre by itself (presentations).
+    pub auto_orbit: bool,
+    /// Centre of the visible model, set by the viewport each frame.
+    pub centre: Option<Vec3>,
     pub anim: Option<Transition>,
     /// Home view (pose, ortho); `None` — the default angle and "zoom to fit".
     pub home: Option<(Pose, bool)>,
@@ -282,6 +292,9 @@ impl Default for Nav {
             empty_act: None,
             loading: None,
             walk: None,
+            center_orbit: false,
+            auto_orbit: false,
+            centre: None,
             anim: None,
             home: None,
             pivot: None,
@@ -377,6 +390,11 @@ impl Nav {
         if resp.dragged() || scroll {
             self.anim = None;
         }
+        if self.auto_orbit && self.walk.is_none() && self.anim.is_none() && !resp.dragged() {
+            let dt = ui.input(|i| i.stable_dt).clamp(0.0, 0.1);
+            self.spin(cam, AUTO_ORBIT_DEG_S.to_radians() * dt);
+            ui.ctx().request_repaint();
+        }
         if let Some(a) = &mut self.anim {
             let dt = ui.input(|i| i.stable_dt).clamp(0.0, 0.1);
             let (p, done) = a.step(dt);
@@ -387,6 +405,13 @@ impl Nav {
                 ui.ctx().request_repaint();
             }
         }
+    }
+
+    /// Turns the camera by `dyaw` radians around the vertical axis through the model centre.
+    pub fn spin(&self, cam: &mut OrbitCamera, dyaw: f32) {
+        let c = self.centre.unwrap_or(cam.target);
+        cam.yaw += dyaw;
+        cam.target = c + ddc_render::glam::Quat::from_rotation_z(dyaw) * (cam.target - c);
     }
 
     /// Smooth transition to a pose.
@@ -713,6 +738,19 @@ fn h_walk(a: &mut EditorApp) {
     a.view.nav.toggle_walk(&mut a.view.camera);
     a.view3d = true;
 }
+fn h_orbit_center(a: &mut EditorApp) {
+    a.view.nav.center_orbit = !a.view.nav.center_orbit;
+    a.view3d = true;
+}
+fn h_orbit_auto(a: &mut EditorApp) {
+    let n = &mut a.view.nav;
+    n.auto_orbit = !n.auto_orbit;
+    if n.auto_orbit {
+        n.walk = None;
+        a.view.camera.ortho = false;
+    }
+    a.view3d = true;
+}
 fn h_home(a: &mut EditorApp) {
     let b = Nav::extents(a.scene.focus.or(a.scene.bounds), a.view.section_box);
     let aspect = a.view.nav.aspect;
@@ -834,6 +872,8 @@ pub fn register(a: &mut EditorApp) {
         ("view.style_xray", h_xray),
         ("view.projection", h_projection),
         ("view.walk", h_walk),
+        ("view.orbit_center", h_orbit_center),
+        ("view.orbit_auto", h_orbit_auto),
         ("view.home_3d", h_home),
         ("view.zoom_sel_3d", h_zoom_sel),
         ("view.section_box_fit", h_box_fit),

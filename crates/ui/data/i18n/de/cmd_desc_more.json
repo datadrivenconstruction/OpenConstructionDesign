@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Speichert die aktuelle 3D-Ansicht mit Kamera, Schnittbox und Darstellung. Einen Ansichtsnamen eingeben.",
  "cmd.view.hide_cat_3d.desc": "Blendet die Kategorie des gewählten Elements in 3D vorübergehend aus. Die Ansicht bleibt unverändert.",
  "cmd.view.isolate_cat_3d.desc": "Zeigt in 3D vorübergehend nur die Kategorie des gewählten Elements.",
- "cmd.view.reveal_3d.desc": "Blendet alle in 3D vorübergehend ausgeblendeten Kategorien wieder ein."
+ "cmd.view.reveal_3d.desc": "Blendet alle in 3D vorübergehend ausgeblendeten Kategorien wieder ein.",
+ "cmd.view.orbit_center.desc": "Das Orbit-Ziehen dreht um die Modellmitte statt um den Punkt unter dem Cursor, sodass das Modell im Bild bleibt.",
+ "cmd.view.orbit_auto.desc": "Die Kamera umkreist das Modell selbstständig, für Präsentationen. Erneut ausführen zum Stoppen."
 }

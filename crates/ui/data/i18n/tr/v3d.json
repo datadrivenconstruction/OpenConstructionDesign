@@ -66,5 +66,7 @@
  "v3d.msg.deleted": "3B görünüm silindi",
  "v3d.msg.restored": "3B görünüm açıldı",
  "v3d.msg.empty": "3B'de gösterilecek bir şey yok",
- "v3d.view_name": "3B görünüm"
+ "v3d.view_name": "3B görünüm",
+ "cmd.view.orbit_center": "Model merkezi etrafında yörünge",
+ "cmd.view.orbit_auto": "Modeli otomatik döndür"
 }

@@ -13,6 +13,10 @@ use rusqlite::{Connection, OpenFlags, OptionalExtension};
 
 use crate::{Changes, ElKey, Error, Model, RevealChange, RevealStep, PHASED};
 
+/// Element tables the replay shows besides the phased ones: the bodies and masses an applied plan
+/// is mostly built from.
+const WALKED_EXTRA: [&str; 2] = ["solid", "mass"];
+
 /// One journal operation (or `stride` consecutive ones): the oldest sequence number, kind and touched rows.
 #[derive(Clone, Debug, PartialEq)]
 pub struct WalkStep {
@@ -92,8 +96,11 @@ impl Iterator for JournalWalk {
                 let before = w.m.as_ref().unwrap().change_head();
                 w.m.as_mut().unwrap().undo()?;
                 let ch = w.m.as_ref().unwrap().changes_since(before);
-                for t in PHASED {
-                    for &id in ch.rows.get(t).into_iter().flatten() {
+                for t in PHASED.iter().chain(WALKED_EXTRA.iter()) {
+                    // creation order (ids rise with it), not hash order
+                    let mut ids: Vec<i64> = ch.rows.get(*t).into_iter().flatten().copied().collect();
+                    ids.sort_unstable();
+                    for id in ids {
                         let old = exists(w.m.as_ref().unwrap().sql(), t, id)?;
                         let key = (t.to_string(), id);
                         let new = match w.alive.get(&key) {

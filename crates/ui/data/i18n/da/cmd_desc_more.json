@@ -49,5 +49,7 @@
  "cmd.view.save_3d.desc": "Gemmer den aktuelle 3D-visning med kamera, snitboks og stil. Indtast et visningsnavn.",
  "cmd.view.hide_cat_3d.desc": "Skjuler midlertidigt kategorien for det valgte element i 3D. Visningen ændres ikke.",
  "cmd.view.isolate_cat_3d.desc": "Viser midlertidigt kun kategorien for det valgte element i 3D.",
- "cmd.view.reveal_3d.desc": "Henter alle midlertidigt skjulte kategorier frem igen i 3D."
+ "cmd.view.reveal_3d.desc": "Henter alle midlertidigt skjulte kategorier frem igen i 3D.",
+ "cmd.view.orbit_center.desc": "Kredsdrag drejer om modellens centrum i stedet for punktet under markøren, så modellen bliver i billedet.",
+ "cmd.view.orbit_auto.desc": "Kameraet kredser selv om modellen, til præsentationer. Kør igen for at stoppe."
 }
