@@ -876,6 +876,9 @@ pub fn actions(
         if let Some((text, tone)) = &reason_text {
             reason_note(ui, th, text, *tone);
         }
+        if !stale {
+            blocked_bar(ui, cx, plan, acts);
+        }
     }
     ui.ctx().data_mut(|d| {
         if asking {
@@ -902,19 +905,72 @@ fn show_all_button(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action
     }
 }
 
+/// The blocking checks of both gates: what holds Apply off, whatever the card above scrolled to.
+fn blocking(plan: &PlanView) -> Vec<&PlanIssue> {
+    plan.issues
+        .iter()
+        .chain(&plan.main_issues)
+        .filter(|i| i.level == IssueLevel::Block)
+        .collect()
+}
+
+/// Under Apply: each blocking check by name, and the two ways out of it.
+fn blocked_bar(ui: &mut Ui, cx: &Cx<'_>, plan: &PlanView, acts: &mut Vec<Action>) {
+    let (th, cat) = (cx.th, cx.cat);
+    let bl = blocking(plan);
+    if bl.is_empty() {
+        return;
+    }
+    // the bar has no hover outline of its own; a click still frames the element
+    let mut hot = None;
+    for issue in &bl {
+        issue_line(ui, cx, issue, acts, &mut hot);
+    }
+    let mut items: Vec<u32> = bl.iter().filter_map(|i| i.item).collect();
+    items.sort_unstable();
+    items.dedup();
+    items.retain(|n| plan.items.iter().any(|i| i.id == *n && i.checked));
+    let rest = plan.items.iter().filter(|i| i.checked && !items.contains(&i.id)).count();
+    ui.horizontal_wrapped(|ui| {
+        if !items.is_empty() && rest > 0 {
+            let list = items.iter().map(u32::to_string).collect::<Vec<_>>().join(", ");
+            if Button::secondary(&cat.tf("ai.plan.untick_blocked", &[("items", &list)]))
+                .small()
+                .show(ui, th)
+                .clicked()
+            {
+                acts.push(Action::SetChecked(items.iter().map(|n| (*n, false)).collect()));
+            }
+        }
+        if Button::secondary(&cat.t("ai.plan.ask_fix"))
+            .small()
+            .show(ui, th)
+            .clicked()
+        {
+            let what = bl
+                .iter()
+                .map(|i| logic::issue_text(cat, i))
+                .collect::<Vec<_>>()
+                .join("; ");
+            acts.push(Action::AskFix(cat.tf("ai.plan.fix_prompt", &[("what", &what)])));
+        }
+    });
+}
+
 fn plan_card_footer(ui: &mut Ui, cx: &Cx<'_>, plan: &PlanView) {
     let (th, cat) = (cx.th, cx.cat);
     let (n, m) = review::accepted(&plan.items);
-    // the review keys are a tooltip: four lines of shortcuts under every draft read as noise
-    kit::caption(
-        ui,
-        th,
-        &cat.tf(
+    // a blocked plan applies nothing: "13 of 13 will be applied" under it was a promise it broke
+    let text = if blocking(plan).is_empty() {
+        cat.tf(
             "ai.plan.will_apply",
             &[("n", &n.to_string()), ("m", &m.to_string())],
-        ),
-    )
-    .on_hover_text(cat.t("ai.plan.keys_hint"));
+        )
+    } else {
+        cat.t("ai.plan.will_apply_none")
+    };
+    // the review keys are a tooltip: four lines of shortcuts under every draft read as noise
+    kit::caption(ui, th, &text).on_hover_text(cat.t("ai.plan.keys_hint"));
 }
 
 /// Drafts of this many items or more ask before Reject.

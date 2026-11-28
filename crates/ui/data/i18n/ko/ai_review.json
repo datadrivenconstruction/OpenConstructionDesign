@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "승인된 {n}개 적용",
  "ai.plan.will_apply": "{m}개 변경 중 {n}개가 적용됩니다",
- "ai.plan.keys_hint": "J/K 또는 Alt+위/아래 이동 · A 승인 · R 거부 · Space 전환 · Shift+A / Shift+R 그룹 전체 · Ctrl+Enter 적용 · Esc 뷰로 돌아가기 (초안 유지)"
+ "ai.plan.keys_hint": "J/K 또는 Alt+위/아래 이동 · A 승인 · R 거부 · Space 전환 · Shift+A / Shift+R 그룹 전체 · Ctrl+Enter 적용 · Esc 뷰로 돌아가기 (초안 유지)",
+ "ai.plan.will_apply_none": "차단하는 문제가 남아 있는 동안에는 아무것도 적용되지 않습니다",
+ "ai.plan.untick_blocked": "항목 {items} 제외",
+ "ai.plan.ask_fix": "어시스턴트에게 수정 요청",
+ "ai.plan.fix_prompt": "적용할 수 있도록 초안을 고쳐 주세요. 차단 문제: {what}"
 }

@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Käytä {n} hyväksyttyä",
  "ai.plan.will_apply": "{n} / {m} muutosta käytetään",
- "ai.plan.keys_hint": "J/K tai Alt+ylös/alas siirtää · A hyväksyy · R hylkää · Välilyönti vaihtaa · Shift+A / Shift+R koko ryhmä · Ctrl+Enter käyttää · Esc takaisin näkymään (säilyttää luonnoksen)"
+ "ai.plan.keys_hint": "J/K tai Alt+ylös/alas siirtää · A hyväksyy · R hylkää · Välilyönti vaihtaa · Shift+A / Shift+R koko ryhmä · Ctrl+Enter käyttää · Esc takaisin näkymään (säilyttää luonnoksen)",
+ "ai.plan.will_apply_none": "Mitään ei toteuteta, kun estävä ongelma on olemassa",
+ "ai.plan.untick_blocked": "Jätä pois kohta {items}",
+ "ai.plan.ask_fix": "Pyydä avustajaa korjaamaan",
+ "ai.plan.fix_prompt": "Korjaa luonnos niin, että se voidaan toteuttaa. Estävät ongelmat: {what}"
 }

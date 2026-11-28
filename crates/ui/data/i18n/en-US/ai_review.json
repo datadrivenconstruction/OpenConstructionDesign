@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Apply {n} accepted",
  "ai.plan.will_apply": "{n} of {m} changes will be applied",
- "ai.plan.keys_hint": "J/K or Alt+Up/Down move · A accept · R reject · Space toggle · Shift+A / Shift+R whole group · Ctrl+Enter apply · Esc back to the view (keeps the draft)"
+ "ai.plan.keys_hint": "J/K or Alt+Up/Down move · A accept · R reject · Space toggle · Shift+A / Shift+R whole group · Ctrl+Enter apply · Esc back to the view (keeps the draft)",
+ "ai.plan.will_apply_none": "Nothing will be applied while a blocking problem remains",
+ "ai.plan.untick_blocked": "Leave out item {items}",
+ "ai.plan.ask_fix": "Ask the assistant to fix",
+ "ai.plan.fix_prompt": "Fix the draft so it can be applied. Blocking problems: {what}"
 }

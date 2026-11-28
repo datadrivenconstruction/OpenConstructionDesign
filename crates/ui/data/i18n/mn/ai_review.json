@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Зөвшөөрсөн {n}-ийг хэрэгжүүлэх",
  "ai.plan.will_apply": "{m}-аас {n} өөрчлөлт хэрэгжинэ",
- "ai.plan.keys_hint": "J/K эсвэл Alt+Up/Down зөөнө · A зөвшөөрнө · R татгалзана · Space сольно · Shift+A / Shift+R бүх бүлэг · Ctrl+Enter хэрэгжүүлнэ · Esc харагдац руу буцна (ноорог хадгалагдана)"
+ "ai.plan.keys_hint": "J/K эсвэл Alt+Up/Down зөөнө · A зөвшөөрнө · R татгалзана · Space сольно · Shift+A / Shift+R бүх бүлэг · Ctrl+Enter хэрэгжүүлнэ · Esc харагдац руу буцна (ноорог хадгалагдана)",
+ "ai.plan.will_apply_none": "Саад болох асуудал байгаа бол юу ч хэрэгжихгүй",
+ "ai.plan.untick_blocked": "{items} зүйлийг орхих",
+ "ai.plan.ask_fix": "Туслахаас засахыг хүсэх",
+ "ai.plan.fix_prompt": "Ноорогийг хэрэгжүүлж болохоор засна уу. Саад болох асуудлууд: {what}"
 }

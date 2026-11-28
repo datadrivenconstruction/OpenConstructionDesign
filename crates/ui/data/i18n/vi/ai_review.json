@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Áp dụng {n} đã chấp nhận",
  "ai.plan.will_apply": "{n} trên {m} thay đổi sẽ được áp dụng",
- "ai.plan.keys_hint": "J/K hoặc Alt+Lên/Xuống để di chuyển · A chấp nhận · R từ chối · Space bật/tắt · Shift+A / Shift+R cả nhóm · Ctrl+Enter áp dụng · Esc về góc nhìn (giữ bản nháp)"
+ "ai.plan.keys_hint": "J/K hoặc Alt+Lên/Xuống để di chuyển · A chấp nhận · R từ chối · Space bật/tắt · Shift+A / Shift+R cả nhóm · Ctrl+Enter áp dụng · Esc về góc nhìn (giữ bản nháp)",
+ "ai.plan.will_apply_none": "Sẽ không áp dụng gì cả khi vẫn còn vấn đề chặn",
+ "ai.plan.untick_blocked": "Bỏ qua mục {items}",
+ "ai.plan.ask_fix": "Nhờ trợ lý sửa",
+ "ai.plan.fix_prompt": "Hãy sửa bản nháp để có thể áp dụng. Các vấn đề chặn: {what}"
 }

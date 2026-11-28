@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Приложи приетите: {n}",
  "ai.plan.will_apply": "Ще бъдат приложени {n} от {m} промени",
- "ai.plan.keys_hint": "J/K или Alt+Up/Down — преместване · A приема · R отхвърля · Space превключва · Shift+A / Shift+R за цялата група · Ctrl+Enter прилага · Esc — обратно към изгледа (черновата се запазва)"
+ "ai.plan.keys_hint": "J/K или Alt+Up/Down — преместване · A приема · R отхвърля · Space превключва · Shift+A / Shift+R за цялата група · Ctrl+Enter прилага · Esc — обратно към изгледа (черновата се запазва)",
+ "ai.plan.will_apply_none": "Нищо няма да се приложи, докато има блокиращ проблем",
+ "ai.plan.untick_blocked": "Пропусни елемент {items}",
+ "ai.plan.ask_fix": "Помоли асистента да поправи",
+ "ai.plan.fix_prompt": "Поправи черновата, за да може да се приложи. Блокиращи проблеми: {what}"
 }

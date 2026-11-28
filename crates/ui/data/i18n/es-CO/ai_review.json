@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Aplicar {n} aceptados",
  "ai.plan.will_apply": "Se aplicarán {n} de {m} cambios",
- "ai.plan.keys_hint": "J/K o Alt+Arriba/Abajo mover · A aceptar · R rechazar · Espacio alternar · Mayús+A / Mayús+R grupo completo · Ctrl+Intro aplicar · Esc volver a la vista (conserva el borrador)"
+ "ai.plan.keys_hint": "J/K o Alt+Arriba/Abajo mover · A aceptar · R rechazar · Espacio alternar · Mayús+A / Mayús+R grupo completo · Ctrl+Intro aplicar · Esc volver a la vista (conserva el borrador)",
+ "ai.plan.will_apply_none": "No se aplicará nada mientras haya un problema bloqueante",
+ "ai.plan.untick_blocked": "Omitir el elemento {items}",
+ "ai.plan.ask_fix": "Pedir al asistente que lo corrija",
+ "ai.plan.fix_prompt": "Corrige el borrador para que se pueda aplicar. Problemas bloqueantes: {what}"
 }

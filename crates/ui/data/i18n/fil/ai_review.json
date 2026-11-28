@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "I-apply ang {n} na tinanggap",
  "ai.plan.will_apply": "{n} sa {m} pagbabago ang ia-apply",
- "ai.plan.keys_hint": "Gumagalaw ang J/K o Alt+Up/Down · A tanggapin · R tanggihan · Space i-toggle · Shift+A / Shift+R buong grupo · Ctrl+Enter i-apply · Esc bumalik sa view (nananatili ang draft)"
+ "ai.plan.keys_hint": "Gumagalaw ang J/K o Alt+Up/Down · A tanggapin · R tanggihan · Space i-toggle · Shift+A / Shift+R buong grupo · Ctrl+Enter i-apply · Esc bumalik sa view (nananatili ang draft)",
+ "ai.plan.will_apply_none": "Walang ia-apply habang may humaharang na problema",
+ "ai.plan.untick_blocked": "Alisin ang item {items}",
+ "ai.plan.ask_fix": "Ipaayos sa assistant",
+ "ai.plan.fix_prompt": "Ayusin ang draft para ma-apply ito. Mga humaharang na problema: {what}"
 }

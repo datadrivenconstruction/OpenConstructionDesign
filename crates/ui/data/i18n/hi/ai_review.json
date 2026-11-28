@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "स्वीकृत {n} लागू करें",
  "ai.plan.will_apply": "{m} में से {n} बदलाव लागू होंगे",
- "ai.plan.keys_hint": "J/K या Alt+Up/Down से चलें · A स्वीकार · R अस्वीकार · Space टॉगल · Shift+A / Shift+R पूरा समूह · Ctrl+Enter लागू करें · Esc दृश्य पर लौटें (ड्राफ़्ट रहता है)"
+ "ai.plan.keys_hint": "J/K या Alt+Up/Down से चलें · A स्वीकार · R अस्वीकार · Space टॉगल · Shift+A / Shift+R पूरा समूह · Ctrl+Enter लागू करें · Esc दृश्य पर लौटें (ड्राफ़्ट रहता है)",
+ "ai.plan.will_apply_none": "जब तक रोकने वाली समस्या है, कुछ भी लागू नहीं होगा",
+ "ai.plan.untick_blocked": "आइटम {items} छोड़ें",
+ "ai.plan.ask_fix": "सहायक से ठीक करने को कहें",
+ "ai.plan.fix_prompt": "ड्राफ़्ट को ठीक करो ताकि उसे लागू किया जा सके। रोकने वाली समस्याएँ: {what}"
 }

@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Aplicar {n} aceitos",
  "ai.plan.will_apply": "{n} de {m} alterações serão aplicadas",
- "ai.plan.keys_hint": "J/K ou Alt+Cima/Baixo movem · A aceita · R rejeita · Espaço alterna · Shift+A / Shift+R grupo inteiro · Ctrl+Enter aplica · Esc volta à vista (mantém o rascunho)"
+ "ai.plan.keys_hint": "J/K ou Alt+Cima/Baixo movem · A aceita · R rejeita · Espaço alterna · Shift+A / Shift+R grupo inteiro · Ctrl+Enter aplica · Esc volta à vista (mantém o rascunho)",
+ "ai.plan.will_apply_none": "Nada será aplicado enquanto houver um problema bloqueante",
+ "ai.plan.untick_blocked": "Omitir o item {items}",
+ "ai.plan.ask_fix": "Pedir ao assistente para corrigir",
+ "ai.plan.fix_prompt": "Corrige o rascunho para que possa ser aplicado. Problemas bloqueantes: {what}"
 }

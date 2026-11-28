@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Қабылданған {n} қолдану",
  "ai.plan.will_apply": "{m} өзгерістің {n}-і қолданылады",
- "ai.plan.keys_hint": "J/K немесе Alt+Up/Down — жылжыту · A — қабылдау · R — қабылдамау · Space — ауыстыру · Shift+A / Shift+R — бүкіл топ · Ctrl+Enter — қолдану · Esc — көріністе қайту (жобаны сақтайды)"
+ "ai.plan.keys_hint": "J/K немесе Alt+Up/Down — жылжыту · A — қабылдау · R — қабылдамау · Space — ауыстыру · Shift+A / Shift+R — бүкіл топ · Ctrl+Enter — қолдану · Esc — көріністе қайту (жобаны сақтайды)",
+ "ai.plan.will_apply_none": "Бөгейтін мәселе болғанша ештеңе қолданылмайды",
+ "ai.plan.untick_blocked": "{items} тармағын қалдырмау",
+ "ai.plan.ask_fix": "Көмекшіден түзетуді сұрау",
+ "ai.plan.fix_prompt": "Жобаны қолдануға болатындай түзет. Бөгейтін мәселелер: {what}"
 }

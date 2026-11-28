@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Anvend {n} accepteret",
  "ai.plan.will_apply": "{n} af {m} ændringer anvendes",
- "ai.plan.keys_hint": "J/K eller Alt+Op/Ned flytter · A accepterer · R afviser · Mellemrum skifter · Shift+A / Shift+R hele gruppen · Ctrl+Enter anvender · Esc tilbage til visningen (beholder udkastet)"
+ "ai.plan.keys_hint": "J/K eller Alt+Op/Ned flytter · A accepterer · R afviser · Mellemrum skifter · Shift+A / Shift+R hele gruppen · Ctrl+Enter anvender · Esc tilbage til visningen (beholder udkastet)",
+ "ai.plan.will_apply_none": "Intet bliver anvendt, så længe der er et blokerende problem",
+ "ai.plan.untick_blocked": "Udelad punkt {items}",
+ "ai.plan.ask_fix": "Bed assistenten om at rette",
+ "ai.plan.fix_prompt": "Ret udkastet, så det kan anvendes. Blokerende problemer: {what}"
 }

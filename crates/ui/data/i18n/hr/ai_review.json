@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Primijeni {n} prihvaćenih",
  "ai.plan.will_apply": "{n} od {m} promjena bit će primijenjeno",
- "ai.plan.keys_hint": "J/K ili Alt+Gore/Dolje pomiču · A prihvaća · R odbija · Razmaknica preklapa · Shift+A / Shift+R cijela grupa · Ctrl+Enter primijeni · Esc natrag na pogled (zadržava nacrt)"
+ "ai.plan.keys_hint": "J/K ili Alt+Gore/Dolje pomiču · A prihvaća · R odbija · Razmaknica preklapa · Shift+A / Shift+R cijela grupa · Ctrl+Enter primijeni · Esc natrag na pogled (zadržava nacrt)",
+ "ai.plan.will_apply_none": "Ništa se neće primijeniti dok postoji problem koji blokira",
+ "ai.plan.untick_blocked": "Izostavi stavku {items}",
+ "ai.plan.ask_fix": "Zatraži od asistenta ispravak",
+ "ai.plan.fix_prompt": "Ispravi nacrt tako da se može primijeniti. Problemi koji blokiraju: {what}"
 }

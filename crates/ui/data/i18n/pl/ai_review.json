@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Zastosuj {n} zaakceptowane",
  "ai.plan.will_apply": "Zostanie zastosowanych zmian: {n} z {m}",
- "ai.plan.keys_hint": "J/K lub Alt+strzałka góra/dół przesuwa · A akceptuje · R odrzuca · Spacja przełącza · Shift+A / Shift+R cała grupa · Ctrl+Enter stosuje · Esc wraca do widoku (zachowuje szkic)"
+ "ai.plan.keys_hint": "J/K lub Alt+strzałka góra/dół przesuwa · A akceptuje · R odrzuca · Spacja przełącza · Shift+A / Shift+R cała grupa · Ctrl+Enter stosuje · Esc wraca do widoku (zachowuje szkic)",
+ "ai.plan.will_apply_none": "Dopóki istnieje problem blokujący, nic nie zostanie zastosowane",
+ "ai.plan.untick_blocked": "Pomiń pozycję {items}",
+ "ai.plan.ask_fix": "Poproś asystenta o poprawkę",
+ "ai.plan.fix_prompt": "Popraw szkic tak, aby dało się go zastosować. Problemy blokujące: {what}"
 }

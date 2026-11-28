@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Elfogadott {n} alkalmazása",
  "ai.plan.will_apply": "{n} / {m} módosítás lesz alkalmazva",
- "ai.plan.keys_hint": "J/K vagy Alt+Fel/Le mozgat · A elfogad · R elutasít · Szóköz kapcsol · Shift+A / Shift+R a teljes csoport · Ctrl+Enter alkalmaz · Esc vissza a nézetbe (megtartja a vázlatot)"
+ "ai.plan.keys_hint": "J/K vagy Alt+Fel/Le mozgat · A elfogad · R elutasít · Szóköz kapcsol · Shift+A / Shift+R a teljes csoport · Ctrl+Enter alkalmaz · Esc vissza a nézetbe (megtartja a vázlatot)",
+ "ai.plan.will_apply_none": "Amíg blokkoló probléma van, semmi sem lesz alkalmazva",
+ "ai.plan.untick_blocked": "{items} tétel kihagyása",
+ "ai.plan.ask_fix": "Kérje meg az asszisztenst a javításra",
+ "ai.plan.fix_prompt": "Javítsd ki a tervezetet, hogy alkalmazható legyen. Blokkoló problémák: {what}"
 }

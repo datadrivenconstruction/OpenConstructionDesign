@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Použít {n} přijaté",
  "ai.plan.will_apply": "Použito bude {n} z {m} změn",
- "ai.plan.keys_hint": "J/K nebo Alt+šipka nahoru/dolů posun · A přijmout · R zamítnout · Mezerník přepnout · Shift+A / Shift+R celou skupinu · Ctrl+Enter použít · Esc zpět do pohledu (návrh zůstane)"
+ "ai.plan.keys_hint": "J/K nebo Alt+šipka nahoru/dolů posun · A přijmout · R zamítnout · Mezerník přepnout · Shift+A / Shift+R celou skupinu · Ctrl+Enter použít · Esc zpět do pohledu (návrh zůstane)",
+ "ai.plan.will_apply_none": "Dokud existuje blokující problém, nic se nepoužije",
+ "ai.plan.untick_blocked": "Vynechat položku {items}",
+ "ai.plan.ask_fix": "Požádat asistenta o opravu",
+ "ai.plan.fix_prompt": "Oprav návrh tak, aby šel použít. Blokující problémy: {what}"
 }

@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "应用已接受的 {n} 项",
  "ai.plan.will_apply": "将应用 {m} 项更改中的 {n} 项",
- "ai.plan.keys_hint": "J/K 或 Alt+上/下 移动 · A 接受 · R 拒绝 · 空格 切换 · Shift+A / Shift+R 整组 · Ctrl+Enter 应用 · Esc 返回视图（保留草稿）"
+ "ai.plan.keys_hint": "J/K 或 Alt+上/下 移动 · A 接受 · R 拒绝 · 空格 切换 · Shift+A / Shift+R 整组 · Ctrl+Enter 应用 · Esc 返回视图（保留草稿）",
+ "ai.plan.will_apply_none": "存在阻止应用的问题时，不会应用任何内容",
+ "ai.plan.untick_blocked": "排除项目 {items}",
+ "ai.plan.ask_fix": "请助手修复",
+ "ai.plan.fix_prompt": "请修复草稿，使其可以应用。阻止应用的问题：{what}"
 }

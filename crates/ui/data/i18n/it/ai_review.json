@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Applica {n} accettate",
  "ai.plan.will_apply": "{n} di {m} modifiche saranno applicate",
- "ai.plan.keys_hint": "J/K o Alt+Su/Giù spostano · A accetta · R rifiuta · Spazio alterna · Maiusc+A / Maiusc+R intero gruppo · Ctrl+Invio applica · Esc torna alla vista (mantiene la bozza)"
+ "ai.plan.keys_hint": "J/K o Alt+Su/Giù spostano · A accetta · R rifiuta · Spazio alterna · Maiusc+A / Maiusc+R intero gruppo · Ctrl+Invio applica · Esc torna alla vista (mantiene la bozza)",
+ "ai.plan.will_apply_none": "Non verrà applicato nulla finché resta un problema bloccante",
+ "ai.plan.untick_blocked": "Escludi la voce {items}",
+ "ai.plan.ask_fix": "Chiedi all'assistente di correggere",
+ "ai.plan.fix_prompt": "Correggi la bozza in modo che possa essere applicata. Problemi bloccanti: {what}"
 }

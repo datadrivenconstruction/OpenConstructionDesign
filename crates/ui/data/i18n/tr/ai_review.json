@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Kabul edilen {n} uygula",
  "ai.plan.will_apply": "{m} değişiklikten {n} tanesi uygulanacak",
- "ai.plan.keys_hint": "J/K veya Alt+Yukarı/Aşağı taşır · A kabul · R reddet · Space değiştir · Shift+A / Shift+R tüm grup · Ctrl+Enter uygula · Esc görünüme döner (taslak kalır)"
+ "ai.plan.keys_hint": "J/K veya Alt+Yukarı/Aşağı taşır · A kabul · R reddet · Space değiştir · Shift+A / Shift+R tüm grup · Ctrl+Enter uygula · Esc görünüme döner (taslak kalır)",
+ "ai.plan.will_apply_none": "Engelleyen bir sorun olduğu sürece hiçbir şey uygulanmaz",
+ "ai.plan.untick_blocked": "{items} öğesini dışarıda bırak",
+ "ai.plan.ask_fix": "Asistandan düzeltmesini iste",
+ "ai.plan.fix_prompt": "Taslağı uygulanabilir olacak şekilde düzelt. Engelleyen sorunlar: {what}"
 }

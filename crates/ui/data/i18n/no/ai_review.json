@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Bruk {n} godkjent",
  "ai.plan.will_apply": "{n} av {m} endringer blir brukt",
- "ai.plan.keys_hint": "J/K eller Alt+opp/ned flytter · A godkjenner · R avviser · Mellomrom veksler · Shift+A / Shift+R hele gruppen · Ctrl+Enter bruker · Esc tilbake til visningen (beholder utkastet)"
+ "ai.plan.keys_hint": "J/K eller Alt+opp/ned flytter · A godkjenner · R avviser · Mellomrom veksler · Shift+A / Shift+R hele gruppen · Ctrl+Enter bruker · Esc tilbake til visningen (beholder utkastet)",
+ "ai.plan.will_apply_none": "Ingenting blir brukt så lenge det finnes et blokkerende problem",
+ "ai.plan.untick_blocked": "Utelat punkt {items}",
+ "ai.plan.ask_fix": "Be assistenten om å rette",
+ "ai.plan.fix_prompt": "Rett utkastet slik at det kan brukes. Blokkerende problemer: {what}"
 }

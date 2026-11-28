@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "{n} angenommene anwenden",
  "ai.plan.will_apply": "{n} von {m} Änderungen werden angewendet",
- "ai.plan.keys_hint": "J/K oder Alt+Pfeil hoch/runter bewegt · A annehmen · R ablehnen · Space umschalten · Shift+A / Shift+R ganze Gruppe · Ctrl+Enter anwenden · Esc zurück zur Ansicht (Entwurf bleibt)"
+ "ai.plan.keys_hint": "J/K oder Alt+Pfeil hoch/runter bewegt · A annehmen · R ablehnen · Space umschalten · Shift+A / Shift+R ganze Gruppe · Ctrl+Enter anwenden · Esc zurück zur Ansicht (Entwurf bleibt)",
+ "ai.plan.will_apply_none": "Solange ein blockierendes Problem besteht, wird nichts angewendet",
+ "ai.plan.untick_blocked": "Eintrag {items} weglassen",
+ "ai.plan.ask_fix": "Assistent um Korrektur bitten",
+ "ai.plan.fix_prompt": "Korrigiere den Entwurf, damit er angewendet werden kann. Blockierende Probleme: {what}"
 }

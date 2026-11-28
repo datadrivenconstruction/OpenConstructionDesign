@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "{n}টি গৃহীত প্রয়োগ করুন",
  "ai.plan.will_apply": "{m}টির মধ্যে {n}টি পরিবর্তন প্রয়োগ হবে",
- "ai.plan.keys_hint": "J/K বা Alt+Up/Down সরায় · A গ্রহণ · R বাতিল · Space টগল · Shift+A / Shift+R পুরো গ্রুপ · Ctrl+Enter প্রয়োগ · Esc ভিউতে ফেরে (ড্রাফট রাখে)"
+ "ai.plan.keys_hint": "J/K বা Alt+Up/Down সরায় · A গ্রহণ · R বাতিল · Space টগল · Shift+A / Shift+R পুরো গ্রুপ · Ctrl+Enter প্রয়োগ · Esc ভিউতে ফেরে (ড্রাফট রাখে)",
+ "ai.plan.will_apply_none": "বাধা সৃষ্টিকারী সমস্যা থাকা পর্যন্ত কিছুই প্রয়োগ হবে না",
+ "ai.plan.untick_blocked": "আইটেম {items} বাদ দিন",
+ "ai.plan.ask_fix": "সহকারীকে ঠিক করতে বলুন",
+ "ai.plan.fix_prompt": "খসড়াটি ঠিক করুন যাতে প্রয়োগ করা যায়। বাধা সৃষ্টিকারী সমস্যা: {what}"
 }

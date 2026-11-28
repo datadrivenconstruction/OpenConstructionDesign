@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "นำ {n} ที่ยอมรับไปใช้",
  "ai.plan.will_apply": "การเปลี่ยนแปลง {n} จาก {m} จะถูกนำไปใช้",
- "ai.plan.keys_hint": "J/K หรือ Alt+ขึ้น/ลง เลื่อน · A ยอมรับ · R ปฏิเสธ · Space สลับ · Shift+A / Shift+R ทั้งกลุ่ม · Ctrl+Enter นำไปใช้ · Esc กลับไปยังมุมมอง (เก็บฉบับร่างไว้)"
+ "ai.plan.keys_hint": "J/K หรือ Alt+ขึ้น/ลง เลื่อน · A ยอมรับ · R ปฏิเสธ · Space สลับ · Shift+A / Shift+R ทั้งกลุ่ม · Ctrl+Enter นำไปใช้ · Esc กลับไปยังมุมมอง (เก็บฉบับร่างไว้)",
+ "ai.plan.will_apply_none": "จะไม่มีการนำไปใช้จนกว่าปัญหาที่ขวางอยู่จะหมดไป",
+ "ai.plan.untick_blocked": "ข้ามรายการ {items}",
+ "ai.plan.ask_fix": "ให้ผู้ช่วยแก้ไข",
+ "ai.plan.fix_prompt": "แก้ไขฉบับร่างให้นำไปใช้ได้ ปัญหาที่ขวางอยู่: {what}"
 }

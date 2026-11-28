@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Terapkan {n} diterima",
  "ai.plan.will_apply": "{n} dari {m} perubahan akan diterapkan",
- "ai.plan.keys_hint": "J/K atau Alt+Atas/Bawah memindahkan · A terima · R tolak · Spasi ganti centang · Shift+A / Shift+R seluruh grup · Ctrl+Enter terapkan · Esc kembali ke tampilan (draf tetap)"
+ "ai.plan.keys_hint": "J/K atau Alt+Atas/Bawah memindahkan · A terima · R tolak · Spasi ganti centang · Shift+A / Shift+R seluruh grup · Ctrl+Enter terapkan · Esc kembali ke tampilan (draf tetap)",
+ "ai.plan.will_apply_none": "Tidak ada yang akan diterapkan selama masih ada masalah yang menghalangi",
+ "ai.plan.untick_blocked": "Lewati butir {items}",
+ "ai.plan.ask_fix": "Minta asisten memperbaiki",
+ "ai.plan.fix_prompt": "Perbaiki draf agar dapat diterapkan. Masalah yang menghalangi: {what}"
 }

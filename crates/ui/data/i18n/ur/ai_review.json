@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "{n} قبول شدہ لاگو کریں",
  "ai.plan.will_apply": "{m} میں سے {n} تبدیلیاں لاگو ہوں گی",
- "ai.plan.keys_hint": "J/K یا Alt+Up/Down حرکت · A قبول · R مسترد · Space ٹوگل · Shift+A / Shift+R پورا گروپ · Ctrl+Enter لاگو · Esc منظر پر واپس (مسودہ رہتا ہے)"
+ "ai.plan.keys_hint": "J/K یا Alt+Up/Down حرکت · A قبول · R مسترد · Space ٹوگل · Shift+A / Shift+R پورا گروپ · Ctrl+Enter لاگو · Esc منظر پر واپس (مسودہ رہتا ہے)",
+ "ai.plan.will_apply_none": "جب تک رکاوٹ ڈالنے والا مسئلہ موجود ہے، کچھ بھی لاگو نہیں ہوگا",
+ "ai.plan.untick_blocked": "آئٹم {items} چھوڑ دیں",
+ "ai.plan.ask_fix": "اسسٹنٹ سے درست کرنے کو کہیں",
+ "ai.plan.fix_prompt": "مسودے کو ٹھیک کریں تاکہ اسے لاگو کیا جا سکے۔ رکاوٹ والے مسائل: {what}"
 }

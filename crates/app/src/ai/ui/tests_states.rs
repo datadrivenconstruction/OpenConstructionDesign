@@ -1125,6 +1125,40 @@ fn no_plan_shows_only_the_connect_card_in_russian() {
     no_plan_shows_only_the_connect_card(ddc_ui::Lang::Ru);
 }
 
+/// The bar under the dialog names the blocking check, offers to leave its item out or ask the
+/// assistant, and does not promise changes that will not happen.
+fn blocked_bar_names_the_problem(lang: ddc_ui::Lang) {
+    let ed = Editor::new_in_memory().unwrap();
+    let cat = ddc_ui::Catalog::new(lang);
+    let apply = cat.plural("ai.items.apply", 2);
+    let p = plan(&ed, 2, false, true);
+    let what = logic::issue_text(&cat, &p.issues[0]);
+    let f = facts(p, true, false);
+    let mut st = base(false);
+    let o = render(&ed, &mut st, &f, lang, ddc_ui::Mode::Light);
+    let tag = format!("{lang:?}");
+    let bar = o.buttons.iter().find(|b| b.label == apply).expect("Apply");
+    assert!(
+        o.texts.iter().any(|(t, r, _)| t.contains(&what) && r.top() > bar.top),
+        "{tag}: the problem is named under Apply"
+    );
+    assert!(has_text(&o, &cat.t("ai.plan.will_apply_none")), "{tag}: nothing will apply");
+    let untick = cat.tf("ai.plan.untick_blocked", &[("items", "1")]);
+    assert!(o.buttons.iter().any(|b| b.label == untick && b.enabled), "{tag}: leave item 1 out");
+    let ask = cat.t("ai.plan.ask_fix");
+    assert!(o.buttons.iter().any(|b| b.label == ask && b.enabled), "{tag}: ask to fix");
+}
+
+#[test]
+fn blocked_bar_names_the_problem_in_english() {
+    blocked_bar_names_the_problem(ddc_ui::Lang::En);
+}
+
+#[test]
+fn blocked_bar_names_the_problem_in_russian() {
+    blocked_bar_names_the_problem(ddc_ui::Lang::Ru);
+}
+
 #[test]
 fn not_connected_plan_says_why_in_english() {
     not_connected_plan_says_why(ddc_ui::Lang::En);

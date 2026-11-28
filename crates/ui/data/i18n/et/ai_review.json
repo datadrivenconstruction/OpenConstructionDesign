@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "Rakenda {n} vastuvõetud",
  "ai.plan.will_apply": "{n} / {m} muudatust rakendatakse",
- "ai.plan.keys_hint": "J/K või Alt+Üles/Alla liigutab · A võtab vastu · R lükkab tagasi · Tühik lülitab · Shift+A / Shift+R kogu rühm · Ctrl+Enter rakendab · Esc tagasi vaatesse (jätab mustandi alles)"
+ "ai.plan.keys_hint": "J/K või Alt+Üles/Alla liigutab · A võtab vastu · R lükkab tagasi · Tühik lülitab · Shift+A / Shift+R kogu rühm · Ctrl+Enter rakendab · Esc tagasi vaatesse (jätab mustandi alles)",
+ "ai.plan.will_apply_none": "Kuni blokeeriv probleem püsib, ei rakendata midagi",
+ "ai.plan.untick_blocked": "Jäta kirje {items} välja",
+ "ai.plan.ask_fix": "Palu assistendil parandada",
+ "ai.plan.fix_prompt": "Paranda kavand nii, et seda saaks rakendada. Blokeerivad probleemid: {what}"
 }

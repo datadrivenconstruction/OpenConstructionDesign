@@ -1,5 +1,9 @@
 {
  "ai.plan.apply_n": "{n} geaccepteerde toepassen",
  "ai.plan.will_apply": "{n} van {m} wijzigingen worden toegepast",
- "ai.plan.keys_hint": "J/K of Alt+Omhoog/Omlaag verplaatsen · A accepteren · R afwijzen · Spatie schakelen · Shift+A / Shift+R hele groep · Ctrl+Enter toepassen · Esc terug naar de weergave (het concept blijft bewaard)"
+ "ai.plan.keys_hint": "J/K of Alt+Omhoog/Omlaag verplaatsen · A accepteren · R afwijzen · Spatie schakelen · Shift+A / Shift+R hele groep · Ctrl+Enter toepassen · Esc terug naar de weergave (het concept blijft bewaard)",
+ "ai.plan.will_apply_none": "Er wordt niets toegepast zolang er een blokkerend probleem is",
+ "ai.plan.untick_blocked": "Item {items} weglaten",
+ "ai.plan.ask_fix": "Assistent om een oplossing vragen",
+ "ai.plan.fix_prompt": "Herstel het concept zodat het kan worden toegepast. Blokkerende problemen: {what}"
 }
