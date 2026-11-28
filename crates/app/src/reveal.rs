@@ -660,6 +660,37 @@ pub fn scene_elements(
     v
 }
 
+/// The editor scene with the material colours and textures of its solids and masses, as the
+/// 3D view shows them (the editor draws them in the category tone).
+pub fn with_materials(ed: &crate::editor::Editor, scene: ddc_render::Scene) -> ddc_render::Scene {
+    use crate::solid_tools::{SOLID_BASE, SOLID_SPAN};
+    let texl = crate::mat_tex::layers(ed);
+    let mut masses: std::collections::HashMap<u32, Option<i64>> = Default::default();
+    let meshes: Vec<ddc_render::SceneMesh> = scene
+        .meshes
+        .iter()
+        .map(|m| {
+            let mut m = (**m).clone();
+            let e = m.element;
+            let of = if (SOLID_BASE..SOLID_BASE + SOLID_SPAN).contains(&e) {
+                Some(("solid", i64::from(e - SOLID_BASE)))
+            } else if (crate::mass_tools::MASS_BASE..crate::mass_tools::MASS_END).contains(&e) {
+                (*masses.entry(e).or_insert_with(|| crate::mass_tools::mass_of_element(&ed.model, e))).map(|id| ("mass", id))
+            } else {
+                None
+            };
+            if let Some((table, id)) = of {
+                m.tag = texl.elem(table, id, m.tag);
+            }
+            m
+        })
+        .collect();
+    let mut s = ddc_render::Scene::new(meshes);
+    s.cats = scene.cats.clone();
+    s.focus = scene.focus;
+    s
+}
+
 /// The scene with its element numbers packed from 1 in their order, and the map from the old
 /// numbers. The renderer animates an element by its number, up to `MAX_ELEMS`; solids and other
 /// high ranges would fall outside and never move.
@@ -880,7 +911,7 @@ pub fn export_cli(
     span: Span,
     cam_mode: CamMode,
 ) -> Result<Exported, String> {
-    let (scene, map) = packed(&a.ed.scene());
+    let (scene, map) = packed(&with_materials(&a.ed, a.ed.scene()));
     let old: Vec<u32> = map.keys().copied().collect();
     let els = {
         let ed = &a.ed;

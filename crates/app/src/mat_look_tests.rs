@@ -159,3 +159,35 @@ fn a_body_shows_its_material_colour_clear_glass_and_a_row_for_a_new_name() {
     // a new material text got its row, so colour and properties are editable
     assert!(ed.model.materials().unwrap().iter().any(|m| m.spec.name == "Eiffel Tower Brown" && m.id != 0));
 }
+
+#[test]
+fn a_revealed_body_keeps_its_material_colour() {
+    use ddc_geom::{arc::BulgeRing, v2};
+    use ddc_model::{SolidForm, SolidFrame, SolidSpec};
+    let mut ed = Editor::new_in_memory().unwrap();
+    let ring = |r: f64| BulgeRing {
+        pts: (0..8).map(|i| (std::f64::consts::TAU * i as f64 / 8.0, r)).map(|(a, r)| v2(r * a.cos(), r * a.sin())).collect(),
+        bulges: vec![0.0; 8],
+    };
+    let id = ed
+        .model
+        .add_solid(&SolidSpec {
+            level: ed.level,
+            name: "lawn".into(),
+            void: false,
+            material: "grass".into(),
+            frame: SolidFrame::default(),
+            form: SolidForm::Blend { bottom: ring(1.0), top: ring(0.8), height: 1.0 },
+            ifc: None,
+        })
+        .unwrap();
+    ed.reload().unwrap();
+    let plain = ed.scene();
+    let shown = crate::reveal::with_materials(&ed, ed.scene());
+    let e = crate::solid_tools::SOLID_BASE + id as u32;
+    let tag = |s: &ddc_render::Scene| s.meshes.iter().find(|m| m.element == e).map(|m| m.tag);
+    assert!(tag(&plain).is_some(), "the editor scene draws the solid");
+    let t = tag(&shown).unwrap();
+    assert_eq!(t & ddc_render::scene::TAG_RGB, ddc_render::scene::TAG_RGB, "{t:#x}");
+    assert_eq!(t & 0xFF_FFFF, 0x5E8C3A);
+}
