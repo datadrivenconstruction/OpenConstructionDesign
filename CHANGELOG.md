@@ -25,6 +25,7 @@
 - UI shot scripts can open another project between steps and keep the view, and set the 3D camera with `zoom`, `eye` and `target`.
 
 ### AI assistant
+- Turn limits can be raised mid-turn, long builds stop every 16 operations and roll back cleanly, and the assistant shows an estimate before a run, key and account balances, and the output cap (64k by default).
 - Cost uses the amount the service reports for each reply, and cached input is counted at its own price; long chats reuse the cached start of the conversation.
 - Model gateway preset: models, prices and context size come from the gateway.
 - A spent key limit and an empty balance are their own errors with a next step; the balance is shown.
