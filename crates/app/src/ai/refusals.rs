@@ -50,7 +50,11 @@ pub fn human(detail: &str) -> String {
     let args: Vec<(&str, &str)> = r.args.iter().map(|(k, v)| (*k, v.as_str())).collect();
     let what = crate::tr(&refusal::what_key(r.msg_key), &args);
     let try_ = crate::tr(r.msg_key, &args);
-    format!("{what} {try_}")
+    // the detail is the one line that says what to fix: "see detail" without it is a dead end
+    match r.detail.as_deref().map(str::trim).filter(|d| !d.is_empty() && !what.contains(d)) {
+        Some(d) => format!("{what} {try_} ({d})"),
+        None => format!("{what} {try_}"),
+    }
 }
 
 #[cfg(test)]
@@ -95,6 +99,13 @@ mod tests {
         assert!(en.contains("AI settings"), "{en}");
         assert!(!ru.contains('{') && !ru.contains("snapshots_off"), "no JSON for the person: {ru}");
         assert_eq!(human("plain failure"), "plain failure");
+        let bad = refusal::of(RefusalCode::InvalidArgs).detail("args.items[0].title: missing");
+        let bad = refusal::to_wire(&CmdError::refused(bad).refusal(), "en").to_string();
+        let shown = crate::with_test_lang(true, || human(&bad));
+        assert!(shown.contains("args.items[0].title: missing"), "the field to fix is named: {shown}");
+        let crash = refusal::to_wire(&Refusal::from(AiError::Internal("lua: line 3".into())), "en");
+        let shown = crate::with_test_lang(true, || human(&crash.to_string()));
+        assert!(shown.contains("lua: line 3"), "the failure says where: {shown}");
         assert_eq!((code_of(&detail), code_of("plain failure")), (Some("snapshots_off"), None));
         // every code has its texts in the app catalog too
         for c in AI_CODES {
