@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Verborgen in deze weergave, bewaard en gedeselecteerd: {n}",
  "view_gfx.flt.bad_value": "Regelwaarde niet herkend: voer een getal in, eventueel met eenheid",
  "view_gfx.name_taken": "Deze naam is al in gebruik",
+ "view_gfx.mat.roughness": "Oppervlakteruwheid",
+ "view_gfx.mat.metallic": "Metaalachtig",
+ "view_gfx.mat.opacity": "Dekking",
+ "view_gfx.mat.ior": "Brekingsindex",
+ "view_gfx.mat.surface_reset": "Oppervlak terugzetten naar klassewaarden",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

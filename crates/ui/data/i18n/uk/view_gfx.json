@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Приховано в цьому виді, збережено і знято з вибору: {n}",
  "view_gfx.flt.bad_value": "Значення правила не розпізнано: введіть число, за потреби з одиницею",
  "view_gfx.name_taken": "Ця назва вже зайнята",
+ "view_gfx.mat.roughness": "Шорсткість поверхні",
+ "view_gfx.mat.metallic": "Металевість",
+ "view_gfx.mat.opacity": "Непрозорість",
+ "view_gfx.mat.ior": "Показник заломлення",
+ "view_gfx.mat.surface_reset": "Скинути поверхню до значень класу",
  "view_gfx.unit.density": "кг/м³",
  "view_gfx.unit.conductivity": "Вт/(м·К)",
  "view_gfx.unit.specific_heat": "Дж/(кг·К)"

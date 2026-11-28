@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Энэ харагдацад нуугдсан, хадгалагдсан, сонголтгүй: {n}",
  "view_gfx.flt.bad_value": "Дүрмийн утга таньгдсангүй: тоо оруулна уу, нэгжтэй байж болно",
  "view_gfx.name_taken": "Энэ нэр аль хэдийн эзлэгдсэн",
+ "view_gfx.mat.roughness": "Гадаргуугийн барзгар байдал",
+ "view_gfx.mat.metallic": "Металл төрх",
+ "view_gfx.mat.opacity": "Тунгалаггүй байдал",
+ "view_gfx.mat.ior": "Хугарлын илтгэгч",
+ "view_gfx.mat.surface_reset": "Гадаргууг ангийн утгууд руу сэргээх",
  "view_gfx.unit.density": "кг/м³",
  "view_gfx.unit.conductivity": "Вт/(м·К)",
  "view_gfx.unit.specific_heat": "Дж/(кг·К)"

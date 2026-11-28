@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Ascunse în această vedere, păstrate și deselectate: {n}",
  "view_gfx.flt.bad_value": "Valoarea regulii nu a fost recunoscută: introduceți un număr, opțional cu unitate",
  "view_gfx.name_taken": "Acest nume este deja folosit",
+ "view_gfx.mat.roughness": "Rugozitatea suprafeței",
+ "view_gfx.mat.metallic": "Metalic",
+ "view_gfx.mat.opacity": "Opacitate",
+ "view_gfx.mat.ior": "Indice de refracție",
+ "view_gfx.mat.surface_reset": "Resetează suprafața la valorile clasei",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

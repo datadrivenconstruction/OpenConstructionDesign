@@ -80,4 +80,30 @@ mod tests {
         assert_eq!(h("topsoil"), "earth");
         assert_eq!(h("zzz unknown"), "none");
     }
+
+    #[test]
+    fn every_listed_local_word_names_a_class() {
+        let j: serde_json::Value = serde_json::from_str(include_str!("../data/material_words.json")).unwrap();
+        for (class, langs) in j.as_object().unwrap() {
+            assert!(crate::material_look::look_by_key(class).is_some(), "{class}");
+            for (lang, ws) in langs.as_object().unwrap() {
+                for w in ws.as_array().unwrap().iter().filter_map(|w| w.as_str()) {
+                    assert!(look_of(w).is_some(), "{class}/{lang}: {w}");
+                }
+            }
+        }
+    }
+
+    #[test]
+    fn a_row_may_use_any_builtin_hatch() {
+        let mut m = crate::Model::open(":memory:").unwrap();
+        for (i, k) in EXTRA_HATCHES.iter().enumerate() {
+            let mut s = crate::material_defaults(&format!("Zz {i}"));
+            s.hatch = (*k).into();
+            m.add_material(&s).unwrap_or_else(|e| panic!("{k}: {e}"));
+        }
+        let mut bad = crate::material_defaults("Zz bad");
+        bad.hatch = "nonsense".into();
+        assert!(m.add_material(&bad).is_err());
+    }
 }

@@ -78,33 +78,23 @@ pub struct Material {
 
 /// Reference values of the material class by name: (hatch, density, λ, c).
 fn class_values(name: &str) -> Option<(&'static str, f64, f64, f64)> {
+    let look = crate::material_look::look_of(name)?;
+    let hatch = crate::material_hatch::class_hatch(look.key);
     let m = name.to_lowercase();
-    let has = |k: &[&str]| k.iter().any(|k| m.contains(k));
-    if has(&["concrete", "\u{431}\u{435}\u{442}\u{43e}\u{43d}"]) {
-        Some(("dots", 2400.0, 1.75, 840.0))
-    } else if has(&["masonry", "brick", "\u{43a}\u{438}\u{440}\u{43f}\u{438}\u{447}", "\u{43a}\u{43b}\u{430}\u{434}\u{43a}"]) {
-        Some(("diagonal", 1800.0, 0.81, 880.0))
-    } else if has(&["insul", "\u{443}\u{442}\u{435}\u{43f}\u{43b}", "wool", "\u{432}\u{430}\u{442}\u{430}"]) {
-        Some(("cross", 40.0, 0.04, 1030.0))
-    } else if has(&["glass", "\u{441}\u{442}\u{435}\u{43a}\u{43b}"]) {
-        Some(("none", 2500.0, 1.0, 750.0))
-    } else if has(&["glulam"]) {
-        Some(("back_diagonal", 470.0, 0.13, 1600.0))
-    } else if has(&["cross-laminated", "cross laminated"]) {
-        Some(("back_diagonal", 500.0, 0.13, 1600.0))
-    } else if has(&["door", "wood", "timber", "\u{434}\u{435}\u{440}\u{435}\u{432}"]) {
-        Some(("back_diagonal", 500.0, 0.13, 1600.0))
-    } else if has(&["steel", "\u{441}\u{442}\u{430}\u{43b}"]) {
-        Some(("none", 7850.0, 50.0, 460.0))
-    } else if has(&["gypsum", "\u{433}\u{438}\u{43f}\u{441}", "\u{433}\u{43a}\u{43b}"]) {
-        Some(("none", 850.0, 0.21, 1090.0))
-    } else if has(&["plaster", "render", "\u{448}\u{442}\u{443}\u{43a}\u{430}\u{442}\u{443}\u{440}"]) {
-        Some(("none", 1600.0, 0.7, 840.0))
-    } else if has(&["membrane", "\u{43c}\u{435}\u{43c}\u{431}\u{440}\u{430}\u{43d}"]) {
-        Some(("none", 950.0, 0.2, 1800.0))
-    } else {
-        None
-    }
+    let (d, k, c) = match look.key {
+        "concrete" => (2400.0, 1.75, 840.0),
+        "masonry" | "brick" => (1800.0, 0.81, 880.0),
+        "insulation" => (40.0, 0.04, 1030.0),
+        "glass" => (2500.0, 1.0, 750.0),
+        "timber" if m.contains("glulam") => (470.0, 0.13, 1600.0),
+        "timber" => (500.0, 0.13, 1600.0),
+        "steel" => (7850.0, 50.0, 460.0),
+        "plaster" if ["gypsum", "board", "drywall"].iter().any(|w| m.contains(w)) => (850.0, 0.21, 1090.0),
+        "plaster" | "render" => (1600.0, 0.7, 840.0),
+        "roofing" => (950.0, 0.2, 1800.0),
+        _ => return None,
+    };
+    Some((hatch, d, k, c))
 }
 
 /// Hatch of a material text without a row: the same its row gets when it is created.
@@ -256,6 +246,7 @@ pub(crate) fn migrate(db: &Connection, upgrading: bool) -> Result<(), Error> {
     )?;
     db.execute_batch(DDL)?;
     crate::material_texture::migrate(db)?;
+    crate::material_surface::migrate(db)?;
     if existed == 0 {
         for b in BUILTIN_MATERIALS {
             insert_spec_ignore(db, &material_defaults(b))?;
@@ -289,7 +280,7 @@ fn check_props(s: &MaterialSpec) -> Result<(), Error> {
     if s.color.is_some_and(|c| c > 0xFF_FFFF) {
         return Err(FieldErr::MaterialColor.into());
     }
-    if !MATERIAL_HATCHES.contains(&s.hatch.as_str()) && !is_lib_hatch(&s.hatch) {
+    if !crate::material_hatch::is_builtin_hatch(&s.hatch) && !is_lib_hatch(&s.hatch) {
         return Err(FieldErr::MaterialHatch(s.hatch.clone()).into());
     }
     for v in [s.density, s.conductivity, s.specific_heat]

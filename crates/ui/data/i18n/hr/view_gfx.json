@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Skriveno u ovom pogledu, zadržano i poništeno odabira: {n}",
  "view_gfx.flt.bad_value": "Vrijednost pravila nije prepoznata: upišite broj, po želji s jedinicom",
  "view_gfx.name_taken": "Ovaj naziv je već zauzet",
+ "view_gfx.mat.roughness": "Hrapavost površine",
+ "view_gfx.mat.metallic": "Metalni izgled",
+ "view_gfx.mat.opacity": "Neprozirnost",
+ "view_gfx.mat.ior": "Indeks loma",
+ "view_gfx.mat.surface_reset": "Vrati površinu na vrijednosti klase",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

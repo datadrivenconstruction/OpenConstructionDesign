@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "מוסתר במבט זה, נשמר ובוטלה בחירתו: {n}",
  "view_gfx.flt.bad_value": "ערך הכלל לא זוהה: הזן מספר, אפשר עם יחידה",
  "view_gfx.name_taken": "השם הזה כבר תפוס",
+ "view_gfx.mat.roughness": "חספוס פני השטח",
+ "view_gfx.mat.metallic": "מתכתי",
+ "view_gfx.mat.opacity": "אטימות",
+ "view_gfx.mat.ior": "מקדם שבירה",
+ "view_gfx.mat.surface_reset": "איפוס המשטח לערכי המחלקה",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

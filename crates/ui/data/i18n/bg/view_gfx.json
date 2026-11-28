@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Скрити в този изглед, запазени и отселектирани: {n}",
  "view_gfx.flt.bad_value": "Стойността на правилото не е разпозната: въведете число, по желание с мерна единица",
  "view_gfx.name_taken": "Това име вече е заето",
+ "view_gfx.mat.roughness": "Грапавост на повърхността",
+ "view_gfx.mat.metallic": "Металност",
+ "view_gfx.mat.opacity": "Непрозрачност",
+ "view_gfx.mat.ior": "Индекс на пречупване",
+ "view_gfx.mat.surface_reset": "Нулиране на повърхността до стойностите на класа",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

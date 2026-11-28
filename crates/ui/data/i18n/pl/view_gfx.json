@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Ukryte w tym widoku, zachowane i odznaczone: {n}",
  "view_gfx.flt.bad_value": "Nie rozpoznano wartości reguły: podaj liczbę, opcjonalnie z jednostką",
  "view_gfx.name_taken": "Ta nazwa jest już zajęta",
+ "view_gfx.mat.roughness": "Chropowatość powierzchni",
+ "view_gfx.mat.metallic": "Metaliczność",
+ "view_gfx.mat.opacity": "Nieprzezroczystość",
+ "view_gfx.mat.ior": "Współczynnik załamania",
+ "view_gfx.mat.surface_reset": "Przywróć powierzchnię do wartości klasy",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

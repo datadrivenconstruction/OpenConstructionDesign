@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Осы көріністе жасырылған, сақталып, таңдаудан алынған: {n}",
  "view_gfx.flt.bad_value": "Ереже мәні танылмады: санды енгізіңіз, қажет болса өлшем бірлігімен",
  "view_gfx.name_taken": "Бұл аты бос емес",
+ "view_gfx.mat.roughness": "Беттің кедір-бұдырлығы",
+ "view_gfx.mat.metallic": "Металл түрі",
+ "view_gfx.mat.opacity": "Мөлдір еместік",
+ "view_gfx.mat.ior": "Сыну көрсеткіші",
+ "view_gfx.mat.surface_reset": "Бетті сынып мәндеріне қайтару",
  "view_gfx.unit.density": "кг/м³",
  "view_gfx.unit.conductivity": "Вт/(м·К)",
  "view_gfx.unit.specific_heat": "Дж/(кг·К)"

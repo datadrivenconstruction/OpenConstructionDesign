@@ -54,24 +54,7 @@ pub const SLOW_REGEN: f64 = 0.15;
 
 /// Material class for fill (index into `Tokens::mat`).
 pub fn mat_class(m: &str) -> usize {
-    if let Some(l) = ddc_model::material_look::look_of(m) {
-        return ddc_model::material_hatch::poche_class(l.key);
-    }
-    let m = m.to_lowercase();
-    let has = |k: &[&str]| k.iter().any(|k| m.contains(k));
-    if has(&["concrete", "\u{431}\u{435}\u{442}\u{43e}\u{43d}"]) {
-        0
-    } else if has(&["masonry", "brick", "\u{43a}\u{438}\u{440}\u{43f}\u{438}\u{447}", "\u{43a}\u{43b}\u{430}\u{434}\u{43a}"]) {
-        1
-    } else if has(&["insul", "\u{443}\u{442}\u{435}\u{43f}\u{43b}", "wool"]) {
-        2
-    } else if has(&["glass", "\u{441}\u{442}\u{435}\u{43a}\u{43b}"]) {
-        3
-    } else if has(&["door", "wood", "timber", "\u{434}\u{435}\u{440}\u{435}\u{432}"]) {
-        4
-    } else {
-        5
-    }
+    ddc_model::material_look::look_of(m).map_or(5, |l| ddc_model::material_hatch::poche_class(l.key))
 }
 
 /// Drawing element -> editor selection.

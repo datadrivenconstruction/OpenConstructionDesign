@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Κρυφά σε αυτή την προβολή, διατηρήθηκαν και αποεπιλέχθηκαν: {n}",
  "view_gfx.flt.bad_value": "Η τιμή κανόνα δεν αναγνωρίστηκε: εισαγάγετε αριθμό, προαιρετικά με μονάδα",
  "view_gfx.name_taken": "Αυτό το όνομα υπάρχει ήδη",
+ "view_gfx.mat.roughness": "Τραχύτητα επιφάνειας",
+ "view_gfx.mat.metallic": "Μεταλλικό",
+ "view_gfx.mat.opacity": "Αδιαφάνεια",
+ "view_gfx.mat.ior": "Δείκτης διάθλασης",
+ "view_gfx.mat.surface_reset": "Επαναφορά επιφάνειας στις τιμές της κλάσης",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

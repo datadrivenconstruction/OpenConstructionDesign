@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Piilotettu tässä näkymässä, säilytetty ja poistettu valinnasta: {n}",
  "view_gfx.flt.bad_value": "Säännön arvoa ei tunnistettu: anna luku, tarvittaessa yksikön kanssa",
  "view_gfx.name_taken": "Tämä nimi on jo käytössä",
+ "view_gfx.mat.roughness": "Pinnan karheus",
+ "view_gfx.mat.metallic": "Metallinen",
+ "view_gfx.mat.opacity": "Peittävyys",
+ "view_gfx.mat.ior": "Taitekerroin",
+ "view_gfx.mat.surface_reset": "Palauta pinta luokan arvoihin",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

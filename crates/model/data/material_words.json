@@ -1,0 +1,4240 @@
+{
+"aluminium": {
+"de": [
+"alu"
+],
+"ro": [
+"aluminiu"
+],
+"pt": [
+"alumínio"
+],
+"fi": [
+"alumiini"
+],
+"it": [
+"alluminio"
+],
+"kk": [
+"алюминий",
+"алюмин"
+],
+"cs": [
+"hliník",
+"hliníkov"
+],
+"nl": [
+"alu"
+],
+"et": [
+"alumiinium",
+"alumiin"
+],
+"pl": [
+"aluminiow",
+"alu"
+],
+"ky": [
+"алюминий",
+"алюмин"
+],
+"ar": [
+"ألمنيوم",
+"ألومنيوم",
+"المنيوم"
+],
+"hi": [
+"एल्युमिनियम",
+"एल्युमीनियम",
+"अल्युमिनियम"
+],
+"fa": [
+"آلومینیوم",
+"آلومینیم"
+],
+"ko": [
+"알루미늄",
+"알루미"
+],
+"fr": [
+"alu"
+],
+"uk": [
+"алюміній",
+"алюмін"
+],
+"el": [
+"αλουμίνιο",
+"αλουμιν"
+],
+"th": [
+"อลูมิเนียม",
+"อะลูมิเนียม"
+],
+"en": [],
+"tr": [
+"alüminyum",
+"aluminyum"
+],
+"uz": [
+"alyuminiy",
+"alyumin"
+],
+"es": [
+"aluminio"
+],
+"bn": [
+"অ্যালুমিনিয়াম",
+"অ্যালুমিনিয়াম"
+],
+"ur": [
+"ایلومینیم",
+"المونیم"
+],
+"id": [
+"alumunium",
+"alumin"
+],
+"vi": [
+"nhôm"
+],
+"hu": [
+"alumínium",
+"alumin"
+],
+"da": [
+"alu"
+],
+"bg": [
+"алуминий",
+"алуминиев"
+],
+"hr": [
+"aluminij"
+],
+"fil": [
+"aluminyo"
+],
+"zh": [
+"铝合金",
+"铝板",
+"铝材"
+],
+"no": [
+"alu"
+],
+"mn": [
+"хөнгөн цагаан",
+"алюмин"
+],
+"ja": [
+"アルミ",
+"アルミニウム",
+"アルミサッシ"
+],
+"he": [
+"אלומיניום"
+],
+"ru": [
+"алюмин"
+],
+"sv": [
+"alu"
+]
+},
+"grass": {
+"de": [
+"gras",
+"rasen",
+"wiese"
+],
+"ro": [
+"iarbă",
+"iarba",
+"gazon",
+"pajiște"
+],
+"pt": [
+"relva",
+"grama",
+"gramado",
+"erva"
+],
+"fi": [
+"ruoho",
+"nurmi",
+"nurmikko"
+],
+"it": [
+"erba",
+"prato",
+"tappeto erboso"
+],
+"kk": [
+"шөп",
+"көгал",
+"жайылым"
+],
+"cs": [
+"tráva",
+"trávník",
+"trav"
+],
+"nl": [
+"gras",
+"gazon",
+"grasmat"
+],
+"et": [
+"muru",
+"muruk",
+"rohu"
+],
+"pl": [
+"trawa",
+"trawnik",
+"murawa"
+],
+"ky": [
+"чөп",
+"газон",
+"көгөт"
+],
+"ar": [
+"عشب",
+"عشبي",
+"حشائش",
+"نجيل",
+"مرج"
+],
+"hi": [
+"घास",
+"हरियाली",
+"दूब"
+],
+"fa": [
+"چمن",
+"علف",
+"چمنزار"
+],
+"ko": [
+"잔디",
+"초지",
+"초원",
+"잔디밭"
+],
+"fr": [
+"gazon",
+"herbe",
+"pelouse"
+],
+"uk": [
+"трава",
+"газон",
+"трав'ян",
+"галявина"
+],
+"el": [
+"γρασίδι",
+"χλόη",
+"χλοοτάπητας",
+"γκαζόν"
+],
+"th": [
+"หญ้า",
+"สนามหญ้า"
+],
+"en": [],
+"tr": [
+"çim",
+"çimen",
+"çayır"
+],
+"uz": [
+"maysa",
+"maysazor",
+"gazon"
+],
+"es": [
+"césped",
+"hierba",
+"pasto",
+"grama"
+],
+"bn": [
+"ঘাস",
+"ঘাসের"
+],
+"ur": [
+"گھاس",
+"سبزہ"
+],
+"id": [
+"rumput",
+"padang rumput",
+"halaman rumput"
+],
+"vi": [
+"bãi cỏ",
+"thảm cỏ",
+"cỏ tự nhiên"
+],
+"hu": [
+"gyep",
+"pázsit",
+"füves"
+],
+"da": [
+"græs",
+"græsplæne",
+"plæne"
+],
+"bg": [
+"трева",
+"тревн",
+"морава"
+],
+"hr": [
+"trava",
+"travnjak",
+"trav"
+],
+"fil": [
+"damo",
+"damuhan"
+],
+"zh": [
+"草坪",
+"草地",
+"草皮",
+"绿地"
+],
+"no": [
+"gress",
+"plen",
+"gressplen"
+],
+"mn": [
+"өвс",
+"зүлэг",
+"бэлчээр"
+],
+"ja": [
+"芝生",
+"草地",
+"草原"
+],
+"he": [
+"דשא",
+"עשב",
+"מדשאה"
+],
+"ru": [
+"трава",
+"газон",
+"травян",
+"лужайка"
+],
+"sv": [
+"gräs",
+"gräsmatta",
+"gräsyta"
+]
+},
+"roof_tile": {
+"de": [
+"dachziegel",
+"dachpfanne",
+"biberschwanz",
+"falzziegel"
+],
+"ro": [
+"țiglă",
+"tigla",
+"țigl"
+],
+"pt": [
+"telha",
+"telhas"
+],
+"fi": [
+"kattotiili",
+"tiilikatto"
+],
+"it": [
+"tegola",
+"tegol",
+"coppo",
+"coppi"
+],
+"kk": [
+"черепица",
+"қыш жабын"
+],
+"cs": [
+"taška",
+"tašk",
+"pálená"
+],
+"nl": [
+"dakpan",
+"dakpannen"
+],
+"et": [
+"katusekivi",
+"katusepann",
+"pann"
+],
+"pl": [
+"dachówk",
+"dachowk"
+],
+"ky": [
+"черепица",
+"чатыр"
+],
+"ar": [
+"قرميد",
+"قراميد"
+],
+"hi": [
+"खपरैल",
+"खपरा",
+"खपड़ा"
+],
+"fa": [
+"سفال",
+"شیروانی",
+"سفالی"
+],
+"ko": [
+"기와",
+"점토기와"
+],
+"fr": [
+"tuile",
+"tuiles"
+],
+"uk": [
+"черепиц",
+"черепиця"
+],
+"el": [
+"κεραμίδι",
+"κεραμίδ"
+],
+"th": [
+"กระเบื้องมุง",
+"กระเบื้องหลังคา"
+],
+"en": [],
+"tr": [
+"kiremit"
+],
+"uz": [
+"cherepitsa",
+"chorepitsa"
+],
+"es": [
+"teja",
+"tejas",
+"teja cerámica"
+],
+"bn": [
+"টালি",
+"খোলা"
+],
+"ur": [
+"کھپریل",
+"چھت کی ٹائل"
+],
+"id": [
+"genteng",
+"genting"
+],
+"vi": [
+"ngói",
+"ngói đất sét",
+"ngói lợp"
+],
+"hu": [
+"cserép",
+"tetőcserép",
+"cserepek"
+],
+"da": [
+"tagsten",
+"tagtegl"
+],
+"bg": [
+"керемид",
+"керемида"
+],
+"hr": [
+"crijep",
+"crijepa"
+],
+"fil": [
+"tisa"
+],
+"zh": [
+"瓦片",
+"琉璃瓦",
+"黏土瓦",
+"屋面瓦"
+],
+"no": [
+"takstein",
+"takpanne"
+],
+"mn": [
+"черепиц",
+"дээврийн хавтан"
+],
+"ja": [
+"屋根瓦",
+"粘土瓦",
+"瓦屋根",
+"桟瓦"
+],
+"he": [
+"רעף",
+"רעפים"
+],
+"ru": [
+"черепиц",
+"черепич"
+],
+"sv": [
+"takpanna",
+"takpannor",
+"taktegel"
+]
+},
+"steel": {
+"de": [
+"stahl",
+"eisen",
+"blech",
+"metall"
+],
+"ro": [
+"oțel",
+"otel",
+"fier",
+"metalic"
+],
+"pt": [
+"aço",
+"ferro",
+"metálico"
+],
+"fi": [
+"teräs",
+"rauta",
+"metalli"
+],
+"it": [
+"acciaio",
+"ferro",
+"metallo",
+"metallic"
+],
+"kk": [
+"болат",
+"темір",
+"металл"
+],
+"cs": [
+"ocel",
+"ocelov",
+"železo",
+"kov"
+],
+"nl": [
+"staal",
+"stalen",
+"ijzer",
+"metaal"
+],
+"et": [
+"teras",
+"raud",
+"metall"
+],
+"pl": [
+"stal",
+"stalow",
+"żelazo",
+"metalow"
+],
+"ky": [
+"болот",
+"темир",
+"металл"
+],
+"ar": [
+"فولاذ",
+"صلب",
+"حديد",
+"معدن",
+"معدني"
+],
+"hi": [
+"इस्पात",
+"लोहा",
+"धातु",
+"लोह"
+],
+"fa": [
+"فولاد",
+"آهن",
+"فلز"
+],
+"ko": [
+"강철",
+"철강",
+"철골",
+"금속"
+],
+"fr": [
+"acier",
+"fer",
+"métal"
+],
+"uk": [
+"сталь",
+"стальн",
+"залізо",
+"метал"
+],
+"el": [
+"χάλυβας",
+"χάλυβ",
+"ατσάλι",
+"μεταλλικ",
+"σίδηρος"
+],
+"th": [
+"เหล็ก",
+"เหล็กกล้า",
+"โลหะ"
+],
+"en": [],
+"tr": [
+"çelik",
+"demir",
+"metalik"
+],
+"uz": [
+"po'lat",
+"polat",
+"temir",
+"metall"
+],
+"es": [
+"acero",
+"hierro",
+"metálico"
+],
+"bn": [
+"ইস্পাত",
+"লোহা",
+"ধাতু"
+],
+"ur": [
+"فولاد",
+"لوہا",
+"دھات",
+"اسٹیل"
+],
+"id": [
+"baja",
+"besi",
+"logam"
+],
+"vi": [
+"thép",
+"sắt",
+"kim loại"
+],
+"hu": [
+"acél",
+"vas",
+"fém"
+],
+"da": [
+"stål",
+"jern",
+"metal"
+],
+"bg": [
+"стомана",
+"стоман",
+"желязо",
+"метал"
+],
+"hr": [
+"čelik",
+"željezo",
+"metaln"
+],
+"fil": [
+"bakal",
+"asero",
+"yero"
+],
+"zh": [
+"钢材",
+"钢板",
+"钢筋",
+"金属"
+],
+"no": [
+"stål",
+"jern",
+"metall"
+],
+"mn": [
+"ган",
+"төмөр",
+"металл"
+],
+"ja": [
+"鋼材",
+"鋼板",
+"鉄骨",
+"金属",
+"鉄筋"
+],
+"he": [
+"פלדה",
+"ברזל",
+"מתכת"
+],
+"ru": [
+"сталь",
+"стальн",
+"железо",
+"металл"
+],
+"sv": [
+"stål",
+"järn",
+"metall"
+]
+},
+"timber": {
+"de": [
+"holz",
+"bauholz",
+"schnittholz"
+],
+"ro": [
+"lemn",
+"lemnos",
+"cherestea",
+"scândur"
+],
+"pt": [
+"madeira",
+"lenho",
+"tábua"
+],
+"fi": [
+"puu",
+"puinen",
+"puutavara",
+"hirsi"
+],
+"it": [
+"legno",
+"legname",
+"ligneo",
+"tavol"
+],
+"kk": [
+"ағаш",
+"ағаштан",
+"тақтай"
+],
+"cs": [
+"dřevo",
+"dřev",
+"dřevěn",
+"řezivo"
+],
+"nl": [
+"hout",
+"houten",
+"timmerhout"
+],
+"et": [
+"puit",
+"puidust",
+"palk"
+],
+"pl": [
+"drewno",
+"drewn",
+"deska",
+"tarcica"
+],
+"ky": [
+"жыгач",
+"жыгачтан",
+"такта"
+],
+"ar": [
+"خشب",
+"أخشاب",
+"خشبي"
+],
+"hi": [
+"लकड़ी",
+"लकडी",
+"काष्ठ"
+],
+"fa": [
+"چوب",
+"چوبی",
+"الوار"
+],
+"ko": [
+"목재",
+"나무",
+"원목",
+"합판"
+],
+"fr": [
+"bois",
+"madrier",
+"planche"
+],
+"uk": [
+"дерево",
+"деревин",
+"деревян",
+"брус"
+],
+"el": [
+"ξύλο",
+"ξυλεία",
+"ξύλιν"
+],
+"th": [
+"ไม้",
+"ไม้อัด",
+"ไม้เนื้อแข็ง"
+],
+"en": [],
+"tr": [
+"ahşap",
+"tahta",
+"kereste"
+],
+"uz": [
+"yog'och",
+"yogoch",
+"taxta",
+"yog‘och"
+],
+"es": [
+"madera",
+"maderas",
+"tablón"
+],
+"bn": [
+"কাঠ",
+"কাঠের"
+],
+"ur": [
+"لکڑی",
+"لکڑ",
+"تختہ"
+],
+"id": [
+"kayu",
+"papan",
+"balok"
+],
+"vi": [
+"gỗ xẻ",
+"gỗ tự nhiên",
+"ván",
+"gỗ ép"
+],
+"hu": [
+"faanyag",
+"fából",
+"deszka",
+"gerenda"
+],
+"da": [
+"tømmer",
+"trælast",
+"krydsfiner"
+],
+"bg": [
+"дърво",
+"дървен",
+"дървесин",
+"дъск"
+],
+"hr": [
+"drvo",
+"drven",
+"građa"
+],
+"fil": [
+"kahoy",
+"tabla",
+"troso"
+],
+"zh": [
+"木材",
+"木头",
+"实木",
+"原木",
+"木板"
+],
+"no": [
+"tømmer",
+"trelast",
+"treverk"
+],
+"mn": [
+"мод",
+"модон",
+"банз"
+],
+"ja": [
+"木材",
+"木製",
+"木造",
+"合板"
+],
+"he": [
+"עצים",
+"נגרות",
+"קורות"
+],
+"ru": [
+"дерево",
+"древесин",
+"деревян",
+"брус",
+"доска"
+],
+"sv": [
+"virke",
+"timmer",
+"trävaror",
+"bräd"
+]
+},
+"soil": {
+"de": [
+"erde",
+"boden",
+"lehm",
+"erdreich"
+],
+"ro": [
+"pământ",
+"nisip",
+"argilă",
+"lut"
+],
+"pt": [
+"solo",
+"terra",
+"areia",
+"argila"
+],
+"fi": [
+"maa",
+"hiekka",
+"savi",
+"multa",
+"maaperä"
+],
+"it": [
+"terreno",
+"terra",
+"sabbia",
+"argilla"
+],
+"kk": [
+"топырақ",
+"құм",
+"саз",
+"балшық"
+],
+"cs": [
+"půda",
+"písek",
+"hlína",
+"zemin"
+],
+"nl": [
+"grond",
+"zand",
+"klei",
+"aarde"
+],
+"et": [
+"pinnas",
+"liiv",
+"savi",
+"muld"
+],
+"pl": [
+"grunt",
+"ziemia",
+"piasek",
+"glina"
+],
+"ky": [
+"топурак",
+"кум",
+"чопо"
+],
+"ar": [
+"تربة",
+"رمل",
+"طين",
+"تراب"
+],
+"hi": [
+"मिट्टी",
+"रेत",
+"बालू",
+"भूमि"
+],
+"fa": [
+"خاک",
+"ماسه",
+"خاکی"
+],
+"ko": [
+"모래",
+"점토",
+"토양"
+],
+"fr": [
+"terre",
+"sable",
+"argile",
+"remblai"
+],
+"uk": [
+"ґрунт",
+"грунт",
+"земля",
+"пісок",
+"глина"
+],
+"el": [
+"χώμα",
+"έδαφος",
+"άμμος",
+"άργιλος"
+],
+"th": [
+"ดิน",
+"ทราย",
+"ดินเหนียว"
+],
+"en": [],
+"tr": [
+"toprak",
+"kum",
+"kil",
+"zemin"
+],
+"uz": [
+"tuproq",
+"qum",
+"loy"
+],
+"es": [
+"suelo",
+"tierra",
+"arena",
+"arcilla"
+],
+"bn": [
+"মাটি",
+"বালি",
+"কাদা",
+"মৃত্তিকা"
+],
+"ur": [
+"مٹی",
+"ریت",
+"چکنی",
+"زمین"
+],
+"id": [
+"tanah",
+"pasir",
+"lempung",
+"tanah liat"
+],
+"vi": [
+"đất sét",
+"đất",
+"cát"
+],
+"hu": [
+"talaj",
+"föld",
+"homok",
+"agyag"
+],
+"da": [
+"jord",
+"sand",
+"ler"
+],
+"bg": [
+"почва",
+"пясък",
+"глина",
+"пръст"
+],
+"hr": [
+"tlo",
+"pijesak",
+"glina",
+"zemlja"
+],
+"fil": [
+"lupa",
+"buhangin",
+"luwad"
+],
+"zh": [
+"土壤",
+"泥土",
+"黏土",
+"沙土",
+"砂土"
+],
+"no": [
+"jord",
+"sand",
+"leire"
+],
+"mn": [
+"шороо",
+"элс",
+"шавар",
+"хөрс"
+],
+"ja": [
+"土壌",
+"粘土",
+"砂地",
+"盛土"
+],
+"he": [
+"אדמה",
+"חול",
+"חימר",
+"קרקע"
+],
+"ru": [
+"грунт",
+"земля",
+"песок",
+"глина",
+"почва"
+],
+"sv": [
+"jord",
+"sand",
+"lera"
+]
+},
+"brick": {
+"de": [
+"ziegel",
+"backstein",
+"klinker",
+"mauerziegel"
+],
+"ro": [
+"cărămid",
+"caramid"
+],
+"pt": [
+"tijolo",
+"tijolos"
+],
+"fi": [
+"tiili",
+"tiilet",
+"tiilestä"
+],
+"it": [
+"mattone",
+"mattoni",
+"laterizio"
+],
+"kk": [
+"кірпіш",
+"кірпіштен"
+],
+"cs": [
+"cihla",
+"cihel",
+"cihl"
+],
+"nl": [
+"baksteen",
+"bakstenen",
+"metselsteen"
+],
+"et": [
+"telliskivi",
+"tellis",
+"tellist"
+],
+"pl": [
+"cegł",
+"cegieł",
+"cegla"
+],
+"ky": [
+"кирпич",
+"кыш"
+],
+"ar": [
+"طوب",
+"آجر",
+"طوبة"
+],
+"hi": [
+"ईंट"
+],
+"fa": [
+"آجر",
+"آجری"
+],
+"ko": [
+"벽돌",
+"점토벽돌"
+],
+"fr": [
+"brique",
+"briques"
+],
+"uk": [
+"цегл",
+"цегля",
+"цегляна"
+],
+"el": [
+"τούβλο",
+"τούβλ",
+"πλίνθος"
+],
+"th": [
+"อิฐ",
+"อิฐมอญ"
+],
+"en": [],
+"tr": [
+"tuğla",
+"tugla"
+],
+"uz": [
+"g'isht",
+"gisht",
+"g‘isht"
+],
+"es": [
+"ladrillo",
+"ladrillos"
+],
+"bn": [
+"ইটের"
+],
+"ur": [
+"اینٹ",
+"اینٹیں"
+],
+"id": [
+"bata",
+"batu bata",
+"bata merah"
+],
+"vi": [
+"gạch",
+"gach"
+],
+"hu": [
+"tégla",
+"téglá",
+"téglák"
+],
+"da": [
+"mursten",
+"teglsten"
+],
+"bg": [
+"тухла",
+"тухли",
+"тухлен"
+],
+"hr": [
+"cigla",
+"cigl",
+"opeka",
+"opek"
+],
+"fil": [
+"laryo",
+"ladrilyo"
+],
+"zh": [
+"红砖",
+"砖块",
+"砌砖"
+],
+"no": [
+"murstein",
+"teglstein"
+],
+"mn": [
+"тоосго",
+"тоосгон"
+],
+"ja": [
+"レンガ",
+"煉瓦",
+"れんが"
+],
+"he": [
+"לבנה",
+"לבני",
+"לבנים"
+],
+"ru": [
+"кирпич",
+"кирпичн"
+],
+"sv": [
+"tegel",
+"tegelsten"
+]
+},
+"insulation": {
+"de": [
+"dämm",
+"daemm",
+"isolier",
+"mineralwolle",
+"steinwolle"
+],
+"ro": [
+"izolați",
+"izolati",
+"izolant",
+"vată"
+],
+"pt": [
+"isolamento",
+"isolante",
+"isolação"
+],
+"fi": [
+"eriste",
+"villa",
+"mineraalivilla"
+],
+"it": [
+"isolante",
+"isolamento",
+"isolant",
+"lana"
+],
+"kk": [
+"оқшаулағыш",
+"изоляция",
+"минвата",
+"жылу оқшау"
+],
+"cs": [
+"izolac",
+"izolant",
+"minerální vlna",
+"vlna"
+],
+"nl": [
+"isolatie",
+"isolerend",
+"steenwol",
+"minerale wol"
+],
+"et": [
+"soojustus",
+"isolat",
+"villa"
+],
+"pl": [
+"izolacj",
+"wełna",
+"styropian",
+"ocieplen"
+],
+"ky": [
+"изоляция",
+"жылуулоо",
+"минвата"
+],
+"ar": [
+"عزل",
+"صوف معدني",
+"عازل"
+],
+"hi": [
+"इन्सुलेशन",
+"ऊष्मारोधी",
+"खनिज ऊन",
+"रोधन"
+],
+"fa": [
+"عایق",
+"پشم سنگ",
+"پشم معدنی"
+],
+"ko": [
+"단열",
+"보온",
+"암면",
+"단열재"
+],
+"fr": [
+"isolant",
+"isolation",
+"laine"
+],
+"uk": [
+"утеплювач",
+"ізоляц",
+"мінвата",
+"утеплен"
+],
+"el": [
+"μόνωση",
+"θερμομόν",
+"πετροβάμβακας",
+"μονωτικ"
+],
+"th": [
+"ฉนวน",
+"ใยแก้ว",
+"ใยหิน"
+],
+"en": [],
+"tr": [
+"yalıtım",
+"yalitim",
+"izolasyon",
+"taş yünü",
+"cam yünü"
+],
+"uz": [
+"izolyatsiya",
+"issiqlik",
+"mineral paxta",
+"izolyator"
+],
+"es": [
+"aislamiento",
+"aislante",
+"lana mineral",
+"lana de roca"
+],
+"bn": [
+"অন্তরণ",
+"তাপ নিরোধ",
+"খনিজ উল"
+],
+"ur": [
+"انسولیشن",
+"حرارتی",
+"معدنی اون"
+],
+"id": [
+"isolasi",
+"insulasi",
+"wol mineral",
+"wol"
+],
+"vi": [
+"cách nhiệt",
+"bông khoáng",
+"cach nhiet",
+"len"
+],
+"hu": [
+"szigetel",
+"hőszigetel",
+"kőzetgyapot",
+"üveggyapot"
+],
+"da": [
+"isolering",
+"isoler",
+"mineraluld"
+],
+"bg": [
+"изолаци",
+"минерална вата",
+"вата"
+],
+"hr": [
+"izolacij",
+"izolator",
+"mineralna vuna",
+"vuna"
+],
+"fil": [
+"insulasyon",
+"pang-insulate"
+],
+"zh": [
+"保温",
+"隔热",
+"岩棉",
+"绝热",
+"隔音棉"
+],
+"no": [
+"isolasjon",
+"isoler",
+"mineralull"
+],
+"mn": [
+"дулаалга",
+"дулаалагч",
+"дулаал"
+],
+"ja": [
+"断熱",
+"保温",
+"岩綿",
+"ロックウール",
+"グラスウール"
+],
+"he": [
+"בידוד",
+"צמר",
+"מבודד"
+],
+"ru": [
+"утеплител",
+"изоляц",
+"минвата",
+"теплоизол"
+],
+"sv": [
+"isolering",
+"isoler",
+"mineralull"
+]
+},
+"render": {
+"de": [
+"putz",
+"fassadenputz",
+"stuck"
+],
+"ro": [
+"tencuial",
+"tencui",
+"stuc"
+],
+"pt": [
+"reboco",
+"emboço",
+"estuque"
+],
+"fi": [
+"rappaus",
+"rappa",
+"stukko"
+],
+"it": [
+"intonaco",
+"intonac",
+"rasante"
+],
+"kk": [
+"сылақ",
+"сылау",
+"фасад сылағы"
+],
+"cs": [
+"omítk",
+"omitk",
+"štuk"
+],
+"nl": [
+"pleister",
+"stuc",
+"stucwerk",
+"bepleistering"
+],
+"et": [
+"krohv",
+"fassaadikrohv",
+"stukk"
+],
+"pl": [
+"tynk",
+"tynki",
+"stiuk"
+],
+"ky": [
+"штукатур",
+"шыбак",
+"шыбоо"
+],
+"ar": [
+"لياسة",
+"ملاط",
+"استوكو",
+"لياس"
+],
+"hi": [
+"पलस्तर",
+"स्टुको",
+"लिपाई"
+],
+"fa": [
+"اندود",
+"اندودکاری",
+"نماکاری"
+],
+"ko": [
+"미장",
+"모르타르",
+"스터코",
+"몰탈"
+],
+"fr": [
+"enduit",
+"crépi",
+"stuc",
+"ravalement"
+],
+"uk": [
+"штукатур",
+"штукатурк",
+"оштукатур",
+"ліпнин"
+],
+"el": [
+"σοβάς",
+"σοβά",
+"επίχρισμα"
+],
+"th": [
+"ฉาบ",
+"ปูนฉาบ",
+"สตัคโค"
+],
+"en": [],
+"tr": [
+"sıva",
+"siva",
+"sıvası"
+],
+"uz": [
+"suvoq",
+"shuvoq",
+"stukko"
+],
+"es": [
+"enlucido",
+"revoco",
+"estuco"
+],
+"bn": [
+"পলেস্তারা",
+"পলেস্তরা"
+],
+"ur": [
+"پلستر",
+"پلاسٹر",
+"سٹکو"
+],
+"id": [
+"plester",
+"plesteran",
+"acian"
+],
+"vi": [
+"trát",
+"vữa trát",
+"tô trát",
+"vữa"
+],
+"hu": [
+"vakolat",
+"stukkó",
+"homlokzati"
+],
+"da": [
+"puds",
+"facadepuds",
+"kalkpuds"
+],
+"bg": [
+"мазилка",
+"мазилк",
+"фасадна мазилка"
+],
+"hr": [
+"žbuk",
+"zbuk",
+"fasadni",
+"štuko"
+],
+"fil": [
+"palitada",
+"pagpapalitada"
+],
+"zh": [
+"抹灰",
+"粉刷",
+"灰泥",
+"批荡"
+],
+"no": [
+"puss",
+"pussing",
+"stukk"
+],
+"mn": [
+"шохой",
+"шохойн",
+"штукатур"
+],
+"ja": [
+"モルタル",
+"左官",
+"スタッコ"
+],
+"he": [
+"טיח",
+"סטוקו",
+"טייח"
+],
+"ru": [
+"штукатур",
+"оштукатур",
+"стукко"
+],
+"sv": [
+"puts",
+"fasadputs",
+"stuck"
+]
+},
+"copper": {
+"de": [
+"kupfer",
+"messing",
+"rotguss"
+],
+"ro": [
+"cupru",
+"alamă",
+"bronz"
+],
+"pt": [
+"cobre",
+"latão"
+],
+"fi": [
+"kupari",
+"messinki",
+"pronssi"
+],
+"it": [
+"rame",
+"ottone",
+"bronzo"
+],
+"kk": [
+"мыс",
+"жез",
+"қола"
+],
+"cs": [
+"měď",
+"mosaz",
+"bronz"
+],
+"nl": [
+"koper",
+"messing",
+"brons"
+],
+"et": [
+"vask",
+"messing",
+"pronks"
+],
+"pl": [
+"miedź",
+"mosiądz",
+"brąz",
+"miedzi"
+],
+"ky": [
+"жез",
+"коло",
+"мыс"
+],
+"ar": [
+"نحاس",
+"برونز",
+"نحاسي"
+],
+"hi": [
+"तांबा",
+"ताँबा",
+"पीतल",
+"कांस्य"
+],
+"fa": [
+"برنج",
+"برنز",
+"مسی"
+],
+"ko": [
+"구리",
+"황동",
+"청동",
+"놋쇠"
+],
+"fr": [
+"cuivre",
+"laiton"
+],
+"uk": [
+"мідь",
+"мідн",
+"латунь",
+"бронза"
+],
+"el": [
+"χαλκός",
+"ορείχαλκος",
+"μπρούτζος"
+],
+"th": [
+"ทองแดง",
+"ทองเหลือง",
+"สัมฤทธิ์"
+],
+"en": [],
+"tr": [
+"bakır",
+"pirinç",
+"tunç"
+],
+"uz": [
+"mis",
+"latun",
+"bronza"
+],
+"es": [
+"cobre",
+"latón",
+"bronce"
+],
+"bn": [
+"তামা",
+"পিতল",
+"ব্রোঞ্জ"
+],
+"ur": [
+"تانبا",
+"پیتل",
+"کانسی"
+],
+"id": [
+"tembaga",
+"kuningan",
+"perunggu"
+],
+"vi": [
+"đồng",
+"đồng thau",
+"đồng đỏ"
+],
+"hu": [
+"réz",
+"sárgaréz",
+"rézlemez"
+],
+"da": [
+"kobber",
+"messing"
+],
+"bg": [
+"медн",
+"месинг",
+"бронз"
+],
+"hr": [
+"bakar",
+"mjed",
+"bronca"
+],
+"fil": [
+"tanso",
+"bronse"
+],
+"zh": [
+"黄铜",
+"青铜",
+"紫铜",
+"铜板"
+],
+"no": [
+"kobber",
+"messing",
+"bronse"
+],
+"mn": [
+"зэс",
+"хүрэл",
+"гууль"
+],
+"ja": [
+"銅板",
+"銅管",
+"真鍮",
+"青銅"
+],
+"he": [
+"נחושת",
+"פליז",
+"ברונזה"
+],
+"ru": [
+"медь",
+"медн",
+"латунь",
+"бронза"
+],
+"sv": [
+"koppar",
+"mässing",
+"brons"
+]
+},
+"concrete": {
+"de": [
+"beton",
+"stahlbeton"
+],
+"ro": [
+"beton",
+"betonul"
+],
+"pt": [
+"concreto",
+"betão",
+"betao"
+],
+"fi": [
+"betoni",
+"betonia"
+],
+"it": [
+"calcestruzzo",
+"cemento",
+"cls"
+],
+"kk": [
+"бетон",
+"бетонды"
+],
+"cs": [
+"beton",
+"betonov"
+],
+"nl": [
+"beton",
+"betonnen"
+],
+"et": [
+"betoon",
+"betooni"
+],
+"pl": [
+"beton",
+"betonow"
+],
+"ky": [
+"бетон",
+"бетондон"
+],
+"ar": [
+"خرسانة",
+"خرسان",
+"خرسانية"
+],
+"hi": [
+"कंक्रीट",
+"कंक्रिट"
+],
+"fa": [
+"بتن",
+"بتنی"
+],
+"ko": [
+"콘크리트",
+"콘크리"
+],
+"fr": [
+"béton",
+"beton"
+],
+"uk": [
+"бетон",
+"бетонн"
+],
+"el": [
+"σκυρόδεμα",
+"μπετόν",
+"μπετ"
+],
+"th": [
+"คอนกรีต",
+"ซีเมนต์"
+],
+"en": [],
+"tr": [
+"beton",
+"betonarme"
+],
+"uz": [
+"beton",
+"betonli"
+],
+"es": [
+"hormigón",
+"hormigon",
+"concreto"
+],
+"bn": [
+"কংক্রিট",
+"কনক্রিট"
+],
+"ur": [
+"کنکریٹ",
+"کنکریٹی"
+],
+"id": [
+"beton",
+"betonan"
+],
+"vi": [
+"bê tông",
+"be tong"
+],
+"hu": [
+"beton",
+"betonból"
+],
+"da": [
+"beton"
+],
+"bg": [
+"бетон",
+"бетонен"
+],
+"hr": [
+"beton",
+"betonsk"
+],
+"fil": [
+"konkreto",
+"semento"
+],
+"zh": [
+"混凝土"
+],
+"no": [
+"betong",
+"betongen"
+],
+"mn": [
+"бетон",
+"бетонон"
+],
+"ja": [
+"コンクリート",
+"コンクリ"
+],
+"he": [
+"בטון",
+"בטונ"
+],
+"ru": [
+"бетон",
+"железобетон",
+"ж/б"
+],
+"sv": [
+"betong",
+"betongen"
+]
+},
+"plaster": {
+"de": [
+"gips",
+"gipskarton",
+"trockenbau"
+],
+"ro": [
+"gips",
+"gipscarton",
+"gips-carton"
+],
+"pt": [
+"gesso",
+"placa de gesso",
+"gesso cartonado"
+],
+"fi": [
+"kipsi",
+"kipsilevy",
+"tasoite"
+],
+"it": [
+"gesso",
+"cartongesso",
+"gessi"
+],
+"kk": [
+"гипс",
+"гипсокартон",
+"гипсті"
+],
+"cs": [
+"sádrokarton",
+"sádra",
+"sádrov"
+],
+"nl": [
+"gips",
+"gipsplaat",
+"gipskarton"
+],
+"et": [
+"kips",
+"kipsplaat",
+"kipsikartong"
+],
+"pl": [
+"gips",
+"gipsow",
+"kartongips"
+],
+"ky": [
+"гипс",
+"гипсокартон"
+],
+"ar": [
+"جبس",
+"جبسوم",
+"جبسي",
+"جبسية"
+],
+"hi": [
+"प्लास्टर",
+"जिप्सम",
+"पीओपी"
+],
+"fa": [
+"گچی",
+"گچکاری"
+],
+"ko": [
+"석고",
+"석고보드",
+"플라스터"
+],
+"fr": [
+"plâtre",
+"platre",
+"gypse"
+],
+"uk": [
+"гіпс",
+"гіпсокартон",
+"шпаклівк"
+],
+"el": [
+"γυψοσανίδα",
+"γύψος",
+"γυψ"
+],
+"th": [
+"ยิปซัม",
+"ปลาสเตอร์",
+"ฝ้ายิปซัม"
+],
+"en": [],
+"tr": [
+"alçı",
+"alci",
+"alçıpan"
+],
+"uz": [
+"gips",
+"gipsokarton",
+"gipskarton"
+],
+"es": [
+"yeso",
+"cartón yeso",
+"escayola"
+],
+"bn": [
+"প্লাস্টার",
+"জিপসাম"
+],
+"ur": [
+"جپسم",
+"جپسم بورڈ"
+],
+"id": [
+"gipsum",
+"papan gipsum",
+"gipsum board"
+],
+"vi": [
+"thạch cao",
+"tấm thạch cao",
+"thach cao"
+],
+"hu": [
+"gipsz",
+"gipszkarton",
+"gipszes"
+],
+"da": [
+"gips",
+"gipsplade",
+"spartel"
+],
+"bg": [
+"гипс",
+"гипсокартон",
+"шпакл"
+],
+"hr": [
+"gips",
+"gipsane",
+"gipskarton"
+],
+"fil": [
+"yeso",
+"dyipsum"
+],
+"zh": [
+"石膏",
+"石膏板",
+"纸面石膏板"
+],
+"no": [
+"gips",
+"gipsplate",
+"sparkel"
+],
+"mn": [
+"гипс",
+"гипсэн"
+],
+"ja": [
+"石膏",
+"石膏ボード",
+"プラスター",
+"漆喰"
+],
+"he": [
+"גבס",
+"לוחות גבס",
+"גבסנית"
+],
+"ru": [
+"гипс",
+"гипсокартон",
+"гкл",
+"шпаклев"
+],
+"sv": [
+"gips",
+"gipsskiva",
+"spackel"
+]
+},
+"roofing": {
+"de": [
+"dachbahn",
+"dichtungsbahn",
+"dachpappe",
+"abdichtung"
+],
+"ro": [
+"bitum",
+"membran",
+"hidroizola",
+"carton bitumat"
+],
+"pt": [
+"betume",
+"membrana",
+"impermeabilização",
+"manta asfáltica"
+],
+"fi": [
+"bitumi",
+"bitumikermi",
+"katemembraani"
+],
+"it": [
+"bitume",
+"guaina",
+"membrana",
+"impermeabilizz"
+],
+"kk": [
+"битум",
+"мембрана",
+"гидроизоляция"
+],
+"cs": [
+"hydroizolac",
+"fólie",
+"střešní"
+],
+"nl": [
+"dakleer",
+"membraan",
+"dakbedekking"
+],
+"et": [
+"bituumen",
+"bituum",
+"hüdroisol"
+],
+"pl": [
+"bitum",
+"membran",
+"papa"
+],
+"ky": [
+"битум",
+"мембрана"
+],
+"ar": [
+"بيتومين",
+"غشاء",
+"قار"
+],
+"hi": [
+"बिटुमिन",
+"झिल्ली",
+"बिटुमेन"
+],
+"fa": [
+"قیر",
+"ایزوگام",
+"غشا"
+],
+"ko": [
+"방수",
+"루핑",
+"멤브레인",
+"역청"
+],
+"fr": [
+"bitume",
+"membrane",
+"étanchéité"
+],
+"uk": [
+"бітум",
+"мембран",
+"руберойд",
+"гідроізоляц"
+],
+"el": [
+"ασφαλτικ",
+"μεμβράνη",
+"μεμβράν",
+"στεγάνωση"
+],
+"th": [
+"บิทูเมน",
+"เมมเบรน",
+"กันซึม"
+],
+"en": [],
+"tr": [
+"membran",
+"bitüm",
+"su yalıtım"
+],
+"uz": [
+"bitum",
+"membrana",
+"gidroizolyatsiya"
+],
+"es": [
+"membrana",
+"impermeabilizante",
+"lámina asfáltica",
+"betún"
+],
+"bn": [
+"বিটুমিন",
+"মেমব্রেন"
+],
+"ur": [
+"بٹومین",
+"جھلی"
+],
+"id": [
+"membran",
+"kedap"
+],
+"vi": [
+"bitum",
+"chống thấm",
+"màng"
+],
+"hu": [
+"tetőfólia",
+"vízszigetel",
+"bitumenes"
+],
+"da": [
+"tagpap",
+"tagdug",
+"membran"
+],
+"bg": [
+"битум",
+"мембран",
+"хидроизолац"
+],
+"hr": [
+"hidroizolac",
+"membran",
+"krovn"
+],
+"fil": [
+"membrana"
+],
+"zh": [
+"防水卷材",
+"油毡",
+"沥青",
+"防水"
+],
+"no": [
+"takpapp",
+"membran",
+"takduk"
+],
+"mn": [
+"битум",
+"мембран"
+],
+"ja": [
+"ルーフィング",
+"防水シート",
+"防水",
+"ビチューメン"
+],
+"he": [
+"ביטומן",
+"ביטומני",
+"איטום",
+"יריעה"
+],
+"ru": [
+"битум",
+"мембран",
+"рубероид",
+"гидроизоляц"
+],
+"sv": [
+"takpapp",
+"membran",
+"tätskikt",
+"takduk"
+]
+},
+"masonry": {
+"de": [
+"mauerwerk",
+"mauer",
+"planstein"
+],
+"ro": [
+"zidărie",
+"zidarie",
+"zidar",
+"bloc"
+],
+"pt": [
+"alvenaria",
+"bloco",
+"blocos"
+],
+"fi": [
+"muuraus",
+"harkko",
+"muuri"
+],
+"it": [
+"muratura",
+"blocchi",
+"murat"
+],
+"kk": [
+"қалау",
+"блок",
+"қабырға"
+],
+"cs": [
+"zdivo",
+"tvárnic",
+"zděn"
+],
+"nl": [
+"metselwerk",
+"blok",
+"muur"
+],
+"et": [
+"müüritis",
+"müür",
+"plokk"
+],
+"pl": [
+"murowan",
+"pustak",
+"bloczek",
+"mur"
+],
+"ky": [
+"дубал",
+"блок"
+],
+"ar": [
+"بناء",
+"مداميك",
+"بلوك"
+],
+"hi": [
+"चिनाई",
+"ब्लॉक",
+"राजमिस्त्री"
+],
+"fa": [
+"بنایی",
+"بلوک",
+"بلوکی"
+],
+"ko": [
+"조적",
+"블록",
+"블럭"
+],
+"fr": [
+"maçonnerie",
+"parpaing",
+"agglo",
+"maconnerie"
+],
+"uk": [
+"мурування",
+"кладк",
+"блок",
+"мурув"
+],
+"el": [
+"τοιχοποιία",
+"τοιχοποιι",
+"τσιμεντόλιθος"
+],
+"th": [
+"งานก่อ",
+"บล็อก",
+"ก่ออิฐ"
+],
+"en": [],
+"tr": [
+"duvar",
+"gazbeton",
+"briket",
+"blok"
+],
+"uz": [
+"devor",
+"blok",
+"terim"
+],
+"es": [
+"mampostería",
+"albañilería",
+"bloque",
+"mamposteria"
+],
+"bn": [
+"গাঁথুনি",
+"রাজমিস্ত্রি"
+],
+"ur": [
+"چنائی",
+"بلاک",
+"معماری"
+],
+"id": [
+"pasangan",
+"batako",
+"tembok"
+],
+"vi": [
+"xây",
+"khối xây",
+"khoi xay"
+],
+"hu": [
+"falazat",
+"falazó",
+"blokk"
+],
+"da": [
+"murværk",
+"blokke",
+"murede"
+],
+"bg": [
+"зидария",
+"зидан",
+"блокч"
+],
+"hr": [
+"zidanje",
+"zidan",
+"zidovi"
+],
+"fil": [
+"pagmamason",
+"masonerya",
+"hollow"
+],
+"zh": [
+"砌体",
+"砌块",
+"砌筑"
+],
+"no": [
+"murverk",
+"blokk",
+"mur"
+],
+"mn": [
+"өрлөг",
+"блок"
+],
+"ja": [
+"組積",
+"石積",
+"ブロック",
+"積み"
+],
+"he": [
+"בלוק",
+"בלוקים",
+"בנייה"
+],
+"ru": [
+"кладк",
+"блок",
+"газоблок",
+"пеноблок"
+],
+"sv": [
+"murverk",
+"murar",
+"mur"
+]
+},
+"gravel": {
+"de": [
+"kies",
+"schotter",
+"splitt"
+],
+"ro": [
+"pietriș",
+"pietris",
+"prundiș"
+],
+"pt": [
+"cascalho",
+"brita",
+"seixo"
+],
+"fi": [
+"sora",
+"soraa",
+"murske",
+"kivimurske"
+],
+"it": [
+"ghiaia",
+"ghiai",
+"pietrisco"
+],
+"kk": [
+"қиыршық",
+"шағыл"
+],
+"cs": [
+"štěrk",
+"štěrkov",
+"kamenivo",
+"kačírek"
+],
+"nl": [
+"grind",
+"steenslag",
+"grindbed"
+],
+"et": [
+"kruus",
+"killustik"
+],
+"pl": [
+"żwir",
+"żwirow",
+"tłuczeń",
+"kruszyw"
+],
+"ky": [
+"шагыл",
+"майда таш"
+],
+"ar": [
+"حصى",
+"حصباء",
+"زلط"
+],
+"hi": [
+"बजरी",
+"गिट्टी",
+"कंकड़"
+],
+"fa": [
+"سنگریزه",
+"شن‌ریزه"
+],
+"ko": [
+"자갈",
+"쇄석",
+"골재"
+],
+"fr": [
+"gravier",
+"gravillon",
+"ballast"
+],
+"uk": [
+"щебін",
+"щебен",
+"гравій"
+],
+"el": [
+"χαλίκι",
+"χαλικ",
+"σκύρα"
+],
+"th": [
+"กรวด",
+"หินคลุก",
+"หินย่อย"
+],
+"en": [],
+"tr": [
+"çakıl",
+"kırmataş",
+"mıcır"
+],
+"uz": [
+"shag'al",
+"shagal",
+"chaqir"
+],
+"es": [
+"grava",
+"gravilla",
+"ripio"
+],
+"bn": [
+"নুড়ি",
+"পাথরকুচি",
+"খোয়া"
+],
+"ur": [
+"بجری",
+"روڑی"
+],
+"id": [
+"kerikil",
+"krikil",
+"batu pecah"
+],
+"vi": [
+"sỏi",
+"đá dăm"
+],
+"hu": [
+"kavics",
+"murva",
+"zúzott"
+],
+"da": [
+"grus",
+"skærv",
+"singel"
+],
+"bg": [
+"чакъл",
+"баластра"
+],
+"hr": [
+"šljunak",
+"šljunč",
+"tucanik"
+],
+"fil": [
+"graba"
+],
+"zh": [
+"砾石",
+"碎石",
+"卵石",
+"砂砾"
+],
+"no": [
+"pukk",
+"singel",
+"grus"
+],
+"mn": [
+"хайрга",
+"хайрган"
+],
+"ja": [
+"砂利",
+"砕石",
+"栗石",
+"バラス"
+],
+"he": [
+"חצץ",
+"חצצית"
+],
+"ru": [
+"щебен",
+"гравий",
+"галька"
+],
+"sv": [
+"grus",
+"singel",
+"makadam"
+]
+},
+"ceramic": {
+"de": [
+"keramik",
+"fliese",
+"porzellan",
+"steinzeug"
+],
+"ro": [
+"ceramic",
+"gresie",
+"faianță",
+"porțelan"
+],
+"pt": [
+"cerâmica",
+"azulejo",
+"porcelanato",
+"ladrilho"
+],
+"fi": [
+"keraami",
+"laatta",
+"posliini"
+],
+"it": [
+"ceramica",
+"piastrella",
+"gres",
+"porcellana"
+],
+"kk": [
+"керамика",
+"плитка",
+"фарфор"
+],
+"cs": [
+"keramik",
+"dlažba",
+"obklad",
+"porcel"
+],
+"nl": [
+"keramiek",
+"tegel",
+"porselein"
+],
+"et": [
+"keraamik",
+"portselan",
+"fliis"
+],
+"pl": [
+"ceramik",
+"płytk",
+"gres",
+"porcelan"
+],
+"ky": [
+"керамика",
+"плитка",
+"фарфор"
+],
+"ar": [
+"سيراميك",
+"بورسلين",
+"خزف",
+"بلاط"
+],
+"hi": [
+"सिरेमिक",
+"चीनी मिट्टी",
+"पोर्सिलेन"
+],
+"fa": [
+"سرامیک",
+"کاشی",
+"پرسلان"
+],
+"ko": [
+"타일",
+"세라믹",
+"도기",
+"자기"
+],
+"fr": [
+"céramique",
+"carrelage",
+"faïence",
+"porcelaine",
+"grès"
+],
+"uk": [
+"кераміка",
+"плитка",
+"порцеляна",
+"фаянс"
+],
+"el": [
+"κεραμικ",
+"πλακάκι",
+"πορσελάνη"
+],
+"th": [
+"เซรามิก",
+"กระเบื้อง",
+"พอร์ซเลน"
+],
+"en": [],
+"tr": [
+"seramik",
+"fayans",
+"porselen",
+"karo"
+],
+"uz": [
+"keramika",
+"plitka",
+"kafel",
+"chinni"
+],
+"es": [
+"cerámica",
+"azulejo",
+"porcelanato",
+"baldosa"
+],
+"bn": [
+"সিরামিক",
+"চিনামাটি",
+"টাইলস"
+],
+"ur": [
+"سیرامک",
+"چینی",
+"پورسلین"
+],
+"id": [
+"keramik",
+"ubin",
+"porselen"
+],
+"vi": [
+"gốm",
+"gạch men",
+"gạch ốp lát"
+],
+"hu": [
+"kerámia",
+"csempe",
+"járólap",
+"porcelán"
+],
+"da": [
+"keramik",
+"flise",
+"fliser",
+"porcelæn"
+],
+"bg": [
+"керамик",
+"фаянс",
+"плочк",
+"порцелан"
+],
+"hr": [
+"keramik",
+"pločic",
+"porculan"
+],
+"fil": [
+"seramik",
+"seramika",
+"porselana",
+"baldosa"
+],
+"zh": [
+"陶瓷",
+"瓷砖",
+"瓷器",
+"地砖"
+],
+"no": [
+"keramikk",
+"flis",
+"fliser",
+"porselen"
+],
+"mn": [
+"керамик",
+"шаазан",
+"хавтан"
+],
+"ja": [
+"タイル",
+"陶器",
+"磁器",
+"セラミック"
+],
+"he": [
+"קרמיקה",
+"אריח",
+"פורצלן"
+],
+"ru": [
+"керамик",
+"плитка",
+"керамогранит",
+"фарфор"
+],
+"sv": [
+"keramik",
+"kakel",
+"porslin"
+]
+},
+"water": {
+"de": [
+"wasser",
+"gewässer"
+],
+"ro": [
+"apă",
+"apa",
+"acvatic"
+],
+"pt": [
+"água",
+"aquático",
+"lago",
+"lagoa"
+],
+"fi": [
+"vesi",
+"vettä",
+"vesist"
+],
+"it": [
+"acqua",
+"acque"
+],
+"kk": [
+"сулы",
+"көл",
+"өзен"
+],
+"cs": [
+"voda",
+"vodní",
+"vod"
+],
+"nl": [
+"vijver",
+"sloot",
+"plas"
+],
+"et": [
+"vesi",
+"veekogu",
+"veek"
+],
+"pl": [
+"woda",
+"wody",
+"wodn",
+"staw"
+],
+"ky": [
+"суу",
+"көл",
+"дарыя"
+],
+"ar": [
+"مياه",
+"مائي",
+"بحيرة",
+"نهر"
+],
+"hi": [
+"पानी",
+"जलाशय",
+"तालाब"
+],
+"fa": [
+"آبی",
+"دریاچه",
+"استخر",
+"رودخانه"
+],
+"ko": [
+"수면",
+"수역",
+"연못"
+],
+"fr": [
+"eau",
+"eaux",
+"aquat"
+],
+"uk": [
+"вода",
+"водн",
+"водойм",
+"ставок"
+],
+"el": [
+"νερό",
+"νερ",
+"υδάτ",
+"θάλασσα"
+],
+"th": [
+"น้ำ",
+"แหล่งน้ำ",
+"สระน้ำ",
+"บ่อน้ำ"
+],
+"en": [],
+"tr": [
+"göl",
+"gölet",
+"havuz",
+"dere"
+],
+"uz": [
+"suv",
+"suvli",
+"ko'l",
+"daryo"
+],
+"es": [
+"agua",
+"acuático",
+"estanque"
+],
+"bn": [
+"পানি",
+"জলাশয়"
+],
+"ur": [
+"پانی",
+"جھیل",
+"تالاب",
+"دریا"
+],
+"id": [
+"air",
+"perairan",
+"kolam",
+"sungai"
+],
+"vi": [
+"nước",
+"mặt nước",
+"ao hồ"
+],
+"hu": [
+"víz",
+"vizes",
+"folyó"
+],
+"da": [
+"vand",
+"vandet"
+],
+"bg": [
+"вода",
+"водн",
+"езеро"
+],
+"hr": [
+"voda",
+"vod",
+"vodeno"
+],
+"fil": [
+"tubig",
+"lawa",
+"ilog"
+],
+"zh": [
+"水体",
+"水面",
+"水域",
+"河流"
+],
+"no": [
+"vann",
+"vannet"
+],
+"mn": [
+"усан",
+"нуур",
+"гол",
+"далай"
+],
+"ja": [
+"水面",
+"水域",
+"池水",
+"河川"
+],
+"he": [
+"מים",
+"מימי",
+"אגם",
+"בריכה"
+],
+"ru": [
+"вода",
+"водн",
+"водоем",
+"пруд",
+"озеро"
+],
+"sv": [
+"vatten",
+"vattn",
+"sjö",
+"damm"
+]
+},
+"asphalt": {
+"de": [
+"teer",
+"schwarzdecke"
+],
+"ro": [
+"asfalt"
+],
+"pt": [
+"asfalto"
+],
+"fi": [
+"asfaltti",
+"asfaltt"
+],
+"it": [
+"asfalto",
+"asfalt"
+],
+"kk": [
+"асфальт"
+],
+"cs": [
+"asfalt",
+"asfaltov"
+],
+"nl": [
+"asfalt"
+],
+"et": [
+"asfalt"
+],
+"pl": [
+"asfalt"
+],
+"ky": [
+"асфальт"
+],
+"ar": [
+"أسفلت",
+"اسفلت",
+"إسفلت",
+"زفت"
+],
+"hi": [
+"डामर",
+"अस्फाल्ट",
+"तारकोल"
+],
+"fa": [
+"آسفالت"
+],
+"ko": [
+"아스팔트",
+"아스콘"
+],
+"fr": [
+"asphalte",
+"enrobé",
+"goudron"
+],
+"uk": [
+"асфальт"
+],
+"el": [
+"άσφαλτος",
+"ασφαλτ"
+],
+"th": [
+"แอสฟัลต์",
+"ยางมะตอย",
+"ถนนลาดยาง"
+],
+"en": [],
+"tr": [
+"asfalt"
+],
+"uz": [
+"asfalt"
+],
+"es": [
+"asfalto",
+"asfált"
+],
+"bn": [
+"অ্যাসফল্ট",
+"অ্যাসফাল্ট"
+],
+"ur": [
+"اسفالٹ",
+"تارکول"
+],
+"id": [
+"aspal",
+"beraspal"
+],
+"vi": [
+"nhựa đường",
+"bê tông nhựa"
+],
+"hu": [
+"aszfalt"
+],
+"da": [
+"asfalt"
+],
+"bg": [
+"асфалт",
+"асфалтов"
+],
+"hr": [
+"asfalt"
+],
+"fil": [
+"aspalto"
+],
+"zh": [
+"柏油",
+"沥青路面",
+"沥青混凝土"
+],
+"no": [
+"asfalt"
+],
+"mn": [
+"асфальт"
+],
+"ja": [
+"アスファルト",
+"アスコン"
+],
+"he": [
+"אספלט"
+],
+"ru": [
+"асфальт"
+],
+"sv": [
+"asfalt"
+]
+},
+"paint": {
+"de": [
+"farbe",
+"anstrich",
+"lack"
+],
+"ro": [
+"vopsea",
+"vopsel",
+"lac"
+],
+"pt": [
+"tinta",
+"verniz",
+"tintas"
+],
+"fi": [
+"maali",
+"maalia",
+"lakka"
+],
+"it": [
+"vernice",
+"pittura",
+"smalto",
+"tinteggi"
+],
+"kk": [
+"бояу",
+"бояуы",
+"лак"
+],
+"cs": [
+"barva",
+"barv",
+"nátěr",
+"malb"
+],
+"nl": [
+"verf",
+"lak",
+"schilderwerk"
+],
+"et": [
+"värv",
+"värvi",
+"lakk"
+],
+"pl": [
+"farba",
+"farb",
+"lakier",
+"emalia"
+],
+"ky": [
+"боёк",
+"боек",
+"лак"
+],
+"ar": [
+"طلاء",
+"دهان",
+"دهانات",
+"صبغ",
+"بوية"
+],
+"hi": [
+"रंग",
+"रोगन",
+"पेंट"
+],
+"fa": [
+"رنگ",
+"رنگی"
+],
+"ko": [
+"페인트",
+"도료",
+"도장",
+"도색"
+],
+"fr": [
+"peinture",
+"vernis",
+"lasure"
+],
+"uk": [
+"фарб",
+"емаль",
+"лак"
+],
+"el": [
+"βαφή",
+"μπογιά",
+"χρώμα"
+],
+"th": [
+"สีทา",
+"สีน้ำมัน",
+"สีพ่น"
+],
+"en": [],
+"tr": [
+"boya",
+"vernik",
+"cila"
+],
+"uz": [
+"bo'yoq",
+"boyoq",
+"bo‘yoq",
+"lak"
+],
+"es": [
+"pintura",
+"esmalte",
+"barniz"
+],
+"bn": [
+"রঙিন",
+"রঞ্জক",
+"রংয়ের"
+],
+"ur": [
+"رنگ",
+"پینٹ",
+"وارنش"
+],
+"id": [
+"cat tembok",
+"pernis",
+"pelitur",
+"cat minyak"
+],
+"vi": [
+"sơn",
+"sơn nước",
+"sơn dầu",
+"vecni"
+],
+"hu": [
+"festék",
+"festés",
+"lakk"
+],
+"da": [
+"maling",
+"farve",
+"lak"
+],
+"bg": [
+"боя",
+"боядис",
+"бои"
+],
+"hr": [
+"boja",
+"boje",
+"lak"
+],
+"fil": [
+"pintura",
+"pinta",
+"barnis"
+],
+"zh": [
+"涂料",
+"油漆",
+"乳胶漆",
+"涂装"
+],
+"no": [
+"maling",
+"lakk",
+"beis"
+],
+"mn": [
+"будаг",
+"будаглах",
+"лак"
+],
+"ja": [
+"塗料",
+"塗装",
+"ペンキ",
+"ペイント"
+],
+"he": [
+"צבע",
+"צבעי",
+"ציפוי"
+],
+"ru": [
+"краск",
+"эмаль",
+"лак"
+],
+"sv": [
+"färg",
+"lack",
+"målarfärg"
+]
+},
+"stone": {
+"de": [
+"naturstein",
+"granit",
+"marmor",
+"stein"
+],
+"ro": [
+"piatră",
+"piatra",
+"granit",
+"marmură"
+],
+"pt": [
+"pedra",
+"granito",
+"mármore"
+],
+"fi": [
+"kivi",
+"graniitti",
+"marmori"
+],
+"it": [
+"pietra",
+"granito",
+"marmo"
+],
+"kk": [
+"тас",
+"гранит",
+"мәрмәр"
+],
+"cs": [
+"kámen",
+"kamen",
+"žula",
+"mramor"
+],
+"nl": [
+"steen",
+"graniet",
+"marmer",
+"natuursteen"
+],
+"et": [
+"kivi",
+"graniit",
+"marmor"
+],
+"pl": [
+"kamień",
+"kamien",
+"granit",
+"marmur"
+],
+"ky": [
+"таш",
+"гранит",
+"мрамор"
+],
+"ar": [
+"حجر",
+"حجري",
+"جرانيت",
+"رخام"
+],
+"hi": [
+"पत्थर",
+"ग्रेनाइट",
+"संगमरमर"
+],
+"fa": [
+"سنگ",
+"گرانیت",
+"مرمر"
+],
+"ko": [
+"석재",
+"대리석",
+"화강암"
+],
+"fr": [
+"pierre",
+"granit",
+"marbre"
+],
+"uk": [
+"камінь",
+"граніт",
+"мармур",
+"камен"
+],
+"el": [
+"πέτρα",
+"γρανίτης",
+"μάρμαρο",
+"λίθος"
+],
+"th": [
+"หิน",
+"หินแกรนิต",
+"หินอ่อน",
+"หินธรรมชาติ"
+],
+"en": [],
+"tr": [
+"taş",
+"granit",
+"mermer",
+"doğal taş"
+],
+"uz": [
+"tosh",
+"granit",
+"marmar"
+],
+"es": [
+"piedra",
+"granito",
+"mármol",
+"pétrea"
+],
+"bn": [
+"পাথর",
+"গ্রানাইট",
+"মার্বেল"
+],
+"ur": [
+"پتھر",
+"گرینائٹ",
+"سنگ مرمر"
+],
+"id": [
+"batu",
+"granit",
+"marmer"
+],
+"vi": [
+"hoa cương",
+"đá tự nhiên",
+"đá cẩm thạch",
+"đá granit"
+],
+"hu": [
+"gránit",
+"márvány",
+"kőzet",
+"mészkő"
+],
+"da": [
+"sten",
+"granit",
+"marmor"
+],
+"bg": [
+"камък",
+"камен",
+"гранит",
+"мрамор"
+],
+"hr": [
+"kamen",
+"granit",
+"mramor"
+],
+"fil": [
+"bato",
+"granito",
+"marmol"
+],
+"zh": [
+"石材",
+"花岗岩",
+"大理石",
+"石头"
+],
+"no": [
+"stein",
+"granitt",
+"marmor"
+],
+"mn": [
+"чулуу",
+"гранит",
+"гантиг"
+],
+"ja": [
+"石材",
+"大理石",
+"御影石",
+"花崗岩"
+],
+"he": [
+"אבן",
+"גרניט",
+"שיש"
+],
+"ru": [
+"камень",
+"камня",
+"гранит",
+"мрамор",
+"камен"
+],
+"sv": [
+"sten",
+"granit",
+"marmor"
+]
+},
+"glass": {
+"de": [
+"glas",
+"scheibe",
+"verglasung"
+],
+"ro": [
+"sticlă",
+"sticl",
+"geam"
+],
+"pt": [
+"vidro",
+"vidraça",
+"envidraçado"
+],
+"fi": [
+"lasi",
+"lasit",
+"ikkunalasi"
+],
+"it": [
+"vetro",
+"vetrata",
+"vetri"
+],
+"kk": [
+"әйнек",
+"шыны",
+"әйнектеу"
+],
+"cs": [
+"sklo",
+"skl",
+"zasklení"
+],
+"nl": [
+"glas",
+"beglazing",
+"ruit"
+],
+"et": [
+"klaas",
+"klaasi",
+"aken"
+],
+"pl": [
+"szkło",
+"szkl",
+"szyba"
+],
+"ky": [
+"айнек",
+"шише"
+],
+"ar": [
+"زجاج",
+"زجاجي",
+"زجاجية"
+],
+"hi": [
+"काँच",
+"कांच",
+"शीशा"
+],
+"fa": [
+"شیشه",
+"شیشه‌ای",
+"شیشه ای"
+],
+"ko": [
+"유리",
+"유리창"
+],
+"fr": [
+"verre",
+"vitrage",
+"vitre"
+],
+"uk": [
+"скло",
+"скл",
+"засклен"
+],
+"el": [
+"γυαλί",
+"τζάμι",
+"υαλο"
+],
+"th": [
+"กระจก"
+],
+"en": [],
+"tr": [
+"cam",
+"camekan",
+"camlama"
+],
+"uz": [
+"oyna",
+"shisha",
+"oynali"
+],
+"es": [
+"vidrio",
+"cristal",
+"acristalamiento"
+],
+"bn": [
+"কাচ",
+"কাঁচ"
+],
+"ur": [
+"شیشہ",
+"کانچ"
+],
+"id": [
+"kaca",
+"kaca bening"
+],
+"vi": [
+"kính",
+"thủy tinh",
+"thuy tinh"
+],
+"hu": [
+"üveg",
+"üvegez",
+"üvegfal"
+],
+"da": [
+"glas",
+"rude",
+"ruder"
+],
+"bg": [
+"стъкло",
+"стъкл",
+"стъклен"
+],
+"hr": [
+"staklo",
+"stakl",
+"staklen"
+],
+"fil": [
+"salamin",
+"bintana"
+],
+"zh": [
+"玻璃",
+"幕墙"
+],
+"no": [
+"vindusglass",
+"speilglass",
+"rute"
+],
+"mn": [
+"шил",
+"шилэн"
+],
+"ja": [
+"ガラス",
+"硝子"
+],
+"he": [
+"זכוכית",
+"זכוכי"
+],
+"ru": [
+"стекло",
+"стекл",
+"остекление"
+],
+"sv": [
+"glas",
+"fönster",
+"ruta"
+]
+},
+"plastic": {
+"de": [
+"kunststoff",
+"plastik",
+"pvc",
+"kunstharz"
+],
+"ro": [
+"polimer",
+"pvc",
+"vinil"
+],
+"pt": [
+"plástico",
+"plastico",
+"polímero",
+"pvc"
+],
+"fi": [
+"muovi",
+"muovia",
+"pvc"
+],
+"it": [
+"plastica",
+"plastico",
+"polimer",
+"pvc"
+],
+"kk": [
+"пластик",
+"пластмасса",
+"полимер"
+],
+"cs": [
+"plast",
+"plastov",
+"polymer"
+],
+"nl": [
+"kunststof",
+"pvc",
+"polymeer"
+],
+"et": [
+"plast",
+"plastik",
+"polümeer",
+"plastmass"
+],
+"pl": [
+"plastik",
+"tworzyw",
+"polimer",
+"pcv"
+],
+"ky": [
+"пластик",
+"пластмасса",
+"полимер"
+],
+"ar": [
+"بلاستيك",
+"بلاستيكي",
+"لدائن",
+"بوليمر"
+],
+"hi": [
+"प्लास्टिक",
+"पॉलिमर",
+"पीवीसी"
+],
+"fa": [
+"پلاستیک",
+"پلیمر",
+"پلیمری"
+],
+"ko": [
+"플라스틱",
+"수지",
+"비닐",
+"합성수지"
+],
+"fr": [
+"plastique",
+"polymère",
+"polymere"
+],
+"uk": [
+"пластик",
+"пластмас",
+"полімер",
+"пвх"
+],
+"el": [
+"πλαστικ",
+"πολυμερ"
+],
+"th": [
+"พลาสติก",
+"พีวีซี",
+"โพลิเมอร์"
+],
+"en": [],
+"tr": [
+"plastik",
+"polimer",
+"pvc"
+],
+"uz": [
+"plastik",
+"plastmassa",
+"polimer",
+"pvx"
+],
+"es": [
+"plástico",
+"plastico",
+"polímero",
+"vinilo"
+],
+"bn": [
+"প্লাস্টিক",
+"পলিমার",
+"পিভিসি"
+],
+"ur": [
+"پلاسٹک",
+"پولیمر",
+"پی وی سی"
+],
+"id": [
+"plastik",
+"polimer",
+"pvc"
+],
+"vi": [
+"nhựa",
+"chất dẻo",
+"polyme"
+],
+"hu": [
+"műanyag",
+"polimer"
+],
+"da": [
+"plastik",
+"plast",
+"pvc"
+],
+"bg": [
+"пластмас",
+"пластик",
+"полимер"
+],
+"hr": [
+"plastik",
+"plastič",
+"polimer"
+],
+"fil": [
+"plastik",
+"polimer"
+],
+"zh": [
+"塑料",
+"塑胶",
+"树脂",
+"聚合物"
+],
+"no": [
+"plast",
+"plastikk",
+"polymer"
+],
+"mn": [
+"хуванцар",
+"пластик",
+"полимер"
+],
+"ja": [
+"プラスチック",
+"樹脂",
+"塩ビ",
+"ビニール"
+],
+"he": [
+"פלסטיק",
+"פולימר",
+"פוליאתילן"
+],
+"ru": [
+"пластик",
+"пластмасс",
+"полимер",
+"пвх"
+],
+"sv": [
+"plast",
+"plastmaterial",
+"pvc",
+"polymer"
+]
+}
+}

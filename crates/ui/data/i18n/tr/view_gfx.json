@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Bu görünümde gizlendi, korundu ve seçimi kaldırıldı: {n}",
  "view_gfx.flt.bad_value": "Kural değeri tanınmadı: bir sayı girin, isteğe bağlı olarak birimle",
  "view_gfx.name_taken": "Bu ad zaten kullanılıyor",
+ "view_gfx.mat.roughness": "Yüzey pürüzlülüğü",
+ "view_gfx.mat.metallic": "Metalik",
+ "view_gfx.mat.opacity": "Opaklık",
+ "view_gfx.mat.ior": "Kırılma indisi",
+ "view_gfx.mat.surface_reset": "Yüzeyi sınıf değerlerine sıfırla",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

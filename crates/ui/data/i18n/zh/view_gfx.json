@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "在此视图中隐藏,已保留并取消选择:{n}",
  "view_gfx.flt.bad_value": "无法识别规则值:请输入数字,可选带单位",
  "view_gfx.name_taken": "该名称已被占用",
+ "view_gfx.mat.roughness": "表面粗糙度",
+ "view_gfx.mat.metallic": "金属感",
+ "view_gfx.mat.opacity": "不透明度",
+ "view_gfx.mat.ior": "折射率",
+ "view_gfx.mat.surface_reset": "将表面重置为类别默认值",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

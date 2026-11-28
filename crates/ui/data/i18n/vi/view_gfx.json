@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Ẩn trong góc nhìn này, được giữ lại và bỏ chọn: {n}",
  "view_gfx.flt.bad_value": "Không nhận ra giá trị quy tắc: nhập số, có thể kèm đơn vị",
  "view_gfx.name_taken": "Tên này đã được dùng",
+ "view_gfx.mat.roughness": "Độ nhám bề mặt",
+ "view_gfx.mat.metallic": "Độ kim loại",
+ "view_gfx.mat.opacity": "Độ mờ đục",
+ "view_gfx.mat.ior": "Chiết suất",
+ "view_gfx.mat.surface_reset": "Đặt lại bề mặt về giá trị của lớp",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

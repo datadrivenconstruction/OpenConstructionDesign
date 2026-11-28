@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Скрытые в виде элементы не удалены и сняты с выбора: {n}",
  "view_gfx.flt.bad_value": "Значение правила не распознано: укажите число или число с единицей",
  "view_gfx.name_taken": "Такое имя уже занято",
+ "view_gfx.mat.roughness": "Шероховатость поверхности",
+ "view_gfx.mat.metallic": "Металличность",
+ "view_gfx.mat.opacity": "Непрозрачность",
+ "view_gfx.mat.ior": "Показатель преломления",
+ "view_gfx.mat.surface_reset": "Сбросить поверхность к значениям класса",
  "view_gfx.unit.density": "кг/м³",
  "view_gfx.unit.conductivity": "Вт/(м·К)",
  "view_gfx.unit.specific_heat": "Дж/(кг·К)"

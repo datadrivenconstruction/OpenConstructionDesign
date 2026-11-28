@@ -575,6 +575,40 @@ fn num_row(ui: &mut egui::Ui, key: &str, unit: &str, v: &mut String) {
     ui_kit::kv_text(ui, &name, v, &t(unit), &name, "", egui::Align::Max);
 }
 
+/// Roughness, metallic, opacity and refraction index of the open material. A change applies at
+/// once as its own undo step; a value at the class default is stored as "not set".
+fn surface_rows(ui: &mut egui::Ui, ed: &mut Editor, name: &str) {
+    let th = ddc_ui::theme::of(ui.ctx());
+    let nf = widgets::NumberFormat::for_lang(crate::ui_lang());
+    let cur = ed.model.material_surface(name).unwrap_or_default();
+    let class = ed.model.material_look(name).ok().flatten();
+    let (cr, cm) = class.map_or((0.85, 0.0), |r| (f64::from(r.roughness), f64::from(r.metallic)));
+    let mut s = cur;
+    let rows: [(&str, &mut Option<f64>, f64, (f64, f64), f64, usize); 4] = [
+        ("view_gfx.mat.roughness", &mut s.roughness, cr, (0.0, 1.0), 0.05, 2),
+        ("view_gfx.mat.metallic", &mut s.metallic, cm, (0.0, 1.0), 0.05, 2),
+        ("view_gfx.mat.opacity", &mut s.opacity, 1.0, (0.0, 1.0), 0.05, 2),
+        ("view_gfx.mat.ior", &mut s.ior, 1.5, (ddc_model::IOR_MIN, ddc_model::IOR_MAX), 0.05, 2),
+    ];
+    ui_kit::props(ui, "view_gfx.mat.surface", |ui| {
+        for (key, slot, dflt, range, step, dec) in rows {
+            ui_kit::kv_widget(ui, &t(key), |ui| {
+                let mut x = slot.unwrap_or(dflt);
+                if widgets::field::slider(ui, &th, key, &mut x, range, step, dec, nf) {
+                    *slot = Some(x);
+                }
+            });
+        }
+    });
+    if !cur.is_default() && ui_kit::secondary_button(ui, t("view_gfx.mat.surface_reset")).clicked() {
+        s = ddc_model::MaterialSurface::default();
+    }
+    if s != cur {
+        let n = name.to_string();
+        run(ed, move |m| m.set_material_surface(&n, &s));
+    }
+}
+
 /// The user's answer to a card conflict.
 #[derive(Clone, Copy, Debug, PartialEq)]
 enum Answer {
@@ -654,6 +688,7 @@ fn details_ui(ui: &mut egui::Ui, ed: &mut Editor, st: &mut Win) -> Option<Answer
         let note = t("view_gfx.mat.note");
         ui_kit::kv_text(ui, &note, &mut d.note, "", &note, "", egui::Align::Min);
     });
+    surface_rows(ui, ed, &d.orig);
     if let Some(e) = &d.error {
         ui_kit::error_note(ui, e);
     }

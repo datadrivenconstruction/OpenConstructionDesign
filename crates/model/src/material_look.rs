@@ -117,7 +117,7 @@ fn words(key: &str) -> &'static [&'static str] {
         "seating" => &["seat", "seating", "bench", "chair"],
         "plastic" => &["plastic", "polyethylene", "polypropylene", "hdpe", "pvc", "upvc", "frp", "grp"],
         "timber" => &[
-            "timber", "wood", "glulam", "clt", "lvl", "osb", "oak", "pine", "spruce", "larch",
+            "timber", "wood", "door", "glulam", "clt", "lvl", "osb", "oak", "pine", "spruce", "larch",
             "birch", "beech", "cedar", "plywood", "decking", "laminated veneer",
         ],
         "copper" => &["copper", "brass", "bronze", "zinc"],
@@ -152,6 +152,43 @@ const COLOUR_WORDS: [(&str, u32); 17] = [
     ("gold", 0xC9A227),
     ("cream", 0xEFE4C4),
 ];
+
+/// Words other languages use for each class (`data/material_words.json`: class, language, words),
+/// flattened per class. Only classes of the library are kept.
+fn local_words(key: &str) -> &'static [String] {
+    use std::collections::HashMap;
+    use std::sync::OnceLock;
+    static WORDS: OnceLock<HashMap<String, Vec<String>>> = OnceLock::new();
+    let all = WORDS.get_or_init(|| {
+        let j: serde_json::Value =
+            serde_json::from_str(include_str!("../data/material_words.json")).unwrap_or_default();
+        let mut out: HashMap<String, Vec<String>> = HashMap::new();
+        for (class, langs) in j.as_object().into_iter().flatten() {
+            let e = out.entry(class.clone()).or_default();
+            for list in langs.as_object().into_iter().flat_map(|o| o.values()) {
+                for w in list.as_array().into_iter().flatten().filter_map(|w| w.as_str()) {
+                    let w = w.trim().to_lowercase();
+                    if w.chars().count() >= 2 && !e.contains(&w) {
+                        e.push(w);
+                    }
+                }
+            }
+        }
+        out
+    });
+    all.get(key).map_or(&[], Vec::as_slice)
+}
+
+/// A local word in the name. A plain Latin word follows `has_word`; any other word (another
+/// script, an apostrophe or a slash) matches inside the name, since such texts inflect or run
+/// words together.
+fn has_local_word(name: &str, w: &str) -> bool {
+    if w.chars().all(|c| c.is_ascii_alphanumeric()) {
+        has_word(name, w)
+    } else {
+        name.contains(w)
+    }
+}
 
 fn tokens(s: &str) -> impl Iterator<Item = &str> {
     s.split(|c: char| !c.is_ascii_alphanumeric()).filter(|t| !t.is_empty())
@@ -201,6 +238,7 @@ pub fn look_of(name: &str) -> Option<&'static Look> {
     LOOKS
         .iter()
         .find(|l| words(l.key).iter().any(|w| has_word(&n, w)))
+        .or_else(|| LOOKS.iter().find(|l| local_words(l.key).iter().any(|w| has_local_word(&n, w))))
         .or_else(|| grade(&n, name).and_then(look_by_key))
 }
 
@@ -224,6 +262,9 @@ pub struct Resolved {
     pub rgb: u32,
     pub metallic: f32,
     pub roughness: f32,
+    /// Row override; None keeps what the class implies.
+    pub opacity: Option<f32>,
+    pub ior: Option<f32>,
 }
 
 /// Look of a material text with an optional row colour (`MaterialSpec::color`); None when the
@@ -244,7 +285,7 @@ pub fn resolve(name: &str, row_color: Option<u32>) -> Option<Resolved> {
         }
         (None, None) => look.rgb,
     };
-    Some(Resolved { look, rgb, metallic, roughness })
+    Some(Resolved { look, rgb, metallic, roughness, opacity: None, ior: None })
 }
 
 /// Material name a new element of `kind` gets when none is given: the class its name hints at
@@ -351,7 +392,15 @@ impl Model {
         if name.trim().is_empty() {
             return Ok(None);
         }
-        Ok(resolve(name, self.material(name)?.spec.color))
+        let Some(mut r) = resolve(name, self.material(name)?.spec.color) else {
+            return Ok(None);
+        };
+        let s = self.material_surface(name)?;
+        r.roughness = s.roughness.map_or(r.roughness, |v| v as f32);
+        r.metallic = s.metallic.map_or(r.metallic, |v| v as f32);
+        r.opacity = s.opacity.map(|v| v as f32);
+        r.ior = s.ior.map(|v| v as f32);
+        Ok(Some(r))
     }
 
     /// Every (table, id, material) of [`CHECKED`], empty materials included. Tables this file

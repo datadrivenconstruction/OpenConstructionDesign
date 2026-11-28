@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Ebben a nézetben rejtve, megtartva és kijelölés nélkül: {n}",
  "view_gfx.flt.bad_value": "A szabály értéke nem értelmezhető: adjon meg számot, opcionálisan mértékegységgel",
  "view_gfx.name_taken": "Ez a név már foglalt",
+ "view_gfx.mat.roughness": "Felület érdessége",
+ "view_gfx.mat.metallic": "Fémes",
+ "view_gfx.mat.opacity": "Átlátszatlanság",
+ "view_gfx.mat.ior": "Törésmutató",
+ "view_gfx.mat.surface_reset": "Felület visszaállítása az osztály értékeire",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

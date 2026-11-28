@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "اس ویو میں چھپا ہوا، رکھا گیا اور غیر منتخب: {n}",
  "view_gfx.flt.bad_value": "اصول کی قدر پہچانی نہیں: عدد لکھیں، اختیاری طور پر یونٹ کے ساتھ",
  "view_gfx.name_taken": "یہ نام پہلے ہی استعمال ہو چکا ہے",
+ "view_gfx.mat.roughness": "سطح کی کھردرائی",
+ "view_gfx.mat.metallic": "دھاتی",
+ "view_gfx.mat.opacity": "غیر شفافیت",
+ "view_gfx.mat.ior": "انعطاف کا اشاریہ",
+ "view_gfx.mat.surface_reset": "سطح کو کلاس کی قدروں پر ری سیٹ کریں",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

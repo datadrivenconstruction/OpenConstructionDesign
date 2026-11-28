@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "このビューで非表示、保持して選択解除: {n}",
  "view_gfx.flt.bad_value": "ルールの値を認識できません: 数値を入力してください (単位を付けることもできます)",
  "view_gfx.name_taken": "この名前は既に使用されています",
+ "view_gfx.mat.roughness": "表面の粗さ",
+ "view_gfx.mat.metallic": "金属感",
+ "view_gfx.mat.opacity": "不透明度",
+ "view_gfx.mat.ior": "屈折率",
+ "view_gfx.mat.surface_reset": "表面をクラスの値にリセット",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

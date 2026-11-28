@@ -292,10 +292,21 @@ pub fn set_material(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String
             Some((k.trim().to_ascii_lowercase(), tile))
         }
     };
-    if look.is_none() && color.is_none() && texture.is_none() {
-        return Err(bad("look", "give look, color or texture"));
+    let opt = |key: &str, what: &str| match &a[key] {
+        J::Null => Ok(None),
+        _ => number(a, key, what).map(Some),
+    };
+    let surface = ddc_model::MaterialSurface {
+        roughness: opt("roughness", "0 to 1")?,
+        metallic: opt("metallic", "0 to 1")?,
+        opacity: opt("opacity", "0 to 1")?,
+        ior: opt("ior", "1 to 3")?,
+    };
+    surface.check().map_err(|e| bad("surface", &e.to_string()))?;
+    if look.is_none() && color.is_none() && texture.is_none() && surface.is_default() {
+        return Err(bad("look", "give look, color, texture or a surface value"));
     }
-    add_op(c, a, cx, PlanOp::Tool(ToolAct::SetMaterial { name, look, color, texture }))
+    add_op(c, a, cx, PlanOp::Tool(ToolAct::SetMaterial { name, look, color, texture, surface }))
 }
 
 pub fn move_elements(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {

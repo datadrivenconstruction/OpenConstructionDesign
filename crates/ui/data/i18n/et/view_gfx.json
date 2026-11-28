@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Selles vaates peidetud, alles jäetud ja valikust eemaldatud: {n}",
  "view_gfx.flt.bad_value": "Reegli väärtust ei tuvastatud: sisesta arv, vajadusel ühikuga",
  "view_gfx.name_taken": "See nimi on juba kasutusel",
+ "view_gfx.mat.roughness": "Pinna karedus",
+ "view_gfx.mat.metallic": "Metallilisus",
+ "view_gfx.mat.opacity": "Läbipaistmatus",
+ "view_gfx.mat.ior": "Murdumisnäitaja",
+ "view_gfx.mat.surface_reset": "Lähtesta pind klassi väärtustele",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

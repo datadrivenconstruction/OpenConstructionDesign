@@ -126,6 +126,8 @@ pub mod mat_mech;
 mod material_texture;
 pub mod material_look;
 pub mod material_hatch;
+mod material_surface;
+pub use material_surface::{MaterialSurface, IOR_MAX, IOR_MIN};
 #[cfg(test)]
 mod material_look_tests;
 mod field_err;

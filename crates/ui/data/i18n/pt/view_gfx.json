@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Ocultos nesta vista, mantidos e desselecionados: {n}",
  "view_gfx.flt.bad_value": "Valor de regra não reconhecido: introduza um número, opcionalmente com unidade",
  "view_gfx.name_taken": "Este nome já está em uso",
+ "view_gfx.mat.roughness": "Rugosidade da superfície",
+ "view_gfx.mat.metallic": "Metálico",
+ "view_gfx.mat.opacity": "Opacidade",
+ "view_gfx.mat.ior": "Índice de refração",
+ "view_gfx.mat.surface_reset": "Repor a superfície para os valores da classe",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

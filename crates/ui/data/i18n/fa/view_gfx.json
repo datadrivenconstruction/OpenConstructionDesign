@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "در این نما پنهان است، نگه داشته و از انتخاب خارج شد: {n}",
  "view_gfx.flt.bad_value": "مقدار قاعده شناخته نشد: عدد وارد کنید، با واحد در صورت تمایل",
  "view_gfx.name_taken": "این نام از قبل استفاده شده است",
+ "view_gfx.mat.roughness": "زبری سطح",
+ "view_gfx.mat.metallic": "فلزی",
+ "view_gfx.mat.opacity": "کدری",
+ "view_gfx.mat.ior": "ضریب شکست",
+ "view_gfx.mat.surface_reset": "بازنشانی سطح به مقادیر کلاس",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

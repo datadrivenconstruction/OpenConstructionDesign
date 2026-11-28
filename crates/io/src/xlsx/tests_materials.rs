@@ -282,7 +282,7 @@ fn material_bad_color_refused_per_cell() {
             .unwrap_or_else(|| panic!("no refusal of {header}: {:?}", rep.rejected))
     };
     assert_eq!(why(H_COLOR), "not a colour: 'red' (use #RRGGBB)");
-    assert_eq!(why("hatch"), "unknown hatch 'wavy' (use none, diagonal, back_diagonal, cross, dots)");
+    assert_eq!(why("hatch"), "unknown hatch 'wavy' (use none, diagonal, back_diagonal, cross, dots, steel, earth, water, stone, stipple, glass)");
     assert_eq!(why(H_DENSITY), "value must be 0 or more, got -5");
     assert!(why(H_COND).starts_with("not a number"));
     let glass = row_named(&g, "glass") as u32 + 1;

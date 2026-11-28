@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "इस दृश्य में छिपाए गए, रखे गए और अचयनित: {n}",
  "view_gfx.flt.bad_value": "नियम का मान पहचाना नहीं गया: संख्या लिखें, इकाई के साथ या बिना",
  "view_gfx.name_taken": "यह नाम पहले से लिया जा चुका है",
+ "view_gfx.mat.roughness": "सतह की खुरदरापन",
+ "view_gfx.mat.metallic": "धात्विक",
+ "view_gfx.mat.opacity": "अपारदर्शिता",
+ "view_gfx.mat.ior": "अपवर्तनांक",
+ "view_gfx.mat.surface_reset": "सतह को क्लास मानों पर रीसेट करें",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

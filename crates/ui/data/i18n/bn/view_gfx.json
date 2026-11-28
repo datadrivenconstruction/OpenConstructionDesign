@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "এই ভিউয়ে লুকানো, রাখা ও নির্বাচন বাতিল: {n}",
  "view_gfx.flt.bad_value": "নিয়মের মান বোঝা যায়নি: একটি সংখ্যা লিখুন, চাইলে একক সহ",
  "view_gfx.name_taken": "এই নাম আগে থেকেই নেওয়া",
+ "view_gfx.mat.roughness": "পৃষ্ঠের অমসৃণতা",
+ "view_gfx.mat.metallic": "ধাতব",
+ "view_gfx.mat.opacity": "অস্বচ্ছতা",
+ "view_gfx.mat.ior": "প্রতিসরণ সূচক",
+ "view_gfx.mat.surface_reset": "পৃষ্ঠকে শ্রেণির মানে রিসেট করুন",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

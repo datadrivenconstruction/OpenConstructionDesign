@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "ซ่อนในมุมมองนี้ เก็บไว้และยกเลิกการเลือก: {n}",
  "view_gfx.flt.bad_value": "ไม่รู้จักค่าของกฎ: ใส่ตัวเลข และอาจมีหน่วย",
  "view_gfx.name_taken": "ชื่อนี้ถูกใช้แล้ว",
+ "view_gfx.mat.roughness": "ความหยาบของพื้นผิว",
+ "view_gfx.mat.metallic": "ความเป็นโลหะ",
+ "view_gfx.mat.opacity": "ความทึบแสง",
+ "view_gfx.mat.ior": "ดัชนีหักเห",
+ "view_gfx.mat.surface_reset": "รีเซ็ตพื้นผิวเป็นค่าของคลาส",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

@@ -1557,17 +1557,17 @@ fn materials_edits(model: &Model, tab: &Tab, rep: &mut Report) -> Vec<Edit> {
                 // built-in keys in any case; a library hatch keeps its name as written
                 let t = t.map(|h| {
                     let low = h.to_lowercase();
-                    if ddc_model::MATERIAL_HATCHES.contains(&low.as_str()) { low } else { h }
+                    if ddc_model::material_hatch::is_builtin_hatch(&low) { low } else { h }
                 });
                 match t {
                     None => row.bad(rep, "hatch", "value required"),
                     Some(h)
-                        if !ddc_model::MATERIAL_HATCHES.contains(&h.as_str())
+                        if !ddc_model::material_hatch::is_builtin_hatch(&h)
                             && !ddc_model::is_lib_hatch(&h) =>
                     {
                         let why = format!(
                             "unknown hatch '{h}' (use {})",
-                            ddc_model::MATERIAL_HATCHES.join(", ")
+                            [ddc_model::MATERIAL_HATCHES.join(", "), ddc_model::material_hatch::EXTRA_HATCHES.join(", ")].join(", ")
                         );
                         row.bad(rep, "hatch", why)
                     }

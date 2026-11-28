@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "이 뷰에서 숨김, 유지되고 선택 해제됨: {n}",
  "view_gfx.flt.bad_value": "규칙 값을 인식할 수 없습니다: 숫자를 입력하세요(단위 선택 가능)",
  "view_gfx.name_taken": "이미 사용 중인 이름입니다",
+ "view_gfx.mat.roughness": "표면 거칠기",
+ "view_gfx.mat.metallic": "금속성",
+ "view_gfx.mat.opacity": "불투명도",
+ "view_gfx.mat.ior": "굴절률",
+ "view_gfx.mat.surface_reset": "표면을 클래스 값으로 재설정",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

@@ -83,6 +83,7 @@ struct Ctx {
     prod: BTreeMap<(String, i64), u32>,
     /// Material specs by name, and the IfcMaterial written for each (one per name).
     mat_spec: BTreeMap<String, ddc_model::MaterialSpec>,
+    mat_look: BTreeMap<String, ddc_model::material_look::Resolved>,
     mat_ent: BTreeMap<String, u32>,
     /// Context of the material style representations.
     mat_ctx: u32,
@@ -302,6 +303,7 @@ fn run(model: &Model, step: Step) -> Result<(Step, guids::Guids), String> {
         g: guids::Guids::load(model)?,
         prod: BTreeMap::new(),
         mat_spec: matdef::load(model)?,
+        mat_look: matdef::looks(model)?,
         mat_ent: BTreeMap::new(),
         mat_ctx: 0,
     };

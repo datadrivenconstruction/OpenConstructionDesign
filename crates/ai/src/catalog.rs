@@ -738,8 +738,12 @@ fn set_material() -> Schema {
         ("name", desc("Material name; a new name becomes a project material", str_max(80))),
         ("look", opt(desc("Library class from list_materials.library, e.g. steel, concrete, timber, glass, brick, render, grass", str_max(40)))),
         ("color", opt(desc("Base colour #RRGGBB; overrides the class colour", str_max(7)))),
-        ("texture", opt(enum_(&["brick", "concrete", "wood", "tile", "metal", "glass", "grass"]))),
+        ("texture", opt(enum_(&ddc_model::BUILTIN_TEXTURES))),
         ("tile", opt(desc("Texture repeat in metres; default: the class tile", num()))),
+        ("roughness", opt(desc("Surface roughness 0 (mirror) to 1 (matt); default: the class value", num()))),
+        ("metallic", opt(desc("0 dielectric to 1 bare metal; default: the class value", num()))),
+        ("opacity", opt(desc("1 opaque to 0 clear; default: opaque unless the class is glass", num()))),
+        ("ior", opt(desc("Refraction index 1 to 3, glass 1.5, water 1.33", num()))),
     ])
 }
 
@@ -1962,7 +1966,7 @@ static CATALOG: &[ToolSpec] = &[
     propose("delete_level", "Plan: delete a level; the last level is refused.", delete_level).plan_item().with_effect(Effect::Overwrites),
     propose("place_rooms", "Plan: a room in every closed wall region of a level that has no room yet; numbers continue the level's sequence. None free: no_effect.", place_rooms).plan_item(),
     propose("place_footings", "Plan: a concrete pad footing 1.2 x 1.2 x 0.5 m under every column of a level that has none. None free: no_effect.", place_footings).plan_item(),
-    propose("set_material", "Plan: set how a material looks in 3D: a library class (look), a colour #RRGGBB and a built-in texture with its tile in metres. A new name becomes a project material. Assign it to elements by name in layers, create_geometry parts and fields. Already so: no_effect.", set_material).plan_item().with_effect(Effect::Overwrites),
+    propose("set_material", "Plan: set how a material looks in 3D: a library class (look), a colour #RRGGBB, a built-in texture with its tile in metres, and surface values roughness, metallic, opacity and ior. A new name becomes a project material. Assign it to elements by name in layers, create_geometry parts and fields. Already so: no_effect.", set_material).plan_item().with_effect(Effect::Overwrites),
     propose("create_terrain", "Plan: a terrain (toposolid) through survey points, or a plane over an outline at a height with a slope; the answer names it as toposolid:ID. generate_project with site.terrain \"model\" then sets the building on it.", create_terrain).plan_item().at_version(3),
     propose(MEASURE_SAVE, MEASURE_SAVE_HELP, measure_save).plan_item(),
     propose(EDIT_MASS, EDIT_MASS_HELP, edit_mass).plan_item().with_effect(Effect::Overwrites),
@@ -2555,6 +2559,7 @@ mod tests {
         ok("list_types", json!({}));
         ok("list_types", json!({ "cat": "door" }));
         ok("set_material", json!({ "title": "Steel", "name": "steel S355", "look": "steel", "color": "#8a9097", "texture": "metal", "tile": 1.0 }));
+        ok("set_material", json!({ "title": "Rough", "name": "steel S355", "roughness": 0.8, "metallic": 0.0, "ior": 1.5 }));
         bad("set_material", json!({ "title": "Steel", "name": "steel S355", "texture": "marble" }));
         ok(
             "query_elements",

@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Skjult i denne visningen, beholdt og fravalgt: {n}",
  "view_gfx.flt.bad_value": "Regelverdien ble ikke gjenkjent: skriv inn et tall, eventuelt med enhet",
  "view_gfx.name_taken": "Dette navnet er allerede i bruk",
+ "view_gfx.mat.roughness": "Overflateruhet",
+ "view_gfx.mat.metallic": "Metallisk",
+ "view_gfx.mat.opacity": "Dekkevne",
+ "view_gfx.mat.ior": "Brytningsindeks",
+ "view_gfx.mat.surface_reset": "Tilbakestill overflaten til klasseverdier",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

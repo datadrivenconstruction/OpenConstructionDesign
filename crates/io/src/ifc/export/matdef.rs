@@ -16,13 +16,27 @@ pub(super) fn load(model: &Model) -> Result<BTreeMap<String, MaterialSpec>, Stri
     Ok(rows.into_iter().map(|m| (m.spec.name.clone(), m.spec)).collect())
 }
 
-/// Glass-like materials are written see-through.
-fn transparency(name: &str) -> f64 {
-    let n = name.to_lowercase();
-    if n.contains("glass") || n.contains("\u{441}\u{442}\u{435}\u{43a}\u{43b}") {
-        0.7
-    } else {
-        0.0
+/// Look of every material in use with its row values applied.
+pub(super) fn looks(model: &Model) -> Result<BTreeMap<String, ddc_model::material_look::Resolved>, String> {
+    let rows = model.materials().map_err(|e| format!("db: {e}"))?;
+    let mut out = BTreeMap::new();
+    for m in rows {
+        if let Some(l) = model.material_look(&m.spec.name).map_err(|e| format!("db: {e}"))? {
+            out.insert(m.spec.name, l);
+        }
+    }
+    Ok(out)
+}
+
+/// IFC transparency: the row opacity, else see-through for the glass classes.
+fn transparency(look: Option<&ddc_model::material_look::Resolved>) -> f64 {
+    match look {
+        Some(l) => match l.opacity {
+            Some(o) => f64::from(1.0 - o.clamp(0.0, 1.0)),
+            None if matches!(l.look.key, "glass" | "polycarbonate") => 0.7,
+            None => 0.0,
+        },
+        None => 0.0,
     }
 }
 
@@ -64,10 +78,15 @@ impl Ctx {
             "IFCCOLOURRGB",
             &[s(NONE), real(ch(16)), real(ch(8)), real(ch(0))],
         );
-        let transp = transparency(name);
-        let (highlight, method) = match ddc_model::material_look::resolve(name, Some(rgb)) {
+        let look = self
+            .mat_look
+            .get(name)
+            .copied()
+            .or_else(|| ddc_model::material_look::resolve(name, Some(rgb)));
+        let transp = transparency(look.as_ref());
+        let (highlight, method) = match look {
             Some(l) => (
-                format!("IFCSPECULARROUGHNESS({})", real(f64::from(l.roughness.clamp(0.0, 1.0)))),
+                format!("IFCSPECULARROUGHNESS({})", real((f64::from(l.roughness.clamp(0.0, 1.0)) * 1e4).round() / 1e4)),
                 reflectance(transp, l.metallic, l.roughness),
             ),
             None => (s(NONE), ".NOTDEFINED."),
@@ -270,6 +289,25 @@ mod tests {
         let mut dst = Model::open(":memory:").unwrap();
         crate::ifc::import_ifc(&mut dst, t.as_bytes()).unwrap();
         assert_eq!(dst.material(name).unwrap().spec.color, row, "the look colour does not become a row colour");
+    }
+
+    #[test]
+    fn row_surface_values_reach_the_style() {
+        let mut m = Model::open(":memory:").unwrap();
+        let lv = m.add_level("L1", 0.0).unwrap();
+        let layer = LayerSpec { material: "Zz plate".into(), thickness: 0.2 };
+        let wt = m.add_wall_type("zz", &[layer]).unwrap();
+        m.add_wall(&WallSpec { a: (0.0, 0.0), b: (4.0, 0.0), level: lv, base_offset: 0.0, height: 3.0, wall_type: wt, offset0: None })
+            .unwrap();
+        m.set_material_surface(
+            "Zz plate",
+            &ddc_model::MaterialSurface { roughness: Some(0.1), metallic: Some(1.0), opacity: Some(0.25), ior: None },
+        )
+        .unwrap();
+        let t = export_ifc(&m).unwrap();
+        let line = t.lines().find(|l| l.contains("=IFCSURFACESTYLERENDERING(")).expect("a style");
+        assert!(line.contains(",0.75,"), "transparency is 1 - opacity: {line}");
+        assert!(line.contains("IFCSPECULARROUGHNESS(0.1)"), "{line}");
     }
 
     #[test]

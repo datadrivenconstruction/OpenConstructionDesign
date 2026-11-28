@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Dold i denna vy, behållen och avmarkerad: {n}",
  "view_gfx.flt.bad_value": "Regelvärdet kändes inte igen: ange ett tal, eventuellt med enhet",
  "view_gfx.name_taken": "Detta namn är redan upptaget",
+ "view_gfx.mat.roughness": "Ytjämnhet",
+ "view_gfx.mat.metallic": "Metallisk",
+ "view_gfx.mat.opacity": "Opacitet",
+ "view_gfx.mat.ior": "Brytningsindex",
+ "view_gfx.mat.surface_reset": "Återställ ytan till klassvärden",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

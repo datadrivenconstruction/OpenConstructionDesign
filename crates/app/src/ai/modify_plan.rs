@@ -103,7 +103,13 @@ pub enum ToolAct {
     TimelineFamily { mass: i64, name: Option<String> },
     /// A material's look: library class (`material_look::LOOKS` key), colour 0xRRGGBB, built-in
     /// texture with tile size in metres. `None` keeps what the material has.
-    SetMaterial { name: String, look: Option<String>, color: Option<u32>, texture: Option<(String, Option<f64>)> },
+    SetMaterial {
+        name: String,
+        look: Option<String>,
+        color: Option<u32>,
+        texture: Option<(String, Option<f64>)>,
+        surface: ddc_model::MaterialSurface,
+    },
 }
 
 /// A resolved step: every value fixed on the copy, so Apply replays exactly the preview.
@@ -121,7 +127,11 @@ pub enum ToolStep {
     MassForm { mass: i64, edit: FormEdit },
     TimelineFamily { mass: i64, name: String },
     /// The material row as it will be written, and its texture slot when one is set.
-    SetMaterial { spec: ddc_model::MaterialSpec, texture: Option<ddc_model::MaterialTexture> },
+    SetMaterial {
+        spec: ddc_model::MaterialSpec,
+        texture: Option<ddc_model::MaterialTexture>,
+        surface: ddc_model::MaterialSurface,
+    },
 }
 
 /// The model target of a plan key; `None` for a category the modify tools do not change.
@@ -286,8 +296,11 @@ pub fn run(m: &mut Model, s: &ToolStep) -> Result<Made, Error> {
         ToolStep::TimelineFamily { mass, name } => {
             Ok(vec![("comp_family", crate::elem::history::to_family(m, *mass, name)?.0)])
         }
-        ToolStep::SetMaterial { spec, texture } => {
+        ToolStep::SetMaterial { spec, texture, surface } => {
             m.set_material(&spec.name, spec)?;
+            if !surface.is_default() {
+                m.set_material_surface(&spec.name, surface)?;
+            }
             if let Some(t) = texture {
                 m.set_material_texture(&spec.name, Some((t.clone(), None)))?;
             }
@@ -304,6 +317,7 @@ fn material_step(
     look: Option<&str>,
     color: Option<u32>,
     texture: Option<&(String, Option<f64>)>,
+    surface: &ddc_model::MaterialSurface,
 ) -> Result<ToolStep, PlanError> {
     use ddc_model::material_look::{look_by_key, look_of, LOOKS};
     let cur = m.material(name)?;
@@ -333,16 +347,25 @@ fn material_step(
         }
         None => None,
     };
-    let unchanged = cur.id != 0 && spec == cur.spec && texture.is_none();
+    // values not given keep what the row has
+    let held = m.material_surface(name)?;
+    let merged = ddc_model::MaterialSurface {
+        roughness: surface.roughness.or(held.roughness),
+        metallic: surface.metallic.or(held.metallic),
+        opacity: surface.opacity.or(held.opacity),
+        ior: surface.ior.or(held.ior),
+    };
+    merged.check().map_err(|e| PlanError(e.to_string()))?;
+    let unchanged = cur.id != 0 && spec == cur.spec && texture.is_none() && merged == held;
     if unchanged {
         let why = format!("nothing to change: material {name} already looks so");
         return Err(PlanError(CmdError::wire(ErrorCode::NoEffect, why)));
     }
-    if class.is_none() && spec.color.is_none() && texture.is_none() && look_of(name).is_none() {
+    if class.is_none() && spec.color.is_none() && texture.is_none() && surface.is_default() && look_of(name).is_none() {
         let why = format!("material {name} names no library look: give look, color or texture");
         return Err(PlanError(why));
     }
-    Ok(ToolStep::SetMaterial { spec, texture })
+    Ok(ToolStep::SetMaterial { spec, texture, surface: merged })
 }
 
 fn step(cx: &mut CompileCx<'_>, s: ToolStep, out: &mut Vec<ModelStep>) -> Result<(), PlanError> {
@@ -505,8 +528,8 @@ pub fn compile_tool(
             let name = crate::elem::history::family_name(m, &base)?;
             ToolStep::TimelineFamily { mass: *mass, name }
         }
-        ToolAct::SetMaterial { name, look, color, texture } => {
-            material_step(&cx.ed.model, name, look.as_deref(), *color, texture.as_ref())?
+        ToolAct::SetMaterial { name, look, color, texture, surface } => {
+            material_step(&cx.ed.model, name, look.as_deref(), *color, texture.as_ref(), surface)?
         }
     };
     step(cx, s, out)

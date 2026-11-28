@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "Skryto v tomto pohledu, ponecháno a odznačeno: {n}",
  "view_gfx.flt.bad_value": "Hodnota pravidla nebyla rozpoznána: zadejte číslo, případně s jednotkou",
  "view_gfx.name_taken": "Tento název je již obsazen",
+ "view_gfx.mat.roughness": "Drsnost povrchu",
+ "view_gfx.mat.metallic": "Kovový vzhled",
+ "view_gfx.mat.opacity": "Neprůhlednost",
+ "view_gfx.mat.ior": "Index lomu",
+ "view_gfx.mat.surface_reset": "Obnovit povrch na hodnoty třídy",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

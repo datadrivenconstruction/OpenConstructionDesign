@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "مخفي في هذا المنظر، ومحفوظ وغير محدد: {n}",
  "view_gfx.flt.bad_value": "قيمة القاعدة غير مفهومة: أدخل رقمًا، ويمكن إضافة وحدة",
  "view_gfx.name_taken": "هذا الاسم مستخدم بالفعل",
+ "view_gfx.mat.roughness": "خشونة السطح",
+ "view_gfx.mat.metallic": "معدني",
+ "view_gfx.mat.opacity": "العتامة",
+ "view_gfx.mat.ior": "معامل الانكسار",
+ "view_gfx.mat.surface_reset": "إعادة السطح إلى قيم الفئة",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

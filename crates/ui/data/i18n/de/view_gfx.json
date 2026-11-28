@@ -160,6 +160,11 @@
  "view_gfx.delete.kept_hidden": "In dieser Ansicht ausgeblendet, behalten und abgewählt: {n}",
  "view_gfx.flt.bad_value": "Regelwert nicht erkannt: eine Zahl eingeben, optional mit Einheit",
  "view_gfx.name_taken": "Dieser Name ist bereits vergeben",
+ "view_gfx.mat.roughness": "Rauheit der Oberfläche",
+ "view_gfx.mat.metallic": "Metallisch",
+ "view_gfx.mat.opacity": "Deckkraft",
+ "view_gfx.mat.ior": "Brechungsindex",
+ "view_gfx.mat.surface_reset": "Oberfläche auf Klassenwerte zurücksetzen",
  "view_gfx.unit.density": "kg/m³",
  "view_gfx.unit.conductivity": "W/(m·K)",
  "view_gfx.unit.specific_heat": "J/(kg·K)"

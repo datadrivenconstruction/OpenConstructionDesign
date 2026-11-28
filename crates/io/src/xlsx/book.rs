@@ -132,7 +132,11 @@ pub(crate) fn begin(model: &Model, style: &Style) {
         materials.sort();
         materials.dedup();
         // library hatches in use are exported as they are, so the dropdown must accept them
-        let mut hatches = ddc_model::MATERIAL_HATCHES.map(String::from).to_vec();
+        let mut hatches: Vec<String> = ddc_model::MATERIAL_HATCHES
+            .iter()
+            .chain(ddc_model::material_hatch::EXTRA_HATCHES.iter())
+            .map(|h| h.to_string())
+            .collect();
         hatches.extend(
             strings(model, "SELECT DISTINCT hatch FROM material ORDER BY hatch")
                 .into_iter()
