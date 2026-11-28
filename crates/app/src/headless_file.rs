@@ -71,6 +71,10 @@ Video and frames (rendered offscreen with --screenshot; --ui-shot needs no other
   --reveal-frame N      only that frame, a still of the build-up at one moment
   --reveal-from N --reveal-to M --reveal-step K   write only frames N..M, every K-th (frame-step
                         for video tools; frames are numbered from 0 in the output)
+  --reveal-order creation|zones   creation (default) builds bottom to top as created; zones
+                        sweeps the plan zone by zone (a 3 x 3 grid, row by row)
+  --reveal all --reveal-seek N   without --reveal-out: open the window and play the build-up,
+                        paused on frame N (the slider, < > and the frame box scrub it)
   --reveal-motion full|reduced|off   how much the elements move while they appear
   --reveal-camera fixed|orbit|follow  fixed frames the whole model (default), orbit turns
                         once around it, follow frames each step

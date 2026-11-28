@@ -47,6 +47,9 @@ part, parts made by a script included. `--reveal calendar` follows the phase dat
 `--reveal-frame N` writes only that frame, `--reveal-motion full|reduced|off` sets how much the
 elements move while they appear. `--reveal-from N --reveal-to M --reveal-step K` writes frames N to M,
 every K-th one, numbered from 0 (frame-step mode for video tools). `--reveal-out` renders without a window.
+`--reveal-order zones` builds the model zone by zone across the plan instead of bottom to top.
+Without `--reveal-out`, `--reveal all` opens the window and plays the show; add `--reveal-seek N` to open it
+paused on frame N. In the player the slider, the `<` and `>` buttons and the frame box scrub to any frame.
 
 The camera frames the whole model and stays still (`--reveal-camera fixed`, the default).
 `--reveal-camera orbit` turns once around the model over the show, and `--reveal-camera follow`

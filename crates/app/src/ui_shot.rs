@@ -9,6 +9,7 @@
 //! `open` may also come between actions: it loads another project and keeps the plan and 3D view.
 //! Actions:
 //!   level NAME        plan of that level          fit             fit the plan to the model
+//!   reveal [zones] [N]  play the build-up in the window, paused on frame N when given
 //!   view X,Y,PX       plan centre (m) and px/m    quiet           dismiss the toasts on screen
 //!   run CMD           a command id (arch.wall)    mode select|wall|rect
 //!   at X,Y            click the plan at model metres, through the canvas
@@ -41,7 +42,8 @@ pub struct Step {
 }
 
 const SETUP: [&str; 5] = ["size", "scale", "lang", "theme", "open"];
-const ACTIONS: [&str; 28] = [
+const ACTIONS: [&str; 29] = [
+    "reveal",
     "zoom",
     "eye",
     "target",
@@ -339,6 +341,18 @@ pub fn run(
                     return Err(err("view X,Y,PX"));
                 };
                 (app.plan.center, app.plan.scale) = (ddc_geom::v2(x, y), px);
+            }
+            "reveal" => {
+                let mut w = s.arg.split_whitespace().peekable();
+                let order = if w.peek() == Some(&"zones") {
+                    w.next();
+                    crate::reveal::Order::Zones
+                } else {
+                    crate::reveal::Order::Creation
+                };
+                let seek = w.next().map(|n| n.parse::<u32>().map_err(|_| err("reveal [zones] [frame]"))).transpose()?;
+                app.reveal_boot = Some((order, seek));
+                r.pass(&mut app, vec![], 6);
             }
             "quiet" => {
                 r.pass(&mut app, vec![], 2);

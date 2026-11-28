@@ -383,6 +383,7 @@ fn main() -> Result<(), String> {
         std::process::exit(code);
     }
     let reveal_motion = ddc_app::reveal::motion_arg(&argv)?;
+    let reveal_boot = ddc_app::reveal::boot_arg(&argv)?;
     // every envelope path (tools, MCP, design options) reaches the model lowering
     ddc_app::ops_exec::link();
     if let Some(code) = ddc_app::qa_accept::handle(&argv) {
@@ -533,6 +534,7 @@ fn main() -> Result<(), String> {
                 // the interactive window runs heavy edits and view rebuilds on workers
                 app.ed.bg = true;
                 app.reveal_motion = reveal_motion;
+                app.reveal_boot = reveal_boot;
                 app.prefs = ddc_app::prefs::Prefs::load();
                 app.ed.thin_pref = app.prefs.thin_lines;
                 app.view.gfx.safe = rung > 0;
@@ -1184,7 +1186,11 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
         // a show that cannot be written is a usage outcome (exit 2), like a bad argument
         let n = ddc_app::reveal::camera_arg(&argv)
             .and_then(|cam| ddc_app::reveal::Span::from_argv(&argv).map(|sp| (cam, sp)))
-            .and_then(|(cam, span)| ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame, span, cam))
+            .and_then(|(cam, span)| {
+                ddc_app::reveal::order_arg(&argv).and_then(|order| {
+                    ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame, span, cam, order)
+                })
+            })
             .unwrap_or_else(|e| {
                 eprintln!("error: {e}");
                 std::process::exit(2);

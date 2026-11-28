@@ -328,6 +328,12 @@ impl Player {
         self.pause();
     }
 
+    /// Frame step (back for negative `by`) with playback stopped; stays on the timeline.
+    pub fn step(&mut self, by: i32) {
+        let f = (i64::from(self.frame()) + i64::from(by)).clamp(0, i64::from(self.timeline.len));
+        self.seek(f as u32);
+    }
+
     /// `dt` seconds passed; at the timeline edge it pauses. `true` means the frame changed.
     pub fn advance(&mut self, dt: f32) -> bool {
         if self.dir == 0 || self.timeline.len == 0 {
@@ -391,6 +397,35 @@ fn start(a: &mut crate::shell::EditorApp, b: &[Vec<Step>], labels: Vec<String>) 
     let p = Player::new(tl).with_labels(labels);
     if p.is_empty() {
         return false;
+    }
+    set_pack(a, Some(map));
+    a.reveal = Some(p);
+    enter_3d(a);
+    true
+}
+
+/// The whole scene built up (`--reveal all` in the window), paused on `seek` when given.
+pub fn start_all(a: &mut crate::shell::EditorApp, order: Order, seek: Option<u32>) -> bool {
+    let map = pack_map(&a.scene);
+    let ed = &a.ed;
+    let key = |e: u32| editor_key(ed, e);
+    let els = scene_elements(&a.scene, &key);
+    let low: std::collections::HashMap<ElKey, f32> = els.iter().map(|(k, _, z)| (k.clone(), *z)).collect();
+    let range: std::collections::HashMap<ElKey, (u32, u32)> = els.iter().map(|(k, r, _)| (k.clone(), *r)).collect();
+    let steps: Vec<Step> = els.iter().map(|(k, ..)| Step::new(k.clone(), Change::Added)).collect();
+    let mut b = bands(batches(&steps, &ed.model), &|k| low.get(k).copied());
+    if order == Order::Zones {
+        let c = plan_centres(&a.scene, &key);
+        b = zones(b, &|k| c.get(k).copied());
+    }
+    let tl = timeline(&b, &|k| range.get(k).and_then(|r| packed_range(&map, *r)));
+    let tl = apply_motion(tl, a, a.reveal_motion);
+    let mut p = Player::new(tl);
+    if p.is_empty() {
+        return false;
+    }
+    if let Some(n) = seek {
+        p.seek(n);
     }
     set_pack(a, Some(map));
     a.reveal = Some(p);
@@ -756,6 +791,92 @@ const BAND_MIN: f32 = 1.0;
 /// Bands one batch is split into at most.
 const MAX_BANDS: usize = 24;
 
+/// Order of a build-up: as created (bottom to top), or sweeping the plan zone by zone.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub enum Order {
+    #[default]
+    Creation,
+    Zones,
+}
+
+/// Plan zones are a `ZONE_GRID` x `ZONE_GRID` grid over the plan extent of the elements shown.
+pub const ZONE_GRID: usize = 3;
+
+/// `--reveal-order creation|zones`; absent is creation order.
+pub fn order_arg(argv: &[String]) -> Result<Order, String> {
+    let Some(i) = argv.iter().position(|s| s == "--reveal-order") else { return Ok(Order::Creation) };
+    match argv.get(i + 1).map(String::as_str) {
+        Some("creation") => Ok(Order::Creation),
+        Some("zones") => Ok(Order::Zones),
+        other => Err(format!("--reveal-order {}: expected creation or zones", other.unwrap_or(""))),
+    }
+}
+
+/// `--reveal all` without `--reveal-out` plays in the window; `--reveal-seek N` opens it paused on
+/// frame N. `None` when the window is not asked to play a show.
+pub fn boot_arg(argv: &[String]) -> Result<Option<(Order, Option<u32>)>, String> {
+    let has = |f: &str| argv.iter().position(|s| s == f);
+    if has("--reveal-out").is_some() {
+        return Ok(None);
+    }
+    let Some(i) = has("--reveal") else {
+        return match has("--reveal-seek") {
+            Some(_) => Err("--reveal-seek needs --reveal all".into()),
+            None => Ok(None),
+        };
+    };
+    if argv.get(i + 1).map(String::as_str) != Some("all") {
+        return Ok(None);
+    }
+    let seek = match has("--reveal-seek") {
+        None => None,
+        Some(j) => Some(argv.get(j + 1).and_then(|v| v.parse::<u32>().ok()).ok_or("--reveal-seek needs a frame number")?),
+    };
+    Ok(Some((order_arg(argv)?, seek)))
+}
+
+/// Plan centre of each element (the middle of the box of its meshes).
+pub fn plan_centres(scene: &ddc_render::Scene, key_of: &dyn Fn(u32) -> Option<ElKey>) -> std::collections::HashMap<ElKey, (f32, f32)> {
+    let mut by: std::collections::HashMap<ElKey, (f32, f32, f32, f32)> = Default::default();
+    for (m, b) in scene.meshes.iter().zip(scene.boxes()) {
+        if m.element >= crate::scene_ids::SERVICE_BASE || m.positions.is_empty() {
+            continue;
+        }
+        let k = key_of(m.element).unwrap_or_else(|| ("scene".to_string(), i64::from(m.element)));
+        let e = by.entry(k).or_insert((f32::INFINITY, f32::INFINITY, f32::NEG_INFINITY, f32::NEG_INFINITY));
+        *e = (e.0.min(b.min.x), e.1.min(b.min.y), e.2.max(b.max.x), e.3.max(b.max.y));
+    }
+    by.into_iter().map(|(k, b)| (k, ((b.0 + b.2) / 2.0, (b.1 + b.3) / 2.0))).collect()
+}
+
+/// Each batch split by plan zone, zones in a serpentine sweep (row by row, every other row
+/// reversed) so the show crosses the plan once. Elements without a position join the first zone.
+pub fn zones(batches: Vec<Vec<Step>>, at: &dyn Fn(&ElKey) -> Option<(f32, f32)>) -> Vec<Vec<Step>> {
+    let pts: Vec<(f32, f32)> = batches.iter().flatten().filter_map(|s| at(&s.key)).collect();
+    if pts.is_empty() {
+        return batches;
+    }
+    let lo = |g: fn(&(f32, f32)) -> f32| pts.iter().map(g).fold(f32::INFINITY, f32::min);
+    let hi = |g: fn(&(f32, f32)) -> f32| pts.iter().map(g).fold(f32::NEG_INFINITY, f32::max);
+    let (x0, x1, y0, y1) = (lo(|p| p.0), hi(|p| p.0), lo(|p| p.1), hi(|p| p.1));
+    let cell = |v: f32, lo: f32, hi: f32| (((v - lo) / (hi - lo).max(1e-3) * ZONE_GRID as f32) as usize).min(ZONE_GRID - 1);
+    let zone_of = |k: &ElKey| -> usize {
+        at(k).map_or(0, |(x, y)| {
+            let (c, r) = (cell(x, x0, x1), cell(y, y0, y1));
+            r * ZONE_GRID + if r % 2 == 1 { ZONE_GRID - 1 - c } else { c }
+        })
+    };
+    let mut out = vec![];
+    for b in batches {
+        let mut by: BTreeMap<usize, Vec<Step>> = BTreeMap::new();
+        for st in b {
+            by.entry(zone_of(&st.key)).or_default().push(st);
+        }
+        out.extend(by.into_values());
+    }
+    out
+}
+
 /// Height bands of a reveal: a batch whose elements' lowest points spread over more than
 /// `BAND_MIN` is split, bottom to top, into at most `MAX_BANDS` bands of equal height.
 pub fn bands(batches: Vec<Vec<Step>>, low: &dyn Fn(&ElKey) -> Option<f32>) -> Vec<Vec<Step>> {
@@ -910,6 +1031,7 @@ pub fn export_cli(
     only: Option<u32>,
     span: Span,
     cam_mode: CamMode,
+    order: Order,
 ) -> Result<Exported, String> {
     let (scene, map) = packed(&with_materials(&a.ed, a.ed.scene()));
     let old: Vec<u32> = map.keys().copied().collect();
@@ -928,7 +1050,15 @@ pub fn export_cli(
         }
         "all" | "" => {
             let steps: Vec<Step> = els.iter().map(|(k, ..)| Step::new(k.clone(), Change::Added)).collect();
-            bands(batches(&steps, &a.ed.model), &|k| low.get(k).copied())
+            let b = bands(batches(&steps, &a.ed.model), &|k| low.get(k).copied());
+            match order {
+                Order::Creation => b,
+                Order::Zones => {
+                    let ed = &a.ed;
+                    let c = plan_centres(&scene, &|e| old.get((e as usize).checked_sub(1)?).and_then(|o| editor_key(ed, *o)));
+                    zones(b, &|k| c.get(k).copied())
+                }
+            }
         }
         other => {
             return Err(format!(
@@ -965,6 +1095,11 @@ pub fn export_cli(
 
 /// Player window: back, pause/forward, frame slider, close (the scene is left as it was).
 pub fn controls(a: &mut crate::shell::EditorApp, ctx: &egui::Context) {
+    if a.reveal.is_none() && !a.scene.meshes.is_empty() {
+        if let Some((order, seek)) = a.reveal_boot.take() {
+            start_all(a, order, seek);
+        }
+    }
     if crate::phase_ui::take_calendar_request() {
         start_calendar(a);
     }
@@ -1018,10 +1153,21 @@ pub fn controls(a: &mut crate::shell::EditorApp, ctx: &egui::Context) {
                         p.play();
                     }
                 }
+                if Button::quiet("<").show(ui, th).clicked() {
+                    p.step(-1);
+                }
                 let mut f = p.frame();
                 if ui.add(egui::Slider::new(&mut f, 0..=p.len()).show_value(false)).changed() {
                     p.seek(f);
                 }
+                if Button::quiet(">").show(ui, th).clicked() {
+                    p.step(1);
+                }
+                let mut n = p.frame();
+                if ui.add(egui::DragValue::new(&mut n).range(0..=p.len())).changed() {
+                    p.seek(n);
+                }
+                ui.label(format!("/ {}", p.len()));
                 if let Some(c) = p.caption() {
                     ui.label(c);
                 }
@@ -1549,6 +1695,59 @@ mod tests {
         assert_eq!(parse_motion("full"), Ok(Some(Motion::Full)));
         let e = parse_motion("fast").unwrap_err();
         assert!(e.contains("fast") && e.contains("full") && e.contains("reduced") && e.contains("off"), "{e}");
+    }
+
+    #[test]
+    fn plan_zones_sweep_the_plan_in_a_serpentine_order() {
+        let step = |i: i64| Step::new(key("wall", i), Change::Added);
+        // ids sit on a 3 x 3 grid: id = 10 * row + col
+        let at = |k: &ElKey| Some(((k.1 % 10) as f32 * 10.0, (k.1 / 10) as f32 * 10.0));
+        let batch: Vec<Step> = [22, 0, 11, 2, 21, 10, 1, 20, 12].map(step).to_vec();
+        let out = zones(vec![batch], &at);
+        let ids: Vec<Vec<i64>> = out.iter().map(|b| b.iter().map(|s| s.key.1).collect()).collect();
+        // row 0 left to right, row 1 right to left, row 2 left to right
+        assert_eq!(ids, vec![vec![0], vec![1], vec![2], vec![12], vec![11], vec![10], vec![20], vec![21], vec![22]]);
+        // a batch in one zone is not split; elements without a position stay with the first zone
+        let one = vec![vec![step(1), step(1)]];
+        assert_eq!(zones(one.clone(), &at).len(), 1);
+        assert_eq!(zones(one.clone(), &|_| None), one);
+        let mixed = zones(vec![vec![step(22), step(99), step(0)]], &|k| (k.1 != 99).then(|| at(k)).flatten());
+        assert_eq!(mixed[0].iter().map(|s| s.key.1).collect::<Vec<_>>(), vec![99, 0]);
+    }
+
+    #[test]
+    fn order_and_window_boot_arguments() {
+        let v = |a: &[&str]| a.iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        assert_eq!(order_arg(&v(&[])).unwrap(), Order::Creation);
+        assert_eq!(order_arg(&v(&["--reveal-order", "zones"])).unwrap(), Order::Zones);
+        assert!(order_arg(&v(&["--reveal-order", "x"])).is_err());
+        assert!(order_arg(&v(&["--reveal-order"])).is_err());
+        assert_eq!(boot_arg(&v(&[])).unwrap(), None);
+        assert_eq!(boot_arg(&v(&["--reveal", "all"])).unwrap(), Some((Order::Creation, None)));
+        assert_eq!(
+            boot_arg(&v(&["--reveal", "all", "--reveal-seek", "40", "--reveal-order", "zones"])).unwrap(),
+            Some((Order::Zones, Some(40)))
+        );
+        // a headless export is not a window show; a seek alone or without a frame is a usage error
+        assert_eq!(boot_arg(&v(&["--reveal", "all", "--reveal-out", "d", "--reveal-seek", "3"])).unwrap(), None);
+        assert!(boot_arg(&v(&["--reveal-seek", "3"])).is_err());
+        assert!(boot_arg(&v(&["--reveal", "all", "--reveal-seek"])).is_err());
+        assert!(boot_arg(&v(&["--reveal", "all", "--reveal-seek", "x"])).is_err());
+    }
+
+    #[test]
+    fn frame_steps_pause_and_stay_on_the_timeline() {
+        let mut p = Player::new(small_timeline());
+        p.seek(5);
+        p.play();
+        p.step(1);
+        assert_eq!((p.frame(), p.playing()), (6, false));
+        p.step(-2);
+        assert_eq!(p.frame(), 4);
+        p.step(-100);
+        assert_eq!(p.frame(), 0);
+        p.step(100_000);
+        assert_eq!(p.frame(), p.len());
     }
 
     #[test]

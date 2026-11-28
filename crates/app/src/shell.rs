@@ -247,6 +247,8 @@ pub struct EditorApp {
     pub reveal: Option<crate::reveal::Player>,
     /// Element numbers of the scene packed from 1 while a show plays (the renderer animates by number).
     pub reveal_pack: Option<std::collections::BTreeMap<u32, u32>>,
+    /// `--reveal all [--reveal-seek N]` in the window: the show to start once the scene is built.
+    pub reveal_boot: Option<(crate::reveal::Order, Option<u32>)>,
     /// Background journal walk used for the reveal playback (`reveal::start_journal`).
     pub reveal_job: Option<crate::reveal::JournalJob>,
     /// `--reveal-motion`: beats the interface motion setting for every show.
@@ -495,6 +497,7 @@ impl EditorApp {
             cwedit: None,
             reveal: None,
             reveal_pack: None,
+            reveal_boot: None,
             reveal_job: None,
             reveal_motion: None,
             bridges: crate::import::Bridges::load(),
