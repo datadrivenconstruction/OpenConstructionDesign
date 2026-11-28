@@ -40,6 +40,7 @@
 - Scrollbars never cover content.
 - The model summary counts members, plates and other solids.
 - Realism checks of steel joints scale to large models.
+- Steel gusset, end plate and base plate bolts fit the connected section: heads and nuts stay clear of sloped angle legs and leaning columns, and joints that would fail the check are not placed.
 - Every locale has all interface texts.
 - Materials set by scripts render in 3D; script-made parts are listed in the project browser.
 - Geometry and export errors name the element and the next step; the SVG export explains what it includes.
