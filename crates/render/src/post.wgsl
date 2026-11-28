@@ -91,15 +91,42 @@ fn eye_pos(p: vec2<i32>) -> vec3<f32> {
     return world_at(vec2<f32>(p) + 0.5, depth_px(p));
 }
 
+// Edge smoothing for frames drawn without multisampling: pixels whose neighbours differ in
+// brightness or coverage are blended with them, premultiplied so the backdrop edge is smoothed too.
+fn smooth_edges(c: vec4<f32>, ip: vec2<i32>) -> vec4<f32> {
+    let dim = vec2<i32>(textureDimensions(frame_tex));
+    let hi = dim - vec2<i32>(1, 1);
+    let n = textureLoad(frame_tex, clamp(ip + vec2<i32>(0, -1), vec2<i32>(0, 0), hi), 0);
+    let s = textureLoad(frame_tex, clamp(ip + vec2<i32>(0, 1), vec2<i32>(0, 0), hi), 0);
+    let e = textureLoad(frame_tex, clamp(ip + vec2<i32>(1, 0), vec2<i32>(0, 0), hi), 0);
+    let w = textureLoad(frame_tex, clamp(ip + vec2<i32>(-1, 0), vec2<i32>(0, 0), hi), 0);
+    let k = vec3<f32>(0.299, 0.587, 0.114);
+    let lc = dot(c.rgb, k) * c.a + 0.5 * c.a;
+    let ln = dot(n.rgb, k) * n.a + 0.5 * n.a;
+    let ls = dot(s.rgb, k) * s.a + 0.5 * s.a;
+    let le = dot(e.rgb, k) * e.a + 0.5 * e.a;
+    let lw = dot(w.rgb, k) * w.a + 0.5 * w.a;
+    let hi_l = max(max(max(ln, ls), max(le, lw)), lc);
+    let lo_l = min(min(min(ln, ls), min(le, lw)), lc);
+    let b = smoothstep(0.16, 0.5, hi_l - lo_l) * 0.5;
+    if (b <= 0.0) { return c; }
+    let p = vec4<f32>(c.rgb * c.a, c.a) * (1.0 - b)
+        + (vec4<f32>(n.rgb * n.a, n.a) + vec4<f32>(s.rgb * s.a, s.a)
+        + vec4<f32>(e.rgb * e.a, e.a) + vec4<f32>(w.rgb * w.a, w.a)) * (b * 0.25);
+    return vec4<f32>(p.rgb / max(p.a, 1e-4), p.a);
+}
+
 // Frame output; outline from two cues, once per pixel and with no face redraw: a depth jump
 // (a neighbour clearly farther: silhouette) and, when `look.y` > 0, a fold (a neighbour that
 // leaves the tangent plane of the pixel). The width follows the frame height (`look.x`).
 @fragment
 fn fs_composite(i: FOut) -> @location(0) vec4<f32> {
-    let c = textureSampleLevel(frame_tex, frame_smp, i.uv, 0.0);
+    let c0 = textureSampleLevel(frame_tex, frame_smp, i.uv, 0.0);
     let ip = vec2<i32>(i.uv * u.view.xy);
+    var c = c0;
+    if (u.look.w > 0.5) { c = smooth_edges(c0, ip); }
     let d = depth_px(ip);
-    if (c.a < 0.99 || d <= 0.0 || u.fx.y < 0.5) { return c; }
+    if (c0.a < 0.99 || d <= 0.0 || u.fx.y < 0.5) { return c; }
     let w = max(i32(round(u.look.x)), 1);
     let dist = eye_len(world_at(vec2<f32>(ip) + 0.5, d));
     let far = max(max(eye_dist(ip + vec2<i32>(w, 0)), eye_dist(ip - vec2<i32>(w, 0))),

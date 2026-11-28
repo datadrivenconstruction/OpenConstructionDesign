@@ -583,4 +583,18 @@ mod foliage_tests {
         assert!(dark.sky[1][3] > 0.0, "haze density kept");
         assert!(dark.sky[0][2] > dark.sky[0][0], "the sky stays cool above");
     }
+
+    #[test]
+    fn glass_and_unsampled_frames_use_the_shared_curves() {
+        let mesh = include_str!("mesh.wgsl");
+        let g = &mesh[mesh.find("fn fs_glass").unwrap()..];
+        assert!(g.contains("0.04 + 0.96 * pow(1.0 - clamp(dot(n, v), 0.0, 1.0), 5.0)"), "Schlick reflectance");
+        assert!(g.contains("sky_dir(r)"), "reflections show the painted sky");
+        let post = include_str!("post.wgsl");
+        assert!(post.contains("fn smooth_edges") && post.contains("u.look.w > 0.5"));
+        // outline decisions stay on the unfiltered coverage
+        assert!(post.contains("if (c0.a < 0.99 || d <= 0.0"));
+        let r = include_str!("renderer.rs");
+        assert!(r.contains("key.samples == 1 && !self.cpu"));
+    }
 }

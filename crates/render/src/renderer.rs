@@ -640,6 +640,8 @@ pub struct Renderer {
     anchor_seen: u64,
     real_module: Option<wgpu::ShaderModule>,
     limits: Limits,
+    /// Software rasteriser: no extra per-pixel passes.
+    cpu: bool,
     health: Health,
     /// Budgets of the next frames; `None` derives them from `FrameUniforms::quality`.
     fx: Option<FrameFx>,
@@ -987,6 +989,7 @@ impl Renderer {
             anchor_seen: 0,
             real_module: None,
             limits,
+            cpu: false,
             health,
             fx: None,
             shadow_map: None,
@@ -1218,8 +1221,9 @@ impl Renderer {
 
     /// Frame and memory limits for the actual adapter.
     pub fn set_adapter(&mut self, info: &wgpu::AdapterInfo) {
-        self.chunks
-            .set_gpu_class(crate::perf::GpuClass::of(info.device_type));
+        let class = crate::perf::GpuClass::of(info.device_type);
+        self.cpu = class == crate::perf::GpuClass::Cpu;
+        self.chunks.set_gpu_class(class);
         // GL takes flat values from the last vertex of a triangle, the others — from the first
         self.chunks
             .set_provoke_last(info.backend == wgpu::Backend::Gl);
@@ -1600,6 +1604,8 @@ impl Renderer {
         u.look = edge_look(size.1, fx.ao != crate::graphics::AoMode::Off);
         // soft penumbra only where the shadow map is large enough to pay for it
         u.look[2] = f32::from(u8::from(fx.shadow_px >= 2048));
+        // without multisampling the composite smooths the stair steps (a scaled frame is filtered already)
+        u.look[3] = f32::from(u8::from(key.samples == 1 && !self.cpu));
         u.wind = if fx.wind > 0.0 { [fx.wind, wind_time(), 0.0, 0.0] } else { [0.0; 4] };
         u.fx = [
             f32::from(u8::from(fx.edges)),

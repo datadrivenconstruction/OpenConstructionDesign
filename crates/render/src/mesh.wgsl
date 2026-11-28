@@ -485,19 +485,21 @@ fn fs_glass(i: VOut) -> @location(0) vec4<f32> {
     let to_eye = u.eye.xyz - i.world;
     if (dot(n, to_eye) < 0.0) { n = -n; }
     let v = normalize(to_eye);
-    let fres = pow(1.0 - clamp(dot(n, v), 0.0, 1.0), 4.0);
+    // Schlick reflectance of glass (F0 0.04): clear face-on, mirror-like at grazing angles
+    let fres = 0.04 + 0.96 * pow(1.0 - clamp(dot(n, v), 0.0, 1.0), 5.0);
     let l = normalize(-u.light_dir.xyz);
     let h = normalize(l + v);
     let spec = pow(max(dot(n, h), 0.0), 90.0) * sun_light(i.world, n);
     let r = reflect(-v, n);
-    let skyc = mix(vec3<f32>(0.62, 0.66, 0.70), vec3<f32>(0.86, 0.92, 1.0), clamp(r.z * 0.5 + 0.6, 0.0, 1.0));
+    let skyc = sky_dir(r);
     // network shell (insulation): system colour, weaker reflection
     let shell = (i.tag & 0xE0000000u) == 0x60000000u;
     var tint = palette(8u) * (0.55 + 0.45 * max(dot(n, l), 0.0));
     if (shell) { tint = palette(i.tag & 0x5FFFFFFFu) * (0.7 + 0.3 * max(dot(n, l), 0.0)); }
     var c = mix(tint, skyc, select(0.25 + fres * 0.6, 0.1 + fres * 0.3, shell)) + vec3<f32>(spec * 0.9);
     c = mark(c, n, to_eye, selected, hovered, i.elem);
-    var a = clamp(0.30 + fres * 0.45 + spec, 0.0, 0.9);
+    // the pane darkens what is behind it a little, more where it reflects
+    var a = clamp(0.30 + fres * 0.6 + spec, 0.0, 0.9);
     if (shell) { a = clamp(0.22 + fres * 0.35, 0.0, 0.7); }
     return vec4<f32>(c, a * cat_cov(i.tag) * anim_alpha(i.elem));
 }
