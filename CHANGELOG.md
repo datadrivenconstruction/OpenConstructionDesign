@@ -3,6 +3,7 @@
 ## 1.4.0 (unreleased)
 
 ### Command line
+- `ddc run` without `--level` places the model on the level at elevation 0 and warns when there is none.
 - `ddc ai --apply` no longer applies a plan cut short by a limit; pass `--apply-partial` to apply it anyway.
 - Release builds include `ddc gen` and `ddc publish`; the ERP link builds without the GUI.
 - `ddc new` creates an empty project; `ddc run --new` runs a script without an input file.
