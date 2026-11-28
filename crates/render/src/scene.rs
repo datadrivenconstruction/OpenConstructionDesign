@@ -527,6 +527,20 @@ mod foliage_tests {
         assert!(include_str!("mesh.wgsl").contains("smoothstep(0.03, 0.25, px_m)"), "line ink thins with distance");
     }
 
+    /// Lit faces read the occlusion through the depth-aware smoothing and lift it with the
+    /// multi-bounce fit; the cheap level keeps plain bilinear taps.
+    #[test]
+    fn occlusion_is_depth_aware_and_bounced() {
+        let mesh = include_str!("mesh.wgsl");
+        assert!(mesh.contains("fn ambient_occ_at(") && mesh.contains("fn ao_bounce("));
+        assert!(mesh.contains("if (u.params.z < 1.5) { return ambient_occ(px); }"));
+        let fs = &mesh[mesh.find("fn fs(i: VOut)").unwrap()..mesh.find("fn fs_glass").unwrap()];
+        assert!(fs.contains("ambient_occ_at(i.clip.xy, i.world)") && fs.contains("ao_bounce("));
+        let real = include_str!("realistic.wgsl");
+        let fr = &real[real.find("fn fs_real").unwrap()..];
+        assert!(fr.contains("ambient_occ_at(i.clip.xy, i.world)") && fr.contains("hemi * 0.62 * aoc"));
+    }
+
     #[test]
     fn sky_follows_the_background_and_haze_is_perspective_only() {
         use crate::renderer::{FrameUniforms, SKY_DEFAULT};

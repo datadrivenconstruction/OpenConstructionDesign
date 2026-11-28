@@ -227,12 +227,13 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
 
     let l = normalize(-u.light_dir.xyz);
     let sun = max(dot(n, l), 0.0) * sun_light(i.world, n);
-    var ao = ambient_occ(i.clip.xy);
+    var ao = ambient_occ_at(i.clip.xy, i.world);
     if (u.params.z < 0.5) { ao = mix(0.8, 1.0, smoothstep(0.0, 0.9, i.world.z - u.view.w)); }
+    let aoc = ao_bounce(ao, clamp(base, vec3<f32>(0.0), vec3<f32>(1.0)));
     let hemi = sky_ambient(n);
     let sun_c = vec3<f32>(1.0, 0.95, 0.86) * 1.15;
     // a metal has little diffuse light; its highlight and reflection take its own colour
-    var c = base * (hemi * 0.62 * ao + sun_c * sun) * (1.0 - 0.6 * metal);
+    var c = base * (hemi * 0.62 * aoc + sun_c * sun) * (1.0 - 0.6 * metal);
 
     // highlight and Fresnel sky reflection, both by roughness
     let h = normalize(l + v);

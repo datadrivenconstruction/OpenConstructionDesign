@@ -233,10 +233,51 @@ fn ambient_occ(px: vec2<f32>) -> f32 {
     return a * 0.25;
 }
 
+// Occlusion at a fragment, smoothed over the half-resolution texels with weights by the depth
+// difference: occlusion of a far surface does not bleed over a silhouette (no halos). The
+// cheap level keeps the plain bilinear taps.
+fn ambient_occ_at(px: vec2<f32>, world: vec3<f32>) -> f32 {
+    if (u.params.z < 1.5) { return ambient_occ(px); }
+    let div = u.view.z;
+    let dims = vec2<i32>(textureDimensions(ao_tex));
+    let dsz = vec2<i32>(textureDimensions(depth_tex)) - vec2<i32>(1);
+    let f = px / div - vec2<f32>(0.5);
+    let b = vec2<i32>(floor(f));
+    let t = fract(f);
+    let dc = eye_len(world);
+    let sigma = 0.03 * dc + 0.05;
+    var sum = 0.0;
+    var wsum = 0.0;
+    for (var k = 0; k < 4; k = k + 1) {
+        let o = vec2<i32>(k & 1, k >> 1);
+        let tp = clamp(b + o, vec2<i32>(0), dims - vec2<i32>(1));
+        let wb = select(1.0 - t.x, t.x, o.x == 1) * select(1.0 - t.y, t.y, o.y == 1);
+        let sp = clamp(vec2<i32>((vec2<f32>(tp) + 0.5) * div), vec2<i32>(0), dsz);
+        let sd = textureLoad(depth_tex, sp, 0);
+        var wd = 0.0;
+        if (sd > 0.0) {
+            wd = exp(-abs(eye_len(world_at(vec2<f32>(sp) + 0.5, sd)) - dc) / sigma);
+        }
+        let w = wb * wd + 1e-4 * wb;
+        sum = sum + textureLoad(ao_tex, tp, 0).r * w;
+        wsum = wsum + w;
+    }
+    return sum / wsum;
+}
+
+// Multi-bounce occlusion (published fit): light bounced between nearby surfaces lifts the
+// occlusion of bright materials, so corners of light walls do not go dirty grey.
+fn ao_bounce(ao: f32, albedo: vec3<f32>) -> vec3<f32> {
+    let a = 2.0404 * albedo - vec3<f32>(0.3324);
+    let b = -4.7951 * albedo + vec3<f32>(0.6417);
+    let c = 2.7552 * albedo + vec3<f32>(0.6903);
+    return max(vec3<f32>(ao), ((vec3<f32>(ao) * a + b) * ao + c) * ao);
+}
+
 @fragment
 fn fs_ground(i: VOut) -> @location(0) vec4<f32> {
     let s = sun_light(i.world, vec3<f32>(0.0, 0.0, 1.0));
-    let ao = ambient_occ(i.clip.xy);
+    let ao = ambient_occ_at(i.clip.xy, i.world);
     let fade = 1.0 - smoothstep(u.eye.w * 1.2, u.eye.w * 3.0, distance(i.world.xy, orbit_eye().xy));
     let k = clamp((1.0 - s) * mix(0.22, 0.38, u.params.x) + (1.0 - ao) * 0.45, 0.0, 0.6);
     // shadow over a light shading of the ground: "over" of two layers in one output
@@ -379,12 +420,13 @@ fn fs(i: VOut) -> @location(0) vec4<f32> {
     let fill = max(dot(n, normalize(vec3<f32>(0.6, 0.8, 0.3))), 0.0) * 0.10;
     let amb = u.light_dir.w;
     let base = palette(base_tag(i.tag)) * tone;
-    var ao = ambient_occ(i.clip.xy);
+    var ao = ambient_occ_at(i.clip.xy, i.world);
     if (u.params.z < 0.5) {
         // no effects: ground-contact shading approximation
         ao = mix(0.8, 1.0, smoothstep(0.0, 0.9, i.world.z - u.view.w));
     }
-    var c = base * ((hemi * amb + fill) * ao + vec3<f32>(1.0, 0.97, 0.92) * (1.0 - amb) * sun * mix(0.85, 1.0, ao));
+    let aoc = ao_bounce(ao, clamp(base, vec3<f32>(0.0), vec3<f32>(1.0)));
+    var c = base * ((hemi * amb + fill) * aoc + vec3<f32>(1.0, 0.97, 0.92) * (1.0 - amb) * sun * mix(0.85, 1.0, ao));
     c = haze(tone_neutral(c), eye_len(i.world));
     return vec4<f32>(mark(c, n, to_eye, selected, hovered, i.elem), 1.0);
 }
