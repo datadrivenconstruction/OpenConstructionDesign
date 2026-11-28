@@ -198,28 +198,72 @@ fn vs_ground(@builtin(vertex_index) k: u32) -> VOut {
     return o;
 }
 
+// Soft shadow edge for the high levels: 8 bilinear comparison taps on a rotated disc. With the
+// penumbra switch (`look.z`) the disc radius grows with the distance to the nearest blockers
+// found by 4 depth reads (contact-hardening look); otherwise it is a fixed 1.5 texels.
+fn sun_soft(uv: vec2<f32>, z: f32, tm: f32, zscale: f32) -> f32 {
+    let dims = vec2<f32>(textureDimensions(shadow_tex));
+    let texel = 1.0 / dims;
+    let ang = 6.2831853 * fract(52.9829189 * fract(dot(vec2<f32>(uv * dims), vec2<f32>(0.06711056, 0.00583715))));
+    let rot = vec2<f32>(cos(ang), sin(ang));
+    var radius = 1.5;
+    if (u.look.z > 0.5) {
+        var gap = 0.0;
+        var cnt = 0.0;
+        for (var k = 0; k < 4; k = k + 1) {
+            let a = f32(k) * 1.5707963 + 0.7;
+            let d = vec2<f32>(cos(a), sin(a)) * 5.0;
+            let q = vec2<f32>(d.x * rot.x - d.y * rot.y, d.x * rot.y + d.y * rot.x);
+            let px = vec2<i32>(clamp(uv * dims + q, vec2<f32>(0.0), dims - vec2<f32>(1.0)));
+            let bz = textureLoad(shadow_tex, px, 0);
+            if (bz > z) {
+                gap = gap + (bz - z);
+                cnt = cnt + 1.0;
+            }
+        }
+        if (cnt > 0.0) {
+            // blocker distance in metres, widened to a soft sun
+            radius = clamp((gap / cnt) / max(zscale, 1e-6) * 0.03 / max(tm, 1e-4), 1.5, 5.0);
+        }
+    }
+    var s = 0.0;
+    for (var j = 0; j < 8; j = j + 1) {
+        let r = sqrt((f32(j) + 0.5) / 8.0) * radius;
+        let a = f32(j) * 2.3999632;
+        let d = vec2<f32>(cos(a), sin(a)) * r;
+        let q = vec2<f32>(d.x * rot.x - d.y * rot.y, d.x * rot.y + d.y * rot.x);
+        s = s + textureSampleCompareLevel(shadow_tex, shadow_smp, uv + q * texel, z);
+    }
+    return s * 0.125;
+}
+
+// One shadow-map texel in metres, from the width of the fitted light box.
+fn shadow_texel_m() -> f32 {
+    let row0 = vec3<f32>(u.light_vp[0].x, u.light_vp[1].x, u.light_vp[2].x);
+    return 2.0 / (max(length(row0), 1e-6) * f32(textureDimensions(shadow_tex).x));
+}
+
 fn sun_light(p: vec3<f32>, n: vec3<f32>) -> f32 {
     if (u.params.w < 0.5) { return 1.0; }
-    let c = u.light_vp * vec4<f32>(p + n * 0.03, 1.0);
+    // bias in texels of the fitted map: a normal offset and a depth bias that grows with the slope
+    let tm = shadow_texel_m();
+    let ndl = clamp(dot(n, normalize(-u.light_dir.xyz)), 0.05, 1.0);
+    let slope = clamp(sqrt(1.0 - ndl * ndl) / ndl, 0.0, 3.0);
+    let c = u.light_vp * vec4<f32>(p + n * (tm * 0.7), 1.0);
     let uv = vec2<f32>(c.x * 0.5 + 0.5, 0.5 - c.y * 0.5);
     // reverse depth: beyond the far plane z < 0, towards the light - larger
     if (any(uv < vec2<f32>(0.0)) || any(uv > vec2<f32>(1.0)) || c.z < 0.0) { return 1.0; }
     let texel = 1.0 / vec2<f32>(textureDimensions(shadow_tex));
-    let z = c.z + 0.0015;
-    // comparison taps with bilinear filtering: 4 at a 0.9 texel step; at high quality
-    // 4 more at a 1.8 step in a cross - a wider, softer edge
+    let row2 = vec3<f32>(u.light_vp[0].z, u.light_vp[1].z, u.light_vp[2].z);
+    let z = c.z + (0.5 + slope) * tm * length(row2);
+    if (u.params.z > 1.5) { return sun_soft(uv, z, tm, length(row2)); }
+    // comparison taps with bilinear filtering: 4 at a 0.9 texel step
     let o = texel * 0.9;
     var s = textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(-o.x, -o.y), z)
           + textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(o.x, -o.y), z)
           + textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(-o.x, o.y), z)
           + textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(o.x, o.y), z);
-    if (u.params.z < 1.5) { return s * 0.25; }
-    let w = texel * 1.8;
-    s += textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(-w.x, 0.0), z)
-       + textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(w.x, 0.0), z)
-       + textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(0.0, -w.y), z)
-       + textureSampleCompareLevel(shadow_tex, shadow_smp, uv + vec2<f32>(0.0, w.y), z);
-    return s * 0.125;
+    return s * 0.25;
 }
 
 fn ambient_occ(px: vec2<f32>) -> f32 {

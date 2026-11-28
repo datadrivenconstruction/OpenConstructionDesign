@@ -541,6 +541,37 @@ mod foliage_tests {
         assert!(fr.contains("ambient_occ_at(i.clip.xy, i.world)") && fr.contains("hemi * 0.62 * aoc"));
     }
 
+    /// The fitted shadow rectangle covers what the camera needs, keeps its size and grid while the
+    /// camera moves a little, and never leaves the model's own extent by more than one step.
+    #[test]
+    fn shadow_fit_covers_the_view_and_holds_steady() {
+        use crate::renderer::fit_light_xy;
+        use glam::Vec2;
+        let all = (Vec2::new(-200.0, -150.0), Vec2::new(300.0, 250.0));
+        let need = (Vec2::new(10.0, 20.0), Vec2::new(70.0, 62.0));
+        let (lo, hi) = fit_light_xy(need.0, need.1, all.0, all.1);
+        assert!(lo.x <= need.0.x && lo.y <= need.0.y && hi.x >= need.1.x && hi.y >= need.1.y);
+        assert!((hi.x - lo.x - (hi.y - lo.y)).abs() < 1e-3, "square texels");
+        assert!(hi.x - lo.x < 500.0, "much tighter than the whole model");
+        // a small camera move keeps the size and the grid
+        let (lo2, hi2) = fit_light_xy(need.0 + Vec2::splat(0.3), need.1 + Vec2::splat(0.3), all.0, all.1);
+        assert_eq!((hi2 - lo2), (hi - lo));
+        assert_eq!(lo2, lo);
+        // an empty overlap falls back to the model's extent
+        let (flo, fhi) = fit_light_xy(Vec2::new(900.0, 900.0), Vec2::new(950.0, 950.0), all.0, all.1);
+        assert!(flo.x <= all.0.x && fhi.x >= all.1.x);
+    }
+
+    /// Shadow filtering and bias work in texels of the fitted map and the high levels use the
+    /// rotated-disc taps.
+    #[test]
+    fn shadow_shader_uses_texel_bias_and_disc_taps() {
+        let mesh = include_str!("mesh.wgsl");
+        assert!(mesh.contains("fn shadow_texel_m(") && mesh.contains("fn sun_soft("));
+        assert!(mesh.contains("tm * 0.7") && !mesh.contains("0.0015") && !mesh.contains("n * 0.03"));
+        assert!(mesh.contains("u.look.z > 0.5"), "penumbra switch");
+    }
+
     #[test]
     fn sky_follows_the_background_and_haze_is_perspective_only() {
         use crate::renderer::{FrameUniforms, SKY_DEFAULT};

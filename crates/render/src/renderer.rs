@@ -14,7 +14,7 @@ use crate::scene::Scene;
 #[cfg(feature = "gpu")]
 use crate::vpack::GpuVertex;
 use bytemuck::{Pod, Zeroable};
-use glam::{Mat4, Vec3};
+use glam::{Mat4, Vec2, Vec3};
 
 #[cfg(feature = "gpu")]
 /// Target formats of the pass the renderer draws into.
@@ -82,6 +82,61 @@ pub struct FrameUniforms {
 /// frame keeps the line weight of a 1080p one); fold edges only when the level pays for them.
 pub fn edge_look(height: u32, folds: bool) -> [f32; 4] {
     [(height as f32 / 1080.0).clamp(1.0, 3.0).round(), f32::from(u8::from(folds)), 0.0, 0.0]
+}
+
+/// Light-space sideways extent (x, y of the light view) of the part of the camera frustum that
+/// reaches the model: the near-plane corners and the same rays cut at the farthest model corner.
+#[cfg(feature = "gpu")]
+fn frustum_light_xy(view: &Mat4, inv_vp: &Mat4, eye: Vec3, b: &Aabb) -> Option<(Vec2, Vec2)> {
+    let far = (0..8)
+        .map(|i| {
+            let p = Vec3::new(
+                if i & 1 == 0 { b.min.x } else { b.max.x },
+                if i & 2 == 0 { b.min.y } else { b.max.y },
+                if i & 4 == 0 { b.min.z } else { b.max.z },
+            );
+            p.distance(eye)
+        })
+        .fold(0.0_f32, f32::max);
+    let un = |x: f32, y: f32, z: f32| {
+        let h = *inv_vp * glam::Vec4::new(x, y, z, 1.0);
+        h.truncate() / h.w
+    };
+    let mut lo = Vec2::splat(f32::INFINITY);
+    let mut hi = Vec2::splat(f32::NEG_INFINITY);
+    for (x, y) in [(-1.0, -1.0), (1.0, -1.0), (-1.0, 1.0), (1.0, 1.0)] {
+        let near = un(x, y, 1.0);
+        let dir = (un(x, y, 0.5) - near).normalize_or_zero();
+        if !near.is_finite() || dir == Vec3::ZERO {
+            return None;
+        }
+        // rays leave the eye (perspective) or run parallel (ortho): walk to the far corner
+        let reach = (far + near.distance(eye)).max(1.0);
+        for p in [near, near + dir * reach] {
+            let v = view.transform_point3(p);
+            lo = lo.min(v.truncate());
+            hi = hi.max(v.truncate());
+        }
+    }
+    (lo.is_finite() && hi.is_finite()).then_some((lo, hi))
+}
+
+/// The shadow map's sideways rectangle: what the camera needs (`need_*`) inside what the model
+/// spans (`all_*`), as a square of a stepped size on a grid of its own steps. The size and the
+/// origin change only in jumps, so the map keeps its texels while the camera moves and is not
+/// redrawn every frame.
+pub fn fit_light_xy(need_lo: Vec2, need_hi: Vec2, all_lo: Vec2, all_hi: Vec2) -> (Vec2, Vec2) {
+    let mut lo = need_lo.max(all_lo);
+    let mut hi = need_hi.min(all_hi);
+    if !(hi.x > lo.x && hi.y > lo.y) {
+        lo = all_lo;
+        hi = all_hi;
+    }
+    let s = (hi - lo).max_element().max(1e-3);
+    let sq = 1.25_f32.powf((s * 1.15).max(1.0).log(1.25).ceil());
+    let step = sq / 16.0;
+    let o = (lo / step).floor() * step;
+    (o, o + Vec2::splat(sq))
 }
 
 /// Default sky: cool zenith, pale horizon, warm ground bounce (linear).
@@ -1205,7 +1260,7 @@ impl Renderer {
     }
 
     /// Sun camera: orthographic projection over the scene bounds and their projection onto the ground along the light.
-    fn light_matrix(&self, l: Vec3, ground: f32) -> Mat4 {
+    fn light_matrix(&self, l: Vec3, ground: f32, inv_vp: &Mat4, eye: Vec3) -> Mat4 {
         let Some(b) = self.bounds else {
             return Mat4::IDENTITY;
         };
@@ -1228,15 +1283,14 @@ impl Renderer {
             }
         }
         let pad = 0.5;
+        // the map covers what the camera can see of the model: a caster outside the view still
+        // shadows a visible receiver along the same light ray, so only the sideways extent shrinks
+        let (mut xlo, mut xhi) = (Vec2::new(lo.x - pad, lo.y - pad), Vec2::new(hi.x + pad, hi.y + pad));
+        if let Some((flo, fhi)) = frustum_light_xy(&view, inv_vp, eye, &b) {
+            (xlo, xhi) = fit_light_xy(flo, fhi, xlo, xhi);
+        }
         // reversed depth, as for the camera: near plane → 1
-        Mat4::orthographic_rh(
-            lo.x - pad,
-            hi.x + pad,
-            lo.y - pad,
-            hi.y + pad,
-            -lo.z + pad,
-            -hi.z - pad,
-        ) * view
+        Mat4::orthographic_rh(xlo.x, xhi.x, xlo.y, xhi.y, -lo.z + pad, -hi.z - pad) * view
     }
 
     /// The pipelines for a sample count, built once; `None` if the device rejected them.
@@ -1520,7 +1574,10 @@ impl Renderer {
         let mut u = (*u).with_selection_set(self.sel.ranges(), self.sel.generation());
         u.sel_n[3] = self.anim.state.tag();
         let l = Vec3::from_slice(&u.light_dir[..3]);
-        u.light_vp = self.light_matrix(l, ground).to_cols_array_2d();
+        let inv_vp = Mat4::from_cols_array_2d(&u.inv_view_proj);
+        u.light_vp = self
+            .light_matrix(l, ground, &inv_vp, Vec3::from_slice(&u.eye[..3]))
+            .to_cols_array_2d();
         u.view = [size.0 as f32, size.1 as f32, key.ao_div as f32, ground];
         let effects = u.params[1] > 0.5;
         u.params[2] = if effects { fx.ao.code() } else { 0.0 };
@@ -1530,6 +1587,8 @@ impl Renderer {
             u.sky[1][3] = 0.0;
         }
         u.look = edge_look(size.1, fx.ao != crate::graphics::AoMode::Off);
+        // soft penumbra only where the shadow map is large enough to pay for it
+        u.look[2] = f32::from(u8::from(fx.shadow_px >= 2048));
         u.wind = if fx.wind > 0.0 { [fx.wind, wind_time(), 0.0, 0.0] } else { [0.0; 4] };
         u.fx = [
             f32::from(u8::from(fx.edges)),
