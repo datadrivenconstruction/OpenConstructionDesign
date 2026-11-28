@@ -113,6 +113,44 @@ fn room(lua: &Lua, t: Option<Table>) -> LResult<ElH> {
     make(lua, "room", Cat::Room, NewEl::Room { level, at: at(p), name, number: (!number.is_empty()).then_some(number) })
 }
 
+/// `place_family{family, at, rotation, host, type}`: one loaded family (furniture, fixture) as a
+/// component element at a point.
+fn place_family(lua: &Lua, t: Option<Table>) -> LResult<ElH> {
+    let o = Opts::new("place_family", t, lua)?;
+    let family = o.text("family", "")?;
+    let (Some(p), false) = (o.opt_point("at")?, family.is_empty()) else {
+        return err("place_family: needs family and at, e.g. place_family{family = \"Chair\", at = vec3(1, 2, 0)}");
+    };
+    let rotation = o.ang("rotation", 0.0)?;
+    let host = match o.value("host")? {
+        Value::Nil => None,
+        Value::UserData(u) if u.is::<ElH>() => Some(Ref::slot(u.borrow::<ElH>()?.slot)),
+        _ => return err("place_family: host = the value returned by wall{...}"),
+    };
+    let ty = type_ref(&o, Cat::Family)?;
+    o.done()?;
+    let level = level(lua, "place_family")?;
+    let family = Ref::name(Cat::Family, &family);
+    make(lua, "place_family", Cat::Component, NewEl::Component { level, at: at(p), family, host, rotation: Angle::rad(rotation), ty, fields: vec![] })
+}
+
+/// `pipe{system, path, size}`: a run of pipe (or duct, cable tray) along a path, as a MEP element.
+fn pipe(lua: &Lua, t: Option<Table>) -> LResult<ElH> {
+    let o = Opts::new("pipe", t, lua)?;
+    let system = o.text("system", "")?;
+    let Some(pts) = o.points("path")?.filter(|p| p.len() >= 2) else {
+        return err("pipe: needs a path of two or more points, e.g. pipe{system = \"Cold water\", path = {vec3(0, 0, 0), vec3(3, 0, 0)}, size = \"20 mm\"}");
+    };
+    if system.is_empty() {
+        return err("pipe: needs the system it belongs to, e.g. system = \"Cold water\"");
+    }
+    let size = o.len_in("size", 0.05, 0.001, 5.0)?;
+    let ty = type_ref(&o, Cat::MepRun)?;
+    o.done()?;
+    let level = level(lua, "pipe")?;
+    make(lua, "pipe", Cat::MepRun, NewEl::MepRun { level, system, path: pts.into_iter().map(at).collect(), size: Len::m(size), ty, fields: vec![] })
+}
+
 /// `roof{outline, slope, overhang, gables = {edge numbers}, type}`: a roof element over a plan.
 fn roof(lua: &Lua, t: Option<Table>) -> LResult<ElH> {
     let o = Opts::new("roof", t, lua)?;
@@ -226,6 +264,8 @@ pub(crate) fn install(lua: &Lua, g: &Table) -> LResult<()> {
     g.set("window", lua.create_function(|lua, t: Option<Table>| opening(lua, t, false))?)?;
     g.set("room", lua.create_function(room)?)?;
     g.set("roof", lua.create_function(roof)?)?;
+    g.set("place_family", lua.create_function(place_family)?)?;
+    g.set("pipe", lua.create_function(pipe)?)?;
     g.set("plate", block(lua, plate)?)?;
     g.set("bolt", block(lua, |l, t| fastener(l, t, false))?)?;
     g.set("rivet", block(lua, |l, t| fastener(l, t, true))?)?;

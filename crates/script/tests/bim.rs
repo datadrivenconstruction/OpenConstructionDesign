@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! Building elements, plates, fasteners and shells from Lua.
 
-use ddc_ops::{Cat, GeoOp, NewEl, Op, Ref};
+use ddc_ops::{Cat, GeoOp, Len, NewEl, Op, Ref};
 use ddc_script::{GeoScript, RunOpts, Sandbox, ScriptRun};
 use serde_json::json;
 
@@ -93,4 +93,43 @@ local f = extrude(profile.rect(0.1, 0.1), vec3(0, 0, 0), vec3(0, 0, 1))
 member{from = vec3(0, 0, 0), to = vec3(3, 0, 0), profile = "2L 100x65x10", role = "brace"}
 "#);
     assert!(!ops(&r).is_empty());
+}
+
+#[test]
+fn furniture_and_pipes_are_elements_too() {
+    let r = run(r#"
+local w = wall{from = vec3(0, 0, 0), to = vec3(6, 0, 0), height = 3}
+place_family{family = "Chair", at = vec3(1, 2, 0), rotation = "90 deg"}
+pipe{system = "Cold water", path = {vec3(0, 0, 0.3), vec3(3, 0, 0.3), vec3(3, 2, 0.3)}, size = "20 mm"}
+"#);
+    let Op::Create { el: NewEl::Component { family, .. }, .. } = &ops(&r)[1] else { panic!("{:?}", ops(&r)[1]) };
+    assert_eq!(family, &Ref::name(Cat::Family, "Chair"));
+    let Op::Create { el: NewEl::MepRun { system, path, size, .. }, .. } = &ops(&r)[2] else { panic!() };
+    assert_eq!((system.as_str(), path.len(), *size), ("Cold water", 3, Len::m(0.02)));
+}
+
+#[test]
+fn furniture_and_pipes_say_what_is_missing() {
+    let o = RunOpts::new(Ref::name(Cat::Level, "Level 1"), json!({}));
+    for (src, want) in [
+        (r#"place_family{at = vec3(0, 0, 0)}"#, "needs family and at"),
+        (r#"pipe{path = {vec3(0, 0, 0), vec3(1, 0, 0)}}"#, "needs the system"),
+        (r#"pipe{system = "x", path = {vec3(0, 0, 0)}}"#, "two or more points"),
+    ] {
+        let e = Sandbox.run(src, &o).err().unwrap_or_else(|| panic!("{src} ran")).to_string();
+        assert!(e.contains(want), "{src}: {e}");
+    }
+}
+
+#[test]
+fn a_part_name_limit_counts_characters_not_bytes() {
+    let o = RunOpts::new(Ref::name(Cat::Level, "Level 1"), json!({}));
+    let ok = "ж".repeat(80);
+    let too_long = "ж".repeat(81);
+    let src = |n: &str| format!("part(\"{n}\", extrude(profile.rect(0.1, 0.1), vec3(0,0,0), vec3(1,0,0)))");
+    if let Err(e) = Sandbox.run(&src(&ok), &o) {
+        panic!("80 characters of 2 bytes each: {e}");
+    }
+    let e = Sandbox.run(&src(&too_long), &o).err().expect("81 characters").to_string();
+    assert!(e.contains("80 characters"), "{e}");
 }

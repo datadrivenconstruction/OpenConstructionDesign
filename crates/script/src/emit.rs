@@ -330,7 +330,7 @@ impl Builder {
 }
 
 fn check_name(name: &str) -> Result<(), String> {
-    if name.trim().is_empty() || name.contains(['/', '#']) || name.len() > 80 {
+    if name.trim().is_empty() || name.contains(['/', '#']) || name.chars().count() > 80 {
         return Err(format!("name `{name}`: 1-80 characters without / or #"));
     }
     Ok(())
