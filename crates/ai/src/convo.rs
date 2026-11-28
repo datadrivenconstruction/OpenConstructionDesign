@@ -104,13 +104,22 @@ pub struct Limits {
 
 impl Default for Limits {
     fn default() -> Self {
+        Limits::reach(crate::limits::Reach::Normal)
+    }
+}
+
+impl Limits {
+    /// The limits of a mode; a money cap is the caller's (`max_cost` stays `None`).
+    pub fn reach(r: crate::limits::Reach) -> Self {
+        use crate::limits as l;
+        let u32_of = |x: &l::Limit, top: u32| r.value(x).min(u64::from(top)) as u32;
         Limits {
-            max_steps: 24,
-            max_tool_calls: 64,
-            max_turn_tokens: 200_000,
+            max_steps: u32_of(&l::STEPS, u32::MAX),
+            max_tool_calls: u32_of(&l::TOOL_CALLS, u32::MAX),
+            max_turn_tokens: r.value(&l::TURN_TOKENS),
             max_cost: None,
-            max_wall_s: 600,
-            max_result_chars: 6000,
+            max_wall_s: u32_of(&l::WALL_S, u32::MAX / 2),
+            max_result_chars: r.value(&l::RESULT_CHARS).min(usize::MAX as u64) as usize,
         }
     }
 }
@@ -203,6 +212,9 @@ pub enum ConvoEvent {
     },
     Usage(UsageTotals),
     Sent(String),
+    /// The model is writing a tool call: the estimated tokens of its arguments so far in this
+    /// piece (a quarter of the characters, rounded up). Text has its own event.
+    Progress { tokens: u64 },
     /// One model step finished: its journal record (`journal`).
     Step(StepRecord),
 }
@@ -631,6 +643,7 @@ fn stream_once(
                     }
                     c.args.push_str(&json);
                 }
+                ev(ConvoEvent::Progress { tokens: (json.len() as u64).div_ceil(4) });
             }
             StreamEvent::ToolEnd { .. } => acc.any = true,
             StreamEvent::Usage(u) => acc.usage = Some(u),
@@ -988,9 +1001,23 @@ impl Conversation {
 
             let mut results = Vec::with_capacity(calls.len());
             let mut end = None;
+            // calls the model already issued are finished work of the draft: once the first one
+            // runs, the rest follow unless the person cancels or the time runs far past its limit
+            let grace = deadline
+                .checked_add(Duration::from_secs((u64::from(self.limits.max_wall_s) / 4).max(60)))
+                .unwrap_or(deadline);
+            let mut started = false;
             for ((c, args), id) in calls.iter().zip(parsed).zip(ids) {
                 if end.is_none() {
-                    end = self.call_budget_end(tool_calls, deadline);
+                    end = if started {
+                        if self.cancel.is_cancelled() {
+                            Some(TurnEnd::Cancelled)
+                        } else {
+                            (Instant::now() >= grace).then_some(TurnEnd::LimitHit("wall"))
+                        }
+                    } else {
+                        self.call_budget_end(tool_calls, deadline)
+                    };
                 }
                 if end.is_some() {
                     results.push(Part::ToolResult {
@@ -1001,6 +1028,7 @@ impl Conversation {
                     });
                     continue;
                 }
+                started = true;
                 tool_calls += 1;
                 let label = tool_label(&c.name);
                 ev(ConvoEvent::ToolStart {
@@ -1071,6 +1099,9 @@ impl Conversation {
                 role: Role::Tool,
                 parts: results,
             });
+            if end.is_none() && tool_calls >= self.limits.max_tool_calls {
+                end = Some(TurnEnd::LimitHit("tool_calls"));
+            }
             if let Some(end) = end {
                 return Ok(end);
             }
@@ -1080,6 +1111,11 @@ impl Conversation {
                 sent_groups = self.loaded.len();
             }
         }
+    }
+
+    /// The limits of the turns to come; the chat and its history stay.
+    pub fn set_limits(&mut self, l: Limits) {
+        self.limits = l;
     }
 
     fn turn_cost_over(&self, turn: Usage) -> bool {
@@ -1151,6 +1187,7 @@ impl Conversation {
             tokens_cached: u.cache_read_tokens,
             tokens_out: u.output_tokens,
             cost: priced(self.profile.prices_for(self.role), u),
+            charged: u.charged(),
             ms: self
                 .step_started
                 .map_or(0, |t| t.elapsed().as_millis().min(u128::from(u64::MAX)) as u64),
@@ -1952,7 +1989,30 @@ mod tests {
     }
 
     #[test]
-    fn tool_call_limit_answers_the_rest_as_not_run() {
+    fn tool_arguments_count_as_progress() {
+        let p = ScriptedProvider::new(vec![
+            vec![tool("get_context", json!({"a": "0123456789"}))],
+            vec![text("done")],
+        ]);
+        let mut c = conv(&p, Limits::default());
+        let (r, events) = turn(&mut c, Mode::ReadOnly, &mut Host::default());
+        assert_eq!(r, Ok(TurnEnd::Answered));
+        let n: Vec<u64> = events
+            .iter()
+            .filter_map(|e| match e {
+                ConvoEvent::Progress { tokens } => Some(*tokens),
+                _ => None,
+            })
+            .collect();
+        // however the provider splits the arguments, the parts add up to about len / 4
+        let len = json!({"a": "0123456789"}).to_string().len() as u64;
+        let sum: u64 = n.iter().sum();
+        assert!(!n.is_empty() && n.iter().all(|t| *t > 0));
+        assert!(sum >= len / 4 && sum <= len.div_ceil(4) + n.len() as u64, "{n:?}");
+    }
+
+    #[test]
+    fn tool_call_limit_lets_the_issued_batch_finish_and_then_ends() {
         let p = ScriptedProvider::new(vec![(0..5)
             .map(|_| tool("get_context", json!({})))
             .collect::<Vec<Script>>()]);
@@ -1968,10 +2028,11 @@ mod tests {
             turn(&mut c, Mode::ReadOnly, &mut host).0,
             Ok(TurnEnd::LimitHit("tool_calls"))
         );
-        assert_eq!(host.calls.len(), 2);
+        assert_eq!(host.calls.len(), 5, "the calls the model issued are run, none is lost");
         let r = results(c.messages());
         assert_eq!(r.len(), 5);
-        assert!(r[2].2 && r[2].1.contains("not run"));
+        assert!(r.iter().all(|x| !x.1.contains("not run")));
+        assert_eq!(p.requests().len(), 1, "no further step starts");
         assert_every_call_answered(c.messages());
     }
 
@@ -2004,6 +2065,21 @@ mod tests {
             turn(&mut c, Mode::ReadOnly, &mut Host::default()).0,
             Ok(TurnEnd::Answered)
         );
+    }
+
+    #[test]
+    fn a_step_keeps_the_price_the_server_charged() {
+        let used = Usage {
+            input_tokens: 10,
+            output_tokens: 5,
+            charged_micros: Some(2_500),
+            ..Usage::default()
+        };
+        let p = ScriptedProvider::with_usage(vec![vec![text("ok")]], used);
+        let mut c = conv(&p, Limits::default());
+        let (r, _) = turn(&mut c, Mode::ReadOnly, &mut Host::default());
+        assert_eq!(r, Ok(TurnEnd::Answered));
+        assert_eq!(c.journal().steps[0].charged, Some(0.0025));
     }
 
     #[test]

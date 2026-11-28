@@ -11,5 +11,8 @@
  "ai.stream.local": "Radi na ovom računalu, ne čeka uslugu modela",
  "ai.stream.stop": "Zaustavi",
  "ai.stream.cancelled": "Zaustavljeno",
+ "ai.stream.writing": "Model piše, tokena: {n}",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Nacrt se gradi ovdje: {done} od {total}",
  "ai.stream.incomplete": "Nacrt je nepotpun. Ništa nije primijenjeno na model."
 }

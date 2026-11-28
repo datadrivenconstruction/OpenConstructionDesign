@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Kosten und Zeit anzeigen",
+ "ai.cost.show_tip": "Wie viele Token, wie viel Preis und Zeit einer Anfrage der Chat während der Arbeit anzeigt.",
+ "ai.cost.show.off": "Aus",
+ "ai.cost.show.brief": "Kurz",
+ "ai.cost.show.detailed": "Ausführlich",
+ "ai.cost.charged": "berechnet {cost}",
+ "ai.cost.tokens_split": "ein {in} · aus {out} · aus Cache {cache}",
+ "ai.cost.step_no": "Schritt {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Alle Runden exportieren",
+ "ai.settings.from_list": "Kontextgröße, längste Antwort und Preise stammen aus der Modellliste des Servers. Ändern Sie sie unter Erweitert.",
+ "ai.cost.plan_tokens": "Dieser Plan: {n} Token",
+ "ai.cost.plan_time": "{m} Min. {s} s",
+ "ai.cost.plan_elements": "{n} Elemente",
+ "ai.cost.plan_each": "{cost} pro Element",
+ "ai.cost.costliest": "Der teuerste Schritt dieser Anfrage"
+}

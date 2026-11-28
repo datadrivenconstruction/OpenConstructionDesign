@@ -11,5 +11,8 @@
  "ai.stream.local": "Töötab sellel arvutil, ootamata mudeliteenust",
  "ai.stream.stop": "Peata",
  "ai.stream.cancelled": "Peatatud",
+ "ai.stream.writing": "Mudel kirjutab, märke: {n}",
+ "ai.stream.rate": "{n} märki/s",
+ "ai.stream.building": "Kavand valmib siin: {done} / {total}",
  "ai.stream.incomplete": "Mustand on poolik. Midagi ei rakendatud mudelile."
 }

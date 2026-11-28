@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "費用と時間を表示",
+ "ai.cost.show_tip": "リクエストのトークン数、料金、時間のうち、実行中にチャットが表示する範囲です。",
+ "ai.cost.show.off": "オフ",
+ "ai.cost.show.brief": "簡易",
+ "ai.cost.show.detailed": "詳細",
+ "ai.cost.charged": "請求額 {cost}",
+ "ai.cost.tokens_split": "入力 {in} · 出力 {out} · キャッシュ {cache}",
+ "ai.cost.step_no": "ステップ {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "すべてのターンをエクスポート",
+ "ai.settings.from_list": "コンテキストサイズ、最長の返信、料金はサーバーのモデル一覧から取得されます。変更は詳細設定で行えます。",
+ "ai.cost.plan_tokens": "この計画: {n} トークン",
+ "ai.cost.plan_time": "{m} 分 {s} 秒",
+ "ai.cost.plan_elements": "{n} 個の要素",
+ "ai.cost.plan_each": "要素あたり {cost}",
+ "ai.cost.costliest": "このリクエストで最も高いステップ"
+}

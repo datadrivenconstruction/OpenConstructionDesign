@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Ipakita ang gastos at oras",
+ "ai.cost.show_tip": "Gaano karami sa mga token, presyo, at oras ng isang kahilingan ang ipinapakita ng chat habang tumatakbo.",
+ "ai.cost.show.off": "Naka-off",
+ "ai.cost.show.brief": "Maikli",
+ "ai.cost.show.detailed": "Detalyado",
+ "ai.cost.charged": "sinisingil {cost}",
+ "ai.cost.tokens_split": "pasok {in} · labas {out} · mula sa cache {cache}",
+ "ai.cost.step_no": "hakbang {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "I-export ang lahat ng turn",
+ "ai.settings.from_list": "Ang laki ng konteksto, pinakamahabang sagot, at mga presyo ay galing sa listahan ng modelo ng server. Baguhin ang mga ito sa Advanced.",
+ "ai.cost.plan_tokens": "Ang planong ito: {n} token",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} elemento",
+ "ai.cost.plan_each": "{cost} bawat elemento",
+ "ai.cost.costliest": "Ang pinakamahal na hakbang ng kahilingang ito"
+}

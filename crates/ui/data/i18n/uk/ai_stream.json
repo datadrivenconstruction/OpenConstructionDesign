@@ -11,5 +11,8 @@
  "ai.stream.local": "Працює на цьому комп’ютері, не чекаючи сервіс моделі",
  "ai.stream.stop": "Зупинити",
  "ai.stream.cancelled": "Зупинено",
+ "ai.stream.writing": "Модель пише, токенів: {n}",
+ "ai.stream.rate": "{n} ток/с",
+ "ai.stream.building": "Чернетка будується тут: {done} з {total}",
  "ai.stream.incomplete": "Чернетка неповна. До моделі нічого не застосовано."
 }

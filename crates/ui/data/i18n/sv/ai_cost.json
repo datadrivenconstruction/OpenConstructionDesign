@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Visa kostnad och tid",
+ "ai.cost.show_tip": "Hur mycket av en begärans tokens, pris och tid som chatten visar medan den körs.",
+ "ai.cost.show.off": "Av",
+ "ai.cost.show.brief": "Kort",
+ "ai.cost.show.detailed": "Detaljerad",
+ "ai.cost.charged": "debiterat {cost}",
+ "ai.cost.tokens_split": "in {in} · ut {out} · cachat {cache}",
+ "ai.cost.step_no": "steg {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Exportera alla vändor",
+ "ai.settings.from_list": "Kontextstorlek, längsta svar och priser hämtas från serverns modelllista. Ändra dem under Avancerat.",
+ "ai.cost.plan_tokens": "Denna plan: {n} tokens",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} element",
+ "ai.cost.plan_each": "{cost} per element",
+ "ai.cost.costliest": "Det dyraste steget i denna begäran"
+}

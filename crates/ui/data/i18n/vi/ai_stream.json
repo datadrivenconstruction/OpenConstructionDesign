@@ -11,5 +11,8 @@
  "ai.stream.local": "Đang chạy trên máy tính này, không chờ dịch vụ mô hình",
  "ai.stream.stop": "Dừng",
  "ai.stream.cancelled": "Đã dừng",
+ "ai.stream.writing": "Mô hình đang viết, {n} token",
+ "ai.stream.rate": "{n} token/giây",
+ "ai.stream.building": "Bản nháp đang được tạo ở đây: {done} trên {total}",
  "ai.stream.incomplete": "Bản nháp chưa hoàn chỉnh. Không có gì được áp dụng vào mô hình."
 }

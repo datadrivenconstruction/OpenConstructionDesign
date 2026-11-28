@@ -24,6 +24,8 @@ pub struct StepRecord {
     pub tokens_out: u64,
     /// At the role's prices; None without prices.
     pub cost: Option<f64>,
+    /// What the server says it charged for the step, in its billing unit; None when it reports none.
+    pub charged: Option<f64>,
     /// From the request to the end of the reply, retries included.
     pub ms: u64,
     /// Tools the step asked for, in order (catalog names).
@@ -101,6 +103,7 @@ mod tests {
             tokens_cached: 600,
             tokens_out: 50,
             cost,
+            charged: None,
             ms: 120,
             tools: tools.iter().map(|t| t.to_string()).collect(),
         }

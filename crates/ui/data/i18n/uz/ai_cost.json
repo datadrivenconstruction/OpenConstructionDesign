@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Narx va vaqtni ko'rsatish",
+ "ai.cost.show_tip": "So'rovning qancha token, narx va vaqtini chat ishlayotganda ko'rsatishini tanlang.",
+ "ai.cost.show.off": "O'chiq",
+ "ai.cost.show.brief": "Qisqa",
+ "ai.cost.show.detailed": "Batafsil",
+ "ai.cost.charged": "hisoblandi {cost}",
+ "ai.cost.tokens_split": "kirish {in} · chiqish {out} · keshdan {cache}",
+ "ai.cost.step_no": "{n}-qadam",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Barcha navbatlarni eksport qilish",
+ "ai.settings.from_list": "Kontekst hajmi, eng uzun javob va narxlar serverning modellar ro'yxatidan olinadi. Ularni Qo'shimcha bo'limida o'zgartiring.",
+ "ai.cost.plan_tokens": "Bu reja: {n} token",
+ "ai.cost.plan_time": "{m} daq {s} s",
+ "ai.cost.plan_elements": "{n} element",
+ "ai.cost.plan_each": "har bir element uchun {cost}",
+ "ai.cost.costliest": "Ushbu so'rovning eng qimmat qadami"
+}

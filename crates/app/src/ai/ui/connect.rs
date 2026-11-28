@@ -7,6 +7,7 @@ use super::logic;
 use crate::ai::{AiError, SessionCfg, UiSession, ViewCtx};
 use crate::shell::EditorApp;
 use ddc_ai::egress::is_local_url;
+use ddc_ai::limits::Reach;
 use ddc_ai::profile::header_is_secret;
 use ddc_ai::secret::default_store;
 use ddc_ai::{
@@ -319,16 +320,90 @@ pub fn snapshots_on(m: &Model) -> bool {
     snapshots_choice(m).unwrap_or(false)
 }
 
+/// Policy keys of the turn limits: the mode chip, the money cap of the whole project and what
+/// the project has spent so far.
+pub const MODE_KEY: &str = "limits.mode";
+pub const PROJECT_COST_KEY: &str = "limits.project_cost";
+pub const SPENT_KEY: &str = "limits.spent";
+pub const AUTO_CONTINUE_KEY: &str = "limits.auto_continue";
+/// Sent as the next turn when the person continues a turn that a limit stopped.
+pub const CONTINUE_TEXT: &str = "Continue from where you stopped. Do not redo what is already in the draft; finish what is missing and say what is still open.";
+
+/// The mode of this project; `DDC_AI_UNLIMITED=1` and the command line lift it for the run.
+pub fn reach_of(m: &Model) -> Reach {
+    if ddc_ai::limits::env_unlimited() {
+        return Reach::Unlimited;
+    }
+    policy(m, MODE_KEY).and_then(|v| Reach::parse(&v)).unwrap_or_else(ddc_ai::limits::default_reach)
+}
+
+pub fn set_reach(m: &Model, r: Reach) -> Result<(), ddc_model::Error> {
+    m.set_ai_policy(MODE_KEY, r.key())
+}
+
+/// The turn limits of the project: the mode's values, then the person's own token and time
+/// limits (normal mode only) and the money cap per turn.
 pub(crate) fn limits_of(m: &Model) -> Limits {
-    let mut l = Limits::default();
+    let r = reach_of(m);
+    let mut l = Limits::reach(r);
     if let Some(v) = policy(m, "limits.max_cost").and_then(|v| v.parse().ok()) {
         l.max_cost = Some(v);
     }
-    if let Some(v) = policy(m, "limits.max_turn_tokens").and_then(|v| v.parse().ok()) {
-        l.max_turn_tokens = if v == 0 { u64::MAX } else { v };
+    if r == Reach::Normal {
+        if let Some(v) = policy(m, "limits.max_turn_tokens").and_then(|v| v.parse().ok()) {
+            l.max_turn_tokens = if v == 0 { u64::MAX } else { v };
+        }
+        if let Some(v) = policy(m, "limits.max_wall_s").and_then(|v| v.parse::<f64>().ok()) {
+            l.max_wall_s = if v <= 0.0 { u32::MAX / 2 } else { v.clamp(10.0, 86_400.0) as u32 };
+        }
     }
-    if let Some(v) = policy(m, "limits.max_wall_s").and_then(|v| v.parse::<f64>().ok()) {
-        l.max_wall_s = if v <= 0.0 { u32::MAX / 2 } else { v.clamp(10.0, 86_400.0) as u32 };
+    l
+}
+
+/// Lifts the limit that stopped a turn, from the stop message: a money cap doubles, the others
+/// move the project one mode up (a larger mode, then no limits).
+pub fn raise_limit(m: &Model, what: &str) {
+    if what == "cost" {
+        let up = |k: &str, v: f64| {
+            let _ = m.set_ai_policy(k, &format!("{:.4}", v * 2.0));
+        };
+        if let Some(c) = policy(m, "limits.max_cost").and_then(|v| v.parse::<f64>().ok()).filter(|c| *c > 0.0) {
+            up("limits.max_cost", c);
+        }
+        if let Some(c) = project_cap_of(m) {
+            up(PROJECT_COST_KEY, c);
+        }
+        return;
+    }
+    let next = match reach_of(m) {
+        Reach::Normal => Reach::Large,
+        _ => Reach::Unlimited,
+    };
+    let _ = set_reach(m, next);
+}
+
+/// What the project has spent on assistant turns, at the connection prices.
+pub fn spent_of(m: &Model) -> f64 {
+    policy(m, SPENT_KEY).and_then(|v| v.parse::<f64>().ok()).filter(|v| *v > 0.0).unwrap_or(0.0)
+}
+
+/// The money the project may spend in all: none set means no cap.
+pub fn project_cap_of(m: &Model) -> Option<f64> {
+    policy(m, PROJECT_COST_KEY).and_then(|v| v.parse::<f64>().ok()).filter(|v| *v > 0.0)
+}
+
+pub fn add_spent(m: &Model, delta: f64) {
+    if delta > 0.0 {
+        let _ = m.set_ai_policy(SPENT_KEY, &format!("{:.6}", spent_of(m) + delta));
+    }
+}
+
+/// `limits_of` for a turn about to start: the money cap also holds what the project has left.
+pub(crate) fn turn_limits(m: &Model) -> Limits {
+    let mut l = limits_of(m);
+    if let Some(cap) = project_cap_of(m) {
+        let left = (cap - spent_of(m)).max(0.0);
+        l.max_cost = Some(l.max_cost.map_or(left, |c| c.min(left)));
     }
     l
 }
@@ -405,7 +480,7 @@ pub fn open_session(
     let cfg = SessionCfg {
         provider,
         profile: p.clone(),
-        limits: limits_of(m),
+        limits: turn_limits(m),
         session: session_name(),
         allow_snapshots: snapshots,
         extra_generators: vec![],
@@ -659,6 +734,54 @@ mod tests {
         assert!(!is_local(&p));
         assert_eq!(missing(&p, false), vec!["ai.settings.need_model", "ai.settings.need_key"]);
         assert!(Preset::ALL.contains(&Preset::Gateway));
+    }
+
+    #[test]
+    fn the_mode_sets_the_turn_limits_and_keeps_the_money_cap() {
+        let m = model();
+        assert_eq!(reach_of(&m), Reach::Normal);
+        assert_eq!(limits_of(&m), Limits::default());
+        m.set_ai_policy("limits.max_cost", "1.5").unwrap();
+        m.set_ai_policy("limits.max_turn_tokens", "1234").unwrap();
+        set_reach(&m, Reach::Unlimited).unwrap();
+        let l = limits_of(&m);
+        assert_eq!((l.max_steps, l.max_tool_calls, l.max_turn_tokens), (u32::MAX, u32::MAX, u64::MAX));
+        assert!(l.max_wall_s >= 86_400 * 365);
+        assert_eq!(l.max_cost, Some(1.5), "the money cap stays");
+        set_reach(&m, Reach::Large).unwrap();
+        assert!(limits_of(&m).max_steps > Limits::default().max_steps);
+        assert_eq!(limits_of(&m).max_turn_tokens, 2_000_000, "a mode outranks the single limits");
+        m.set_ai_policy(MODE_KEY, "nonsense").unwrap();
+        assert_eq!(reach_of(&m), Reach::Normal);
+    }
+
+    #[test]
+    fn the_project_cap_leaves_a_turn_what_the_project_has_left() {
+        let m = model();
+        assert_eq!(turn_limits(&m).max_cost, None);
+        m.set_ai_policy(PROJECT_COST_KEY, "10").unwrap();
+        add_spent(&m, 4.0);
+        add_spent(&m, 2.5);
+        assert!((spent_of(&m) - 6.5).abs() < 1e-9);
+        assert!((turn_limits(&m).max_cost.unwrap() - 3.5).abs() < 1e-9);
+        m.set_ai_policy("limits.max_cost", "2").unwrap();
+        assert_eq!(turn_limits(&m).max_cost, Some(2.0), "the smaller cap rules");
+        add_spent(&m, 9.0);
+        assert_eq!(turn_limits(&m).max_cost, Some(0.0), "an empty project budget stops a turn at once");
+    }
+
+    #[test]
+    fn raising_a_stop_lifts_the_limit_that_hit() {
+        let m = model();
+        raise_limit(&m, "steps");
+        assert_eq!(reach_of(&m), Reach::Large);
+        raise_limit(&m, "tokens");
+        assert_eq!(reach_of(&m), Reach::Unlimited);
+        m.set_ai_policy("limits.max_cost", "1").unwrap();
+        m.set_ai_policy(PROJECT_COST_KEY, "3").unwrap();
+        raise_limit(&m, "cost");
+        assert_eq!(limits_of(&m).max_cost, Some(2.0));
+        assert_eq!(project_cap_of(&m), Some(6.0));
     }
 
     #[test]

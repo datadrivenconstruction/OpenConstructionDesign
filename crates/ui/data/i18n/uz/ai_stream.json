@@ -11,5 +11,8 @@
  "ai.stream.local": "Shu kompyuterda ishlamoqda, model xizmatini kutmaydi",
  "ai.stream.stop": "To'xtatish",
  "ai.stream.cancelled": "To'xtatildi",
+ "ai.stream.writing": "Model yozmoqda, {n} token",
+ "ai.stream.rate": "{n} token/s",
+ "ai.stream.building": "Qoralama shu yerda tuzilmoqda: {done} / {total}",
  "ai.stream.incomplete": "Qoralama to'liq emas. Modelga hech narsa qo'llanmadi."
 }

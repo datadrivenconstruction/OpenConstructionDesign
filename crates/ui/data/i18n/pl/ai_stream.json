@@ -11,5 +11,8 @@
  "ai.stream.local": "Praca na tym komputerze, bez czekania na usługę modelu",
  "ai.stream.stop": "Zatrzymaj",
  "ai.stream.cancelled": "Zatrzymano",
+ "ai.stream.writing": "Model pisze, tokenów: {n}",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Szkic powstaje tutaj: {done} z {total}",
  "ai.stream.incomplete": "Szkic jest niekompletny. Nic nie zastosowano do modelu."
 }

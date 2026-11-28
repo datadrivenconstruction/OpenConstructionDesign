@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Afficher le coût et la durée",
+ "ai.cost.show_tip": "Quelle part des jetons, du prix et du temps d'une requête le chat affiche pendant l'exécution.",
+ "ai.cost.show.off": "Désactivé",
+ "ai.cost.show.brief": "Bref",
+ "ai.cost.show.detailed": "Détaillé",
+ "ai.cost.charged": "facturé {cost}",
+ "ai.cost.tokens_split": "entrée {in} · sortie {out} · en cache {cache}",
+ "ai.cost.step_no": "étape {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Exporter tous les tours",
+ "ai.settings.from_list": "La taille du contexte, la réponse la plus longue et les prix viennent de la liste des modèles du serveur. Modifiez-les dans Avancé.",
+ "ai.cost.plan_tokens": "Ce plan : {n} jetons",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} éléments",
+ "ai.cost.plan_each": "{cost} par élément",
+ "ai.cost.costliest": "L'étape la plus coûteuse de cette requête"
+}

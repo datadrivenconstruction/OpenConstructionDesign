@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Показывать стоимость и время",
+ "ai.cost.show_tip": "Сколько токенов, цены и времени запроса чат показывает во время работы.",
+ "ai.cost.show.off": "Выкл.",
+ "ai.cost.show.brief": "Кратко",
+ "ai.cost.show.detailed": "Подробно",
+ "ai.cost.charged": "списано {cost}",
+ "ai.cost.tokens_split": "вход {in} · выход {out} · из кэша {cache}",
+ "ai.cost.step_no": "шаг {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Экспортировать все ходы",
+ "ai.settings.from_list": "Размер контекста, самый длинный ответ и цены берутся из списка моделей сервера. Измените их в разделе «Дополнительно».",
+ "ai.cost.plan_tokens": "Этот план: токенов {n}",
+ "ai.cost.plan_time": "{m} мин {s} с",
+ "ai.cost.plan_elements": "элементов: {n}",
+ "ai.cost.plan_each": "{cost} за элемент",
+ "ai.cost.costliest": "Самый дорогой шаг этого запроса"
+}

@@ -41,6 +41,9 @@ impl Unit {
 pub enum Tier {
     /// The person may change it in Settings > AI within `min..=max`.
     Setting { min: u64, max: u64 },
+    /// A turn or plan limit the project sets (policy `limits.*`, `plan.*`) or lifts with the
+    /// mode chip; the global settings list does not show it.
+    Project { min: u64, max: u64 },
     /// Memory or loop safety: fixed.
     Guard,
 }
@@ -89,7 +92,7 @@ impl Limit {
     /// Input schemas accept up to here; the value in force refuses by name above it.
     pub const fn hi(&self) -> u64 {
         match self.tier {
-            Tier::Setting { max, .. } => max,
+            Tier::Setting { max, .. } | Tier::Project { max, .. } => max,
             Tier::Guard => self.value,
         }
     }
@@ -156,6 +159,9 @@ const G: Tier = Tier::Guard;
 const fn set(min: u64, max: u64) -> Tier {
     Tier::Setting { min, max }
 }
+const fn project(min: u64, max: u64) -> Tier {
+    Tier::Project { min, max }
+}
 
 limits! {
     // settings: the person may raise or lower them
@@ -180,7 +186,27 @@ limits! {
     MCP_READ_TIMEOUT = "mcp_read_timeout", 300, Seconds, set(10, 3600), "a stalled tool server frees the chat",
         tools: [], doc: "", src: [];
 
+    // per turn and per plan: the project sets them, the mode chip lifts them
+    STEPS = "steps", 24, Count, project(1, 100_000), "each step is one model request; a runaway turn stops here",
+        tools: [], doc: "", src: [];
+    TOOL_CALLS = "tool_calls", 64, Count, project(1, 1_000_000), "a runaway turn cannot call tools forever",
+        tools: [], doc: "", src: [];
+    TURN_TOKENS = "turn_tokens", 200_000, Count, project(1000, 1_000_000_000), "tokens of one turn cost money",
+        tools: [], doc: "", src: [];
+    WALL_S = "wall_s", 600, Seconds, project(10, 86_400), "a turn that never ends blocks the chat",
+        tools: [], doc: "", src: [];
+    RESULT_CHARS = "result_chars", 6000, Chars, project(500, 1_000_000), "a tool result rides in every later request",
+        tools: [], doc: "", src: [];
+    PLAN_CONFIRM = "plan_confirm", 500, Count, project(1, 10_000_000), "a plan touching more elements asks for Allow large",
+        tools: [], doc: "", src: ["app/src/ai/validate.rs::LARGE_PLAN"];
+    PLAN_DELETE = "plan_delete", 50, Count, project(1, 10_000_000), "a plan deleting more elements asks for Allow large",
+        tools: [], doc: "", src: ["app/src/ai/validate.rs::LARGE_DELETE"];
+
     // guards: memory and loop safety
+    PLAN_REFUSE = "plan_refuse", 150_000, Count, G, "a plan past the change list of the card cannot be shown or verified",
+        tools: [], doc: "", src: ["app/src/ai/validate.rs::REFUSED_PLAN"];
+    AUTO_CONTINUES = "auto_continues", 5, Count, G, "turns that go on by themselves after a limit stop, until the person writes again",
+        tools: [], doc: "", src: ["app/src/ai/ui/mod.rs::MAX_AUTO_CONTINUES"];
     QUERY_PAGE = "query_page", 100, Count, G, "one reply stays small enough to read",
         tools: ["query_relations", "query_spatial"], doc: "returns at most {n} rows per call (limit); page on with offset", src: [];
     QUERY_DEFAULT = "query_default", 20, Count, G, "rows a query returns when no limit is given",
@@ -395,6 +421,69 @@ limits! {
         tools: [], doc: "", src: ["app/src/ai/ui/steps.rs::NAME_MAX"];
 }
 
+/// How far one turn may go. `Normal` is the registry's values; `Large` raises them for a big
+/// model; `Unlimited` lifts steps, calls, tokens, time and plan size. A money cap and the
+/// mass-delete confirmation stay in every mode.
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq)]
+pub enum Reach {
+    #[default]
+    Normal,
+    Large,
+    Unlimited,
+}
+
+impl Reach {
+    pub const ALL: [Reach; 3] = [Reach::Normal, Reach::Large, Reach::Unlimited];
+
+    pub const fn key(self) -> &'static str {
+        match self {
+            Reach::Normal => "normal",
+            Reach::Large => "large",
+            Reach::Unlimited => "unlimited",
+        }
+    }
+
+    pub fn parse(s: &str) -> Option<Reach> {
+        Reach::ALL.into_iter().find(|r| r.key() == s.trim().to_ascii_lowercase())
+    }
+
+    /// The value of a turn or plan limit in this mode; `u64::MAX` is no limit.
+    pub fn value(self, l: &Limit) -> u64 {
+        match (self, l.key) {
+            (Reach::Normal, _) => l.value,
+            (Reach::Unlimited, "plan_delete") => l.value,
+            (Reach::Unlimited, "result_chars") => 12_000,
+            (Reach::Unlimited, _) => u64::MAX,
+            (Reach::Large, "steps") => 120,
+            (Reach::Large, "tool_calls") => 400,
+            (Reach::Large, "turn_tokens") => 2_000_000,
+            (Reach::Large, "wall_s") => 3600,
+            (Reach::Large, "result_chars") => 12_000,
+            (Reach::Large, "plan_confirm") => 5000,
+            (Reach::Large, _) => l.value,
+        }
+    }
+}
+
+static DEFAULT_REACH: std::sync::atomic::AtomicU8 = std::sync::atomic::AtomicU8::new(0);
+
+/// The mode of a project that made no choice: the person's own last pick (their settings).
+pub fn default_reach() -> Reach {
+    Reach::ALL[usize::from(DEFAULT_REACH.load(std::sync::atomic::Ordering::Relaxed)).min(2)]
+}
+
+pub fn set_default_reach(r: Reach) {
+    let i = Reach::ALL.iter().position(|x| *x == r).unwrap_or(0);
+    DEFAULT_REACH.store(i as u8, std::sync::atomic::Ordering::Relaxed);
+}
+
+/// `DDC_AI_UNLIMITED=1` (or true, yes, on): the command line's and scripts' way to the
+/// unlimited mode.
+pub fn env_unlimited() -> bool {
+    std::env::var("DDC_AI_UNLIMITED")
+        .is_ok_and(|v| matches!(v.trim().to_ascii_lowercase().as_str(), "1" | "true" | "yes" | "on"))
+}
+
 /// Settings tier only, in declaration order: the rows of Settings > AI.
 pub fn settings() -> impl Iterator<Item = &'static Limit> {
     ALL.iter().copied().filter(|l| l.is_setting())
@@ -485,7 +574,7 @@ mod tests {
                 if name.is_empty() || !rest[name.len()..].trim_start().starts_with(':') {
                     continue;
                 }
-                if ["MAX", "LIMIT", "CAP", "TIMEOUT"].iter().any(|w| name.contains(w)) {
+                if !name.ends_with("_KEY") && ["MAX", "LIMIT", "CAP", "TIMEOUT", "LARGE", "REFUSED"].iter().any(|w| name.contains(w)) {
                     out.push((format!("{rel}::{name}"), line.to_string()));
                 }
             }
@@ -542,7 +631,7 @@ mod tests {
             assert!(seen.insert(l.key), "{} twice", l.key);
             assert!(!l.reason.is_empty() && !l.reason.contains('\n'));
             assert_eq!(l.tools.is_empty(), l.doc.is_empty(), "{}: tools and doc go together", l.key);
-            if let Tier::Setting { min, max } = l.tier {
+            if let Tier::Setting { min, max } | Tier::Project { min, max } = l.tier {
                 assert!(min <= l.value && l.value <= max, "{}", l.key);
             }
         }
@@ -580,6 +669,18 @@ mod tests {
         set_overrides([]);
         assert_eq!(COPIES.get(), 200);
         assert!(COPIES.refusal("300 copies").contains("Settings > AI"));
+    }
+
+    #[test]
+    fn reach_lifts_turn_and_plan_limits_but_keeps_mass_delete() {
+        assert_eq!(Reach::parse(" Unlimited "), Some(Reach::Unlimited));
+        assert_eq!(Reach::parse("x"), None);
+        for l in ALL.iter().filter(|l| matches!(l.tier, Tier::Project { .. })) {
+            assert_eq!(Reach::Normal.value(l), l.value);
+            let (lg, un) = (Reach::Large.value(l), Reach::Unlimited.value(l));
+            assert!(lg >= l.value && un >= lg, "{}", l.key);
+            assert_eq!(un == u64::MAX, !["plan_delete", "result_chars"].contains(&l.key), "{}", l.key);
+        }
     }
 
     #[test]

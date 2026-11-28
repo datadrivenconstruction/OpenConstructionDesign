@@ -11,5 +11,8 @@
  "ai.stream.local": "Working on this computer, not waiting for the model service",
  "ai.stream.stop": "Stop",
  "ai.stream.cancelled": "Stopped",
+ "ai.stream.writing": "The model is writing, {n} tokens",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Building the draft here: {done} of {total}",
  "ai.stream.incomplete": "The draft is incomplete. Nothing was applied to the model."
 }

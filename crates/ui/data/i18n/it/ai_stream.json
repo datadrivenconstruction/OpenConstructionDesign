@@ -11,5 +11,8 @@
  "ai.stream.local": "In esecuzione su questo computer, senza attendere il servizio del modello",
  "ai.stream.stop": "Ferma",
  "ai.stream.cancelled": "Fermato",
+ "ai.stream.writing": "Il modello sta scrivendo, {n} token",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "La bozza viene costruita qui: {done} di {total}",
  "ai.stream.incomplete": "La bozza è incompleta. Nulla è stato applicato al modello."
 }

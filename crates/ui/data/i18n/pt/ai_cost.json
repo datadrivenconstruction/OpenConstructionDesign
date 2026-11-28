@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Mostrar custo e tempo",
+ "ai.cost.show_tip": "Quantos tokens, preço e tempo de um pedido o chat mostra enquanto ele é executado.",
+ "ai.cost.show.off": "Desligado",
+ "ai.cost.show.brief": "Resumido",
+ "ai.cost.show.detailed": "Detalhado",
+ "ai.cost.charged": "cobrado {cost}",
+ "ai.cost.tokens_split": "entrada {in} · saída {out} · em cache {cache}",
+ "ai.cost.step_no": "passo {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Exportar todos os turnos",
+ "ai.settings.from_list": "O tamanho do contexto, a resposta mais longa e os preços vêm da lista de modelos do servidor. Altere-os em Avançado.",
+ "ai.cost.plan_tokens": "Este plano: {n} tokens",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} elementos",
+ "ai.cost.plan_each": "{cost} por elemento",
+ "ai.cost.costliest": "O passo mais caro deste pedido"
+}

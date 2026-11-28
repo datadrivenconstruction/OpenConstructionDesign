@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Kosten en tijd tonen",
+ "ai.cost.show_tip": "Hoeveel van de tokens, de prijs en de tijd van een verzoek de chat tijdens het uitvoeren toont.",
+ "ai.cost.show.off": "Uit",
+ "ai.cost.show.brief": "Kort",
+ "ai.cost.show.detailed": "Uitgebreid",
+ "ai.cost.charged": "in rekening gebracht {cost}",
+ "ai.cost.tokens_split": "in {in} · uit {out} · uit cache {cache}",
+ "ai.cost.step_no": "stap {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Alle beurten exporteren",
+ "ai.settings.from_list": "Contextgrootte, langste antwoord en prijzen komen uit de modellijst van de server. Wijzig ze onder Geavanceerd.",
+ "ai.cost.plan_tokens": "Dit plan: {n} tokens",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} elementen",
+ "ai.cost.plan_each": "{cost} per element",
+ "ai.cost.costliest": "De duurste stap van dit verzoek"
+}

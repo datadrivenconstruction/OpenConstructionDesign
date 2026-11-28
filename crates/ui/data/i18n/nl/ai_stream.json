@@ -11,5 +11,8 @@
  "ai.stream.local": "Werkt op deze computer, wacht niet op de modelservice",
  "ai.stream.stop": "Stoppen",
  "ai.stream.cancelled": "Gestopt",
+ "ai.stream.writing": "Het model schrijft, {n} tokens",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Het concept wordt hier opgebouwd: {done} van {total}",
  "ai.stream.incomplete": "Het concept is onvolledig. Er is niets op het model toegepast."
 }

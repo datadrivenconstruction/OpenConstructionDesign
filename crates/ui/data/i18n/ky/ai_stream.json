@@ -11,5 +11,8 @@
  "ai.stream.local": "Ушул компьютерде иштеп жатат, модель кызматын күтпөйт",
  "ai.stream.stop": "Токтотуу",
  "ai.stream.cancelled": "Токтотулду",
+ "ai.stream.writing": "Модель жазып жатат, {n} токен",
+ "ai.stream.rate": "{n} токен/с",
+ "ai.stream.building": "Долбоор бул жерде түзүлүүдө: {done} / {total}",
  "ai.stream.incomplete": "Черновик толук эмес. Моделге эч нерсе колдонулган жок."
 }

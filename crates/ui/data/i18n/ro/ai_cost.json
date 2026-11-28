@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Afișează costul și timpul",
+ "ai.cost.show_tip": "Cât din tokenii, prețul și timpul unei cereri afișează chatul în timpul rulării.",
+ "ai.cost.show.off": "Oprit",
+ "ai.cost.show.brief": "Scurt",
+ "ai.cost.show.detailed": "Detaliat",
+ "ai.cost.charged": "taxat {cost}",
+ "ai.cost.tokens_split": "intrare {in} · ieșire {out} · din cache {cache}",
+ "ai.cost.step_no": "pasul {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Exportă toate rundele",
+ "ai.settings.from_list": "Dimensiunea contextului, cel mai lung răspuns și prețurile vin din lista de modele a serverului. Modificați-le la Avansat.",
+ "ai.cost.plan_tokens": "Acest plan: {n} tokeni",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} elemente",
+ "ai.cost.plan_each": "{cost} per element",
+ "ai.cost.costliest": "Cel mai costisitor pas al acestei cereri"
+}

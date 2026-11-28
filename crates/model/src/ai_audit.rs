@@ -2,7 +2,7 @@
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
 //! AI action log and project settings (schema 31). Kept outside the undo journal, like `clash_item`:
 //! `changes_since` does not see them, otherwise auditing would rebuild the scene and make a plan stale.
-//! Event kinds: turn, snapshot, tool_write, plan, apply, reject, cancel, mcp_connect, mcp_policy.
+//! Event kinds: turn, snapshot, tool_write, tool_error, plan, apply, reject, cancel, mcp_connect, mcp_policy.
 //! `op_seq` cannot be matched by number alone: after an undo the next operation takes the same
 //! number (no AUTOINCREMENT), so undo marks the entry `op_undone`; matching uses `audit_op_live`.
 //! Redo is a new operation: the app writes its own event for it.

@@ -11,5 +11,8 @@
  "ai.stream.local": "Arbeitet auf diesem Computer, ohne auf den Modelldienst zu warten",
  "ai.stream.stop": "Stopp",
  "ai.stream.cancelled": "Gestoppt",
+ "ai.stream.writing": "Das Modell schreibt, {n} Token",
+ "ai.stream.rate": "{n} Token/s",
+ "ai.stream.building": "Der Entwurf entsteht hier: {done} von {total}",
  "ai.stream.incomplete": "Der Entwurf ist unvollständig. Am Modell wurde nichts angewendet."
 }

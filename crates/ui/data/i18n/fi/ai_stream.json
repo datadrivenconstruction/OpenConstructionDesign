@@ -11,5 +11,8 @@
  "ai.stream.local": "Työskentelee tällä tietokoneella odottamatta mallipalvelua",
  "ai.stream.stop": "Pysäytä",
  "ai.stream.cancelled": "Pysäytetty",
+ "ai.stream.writing": "Malli kirjoittaa, {n} tokenia",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Luonnos rakentuu tässä: {done} / {total}",
  "ai.stream.incomplete": "Luonnos on keskeneräinen. Mitään ei käytetty malliin."
 }

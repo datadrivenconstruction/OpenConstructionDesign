@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "显示费用和时间",
+ "ai.cost.show_tip": "运行时聊天显示请求的令牌、价格和时间的详细程度。",
+ "ai.cost.show.off": "关闭",
+ "ai.cost.show.brief": "简略",
+ "ai.cost.show.detailed": "详细",
+ "ai.cost.charged": "已计费 {cost}",
+ "ai.cost.tokens_split": "输入 {in} · 输出 {out} · 缓存 {cache}",
+ "ai.cost.step_no": "第 {n} 步",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "导出所有轮次",
+ "ai.settings.from_list": "上下文大小、最长回复和价格来自服务器的模型列表。可在高级设置中修改。",
+ "ai.cost.plan_tokens": "此计划：{n} 个令牌",
+ "ai.cost.plan_time": "{m} 分 {s} 秒",
+ "ai.cost.plan_elements": "{n} 个元素",
+ "ai.cost.plan_each": "每个元素 {cost}",
+ "ai.cost.costliest": "此请求中最昂贵的一步"
+}

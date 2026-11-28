@@ -718,8 +718,17 @@ fn errors(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
     let settings = cat.t("cmd.ai.settings");
     let shorten = cat.t(retry::fix_label_key(retry::Fix::Shorten));
     let shorten_fix = retry::fix_for(kind) == Some(retry::Fix::Shorten);
+    let cont = cat.t("ai.limit.continue");
+    let raise = cat.t("ai.limit.raise_continue");
+    let stopped = st.error.is_none().then_some(st.limit).flatten().filter(|w| logic::can_continue(w));
     let mut labels: Vec<&str> = vec![];
-    if shorten_fix {
+    if let Some(w) = stopped {
+        labels.push(cont.as_str());
+        if logic::can_raise(w) {
+            labels.push(raise.as_str());
+        }
+        labels.push(settings.as_str());
+    } else if shorten_fix {
         labels.push(shorten.as_str());
     } else {
         if logic::can_retry(kind) {
@@ -759,8 +768,23 @@ fn errors(ui: &mut Ui, st: &PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
             }
         });
     }
+    if stopped.is_some() {
+        let mut auto = connect::policy_flag(&cx.ed.model, connect::AUTO_CONTINUE_KEY, false);
+        if kit::checkbox(ui, th, &mut auto, &cat.t("ai.limit.auto")).changed() {
+            acts.push(Action::AutoContinue(auto));
+        }
+        kit::caption(ui, th, &cat.t("ai.limit.auto_hint"));
+    }
     if let Some(i) = hit {
-        if shorten_fix {
+        if stopped.is_some() {
+            if labels[i] == cont {
+                acts.push(Action::ContinueTurn { raise: false });
+            } else if labels[i] == raise {
+                acts.push(Action::ContinueTurn { raise: true });
+            } else {
+                acts.push(Action::OpenSettings);
+            }
+        } else if shorten_fix {
             acts.push(Action::Shorten);
         } else if labels[i] == retry {
             acts.push(Action::Retry);
@@ -1259,12 +1283,61 @@ fn status_line(
     if let Some(after) = stream_status::repaint_after(&row).filter(|_| f.busy) {
         ui.ctx().request_repaint_after(after);
     }
+    // The usage text and the status share one row only when both fit; otherwise the usage
+    // text takes a row of its own, and every text is cut with an ellipsis to its room.
+    let detail = super::cost_view::detail_of(&cx.ed.model);
+    let left = st.estimate.balance.and_then(|b| b.spendable());
+    let step = st.estimate.step_max;
+    let live_now = f.busy && row.live();
+    let live = super::cost_view::Live {
+        secs: live_now.then_some(row.secs),
+        rate: if live_now { row.rate } else { None },
+        step: live_now.then(|| st.journal.steps.len() as u32 + 1),
+    };
+    let used = super::cost_view::usage_text(cat, detail, &st.usage, live);
+    let diverges = used.as_ref().is_some_and(|u| u.diverges);
+    let usage_text = (detail != super::cost_view::Detail::Off).then(|| {
+        let line = used.map(|u| u.text).unwrap_or_default();
+        with_balance(cat, line, step, left)
+    }).filter(|t| !t.is_empty());
+    let status_text = if f.busy && row.live() {
+        stream_status::row_text(&row, &|k, a| cat.tf(k, a))
+    } else if state != PanelState::Idle {
+        cat.t(logic::state_key(state))
+    } else {
+        String::new()
+    };
+    let font = th.font(Role::Caption);
+    let width = |t: &str| {
+        ui.painter()
+            .layout_no_wrap(t.to_owned(), font.clone(), egui::Color32::WHITE)
+            .size()
+            .x
+    };
+    let gap = ui.spacing().item_spacing.x;
+    let mut buttons = 0.0;
+    if !st.sent.is_empty() {
+        buttons += width(&cat.t("cmd.ai.what_sent")) + BUTTON_PAD + gap;
+    }
+    if !st.journal.steps.is_empty() {
+        let label = cat.tf("ai.journal.open", &[("n", &st.journal.steps.len().to_string())]);
+        buttons += width(&label) + BUTTON_PAD + gap;
+    }
+    let stop_w = if row.stalled || row.local_busy { width(&cat.t("ai.stream.stop")) + BUTTON_PAD + gap } else { 0.0 };
+    let spinner_w = if f.busy { ui.spacing().interact_size.y + gap } else { 0.0 };
+    let layout = status_layout(
+        ui.available_width(),
+        width(&status_text) + CARET_W,
+        usage_text.as_deref().map_or(0.0, |t| width(t)),
+        buttons + stop_w + spinner_w,
+        gap,
+    );
     ui.horizontal(|ui| {
         if f.busy {
             kit::spinner(ui, th);
         }
         if f.busy && row.live() {
-            let line = stream_status::row_text(&row, &|k, a| cat.tf(k, a));
+            let line = status_text.clone();
             let line = if row.caret {
                 let calm = th.reduced_motion || ui.ctx().style().animation_time <= 0.0;
                 let t = ui.ctx().input(|i| i.time);
@@ -1277,7 +1350,7 @@ fn status_line(
             } else {
                 line
             };
-            let r = kit::caption(ui, th, &line);
+            let r = elided_caption(ui, th, &line, layout.status_room, "text.secondary");
             if let Some(name) = &row.tool {
                 r.on_hover_text(cat.t(&logic::tool_key(name)));
             }
@@ -1293,7 +1366,7 @@ fn status_line(
         } else {
             // the greeting is the empty panel's own title; idle, the line stays quiet
             if state != PanelState::Idle {
-                kit::caption(ui, th, &cat.t(logic::state_key(state)));
+                elided_caption(ui, th, &status_text, layout.status_room, "text.secondary");
             }
             if row.incomplete {
                 kit::caption(ui, th, &cat.t("ai.stream.incomplete"));
@@ -1315,34 +1388,83 @@ fn status_line(
                     acts.push(Action::ToggleJournal);
                 }
             }
-            let used = st.usage.session.total();
-            let left = st.estimate.balance.and_then(|b| b.spendable());
-            let step = st.estimate.step_max;
-            if used > 0 || left.is_some() || step.is_some() {
-                let mut line = if used > 0 {
-                    usage_line(cat, used, st.usage.cost)
-                } else {
-                    String::new()
-                };
-                line = with_balance(cat, line, step, left);
-                let r = kit::caption(ui, th, &line);
+            if let Some(line) = usage_text.as_deref().filter(|_| !layout.stacked) {
+                let r = usage_caption(ui, th, line, diverges);
                 if st.usage.cost.is_some() {
                     r.on_hover_text(cat.t("ai.usage.cost_tip"));
                 }
             }
         });
     });
+    if let Some(line) = usage_text.as_deref().filter(|_| layout.stacked) {
+        let r = elided_caption(ui, th, line, ui.available_width(), if diverges { "warning" } else { "text.secondary" });
+        if st.usage.cost.is_some() {
+            r.on_hover_text(cat.t("ai.usage.cost_tip"));
+        }
+    }
     if st.journal_open && !st.journal.steps.is_empty() {
         step_feed(ui, &st.journal, cx, acts);
     }
+}
+
+/// Room a small button takes beyond its label, and the caret's width in the status text.
+const BUTTON_PAD: f32 = 16.0;
+const CARET_W: f32 = 10.0;
+
+/// Where the status row's parts go: the usage text beside them when all fit, otherwise on a row
+/// of its own; `status_room` is what the status text may take before it is cut.
+#[derive(Debug, PartialEq)]
+struct StatusLayout {
+    stacked: bool,
+    status_room: f32,
+}
+
+fn status_layout(avail: f32, status_w: f32, usage_w: f32, fixed_w: f32, gap: f32) -> StatusLayout {
+    let beside = status_w + usage_w + fixed_w + 2.0 * gap;
+    let stacked = usage_w > 0.0 && beside > avail;
+    let taken = if stacked || usage_w == 0.0 { fixed_w } else { fixed_w + usage_w + gap };
+    StatusLayout { stacked, status_room: (avail - taken - gap).max(0.0) }
+}
+
+/// The usage text; in the warning colour when the server's price and the estimate disagree.
+fn usage_caption(ui: &mut Ui, th: &ddc_ui::Theme, line: &str, diverges: bool) -> egui::Response {
+    if !diverges {
+        return kit::caption(ui, th, line);
+    }
+    ui.label(RichText::new(line).font(th.font(Role::Caption)).color(th.c("warning")))
+}
+
+/// A caption no wider than `room`, cut with an ellipsis; the whole text on hover when cut.
+fn elided_caption(ui: &mut Ui, th: &ddc_ui::Theme, text: &str, room: f32, color: &str) -> egui::Response {
+    let h = ui.spacing().interact_size.y;
+    ui.allocate_ui_with_layout(
+        egui::vec2(room.max(1.0), h),
+        egui::Layout::left_to_right(egui::Align::Center),
+        |ui| {
+            widgets::elided_label(
+                ui,
+                text,
+                th.font(Role::Caption),
+                th.c(color),
+            )
+        },
+    )
+    .inner
 }
 
 /// The step feed of the last request: a line per model step, the totals, and the export.
 fn step_feed(ui: &mut Ui, j: &ddc_ai::TaskJournal, cx: &Cx<'_>, acts: &mut Vec<Action>) {
     let (th, cat) = (cx.th, cx.cat);
     ui.vertical(|ui| {
-        for s in &j.steps {
-            kit::caption(ui, th, &logic::step_line(cat, s));
+        let top = super::cost_view::costliest(&j.steps);
+        for (i, s) in j.steps.iter().enumerate() {
+            let line = logic::step_line(cat, s);
+            if top == Some(i) {
+                ui.label(RichText::new(line).font(th.font(Role::Caption)).color(th.c("warning")))
+                    .on_hover_text(cat.t("ai.cost.costliest"));
+            } else {
+                kit::caption(ui, th, &line);
+            }
         }
         ui.horizontal(|ui| {
             kit::caption(ui, th, &logic::journal_total_line(cat, j));
@@ -1352,6 +1474,9 @@ fn step_feed(ui: &mut Ui, j: &ddc_ai::TaskJournal, cx: &Cx<'_>, acts: &mut Vec<A
                 .clicked()
             {
                 acts.push(Action::ExportJournal);
+            }
+            if Button::quiet(&cat.t("ai.cost.export_project")).small().show(ui, th).clicked() {
+                acts.push(Action::ExportTurns);
             }
         });
     });
@@ -1422,6 +1547,21 @@ pub(super) fn with_balance(cat: &ddc_ui::Catalog, line: String, step: Option<f64
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn status_and_usage_never_share_a_row_they_do_not_fit() {
+        // the long working line with a long usage text, in a narrow panel
+        let l = status_layout(300.0, 220.0, 240.0, 80.0, 6.0);
+        assert!(l.stacked);
+        assert!(l.status_room <= 300.0 - 80.0);
+        // room enough: side by side, and the status keeps what the usage text leaves
+        let l = status_layout(900.0, 220.0, 240.0, 80.0, 6.0);
+        assert!(!l.stacked);
+        assert!(l.status_room >= 220.0, "{l:?}");
+        assert!(l.status_room + 240.0 + 80.0 <= 900.0);
+        // no usage text, nothing to stack
+        assert!(!status_layout(100.0, 220.0, 0.0, 80.0, 6.0).stacked);
+    }
 
     #[test]
     fn balance_follows_the_usage_line() {

@@ -24,6 +24,11 @@ pub enum Ev {
     Done(Instant),
     /// The person stopped the turn.
     Cancel(Instant),
+    /// Tokens the model has written since the last tool event (answer text or tool-call
+    /// arguments): `first` and `last` bound them in time. Never more than one in the log.
+    Tokens { first: Instant, last: Instant, n: u64 },
+    /// This computer builds the draft: `done` of `total` elements.
+    Build(Instant, u64, u64),
 }
 
 impl Ev {
@@ -35,7 +40,9 @@ impl Ev {
             | Ev::Text(t)
             | Ev::Heartbeat(t)
             | Ev::Done(t)
-            | Ev::Cancel(t) => *t,
+            | Ev::Cancel(t)
+            | Ev::Build(t, _, _) => *t,
+            Ev::Tokens { last, .. } => *last,
         }
     }
 }
@@ -67,6 +74,11 @@ pub struct StatusRow {
     pub local_busy: bool,
     /// The turn was stopped before it finished: any draft is partial and nothing was applied.
     pub incomplete: bool,
+    /// Tokens written since the last tool event and the speed over that stretch.
+    pub written: u64,
+    pub rate: Option<u64>,
+    /// The draft is being built here: elements done of all.
+    pub build: Option<(u64, u64)>,
 }
 
 impl StatusRow {
@@ -81,6 +93,9 @@ impl StatusRow {
             quiet_secs: 0,
             local_busy: false,
             incomplete: false,
+            written: 0,
+            rate: None,
+            build: None,
         }
     }
 
@@ -103,6 +118,9 @@ pub fn stream_status(events: &[Ev], now: Instant) -> StatusRow {
     let mut end: Option<Instant> = None;
     for e in &turn[1..] {
         last = last.max(e.at());
+        if !matches!(e, Ev::Build(..)) {
+            row.build = None;
+        }
         match e {
             Ev::ToolStart(_, name) => {
                 row.tools += 1;
@@ -118,6 +136,16 @@ pub fn stream_status(events: &[Ev], now: Instant) -> StatusRow {
                 row.phase = Phase::Answering;
             }
             Ev::Heartbeat(_) | Ev::Start(_) => {}
+            Ev::Tokens { first, last: l, n } => {
+                row.written = *n;
+                let span = l.saturating_duration_since(*first).as_secs_f64();
+                // under a second of data gives no honest speed
+                row.rate = (span >= 1.0).then(|| (*n as f64 / span).round() as u64);
+                if row.phase == Phase::Waiting || row.phase == Phase::Working {
+                    row.phase = Phase::Answering;
+                }
+            }
+            Ev::Build(_, done, total) => row.build = Some((*done, *total)),
             Ev::Done(t) => {
                 end = Some(*t);
                 row.phase = Phase::Idle;
@@ -158,6 +186,24 @@ pub fn push(events: &mut Vec<Ev>, e: Ev) {
     if matches!(e, Ev::Start(_)) {
         events.clear();
     }
+    // the count belongs to one stretch of writing: a tool event closes it
+    if matches!(e, Ev::ToolStart(..) | Ev::ToolEnd(_)) {
+        events.retain(|x| !matches!(x, Ev::Tokens { .. }));
+    }
+    if let Ev::Tokens { first, last, n } = e {
+        if let Some(Ev::Tokens { last: l, n: m, .. }) =
+            events.iter_mut().rev().find(|x| matches!(x, Ev::Tokens { .. }))
+        {
+            *l = last;
+            *m += n;
+            return;
+        }
+        events.push(Ev::Tokens { first, last, n });
+        return;
+    }
+    if let Ev::Build(..) = e {
+        events.retain(|x| !matches!(x, Ev::Build(..)));
+    }
     if let (Some(last), Ev::Text(_) | Ev::Heartbeat(_)) = (events.last_mut(), &e) {
         if matches!(last, Ev::Text(_) | Ev::Heartbeat(_)) {
             // a heartbeat after text must not turn the phase back to waiting
@@ -168,6 +214,16 @@ pub fn push(events: &mut Vec<Ev>, e: Ev) {
         }
     }
     events.push(e);
+}
+
+fn fmt_count(n: u64) -> String {
+    if n >= 10_000 {
+        format!("{}k", n / 1000)
+    } else if n >= 1000 {
+        format!("{:.1}k", n as f64 / 1000.0)
+    } else {
+        n.to_string()
+    }
 }
 
 /// The row as one line: "Reading the model - 3 tools - 12 s".
@@ -185,6 +241,20 @@ pub fn row_text(row: &StatusRow, tr: &dyn Fn(&str, &[(&str, &str)]) -> String) -
         Phase::Working => "ai.stream.working",
         Phase::Answering => "ai.stream.answering",
     };
+    if let Some((done, total)) = row.build {
+        let (d, t) = (done.to_string(), total.to_string());
+        let secs = tr("ai.stream.secs", &[("n", &row.secs.to_string())]);
+        return [tr("ai.stream.building", &[("done", &d), ("total", &t)]), secs]
+            .join(&tr("ai.stream.sep", &[]));
+    }
+    if row.phase == Phase::Answering && row.written > 0 {
+        let mut parts = vec![tr("ai.stream.writing", &[("n", &fmt_count(row.written))])];
+        if let Some(r) = row.rate {
+            parts.push(tr("ai.stream.rate", &[("n", &r.to_string())]));
+        }
+        parts.push(tr("ai.stream.secs", &[("n", &row.secs.to_string())]));
+        return parts.join(&tr("ai.stream.sep", &[]));
+    }
     let mut parts = vec![tr(if row.local_busy { "ai.stream.local" } else { phase }, &[])];
     match row.tools {
         0 => {}
@@ -327,6 +397,31 @@ mod tests {
     }
 
     #[test]
+    fn written_tokens_give_a_speed_and_a_tool_event_closes_the_stretch() {
+        let b = Instant::now();
+        let mut v = log(b, &[(0, "start")]);
+        push(&mut v, Ev::Tokens { first: at(b, 1), last: at(b, 1), n: 100 });
+        push(&mut v, Ev::Tokens { first: at(b, 5), last: at(b, 5), n: 300 });
+        let r = stream_status(&v, at(b, 6));
+        assert_eq!((r.written, r.rate, r.phase), (400, Some(100), Phase::Answering));
+        assert_eq!(v.iter().filter(|e| matches!(e, Ev::Tokens { .. })).count(), 1);
+        assert!(line(Lang::En, &r).starts_with("The model is writing, 400 tokens \u{b7} 100 tok/s"));
+        push(&mut v, Ev::ToolStart(at(b, 41), "query".into()));
+        assert_eq!(stream_status(&v, at(b, 42)).written, 0);
+    }
+
+    #[test]
+    fn building_the_draft_here_is_told_with_its_progress() {
+        let b = Instant::now();
+        let mut v = log(b, &[(0, "start"), (1, "tool")]);
+        push(&mut v, Ev::Build(at(b, 2), 120, 3000));
+        push(&mut v, Ev::Build(at(b, 3), 240, 3000));
+        let r = stream_status(&v, at(b, 4));
+        assert_eq!(r.build, Some((240, 3000)));
+        assert_eq!(line(Lang::En, &r), "Building the draft here: 240 of 3000 \u{b7} 4 s");
+    }
+
+    #[test]
     fn every_key_exists_in_en_and_ru() {
         for k in [
             "ai.stream.waiting",
@@ -342,6 +437,9 @@ mod tests {
             "ai.stream.stop",
             "ai.stream.cancelled",
             "ai.stream.incomplete",
+            "ai.stream.writing",
+            "ai.stream.rate",
+            "ai.stream.building",
         ] {
             for l in [Lang::En, Lang::Ru] {
                 assert_ne!(crate::tr_in(l, k, &[]), k, "{k}");

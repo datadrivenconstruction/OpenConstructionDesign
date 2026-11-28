@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Költség és idő megjelenítése",
+ "ai.cost.show_tip": "A kérés tokenjeiből, árából és idejéből mennyit mutat a csevegés futás közben.",
+ "ai.cost.show.off": "Ki",
+ "ai.cost.show.brief": "Rövid",
+ "ai.cost.show.detailed": "Részletes",
+ "ai.cost.charged": "terhelve {cost}",
+ "ai.cost.tokens_split": "be {in} · ki {out} · gyorsítótárból {cache}",
+ "ai.cost.step_no": "{n}. lépés",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Minden kör exportálása",
+ "ai.settings.from_list": "A kontextus mérete, a leghosszabb válasz és az árak a szerver modelllistájából származnak. Módosítsa őket a Speciális résznél.",
+ "ai.cost.plan_tokens": "Ez a terv: {n} token",
+ "ai.cost.plan_time": "{m} perc {s} mp",
+ "ai.cost.plan_elements": "{n} elem",
+ "ai.cost.plan_each": "{cost} elemenként",
+ "ai.cost.costliest": "A kérés legdrágább lépése"
+}

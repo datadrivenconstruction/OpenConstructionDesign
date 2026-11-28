@@ -11,5 +11,8 @@
  "ai.stream.local": "يعمل على هذا الكمبيوتر دون انتظار خدمة النموذج",
  "ai.stream.stop": "إيقاف",
  "ai.stream.cancelled": "أُوقف",
+ "ai.stream.writing": "النموذج يكتب، {n} رمز",
+ "ai.stream.rate": "{n} رمز/ث",
+ "ai.stream.building": "يتم بناء المسودة هنا: {done} من {total}",
  "ai.stream.incomplete": "المسودة غير مكتملة. لم يُطبَّق شيء على النموذج."
 }

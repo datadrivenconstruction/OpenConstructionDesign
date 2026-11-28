@@ -11,5 +11,8 @@
  "ai.stream.local": "Arbejder på denne computer uden at vente på modeltjenesten",
  "ai.stream.stop": "Afbryd",
  "ai.stream.cancelled": "Stoppet",
+ "ai.stream.writing": "Modellen skriver, {n} tokens",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Udkastet bygges her: {done} af {total}",
  "ai.stream.incomplete": "Udkastet er ufuldstændigt. Intet er anvendt på modellen."
 }

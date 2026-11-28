@@ -11,5 +11,8 @@
  "ai.stream.local": "Ezen a számítógépen dolgozik, nem vár a modellszolgáltatásra",
  "ai.stream.stop": "Leállítás",
  "ai.stream.cancelled": "Leállítva",
+ "ai.stream.writing": "A modell ír, {n} token",
+ "ai.stream.rate": "{n} token/mp",
+ "ai.stream.building": "A vázlat itt készül: {done} / {total}",
  "ai.stream.incomplete": "A vázlat hiányos. Semmi nem lett alkalmazva a modellre."
 }

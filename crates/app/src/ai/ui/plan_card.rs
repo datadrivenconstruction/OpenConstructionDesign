@@ -151,6 +151,7 @@ fn keys_of_kind(diff: &[ElemDiff], k: RowKind) -> Vec<ElKey> {
 fn summary(
     ui: &mut Ui,
     cx: &Cx<'_>,
+    total: Option<&str>,
     plan: &PlanView,
     acts: &mut Vec<Action>,
     hot: &mut Option<Vec<ElKey>>,
@@ -185,6 +186,9 @@ fn summary(
     if let Some(line) = cost_line(cx, plan, units) {
         kit::caption(ui, th, &line);
     }
+    if let Some(t) = total {
+        kit::caption(ui, th, t);
+    }
 }
 
 /// `Area +12 m² · Cost +3 400 EUR`; the cost part needs a price table, the line a change.
@@ -211,12 +215,24 @@ fn cost_line(cx: &Cx<'_>, plan: &PlanView, u: Units) -> Option<String> {
     Some(parts.join(" · "))
 }
 
+/// Decimals of a volume by size: tenths of a cubic metre mean nothing in a thousand.
+fn volume_decimals(m3: f64, d: usize) -> usize {
+    if m3 >= 100.0 {
+        0
+    } else if m3 >= 10.0 {
+        d.min(1)
+    } else {
+        d
+    }
+}
+
 /// `Concrete +12.4 m³` (localized separators); totals read through their own names.
 pub fn qty_line(cat: &Catalog, q: &QtyDelta, u: Units) -> String {
     let d = q.after - q.before;
     let sign = if d < 0.0 { "−" } else { "+" };
     let m = d.abs();
-    let vol = |m: f64| fmt_volume_lang(m, u, precision().1, cat.lang);
+    // a big volume with three decimals reads as a thousand times more in a comma locale
+    let vol = |m: f64| fmt_volume_lang(m, u, volume_decimals(m, precision().1), cat.lang);
     if let Some(name) = q.key.strip_prefix("volume:") {
         return format!("{name} {sign}{}", vol(m));
     }
@@ -654,14 +670,20 @@ pub fn card(
     st.values.busy = f.busy;
     if !cx.palette_open && !confirm_open {
         // Ctrl+Enter follows the button: armed only while no reason holds Apply off
-        let why = apply_why(f, plan, stale, st.values.choosing(f.busy));
+        let why = apply_why(f, plan, stale, st.values.choosing(f.busy), st.cut_holds());
         keyboard(ui, st, plan, apply_armed(why), acts);
     }
     let top = ui.cursor().min;
     let wide = ui.available_width();
     kit::card(ui, th, |ui| {
         ui.set_width(ui.available_width());
-        summary(ui, cx, plan, acts, hot);
+        let total = (super::cost_view::detail_of(&cx.ed.model) != super::cost_view::Detail::Off)
+            .then(|| {
+                let made = crate::ai::plan::counts(&plan.diff).0;
+                super::cost_view::plan_total_line(cat, &st.journal, made)
+            })
+            .flatten();
+        summary(ui, cx, total.as_deref(), plan, acts, hot);
         if stale {
             kit::warn_note(ui, th, &cat.t("ai.plan.stale"));
         } else if let Some(d) = &f.rebased {
@@ -673,6 +695,7 @@ pub fn card(
             kit::caption(ui, th, &cat.t("ai.plan.recomputed"));
         }
         variants(ui, cx, plan, acts);
+        cut_note(ui, st, cx, acts);
         if fills_values(&plan.items) {
             kit::warn_note(ui, th, &cat.t("value_src.ai_fill_note"));
         }
@@ -711,6 +734,28 @@ pub fn card(
     if let Some(at) = ui.input(|i| i.pointer.any_pressed().then(|| i.pointer.interact_pos()).flatten()) {
         st.card_focus = area.contains(at);
     }
+}
+
+/// A turn that a limit stopped left a plan that may lack parts: the card says so, offers to go
+/// on from here, and Apply waits until the person accepts the plan as it is.
+fn cut_note(ui: &mut Ui, st: &mut PanelUi, cx: &Cx<'_>, acts: &mut Vec<Action>) {
+    if !st.plan_cut {
+        return;
+    }
+    let (th, cat) = (cx.th, cx.cat);
+    let what = st.limit.map(logic::turn_limit_name).unwrap_or_default();
+    kit::warn_note(ui, th, &cat.tf("ai.plan.cut", &[("what", &cat.t(what))]));
+    ui.horizontal_wrapped(|ui| {
+        if Button::secondary(&cat.t("ai.limit.continue")).small().show(ui, th).clicked() {
+            acts.push(Action::ContinueTurn { raise: false });
+        }
+        if st.limit.is_some_and(logic::can_raise) {
+            if Button::quiet(&cat.t("ai.limit.raise_continue")).small().show(ui, th).clicked() {
+                acts.push(Action::ContinueTurn { raise: true });
+            }
+        }
+    });
+    kit::checkbox(ui, th, &mut st.plan_cut_ok, &cat.t("ai.plan.cut_accept"));
 }
 
 /// The files a delivery card writes after Apply: ticked as the assistant asked, the person's
@@ -776,7 +821,7 @@ pub fn actions(
     // the `ai.reject` command asked for the same question the button asks
     asking |= take_ask(f.plan_rev);
     let stale = draft_stale(cx, plan.compiled.base_head, f.stale);
-    let reason = apply_why(f, plan, stale, st.values.choosing(f.busy));
+    let reason = apply_why(f, plan, stale, st.values.choosing(f.busy), st.cut_holds());
     let reason_text = reason.map(|(key, tone)| (cat.t(key), tone));
     if asking {
         let hint = cat.t("ai.plan.reject_ask.hint");
@@ -945,6 +990,8 @@ struct WhyIn {
     checked: usize,
     /// A value the person corrected while the agent changed it too waits for their pick.
     choosing: bool,
+    /// A limit stopped the turn that drafted this plan and the person has not accepted it as it is.
+    cut: bool,
 }
 
 /// Why Apply is off, as a catalog key and a tone; None while it is armed.
@@ -959,6 +1006,8 @@ fn apply_why_of(w: &WhyIn) -> Option<(&'static str, Tone)> {
         Some(("ai.redraft.review_first", Tone::Warn))
     } else if w.choosing {
         Some(("ai.value.choose_first", Tone::Warn))
+    } else if w.cut {
+        Some(("ai.plan.cut_first", Tone::Warn))
     } else if w.checked == 0 {
         Some(("ai.plan.nothing_checked", Tone::Muted))
     } else if !w.can_apply {
@@ -973,8 +1022,10 @@ fn apply_why(
     plan: &PlanView,
     stale: bool,
     choosing: bool,
+    cut: bool,
 ) -> Option<(&'static str, Tone)> {
     apply_why_of(&WhyIn {
+        cut,
         can_apply: f.can_apply,
         stale,
         blocked: plan.blocked(),
@@ -1112,6 +1163,15 @@ mod tests {
         assert!(line.starts_with("Glass −"), "{line}");
     }
 
+    #[test]
+    fn a_large_volume_shows_no_decimals_that_pass_for_thousands() {
+        let line = qty_line(&ru(), &q("volume:Concrete", 0.0, 10400.0), Units::Metric);
+        assert!(line.contains("10\u{a0}400") && !line.contains(",000"), "{line}");
+        let line = qty_line(&en(), &q("volume:Concrete", 0.0, 1205.012), Units::Metric);
+        assert!(line.contains("1,205") && !line.contains("1,205."), "{line}");
+        assert_eq!(volume_decimals(0.5, 3), 3);
+    }
+
     fn en() -> Catalog {
         Catalog::new(ddc_ui::Lang::En)
     }
@@ -1225,6 +1285,7 @@ mod tests {
             redraft: false,
             checked: 3,
             choosing: false,
+            cut: false,
         }
     }
 
@@ -1237,6 +1298,7 @@ mod tests {
             (WhyIn { unreviewed: true, can_apply: false, ..armed() }, "ai.plan.review_first", Tone::Warn),
             (WhyIn { redraft: true, can_apply: false, ..armed() }, "ai.redraft.review_first", Tone::Warn),
             (WhyIn { choosing: true, ..armed() }, "ai.value.choose_first", Tone::Warn),
+            (WhyIn { cut: true, ..armed() }, "ai.plan.cut_first", Tone::Warn),
             (WhyIn { checked: 0, ..armed() }, "ai.plan.nothing_checked", Tone::Muted),
             (WhyIn { can_apply: false, ..armed() }, "ai.state.recomputing", Tone::Muted),
         ];

@@ -11,5 +11,8 @@
  "ai.stream.local": "Εργάζεται σε αυτόν τον υπολογιστή, χωρίς αναμονή για την υπηρεσία του μοντέλου",
  "ai.stream.stop": "Διακοπή",
  "ai.stream.cancelled": "Διακόπηκε",
+ "ai.stream.writing": "Το μοντέλο γράφει, {n} tokens",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Το προσχέδιο χτίζεται εδώ: {done} από {total}",
  "ai.stream.incomplete": "Το προσχέδιο είναι ημιτελές. Τίποτα δεν εφαρμόστηκε στο μοντέλο."
 }

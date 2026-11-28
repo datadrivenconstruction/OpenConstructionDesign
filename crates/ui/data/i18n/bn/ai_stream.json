@@ -11,5 +11,8 @@
  "ai.stream.local": "এই কম্পিউটারে কাজ চলছে, মডেল সার্ভিসের অপেক্ষায় নেই",
  "ai.stream.stop": "থামান",
  "ai.stream.cancelled": "থামানো হয়েছে",
+ "ai.stream.writing": "মডেল লিখছে, {n} টোকেন",
+ "ai.stream.rate": "{n} টোকেন/সেকেন্ড",
+ "ai.stream.building": "খসড়া এখানে তৈরি হচ্ছে: {total}-এর মধ্যে {done}",
  "ai.stream.incomplete": "ড্রাফট অসম্পূর্ণ। মডেলে কিছু প্রয়োগ হয়নি।"
 }

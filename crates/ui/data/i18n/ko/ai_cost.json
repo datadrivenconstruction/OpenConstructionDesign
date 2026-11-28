@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "비용과 시간 표시",
+ "ai.cost.show_tip": "실행 중에 채팅이 요청의 토큰, 가격, 시간을 얼마나 보여 줄지 정합니다.",
+ "ai.cost.show.off": "끔",
+ "ai.cost.show.brief": "간단히",
+ "ai.cost.show.detailed": "자세히",
+ "ai.cost.charged": "청구 {cost}",
+ "ai.cost.tokens_split": "입력 {in} · 출력 {out} · 캐시 {cache}",
+ "ai.cost.step_no": "{n}단계",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "모든 턴 내보내기",
+ "ai.settings.from_list": "컨텍스트 크기, 가장 긴 응답, 가격은 서버의 모델 목록에서 가져옵니다. 고급에서 변경할 수 있습니다.",
+ "ai.cost.plan_tokens": "이 계획: 토큰 {n}개",
+ "ai.cost.plan_time": "{m}분 {s}초",
+ "ai.cost.plan_elements": "요소 {n}개",
+ "ai.cost.plan_each": "요소당 {cost}",
+ "ai.cost.costliest": "이 요청에서 가장 비싼 단계"
+}

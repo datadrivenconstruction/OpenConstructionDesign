@@ -350,6 +350,7 @@ pub const fn can_retry(k: ErrKind) -> bool {
 pub fn turn_limit_key(what: &str) -> &'static str {
     match what {
         "tokens" => "ai.err.limit_tokens",
+        "tool_calls" => "ai.err.limit_calls",
         "cost" => "ai.err.limit_cost",
         "wall" => "ai.err.limit_time",
         "output" => "ai.err.limit_output",
@@ -359,11 +360,36 @@ pub fn turn_limit_key(what: &str) -> &'static str {
     }
 }
 
+/// The name of a limit in the plan card's "stopped at ..." line.
+pub fn turn_limit_name(what: &str) -> &'static str {
+    match what {
+        "tokens" => "ai.limit.name_tokens",
+        "tool_calls" => "ai.limit.name_calls",
+        "cost" => "ai.limit.name_cost",
+        "wall" => "ai.limit.name_time",
+        "output" => "ai.limit.name_output",
+        "filtered" => "ai.limit.name_filtered",
+        "empty" => "ai.limit.name_empty",
+        _ => "ai.limit.name_steps",
+    }
+}
+
+/// The limits the person can raise from the stop message.
+pub fn can_raise(what: &str) -> bool {
+    matches!(what, "steps" | "tool_calls" | "tokens" | "wall" | "cost")
+}
+
+/// A stop the next turn can pick up from: its limit is raisable or only the model's own length.
+pub fn can_continue(what: &str) -> bool {
+    can_raise(what) || matches!(what, "output" | "empty")
+}
+
 /// The value of the limit that stopped a turn, as the message shows it.
 pub fn turn_limit_value(what: &str, l: &ddc_ai::Limits, max_output: u32) -> String {
     match what {
         "tokens" => l.max_turn_tokens.to_string(),
         "wall" => l.max_wall_s.to_string(),
+        "tool_calls" => l.max_tool_calls.to_string(),
         "cost" => l.max_cost.map(|c| format!("{c:.2}")).unwrap_or_default(),
         "output" => max_output.to_string(),
         _ => l.max_steps.to_string(),
@@ -1587,6 +1613,7 @@ mod tests {
             tokens_cached: 9_000,
             tokens_out: 310,
             cost: Some(0.02),
+            charged: None,
             ms: 1500,
             tools: vec!["create_geometry".into(), "create_elements".into()],
         });

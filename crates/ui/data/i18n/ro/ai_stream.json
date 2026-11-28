@@ -11,5 +11,8 @@
  "ai.stream.local": "Lucrează pe acest computer, fără a aștepta serviciul modelului",
  "ai.stream.stop": "Oprește",
  "ai.stream.cancelled": "Oprit",
+ "ai.stream.writing": "Modelul scrie, {n} tokeni",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Schița se construiește aici: {done} din {total}",
  "ai.stream.incomplete": "Ciorna este incompletă. Nimic nu a fost aplicat modelului."
 }

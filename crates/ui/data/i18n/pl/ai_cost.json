@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Pokaż koszt i czas",
+ "ai.cost.show_tip": "Ile tokenów, ceny i czasu zapytania pokazuje czat podczas pracy.",
+ "ai.cost.show.off": "Wył.",
+ "ai.cost.show.brief": "Krótko",
+ "ai.cost.show.detailed": "Szczegółowo",
+ "ai.cost.charged": "naliczono {cost}",
+ "ai.cost.tokens_split": "wejście {in} · wyjście {out} · z pamięci podręcznej {cache}",
+ "ai.cost.step_no": "krok {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Eksportuj wszystkie tury",
+ "ai.settings.from_list": "Rozmiar kontekstu, najdłuższa odpowiedź i ceny pochodzą z listy modeli serwera. Zmienisz je w sekcji Zaawansowane.",
+ "ai.cost.plan_tokens": "Ten plan: tokenów {n}",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "elementów: {n}",
+ "ai.cost.plan_each": "{cost} za element",
+ "ai.cost.costliest": "Najdroższy krok tego zapytania"
+}

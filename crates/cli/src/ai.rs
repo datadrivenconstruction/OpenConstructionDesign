@@ -27,6 +27,12 @@ pub struct AiArgs {
     /// Per-turn token and time limits; unset keeps the stock ones.
     pub max_tokens: Option<u64>,
     pub max_time_s: Option<u32>,
+    /// Lifts steps, calls, tokens, time and plan size for the run (also `DDC_AI_UNLIMITED=1`).
+    pub unlimited: bool,
+    /// Turns that go on by themselves after a stop at steps, calls, tokens or time.
+    pub auto_continue: u32,
+    /// Applies a plan that a limit cut short; otherwise it is printed and kept.
+    pub apply_partial: bool,
     pub apply: bool,
     pub allow_large: bool,
     pub timeout_s: u64,
@@ -34,15 +40,19 @@ pub struct AiArgs {
 
 pub const USAGE: &str = "\
   ddc ai \"<request>\" --profile <file|id|name> [--project <in.ddc>] [--out <out.ddc>]
-      [--budget-usd <N>] [--max-tokens <N>] [--max-time-s <N>] [--apply] [--allow-large]
-      [--timeout-s <N>]
+      [--budget-usd <N>] [--max-tokens <N>] [--max-time-s <N>] [--ai-unlimited]
+      [--auto-continue <N>] [--apply] [--apply-partial] [--allow-large] [--timeout-s <N>]
       The editor's assistant without the window. The plan is printed; with --apply it is applied
       as one undo step and the project saved to --out (the input is never overwritten).
       --profile: a connection file (as in ai_profiles.json) or a stored connection
       (ddc ai-profile list). The key: DDC_AI_KEY, else the system key store.
       --budget-usd stops the run when its cost at the connection prices reaches N.
-      --max-tokens (stock 200000) and --max-time-s (stock 600) bound one turn; a turn that hits
+      --max-tokens and --max-time-s bound one turn; a turn that hits
       a limit says which and how to raise it.
+      --ai-unlimited (or DDC_AI_UNLIMITED=1) lifts steps, calls, tokens, time and plan size;
+      the --budget-usd cap and the confirmation of mass deletes stay.
+      --auto-continue N goes on up to N times after a stop at a limit. A plan that a limit cut
+      short is not applied unless --apply-partial is given.
       Before the run the cost of one step at most and the balance (when the server reports it)
       are printed.
 ";
@@ -67,6 +77,9 @@ pub fn parse(rest: &[OsString]) -> Result<(AiArgs, bool, bool), String> {
             "--budget-usd" => a.budget_usd = Some(number(it, "--budget-usd")?),
             "--max-tokens" => a.max_tokens = Some(number(it, "--max-tokens")? as u64),
             "--max-time-s" => a.max_time_s = Some(number(it, "--max-time-s")? as u32),
+            "--ai-unlimited" => a.unlimited = true,
+            "--auto-continue" => a.auto_continue = number(it, "--auto-continue")? as u32,
+            "--apply-partial" => a.apply_partial = true,
             "--apply" => a.apply = true,
             "--allow-large" => a.allow_large = true,
             "--timeout-s" => a.timeout_s = number(it, "--timeout-s")? as u64,
@@ -145,6 +158,9 @@ pub fn request(
         turn_timeout: Duration::from_secs(a.timeout_s.max(10)),
         max_tokens: a.max_tokens,
         max_time_s: a.max_time_s,
+        unlimited: a.unlimited,
+        auto_continue: a.auto_continue,
+        apply_partial: a.apply_partial,
     }
 }
 
@@ -184,7 +200,7 @@ pub fn estimate_lines(r: &Report, budget: Option<f64>) -> Vec<String> {
 pub fn exit_of(r: &Report, apply: bool) -> i32 {
     if r.failed.is_some() {
         EXIT_FAILED
-    } else if (apply && r.applied.is_none()) || r.over_budget || r.limit.is_some() {
+    } else if (apply && r.applied.is_none()) || r.over_budget || r.limit.is_some() || r.held_partial {
         EXIT_PARTIAL
     } else {
         EXIT_OK
@@ -196,15 +212,19 @@ pub fn limit_line(a: &AiArgs, what: &str) -> String {
     let d = ddc_ai::Limits::default();
     match what {
         "tokens" => format!(
-            "stopped: the token limit per turn ({}) was reached; the work so far is in the plan above; raise it with --max-tokens N",
+            "stopped: the token limit per turn ({}) was reached; the work so far is in the plan above; raise it with --max-tokens N, or use --ai-unlimited",
             a.max_tokens.unwrap_or(d.max_turn_tokens)
         ),
         "wall" => format!(
-            "stopped: the time limit per turn ({} s) was reached; the work so far is in the plan above; raise it with --max-time-s N",
+            "stopped: the time limit per turn ({} s) was reached; the work so far is in the plan above; raise it with --max-time-s N, or use --ai-unlimited",
             a.max_time_s.unwrap_or(d.max_wall_s)
         ),
         "cost" => "stopped: the cost limit was reached; raise it with --budget-usd N".to_string(),
         "output" => "stopped: the model's answer kept hitting its output limit; raise it with --max-output N (ddc ai-profile)".to_string(),
+        "steps" | "tool_calls" => format!(
+            "stopped: the {} limit per turn was reached; the work so far is in the plan above; go on with --auto-continue N, or lift it with --ai-unlimited",
+            if what == "steps" { "step" } else { "tool call" }
+        ),
         other => format!("stopped: limit '{other}' was reached; narrow the request or ask again to continue"),
     }
 }
@@ -248,6 +268,10 @@ pub fn render(a: &AiArgs, r: &Report, lang: &str) -> String {
         (None, Some(_), Some(out)) => {
             t.push_str(&format!("ok: applied, saved {}\n", out.display()))
         }
+        (None, None, _) if r.held_partial => t.push_str(
+            "not applied: the plan is incomplete, a limit stopped the run; add --auto-continue N, raise the limit or use --ai-unlimited, or --apply-partial to apply it as it is
+",
+        ),
         (None, None, _) if !r.items.is_empty() => {
             t.push_str("not applied: add --apply --out <file> to apply\n")
         }
@@ -264,7 +288,7 @@ pub fn report_json(a: &AiArgs, r: &Report, code: i32) -> serde_json::Value {
         "answer": r.answer, "items": r.items,
         "blocked": headless::issue_lines(r, "en"),
         "tokens_in": r.tokens_in, "tokens_out": r.tokens_out, "cost": r.cost,
-        "over_budget": r.over_budget, "limit": r.limit, "applied": r.applied.is_some(),
+        "over_budget": r.over_budget, "limit": r.limit, "partial_held": r.held_partial, "applied": r.applied.is_some(),
         "out": a.out.as_ref().filter(|_| r.applied.is_some()).map(|p| p.to_string_lossy().into_owned()),
         "error": r.failed.as_deref().map(ddc_ai::secret::scrub_known),
     })
@@ -331,6 +355,23 @@ mod tests {
 
     fn os(v: &[&str]) -> Vec<OsString> {
         v.iter().map(OsString::from).collect()
+    }
+
+    #[test]
+    fn the_unlimited_flags_reach_the_request_and_a_cut_plan_is_held() {
+        let (a, _, _) = parse(&os(&[
+            "draw", "--profile", "p", "--ai-unlimited", "--auto-continue", "3", "--apply", "--out", "o.ddc",
+        ]))
+        .unwrap();
+        assert!(a.unlimited && a.auto_continue == 3 && !a.apply_partial);
+        let (b, _, _) = parse(&os(&["draw", "--profile", "p", "--apply-partial"])).unwrap();
+        assert!(b.apply_partial && !b.unlimited);
+        let held = Report { held_partial: true, items: vec!["wall".into()], limit: Some("tool_calls"), ..Report::default() };
+        assert_eq!(exit_of(&held, true), EXIT_PARTIAL);
+        let text = render(&a, &held, "en");
+        assert!(text.contains("not applied: the plan is incomplete"), "{text}");
+        assert!(text.contains("--auto-continue"), "{text}");
+        assert!(report_json(&a, &held, EXIT_PARTIAL)["partial_held"].as_bool().unwrap());
     }
 
     #[test]

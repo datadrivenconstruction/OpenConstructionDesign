@@ -7,6 +7,7 @@ pub mod agent_draft_card;
 pub mod attach_ui;
 pub mod audit_ui;
 pub mod budget;
+pub mod cost_view;
 pub mod chat;
 pub mod point_marks;
 pub mod checks;
@@ -203,6 +204,14 @@ pub enum Action {
     SetChecked(Vec<(u32, bool)>),
     SetVariant(u32),
     AllowLarge(bool),
+    /// Go on after a limit stopped the turn; `raise` lifts that limit first.
+    ContinueTurn { raise: bool },
+    /// Continue by itself after a stop at steps, calls, tokens or time.
+    AutoContinue(bool),
+    /// The mode chip: how far one turn may go in this project.
+    SetReach(ddc_ai::limits::Reach),
+    /// The project may send to the active connection without asking, granted ahead of the card.
+    GrantConsent,
     /// Pick a picture or a PDF to compare the draft with.
     AttachReference,
     /// Pick files to attach to the chat.
@@ -254,6 +263,8 @@ pub enum Action {
     ToggleJournal,
     /// Save the last request's journal (steps, tokens, cost, time) as JSON.
     ExportJournal,
+    /// Save every turn of the project (date, model, tokens, price) as CSV or JSON.
+    ExportTurns,
     Export(usize),
     OpenSchedule(usize),
     ExportSchedule(usize),
@@ -387,6 +398,9 @@ pub struct Cx<'a> {
     pub palette_open: bool,
 }
 
+/// Turns that go on by themselves after a limit stop, until the person writes again.
+const MAX_AUTO_CONTINUES: u32 = ddc_ai::limits::AUTO_CONTINUES.u32v();
+
 #[derive(Default)]
 pub struct PanelUi {
     init: bool,
@@ -418,6 +432,15 @@ pub struct PanelUi {
     /// The connections file could not be read at start: said once as a toast.
     unreadable: Option<connect::Unreadable>,
     pub limit: Option<&'static str>,
+    /// A turn stopped by a limit left a plan that is not whole.
+    pub plan_cut: bool,
+    /// The person accepted that incomplete plan as it is.
+    pub plan_cut_ok: bool,
+    /// Turns continued without a click since the person's last message.
+    auto_runs: u32,
+    /// The session cost seen last, and the money since the last write to the project's counter.
+    cost_seen: Option<f64>,
+    spent_pending: f64,
     pub usage: UsageTotals,
     /// Cost of one step at most and the money left (when the server reports it); once per session.
     pub estimate: crate::ai::headless::Estimate,
@@ -568,6 +591,11 @@ impl PanelUi {
             || connect::default_profile().is_some()
     }
 
+    /// Apply of the plan waits while a limit-cut plan is not accepted.
+    pub(super) fn cut_holds(&self) -> bool {
+        self.plan_cut && !self.plan_cut_ok
+    }
+
     fn end_session(&mut self) {
         with_session(|s| {
             if let Some(mut u) = s.take() {
@@ -614,6 +642,9 @@ impl PanelUi {
         self.local_wait = false;
         self.once_host = None;
         self.usage = UsageTotals::default();
+        self.cost_seen = None;
+        self.spent_pending = 0.0;
+        self.plan_cut = false;
         self.snapshots.store(
             connect::snapshots_for(&app.ed.model, self.active()),
             Ordering::Relaxed,
@@ -634,7 +665,18 @@ impl PanelUi {
             use stream_status::{push, Ev};
             match &e {
                 UiEvent::Text(t) if t.is_empty() => push(&mut self.stream, Ev::Heartbeat(now)),
-                UiEvent::Text(_) => push(&mut self.stream, Ev::Text(now)),
+                UiEvent::Text(t) => {
+                    push(&mut self.stream, Ev::Text(now));
+                    // about four characters a token; the exact count comes with the step
+                    let n = (t.chars().count() as u64).div_ceil(4);
+                    push(&mut self.stream, Ev::Tokens { first: now, last: now, n });
+                }
+                UiEvent::Preparing { done, total } => {
+                    push(&mut self.stream, Ev::Build(now, *done, *total))
+                }
+                UiEvent::Progress { tokens } => {
+                    push(&mut self.stream, Ev::Tokens { first: now, last: now, n: *tokens })
+                }
                 UiEvent::Tool { name, ok: None, .. } => {
                     push(&mut self.stream, Ev::ToolStart(now, name.clone()))
                 }
@@ -683,7 +725,14 @@ impl PanelUi {
                     }
                     self.chat_dirty = true;
                 }
-                UiEvent::Usage(u) => self.usage = u,
+                UiEvent::Usage(u) => {
+                    if let Some(c) = u.cost {
+                        let prev = self.cost_seen.filter(|p| *p <= c).unwrap_or(0.0);
+                        self.spent_pending += c - prev;
+                        self.cost_seen = Some(c);
+                    }
+                    self.usage = u;
+                }
                 UiEvent::Step(r) => self.journal.steps.push(r),
                 UiEvent::Sent(e) => self.sent.push(e),
                 UiEvent::Failed(e) => {
@@ -713,6 +762,8 @@ impl PanelUi {
                     self.close_steps(None);
                     self.journal.end = Some(logic::journal_end(&end));
                     self.limit = logic::turn_end_limit(&end);
+                    self.plan_cut = self.limit.is_some();
+                    self.plan_cut_ok = false;
                     if matches!(end, TurnEnd::Cancelled) {
                         self.log.push(Entry::Note("ai.state.cancelled"));
                     }
@@ -726,6 +777,8 @@ impl PanelUi {
                 }
                 UiEvent::DraftEmptied => self.log.push(Entry::Note("ai.redraft.emptied")),
                 UiEvent::ValueRefused { item, why } => self.values.refused(item, why),
+                // already in the status row above
+                UiEvent::Progress { .. } => {}
                 UiEvent::Preparing { done, total } => {
                     self.prepared = (done < total).then_some((done, total))
                 }
@@ -938,6 +991,7 @@ impl PanelUi {
             s.as_mut().map(|u| {
                 u.set_attachments(files, facts);
                 u.set_point(point);
+                u.set_limits(connect::turn_limits(&app.ed.model), connect::reach_of(&app.ed.model));
                 u.send_turn(&app.ed, text, view, mode)
             })
         });
@@ -968,6 +1022,9 @@ impl PanelUi {
         }
         self.error = None;
         self.limit = None;
+        self.plan_cut = false;
+        self.plan_cut_ok = false;
+        self.auto_runs = 0;
         self.recomputed = false;
         self.values.next_request();
         self.log.push(Entry::User(text.clone()));
@@ -977,6 +1034,18 @@ impl PanelUi {
         self.last = Some((text.clone(), mode));
         self.pending = Some((text, mode));
         self.retry.reset();
+        self.dispatch(app);
+    }
+
+    /// Starts a turn that picks up where a limit stopped the last one; the draft and the chat stay.
+    fn continue_turn(&mut self, app: &mut EditorApp) {
+        let mode = self.last.as_ref().map_or(Mode::Propose, |l| l.1);
+        self.error = None;
+        self.limit = None;
+        self.log.push(Entry::Note("ai.limit.continued"));
+        self.chat_dirty = true;
+        self.last = Some((connect::CONTINUE_TEXT.to_string(), mode));
+        self.pending = self.last.clone();
         self.dispatch(app);
     }
 
@@ -993,6 +1062,19 @@ impl PanelUi {
     /// Per frame: counts down a retryable failure and resends when the time is up.
     /// A turn that left a draft or an agent card is never resent.
     fn retry_step(&mut self, app: &mut EditorApp, ctx: &egui::Context, has_draft: bool) {
+        let idle = self.pending.is_none() && !self.again && !with_session(|s| s.as_ref().is_some_and(|u| u.is_busy()));
+        if idle
+            && self.error.is_none()
+            && self.auto_runs < MAX_AUTO_CONTINUES
+            && self.limit.is_some_and(|w| matches!(w, "steps" | "tool_calls" | "tokens" | "wall"))
+            && connect::policy_flag(&app.ed.model, connect::AUTO_CONTINUE_KEY, false)
+        {
+            self.auto_runs += 1;
+            self.continue_turn(app);
+        }
+        if self.spent_pending > 0.0 {
+            connect::add_spent(&app.ed.model, std::mem::take(&mut self.spent_pending));
+        }
         let kind = self.error.as_ref().map(retry::auto_kind);
         let after = self.error.as_ref().and_then(|e| logic::error_detail(e).retry_after_s);
         let now = ctx.input(|i| i.time);
@@ -1145,6 +1227,31 @@ impl PanelUi {
                 self.error = None;
                 self.limit = None;
                 self.retry.reset();
+            }
+            Action::ContinueTurn { raise } => {
+                if raise {
+                    if let Some(w) = self.limit {
+                        connect::raise_limit(&app.ed.model, w);
+                    }
+                }
+                self.continue_turn(app);
+            }
+            Action::AutoContinue(on) => {
+                let _ = app.ed.model.set_ai_policy(connect::AUTO_CONTINUE_KEY, if on { "1" } else { "0" });
+            }
+            Action::SetReach(r) => {
+                if connect::set_reach(&app.ed.model, r).is_ok() {
+                    // the next project without a choice of its own starts from this one
+                    ddc_ai::limits::set_default_reach(r);
+                    app.prefs.ai_reach = r.key().to_string();
+                    app.prefs.save();
+                    let (l, r) = (connect::turn_limits(&app.ed.model), connect::reach_of(&app.ed.model));
+                    with_session(|s| {
+                        if let Some(u) = s.as_mut() {
+                            u.set_limits(l, r);
+                        }
+                    });
+                }
             }
             Action::Apply => self.apply(app),
             Action::AttachReference => self.attach_reference(app),
@@ -1320,6 +1427,21 @@ impl PanelUi {
                     }
                 }
             }
+            Action::GrantConsent => {
+                let host = self
+                    .active()
+                    .filter(|p| !connect::is_local(p))
+                    .and_then(|p| ddc_ai::consent_key(&p.base_url).ok());
+                if let Some(host) = host {
+                    if app.ed.model.set_ai_policy(&logic::consent_policy(&host), "1").is_ok() {
+                        audit(app, "consent", &host);
+                        if self.consent.as_deref() == Some(host.as_str()) {
+                            self.consent = None;
+                            self.dispatch(app);
+                        }
+                    }
+                }
+            }
             Action::ConsentOnce { snapshots } => {
                 if let Some(host) = self.consent.take() {
                     audit(app, "consent_once", &host);
@@ -1357,6 +1479,11 @@ impl PanelUi {
             Action::ToggleJournal => self.journal_open = !self.journal_open,
             Action::ExportJournal => {
                 if let Err(e) = consent::export_journal(app, &self.journal) {
+                    self.error = Some(AiError::Internal(e));
+                }
+            }
+            Action::ExportTurns => {
+                if let Err(e) = cost_view::export_turns(app) {
                     self.error = Some(AiError::Internal(e));
                 }
             }
@@ -2031,6 +2158,10 @@ pub fn register(a: &mut EditorApp) {
         }
     });
     a.register_command("ai.cancel", |a| act(a, Action::Cancel));
+    a.register_command("ai.limits.unlimited", |a| act(a, Action::SetReach(ddc_ai::limits::Reach::Unlimited)));
+    a.register_command("ai.limits.large", |a| act(a, Action::SetReach(ddc_ai::limits::Reach::Large)));
+    a.register_command("ai.limits.normal", |a| act(a, Action::SetReach(ddc_ai::limits::Reach::Normal)));
+    a.register_command("ai.consent.grant", |a| act(a, Action::GrantConsent));
     a.register_command("ai.next_change", |a| {
         palette_rows::run_draft(a, palette_rows::Draft::Next)
     });

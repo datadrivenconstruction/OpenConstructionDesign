@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "খরচ ও সময় দেখান",
+ "ai.cost.show_tip": "অনুরোধের কত টোকেন, দাম ও সময় চ্যাট চলার সময় দেখায়।",
+ "ai.cost.show.off": "বন্ধ",
+ "ai.cost.show.brief": "সংক্ষিপ্ত",
+ "ai.cost.show.detailed": "বিস্তারিত",
+ "ai.cost.charged": "চার্জ করা হয়েছে {cost}",
+ "ai.cost.tokens_split": "ইনপুট {in} · আউটপুট {out} · ক্যাশ থেকে {cache}",
+ "ai.cost.step_no": "ধাপ {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "সব টার্ন রপ্তানি করুন",
+ "ai.settings.from_list": "প্রসঙ্গের আকার, দীর্ঘতম উত্তর ও দাম সার্ভারের মডেল তালিকা থেকে আসে। এগুলো উন্নত অংশে বদলান।",
+ "ai.cost.plan_tokens": "এই পরিকল্পনা: {n} টোকেন",
+ "ai.cost.plan_time": "{m} মিনিট {s} সেকেন্ড",
+ "ai.cost.plan_elements": "{n}টি উপাদান",
+ "ai.cost.plan_each": "প্রতি উপাদান {cost}",
+ "ai.cost.costliest": "এই অনুরোধের সবচেয়ে ব্যয়বহুল ধাপ"
+}

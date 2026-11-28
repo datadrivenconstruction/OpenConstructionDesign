@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "הצג עלות וזמן",
+ "ai.cost.show_tip": "כמה מהטוקנים, המחיר והזמן של בקשה מוצג בצ'אט בזמן הריצה.",
+ "ai.cost.show.off": "כבוי",
+ "ai.cost.show.brief": "קצר",
+ "ai.cost.show.detailed": "מפורט",
+ "ai.cost.charged": "חויב {cost}",
+ "ai.cost.tokens_split": "קלט {in} · פלט {out} · ממטמון {cache}",
+ "ai.cost.step_no": "שלב {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "ייצוא כל הסבבים",
+ "ai.settings.from_list": "גודל ההקשר, התשובה הארוכה ביותר והמחירים נלקחים מרשימת המודלים של השרת. אפשר לשנות אותם תחת מתקדם.",
+ "ai.cost.plan_tokens": "התוכנית הזו: {n} טוקנים",
+ "ai.cost.plan_time": "{m} דק׳ {s} שנ׳",
+ "ai.cost.plan_elements": "{n} רכיבים",
+ "ai.cost.plan_each": "{cost} לרכיב",
+ "ai.cost.costliest": "השלב היקר ביותר בבקשה זו"
+}

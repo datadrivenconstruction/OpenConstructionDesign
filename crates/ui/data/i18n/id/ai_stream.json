@@ -11,5 +11,8 @@
  "ai.stream.local": "Bekerja di komputer ini, tidak menunggu layanan model",
  "ai.stream.stop": "Hentikan",
  "ai.stream.cancelled": "Dihentikan",
+ "ai.stream.writing": "Model sedang menulis, {n} token",
+ "ai.stream.rate": "{n} token/dtk",
+ "ai.stream.building": "Draf dibuat di sini: {done} dari {total}",
  "ai.stream.incomplete": "Draf belum lengkap. Tidak ada yang diterapkan ke model."
 }

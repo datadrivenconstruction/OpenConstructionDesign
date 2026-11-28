@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Prikaži trošak i vrijeme",
+ "ai.cost.show_tip": "Koliko tokena, cijene i vremena zahtjeva chat prikazuje tijekom rada.",
+ "ai.cost.show.off": "Isključeno",
+ "ai.cost.show.brief": "Kratko",
+ "ai.cost.show.detailed": "Detaljno",
+ "ai.cost.charged": "naplaćeno {cost}",
+ "ai.cost.tokens_split": "ulaz {in} · izlaz {out} · iz predmemorije {cache}",
+ "ai.cost.step_no": "korak {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Izvezi sve krugove",
+ "ai.settings.from_list": "Veličina konteksta, najduži odgovor i cijene dolaze s popisa modela poslužitelja. Promijenite ih u Napredno.",
+ "ai.cost.plan_tokens": "Ovaj plan: tokena {n}",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "elemenata: {n}",
+ "ai.cost.plan_each": "{cost} po elementu",
+ "ai.cost.costliest": "Najskuplji korak ovog zahtjeva"
+}

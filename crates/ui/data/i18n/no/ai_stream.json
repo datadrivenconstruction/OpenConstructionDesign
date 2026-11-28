@@ -11,5 +11,8 @@
  "ai.stream.local": "Arbeider på denne datamaskinen uten å vente på modelltjenesten",
  "ai.stream.stop": "Stopp",
  "ai.stream.cancelled": "Stoppet",
+ "ai.stream.writing": "Modellen skriver, {n} tokens",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Utkastet bygges her: {done} av {total}",
  "ai.stream.incomplete": "Utkastet er ufullstendig. Ingenting ble brukt på modellen."
 }

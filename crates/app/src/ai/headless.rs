@@ -107,6 +107,13 @@ pub struct Request {
     /// Per-turn limits other than the cost; `None` keeps the stock one.
     pub max_tokens: Option<u64>,
     pub max_time_s: Option<u32>,
+    /// Lifts steps, calls, tokens, time and plan size (`--ai-unlimited`, `DDC_AI_UNLIMITED=1`);
+    /// the money budget and the mass-delete confirmation stay.
+    pub unlimited: bool,
+    /// Turns that go on by themselves after a stop at steps, calls, tokens or time.
+    pub auto_continue: u32,
+    /// Applies a plan a limit cut short; without it such a plan is printed and kept.
+    pub apply_partial: bool,
 }
 
 /// The money side before the first step: what one step may cost at most (a full context in, the
@@ -144,6 +151,8 @@ pub struct Report {
     pub over_budget: bool,
     /// The limit that ended the turn (`TurnEnd::LimitHit`): tokens, wall, cost, steps, output...
     pub limit: Option<&'static str>,
+    /// The plan was kept, not applied: a limit stopped the turn (`Request::apply_partial`).
+    pub held_partial: bool,
     /// The undo step of the applied plan.
     pub applied: Option<i64>,
     pub failed: Option<String>,
@@ -213,15 +222,22 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
         r.failed = Some(ddc_ai::ProviderError::NoCredit("balance 0".into()).to_string());
         return r;
     }
+    let reach = if req.unlimited || ddc_ai::limits::env_unlimited() {
+        ddc_ai::limits::Reach::Unlimited
+    } else {
+        ddc_ai::limits::Reach::Normal
+    };
+    let base = Limits::reach(reach);
+    let limits = Limits {
+        max_cost: req.budget,
+        max_turn_tokens: req.max_tokens.unwrap_or(base.max_turn_tokens),
+        max_wall_s: req.max_time_s.unwrap_or(base.max_wall_s),
+        ..base
+    };
     let cfg = SessionCfg {
         provider: req.provider.clone(),
         profile: req.profile.clone(),
-        limits: Limits {
-            max_cost: req.budget,
-            max_turn_tokens: req.max_tokens.unwrap_or(Limits::default().max_turn_tokens),
-            max_wall_s: req.max_time_s.unwrap_or(Limits::default().max_wall_s),
-            ..Limits::default()
-        },
+        limits: limits.clone(),
         session: format!("cli-{}", std::process::id()),
         allow_snapshots: Arc::new(AtomicBool::new(false)),
         extra_generators: vec![],
@@ -242,8 +258,10 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
         r.failed = Some("the session did not open".into());
         return r;
     }
+    s.set_limits(limits, reach);
     let budget = req.budget;
-    let (mut failed, mut over) = (None::<String>, false);
+    let (failed_at, mut over) = (std::cell::RefCell::new(None::<String>), false);
+    let limit_hit = std::cell::Cell::new(None::<&'static str>);
     let mut on = |e: UiEvent| {
         match e {
             UiEvent::Text(x) => r.answer.push_str(&x),
@@ -256,24 +274,32 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
                     return false;
                 }
             }
-            UiEvent::Failed(e) => failed = Some(e.to_string()),
-            UiEvent::TurnDone(ddc_ai::TurnEnd::LimitHit(l)) => r.limit = Some(l),
+            UiEvent::Failed(e) => *failed_at.borrow_mut() = Some(e.to_string()),
+            UiEvent::TurnDone(ddc_ai::TurnEnd::LimitHit(l)) => limit_hit.set(Some(l)),
             _ => {}
         }
         true
     };
-    let view = plain_view(ed);
-    if let Err(e) = drive_turn(
-        &mut s,
-        ed,
-        req.prompt.clone(),
-        view,
-        req.turn_timeout,
-        &mut on,
-    ) {
-        failed = Some(e.to_string());
+    let mut say = req.prompt.clone();
+    let mut left = req.auto_continue;
+    loop {
+        limit_hit.set(None);
+        let view = plain_view(ed);
+        if let Err(e) = drive_turn(&mut s, ed, say, view, req.turn_timeout, &mut on) {
+            *failed_at.borrow_mut() = Some(e.to_string());
+            break;
+        }
+        let goes_on = limit_hit.get().is_some_and(|w| matches!(w, "steps" | "tool_calls" | "tokens" | "wall"));
+        if !goes_on || left == 0 || failed_at.borrow().is_some() {
+            break;
+        }
+        left -= 1;
+        say = crate::ai::ui::connect::CONTINUE_TEXT.to_string();
     }
+    let limit_end = limit_hit.get();
+    let mut failed = failed_at.into_inner();
     r.over_budget = over;
+    r.limit = limit_end;
     if let Some(p) = s.plan() {
         r.items = p.items.iter().map(|i| i.title.clone()).collect();
         r.blocked = p
@@ -284,7 +310,10 @@ pub fn run(ed: &mut Editor, req: &Request) -> Report {
             .cloned()
             .collect();
     }
-    if req.apply && failed.is_none() && !over && !r.items.is_empty() {
+    // a plan a limit cut short is not applied unless asked for: it may lack parts
+    if req.apply && failed.is_none() && !over && !r.items.is_empty() && r.limit.is_some() && !req.apply_partial {
+        r.held_partial = true;
+    } else if req.apply && failed.is_none() && !over && !r.items.is_empty() {
         if ready_to_apply(&mut s, ed, req.turn_timeout, req.allow_large) {
             match s.apply(ed) {
                 Ok(op) => {
@@ -355,6 +384,9 @@ mod tests {
             turn_timeout: Duration::from_secs(120),
             max_tokens: None,
             max_time_s: None,
+            unlimited: false,
+            auto_continue: 0,
+            apply_partial: false,
         }
     }
 
@@ -369,6 +401,51 @@ mod tests {
         let mut ed = Editor::new_in_memory().unwrap();
         ed.reload().unwrap();
         ed
+    }
+
+    /// `n` steps that each draw a wall, then an answer: longer than the stock step limit.
+    fn long_run(n: usize) -> Vec<Vec<Script>> {
+        let mut v: Vec<Vec<Script>> = (0..n)
+            .map(|i| {
+                vec![Script::Tool {
+                    name: "create_elements".into(),
+                    args: json!({"title": format!("Wall {i}"), "cat": "wall",
+                        "items": [{"a": [0, 10 * i as i64], "b": [5, 10 * i as i64]}]}),
+                }]
+            })
+            .collect();
+        v.push(vec![Script::Text("done".into())]);
+        v
+    }
+
+    #[test]
+    fn a_plan_cut_by_a_limit_is_kept_not_applied_until_asked() {
+        let mut ed = editor();
+        let before = ops(&ed);
+        let r = run(&mut ed, &req(ScriptedProvider::new(long_run(30)), true));
+        assert_eq!(r.limit, Some("steps"), "{r:?}");
+        assert!(r.held_partial && r.applied.is_none() && r.failed.is_none(), "{r:?}");
+        assert!(r.items.len() >= 20, "every finished part stays in the plan: {}", r.items.len());
+        assert_eq!(ops(&ed), before);
+        let mut ed = editor();
+        let mut q = req(ScriptedProvider::new(long_run(30)), true);
+        q.apply_partial = true;
+        let r = run(&mut ed, &q);
+        assert!(!r.held_partial && r.applied.is_some(), "{r:?}");
+    }
+
+    #[test]
+    fn unlimited_and_auto_continue_finish_what_the_stock_limits_cut() {
+        let mut ed = editor();
+        let mut q = req(ScriptedProvider::new(long_run(30)), false);
+        q.unlimited = true;
+        let r = run(&mut ed, &q);
+        assert_eq!((r.limit, r.items.len()), (None, 30), "{r:?}");
+        let mut ed = editor();
+        let mut q = req(ScriptedProvider::new(long_run(30)), false);
+        q.auto_continue = 1;
+        let r = run(&mut ed, &q);
+        assert_eq!((r.limit, r.items.len()), (None, 30), "{r:?}");
     }
 
     #[test]

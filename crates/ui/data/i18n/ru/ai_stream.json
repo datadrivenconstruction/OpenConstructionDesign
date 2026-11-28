@@ -11,5 +11,8 @@
  "ai.stream.local": "Работает на этом компьютере, не ожидая сервис модели",
  "ai.stream.stop": "Остановить",
  "ai.stream.cancelled": "Остановлено",
+ "ai.stream.writing": "Модель пишет, токенов: {n}",
+ "ai.stream.rate": "{n} ток/с",
+ "ai.stream.building": "Черновик строится здесь: {done} из {total}",
  "ai.stream.incomplete": "Черновик неполный. В модель ничего не применено."
 }

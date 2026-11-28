@@ -14,12 +14,12 @@ use std::collections::{HashMap, HashSet};
 
 /// More touched elements than this needs an explicit "Allow large": a slip here is expensive.
 /// The default of a project rule the person can change (`PlanCaps`).
-pub const LARGE_PLAN: usize = 500;
+pub const LARGE_PLAN: usize = ddc_ai::limits::PLAN_CONFIRM.us();
 /// More deleted elements than this needs "Allow large" too.
-pub const LARGE_DELETE: usize = 50;
+pub const LARGE_DELETE: usize = ddc_ai::limits::PLAN_DELETE.us();
 /// More touched elements than this is refused: the change list of the card stops there
 /// (`DIFF_LIMIT`), so a larger plan could not be shown or verified.
-pub const REFUSED_PLAN: usize = 150_000;
+pub const REFUSED_PLAN: usize = ddc_ai::limits::PLAN_REFUSE.us();
 /// The highest the refusal limit can be set: just below the change list's size.
 pub const REFUSED_PLAN_MAX: usize = ddc_ai::limits::REFUSED_PLAN.us();
 const MAX_RULE_FINDINGS: usize = ddc_ai::limits::RULE_FINDINGS.us();
@@ -56,6 +56,18 @@ impl Default for PlanCaps {
 
 impl PlanCaps {
     pub const KEYS: [&'static str; 3] = ["plan.confirm_above", "plan.delete_above", "plan.refuse_above"];
+
+    /// The caps under a mode: `Large` raises the size that needs "Allow large" unless the
+    /// project set its own, `Unlimited` removes it. The mass-delete caps stay in every mode.
+    pub fn under(self, m: &Model, r: ddc_ai::limits::Reach) -> PlanCaps {
+        let own = m.ai_policy(Self::KEYS[0]).ok().flatten().is_some();
+        let mut c = self;
+        if r != ddc_ai::limits::Reach::Normal && !(own && r == ddc_ai::limits::Reach::Large) {
+            let n = r.value(&ddc_ai::limits::PLAN_CONFIRM);
+            c.confirm_above = usize::try_from(n).unwrap_or(usize::MAX);
+        }
+        c
+    }
 
     /// The project's rule; a missing or unreadable value keeps the default.
     pub fn read(m: &Model) -> PlanCaps {
@@ -1193,6 +1205,29 @@ mod tests {
         assert!(PlanCaps::set(&ed.model, "nope", 1).is_err());
         ed.model.set_ai_policy("plan.confirm_above", "many").unwrap();
         assert_eq!(PlanCaps::read(&ed.model).confirm_above, LARGE_PLAN);
+    }
+
+    #[test]
+    fn the_mode_lifts_the_confirm_size_but_not_the_mass_delete_rule() {
+        use ddc_ai::limits::Reach;
+        let ed = Editor::new_in_memory().unwrap();
+        let base = PlanCaps::read(&ed.model);
+        assert_eq!(base.under(&ed.model, Reach::Normal), base);
+        let big = size(2424, 0);
+        let k = |c: &PlanCaps| keys(&plan_issues_with(c, &[], big, Target::Main, false));
+        assert_eq!(k(&base.under(&ed.model, Reach::Normal)), vec!["ai.issue.too_large"]);
+        assert!(k(&base.under(&ed.model, Reach::Large)).is_empty(), "large mode raises the size");
+        let un = base.under(&ed.model, Reach::Unlimited);
+        assert!(k(&un).is_empty());
+        assert_eq!(un.delete_above, LARGE_DELETE, "mass delete still asks");
+        assert_eq!(un.refuse_above, REFUSED_PLAN, "the card's change list is a wall");
+        let del = size(LARGE_DELETE + 1, LARGE_DELETE + 1);
+        assert!(!plan_issues_with(&un, &[], del, Target::Main, false).is_empty());
+        // a size the project chose for itself outranks the large mode
+        PlanCaps::set(&ed.model, "plan.confirm_above", 700).unwrap();
+        let own = PlanCaps::read(&ed.model);
+        assert_eq!(own.under(&ed.model, Reach::Large).confirm_above, 700);
+        assert_eq!(own.under(&ed.model, Reach::Unlimited).confirm_above, usize::MAX);
     }
 
     // Pinned behaviour: a plan of REFUSED_PLAN (150 000) changes is refused even with "Allow large",

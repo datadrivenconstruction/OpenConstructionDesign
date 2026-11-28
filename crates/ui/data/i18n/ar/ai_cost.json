@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "إظهار التكلفة والوقت",
+ "ai.cost.show_tip": "مقدار الرموز والسعر ووقت الطلب الذي تعرضه المحادثة أثناء التشغيل.",
+ "ai.cost.show.off": "إيقاف",
+ "ai.cost.show.brief": "موجز",
+ "ai.cost.show.detailed": "مفصل",
+ "ai.cost.charged": "المحتسب {cost}",
+ "ai.cost.tokens_split": "إدخال {in} · إخراج {out} · من الذاكرة المؤقتة {cache}",
+ "ai.cost.step_no": "الخطوة {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "تصدير كل الأدوار",
+ "ai.settings.from_list": "يأتي حجم السياق وأطول رد والأسعار من قائمة نماذج الخادم. غيّرها ضمن الإعدادات المتقدمة.",
+ "ai.cost.plan_tokens": "هذه الخطة: {n} رمز",
+ "ai.cost.plan_time": "{m} د {s} ث",
+ "ai.cost.plan_elements": "{n} عنصر",
+ "ai.cost.plan_each": "{cost} لكل عنصر",
+ "ai.cost.costliest": "أغلى خطوة في هذا الطلب"
+}

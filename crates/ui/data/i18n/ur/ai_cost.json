@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "لاگت اور وقت دکھائیں",
+ "ai.cost.show_tip": "درخواست کے ٹوکنز، قیمت اور وقت میں سے کتنا چیٹ چلنے کے دوران دکھاتی ہے۔",
+ "ai.cost.show.off": "بند",
+ "ai.cost.show.brief": "مختصر",
+ "ai.cost.show.detailed": "تفصیلی",
+ "ai.cost.charged": "وصول کیا گیا {cost}",
+ "ai.cost.tokens_split": "ان پٹ {in} · آؤٹ پٹ {out} · کیشے سے {cache}",
+ "ai.cost.step_no": "مرحلہ {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "تمام دور برآمد کریں",
+ "ai.settings.from_list": "سیاق کا سائز، سب سے لمبا جواب اور قیمتیں سرور کی ماڈل فہرست سے آتی ہیں۔ انہیں اعلیٰ ترتیبات میں بدلیں۔",
+ "ai.cost.plan_tokens": "یہ منصوبہ: {n} ٹوکنز",
+ "ai.cost.plan_time": "{m} منٹ {s} سیکنڈ",
+ "ai.cost.plan_elements": "{n} عناصر",
+ "ai.cost.plan_each": "{cost} فی عنصر",
+ "ai.cost.costliest": "اس درخواست کا سب سے مہنگا مرحلہ"
+}

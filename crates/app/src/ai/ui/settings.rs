@@ -5,7 +5,7 @@
 
 use super::kit::{self, space, Button, Dialog, DialogSize};
 use super::{connect, keys, logic, Action, Cx, PanelUi};
-use crate::ai::AiError;
+use crate::ai::{validate, AiError};
 use ddc_ai::gateway::ModelInfo;
 use ddc_ai::{
     build_provider, consent_key, AuthKind, ChatRequest, EgressGuard, Executor, Flow, Message, Profile,
@@ -22,7 +22,8 @@ const TAB_PROJECT: usize = 1;
 const PING_OUTPUT_TOKENS: u32 = 64;
 
 enum JobMsg {
-    Tested { tool: bool },
+    /// `models`: the server's model list, read in the same go when it has one.
+    Tested { tool: bool, models: Option<Vec<ModelInfo>> },
     Models(Vec<ModelInfo>),
     Failed {
         key: &'static str,
@@ -51,11 +52,13 @@ enum Settled {
 /// Pure map from the channel's answer to the UI state; `None` while the job still runs.
 fn settle(r: Result<JobMsg, mpsc::TryRecvError>) -> Option<Settled> {
     match r {
-        Ok(JobMsg::Tested { tool }) => Some(Settled::Done(Outcome::Ok(if tool {
-            "ai.settings.test_ok"
-        } else {
-            "ai.settings.test_no_tool"
-        }))),
+        Ok(JobMsg::Tested { tool, models }) => {
+            let ok = Outcome::Ok(if tool { "ai.settings.test_ok" } else { "ai.settings.test_no_tool" });
+            Some(match models.filter(|l| !l.is_empty()) {
+                Some(list) => Settled::Models(list, ok),
+                None => Settled::Done(ok),
+            })
+        }
         Ok(JobMsg::Models(list)) => Some(Settled::Models(list, Outcome::Ok("ai.settings.models_ok"))),
         Ok(JobMsg::Failed { key, detail }) => Some(Settled::Done(Outcome::Failed { key, detail })),
         Err(mpsc::TryRecvError::Empty) => None,
@@ -90,7 +93,11 @@ pub struct Settings {
     exec_model: String,
     exec_price_in: String,
     exec_price_out: String,
+    /// Ids of the connections on disk: a new one is not saved until Save.
+    saved: Vec<String>,
     models: Vec<ModelInfo>,
+    /// Id of the connection whose context, output size or prices came from the server's list.
+    listed_from: Option<String>,
     job: Option<Receiver<JobMsg>>,
     outcome: Option<Outcome>,
     save_error: Option<String>,
@@ -104,8 +111,11 @@ pub struct Settings {
     max_cost: String,
     max_tokens: String,
     max_wall: String,
+    /// The money cap of the whole project and the size that asks for "Allow large".
+    project_cost: String,
+    plan_confirm: String,
     /// Refusal of the last typed cost / token limit (catalog key); the typed text stays.
-    limit_err: [Option<&'static str>; 3],
+    limit_err: [Option<&'static str>; 5],
     consents: Vec<String>,
     /// Set by the hosted preset: the address field takes focus on the next frame.
     focus_url: bool,
@@ -239,6 +249,7 @@ impl Settings {
     fn load(&mut self, st_profiles: &[Profile], sel: usize, m: &Model) {
         self.loaded = true;
         self.draft = st_profiles.to_vec();
+        self.saved = self.draft.iter().map(|p| p.id.clone()).collect();
         self.held = take_held(&mut self.draft);
         self.sel = sel.min(self.draft.len().saturating_sub(1));
         self.save_error = None;
@@ -253,7 +264,9 @@ impl Settings {
         self.max_cost = stored_text(m.ai_policy("limits.max_cost").ok().flatten(), mark);
         self.max_tokens = stored_text(m.ai_policy("limits.max_turn_tokens").ok().flatten(), mark);
         self.max_wall = stored_text(m.ai_policy("limits.max_wall_s").ok().flatten(), mark);
-        self.limit_err = [None; 3];
+        self.project_cost = stored_text(m.ai_policy(connect::PROJECT_COST_KEY).ok().flatten(), mark);
+        self.plan_confirm = stored_text(m.ai_policy(validate::PlanCaps::KEYS[0]).ok().flatten(), mark);
+        self.limit_err = [None; 5];
         self.consents = consents_of(m);
         self.load_form();
     }
@@ -262,6 +275,7 @@ impl Settings {
     fn load_form(&mut self) {
         self.key.clear();
         self.models.clear();
+        self.listed_from = None;
         self.outcome = None;
         match self.draft.get(self.sel) {
             Some(p) => {
@@ -294,8 +308,15 @@ impl Settings {
     fn add_preset(&mut self, preset: connect::Preset, cat: &ddc_ui::Catalog) {
         self.commit_form();
         let ids: Vec<String> = self.draft.iter().map(|p| p.id.clone()).collect();
-        let number = self.draft.len() + 1;
-        let name = cat.tf("ai.settings.new_name", &[("n", &number.to_string())]);
+        // named after what it is, numbered only when that name is taken
+        let base = cat.t(preset.key());
+        let taken = |n: &str| self.draft.iter().any(|p| p.name == n);
+        let mut name = base.clone();
+        let mut n = 1;
+        while taken(&name) {
+            n += 1;
+            name = format!("{base} {n}");
+        }
         let p = connect::preset_profile(preset, logic::profile_id(&ids), name);
         if preset == connect::Preset::Custom {
             self.advanced_open.push(p.id.clone());
@@ -396,6 +417,7 @@ impl Settings {
             }
         }
         forget_key_field(ctx);
+        self.saved = self.draft.iter().map(|p| p.id.clone()).collect();
         acts.push(Action::ProfilesSaved(self.draft.clone(), self.sel));
     }
 
@@ -457,6 +479,9 @@ impl Settings {
         let mark = units::ui_decimal_mark();
         if let Some(p) = self.draft.get_mut(self.sel) {
             if let Some(m) = list.iter().find(|m| m.id == p.model) {
+                if m.context_tokens.is_some() || m.max_output_tokens.is_some() || m.price_in_per_mtok.is_some() {
+                    self.listed_from = Some(p.id.clone());
+                }
                 if self.price_in.trim().is_empty() && self.price_out.trim().is_empty() {
                     adopt_listed(p, m, &mut self.price_in, &mut self.price_out, mark);
                 }
@@ -666,7 +691,11 @@ fn ping(p: &Profile, typed: Option<Secret>, local_only: bool) -> JobMsg {
         Flow::Continue
     });
     match r {
-        Ok(()) => JobMsg::Tested { tool },
+        Ok(()) => JobMsg::Tested {
+            tool,
+            // a server without a model list is no failure of the test
+            models: provider.list_model_infos().ok(),
+        },
         Err(e) => failed(&e),
     }
 }
@@ -1008,21 +1037,32 @@ fn form(ui: &mut Ui, s: &mut Settings, cx: &Cx<'_>, ctx: &egui::Context) {
     }
 }
 
+/// Height kept for the status lines above the footer buttons.
+const STATUS_SLOT_H: f32 = 64.0;
+
 /// The presets as a title and a one-line explanation each; returns the one picked.
 fn preset_list(ui: &mut Ui, cx: &Cx<'_>) -> Option<connect::Preset> {
     let (th, cat) = (cx.th, cx.cat);
     let mut picked = None;
     for preset in connect::Preset::ALL {
         let key = preset.key();
-        if Button::secondary(&cat.t(key))
-            .small()
-            .full_width()
-            .show(ui, th)
-            .clicked()
-        {
+        // a card to choose, not a field to type in
+        let card = ddc_ui::widgets::card(ui, th, |ui| {
+            ui.set_width(ui.available_width());
+            ui.label(
+                egui::RichText::new(cat.t(key))
+                    .font(th.font(FontRole::Label))
+                    .color(th.c("text.primary")),
+            );
+            kit::caption(ui, th, &cat.t(&format!("{key}_sub")));
+        });
+        let hit = ui.interact(card.response.rect, egui::Id::new(("ddc.ai.preset_card", key)), egui::Sense::click());
+        if hit.hovered() {
+            ui.ctx().set_cursor_icon(egui::CursorIcon::PointingHand);
+        }
+        if hit.clicked() {
             picked = Some(preset);
         }
-        kit::caption(ui, th, &cat.t(&format!("{key}_sub")));
         ui.add_space(space::XS);
     }
     picked
@@ -1065,12 +1105,15 @@ fn connections(
                 }
             });
         }
-        if !s.draft.is_empty()
-            && Button::danger(&cat.t("ai.settings.remove"))
-                .small()
-                .show(ui, th)
-                .clicked()
-        {
+        let unsaved = s.draft.get(s.sel).is_some_and(|p| !s.saved.contains(&p.id));
+        // a connection that was never saved is discarded, not deleted
+        let gone_label = cat.t(if unsaved { "ai.settings.discard" } else { "ai.settings.remove" });
+        let gone_btn = if unsaved {
+            Button::quiet(&gone_label).small()
+        } else {
+            Button::danger(&gone_label).small()
+        };
+        if !s.draft.is_empty() && gone_btn.show(ui, th).clicked() {
             let gone = s.draft.remove(s.sel);
             let _ = connect::store().remove(&gone.id);
             s.sel = s.sel.min(s.draft.len().saturating_sub(1));
@@ -1078,13 +1121,10 @@ fn connections(
         }
     });
     if s.draft.is_empty() {
-        kit::empty_state(
-            ui,
-            th,
-            &cat.t("ai.settings.no_profiles"),
-            &cat.t("ai.settings.no_profiles_hint"),
-            None,
-        );
+        // a title and a line, then the cards: no tall empty box above them
+        kit::section_title(ui, th, &cat.t("ai.settings.no_profiles"));
+        kit::caption(ui, th, &cat.t("ai.settings.no_profiles_hint"));
+        ui.add_space(space::SM);
         if let Some(preset) = preset_list(ui, cx) {
             s.add_preset(preset, cat);
         }
@@ -1097,11 +1137,20 @@ fn connections(
             kit::caption(ui, th, &cat.t("ai.settings.cloud_note"));
         }
     }
+    if s.listed_from.as_deref() == s.draft.get(s.sel).map(|p| p.id.as_str()) && s.listed_from.is_some() {
+        kit::caption(ui, th, &cat.t("ai.settings.from_list"));
+    }
     let missing = s.missing();
+    let busy = s.job.is_some();
+    let blocked = s.save_blocked();
+    let block_reason = blocked.map(|k| cat.t(k)).unwrap_or_default();
+    // the status lines sit in a slot of fixed height, so the buttons below do not move when a
+    // test result appears
+    ui.scope(|ui| {
+    ui.set_min_height(STATUS_SLOT_H);
     for k in &missing {
         kit::caption(ui, th, &cat.t(k));
     }
-    let busy = s.job.is_some();
     match &s.outcome {
         Some(Outcome::Ok(key)) => {
             ui.label(
@@ -1125,11 +1174,10 @@ fn connections(
     if let Some(e) = &s.save_error {
         kit::error_note(ui, th, e);
     }
-    let blocked = s.save_blocked();
-    let block_reason = blocked.map(|k| cat.t(k)).unwrap_or_default();
     if blocked.is_some() {
         kit::caption(ui, th, &block_reason);
     }
+    });
     kit::dialog_footer(ui, |ui| {
         let save_label = cat.t("ai.common.save");
         let mut save = Button::primary(&save_label).enabled(blocked.is_none());
@@ -1224,6 +1272,12 @@ fn project(ui: &mut Ui, s: &mut Settings, cx: &Cx<'_>, acts: &mut Vec<Action>) {
         set_flag(m, "audit.keep_text", s.keep_text, acts);
     }
     kit::section_title(ui, th, &cat.t("ai.settings.limits"));
+    super::depth_chip::reach_picker(ui, cx, acts);
+    let mut auto = connect::policy_flag(m, connect::AUTO_CONTINUE_KEY, false);
+    if kit::checkbox(ui, th, &mut auto, &cat.t("ai.limit.auto")).changed() {
+        acts.push(Action::AutoContinue(auto));
+    }
+    kit::caption(ui, th, &cat.t("ai.limit.auto_hint"));
     egui::Grid::new("ddc.ai.settings_limits")
         .num_columns(2)
         .spacing([space::SM, space::XS])
@@ -1258,7 +1312,35 @@ fn project(ui: &mut Ui, s: &mut Settings, cx: &Cx<'_>, acts: &mut Vec<Action>) {
                 &mut s.limit_err[2],
                 acts,
             );
+            limit_field(
+                ui,
+                cx,
+                &cat.t("ai.settings.project_cost"),
+                connect::PROJECT_COST_KEY,
+                "ai.settings.unit_money",
+                &mut s.project_cost,
+                &mut s.limit_err[3],
+                acts,
+            );
+            limit_field(
+                ui,
+                cx,
+                &cat.t("ai.settings.plan_confirm"),
+                validate::PlanCaps::KEYS[0],
+                "ai.settings.unit_items",
+                &mut s.plan_confirm,
+                &mut s.limit_err[4],
+                acts,
+            );
         });
+    let spent = connect::spent_of(m);
+    ui.horizontal(|ui| {
+        kit::caption(ui, th, &cat.tf("ai.settings.spent", &[("n", &amount_text(spent, units::ui_decimal_mark()))]));
+        if spent > 0.0 && Button::quiet(&cat.t("ai.settings.spent_reset")).small().show(ui, th).clicked() {
+            let _ = m.set_ai_policy(connect::SPENT_KEY, "0");
+        }
+    });
+    super::cost_view::picker(ui, th, cat, m);
     kit::caption(ui, th, &cat.t("ai.settings.limits_hint"));
     let d = ddc_ai::Limits::default();
     kit::caption(
@@ -1272,6 +1354,22 @@ fn project(ui: &mut Ui, s: &mut Settings, cx: &Cx<'_>, acts: &mut Vec<Action>) {
     kit::section_title(ui, th, &cat.t("ai.settings.consents"));
     if s.consents.is_empty() {
         kit::caption(ui, th, &cat.t("ai.settings.consents_none"));
+    }
+    // granted ahead of the first request: scripts and the command line need no card
+    let ahead = s
+        .draft
+        .get(s.sel)
+        .filter(|p| !connect::is_local(p))
+        .and_then(|p| ddc_ai::consent_key(&p.base_url).ok())
+        .filter(|h| !s.consents.contains(h));
+    if let Some(host) = ahead {
+        let label = cat.tf("ai.settings.consent_grant", &[("host", &host)]);
+        if Button::secondary(&label).small().show(ui, th).clicked() {
+            if m.set_ai_policy(&logic::consent_policy(&host), "1").is_ok() {
+                s.consents = consents_of(m);
+            }
+            acts.push(Action::GrantConsent);
+        }
     }
     let mut revoke = None;
     for host in &s.consents {
@@ -1565,11 +1663,16 @@ mod tests {
     #[test]
     fn settings_ping_ok_and_models_show_outcome() {
         assert_eq!(
-            settle(Ok(JobMsg::Tested { tool: true })),
+            settle(Ok(JobMsg::Tested { tool: true, models: None })),
             Some(Settled::Done(Outcome::Ok("ai.settings.test_ok")))
         );
         assert_eq!(
-            settle(Ok(JobMsg::Tested { tool: false })),
+            settle(Ok(JobMsg::Tested { tool: true, models: Some(vec![ModelInfo::named("m")]) })),
+            Some(Settled::Models(vec![ModelInfo::named("m")], Outcome::Ok("ai.settings.test_ok"))),
+            "a test also brings the model list"
+        );
+        assert_eq!(
+            settle(Ok(JobMsg::Tested { tool: false, models: None })),
             Some(Settled::Done(Outcome::Ok("ai.settings.test_no_tool")))
         );
         assert_eq!(

@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Құн мен уақытты көрсету",
+ "ai.cost.show_tip": "Сұраудың қанша токенін, бағасын және уақытын чат жұмыс кезінде көрсететінін таңдаңыз.",
+ "ai.cost.show.off": "Өшірулі",
+ "ai.cost.show.brief": "Қысқа",
+ "ai.cost.show.detailed": "Толық",
+ "ai.cost.charged": "есептелді {cost}",
+ "ai.cost.tokens_split": "кіріс {in} · шығыс {out} · кэштен {cache}",
+ "ai.cost.step_no": "{n}-қадам",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Барлық кезеңдерді экспорттау",
+ "ai.settings.from_list": "Контекст өлшемі, ең ұзын жауап және бағалар сервердің модельдер тізімінен алынады. Оларды Қосымша бөлімінде өзгертіңіз.",
+ "ai.cost.plan_tokens": "Бұл жоспар: {n} токен",
+ "ai.cost.plan_time": "{m} мин {s} с",
+ "ai.cost.plan_elements": "{n} элемент",
+ "ai.cost.plan_each": "әр элементке {cost}",
+ "ai.cost.costliest": "Осы сұраудың ең қымбат қадамы"
+}

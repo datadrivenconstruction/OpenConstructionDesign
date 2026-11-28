@@ -11,5 +11,8 @@
  "ai.stream.local": "正在此电脑上运行,不等待模型服务",
  "ai.stream.stop": "停止",
  "ai.stream.cancelled": "已停止",
+ "ai.stream.writing": "模型正在写入，{n} 个令牌",
+ "ai.stream.rate": "{n} 令牌/秒",
+ "ai.stream.building": "正在此处构建草稿：{done} / {total}",
  "ai.stream.incomplete": "草稿不完整。未向模型应用任何内容。"
 }

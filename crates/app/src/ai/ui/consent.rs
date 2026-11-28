@@ -336,6 +336,7 @@ mod tests {
             tokens_cached: 9_000,
             tokens_out: 2_100,
             cost: Some(0.05),
+            charged: None,
             ms: 900,
             tools: vec!["create_geometry".into()],
         });

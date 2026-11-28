@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "แสดงค่าใช้จ่ายและเวลา",
+ "ai.cost.show_tip": "จำนวนโทเค็น ราคา และเวลาของคำขอที่แชตแสดงขณะทำงาน",
+ "ai.cost.show.off": "ปิด",
+ "ai.cost.show.brief": "สั้น",
+ "ai.cost.show.detailed": "ละเอียด",
+ "ai.cost.charged": "เรียกเก็บ {cost}",
+ "ai.cost.tokens_split": "เข้า {in} · ออก {out} · จากแคช {cache}",
+ "ai.cost.step_no": "ขั้นตอนที่ {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "ส่งออกทุกรอบ",
+ "ai.settings.from_list": "ขนาดบริบท คำตอบที่ยาวที่สุด และราคา มาจากรายการโมเดลของเซิร์ฟเวอร์ แก้ไขได้ในขั้นสูง",
+ "ai.cost.plan_tokens": "แผนนี้: {n} โทเค็น",
+ "ai.cost.plan_time": "{m} นาที {s} วินาที",
+ "ai.cost.plan_elements": "{n} องค์ประกอบ",
+ "ai.cost.plan_each": "{cost} ต่อองค์ประกอบ",
+ "ai.cost.costliest": "ขั้นตอนที่แพงที่สุดของคำขอนี้"
+}

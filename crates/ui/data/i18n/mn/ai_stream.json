@@ -11,5 +11,8 @@
  "ai.stream.local": "Энэ компьютер дээр ажиллаж байна, загварын үйлчилгээг хүлээхгүй",
  "ai.stream.stop": "Зогсоох",
  "ai.stream.cancelled": "Зогссон",
+ "ai.stream.writing": "Загвар бичиж байна, {n} токен",
+ "ai.stream.rate": "{n} токен/с",
+ "ai.stream.building": "Ноорог энд баригдаж байна: {done} / {total}",
  "ai.stream.incomplete": "Ноорог бүрэн биш байна. Загварт юу ч хэрэгжээгүй."
 }

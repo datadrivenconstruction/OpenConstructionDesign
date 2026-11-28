@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Hiện chi phí và thời gian",
+ "ai.cost.show_tip": "Số token, giá và thời gian của một yêu cầu mà cuộc trò chuyện hiển thị khi chạy.",
+ "ai.cost.show.off": "Tắt",
+ "ai.cost.show.brief": "Ngắn gọn",
+ "ai.cost.show.detailed": "Chi tiết",
+ "ai.cost.charged": "đã tính phí {cost}",
+ "ai.cost.tokens_split": "vào {in} · ra {out} · từ bộ nhớ đệm {cache}",
+ "ai.cost.step_no": "bước {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Xuất tất cả lượt",
+ "ai.settings.from_list": "Kích thước ngữ cảnh, câu trả lời dài nhất và giá lấy từ danh sách mô hình của máy chủ. Thay đổi trong Nâng cao.",
+ "ai.cost.plan_tokens": "Kế hoạch này: {n} token",
+ "ai.cost.plan_time": "{m} phút {s} giây",
+ "ai.cost.plan_elements": "{n} phần tử",
+ "ai.cost.plan_each": "{cost} mỗi phần tử",
+ "ai.cost.costliest": "Bước tốn kém nhất của yêu cầu này"
+}

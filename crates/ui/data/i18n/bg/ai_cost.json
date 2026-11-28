@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Показване на цена и време",
+ "ai.cost.show_tip": "Колко токени, цена и време на заявката показва чатът, докато работи.",
+ "ai.cost.show.off": "Изкл.",
+ "ai.cost.show.brief": "Кратко",
+ "ai.cost.show.detailed": "Подробно",
+ "ai.cost.charged": "таксувано {cost}",
+ "ai.cost.tokens_split": "вход {in} · изход {out} · от кеша {cache}",
+ "ai.cost.step_no": "стъпка {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Експорт на всички ходове",
+ "ai.settings.from_list": "Размерът на контекста, най-дългият отговор и цените идват от списъка с модели на сървъра. Променете ги в «Разширени».",
+ "ai.cost.plan_tokens": "Този план: {n} токена",
+ "ai.cost.plan_time": "{m} мин {s} с",
+ "ai.cost.plan_elements": "{n} елемента",
+ "ai.cost.plan_each": "{cost} на елемент",
+ "ai.cost.costliest": "Най-скъпата стъпка на тази заявка"
+}

@@ -11,5 +11,8 @@
  "ai.stream.local": "Pracuje v tomto počítači, nečeká na službu modelu",
  "ai.stream.stop": "Zastavit",
  "ai.stream.cancelled": "Zastaveno",
+ "ai.stream.writing": "Model píše, tokenů: {n}",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Koncept se tvoří zde: {done} z {total}",
  "ai.stream.incomplete": "Návrh je neúplný. Do modelu nebylo nic použito."
 }

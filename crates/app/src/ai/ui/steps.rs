@@ -318,7 +318,7 @@ pub fn why(text: &str) -> Why {
     if has("timed out") || has("timeout") {
         Why::Timeout
     } else if has("not found") || has("no such") || has("does not exist") || has("unknown element")
-        || has("is gone") || has("no new element")
+        || has("is gone") || has("no new element") || has("unknown tool")
     {
         Why::NotFound
     } else if has("not allowed") || has("denied") || has("read-only") || has("forbidden") {
@@ -331,6 +331,25 @@ pub fn why(text: &str) -> Why {
         Why::Network
     } else {
         Why::Other
+    }
+}
+
+/// Longest piece of an unclassified failure text shown beside the generic reason.
+const DETAIL_CHARS: usize = 160;
+
+/// The reason line of a failed step: the classified reason, or, when none fits, the tool's own
+/// text, so a failure is never reduced to "did not finish".
+pub fn reason_line(cat: &Catalog, err: Option<&str>) -> String {
+    let w = err.map_or(Why::Other, why);
+    let base = why_text(cat, w);
+    let detail = err.map(str::trim).filter(|e| !e.is_empty());
+    match (w, detail) {
+        (Why::Other, Some(d)) => {
+            let short: String = d.chars().take(DETAIL_CHARS).collect();
+            let dots = if d.chars().count() > DETAIL_CHARS { "\u{2026}" } else { "" };
+            format!("{base}: {short}{dots}")
+        }
+        _ => base,
     }
 }
 
@@ -517,7 +536,7 @@ fn row(ui: &mut Ui, cx: &Cx<'_>, s: &Step, at: (usize, usize), now: u64) {
     if state != State::Failed {
         return;
     }
-    let reason = why_text(cat, s.err.as_deref().map_or(Why::Other, why));
+    let reason = reason_line(cat, s.err.as_deref());
     let pad = th.d().icon + ui.spacing().item_spacing.x;
     ui.horizontal(|ui| {
         ui.add_space(pad);
@@ -712,6 +731,10 @@ mod tests {
         assert_eq!(why("invalid filter: expected a category"), Why::Invalid);
         assert_eq!(why("the model is read-only"), Why::Denied);
         assert_eq!(why("something odd"), Why::Other);
+        assert_eq!(why("unknown tool: view_measure"), Why::NotFound);
+        let c = cat(Lang::En);
+        assert!(reason_line(&c, Some("door GF-D06 hit the frame")).ends_with(": door GF-D06 hit the frame"));
+        assert_eq!(reason_line(&c, None), why_text(&c, Why::Other));
         assert_eq!(why(""), Why::Other);
     }
 

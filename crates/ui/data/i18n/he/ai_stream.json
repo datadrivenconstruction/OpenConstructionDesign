@@ -11,5 +11,8 @@
  "ai.stream.local": "פועל במחשב זה, ללא המתנה לשירות המודל",
  "ai.stream.stop": "עצור",
  "ai.stream.cancelled": "נעצר",
+ "ai.stream.writing": "המודל כותב, {n} טוקנים",
+ "ai.stream.rate": "{n} טוקנים/שנ׳",
+ "ai.stream.building": "הטיוטה נבנית כאן: {done} מתוך {total}",
  "ai.stream.incomplete": "הטיוטה לא שלמה. שום דבר לא הוחל על המודל."
 }

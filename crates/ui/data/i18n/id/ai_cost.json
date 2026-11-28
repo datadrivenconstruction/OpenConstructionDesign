@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Tampilkan biaya dan waktu",
+ "ai.cost.show_tip": "Seberapa banyak token, harga, dan waktu permintaan yang ditampilkan obrolan saat berjalan.",
+ "ai.cost.show.off": "Mati",
+ "ai.cost.show.brief": "Ringkas",
+ "ai.cost.show.detailed": "Terperinci",
+ "ai.cost.charged": "ditagih {cost}",
+ "ai.cost.tokens_split": "masuk {in} · keluar {out} · dari cache {cache}",
+ "ai.cost.step_no": "langkah {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Ekspor semua giliran",
+ "ai.settings.from_list": "Ukuran konteks, balasan terpanjang, dan harga berasal dari daftar model server. Ubah di Lanjutan.",
+ "ai.cost.plan_tokens": "Rencana ini: {n} token",
+ "ai.cost.plan_time": "{m} mnt {s} dtk",
+ "ai.cost.plan_elements": "{n} elemen",
+ "ai.cost.plan_each": "{cost} per elemen",
+ "ai.cost.costliest": "Langkah termahal dari permintaan ini"
+}

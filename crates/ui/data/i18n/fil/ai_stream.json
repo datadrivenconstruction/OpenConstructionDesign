@@ -11,5 +11,8 @@
  "ai.stream.local": "Gumagana sa computer na ito, hindi naghihintay sa serbisyo ng modelo",
  "ai.stream.stop": "Itigil",
  "ai.stream.cancelled": "Itinigil",
+ "ai.stream.writing": "Sumusulat ang modelo, {n} token",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "Binubuo ang draft dito: {done} sa {total}",
  "ai.stream.incomplete": "Hindi kumpleto ang draft. Walang na-apply sa model."
 }

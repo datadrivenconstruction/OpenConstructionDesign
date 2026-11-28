@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Näytä hinta ja aika",
+ "ai.cost.show_tip": "Kuinka paljon pyynnön tokeneista, hinnasta ja ajasta chat näyttää sen suorituksen aikana.",
+ "ai.cost.show.off": "Pois",
+ "ai.cost.show.brief": "Lyhyt",
+ "ai.cost.show.detailed": "Yksityiskohtainen",
+ "ai.cost.charged": "veloitettu {cost}",
+ "ai.cost.tokens_split": "sisään {in} · ulos {out} · välimuistista {cache}",
+ "ai.cost.step_no": "vaihe {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Vie kaikki vuorot",
+ "ai.settings.from_list": "Kontekstin koko, pisin vastaus ja hinnat tulevat palvelimen mallilistasta. Muuta niitä kohdassa Lisäasetukset.",
+ "ai.cost.plan_tokens": "Tämä suunnitelma: {n} tokenia",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} elementtiä",
+ "ai.cost.plan_each": "{cost} elementtiä kohti",
+ "ai.cost.costliest": "Tämän pyynnön kallein vaihe"
+}

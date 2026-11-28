@@ -11,5 +11,8 @@
  "ai.stream.local": "Bu bilgisayarda çalışıyor, model hizmetini beklemiyor",
  "ai.stream.stop": "Durdur",
  "ai.stream.cancelled": "Durduruldu",
+ "ai.stream.writing": "Model yazıyor, {n} token",
+ "ai.stream.rate": "{n} tok/sn",
+ "ai.stream.building": "Taslak burada oluşturuluyor: {done} / {total}",
  "ai.stream.incomplete": "Taslak eksik. Modele hiçbir şey uygulanmadı."
 }

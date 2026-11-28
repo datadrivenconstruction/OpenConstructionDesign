@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Зардал ба хугацааг харуулах",
+ "ai.cost.show_tip": "Хүсэлтийн хэдэн токен, үнэ, хугацааг чат ажиллах үед харуулахыг сонгоно.",
+ "ai.cost.show.off": "Идэвхгүй",
+ "ai.cost.show.brief": "Товч",
+ "ai.cost.show.detailed": "Дэлгэрэнгүй",
+ "ai.cost.charged": "тооцсон {cost}",
+ "ai.cost.tokens_split": "орц {in} · гаралт {out} · кэшээс {cache}",
+ "ai.cost.step_no": "{n}-р алхам",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Бүх явцыг экспортлох",
+ "ai.settings.from_list": "Контекстийн хэмжээ, хамгийн урт хариу, үнэ нь серверийн загварын жагсаалтаас ирнэ. Тэдгээрийг Нэмэлт хэсэгт өөрчилнө үү.",
+ "ai.cost.plan_tokens": "Энэ төлөвлөгөө: {n} токен",
+ "ai.cost.plan_time": "{m} мин {s} с",
+ "ai.cost.plan_elements": "{n} элемент",
+ "ai.cost.plan_each": "элемент бүрт {cost}",
+ "ai.cost.costliest": "Энэ хүсэлтийн хамгийн үнэтэй алхам"
+}

@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Εμφάνιση κόστους και χρόνου",
+ "ai.cost.show_tip": "Πόσα από τα tokens, την τιμή και τον χρόνο ενός αιτήματος εμφανίζει η συνομιλία κατά την εκτέλεση.",
+ "ai.cost.show.off": "Ανενεργό",
+ "ai.cost.show.brief": "Σύντομο",
+ "ai.cost.show.detailed": "Αναλυτικό",
+ "ai.cost.charged": "χρεώθηκε {cost}",
+ "ai.cost.tokens_split": "είσοδος {in} · έξοδος {out} · από cache {cache}",
+ "ai.cost.step_no": "βήμα {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Εξαγωγή όλων των γύρων",
+ "ai.settings.from_list": "Το μέγεθος περιβάλλοντος, η μεγαλύτερη απάντηση και οι τιμές προέρχονται από τη λίστα μοντέλων του διακομιστή. Αλλάξτε τα στις Σύνθετες ρυθμίσεις.",
+ "ai.cost.plan_tokens": "Αυτό το πλάνο: {n} tokens",
+ "ai.cost.plan_time": "{m} λ {s} δ",
+ "ai.cost.plan_elements": "{n} στοιχεία",
+ "ai.cost.plan_each": "{cost} ανά στοιχείο",
+ "ai.cost.costliest": "Το ακριβότερο βήμα αυτού του αιτήματος"
+}

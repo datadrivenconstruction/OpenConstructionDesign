@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Vis pris og tid",
+ "ai.cost.show_tip": "Hvor mye av en forespørsels tokens, pris og tid chatten viser mens den kjører.",
+ "ai.cost.show.off": "Av",
+ "ai.cost.show.brief": "Kort",
+ "ai.cost.show.detailed": "Detaljert",
+ "ai.cost.charged": "belastet {cost}",
+ "ai.cost.tokens_split": "inn {in} · ut {out} · bufret {cache}",
+ "ai.cost.step_no": "steg {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Eksporter alle runder",
+ "ai.settings.from_list": "Kontekststørrelse, lengste svar og priser hentes fra serverens modellliste. Endre dem under Avansert.",
+ "ai.cost.plan_tokens": "Denne planen: {n} tokens",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} elementer",
+ "ai.cost.plan_each": "{cost} per element",
+ "ai.cost.costliest": "Det dyreste steget i denne forespørselen"
+}

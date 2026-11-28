@@ -11,5 +11,8 @@
  "ai.stream.local": "روی این رایانه کار می‌کند و منتظر سرویس مدل نمی‌ماند",
  "ai.stream.stop": "توقف",
  "ai.stream.cancelled": "متوقف شد",
+ "ai.stream.writing": "مدل در حال نوشتن است، {n} توکن",
+ "ai.stream.rate": "{n} توکن/ثانیه",
+ "ai.stream.building": "پیش‌نویس اینجا ساخته می‌شود: {done} از {total}",
  "ai.stream.incomplete": "پیش‌نویس ناقص است. چیزی به مدل اعمال نشد."
 }

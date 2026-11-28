@@ -11,5 +11,8 @@
  "ai.stream.local": "Travail sur cet ordinateur, sans attendre le service du modèle",
  "ai.stream.stop": "Arrêter",
  "ai.stream.cancelled": "Arrêté",
+ "ai.stream.writing": "Le modèle écrit, {n} jetons",
+ "ai.stream.rate": "{n} jetons/s",
+ "ai.stream.building": "Le brouillon se construit ici : {done} sur {total}",
  "ai.stream.incomplete": "Le brouillon est incomplet. Rien n’a été appliqué au modèle."
 }

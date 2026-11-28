@@ -11,5 +11,8 @@
  "ai.stream.local": "Осы компьютерде жұмыс істеп тұр, модель қызметін күтпейді",
  "ai.stream.stop": "Тоқтату",
  "ai.stream.cancelled": "Тоқтатылды",
+ "ai.stream.writing": "Модель жазып жатыр, {n} токен",
+ "ai.stream.rate": "{n} токен/с",
+ "ai.stream.building": "Жоба осында құрылуда: {done} / {total}",
  "ai.stream.incomplete": "Жоба толық емес. Модельге ештеңе қолданылған жоқ."
 }

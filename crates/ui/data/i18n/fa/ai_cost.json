@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "نمایش هزینه و زمان",
+ "ai.cost.show_tip": "چه مقدار از توکن‌ها، قیمت و زمان یک درخواست در حین اجرا در گفتگو نشان داده شود.",
+ "ai.cost.show.off": "خاموش",
+ "ai.cost.show.brief": "کوتاه",
+ "ai.cost.show.detailed": "تفصیلی",
+ "ai.cost.charged": "محاسبه‌شده {cost}",
+ "ai.cost.tokens_split": "ورودی {in} · خروجی {out} · از حافظه نهان {cache}",
+ "ai.cost.step_no": "گام {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "صادر کردن همه نوبت‌ها",
+ "ai.settings.from_list": "اندازه زمینه، طولانی‌ترین پاسخ و قیمت‌ها از فهرست مدل‌های سرور می‌آیند. آن‌ها را در بخش پیشرفته تغییر دهید.",
+ "ai.cost.plan_tokens": "این طرح: {n} توکن",
+ "ai.cost.plan_time": "{m} دقیقه {s} ثانیه",
+ "ai.cost.plan_elements": "{n} عنصر",
+ "ai.cost.plan_each": "{cost} برای هر عنصر",
+ "ai.cost.costliest": "پرهزینه‌ترین گام این درخواست"
+}

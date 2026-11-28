@@ -11,5 +11,8 @@
  "ai.stream.local": "इस कंप्यूटर पर चल रहा है, मॉडल सेवा का इंतज़ार नहीं कर रहा",
  "ai.stream.stop": "रोकें",
  "ai.stream.cancelled": "रोका गया",
+ "ai.stream.writing": "मॉडल लिख रहा है, {n} टोकन",
+ "ai.stream.rate": "{n} टोकन/सेकंड",
+ "ai.stream.building": "ड्राफ्ट यहां बन रहा है: {total} में से {done}",
  "ai.stream.incomplete": "ड्राफ़्ट अधूरा है। मॉडल में कुछ लागू नहीं हुआ।"
 }

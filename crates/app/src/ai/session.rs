@@ -143,6 +143,8 @@ pub enum ToWorker {
     SetChecked(Vec<(u32, bool)>),
     SetVariant(u32),
     AllowLarge(bool),
+    /// The limits of the next turn and the mode the plan caps follow; sent before each turn.
+    SetLimits(Limits, ddc_ai::limits::Reach),
     /// Images the person attached for comparison (a picture, or the first page of a PDF).
     SetReference(Vec<ddc_ai::ImageData>),
     /// The `point_ctx` block of the next turn (from `point::message` without the text); `None` clears it.
@@ -238,6 +240,10 @@ pub enum FromWorker {
     Preparing {
         done: u64,
         total: u64,
+    },
+    /// Tokens the model wrote into tool-call arguments (an estimate): progress, not a stall.
+    Progress {
+        tokens: u64,
     },
     Synced {
         head: u64,
@@ -349,6 +355,10 @@ pub enum UiEvent {
         done: u64,
         total: u64,
     },
+    /// The model is writing tool-call arguments: about this many more tokens.
+    Progress {
+        tokens: u64,
+    },
     RuleDraft {
         rule: RuleDef,
         text: String,
@@ -452,6 +462,7 @@ pub struct Core {
     copies: Box<dyn CopyStore>,
     pub sets: Sets,
     pub plan: PlanState,
+    reach: ddc_ai::limits::Reach,
     pub view: ViewCtx,
     pub findings: HashMap<String, FindingRef>,
     next_finding: u32,
@@ -564,6 +575,7 @@ fn turn_events<'a>(
                 FromWorker::Usage(u)
             }
             ConvoEvent::Sent(s) => FromWorker::Sent(s),
+            ConvoEvent::Progress { tokens } => FromWorker::Progress { tokens },
             ConvoEvent::Step(r) => FromWorker::Step(r),
         };
         let _ = tx.send(m);
@@ -963,7 +975,7 @@ impl Core {
             let _q = ddc_model::perf::span("draft.view.qty");
             qty = validate::qty_deltas(&self.ed.model, b)?;
         }
-        let caps = validate::PlanCaps::read(&self.ed.model);
+        let caps = validate::PlanCaps::read(&self.ed.model).under(&self.ed.model, self.reach);
         issues.extend(gate_issues(&caps, self.target, &self.plan, &diff));
         let mass = validate::mass_issues(&self.ed.model, &diff, self.plan.allow_large);
         if self.target == catalog::Target::Main {
@@ -1294,7 +1306,7 @@ impl Core {
         }
         // the host checks again what the registry gate checked: a caller may skip the gate
         let Some(spec) = catalog::find(name) else {
-            return CmdError::from_text("unknown tool").outcome();
+            return CmdError::from_text(&format!("unknown tool: {}", name.chars().take(64).collect::<String>())).outcome();
         };
         if !catalog::allowed(spec, cx.mode, images) {
             return CmdError::new(ErrorCode::NotAllowed, "not_allowed").outcome();
@@ -1303,7 +1315,7 @@ impl Core {
             return CmdError::from_text(&e).outcome();
         }
         let Some(run) = handler(name) else {
-            return CmdError::from_text("unknown tool").outcome();
+            return CmdError::from_text(&format!("unknown tool: {}", name.chars().take(64).collect::<String>())).outcome();
         };
         let can_see = images;
         match run(self, args, cx) {
@@ -1609,6 +1621,14 @@ impl Core {
                 self.attachments = files;
                 self.requirements = facts;
             }
+            ToWorker::SetLimits(l, reach) => {
+                self.max_chars = l.max_result_chars;
+                conv.set_limits(l);
+                if self.reach != reach {
+                    self.reach = reach;
+                    self.refresh();
+                }
+            }
             ToWorker::AllowLarge(on) => {
                 self.ack += 1;
                 self.plan.allow_large = on;
@@ -1757,6 +1777,7 @@ fn open_core(init: WorkerInit) -> Result<(Core, Conversation), AiError> {
         copies,
         sets: Sets::default(),
         plan: PlanState::default(),
+        reach: ddc_ai::limits::Reach::Normal,
         view,
         findings: HashMap::new(),
         next_finding: 0,
@@ -2240,6 +2261,11 @@ impl UiSession {
         facts: Vec<ddc_io::attach::facts::Fact>,
     ) {
         self.send(ToWorker::SetAttachments(files, facts));
+    }
+
+    /// The limits and mode of the turns to come; the caps of the shown plan follow at once.
+    pub fn set_limits(&mut self, l: Limits, reach: ddc_ai::limits::Reach) {
+        self.send(ToWorker::SetLimits(l, reach));
     }
 
     pub fn allow_large(&mut self, on: bool) {
@@ -2871,6 +2897,10 @@ impl UiSession {
         match m {
             FromWorker::Text(t) => self.events.push_back(UiEvent::Text(t)),
             FromWorker::Tool { name, ok, err } => {
+                if ok == Some(false) {
+                    let e = tool_error_entry(&self.session, &self.endpoint, &self.model_name, &name, err.as_deref());
+                    audit_write(&ed.model, &e);
+                }
                 // the model got the refusal as JSON; the person reads it in the UI language
                 let code = err.as_deref().and_then(super::refusals::code_of);
                 let err = err.map(|e| super::refusals::human(&e));
@@ -2913,6 +2943,7 @@ impl UiSession {
             FromWorker::AutoTurn => self.busy = true,
             FromWorker::TurnEnd(end) => self.events.push_back(UiEvent::TurnDone(end)),
             FromWorker::Ready { base, work } => self.paths = Some((base, work)),
+            FromWorker::Progress { tokens } => self.events.push_back(UiEvent::Progress { tokens }),
             FromWorker::Preparing { done, total } => {
                 self.events.push_back(UiEvent::Preparing { done, total })
             }
@@ -3234,6 +3265,24 @@ pub fn audit_write(m: &Model, e: &AuditEntry) -> bool {
     }
 }
 
+/// Longest tool error text kept in the log.
+const AUDIT_ERR_CHARS: usize = 2000;
+
+/// A failed tool call as a log entry: the tool and the full reason, not only that it failed.
+fn tool_error_entry(session: &str, endpoint: &str, model: &str, name: &str, err: Option<&str>) -> AuditEntry {
+    let why: String = err.unwrap_or("").chars().take(AUDIT_ERR_CHARS).collect();
+    AuditEntry {
+        session: session.to_string(),
+        actor: "assistant".to_string(),
+        event: "tool_error".to_string(),
+        endpoint: Some(endpoint.to_string()),
+        model: Some(model.to_string()),
+        text: Some(format!("{name}: {why}")),
+        status: "failed".to_string(),
+        ..AuditEntry::default()
+    }
+}
+
 /// What failed to reach the log since the last call, and forgets it.
 pub fn take_audit_lost() -> (bool, bool) {
     AUDIT_LOST.with(|c| c.replace((false, false)))
@@ -3250,6 +3299,21 @@ fn applied_seq(
             events.push_back(UiEvent::Failed(AiError::AppliedNotRefreshed(e.to_string())));
             top + 1
         }
+    }
+}
+
+#[cfg(test)]
+mod tool_error_tests {
+    use super::*;
+
+    #[test]
+    fn a_failed_tool_leaves_its_reason_in_the_log() {
+        let e = tool_error_entry("s", "ep", "m", "create_geometry", Some("door GF-D06 does not fit the wall"));
+        assert_eq!((e.event.as_str(), e.status.as_str()), ("tool_error", "failed"));
+        assert_eq!(e.text.as_deref(), Some("create_geometry: door GF-D06 does not fit the wall"));
+        let long = "x".repeat(AUDIT_ERR_CHARS * 2);
+        let e = tool_error_entry("s", "ep", "m", "t", Some(&long));
+        assert_eq!(e.text.unwrap().chars().count(), AUDIT_ERR_CHARS + 3);
     }
 }
 

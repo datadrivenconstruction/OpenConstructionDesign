@@ -11,5 +11,8 @@
  "ai.stream.local": "このコンピューターで処理中(モデルサービスを待機していません)",
  "ai.stream.stop": "停止",
  "ai.stream.cancelled": "停止しました",
+ "ai.stream.writing": "モデルが書き込み中、{n} トークン",
+ "ai.stream.rate": "{n} トークン/秒",
+ "ai.stream.building": "ここで下書きを作成中: {done} / {total}",
  "ai.stream.incomplete": "ドラフトは不完全です。モデルには何も適用されていません。"
 }

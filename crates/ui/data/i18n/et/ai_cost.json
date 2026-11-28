@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Kuva hind ja aeg",
+ "ai.cost.show_tip": "Kui palju päringu märke, hinda ja aega vestlus töö ajal näitab.",
+ "ai.cost.show.off": "Väljas",
+ "ai.cost.show.brief": "Lühike",
+ "ai.cost.show.detailed": "Üksikasjalik",
+ "ai.cost.charged": "tasutud {cost}",
+ "ai.cost.tokens_split": "sisend {in} · väljund {out} · vahemälust {cache}",
+ "ai.cost.step_no": "samm {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Ekspordi kõik käigud",
+ "ai.settings.from_list": "Konteksti suurus, pikim vastus ja hinnad tulevad serveri mudelite loendist. Muutke neid jaotises Täpsemalt.",
+ "ai.cost.plan_tokens": "See plaan: {n} märki",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "{n} elementi",
+ "ai.cost.plan_each": "{cost} elemendi kohta",
+ "ai.cost.costliest": "Selle päringu kallim samm"
+}

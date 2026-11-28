@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Баа менен убакытты көрсөтүү",
+ "ai.cost.show_tip": "Суроонун канча токенин, баасын жана убактысын чат иштеп жатканда көрсөтөөрүн тандаңыз.",
+ "ai.cost.show.off": "Өчүк",
+ "ai.cost.show.brief": "Кыска",
+ "ai.cost.show.detailed": "Толук",
+ "ai.cost.charged": "эсептелди {cost}",
+ "ai.cost.tokens_split": "кирүү {in} · чыгуу {out} · кэштен {cache}",
+ "ai.cost.step_no": "{n}-кадам",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Бардык кезектерди экспорттоо",
+ "ai.settings.from_list": "Контекст өлчөмү, эң узун жооп жана баалар сервердин моделдер тизмесинен алынат. Аларды Кошумча бөлүмүндө өзгөртүңүз.",
+ "ai.cost.plan_tokens": "Бул план: {n} токен",
+ "ai.cost.plan_time": "{m} мин {s} с",
+ "ai.cost.plan_elements": "{n} элемент",
+ "ai.cost.plan_each": "ар бир элементке {cost}",
+ "ai.cost.costliest": "Бул суроонун эң кымбат кадамы"
+}

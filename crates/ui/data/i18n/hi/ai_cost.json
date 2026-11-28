@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "लागत और समय दिखाएं",
+ "ai.cost.show_tip": "अनुरोध के कितने टोकन, कीमत और समय चैट चलते समय दिखाती है।",
+ "ai.cost.show.off": "बंद",
+ "ai.cost.show.brief": "संक्षिप्त",
+ "ai.cost.show.detailed": "विस्तृत",
+ "ai.cost.charged": "शुल्क लिया गया {cost}",
+ "ai.cost.tokens_split": "इनपुट {in} · आउटपुट {out} · कैश से {cache}",
+ "ai.cost.step_no": "चरण {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "सभी टर्न निर्यात करें",
+ "ai.settings.from_list": "संदर्भ का आकार, सबसे लंबा उत्तर और कीमतें सर्वर की मॉडल सूची से आती हैं। इन्हें उन्नत में बदलें।",
+ "ai.cost.plan_tokens": "यह योजना: {n} टोकन",
+ "ai.cost.plan_time": "{m} मिनट {s} सेकंड",
+ "ai.cost.plan_elements": "{n} तत्व",
+ "ai.cost.plan_each": "प्रति तत्व {cost}",
+ "ai.cost.costliest": "इस अनुरोध का सबसे महंगा चरण"
+}

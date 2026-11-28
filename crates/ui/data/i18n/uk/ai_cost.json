@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Показувати вартість і час",
+ "ai.cost.show_tip": "Скільки токенів, ціни та часу запиту чат показує під час роботи.",
+ "ai.cost.show.off": "Вимк.",
+ "ai.cost.show.brief": "Коротко",
+ "ai.cost.show.detailed": "Докладно",
+ "ai.cost.charged": "списано {cost}",
+ "ai.cost.tokens_split": "вхід {in} · вихід {out} · з кешу {cache}",
+ "ai.cost.step_no": "крок {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Експортувати всі ходи",
+ "ai.settings.from_list": "Розмір контексту, найдовша відповідь і ціни беруться зі списку моделей сервера. Змініть їх у розділі «Додатково».",
+ "ai.cost.plan_tokens": "Цей план: токенів {n}",
+ "ai.cost.plan_time": "{m} хв {s} с",
+ "ai.cost.plan_elements": "елементів: {n}",
+ "ai.cost.plan_each": "{cost} за елемент",
+ "ai.cost.costliest": "Найдорожчий крок цього запиту"
+}

@@ -11,5 +11,8 @@
  "ai.stream.local": "اس کمپیوٹر پر چل رہا ہے، ماڈل سروس کا انتظار نہیں کر رہا",
  "ai.stream.stop": "روکیں",
  "ai.stream.cancelled": "رک گیا",
+ "ai.stream.writing": "ماڈل لکھ رہا ہے، {n} ٹوکنز",
+ "ai.stream.rate": "{n} ٹوکن/سیکنڈ",
+ "ai.stream.building": "مسودہ یہاں بن رہا ہے: {done} از {total}",
  "ai.stream.incomplete": "مسودہ نامکمل ہے۔ ماڈل میں کچھ لاگو نہیں ہوا۔"
 }

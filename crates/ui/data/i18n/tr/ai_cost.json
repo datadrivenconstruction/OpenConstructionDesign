@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Maliyeti ve süreyi göster",
+ "ai.cost.show_tip": "Bir isteğin token, fiyat ve süresinin ne kadarını sohbetin çalışırken gösterdiği.",
+ "ai.cost.show.off": "Kapalı",
+ "ai.cost.show.brief": "Kısa",
+ "ai.cost.show.detailed": "Ayrıntılı",
+ "ai.cost.charged": "ücretlendirilen {cost}",
+ "ai.cost.tokens_split": "giriş {in} · çıkış {out} · önbellekten {cache}",
+ "ai.cost.step_no": "adım {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Tüm turları dışa aktar",
+ "ai.settings.from_list": "Bağlam boyutu, en uzun yanıt ve fiyatlar sunucunun model listesinden gelir. Bunları Gelişmiş bölümünden değiştirin.",
+ "ai.cost.plan_tokens": "Bu plan: {n} token",
+ "ai.cost.plan_time": "{m} dk {s} sn",
+ "ai.cost.plan_elements": "{n} öğe",
+ "ai.cost.plan_each": "öğe başına {cost}",
+ "ai.cost.costliest": "Bu isteğin en pahalı adımı"
+}

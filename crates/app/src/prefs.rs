@@ -113,6 +113,8 @@ pub struct Prefs {
     /// Assistant limits the person changed (Settings > AI), by `ddc_ai::limits` key; others keep
     /// their default. Stored as `ai.limit.<key>=<value>`.
     pub ai_limits: std::collections::BTreeMap<String, u64>,
+    /// The mode a project without its own choice takes (`ddc_ai::limits::Reach::key`); empty: normal.
+    pub ai_reach: String,
     /// Where to save; `None` keeps settings in memory only (screenshots, tests).
     pub path: Option<PathBuf>,
     /// The last write of the settings files failed: not a setting, never written or compared.
@@ -220,6 +222,7 @@ impl Default for Prefs {
             full_axes: false,
             erp_link: false,
             ai_limits: Default::default(),
+            ai_reach: String::new(),
             path: None,
             write_fail: WriteFail::default(),
         }
@@ -305,6 +308,7 @@ impl Prefs {
                 }
                 "look.font" if ddc_ui::theme::UiFont::parse(v).is_some() => p.font = v.into(),
                 "look.text_size" => p.text_size = v.parse().unwrap_or(p.text_size),
+                "ai.reach" if ddc_ai::limits::Reach::parse(v).is_some() => p.ai_reach = v.into(),
                 k if k.starts_with("ai.limit.") => {
                     let key = &k["ai.limit.".len()..];
                     if let (Some(l), Ok(n)) = (ddc_ai::limits::find(key), v.parse::<u64>()) {
@@ -441,6 +445,8 @@ impl Prefs {
         ) + &format!("snap.px={}\nthin_lines={}\n", self.snap_px, u8::from(self.thin_lines))
           + &format!("full_axes={}\n", u8::from(self.full_axes))
           + &format!("erp_link={}\n", u8::from(self.erp_link))
+          + &(if self.ai_reach.is_empty() { String::new() } else { format!("ai.reach={}
+", self.ai_reach) })
           + &self.ai_limits.iter().map(|(k, v)| format!("ai.limit.{k}={v}\n")).collect::<String>()
           + &self.fold.text()
           + &format!(
@@ -505,6 +511,7 @@ look.icons={}
         units::set_frac_denominator(self.frac_denominator);
         units::set_small_area_in2(self.small_area_in2);
         crate::snap_refine::set_snap_px(self.snap_px);
+        ddc_ai::limits::set_default_reach(ddc_ai::limits::Reach::parse(&self.ai_reach).unwrap_or_default());
         ddc_ai::limits::set_overrides(self.ai_limits.iter().map(|(k, v)| (k.as_str(), *v)));
     }
 
@@ -538,6 +545,7 @@ fn prefs_round_trip_and_clamp() {
         ai_panel_w: 420.0,
         ai_panel_open: true,
         ai_profile: "p2".into(),
+        ai_reach: "large".into(),
         area_decimals: 1,
         volume_decimals: 4,
         frac_denominator: 64,

@@ -1,0 +1,18 @@
+{
+ "ai.cost.show": "Zobrazit cenu a čas",
+ "ai.cost.show_tip": "Kolik tokenů, ceny a času požadavku chat zobrazuje během práce.",
+ "ai.cost.show.off": "Vyp.",
+ "ai.cost.show.brief": "Stručně",
+ "ai.cost.show.detailed": "Podrobně",
+ "ai.cost.charged": "účtováno {cost}",
+ "ai.cost.tokens_split": "vstup {in} · výstup {out} · z mezipaměti {cache}",
+ "ai.cost.step_no": "krok {n}",
+ "ai.cost.file": "assistant-turns",
+ "ai.cost.export_project": "Exportovat všechny tahy",
+ "ai.settings.from_list": "Velikost kontextu, nejdelší odpověď a ceny se berou ze seznamu modelů serveru. Změníte je v části Upřesnit.",
+ "ai.cost.plan_tokens": "Tento plán: tokenů {n}",
+ "ai.cost.plan_time": "{m} min {s} s",
+ "ai.cost.plan_elements": "prvků: {n}",
+ "ai.cost.plan_each": "{cost} za prvek",
+ "ai.cost.costliest": "Nejdražší krok tohoto požadavku"
+}

@@ -11,5 +11,8 @@
  "ai.stream.local": "A trabalhar neste computador, sem esperar pelo serviço do modelo",
  "ai.stream.stop": "Parar",
  "ai.stream.cancelled": "Interrompido",
+ "ai.stream.writing": "O modelo está a escrever, {n} tokens",
+ "ai.stream.rate": "{n} tok/s",
+ "ai.stream.building": "O rascunho está a ser construído aqui: {done} de {total}",
  "ai.stream.incomplete": "O rascunho está incompleto. Nada foi aplicado ao modelo."
 }
