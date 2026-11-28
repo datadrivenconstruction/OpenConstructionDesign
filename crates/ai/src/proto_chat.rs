@@ -455,7 +455,7 @@ data: [DONE]
             Message::text(Role::User, "hi"),
             Message::text(Role::User, "again"),
         ];
-        let on = messages_for("anthropic/claude-x", &msgs);
+        let on = messages_for(&format!("{}x", crate::gateway::CACHE_VENDOR), &msgs);
         assert_eq!(on[0]["content"][0]["cache_control"]["type"], "ephemeral");
         assert!(on[1]["content"].is_string(), "only the newest content moves");
         assert_eq!(on[2]["content"][0]["cache_control"]["ttl"], crate::provider::CACHE_TTL);

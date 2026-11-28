@@ -140,8 +140,12 @@ pub fn funds_error(status: u16, body: &str) -> Option<ProviderError> {
 /// request (the Claude family, by id or through a gateway's vendor prefix).
 pub fn caches_prompt(model: &str) -> bool {
     let m = model.to_ascii_lowercase();
-    m.starts_with("anthropic/") || m.contains("claude")
+    m.starts_with(CACHE_VENDOR) || m.contains(CACHE_FAMILY)
 }
+
+/// Gateway vendor prefix and model family name of the servers that take cache points.
+pub const CACHE_VENDOR: &str = "anthropic/";
+pub const CACHE_FAMILY: &str = "claude";
 
 /// Cost of a run from token counts and per-million prices; `None` without both prices.
 pub fn cost_of(
