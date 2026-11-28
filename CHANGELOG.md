@@ -13,6 +13,7 @@
 - `ddc run` reports level read errors instead of hiding them.
 
 ### Scripting
+- Lua builds lattice girders, double-angle members, shells and roofs as model elements.
 - Lua `member{}` and `slab{}` blocks.
 - The lattice audit joins members crossing at a node instead of reporting clashes, and names ids and points.
 
@@ -33,6 +34,8 @@
 - Time and token limits are shown and adjustable; `ddc ai --max-tokens`, `--max-time-s`; a stop names the limit and how to raise it.
 
 ### Editor
+- Realism checks flag solid glass, filled blocks, parts of unlikely size and parts outside the outline.
+- Solids appear in the spreadsheet and CSV exports with volume, area and net volume, and in OBJ and mesh exports with unique part names.
 - The window is named OpenConstructionDesign.
 - Scrollbars never cover content.
 - The model summary counts members, plates and other solids.
