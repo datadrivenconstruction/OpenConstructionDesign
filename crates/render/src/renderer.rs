@@ -191,6 +191,17 @@ impl FrameUniforms {
             look: [1.0, 1.0, 0.0, 0.0],
         }
     }
+    /// Shifts the projection by a sub-pixel amount (pixels, y up) for frame accumulation.
+    pub fn with_jitter(mut self, dx: f32, dy: f32, size: (u32, u32)) -> Self {
+        if dx == 0.0 && dy == 0.0 {
+            return self;
+        }
+        let t = Mat4::from_translation(Vec3::new(2.0 * dx / size.0.max(1) as f32, 2.0 * dy / size.1.max(1) as f32, 0.0));
+        let vp = t * Mat4::from_cols_array_2d(&self.view_proj);
+        self.view_proj = vp.to_cols_array_2d();
+        self.inv_view_proj = vp.inverse().to_cols_array_2d();
+        self
+    }
     /// Sky colours from the background gradient (sRGB top and bottom): the defaults, pulled 15%
     /// towards the painted tones, so the lit surfaces and the backdrop agree while light stays
     /// cool above and warm below.

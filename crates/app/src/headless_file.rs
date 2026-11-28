@@ -78,6 +78,8 @@ Video and frames (rendered offscreen with --screenshot; --ui-shot needs no other
   --reveal-motion full|reduced|off   how much the elements move while they appear
   --reveal-camera fixed|orbit|follow  fixed frames the whole model (default), orbit turns
                         once around it, follow frames each step
+  --reveal-aa N          renders averaged per frame (1..64, default 8; 1 is off): smooth edges and
+                        steady shadows in video
   --ui-shot <script.txt> the whole editor interface offscreen, driven by a script of taps,
                         keys and commands; every shot line writes a PNG
   Put the frames in a video with any encoder, for example

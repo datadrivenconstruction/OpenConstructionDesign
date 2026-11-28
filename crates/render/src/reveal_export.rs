@@ -123,6 +123,52 @@ impl Timeline {
     }
 }
 
+/// Sub-pixel offset (in pixels, -0.5..0.5) of sample `i`: a low-discrepancy sequence, so any
+/// prefix covers the pixel evenly and sample 0 is the unshifted frame.
+pub fn jitter_offset(i: u32) -> (f32, f32) {
+    if i == 0 {
+        return (0.0, 0.0);
+    }
+    let halton = |mut n: u32, b: u32| {
+        let (mut f, mut r) = (1.0f32, 0.0f32);
+        while n > 0 {
+            f /= b as f32;
+            r += f * (n % b) as f32;
+            n /= b;
+        }
+        r
+    };
+    (halton(i, 2) - 0.5, halton(i, 3) - 0.5)
+}
+
+fn srgb_to_lin(v: u8) -> f32 {
+    let v = v as f32 / 255.0;
+    if v <= 0.04045 {
+        v / 12.92
+    } else {
+        ((v + 0.055) / 1.055).powf(2.4)
+    }
+}
+
+fn accumulate(sum: &mut [f32], px: &[u8]) {
+    let lut: Vec<f32> = (0..=255u8).map(srgb_to_lin).collect();
+    for (i, (s, p)) in sum.iter_mut().zip(px).enumerate() {
+        *s += if i % 4 == 3 { *p as f32 / 255.0 } else { lut[*p as usize] };
+    }
+}
+
+fn resolve(sum: &[f32], n: u32) -> Vec<u8> {
+    let k = 1.0 / n as f32;
+    sum.iter()
+        .enumerate()
+        .map(|(i, s)| {
+            let v = (s * k).clamp(0.0, 1.0);
+            let e = if i % 4 == 3 || v <= 0.003_130_8 { v * if i % 4 == 3 { 1.0 } else { 12.92 } } else { 1.055 * v.powf(1.0 / 2.4) - 0.055 };
+            (e * 255.0 + 0.5) as u8
+        })
+        .collect()
+}
+
 /// Export frame.
 #[derive(Clone, Debug, PartialEq)]
 pub struct Rgba8Image {
@@ -143,6 +189,7 @@ pub struct TimelineRender<'a> {
     cams: &'a dyn Fn(u32) -> OrbitCamera,
     size: (u32, u32),
     frame: u32,
+    aa: u32,
 }
 
 #[cfg(feature = "gpu")]
@@ -194,7 +241,7 @@ pub fn render_timeline<'a>(
             scene,
         );
         renderer.chunks.build_all(&device);
-        Ok(TimelineRender { device, queue, renderer, color, views, tl, cams, size, frame: 0 })
+        Ok(TimelineRender { device, queue, renderer, color, views, tl, cams, size, frame: 0, aa: 1 })
     })
 }
 
@@ -205,7 +252,27 @@ impl TimelineRender<'_> {
         self.one(f)
     }
 
+    /// Samples per exported frame: each is rendered with a sub-pixel shift of the projection and the
+    /// results are averaged in linear light (edges, thin lines and shadow borders stop crawling).
+    pub fn set_samples(&mut self, n: u32) {
+        self.aa = n.clamp(1, 64);
+    }
+
     fn one(&mut self, f: u32) -> Result<Rgba8Image, String> {
+        let (w, h) = self.size;
+        if self.aa <= 1 {
+            let px = self.shot(f, (0.0, 0.0))?;
+            return Ok(Rgba8Image { w, h, px });
+        }
+        let mut sum = vec![0f32; (w * h * 4) as usize];
+        for i in 0..self.aa {
+            let px = self.shot(f, jitter_offset(i))?;
+            accumulate(&mut sum, &px);
+        }
+        Ok(Rgba8Image { w, h, px: resolve(&sum, self.aa) })
+    }
+
+    fn shot(&mut self, f: u32, jit: (f32, f32)) -> Result<Vec<u8>, String> {
         let (w, h) = self.size;
         let cam = (self.cams)(f);
         let anim = self.tl.sample(f);
@@ -219,7 +286,7 @@ impl TimelineRender<'_> {
             mapped_at_creation: false,
         });
         let mut enc = self.device.create_command_encoder(&Default::default());
-        let u = FrameUniforms::new(&cam, w as f32 / h as f32, None).with_quality(Quality::High);
+        let u = FrameUniforms::new(&cam, w as f32 / h as f32, None).with_quality(Quality::High).with_jitter(jit.0, jit.1, (w, h));
         self.renderer.prepare(&self.device, &self.queue, &mut enc, &u, (w, h));
         {
             let c = crate::headless::CLEAR;
@@ -276,7 +343,7 @@ impl TimelineRender<'_> {
             }
         }
         buf.unmap();
-        Ok(Rgba8Image { w, h, px })
+        Ok(px)
     }
 }
 
@@ -317,6 +384,32 @@ mod tests {
 
     fn bx(a: [f32; 3], b: [f32; 3]) -> Aabb {
         Aabb { min: Vec3::from(a), max: Vec3::from(b) }
+    }
+
+    #[test]
+    fn jitter_samples_stay_in_the_pixel_and_differ() {
+        assert_eq!(jitter_offset(0), (0.0, 0.0));
+        let v: Vec<_> = (0..16).map(jitter_offset).collect();
+        assert!(v.iter().all(|(x, y)| x.abs() <= 0.5 && y.abs() <= 0.5));
+        for (i, a) in v.iter().enumerate() {
+            assert!(v[i + 1..].iter().all(|b| a != b));
+        }
+        let mean = v.iter().fold((0.0, 0.0), |m, p| (m.0 + p.0 / 16.0, m.1 + p.1 / 16.0));
+        assert!(mean.0.abs() < 0.1 && mean.1.abs() < 0.1, "{mean:?}");
+    }
+
+    #[test]
+    fn accumulation_averages_in_linear_light() {
+        let (a, b) = ([0u8, 0, 0, 255], [255u8, 255, 255, 255]);
+        let mut s = vec![0f32; 4];
+        accumulate(&mut s, &a);
+        accumulate(&mut s, &b);
+        let o = resolve(&s, 2);
+        assert!((o[0] as i32 - 188).abs() <= 1, "{o:?}");
+        assert_eq!(o[3], 255);
+        let mut s = vec![0f32; 4];
+        accumulate(&mut s, &b);
+        assert_eq!(resolve(&s, 1), b);
     }
 
     #[test]

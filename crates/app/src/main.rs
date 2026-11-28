@@ -1187,8 +1187,9 @@ fn screenshot(a: &Args, out: &str, log: &mut StartupLog) -> Result<(), String> {
         let n = ddc_app::reveal::camera_arg(&argv)
             .and_then(|cam| ddc_app::reveal::Span::from_argv(&argv).map(|sp| (cam, sp)))
             .and_then(|(cam, span)| {
+                let samples = ddc_app::reveal::samples_arg(&argv)?;
                 ddc_app::reveal::order_arg(&argv).and_then(|order| {
-                    ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame, span, cam, order)
+                    ddc_app::reveal::export_cli(&mut app, &a.reveal, std::path::Path::new(dir), a.reveal_fps, a.size, a.reveal_frame, span, cam, order, samples)
                 })
             })
             .unwrap_or_else(|e| {

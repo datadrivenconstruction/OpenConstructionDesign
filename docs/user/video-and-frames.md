@@ -55,6 +55,9 @@ The camera frames the whole model and stays still (`--reveal-camera fixed`, the 
 `--reveal-camera orbit` turns once around the model over the show, and `--reveal-camera follow`
 frames each step as it appears.
 
+Each frame is the average of 8 slightly shifted renders, which keeps edges and shadows steady while the
+camera moves. `--reveal-aa N` changes the count (1 to 64; 1 is faster and slightly rougher).
+
 ## Frames to video
 
 Give `--reveal-out` a video file instead of a folder (`.mp4`, `.webm`, `.mov` or `.gif`) and

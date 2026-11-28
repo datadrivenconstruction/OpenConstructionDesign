@@ -585,6 +585,15 @@ pub fn camera_arg(argv: &[String]) -> Result<CamMode, String> {
     }
 }
 
+/// `--reveal-aa N`: renders averaged per exported frame (1..=64); absent is 8, 1 turns it off.
+pub fn samples_arg(argv: &[String]) -> Result<u32, String> {
+    let Some(i) = argv.iter().position(|s| s == "--reveal-aa") else { return Ok(8) };
+    match argv.get(i + 1).and_then(|v| v.parse::<u32>().ok()) {
+        Some(n) if (1..=64).contains(&n) => Ok(n),
+        _ => Err("--reveal-aa: expected a whole number from 1 to 64".into()),
+    }
+}
+
 /// Per-frame cameras of `mode`; `cam` already frames the whole model. Fixed and orbit keep its
 /// target and distance, so nothing jumps between batches.
 pub fn camera_path_of(
@@ -967,11 +976,13 @@ pub fn export_frames(
     span: Span,
     section: Option<&ddc_render::Aabb>,
     mode: CamMode,
+    samples: u32,
 ) -> Result<Exported, String> {
     std::fs::create_dir_all(dir).map_err(|e| e.to_string())?;
     let (path, stuck) = camera_path_of(mode, scene, tl, cam, size.0 as f32 / size.1.max(1) as f32, section);
     let cams = |f: u32| path[(f as usize).min(path.len() - 1)].clone();
     let mut r = ddc_render::reveal_export::render_timeline(scene, tl, &cams, size)?;
+    r.set_samples(samples);
     let save = |i: u32, img: ddc_render::reveal_export::Rgba8Image| -> Result<(), String> {
         let png = crate::ai::session::encode_png(&img.px, img.w, img.h)?;
         std::fs::write(dir.join(frame_file(i)), png).map_err(|e| e.to_string())
@@ -1032,6 +1043,7 @@ pub fn export_cli(
     span: Span,
     cam_mode: CamMode,
     order: Order,
+    samples: u32,
 ) -> Result<Exported, String> {
     let (scene, map) = packed(&with_materials(&a.ed, a.ed.scene()));
     let old: Vec<u32> = map.keys().copied().collect();
@@ -1083,12 +1095,12 @@ pub fn export_cli(
     }
     let section = a.view.section_box;
     if !video {
-        return export_frames(&scene, &tl, &cam, size, out, only, span, section.as_ref(), cam_mode);
+        return export_frames(&scene, &tl, &cam, size, out, only, span, section.as_ref(), cam_mode, samples);
     }
     let stem = out.file_name().map(|n| n.to_string_lossy().into_owned()).unwrap_or_default();
     let frames = out.with_file_name(format!("{stem}.frames"));
     let _ = std::fs::remove_dir_all(&frames);
-    let n = export_frames(&scene, &tl, &cam, size, &frames, only, span, section.as_ref(), cam_mode)?;
+    let n = export_frames(&scene, &tl, &cam, size, &frames, only, span, section.as_ref(), cam_mode, samples)?;
     encode(&frames, fps, out)?;
     Ok(n)
 }
@@ -1603,6 +1615,10 @@ mod tests {
         assert_eq!(camera_arg(&v(&["ddc"])), Ok(CamMode::Fixed));
         assert_eq!(camera_arg(&v(&["ddc", "--reveal-camera", "orbit"])), Ok(CamMode::Orbit));
         assert!(camera_arg(&v(&["ddc", "--reveal-camera"])).is_err());
+        assert_eq!(samples_arg(&v(&["ddc"])), Ok(8));
+        assert_eq!(samples_arg(&v(&["ddc", "--reveal-aa", "1"])), Ok(1));
+        assert!(samples_arg(&v(&["ddc", "--reveal-aa", "0"])).is_err());
+        assert!(samples_arg(&v(&["ddc", "--reveal-aa"])).is_err());
         assert_eq!(wants_headless(&v(&["ddc", "--open-project", "a.ddc"])), Ok(false));
         assert_eq!(wants_headless(&v(&["ddc", "--reveal-out", "show.mp4"])), Ok(true));
         assert!(wants_headless(&v(&["ddc", "--reveal-out", "--reveal", "all"])).is_err());
