@@ -144,7 +144,7 @@ fn foliage(base0: vec3<f32>, n: vec3<f32>, v: vec3<f32>, l: vec3<f32>, world: ve
     // only a faint sky sheen at grazing angles (rough)
     let fres = pow(1.0 - clamp(dot(n, v), 0.0, 1.0), 5.0);
     c = mix(c, mix(bounce, sky, 0.7) * ao, fres * 0.1 * 0.5);
-    return c * (2.51 * c + vec3<f32>(0.03)) / (c * (2.43 * c + vec3<f32>(0.59)) + vec3<f32>(0.14));
+    return tone_filmic(c);
 }
 
 @fragment
@@ -229,9 +229,7 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     let sun = max(dot(n, l), 0.0) * sun_light(i.world, n);
     var ao = ambient_occ(i.clip.xy);
     if (u.params.z < 0.5) { ao = mix(0.8, 1.0, smoothstep(0.0, 0.9, i.world.z - u.view.w)); }
-    let sky = vec3<f32>(0.80, 0.88, 1.0);
-    let bounce = vec3<f32>(0.42, 0.39, 0.35);
-    let hemi = mix(bounce, sky, n.z * 0.5 + 0.5);
+    let hemi = sky_ambient(n);
     let sun_c = vec3<f32>(1.0, 0.95, 0.86) * 1.15;
     // a metal has little diffuse light; its highlight and reflection take its own colour
     var c = base * (hemi * 0.62 * ao + sun_c * sun) * (1.0 - 0.6 * metal);
@@ -243,10 +241,10 @@ fn fs_real(i: VOut) -> @location(0) vec4<f32> {
     c += sun_c * spec_c * pow(max(dot(n, h), 0.0), power) * sun * (1.0 - rough) * 0.6;
     let fres = pow(1.0 - clamp(dot(n, v), 0.0, 1.0), 5.0);
     let r = reflect(-v, n);
-    let refl = mix(bounce, sky, clamp(r.z * 0.5 + 0.5, 0.0, 1.0)) * spec_c;
+    let refl = sky_dir(r) * spec_c;
     let f0 = mix(0.04, 0.6, metal);
     c = mix(c, refl * ao, (f0 + (1.0 - f0) * fres) * (1.0 - rough) * 0.6);
-    // filmic curve: keeps highlights from clipping (published ACES fit, Narkowicz 2015)
-    c = c * (2.51 * c + vec3<f32>(0.03)) / (c * (2.43 * c + vec3<f32>(0.59)) + vec3<f32>(0.14));
+    // filmic curve keeps highlights from clipping, then distance haze
+    c = haze(tone_filmic(c), dist);
     return vec4<f32>(mark(c, n, to_eye, selected, hovered, i.elem), 1.0);
 }

@@ -315,6 +315,10 @@ impl Viewport {
             .with_accent(crate::overlay::rgb(ov.selection))
             .with_hover(crate::overlay::rgb(ov.hover))
             .with_theme(self.dark)
+            .with_sky(
+                [self.bg[0].r(), self.bg[0].g(), self.bg[0].b()],
+                [self.bg[1].r(), self.bg[1].g(), self.bg[1].b()],
+            )
             .with_quality(self.nav.quality(Quality::High))
             .with_clip(self.section_box)
             .with_style(self.nav.style)

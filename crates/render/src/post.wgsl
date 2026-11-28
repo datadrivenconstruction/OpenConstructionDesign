@@ -87,18 +87,50 @@ fn eye_dist(p: vec2<i32>) -> f32 {
     return eye_len(world_at(vec2<f32>(p) + 0.5, d));
 }
 
-// Frame output; silhouette outline from the depth jump (neighbouring pixel clearly farther) -
-// once per pixel, no face redraw.
+fn eye_pos(p: vec2<i32>) -> vec3<f32> {
+    return world_at(vec2<f32>(p) + 0.5, depth_px(p));
+}
+
+// Frame output; outline from two cues, once per pixel and with no face redraw: a depth jump
+// (a neighbour clearly farther: silhouette) and, when `look.y` > 0, a fold (a neighbour that
+// leaves the tangent plane of the pixel). The width follows the frame height (`look.x`).
 @fragment
 fn fs_composite(i: FOut) -> @location(0) vec4<f32> {
     let c = textureSampleLevel(frame_tex, frame_smp, i.uv, 0.0);
     let ip = vec2<i32>(i.uv * u.view.xy);
     let d = depth_px(ip);
     if (c.a < 0.99 || d <= 0.0 || u.fx.y < 0.5) { return c; }
+    let w = max(i32(round(u.look.x)), 1);
     let dist = eye_len(world_at(vec2<f32>(ip) + 0.5, d));
-    let far = max(max(eye_dist(ip + vec2<i32>(1, 0)), eye_dist(ip - vec2<i32>(1, 0))),
-                  max(eye_dist(ip + vec2<i32>(0, 1)), eye_dist(ip - vec2<i32>(0, 1))));
-    let e = smoothstep(0.04, 0.12, (far - dist) / dist) * 0.6;
+    let far = max(max(eye_dist(ip + vec2<i32>(w, 0)), eye_dist(ip - vec2<i32>(w, 0))),
+                  max(eye_dist(ip + vec2<i32>(0, w)), eye_dist(ip - vec2<i32>(0, w))));
+    // diagonal neighbours round off the stair steps of the depth edge
+    let dg = max(max(eye_dist(ip + vec2<i32>(w, w)), eye_dist(ip - vec2<i32>(w, w))),
+                 max(eye_dist(ip + vec2<i32>(w, -w)), eye_dist(ip - vec2<i32>(w, -w))));
+    let jump = max((far - dist) / dist, 0.7 * (dg - dist) / dist);
+    var e = smoothstep(0.04, 0.12, jump) * 0.6;
+    if (u.look.y > 0.0 && dist < 1e8) {
+        // fold: the neighbours' offset from the tangent plane, as the sine of the angle to it
+        let p = world_at(vec2<f32>(ip) + 0.5, d);
+        let pr = eye_pos(ip + vec2<i32>(w, 0));
+        let pl = eye_pos(ip - vec2<i32>(w, 0));
+        let pd = eye_pos(ip + vec2<i32>(0, w));
+        let pu = eye_pos(ip - vec2<i32>(0, w));
+        var dx = pr - p;
+        if (length(p - pl) < length(dx)) { dx = p - pl; }
+        var dy = pd - p;
+        if (length(p - pu) < length(dy)) { dy = p - pu; }
+        let n = normalize(cross(dx, dy));
+        // only neighbours on this surface count: a depth jump is the other cue's job
+        let near = vec4<f32>(length(pr - p), length(pl - p), length(pd - p), length(pu - p));
+        let lim = dist * 0.02 * f32(w);
+        var fold = 0.0;
+        if (near.x < lim) { fold = max(fold, abs(dot(n, pr - p)) / max(near.x, 1e-5)); }
+        if (near.y < lim) { fold = max(fold, abs(dot(n, pl - p)) / max(near.y, 1e-5)); }
+        if (near.z < lim) { fold = max(fold, abs(dot(n, pd - p)) / max(near.z, 1e-5)); }
+        if (near.w < lim) { fold = max(fold, abs(dot(n, pu - p)) / max(near.w, 1e-5)); }
+        e = max(e, smoothstep(0.30, 0.65, fold) * 0.5 * u.look.y);
+    }
     let ink = mix(vec3<f32>(0.16, 0.17, 0.20), vec3<f32>(0.03, 0.035, 0.045), u.params.x);
     return vec4<f32>(mix(c.rgb, ink, e), c.a);
 }

@@ -325,7 +325,9 @@ fn fs(i: VOut) -> @location(0) vec4<f32> {
             var c = mix(vec3<f32>(0.10, 0.11, 0.13), vec3<f32>(0.04, 0.045, 0.055), dark);
             // wireframe and x-ray in the dark theme: light edges over a dark background
             if (dark > 0.5 && u.style.x > 2.5) { c = vec3<f32>(0.78, 0.81, 0.86); }
-            return vec4<f32>(c, mix(0.55, 0.7, dark));
+            // a pixel wider than a few centimetres sees many members: thinner ink, no grey haze
+            let px_m = length(dpdx(i.world)) + length(dpdy(i.world));
+            return vec4<f32>(c, mix(0.55, 0.7, dark) * mix(1.0, 0.45, smoothstep(0.03, 0.25, px_m)));
         }
         // ground grid: thin, fades with distance from the look-at point (relative to camera distance)
         let d = distance(i.world.xy, orbit_eye().xy);
@@ -371,9 +373,7 @@ fn fs(i: VOut) -> @location(0) vec4<f32> {
     }
 
     // hemisphere (sky/ground) + sun with soft transition and shadow + counter fill light
-    let sky = vec3<f32>(0.93, 0.96, 1.0);
-    let ground = vec3<f32>(0.55, 0.52, 0.49);
-    let hemi = mix(ground, sky, n.z * 0.5 + 0.5);
+    let hemi = sky_ambient(n);
     let wrap = clamp((dot(n, l) + 0.2) / 1.2, 0.0, 1.0);
     let sun = wrap * sun_light(i.world, n);
     let fill = max(dot(n, normalize(vec3<f32>(0.6, 0.8, 0.3))), 0.0) * 0.10;
@@ -385,6 +385,7 @@ fn fs(i: VOut) -> @location(0) vec4<f32> {
         ao = mix(0.8, 1.0, smoothstep(0.0, 0.9, i.world.z - u.view.w));
     }
     var c = base * ((hemi * amb + fill) * ao + vec3<f32>(1.0, 0.97, 0.92) * (1.0 - amb) * sun * mix(0.85, 1.0, ao));
+    c = haze(tone_neutral(c), eye_len(i.world));
     return vec4<f32>(mark(c, n, to_eye, selected, hovered, i.elem), 1.0);
 }
 

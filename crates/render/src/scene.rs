@@ -483,4 +483,59 @@ mod foliage_tests {
             .unwrap_or_else(|e| panic!("{name}: {e:?}"));
         }
     }
+
+    /// The composite and occlusion passes read the same uniform block as the scene shaders.
+    #[test]
+    fn post_shader_validates_with_common() {
+        let src = format!("{}
+{}", include_str!("common.wgsl"), include_str!("post.wgsl"));
+        let m = naga::front::wgsl::parse_str(&src)
+            .unwrap_or_else(|e| panic!("post: {}", e.emit_to_string(&src)));
+        naga::valid::Validator::new(naga::valid::ValidationFlags::all(), naga::valid::Capabilities::all())
+            .validate(&m)
+            .unwrap_or_else(|e| panic!("post: {e:?}"));
+    }
+
+    /// Lit shaded faces are tone mapped with the neutral curve and lit by the sky uniform, not
+    /// by constants of their own; the realistic style shares the sky and the filmic curve.
+    #[test]
+    fn lit_styles_share_sky_and_tone_curves() {
+        let mesh = include_str!("mesh.wgsl");
+        let fs = &mesh[mesh.find("fn fs(i: VOut)").unwrap()..mesh.find("fn fs_glass").unwrap()];
+        assert!(fs.contains("tone_neutral(") && fs.contains("sky_ambient(n)"));
+        assert!(!fs.contains("vec3<f32>(0.93, 0.96, 1.0)"), "no private sky colour");
+        let real = include_str!("realistic.wgsl");
+        let fr = &real[real.find("fn fs_real").unwrap()..];
+        assert!(fr.contains("tone_filmic(") && fr.contains("sky_dir(r)") && fr.contains("sky_ambient(n)"));
+        let common = include_str!("common.wgsl");
+        for f in ["fn tone_neutral(", "fn tone_filmic(", "fn sky_ambient(", "fn sky_dir(", "fn haze("] {
+            assert!(common.contains(f), "{f}");
+        }
+    }
+
+    /// The outline width follows the frame height; fold edges come only with occlusion shading,
+    /// and the composite reads both from the uniform block.
+    #[test]
+    fn outline_width_follows_frame_height() {
+        use crate::renderer::edge_look;
+        assert_eq!(edge_look(720, false), [1.0, 0.0, 0.0, 0.0]);
+        assert_eq!(edge_look(1080, true)[0], 1.0);
+        assert_eq!(edge_look(2160, true), [2.0, 1.0, 0.0, 0.0]);
+        assert_eq!(edge_look(8000, true)[0], 3.0);
+        let post = include_str!("post.wgsl");
+        assert!(post.contains("u.look.x") && post.contains("u.look.y"));
+        assert!(include_str!("mesh.wgsl").contains("smoothstep(0.03, 0.25, px_m)"), "line ink thins with distance");
+    }
+
+    #[test]
+    fn sky_follows_the_background_and_haze_is_perspective_only() {
+        use crate::renderer::{FrameUniforms, SKY_DEFAULT};
+        let cam = crate::camera::OrbitCamera::default();
+        let d = FrameUniforms::new(&cam, 1.5, None);
+        assert_eq!(d.sky, SKY_DEFAULT);
+        let dark = d.with_sky([10, 12, 20], [30, 30, 40]);
+        assert!(dark.sky[0][0] < SKY_DEFAULT[0][0] && dark.sky[2][2] < SKY_DEFAULT[2][2]);
+        assert!(dark.sky[1][3] > 0.0, "haze density kept");
+        assert!(dark.sky[0][2] > dark.sky[0][0], "the sky stays cool above");
+    }
 }

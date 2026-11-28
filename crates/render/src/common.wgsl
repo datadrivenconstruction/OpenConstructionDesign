@@ -18,6 +18,8 @@ struct U {
     fx: vec4<f32>,          // x: edges of unselected chunks, y: silhouette, w: surface detail
     sel_n: vec4<u32>,       // x: ranges in sel_tex (0: sel.xy alone), y: texels per row, z: generation
     wind: vec4<f32>,        // x: foliage sway, m at 10 m (0: still), y: time, s
+    sky: array<vec4<f32>, 3>, // linear colours: zenith, horizon (w: haze density), ground
+    look: vec4<f32>,        // x: edge width in pixels, y: normal-edge weight, z: penumbra, w: reserved
 };
 @group(0) @binding(0) var<uniform> u: U;
 // whole selection: sorted merged [start, end) element ranges, one per texel, rows of sel_n.y
@@ -132,4 +134,52 @@ fn face_dropped(tag: u32, px: vec2<f32>, e: u32) -> bool {
     if (u.style.x > 2.5 && u.style.x < 3.5) { return true; }
     let c = coverage(tag, e);
     return c < 1.0 && bayer4(px) > c;
+}
+
+// Sky seen from direction `d` (z up): horizon band, zenith above, ground below.
+fn sky_dir(d: vec3<f32>) -> vec3<f32> {
+    let up = clamp(d.z, -1.0, 1.0);
+    // what a surface mirrors near the horizon is darker than the pale band painted behind the model
+    let hz = u.sky[1].xyz * 0.72;
+    if (up >= 0.0) { return mix(hz, u.sky[0].xyz, pow(up, 0.55)); }
+    return mix(hz, u.sky[2].xyz, smoothstep(0.0, 0.45, -up));
+}
+
+// Diffuse ambient light for a surface normal: ground below, sky above, the same colours the
+// viewport background is painted with.
+fn sky_ambient(n: vec3<f32>) -> vec3<f32> {
+    let top = mix(u.sky[1].xyz, u.sky[0].xyz, 0.6);
+    return mix(u.sky[2].xyz, top, n.z * 0.5 + 0.5);
+}
+
+// Filmic curve (published fit): contrast and soft shoulder, for the realistic style.
+fn tone_filmic(c: vec3<f32>) -> vec3<f32> {
+    return c * (2.51 * c + vec3<f32>(0.03)) / (c * (2.43 * c + vec3<f32>(0.59)) + vec3<f32>(0.14));
+}
+
+// Neutral curve: colours below the shoulder pass unchanged (material colours stay true),
+// only values near white are compressed and slightly desaturated.
+fn tone_neutral(c0: vec3<f32>) -> vec3<f32> {
+    let start = 0.76;
+    let d = 1.0 - start;
+    var c = max(c0, vec3<f32>(0.0));
+    let x = min(c.x, min(c.y, c.z));
+    let off = select(0.04, x - 6.25 * x * x, x < 0.08);
+    c = c - vec3<f32>(off);
+    let peak = max(c.x, max(c.y, c.z));
+    if (peak < start) { return c + vec3<f32>(off); }
+    let np = 1.0 - d * d / (peak + d - start);
+    c = c * (np / peak);
+    let g = 1.0 - 1.0 / (0.15 * (peak - np) + 1.0);
+    return mix(c, vec3<f32>(np), g);
+}
+
+// Distance haze towards the horizon colour; density 0 (plan, ortho) leaves `c` untouched.
+fn haze(c: vec3<f32>, dist: f32) -> vec3<f32> {
+    let k = u.sky[1].w;
+    if (k <= 0.0) { return c; }
+    // starts well beyond the camera distance, so the model itself keeps its colours
+    let x = max(dist / max(u.eye.w * 10.0, 1.0) - 0.3, 0.0);
+    let f = 1.0 - exp(-x * x * 3.0 * k);
+    return mix(c, u.sky[1].xyz, clamp(f, 0.0, 0.5));
 }

@@ -70,7 +70,26 @@ pub struct FrameUniforms {
     pub sel_n: [u32; 4],
     /// x: sway of foliage, m at 10 m (0 keeps it still), y: time, s. Set by `Renderer::prepare`.
     pub wind: [f32; 4],
+    /// Linear colours of the sky: zenith, horizon (w: haze density, 0 — none), ground. Ambient
+    /// light, reflections and haze use them; `with_sky` sets them from the painted background.
+    pub sky: [[f32; 4]; 3],
+    /// x: edge width in pixels at the base scale, y: weight of normal edges, z: shadow penumbra,
+    /// w: reserved. Set by `Renderer::prepare` from `FrameFx`.
+    pub look: [f32; 4],
 }
+
+/// `FrameUniforms::look` of a frame: outline width in pixels grows with the frame height (a 4K
+/// frame keeps the line weight of a 1080p one); fold edges only when the level pays for them.
+pub fn edge_look(height: u32, folds: bool) -> [f32; 4] {
+    [(height as f32 / 1080.0).clamp(1.0, 3.0).round(), f32::from(u8::from(folds)), 0.0, 0.0]
+}
+
+/// Default sky: cool zenith, pale horizon, warm ground bounce (linear).
+pub const SKY_DEFAULT: [[f32; 4]; 3] = [
+    [0.72, 0.82, 1.0, 0.0],
+    [0.92, 0.95, 1.0, 1.0],
+    [0.50, 0.47, 0.44, 0.0],
+];
 
 /// Category number in the vertex tag (bits 24–27; 0 — no category).
 pub const CAT_SHIFT: u32 = 24;
@@ -113,7 +132,23 @@ impl FrameUniforms {
             fx: [1.0, 1.0, 0.0, 1.0],
             sel_n: [0, crate::selset::ROW, 0, 0],
             wind: [0.0; 4],
+            sky: SKY_DEFAULT,
+            look: [1.0, 1.0, 0.0, 0.0],
         }
+    }
+    /// Sky colours from the background gradient (sRGB top and bottom): the defaults, pulled 15%
+    /// towards the painted tones, so the lit surfaces and the backdrop agree while light stays
+    /// cool above and warm below.
+    pub fn with_sky(mut self, top: [u8; 3], bottom: [u8; 3]) -> Self {
+        let t = srgb_linear(top);
+        let b = srgb_linear(bottom);
+        let mixc = |d: [f32; 4], c: [f32; 4]| {
+            [d[0] + (c[0] - d[0]) * 0.15, d[1] + (c[1] - d[1]) * 0.15, d[2] + (c[2] - d[2]) * 0.15, d[3]]
+        };
+        self.sky[0] = mixc(SKY_DEFAULT[0], t);
+        self.sky[1] = mixc(SKY_DEFAULT[1], [(t[0] + b[0]) * 0.5, (t[1] + b[1]) * 0.5, (t[2] + b[2]) * 0.5, 1.0]);
+        self.sky[2] = mixc(SKY_DEFAULT[2], b);
+        self
     }
     /// Whole selection as a merged set: two or more ranges replace `sel.xy` by their bounds
     /// (a cheap reject) and the shader searches the set; fewer leave `with_ranges` as is.
@@ -1490,6 +1525,11 @@ impl Renderer {
         let effects = u.params[1] > 0.5;
         u.params[2] = if effects { fx.ao.code() } else { 0.0 };
         u.params[3] = f32::from(u8::from(effects && fx.shadow_px > 0));
+        // haze is a perspective cue: none in an orthographic view
+        if u.style[3] > 0.0 {
+            u.sky[1][3] = 0.0;
+        }
+        u.look = edge_look(size.1, fx.ao != crate::graphics::AoMode::Off);
         u.wind = if fx.wind > 0.0 { [fx.wind, wind_time(), 0.0, 0.0] } else { [0.0; 4] };
         u.fx = [
             f32::from(u8::from(fx.edges)),

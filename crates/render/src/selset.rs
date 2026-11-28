@@ -239,10 +239,12 @@ mod tests {
         use crate::renderer::FrameUniforms;
         let size = std::mem::size_of::<FrameUniforms>();
         assert_eq!(size % 16, 0);
-        // the new field is last, as in the shader struct
-        assert_eq!(std::mem::offset_of!(FrameUniforms, wind), size - 16);
-        assert_eq!(std::mem::offset_of!(FrameUniforms, sel_n), size - 32);
-        assert_eq!(std::mem::offset_of!(FrameUniforms, fx), size - 48);
+        // the new fields are last, in the order of the shader struct
+        assert_eq!(std::mem::offset_of!(FrameUniforms, look), size - 16);
+        assert_eq!(std::mem::offset_of!(FrameUniforms, sky), size - 64);
+        assert_eq!(std::mem::offset_of!(FrameUniforms, wind), size - 80);
+        assert_eq!(std::mem::offset_of!(FrameUniforms, sel_n), size - 96);
+        assert_eq!(std::mem::offset_of!(FrameUniforms, fx), size - 112);
     }
 
     #[test]
