@@ -38,6 +38,12 @@
 - Solids and freeform bodies show their material colour; glass is see-through, while steel and concrete keep their texture.
 - Stone, water and grass finishes; naming a new material on a solid adds it to the material list.
 
+### Materials
+- Ten new textures: stone, gravel, soil, asphalt, plaster, roof tile, insulation, water, steel plate and rubber.
+- The materials list, material card and properties show a swatch of each material with its hatch.
+- Plans and sections share one hatch per material class, with steel, earth, water, stone, stipple and glass patterns.
+- Colour the model by material, with a legend.
+
 ### Export
 - glTF exports carry metal, roughness and refraction per material; glass is smooth and refractive.
 - IFC exports carry surface roughness and a reflectance method for each material.
