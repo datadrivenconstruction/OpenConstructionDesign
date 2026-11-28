@@ -50,6 +50,8 @@
 - The materials list, material card and properties show a swatch of each material with its hatch.
 - Plans and sections share one hatch per material class, with steel, earth, water, stone, stipple and glass patterns.
 - Colour the model by material, with a legend.
+- Roughness, metallic, opacity and refraction index per material, with sliders in the material card; IFC and the AI assistant use them.
+- Material classes are recognised from names in many languages.
 
 ### Export
 - glTF exports carry metal, roughness and refraction per material; glass is smooth and refractive.
