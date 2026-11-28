@@ -715,3 +715,36 @@ fn every_example_script_runs_on_a_new_project() {
     }
     assert!(n >= 2, "examples/ holds {n} scripts");
 }
+
+#[test]
+fn run_without_level_lands_on_the_ground_level() {
+    let d = tmp("run_ground");
+    let mut m = Model::open(":memory:").unwrap();
+    let base = m.add_level("Basement", -2.4).unwrap();
+    let ground = m.add_level("Ground", 0.0).unwrap();
+    assert_ne!(base, ground);
+    let proj = d.join("p.ddc");
+    m.save_project_to(&proj, &mut |_, _| Ok(())).unwrap();
+    let sc = script(&d, GOOD);
+    let out = d.join("o.ddc");
+    let o = ddc(&["run", s(&proj), s(&sc), "--out", s(&out), "--json"]);
+    assert_eq!(o.status.code(), Some(0), "{}", String::from_utf8_lossy(&o.stdout));
+    let v = json(&o);
+    let warned = v["steps"].as_array().unwrap().iter().any(|s| !s["warnings"].as_array().unwrap().is_empty());
+    assert!(!warned, "{v}");
+    let m2 = Model::open(s(&out)).unwrap();
+    let solids = m2.solids(None).unwrap();
+    assert!(!solids.is_empty());
+    assert!(solids.iter().all(|(_, sd)| sd.level == ground), "solids not on the ground level");
+
+    // no level at 0: the nearest one is used and the run says so
+    let mut m = Model::open(":memory:").unwrap();
+    m.add_level("Low", -2.4).unwrap();
+    m.add_level("Up", 3.0).unwrap();
+    let proj = d.join("q.ddc");
+    m.save_project_to(&proj, &mut |_, _| Ok(())).unwrap();
+    let o = ddc(&["run", s(&proj), s(&sc), "--out", s(&out), "--force", "--json"]);
+    let v = json(&o);
+    let w = v["steps"].to_string();
+    assert!(w.contains("no level at elevation 0"), "{w}");
+}

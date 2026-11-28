@@ -119,8 +119,15 @@ fn execute(a: &RunArgs, quiet: bool) -> Outcome {
 
     let t = Instant::now();
     let level = match &a.level {
-        Some(n) => loaded.model.level_list().unwrap_or_default().into_iter().find(|l| &l.1 == n),
-        None => loaded.model.lowest_level().unwrap_or_default(),
+        Some(n) => loaded.model.level_list().map(|v| v.into_iter().find(|l| &l.1 == n)),
+        None => loaded.model.ground_level(),
+    };
+    let level = match level {
+        Ok(l) => l,
+        Err(e) => {
+            o.steps.push(Step::fail("script", t, format!("cannot read the levels: {e}")));
+            return o;
+        }
     };
     let Some(level) = level else {
         let why = match &a.level {
@@ -147,7 +154,14 @@ fn execute(a: &RunArgs, quiet: bool) -> Outcome {
     };
     o.hash = Some(run.hash.clone());
     o.log = run.log.clone();
-    o.steps.push(Step::pass("script", t, None, vec![]));
+    let mut warn = vec![];
+    if a.level.is_none() && level.2.abs() > 1e-9 {
+        warn.push(format!(
+            "no --level given and no level at elevation 0: using '{}' at {} m; solids are placed relative to it",
+            level.1, level.2
+        ));
+    }
+    o.steps.push(Step::pass("script", t, None, warn));
 
     let t = Instant::now();
     progress(quiet, "applying");
