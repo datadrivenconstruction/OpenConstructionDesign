@@ -6,6 +6,7 @@
 use super::sets::{Key, Marks};
 use crate::editor::bodies::BodyKind;
 use crate::editor::{Editor, Sel};
+use crate::scene_ids::EXT_SOLID;
 use crate::query::{self, Row};
 use ddc_model::Model;
 use rusqlite::types::Value as Sql;
@@ -92,6 +93,8 @@ pub fn sel_of(k: Key) -> Option<Sel> {
         "roof" => Sel::Ext(EXT_ROOF, k.id),
         "stair" => Sel::Ext(EXT_STAIR, k.id),
         "railing" => Sel::Ext(EXT_RAILING, k.id),
+        "solid" => Sel::Ext(EXT_SOLID, k.id),
+        "mass" => Sel::Mass(k.id),
         _ => return None,
     })
 }
@@ -113,7 +116,9 @@ pub fn key_of_sel(s: Sel, door: impl Fn(i64) -> &'static str) -> Option<Key> {
             cat: "imported",
             id,
         },
-        Sel::Mass(_) | Sel::Ext(..) | Sel::Anno(_) => return None,
+        Sel::Mass(id) => Key { cat: "mass", id },
+        Sel::Ext(EXT_SOLID, id) => Key { cat: "solid", id },
+        Sel::Ext(..) | Sel::Anno(_) => return None,
     })
 }
 
@@ -275,6 +280,21 @@ fn extend(m: &Model, out: &mut Vec<Row>) {
                 vec![],
             ))
         },
+    ));
+    // scripts and the assistant build mostly solids: a read that skips them sees an empty model
+    out.extend(sql_rows(
+        m,
+        "SELECT e.id, e.level, e.material, e.name, q.volume, q.area FROM solid e
+         LEFT JOIN solid_qty q ON q.solid=e.id WHERE e.void=0 ORDER BY e.id",
+        |r| {
+            let n = nums([("volume", r.get(4)?), ("area", r.get(5)?)]);
+            Ok(row(Sel::Ext(EXT_SOLID, r.get(0)?), "solid", r.get(1)?, r.get(2)?, r.get(3)?, n))
+        },
+    ));
+    out.extend(sql_rows(
+        m,
+        "SELECT id, level, name FROM mass WHERE void=0 ORDER BY id",
+        |r| Ok(row(Sel::Mass(r.get(0)?), "mass", r.get(1)?, String::new(), r.get(2)?, vec![])),
     ));
     out.extend(sql_rows(
         m,
@@ -533,10 +553,44 @@ mod tests {
     }
 
     #[test]
+    fn solids_are_rows_the_assistant_reads() {
+        use ddc_geom::arc::BulgeRing;
+        use ddc_geom::math::v2;
+        use ddc_model::{SolidForm, SolidFrame, SolidSpec};
+        let mut ed = editor();
+        let ring = BulgeRing {
+            pts: vec![v2(0.0, 0.0), v2(2.0, 0.0), v2(2.0, 1.0), v2(0.0, 1.0)],
+            bulges: vec![0.0; 4],
+        };
+        let spec = |void: bool| SolidSpec {
+            level: ed.level,
+            name: "pier".into(),
+            void,
+            material: "Puddled iron".into(),
+            frame: SolidFrame::default(),
+            form: SolidForm::Blend { bottom: ring.clone(), top: ring.clone(), height: 3.0 },
+            ifc: None,
+        };
+        let id = ed.model.add_solid(&spec(false)).unwrap();
+        ed.model.add_solid(&spec(true)).unwrap();
+        ed.revision += 1;
+        let r = rows(&ed);
+        let solids: Vec<_> = r.iter().filter(|x| x.cat == "solid").collect();
+        assert_eq!(solids.len(), 1, "one solid, the void cuts and is no element");
+        let s = solids[0];
+        assert_eq!((s.id(), s.ty.as_str(), s.name.as_str()), (id, "Puddled iron", "pier"));
+        let v = s.nums.iter().find(|n| n.0 == "volume").map(|n| n.1);
+        assert!(v.is_some_and(|v| (v - 6.0).abs() < 1e-6), "{:?}", s.nums);
+        assert_eq!(key_of(s).table(), "solid");
+        assert_eq!(crate::query::cat_word("тела"), Some("solid"));
+        assert_eq!(crate::query::cat_word("masses"), Some("mass"));
+    }
+
+    #[test]
     fn every_ai_category_maps_to_a_selection_and_back() {
         for cat in [
             "wall", "curtain", "floor", "room", "mep", "comp", "column", "beam", "ceiling",
-            "imported",
+            "imported", "solid", "mass",
         ] {
             let k = Key { cat, id: 7 };
             let s = sel_of(k).unwrap();

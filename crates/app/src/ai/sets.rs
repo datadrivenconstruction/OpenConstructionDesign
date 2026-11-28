@@ -54,6 +54,8 @@ pub fn table_of(cat: &str) -> &'static str {
         "shaft" => "shaft",
         "grid" => "grid",
         "steel_conn" => "steel_conn",
+        "solid" => "solid",
+        "mass" => "mass",
         _ => "",
     }
 }

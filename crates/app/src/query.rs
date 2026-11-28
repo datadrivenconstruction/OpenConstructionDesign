@@ -252,6 +252,8 @@ pub fn cat_word(w: &str) -> Option<&'static str> {
         "\u{43a}\u{43e}\u{43c}\u{43f}\u{43e}\u{43d}\u{435}\u{43d}\u{442}" | "\u{43a}\u{43e}\u{43c}\u{43f}\u{43e}\u{43d}\u{435}\u{43d}\u{442}\u{44b}" | "\u{43a}\u{43e}\u{43c}\u{43f}\u{43e}\u{43d}\u{435}\u{43d}\u{442}\u{43e}\u{432}" | "comp" | "component" | "components" => {
             "comp"
         }
+        "\u{442}\u{435}\u{43b}\u{43e}" | "\u{442}\u{435}\u{43b}\u{430}" | "\u{442}\u{435}\u{43b}" | "solid" | "solids" | "body" | "bodies" => "solid",
+        "\u{43c}\u{430}\u{441}\u{441}\u{430}" | "\u{43c}\u{430}\u{441}\u{441}\u{44b}" | "mass" | "masses" => "mass",
         _ => return None,
     })
 }

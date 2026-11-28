@@ -197,8 +197,11 @@ fn get_context(c: &mut Core, _a: &J, _cx: &CallCx<'_>) -> Result<Done, String> {
             "max": [fmt::num(f64::from(b.max.x)), fmt::num(f64::from(b.max.y)), fmt::num(f64::from(b.max.z))],
         }));
     }
+    let all = rows::rows(&c.ed);
+    let count = |cat: &str| all.iter().filter(|r| r.cat == cat).count();
     o.put("totals", &json!({
         "walls": t.walls, "doors": t.doors, "windows": t.windows, "slabs": t.slabs, "rooms": t.rooms, "curtains": t.curtains,
+        "solids": count("solid"), "masses": count("mass"),
         "wall_volume": fmt::num(t.wall_volume), "slab_area": fmt::num(t.slab_area), "room_area": fmt::num(t.room_area),
     }));
     // applied generated projects with the spec revise_project patches
@@ -316,6 +319,7 @@ pub(super) fn category_fields(cat: &str) -> Option<J> {
         "mep" => json!({"create": ["system mep_system ref", "points [[x,y,z],...] absolute", "domain pipe|duct|tray|conduit (default pipe)", "pipe: dn, material", "duct/tray: width and height, or diameter for a round duct", "conduit: diameter", level], "edit": ["parameters only"], "prefer": "route_mep, supply_fixtures and power_devices route whole networks: state the intent, never hand-place points"}),
         "curtain" => json!({"create": ["a [x,y]", "b [x,y]", "height", "name", "spacing [u,v]", "mullion [w,d]", level], "edit": ["level", "name", "offset"]}),
         "railing" | "imported" => json!({"create": [], "edit": ["parameters only"]}),
+        "solid" | "mass" => json!({"create": ["run_script: Lua part{} and blocks"], "edit": ["run_script"], "note": "type is the material name"}),
         "shaft" => json!({"create": ["ring [[x,y],...] outline of the opening", level, "top_level", "top_offset (0)"], "edit": ["delete and create again"], "note": "cuts every slab, ceiling and roof between its levels"}),
         "grid" => json!({"create": ["name", "a [x,y]", "b [x,y]"], "edit": ["name", "move with the grid tools"], "prefer": "create_grids makes a whole set from count, spacing, angle and labels"}),
         "steel_conn" => json!({"create": ["type connection key or auto", "members column/beam refs", "params key=value;...", level], "edit": ["parameters only"], "prefer": "connect_members: omit members for every free node of the type"}),
