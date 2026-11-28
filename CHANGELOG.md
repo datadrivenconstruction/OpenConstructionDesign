@@ -19,6 +19,7 @@
 - The lattice audit joins members crossing at a node instead of reporting clashes, and names ids and points.
 
 ### Video and frames
+- `--reveal-order zones` builds the model zone by zone across the plan; `--reveal-seek N` opens the window paused on frame N, and the player steps frame by frame.
 - `--reveal-out` always runs headless; `--reveal all` includes script-made elements, built bottom-up.
 - Camera choice for reveals: `fixed`, `orbit`, `follow`.
 - Sections and plans work for models made only of members; screenshots show only the canvas.
