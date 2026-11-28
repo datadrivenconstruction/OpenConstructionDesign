@@ -467,6 +467,15 @@ fn end_plates(k: &mut Kit, a: &Bar, b: &Bar, n: V3) -> Result<(), ConnError> {
                 }
             }
         }
+        // the side lines end c·√2 from the corner bolts of the rows: a bolt that close goes
+        let pmin = k.cat.spacing.p1_min.max(k.cat.spacing.p2_min) * size.hole;
+        let mut kept: Vec<V2> = vec![];
+        for q in pts {
+            if kept.iter().all(|o| (*o - q).len() >= pmin - 1e-9) {
+                kept.push(q);
+            }
+        }
+        pts = kept;
     }
     let (mut px0, mut px1, mut py0, mut py1) = (x0, x1, y0, y1);
     for q in &pts {

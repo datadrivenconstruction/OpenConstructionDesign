@@ -399,6 +399,21 @@ mod tests {
     }
 
     #[test]
+    fn braced_frame_joints_pass_their_own_checks() {
+        let mut m = Model::open(":memory:").unwrap();
+        let lv = m.add_level("L0", 0.0).unwrap();
+        let f = tower::braced_frame(2, 1, 6.0, 6.0, 2, 3.5).unwrap();
+        let ids = m.add_steel_frame(lv, &f).unwrap();
+        let conns = m.connect_steel_frame(&ids).unwrap();
+        assert!(conns.len() >= 30, "{} connections", conns.len());
+        for id in conns {
+            let r = m.steel_conn_report(id).unwrap();
+            let bad: Vec<_> = r.findings.iter().filter(|f| f.rule.is_error()).map(|f| &f.text).collect();
+            assert!(bad.is_empty(), "{:?}: {bad:?}", r.spec.kind);
+        }
+    }
+
+    #[test]
     fn insulator_strings_become_components_of_the_library_family() {
         use ddc_geom::steel::lattice::InsulatorString;
         let mut m = Model::open(":memory:").unwrap();

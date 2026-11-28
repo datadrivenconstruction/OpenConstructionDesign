@@ -153,14 +153,18 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
         })
         .collect();
     ws.sort_by(|a, b| a.d.y.atan2(a.d.x).total_cmp(&b.d.y.atan2(b.d.x)));
-    // bolts for each member, then setbacks clear of the faces, the heads and each other
-    let sizes: Vec<BoltSize> = ws
-        .iter()
-        .map(|w| member_bolt(k, w.bar, w.half))
-        .collect::<Result<_, _>>()?;
+    // bolts for each member on a line whose heads clear its section, then setbacks clear of
+    // the faces, the heads and each other
+    let mut sizes: Vec<BoltSize> = vec![];
+    let mut lines: Vec<f64> = vec![];
+    for w in &ws {
+        let (size, u) = bolt_line(k, w, nrm, tg)?;
+        sizes.push(size);
+        lines.push(u);
+    }
     let mut sb: Vec<f64> = vec![0.0; ws.len()];
     for (i, w) in ws.iter().enumerate() {
-        let r = sizes[i].hex_r().max(sizes[i].w_od / 2.0) + k.cat.spacing.face_clear;
+        let r = sizes[i].hex_r().max(sizes[i].w_od / 2.0) + k.cat.spacing.face_clear + lines[i].abs();
         let mut s = (y0 + gap + w.half * w.d.x.abs()) / w.d.y.max(1e-6);
         if let Some((sx, xf)) = x_face {
             let dx = w.d.x * sx;
@@ -177,11 +181,18 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
                     .clamp(-1.0, 1.0)
                     .acos()
                     .min(std::f64::consts::FRAC_PI_2);
-            let ro = sizes[j].hex_r().max(sizes[j].w_od / 2.0);
+            let ro = sizes[j].hex_r().max(sizes[j].w_od / 2.0) + lines[j].abs();
             let need = w.half.max(r) + o.half.max(ro) + gap;
             s = s.max(need / ang.sin().max(1e-3));
         }
         sb[i] = k.cat.round_up(s);
+        // members meeting at a slight angle push the gusset past the member itself
+        if sb[i] > (w.bar.t1 - w.bar.t0).abs() / 2.0 {
+            return Err(ConnError(format!(
+                "member {} meets another at too small an angle for one gusset",
+                w.index + 1
+            )));
+        }
     }
     let mut pts: Vec<V2> = vec![];
     let mut groups = vec![];
@@ -195,7 +206,7 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
         let lat = v2(-w.d.y, w.d.x);
         for s in [sb[i] - gap, ss[n - 1] + e] {
             for sg in [-1.0, 1.0] {
-                pts.push(w.d * s + lat * (e * sg));
+                pts.push(w.d * s + lat * (lines[i] + e * sg));
             }
         }
         // a hollow member ends past its bolts, clear of the nuts, over its knife plate
@@ -233,7 +244,7 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
     let mut holes = vec![];
     for (i, w) in ws.iter().enumerate() {
         for s in &groups[i] {
-            holes.push((w.d * *s, sizes[i].hole));
+            holes.push((w.d * *s + v2(-w.d.y, w.d.x) * lines[i], sizes[i].hole));
         }
     }
     let gp = k.plate(Role::Gusset, f, outline.clone(), holes, tg, -tg / 2.0);
@@ -267,18 +278,17 @@ fn node(k: &mut Kit, hosts: &[&Bar], webs: &[&Bar], first: usize) -> Result<(), 
             knife(k, f, w, kn, &groups[i], ends[i], (gp, tg), &sizes[i])?;
             continue;
         }
+        let perp = nrm.cross(w.dw).normalized();
         for s in &groups[i] {
-            let c = node + w.dw * *s;
+            let c = node + w.dw * *s + perp * lines[i];
             let q = w.bar.local(c);
             let nn = v2(nrm.dot(w.bar.ey), nrm.dot(w.bar.ez));
             let nn = nn * (1.0 / nn.len().max(1e-12));
             // offset along the normal of the member's section origin, then of the cut points
             let off = (w.bar.at(q.x, 0.0, 0.0) - node).dot(nrm) + v2(q.y, q.z).dot(nn);
-            let (mut lo, mut hi) = (-tg / 2.0, tg / 2.0);
-            for (a, b) in w.bar.cut_line(v2(q.y, q.z), nn) {
-                lo = lo.min(off + a);
-                hi = hi.max(off + b);
-            }
+            let r = sizes[i].hex_r().max(sizes[i].w_od / 2.0);
+            let (a, b) = stack(w.bar, v2(q.y, q.z), nn, r).unwrap_or((0.0, 0.0));
+            let (lo, hi) = ((off + a).min(-tg / 2.0), (off + b).max(tg / 2.0));
             let o = c - nrm * (c - node).dot(nrm) + nrm * lo;
             k.bolt(&sizes[i], o, nrm, hi - lo, vec![gp], w.dw)?;
         }
@@ -331,6 +341,85 @@ fn knife(
         fmt_mm(lw)
     ));
     Ok(())
+}
+
+/// Bolt size and lateral line (m, along `nrm × dw`) for a web member: the line nearest the
+/// axis whose head and nut stand clear of the section, a smaller bolt when none does.
+fn bolt_line(k: &Kit, w: &Web, nrm: V3, tg: f64) -> Result<(BoltSize, f64), ConnError> {
+    let mut size = member_bolt(k, w.bar, w.half)?;
+    if w.knife.is_some() {
+        return Ok((size, 0.0));
+    }
+    let bar = w.bar;
+    let sec = |v: V3| {
+        let p = v2(v.dot(bar.ey), v.dot(bar.ez));
+        p * (1.0 / p.len().max(1e-12))
+    };
+    let nn = sec(nrm);
+    let ls = sec(nrm.cross(w.dw));
+    // section point of the line through the node at lateral offset u, and its offset along nrm
+    let q = bar.local(k.node);
+    let p0 = v2(q.y, q.z) - nn * v2(q.y, q.z).dot(nn);
+    let off = (bar.at(q.x, 0.0, 0.0) - k.node).dot(nrm);
+    let span = |u: f64, r: f64| stack(bar, p0 + ls * u, nn, r).map(|(a, b)| (off + a, off + b));
+    let step = k.cat.spacing.round.max(1e-3);
+    loop {
+        let r = size.hex_r().max(size.w_od / 2.0);
+        let e = k.cat.spacing.e2_min * size.hole;
+        // the checker's test: head and nut samples must stay out of the member's material
+        let tm = (bar.t0 + bar.t1) / 2.0;
+        let fits = |u: f64| -> bool {
+            let (Some(c), Some((lo, hi))) = (span(u, 0.0), span(u, r)) else { return false };
+            // a face sloping under the head would leave it bearing on an edge: bound the gap
+            if [-e, e].iter().any(|d| span(u + d, 0.0).is_none()) || hi - lo > c.1 - c.0 + 2.0 * r {
+                return false;
+            }
+            let (lo, hi) = (lo.min(-tg / 2.0), hi.max(tg / 2.0));
+            let heads = [(lo - size.k - size.w_t, lo), (hi, hi + size.w_t + size.m)];
+            !heads.iter().any(|(z0, z1)| {
+                [*z0, (z0 + z1) / 2.0, *z1].iter().any(|z| {
+                    (0..8).any(|i| {
+                        let a = 0.98 * r * (std::f64::consts::PI * i as f64 / 4.0).cos();
+                        let p = p0 + ls * (u + a) + nn * (z - off);
+                        bar.holds(bar.at(tm, p.x, p.y), 2e-4)
+                    })
+                })
+            })
+        };
+        let n = (w.half / step).ceil() as i64;
+        let found = (0..=n)
+            .flat_map(|i| [i, -i])
+            .map(|i| i as f64 * step)
+            .find(|u| fits(*u));
+        if let Some(u) = found {
+            return Ok((size, u));
+        }
+        match k.cat.smaller(size.d).filter(|_| k.p.bolt.is_none()) {
+            Some(s) => size = s.clone(),
+            None => {
+                return Err(ConnError(format!(
+                    "member {}: no {} bolt line clears its section",
+                    w.index + 1,
+                    size.name()
+                )))
+            }
+        }
+    }
+}
+
+/// Material of the section across the band of half-width `r` either side of the line through
+/// `p` along unit `nn`, as (min, max) of the line parameter; None when the line misses it.
+fn stack(bar: &Bar, p: V2, nn: V2, r: f64) -> Option<(f64, f64)> {
+    let ls = v2(-nn.y, nn.x);
+    let mut t: Vec<f64> = bar.cut_line(p, nn).into_iter().flat_map(|(a, b)| [a, b]).collect();
+    if t.is_empty() {
+        return None;
+    }
+    for d in [-r, r] {
+        t.extend(bar.cut_line(p + ls * d, nn).into_iter().flat_map(|(a, b)| [a, b]));
+    }
+    t.extend(bar.outer.iter().filter(|v| (**v - p).dot(ls).abs() <= r).map(|v| (*v - p).dot(nn)));
+    Some((t.iter().cloned().fold(f64::MAX, f64::min), t.iter().cloned().fold(f64::MIN, f64::max)))
 }
 
 /// Bolt for a web member: by its depth, small enough for the edge distance across its width.

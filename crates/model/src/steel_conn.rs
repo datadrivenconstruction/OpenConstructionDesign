@@ -257,6 +257,29 @@ fn spec_check_on(
     Ok(())
 }
 
+/// A node placed without being asked for must pass its own checks: what [`check`] would
+/// block is left out (after [`spec_check_on`], which built it).
+fn sound(idx: &HashMap<(&'static str, i64), &Member>, s: &SteelConnSpec) -> bool {
+    let ms: Option<Vec<Member>> = s
+        .members
+        .iter()
+        .map(|(k, id)| {
+            let key = STEEL_MEMBER_KINDS.iter().find(|x| **x == k.as_str())?;
+            idx.get(&(*key, *id)).map(|m| (*m).clone())
+        })
+        .collect();
+    let Some(ms) = ms else { return false };
+    let key = checked_key(s, &ms);
+    CHECKED.with(|c| {
+        let mut c = c.borrow_mut();
+        let ok = c.get(&key).is_some_and(|(c, ms)| !check(c, ms).iter().any(|f| f.rule.is_error()));
+        if !ok {
+            c.remove(&key);
+        }
+        ok
+    })
+}
+
 fn insert(db: &Connection, s: &SteelConnSpec) -> Result<i64, Error> {
     db.execute(
         "INSERT INTO steel_conn(level, kind, members, params) VALUES (?1,?2,?3,?4)",
@@ -997,7 +1020,7 @@ impl Model {
         let specs: Vec<SteelConnSpec> = candidates(&near, None, None)
             .into_iter()
             .filter(|s| s.members.iter().all(|(c, i)| ours.contains(&(c.as_str(), *i))))
-            .filter(|s| spec_check_on(&self.db, &idx, &have, s).is_ok())
+            .filter(|s| spec_check_on(&self.db, &idx, &have, s).is_ok() && sound(&idx, s))
             .filter(|s| seen.insert(sorted(&s.members)))
             .collect();
         drop(pick);

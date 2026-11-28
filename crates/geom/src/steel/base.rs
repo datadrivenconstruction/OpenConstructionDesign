@@ -25,14 +25,23 @@ pub(super) fn base_plate(k: &mut Kit, col: &Bar) -> Result<(), ConnError> {
     k.node = col.axis(t_end);
     let f = frame_from(k.node, up, col.ey);
     // section footprint on the plate (stretched for an inclined column)
-    let foot: Vec<V2> = col
-        .outer
+    let cat = k.cat;
+    let (d_def, n_def) = cat.anchors_for(col.dims.h.max(col.dims.b));
+    let size = k.bolt_size(d_def)?;
+    let thin = col.dims.thin();
+    let t = k.plate_t((1.5 * col.dims.tf.max(col.dims.tw)).max(0.02), thin);
+    // an inclined column leans over the anchors: its section up to the nut tops counts
+    let rise = t + size.plate_washer_t + size.m;
+    let foot: Vec<V2> = [0.0, rise]
         .iter()
-        .map(|p| {
-            let w = col.at(0.0, p.x, p.y);
-            let s = super::bar::hit_plane(w, col.u, k.node, up).unwrap_or(0.0);
-            let q = f.local(w + col.u * s);
-            v2(q.x, q.y)
+        .flat_map(|h| {
+            let at = k.node + up * *h;
+            col.outer.iter().map(move |p| {
+                let w = col.at(0.0, p.x, p.y);
+                let s = super::bar::hit_plane(w, col.u, at, up).unwrap_or(0.0);
+                let q = f.local(w + col.u * s);
+                v2(q.x, q.y)
+            })
         })
         .collect();
     let (mut x0, mut x1, mut y0, mut y1) = (f64::MAX, f64::MIN, f64::MAX, f64::MIN);
@@ -43,17 +52,12 @@ pub(super) fn base_plate(k: &mut Kit, col: &Bar) -> Result<(), ConnError> {
         y1 = y1.max(p.y);
     }
     let (fw, fh) = (x1 - x0, y1 - y0);
-    let cat = k.cat;
-    let (d_def, n_def) = cat.anchors_for(col.dims.h.max(col.dims.b));
-    let size = k.bolt_size(d_def)?;
     let count = k.p.anchors.unwrap_or(n_def);
     if !matches!(count, 4 | 6 | 8) {
         return Err(ConnError::new("a column base takes 4, 6 or 8 anchors"));
     }
     let per_side = count / 2;
     let hole = size.anchor_hole;
-    let thin = col.dims.thin();
-    let t = k.plate_t((1.5 * col.dims.tf.max(col.dims.tw)).max(0.02), thin);
     let leg = k.leg(t, thin);
     let stiff =
         k.p.stiffeners
