@@ -3,6 +3,7 @@
 ## 1.4.0 (unreleased)
 
 ### Command line
+- `ddc ai --apply` no longer applies a plan cut short by a limit; pass `--apply-partial` to apply it anyway.
 - Release builds include `ddc gen` and `ddc publish`; the ERP link builds without the GUI.
 - `ddc new` creates an empty project; `ddc run --new` runs a script without an input file.
 - `ddc run` applies large scripts in linear time and prints `applying N/total`.
