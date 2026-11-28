@@ -881,7 +881,7 @@ impl Conversation {
                 return Ok(end);
             }
             if steps > 0
-                && steps + 1 == self.limits.max_steps
+                && (steps + 1 == self.limits.max_steps || self.last_affordable_step(turn, steps))
                 && self.messages.last().is_some_and(|m| m.role == Role::Tool)
             {
                 self.messages.push(Message::text(Role::User, LAST_STEP_NOTE));
@@ -1157,11 +1157,32 @@ impl Conversation {
         }
     }
 
-    fn turn_cost_over(&self, turn: Usage) -> bool {
+    /// Spent this turn and the money cap; None without a cap or without prices.
+    fn turn_cost(&self, turn: Usage) -> Option<(f64, f64)> {
         match (self.limits.max_cost, with_delta(cost_of(&self.profile, turn), self.turn_delta)) {
-            (Some(max), Some(cost)) => cost >= max,
-            _ => false,
+            (Some(max), Some(cost)) => Some((cost, max)),
+            _ => None,
         }
+    }
+
+    /// What the next step will likely cost: the last one's, as the context only grows.
+    fn next_step_cost(&self, steps: u32) -> f64 {
+        if steps == 0 {
+            return 0.0;
+        }
+        self.journal.steps.last().and_then(|s| s.cost).unwrap_or(0.0)
+    }
+
+    /// Checked before a step: one that would pass the cap is not sent at all.
+    fn turn_cost_over(&self, turn: Usage, steps: u32) -> bool {
+        let next = self.next_step_cost(steps);
+        self.turn_cost(turn).is_some_and(|(cost, max)| cost >= max || cost + next > max)
+    }
+
+    /// Only one more step fits under the money cap: it is kept for the final report.
+    fn last_affordable_step(&self, turn: Usage, steps: u32) -> bool {
+        let next = self.next_step_cost(steps);
+        next > 0.0 && self.turn_cost(turn).is_some_and(|(cost, max)| cost + 2.0 * next > max)
     }
 
     fn budget_end(&self, steps: u32, turn: Usage, deadline: Instant) -> Option<TurnEnd> {
@@ -1171,7 +1192,7 @@ impl Conversation {
             Some(TurnEnd::LimitHit("steps"))
         } else if turn.total() >= self.limits.max_turn_tokens {
             Some(TurnEnd::LimitHit("tokens"))
-        } else if self.turn_cost_over(turn) {
+        } else if self.turn_cost_over(turn, steps) {
             Some(TurnEnd::LimitHit("cost"))
         } else if Instant::now() >= deadline {
             Some(TurnEnd::LimitHit("wall"))
@@ -2176,8 +2197,9 @@ mod tests {
         let mut pf = profile();
         pf.price_in_per_mtok = Some(1.0);
         pf.price_out_per_mtok = Some(2.0);
+        // a step costs 3: two fit under 7, a third would pass it and is not sent
         let limits = Limits {
-            max_cost: Some(5.0),
+            max_cost: Some(7.0),
             max_turn_tokens: u64::MAX,
             ..Limits::default()
         };
@@ -2334,10 +2356,37 @@ mod tests {
             ..Limits::default()
         };
         let mut c = Conversation::new(p.clone(), pf, limits, CancelToken::new());
-        // one step costs 0.1, so the limit of 0.15 stops the turn after the second step
+        // one step costs 0.1: a second would pass the limit of 0.15, so it is never sent
         let (r, _) = turn(&mut c, Mode::ReadOnly, &mut Host::default());
         assert_eq!(r, Ok(TurnEnd::LimitHit("cost")));
+        assert_eq!(p.requests().len(), 1);
+    }
+
+    #[test]
+    fn the_cost_limit_is_never_passed_and_the_last_step_reports() {
+        let used = Usage {
+            input_tokens: 100_000,
+            output_tokens: 0,
+            ..Usage::default()
+        };
+        let mut pf = profile();
+        pf.price_in_per_mtok = Some(1.0);
+        pf.price_out_per_mtok = Some(1.0);
+        let p = ScriptedProvider::with_usage(calls_forever(5), used);
+        let limits = Limits {
+            max_cost: Some(0.25),
+            max_turn_tokens: u64::MAX,
+            ..Limits::default()
+        };
+        let mut c = Conversation::new(p.clone(), pf, limits, CancelToken::new());
+        let (r, _) = turn(&mut c, Mode::ReadOnly, &mut Host::default());
+        assert_eq!(r, Ok(TurnEnd::LimitHit("cost")));
+        // 0.1 a step under 0.25: two steps, never a third that would end at 0.3
         assert_eq!(p.requests().len(), 2);
+        let spent: f64 = c.journal.steps.iter().filter_map(|s| s.cost).sum();
+        assert!(spent <= 0.25 + 1e-9, "{spent}");
+        let last = format!("{:?}", p.requests()[1]);
+        assert!(last.contains(LAST_STEP_NOTE), "the last affordable step asks for the report");
     }
 
     #[test]
