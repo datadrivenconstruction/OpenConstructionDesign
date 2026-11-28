@@ -36,6 +36,7 @@
 - Time and token limits are shown and adjustable; `ddc ai --max-tokens`, `--max-time-s`; a stop names the limit and how to raise it.
 
 ### 3D view
+- Bodies appearing in a reveal keep their material colours.
 - Shaded and realistic styles share one lighting curve; saturated colours keep their hue, the sky follows the backdrop and outlines scale with the frame.
 - Solids and freeform bodies show their material colour; glass is see-through, while steel and concrete keep their texture.
 - Stone, water and grass finishes; naming a new material on a solid adds it to the material list.
