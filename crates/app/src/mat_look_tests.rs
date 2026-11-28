@@ -114,3 +114,48 @@ fn a_part_takes_the_look_of_its_material() {
     assert!(texture::layer_of(tag_of(steel)).is_some(), "{:#x}", tag_of(steel));
     assert_eq!(tag_of(grass) & ddc_render::scene::TAG_RGB, ddc_render::scene::TAG_RGB);
 }
+
+#[test]
+fn a_body_shows_its_material_colour_clear_glass_and_a_row_for_a_new_name() {
+    use ddc_geom::{arc::BulgeRing, v2};
+    use ddc_model::{SolidForm, SolidFrame, SolidSpec};
+    let mut ed = Editor::new_in_memory().unwrap();
+    let ring = |r: f64| BulgeRing {
+        pts: (0..8).map(|i| (std::f64::consts::TAU * i as f64 / 8.0, r)).map(|(a, r)| v2(r * a.cos(), r * a.sin())).collect(),
+        bulges: vec![0.0; 8],
+    };
+    let n = std::cell::Cell::new(0.0);
+    // distinct shapes: equal bodies are drawn as instances without a mesh of their own
+    let mut add = |material: &str| {
+        ed.model
+            .add_solid(&SolidSpec {
+                level: ed.level,
+                name: "p".into(),
+                void: false,
+                material: material.into(),
+                frame: SolidFrame::default(),
+                form: SolidForm::Blend { bottom: ring(1.0), top: ring({ n.set(n.get() + 0.1); 0.9 - n.get() }), height: 1.0 },
+                ifc: None,
+            })
+            .unwrap()
+    };
+    let (concrete, glass, brown, hex) = (add("concrete"), add("glass"), add("Eiffel Tower Brown"), add("Facade #a0522d"));
+    let water = add("water");
+    ed.reload().unwrap();
+    let (sc, ts) = scene3d::compose(&mut ed);
+    let tag_of = |id: i64| {
+        let k = ts.iter().position(|t| *t == crate::edit3d::pick::Target::new(crate::edit3d::pick::Cat::Ext(crate::scene_ids::EXT_SOLID), id)).unwrap();
+        sc.meshes.iter().find(|m| m.element == crate::scene_ids::EXT_BASE + k as u32).unwrap().tag
+    };
+    let rgb = ddc_render::scene::TAG_RGB;
+    // a textured structural class keeps its texture layer
+    assert!(texture::layer_of(tag_of(concrete)).is_some(), "{:#x}", tag_of(concrete));
+    assert!(ddc_render::is_translucent(tag_of(glass)), "{:#x}", tag_of(glass));
+    // water keeps its colour as an opaque body until the glass pass can tint by material
+    assert!(!ddc_render::is_translucent(tag_of(water)) && tag_of(water) & rgb == rgb, "{:#x}", tag_of(water));
+    assert_ne!(tag_of(water) & 0xFF_FFFF, 0);
+    assert_eq!(tag_of(brown) & 0xFF_FFFF, 0x6B4A32);
+    assert_eq!(tag_of(hex) & 0xFF_FFFF, 0xA0522D);
+    // a new material text got its row, so colour and properties are editable
+    assert!(ed.model.materials().unwrap().iter().any(|m| m.spec.name == "Eiffel Tower Brown" && m.id != 0));
+}

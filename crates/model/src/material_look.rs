@@ -133,7 +133,7 @@ fn words(key: &str) -> &'static [&'static str] {
 }
 
 /// Paint colour words: a name that carries one takes that colour (painted metal is not metallic).
-const COLOUR_WORDS: [(&str, u32); 12] = [
+const COLOUR_WORDS: [(&str, u32); 17] = [
     ("white", 0xF0F0EC),
     ("black", 0x262729),
     ("red", 0xB0302A),
@@ -146,6 +146,11 @@ const COLOUR_WORDS: [(&str, u32); 12] = [
     ("anthracite", 0x3C3F44),
     ("silver", 0xC0C4C8),
     ("beige", 0xD8CCB0),
+    ("brown", 0x6B4A32),
+    ("pink", 0xE08CA8),
+    ("purple", 0x6A3F8C),
+    ("gold", 0xC9A227),
+    ("cream", 0xEFE4C4),
 ];
 
 fn tokens(s: &str) -> impl Iterator<Item = &str> {
@@ -201,6 +206,13 @@ pub fn look_of(name: &str) -> Option<&'static Look> {
 
 /// Colour word in a material text, if any.
 fn paint_colour(name: &str) -> Option<u32> {
+    // an explicit "#RRGGBB" in the text wins over colour words
+    if let Some(i) = name.find('#') {
+        let h = name[i + 1..].get(..6).filter(|h| h.chars().all(|c| c.is_ascii_hexdigit()));
+        if let Some(c) = h.and_then(|h| u32::from_str_radix(h, 16).ok()) {
+            return Some(c);
+        }
+    }
     let n = name.to_lowercase();
     COLOUR_WORDS.iter().find(|(w, _)| tokens(&n).any(|t| t == *w)).map(|c| c.1)
 }

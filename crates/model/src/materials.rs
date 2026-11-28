@@ -35,7 +35,7 @@ pub fn is_lib_hatch(key: &str) -> bool {
 }
 
 /// Built-in materials of a new project (UI labels are `mat.<id>`).
-pub const BUILTIN_MATERIALS: [&str; 12] = [
+pub const BUILTIN_MATERIALS: [&str; 15] = [
     "concrete",
     "masonry",
     "brick",
@@ -47,6 +47,9 @@ pub const BUILTIN_MATERIALS: [&str; 12] = [
     "wood",
     "steel",
     "membrane",
+    "stone",
+    "water",
+    "grass",
     "other",
 ];
 

@@ -30,7 +30,7 @@ pub(crate) struct PartOpts {
     pub level: Option<Ref>,
 }
 
-/// The third argument of `part`: a material text, or `{material, ifc, predefined, level}`.
+/// The third argument of `part`: a material text, or `{material, color, ifc, predefined, level}`.
 /// The IFC class is checked by the model against its allow list when the ops are applied.
 pub(crate) fn part_opts(lua: &Lua, x: Value) -> LResult<PartOpts> {
     match x {
@@ -53,7 +53,18 @@ pub(crate) fn part_opts(lua: &Lua, x: Value) -> LResult<PartOpts> {
             let class = opt("ifc")?.or(opt("class")?);
             let pre = opt("predefined")?.or(opt("type")?);
             let level = opt("level")?;
+            let color = opt("color")?.or(opt("colour")?);
             o.done()?;
+            let material = match (material, color) {
+                (m, Some(c)) => {
+                    let c = c.trim().trim_start_matches('#').to_string();
+                    if c.len() != 6 || !c.chars().all(|x| x.is_ascii_hexdigit()) {
+                        return err(format!("part: color is a hex text like \"#a0522d\", got \"{c}\""));
+                    }
+                    Some(format!("{} #{c}", m.unwrap_or_else(|| "Painted".into())))
+                }
+                (m, None) => m,
+            };
             if class.is_none() && pre.is_some() {
                 return err("part: predefined needs ifc, e.g. {ifc = \"IfcBeam\", predefined = \"BEAM\"}");
             }

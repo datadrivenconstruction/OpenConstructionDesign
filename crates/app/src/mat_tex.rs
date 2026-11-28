@@ -25,7 +25,7 @@ const MAX_SIDE: u32 = 8192;
 pub struct Layers {
     elem: HashMap<(&'static str, i64), u8>,
     /// Typed parts (solids) whose material is a finish: the look colour in every style.
-    elem_rgb: HashMap<(&'static str, i64), [u8; 3]>,
+    elem_rgb: HashMap<(&'static str, i64), ([u8; 3], bool)>,
     wall: HashMap<(i64, usize), u8>,
     /// Wall type layers drawn with their library look (finishes keep their shaded colour).
     wall_look: HashMap<(i64, usize), u8>,
@@ -79,8 +79,11 @@ impl Layers {
 
     /// `tag` of an element's faces with its material texture, unchanged without one.
     pub fn elem(&self, table: &'static str, id: i64, tag: u32) -> u32 {
-        if let Some(c) = self.elem_rgb.get(&(table, id)) {
-            return ddc_render::tag_rgb(*c, false);
+        if let Some((c, clear)) = self.elem_rgb.get(&(table, id)) {
+            // voids keep their own tag
+            if ddc_render::style::base_tag(tag) != ddc_render::scene::TAG_GLASS {
+                return ddc_render::tag_rgb(*c, *clear);
+            }
         }
         match self.elem.get(&(table, id)) {
             Some(&l) => texture::with_layer(tag, l),
@@ -399,6 +402,18 @@ pub fn sync(ed: &Editor) -> bool {
 }
 
 /// Texture layers for the current model: one query per model revision, then cached.
+/// Colour and clearness of a free body's material in every style: the row colour or the class
+/// colour; glass-like classes are see-through. None for a textured structural class (it keeps its texture).
+pub fn body_rgb(ed: &Editor, material: &str) -> Option<([u8; 3], bool)> {
+    let r = ed.model.material_look(material).ok().flatten()?;
+    let clear = matches!(r.look.key, "glass" | "polycarbonate");
+    // a textured structural class keeps its texture layer; the flat colour is for finishes, glass and untextured looks
+    if !clear && !r.look.finish && !r.look.texture.is_empty() {
+        return None;
+    }
+    Some(([(r.rgb >> 16) as u8, (r.rgb >> 8) as u8, r.rgb as u8], clear))
+}
+
 pub fn layers(ed: &Editor) -> Rc<Layers> {
     // no blobs here: this runs several times per scene build
     let slots: Vec<_> = ed
@@ -439,16 +454,16 @@ pub fn layers(ed: &Editor) -> Rc<Layers> {
     };
     let mut uses: HashMap<String, (LookTex, usize)> = HashMap::new();
     let mut elem_look: Vec<((&'static str, i64), String)> = vec![];
-    let mut elem_rgb: HashMap<(&'static str, i64), [u8; 3]> = HashMap::new();
-    let mut finish: HashMap<&str, Option<[u8; 3]>> = HashMap::new();
+    let mut elem_rgb: HashMap<(&'static str, i64), ([u8; 3], bool)> = HashMap::new();
+    let mut body: HashMap<&str, Option<([u8; 3], bool)>> = HashMap::new();
     for (table, id, material) in &elems {
         let Some(table) = static_table(table) else { continue };
         if let Some(&l) = by_name.get(material.as_str()) {
             elem_look.push(((table, *id), format!("#{l}")));
-        } else if let Some(c) = (table == "solid").then(|| finish.entry(material.as_str()).or_insert_with(|| {
-            let r = ed.model.material_look(material).ok().flatten().filter(|r| r.look.finish)?;
-            Some([(r.rgb >> 16) as u8, (r.rgb >> 8) as u8, r.rgb as u8])
-        })).and_then(|c| *c) {
+        } else if let Some(c) = matches!(table, "solid" | "freeform")
+            .then(|| body.entry(material.as_str()).or_insert_with(|| body_rgb(ed, material)))
+            .and_then(|c| *c)
+        {
             elem_rgb.insert((table, *id), c);
         } else if let Some(t) = look(material) {
             let k = t.key();

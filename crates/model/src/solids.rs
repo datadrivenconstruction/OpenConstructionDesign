@@ -437,13 +437,20 @@ fn geom_err(e: gsolid::FormError) -> Error {
     Error::Degenerate(format!("solid: {e}"))
 }
 
+/// Longest solid name or material text, characters.
+const MAX_TEXT: usize = 200;
+
 pub(crate) fn check(db: &Connection, s: &SolidSpec) -> Result<(), Error> {
     elev(db, s.level)?;
     if !s.frame.is_valid() {
         return invalid("solid: work plane axes must be orthonormal");
     }
-    if s.name.len() > 200 || s.material.len() > 200 {
-        return invalid("solid: name or material too long");
+    for (what, v) in [("name", &s.name), ("material", &s.material)] {
+        let n = v.chars().count();
+        if n > MAX_TEXT {
+            let head: String = v.chars().take(24).collect();
+            return invalid(format!("solid: the {what} \"{head}...\" has {n} characters; the limit is {MAX_TEXT}, shorten it"));
+        }
     }
     if let Some(c) = &s.ifc {
         if s.void {
@@ -699,7 +706,14 @@ impl Model {
         check(&self.db, s)?;
         self.op("solid_add", |db| {
             let id = write(db, s, None)?;
-            Ok((id, id, Inv::default().delete("solid", "id", id)))
+            let mut inv = Inv::default().delete("solid", "id", id);
+            // a new material text gets its row: colour and properties are editable at once
+            let m = &s.material;
+            if !s.void && !m.trim().is_empty() && m.trim() == m && m.chars().count() <= 120 && crate::materials::row_id(db, m)?.is_none() {
+                crate::materials::insert_spec_ignore(db, &crate::materials::material_defaults(m))?;
+                inv = inv.delete("material", "id", db.last_insert_rowid());
+            }
+            Ok((id, id, inv))
         })
     }
 

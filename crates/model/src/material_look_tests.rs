@@ -287,3 +287,42 @@ fn runs_of_a_grey_or_missing_system_are_gaps_and_service_coloured_ones_are_not()
     assert_eq!(gaps, vec![("mep_run", dull), ("mep_run", lost)]);
     assert!(!gaps.contains(&("mep_run", ok)));
 }
+
+#[test]
+fn a_hex_colour_or_a_colour_word_in_the_name_sets_the_colour() {
+    assert_eq!(resolve("Facade #a0522d", None).unwrap().rgb, 0xA0522D);
+    assert_eq!(resolve("Eiffel Tower Brown", None).unwrap().rgb, 0x6B4A32);
+    // a row colour still wins, and a name that only looks like a hex word is not a colour
+    assert_eq!(resolve("Facade #a0522d", Some(0x112233)).unwrap().rgb, 0x112233);
+    assert!(resolve("decade", None).is_none());
+}
+
+#[test]
+fn a_new_solid_gets_its_material_row_and_undo_removes_it() {
+    use crate::{SolidForm, SolidFrame, SolidSpec};
+    use ddc_geom::{arc::BulgeRing, v2};
+    let mut m = Model::open(":memory:").unwrap();
+    let lv = m.add_level("L1", 0.0).unwrap();
+    let ring = |r: f64| BulgeRing {
+        pts: (0..8).map(|i| (std::f64::consts::TAU * i as f64 / 8.0, r)).map(|(a, r)| v2(r * a.cos(), r * a.sin())).collect(),
+        bulges: vec![0.0; 8],
+    };
+    let spec = SolidSpec {
+        level: lv,
+        name: "p".into(),
+        void: false,
+        material: "New material".into(),
+        frame: SolidFrame::default(),
+        form: SolidForm::Blend { bottom: ring(1.0), top: ring(0.8), height: 1.0 },
+        ifc: None,
+    };
+    let has = |m: &Model| m.materials().unwrap().iter().any(|x| x.spec.name == "New material" && x.id != 0);
+    m.add_solid(&spec).unwrap();
+    assert!(has(&m));
+    m.undo().unwrap();
+    assert!(!has(&m));
+    let mut long = spec.clone();
+    long.material = "m".repeat(201);
+    let e = m.add_solid(&long).unwrap_err().to_string();
+    assert!(e.contains("201 characters") && e.contains("limit is 200"), "{e}");
+}
