@@ -116,6 +116,10 @@ pub(crate) fn wire_form(f: &FormV) -> Form {
 }
 
 impl Builder {
+    pub(crate) fn count_element(&mut self) -> Result<(), String> {
+        self.count()
+    }
+
     fn count(&mut self) -> Result<(), String> {
         self.elements += 1;
         if self.elements > self.max_elements {

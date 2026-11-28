@@ -842,3 +842,34 @@ fn set_type_opening_still_refused_unchanged() {
     assert!(t.m.apply_envelope(&retype_env(refs, Ref::id(Cat::SlabType, t.st_b))).is_err());
     assert_eq!(hash(&t.m), h0);
 }
+
+/// `n` small solids on a grid starting at slot 1, `x0` apart from the origin so batches differ.
+fn many_solids(lv: i64, n: u32, x0: f64) -> Envelope {
+    let ops = (0..n)
+        .map(|i| {
+            let (gx, gy) = (f64::from(i % 50), f64::from(i / 50));
+            geo_solid(i + 1, lv, extrude(square(0.2), x0 + gx * 0.5 + gy * 0.0))
+        })
+        .collect();
+    envelope(vec![group(1, &[], ops)])
+}
+
+/// Applying solids takes time proportional to their number, also into a project that already
+/// holds thousands (a quadratic apply took minutes at these sizes).
+#[test]
+fn applying_many_solids_is_linear_into_a_full_project() {
+    let mut m = model();
+    let lv = m.add_level("bench-L1", 0.0).unwrap();
+    m.apply_envelope(&many_solids(lv, 1500, 0.0)).unwrap();
+    let time = |m: &mut Model, n: u32| {
+        let t = std::time::Instant::now();
+        let r = m.apply_envelope(&many_solids(lv, n, 100.0)).unwrap();
+        assert_eq!(r.created.len(), n as usize);
+        t.elapsed().as_secs_f64()
+    };
+    let small = time(&mut m, 250);
+    let big = time(&mut m, 1000);
+    // 4x the solids: linear is about 4x; quadratic would be about 16x
+    assert!(big < small * 9.0 + 0.5, "250 solids {small:.2} s, 1000 solids {big:.2} s");
+    assert!(big < 60.0, "1000 solids took {big:.1} s");
+}

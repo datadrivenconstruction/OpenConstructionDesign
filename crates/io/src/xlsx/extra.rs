@@ -119,10 +119,10 @@ pub(crate) const SHEET_CATS: [SheetCat; 12] = [
 ];
 
 /// All format sheets: user columns on them, except on category sheets, are not carried over.
-const OWN: [&str; 22] = [
+const OWN: [&str; 23] = [
     LEVELS, TYPES, LAYERS, SLAB_LAYERS, MATERIALS, WALLS, OPENINGS, QUANTITIES, ROOMS, SLABS, CURTAINS,
-    SUMMARY, INFO, BASELINE, KEYS, LISTS, COLUMNS, BEAMS, ROOFS, CEILINGS, SLAB_TYPES,
-    MEMBER_TYPES,
+    SUMMARY, INFO, BASELINE, KEYS, LISTS, COLUMNS, BEAMS, ROOFS, SOLIDS, CEILINGS,
+    SLAB_TYPES, MEMBER_TYPES,
 ];
 
 pub(crate) fn sheet_cat(name: &str) -> Option<&'static SheetCat> {

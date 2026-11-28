@@ -96,6 +96,14 @@ impl Model {
         Ok(self.level_list()?.into_iter().next())
     }
 
+    /// The level a script lands on when none is named: the one nearest elevation 0 (the lower
+    /// one on a tie), so a basement below ground does not shift every body.
+    pub fn ground_level(&self) -> Result<Option<(i64, String, f64)>, Error> {
+        let mut v = self.level_list()?;
+        v.sort_by(|a, b| a.2.abs().total_cmp(&b.2.abs()).then(a.2.total_cmp(&b.2)));
+        Ok(v.into_iter().next())
+    }
+
     pub fn add_level(&mut self, name: &str, elevation: f64) -> Result<i64, Error> {
         if !elevation.is_finite() {
             return invalid("level elevation must be finite");

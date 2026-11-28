@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 // SPDX-FileCopyrightText: 2026 Artem Boiko / DataDrivenConstruction.io and OpenConstructionDesign Contributors
-//! `create` of doors, windows, rooms, slabs and columns (docs/design/AI_NATIVE.md, "Lowering").
+//! `create` of doors, windows, rooms, slabs, roofs and columns (docs/design/AI_NATIVE.md, "Lowering").
 //!
 //! Each kind runs the model function the editor tools use (`add_opening_with`, `add_room`,
 //! `add_slab`, `add_column`). Field names are the ones the XLSX adapter emits, so an envelope
@@ -11,7 +11,7 @@ use rusqlite::Connection;
 
 use super::set::{flag_of, len, opt_len, positive_len};
 use super::{along_host, at_point, bad_value, el_name, level_row, resolve_as, unsupported, Fail, Run, EPS};
-use crate::{ColumnSpec, Model, OpeningSpec, RoomSpec, SlabSpec, Swing};
+use crate::{ColumnSpec, Model, OpeningSpec, RoofKind, RoofSpec, RoomSpec, SlabSpec, Swing};
 
 /// Room height until a later `set` gives one: the wire room has no height row.
 pub(super) const ROOM_HEIGHT: f64 = 3.0;
@@ -19,6 +19,7 @@ pub(super) const ROOM_HEIGHT: f64 = 3.0;
 // `sill` as a field is the door form (a window has the typed `sill`)
 const OPENING_FIELDS: &[&str] = &["width", "height", "swing_side", "swing_hinge", "sill"];
 const SLAB_FIELDS: &[&str] = &["holes"];
+const ROOF_FIELDS: &[&str] = &["overhang", "offset", "fascia", "gables"];
 const COLUMN_FIELDS: &[&str] = &["base_offset", "top_offset", "structural", "top_at_x", "top_at_y"];
 
 pub(super) fn create(m: &mut Model, run: &mut Run, slot: u32, el: &NewEl) -> Result<(), Fail> {
@@ -27,6 +28,7 @@ pub(super) fn create(m: &mut Model, run: &mut Run, slot: u32, el: &NewEl) -> Res
         NewEl::Room { .. } => room(m, run, slot, el),
         NewEl::Slab { .. } => slab(m, run, slot, el),
         NewEl::Column { .. } => column(m, run, slot, el),
+        NewEl::Roof { .. } => roof(m, run, slot, el),
         other => Err(unsupported(format!("creating `{}` is not lowered yet", el_name(other)))),
     }
 }
@@ -167,6 +169,52 @@ fn slab(m: &mut Model, run: &mut Run, slot: u32, el: &NewEl) -> Result<(), Fail>
     };
     let id = m.add_slab(&SlabSpec { level: lv, slab_type, offset: offset.to_m(), outer, holes })?;
     run.made(slot, Cat::Slab, id);
+    Ok(())
+}
+
+/// A roof over a plan outline, every edge sloped by `slope` (degrees on the wire as an angle);
+/// `gables` lists the edge indices left as gable ends.
+fn roof(m: &mut Model, run: &mut Run, slot: u32, el: &NewEl) -> Result<(), Fail> {
+    let NewEl::Roof { level, boundary, slope, ty, fields } = el else {
+        return Err(unsupported(format!("`{}` is not a roof", el_name(el))));
+    };
+    let f = pick("roof", fields, ROOF_FIELDS)?;
+    let lv = resolve_as(m, run, level, Cat::Level).map_err(|e| e.at("/el/level"))?;
+    let (_, elev) = level_row(m, lv)?;
+    if boundary.len() < 3 {
+        return Err(bad_value(format!("a roof boundary needs at least 3 points, got {}", boundary.len()))
+            .at("/el/boundary"));
+    }
+    let mut ring = Vec::with_capacity(boundary.len());
+    for (i, p) in boundary.iter().enumerate() {
+        ring.push(plan_point(p, elev).map_err(|e| e.at(format!("/el/boundary/{i}")))?);
+    }
+    let deg = slope.to_rad().to_degrees();
+    if !(0.0..90.0).contains(&deg) {
+        return Err(bad_value(format!("roof `slope` must be from 0 to 90 degrees, got {deg}")).at("/el/slope"));
+    }
+    let mut slopes = vec![Some(deg); ring.len()];
+    if let Some(g) = f.get("gables") {
+        let bad = || bad_value("`gables` needs a list of edge numbers (0 is the edge from the first point)");
+        for e in g.value.v.as_array().ok_or_else(bad)? {
+            let i = e.as_u64().ok_or_else(bad)? as usize;
+            *slopes.get_mut(i).ok_or_else(bad)? = None;
+        }
+    }
+    let slab_type = match ty {
+        Some(t) => resolve_as(m, run, t, Cat::SlabType).map_err(|e| e.at("/el/type"))?,
+        None => first_row(&m.db, "slab_type", "slab type")?,
+    };
+    let spec = RoofSpec {
+        level: lv,
+        slab_type,
+        offset: f.len_or("offset", 0.0)?,
+        overhang: f.len_or("overhang", 0.0)?,
+        fascia: f.len_or("fascia", 0.0)?,
+        kind: RoofKind::Footprint { ring, slopes, mansard: None },
+    };
+    let id = m.add_roof(&spec)?;
+    run.made(slot, Cat::Roof, id);
     Ok(())
 }
 

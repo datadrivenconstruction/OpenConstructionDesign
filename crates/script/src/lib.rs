@@ -12,6 +12,8 @@
 #[cfg(feature = "lua")]
 mod audit;
 #[cfg(feature = "lua")]
+mod bim;
+#[cfg(feature = "lua")]
 mod blocks;
 #[cfg(feature = "lua")]
 mod blocks_build;

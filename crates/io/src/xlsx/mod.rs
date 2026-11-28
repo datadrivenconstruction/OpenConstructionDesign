@@ -136,6 +136,7 @@ pub(crate) const SUMMARY: &str = "QuantitiesSummary";
 pub(crate) const COLUMNS: &str = "Columns";
 pub(crate) const BEAMS: &str = "Beams";
 pub(crate) const ROOFS: &str = "Roofs";
+pub(crate) const SOLIDS: &str = "Solids";
 pub(crate) const CEILINGS: &str = "Ceilings";
 pub(crate) const SLAB_TYPES: &str = "SlabTypes";
 pub(crate) const MEMBER_TYPES: &str = "MemberTypes";
@@ -314,6 +315,16 @@ pub(crate) const ROOFS_COLS: &[Col] = &[
     c("area", "area [m2] (read-only)", false),
     c("volume", "volume [m3] (read-only)", false),
 ];
+pub(crate) const SOLIDS_COLS: &[Col] = &[
+    c("id", "id", false),
+    c("level", "level", false),
+    c("name", "name (read-only)", false),
+    c("material", "material (read-only)", false),
+    c("kind", "kind (read-only)", false),
+    c("area", "area [m2] (read-only)", false),
+    c("volume", "volume [m3] (read-only)", false),
+    c("net_volume", "net volume [m3] (read-only)", false),
+];
 pub(crate) const CEILINGS_COLS: &[Col] = &[
     c("id", "id", false),
     c("level", "level", false),
@@ -337,7 +348,7 @@ pub(crate) struct ParamSheet {
     pub sql: &'static str,
 }
 
-pub(crate) const PARAM_SHEETS: [ParamSheet; 6] = [
+pub(crate) const PARAM_SHEETS: [ParamSheet; 7] = [
     ParamSheet {
         sheet: COLUMNS,
         cols: COLUMNS_COLS,
@@ -358,6 +369,13 @@ pub(crate) const PARAM_SHEETS: [ParamSheet; 6] = [
         sql: "SELECT r.id,lv.name,t.name,r.kind,r.offset,MAX(q.area),SUM(q.volume) FROM roof r \
               JOIN level lv ON lv.id=r.level JOIN slab_type t ON t.id=r.stype \
               LEFT JOIN roof_qty q ON q.roof=r.id GROUP BY r.id ORDER BY r.id",
+    },
+    ParamSheet {
+        sheet: SOLIDS,
+        cols: SOLIDS_COLS,
+        sql: "SELECT s.id,COALESCE(lv.name,''),s.name,s.material,s.kind,q.area,q.volume,q.net_volume \
+              FROM solid s LEFT JOIN level lv ON lv.id=s.level \
+              LEFT JOIN solid_qty q ON q.solid=s.id AND q.error IS NULL ORDER BY s.id",
     },
     ParamSheet {
         sheet: CEILINGS,

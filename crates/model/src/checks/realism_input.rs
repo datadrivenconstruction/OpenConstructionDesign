@@ -327,7 +327,8 @@ fn solids(m: &Model, inp: &mut Input) -> Result<(), Error> {
         let z0 = level_z(m, s.level);
         let dims = bbox_dims(&q.bbox);
         let min_ext = dims.iter().copied().fold(f64::MAX, f64::min);
-        let part = Part { key: key.clone(), bbox: q.bbox, min_dim: min_ext, mesh };
+        let glass = s.material.to_lowercase().contains("glass") || s.material.to_lowercase().contains("glaz");
+        let part = Part { key: key.clone(), bbox: q.bbox, min_dim: min_ext, mesh, volume: q.volume, area: q.area, glass };
         let mut b = build(key, &s.form, &s.frame, z0, &tags, part);
         if let Some(si) = b.info {
             // a tube's size is its outside; its wall counts only when below what is rolled

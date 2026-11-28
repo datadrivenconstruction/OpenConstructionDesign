@@ -39,7 +39,7 @@ fn one(f: impl FnOnce(&mut Input)) -> Input {
 }
 
 fn part(id: i64, bbox: [f64; 6], min_dim: f64) -> Part {
-    Part { key: key("solid", id), bbox, min_dim, mesh: None }
+    Part { key: key("solid", id), bbox, min_dim, mesh: None, ..Default::default() }
 }
 
 fn cube(x0: f64, x1: f64) -> Mesh {
@@ -306,6 +306,49 @@ fn no_level_means_no_floating_verdict() {
     let mut i = floating(&[(1, 5.0, 6.0)], vec![]);
     i.ground_z = None;
     assert_eq!(count(&i, K_FLOAT), 0);
+}
+
+fn body(id: i64, bbox: [f64; 6], volume: f64, area: f64, glass: bool) -> Part {
+    Part { volume, area, glass, ..part(id, bbox, 1.0) }
+}
+
+#[test]
+fn solid_glass_filled_blocks_and_unit_slips_are_flagged() {
+    // 200 x 20 x 23 m of glass: the whole block is glass
+    let i = one(|i| {
+        let (v, a) = (92_000.0, 2.0 * (200.0 * 20.0 + 200.0 * 23.0 + 20.0 * 23.0));
+        i.parts.push(body(1, [0.0, 0.0, 0.0, 200.0, 20.0, 23.0], v, a, true));
+        // a 12 mm pane is fine
+        i.parts.push(body(2, [0.0, 0.0, 0.0, 3.0, 0.012, 2.0], 3.0 * 0.012 * 2.0, 2.0 * (6.0 + 0.036 + 0.024), true));
+    });
+    assert_eq!(count(&i, K_GLASS), 1);
+    assert_eq!(count(&i, K_BULK), 0, "glass is reported once");
+    // the same block in stone is a filled block
+    let i = one(|i| {
+        let (v, a) = (92_000.0, 2.0 * (200.0 * 20.0 + 200.0 * 23.0 + 20.0 * 23.0));
+        i.parts.push(body(1, [0.0, 0.0, 0.0, 200.0, 20.0, 23.0], v, a, false));
+    });
+    assert_eq!(count(&i, K_BULK), 1);
+    // a footing 3 x 3 x 1 m is not
+    let i = one(|i| i.parts.push(body(1, [0.0, 0.0, -1.0, 3.0, 3.0, 0.0], 9.0, 30.0, false)));
+    assert_eq!(count(&i, K_BULK) + count(&i, K_SIZE), 0);
+    // millimetres taken as metres
+    let i = one(|i| i.parts.push(body(1, [0.0, 0.0, 0.0, 6000.0, 6000.0, 800.0], 2.9e10, 8e7, false)));
+    assert_eq!(count(&i, K_SIZE), 1);
+}
+
+#[test]
+fn a_body_far_outside_the_walls_is_flagged() {
+    let wall = |x0: f64, y0: f64, x1: f64, y1: f64| [x0, y0, 0.0, x1, y1, 3.0];
+    let i = one(|i| {
+        i.supports = vec![wall(0.0, 0.0, 10.0, 0.2), wall(0.0, 8.0, 10.0, 8.2), wall(0.0, 0.0, 0.2, 8.0), wall(9.8, 0.0, 10.0, 8.0)];
+        i.parts.push(body(1, [2.0, 2.0, 0.0, 4.0, 3.0, 1.0], 1.0, 1.0, false));
+        i.parts.push(body(2, [2.0, -4.0, 0.0, 6.0, -0.5, 0.2], 1.0, 1.0, false));
+        i.parts.push(body(3, [-0.5, 2.0, 0.0, 0.0, 3.0, 1.0], 1.0, 1.0, false));
+    });
+    let n: Vec<_> = analyze(&i).into_iter().filter(|x| x.msg_key == K_OUTSIDE).collect();
+    assert_eq!(n.len(), 1);
+    assert_eq!(n[0].keys[0].1, 2);
 }
 
 #[test]

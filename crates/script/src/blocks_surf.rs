@@ -108,6 +108,7 @@ pub(crate) fn install(lua: &Lua, g: &Table) -> LResult<()> {
     s.set("sample", lua.create_function(s_sample)?)?;
     g.set("surf", s)?;
     g.set("surface_grid", block(lua, surface_grid)?)?;
+    g.set("shell", block(lua, shell)?)?;
     g.set("geodesic", block(lua, geodesic)?)?;
     g.set("hypar_umbrella", block(lua, hypar_umbrella)?)?;
     g.set("membrane", block(lua, membrane)?)?;
@@ -277,6 +278,37 @@ impl SurfIn {
 // ---- gridshell ----
 
 /// Members and panels over a surface: quad, triangulated or diagrid; columns where asked.
+/// `shell{surface, nu, nv, thickness, material, name}`: a surface covered with flat panels of one
+/// thickness, for glazing and domes (a solid body is never needed for a skin).
+fn shell(lua: &Lua, t: Option<Table>) -> Out {
+    let o = Opts::new("shell", t, lua)?;
+    let s = surf_in(&o, "surface")?;
+    let nu = o.int("nu", 12, 1, 400)? as usize;
+    let nv = o.int("nv", 8, 1, 400)? as usize;
+    let th = o.len_in("thickness", 0.024, 0.002, 1.0)?;
+    let mat = o.mat("material", "glass")?;
+    let name = o.text("name", "shell")?;
+    o.done()?;
+    if (nu + 1) * (nv + 1) > 40_000 {
+        return err("shell: at most 40000 grid points");
+    }
+    let mut p: Vec<Vec<V3>> = Vec::with_capacity(nu + 1);
+    for i in 0..=nu {
+        let mut row = Vec::with_capacity(nv + 1);
+        for j in 0..=nv {
+            row.push(s.at(lua, i as f64 / nu as f64, j as f64 / nv as f64, "shell")?);
+        }
+        p.push(row);
+    }
+    let mut em = Em::new(lua, "shell");
+    for i in 0..nu {
+        for j in 0..nv {
+            em.panel("panel", &[p[i][j], p[i + 1][j], p[i + 1][j + 1], p[i][j + 1]], th, &mat)?;
+        }
+    }
+    em.finish(&name)
+}
+
 fn surface_grid(lua: &Lua, t: Option<Table>) -> Out {
     let o = Opts::new("surface_grid", t, lua)?;
     let s = surf_in(&o, "surface")?;

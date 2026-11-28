@@ -69,8 +69,16 @@ pub fn write(set: &MeshSet, mtl_name: &str, o: ObjOptions) -> Result<(String, St
         let _ = writeln!(mtl, "newmtl {n}\nKa 0 0 0\nKd {r:.6} {g:.6} {b:.6}\nKs 0 0 0\nd {a:.6}\nillum 1\n");
     }
     let mut base = 1usize;
+    // one object per element: a name shared by several parts is made unique with the part key,
+    // so a reader that merges objects of one name does not fuse them
+    let mut seen: std::collections::HashMap<String, usize> = std::collections::HashMap::new();
     for p in &set.parts {
-        let _ = writeln!(obj, "o {}", token(&p.name));
+        *seen.entry(token(&p.name)).or_default() += 1;
+    }
+    for p in &set.parts {
+        let nm = token(&p.name);
+        let nm = if seen[&nm] > 1 { format!("{nm}_{}", token(&p.key).replace(':', "_")) } else { nm };
+        let _ = writeln!(obj, "o {nm}");
         let _ = writeln!(obj, "g {}", token(&p.key));
         let n = p.material.and_then(|m| names.get(m)).map_or(NO_MATERIAL, String::as_str);
         let _ = writeln!(obj, "usemtl {n}");

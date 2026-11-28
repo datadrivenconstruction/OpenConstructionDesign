@@ -286,6 +286,8 @@ impl MeshSet {
         for (id, _, mesh) in m.mep_meshes(None).map_err(e)? {
             add(&mut out, "mep_run", id, "mep", &mesh, format!("mep {id}"));
         }
+        // solids and freeform patches are model bodies too: every mesh export carries them
+        crate::exact::model::add_solids(m, &mut out)?;
         if failed > 0 {
             warns.push(format!("{failed} element(s) have no body to export"));
         }

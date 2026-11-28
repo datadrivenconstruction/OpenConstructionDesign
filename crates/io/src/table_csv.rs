@@ -93,6 +93,21 @@ pub fn csv_full(m: &Model) -> Result<String, String> {
             props.entry((kind, id)).or_default().push((head, v));
         }
     }
+    // solids carry their measured quantities: the stored form alone says nothing about size
+    let mut qty: HashMap<i64, [f64; 3]> = HashMap::new();
+    if table_exists(m, "solid_qty") {
+        let mut st = m
+            .sql()
+            .prepare("SELECT solid, volume, net_volume, area FROM solid_qty WHERE error IS NULL")
+            .map_err(e)?;
+        let rows = st
+            .query_map([], |r| Ok((r.get::<_, i64>(0)?, [r.get(1)?, r.get(2)?, r.get(3)?])))
+            .map_err(e)?;
+        for r in rows {
+            let (id, q) = r.map_err(e)?;
+            qty.insert(id, q);
+        }
+    }
     let mut cols: Vec<String> = vec![];
     let mut rows: Vec<Row> = vec![];
     for (cat, table) in COUNTED_CATEGORIES {
@@ -137,6 +152,16 @@ pub fn csv_full(m: &Model) -> Result<String, String> {
             }
             if *table == "level" {
                 row.level = levels.get(&row.id).cloned().unwrap_or_default();
+            }
+            if *table == "solid" {
+                if let Some(q) = qty.get(&row.id) {
+                    for (n, v) in [("volume_m3", q[0]), ("net_volume_m3", q[1]), ("area_m2", q[2])] {
+                        if !cols.iter().any(|c| c == n) {
+                            cols.push(n.to_string());
+                        }
+                        row.cells.insert(n.to_string(), format!("{v}"));
+                    }
+                }
             }
             rows.push(row);
         }
@@ -247,5 +272,35 @@ mod tests {
         assert_eq!(&lvl[..3], &["level", "7", "L1"]);
         assert_eq!(lvl.len(), head.len());
         assert_eq!(csv.lines().count(), 3);
+    }
+
+    #[test]
+    fn solids_carry_volume_and_area() {
+        let mut m = Model::open(":memory:").unwrap();
+        let lv = m.add_level("L0", 0.0).unwrap();
+        use ddc_geom::gsolid::{Form, Frame, Section};
+        use ddc_geom::v2;
+        let spec = ddc_model::SolidSpec {
+            level: lv,
+            name: "block".into(),
+            void: false,
+            material: "Concrete".into(),
+            frame: Frame::default(),
+            form: Form::Extrusion {
+                profile: Section::polygon(vec![v2(0.0, 0.0), v2(2.0, 0.0), v2(2.0, 3.0), v2(0.0, 3.0)]),
+                start: 0.0,
+                end: 4.0,
+            },
+            ifc: None,
+        };
+        m.add_solid(&spec).unwrap();
+        let csv = csv_full(&m).unwrap();
+        let head = cells(csv.lines().next().unwrap());
+        let at = |n: &str| head.iter().position(|h| h == n).unwrap_or_else(|| panic!("{n}: {head:?}"));
+        let row = cells(csv.lines().find(|l| l.starts_with("solid,")).unwrap());
+        let vol: f64 = row[at("volume_m3")].parse().unwrap();
+        assert!((vol - 24.0).abs() < 1e-6, "{vol}");
+        let area: f64 = row[at("area_m2")].parse().unwrap();
+        assert!((area - 2.0 * (6.0 + 8.0 + 12.0)).abs() < 1e-6, "{area}");
     }
 }

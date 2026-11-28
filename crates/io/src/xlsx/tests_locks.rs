@@ -164,6 +164,14 @@ const CLASSES: &[(&str, &str, Class)] = &[
     (CEILINGS, "height", Computed),
     (CEILINGS, "area", Computed),
     (CEILINGS, "volume", Computed),
+    (SOLIDS, "id", Key),
+    (SOLIDS, "level", Computed),
+    (SOLIDS, "name", Computed),
+    (SOLIDS, "material", Computed),
+    (SOLIDS, "kind", Computed),
+    (SOLIDS, "area", Computed),
+    (SOLIDS, "volume", Computed),
+    (SOLIDS, "net_volume", Computed),
     (SLAB_TYPES, "id", Key),
     (SLAB_TYPES, "name", Edit),
     (SLAB_TYPES, "layers", Computed),
@@ -298,6 +306,22 @@ fn fixture() -> Model {
         height: 2.7,
         outer: ring,
         holes: vec![],
+    })
+    .unwrap();
+    use ddc_geom::gsolid::{Form, Frame, Section};
+    use ddc_geom::v2;
+    m.add_solid(&ddc_model::SolidSpec {
+        level: l1,
+        name: "block".into(),
+        void: false,
+        material: "Concrete".into(),
+        frame: Frame::default(),
+        form: Form::Extrusion {
+            profile: Section::polygon(vec![v2(0.0, 0.0), v2(2.0, 0.0), v2(2.0, 3.0), v2(0.0, 3.0)]),
+            start: 0.0,
+            end: 1.0,
+        },
+        ifc: None,
     })
     .unwrap();
     m

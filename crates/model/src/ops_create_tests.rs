@@ -340,3 +340,26 @@ fn create_all_or_nothing_and_one_undo() {
     m.undo().unwrap();
     assert_eq!(hash(&m), h0, "one undo removes every created row");
 }
+
+#[test]
+fn create_roof_over_an_outline_with_gable_ends() {
+    let (mut m, fx) = fixture();
+    let roof = |slot: u32, slope: f64, gables: serde_json::Value| Op::Create {
+        slot,
+        el: NewEl::Roof {
+            level: Ref::id(Cat::Level, fx.l1),
+            boundary: [(0.0, 0.0), (8.0, 0.0), (8.0, 6.0), (0.0, 6.0)].iter().map(|p| at(p.0, p.1, 3.0)).collect(),
+            slope: Angle::deg(slope),
+            ty: Some(Ref::id(Cat::SlabType, fx.stype)),
+            fields: vec![m_("overhang", 0.4), Field::new("gables", Value::plain(gables))],
+        },
+    };
+    let r = m.apply_envelope(&one(vec![roof(1, 35.0, json!([1, 3]))])).unwrap();
+    let (cat, id) = created(&r, 1);
+    assert_eq!(cat, Cat::Roof);
+    let n: i64 = m.sql().query_row("SELECT count(*) FROM roof_vertex WHERE roof=?1", [id], |r| r.get(0)).unwrap();
+    assert_eq!(n, 4);
+    let area: f64 = m.sql().query_row("SELECT sum(area) FROM roof_qty WHERE roof=?1", [id], |r| r.get(0)).unwrap();
+    assert!(area > 48.0, "a sloped roof is larger than its plan: {area}");
+    refused(&mut m, &one(vec![roof(1, 95.0, json!([]))]), Code::Invalid);
+}

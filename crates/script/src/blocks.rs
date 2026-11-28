@@ -321,6 +321,13 @@ pub(crate) fn prof_text(s: &str) -> Result<Profile, String> {
             h: mm(nums[0]),
             t: mm(nums[1]),
         },
+        // two angles back to back on their long legs, no gap: a tee of twice the short leg
+        "2l" if ok(3) && nums[2] < nums[0].min(nums[1]) => Profile::T {
+            h: mm(nums[0]),
+            b: mm(2.0 * nums[1]),
+            tw: mm(2.0 * nums[2]),
+            tf: mm(nums[2]),
+        },
         "rect" if ok(2) => Profile::Rect { w: mm(nums[0]), h: mm(nums[1]) },
         "round" if ok(1) => Profile::Circle { r: mm(nums[0] / 2.0) },
         "i" if ok(2) => Profile::I {
@@ -807,6 +814,7 @@ pub(crate) fn ngon(c: V3, r: f64, n: usize, a0: f64) -> Vec<V3> {
 
 pub(crate) fn install(lua: &Lua) -> LResult<()> {
     let g = lua.globals();
+    crate::bim::install(lua, &g)?;
     crate::blocks_build::install(lua, &g)?;
     crate::blocks_surf::install(lua, &g)?;
     crate::geo_curve::install(lua, &g)?;

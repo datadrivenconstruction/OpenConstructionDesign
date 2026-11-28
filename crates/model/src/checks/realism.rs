@@ -45,6 +45,16 @@ pub const COVER_FLOOR: f64 = 0.015;
 /// Stair limits, m (planning defaults, not a code claim).
 pub const RISER: (f64, f64) = (0.10, 0.20);
 pub const TREAD: (f64, f64) = (0.22, 0.40);
+/// Glazing thicker than this (mean thickness, twice volume over surface) is a solid block, m.
+pub const GLASS_MAX: f64 = 0.1;
+/// A body bigger than this volume with a mean thickness above `BULK_THICK` is a filled block, m3, m.
+pub const BULK_VOLUME: f64 = 1000.0;
+pub const BULK_THICK: f64 = 5.0;
+/// No single part of a building is longer than this: more means a unit slip (mm taken as m), m.
+pub const PART_SIZE_MAX: f64 = 2000.0;
+/// A body reaching further than this past the walls, slabs and columns that carry it is not part of
+/// the building as drawn, m.
+pub const OUTLINE_MARGIN: f64 = 2.0;
 /// Parts may rest on the lowest level within this, m.
 pub const GROUND_TOL: f64 = 0.005;
 const MAX_PAIRS: usize = 3_000_000;
@@ -120,10 +130,15 @@ pub struct Member {
 }
 
 /// Any solid body.
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Default)]
 pub struct Part {
     pub key: ElKey,
     pub bbox: [f64; 6],
+    /// Volume, m3, and surface area, m2 (0 when not measured).
+    pub volume: f64,
+    pub area: f64,
+    /// The material is glazing.
+    pub glass: bool,
     /// Thinnest extent: section side or length, whichever is smaller.
     pub min_dim: f64,
     pub mesh: Option<Arc<Mesh>>,
@@ -205,11 +220,16 @@ pub const K_STIRRUP: &str = "ai.realism.stirrup";
 pub const K_RISER: &str = "ai.realism.stair_riser";
 pub const K_TREAD: &str = "ai.realism.stair_tread";
 pub const K_FLOAT: &str = "ai.realism.floating";
+pub const K_GLASS: &str = "ai.realism.solid_glass";
+pub const K_BULK: &str = "ai.realism.filled_block";
+pub const K_SIZE: &str = "ai.realism.part_size";
+pub const K_OUTSIDE: &str = "ai.realism.outside_outline";
 
 /// Every message key of the pure rules.
-pub const KEYS: [&str; 15] = [
+pub const KEYS: [&str; 19] = [
     K_BENT, K_RADIUS, K_AXIS, K_TINY, K_SLIVER, K_PLATE, K_BOLT_D, K_BOLT_HOLE, K_BOLT_EDGE,
-    K_BOLT_PITCH, K_COVER, K_STIRRUP, K_RISER, K_TREAD, K_FLOAT,
+    K_BOLT_PITCH, K_COVER, K_STIRRUP, K_RISER, K_TREAD, K_FLOAT, K_GLASS, K_BULK, K_SIZE,
+    K_OUTSIDE,
 ];
 
 fn name(k: &ElKey) -> String {
@@ -646,6 +666,81 @@ fn rule_floating(inp: &Input, out: &mut Vec<Issue>) {
     }
 }
 
+/// Mean thickness of a closed body: twice the volume over the surface (exact for a slab).
+fn mean_thick(p: &Part) -> Option<f64> {
+    (p.volume > 0.0 && p.area > 0.0).then(|| 2.0 * p.volume / p.area)
+}
+
+/// Solid glass, filled blocks and sizes out of proportion with a building.
+fn rule_mass(inp: &Input, out: &mut Vec<Issue>) {
+    for p in &inp.parts {
+        let size = (0..3).map(|k| p.bbox[k + 3] - p.bbox[k]).fold(0.0, f64::max);
+        if size > PART_SIZE_MAX {
+            out.push(issue(
+                Severity::Warning,
+                vec![p.key.clone()],
+                Some(center(&p.bbox)),
+                K_SIZE,
+                vec![("name", name(&p.key)), ("size", format!("{size:.0}"))],
+                Some(Measure::new(size, PART_SIZE_MAX, "m")),
+            ));
+            continue;
+        }
+        let Some(t) = mean_thick(p) else { continue };
+        if p.glass && t > GLASS_MAX {
+            out.push(issue(
+                Severity::Warning,
+                vec![p.key.clone()],
+                Some(center(&p.bbox)),
+                K_GLASS,
+                vec![("name", name(&p.key)), ("thick", txt(t)), ("volume", format!("{:.0}", p.volume))],
+                Some(Measure::new(mm(t), mm(GLASS_MAX), "mm")),
+            ));
+        } else if p.volume > BULK_VOLUME && t > BULK_THICK {
+            out.push(issue(
+                Severity::Warning,
+                vec![p.key.clone()],
+                Some(center(&p.bbox)),
+                K_BULK,
+                vec![("name", name(&p.key)), ("thick", format!("{t:.1}")), ("volume", format!("{:.0}", p.volume))],
+                Some(Measure::new(t, BULK_THICK, "m")),
+            ));
+        }
+    }
+}
+
+/// A body that sticks far out of the hull of the walls, slabs and columns: a gable turned flat
+/// onto a facade, a part placed in the wrong frame.
+fn rule_outline(inp: &Input, out: &mut Vec<Issue>) {
+    if inp.supports.len() < 4 {
+        return;
+    }
+    let mut hull = [f64::MAX, f64::MAX, f64::MAX, f64::MIN, f64::MIN, f64::MIN];
+    for s in &inp.supports {
+        for k in 0..3 {
+            hull[k] = hull[k].min(s[k]);
+            hull[k + 3] = hull[k + 3].max(s[k + 3]);
+        }
+    }
+    for p in &inp.parts {
+        let b = &p.bbox;
+        let past = (0..2)
+            .map(|k| (hull[k] - b[k]).max(b[k + 3] - hull[k + 3]))
+            .fold(0.0, f64::max);
+        // lowest part of the body above the hull's top is a roof or a mast, not outside
+        if past > OUTLINE_MARGIN && b[2] < hull[5] {
+            out.push(issue(
+                Severity::Warning,
+                vec![p.key.clone()],
+                Some(center(b)),
+                K_OUTSIDE,
+                vec![("name", name(&p.key)), ("past", format!("{past:.1}"))],
+                Some(Measure::new(past, OUTLINE_MARGIN, "m")),
+            ));
+        }
+    }
+}
+
 /// All pure rules, in the order the person reads them.
 pub fn analyze(inp: &Input) -> Vec<Issue> {
     let mut v = vec![];
@@ -685,6 +780,8 @@ pub fn analyze(inp: &Input) -> Vec<Issue> {
         let _s = crate::perf::span("realism.floating");
         rule_floating(inp, &mut v);
     }
+    rule_mass(inp, &mut v);
+    rule_outline(inp, &mut v);
     v
 }
 
