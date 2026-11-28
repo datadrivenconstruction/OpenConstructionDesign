@@ -43,6 +43,7 @@
 - Orbit around the model centre, or let the view orbit on its own.
 - A large AI plan replays in the journal element by element.
 - Corner shading follows depth, without halos around edges.
+- Shadows fit the visible part of the model and get soft edges at the Quality level.
 
 ### Materials
 - Ten new textures: stone, gravel, soil, asphalt, plaster, roof tile, insulation, water, steel plate and rubber.
