@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "tarkistukset: {blocks} estävää, {warns} varoitusta",
+ "ai.plan.variant_time": "{ms} ms rakentamiseen",
+ "ai.plan.variant_unaudited": "tarkistukset: ei vielä ajettu, näytä nähdäksesi",
+ "ai.plan.variant_cost": "kustannus {value}"
+}

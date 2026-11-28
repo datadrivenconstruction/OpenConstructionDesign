@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "kontrollid: {blocks} blokeerivat, {warns} hoiatust",
+ "ai.plan.variant_time": "koostamine {ms} ms",
+ "ai.plan.variant_unaudited": "kontrollid: pole veel käivitatud, kuva need nägemiseks",
+ "ai.plan.variant_cost": "maksumus {value}"
+}

@@ -7,7 +7,7 @@ use super::kit::{self, space, Button};
 use super::logic::{self, Counts};
 use super::review::{self, ReviewAct, ReviewCtx};
 use super::{Action, Cx, Facts, PanelUi};
-use crate::ai::plan::{ElemDiff, PlanView, QtyDelta};
+use crate::ai::plan::{ElemDiff, PlanView, QtyDelta, VariantInfo};
 use crate::ai::preview::{self, PreviewSet};
 use crate::ai::validate::{IssueLevel, PlanIssue};
 use crate::units::{fmt_area_in_lang, fmt_num_lang, fmt_volume_lang, precision, Units};
@@ -279,6 +279,24 @@ fn variants(ui: &mut Ui, cx: &Cx<'_>, plan: &PlanView, acts: &mut Vec<Action>) {
             .join(" · ");
         kit::caption(ui, th, &line);
     }
+    for (i, v) in plan.variants.iter().enumerate() {
+        let name = VARIANT_NAMES.get(i).copied().unwrap_or("…");
+        kit::caption(ui, th, &format!("{name}: {}", variant_facts(cx.cat, v)));
+    }
+}
+
+/// What tells the variants apart besides their metrics: the time to build, what the checks
+/// found, and a cost when the generator reports one. A variant not shown yet is not checked.
+fn variant_facts(cat: &ddc_ui::i18n::Catalog, v: &VariantInfo) -> String {
+    let mut parts = vec![cat.tf("ai.plan.variant_time", &[("ms", &v.build_ms.to_string())])];
+    parts.push(match v.audit {
+        Some((b, w)) => cat.tf("ai.plan.variant_audit", &[("blocks", &b.to_string()), ("warns", &w.to_string())]),
+        None => cat.t("ai.plan.variant_unaudited"),
+    });
+    if let Some((_, c)) = v.metrics.iter().find(|(k, _)| k.to_ascii_lowercase().contains("cost")) {
+        parts.push(cat.tf("ai.plan.variant_cost", &[("value", &fmt_num_lang(*c, 1, cat.lang))]));
+    }
+    parts.join(" · ")
 }
 
 fn issues(
@@ -1144,6 +1162,26 @@ mod tests {
 
     fn cat() -> Catalog {
         Catalog::new(ddc_ui::Lang::En)
+    }
+
+    #[test]
+    fn a_variant_row_says_time_checks_and_a_cost_only_when_reported() {
+        let mut v = VariantInfo {
+            id: 0,
+            seed: 1,
+            criterion: String::new(),
+            metrics: vec![("area".into(), 80.0)],
+            build_ms: 12,
+            audit: None,
+        };
+        let c = cat();
+        let t = variant_facts(&c, &v);
+        assert!(t.contains("12 ms") && t.contains("not run yet") && !t.contains("cost"), "{t}");
+        v.audit = Some((1, 3));
+        v.metrics.push(("total_cost".into(), 1200.0));
+        let t = variant_facts(&c, &v);
+        assert!(t.contains("1 blocking, 3 warnings") && t.contains("cost 1"), "{t}");
+        assert!(!t.contains("ai.plan"), "untranslated key in {t}");
     }
 
     fn q(key: &str, before: f64, after: f64) -> QtyDelta {

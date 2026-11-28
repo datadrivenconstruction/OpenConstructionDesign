@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "जाँच: {blocks} अवरोधक, {warns} चेतावनियाँ",
+ "ai.plan.variant_time": "बनाने में {ms} मि.से.",
+ "ai.plan.variant_unaudited": "जाँच: अभी चलाई नहीं गई, देखने के लिए इसे दिखाएँ",
+ "ai.plan.variant_cost": "लागत {value}"
+}

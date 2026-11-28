@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "έλεγχοι: {blocks} αποκλεισμού, {warns} προειδοποιήσεις",
+ "ai.plan.variant_time": "{ms} ms για την κατασκευή",
+ "ai.plan.variant_unaudited": "έλεγχοι: δεν έχουν εκτελεστεί ακόμη, εμφανίστε το",
+ "ai.plan.variant_cost": "κόστος {value}"
+}

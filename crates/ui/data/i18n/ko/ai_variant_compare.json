@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "검사: 차단 {blocks}건, 경고 {warns}건",
+ "ai.plan.variant_time": "빌드 {ms} ms",
+ "ai.plan.variant_unaudited": "검사: 아직 실행되지 않음, 표시하면 확인할 수 있음",
+ "ai.plan.variant_cost": "비용 {value}"
+}

@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "provjere: {blocks} blokirajućih, {warns} upozorenja",
+ "ai.plan.variant_time": "{ms} ms za izradu",
+ "ai.plan.variant_unaudited": "provjere: još nisu pokrenute, prikažite za pregled",
+ "ai.plan.variant_cost": "trošak {value}"
+}

@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "шалгалт: {blocks} хориглосон, {warns} анхааруулга",
+ "ai.plan.variant_time": "бүтээхэд {ms} мс",
+ "ai.plan.variant_unaudited": "шалгалт: хараахан ажиллуулаагүй, харахын тулд үзүүлнэ үү",
+ "ai.plan.variant_cost": "өртөг {value}"
+}

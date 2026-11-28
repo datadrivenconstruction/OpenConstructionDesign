@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "チェック: ブロック {blocks} 件、警告 {warns} 件",
+ "ai.plan.variant_time": "構築に {ms} ms",
+ "ai.plan.variant_unaudited": "チェック: 未実行、表示すると確認できます",
+ "ai.plan.variant_cost": "コスト {value}"
+}

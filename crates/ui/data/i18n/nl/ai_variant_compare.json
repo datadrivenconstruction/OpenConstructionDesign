@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "controles: {blocks} blokkerend, {warns} waarschuwingen",
+ "ai.plan.variant_time": "{ms} ms om op te bouwen",
+ "ai.plan.variant_unaudited": "controles: nog niet uitgevoerd, toon om te bekijken",
+ "ai.plan.variant_cost": "kosten {value}"
+}

@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "بررسی‌ها: {blocks} مسدودکننده، {warns} هشدار",
+ "ai.plan.variant_time": "{ms} میلی‌ثانیه برای ساخت",
+ "ai.plan.variant_unaudited": "بررسی‌ها: هنوز اجرا نشده، برای دیدن نمایش دهید",
+ "ai.plan.variant_cost": "هزینه {value}"
+}

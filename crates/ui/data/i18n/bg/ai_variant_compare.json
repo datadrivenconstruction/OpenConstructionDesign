@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "проверки: {blocks} блокиращи, {warns} предупреждения",
+ "ai.plan.variant_time": "{ms} мс за изграждане",
+ "ai.plan.variant_unaudited": "проверки: още не са пускани, покажете го",
+ "ai.plan.variant_cost": "цена {value}"
+}

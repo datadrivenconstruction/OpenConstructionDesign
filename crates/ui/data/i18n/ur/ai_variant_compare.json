@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "جانچ: {blocks} رکاوٹی، {warns} انتباہات",
+ "ai.plan.variant_time": "بنانے میں {ms} ملی سیکنڈ",
+ "ai.plan.variant_unaudited": "جانچ: ابھی چلائی نہیں گئی، دیکھنے کے لیے دکھائیں",
+ "ai.plan.variant_cost": "لاگت {value}"
+}

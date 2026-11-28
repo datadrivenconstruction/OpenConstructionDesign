@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "mga check: {blocks} nakaharang, {warns} babala",
+ "ai.plan.variant_time": "{ms} ms para buuin",
+ "ai.plan.variant_unaudited": "mga check: hindi pa napapatakbo, ipakita para makita",
+ "ai.plan.variant_cost": "gastos {value}"
+}

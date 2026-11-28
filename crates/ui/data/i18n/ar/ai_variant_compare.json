@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "الفحوصات: {blocks} حاجبة، {warns} تحذيرات",
+ "ai.plan.variant_time": "{ms} مللي ثانية للبناء",
+ "ai.plan.variant_unaudited": "الفحوصات: لم تُشغَّل بعد، اعرضه لرؤيتها",
+ "ai.plan.variant_cost": "التكلفة {value}"
+}

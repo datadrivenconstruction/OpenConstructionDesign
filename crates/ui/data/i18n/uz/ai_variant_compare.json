@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "tekshiruvlar: {blocks} bloklovchi, {warns} ogohlantirish",
+ "ai.plan.variant_time": "qurish uchun {ms} ms",
+ "ai.plan.variant_unaudited": "tekshiruvlar: hali ishga tushirilmagan, ko'rish uchun ko'rsating",
+ "ai.plan.variant_cost": "narxi {value}"
+}

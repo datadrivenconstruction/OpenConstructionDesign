@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "verificări: {blocks} blocante, {warns} avertismente",
+ "ai.plan.variant_time": "{ms} ms pentru construire",
+ "ai.plan.variant_unaudited": "verificări: încă neexecutate, afișați pentru a vedea",
+ "ai.plan.variant_cost": "cost {value}"
+}

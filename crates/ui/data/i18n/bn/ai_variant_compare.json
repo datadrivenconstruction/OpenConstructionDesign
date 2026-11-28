@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "পরীক্ষা: {blocks} ব্লকিং, {warns} সতর্কতা",
+ "ai.plan.variant_time": "তৈরিতে {ms} মিলিসেকেন্ড",
+ "ai.plan.variant_unaudited": "পরীক্ষা: এখনও চালানো হয়নি, দেখতে এটি দেখান",
+ "ai.plan.variant_cost": "খরচ {value}"
+}

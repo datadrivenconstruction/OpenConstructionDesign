@@ -596,6 +596,10 @@ pub struct VariantInfo {
     /// What sets this variant apart, as the generator states it.
     pub criterion: String,
     pub metrics: Vec<(String, f64)>,
+    /// Milliseconds the generator took to build this variant.
+    pub build_ms: u64,
+    /// Blocking and warning findings of the plan with this variant; known once it was shown.
+    pub audit: Option<(u32, u32)>,
 }
 
 /// What the card shows. `ack` is the last plan-affecting message the worker has processed: the

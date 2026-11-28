@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "检查：{blocks} 项阻塞，{warns} 项警告",
+ "ai.plan.variant_time": "构建耗时 {ms} 毫秒",
+ "ai.plan.variant_unaudited": "检查：尚未运行，显示后可查看",
+ "ai.plan.variant_cost": "成本 {value}"
+}

@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "การตรวจสอบ: ปิดกั้น {blocks}, คำเตือน {warns}",
+ "ai.plan.variant_time": "ใช้เวลาสร้าง {ms} มิลลิวินาที",
+ "ai.plan.variant_unaudited": "การตรวจสอบ: ยังไม่ได้เรียกใช้ แสดงเพื่อดู",
+ "ai.plan.variant_cost": "ต้นทุน {value}"
+}

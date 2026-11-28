@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "ellenőrzések: {blocks} blokkoló, {warns} figyelmeztetés",
+ "ai.plan.variant_time": "{ms} ms az összeállításhoz",
+ "ai.plan.variant_unaudited": "ellenőrzések: még nem futottak, jelenítse meg a megtekintéshez",
+ "ai.plan.variant_cost": "költség {value}"
+}

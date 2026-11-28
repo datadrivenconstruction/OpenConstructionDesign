@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "kontroly: blokující {blocks}, varování {warns}",
+ "ai.plan.variant_time": "sestavení {ms} ms",
+ "ai.plan.variant_unaudited": "kontroly: zatím nespuštěny, zobrazte je",
+ "ai.plan.variant_cost": "náklady {value}"
+}

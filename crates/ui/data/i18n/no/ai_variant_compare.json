@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "kontroller: {blocks} blokkerende, {warns} advarsler",
+ "ai.plan.variant_time": "{ms} ms å bygge",
+ "ai.plan.variant_unaudited": "kontroller: ikke kjørt ennå, vis den for å se",
+ "ai.plan.variant_cost": "kostnad {value}"
+}

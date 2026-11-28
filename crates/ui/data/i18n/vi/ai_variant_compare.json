@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "kiểm tra: {blocks} chặn, {warns} cảnh báo",
+ "ai.plan.variant_time": "{ms} ms để dựng",
+ "ai.plan.variant_unaudited": "kiểm tra: chưa chạy, hãy hiển thị để xem",
+ "ai.plan.variant_cost": "chi phí {value}"
+}

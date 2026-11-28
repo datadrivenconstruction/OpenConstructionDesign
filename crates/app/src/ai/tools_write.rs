@@ -1005,7 +1005,10 @@ fn run_generator(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
         if cx.cancel.is_cancelled() || c.stop.is_cancelled() {
             return Err(CmdError::wire(ErrorCode::Cancelled, "cancelled"));
         }
-        match g.build(&params, seed) {
+        let started = std::time::Instant::now();
+        let built_now = g.build(&params, seed);
+        let build_ms = started.elapsed().as_millis().min(u128::from(u64::MAX)) as u64;
+        match built_now {
             Ok(result) => {
                 // the same result under another criterion is no choice at all
                 if built.contains(&result) {
@@ -1038,6 +1041,8 @@ fn run_generator(c: &mut Core, a: &J, cx: &CallCx<'_>) -> Result<Done, String> {
                     seed,
                     criterion,
                     metrics,
+                    build_ms,
+                    audit: None,
                 });
                 built.push(result);
             }

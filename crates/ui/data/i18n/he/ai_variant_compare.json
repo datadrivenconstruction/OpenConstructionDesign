@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "בדיקות: {blocks} חוסמות, {warns} אזהרות",
+ "ai.plan.variant_time": "{ms} מ״ש לבנייה",
+ "ai.plan.variant_unaudited": "בדיקות: טרם הופעלו, הציגו כדי לראות",
+ "ai.plan.variant_cost": "עלות {value}"
+}

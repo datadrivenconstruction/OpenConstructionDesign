@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "текшерүүлөр: {blocks} бөгөттөөчү, {warns} эскертүү",
+ "ai.plan.variant_time": "куруу {ms} мс",
+ "ai.plan.variant_unaudited": "текшерүүлөр: дагы иштетилген жок, көрүү үчүн көрсөтүңүз",
+ "ai.plan.variant_cost": "баасы {value}"
+}

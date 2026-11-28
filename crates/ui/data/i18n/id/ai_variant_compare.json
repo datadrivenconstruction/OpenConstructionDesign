@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "pemeriksaan: {blocks} pemblokir, {warns} peringatan",
+ "ai.plan.variant_time": "{ms} md untuk membangun",
+ "ai.plan.variant_unaudited": "pemeriksaan: belum dijalankan, tampilkan untuk melihat",
+ "ai.plan.variant_cost": "biaya {value}"
+}

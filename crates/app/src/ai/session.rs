@@ -950,6 +950,15 @@ impl Core {
         self.plan_checks(b, &diff)
     }
 
+    /// What the checks found is kept with the variant on show, for the comparison of variants.
+    fn note_variant_audit(&mut self, issues: &[PlanIssue]) {
+        let (blocks, warns) = audit_counts(issues);
+        let on = self.plan.variant;
+        if let Some(v) = self.plan.variants.iter_mut().find(|v| v.id == on) {
+            v.audit = Some((blocks, warns));
+        }
+    }
+
     /// The full picture of the plan on the scratch copy.
     pub fn build_view(&mut self, with_preview: bool) -> Result<PlanView, AiError> {
         let _s = ddc_model::perf::span("draft.view");
@@ -988,6 +997,7 @@ impl Core {
         }
         issues.extend(super::rel_value::skip_issues(&self.plan));
         issues.extend(validate::truncation_issues(raw.truncated, raw.rows.len()));
+        self.note_variant_audit(&issues);
         let span = ddc_model::perf::span("draft.view.preview");
         let shown = if with_preview && !diff.is_empty() {
             // the base is read only for what the plan changes or deletes: a plan that only
@@ -3227,6 +3237,12 @@ pub(crate) fn encode_png(rgba: &[u8], width: u32, height: u32) -> Result<Vec<u8>
         writer.write_image_data(rgba).map_err(|e| e.to_string())?;
     }
     Ok(out)
+}
+
+/// Blocking findings and warnings of a plan.
+fn audit_counts(issues: &[PlanIssue]) -> (u32, u32) {
+    let n = |l: validate::IssueLevel| issues.iter().filter(|i| i.level == l).count() as u32;
+    (n(validate::IssueLevel::Block), n(validate::IssueLevel::Warn))
 }
 
 /// Caps and confirms follow the session's own target: only a draft skips the main model's caps.

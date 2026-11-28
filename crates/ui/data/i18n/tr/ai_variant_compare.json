@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "denetimler: {blocks} engelleyici, {warns} uyarı",
+ "ai.plan.variant_time": "oluşturma {ms} ms",
+ "ai.plan.variant_unaudited": "denetimler: henüz çalıştırılmadı, görmek için gösterin",
+ "ai.plan.variant_cost": "maliyet {value}"
+}

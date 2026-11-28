@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "tjek: {blocks} blokerende, {warns} advarsler",
+ "ai.plan.variant_time": "{ms} ms at bygge",
+ "ai.plan.variant_unaudited": "tjek: ikke kørt endnu, vis den for at se",
+ "ai.plan.variant_cost": "pris {value}"
+}

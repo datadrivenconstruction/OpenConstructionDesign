@@ -1,0 +1,6 @@
+{
+ "ai.plan.variant_audit": "Prüfungen: {blocks} blockierend, {warns} Warnungen",
+ "ai.plan.variant_time": "{ms} ms für den Aufbau",
+ "ai.plan.variant_unaudited": "Prüfungen: noch nicht ausgeführt, anzeigen zum Ansehen",
+ "ai.plan.variant_cost": "Kosten {value}"
+}
