@@ -20,6 +20,7 @@
 - The lattice audit joins members crossing at a node instead of reporting clashes, and names ids and points.
 
 ### Video and frames
+- Reveal frames are anti-aliased (8 samples by default, `--reveal-aa N` sets 1 to 64), so thin edges no longer crawl in videos.
 - `--reveal-order zones` builds the model zone by zone across the plan; `--reveal-seek N` opens the window paused on frame N, and the player steps frame by frame.
 - `--reveal-out` always runs headless; `--reveal all` includes script-made elements, built bottom-up.
 - Camera choice for reveals: `fixed`, `orbit`, `follow`.
@@ -40,6 +41,7 @@
 - Time and token limits are shown and adjustable; `ddc ai --max-tokens`, `--max-time-s`; a stop names the limit and how to raise it.
 
 ### 3D view
+- Glass reflects the sky with a physically based Fresnel term, and the Speed setting smooths jagged silhouette edges.
 - Bodies appearing in a reveal keep their material colours.
 - Shaded and realistic styles share one lighting curve; saturated colours keep their hue, the sky follows the backdrop and outlines scale with the frame.
 - Solids and freeform bodies show their material colour; glass is see-through, while steel and concrete keep their texture.
